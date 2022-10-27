@@ -1240,7 +1240,11 @@ Character/Name/46┃Aiden
 Character/Name/47┃Laura
 Character/Name/48┃Tia
 Character/Name/49┃Felix
+Character/Name/56┃Piolo
+Character/Name/57┃Martina
 Character/Name/58┃Haze
+Character/Name/59┃Isaac
+Character/Name/60┃Tazia
 Monster/Name/1┃Ayam
 Monster/Name/2┃Kelelawar
 Monster/Name/3┃Babi Hutan
@@ -1417,6 +1421,7 @@ MasteryResultValueType/KillMonster┃Berdasarkan Level Binatang Buas
 StatType/None┃Tidak Ada
 StatType/MaxHp┃HP Maks.
 StatType/MaxHpByLv┃Maks HP per Level
+StatType/MaxHpCoef┃HP Maks.
 StatType/MaxSp┃SP Maks.
 StatType/AttackPower┃Kekuatan Serangan
 StatType/AttackPowerByLv┃Kekuatan Serangan per Level
@@ -1655,7 +1660,7 @@ MonsterDropRandom/4┃Menjatuhkan barang <color=white>Biasa</color>.
 MonsterDropRandom/5┃Menjatuhkan barang <color=white>Tidak Biasa</color> atau <color=#2AC0FF>Langka</color>.
 MonsterDropRandom/6┃Menjatuhkan barang <color=white>Tidak Biasa</color>, <color=#2AC0FF>Langka</color>, atau <color=#D05EFF>Epik</color>.
 MonsterDropRandom/7┃Menjatuhkan diantara <color=#D05EFF>Mithril</color>, <color=#D05EFF>Biduri Bulan</color>, <color=#D05EFF>Pohon Kehidupan</color>, <color=#35FF94>Kamera Tele</color>, atau <color=#D05EFF>Ponsel</color>.
-MonsterDropRandom/8┃Menjatuhkan diantara <color=#D05EFF>Mithril</color>, <color=#D05EFF>Biduri Bulan</color>, <color=#D05EFF>Pohon Kehidupan</color>, <color=#35FF94>Kamera Tele</color>, atau <color=#D05EFF>Ponsel</color>.
+MonsterDropRandom/8┃Menjatuhkan barang <color=#C4C4C4>Tidak Biasa</color>, <color=#2AC0FF>Langka</color>, atau <color=#D05EFF>Epik</color>.
 MonsterDropRandom/9┃Menjatuhkan barang <color=white>Tidak Biasa</color>, <color=#2AC0FF>Langka</color>, atau <color=#D05EFF>Epik</color>.
 MonsterDropRandom/12┃Menjatuhkan <color=white>Daging</color> atau <color=white>Bulu</color>.
 MonsterDropRandom/13┃Menjatuhkan <color=white>Kulit</color>(kemungkinan besar), atau barang <color=white>Biasa</color>(kemungkinan kecil).
@@ -2076,11 +2081,13 @@ Skill/Group/Name/1001400┃Leaping Strike
 Skill/Group/Name/1001500┃Chainsaw Murderer
 Skill/Group/Name/1001520┃Chainsaw Murderer
 Skill/Group/Desc/1001100┃Ketika Jackie membunuh lawan, kekuatan serangannya meningkat untuk {0} detik.\n\nMembunuh pemain lain atau beruang meningkatkan kekuatan serangannya sebanyak {1}.\nMembunuh hewan liar lainnya meningkatkan kekuatan serangannya sebanyak {2}.
-Skill/Group/Desc/1001200┃Jackie mengayunkan senjatanya dua kali ke arah target dan memberikan {0}<color=#ffd775>(+{1})</color>, {2}<color=#ffd775>(+{3})</color> kerusakan.\n\nMengenai musuh menyebabkan mereka mengalami Pendarahan dan menerima {5} kerusakan untuk {4} detik.
-Skill/Group/Desc/1001300┃Saat Adrenaline Burst aktif, Kecepatan Pergerakan Jackie meningkat sebanyak {1} selama {0} detik.\nSaat Adrenaline Burst aktif, dia memberikan {2} kali kerusakan lebih banyak ketika mengenai musuh yang mengalami Pendarahan dan mengembalikan HP sebanyak {3}<color=#ffd775>(+{4})</color>.
-Skill/Group/Desc/1001400┃Jackie melompat ke target dan memberikan {0}<color=#ffd775>(+{1})</color> kerusakan saat mendarat.\n\nMusuh yang mengalami Pendarahan kecepatan gerakannya berkurang sebanyak {3} untuk {2} detik.
-Skill/Group/Desc/1001500┃Jackie mengeluarkan gergaji mesin untuk {0} detik.\nKecepatan serangannya meningkat sebanyak {1} dan seranganya membuat musuh mengalami Pendarahan.\n\nKetika jurus selesai, dia mengayunkan gergajinya, memberikan {2}<color=#ffd775>(+{3})</color> kerusakan sebelum kembali ke senjata yang sebelumnya.
-Skill/Group/Desc/1001520┃Jackie mengeluarkan gergaji mesin untuk {0} detik.\nKecepatan serangannya meningkat sebanyak {1} dan seranganya membuat musuh mengalami Pendarahan.\n\nKetika jurus selesai, dia mengayunkan gergajinya, memberikan {2}<color=#ffd775>(+{3})</color> kerusakan sebelum kembali ke senjata yang sebelumnya.
+Skill/Group/Desc/1001300┃Saat Adrenaline Burst aktif, Kecepatan Pergerakan Jackie meningkat sebanyak {1} selama {0} detik.\nSaat Adrenaline Burst aktif, dia memberikan <color=white>{2}</color> kali kerusakan lebih banyak ketika mengenai musuh yang mengalami Pendarahan dan mengembalikan HP sebanyak <color=white>{3}</color>.
+Skill/Group/Coef/1001100┃Ketika Jackie membunuh lawan, kekuatan serangannya meningkat untuk {0} detik.\n\nMembunuh pemain lain atau beruang meningkatkan kekuatan serangannya sebanyak {1}.\nMembunuh hewan liar lainnya meningkatkan kekuatan serangannya sebanyak {2}.
+Skill/Group/Coef/1001200┃Jackie mengayunkan senjatanya dua kali ke arah target dan memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color>, <color=white><color=white>{2}</color></color><color=#ffd775>(+{3})</color> kerusakan.\n\nMengenai musuh menyebabkan mereka mengalami Pendarahan dan menerima <color=white>{5}</color> kerusakan untuk {4} detik.
+Skill/Group/Coef/1001300┃Saat Adrenaline Burst aktif, Kecepatan Pergerakan Jackie meningkat sebanyak {1} selama {0} detik.\nSaat Adrenaline Burst aktif, dia memberikan {2} kali kerusakan lebih banyak ketika mengenai musuh yang mengalami Pendarahan dan mengembalikan HP sebanyak <color=white>{3}</color><color=#ffd775>(+{4})</color>.
+Skill/Group/Coef/1001400┃Jackie melompat ke target dan memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan saat mendarat.\n\nMusuh yang mengalami Pendarahan kecepatan gerakannya berkurang sebanyak {3} untuk {2} detik.
+Skill/Group/Coef/1001500┃Jackie mengeluarkan gergaji mesin untuk {0} detik.\nKecepatan serangannya meningkat sebanyak {1} dan seranganya membuat musuh mengalami Pendarahan.\n\nKetika jurus selesai, dia mengayunkan gergajinya, memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan sebelum kembali ke senjata yang sebelumnya.
+Skill/Group/Coef/1001520┃Jackie mengeluarkan gergaji mesin untuk {0} detik.\nKecepatan serangannya meningkat sebanyak {1} dan seranganya membuat musuh mengalami Pendarahan.\n\nKetika jurus selesai, dia mengayunkan gergajinya, memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan sebelum kembali ke senjata yang sebelumnya.
 CharacterState/Group/Name/1001100┃Lunatic Bloodfest
 CharacterState/Group/Desc/1001100┃Insting pembunuh bawaan Jackie meningkatkan kekuatan serangannya.
 CharacterState/Group/Name/1001110┃Bloodfest
@@ -2102,11 +2109,14 @@ Skill/Group/Name/1002200┃Double Shot
 Skill/Group/Name/1002300┃Steady Shot
 Skill/Group/Name/1002400┃Moving Turn
 Skill/Group/Name/1002500┃Blank Catridge
-Skill/Group/Desc/1002100┃Ketika Aya diserang, dia akan diselimuti pelindung yang menghalang {1}<color=#ffd775>(+{2})</color> kerusakan untuk {0} detik.\nSetiap kali Aya menyerang  musuh, cooldown jurus ini berkurang sebanyak{3} detik.
-Skill/Group/Desc/1002200┃Aya dengan cepat menembak dua kali ke arah target. Serangan keduanya memberi {1}<color=#ffd775>(+{0})</color> kerusakan.
-Skill/Group/Desc/1002300┃Aya menembakkan {4} peluru secara acak ke arah target selama {3} detik.\n\nSetiap peluru yang mengenai target memberi {0}<color=#ffd775>(+{1})</color> kerusakan.
+Skill/Group/Desc/1002100┃Ketika Aya diserang, dia akan diselimuti pelindung yang menghalang <color=white>{1}</color> kerusakan untuk {0} detik.\nSetiap kali Aya menyerang  musuh, cooldown jurus ini berkurang sebanyak{2} detik.
+Skill/Group/Desc/1002200┃Aya dengan cepat menembak dua kali ke arah target. Serangan keduanya memberi <color=white>{0}</color> kerusakan.
+Skill/Group/Desc/1002300┃Aya menembakkan {3} peluru secara acak ke arah target selama {2} detik.\n\nSetiap peluru yang mengenai target memberi <color=white>{0}</color> kerusakan.
 Skill/Group/Desc/1002400┃Aya dengan cepat melompat ke arah target.
-Skill/Group/Desc/1002500┃Aya menembak Peluru Kosong ke langit, mengejutkan musuh di area sekitarnya. Musuh yang terkejut menerima {1}<color=#ffd775>(+{2})</color> kerusakan dan akan Terstun untuk {0} detik.
+Skill/Group/Coef/1002100┃Ketika Aya diserang, dia akan diselimuti pelindung yang menghalang <color=white>{1}</color><color=#ffd775>(+{2})</color> kerusakan untuk {0} detik.\nSetiap kali Aya menyerang  musuh, cooldown jurus ini berkurang sebanyak{3} detik.
+Skill/Group/Coef/1002200┃Aya dengan cepat menembak dua kali ke arah target. Serangan keduanya memberi <color=white>{1}</color><color=#ffd775>(+{0})</color><color=#DDA0DD>(+{2})</color> kerusakan.
+Skill/Group/Coef/1002300┃Aya menembakkan {4} peluru secara acak ke arah target selama {3} detik.\n\nSetiap peluru yang mengenai target memberi <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{5})</color> kerusakan.
+Skill/Group/Coef/1002400┃Aya dengan cepat melompat ke arah target.
 CharacterState/Group/Name/1002100┃Aya's Justice
 CharacterState/Group/Desc/1002100┃Menyerap kerusakan hingga jumlah tertentu
 CharacterState/Group/Name/1002300┃Steady Shot
@@ -2117,11 +2127,16 @@ Skill/Group/Name/1004200┃Broken Bullet
 Skill/Group/Name/1004300┃17 vs 1
 Skill/Group/Name/1004400┃Heavy Strike
 Skill/Group/Name/1004500┃Bike from Hell
-Skill/Group/Desc/1004100┃Pertahanan Magnus meningkat seiring berkurangnya HP.\n\nPertahanannya meningkat {0} setiap 1% HP berkurang.
-Skill/Group/Desc/1004200┃Magnus menghantam tanah dan melemparkan batu ke area target, memberikan {0}<color=#ffd775>(+{1})</color> kerusakan. Musuh yang terkena batu akan berkurang kecepatan gerakannya sebanyak {2}. Kecepatan akan pulih seiring waktu.
-Skill/Group/Desc/1004300┃Magnus mengayunkan senjata ke area sekitarnya untuk {0} detik, memberi {1}<color=#ffd775>(+{2})</color><color=aqua>(+{3})</color> kerusakan {4} kali.\n\nDia memberikan 1.5 kali kerusakan lebih banyak ke unit yang melambat atau tidak bisa bergerak. Kecepatan gerakannya berkurang {5} selama 17 vs 1 aktif.
-Skill/Group/Desc/1004400┃Magnus menghantam musuh, memberi {0}<color=#ffd775>(+{1})</color> kerusakan, melempar musuh {2}m ke sebelah Kiri Magnus.\nJika musuh menabrak dinding, dia Tertahan untuk {3} detik.
-Skill/Group/Desc/1004500┃Magnus mengeluarkan motor, menaikinya selama {0} detik.\nDengan menggunakan jurus ini lagi, Magnus akan melompat dari motor, melemparkannya ke depan.\n\nJika motor mengenai musuh, hewan liar, atau dinding, motor akan meledak dan memberikan {1}<color=#ffd775>(+{2})</color> kerusakan area.\n\nJika Magnus hampir menabrak musuh, hewan liar, atau dinding, maka dia akan langsung lompat dari motor.
+Skill/Group/Desc/1004100┃Pertahanan Magnus meningkat seiring berkurangnya HP.\n\nPertahanannya meningkat <color=#93C9E7>{0}</color> setiap 1% HP berkurang.
+Skill/Group/Desc/1004200┃Magnus menghantam tanah dan melemparkan batu ke area target, memberikan <color=white>{20}</color> kerusakan. Musuh yang terkena batu akan berkurang kecepatan gerakannya sebanyak {2}. Kecepatan akan pulih seiring waktu.
+Skill/Group/Desc/1004300┃Magnus mengayunkan senjata ke area sekitarnya untuk {0} detik, memberi <color=white>{20}</color><color=aqua>(+{3})</color> kerusakan {4} kali.\n\nDia memberikan 1.5 kali kerusakan lebih banyak ke unit yang melambat atau tidak bisa bergerak. Kecepatan gerakannya berkurang {5} selama 17 vs 1 aktif.
+Skill/Group/Desc/1004400┃Magnus menghantam musuh, memberi <color=white>{20}</color> kerusakan, melempar musuh {2}m ke sebelah Kiri Magnus.\nJika musuh menabrak dinding, dia Tertahan untuk {3} detik.
+Skill/Group/Desc/1004500┃Magnus mengeluarkan motor, menaikinya selama {0} detik.\nDengan menggunakan jurus ini lagi, Magnus akan melompat dari motor, melemparkannya ke depan.\n\nJika motor mengenai musuh, hewan liar, atau dinding, motor akan meledak dan memberikan <color=white>{20}</color> kerusakan area.\n\nJika Magnus hampir menabrak musuh, hewan liar, atau dinding, maka dia akan langsung lompat dari motor.
+Skill/Group/Coef/1004100┃Pertahanan Magnus meningkat seiring berkurangnya HP.\n\nPertahanannya meningkat <color=#93C9E7>{0}</color> setiap 1% HP berkurang.
+Skill/Group/Coef/1004200┃Magnus menghantam tanah dan melemparkan batu ke area target, memberikan {0}<color=#ffd775>(+{1})</color> kerusakan. Musuh yang terkena batu akan berkurang kecepatan gerakannya sebanyak {2}. Kecepatan akan pulih seiring waktu.
+Skill/Group/Coef/1004300┃Magnus mengayunkan senjata ke area sekitarnya untuk {0} detik, memberi {1}<color=#ffd775>(+{2})</color><color=aqua>(+{3})</color> kerusakan {4} kali.\n\nDia memberikan 1.5 kali kerusakan lebih banyak ke unit yang melambat atau tidak bisa bergerak. Kecepatan gerakannya berkurang {5} selama 17 vs 1 aktif.
+Skill/Group/Coef/1004400┃Magnus menghantam musuh, memberi {0}<color=#ffd775>(+{1})</color> kerusakan, melempar musuh {2}m ke sebelah Kiri Magnus.\nJika musuh menabrak dinding, dia Tertahan untuk {3} detik.
+Skill/Group/Coef/1004500┃Magnus mengeluarkan motor, menaikinya selama {0} detik.\nDengan menggunakan jurus ini lagi, Magnus akan melompat dari motor, melemparkannya ke depan.\n\nJika motor mengenai musuh, hewan liar, atau dinding, motor akan meledak dan memberikan {1}<color=#ffd775>(+{2})</color> kerusakan area.\n\nJika Magnus hampir menabrak musuh, hewan liar, atau dinding, maka dia akan langsung lompat dari motor.
 CharacterState/Group/Name/1004100┃Tough Body
 CharacterState/Group/Desc/1004100┃Apa yang tidak membunuhnya membuat dia semakin kuat
 CharacterState/Group/Name/1004200┃Kecepatan Gerak berkurang
@@ -2133,11 +2148,16 @@ Skill/Group/Name/1007200┃Stomping Foot
 Skill/Group/Name/1007300┃Bluff
 Skill/Group/Name/1007400┃First Attack
 Skill/Group/Name/1007500┃Haymaker
-Skill/Group/Desc/1007100┃Hyunwoo menerima {2} tumpukan Dogfight saat menyerang musuh, dan {3} tumpukan saat terkena serangan.\nSetelah {0} tumpukan, Dogfight aktif dan serangan selanjutnya memulihkan HP sebanyak {1}
-Skill/Group/Desc/1007200┃Hyunwoo menghentak area target dan memberi  {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh dan mengurangi kecepatan gerakan mereka sebanyak {3} untuk {2} detik.
-Skill/Group/Desc/1007300┃Hyunwoo Menggertak dan menerima {0}<color=#008000>(+{1})</color> pertahanan tambahan untuk {3} detik.\n\nSaat mengaktifkan Bluff, Hyunwoo tidak akan bisa diganggu pergerakannya untuk {2} detik.\n\nEfek Mengganggu Pergerakan: di udara, lambat, takut, terpesona, tertahan, pukul mundur, tertekan, menari.
-Skill/Group/Desc/1007400┃Hyunwoo berlari ke arah target. Jika dia bertabrakan dengan musuh, memberi kerusakan sebesar <color=aqua>{3}</color> ditambah {0} dari HP musuh. Musuh yang terkena juga akan terdorong ke belakang dan pertahanannya berkurang sebanyak {4} untuk {5} detik.\nJika musuh terdorong ke dinding, dia tertahan untuk {1} detik dan menerima  {2} kerusakan.
-Skill/Group/Desc/1007500┃Hyunwoo mengumpulkan kekuatannya dan melayangkan Pukulan Kuat, memberi {0}<color=#ffd775>(+{1})</color> kerusakan. Jarak serang dan kerusakan bertambah seiring lamanya ia mengumpulkan kekuatan. Pukulan Kuat bisa memberi kerusakan maksimal sebanyak {2}<color=#ffd775>(+{3})</color>.
+Skill/Group/Desc/1007100┃Hyunwoo menerima {2} tumpukan Dogfight saat menyerang musuh, dan <color=white>{20}</color> tumpukan saat terkena serangan.\nSetelah {0} tumpukan, Dogfight aktif dan serangan selanjutnya memulihkan HP sebanyak {1}
+Skill/Group/Desc/1007200┃Hyunwoo menghentak area target dan memberi  <color=white>{20}</color> kerusakan ke musuh dan mengurangi kecepatan gerakan mereka sebanyak {3} untuk {2} detik.
+Skill/Group/Desc/1007300┃Hyunwoo Menggertak dan menerima <color=white>{20}</color><color=#008000>(+{1})</color> pertahanan tambahan untuk {3} detik.\n\nSaat mengaktifkan Bluff, Hyunwoo tidak akan bisa diganggu pergerakannya untuk {2} detik.
+Skill/Group/Desc/1007500┃Hyunwoo mengumpulkan kekuatannya dan melayangkan Pukulan Kuat, memberi <color=white>{20}</color> kerusakan. Jarak serang dan kerusakan bertambah seiring lamanya ia mengumpulkan kekuatan. Pukulan Kuat bisa memberi kerusakan maksimal sebanyak <color=white>{21}</color>.
+Skill/Group/Coef/1007100┃Hyunwoo menerima {2} tumpukan Dogfight saat menyerang musuh, dan {3} tumpukan saat terkena serangan.\nSetelah {0} tumpukan, Dogfight aktif dan serangan selanjutnya memulihkan HP sebanyak {1}
+Skill/Group/Coef/1007200┃Hyunwoo menghentak area target dan memberi  {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh dan mengurangi kecepatan gerakan mereka sebanyak {3} untuk {2} detik.
+Skill/Group/Coef/1007300┃Hyunwoo Menggertak dan menerima {0}<color=#008000>(+{5})</color> pertahanan tambahan untuk {3} detik.\n\nSaat mengaktifkan Bluff, Hyunwoo tidak akan bisa diganggu pergerakannya untuk {2} detik.\n\nEfek Mengganggu Pergerakan: di udara, lambat, takut, terpesona, tertahan, pukul mundur, tertekan, menari.
+Skill/Group/Coef/1007400┃Hyunwoo berlari ke arah target. Jika dia bertabrakan dengan musuh, memberi kerusakan sebesar <color=aqua>{3}</color> ditambah {0} dari HP musuh. Musuh yang terkena juga akan terdorong ke belakang dan pertahanannya berkurang sebanyak {4} untuk {5} detik.\nJika musuh terdorong ke dinding, dia tertahan untuk {1} detik dan menerima  {2} kerusakan.
+Skill/Group/Coef/1007500┃Hyunwoo mengumpulkan kekuatannya dan melayangkan Pukulan Kuat, memberi {0}<color=#ffd775>(+{1})</color> kerusakan. Jarak serang dan kerusakan bertambah seiring lamanya ia mengumpulkan kekuatan. Pukulan Kuat bisa memberi kerusakan maksimal sebanyak {2}<color=#ffd775>(+{3})</color>.
+Skill/Group/ExpansionTip/1007300┃<i>Efek Mengganggu Pergerakan: di udara, lambat, takut, terpesona, tertahan, pukul mundur, tertekan, menari.</i>
 CharacterState/Group/Name/1007100┃Dogfight
 CharacterState/Group/Desc/1007100┃Menyerang musuh dan memulihkan HP.
 CharacterState/Group/Name/1007200┃Stomping Foot
@@ -2158,11 +2178,7 @@ Skill/Group/Name/1003410┃Marche & Rompre
 Skill/Group/Name/1003500┃Garde
 Skill/Group/Name/1003510┃Garde
 Skill/Group/Desc/1003100┃Setiap kali Fiora memberi kerusakan ke musuh dengan serangan, musuh akan menerima tumpukan Touché. Ketika tumpukan mencapai {0}; indikator Touché akan aktif untuk {1} detik.
-Skill/Group/Desc/1003200┃Fiora menusuk ke arah target, memberi {0}<color=#ffd775>(+{2})</color> kerusakan ke musuh yang kena dan memperlambat mereka sebanyak {4} selama {6} detik.\nJika musuh memliki indikator Touché, Fiora melepas indikator, memberi {1}<color=#ffd775>(+{2})</color> kerusakan dan memperlambat mereka sebanyak {5} selama {6} detik.\nKerusakan meningkat dengan kerusakan kritis.
-Skill/Group/Desc/1003300┃Fiora mengayunkan pedangnya ke arah target dua kali untuk serangan berikutnya, memberi <color=#ffd775>{0}</color> dan <color=#ffd775>{1}</color> kerusakan.\nUntuk setiap indikator Touché yang dilepas, cooldown dari Attaque Composée dikurangi 2 detik.
-Skill/Group/Desc/1003400┃Fiora menerjang ke area target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan.\nJika musuh memiliki tumpukan Touché, dia akan melepaskan indikator, memberi {7}<color=#ffd775>(+{8})</color> kerusakan dan mengurangi cooldown Celah sebanyak {6} detik.\nJika dia memberi kerusakan pada musuh, dia bisa menggunakan jurus ini lagi ke arah target dalam {4} detik untuk melompat ke belakang. \nKerusakan meningkat seiring dengan peningkatan kerusakan kritikal.
-Skill/Group/Desc/1003500┃<color=green>[Activated/Deactivated]</color> Fiora menguasai postur tubuh yang rumit untuk mengeluarkan serangannya yang paling efektif. Ketika aktif, serangan menghabiskan {0} stamina dan memberi {1}<color=#ffd775>(+{2})</color> kerusakan tambahan.\nJika stamina mencapai {0}, jurusnya akan otomatis diberhentikan.
-Skill/Group/Desc/1003510┃<color=green>[Activated/Deactivated]</color> Fiora menguasai postur tubuh yang rumit untuk mengeluarkan serangannya yang paling efektif. Ketika aktif, serangan menghabiskan {0} stamina dan memberi {1}<color=#ffd775>(+{2})</color> kerusakan tambahan.\nJika stamina mencapai {0}, jurusnya akan otomatis diberhentikan.
+Skill/Group/Desc/1003200┃Fiora menusuk ke arah target, memberi <color=white>{16}</color> kerusakan ke musuh yang kena dan memperlambat mereka sebanyak {4} selama {6} detik.\nJika musuh memliki indikator Touché, Fiora melepas indikator, memberi {1}<color=#ffd775>(+{2})</color> kerusakan dan memperlambat mereka sebanyak {5} selama {6} detik.\nKerusakan meningkat dengan kerusakan kritis.
 Skill/Group/Coef/1003100┃Setiap kali Fiora memberi kerusakan ke musuh dengan serangan, musuh akan menerima tumpukan Touché. Ketika tumpukan mencapai {0}; indikator Touché akan aktif untuk {1} detik.
 Skill/Group/Coef/1003300┃Fiora mengayunkan pedangnya ke arah target dua kali untuk serangan berikutnya, memberi <color=#ffd775>{0}</color> dan <color=#ffd775>{1}</color> kerusakan.\nUntuk setiap indikator Touché yang dilepas, cooldown dari Attaque Composée dikurangi 2 detik.
 CharacterState/Group/Name/1003100┃Touché
@@ -2180,22 +2196,23 @@ Skill/Group/Name/1006310┃Squirrel Trap
 Skill/Group/Name/1006400┃Monkey Wire
 Skill/Group/Name/1006410┃Monkey Wire
 Skill/Group/Name/1006500┃Wolf Asault
-Skill/Group/Desc/1006100┃Clairvoyant: Hewan liar didekat Nadine muncul di peta mini.\n\nWild: Nadina menerima tumpukan Wild setiap kali membunuh hewan liar.\n\nAyam {0}, Babi Hutan {1}\nAnjing Liar, Serigala {2}\nBeruang {3}
-Skill/Group/Desc/1006200┃Nadine mengumpulkan kekuatannya untuk {0} detik, mengurangi kecepatan geraknya sampai {2} dan meningkatkan jarak Bullseye sampai {1} kali. Jika dia punya {8} tumpukan Wild, jarak Bullseye meningkat sampai {9} kali.\nKetika jurus diaktifkan lagi, Nadina menembakkan panah dan memberi {3}<color=#ffd775>(+{5})</color> ~ {4}<color=#ffd775>(+{6})</color><color=blue>(+{11})</color> kerusakan.\nSetelah {7} detik, efek akan berhenti dan dia memulihkan  {10} dari stamina yang hilang.
-Skill/Group/Desc/1006300┃Nadine melempar Squirrel Trap ke target lokasi, memberikan {0}<color=#ffd775>(+{6})</color> damage ke musuh yang terkena dan mempersenjatai sendiri ketika terpasang.\nGunakan lagi jurusnya untuk melempar trapnya sekali lagi dalam {1} detik. Jika trap berjarak kurang dari {2}m, trap menyambung satu sama lain.\nMusuh yang terkena trap yang tersambung terkena {7}<color=#ffd775>(+{6})</color> damage dan diperlambat movement speednya sebanyak {3}, kecepatan serangan berkurang sebanyak {10}, dan Nadine mendapatkan vision musuh selama {4} detik.\nMusuh yang diperlambat Squirrel Trap terkena {9}<color=#ffd775>(+{8})</color> damage.\nTrap yang tersambung akan hilang dalam {5} detik. Maksimal trap yang tersambung sebanyak 3.
+Skill/Group/Desc/1006100┃<color=#FFFFC2>Clairvoyant : </color>Hewan liar didekat Nadine muncul di peta mini.\n<color=#FFFFC2>Wild : </color>Nadina menerima tumpukan Wild setiap kali membunuh hewan liar.\nAyam {0}, Babi Hutan : {1} / Anjing Liar, Serigala : {2} / Beruang : {3}
+Skill/Group/Desc/1006200┃Nadine mengumpulkan kekuatannya untuk {0} detik, mengurangi kecepatan geraknya sampai {2} dan meningkatkan jarak Bullseye sampai {1} kali. Jika dia punya {8} tumpukan Wild, jarak Bullseye meningkat sampai {9} kali.\nKetika jurus diaktifkan lagi, Nadina menembakkan panah dan memberi <color=white>{14}</color> ~ <color=white>{15}</color> kerusakan.\nSetelah {7} detik, efek akan berhenti dan dia memulihkan  {10} dari stamina yang hilang.
+Skill/Group/Desc/1006300┃Nadine melempar Squirrel Trap ke target lokasi, memberikan <color=white>{13}</color> damage ke musuh yang terkena dan mempersenjatai sendiri ketika terpasang.\nGunakan lagi jurusnya untuk melempar trapnya sekali lagi dalam {1} detik. Jika trap berjarak kurang dari {2}m, trap menyambung satu sama lain.\nMusuh yang terkena trap yang tersambung terkena <color=white>{14}</color> damage dan diperlambat movement speednya sebanyak {3}, kecepatan serangan berkurang sebanyak {10}, dan Nadine mendapatkan vision musuh selama {4} detik.\nMusuh yang diperlambat Squirrel Trap terkena <color=white>{15}</color> damage.\nTrap yang tersambung akan hilang dalam {5} detik. Maksimal trap yang tersambung sebanyak 3.
 Skill/Group/Desc/1006310┃Nadine melempar Squirrel Trap ke lokasi target, memberi {0} kerusakan ke musuh yang kena dan menanamkan diri saat mendarat.\nAktifkan jurus lagi untuk melemparkan perangkap lain dalam {1} detik. Jika perangkap kurang dari {2}m, mereka akan saling terhubung.\nMusuh yang terkena perangkap yang terhubung menerima {7}<color=#ffd775>(+{6})</color> kerusakan lalu mengurangi kecepatan serang dan gerakannya sebanyak {3}, Nadine akan melacak posisi mereka untuk {4} detik.\nJPerangkap tersebut akan hilang setelah {5}detik.
 Skill/Group/Desc/1006400┃<color=green>Passive :</color> Kecepatan serang Nadine meningkat sebanyak {0}. \n\nNadine mengikatkan kawat ke dirinya dan lokasi target. Kawat bertahan untuk {1} detik pada jarak {2}m. Ketika terikat Monkey Wire, kecepatan serangan Nadine meningkat sebanyak {3}. Aktifkan jurus ini lagi untuk menarik Nadine ke lokasi target kawat.
 Skill/Group/Desc/1006410┃<color=green>Passive :</color> Kecepatan serang Nadine meningkat sebanyak {0}. \n\nNadine mengikatkan kawat ke dirinya dan lokasi target. Kawat bertahan untuk {1} detik pada jarak {2}m. Ketika terikat Monkey Wire, kecepatan serangan Nadine meningkat sebanyak {3}. Aktifkan jurus ini lagi untuk menarik Nadine ke lokasi target kawat.
-Skill/Group/Desc/1006500┃Untuk beberapa waktu, Nadine memanggil serigala setiap {0} serangannya. Serigala menyerang musuh memberi {1}<color=blue>(+{2})</color><color=#ffd775>(+{4})</color> kerusakan, dan mengurangi kecepatan serang dan gerak sebanyak {3}. Nadine memberi kerusakan lebih banyak sebanyak tumpukan Buas yang dimiliki.
-Skill/Group/Coef/1006100┃<color=#FFFFC2>Clairvoyant : </color>Hewan liar didekat Nadine muncul di peta mini.\n<color=#FFFFC2>Wild : </color>Nadina menerima tumpukan Wild setiap kali membunuh hewan liar.\nAyam {0}, Babi Hutan {1}\nAnjing Liar, Serigala {2}\nBeruang {3}
-Skill/Group/Coef/1006200┃Nadine mengumpulkan kekuatannya untuk {0} detik, mengurangi kecepatan geraknya sampai {2} dan meningkatkan jarak Bullseye sampai {1} kali. Jika dia punya {8} tumpukan Wild, jarak Bullseye meningkat sampai {9} kali.\nKetika jurus diaktifkan lagi, Nadina menembakkan panah dan memberi {3}<color=#ffd775>(+{5})</color> ~ {4}<color=#ffd775>(+{6})</color><color=blue>(+{11})</color> kerusakan.\nSetelah {7} detik, efek akan berhenti dan dia memulihkan  {10} dari stamina yang hilang.
-Skill/Group/Coef/1006300┃Nadine melempar Squirrel Trap ke target lokasi, memberikan {0}<color=#ffd775>(+{6})</color> damage ke musuh yang terkena dan mempersenjatai sendiri ketika terpasang.\nGunakan lagi jurusnya untuk melempar trapnya sekali lagi dalam {1} detik. Jika trap berjarak kurang dari {2}m, trap menyambung satu sama lain.\nMusuh yang terkena trap yang tersambung terkena {7}<color=#ffd775>(+{6})</color> damage dan diperlambat movement speednya sebanyak {3}, kecepatan serangan berkurang sebanyak {10}, dan Nadine mendapatkan vision musuh selama {4} detik.\nMusuh yang diperlambat Squirrel Trap terkena {9}<color=#ffd775>(+{8})</color> damage.\nTrap yang tersambung akan hilang dalam {5} detik. Maksimal trap yang tersambung sebanyak 3.
+Skill/Group/Desc/1006500┃Untuk beberapa waktu, Nadine memanggil serigala setiap {0} serangannya. Serigala menyerang musuh memberi {1}<color=blue>(+{2})</color><color=#ffd775>(+{4})</color> kerusakan, dan mengurangi kecepatan serang dan gerak sebanyak {3}.
+Skill/Group/Coef/1006100┃<color=#FFFFC2>Clairvoyant : </color>Hewan liar didekat Nadine muncul di peta mini.\n<color=#FFFFC2>Wild : </color>Nadina menerima tumpukan Wild setiap kali membunuh hewan liar.\nAyam {0}, Babi Hutan : {1} / Anjing Liar, Serigala : {2} / Beruang : {3}
+Skill/Group/Coef/1006200┃Nadine mengumpulkan kekuatannya untuk {0} detik, mengurangi kecepatan geraknya sampai {2} dan meningkatkan jarak Bullseye sampai {1} kali. Jika dia punya {8} tumpukan Wild, jarak Bullseye meningkat sampai {9} kali.\nKetika jurus diaktifkan lagi, Nadina menembakkan panah dan memberi <color=white>{3}</color><color=#ffd775>(+{5})</color> ~ <color=white>{4}</color><color=#ffd775>(+{6})</color><color=blue>(+{11})</color> kerusakan.\nSetelah {7} detik, efek akan berhenti dan dia memulihkan  {10} dari stamina yang hilang.
+Skill/Group/Coef/1006300┃Nadine melempar Squirrel Trap ke target lokasi, memberikan <color=white>{0}</color><color=#ffd775>(+{6})</color> damage ke musuh yang terkena dan mempersenjatai sendiri ketika terpasang.\nGunakan lagi jurusnya untuk melempar trapnya sekali lagi dalam {1} detik. Jika trap berjarak kurang dari {2}m, trap menyambung satu sama lain.\nMusuh yang terkena trap yang tersambung terkena <color=white>{7}</color><color=#ffd775>(+{6})</color> damage dan diperlambat movement speednya sebanyak {3}, kecepatan serangan berkurang sebanyak {10}, dan Nadine mendapatkan vision musuh selama {4} detik.\nMusuh yang diperlambat Squirrel Trap terkena <color=white>{9}</color><color=#ffd775>(+{8})</color> damage.\nTrap yang tersambung akan hilang dalam {5} detik. Maksimal trap yang tersambung sebanyak 3.
 Skill/Group/Coef/1006310┃Nadine melempar Squirrel Trap ke lokasi target, memberi {0} kerusakan ke musuh yang kena dan menanamkan diri saat mendarat.\nAktifkan jurus lagi untuk melemparkan perangkap lain dalam {1} detik. Jika perangkap kurang dari {2}m, mereka akan saling terhubung.\nMusuh yang terkena perangkap yang terhubung menerima {7}<color=#ffd775>(+{6})</color> kerusakan lalu mengurangi kecepatan serang dan gerakannya sebanyak {3}, Nadine akan melacak posisi mereka untuk {4} detik.\nJPerangkap tersebut akan hilang setelah {5}detik.
 Skill/Group/Coef/1006400┃<color=green>Passive :</color> Kecepatan serang Nadine meningkat sebanyak {0}. \n\nNadine mengikatkan kawat ke dirinya dan lokasi target. Kawat bertahan untuk {1} detik pada jarak {2}m. Ketika terikat Monkey Wire, kecepatan serangan Nadine meningkat sebanyak {3}. Aktifkan jurus ini lagi untuk menarik Nadine ke lokasi target kawat.
 Skill/Group/Coef/1006410┃<color=green>Passive :</color> Kecepatan serang Nadine meningkat sebanyak {0}. \n\nNadine mengikatkan kawat ke dirinya dan lokasi target. Kawat bertahan untuk {1} detik pada jarak {2}m. Ketika terikat Monkey Wire, kecepatan serangan Nadine meningkat sebanyak {3}. Aktifkan jurus ini lagi untuk menarik Nadine ke lokasi target kawat.
-Skill/Group/Coef/1006500┃Untuk beberapa waktu, Nadine memanggil serigala setiap {0} serangannya. Serigala menyerang musuh memberi {1}<color=blue>(+{2})</color><color=#ffd775>(+{4})</color> kerusakan, dan mengurangi kecepatan serang dan gerak sebanyak {3}. 
-Skill/Group/ExpansionTip/1006200┃Nadine memberi kerusakan lebih banyak sebanyak tumpukan Buas yang dimiliki.
-Skill/Group/ExpansionTip/1006500┃Nadine memberi kerusakan lebih banyak sebanyak tumpukan Buas yang dimiliki.
+Skill/Group/Coef/1006500┃Untuk beberapa waktu, Nadine memanggil serigala setiap {0} serangannya. Serigala menyerang musuh memberi <color=white>{1}</color><color=blue>(+{2})</color><color=#ffd775>(+{4})</color> kerusakan, dan mengurangi kecepatan serang dan gerak sebanyak {3}. 
+Skill/Group/ExpansionTip/1006200┃<i>Nadine memberi kerusakan lebih banyak sebanyak tumpukan Buas yang dimiliki.</i>
+Skill/Group/ExpansionTip/1006500┃<i>Nadine memberi kerusakan lebih banyak sebanyak tumpukan Buas yang dimiliki.</i>
+CharacterState/Group/Name/1006100┃Liar
 CharacterState/Group/Desc/1006100┃Mendapatkan tumpukan Buas setiap membunuh hewan liar.
 CharacterState/Group/Name/1006200┃Bullseye
 CharacterState/Group/Desc/1006200┃Kecepatan gerak dikurangi.
@@ -2214,11 +2231,17 @@ Skill/Group/Name/1005200┃Narayanastra
 Skill/Group/Name/1005300┃Gandiva
 Skill/Group/Name/1005400┃Vayvayastra
 Skill/Group/Name/1005500┃Bhargavastra
-Skill/Group/Desc/1005100┃Jika Zahir mengenai musuh dengan jurus, indikator Eye of Azrael akan diberikan kepada musuh itu untuk {5} detik dan kecepatan gerak Zahir meningkat sebanyak {0}. Jika kamu mengenai musuh yang mempunyai indikator dengan sebuah jurus, indikator akan dikonsumsi, memberi <color=#ffd775>{1}(+{2})</color> kerusakan dan efek Eye of Azrael diaplikasikan ke jurus yang digunakan.\n\nJika kamu membunuh musuh, kamu akan melihat mayat di area sekarang untuk {3} detik. (cooldown {4} detik)
-Skill/Group/Desc/1005200┃Zahir memanggil kekuatan Dewa, memberi <color=#ffd775>{0}(+{3})</color> kerusakan ke area target setelah beberapa saat.\n\nEfek Eye of Azrael: Narayanastra memberi {2}<color=#ffd775>(+{6})</color> kerusakan tambahan. Jika musuh membunuh lebih banyak daripada kamu, pertahanan mereka dikurangi berdasarkan perbedaan tersebut dikalikan {1} untuk {5} detik.\nJika mereka membunuh lebih sedikit, pertahanan mereka hanya berkurang sebanyak {1}.
-Skill/Group/Desc/1005300┃<color=green>Pasif:</color> Jika Zahir mengenai musuh dengan jurus lain kecuali Gandiva, dia mendapatkan {2} Cakram yang melayang di belakangnya untuk {4} detik (maks. {3} Cakram). Mendapatkan Cakram baru akan mengulang waktunya.\n\nJurus Gandiva akan memakai Cakram, melemparkannya ke arah target dan memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh. <color=#688A08>Gandiva tidak bisa digunakan tanpa Cakram atau senjata.</color>\n\nEfek Eye of Azrael: Musuh yang terkena akan dikurangi kecepatan geraknya sebanyak {6} untuk {5} detik dan mengurangi cooldown semua jurus, kecuali Gandiva, sebanyak {7} detik.
-Skill/Group/Desc/1005400┃Zahir memanggil hembusan angin, memberi <color=#ffd775>{0}(+{1})</color> kerusakan. Musuh pertama yang kena dilemparkan ke udara untuk {2} detik dan dikurangi kecepatan geraknya sebanyak {3}.\n\nEfek Eye of Azrael: Musuh melayang di udara untuk {4} detik.
-Skill/Group/Desc/1005500┃Zahir memanggil Cakram dari surga untuk menyerang musuh di area yang luas, memberi {0}<color=#ffd775>(+{2})</color> kerusakan awal dan {1}<color=#ffd775>(+{3})</color> kerusakan setiap detik. Bhargavastra mengaktifkan Eye of Azrael ke musuh yang belum memilikinya.
+Skill/Group/Desc/1005100┃Jika Zahir mengenai musuh dengan jurus, indikator Eye of Azrael akan diberikan kepada musuh itu untuk {5} detik dan kecepatan gerak Zahir meningkat sebanyak {0}. Jika kamu mengenai musuh yang mempunyai indikator dengan sebuah jurus, indikator akan dikonsumsi, memberi <color=#ffd775><color=white>{8}</color>(+{2})</color> kerusakan dan efek Eye of Azrael diaplikasikan ke jurus yang digunakan.\n\nJika kamu membunuh musuh, kamu akan melihat mayat di area sekarang untuk {3} detik. (cooldown {4} detik)
+Skill/Group/Desc/1005200┃Zahir memanggil kekuatan Dewa, memberi <color=#ffd775><color=white>{9}</color>(+{3})</color> kerusakan ke area target setelah beberapa saat.\n<color=#ffffC2>Efek Eye of Azrael :</color> Narayanastra memberi <color=white>{10}</color> kerusakan tambahan. Jika musuh membunuh lebih banyak daripada kamu, pertahanan mereka dikurangi berdasarkan perbedaan tersebut dikalikan {1} untuk {5} detik.\nJika mereka membunuh lebih sedikit, pertahanan mereka hanya berkurang sebanyak {1}.
+Skill/Group/Desc/1005300┃<color=green>Pasif:</color> Jika Zahir mengenai musuh dengan jurus lain kecuali Gandiva, dia mendapatkan {2} Cakram yang melayang di belakangnya untuk {4} detik (maks. {3} Cakram). Mendapatkan Cakram baru akan mengulang waktunya.\n\nJurus Gandiva akan memakai Cakram, melemparkannya ke arah target dan memberi <color=white>{9}</color> kerusakan ke musuh. \n<color=#ffffC2>Efek Eye of Azrael :</color> Musuh yang terkena akan dikurangi kecepatan geraknya sebanyak {6} untuk {5} detik dan mengurangi cooldown semua jurus, kecuali Gandiva, sebanyak {7} detik.
+Skill/Group/Desc/1005400┃Zahir memanggil hembusan angin, memberi <color=#ffd775><color=white>{6}</color>(+{1})</color> kerusakan. Musuh pertama yang kena dilemparkan ke udara untuk {2} detik dan dikurangi kecepatan geraknya sebanyak {3}.\n<color=#ffffC2>Efek Eye of Azrael :</color> Musuh melayang di udara untuk {4} detik.
+Skill/Group/Desc/1005500┃Zahir memanggil Cakram dari surga untuk menyerang musuh di area yang luas, memberi <color=white>{6}</color> kerusakan awal dan <color=white>{7}</color> kerusakan setiap detik. Bhargavastra mengaktifkan Eye of Azrael ke musuh yang belum memilikinya.
+Skill/Group/Coef/1005100┃Jika Zahir mengenai musuh dengan jurus, indikator Eye of Azrael akan diberikan kepada musuh itu untuk {5} detik dan kecepatan gerak Zahir meningkat sebanyak {0}. Jika kamu mengenai musuh yang mempunyai indikator dengan sebuah jurus, indikator akan dikonsumsi, memberi <color=#ffd775>{1}(+{2})</color> kerusakan dan efek Eye of Azrael diaplikasikan ke jurus yang digunakan.\n\nJika kamu membunuh musuh, kamu akan melihat mayat di area sekarang untuk {3} detik. (cooldown {4} detik)
+Skill/Group/Coef/1005200┃Zahir memanggil kekuatan Dewa, memberi <color=#ffd775><color=white>{0}</color>(+{3})</color> kerusakan ke area target setelah beberapa saat.\n<color=#ffffC2>Efek Eye of Azrael :</color> Narayanastra memberi <color=white>{2}</color><color=#ffd775>(+{6})</color> kerusakan tambahan. Jika musuh membunuh lebih banyak daripada kamu, pertahanan mereka dikurangi berdasarkan perbedaan tersebut dikalikan {1} untuk {5} detik.\nJika mereka membunuh lebih sedikit, pertahanan mereka hanya berkurang sebanyak {1}.
+Skill/Group/Coef/1005300┃<color=green>Pasif:</color> Jika Zahir mengenai musuh dengan jurus lain kecuali Gandiva, dia mendapatkan {2} Cakram yang melayang di belakangnya untuk {4} detik (maks. {3} Cakram). Mendapatkan Cakram baru akan mengulang waktunya.\n\nJurus Gandiva akan memakai Cakram, melemparkannya ke arah target dan memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh. \n<color=#ffffC2>Efek Eye of Azrael :</color> Musuh yang terkena akan dikurangi kecepatan geraknya sebanyak {6} untuk {5} detik dan mengurangi cooldown semua jurus, kecuali Gandiva, sebanyak {7} detik.
+Skill/Group/Coef/1005400┃Zahir memanggil hembusan angin, memberi <color=#ffd775><color=white>{0}</color>(+{1})</color> kerusakan. Musuh pertama yang kena dilemparkan ke udara untuk {2} detik dan dikurangi kecepatan geraknya sebanyak {3}.\n<color=#ffffC2>Efek Eye of Azrael :</color> Musuh melayang di udara untuk {4} detik.
+Skill/Group/Coef/1005500┃Zahir memanggil Cakram dari surga untuk menyerang musuh di area yang luas, memberi <color=white>{0}</color><color=#ffd775>(+{2})</color> kerusakan awal dan <color=white>{1}</color><color=#ffd775>(+{3})</color> kerusakan setiap detik. Bhargavastra mengaktifkan Eye of Azrael ke musuh yang belum memilikinya.
+Skill/Group/ExpansionTip/1005300┃<i>Gandiva tidak bisa digunakan tanpa Cakram atau senjata.</i>
 CharacterState/Group/Name/1005100┃Eye of Azrael - Kecepatan gerak ditingkatkan, deteksi mayat
 CharacterState/Group/Desc/1005100┃Eye of Azrael - Kecepatan gerak ditingkatkan - Ketika Eye of Azrael diberikan ke musuh, kecepatan gerakmu ditingkatkan sebanyak {0} dan berkurang lagi setelah 3 detik.\n\nEye of Azrael - Deteksi mayat: ketika musuh dibunuh, kamu bisa melihat mayatnya di peta.
 CharacterState/Group/Name/1005110┃Eye of Azrael - Efek tambahan
@@ -2244,31 +2267,31 @@ Skill/Group/Name/1008420┃Flanger
 Skill/Group/Evolution/Name/1008400┃Evolved Flanger
 Skill/Group/Name/1008500┃Peacemaker
 Skill/Group/Evolution/Name/1008500┃Evolved Peacemaker
-Skill/Group/Desc/1008100┃Jika Hart memberi kerusakan ke musuh dengan serangannya, dia akan memulihkan {0} SP.\n\n<color=#FFFFC2>Efek Evolusi : </color>gelombang suara tambahan akan ditembakkan di setiap serangan, memberi <color=#ffd775>{1}</color> kerusakan. Hart menembakkan satu tambahan gelombang suara untuk setiap poin Evolusi yang dia punya.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
+Skill/Group/Desc/1008100┃Jika Hart memberi kerusakan ke musuh dengan serangannya, dia akan memulihkan {0} SP.\n\n<color=#FFFFC2>Efek Evolusi : </color>gelombang suara tambahan akan ditembakkan di setiap serangan, memberi <color=#ffd775>{1}</color> kerusakan. Hart menembakkan satu tambahan gelombang suara untuk setiap poin Evolusi yang dia punya.
 Skill/Group/Evolution/Desc/1008100┃<color=#FFFFC2>Efek  Evolusi : </color>gelombang suara tambahan ditembakkan di setiap serangan. Dia menembakkan satu tambahan gelombang suara per poin Evolusi yang dipakai.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008200┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi {2}<color=#ffd775>(+{3})</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6} ~ {7} . Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
+Skill/Group/Desc/1008200┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi <color=white>{10}</color> sampai <color=white>{11}</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6} ~ {7} . Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008200┃<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan musuh yang terkena. Pengurangan kecepatan gerak meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008210┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi {2}<color=#ffd775>(+{3})</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6}. Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
+Skill/Group/Desc/1008210┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi <color=white>{10}</color> sampai <color=white>{11}</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6} ~ {7} . Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008210┃<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan musuh yang terkena. Pengurangan kecepatan gerak meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
 Skill/Group/Desc/1008300┃Hart memainkan gitar solo, meningkatkan Kekuatan Serangnya sebanyak {1} untuk {0} detik.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi pertahanan musuh terhadap gelombang suara yang selanjutnya sebanyak {2}. (Tidak mempengaruhi Jurus Senjata) Pengurangan pertahanan meningkat per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008300┃<color=#FFFFC2>Efek Evolusi : </color>Mengurangi pertahanan musuh terhadap gelombang suara. Pengurangan pertahanan meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008400┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Desc/1008400┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{8}</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008400┃<color=#FFFFC2>Efek Evolusi : </color>Mengaktifkan jurus ini akan memberi peningkatan kerusakan jurus. Jumlah peningkatan meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008410┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Desc/1008410┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{8}</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008410┃<color=#FFFFC2>Efek Evolusi : </color>Mengaktifkan jurus ini akan memberi peningkatan kerusakan jurus. Jumlah peningkatan meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008420┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Desc/1008420┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{8}</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
 Skill/Group/Evolution/Desc/1008420┃<color=#FFFFC2>Efek Evolusi : </color>Mengaktifkan jurus ini akan memberi peningkatan kerusakan jurus. Jumlah peningkatan meningkat per jumlah poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Desc/1008500┃Hart melakukan pertunjukan selama {0} detik, memaksa musuh dalam jangkauan {1}m untuk berjoget.\nUntuk setiap detik yang dilalui, dia akan memulihkan {2}<color=#688A08>(+{3})</color> HP. Musuh yang hadir di konser akan dikurangi kecepatan geraknya menjadi {4}.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi SP semua yang joget sebanyak {5}  per detik. Jumlah SP yang dikurangi meningkat per poin Evolusi.
+Skill/Group/Desc/1008500┃Hart melakukan pertunjukan selama {0} detik, memaksa musuh dalam jangkauan {1}m untuk berjoget.\nUntuk setiap detik yang dilalui, dia akan memulihkan <color=white>{6}</color> HP. Musuh yang hadir di konser akan dikurangi kecepatan geraknya menjadi {4}.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi SP semua yang joget sebanyak {5}  per detik. Jumlah SP yang dikurangi meningkat per poin Evolusi.
 Skill/Group/Evolution/Desc/1008500┃<color=#FFFFC2>Efek Evolusi : </color>Mengurangi SP semua musuh yang joget perdetik. Jumlah SP yang dikurangi bertambah per poin Evolusi.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Coef/1008100┃Jika Hart memberi kerusakan ke musuh dengan serangannya, dia akan memulihkan {0} SP.\n\n<color=#FFFFC2>Efek Evolusi : </color>gelombang suara tambahan akan ditembakkan di setiap serangan, memberi <color=#ffd775>{1}</color> kerusakan. Hart menembakkan satu tambahan gelombang suara untuk setiap poin Evolusi yang dia punya.\n\n<color=#FFFFC2>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</color>
-Skill/Group/Coef/1008200┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi {2}<color=#ffd775>(+{3})</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6} ~ {7} . Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
-Skill/Group/Coef/1008210┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi {2}<color=#ffd775>(+{3})</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6}. Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
+Skill/Group/Coef/1008100┃Jika Hart memberi kerusakan ke musuh dengan serangannya, dia akan memulihkan {0} SP.\n\n<color=#FFFFC2>Efek Evolusi : </color>gelombang suara tambahan akan ditembakkan di setiap serangan, memberi <color=#ffd775>{1}</color> kerusakan. Hart menembakkan satu tambahan gelombang suara untuk setiap poin Evolusi yang dia punya.
+Skill/Group/Coef/1008200┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> sampai <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6} ~ {7} . Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
+Skill/Group/Coef/1008210┃Hart menggenjreng gitarnya, mengisi gelombang suaranya. Ketika dia menggenjreng gitarnya lagi, gelombang suara yang diisi tadi akan dilepaskan.\nDia bisa mengisi sampai {0} detik, dan gelombang suaranya bertahan untuk {1} detik. Dia memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> sampai <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan, bergantung pada seberapa lama dia mengisinya.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi kecepatan gerak musuh yang terkena sebanyak {6}. Kecepatan gerak yang dikurangi meningkat per jumlah poin Evolusi.
 Skill/Group/Coef/1008300┃Hart memainkan gitar solo, meningkatkan Kekuatan Serangnya sebanyak {1} untuk {0} detik.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi pertahanan musuh terhadap gelombang suara yang selanjutnya sebanyak {2}. (Tidak mempengaruhi Jurus Senjata) Pengurangan pertahanan meningkat per jumlah poin Evolusi.
-Skill/Group/Coef/1008400┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
-Skill/Group/Coef/1008410┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
-Skill/Group/Coef/1008420┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
-Skill/Group/Coef/1008500┃Hart melakukan pertunjukan selama {0} detik, memaksa musuh dalam jangkauan {1}m untuk berjoget.\nUntuk setiap detik yang dilalui, dia akan memulihkan {2}<color=#688A08>(+{3})</color> HP. Musuh yang hadir di konser akan dikurangi kecepatan geraknya menjadi {4}.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi SP semua yang joget sebanyak {5}  per detik. Jumlah SP yang dikurangi meningkat per poin Evolusi.
-Skill/Group/ExpansionTip/1008100┃Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik
+Skill/Group/Coef/1008400┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Coef/1008410┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Coef/1008420┃Hart dengan cepat meluncur ke arah target. Dia bisa mengaktifkan jurus ini sebanyak dua kali lagi.\n\nDia meluncur {0}m dan menggenjreng gitarnya, melepaskan gelombang suara  dalam jarak {1}m di sekitarnya dan memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh yang terkena. Mengaktifkan jurus ini memberi peningkatan kerusakan jurus sebanyak {4} untuk {5} detik. Efek ini bisa ditumpuk sampai {6} kali. Jumlah peningkatan bertambah per jumlah poin Evolusi.
+Skill/Group/Coef/1008500┃Hart melakukan pertunjukan selama {0} detik, memaksa musuh dalam jangkauan {1}m untuk berjoget.\nUntuk setiap detik yang dilalui, dia akan memulihkan <color=white>{2}</color><color=#688A08>(+{3})</color> HP. Musuh yang hadir di konser akan dikurangi kecepatan geraknya menjadi {4}.\n\n<color=#FFFFC2>Efek Evolusi : </color>Mengurangi SP semua yang joget sebanyak {5}  per detik. Jumlah SP yang dikurangi meningkat per poin Evolusi.
+Skill/Group/ExpansionTip/1008100┃<i>Hart mendapatkan Poin Evolusi ketika pertama kali dia membuat senjata Tidak Biasa, Langka, dan Epik</i>
 CharacterState/Group/Name/1008200┃Mengisi
 CharacterState/Group/Desc/1008200┃Delay sedang diisi, bersiap untuk dilepaskan.
 CharacterState/Group/Name/1008210┃Pengurangan Kecepatan Gerak
@@ -2292,11 +2315,16 @@ Skill/Group/Name/1009200┃Semtex Bomb
 Skill/Group/Name/1009300┃Rebel Assault
 Skill/Group/Name/1009400┃Camouflage
 Skill/Group/Name/1009500┃MOK Operational Mine
-Skill/Group/Desc/1009100┃Isol memasang perangkapnya {0} detik lebih cepat.\nMusuh yang terkena kerusakan dari perangkapnya mendapat pengurangan pertahanan sebesar {3} selama {2} detik.\nPhotographic Memory: jika musuh memasang perangkap di jarak pandang Isol, dia akan memngingat perangkap tersebut, mencegahnya agar tidak terlihat baginya
-Skill/Group/Desc/1009200┃Isol melemparkan sebuah bom ke arah target yang menempel di musuh atau di tanah. Jika bom tersebut dilemparkan ke tanah, bom akan meledak setelah {0} detik, memberi {4}<color=#ffd775>(+{5})</color> kerusakan dan musuh akan terjerat saat terkena ledakan selama {6} detik.\nJika bom menempel ke musuh, bom akan meledak setelah {1} detik, memberi {4}<color=#ffd775>(+{5})</color> kerusakan dan menjerat musuh selama {6} detik.\nJika bom menempel di musuh, tiap serangan akan mengurangi waktu (bom) sebanyak {2} detik dan meningkatkan kerusakan dari ledakan sebesar {3}<color=#ffd775>(+{7})</color>.
-Skill/Group/Desc/1009300┃Isol menembakkan hujan peluru ke arah depannya selama {0} detik, memberi <color=#ffd775>{2}(+{3})</color> selama {1} detik, dan mengurangi pergerakan musuh sebesar {5} selama {4} detik, dimulai dari kerusakan terakhir yang diterima dari Rebel Assault
+Skill/Group/Desc/1009100┃Isol memasang perangkapnya {0} detik lebih cepat.\nMusuh yang terkena kerusakan dari perangkapnya mendapat pengurangan pertahanan sebesar {3} selama {2} detik.
+Skill/Group/Desc/1009200┃Isol melemparkan sebuah bom ke arah target yang menempel di musuh atau di tanah. Jika bom tersebut dilemparkan ke tanah, bom akan meledak setelah {0} detik, memberi <color=white>{12}</color> kerusakan dan musuh akan terjerat saat terkena ledakan selama {6} detik.\nJika bom menempel ke musuh, bom akan meledak setelah {1} detik, memberi <color=white>{12}</color> kerusakan dan menjerat musuh selama {6} detik.\nJika bom menempel di musuh, tiap serangan akan mengurangi waktu (bom) sebanyak {2} detik dan meningkatkan kerusakan dari ledakan sebesar <color=white>{13}</color>.
+Skill/Group/Desc/1009300┃Isol menembakkan hujan peluru ke arah depannya selama {0} detik, memberi <color=#ffd775><color=white>{7}</color>(+{3})</color> selama {1} detik, dan mengurangi pergerakan musuh sebesar {5} selama {4} detik, dimulai dari kerusakan terakhir yang diterima dari Rebel Assault
 Skill/Group/Desc/1009400┃Isol bergulir ke depan dan menyatu dengan sekitarnya, menjadi tidak terlihat selama {0} detik. Dia akan terlihat lagi jika Isol melakukan aksi selain bergerak.
-Skill/Group/Desc/1009500┃Isol memasang sebuah MOK Operational Mine di tanah yang bisa mendeteksi musuh selama {0} detik. Ranjau akan meledak jika ada musuh yang memasuki jarak tersebut, memberi {1}<color=#ffd775>(+{2})</color> kerusakan dan mengurangi pergerakan musuh sebanyak {4} selama {3} detik. \nMOK Operational Mine tidak terpengaruh amplifikasi atau pengurangan jurus, tetapi terpengaruhi Penguasaan Perangkap dan memberi {5}<color=#ffd775>(+{6})</color> kerusakan tambahan.
+Skill/Group/Desc/1009500┃Isol memasang sebuah MOK Operational Mine di tanah yang bisa mendeteksi musuh selama {0} detik. Ranjau akan meledak jika ada musuh yang memasuki jarak tersebut, memberi <color=white>{10}</color> kerusakan dan mengurangi pergerakan musuh sebanyak {4} selama {3} detik. \nMOK Operational Mine tidak terpengaruh amplifikasi atau pengurangan jurus, tetapi terpengaruhi Penguasaan Perangkap dan memberi <color=white>{11}</color> kerusakan tambahan.
+Skill/Group/Coef/1009100┃Isol memasang perangkapnya {0} detik lebih cepat.\nMusuh yang terkena kerusakan dari perangkapnya mendapat pengurangan pertahanan sebesar {3} selama {2} detik.\nPhotographic Memory: jika musuh memasang perangkap di jarak pandang Isol, dia akan memngingat perangkap tersebut, mencegahnya agar tidak terlihat baginya
+Skill/Group/Coef/1009300┃Isol menembakkan hujan peluru ke arah depannya selama {0} detik, memberi <color=#ffd775><color=white>{2}</color>(+{3})</color> selama {1} detik, dan mengurangi pergerakan musuh sebesar {5} selama {4} detik, dimulai dari kerusakan terakhir yang diterima dari Rebel Assault
+Skill/Group/Coef/1009400┃Isol bergulir ke depan dan menyatu dengan sekitarnya, menjadi tidak terlihat selama {0} detik. Dia akan terlihat lagi jika Isol melakukan aksi selain bergerak.
+Skill/Group/Coef/1009500┃Isol memasang sebuah MOK Operational Mine di tanah yang bisa mendeteksi musuh selama {0} detik. Ranjau akan meledak jika ada musuh yang memasuki jarak tersebut, memberi <color=white>{1}</color><color=#ffd775>(+{2})</color> kerusakan dan mengurangi pergerakan musuh sebanyak {4} selama {3} detik. \nMOK Operational Mine tidak terpengaruh amplifikasi atau pengurangan jurus, tetapi terpengaruhi Penguasaan Perangkap dan memberi <color=white>{5}</color><color=#ffd775>(+{6})</color> kerusakan tambahan.
+Skill/Group/ExpansionTip/1009100┃<i>Photographic Memory: jika musuh memasang perangkap di jarak pandang Isol, dia akan memngingat perangkap tersebut, mencegahnya agar tidak terlihat baginya</i>
 CharacterState/Group/Name/1009100┃Guerilla Warfare
 CharacterState/Group/Desc/1009100┃Jika musuh memasang perangkap dalam jarak pandang Isol, dia akan mengingat perangkap itu, mencegahnya menjadi tembus pandang untuknya.\nIsol memasang perangkap lebih cepat dan juga perangkap tersebut akan menjadi tidak terlihat lebih cepat juga.
 CharacterState/Group/Name/1009110┃Peningkatan Perangkap
@@ -2319,12 +2347,19 @@ Skill/Group/Name/1010300┃Drink Up
 Skill/Group/Name/1010400┃Bottom Shelf
 Skill/Group/Name/1010500┃Striking Tiger
 Skill/Group/Desc/1010100┃Li Dailin dapat menggunakan Drink Up untuk mengisi bar BAC-nya. Ketika BAC sudah di atas {0}, dia akan Mabuk, memberikan efek tambahan pada jurusnya, dan membuatnya masuk ke Dialed In untuk serangan yang selanjutnya.\nJika BAC-nya mencapai {1}, dia akan Mabuk Berat dan terbungkam untuk {2} detik dan masuk ke Momen.\nSetelah menggunakan jurus, dia mendapatkan Dialed In..\n\nDialed In: Serangan Li Dailin yang selanjutnya akan terpicu dua kali. Serangan keduanya memberi <color=#ffd775>{3}</color> kerusakan.\nStrong Stomach: Kecepatan serang Li Dailin meningkat sebanyak {5} untuk {4} detik setelah meminum minuman beralkohol.
-Skill/Group/Desc/1010200┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak memberikan {2}<color=#ffd775>(+{3})</color> damage\.
-Skill/Group/Desc/1010210┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak dan memberikan {2}<color=#ffd775>(+{3})</color> damage.
-Skill/Group/Desc/1010220┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak dan memberikan {2}<color=#ffd775>(+{3})</color> damage.
+Skill/Group/Desc/1010200┃Li Dailin menyerbu ke depan, memberi <color=white>{20}</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak memberikan <color=white>{21}</color> damage\.
+Skill/Group/Desc/1010210┃Li Dailin menyerbu ke depan, memberi <color=white>{20}</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak memberikan <color=white>{21}</color> damage\.
+Skill/Group/Desc/1010220┃Li Dailin menyerbu ke depan, memberi <color=white>{20}</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak memberikan <color=white>{21}</color> damage\.
 Skill/Group/Desc/1010300┃Li Dailin minum selama {0} detik, mendapatkan Liquid Strength, meningkatkan BAC-nya. Ketika minum, dia menghindari serangan dan menerima {1} lebih sedikit dari kerusakan jurus. Serangan dia akan mengurangi cooldown dari Drink Up sebanyak 1 detik.\n\nLiquid Strength: Kerusakan serangan yang selanjutnya dan kerusakan dari Dailed In bertambah bergantung pada BAC.
-Skill/Group/Desc/1010400┃Li Dailin memuntahkan minuman keras ke depannya (berbentuk kerucut), membungkam musuh untuk {3} detik dan memberi {1}<color=#ffd775>(+{2})</color> kerusakan.\n\nMabuk: Mengurangi kecepatan gerak musuh sebanyak {4} untuk {0} detik.
-Skill/Group/Desc/1010500┃Li Dailin terjun ke depan, menekan musuh pertama yang kena dan dilanjutkan dengan 2 tendangan beruntun. Tiap serangan memberi {0}<color=#ffd775>(+{1})</color> sampai {2}<color=#ffd775>(+{3})</color> kerusakan sebanding dengan HP musuh yang hilang.\n\nMabuk: dilanjutkan dengan 4 tendangan beruntun
+Skill/Group/Desc/1010400┃Li Dailin memuntahkan minuman keras ke depannya (berbentuk kerucut), membungkam musuh untuk {3} detik dan memberi <color=white>{20}</color> kerusakan.\n\nMabuk: Mengurangi kecepatan gerak musuh sebanyak {4} untuk {0} detik.
+Skill/Group/Desc/1010500┃Li Dailin terjun ke depan, menekan musuh pertama yang kena dan dilanjutkan dengan 2 tendangan beruntun. Tiap serangan memberi <color=white>{20}</color> sampai <color=white>{21}</color> kerusakan sebanding dengan HP musuh yang hilang.\n\nMabuk: dilanjutkan dengan 4 tendangan beruntun
+Skill/Group/Coef/1010100┃Li Dailin dapat menggunakan Drink Up untuk mengisi bar BAC-nya. Ketika BAC sudah di atas {0}, dia akan Mabuk, memberikan efek tambahan pada jurusnya, dan membuatnya masuk ke Dialed In untuk serangan yang selanjutnya.\nJika BAC-nya mencapai {1}, dia akan Mabuk Berat dan terbungkam untuk {2} detik dan masuk ke Momen.\nSetelah menggunakan jurus, dia mendapatkan Dialed In..\n\nDialed In: Serangan Li Dailin yang selanjutnya akan terpicu dua kali. Serangan keduanya memberi <color=#ffd775>{3}</color> kerusakan.\nStrong Stomach: Kecepatan serang Li Dailin meningkat sebanyak {5} untuk {4} detik setelah meminum minuman beralkohol.
+Skill/Group/Coef/1010200┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak memberikan {2}<color=#ffd775>(+{3})</color> damage\.
+Skill/Group/Coef/1010210┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak dan memberikan {2}<color=#ffd775>(+{3})</color> damage.
+Skill/Group/Coef/1010220┃Li Dailin menyerbu ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena. Dia bisa menggunakan jurusnya dua kali lagi.\nMabuk: Meningkatkan jarak dan memberikan {2}<color=#ffd775>(+{3})</color> damage.
+Skill/Group/Coef/1010300┃Li Dailin minum selama {0} detik, mendapatkan Liquid Strength, meningkatkan BAC-nya. Ketika minum, dia menghindari serangan dan menerima {1} lebih sedikit dari kerusakan jurus. Serangan dia akan mengurangi cooldown dari Drink Up sebanyak 1 detik.\n\nLiquid Strength: Kerusakan serangan yang selanjutnya dan kerusakan dari Dailed In bertambah bergantung pada BAC.
+Skill/Group/Coef/1010400┃Li Dailin memuntahkan minuman keras ke depannya (berbentuk kerucut), membungkam musuh untuk {3} detik dan memberi {1}<color=#ffd775>(+{2})</color> kerusakan.\n\nMabuk: Mengurangi kecepatan gerak musuh sebanyak {4} untuk {0} detik.
+Skill/Group/Coef/1010500┃Li Dailin terjun ke depan, menekan musuh pertama yang kena dan dilanjutkan dengan 2 tendangan beruntun. Tiap serangan memberi {0}<color=#ffd775>(+{1})</color> sampai {2}<color=#ffd775>(+{3})</color> kerusakan sebanding dengan HP musuh yang hilang.\n\nMabuk: dilanjutkan dengan 4 tendangan beruntun
 CharacterState/Group/Name/1010100┃Mabuk
 CharacterState/Group/Desc/1010100┃Jurus ditingkatkan
 CharacterState/Group/Name/1010110┃Mabuk Berat
@@ -2351,10 +2386,15 @@ Skill/Group/Name/1011300┃Button Up
 Skill/Group/Name/1011400┃Dashing Gentleman
 Skill/Group/Name/1011500┃Coup de Grace
 Skill/Group/Desc/1011100┃Yuki menyimpan kancing sebagai sumber daya. Ketika memberi kerusakan ke musuh, dia akan menggunakan kancing yang disimpan, memberi <color=white>{0}</color> kerusakan murni.\nYuki memulihkan {4} kancing setiap {3} detik ketika tidak bertarung.\n\nMengaktifkan Button Up akan mengisi ulang semua kancing.
-Skill/Group/Desc/1011200┃Serangan Yuki selanjutnya memberi {0}<color=#ffd775>(+{1})</color> kerusakan dan mengurangi kecepatan gerak musuh sebesar {3} untuk {2} detik.\n\nMengkonsumsi kancing akan menahan musuh untuk {4} detik.
+Skill/Group/Desc/1011200┃Serangan Yuki selanjutnya memberi <color=white>{20}</color> kerusakan dan mengurangi kecepatan gerak musuh sebesar {3} untuk {2} detik.\n\nMengkonsumsi kancing akan menahan musuh untuk {4} detik.
 Skill/Group/Desc/1011300┃<color=green>Pasif:</color> Mengurangi cooldown dari Button Up sebanyak {0} detik setiap Yuki menerima kerusakan.\n\nYuki merapikan seragamnya selama {1} detik dan mengurangi cooldown dari Dashing Gentleman sebanyak {3} detik. Saat menggunakan Button Up, pertahanannya meningkat sebanyak {2}. Ketika selesai menggunakan Button Up, Yuki mendapatkan {4} kancing.
-Skill/Group/Desc/1011400┃Yuki menerjang ke arah target sejauh {2}m, memberi {0}<color=#ffd775>(+1)</color> kerusakan ke musuh pertama yang kena. Musuh yang terkena akan terlucuti, menonaktifkan serangan mereka untuk {3} detik.
-Skill/Group/Desc/1011500┃Yuki mengeluarkan pedangnya dan menebas area di depannya, memberi {0}<color=#ffd775>(+{1})</color> kerusakan awal ke musuh dan meninggalkan tanda, mengurangi kecepatan gerak musuh sebanyak {3} untuk {2} detik,\nTanda itu akan meledak setelah Yuki memasukan pedangnya, memberi kerusakan murni sebanyak {6} dari HP maksimal musuh.
+Skill/Group/Desc/1011400┃Yuki menerjang ke arah target sejauh {2}m, memberi <color=white>{20}</color><color=#ffd775>(+1)</color> kerusakan ke musuh pertama yang kena. Musuh yang terkena akan terlucuti, menonaktifkan serangan mereka untuk {3} detik.
+Skill/Group/Desc/1011500┃Yuki mengeluarkan pedangnya dan menebas area di depannya, memberi <color=white>{20}</color> kerusakan awal ke musuh dan meninggalkan tanda, mengurangi kecepatan gerak musuh sebanyak {3} untuk {2} detik,\nTanda itu akan meledak setelah Yuki memasukan pedangnya, memberi kerusakan murni sebanyak {6} dari HP maksimal musuh.
+Skill/Group/Coef/1011100┃Yuki menyimpan kancing sebagai sumber daya. Ketika memberi kerusakan ke musuh, dia akan menggunakan kancing yang disimpan, memberi <color=white>{0}</color> kerusakan murni.\nYuki memulihkan {4} kancing setiap {3} detik ketika tidak bertarung.\n\nMengaktifkan Button Up akan mengisi ulang semua kancing.
+Skill/Group/Coef/1011200┃Serangan Yuki selanjutnya memberi {0}<color=#ffd775>(+{1})</color> kerusakan dan mengurangi kecepatan gerak musuh sebesar {3} untuk {2} detik.\n\nMengkonsumsi kancing akan menahan musuh untuk {4} detik.
+Skill/Group/Coef/1011300┃<color=green>Pasif:</color> Mengurangi cooldown dari Button Up sebanyak {0} detik setiap Yuki menerima kerusakan.\n\nYuki merapikan seragamnya selama {1} detik dan mengurangi cooldown dari Dashing Gentleman sebanyak {3} detik. Saat menggunakan Button Up, pertahanannya meningkat sebanyak {2}. Ketika selesai menggunakan Button Up, Yuki mendapatkan {4} kancing.
+Skill/Group/Coef/1011400┃Yuki menerjang ke arah target sejauh {2}m, memberi {0}<color=#ffd775>(+1)</color> kerusakan ke musuh pertama yang kena. Musuh yang terkena akan terlucuti, menonaktifkan serangan mereka untuk {3} detik.
+Skill/Group/Coef/1011500┃Yuki mengeluarkan pedangnya dan menebas area di depannya, memberi {0}<color=#ffd775>(+{1})</color> kerusakan awal ke musuh dan meninggalkan tanda, mengurangi kecepatan gerak musuh sebanyak {3} untuk {2} detik,\nTanda itu akan meledak setelah Yuki memasukan pedangnya, memberi kerusakan murni sebanyak {6} dari HP maksimal musuh.
 CharacterState/Group/Name/1011200┃From Head to Toe
 CharacterState/Group/Desc/1011200┃Serangan selanjutnya memberi kerusakan dan mengurangi kecepatan gerak musuh.
 CharacterState/Group/Name/1011210┃Pengurangan Kecepatan Gerak
@@ -2374,13 +2414,23 @@ Skill/Group/Name/1012310┃Charm of the Prophecy
 Skill/Group/Name/1012400┃Charm of the Nomad
 Skill/Group/Name/1012410┃Charm of the Nomad
 Skill/Group/Name/1012500┃Five Omens
-Skill/Group/Desc/1012100┃Ketika Hyejin mengenai musuh dengan jurus, mereka akan menerima malapetaka. Setelah mencapai {0} tumpukan, Three Calamities akan aktif, menakuti mereka untuk {1} detik.\n\nMusuh yang ketakutan tidak bisa menerima Three Calamities lagi untuk {2} detik.
-Skill/Group/Desc/1012200┃Hyejin melepaskan Charm of Despair ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh pertama yang kena, mengurangi kecepatan gerak mereka sebanyak {3} untuk {2} detik.\n\nDia bisa mengaktifkan jurusnya lagi untuk melepaskan Charm yang lain.
-Skill/Group/Desc/1012300┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  {2}<color=#ffd775>(+{3}</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan.
-Skill/Group/Desc/1012310┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  {2}<color=#ffd775>(+{3}</color> sampai {4}<color=#ffd775>(+{5})</color> kerusakan.
-Skill/Group/Desc/1012400┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh saat mendarat.
-Skill/Group/Desc/1012410┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh saat mendarat.
-Skill/Group/Desc/1012500┃Hyejin fokus untuk 1 detik, memunculkan 5 Omen, dan memberi {0}<color=#ffd775>(+{1}</color> ke musuh yang ada di sekitar dia.\Omen-omen itu akan memutari Hyejin untuk {2} detik, memberi {3}<color=#ffd775>(+{4})</color> kerusakan ke musuh yang kena. Omen akan terpakai setelah mengenai musuh.\n\nKetika sedang fokus, kecepatan gerak dikurangi sebanyak {5}. Hyejin bisa teleportasi ke Charm of Nomad saat sedang fokus.
+Skill/Group/Desc/1012100┃Ketika Hyejin mengenai musuh dengan jurus, mereka akan menerima malapetaka. Setelah mencapai {0} tumpukan, Three Calamities akan aktif, menakuti mereka untuk {1} detik.
+Skill/Group/Desc/1012200┃Hyejin melepaskan Charm of Despair ke arah target, memberi <color=white>{5}</color> kerusakan ke musuh pertama yang kena, mengurangi kecepatan gerak mereka sebanyak {3} untuk {2} detik.
+Skill/Group/Desc/1012300┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  <color=white>{8}</color><color=#ffd775>(+{3}</color> sampai <color=white>{9}</color> kerusakan.
+Skill/Group/Desc/1012310┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  <color=white>{8}</color><color=#ffd775>(+{3}</color> sampai <color=white>{9}</color> kerusakan.
+Skill/Group/Desc/1012400┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi <color=white>{6}</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi <color=white>{7}</color> kerusakan ke musuh saat mendarat.
+Skill/Group/Desc/1012410┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi <color=white>{6}</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi <color=white>{7}</color> kerusakan ke musuh saat mendarat.
+Skill/Group/Desc/1012500┃Hyejin fokus untuk 1 detik, memunculkan 5 Omen, dan memberi <color=white>{8}</color><color=#ffd775>(+{1}</color> ke musuh yang ada di sekitar dia.\Omen-omen itu akan memutari Hyejin untuk {2} detik, memberi <color=white>{9}</color> kerusakan ke musuh yang kena. Omen akan terpakai setelah mengenai musuh.
+Skill/Group/Coef/1012100┃Ketika Hyejin mengenai musuh dengan jurus, mereka akan menerima malapetaka. Setelah mencapai {0} tumpukan, Three Calamities akan aktif, menakuti mereka untuk {1} detik.
+Skill/Group/Coef/1012200┃Hyejin melepaskan Charm of Despair ke arah target, memberi  <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh pertama yang kena, mengurangi kecepatan gerak mereka sebanyak {3} untuk {2} detik.\n\nDia bisa mengaktifkan jurusnya lagi untuk melepaskan Charm yang lain.
+Skill/Group/Coef/1012300┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  <color=white>{2}</color><color=#ffd775>(+{3}</color> sampai <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan.
+Skill/Group/Coef/1012310┃Hyejin memunculkan Charm of the Prophecy ke lokasi target dan akan bertahan di sana untuk {0} detik. Charm of the Prophecy meledak setelah mencapai waktu maks., atau jika jurusnya diaktifkan lagi, memberi kerusakan ke musuh dalam jangkauan dan menjerat mereka untuk {1} detik.\n\nKerusakan Charm of the Prophecy meningkat ketika di tanah, memberi  <color=white>{2}</color><color=#ffd775>(+{3}</color> sampai <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan.
+Skill/Group/Coef/1012400┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh saat mendarat.
+Skill/Group/Coef/1012410┃Hyejin melepaskan Charm of the Nomad ke lokasi target, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena.\nMengaktifkan jurus lagi akan menteleportasi Hyejin ke lokasi Charm of the Nomad, memberi , memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh saat mendarat.
+Skill/Group/Coef/1012500┃Hyejin fokus untuk 1 detik, memunculkan 5 Omen, dan memberi <color=white>{0}</color><color=#ffd775>(+{1}</color> ke musuh yang ada di sekitar dia.\Omen-omen itu akan memutari Hyejin untuk {2} detik, memberi <color=white>{3}</color><color=#ffd775>(+{4})</color> kerusakan ke musuh yang kena. Omen akan terpakai setelah mengenai musuh.
+Skill/Group/ExpansionTip/1012100┃<i>Musuh yang ketakutan tidak bisa menerima Three Calamities lagi untuk {0} detik</i>
+Skill/Group/ExpansionTip/1012200┃<i>Dia bisa mengaktifkan jurusnya lagi untuk melepaskan Charm yang lain</i>
+Skill/Group/ExpansionTip/1012500┃<i>Ketika sedang fokus, kecepatan gerak dikurangi sebanyak {0}. Hyejin bisa teleportasi ke Charm of Nomad saat sedang fokus</i>
 CharacterState/Group/Name/1012100┃Three Calamities
 CharacterState/Group/Desc/1012100┃Menerima Three Calamities
 CharacterState/Group/Name/1012110┃Ketakutan
@@ -2400,11 +2450,14 @@ Skill/Group/Name/1013200┃Lost in the Sauce
 Skill/Group/Name/1013300┃Heavy Meal
 Skill/Group/Name/1013400┃Wok It Off
 Skill/Group/Name/1013500┃Burnt to a Crisp
-Skill/Group/Desc/1013100┃Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}"이(가) "Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}
-Skill/Group/Desc/1013200┃Xiukai melemparkan barel sausnya ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena dan mengurangi kecepatan gerak sebanyak {3} untuk {2} detik.
-Skill/Group/Desc/1013300┃Xiukai membanting wajan raksasanya ke tanah, memberi {0}<color=#ffd775>(+{1})</color> kerusakan di sekitarnya dan mengurangi kecepatan gerak musuh yang terkena sebanyak {3} untuk {2} detik.\n\nMusuh yang terganggu gerakannya menerima <color=#688A08>{6}</color> kerusakan tambahan ({5} dari HP maks. Xiukai) dan kecepatan gerakan mereka berkurang selama tambahan {4} detik.
-Skill/Group/Desc/1013400┃Xiukai meluncur di atas wajannya ke arah target, menimbulkan {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} dari HP maks. Xiukai) kerusakan ke musuh.\n\nMusuh yang terganggu gerakannya menerima {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> kerusakan ({4} dari maks. HP Xiukai) dan akan terlempar ke udara untuk {3} detik.
-Skill/Group/Desc/1013500┃Xiukai menyemburkan api di atas wajannya {7} kali dalam {0} detik, memberi {1}<color=#ffd775>(+{2})</color>(+{8}) kerusakan ke musuh di area kerucut di depannya. (Juggernaut Chef: {3}).\n\nMusuh dengan gerakan yang terganggu akan dikurangi pertahanannya sebanyak {6} untuk {5} detik.
+Skill/Group/Desc/1013100┃Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}
+Skill/Group/Desc/1013200┃Xiukai melemparkan barel sausnya ke arah target, memberi <color=white>{20}</color> kerusakan ke musuh yang terkena dan mengurangi kecepatan gerak sebanyak {3} untuk {2} detik.
+Skill/Group/Desc/1013500┃Xiukai menyemburkan api di atas wajannya {7} kali dalam {0} detik, memberi <color=white>{20}</color>(+{8}) kerusakan ke musuh di area kerucut di depannya. (Juggernaut Chef: {3}).\n\nMusuh dengan gerakan yang terganggu akan dikurangi pertahanannya sebanyak {6} untuk {5} detik.
+Skill/Group/Coef/1013100┃Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}"이(가) "Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}
+Skill/Group/Coef/1013200┃Xiukai melemparkan barel sausnya ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena dan mengurangi kecepatan gerak sebanyak {3} untuk {2} detik.
+Skill/Group/Coef/1013300┃Xiukai membanting wajan raksasanya ke tanah, memberi {0}<color=#ffd775>(+{1})</color> kerusakan di sekitarnya dan mengurangi kecepatan gerak musuh yang terkena sebanyak {3} untuk {2} detik.\n\nMusuh yang terganggu gerakannya menerima <color=#688A08>{6}</color> kerusakan tambahan ({5} dari HP maks. Xiukai) dan kecepatan gerakan mereka berkurang selama tambahan {4} detik.
+Skill/Group/Coef/1013400┃Xiukai meluncur di atas wajannya ke arah target, menimbulkan {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} dari HP maks. Xiukai) kerusakan ke musuh.\n\nMusuh yang terganggu gerakannya menerima {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> kerusakan ({4} dari maks. HP Xiukai) dan akan terlempar ke udara untuk {3} detik.
+Skill/Group/Coef/1013500┃Xiukai menyemburkan api di atas wajannya {7} kali dalam {0} detik, memberi {1}<color=#ffd775>(+{2})</color>(+{8}) kerusakan ke musuh di area kerucut di depannya. (Juggernaut Chef: {3}).\n\nMusuh dengan gerakan yang terganggu akan dikurangi pertahanannya sebanyak {6} untuk {5} detik.
 CharacterState/Group/Name/1013100┃Juggernaut Chef
 CharacterState/Group/Desc/1013100┃Xiukai mendapatkan tumpukan Juggernaut Chef ketika membuat makanan. Makanan dan minuman yang dibuat Xiukai memberi lebih banyak pemulihan HP/SP.
 CharacterState/Group/Name/1013200┃Lost in the Sauce
@@ -2426,12 +2479,19 @@ Skill/Group/Name/1014400┃Mania
 Skill/Group/Name/1014500┃Plague
 Skill/Group/Name/1014510┃Last Judgement
 Skill/Group/Desc/1014100┃Ketika Chiara mengenai musuh dengan jurus, dia menanamkan Stigma kepada mereka, mengurangi pertahanan sebanyak {2}.\nStigma bertahan selama {1} detik. Chiara bisa memberikan maksimal {0} Stigma ke musuh yang sama.\n\nKetika musuh Stigma mencapai jumlah maksimum, pergerakan Chiara meningkat sebanyak {3} untuk {4} detik.
-Skill/Group/Desc/1014200┃Chiara mengeluarkan energi buruk ke arah target, memberi {1}<color=#ffd775>(+{2})</color> kerusakan ke semua musuh yang kena. Energi buruk itu bertahan untuk {3} detik, mengurangi kecepatan gerak musuh sebanyak {4}.\n\nTahan jurus selama {0} detik untuk melepaskan energi buruk tersebut lebih jauh dalam satu garis lurus.
-Skill/Group/Desc/1014300┃Chiara merapalkan pelindung, menyerap {4}<color=#ffd775>(+{5})</color> kerusakan. Pelindung bertahan untuk {0} detik. Jika pelindung tidak habis setelah {1} detik, dia bisa mengaktifkan jurusnya lagi, membuat pelindung itu meledak, memberi {2}<color=#ffd775>(+{3})</color> kerusakan ke musuh di sekitar.
-Skill/Group/Desc/1014310┃Jika pelindung tidak habis setelah {0} detik, dia bisa mengaktifkan jurus ini lagi, membuat pelindungnya meedak, memberi {1}<color=#ffd775>(+{2})</color> kerusakan ke musuh di sekitar.
-Skill/Group/Desc/1014400┃Chiara melemparkan belenggu ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena dan mengikat dia dengan Chiara. Jika ikatan tersebut bertahan selama {2} detik, Chiara memberi {4}<color=#ffd775>(+{5})</color> kerusakan dan menjerat musuh untuk {6} detik.
-Skill/Group/Desc/1014500┃Chiara menyalurkan kegelapan di dalam dirinya, merubahnya menjadi Malaikat Jatuh untuk {0} detik. Ketika berubah, serangannya berubah menjadi jarak jauh, HP maksimumnya meningkat sebanyak {1}, dan dia menyebarkan Plague ke area di sekitarnya.\nMusuh yang berada di dalam Plague menerima {2}<color=#ffd775>(+{3})</color> kerusakan setiap detik, dan Chiara memulihkan {4} HP sesuai proporsi kerusakan yang dihasilkan.\nKetika Plague aktif, dia mendapatkan penglihatan terhadap musuh yang memilika jumlah Stigma maksimal, dan dia bisa menngeluarkan Last Judgement.\n\nLast Judgement: Chiara bisa menabrak musuh yang memiliki Stigma maksimal, memberi {6}<color=#ffd775>(+{7})</color> kerusakan murni dan mengakhiri Wabahnya.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Plague sebanyak {8} detik.
-Skill/Group/Desc/1014510┃Chiara menabrak musuh yang memilik Stigma maksimal, memberi {0}<color=#ffd775>(+{1})</color> kerusakan murni dan mengakhiri Plague.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Wabah sebanyak {2} detik.
+Skill/Group/Desc/1014200┃Chiara mengeluarkan energi buruk ke arah target, memberi <color=white>{1}</color> kerusakan ke semua musuh yang kena. Energi buruk itu bertahan untuk {2} detik, mengurangi kecepatan gerak musuh sebanyak {3}.\n\nTahan jurus selama {0} detik untuk melepaskan energi buruk tersebut lebih jauh dalam satu garis lurus.
+Skill/Group/Desc/1014300┃Chiara merapalkan pelindung, menyerap <color=white>{3}</color> kerusakan. Pelindung bertahan untuk {0} detik. Jika pelindung tidak habis setelah {1} detik, dia bisa mengaktifkan jurusnya lagi, membuat pelindung itu meledak, memberi <color=white>{2}</color> kerusakan ke musuh di sekitar.
+Skill/Group/Desc/1014310┃Jika pelindung tidak habis setelah {0} detik, dia bisa mengaktifkan jurus ini lagi, membuat pelindungnya meedak, memberi <color=white>{1}</color> kerusakan ke musuh di sekitar.
+Skill/Group/Desc/1014400┃Chiara melemparkan belenggu ke arah target, memberi <color=white>{0}</color> kerusakan ke musuh yang kena dan mengikat dia dengan Chiara. Jika ikatan tersebut bertahan selama {1} detik, Chiara memberi <color=white>{2}</color> kerusakan dan menjerat musuh untuk {3} detik.
+Skill/Group/Desc/1014500┃Chiara menyalurkan kegelapan di dalam dirinya, merubahnya menjadi Malaikat Jatuh untuk {0} detik. Ketika berubah, serangannya berubah menjadi jarak jauh, HP maksimumnya meningkat sebanyak {1}, dan dia menyebarkan Plague ke area di sekitarnya.\nMusuh yang berada di dalam Plague menerima <color=white>{2}</color> kerusakan setiap detik, dan Chiara memulihkan {3} HP sesuai proporsi kerusakan yang dihasilkan.\nKetika Plague aktif, dia mendapatkan penglihatan terhadap musuh yang memilika jumlah Stigma maksimal, dan dia bisa menngeluarkan Last Judgement.\n\nLast Judgement: Chiara bisa menabrak musuh yang memiliki Stigma maksimal, memberi <color=white>{4}</color> kerusakan murni dan mengakhiri Wabahnya.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Plague sebanyak {5} detik.
+Skill/Group/Desc/1014510┃Chiara menyalurkan kegelapan di dalam dirinya, merubahnya menjadi Malaikat Jatuh untuk {0} detik. Ketika berubah, serangannya berubah menjadi jarak jauh, HP maksimumnya meningkat sebanyak {1}, dan dia menyebarkan Plague ke area di sekitarnya.\nMusuh yang berada di dalam Plague menerima <color=white>{2}</color> kerusakan setiap detik, dan Chiara memulihkan {3} HP sesuai proporsi kerusakan yang dihasilkan.\nKetika Plague aktif, dia mendapatkan penglihatan terhadap musuh yang memilika jumlah Stigma maksimal, dan dia bisa menngeluarkan Last Judgement.\n\nLast Judgement: Chiara bisa menabrak musuh yang memiliki Stigma maksimal, memberi <color=white>{4}</color> kerusakan murni dan mengakhiri Wabahnya.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Plague sebanyak {5} detik.
+Skill/Group/Coef/1014100┃Ketika Chiara mengenai musuh dengan jurus, dia menanamkan Stigma kepada mereka, mengurangi pertahanan sebanyak {2}.\nStigma bertahan selama {1} detik. Chiara bisa memberikan maksimal {0} Stigma ke musuh yang sama.\n\nKetika musuh Stigma mencapai jumlah maksimum, pergerakan Chiara meningkat sebanyak {3} untuk {4} detik.
+Skill/Group/Coef/1014200┃Chiara mengeluarkan energi buruk ke arah target, memberi <color=white>{1}</color><color=#ffd775>(+{2})</color> kerusakan ke semua musuh yang kena. Energi buruk itu bertahan untuk {3} detik, mengurangi kecepatan gerak musuh sebanyak {4}.\n\nTahan jurus selama {0} detik untuk melepaskan energi buruk tersebut lebih jauh dalam satu garis lurus.
+Skill/Group/Coef/1014300┃Chiara merapalkan pelindung, menyerap <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan. Pelindung bertahan untuk {0} detik. Jika pelindung tidak habis setelah {1} detik, dia bisa mengaktifkan jurusnya lagi, membuat pelindung itu meledak, memberi <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan ke musuh di sekitar.
+Skill/Group/Coef/1014310┃Jika pelindung tidak habis setelah {0} detik, dia bisa mengaktifkan jurus ini lagi, membuat pelindungnya meedak, memberi <color=white>{1}</color><color=#ffd775>(+{2})</color> kerusakan ke musuh di sekitar.
+Skill/Group/Coef/1014400┃Chiara melemparkan belenggu ke arah target, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh yang kena dan mengikat dia dengan Chiara. Jika ikatan tersebut bertahan selama {2} detik, Chiara memberi <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan dan menjerat musuh untuk {6} detik.
+Skill/Group/Coef/1014500┃Chiara menyalurkan kegelapan di dalam dirinya, merubahnya menjadi Malaikat Jatuh untuk {0} detik. Ketika berubah, serangannya berubah menjadi jarak jauh, HP maksimumnya meningkat sebanyak {1}, dan dia menyebarkan Plague ke area di sekitarnya.\nMusuh yang berada di dalam Plague menerima <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan setiap detik, dan Chiara memulihkan {4} HP sesuai proporsi kerusakan yang dihasilkan.\nKetika Plague aktif, dia mendapatkan penglihatan terhadap musuh yang memilika jumlah Stigma maksimal, dan dia bisa menngeluarkan Last Judgement.\n\nLast Judgement: Chiara bisa menabrak musuh yang memiliki Stigma maksimal, memberi <color=white>{6}</color><color=#ffd775>(+{7})</color> kerusakan murni dan mengakhiri Wabahnya.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Plague sebanyak {8} detik.
+Skill/Group/Coef/1014510┃Chiara menyalurkan kegelapan di dalam dirinya, merubahnya menjadi Malaikat Jatuh untuk {0} detik. Ketika berubah, serangannya berubah menjadi jarak jauh, HP maksimumnya meningkat sebanyak {1}, dan dia menyebarkan Plague ke area di sekitarnya.\nMusuh yang berada di dalam Plague menerima <color=white>{2}</color><color=#ffd775>(+{3})</color> kerusakan setiap detik, dan Chiara memulihkan {4} HP sesuai proporsi kerusakan yang dihasilkan.\nKetika Plague aktif, dia mendapatkan penglihatan terhadap musuh yang memilika jumlah Stigma maksimal, dan dia bisa menngeluarkan Last Judgement.\n\nLast Judgement: Chiara bisa menabrak musuh yang memiliki Stigma maksimal, memberi <color=white>{6}</color><color=#ffd775>(+{7})</color> kerusakan murni dan mengakhiri Wabahnya.\nMembunuh musuh dengan Last Judgement akan mengurangi cooldown Plague sebanyak {8} detik.
 CharacterState/Group/Name/1014100┃Stigma
 CharacterState/Group/Desc/1014100┃Pertahanan dikurangi.
 CharacterState/Group/Name/1014110┃Stigma
@@ -2446,11 +2506,11 @@ Skill/Group/Name/1015200┃Go Get 'Em Wilson!
 Skill/Group/Name/1015300┃Girl in a Bubble
 Skill/Group/Name/1015400┃Play With Us!
 Skill/Group/Name/1015500┃Free at Last
-Skill/Group/Desc/1015100┃Seiring HP Sissela berkurang, dia akan mendapatkan regenerasi HP dan amplifikasi jurus.\nRegenerasi HP per detik: {0} - {1}\nAmplifikasi Jurus: {2} - {3}%\n\nKetika Wilson kembali ke Sissela, serangannya yang selanjutnya memberi {4}<color=#ffd775>(+{5})</color> kerusakan dan mengurangi kecepatan gerak musuh sebanyak {7} untuk {6}.\nEfek ini bisa diaktifkan setiap 3 detik.
-Skill/Group/Desc/1015200┃Wilson terbang ke arah target, memberi {1}<color=#ffd775>(+{2})</color> kerusakan ke musuh di jalannya dan {3}<color=#ffd775>(+{4})</color> kerusakan saat mendarat.
-Skill/Group/Desc/1015300┃Wilson merangkul Sissela untuk {0} detik, menangkis semua kerusakan dan membuatnya tidak tersentuh.\nPerisai Wilson meledak di akhir, atau ketika jurusnya diaktifkan lagi, memberi {1}<color=#ffd775>(+{2})</color> kerusakan ke musuh di area sekitar dan mendorong mereka ke belakang.
-Skill/Group/Desc/1015400┃Wilson melebarkan badannya ke arah target, menarik target pertama yang kena.\nMenarik tim: target mendapatkan perisai, menyerap {0}<color=#ffd775>(+{1})</color> kerusakan untuk {2} detik dancooldown dari Play With Us! dikurangi sebanyak {6} detik.\nMenarik Musuh: Wilson memberi {3}<color=#ffd775>(+{4})</color> kerusakan dan menahan target untuk {5} detik.
-Skill/Group/Desc/1015500┃Sissela menyalurkan kekuatan selama 1 detik. Setelah 3 detik, Sissela memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke semua musuh di peta, termasuk diri sendiri.\nSissela memberi {2} kerusakan tambahan untuk setiap 1% dari HP-nya yang hilang.\nHP Sissela tidak jatuh di bawah {8} jika menerima kerusakan dari jurus ini.\nMemberi kerusakan dengan jurus ini meningkatkan kerusakan dari Agony sebanyak {4}% untuk {3} detik.\n\nSissela menimbulkan kerusakan penuh ke musuh sejauh radius {5}m, {6}% lebih sedikit kerusakan ke musuh di area yang sama tapi diluar radius {5}m, dan {7}% lebih sedikit kerusakan ke musuh di area yang berbeda.
+Skill/Group/Desc/1015100┃Seiring HP Sissela berkurang, dia akan mendapatkan regenerasi HP dan amplifikasi jurus.\nRegenerasi HP per detik: {0} - {1}\nAmplifikasi Jurus: {2} - {3}%\n\nKetika Wilson kembali ke Sissela, serangannya yang selanjutnya memberi <color=white>{9}</color> kerusakan dan mengurangi kecepatan gerak musuh sebanyak {7} untuk {6}.\nEfek ini bisa diaktifkan setiap 3 detik.
+Skill/Group/Desc/1015200┃Wilson terbang ke arah target, memberi <color=white>{7}</color> kerusakan ke musuh di jalannya dan <color=white>{8}</color> kerusakan saat mendarat.
+Skill/Group/Desc/1015300┃Wilson merangkul Sissela untuk {0} detik, menangkis semua kerusakan dan membuatnya tidak tersentuh.\nPerisai Wilson meledak di akhir, atau ketika jurusnya diaktifkan lagi, memberi <color=white>{4}</color> kerusakan ke musuh di area sekitar dan mendorong mereka ke belakang.
+Skill/Group/Desc/1015400┃Wilson melebarkan badannya ke arah target, menarik target pertama yang kena.\nMenarik tim: target mendapatkan perisai, menyerap <color=white>{9}</color> kerusakan untuk {2} detik dancooldown dari Play With Us! dikurangi sebanyak {6} detik.\nMenarik Musuh: Wilson memberi <color=white>{10}</color> kerusakan dan menahan target untuk {5} detik.
+Skill/Group/Desc/1015500┃Sissela menyalurkan kekuatan selama 1 detik. Setelah 3 detik, Sissela memberi <color=white>{10}</color> kerusakan ke semua musuh di peta, termasuk diri sendiri.\nSissela memberi {2} kerusakan tambahan untuk setiap 1% dari HP-nya yang hilang.\nHP Sissela tidak jatuh di bawah {8} jika menerima kerusakan dari jurus ini.\nMemberi kerusakan dengan jurus ini meningkatkan kerusakan dari Agony sebanyak {4}% untuk {3} detik.\n\nSissela menimbulkan kerusakan penuh ke musuh sejauh radius {5}m, {6}% lebih sedikit kerusakan ke musuh di area yang sama tapi diluar radius {5}m, dan {7}% lebih sedikit kerusakan ke musuh di area yang berbeda.
 CharacterState/Group/Name/1015120┃Agony
 CharacterState/Group/Desc/1015120┃Seiring HP Sissela berkurang, dia akan mendapatkan regenerasi HP dan amplifikasi jurus.
 CharacterState/Group/Name/1015130┃Agony
@@ -2472,12 +2532,18 @@ Skill/Group/Name/1017200┃Flamethrower
 Skill/Group/Name/1017300┃Oil Slick
 Skill/Group/Name/1017400┃Fire Escape
 Skill/Group/Name/1017500┃Cocktail Party
-Skill/Group/Desc/1017100┃Adriana bisa menyalakan api di permukaan.\nMusuh akan ikut terbakar (Burned) saat menginjak permukaan yang sedang terbakar, menerima {1}<color=#ffd775>(+{2})</color> kerusakan setiap {0} detik dan akan dikurangi kecepatan geraknya untuk {5} detik.\nKerusakan meningkat sebanyak {6} untuk setiap tumpukan Burned.\n\nAdriana memulihkan {4} SP setiap {3} detik ketika api yang dinyalakan sedang aktif.
-Skill/Group/Desc/1017200┃Adriana menyalakan penyembur api ke arah target, memberi <color=#ffd775>(+{1})</color> kerusakan murni setiap {0} detik.
+Skill/Group/Desc/1017100┃Adriana bisa menyalakan api di permukaan.\nMusuh akan ikut terbakar (Burned) saat menginjak permukaan yang sedang terbakar, menerima <color=white>{20}</color> kerusakan setiap {0} detik dan akan dikurangi kecepatan geraknya untuk {5} detik.\nKerusakan meningkat sebanyak {6} untuk setiap tumpukan Burned.\n\nAdriana memulihkan {4} SP setiap {3} detik ketika api yang dinyalakan sedang aktif.
+Skill/Group/Desc/1017200┃Adriana menyalakan penyembur api ke arah target, memberi  kerusakan murni setiap {0} detik.
 Skill/Group/Desc/1017300┃Adriana menumpahkan minyak ke arah target. Minyak licin tersebut bertahan selama {0} detik. Adriana dapat menyalakan api kepada minyak itu dengan jurusnya untuk {1} detik.\n\nMusuh yang berada di minyak licin akan terjatuh dan tidak bisa menggunakan jurus berpindah tempat.
 Skill/Group/Desc/1017400┃Adriana meluncur ke arah target, meninggalkan jejak api. Api tersebut akan bertahan untuk {0} detik.
-Skill/Group/Desc/1017500┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi {0}<color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
-Skill/Group/Desc/1017510┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi {0}<color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
+Skill/Group/Desc/1017500┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi <color=white>{20}</color><color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
+Skill/Group/Desc/1017510┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi <color=white>{20}</color><color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
+Skill/Group/Coef/1017100┃Adriana bisa menyalakan api di permukaan.\nMusuh akan ikut terbakar (Burned) saat menginjak permukaan yang sedang terbakar, menerima {1}<color=#ffd775>(+{2})</color> kerusakan setiap {0} detik dan akan dikurangi kecepatan geraknya untuk {5} detik.\nKerusakan meningkat sebanyak {6} untuk setiap tumpukan Burned.\n\nAdriana memulihkan {4} SP setiap {3} detik ketika api yang dinyalakan sedang aktif.
+Skill/Group/Coef/1017200┃Adriana menyalakan penyembur api ke arah target, memberi <color=#ffd775>(+{1})</color> kerusakan murni setiap {0} detik.
+Skill/Group/Coef/1017300┃Adriana menumpahkan minyak ke arah target. Minyak licin tersebut bertahan selama {0} detik. Adriana dapat menyalakan api kepada minyak itu dengan jurusnya untuk {1} detik.\n\nMusuh yang berada di minyak licin akan terjatuh dan tidak bisa menggunakan jurus berpindah tempat.
+Skill/Group/Coef/1017400┃Adriana meluncur ke arah target, meninggalkan jejak api. Api tersebut akan bertahan untuk {0} detik.
+Skill/Group/Coef/1017500┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi {0}<color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
+Skill/Group/Coef/1017510┃Adriana melempar koktail molotov ke lokasi target. Koktail molotov meledak saat mendarat, memberi {0}<color=#ffd775>(+1)}</color> kerusakan dan memukul mundur musuh. Setelah ledakan, koktail molotov akan meninggalkan api selama {4} detik.\nAdriana dapat melemparkan maksimal {3} molotov dalam kurun waktu {2} detik.
 CharacterState/Group/Name/1017100┃Pyromaniac
 CharacterState/Group/Desc/1017100┃Memulihkan SP saat api menyala.
 CharacterState/Group/Name/1017110┃Burned
@@ -2496,12 +2562,18 @@ Skill/Group/Name/1018210┃Bad Faith
 Skill/Group/Name/1018300┃Bottom Line
 Skill/Group/Name/1018400┃Risky Business
 Skill/Group/Name/1018500┃Ruthless
-Skill/Group/Desc/1018100┃Shoichi mendapatkan tumpukan Phony Deal setiap kali dia mengenai musuh dengan jurus, meningkatkan kemungkinan serangan kritis sebanyal {0} untuk {5} detik.\nSetelah mencapai {1} tumpukan, serangannya meningkat sebanyak {2}.\nKetika Shoici mengambil Dagger dari tanah, dia akan melemparkannya ke msuh terdekat, memberi {3}<color=#ffd775>(+{4})</color> kerusakan.
-Skill/Group/Desc/1018200┃Shoichi melemparkan pedangnya ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {2} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {3} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
-Skill/Group/Desc/1018210┃Shoichi melemparkan pedangnya ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {2} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {3} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
-Skill/Group/Desc/1018300┃Shoichi meluncur ke musuh atau Dagger, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke semua musuh di jalannya.\nJika dia mengambil Dagger, cooldown dari Bottom Line akan di-reset.
-Skill/Group/Desc/1018400┃Shoichi mundur satu langkah dan melemparkan Dagger ke depan, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh pertama yang kena dan mengurangi kecepatan geraknya sebanak {3} untuk {2} detik.\nSaat mengenai musuh Dagger akan jatuh ke tanah.
-Skill/Group/Desc/1018500┃Shoichi mengayunkan koper mautnya, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh di sekitarnya, menjerat mereka untuk {2} detik dan melemparkan 4 Dagger di tanah dalam bentuk persegi.\nDagger menembus musuh, memberi {3}<color>(+{4})</co;or> kerusakan.
+Skill/Group/Desc/1018100┃Shoichi mendapatkan tumpukan Phony Deal setiap kali dia mengenai musuh dengan jurus, meningkatkan kemungkinan serangan kritis sebanyal {0} untuk {4} detik.\nSetelah mencapai {1} tumpukan, serangannya meningkat sebanyak {2}.\nKetika Shoici mengambil Dagger dari tanah, dia akan melemparkannya ke msuh terdekat, memberi <color=white>{3}</color> kerusakan.
+Skill/Group/Desc/1018200┃Shoichi melemparkan pedangnya ke arah target, memberi <color=white>{0}</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {1} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {2} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
+Skill/Group/Desc/1018210┃Shoichi melemparkan pedangnya ke arah target, memberi <color=white>{0}</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {1} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {2} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
+Skill/Group/Desc/1018300┃Shoichi meluncur ke musuh atau Dagger, memberi <color=white>{0}</color> kerusakan ke semua musuh di jalannya.\nJika dia mengambil Dagger, cooldown dari Bottom Line akan di-reset.
+Skill/Group/Desc/1018400┃Shoichi mundur satu langkah dan melemparkan Dagger ke depan, memberi <color=white>{0}</color> kerusakan ke musuh pertama yang kena dan mengurangi kecepatan geraknya sebanak {2} untuk {1} detik.\nSaat mengenai musuh Dagger akan jatuh ke tanah.
+Skill/Group/Desc/1018500┃Shoichi mengayunkan koper mautnya, memberi <color=white>{0}</color> kerusakan ke musuh di sekitarnya, menjerat mereka untuk {1} detik dan melemparkan 4 Dagger di tanah dalam bentuk persegi.\nDagger menembus musuh, memberi <color=white>{3}</color><color>(+{4})</co;or> kerusakan.
+Skill/Group/Coef/1018100┃Shoichi mendapatkan tumpukan Phony Deal setiap kali dia mengenai musuh dengan jurus, meningkatkan kemungkinan serangan kritis sebanyal {0} untuk {5} detik.\nSetelah mencapai {1} tumpukan, serangannya meningkat sebanyak {2}.\nKetika Shoici mengambil Dagger dari tanah, dia akan melemparkannya ke msuh terdekat, memberi <color=white>{3}</color><color=#ffd775>(+{4})</color> kerusakan.
+Skill/Group/Coef/1018200┃Shoichi melemparkan pedangnya ke arah target, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {2} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {3} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
+Skill/Group/Coef/1018210┃Shoichi melemparkan pedangnya ke arah target, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan. Jika mengenai musuh, cooldown akan dikurangi sebanyak {2} detik dan dia dapat menggunakan Bad Faith dalam kurun waktu {3} detik.\nBad Faith: meningkatkan jarak dan Shoici akan meninggalkan Dagger di tanah.
+Skill/Group/Coef/1018300┃Shoichi meluncur ke musuh atau Dagger, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke semua musuh di jalannya.\nJika dia mengambil Dagger, cooldown dari Bottom Line akan di-reset.
+Skill/Group/Coef/1018400┃Shoichi mundur satu langkah dan melemparkan Dagger ke depan, memberi <color=white>{0}</color><color=#ffd775>(+{1})</color> kerusakan ke musuh pertama yang kena dan mengurangi kecepatan geraknya sebanak {3} untuk {2} detik.\nSaat mengenai musuh Dagger akan jatuh ke tanah.
+Skill/Group/Coef/1018500┃Shoichi gira com sua maleta mortífera, causando <color=white>{0}</color><color=#ffd775>(+{1})</color> de dano a inimigos ao seu redor, enraizando-os por {2} segundo(s) e jogando 4 adagas no chão em um quadrado.\nAdagas atravessam inimigos, causando <color=white>{3}</color><color=#ffd775>(+{4})</color> de dano.
 CharacterState/Group/Name/1018100┃Phony Deal
 CharacterState/Group/Desc/1018100┃Kemungkinan serangan keritis meningkat.
 CharacterState/Group/Name/1018110┃Phony Deal - Ditingkatkan
@@ -2516,10 +2588,11 @@ Skill/Group/Name/1020100┃Umpan Dan Pukul
 Skill/Group/Name/1020200┃Rekoil
 Skill/Group/Name/1020300┃Gigitan Ular
 Skill/Group/Name/1020500┃Beludak Biru
-Skill/Group/Desc/1020100┃\nUmpan: Lenox mendapatkan item extra (tidak termasuk senjata) setiap kali dia memancing. \n\nCommon:{2} / Uncommon: {3} / Rare: {4} \n\nPukul: Setiap {5} detik, Basic Attack Lenox memberikan Shield berdasarkan {0} Max HP Lenox. /nShield ini berlangsung selama {1} detik.
-Skill/Group/Desc/1020200┃Lenox memecut di area bulat sekitarnya, memberikan {0}<color=#ffd775>(+{1})</color> Damage kepada musuh. Dia memberikan ekstra {2} damage ke musuh berdasarkan max HP kepada musuh yang ada di area luar pecutannnya. Jika Rekoil mengenai musuh, Lenox mendapatkan stack yang menurunkan cooldown skill Recoil sebanyak {3} detik per stack. Jika Recoil terkena 2 musuh atau lebih damage Recoil  menurun sebesar {4}
-Skill/Group/Desc/1023100┃Under the Knife:Ketika Cathy melukai musuh dengan jurus, dia memberikan {4} stack of Wounded, memberikan <color=#ffd775>{2}</color> true damage per stack selama {0} detik.\n Ketika mencapai {5} stack, Cathy Severely Wounds musuh, memberikan true damage sama dengan {7}<color=#ffd775>(+{8})</color> dari max HP mereka selama {6} detik. Cathy memberikan {9} Critical strike damage tambahan ke musuh yang terkena Severely Wounded dengan serangan biasa.\n\nPost-op: memukul musuh dengan jurus memberikan dia shield, menyerap {11}<color=#ffd775>(+{12})</color> damage selama {10} detik, dan meningkatkan kecepatannya kearah musuh yang terluka sebanyak {13}, berkurang terus selama {10} detik. Critical Hit mengurangi cooldown Post-op sebanyak {14} detik.
-Skill/Group/Desc/1023200┃<color=green>Pasif</color>: Setelah menggunakan jurus, basic attack Cathy selanjutnya memberikan {2}<color=#ffd775>(+{3})</color> skill damage. Damage nya bertambah sesuai dengan efek Critical Strike Damage Increase.\n\nCathy dash ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage ke musuh yang kena.\nCooldown Double Bypass dikurangi sebanyak {5} jika Severely Wounds Cathy mengenai musuh.
+Skill/Group/Desc/1020100┃<color=#ffffC2>Umpan :</color> Lenox mendapatkan item extra (tidak termasuk senjata) setiap kali dia memancing. \n<color=#ffffC2>Pukul :</color> Setiap {5} detik, Basic Attack Lenox memberikan Shield berdasarkan {0} Max HP Lenox. Shield ini berlangsung selama {1} detik.
+Skill/Group/Desc/1020200┃Lenox memecut di area bulat sekitarnya, memberikan <color=white>{6}</color> Damage kepada musuh. Dia memberikan ekstra {2} damage ke musuh berdasarkan max HP kepada musuh yang ada di area luar pecutannnya. Jika Rekoil mengenai musuh, Lenox mendapatkan stack yang menurunkan cooldown skill Recoil sebanyak {3} detik per stack. Jika Recoil terkena 2 musuh atau lebih damage Recoil  menurun sebesar {4}
+Skill/Group/Coef/1020100┃<color=#ffffC2>Umpan :</color> Lenox mendapatkan item extra (tidak termasuk senjata) setiap kali dia memancing.\n<color=#ffffC2>Pukul :</color> Setiap {5} detik, Basic Attack Lenox memberikan Shield berdasarkan {0} Max HP Lenox. /nShield ini berlangsung selama {1} detik.
+Skill/Group/Coef/1020200┃Lenox memecut di area bulat sekitarnya, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color> Damage kepada musuh. Dia memberikan ekstra {2} damage ke musuh berdasarkan max HP kepada musuh yang ada di area luar pecutannnya. Jika Rekoil mengenai musuh, Lenox mendapatkan stack yang menurunkan cooldown skill Recoil sebanyak {3} detik per stack. Jika Recoil terkena 2 musuh atau lebih damage Recoil  menurun sebesar {4}
+Skill/Group/ExpansionTip/1020100┃<i>Common:{2} / Uncommon: {3} / Rare: {4}</i>
 Skill/Group/Name/1026100┃Retrofit
 Skill/Group/Name/1026200┃BT Sentry Gun Mk. II
 Skill/Group/Name/1026210┃Sentry Recall
@@ -2533,11 +2606,16 @@ Skill/Group/Name/1026430┃Particle Storm
 Skill/Group/Name/1026500┃Overclock
 Skill/Group/Name/1026510┃Overclock
 Skill/Group/Desc/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
-Skill/Group/Desc/1026200┃Barbara memasang Sentry Gun dengan {8} HP di target lokasi, memberikan  {3}<color=#ffd775>(+{4})</color> damage ke musuh yang di hit.\nSentry Gun ada selama {0} detik, memberikan {2} damage ke musuh yang ditembak.\nKetika Sentry Gun baru di letakkan, yang lama akan hancur. Ketika Musuh menghancurkan Sentry Gun, Cooldownnya bertambah sebanyak {9} detik. Jika barbara jauh dari Sentry Gun, dia mengambil kembali Sentry Gun nya, mengurangi cooldown sebanyak {7}. HP Sentry Gun disesuaikan dengan Maximum HP Barbara.
+Skill/Group/Desc/1026200┃Barbara memasang Sentry Gun dengan {8} HP di target lokasi, memberikan  <color=white>{3}</color> damage ke musuh yang di hit.\nSentry Gun ada selama {0} detik, memberikan <color=white>{2}</color> damage ke musuh yang ditembak.\nKetika Sentry Gun baru di letakkan, yang lama akan hancur. Ketika Musuh menghancurkan Sentry Gun, Cooldownnya bertambah sebanyak {9} detik. Jika barbara jauh dari Sentry Gun, dia mengambil kembali Sentry Gun nya, mengurangi cooldown sebanyak {7}. HP Sentry Gun disesuaikan dengan Maximum HP Barbara.
 Skill/Group/Desc/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
-Skill/Group/Desc/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan {0}<color=#ffd775>(+{1})</color> damage.\nSentry Gun yang baru memberikan {2}<color=#ffd775>(+{3})</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
-Skill/Group/Desc/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan {0}<color=#ffd775>(+{1})</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang terkena\.
-Skill/Group/Desc/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak {2}<color=#ffd775>(+{3})</color> dan damage Sentry Gun diperkuat {4}<color=#ffd775>(+{5})</color>.
+Skill/Group/Desc/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
+Skill/Group/Desc/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color> damage ke musuh yang terkena\.
+Skill/Group/Desc/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color> dan damage Sentry Gun diperkuat <color=white>{4}</color>.
+Skill/Group/Coef/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
+Skill/Group/Coef/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
+Skill/Group/Coef/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{7})</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
+Skill/Group/Coef/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{8})</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#DDA0DD>(+{9})</color> damage ke musuh yang terkena\.
+Skill/Group/Coef/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> dan damage Sentry Gun diperkuat <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{7})</color>.
 CharacterState/Group/Desc/1029120┃Basic Attack memberikan extra true damage saat berdiri di atas Pool.
 Skill/Group/Name/1034100┃Potret Lamban
 Skill/Group/Name/1034200┃Snapshot
@@ -2545,11 +2623,17 @@ Skill/Group/Name/1034300┃Timelapse
 Skill/Group/Name/1034400┃Panorama
 Skill/Group/Name/1034410┃Panorama
 Skill/Group/Name/1034500┃F-Stop
-Skill/Group/Desc/1034100┃Kecepatan menyerang Nathapon sudah konstan{0}<color=#ADA478>(+{1})</color><color=#DDA0DD>(+{2})</color> Extra Tambahan Jurus.\n\nMenggabungkan <color=#808080>Kamera Pengintai</color>dan <color=#808080>Ranting</color> untuk membuat <color=#008000>Kamera Jejak</color> dengan efek Infiltrasi.
-Skill/Group/Desc/1034200┃<color=green>Pasif</color>: Memberi kerusakan pada musuh mengaplikasikan <color=white>Picturesque</color>. Setiap tumpukan <color=white>Picturesque</color> menambahkan kerusakan Nathapon sebanyak {1}, sampai dengan {0} kali.\nMusuh akan kehilangan semua tumpukan<color=white>Picturesque</color> ketika mereka menghilang dari jarak pandang Nathapon.\n\nNathapon mengambil foto di target area, memberikan {2}<color=#ffd775>(+{3})</color><color=#DDA0DD>(+{7})</color>kerusakan. Musuh dengan {4} tumpukan <color=white>Picturesque</color> akan diperlambat selama {6}, membusuk selama {5} seconds.
-Skill/Group/Desc/1034300┃Nathapon menggunakan Time Lapse di target area, memberikan {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{8})</color> kerusakan setiap detik dan memperlambat mereka sebanyak {2}.\nFoto terakhir memberikan {3}<color=#ffd775>(+{4})</color><color=#DDA0DD>(+{7})</color> ekstra kerusakan jurus and mengekang subjek di kerangka selama {5} detik.
-Skill/Group/Desc/1034400┃Nathapon mengambil foto dengan Kamera nya ke arah target. Musuh yang difoto mendapatkan {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{10})</color>kerusakan dan diperlambat sebanyak {3} selama {2} detik. Jika fotonya kena, itu akan meninggalkan tanda di area. Setelah {4} detik, Serangan biasa Nathapon yang selanjutnya selama {5} detik memberikan {6}<color=#ffd775>(+{7})</color><color=#DDA0DD>(+{11})</color> kerusakan jurus ke musuh dan memukul mundur mereka kembali ke tanda. Jarak serang Nathapon bertambah sejauh {8}m dan kerusakan tambahan dari Slow Shutter diberikan kepada musuh dengan tanda Panorama.\n\nTanda tersebut akan hilang jika musuh terpukul mundur atau bergerak sejauh {9}m dari tanda tersebut.
+Skill/Group/Desc/1034100┃Kecepatan menyerang Nathapon sudah konstan<color=white>{0}</color> Extra Tambahan Jurus.\n\nMenggabungkan <color=#808080>Kamera Pengintai</color>dan <color=#808080>Ranting</color> untuk membuat <color=#008000>Kamera Jejak</color> dengan efek Infiltrasi.
+Skill/Group/Desc/1034200┃<color=green>Pasif</color>: Memberi kerusakan pada musuh mengaplikasikan <color=white>Picturesque</color>. Setiap tumpukan <color=white>Picturesque</color> menambahkan kerusakan Nathapon sebanyak {1}, sampai dengan {0} kali.\nMusuh akan kehilangan semua tumpukan<color=white>Picturesque</color> ketika mereka menghilang dari jarak pandang Nathapon.\n\nNathapon mengambil foto di target area, memberikan <color=white>{2}</color>kerusakan. Musuh dengan {4} tumpukan <color=white>Picturesque</color> akan diperlambat selama {6}, membusuk selama {5} seconds.
+Skill/Group/Desc/1034300┃Nathapon menggunakan Time Lapse di target area, memberikan <color=white>{0}</color> kerusakan setiap detik dan memperlambat mereka sebanyak {2}.\nFoto terakhir memberikan <color=white>{1}</color> ekstra kerusakan jurus and mengekang subjek di kerangka selama {5} detik.
+Skill/Group/Desc/1034400┃Nathapon mengambil foto dengan Kamera nya ke arah target. Musuh yang difoto mendapatkan <color=white>{0}</color>kerusakan dan diperlambat sebanyak {3} selama {2} detik. Jika fotonya kena, itu akan meninggalkan tanda di area. Setelah {4} detik, Serangan biasa Nathapon yang selanjutnya selama {5} detik memberikan <color=white>{1}</color> kerusakan jurus ke musuh dan memukul mundur mereka kembali ke tanda. Jarak serang Nathapon bertambah sejauh {8}m dan kerusakan tambahan dari Slow Shutter diberikan kepada musuh dengan tanda Panorama.
 Skill/Group/Desc/1034500┃Nathapon mengambil foto semuanya di target area setelah {0} detik. Semua unit yang terfoto akan menjadi Stasis selama {1}detik dan dan tidak bisa melakukan apapun. Musuh yang terfoto mendapatkan {2} tumpukan Picturesque.
+Skill/Group/Coef/1034100┃Kecepatan menyerang Nathapon sudah konstan<color=white>{0}</color><color=#ADA478>(+{1})</color><color=#DDA0DD>(+{2})</color> Extra Tambahan Jurus.\n\nMenggabungkan <color=#808080>Kamera Pengintai</color>dan <color=#808080>Ranting</color> untuk membuat <color=#008000>Kamera Jejak</color> dengan efek Infiltrasi.
+Skill/Group/Coef/1034200┃<color=green>Pasif</color>: Memberi kerusakan pada musuh mengaplikasikan <color=white>Picturesque</color>. Setiap tumpukan <color=white>Picturesque</color> menambahkan kerusakan Nathapon sebanyak {1}, sampai dengan {0} kali.\nMusuh akan kehilangan semua tumpukan<color=white>Picturesque</color> ketika mereka menghilang dari jarak pandang Nathapon.\n\nNathapon mengambil foto di target area, memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{7})</color>kerusakan. Musuh dengan {4} tumpukan <color=white>Picturesque</color> akan diperlambat selama {6}, membusuk selama {5} seconds.
+Skill/Group/Coef/1034300┃Nathapon menggunakan Time Lapse di target area, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{8})</color> kerusakan setiap detik dan memperlambat mereka sebanyak {2}.\nFoto terakhir memberikan <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#DDA0DD>(+{7})</color> ekstra kerusakan jurus and mengekang subjek di kerangka selama {5} detik.
+Skill/Group/Coef/1034400┃Nathapon mengambil foto dengan Kamera nya ke arah target. Musuh yang difoto mendapatkan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{10})</color>kerusakan dan diperlambat sebanyak {3} selama {2} detik. Jika fotonya kena, itu akan meninggalkan tanda di area. Setelah {4} detik, Serangan biasa Nathapon yang selanjutnya selama {5} detik memberikan <color=white>{6}</color><color=#ffd775>(+{7})</color><color=#DDA0DD>(+{11})</color> kerusakan jurus ke musuh dan memukul mundur mereka kembali ke tanda. Jarak serang Nathapon bertambah sejauh {8}m dan kerusakan tambahan dari Slow Shutter diberikan kepada musuh dengan tanda Panorama.
+Skill/Group/Coef/1034500┃Nathapon mengambil foto semuanya di target area setelah {0} detik. Semua unit yang terfoto akan menjadi Stasis selama {1}detik dan dan tidak bisa melakukan apapun. Musuh yang terfoto mendapatkan {2} tumpukan Picturesque.
+Skill/Group/ExpansionTip/1034400┃<i>Tanda tersebut akan hilang jika musuh terpukul mundur atau bergerak sejauh {0}m dari tanda tersebut.</i>
 CharacterState/Group/Name/1034100┃Potret Lamban
 CharacterState/Group/Name/1034200┃Picturesque
 CharacterState/Group/Name/1034210┃Snapshot - Diperlambat
@@ -2580,13 +2664,13 @@ Skill/Group/Name/1036300┃Phase Vortex
 Skill/Group/Name/1036400┃Amethyst Flow
 Skill/Group/Name/1036410┃Amethyst Flow
 Skill/Group/Name/1036500┃Phát Xạ VF
-Skill/Group/Desc/1036100┃Siêu Năng Ngoại Cảm: Bắt đầu từ cấp độ {6}, Eva thức tỉnh năng lực ngoại cảm và có thể mở hộp, hòm tiếp tế, cứu đồng đội từ xa. Cô ấy chỉ có thể cứu đồng đội hoặc thu thập Thiên Thạch và Cây Sinh Mệnh từ xa khi đang trong giao tranh.\n\nHạt Trường Lực: Khi Eva đánh trúng kỹ năng hoặc bị đánh thường, cô ấy phóng thích một Hạt Trường Lực chứa năng lượng VF tới vị trí kẻ địch, gây {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{12})</color> Sát Thương Kỹ Năng và Làm Chậm kẻ địch trúng chiêu đi {4} trong {3} giây.\nHạt Trường Lực rơi trúng kẻ địch sẽ nhận giảm hồi chiêu đi {5} và nhận {7} Trường Lực.\n\nEva nhận {9} Trường Lực mỗi {8} giây ngoài giao tranh, {10} với mỗi mạng hạ gục, và {11} với mỗi mạng hỗ trợ.
-Skill/Group/Desc/1036200┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{5})</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây {2}<color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
-Skill/Group/Desc/1036210┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{5})</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây {2}<color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
-Skill/Group/Desc/1036300┃Eva tạo ra một vùng năng lượng tại vị trí chỉ định, gây {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{10})</color> Sát Thương Kỹ Năng. Những kẻ địch đứng trên Pha Vortex sẽ phải chịu thêm {5} sát thương từ bộ kỹ năng của Eva và bị Làm Chậm đi {8}.\nPha Vortex sẽ phân tán sau {4} giây, gây {2}<color=#ffd775>(+{3})</color><color=#DDA0DD>(+{11})</color> Sát Thương Kỹ Năng và Hất Tung những kẻ địch ở trung tâm kỹ năng trong {6} giây.\n\nKỹ năng trúng địch sẽ nhận {9} Trường Lực.
-Skill/Group/Desc/1036400┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{7})</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
-Skill/Group/Desc/1036410┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{7})</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
-Skill/Group/Desc/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây {1}<color=#ffd775>(+{10})</color><color=#DDA0DD>(+{8})</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây {3}<color=#ffd775>(+{4})</color><color=#DDA0DD>(+{9})</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.\n\nSử dụng Dòng Chảy Thạch Anh khi đang vận sức sẽ ngay lập tức hồi chiêu Phát Xạ VF.
+Skill/Group/Desc/1036100┃Siêu Năng Ngoại Cảm: Bắt đầu từ cấp độ {6}, Eva thức tỉnh năng lực ngoại cảm và có thể mở hộp, hòm tiếp tế, cứu đồng đội từ xa. Cô ấy chỉ có thể cứu đồng đội hoặc thu thập Thiên Thạch và Cây Sinh Mệnh từ xa khi đang trong giao tranh.\n\nHạt Trường Lực: Khi Eva đánh trúng kỹ năng hoặc bị đánh thường, cô ấy phóng thích một Hạt Trường Lực chứa năng lượng VF tới vị trí kẻ địch, gây <color=white>{20}</color> Sát Thương Kỹ Năng và Làm Chậm kẻ địch trúng chiêu đi {4} trong {3} giây.\nHạt Trường Lực rơi trúng kẻ địch sẽ nhận giảm hồi chiêu đi {5} và nhận {7} Trường Lực.\n\nEva nhận {9} Trường Lực mỗi {8} giây ngoài giao tranh, {10} với mỗi mạng hạ gục, và {11} với mỗi mạng hỗ trợ.
+Skill/Group/Desc/1036200┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây <color=white>{20}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây <color=white>{21}</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
+Skill/Group/Desc/1036210┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây <color=white>{20}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây <color=white>{21}</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
+Skill/Group/Desc/1036300┃Eva tạo ra một vùng năng lượng tại vị trí chỉ định, gây <color=white>{20}</color> Sát Thương Kỹ Năng. Những kẻ địch đứng trên Pha Vortex sẽ phải chịu thêm {5} sát thương từ bộ kỹ năng của Eva và bị Làm Chậm đi {8}.\nPha Vortex sẽ phân tán sau {4} giây, gây <color=white>{21}</color> Sát Thương Kỹ Năng và Hất Tung những kẻ địch ở trung tâm kỹ năng trong {6} giây.\n\nKỹ năng trúng địch sẽ nhận {9} Trường Lực.
+Skill/Group/Desc/1036400┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng <color=white>{20}</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
+Skill/Group/Desc/1036410┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng <color=white>{20}</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
+Skill/Group/Desc/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây <color=white>{20}</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây <color=white>{21}</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.\n\nSử dụng Dòng Chảy Thạch Anh khi đang vận sức sẽ ngay lập tức hồi chiêu Phát Xạ VF.
 CharacterState/Group/Name/1036110┃Siêu Năng Ngoại Cảm
 CharacterState/Group/Name/1036120┃Siêu Năng Ngoại Cảm - Làm Chậm
 CharacterState/Group/Name/1036310┃Pha Vortex
@@ -2605,6 +2689,7 @@ CharacterState/Group/Desc/1036420┃Serangan biasa berikutnya di enhanced.
 CharacterState/Group/Desc/1036440┃Di-Silence oleh Amethyst Flow.
 CharacterState/Group/Desc/1036450┃Eva memanipulasi VF mu, memberikan damage dan penglihatan mu kepada Eva.
 CharacterState/Group/Desc/1036510┃Memberikan ekstra damage ketika mencapai maximum stack.
+Skill/Group/Desc/1037200┃Li Dailin terjun ke depan, menekan musuh pertama yang kena dan dilanjutkan dengan 2 tendangan beruntun. Tiap serangan memberi <color=white>{20}</color> sampai <color=white>{21}</color> kerusakan sebanding dengan HP musuh yang hilang.\n\nMabuk: dilanjutkan dengan 4 tendangan beruntun
 Skill/Group/Name/1038100┃Play Dead
 Skill/Group/Name/1038110┃Play Dead
 Skill/Group/Name/1038200┃Spotlight
@@ -2617,15 +2702,27 @@ Skill/Group/Name/1038700┃Red Carpet
 Skill/Group/Name/1038710┃Red Carpet
 Skill/Group/Name/1038800┃Persona
 Skill/Group/Desc/1038100┃<color=#ffffff>Rehearsal</color>: Basic attacks membuat Jenny {0} Rehearsal dan mengurangi cooldown dari Persona sebanyak {12}. Stack Rehersal menurut {14} per detik saat tidak bertarung. \nJenny mendapatkan efek tambahan ketika mengambil role yang baru.\n\n<color=yellow>Red Wine</color>: Menambahkan Attack speed sebanyak {9} selama {8} detik.\n<color=yellow>Black Tea</color>: Menambahkan Movement Speed sebanyak {11} selama {10} detik.\n\n<color=#ffffff>Play Dead</color>: Jika Jenny mempunyai {1} atau lebih Rehearsal Ketika HP nya menjadi 0, dia menghindari kematian, memperlambatnya, tapi membuatnya tidak terlihat, tidak dapat diserang, dan tidak dapat ditarget.\nJenny lalu mengakhiri akting nya, memberikan heal sebanyak{3} + <color=#ff0000>{4}~{5}({13} dari Max HP berdasarkan Reharsal)</color>, dan memberikan {6} + <color=#688A08>{7} dari HP musuh yang hilang</color> damage kemusuh disekitarnya.
-Skill/Group/Desc/1038200┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan {0}<color=#ffd775>(+{1})</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
-Skill/Group/Desc/1038300┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
-Skill/Group/Desc/1038310┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
-Skill/Group/Desc/1038400┃<color=green>Pasif</color>: Jenny memberikan {0}<color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.\nEfek untuk Spotlights and Red Carpets yang ada tidak berefek.\n
-Skill/Group/Desc/1038500┃Jenny membuat award stage disekitarnya, memberikan slow ke musuh sebanyak {0} dan mereset cooldown Persona.\nThe stage menghilang setelah {1} detik, memberikan {2}<color=#ffd775>(+{3})</color> damage dan charm musuh didalamnya selama {4} detik.
-Skill/Group/Desc/1038600┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan {0}<color=#ffd775>(+{1})</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
-Skill/Group/Desc/1038700┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
-Skill/Group/Desc/1038710┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
-Skill/Group/Desc/1038800┃<color=green>Pasif</color>: Jenny memberikan {0}<color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.\nEfek untuk Spotlights and Red Carpets yang ada tidak berefek.\n
+Skill/Group/Desc/1038200┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan <color=white>{20}</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
+Skill/Group/Desc/1038300┃Jenny mengeluarkan red carpet ke target lokasi, memberikan <color=white>{20}</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan <color=white>{21}</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Desc/1038310┃Jenny mengeluarkan red carpet ke target lokasi, memberikan <color=white>{20}</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan <color=white>{21}</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Desc/1038400┃<color=green>Pasif</color>: Jenny memberikan <color=white>{20}</color><color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.
+Skill/Group/Desc/1038500┃Jenny membuat award stage disekitarnya, memberikan slow ke musuh sebanyak {0} dan mereset cooldown Persona.\nThe stage menghilang setelah {1} detik, memberikan <color=white>{20}</color> damage dan charm musuh didalamnya selama {4} detik.
+Skill/Group/Desc/1038600┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan <color=white>{20}</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
+Skill/Group/Desc/1038700┃Jenny mengeluarkan red carpet ke target lokasi, memberikan <color=white>{20}</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan <color=white>{21}</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Desc/1038710┃Jenny mengeluarkan red carpet ke target lokasi, memberikan <color=white>{20}</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan <color=white>{21}</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Desc/1038800┃<color=green>Pasif</color>: Jenny memberikan <color=white>{20}</color><color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.
+Skill/Group/Coef/1038100┃<color=#ffffff>Rehearsal</color>: Basic attacks membuat Jenny {0} Rehearsal dan mengurangi cooldown dari Persona sebanyak {12}. Stack Rehersal menurut {14} per detik saat tidak bertarung. \nJenny mendapatkan efek tambahan ketika mengambil role yang baru.\n\n<color=yellow>Red Wine</color>: Menambahkan Attack speed sebanyak {9} selama {8} detik.\n<color=yellow>Black Tea</color>: Menambahkan Movement Speed sebanyak {11} selama {10} detik.\n\n<color=#ffffff>Play Dead</color>: Jika Jenny mempunyai {1} atau lebih Rehearsal Ketika HP nya menjadi 0, dia menghindari kematian, memperlambatnya, tapi membuatnya tidak terlihat, tidak dapat diserang, dan tidak dapat ditarget.\nJenny lalu mengakhiri akting nya, memberikan heal sebanyak{3} + <color=#ff0000>{4}~{5}({13} dari Max HP berdasarkan Reharsal)</color>, dan memberikan {6} + <color=#688A08>{7} dari HP musuh yang hilang</color> damage kemusuh disekitarnya.
+Skill/Group/Coef/1038200┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan {0}<color=#ffd775>(+{1})</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
+Skill/Group/Coef/1038300┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Coef/1038310┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Coef/1038400┃<color=green>Pasif</color>: Jenny memberikan {0}<color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.\nEfek untuk Spotlights and Red Carpets yang ada tidak berefek.\n
+Skill/Group/Coef/1038500┃Jenny membuat award stage disekitarnya, memberikan slow ke musuh sebanyak {0} dan mereset cooldown Persona.\nThe stage menghilang setelah {1} detik, memberikan {2}<color=#ffd775>(+{3})</color> damage dan charm musuh didalamnya selama {4} detik.
+Skill/Group/Coef/1038600┃Jenny memancarkan spotlight ke target lokasi selama 3 kali, memberikan {0}<color=#ffd775>(+{1})</color> damage.\nMemukul musuh memberikan Jenny {8} Rehearsal. Ketika Jenny mempunyai {9} atau lebih Rehearsal, dia mendapatkan enhanced efek berdasarkan role dia yang aktif ketika spotlight menyinarinya.\n\n<color=yellow>Red Wine</color>: Menambahkan attack speed sebanyak {3} selama {2} detik. (Max {4} Stak)\n<color=yellow>Black Tea</color>: Menambahkan movement speed sebanyak {6} selama {5} detik. (Max {7} Stak)
+Skill/Group/Coef/1038700┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Coef/1038710┃Jenny mengeluarkan red carpet ke target lokasi, memberikan {0}<color=#ffd775>(+{1})</color> damage dan memberikan slow ke musuh sebanyak {2} selama {5} detik.\n\nReactivate Red Carpet untuk memberikan {3}<color=#ffd775>(+{4})</color> damage ke musuh yang ada di carpet. Red Carpet punya efek tambahan tergantung dengan Persona nya.\n\n<color=yellow>Red Wine</color>: Menarik musuh yang berada di red carpet.\n<color=yellow>Black Tea</color>: Mendorong musuh yang berada di red carpet.
+Skill/Group/Coef/1038800┃<color=green>Pasif</color>: Jenny memberikan {0}<color=#008000>(+{1})</color> extra skill damage setiap {2} basic attack. Damage juga bertambah berdasarkan Skill Amplification.\n\nJenny dash ke arah target dan mengambil role baru, mengaktifkan efek tambahan.\nEfek untuk Spotlights and Red Carpets yang ada tidak berefek.\n
+Skill/Group/ExpansionTip/1038400┃<i>Efek untuk Spotlights and Red Carpets yang ada tidak berefek.</i>
+Skill/Group/ExpansionTip/1038800┃<i>Efek untuk Spotlights and Red Carpets yang ada tidak berefek.</i>
 CharacterState/Group/Name/1038110┃Play Dead
 CharacterState/Group/Desc/1038110┃Jenny Playing Dead. Akting yang bagus.
 CharacterState/Group/Name/1038140┃Play Dead
@@ -2668,28 +2765,69 @@ Skill/Group/Name/3006000┃Caltrop Tail
 Skill/Group/Name/3022000┃Love&...
 Skill/Group/Name/3020000┃Breath of the Dragon
 Skill/Group/Name/3023000┃Flash
-Skill/Group/Desc/3015000┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi {3} kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.\n\n<color=yellow>(Aktif pada Penguasaan LV7, Ditingkatkan pada LV14)</color>
-Skill/Group/Desc/3015100┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi {3} kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.\n\n<color=yellow>(Aktif pada Penguasaan LV7, Ditingkatkan pada LV14)</color>
-Skill/Group/Desc/3016000┃Angkat pedangmu dan ambil posisi bertahan.\nKetika Parry aktif, kamu akan terlindungi dari serangan dan efek dari arah depan selama {0} detik. Setelah posisi berakhir, kamu berlari ke arah musuh, memberi <color=#ffd775>(+{1})</color> kerusakan ke musuh di jalanmu.\n\n<color=yellow>(Aktif pada Penguasaan LV7, Ditingkatkan pada LV14)</color>
-Skill/Group/Desc/3014000┃Mendapatkan {0} tumpukan Spiral Kebencian setiap serangan biasa kepada tes subjek dan {1} tumpukan terhadap Binatang dan Android. Ketika tumpukan sudah mencapai Maksimal ({6}), Kamu bisa mengaktifkan Spiral Kebencian.\n\nMengaktifkan  Spiral Kebencian  mengayunkan Kapak ke area disekeliling mu, memberikan <color=#ffd775>{2}</color>(+{3} dari taget Max HP) kerusakan. Kamu akan disembuhkan sebesar {4} dari kerusakan yang diberikan {5} dari damage yang diberikan jika targetnya adalah tes subjek.\n\n<color=yellow>(Aktifasi di Mastery Lv7, Ditingkatkan di Lv14)</color>
-Skill/Group/Desc/3018000┃Menerjang ke arah target dan memberi <color=#ffd775>{0}</color> kerusakan 6 kali ke semua musuh di jalanmu.\nJika musuh terkena Dual Sword Rampage, kamu bisa mengaktifkan jurus sekali lagi dalam {1} detik.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3018010┃Menerjang ke arah target dan memberi <color=#ffd775>{0}</color> kerusakan 6 kali ke semua musuh di jalanmu.\nJika musuh terkena Dual Sword Rampage, kamu bisa mengaktifkan jurus sekali lagi dalam {1} detik.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3009000┃Reload peluru dan meningkatkan movement speed sebanyak {1} selama {0} detik. Mengurangi Cooldown jurus basic sebanyak {2}.\n\n<color=yellow>(Aktif di Mastery Lv7, Enhanced at Lv14)</color>
-Skill/Group/Desc/3010000┃Ketika mengenai musuh dengan serangan, kamu mendapat {0} tumpukan Overheat untuk setiap tembakan. (Maksimal {1} tumpukan)\nJika kamu tidak melakukan serangan selama {6} detik, kamu kehilangan {3} tumpukan setiap {2} detik. Ketika tumpukan mencapai {1}, kamu bisa mengaktifkan Overheat.\n\nMengaktifkan Overheat dengan {1} tumpukan menambahkan kecepatan serang sebanyak {5} untuk {4} detik. Ketika Overheat aktif, kecepatan serang maksimal diabaikan dan efek Pukulan Mundur ditambahkan setiap tiga kali serangan.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3011000┃Mengaktifkan Ballistic Advantage ke arah target.\nKetika Ballistic Advantage aktif, jarak pandang mu bertambah {0} tapi sudut pandang mu berkurang.\nBallistic Advantage dapat membuatmu mengaktifkan Crippling Shot dan Dead to Rights.\n\n<color=white>Crippling Shot</color>\nMemberikan mu {1} penglihatan, memberikan <color=#ffd775>{2}</color> kerusakan, dan memberikan mu penglihatan terhadap musuh mu selama {3} detik.\n\n<color=white>Dead to Rights</color>\nmemberikan mu {4} penglihatan dan memberikan <color=#ffd775>{5}</color> kerusakan ke musuh yang kena. Dead to Rights memberikan kerusakan lebih berdasarkan target HP yang berkurang.\n\nBallistic Advantage berhenti jika kamu bergerak dan terkena efek crowd control.\n\n<color=yellow>(Aktif saat Mastery Lv7, Meningkat saat Lv14)</color>
-Skill/Group/Desc/3001000┃Untuk {0} detik ke depan, jarak serang maksimal meningkat sebanyak {1}m. Menyerang musuh memberi <color=#ffd775>{2}</color> kerusakan, dan tambahan {3} untuk kerusakan terakhir dan {4} kerusakan murni.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3002000┃Menghalang kerusakan dari segala arah untuk {0} detik dan mengembalikan kerusakannya {1}x ke musuh yang menyerang, jika dia ada di jarak pandangmu.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/Desc/3015000┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi <color=white>{3}</color> kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.
+Skill/Group/Desc/3015100┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi <color=white>{3}</color> kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.
+Skill/Group/Coef/3015000┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi {3}<color=#DDA0DD>(+{7})</color> kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.
+Skill/Group/Coef/3015010┃Cloak\nKamu menjadi transparan untuk {0} detik dan kecepatan gerak meningkat {1}. Kecepatan gerak berkurang lagi setelah {0} detik.\n\nDagger\nUntuk {2} detik, efek belati akan ditambahkan ke serangan.\nMenyerang musuh dengan efek belati memindahkan kamu ke belakang musuh, memberi {3}<color=#DDA0DD>(+{7})</color> kerusakan kritis dan kerusakan tambahan murni dari {4} HP musuh saat ini.
+Skill/Group/ExpansionTip/3015000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3015010┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3016000┃Angkat pedangmu dan ambil posisi bertahan.\nKetika Parry aktif, kamu akan terlindungi dari serangan dan efek dari arah depan selama {0} detik. Setelah posisi berakhir, kamu berlari ke arah musuh, memberi <color=white>{20}</color> kerusakan ke musuh di jalanmu.\n\n<color=yellow>(Aktif pada Penguasaan LV7, Ditingkatkan pada LV14)</color>
+Skill/Group/ExpansionTip/3016000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3014000┃Mendapatkan {0} tumpukan Spiral Kebencian setiap serangan biasa kepada tes subjek dan {1} tumpukan terhadap Binatang dan Android. Ketika tumpukan sudah mencapai Maksimal ({6}), Kamu bisa mengaktifkan Spiral Kebencian.\n\nMengaktifkan  Spiral Kebencian  mengayunkan Kapak ke area disekeliling mu, memberikan <color=white>{2}</color><color=#688A08>(+{3} dari taget Max HP)</color> kerusakan. Kamu akan disembuhkan sebesar {4} dari kerusakan yang diberikan {5} dari damage yang diberikan jika targetnya adalah tes subjek.
+Skill/Group/Coef/3014000┃Mendapatkan {0} tumpukan Spiral Kebencian setiap serangan biasa kepada tes subjek dan {1} tumpukan terhadap Binatang dan Android. Ketika tumpukan sudah mencapai Maksimal ({6}), Kamu bisa mengaktifkan Spiral Kebencian.\n\nMengaktifkan  Spiral Kebencian  mengayunkan Kapak ke area disekeliling mu, memberikan <color=#ffd775>{2}</color><color=#DDA0DD>(+{7})</color><color=#688A08>(+{3} dari taget Max HP)</color> kerusakan. Kamu akan disembuhkan sebesar {4} dari kerusakan yang diberikan {5} dari damage yang diberikan jika targetnya adalah tes subjek.
+Skill/Group/ExpansionTip/3014000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Coef/3018000┃Menerjang ke arah target dan memberi <color=#ffd775>{0}</color> kerusakan 6 kali ke semua musuh di jalanmu.\nJika musuh terkena Dual Sword Rampage, kamu bisa mengaktifkan jurus sekali lagi dalam {1} detik.
+Skill/Group/Coef/3018010┃Menerjang ke arah target dan memberi <color=#ffd775>{0}</color> kerusakan 6 kali ke semua musuh di jalanmu.\nJika musuh terkena Dual Sword Rampage, kamu bisa mengaktifkan jurus sekali lagi dalam {1} detik.
+Skill/Group/ExpansionTip/3018000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3018010┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3009000┃Reload peluru dan meningkatkan movement speed sebanyak {1} selama {0} detik. Mengurangi Cooldown jurus basic sebanyak {2}.
+Skill/Group/Coef/3009000┃Reload peluru dan meningkatkan movement speed sebanyak {1} selama {0} detik. Mengurangi Cooldown jurus basic sebanyak {2}.
+Skill/Group/ExpansionTip/3009000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3010000┃Ketika mengenai musuh dengan serangan, kamu mendapat {0} tumpukan Overheat untuk setiap tembakan. (Maksimal {1} tumpukan)\nJika kamu tidak melakukan serangan selama {6} detik, kamu kehilangan {3} tumpukan setiap {2} detik. Ketika tumpukan mencapai {1}, kamu bisa mengaktifkan Overheat.\n\nMengaktifkan Overheat dengan {1} tumpukan menambahkan kecepatan serang sebanyak {5} untuk {4} detik. Ketika Overheat aktif, kecepatan serang maksimal diabaikan dan efek Pukulan Mundur ditambahkan setiap tiga kali serangan.
+Skill/Group/Coef/3010000┃Ketika mengenai musuh dengan serangan, kamu mendapat {0} tumpukan Overheat untuk setiap tembakan. (Maksimal {1} tumpukan)\nJika kamu tidak melakukan serangan selama {6} detik, kamu kehilangan {3} tumpukan setiap {2} detik. Ketika tumpukan mencapai {1}, kamu bisa mengaktifkan Overheat.\n\nMengaktifkan Overheat dengan {1} tumpukan menambahkan kecepatan serang sebanyak {5} untuk {4} detik. Ketika Overheat aktif, kecepatan serang maksimal diabaikan dan efek Pukulan Mundur ditambahkan setiap tiga kali serangan.
+Skill/Group/ExpansionTip/3010000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3011000┃Mengaktifkan Ballistic Advantage ke arah target.\nKetika Ballistic Advantage aktif, jarak pandang mu bertambah {0} tapi sudut pandang mu berkurang.\nBallistic Advantage dapat membuatmu mengaktifkan Crippling Shot dan Dead to Rights.\n\n<color=white>Crippling Shot</color>\nMemberikan mu {1} penglihatan, memberikan <color=white>{2}</color> kerusakan, dan memberikan mu penglihatan terhadap musuh mu selama {3} detik.\n\n<color=white>Dead to Rights</color>\nmemberikan mu {4} penglihatan dan memberikan <color=white>{5}</color> kerusakan ke musuh yang kena. Dead to Rights memberikan kerusakan lebih berdasarkan target HP yang berkurang.
+Skill/Group/Coef/3011000┃Mengaktifkan Ballistic Advantage ke arah target.\nKetika Ballistic Advantage aktif, jarak pandang mu bertambah {0} tapi sudut pandang mu berkurang.\nBallistic Advantage dapat membuatmu mengaktifkan Crippling Shot dan Dead to Rights.\n\n<color=white>Crippling Shot</color>\nMemberikan mu {1} penglihatan, memberikan <color=#ffd775>{2}</color><color=#DDA0DD>(+{8})</color> kerusakan, dan memberikan mu penglihatan terhadap musuh mu selama {3} detik.\n\n<color=white>Dead to Rights</color>\nmemberikan mu {4} penglihatan dan memberikan <color=#ffd775>{5}</color><color=#DDA0DD>(+{8})</color> kerusakan ke musuh yang kena. Dead to Rights memberikan kerusakan lebih berdasarkan target HP yang berkurang.
+Skill/Group/ExpansionTip/3011000┃<i>Ballistic Advantage berhenti jika kamu bergerak dan terkena efek crowd control.\n\nAktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3001000┃Untuk {0} detik ke depan, jarak serang maksimal meningkat sebanyak {1}m. Menyerang musuh memberi <color=white>{6}</color> kerusakan, dan tambahan {3} untuk kerusakan terakhir dan {4} kerusakan murni.
+Skill/Group/Coef/3001000┃Untuk {0} detik ke depan, jarak serang maksimal meningkat sebanyak {1}m. Menyerang musuh memberi <color=#ffd775>{2}</color> kerusakan, dan tambahan {3} untuk kerusakan terakhir dan {4} kerusakan murni.
+Skill/Group/ExpansionTip/3001000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3002000┃Menghalang kerusakan dari segala arah untuk {0} detik dan mengembalikan kerusakannya {1}x ke musuh yang menyerang, jika dia ada di jarak pandangmu.
+Skill/Group/Coef/3002000┃Menghalang kerusakan dari segala arah untuk {0} detik dan mengembalikan kerusakannya {1}x ke musuh yang menyerang, jika dia ada di jarak pandangmu.
+Skill/Group/ExpansionTip/3002000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
 Skill/Group/Desc/3003000┃Ayunkan pentungan ke arah depanmu, memberi <color=#ffd775>{0}</color> kerusakan ke semua musuh di area target, dan memukul mundur mereka sejauh {3}m. Musuh yang mengenai dinding akan tertahan untuk {1} detik.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/ExpansionTip/3003000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
 Skill/Group/Desc/3013000┃Hantam martil ke arah pilihanmu, memberi {0}<color=aqua>(+{1})</color> kerusakan dan mengurangi pertahanan musuh sebanyak {3} untuk {2} detik.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3007000┃Menembakan banyak panah ke area target, menyebabkan hujan panah.\nPanah mencapai target setelah {0} detik, memberi {1}<color=#ffd775>(+{2})</color> kerusakan ke setiap musuh yang kena, dan mengurangi kecepatan serang dan gerak mereka sebanyak {3}. Musuh yang berada di tengah hujan panah menerima {4}<color=#ffd775>(+{5})</color> kerusakan.
-Skill/Group/Desc/3008000┃Tembak crossbow ke area target. Target yang terkena panah menerima {0} kerusakan dan dipukul mundur. Musuh yang mengenai dinding akan tertahan dan menerima {0} kerusakan tambahan. \n\n <color=yellow>(Aktif pada penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/ExpansionTip/3013000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3007000┃Menembakan banyak panah ke area target, menyebabkan hujan panah.\nPanah mencapai target setelah {0} detik, memberi <color=white>{1}</color> kerusakan ke setiap musuh yang kena, dan mengurangi kecepatan serang dan gerak mereka sebanyak {2}. Musuh yang berada di tengah hujan panah menerima <color=white>{3}</color> kerusakan.
+Skill/Group/Coef/3007000┃Menembakan banyak panah ke area target, menyebabkan hujan panah.\nPanah mencapai target setelah {0} detik, memberi <color=white>{1}</color><color=#ffd775>(+{2})</color> kerusakan ke setiap musuh yang kena, dan mengurangi kecepatan serang dan gerak mereka sebanyak {3}. Musuh yang berada di tengah hujan panah menerima <color=white>{4}</color><color=#ffd775>(+{5})</color> kerusakan.
+Skill/Group/ExpansionTip/300700┃<i>Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14<i>
+Skill/Group/Desc/3008000┃Tembak crossbow ke area target. Target yang terkena panah menerima <color=white>{0}</color> kerusakan dan dipukul mundur. Musuh yang mengenai dinding akan tertahan dan menerima <color=white>{0}</color> kerusakan tambahan. \n\n <color=yellow>(Aktif pada penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/Coef/3008000┃Tembak crossbow ke area target. Target yang terkena panah menerima {0} kerusakan dan dipukul mundur. Musuh yang mengenai dinding akan tertahan dan menerima {0} kerusakan tambahan. \n\n <color=yellow>(Aktif pada penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/ExpansionTip/300800┃<i>Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14<i>
 Skill/Group/Desc/3019000┃Secara kuat menusukkan tombak ke arah target, memberi {1} kerusakan ke musuh sampai {0}m, dan {1} kerusakan untuk musuh sampai {2}m.\nMusuh yang terkena Shadow Stab kecepatan geraknya dikurangi sebanyak {4} untuk {3} detik, dan semua musuh di jarak {0} dipukul mundur sejauh {5}m. \n\n <color=yellow>(Aktif pada penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3021000┃Kamu menerjang musuh dan memberi {0} kerusakan. Kerusakan meingkat seiting meningkatnya Kerusakan Kritis. potongan Cepat selalu menghasilkan serangan kritis.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3005000┃Gumpalan asap muncul di tanah sekitarmu. Musuh yang berada di gumpalan asap akan dikurangi jarak pandang dan kecepatan geraknya sebanyak {1}. Gumpalan asap bertahan untuk {0} detik.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada LV14)</color>
-Skill/Group/Desc/3006000┃Lempar ranjau ke area. Ranjau bertahan selama {0} detik, memberi {1}<color=#ffd775>(+{5})</color> damage ke musuh yang menginjaknya dan mengurangi kecepatan gerak mereka sebanyak {2} untuk {4} detik. Jika ada ranjau lebih yang terinjak memberikan damage kurang {3} dari damage sebelumnya.\n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
+Skill/Group/ExpansionTip/3019000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3021000┃Kamu menerjang musuh dan memberi <color=white>{0}</color> kerusakan. Kerusakan meingkat seiting meningkatnya Kerusakan Kritis. potongan Cepat selalu menghasilkan serangan kritis.
+Skill/Group/Coef/3021000┃Kamu menerjang musuh dan memberi {0} kerusakan. Kerusakan meingkat seiting meningkatnya Kerusakan Kritis. potongan Cepat selalu menghasilkan serangan kritis.
+Skill/Group/ExpansionTip/3021000┃<i>Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14<i>
+Skill/Group/Desc/3005000┃Gumpalan asap muncul di tanah sekitarmu. Musuh yang berada di gumpalan asap akan dikurangi jarak pandang dan kecepatan geraknya sebanyak {1}. Gumpalan asap bertahan untuk {0} detik.
+Skill/Group/Coef/3005000┃Gumpalan asap muncul di tanah sekitarmu. Musuh yang berada di gumpalan asap akan dikurangi jarak pandang dan kecepatan geraknya sebanyak {1}. Gumpalan asap bertahan untuk {0} detik.
+Skill/Group/ExpansionTip/3005000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3006000┃Lempar ranjau ke area. Ranjau bertahan selama {0} detik, memberi<color=white>{20}</color> damage ke musuh yang menginjaknya dan mengurangi kecepatan gerak mereka sebanyak {2} untuk {4} detik. Jika ada ranjau lebih yang terinjak memberikan damage kurang {3} dari damage sebelumnya.
+Skill/Group/ExpansionTip/3006000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
 Skill/Group/Desc/3022000┃Menembakkan gelombang suara ke arah target, memberi <color=prange>{0}</color> kerusakan ke musuh pertama yang kena.\nMusuh yang terkena gelombang suara akan kerasukan musik, bergerak ke arah sumber suara selama {1} detik. \n\n<color=yellow>(Aktif pada Penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3020000┃Mengayunkan nunchaku dengan cepat, menimbulkan hembusan angin. setelah beberapa waktu, meluncurkan hembusan angin ke arah target memberi kerusakan dari {0}<color=#ffd775>(+{1})</color> sampai {2}<color=#ffd775>(+{3})</color> tergantung dari seberapa banyak mengayunkan nunchaku. Mengayunkan nunchaku lebih dari {4} detik akan memberikan Stun kepada musuh yang terkena untuk {5} selama. \n\n <color=yellow>(Aktif pada penguasaan Lv7, Ditingkatkan pada Lv14)</color>
-Skill/Group/Desc/3023000┃Menghidupkan Flash mu kearah target, memberikan {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{4})</color> kerusakan. Musuh yang menghadap kamu mendapatkan {2} tambahan kerusakan dan dibutakan selama {3} detik.
+Skill/Group/ExpansionTip/3022000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3020000┃Mengayunkan nunchaku dengan cepat, menimbulkan hembusan angin. setelah beberapa waktu, meluncurkan hembusan angin ke arah target memberi kerusakan dari <color=white>{9}</color> sampai <color=white>{10}</color> tergantung dari seberapa banyak mengayunkan nunchaku. Mengayunkan nunchaku lebih dari {4} detik akan memberikan Stun kepada musuh yang terkena untuk {5} selama. 
+Skill/Group/Coef/3020000┃Mengayunkan nunchaku dengan cepat, menimbulkan hembusan angin. setelah beberapa waktu, meluncurkan hembusan angin ke arah target memberi kerusakan dari <color=white>{0}</color><color=#ffd775>(+{1})</color> sampai <color=white>{2}</color><color=#ffd775>(+{3})</color> tergantung dari seberapa banyak mengayunkan nunchaku. Mengayunkan nunchaku lebih dari {4} detik akan memberikan Stun kepada musuh yang terkena untuk {5} selama. 
+Skill/Group/ExpansionTip/3020000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3004000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/Desc/3023000┃Menghidupkan Flash mu kearah target, memberikan <color=white>{0}</color> kerusakan. Musuh yang menghadap kamu mendapatkan <color=white>{2}</color> tambahan kerusakan dan dibutakan selama {3} detik.
+Skill/Group/Coef/3023000┃Menghidupkan Flash mu kearah target, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{4})</color> kerusakan. Musuh yang menghadap kamu mendapatkan {2} tambahan kerusakan dan dibutakan selama {3} detik.
+Skill/Group/ExpansionTip/3023000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3024000┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3024100┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3024110┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
+Skill/Group/ExpansionTip/3024120┃<i>Aktif pada Penguasaan LV7, Ditingkatkan pada LV14</i>
 CharacterState/Group/Name/3006000┃Caltrops
 CharacterState/Group/Desc/3006000┃Kecepatan gerak dikurangi
 CharacterState/Group/Name/3001000┃Uppercut
@@ -2943,6 +3081,8 @@ Item/Skills/6001001/Name┃<color=yellow>Penghalang Api</color>
 Item/Skills/6001001/Desc┃Memberi Damage kepada musuh di dalam {0}m setiap {9}} detik selama berada di dalam Combat. \nMelee: Memberikan <color=#688A08>{3} Max HP </color> damage seluler. \nRanged: Memberikan <color=#688A08> {7} Max HP </color> damage seluler
 Item/Skills/6001002/Name┃<color=yellow>Penghalang Api</color>
 Item/Skills/6001002/Desc┃Memberi Damage kepada musuh di dalam {0}m setiap {9}} detik selama berada di dalam Combat. \nMelee: Memberikan <color=#688A08>{3} Max HP </color> damage seluler. \nRanged: Memberikan <color=#688A08> {7} Max HP </color> damage seluler
+Item/Skills/6001003/Name┃<color=yellow>Penghalang Api</color>
+Item/Skills/6001003/Desc┃Memberi Damage kepada musuh di dalam {0}m setiap {9}} detik selama berada di dalam Combat. \nMelee: Memberikan <color=#688A08>{3} Max HP </color> damage seluler. \nRanged: Memberikan <color=#688A08> {7} Max HP </color> damage seluler
 Item/Skills/6003001/Name┃<color=yellow>Tenacity</color>
 Item/Skills/6003002/Name┃<color=yellow>Tenacity</color>
 Item/Skills/6004001/Name┃<color=yellow>Smolder</color>
@@ -3032,203 +3172,6 @@ Item/Skills/6013002/Name┃<color=yellow>Lead Shell</color>
 Item/Skills/6013002/Body┃Serangan biasa selanjutnya memperlambat musuh sebanyak {5}% selama {4} second.
 Item/Skills/6013002/Desc┃Serangan biasa selanjutnya memperlambat musuh sebanyak {5}% selama {4} second.
 Item/Skills/6013003/Name┃<color=yellow>Magnetic Midnight</color>
-오늘의 도전┃Tugas Harian
-오늘의 도전과제를 모두 완수하였습니다.┃Kamu sudah menyelesaikan semua Tugas Harian
-도전과제 변경 가능┃Kamu bisa mmengganti Tugas Harian satu kali adalam sehari. Apa kamu ingin mengganti ke Tuhas Harian baru?
-도전과제 변경 초과┃Jumlah penggantian Tugas Harian sudah terlampaui. (satu kali dalam satu hari)
-미션 갱신 에러┃Pembaharuan misi gagal
-매칭중에는 변경할 수 없습니다.┃Tidak bisa mengganti saat mencari permainan
-일일 보상!┃Ambil hadiah
-Mission/1/1┃Mainkan PvP biasa atau Rank
-Mission/2/1┃Mainkan PvP biasa atau Rank
-Mission/3/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
-Mission/4/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
-Mission/21/1┃Mainkan Rank
-Mission/11/1┃Mainkan PvP biasa
-Mission/31/1┃Bunuh musuh
-Mission/32/1┃Bunuh musuh
-Mission/33/1┃Bunuh musuh
-Mission/34/1┃Bunuh musuh
-Mission/35/1┃Bunuh musuh
-Mission/36/1┃Bunuh musuh
-Mission/41/1┃Bunuh hewan liar
-Mission/42/1┃Bunuh hewan liar
-Mission/43/1┃Bunuh hewan liar
-Mission/44/1┃Bunuh hewan liar
-Mission/45/1┃Bunuh hewan liar
-Mission/46/1┃Bunuh hewan liar
-Mission/47/1┃Bunuh hewan liar
-Mission/51/1┃Berada di peringkat 7 ke atas
-Mission/52/1┃Berada di peringkat 5 ke atas
-Mission/53/1┃Berada di peringkat 3 ke atas
-Mission/61/1┃Mendapatkan <color=#C4C4C4>Madu</color>
-Mission/62/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
-Mission/63/1┃Mendapatkan <color=#C4C4C4>Air</color>
-Mission/64/1┃Mendapatkan <color=#C4C4C4>Kentang</color>
-Mission/65/1┃Mendapatkan <color=#C4C4C4>Ikan Kod</color>
-Mission/66/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/67/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/68/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/69/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/71/1┃Memberi kerusakan ke pemain
-Mission/72/1┃Memberi kerusakan ke pemain
-Mission/73/1┃Memberi kerusakan ke pemain
-Mission/74/1┃Memberi kerusakan ke pemain
-Mission/75/1┃Memberi kerusakan ke pemain
-Mission/76/1┃Memberi kerusakan ke pemain
-Mission/77/1┃Memberi kerusakan ke pemain
-Mission/81/1┃Memberi kerusakan ke hewan liar
-Mission/82/1┃Memberi kerusakan ke hewan liar
-Mission/83/1┃Memberi kerusakan ke hewan liar
-Mission/84/1┃Memberi kerusakan ke hewan liar
-Mission/85/1┃Memberi kerusakan ke hewan liar
-Mission/86/1┃Memberi kerusakan ke hewan liar
-Mission/87/1┃Memberi kerusakan ke hewan liar
-Mission/88/1┃Memberi kerusakan ke hewan liar
-Mission/89/1┃Memberi kerusakan ke hewan liar
-Mission/91/1┃Membunuh ayam
-Mission/92/1┃Membunuh ayam
-Mission/93/1┃Membunuh ayam
-Mission/94/1┃Membunuh ayam
-Mission/95/1┃Membunuh ayam
-Mission/96/1┃Membunuh ayam
-Mission/97/1┃Membunuh ayam
-Mission/101/1┃Membunuh kelelawar
-Mission/102/1┃Membunuh kelelawar
-Mission/103/1┃Membunuh kelelawar
-Mission/104/1┃Membunuh kelelawar
-Mission/105/1┃Membunuh kelelawar
-Mission/106/1┃Membunuh kelelawar
-Mission/107/1┃Membunuh kelelawar
-Mission/111/1┃Membunuh babi hutan
-Mission/112/1┃Membunuh babi hutan
-Mission/113/1┃Membunuh babi hutan
-Mission/114/1┃Membunuh babi hutan
-Mission/115/1┃Membunuh babi hutan
-Mission/116/1┃Membunuh babi hutan
-Mission/117/1┃Membunuh babi hutan
-Mission/121/1┃Membunuh anjing liar
-Mission/122/1┃Membunuh anjing liar
-Mission/123/1┃Membunuh anjing liar
-Mission/124/1┃Membunuh anjing liar
-Mission/125/1┃Membunuh anjing liar
-Mission/126/1┃Membunuh anjing liar
-Mission/127/1┃Membunuh anjing liar
-Mission/131/1┃Membunuh serigala
-Mission/132/1┃Membunuh serigala
-Mission/133/1┃Membunuh serigala
-Mission/134/1┃Membunuh serigala
-Mission/135/1┃Membunuh serigala
-Mission/136/1┃Membunuh serigala
-Mission/137/1┃Membunuh serigala
-Mission/141/1┃Membunuh beruang
-Mission/142/1┃Membunuh beruang
-Mission/143/1┃Membunuh beruang
-Mission/144/1┃Membunuh beruang
-Mission/145/1┃Membunuh beruang
-Mission/146/1┃Membunuh beruang
-Mission/147/1┃Membunuh beruang
-Mission/151/1┃Membunuh Wickeline
-Mission/1000101/1┃Mainkan PvP biasa
-Mission/1000102/1┃Mainkan PvP biasa
-Mission/1000103/1┃Mainkan PvP biasa atau Rank
-Mission/1000201/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000202/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000301/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000302/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1010101/1┃Bunuh musuh
-Mission/1010102/1┃Bunuh musuh
-Mission/1010103/1┃Bunuh musuh
-Mission/1010104/1┃Bunuh musuh
-Mission/1010105/1┃Bunuh musuh
-Mission/1010106/1┃Bunuh musuh
-Mission/1020101/1┃Bunuh hewan liar
-Mission/1020102/1┃Bunuh hewan liar
-Mission/1020103/1┃Bunuh hewan liar
-Mission/1020104/1┃Bunuh hewan liar
-Mission/1020105/1┃Bunuh hewan liar
-Mission/1020106/1┃Bunuh hewan liar
-Mission/1020107/1┃Bunuh hewan liar
-Mission/1020108/1┃Bunuh hewan liar
-Mission/1020109/1┃Bunuh hewan liar
-Mission/1020110/1┃Bunuh hewan liar
-Mission/1020111/1┃Bunuh hewan liar
-Mission/1020112/1┃Bunuh hewan liar
-Mission/1020113/1┃Bunuh hewan liar
-Mission/1020114/1┃Bunuh hewan liar
-Mission/1030101/1┃Berada di peringkat 10 ke atas
-Mission/1030201/1┃Berada di peringkat 7 ke atas
-Mission/1030301/1┃Berada di peringkat 5 ke atas
-Mission/1030302/1┃Berada di peringkat 5 ke atas
-Mission/1030401/1┃Berada di peringkat 3 ke atas
-Mission/1030402/1┃Berada di peringkat 3 ke atas
-Mission/1040301/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
-Mission/1040302/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
-Mission/1040401/1┃Mendapatkan <color=#C4C4C4>Air</color>
-Mission/1040402/1┃Mendapatkan <color=#C4C4C4>Air</color>
-Mission/1040501/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1040502/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1040503/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1040601/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/1040602/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/1040701/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/1040801/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/1050101/1┃Memberi kerusakan ke pemain
-Mission/1050201/1┃Memberi kerusakan ke pemain
-Mission/1050301/1┃Memberi kerusakan ke pemain
-Mission/1050401/1┃Memberi kerusakan ke pemain
-Mission/1050402/1┃Memberi kerusakan ke pemain
-Mission/1050403/1┃Memberi kerusakan ke pemain
-Mission/1050404/1┃Memberi kerusakan ke pemain
-Mission/1060101/1┃Memberi kerusakan ke hewan liar
-Mission/1060201/1┃Memberi kerusakan ke hewan liar
-Mission/1060301/1┃Memberi kerusakan ke hewan liar
-Mission/1060401/1┃Memberi kerusakan ke hewan liar
-Mission/1060402/1┃Memberi kerusakan ke hewan liar
-Mission/1060501/1┃Memberi kerusakan ke hewan liar
-Mission/1060502/1┃Memberi kerusakan ke hewan liar
-Mission/1060503/1┃Memberi kerusakan ke hewan liar
-Mission/1060504/1┃Memberi kerusakan ke hewan liar
-Mission/1060601/1┃Memberi kerusakan ke hewan liar
-Mission/1070101/1┃Membunuh ayam
-Mission/1070102/1┃Membunuh ayam
-Mission/1070103/1┃Membunuh ayam
-Mission/1070104/1┃Membunuh ayam
-Mission/1070105/1┃Membunuh ayam
-Mission/1070201/1┃Membunuh kelelawar
-Mission/1070202/1┃Membunuh kelelawar
-Mission/1070203/1┃Membunuh kelelawar
-Mission/1070204/1┃Membunuh kelelawar
-Mission/1070205/1┃Membunuh kelelawar
-Mission/1070301/1┃Membunuh babi hutan
-Mission/1070302/1┃Membunuh babi hutan
-Mission/1070303/1┃Membunuh babi hutan
-Mission/1070304/1┃Membunuh babi hutan
-Mission/1070305/1┃Membunuh babi hutan
-Mission/1070401/1┃Membunuh anjing liar
-Mission/1070402/1┃Membunuh anjing liar
-Mission/1070403/1┃Membunuh anjing liar
-Mission/1070404/1┃Membunuh anjing liar
-Mission/1070405/1┃Membunuh anjing liar
-Mission/1070501/1┃Membunuh serigala
-Mission/1070502/1┃Membunuh serigala
-Mission/1070503/1┃Membunuh serigala
-Mission/1070504/1┃Membunuh serigala
-Mission/1070505/1┃Membunuh serigala
-Mission/1070601/1┃Membunuh beruang
-Mission/1070602/1┃Membunuh beruang
-Mission/1070603/1┃Membunuh beruang
-Mission/1070604/1┃Membunuh beruang
-Mission/1070605/1┃Membunuh beruang
-Mission/1070701/1┃Membunuh Wickeline
-Mission/1070702/1┃Membunuh Wickeline
-Mission/1070703/1┃Membunuh Wickeline
-Mission/1070801/1┃Bunuh Alpha
-Mission/1070802/1┃Bunuh Alpha
-Mission/1070803/1┃Bunuh Alpha
-Mission/1070901/1┃Bunuh Omega
-Mission/1070902/1┃Bunuh Omega
-Mission/1070903/1┃Bunuh Omega
 서비스약관┃Terms of Service
 개인정보동의┃Privacy Policy
 보유하지 않은 캐릭터입니다.┃Kamu tidak memiliki karakter ini.\nSilahkan buka karakter di Toko untuk memainkannya
@@ -4635,6 +4578,206 @@ QuickStart/TeamFinding┃Sun Jan 02 2022 00:00:00 GMT+0900 (한국 표준시)
 QuickStart/Matching┃Wed Feb 02 2022 00:00:00 GMT+0900 (한국 표준시)
 Season7/Name┃<color=#FF7AFF>Neon Aftershock</color>
 알겠습니다┃Konfirmasi
+오늘의 도전┃Tugas Harian
+오늘의 도전과제를 모두 완수하였습니다.┃Kamu sudah menyelesaikan semua Tugas Harian
+도전과제 변경 가능┃Kamu bisa mmengganti Tugas Harian satu kali adalam sehari. Apa kamu ingin mengganti ke Tuhas Harian baru?
+도전과제 변경 초과┃Jumlah penggantian Tugas Harian sudah terlampaui. (satu kali dalam satu hari)
+미션 갱신 에러┃Pembaharuan misi gagal
+매칭중에는 변경할 수 없습니다.┃Tidak bisa mengganti saat mencari permainan
+일일 보상!┃Ambil hadiah
+Mission/1/1┃Mainkan PvP biasa atau Rank
+Mission/2/1┃Mainkan PvP biasa atau Rank
+Mission/3/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
+Mission/4/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
+Mission/21/1┃Mainkan Rank
+Mission/11/1┃Mainkan PvP biasa
+Mission/31/1┃Bunuh musuh
+Mission/32/1┃Bunuh musuh
+Mission/33/1┃Bunuh musuh
+Mission/34/1┃Bunuh musuh
+Mission/35/1┃Bunuh musuh
+Mission/36/1┃Bunuh musuh
+Mission/41/1┃Bunuh hewan liar
+Mission/42/1┃Bunuh hewan liar
+Mission/43/1┃Bunuh hewan liar
+Mission/44/1┃Bunuh hewan liar
+Mission/45/1┃Bunuh hewan liar
+Mission/46/1┃Bunuh hewan liar
+Mission/47/1┃Bunuh hewan liar
+Mission/51/1┃Berada di peringkat 7 ke atas
+Mission/52/1┃Berada di peringkat 5 ke atas
+Mission/53/1┃Berada di peringkat 3 ke atas
+Mission/61/1┃Mendapatkan <color=white>Madu</color>
+Mission/62/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
+Mission/63/1┃Mendapatkan <color=white>Air</color>
+Mission/64/1┃Mendapatkan <color=white>Kentang</color>
+Mission/65/1┃Mendapatkan <color=white>Ikan Kod</color>
+Mission/66/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/67/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/68/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/69/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/71/1┃Memberi kerusakan ke pemain
+Mission/72/1┃Memberi kerusakan ke pemain
+Mission/73/1┃Memberi kerusakan ke pemain
+Mission/74/1┃Memberi kerusakan ke pemain
+Mission/75/1┃Memberi kerusakan ke pemain
+Mission/76/1┃Memberi kerusakan ke pemain
+Mission/77/1┃Memberi kerusakan ke pemain
+Mission/81/1┃Memberi kerusakan ke hewan liar
+Mission/82/1┃Memberi kerusakan ke hewan liar
+Mission/83/1┃Memberi kerusakan ke hewan liar
+Mission/84/1┃Memberi kerusakan ke hewan liar
+Mission/85/1┃Memberi kerusakan ke hewan liar
+Mission/86/1┃Memberi kerusakan ke hewan liar
+Mission/87/1┃Memberi kerusakan ke hewan liar
+Mission/88/1┃Memberi kerusakan ke hewan liar
+Mission/89/1┃Memberi kerusakan ke hewan liar
+Mission/91/1┃Membunuh ayam
+Mission/92/1┃Membunuh ayam
+Mission/93/1┃Membunuh ayam
+Mission/94/1┃Membunuh ayam
+Mission/95/1┃Membunuh ayam
+Mission/96/1┃Membunuh ayam
+Mission/97/1┃Membunuh ayam
+Mission/101/1┃Membunuh kelelawar
+Mission/102/1┃Membunuh kelelawar
+Mission/103/1┃Membunuh kelelawar
+Mission/104/1┃Membunuh kelelawar
+Mission/105/1┃Membunuh kelelawar
+Mission/106/1┃Membunuh kelelawar
+Mission/107/1┃Membunuh kelelawar
+Mission/111/1┃Membunuh babi hutan
+Mission/112/1┃Membunuh babi hutan
+Mission/113/1┃Membunuh babi hutan
+Mission/114/1┃Membunuh babi hutan
+Mission/115/1┃Membunuh babi hutan
+Mission/116/1┃Membunuh babi hutan
+Mission/117/1┃Membunuh babi hutan
+Mission/121/1┃Membunuh anjing liar
+Mission/122/1┃Membunuh anjing liar
+Mission/123/1┃Membunuh anjing liar
+Mission/124/1┃Membunuh anjing liar
+Mission/125/1┃Membunuh anjing liar
+Mission/126/1┃Membunuh anjing liar
+Mission/127/1┃Membunuh anjing liar
+Mission/131/1┃Membunuh serigala
+Mission/132/1┃Membunuh serigala
+Mission/133/1┃Membunuh serigala
+Mission/134/1┃Membunuh serigala
+Mission/135/1┃Membunuh serigala
+Mission/136/1┃Membunuh serigala
+Mission/137/1┃Membunuh serigala
+Mission/141/1┃Membunuh beruang
+Mission/142/1┃Membunuh beruang
+Mission/143/1┃Membunuh beruang
+Mission/144/1┃Membunuh beruang
+Mission/145/1┃Membunuh beruang
+Mission/146/1┃Membunuh beruang
+Mission/147/1┃Membunuh beruang
+Mission/151/1┃Membunuh Wickeline
+Mission/1000101/1┃Mainkan PvP biasa
+Mission/1000102/1┃Mainkan PvP biasa
+Mission/1000103/1┃Mainkan PvP biasa atau Rank
+Mission/1000201/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000202/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000301/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000302/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1010101/1┃Bunuh musuh
+Mission/1010102/1┃Bunuh musuh
+Mission/1010103/1┃Bunuh musuh
+Mission/1010104/1┃Bunuh musuh
+Mission/1010105/1┃Bunuh musuh
+Mission/1010106/1┃Bunuh musuh
+Mission/1020101/1┃Bunuh hewan liar
+Mission/1020102/1┃Bunuh hewan liar
+Mission/1020103/1┃Bunuh hewan liar
+Mission/1020104/1┃Bunuh hewan liar
+Mission/1020105/1┃Bunuh hewan liar
+Mission/1020106/1┃Bunuh hewan liar
+Mission/1020107/1┃Bunuh hewan liar
+Mission/1020108/1┃Bunuh hewan liar
+Mission/1020109/1┃Bunuh hewan liar
+Mission/1020110/1┃Bunuh hewan liar
+Mission/1020111/1┃Bunuh hewan liar
+Mission/1020112/1┃Bunuh hewan liar
+Mission/1020113/1┃Bunuh hewan liar
+Mission/1020114/1┃Bunuh hewan liar
+Mission/1030101/1┃Berada di peringkat 10 ke atas
+Mission/1030201/1┃Berada di peringkat 7 ke atas
+Mission/1030301/1┃Berada di peringkat 5 ke atas
+Mission/1030302/1┃Berada di peringkat 5 ke atas
+Mission/1030401/1┃Berada di peringkat 3 ke atas
+Mission/1030402/1┃Berada di peringkat 3 ke atas
+Mission/1040301/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
+Mission/1040302/1┃Mendapatkan <color=#35FF94>Susu Madu</color>
+Mission/1040401/1┃Mendapatkan <color=white>Air</color>
+Mission/1040402/1┃Mendapatkan <color=white>Air</color>
+Mission/1040501/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1040502/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1040503/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1040601/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/1040602/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/1040701/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/1040801/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/1050101/1┃Memberi kerusakan ke pemain
+Mission/1050201/1┃Memberi kerusakan ke pemain
+Mission/1050301/1┃Memberi kerusakan ke pemain
+Mission/1050401/1┃Memberi kerusakan ke pemain
+Mission/1050402/1┃Memberi kerusakan ke pemain
+Mission/1050403/1┃Memberi kerusakan ke pemain
+Mission/1050404/1┃Memberi kerusakan ke pemain
+Mission/1060101/1┃Memberi kerusakan ke hewan liar
+Mission/1060201/1┃Memberi kerusakan ke hewan liar
+Mission/1060301/1┃Memberi kerusakan ke hewan liar
+Mission/1060401/1┃Memberi kerusakan ke hewan liar
+Mission/1060402/1┃Memberi kerusakan ke hewan liar
+Mission/1060501/1┃Memberi kerusakan ke hewan liar
+Mission/1060502/1┃Memberi kerusakan ke hewan liar
+Mission/1060503/1┃Memberi kerusakan ke hewan liar
+Mission/1060504/1┃Memberi kerusakan ke hewan liar
+Mission/1060601/1┃Memberi kerusakan ke hewan liar
+Mission/1070101/1┃Membunuh ayam
+Mission/1070102/1┃Membunuh ayam
+Mission/1070103/1┃Membunuh ayam
+Mission/1070104/1┃Membunuh ayam
+Mission/1070105/1┃Membunuh ayam
+Mission/1070201/1┃Membunuh kelelawar
+Mission/1070202/1┃Membunuh kelelawar
+Mission/1070203/1┃Membunuh kelelawar
+Mission/1070204/1┃Membunuh kelelawar
+Mission/1070205/1┃Membunuh kelelawar
+Mission/1070301/1┃Membunuh babi hutan
+Mission/1070302/1┃Membunuh babi hutan
+Mission/1070303/1┃Membunuh babi hutan
+Mission/1070304/1┃Membunuh babi hutan
+Mission/1070305/1┃Membunuh babi hutan
+Mission/1070401/1┃Membunuh anjing liar
+Mission/1070402/1┃Membunuh anjing liar
+Mission/1070403/1┃Membunuh anjing liar
+Mission/1070404/1┃Membunuh anjing liar
+Mission/1070405/1┃Membunuh anjing liar
+Mission/1070501/1┃Membunuh serigala
+Mission/1070502/1┃Membunuh serigala
+Mission/1070503/1┃Membunuh serigala
+Mission/1070504/1┃Membunuh serigala
+Mission/1070505/1┃Membunuh serigala
+Mission/1070601/1┃Membunuh beruang
+Mission/1070602/1┃Membunuh beruang
+Mission/1070603/1┃Membunuh beruang
+Mission/1070604/1┃Membunuh beruang
+Mission/1070605/1┃Membunuh beruang
+Mission/1070701/1┃Membunuh Wickeline
+Mission/1070702/1┃Membunuh Wickeline
+Mission/1070703/1┃Membunuh Wickeline
+Mission/1070801/1┃Bunuh Alpha
+Mission/1070802/1┃Bunuh Alpha
+Mission/1070803/1┃Bunuh Alpha
+Mission/1070901/1┃Bunuh Omega
+Mission/1070902/1┃Bunuh Omega
+Mission/1070903/1┃Bunuh Omega
+Mission/8001501/2┃Bunuh musuh
+Mission/8001601/2┃Bunuh musuh
+Mission/8002001/2┃Bunuh musuh
 ButtonType/Confirm┃Konfirmasi
 ButtonType/Cancel┃Batal
 SupportLanguage/Korean┃한국어
