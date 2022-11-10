@@ -13,6 +13,7 @@ Item/Name/101404┃Vibroblade
 Item/Name/101405┃Fragarach
 Item/Name/101406┃Damascus Steel Thorn
 Item/Name/101407┃Maharaja
+Item/Name/101408┃Highlander Dirk
 Item/Name/101501┃Eclipse
 Item/Name/102101┃Rusty Sword
 Item/Name/102201┃Shamshir
@@ -29,6 +30,7 @@ Item/Name/102409┃Laevateinn
 Item/Name/102410┃Monohoshizao
 Item/Name/102411┃Hovud
 Item/Name/102412┃Aurora Longsword
+Item/Name/102413┃Arcane Edge
 Item/Name/102501┃Dáinsleif
 Item/Name/102502┃Almas
 Item/Name/103201┃Twin Blades
@@ -53,6 +55,7 @@ Item/Name/104404┃Evening Star
 Item/Name/104405┃Magic Stick
 Item/Name/104406┃Weight of the World
 Item/Name/104501┃Peacebringer
+Item/Name/104502┃Squeaky Hammer
 Item/Name/105102┃Pickaxe
 Item/Name/105103┃Hatchet
 Item/Name/105201┃Chain Scythe
@@ -469,6 +472,7 @@ Item/Name/203505┃Centipede's Pauldron
 Item/Name/203506┃Sports Watch
 Item/Name/203507┃Tindalos Monarch
 Item/Name/203508┃Shield of Kings
+Item/Name/203509┃Bloodripper
 Item/Name/204101┃Slippers
 Item/Name/204102┃Running Shoes
 Item/Name/204103┃Tights
@@ -683,7 +687,7 @@ Item/Name/401217┃Ruby
 Item/Name/401205┃Dead Battery
 Item/Name/401206┃White Powder
 Item/Name/401208┃Tree of Life
-Item/Name/401209┃Meteoritea
+Item/Name/401209┃Meteorite
 Item/Name/401210┃Ash
 Item/Name/401211┃Electronic Parts
 Item/Name/401212┃Blueprint
@@ -1265,7 +1269,7 @@ Item/Effects/302308┃recover SP over 18 seconds.
 Item/Effects/302309┃recover SP over 18 seconds.
 Item/Effects/302310┃recover SP over 18 seconds.
 Item/Effects/302311┃recover SP over 18 seconds.
-Item/Effects/302312┃recover SP over 18 seconds. Increases armor penetration during recovery.
+Item/Effects/302312┃recover SP over 18 seconds. Increases Attack Power and Skill Amplification during recovery.
 Item/Effects/301102┃recover HP over 18 seconds.
 Item/Effects/301104┃recover HP over 18 seconds.
 Item/Effects/301105┃recover HP over 18 seconds.
@@ -1407,6 +1411,7 @@ Character/Name/58┃Haze
 Character/Name/59┃Isaac
 Character/Name/60┃Tazia
 Character/Name/61┃Irem
+Character/Name/62┃Theodore
 Monster/Name/1┃Chicken
 Monster/Name/2┃Bat
 Monster/Name/3┃Boar
@@ -1661,8 +1666,8 @@ StatType/PreventDamageByDefense┃Damage Reduction % by Defense
 StatType/HpRegen┃HP Regen
 StatType/SpRegen┃SP Regen
 StatType/AttackSpeed┃Attack Speed
-StatType/AttackSpeed/Desc┃Amount of attacks per second. It is affected by your Weapon Mastery level.
-StatType/AttackSpeedRatio/Desc┃Amount of attacks per second. It is affected by your Weapon Mastery level.
+StatType/AttackSpeed/Desc┃Amount of attacks per second.
+StatType/AttackSpeedRatio/Desc┃Amount of attacks per second.
 StatType/AttackSpeedRatioByLv┃Attack speed per level
 StatType/AttackSpeedRatioValue┃Additional Attack Speed %
 StatType/BaseAttackSpeed┃Basic Attack Speed
@@ -1706,7 +1711,7 @@ StatType/MoveSpeedOutOfCombat┃Out of Combat Movement Speed
 StatType/IncreaseBasicAttackDamage┃Extra Basic Attack Damage
 StatType/IncreaseBasicAttackDamageByLv┃Extra Basic Attack Damage per level
 StatType/IncreaseBasicAttackDamageRatio┃Basic Attack Amplification
-StatType/IncreaseBasicAttackDamageRatio/Desc┃Increases the damage of Basic Attacks. Affected by your Weapon Mastery level.
+StatType/IncreaseBasicAttackDamageRatio/Desc┃Increases the damage of Basic Attacks.
 StatType/IncreaseBasicAttackDamageRatioByLv┃Basic Attack Amplification per level
 StatType/PreventDamage┃Damage Reduction
 StatType/PreventDamage/Desc┃Reduces damage from various types of damage.\nThe Defense mastery affects Basic Attack Damage Reduction and Skill Damage Reduction.
@@ -2158,6 +2163,7 @@ CastingActionType/EscapeObject┃Activating Submarine Console
 CastingActionType/EscapeTriggerObject┃Activating Door Controls
 CastingActionType/EscapeHyperloop┃Moving to Abandoned Dock
 CastingActionType/RetrieveEscapeMaterial┃Retrieving Regeneration Cuff
+CastingActionType/TeleportToTeamMemberInAreaAttributes┃Operating Hyperloop to allies on the battlefield: <color=#FFBB00>{0}</color>
 ItemOptionCategory/AttackPower┃Attack Power
 ItemOptionCategory/AttackSpeed┃Attack Speed
 ItemOptionCategory/CriticalStrike┃Critical Strike
@@ -2303,7 +2309,7 @@ Skin/Name/1012000┃Hyejin
 Skin/Name/1012001┃Magnolia Oracle Hyejin
 Skin/Name/1012002┃Cadet Hyejin
 Skin/Name/1012003┃Spirit Hunter Hyejin
-Skin/Name/1012004┃Student Hyejin
+Skin/Name/1012004┃Test-taker Hyejin
 Skin/Name/1013000┃Xiukai
 Skin/Name/1013001┃Itamae Xiukai
 Skin/Name/1013002┃Dodgeball King Xiukai
@@ -2539,6 +2545,8 @@ Skin/Desc/1019003┃Are you ready for the show?
 Skin/Desc/1003003┃A sword is just like wine: cold and smooth. 
 Skin/Desc/1008003┃All I need are my guitar and my amp, and it's showtime!
 Skin/Desc/1012004┃Effort is more important than fate.
+Skin/Desc/1037002┃I'll show you who I really am behind this mask.
+Skin/Desc/1038002┃An actor's strength isn't their good looks, but their unyielding confidence.
 ItemType/EMOTION/Name┃Emote
 Emotion_Name_001┃Angry
 Emotion_Name_002┃Laugh
@@ -2909,6 +2917,21 @@ Emotion_Estelle02_NP┃Estelle Unsure
 Emotion_Estelle03_NP┃Estelle Gives Her Blessing
 Emotion_Estelle04_NP┃Estelle Light it Up
 Emotion_Student_Hyejin01_NP┃Sticky Mouth Hyejin
+Emotion_Mai01_NP┃Mai Gasp!
+Emotion_Mai02_NP┃Mai knew it
+Emotion_Mai03_NP┃Get outta Mai way!
+Emotion_Mai04_NP┃Grab a tissue, Mai
+Emotion_BlackFriday_Fiora01_NP┃Fiora Knows Best
+Emotion_BlackFriday_Chiara01_NP┃Chiara Saw A Ghost!
+Emotion_BlackFriday_Adriana01_NP┃Adriana in Disbelief!
+Emotion_BlackFriday_Eleven01_NP┃Eleven Oh Yeah!
+Emotion_BlackFriday_Nicky01_NP┃Nicky Awkward
+Event_Kumdori_3041┃Kumdori Blast-off!
+Event_Kumsuni_3042┃Kumsuni Stare
+Event_SparkySmirky_3044┃Sparky_smirky
+Event_SparkyChill_3045┃Sparky_chill
+Event_SparkyWonder_3046┃Sparky_wonder
+Event_SparkyAngry_3047┃Sparky_angry
 Shop/Desc/Emotion_Hart01_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes to communicate with other players in-game.
@@ -3267,6 +3290,8 @@ EMBLEM_MARK_EVENT_103069┃Aya's Kitsune Mask
 EMBLEM_MARK_EVENT_103070┃Popo rolling out!
 EMBLEM_MARK_EVENT_103071┃2 Years With Wilson!
 EMBLEM_MARK_1vs17_S4_103072┃Cream of the Crop
+EMBLEM_MARK_EVENT_103074┃Sparky
+EMBLEM_MARK_EVENT_103075┃Sparky_chill
 EMBLEM_MARK_ERPASS_104001┃Crystalized Ice Icon
 EMBLEM_MARK_ERPASS_104002┃Tree of Presents Icon
 EMBLEM_MARK_ERPASS_104003┃Red Nose Icon
@@ -3615,6 +3640,10 @@ Goods/Name/1503018┃Big Snacc Wilson
 Goods/Name/1503019┃Floaty Wilson
 Goods/Name/1503020┃Tropical Party Wilson
 Goods/Name/1503021┃Popo rolling out!
+Goods/Name/1503023┃Sparky_smirky
+Goods/Name/1503024┃Sparky_chill
+Goods/Name/1503025┃Sparky_wonder
+Goods/Name/1503026┃Sparky_angry
 Goods/Name/1504001┃Taunty Holiday Heart
 Goods/Name/1504002┃BIG Match
 Goods/Name/1504003┃Wreath of... Victory?
@@ -3757,8 +3786,10 @@ Bianca_4Emote_Pack_01┃Bianca 4 Emote Pack
 Adina_4Emote_Pack_01┃Adina 4 Emote Pack
 Elena_4Emote_Pack_01┃Elena 4 Emote Pack
 Markus_4Emote_Pack_01┃Markus 4 Emote Pack
+Halloween2022_Skin_RandomBox_01┃Mysterious Skin Data
 Estelle_4Emote_Pack_01┃Estelle 4 Emote Pack
 Mai_4Emote_Pack_01┃Mai 4 Emote Pack
+BlackFriday2022_Skin_RandomBox_01┃Mysterious Data
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emotes\n\n58% of the cost of each item you already own will be refunded through the mailbox.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emotes\n\n56% of the cost of each item you already own will be refunded through the mailbox.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emotes\n\n58% of the cost of each item you already own will be refunded through the mailbox.
@@ -3793,6 +3824,7 @@ Shop/Desc/Markus_4Emote_Pack_01┃Contents:\n\nThe content of the bundle will be
 Shop/Desc/Halloween2022_Skin_RandomBox_01┃Purchasing this pack will send 1 random, unowned skin to your Mailbox.\n\n-  1 of 71 Rare/Uncommon Skins\n\n*You may buy this pack a maximum total of 11 times (100NP for first purchase, 490NP for every other 10 times)\n*The rates are determined as 1/N, which changes depending on the number of skins you own.\n*If you already own all skins, this pack will not be available for you.\n*Cadet skins and other exclusive skins are not included in the pack. 
 Shop/Desc/Estelle_4Emote_Pack_01┃Contents:\n\nThe content of the bundle will be sent to your Mailbox, and will contain the following.\n\n- 4 Estelle Emotes\n- Estelle Character\n- Spec Ops Estelle Skin\n- 3 Day A-Coin Boost\n- 3 Day ER Point Boost\n\n* The items of this pack are sold and applied at a discount and are non-refundable.\n* The price of the pack might change depending on already owned items.\n* The newly purchased items will be immediately added to your collection.
 Shop/Desc/Mai_4Emote_Pack_01┃Contents: \n\nThe content of the bundle will be sent to your Mailbox, and will contain the following.:\n\n- 4 Mai Emotes \n- Mai Character \n- Transfer Student Mai Skin \n- 3 Day A-Coin Boost \n- 3 Day ER Point Boost \n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
+Shop/Desc/BlackFriday2022_Skin_RandomBox_01┃* You may only purchase this pack once. \n* Only 1 Uncommon/Rare/Epic skin from the item list can be redeemed through this pack. \n* If there are no obtainable items, this pack will not be available for you.\n* The rates are determined as 1/N, which changes depending on the number of skins you own.\n* You cannot obtain any Skin that is not included in the item list. (Please refer to the notice)\n* The newly purchased items will be immediately added to your collection.
 Product/Name/SEASON_PASS_S5┃Season 5 Pack
 Shop/Desc/SEASON_PASS_S5┃Get ALL the content from season 5 at a stellar price!
 Product/Name/SEASON_PASS_S6┃Season 6 Pack
@@ -4177,7 +4209,7 @@ Skill/Group/Desc/1010220┃Li Dailin kicks forward, dealing <color=white>{20}</c
 Skill/Group/Desc/1010300┃Li Dailin takes a drink for {0} seconds, gaining Liquid Strength and increasing her BAC. While drinking, she avoids basic attacks. Basic attacks reduce the cooldown of Drink Up by {3} second.\n\nLiquid Strength: the damage from her next basic attack and damage from Dialed In is increased from {1} to {2}, depending on her BAC.
 Skill/Group/Desc/1010400┃Li Dailin spits out cheap liquor in a cone in front of her, slowing enemies in range by {4} for {0} seconds and dealing <color=white>{20}</color> damage. \n\nTipsy: Silences enemies for {3} seconds.
 Skill/Group/Desc/1010500┃Li Dailin launches forward, immune to crowd control, suppressing the first enemy hit and following it up with two consecutive kicks. Each blow deals <color=white>{20}</color> to <color=white>{21}</color> damage in proportion to the enemy's missing HP. Hitting an enemy decreases the cooldown of Striking Tiger by {4} .\n\nTipsy: follows up with 4 consecutive kicks.
-Skill/Group/Coef/1010100┃Li Dailin can use Drink Up to fill her BAC bar. When her BAC is above {0}, she gains Tipsy, giving her skills extra effects, and gaining Dialed In for her next basic attack.\nIf her BAC reaches {1}, she becomes Inebriated, is silenced for {2} seconds and gains Dialed In.\n\nDialed In: after using a skill, Li Dailin's next basic attack will trigger twice. Her second attack deals <color=#ffd775>(+{3}% Attack Power)</color> damage.\nStrong Stomach: Li Dailin's attack speed is increased by {5} for {4} seconds after drinking an alcoholic beverage item. 
+Skill/Group/Coef/1010100┃Li Dailin can use Drink Up to fill her BAC bar. When her BAC is above {0}, she gains Tipsy, giving her skills extra effects, and gaining Dialed In for her next basic attack.\nIf her BAC reaches {1}, she becomes Inebriated, is silenced for {2} seconds and gains Dialed In.\n\nDialed In: after using a skill, Li Dailin's next basic attack will trigger twice. Her second attack deals <color=#ffd775>(+{3}% Attack Power) * (Basic Attack Amplification)</color> damage.\nStrong Stomach: Li Dailin's attack speed is increased by {5} for {4} seconds after drinking an alcoholic beverage item. 
 Skill/Group/Coef/1010200┃Li Dailin kicks forward, dealing <color=white>{0}</color><color=#ffd775>(+{1}% Attack Power)</color><color=#DDA0DD>(+{4}% Skill Amp)</color> damage to enemies hit. She can reactivate this skill two more times.\nTipsy: Increases range and deals <color=white>{2}</color><color=#ffd775>(+{3}% Attack Power)</color><color=#DDA0DD>(+{5}% Skill Amp)</color> damage.
 Skill/Group/Coef/1010210┃Li Dailin kicks forward, dealing <color=white>{0}</color><color=#ffd775>(+{1}% Attack Power)</color><color=#DDA0DD>(+{4}% Skill Amp)</color> damage to enemies hit. She can reactivate this skill two more times.\nTipsy: Increases range and deals <color=white>{2}</color><color=#ffd775>(+{3}% Attack Power)</color><color=#DDA0DD>(+{5}% Skill Amp)</color> damage.
 Skill/Group/Coef/1010220┃Li Dailin kicks forward, dealing <color=white>{0}</color><color=#ffd775>(+{1}% Attack Power)</color><color=#DDA0DD>(+{4}% Skill Amp)</color> damage to enemies hit. She can reactivate this skill two more times.\nTipsy: Increases range and deals <color=white>{2}</color><color=#ffd775>(+{3}% Attack Power)</color><color=#DDA0DD>(+{5}% Skill Amp)</color> damage.
@@ -4216,7 +4248,7 @@ Skill/Group/Desc/1011300┃<color=green>Passive:</color> the cooldown of Button 
 Skill/Group/Desc/1011400┃Yuki dashes {2}m in the targeted direction, dealing <color=white>{20}</color> damage to the first enemy hit. Enemies hit are disarmed, disabling their basic attacks for {3} seconds. Hitting an enemy reduces the cooldown of Dashing Gentleman by {4} seconds.
 Skill/Group/Desc/1011500┃Yuki unsheaths his sword and slashes an area in front of him, dealing an initial <color=white>{20}</color> damage to enemies and leaving a mark, slowing enemies by {3} for {2} second.\nThe mark explodes after Yuki sheaths his sword, dealing true damage equal to {6} of the enemy's max HP.
 Skill/Group/Coef/1011100┃Yuki stores cufflinks as a resource. He consumes a stored cufflink when damaging an enemy, dealing an additional <color=white>{0}</color> true damage.\nYuki recovers all of his cufflinks while out of combat or by activating Button Up.
-Skill/Group/Coef/1011200┃Yuki's next basic attack deals <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color> damage and slows enemies by {3} for {2} second.\n\nConsuming a cufflink stuns enemies for {4} seconds.
+Skill/Group/Coef/1011200┃Yuki's next basic attack deals <color=white>{0}</color><color=#ffd775>(+{1} Attack Power) * (Basic Attack Power)</color> damage and slows enemies by {3} for {2} second.\n\nConsuming a cufflink stuns enemies for {4} seconds.
 Skill/Group/Coef/1011300┃<color=green>Passive:</color> the cooldown of Button Up is reduced by {0} seconds each time Yuki deals damage.\n\nYuki straightens up his outfit for {1} second and reduces the cooldown of Dashing Gentleman by {3}. While using Button Up, his defense is increased by {2}. When Button Up is complete, he gains {4} cufflinks.
 Skill/Group/Coef/1011400┃Yuki dashes {2}m in the targeted direction, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{5} Skill Amp)</color> damage to the first enemy hit. Enemies hit are disarmed, disabling their basic attacks for {3} seconds. Hitting an enemy reduces the cooldown of Dashing Gentleman by {4} seconds.
 Skill/Group/Coef/1011500┃Yuki unsheaths his sword and slashes an area in front of him, dealing an initial <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{7} Skill Amp)</color> damage to enemies and leaving a mark, slowing enemies by {3} for {2} second.\nThe mark explodes after Yuki sheaths his sword, dealing true damage equal to {6} of the enemy's max HP.
@@ -4252,7 +4284,7 @@ Skill/Group/Coef/1012300┃Hyejin summons a Charm of the Prophecy in the targete
 Skill/Group/Coef/1012310┃Hyejin summons a Charm of the Prophecy in the targeted location for up to {0} seconds. Charm of Prophecy ignites after the max time, or if the skill is activated again, dealing damage to enemies in range and rooting them for {1} second.\n\nCharm of the Prophecy damage increases while on the ground, dealing <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#DDA0DD>(+{6} Skill Amp)</color> to <color=white>{4}</color><color=#ffd775>(+{5} Attack Power)</color><color=#DDA0DD>(+{7} Skill Amp)</color> damage.   
 Skill/Group/Coef/1012400┃Hyejin casts a Charm of the Nomad in the targeted location, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{4} Skill Amp)</color> damage to enemies hit.\nActivating the skill again teleports Hyejin to the location of Charm of the Nomad, dealing <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#DDA0DD>(+{5} Skill Amp)</color> damage to enemies upon landing.
 Skill/Group/Coef/1012410┃Hyejin casts a Charm of the Nomad in the targeted location, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{4} Skill Amp)</color> damage to enemies hit.\nActivating the skill again teleports Hyejin to the location of Charm of the Nomad, dealing <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#DDA0DD>(+{5} Skill Amp)</color> damage to enemies upon landing.
-Skill/Group/Coef/1012500┃Hyejin casts a Charm of the Nomad in the targeted location, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{4} Skill Amp)</color> damage to enemies hit.\nActivating the skill again teleports Hyejin to the location of Charm of the Nomad, dealing <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#DDA0DD>(+{5} Skill Amp)</color> damage to enemies upon landing.
+Skill/Group/Coef/1012500┃Hyejin focuses for 1 second dealing  <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#DDA0DD>(+{5} Skill Amp)</color> skill damage to enemies in an area around her and summoning 5 Omens.\nThe Omens spin around Hyejin for {2} seconds, each dealing  <color=white>{3}</color><color=#ffd775>(+{4} Attack Power)</color><color=#DDA0DD>(+{6} Skill Amp)</color> skill damage to enemies hit. Omens are consumed after hitting an enemy.
 Skill/Group/ExpansionTip/1012100┃<i>Feared enemies cannot receive Three Calamities again for {0} seconds</i>
 Skill/Group/ExpansionTip/1012200┃<i>Charm of Despair can hold up to 2 charge stacks.</i>
 Skill/Group/ExpansionTip/1012500┃<i>While focusing, her movement speed is reduced by {0}. Hyejin can teleport to her Charm of the Nomad location while focusing</i>
@@ -5305,7 +5337,7 @@ Skill/Group/Desc/1039520┃Camilo twirls forward and returns to his starting poi
 Skill/Group/Coef/1039100┃Damaging an enemy reduces their SP by <color=white>{1}</color><color=#ffd775>(+{2} Attack Power)</color>, grants Camilo a shield absorbing <color=white>{3}</color><color=#ffd775>(+{4} Attack Power)</color><color=#DDA0DD>(+{7} Skill Amp)</color> damage, and increases his attack speed by {0} for {6} seconds.\nChaining alternating basic attacks and skills reduces the cooldown of Olé! and Cierre by {5} second.
 Skill/Group/Coef/1039200┃Camilo sweeps the area in front of him with his swords, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color> basic attack damage.\nHitting an enemy with the outer range grants Camilo 1 stack of Paso for {2} seconds, increasing his movement speed by {4} for {3} seconds.\nUpon reaching 2 stacks, Camilo can use Enhanced Vuelta, causing him to spin twice, dealing <color=white>{5}</color><color=#ffd775>(+{6} Attack Power)</color> and <color=white>{7}</color><color=#ffd775>(+{8} Attack Power)</color> basic attack damage around him, pulling nearby enemies inward, and healing himself for <color=white>{9}</color><color=#ffd775>(+{10} Attack Power)</color>.\nVuelta only gains cooldown reduction based on Camilo's extra attack speed. (Max {11} seconds)\n\nWhen using Vuelta during Al Compás’s initial dash, Camilo damages enemies in a circle around him and gains Paso effects from hitting enemies with the edge.
 Skill/Group/Coef/1039210┃Camilo sweeps the area in front of him with his swords, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color> basic attack damage.\nHitting an enemy with the outer range grants Camilo 1 stack of Paso for {2} seconds, increasing his movement speed by {4} for {3} seconds.\nUpon reaching 2 stacks, Camilo can use Enhanced Vuelta, causing him to spin twice, dealing <color=white>{5}</color><color=#ffd775>(+{6} Attack Power)</color> and <color=white>{7}</color><color=#ffd775>(+{8} Attack Power)</color> basic attack damage around him, pulling nearby enemies inward, and healing himself for <color=white>{9}</color><color=#ffd775>(+{10} Attack Power)</color>.\nVuelta only gains cooldown reduction based on Camilo's extra attack speed. (Max {11} seconds)\n\nWhen using Vuelta during Al Compás’s initial dash, Camilo damages enemies in a circle around him and gains Paso effects from hitting enemies with the edge.
-Skill/Group/Coef/1039300┃Camilo elegantly dashes forward with his swords, dealing <color=white>{1}</color><color=#ffd775>(+{2} Attack Power)</color> basic attack damage up to {0} times.
+Skill/Group/Coef/1039300┃Camilo elegantly dashes forward with his swords, dealing <color=white>{1}</color><color=#ffd775>(+{2} Attack Power) * (Basic Attack Amplification)</color> basic attack damage up to {0} times.
 Skill/Group/Coef/1039400┃Camilo quickly steps to his target, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#DDA0DD>(+{6} Skill Amp)</color> skill damage.\nCamilo can recast Al Compás within {2} seconds to dash to the target again, dealing <color=white>{3}</color><color=#ffd775>(+{4} Attack Power)</color><color=#DDA0DD>(+{7} Skill Amp)</color> skill damage, knocking them back, and applying Two Step for {5} seconds while gracefully stepping away.\n\nCamilo can not use Al Compás on a target with Two Step.
 Skill/Group/Coef/1039500┃Camilo twirls forward and returns to his starting point after {0} seconds.\nWhile twirling, Camilo is immune to crowd control and takes {12} reduced damage. Upon returning, Camilo deals  <color=white>{1}</color><color=#ffd775>(+{2} Attack Power)</color><color=#DDA0DD>(+{13} Skill Amp)</color> skill damage to enemies hit once. Hitting an enemy twice deals <color=white>{3}</color><color=#ffd775>(+{4} Attack Power)</color><color=#DDA0DD>(+{14} Skill Amp)</color> skill damage and stuns them for {7} seconds. After his dance, Camilo’s movement speed is increased significantly for a short period and he heals for <color=white>{8}(+{10} for each enemy hit by his dance. (Max {9})</color>\nCamilo can use Duende twice more within {11} seconds.
 Skill/Group/Coef/1039510┃Camilo twirls forward and returns to his starting point after {0} seconds.\nWhile twirling, Camilo is immune to crowd control and takes {12} reduced damage. Upon returning, Camilo deals  <color=white>{1}</color><color=#ffd775>(+{2} Attack Power)</color><color=#DDA0DD>(+{13} Skill Amp)</color> skill damage to enemies hit once. Hitting an enemy twice deals <color=white>{3}</color><color=#ffd775>(+{4} Attack Power)</color><color=#DDA0DD>(+{14} Skill Amp)</color> skill damage and stuns them for {7} seconds. After his dance, Camilo’s movement speed is increased significantly for a short period and he heals for <color=white>{8}(+{10} for each enemy hit by his dance. (Max {9})</color>\nCamilo can use Duende twice more within {11} seconds.
@@ -5421,7 +5453,7 @@ Skill/Group/Name/1042300┃Sanctuary
 Skill/Group/Name/1042310┃Sanctuary
 Skill/Group/Name/1042400┃Circulation
 Skill/Group/Name/1042500┃Reign of the Vampire Queen
-Skill/Group/Desc/1042100┃<color=white>Hemostasis</color>\nEvery few seconds, Bianca’s next basic attack deals <color=white>{6}</color><color=#688A08>(+{8}% of target’s max HP)</color> extra skill damage. Every time Bianca deals skill damage to an enemy, they are slowed by {1}%, recovering over {0} seconds.\n\n<color=white>Blood Bank</color>\nBianca stores {2}% of her skill damage dealt and {3}% of her HP lost as <color=white>Blood</color>, up to {4}% of her max HP. When out of combat, Bianca consumes <color=white>Blood</color> equivalent to {5}% of her max <color=white>Blood</color> every second to heal for {10}% of the amount consumed. 
+Skill/Group/Desc/1042100┃<color=white>Hemostasis</color>\nEvery few seconds, Bianca’s next basic attack deals <color=white>{6}</color><color=#688A08>(+{8}% of target’s max HP)</color> extra skill damage. Every time Bianca deals skill damage to an enemy, their movement speed is reduced by {1}% over {0} seconds.\n\n<color=white>Blood Bank</color>\nBianca stores {2}% of her skill damage dealt and {3}% of her HP lost as <color=white>Blood</color>, up to {4}% of her max HP. When out of combat, Bianca consumes <color=white>Blood</color> equivalent to {5}% of her max <color=white>Blood</color> every second to heal for {10}% of the amount consumed. 
 Skill/Group/Desc/1042200┃Bianca throws a spear of blood to the targeted location, dealing <color=white>{0}</color> damage to enemies hit. The javelin forms a pool of blood on arrival, dealing <color=white>{1}</color><color=#688A08>(+{4}% of target’s max HP)</color> damage to the first enemy that touches it. Enemies with <color=white>Hemostasis</color> are rooted for {5} seconds when hit by <color=white>Sanguine Javelin</color>.
 Skill/Group/Desc/1042300┃Bianca confines herself in her gothic coffin for up to {0} seconds.\nWhile inside the coffin, Bianca takes {1}% reduced damage and heals for {3}% of her max HP every {2} seconds.\nIf Bianca's <color=white>Blood</color> is over {4}%, the cooldown of <color=white>Sanctuary</color> is instantly reset.\n\nIf Bianca has over {4}% <color=white>Blood</color> when using <color=white>Sanctuary</color>, she instantly consumes all of her stored <color=white>Blood</color>, increasing her healing inside the coffin based on the amount consumed and reducing the cooldown of all her skills excluding <color=white>Sanctuary</color> by {6} second every {5} seconds.
 Skill/Group/Desc/1042310┃Bianca confines herself in her gothic coffin for up to {0} seconds.\nWhile inside the coffin, Bianca takes {1}% reduced damage and heals for {3}% of her max HP every {2} seconds.\nIf Bianca's <color=white>Blood</color> is over {6}%, the cooldown of <color=white>Sanctuary</color> is instantly reset.\n\nIf Bianca has over {6}% <color=white>Blood</color> when using <color=white>Sanctuary</color>, she instantly consumes all of her stored <color=white>Blood</color>, increasing her healing inside the coffin based on the amount consumed and reducing the cooldown of all her skills excluding <color=white>Sanctuary</color> by {6} second every {5} seconds.
@@ -5649,8 +5681,8 @@ Skill/Group/Desc/1046410┃<color=green>Passive</color>: The cooldown of this sk
 Skill/Group/Desc/1046500┃Aiden discharges a thunderbolt at the targeted location, dealing <color=white>{20}</color> skill damage and slowing enemies by {3} for {2} seconds. Enemies hit in the middle receive <color=white>{21}</color> skill damage and are stunned for {6} seconds.\nAiden then discharges a second thunderbolt at the same location, dealing <color=white>{22}</color> skill damage and slowing enemies hit by {10} for {9} seconds.\n\nIf the first thunderbolt hits an enemy test subject, Aiden can recast <color=white>Electrostatic Surge</color> to teleport to the thunderbolt’s location, immediately triggering the second thunderbolt and fully charging Aiden’s <color=white>Amperes</color>.
 Skill/Group/Desc/1046510┃Aiden discharges a thunderbolt at the targeted location, dealing <color=white>{20}</color> skill damage and slowing enemies by {3} for {2} seconds. Enemies hit in the middle receive <color=white>{21}</color> skill damage and are stunned for {6} seconds.\nAiden then discharges a second thunderbolt at the same location, dealing <color=white>{22}</color> skill damage and slowing enemies hit by {10} for {9} seconds.\n\nIf the first thunderbolt hits an enemy test subject, Aiden can recast <color=white>Electrostatic Surge</color> to teleport to the thunderbolt’s location, immediately triggering the second thunderbolt and fully charging Aiden’s <color=white>Amperes</color>.
 Skill/Group/Coef/1046100┃Aiden gains an <color=white>Ampere</color> for each enemy hit by his skills. When Aiden has {0} <color=white>Amperes</color>, his movement speed is increased by {9}. If there are no enemies within {7}m while <color=white>Amperes</color> is still in effect, he becomes <color=white>Overcharged</color> for {4} seconds, gaining {0} bullets and ranged basic attacks.\n\nWhile <color=white>Overcharged</color>, Aiden’s gains {3} critical strike damage for every 1% of his critical strike chance and his basic attacks always critically strike, but he loses {1} attack speed and {2} critical strike damage.\n\nAfter <color=white>Overcharge</color> expires, Aiden's movement speed is increased by {6} for {5} seconds.
-Skill/Group/Coef/1046200┃<color=white>Lightning Strike</color>: Aiden thrusts his gunblade forward, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color> basic attack damage to the first enemy hit and gaining 2 <color=white>Amperes</color>. Basic attacks reduce the cooldown of <color=white>Lightning Strike</color> by {3} seconds.\n\nDuring <color=white>Overcharge</color>, Aiden can use <color=white>Volt Cannon</color>.\n\n<color=white>Volt Cannon</color>: Aiden fires {8} bullet in the targeted direction, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power)</color> basic attack damage to the first enemy hit and slowing them by {7} for {6} seconds. Hitting an enemy with <color=white>Volt Cannon</color> decreases its cooldown by {9}.\n\n<color=white>Lightning Strike</color> and <color=white>Volt Cannon</color> are not affected by Cooldown Reduction.
-Skill/Group/Coef/1046210┃<color=white>Lightning Strike</color>: Aiden thrusts his gunblade forward, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color> basic attack damage to the first enemy hit and gaining 2 <color=white>Amperes</color>. Basic attacks reduce the cooldown of <color=white>Lightning Strike</color> by {3} seconds.\n\nDuring <color=white>Overcharge</color>, Aiden can use <color=white>Volt Cannon</color>.\n\n<color=white>Volt Cannon</color>: Aiden fires {8} bullet in the targeted direction, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power)</color> basic attack damage to the first enemy hit and slowing them by {7} for {6} seconds. Hitting an enemy with <color=white>Volt Cannon</color> decreases its cooldown by {9}.\n\n<color=white>Lightning Strike</color> and <color=white>Volt Cannon</color> are not affected by Cooldown Reduction.
+Skill/Group/Coef/1046200┃<color=white>Lightning Strike</color>: Aiden thrusts his gunblade forward, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power * (Basic Attack Power))</color> basic attack damage to the first enemy hit and gaining 2 <color=white>Amperes</color>. Basic attacks reduce the cooldown of <color=white>Lightning Strike</color> by {3} seconds.\n\nDuring <color=white>Overcharge</color>, Aiden can use <color=white>Volt Cannon</color>.\n\n<color=white>Volt Cannon</color>: Aiden fires {8} bullet in the targeted direction, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power * (Basic Attack Power))</color> basic attack damage to the first enemy hit and slowing them by {7} for {6} seconds. Hitting an enemy with <color=white>Volt Cannon</color> decreases its cooldown by {9}.\n\n<color=white>Lightning Strike</color> and <color=white>Volt Cannon</color> are not affected by Cooldown Reduction.
+Skill/Group/Coef/1046210┃<color=white>Lightning Strike</color>: Aiden thrusts his gunblade forward, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power * (Basic Attack Power))</color> basic attack damage to the first enemy hit and gaining 2 <color=white>Amperes</color>. Basic attacks reduce the cooldown of <color=white>Lightning Strike</color> by {3} seconds.\n\nDuring <color=white>Overcharge</color>, Aiden can use <color=white>Volt Cannon</color>.\n\n<color=white>Volt Cannon</color>: Aiden fires {8} bullet in the targeted direction, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power * (Basic Attack Power))</color> basic attack damage to the first enemy hit and slowing them by {7} for {6} seconds. Hitting an enemy with <color=white>Volt Cannon</color> decreases its cooldown by {9}.\n\n<color=white>Lightning Strike</color> and <color=white>Volt Cannon</color> are not affected by Cooldown Reduction.
 Skill/Group/Coef/1046300┃Aiden slows himself while he channels high voltage into his gunblade.\nWhen recast, or at max duration, Aiden deals <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#DDA0DD>(+{10} Skill Amp)</color> ~ <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage to enemies nearby based on charge time and slows them by {5} for {4} seconds. Aiden can cast <color=white>Bolt Rush </color> or <color=white>Electrostatic Surge</color> to move while casting.\nIf fully charged, Aiden leaves behind a <color=white>Sparkring</color> for {6} seconds, dealing  <color=white>{7}</color><color=#ffd775>(+{8} Attack Power)</color><color=#DDA0DD>(+{12} Skill Amp)</color> skill damage to enemies that touch it and rooting them for {9} seconds.
 Skill/Group/Coef/1046400┃<color=green>Passive</color>: The cooldown of this skill is reset upon reaching full <color=white>Amperes</color>.\n\n<color=white>Backstep</color>: Aiden steps back and fires an electric bullet, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#DDA0DD>(+{6} Skill Amp)</color> skill damage to the first enemy hit and marking them. The mark provides vision to Aiden and enables him to use <color=white>Bolt Rush</color>. Aiden’s movement speed is increased by {3} for {2} seconds after using <color=white>Backstep</color>.\n\n<color=white>Bolt Rush</color>: Aiden dashes to the marked enemy, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power)</color><color=#DDA0DD>(+{7} Skill Amp)</color> skill damage.
 Skill/Group/Coef/1046410┃<color=green>Passive</color>: The cooldown of this skill is reset upon reaching full <color=white>Amperes</color>.\n\n<color=white>Backstep</color>: Aiden steps back and fires an electric bullet, dealing <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#DDA0DD>(+{6} Skill Amp)</color> skill damage to the first enemy hit and marking them. The mark provides vision to Aiden and enables him to use <color=white>Bolt Rush</color>. Aiden’s movement speed is increased by {3} for {2} seconds after using <color=white>Backstep</color>.\n\n<color=white>Bolt Rush</color>: Aiden dashes to the marked enemy, dealing <color=white>{4}</color><color=#ffd775>(+{5} Attack Power)</color><color=#DDA0DD>(+{7} Skill Amp)</color> skill damage.
@@ -6214,7 +6246,7 @@ Skill/Group/Desc/1057200┃<color=#ffffff>[Interview]</color>\nMartina takes a s
 Skill/Group/Desc/1057210┃Martina takes a snapshot in the targeted direction, dealing <color=white>{8}</color> skill damage. If this skill hits an enemy, its cooldown is reduced by {2}. Consuming a mark with this skill grants Martina {4} Movement Speed for {3} seconds and {6} Attack Speed for {5} seconds.
 Skill/Group/Desc/1057300┃<color=#ffffff>[Interview]</color>\nMartina installs a miniature camera, gaining vision of its surrounding area for {0} seconds. Targeting the camera with <color=white>Fast Forward</color> causes the camera to take a snapshot pointing at Martina, dealing <color=white>{14}</color> skill damage and slowing enemies hit by {4} for {3} seconds. Martina can hold up to {5} cameras and install up to {5} cameras.\n\n<color=#ffd775>[Broadcast]</color>\nMiniature camera snapshots now root enemies hit. The amount of cameras that Martina can hold and install is increased.
 Skill/Group/Desc/1057310┃Martina installs a miniature camera, gaining vision of its surrounding area for {0} seconds. Hitting the camera with <color=white>Fast Forward</color> causes the camera to take a snapshot pointing at Martina, dealing <color=white>{15}</color> skill damage and rooting enemies hit for {9} seconds. Martina can hold up to {10} cameras and can install up to {10} cameras.
-Skill/Group/Desc/1057400┃<color=#ffffff>[Interview]</color>\nMartina dashes in the targeted direction, leaving a videotape behind. Martina then enters the Rewind state for up to 7 seconds, increasing her movement speed by {0}. \n\nExiting the Rewind state causes Martina to dash back to the videotape, becoming Immune to Crowd Control, slowing them by {4} for {3} seconds. \n\nRecast to exit Rewind before the end of its duration.\n\n<color=#ffd775>[Broadcast]</color>\nEnemies hit by Martina while she dashes back are stunned instead, and Martina heals herself for a percent of damage received while in Rewind upon returning to her videotape.\n
+Skill/Group/Desc/1057400┃<color=#ffffff>[Interview]</color>\nMartina dashes in the targeted direction, leaving a videotape behind. Martina then enters the Rewind state for up to 7 seconds, increasing her movement speed by {0}. \n\nExiting the Rewind state causes Martina to dash back to the videotape, becoming Immune to Crowd Control and slowing enemies by {4} for {3} seconds. \n\nRecast to exit Rewind before the end of its duration.\n\n<color=#ffd775>[Broadcast]</color>\nEnemies hit by Martina while she dashes back are stunned instead, and Martina heals herself for a percent of damage received while in Rewind upon returning to her videotape.\n
 Skill/Group/Desc/1057410┃Martina dashes back to her videotape.
 Skill/Group/Desc/1057430┃Martina dashes in the targeted direction, leaving a videotape behind. Martina then enters a Rewind state for up to 5 seconds, increasing her movement speed by {0}. \n\nWhen Martina exits her Rewind state, she dashes back to the videotape, becoming Immune to Crowd Control, dealing <color=white>{6}</color> skill damage to enemies in her way, and stunning them for [3} seconds. After returning to the videotape, Martina heals herself for {4} of damage received during Rewind.\n\nRecast to exit Rewind before the end of its duration.\n
 Skill/Group/Desc/1057440┃Martina dashes back to her videotape.
@@ -6226,7 +6258,7 @@ Skill/Group/Coef/1057200┃<color=#ffffff>[Interview]</color>\nMartina takes a s
 Skill/Group/Coef/1057210┃Martina takes a snapshot in the targeted direction, dealing <color=white>{0}</color><color=#ffd775>(+{1}% Attack Power)</color><color=#DDA0DD>(+{7}% Skill Amp)</color> skill damage. If this skill hits an enemy, its cooldown is reduced by {2}. Consuming a mark with this skill grants Martina {4} Movement Speed for {3} seconds and {6} Attack Speed for {5} seconds.
 Skill/Group/Coef/1057300┃<color=#ffffff>[Interview]</color>\nMartina installs a miniature camera, gaining vision of its surrounding area for {0} seconds. Targeting the camera with <color=white>Fast Forward</color> causes the camera to take a snapshot pointing at Martina, dealing <color=white>{1}</color><color=#ffd775>(+{2}% Attack Power)</color><color=#DDA0DD>(+{12}% Skill Amp)</color> skill damage and slowing enemies hit by {4} for {3} seconds. Martina can hold up to {5} cameras and install up to {5} cameras.\n\n<color=#ffd775>[Broadcast]</color>\nMiniature camera snapshots now root enemies hit. The amount of cameras that Martina can hold and install is increased.
 Skill/Group/Coef/1057310┃Martina installs a miniature camera, gaining vision of its surrounding area for {0} seconds. Hitting the camera with <color=white>Fast Forward</color> causes the camera to take a snapshot pointing at Martina, dealing <color=white>{7}</color><color=#ffd775>(+{8}% Attack Power)</color><color=#DDA0DD>(+{13}% Skill Amp)</color> skill damage and rooting enemies hit for {9} seconds. Martina can hold up to {10} cameras and can install up to {10} cameras.
-Skill/Group/Coef/1057400┃<color=#ffffff>[Interview]</color>\nMartina dashes in the targeted direction, leaving a videotape behind. Martina then enters the Rewind state for up to 7 seconds, increasing her movement speed by {0}. \n\nExiting the Rewind state causes Martina to dash back to the videotape, becoming Immune to Crowd Control, dealing skill damage to enemies in her way, and slowing them by {4} for {3} seconds. \n\nRecast to exit Rewind before the end of its duration.\n\n<color=#ffd775>[Broadcast]</color>\nEnemies hit by Martina while she dashes back are stunned instead, and Martina heals herself for a percent of damage received while in Rewind upon returning to her videotape.\n
+Skill/Group/Coef/1057400┃<color=#ffffff>[Interview]</color>\nMartina dashes in the targeted direction, leaving a videotape behind. Martina then enters the Rewind state for up to 7 seconds, increasing her movement speed by {0}. \n\nExiting the Rewind state causes Martina to dash back to the videotape, becoming Immune to Crowd Control and slowing enemies by {4} for {3} seconds. \n\nRecast to exit Rewind before the end of its duration.\n\n<color=#ffd775>[Broadcast]</color>\nEnemies hit by Martina while she dashes back are stunned instead, and Martina heals herself for a percent of damage received while in Rewind upon returning to her videotape.\n
 Skill/Group/Coef/1057410┃Martina dashes back to her videotape.
 Skill/Group/Coef/1057430┃Martina dashes in the targeted direction, leaving a videotape behind. Martina then enters a Rewind state for up to 5 seconds, increasing her movement speed by {0}. \n\nWhen Martina exits her Rewind state, she dashes back to the videotape, becoming Immune to Crowd Control, dealing <color=white>{1}</color><color=#ffd775>(+{2}% Attack Power)</color><color=#DDA0DD>(+{5}% Skill Amp)</color> skill damage to enemies in her way, and stunning them for [3} seconds. After returning to the videotape, Martina heals herself for {4} of damage received during Rewind.\n\nRecast to exit Rewind before the end of its duration.\n
 Skill/Group/Coef/1057440┃Martina dashes back to her videotape.
@@ -6260,7 +6292,7 @@ CharacterState/Group/Desc/1057320┃Slowed by a Hidden Snapshot.
 CharacterState/Group/Desc/1057330┃Rooted by a Hidden Snapshot.
 CharacterState/Group/Desc/1057400┃In Rewind State
 CharacterState/Group/Desc/1057420┃Recording damage received during Rewind.
-CharacterState/Group/Desc/1057430┃Slowed by Martina's Rewind.
+CharacterState/Group/Desc/1057430┃Recording damage received during Rewind.
 CharacterState/Group/Desc/1057440┃Stunned by Martina's Rewind.
 CharacterState/Group/Desc/1057510┃Record Stacks gained from filming Lumia Island.\nStandard Footage: {0} Record Stacks\nCorpse Footage: {1} Record Stacks
 CharacterState/Group/Desc/1057530┃Defense reduced by Martina's shot.
@@ -6287,14 +6319,19 @@ Skill/Group/Desc/1058410┃Haze discards her SMG and takes out an Assault Rifle 
 Skill/Group/Desc/1058500┃<color=white>Swap to Rocket Launcher Form</color>: Haze swings her weapon case, knocking enemies back and dealing <color=white>{7}</color> skill damage. Haze swaps to her Rocket Launcher Form for {0} second(s) with {1} rocket ammos.\n\nWhile in Rocket Launcher form, Haze's range and attack speed are fixed, and her movement speed is reduced by {8}. Critical strike is not applied to her basic attacks, which splash <color=white>{5}</color> additional skill damage. While in this form, <color=white>40mm Grenade</color> skill changes to <color=white>Rocket Acceleration</color> skill.\n\nWhen Rocket Launcher Form ends, the skill cooldown reduces up to {6} proportional to bullets remaining.
 Skill/Group/Desc/1058510┃Haze puts aside her Rocket Launcher and takes out an Assault Rifle from her Weapon Case.\n\nCurrent Additional Skill Damage: <color=white>{5}</color>
 Skill/Group/Coef/1058100┃<color=white>Grim Merchant</color>: Instead of reloading, Haze takes out a new Assault Rifle with full bullets loaded from her Weapon Case for {0} seconds. While taking out her Assault Rifle, Haze cannot use basic attacks, but her next basic attack deals <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> extra skill damage to enemies hit and her attack speed increases by 40%. Her movement speed is also increased by {3} for {2} seconds.  <color=white>Grim Merchant</color> is only applied while in Assault Rifle Form. \n\n<color=white>Weapon Case</color>: Haze uses different types of guns for each skill, when the skill ends, she takes out a new Assault Rifle from her Weapon Case and activates <color=white>Grim Merchant</color>.
-Skill/Group/Coef/1058200┃<color=white>Assault Rifle Form</color>: Haze launches a grenade, dealing <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> skill damage to enemies hit and slowing them by {2} for {1} second(s). Enemies hit in the center take <color=white>{23}</color><color=#DDA0DD>(+{25}% Skill Amp)</color> skill damge, and are slowed by {5} for {4} second(s).\n\nHaze can hold two charges of grenades.
+Skill/Group/Coef/1058200┃<color=white>Assault Rifle Form</color>: Haze launches a grenade, dealing <color=white>{20}</color><color=#DDA0DD>(+{22} Skill Amp)</color> skill damage to enemies hit and slowing them by {2} for {1} second(s). Enemies hit in the center take <color=white>{23}</color><color=#DDA0DD>(+{25} Skill Amp)</color> skill damge, and are slowed by {5} for {4} second(s).\n\nHaze can hold two charges of grenades.
 Skill/Group/Coef/1058210┃<color=white>SMG Form</color>: Haze focuses for {0} second(s) and burst fires her SMG to the front, dealing <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> <color=#ffd775>(+{2} per remaining magazines)</color> skill damage and discarding her SMG.
-Skill/Group/Coef/1058220┃<color=white>Rocket Launcher Form</color>: Haze pierces her enemies by firing Rocket Acceleration, dealing <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> skill damage to enemies hit and slowing them by {3} for {2} second(s). Half the damage splashes in an area behind the targets. The rocket accelerates over time, widening its range and increasing damage by {1}.\n\nThis skill shares cooldown with basic attacks and is not affected by cooldown reduction stats.
+Skill/Group/Coef/1058220┃<color=white>Rocket Launcher Form</color>: Haze pierces her enemies by firing Rocket Acceleration, dealing <color=white>{20}</color><color=#DDA0DD>(+{22} Skill Amp)</color> skill damage to enemies hit and slowing them by {3} for {2} second(s). Half the damage splashes in an area behind the targets. The rocket accelerates over time, widening its range and increasing damage by {1}.\n\nThis skill shares cooldown with basic attacks and is not affected by cooldown reduction stats.
 Skill/Group/Coef/1058300┃Haze steps back to fire her shotgun, dealing <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> skill damage to enemies hit and stunning them for {1} second(s).\n\nIf used while in <color=white>SMG Form</color> or <color=white>Rocket Launcher Form</color>, the weapon is discarded and the relevant skill's cooldown is reduced by {2}. 
 Skill/Group/Coef/1058400┃<color=white>Swap to SMG Form</color>: Haze dashes slightly forward and swaps to SMG Form with {0} bullets for {8} second..\n\nHaze is able to attack while moving with an SMG and can change targets using Attack Commands. Each attack deals <color=white>{20}</color><color=#DDA0DD>(+Skill Amp 1 per {22})</color> skill damage. Basic attacks with every 5th bullet apply the effect. While maintaining this form, certain actions require interactions with objects are limited and her <color=white>40mm Grenade</color> skill changes to <color=white>SMG Burst</color>.\n\nWhen SMG Form ends, the skill cooldown reduces up to {6} proportional to bullets remaining.
 Skill/Group/Coef/1058410┃Haze discards her SMG and takes out an Assault Rifle from her Weapon Case.\n\nCurrent Damage per hit: <color=white>{20}</color><color=#DDA0DD>(+Skill Amp 1 per {22})</color>
 Skill/Group/Coef/1058500┃<color=white>Swap to Rocket Launcher Form</color>: Haze swings her weapon case, knocking enemies back and dealing <color=white>{23}</color><color=#DDA0DD>(+{25}% Skill Amp)</color> skill damage. Haze swaps to her Rocket Launcher Form for {0} second(s) with {1} rocket ammos.\n\nWhile in Rocket Launcher form, Haze's range and attack speed are fixed, and her movement speed is reduced by {8}. Critical strike is not applied to her basic attacks, which splash <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color> additional skill damage. While in this form, <color=white>40mm Grenade</color> skill changes to <color=white>Rocket Acceleration</color> skill.\n\nWhen Rocket Launcher Form ends, the skill cooldown reduces up to {6} proportional to bullets remaining.
 Skill/Group/Coef/1058510┃Haze puts aside her Rocket Launcher and takes out an Assault Rifle from her Weapon Case.\n\nCurrent Additional Skill Damage: <color=white>{20}</color><color=#DDA0DD>(+{22}% Skill Amp)</color>
+Skill/Group/ExpansionTip/1058100┃<i>Haze cannot manually reload, or automatically reload during non-combat. She keeps her current ammo even upon switching to another weapon.</i>
+Skill/Group/ExpansionTip/1058200┃<i>Uses a Grenade Launcher. Cancels previously used weapon.</i>
+Skill/Group/ExpansionTip/1058300┃<i>Uses a <color=white>shotgun</color>. Replaces previously used weapon.</i>
+Skill/Group/ExpansionTip/1058400┃<i>Uses an <color=white>SMG</color>. Replaces previously used weapon.\nWill automatically target the closest enemy or wild animal after the first charge.\n<color=white>SMG Form</color> is replaced when the magazine is empty, the duration ends, or you switch to another weapon.</i>
+Skill/Group/ExpansionTip/1058500┃<i><color=white>Rocket Launcher</color> is used, and replaces the previously used weapon.\nRange and Attack Speed are fixed at {0} and {1} respectively, movement speed reduces by {2}, and vision increases by {3}.\n<color=white>Rocket Launcher Form</color> is replaced when the magazine is empty, the duration ends, or you switch to another weapon.</i>
 CharacterState/Group/Name/1058100┃Weapon Case - Swaping weapons
 CharacterState/Group/Desc/1058100┃Taking out a new weapon.
 CharacterState/Group/Name/1058110┃Weapon Case - Basic Attacks enhanced
@@ -6327,14 +6364,14 @@ Skill/Group/Desc/1059300┃Isaac's weapon grows stronger, and his next Basic Att
 Skill/Group/Desc/1059400┃Isaac quickly charges forward and prepares his next skill for {0} seconds. \n\nUpon reuse: Pulls in the enemy in front of him, dealing <color=white>{1}</color> skill damage, and stuning them for {2} seconds.
 Skill/Group/Desc/1059410┃Isaac quickly charges forward and prepares his next skill for {0} seconds. \n\nUpon reuse: Pulls in the enemy in front of him, dealing <color=white>{1}</color> skill damage, and stuning them for {2} seconds.
 Skill/Group/Desc/1059500┃Isaac strongly slams into the ground, dealing <color=white>{0}</color> skill damage and pushing enemies without Exploit out of range. If Exploit is activated because of this skill, Isaac deals <color=white>{1} of enemy's missing Health</color> as additional skill damage and slows them by {2} for a short while.
-Skill/Group/Coef/1059100┃Every time Isaac hits the same enemy {0} times, he deals <color=white>{1}</color><color=#ffd775>(+{2} of Attack Power)</color><color=#DDA0DD>(+{3} of Spell Amp)</color> skill damage and his movement speed increases by {5}. He returns to normal after {6} seconds and recovers HP equal to {7} of Exploit damage dealt. If the enemy is a wild animal, recovery effects are decreased by {9}.
+Skill/Group/Coef/1059100┃Every time Isaac hits the same enemy {0} times, he deals <color=white>{1}</color><color=#ffd775>(+{2} of Attack Power)</color><color=#DDA0DD>(+{3} of Skill Amp)</color> skill damage and his movement speed increases by {5}. He returns to normal after {6} seconds and recovers HP equal to {7} of Exploit damage dealt. If the enemy is a wild animal, recovery effects are decreased by {9}.
 Skill/Group/Coef/1059200┃Isaac charges toward an enemy, striking and dealing <color=white>{0}</color><color=#ffd775>(+{1} of Attack Power)</color> skill damage.
 Skill/Group/Coef/1059300┃Isaac's weapon grows stronger, and his next Basic Attack or Basic Skill is strengthened, dealing <color=white>{0}</color><color=#ffd775>(+{1} of Attack Power)</color><color=#DDA0DD>(+{2} of Skill Amp)</color> additional skill damage and destroying the enemy's shield. If Exploit triggers when using an enhanced Basic Attack or Basic Skill, Basic Skill Cooldowns are decreased by {3}.
 Skill/Group/Coef/1059400┃Isaac quickly charges forward and prepares his next skill for {0} seconds. \n\nUpon reuse: Pulls in the enemy in front of him, dealing <color=#white>{1}</color><color=#ffd775>(+{2} of Attack Power)</color><color=#DDA0DD>(+{3} of Skill Amp)</color> skill damage, and stuning them for {4} seconds.
 Skill/Group/Coef/1059410┃Isaac quickly charges forward and prepares his next skill for {0} seconds. \n\nUpon reuse: Pulls in the enemy in front of him, dealing <color=#white>{1}</color><color=#ffd775>(+{2} of Attack Power)</color><color=#DDA0DD>(+{3} of Skill Amp)</color> skill damage, and stuning them for {4} seconds.
 Skill/Group/Coef/1059500┃Isaac strongly slams into the ground, dealing <color=#white>{0}</color><color=#ffd775>(+{1} of Attack Power)</color> skill damage and pushing enemies without Exploit out of range. If Exploit is activated because of this skill,  Isaac deals <color=red>{3} of enemy's missing Health</color><color=#ffd775>(+{4} of Attack Power)</color> as additional skill damage and slows them by {5} for a short while.
 Skill/Group/ExpansionTip/1059100┃<i>Exploit activates on every {0} attack, regardless of Basic Attack or Skill.</i>
-Skill/Group/ExpansionTip/1059300┃<i>Basic Skills that decrease cooldown are all skills excluding<color=white>The Heavy Hand of the Law(R), Reinforce(W), and Weapons Skills.</color></i>
+Skill/Group/ExpansionTip/1059300┃<i>Basic Skills that decrease cooldown are all skills excluding<color=white> The Heavy Hand of the Law(R), Reinforce(W), and Weapons Skills.</color></i>
 Skill/Group/ExpansionTip/1059500┃<i>Immune to Crowd Control while casting <color=white>The Heavy Hand of the Law(R)</color></i>
 CharacterState/Group/Name/1059120┃Exploit
 CharacterState/Group/Name/1059140┃Exploit - Increased Movement Speed
@@ -6347,7 +6384,7 @@ CharacterState/Group/Desc/1059140┃Increases Isaac's movement speed.
 CharacterState/Group/Desc/1059300┃Strength of Isaac's weapon has increased.
 CharacterState/Group/Desc/1059420┃Stunned by Isaac's Arrest
 CharacterState/Group/Desc/1059510┃Slowed by Isaac's The Heavy Hand of the Law
-CharacterState/Group/Desc/1059520┃Immune to Crowd Control while casting The Heavy Hand of the Law
+CharacterState/Group/Desc/1059530┃Immune to Crowd Control while casting The Heavy Hand of the Law
 Skill/Group/Name/3015000┃Cloak and Dagger
 Skill/Group/Name/3015100┃Cloak and Dagger
 Skill/Group/Name/3016000┃Parry
@@ -6382,7 +6419,7 @@ Skill/Group/Coef/3015000┃<color=white>Cloak</color>\nBecome invisible for {0} 
 Skill/Group/Coef/3015010┃<color=white>Cloak</color>\nBecome invisible for {0} seconds and increase your movement speed by {1}, decaying over {0} seconds.\n\n<color=white>Dagger</color>\nActivate the skill on a targeted enemy to blink behind them, dealing <color=#ffd775>{3}% Attack Power</color><color=#DDA0DD>(+{7}% Skill Amp)</color> skill damage and {4} of the target's current HP as true damage and slowing them by {6} for {5} second.
 Skill/Group/ExpansionTip/3015000┃<i>Gain skill points at Weapon Mastery Lv7 and Lv14</i>
 Skill/Group/ExpansionTip/3015010┃<i>Gain skill points at Weapon Mastery Lv7 and Lv14</i>
-Skill/Group/Desc/3016000┃Raise your sword and take a defensive position.\nWhile Parry is active, you are protected from attacks and effects from the direction you are facing for {0} seconds. After ending the position, you charge {2}m towards the attacking enemy, dealing <color=white>{20}</color> damage to all enemies in your path.\n\n<color=yellow>(Activated at Mastery Lv7, Enhanced at Lv14)</color>
+Skill/Group/Desc/3016000┃Take a defensive position for {0} seconds and become immune to all damage and blocking effects.\nAfter ending the position, you charge {2}m towards the attacking enemy, dealing <color=white>{20}</color> skill damage to enemies.
 Skill/Group/Coef/3016000┃Raise your sword and take a defensive position.\nWhile Parry is active, you are protected from attacks and effects from the direction you are facing for {0} seconds. After ending the position, you charge {2}m towards the attacking enemy, dealing <color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{3} Skill Amp)</color> damage to all enemies in your path.
 Skill/Group/ExpansionTip/3016000┃<i>Gain skill points at Weapon Mastery Lv7 and Lv14</i>
 Skill/Group/Desc/3014000┃<color=green>Passive</color>: Gain {0} stack of Helix every basic attack. At the maximum number of stacks ({6}), you can activate Maleficent Helix.\nMaleficent Helix: Swing your Axe in an area around you, dealing <color=#DDA0DD>{2}</color><color=#688A08>(+{3} of the target's Max HP)</color> skill damage and healing you for {4} of damage dealt.
@@ -6401,10 +6438,10 @@ Skill/Group/Desc/3010000┃When hitting an enemy with a basic attack, you gain {
 Skill/Group/Coef/3010000┃When hitting an enemy with a basic attack, you gain {0} Overheat stacks for each shot. (Maximum of {1} stacks)\nIf you do not basic attack for {6} seconds, you lose {3} stacks every {2} seconds. \n\nActivating Overheat instantly reloads your ammo and puts you in an Overheat state for {4} seconds. (Max {8} seconds) \nDuring this period, extra basic attack damage is increased by {7} (Max {9}) and attack speed is increased by {5}. The attack speed cap is ignored during this time.\nExtra Basic Attack Damage and Overheat's duration is also increased based on the number of Overheat stacks.
 Skill/Group/ExpansionTip/3010000┃<i>Gain skill points at Weapon Mastery Lv7 and Lv14</i>
 Skill/Group/Desc/3011000┃Activate <color=white>Ballistic Advantage</color> in the targeted direction.\nWhen <color=white>Ballistic Advantage</color> is active, your vision is increased by {0} but your angle of vision is decreased.\nBallistic Advantage enables you to fire <color=white>Crippling Shot</color> and <color=white>Dead to Rights</color>.\n\n<color=white>Crippling Shot</color>\nGrants you {1} vision, deals <color=white>{2}</color> skill damage, and grants you vision of enemies hit for {3} seconds. Enemies hit are grounded for {6} seconds. \n\n<color=white>Dead to Rights</color>\nGrants you {4} vision and deals <color=white>{5}</color> skill damage to enemies hit. <color=white>Dead to Rights</color> deals more damage based on the target's missing HP.
-Skill/Group/Coef/3011000┃Activate Ballistic Advantage in the targeted direction.\nWhen Ballistic Advantage is active, your vision is increased by {0} but your angle of vision is decreased.\nBallistic Advantage enables you to fire Crippling Shot and Dead to Rights.\n\n<color=white>Crippling Shot</color>\nGrants you {1} vision, deals <color=#ffd775>{2}% Attack Power</color><color=#DDA0DD>(+{8}% Spell Amp)</color> skill damage, and grants you vision of enemies hit for {3} seconds. Enemies hit are grounded for {6} seconds. \n\n<color=white>Dead to Rights</color>\nGrants you {4} vision and deals <color=#ffd775>{5}% Attack Power</color><color=#DDA0DD>(+{9}% Skill Amp)</color> skill damage to enemies hit. Dead to Rights deals more damage based on the target's missing HP.
+Skill/Group/Coef/3011000┃Activate Ballistic Advantage in the targeted direction.\nWhen Ballistic Advantage is active, your vision is increased by {0} but your angle of vision is decreased.\nBallistic Advantage enables you to fire Crippling Shot and Dead to Rights.\n\n<color=white>Crippling Shot</color>\nGrants you {1} vision, deals <color=#ffd775>{2}% Attack Power</color><color=#DDA0DD>(+{8}% Skill Amp)</color> skill damage, and grants you vision of enemies hit for {3} seconds. Enemies hit are grounded for {6} seconds. \n\n<color=white>Dead to Rights</color>\nGrants you {4} vision and deals <color=#ffd775>{5}% Attack Power</color><color=#DDA0DD>(+{9}% Skill Amp)</color> skill damage to enemies hit. Dead to Rights deals more damage based on the target's missing HP.
 Skill/Group/ExpansionTip/3011000┃<i>Ballistic Advantage Maximum Damage: {0}\n ends if you move or are hit by a crowd control effect.\n\nGain skill points at Weapon Mastery Lv7 and Lv14</i>
 Skill/Group/Desc/3001000┃Punch your target, dealing <color=white>{6}</color> damage and an additional {3} of final damage and {4} true damage. Damage dealt with Upper Cut can not Critically Strike.
-Skill/Group/Coef/3001000┃Punch your target, dealing <color=#ffd775>{2} Attack Power</color><color=#DDA0DD>(+{5} Skill Amp)</color> damage and an additional {3} of final damage and {4} true damage. Damage dealt with Upper Cut can not Critically Strike.
+Skill/Group/Coef/3001000┃Punch your target, dealing <color=#ffd775>{2} Attack Power * (Basic Attack Amplification)</color><color=#DDA0DD>(+{5} Skill Amp)</color> damage and an additional {3} of final damage and {4} true damage. Damage dealt with Upper Cut can not Critically Strike.
 Skill/Group/ExpansionTip/3001000┃<i>Gain skill points at Weapon Mastery Lv7 and Lv14</i>
 Skill/Group/Desc/3002000┃Block damage coming from all directions for {0} seconds and return {1}x of the damage back to the attacking enemy.
 Skill/Group/Coef/3002000┃Block damage coming from all directions for {0} seconds and return {1}x of the damage back to the attacking enemy.
@@ -6663,7 +6700,7 @@ Skill/LobbyDesc/1013300┃Xiukai slams his giant wok on the ground, dealing dama
 Skill/LobbyDesc/1013400┃Xiukai slides on his wok in the targeted direction, dealing damage to enemies hit. Enemies with impaired movement receive damage and are knocked airborne. Hitting an enemy with impaired movement also reduces the cooldown of Wok it Off. 
 Skill/LobbyDesc/1013500┃Xiukai dishes out fire from his wok, dealing damage to enemies in a cone in front of him.\nHe deals additional damage with each Juggernaut Chef stack.\nEnemies with impaired movement have their defense reduced.
 Skill/LobbyDesc/1014100┃When Chiara hits an enemy with a skill, she carves a Stigma into them, reducing their defense.\nWhen the enemy reaches the maximum amount of Stigmas, Chiara's movement speed is increased.
-Skill/LobbyDesc/1014200┃Chiara casts out corrupted energy in the targeted direction, dealing damage to all enemies it hits. The corrupted energy remains, slowing enemies hit.\n\nHold the skill down to cast out the corrupted energy further and in a straight line. The straight line cast will have a slightly longer cooldown.
+Skill/LobbyDesc/1014200┃Chiara casts out corrupted energy in the targeted direction, dealing damage to all enemies it hits. The corrupted energy remains, slowing enemies hit.\n\nHold the skill down to cast out the corrupted energy further and in a straight line.
 Skill/LobbyDesc/1014300┃Chiara divines a shield, absorbing damage. If the shield is not depleted, she can reactivate the skill again, making it explode, dealing damage to enemies in range.
 Skill/LobbyDesc/1014400┃Chiara sends out a shackle in the targeted direction, dealing damage to enemies hit and linking them to Chiara. If the link is maintained, she deals damage and roots the enemy.
 Skill/LobbyDesc/1014500┃Passive: Chiara gains visibility of her enemies with maximum Stigma stacks.\n\nChiara channels the darkness inside of her, transforming into a fallen angel. While transformed, her basic attacks are ranged, her max HP is increased, and she Plagues the area around her.\nEnemies inside of the Plague receive damage every second, and Chiara recovers HP in proportion to damage dealt.\nWhile Plague is activated, she can cast Last Judgement to enemies that have the maximum amount of Stigmas.\n\nLast Judgement: Chiara can crash down upon an enemy with the maximum amount of Stigmas, dealing true damage and ending the Plague.\nKilling enemies with Last Judgement reduces the cooldown of Plague.\n\nAfter casting Last Judgment, she becomes invincible when crashing down upon enemies.
@@ -6809,7 +6846,7 @@ Skill/LobbyDesc/1041200┃Johann casts holy light in the targeted direction. The
 Skill/LobbyDesc/1041300┃Johann sets his censer at the targeted location. Censers have increased HP for each ally in range when the censer is set.\n\nWhile inside the smoke, enemies are slowed and allies gain attack speed. Johann gains an amount of damage dealt by allies with the bonus as mastery.\nTranscendent Censers can be moved once. The cooldown is reduced if the censer survives until the end of its duration.
 Skill/LobbyDesc/1041400┃Johann blesses an ally with divine scripture, removing all slows.\n\nThe blessed target's movement speed is increased. The blessing deals skill damage and blocks the vision of enemies nearby upon expiration.\n\nJohann’s movement speed is increased when moving towards an ally blessed with Divine Scripture.
 Skill/LobbyDesc/1041500┃Johann consecrates the area around him, pushing away nearby enemies, dealing skill damage, and healing allies. Activating Faith Unwavering also causes <color=white>Transcendent Censers</color> to push away enemies.\n\nJohann channels Faith Unwavering, increasing the defense of allies in range and healing them.\n\nJohann is slowed but unstoppable during the duration.\nReactivate Faith Unwavering to cancel it early. 
-Skill/LobbyDesc/1042100┃<color=white>Hemostasis</color>\nEvery few seconds, Bianca’s next basic attack deals extra skill damage. Every time Bianca deals skill damage to an enemy, they are slowed.\n\n<color=white>Blood Bank</color>\nBianca stores an amount of her skill damage dealt and her HP lost as <color=white>Blood</color>. When out of combat, Bianca consumes <color=white>Blood</color> to heal for the amount consumed. 
+Skill/LobbyDesc/1042100┃<color=white>Hemostasis</color>\nEvery few seconds, Bianca’s next basic attack deals extra skill damage. Every time Bianca deals skill damage to an enemy, their movement speed is reduced.\n\n<color=white>Blood Bank</color>\nBianca stores an amount of her skill damage dealt and her HP lost as <color=white>Blood</color>. When out of combat, Bianca consumes <color=white>Blood</color> to heal for the amount consumed. 
 Skill/LobbyDesc/1042200┃Bianca throws her Sanguine Javelin to the targeted direction, dealing damage to enemies hit. The javelin forms a blood pool on arrival, dealing damage to the first enemy that touches it. Enemies with <color=white>Hemostasis</color> are rooted when hit by <color=white>Sanguine Javelin</color>.
 Skill/LobbyDesc/1042300┃Bianca confines herself in her gothic coffin.\nWhile inside the coffin, Bianca takes reduced damage and continuosly heals.\nIf Bianca's Blood is over 50%, the cooldown of <color=white>Sanctuary</color> is instantly reset.\n\nIf Bianca has over 50% <color=white>Blood</color> when using <color=white>Sanctuary</color>, she instantly consumes all her stored <color=white>Blood</color>, increasing her healing inside the coffin based on the amount consumed and reducing the cooldown of all her skills every few seconds.\n\nBianca can use <color=white>Reign of the Vampire Queen</color> and <color=white>Circulation</color> while in her coffin, hiding the skill effects from enemies.
 Skill/LobbyDesc/1042400┃Bianca circulates blood around her and dashes, dealing damage. The circulation can be charged, consuming her HP, dealing extra damage and increasing the damage radius and dash range. If fully charged, hitting an enemy heals Bianca per enemy hit.
@@ -6891,7 +6928,7 @@ Skill/LobbyDesc/1057300┃<color=#ffffff>[Interview]</color>\nMartina installs a
 Skill/LobbyDesc/1057400┃<color=#ffffff>[Interview]</color>\nMartina dashes in the targeted direction, leaving a videotape behind. Martina then enters the Rewind state for a few seconds, increasing her Movement Speed.\n\nExiting the Rewind state causes Martina to dash back to the videotape, becoming Immune to Crowd Control, slowing down enemies.\n\nRecast to exit Rewind before the end of its duration.\n\n<color=#ffd775>[Broadcast]</color>\nEnemies hit by Martina while she dashes back are stunned instead, and Martina heals herself for a percent of damage received while in Rewind upon returning to her videotape.\n
 Skill/LobbyDesc/1057500┃<color=#ffffff>[Interview]</color>\nMartina records a video of Lumia Island in the targeted direction. If target comes into range while she's filming, movement speed is increases for the filming duration. If she catches a target on film, Martina gains a <color=white>Record Stack</color> and her Movement Speed is increased.\nIf the video failed to capture a target, this skill's cooldown is slightly reduced.\n\nWhenever Martina has enough <color=white>Record Stacks</color>, she completes her interview and goes into <color=#ffd775>Broadcast</color> mode, enhancing her skills.\n\n<color=#819FF7>Standard Footage Conditions</color>: Film 2 <color=#2ECCFA>Headline Targets</color> to gain Record Stacks and Weapon Mastery. \n<color=#819FF7>Corpse Footage Conditions</color>: Film the corpse of 1 <color=#2ECCFA>Headline Target</color> to gain Record Stacks and Weapon Mastery. Martina cannot film the same corpse twice.\n<color=#2ECCFA>Headline Targets</color>: Enemy Test Subjects, Tree of Life, Meteorite, Alpha, Omega, Wickeline, Gamma\n\n<color=#ffd775>[Broadcast]</color>\nMartina damages enemies in the targeted direction, dealing an additional burst of damage to enemies hit and stunning enemies in the center when the skill ends.
 Skill/LobbyDesc/1058100┃<color=white>Grim Merchant</color>: Instead of reloading, Haze takes out a new Assault Rifle with full bullets loaded from her Weapon Case for 0.75 seconds. While taking out her Assault Rifle, Haze cannot use basic attacks, but her next basic attack deals extra skill damage to enemies hit and her attack speed increases. Her movement speed is also increased.  <color=white>Grim Merchant</color> is only applied while in Assault Riffle Form. \n\n<color=white>Weapon Case</color>: Haze uses different types of guns for each skill, when the skill ends, she takes out a new Assault Riffle from her Weapon Case and activates <color=white>Grim Merchant</color>.\n\nHaze cannot manually or automatically reload when she's out of combat. The number of bullets is mantained even if weapons are swaped.
-Skill/LobbyDesc/1058200┃<color=white>Assault Riffle Form</color>: Haze launches a grenade, dealing skill damage to enemies hit and slowing them. Enemies hit in the center take skill damge, and are slowed.\n\nHaze can hold two charges of grenades.\n\n<color=white>SMG Form</color>: Haze focuses for a moment and burst fires her SMG to the front, dealing skill damage and discarding her SMG.\n\n<color=white>Rocket Launcher Form</color>: Haze pierces her enemies by firing Rocket Accerlation, dealing skill damage to enemies hit and slowing them. Half the damage splashes in an area behind the targets. The rocket accelerates over time, widening its range and increasing damage. This skill shares cooldown with basic attacks and is not affected by cooldown reduction stats.
+Skill/LobbyDesc/1058200┃<color=white>Assault Rifle Form</color>: Haze launches a grenade, dealing skill damage to enemies hit and slowing them. Enemies hit in the center take skill damge, and are slowed.\n\nHaze can hold two charges of grenades.\n\n<color=white>SMG Form</color>: Haze focuses for a moment and burst fires her SMG to the front, dealing skill damage and discarding her SMG.\n\n<color=white>Rocket Launcher Form</color>: Haze pierces her enemies by firing Rocket Accerlation, dealing skill damage to enemies hit and slowing them. Half the damage splashes in an area behind the targets. The rocket accelerates over time, widening its range and increasing damage. This skill shares cooldown with basic attacks and is not affected by cooldown reduction stats.
 Skill/LobbyDesc/1058300┃Haze steps back to fire her shotgun, dealing skill damage to enemies hit and stunning them for a moment.\n\nIf used while in <color=white>SMG Form</color> or <color=white>Rocket Launcher Form</color>, the weapon is discarded and the relevant skill's cooldown is reduced. 
 Skill/LobbyDesc/1058400┃<color=white>Swap to SMG Form</color>: Haze dashes slightly forward for a few seconds and swaps to SMG Form with 40 bullets.\n\nHaze is able to attack while moving with a SMG and can change targets using Attack Commands. Each attack deals skill damage every few seconds. Basic attacks with every 5th bullet applies the effect.  While maintaining this form, certain actions such as crafting and looting are limited and her <color=white>40mm Grenade</color> skill changes to <color=white>SMG Burst</color>.\n\nWhen SMG Form ends, the skill cooldown reduces proportionally to bullets remaining.
 Skill/LobbyDesc/1058500┃<color=white>Swap to Rocket Launcher Form</color>: Haze swings her weapon case, knocking enemies back and dealing skill damage. Haze swaps to her Rocket Launcher Form for a few seconds with 4 rocket ammos.\n\nWhile in Rocket Launcher form, Haze's range and attack speed are fixed, and her movement speed is reduced. Critical strike is not applied to her basic attacks, which splash additional skill damage. While in this form, <color=white>40mm Grenade</color> skill changes to <color=white>Rocket Acceleration</color> skill.\n\nWhen Rocket Launcher Form ends, the skill cooldown reduces proportionally to bullets remaining.
@@ -6913,7 +6950,7 @@ Skill/LobbyDesc/3011000┃Activate Ballistic Advantage in the specified directio
 Skill/LobbyDesc/3013000┃Smash the hammer in a targeted direction, dealing damage and reducing the defense of enemies.
 Skill/LobbyDesc/3014000┃Gain a stack of Helix for each basic attack. At the maximum number of stacks, you can activate Maleficent Helix to move in the targeted direction and swing your Axe, dealing damage to all enemies hit within range, and healing based on damage dealt.
 Skill/LobbyDesc/3015000┃Activate to become invisible and increase your movement speed.\n\nReactivate on a selected enemy to teleport behind them, slow them, and deal skill damage.
-Skill/LobbyDesc/3016000┃Raise your sword and take a defensive position, protecting yourself from attacks and effects.\nAfter a certain time, you charge towards the attacking enemy, dealing damage to all enemies in your path.
+Skill/LobbyDesc/3016000┃Raise your sword and take a defensive position, becoming immune to damage and blocking effects.\nAfter, you charge towards the attacking enemy, dealing skill damage to enemies.
 Skill/LobbyDesc/3018000┃Charge in the targeted direction and deal damage to all enemies in your path.\nIf you hit an enemy, you can reactivate the skill to dash in the targeted direction.
 Skill/LobbyDesc/3019000┃Powerfully lunge your spear in the targeted direction, dealing damage.\nEnemies hit by the attack are slowed and all enemies in a certain range get knocked back.
 Skill/LobbyDesc/3020000┃Swing the nunchaku quickly while moving, creating a gust of wind and slowing the caster. Recast to launch the gust of wind in the targeted direction dealing damage depending on charge time. Swinging the nunchaku for more than a certain amount of time stuns enemies.
@@ -7234,9 +7271,9 @@ Item/Skills/6017004/Body┃Hitting a test subject with a basic attack deals skil
 Item/Skills/6017004/Desc┃Hitting a test subject with a basic attack deals skill damage equal to {0}% of the target’s current HP and grants you a stack of Vigor for {8} seconds. Each stack of Vigor increases your Attack Speed by {3}%. At {9} stacks, you gain an extra {5} Attack Power and {6} Movement speed.
 Item/Skills/6017005/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017006/Name┃<color=yellow>Vigor - Circulation</color>
-Item/Skills/6017005/Body┃When hitting an enemy with a basic attack, deal ({10} + <color=#DDA0DD> Skill Amp * {11}</color>) skill damage, and gain Vigor stacks that give {3}% Attack Speed for {8} seconds.
-Item/Skills/6017005/Desc┃When hitting an enemy with a basic attack, deal (Melee) ({10} + <color=#DDA0DD>Skill Amp {11}</color>) / (Ranged) ({10} + <color=#DDA0DD>Skill Amp {12}</color>) skill damage, and gain Vigor stacks that give {3}% Attack Speed for {8} seconds.
-Item/Skills/6017007/Name┃<color=yellow>Vigor</color>
+Item/Skills/6017005/Body┃When hitting a test subject with a basic attack, deal ({10} + <color=#DDA0DD> Skill Amp * {11}</color>) skill damage, and gain Vigor stacks that give {3}% Attack Speed for {8} seconds.
+Item/Skills/6017005/Desc┃When hitting a test subject with a basic attack, deal (Melee) ({10} + <color=#DDA0DD>Skill Amp {11}</color>) / (Ranged) ({10} + <color=#DDA0DD>Skill Amp {12}</color>) skill damage, and gain Vigor stacks that give {3}% Attack Speed for {8} seconds.
+Item/Skills/6017007/Name┃<color=yellow>Vigor - Circulation</color>
 Item/Skills/6017008/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017008/Body┃Hitting a test subject with a basic attack deals skill damage equal to {1}% of the target’s current HP and grants you a stack of Vigor for {8} seconds. Each stack of Vigor increases your Attack Speed by {3}%. At {9} stacks, you gain an extra {5} Attack Power.
 Item/Skills/6017008/Desc┃Hitting a test subject with a basic attack deals skill damage equal to {1}% of the target’s current HP and grants you a stack of Vigor for {8} seconds. Each stack of Vigor increases your Attack Speed by {3}%. At {9} stacks, you gain an extra {5} Attack Power.
@@ -7249,8 +7286,8 @@ Item/Skills/6018001/Name┃<color=yellow>Temporal Refraction</color>
 Item/Skills/6018001/Body┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
 Item/Skills/6018001/Desc┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
 Item/Skills/6018002/Name┃<color=yellow>Temporal Refraction</color>
-Item/Skills/6018002/Body┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
-Item/Skills/6018002/Desc┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
+Item/Skills/6018002/Body┃Create a temporal anomaly, negating damage and effects of the enemy's next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
+Item/Skills/6018002/Desc┃Create a temporal anomaly, negating damage and effects of the enemy's next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
 Item/Skills/6018003/Name┃<color=yellow>Temporal Refraction</color>
 Item/Skills/6018003/Body┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
 Item/Skills/6018003/Desc┃Create a temporal anomaly, negating damage and effects of the next hostile skill or trap. The anomaly then disappears, returning after {0} seconds.
@@ -7303,8 +7340,8 @@ CharacterState/Group/Name/6024000┃Gathering Electric Shock
 CharacterState/Group/Desc/6024000┃Gathering Electric Shock every time you deal basic attack.
 Item/Skills/6025001┃Corrosive Compound
 Item/Skills/6025001/Name┃<color=yellow>Corrosive Compound</color>
-Item/Skills/6025001/Body┃Damaging enemies with skills apply Corrosive Compound for {0} seconds. Enemies affected lose ({1} +   <color=#008000>{2}</color>) of their shield per {1} seconds.
-Item/Skills/6025001/Desc┃Damaging enemies with skills apply Corrosive Compound for {0} seconds. Enemies affected lose ({1} + <color=#008000>Character Level * {3}</color>) of their shield per {1} seconds.
+Item/Skills/6025001/Body┃Damaging enemies with skills apply Corrosive Compound for {0} seconds. Enemies affected lose ({1} + <color=#008000>{2}</color>) + {3}% of their shield) per second.
+Item/Skills/6025001/Desc┃Damaging enemies with skills apply Corrosive Compound for {0} seconds. Enemies affected lose ({1} + <color=#008000>Character Level * {3}</color> + {5}% of their shield) per second.
 Item/Skills/6025002/Name┃<color=yellow>Corrosive Compound</color>
 CharacterState/Group/Name/6025000┃Corrosive Compound
 CharacterState/Group/Desc/6025000┃Loses shield every second.
@@ -7313,8 +7350,8 @@ Item/Skills/6500001┃Nullification
 Item/Skills/6500001/Name┃<color=yellow>Nullification</color>
 Item/Skills/6500002┃Nullification
 Item/Skills/6500002/Name┃<color=yellow>Nullification</color>
-Item/Skills/6500001/Body┃Activate to instantly cleanse debuffs or crowd control effects on you.\nThis excludes Airborne, Knockback, and Grab.\nCooldown: {0} seconds.
-Item/Skills/6500001/Desc┃Activate to instantly cleanse debuffs or crowd control effects on you.\nThis excludes Airborne, Knockback, and Grab.\nCooldown: {0} seconds.
+Item/Skills/6500001/Body┃Activate to instantly cleanse debuffs or crowd control effects on you.\nThis excludes Airborne, Knockback, Grab, and Stasis.\nCooldown: {0} seconds.
+Item/Skills/6500001/Desc┃Activate to instantly cleanse debuffs or crowd control effects on you.\nThis excludes Airborne, Knockback, Grab, and Stasis.\nCooldown: {0} seconds.
 CharacterState/Group/Name/6500000┃Nullification
 CharacterState/Group/Desc/6500000┃Debuffs and crowd control effects are removed.
 Item/Skills/6501000┃Sprint
@@ -7874,6 +7911,7 @@ ToolTip/LevelUpGuide/WeaponSkill┃Click or press {0} to level up the skill.\nTh
 언어┃Language
 음성┃Voice
 최대 FPS┃FPS Cap
+마우스 크기┃Mouse size
 입력┃Input
 시전방식┃Cast method
 게임┃Game
@@ -8270,6 +8308,10 @@ Vivox점검팝업┃Voice Chat is currently unavailable due to an error.
 음성 채팅 안하기┃Disable Voice Chat
 음성 채팅 참여┃Join Voice Chat
 음성 채팅 이탈┃Leave Voice Chat
+캐릭터 추가 정보 - 주스탯┃Status Information
+캐릭터 추가 정보 - 주스탯 설명┃Check Character Experience and Information.
+캐릭터 추가 정보 - 특성┃Augment Information
+캐릭터 추가 정보 - 특성 설명┃Check Augment Experience and Information.
 보유 크레딧┃Credit Balance
 획득 예정 크레딧┃Credit Income
 획득 예정 크레딧 설명┃You earn this many credits upon each day/night cycle change.
@@ -8334,9 +8376,9 @@ Vivox점검팝업┃Voice Chat is currently unavailable due to an error.
 방어력┃Defense
 방어력 설명┃Reduces your damage taken from Basic Attacks and Skills.
 공격 속도┃Attack Speed
-공격 속도 설명┃Amount of attacks per second. It is affected by your Weapon Mastery level.
+공격 속도 설명┃Amount of attacks per second.
 이동 속도┃Movement Speed
-이동 속도 설명┃Current movement speed of character. It is affected by your Movement Mastery level.
+이동 속도 설명┃Current movement speed of character.
 쿨다운 감소┃Cooldown Reduction
 쿨다운 감소 설명┃Allows you to use your skills more often.\nReduction is capped at {0}%.
 치명타┃Critical Strike Chance
@@ -8697,6 +8739,8 @@ NOTICE┃NOTICE
 오메가사안내┃{0}({1}) was slain by Omega
 알파┃Alpha
 오메가┃Omega
+드론┃Drone
+감마┃Gamma
 게임포기안내┃Left the game.
 마지막금지구역안내┃The restricted areas have been set.\nAir Supplies will arrive.
 WickelineUI_WaitTooltip┃Time left until Wickeline spawns.
@@ -8723,6 +8767,10 @@ WickelineUI_ReadyTooltip┃Wickeline is now active.
 위클라인죽음어나운스┃{0} has slain Wickeline!
 위클라인이동┃Wickeline has been seen in {0}.
 위클라인┃Dr.Wickeline
+GameAnnounce-전장예정지선정┃Battlefield location has been selected. Battlefield will be activated in the next phase.
+GameAnnounce-전장시작┃Battlefield has been activated. Join the battlefield within {0} seconds.
+GameAnnounce-전장승자팀발생┃Battlefield has been won. Receive rewards from the battlefield in your Security Console within {0} seconds.
+GameAnnounce-전장종료┃The battlefield has completed. Completed battlefield will become a restricted area.
 더미알파생성┃Alpha will arrive in 1 minute in {0}.
 더미오메가생성┃Omega will arrive in 1 minute in {0}.
 더미알파생성완료┃Alpha has appeared in {0}.
@@ -8863,6 +8911,7 @@ SP 알림┃{0}({1}): <color=#86E57F>SP {2}%</color>
 하이퍼루프재료알림┃{0}({1}):  <color=#FFBB00>{2}</color> - <color=#86E57F>{3}</color> Materials needed
 하이퍼루프알림┃{0}({1}): Target area - <color=#FFBB00>{2}</color>
 ToastMessage/HyperloopNotLab┃You cannot hyperloop to the Research Center.
+ToastMessage/HyperloopNotBattlezone┃Hyperloop target cannot be specified until the battlefield ends.
 팀원상태알림┃{0}({1}): <color=#FFBB00>{2}({3})</color> - {4}
 팀원빈사알림┃{0}({1}): <color=#FFBB00>{2}({3})</color> - Death in <color=#86E57F>{4}</color>s in {5}
 팀원상태생존┃<color=#86E57F>Alive</color>
@@ -8959,6 +9008,7 @@ CBT스케줄링크┃https://www.playeternalreturn.com/schedule/
 바로 시작하기┃Quick Start
 순위표┃Ranking
 통계┃Stats
+그래프┃Graph
 총 플레이 시간┃Total play time
 게임ID┃Match ID:
 기본┃Basic
@@ -8995,6 +9045,7 @@ CBT스케줄링크┃https://www.playeternalreturn.com/schedule/
 감시카메라 제거 수┃Surveillance Cameras destroyed
 원격카메라 제거 수┃Telephoto Cameras destroyed
 하이퍼루프 사용 횟수┃Hyperloop uses
+디플로잉루프 사용 횟수┃Deploying Loop uses
 보안 콘솔 사용 횟수┃Security Console activations
 추후 제공 예정입니다┃Stats are yet to be supported.
 확인 불가┃Unable to confirm
@@ -9022,11 +9073,16 @@ ServerRegion/NONE┃Unknown
 개요┃Summary
 시나리오┃Story
 피해┃Damage
+피해 설명┃Ability to damage enemies
 보조┃Support
+보조 설명┃Abilities that give beneficial effects to ally, such as shield, recovery, movement speed increase, etc.
 이동┃Movement
+이동 설명┃Ability to move quickly in the map, such as sudden movement or quickly charging
 군중제어┃Crowd Control
+군중제어 설명┃Ability to give harmful effects to enemies, such as stun or slow
+방어 설명┃Ability to withstand damage from enemies
 스킬┃Skills
-정보┃Info
+정보┃Information
 초기 스탯┃Stats
 LV20┃Level 20
 성장치┃Growth Rate
@@ -9423,6 +9479,7 @@ Product Info┃Product Info
 루트 상대하기 어려운 실험체┃Countered By
 루트 실험체 상성 설명 예시┃Enter description about Test Subject.\n(4 Lines Max)
 이벤트 겨울맵┃<color=#35FF94>EVENT</color> WINTER MAP
+계정 구매 횟수 제한┃Amount of Possible Purchases
 계정 프로필┃Profile
 계정 아이콘 설정┃Edit Player Icon
 계정 아이콘 저장 팝업┃Would you like to save?
@@ -10105,7 +10162,7 @@ EP 토큰 구매┃Purchase EP Tokens
 EP 토큰 상점에서 구매 가능┃Available for purchase in the EP token store.
 스킨을 배틀패스 구매 가능┃Obtained via reaching ER Pass {0} Level {1}
 스킨을 이벤트로 획득 가능┃Obtained via Event Reward
-스킨을 시즌패스 구매 가능┃Obtained via Season Pack Reward
+스킨을 시즌패스로 획득 가능┃Obtained via Season Pack Reward
 기본으로 지급되는 스킨┃Default Skin
 해당 스킨은 현재 구매할 수 없습니다.┃Skin not available for purchase.
 스킨을 시즌1 보상으로 획득 가능┃Skin not available for purchase. (Season 1 reward)
@@ -10384,6 +10441,26 @@ Tutorial/Announce/핵심3번/11┃Items without the yellow triangle are not your
 Tutorial/Announce/핵심공통/00┃You will be revived during the training process. Please keep an eye on your HP.
 Tutorial/Announce/핵심공통/01┃Recover HP and SP by eating, drinking, and resting.
 Tutorial/Announce/핵심공통/02┃Be the person standing, and you win. You can always see how many other players are remaining.
+Tutorial/Announce/초급1번/00┃These will be the buttons you press most often. Click the button on the right when you're ready.
+Tutorial/Announce/초급1번/01┃Right click to move.
+Tutorial/Announce/초급1번/02┃Open a box
+Tutorial/Announce/초급1번/03┃Click on the item to obtain it.
+Tutorial/Announce/초급1번/04┃Combine two different materials to make a better item.\nYou can combine items by clicking the icon or using the hotkey.
+Tutorial/Announce/초급1번/05┃You can check your equipped items here.
+Tutorial/Announce/초급1번/06┃Move along the designated path.
+Tutorial/Announce/초급1번/07┃Try attacking the wild animals.
+Tutorial/Announce/초급1번/08┃Use your skills to attack. Skills can be used by clicking on the icon or pressing the hotkey.
+Tutorial/Announce/초급1번/09┃Right-click animals to loot them after you hunt them.
+Tutorial/Announce/초급1/이벤트1/01┃Take out your enemy.
+Tutorial/Announce/초급1/이벤트1/02┃You can loot items from dead enemies.
+Tutorial/Announce/초급1/이벤트1/03┃You can loot items from dead enemies.
+Tutorial/Announce/초급1/이벤트2/01┃Take out your enemy.
+Tutorial/Announce/초급1/이벤트2/02┃You can loot items from dead enemies.
+Tutorial/Announce/초급1/이벤트2/03┃You can loot items from dead enemies.
+Tutorial/Announce/초급2번/00┃These will be the buttons you press most often. Click the button on the right when you're ready.
+Tutorial/Announce/초급2번/01┃Right click to move.
+Tutorial/Announce/초급2번/02┃Open a box
+Tutorial/Announce/초급2번/03┃Click on the item to obtain it.
 전체 채팅무시┃/muteall
 전체 채팅무시 해제┃/unmuteall
 전체 핑무시┃/mutepingall
@@ -11093,7 +11170,7 @@ Trait/Tooltip/7210601┃Start the game with 'Clogs' equipped. Out of combat move
 Trait/Tooltip/7210801┃Your first use of the transfer console is heavily discounted.\nSubsequent uses of the transfer console are slightly discounted.
 Trait/DetailTooltip/7000201┃Your {1}rd basic attack or skill against the same test subject within {0} seconds deals (Level*{2}) true damage and reduces their defense by (Level*{4})% for {3} seconds. (Cooldown: {5}s)\nMulti-hit effects only grant 1 stack.
 Trait/DetailTooltip/7000301┃When you use your Weapon Skill, gain additional Attack Speed.\n(Melee) Gain ({4} + Level*{5}%) Attack Speed for {1} seconds. \n(Ranged) Gain ({10} + Level*{11}%) Attack Speed for {7} seconds. \n\n(Cooldown: {0}s)
-Trait/DetailTooltip/7000401┃Damaging a test subject with a skill grants you {0}% Omnisyphon, for up to {1} stacks. At max stacks, you gain ({5}+Level*{2})% Skill Amplification.\nOmnisyphon gained from [Augment name] lasts for {3} seconds and is regained every time you damage an enemy with a skill.(Cooldown: {4}s)
+Trait/DetailTooltip/7000401┃Damaging a test subject with a skill grants you {0}% Omnisyphon, for up to {1} stacks. At max stacks, you gain ({5}+Level*{2})% Skill Amplification.\nOmnisyphon gained from Vampiric Bloodline lasts for {3} seconds and is regained every time you damage an enemy with a skill.(Cooldown: {4}s)
 Trait/DetailTooltip/7000501┃Damaging an enemy with a skill spawns a sprite that deals {1}(+Level*{2})(+Attack Power*{3})(+Skill Amplification*{4}) additional skill damage and can chain to multiple enemy test subjects. If at least one other test subject is within {7}m of the sprite, its additional damage is reduced by {8}% but chains and damages both enemies. If no other test subjects were in range, the sprite's additional damage is increased by {6}%. Every time you damage an enemy test subject with a skill, the cooldown of Red Sprite is reduced by {9} seconds. (Cooldown : {5} seconds)
 Trait/DetailTooltip/7000601┃For each Basic Attack on an enemy test subject or every {0} seconds spent in combat, gain a stack of Adrenaline up to a maximum of {1} stacks. \n({11}) Gain ({2}+Level*{3})% Attack Speed per Adrenaline stack.\nWhile at max stacks, gain an additional ({4}+level*{5})% Basic Attack Amplification.\n\n({12}) Gain ({7}+Level*{8})% Attack Speed per Adrenaline stack.\nWhile at max stacks, gain an additional ({9}+level*{10})% Basic Attack Amplification.\n\nAdrenaline stacks expire upon exiting combat. (Cooldown: {13} s
 Trait/DetailTooltip/7010101┃Gain {0}% Armor Penetration.
@@ -11348,6 +11425,9 @@ Graphic/VeryLow┃Low
 Graphic/Medium┃Normal
 Graphic/High┃High
 Graphic/Ultra┃Ultra
+MouseSize/Small┃Small
+MouseSize/Medium┃Medium
+MouseSize/Large┃Large
 FullScreenMode/ExclusiveFullScreen┃Fullscreen 
 FullScreenMode/FullScreenWindow┃Borderless Fullscreen
 FullScreenMode/MaximizedWindow┃Borderless Fullscreen
@@ -11701,6 +11781,52 @@ MasteryType/Trap/Stats┃{0} {1} Increase
 로딩팁 튜토리얼129┃Mutant animals are stronger than regular wild animals, but they give you credits. 
 로딩팁 튜토리얼130┃You can earn credits by slaying mutants, killing test subjects, or as income on every day/night cycle change!
 로딩팁 튜토리얼131┃If a material in your saved plan is highlighted, it means the material cannot be found in the next area on your route.
+gameTip_Title_10000_1┃Planning / Crafting Guide
+gameTip_Desc_10000_1┃So you opened a box - don't know which items to grab? Pay attention to the yellow item markers! Those are items you'll definitely need.\n\nUnsure which items to get in the current area? Don't worry! The Crafting Guide shows which items you can get!\n\nYou can craft powerful equipment by collecting all the necessary ingredients!
+gameTip_Title_10000_2┃Planning / Crafting Guide
+gameTip_Desc_10000_2┃Don't memorize — plan!\n\nPlanning is like farming. If you register which area you need to move to and which equipment you want, you can quickly get the materials you need without wandering around!\n\nIf making a plan is difficult, try using a shared plan. You'll be able to create your own plan the more you get used to it.\n\nMake a plan before the game starts and devise your own strategy!
+gameTip_Title_10010_1┃Crafting
+gameTip_Desc_10010_1┃Crafting is a must to survive! Gather your materials and make even more powerful equipment through crafting.\n\nYou can craft by pressing the craft icon shown at the bottom of the screen, but it's easier and faster to craft by pressing the [Z Hotkey] to quick craft.\n\nQuick crafting starts with the left most items, but don't worry! Your most necessary items start from the left for better accessibility.
+gameTip_Title_10020_1┃Credits
+gameTip_Desc_10020_1┃On Lumia Island, you can earn credits, which act as in-game currency, through a multitude of actions.\nSo how do you get credits?\n- First: you get credits for free at certain time periods of the game!\n- Second: Hunting mutant wild animals.\n- Third: Eliminating other Test Subjects.\n\nWhat do you do when you have a bunch of credits? Check the next page to find out!
+gameTip_Title_10020_2┃Remote Transfer Drones
+gameTip_Desc_10020_2┃If you couldn't find some of the materials in boxes, try the remote transfer drones! By right-clicking on an item anytime, anywhere, you can use a remote transfer drone to get the item you want.\n\nKeep in mind that you need credits to use the remote transfer drone. Materials get a bit more expensive the more you buy them!
+gameTip_Title_10020_3┃Transfer Console
+gameTip_Desc_10020_3┃Did you know that using a transfer console makes it easier to purchase special materials with your credits?\n\nTransfer console is another way to get materials like Tree of Life or Meteorite!. Use the transfer consoles in the 4 designated areas of Lumia Island to get the special meterials. It's simple!\nClick the transfer console → Click the item you want → Wait!\n\nFair warning: Special materials aren't cheap. \n
+gameTip_Title_10030_1┃Wild Animals
+gameTip_Desc_10030_1┃Hunt Lumia Island's wild animals to gain mastery and get items.\n\nChickens, bats, bears, and wolves are just a few of the wild animals on Lumia Island. If you hunt them, you'll gain mastery, materials, and food to eat.\n\nMake sure you craft and level up your weapons before hunting! It'll be a tough fight if you're at a lower level.
+gameTip_Title_10031_1┃Wild Animals - Mutants
+gameTip_Desc_10031_1┃Have you noticed that some of Lumia Island's wild animals look a bit different?\n\nThese enhanced wild animals are called "mutants." Mutants are much stronger than regular wild animals, and have a chance to appear after a certain amount of wild animals have been slain.\n\nKilling them earns you credits, so we recommend killing them whenever they appear.\n\nHowever, the bear mutant is a force to be reckoned with.
+gameTip_Title_10032_1┃Boss Monster
+gameTip_Desc_10032_1┃Do you know the powerful boss monsters who appear on Lumia Island: Wickeline, Alpha, and Omega?\n\nThey appear at different times, but you can check the times by clicking the [TAB Hotkey] and where they'll appear by clicking the [M Hotkey].\n\nYou get special rewards (buffs, special materials, etc.) if you take out the boss monsters. Be warned though: if you're not prepared, you can be defeated or ambushed by other Test Subjects. Always be on your guard when taking on a boss monster!
+gameTip_Title_10040_1┃Special Materials
+gameTip_Desc_10040_1┃Special materials are needed to make powerful items!\n\nAs the materials are special, the way to get them is just as special.\n\nYou can get these materials at certains times in areas of the map, such as the Tree of Life or Meteorite, or by hunting boss monsters for Mithril or VF Blood Sample.
+gameTip_Title_10050_1┃Match Status Info
+gameTip_Desc_10050_1┃Press the [TAB Hotkey] to see various game status information!\n\n① Participating Test Subject information\n② Various time information \n③ Map and farming routes\n\nGain quick, helpful information to lead yourself to victory!\n\n\n
+gameTip_Title_10060_1┃Information Overlay
+gameTip_Desc_10060_1┃Use the Information Overlay [ALT] to quickly check information on a variety of objects, Test subjects, and wild animals around Lumia Island.\n\nYou can check enemy Test Subjects, weapon mastery, and Augments. Take these information in consideration when choosing to fight or flight!\n\nYou can toggle the Information Overlay by pressing the [F8 Hotkey]. The type of information being displayed can be selected in the [Settings Menu].
+gameTip_Title_10070_1┃Security Console
+gameTip_Desc_10070_1┃Activate the security console in each area of Lumia Island to gain important sight on the enemies' location. Use this information to gain the upper hand!\n\nBy activating a security console in an area, you'll be able to see CCTVs that shows the area around the camera.\n\nOn the other hand, if the CCTV is moving closer to you and blinking red, that means someone is watching you instead! Run for it!
+gameTip_Title_10080_1┃Hyperloop
+gameTip_Desc_10080_1┃Did someone say, FAST TRAVEL?\n\nIt may look like a broken down phone booth, but this booth allows you to travel anywhere on Lumia Island thanks to Hyperloop technology.\n\n*Hyperloop Usage Precautions*\nYou may accidentally run into enemies after teleporting. Be careful!
+gameTip_Title_10090_1┃Quick Communication
+gameTip_Desc_10090_1┃You can ping anyone by clicking ALT + the left mouse button.\n\nEven if there's no time to chat, use the ping function to communicate in a variety of ways. Send an exclamation point to allies to alert them to "danger ahead!"\n\nIf you need a bit more in-depth communication, click CTRL and drag the left mouse button for the quick chatting function. Click CTRL + the left mouse button to set goals with your team.
+gameTip_Title_10100_1┃Detonation Timer
+gameTip_Desc_10100_1┃If you're in a forbidden area marked in red, you better get out of there, stat! If not, you'll die as soon as the detonation timer goes off.\n\nDetonation timers are placed in forbidden areas and activate with terrifying effects. When the timer reaches 0, you can kiss your life goodbye.\n\nYou can restore the detonation timer by killing other test subjects, but it's better for you not to be in the forbidden area at all.\n\n"Soon the Test Subject will explode!"
+gameTip_Title_10110_1┃Temporary Safe Zone
+gameTip_Desc_10110_1┃When the last safe zone is designated as a forbidden area, two temporary safe zones are created if 3 or more survivors are still alive.\n\nThe detonation timer won't tick down if your team is inside the safe zone. On the other hand, if 2 or more teams are in the temporary safe zone, the detonation timer begins ticking again.\n\nIt's a piece of cake. Keep your team in the temporary safe zone, and drive out any enemies to stay alive!
+gameTip_Title_10120_1┃Final Safe Zone
+gameTip_Desc_10120_1┃The final safe zone is a place to determine the ultimate winner.\n\nThe final safe zone is placed around the security console in the last forbidden area. As the detonation timer works everywhere except the safe zone, you have to fight and win.\n\nIf the final safe zone is activated and there is no winner after a certain amount of time, all safe zones will be discarded and the detonation timer begins ticking for everyone. This is your time to defeat the enemy and claim first place!
+gameTip_Title_10130_1┃Auto Revive
+gameTip_Desc_10130_1┃Died? Don't give up just yet!\n\nIf your teammates are still alive, you will auto-revive until day 2 night. An enemy guarding your dead body? No problem - you can choose the spot to respawn. A place close to your team should be safe... right?\n\nYou can't respawn in Solo, so be careful not to die.
+gameTip_Title_10140_1┃Downed / Slain
+gameTip_Desc_10140_1┃Test Subjects on Lumia Island become downed when they are first slain. When down, you can only move, discard items, and your HP drops even if you stand still.\n\nIf you die again while down, your dead body will be left behind. You can grab items left from dead Test Subjects.
+gameTip_Title_10150_1┃Air Supply Box
+gameTip_Desc_10150_1┃Are you out of food? Or maybe you didn't craft the equipment you need? If so, look for the Air Supply Box on the map!\n\nYou can get food and equipment of the corresponding rank that matches the color of the rewards box. Open up the box, and hope what you need is inside!\n\nDon't miss out when warnings of where and when the reward boxes will drop appear on the minimap.
+gameTip_Title_10160_1┃Level / Skill
+gameTip_Desc_10160_1┃Use the points you gain to level up and use stronger skills!\n\nWhen you obtain a certain level of mastery, the test subject's "level" increases. As level goes up, so do stats. Gain skill points to use even stronger skills\n\nLevel up and become as strong as you can!
+gameTip_Title_10170_1┃Augments
+gameTip_Desc_10170_1┃You can add new skills and buffs to your test subjects by selecting Augments.\n\nAugments allow more variety and options. For example, using Fortification Augments will increase Defense and reduce Damage. If you use Support Augments, you may be able to help your teammates and lead them to victory!\n\nDon't know which Augments are better suited for your test subjects? Check them out in the [Loadout → Augments Menu]!
 ServerError/1000┃An error occurred. Please restart your game.
 ServerError/1001┃An error occurred. Please restart your game.
 ServerError/1002┃An error occurred. Please restart your game.
@@ -11867,7 +11993,7 @@ Trait/Name/7900601┃Omnivamp I
 Trait/Name/7900602┃Omnivamp Il
 Trait/Name/7900603┃Omnivamp Ill
 Trait/Name/7900701┃Tenacity I
-Trait/Name/7900702┃Tenacity Il
+Trait/Name/7900702┃Tenacity 
 Trait/Name/7900703┃Tenacity Ill
 Trait/Name/7900801┃Spot Weakness I
 Trait/Name/7900802┃Spot Weakness II
@@ -11962,9 +12088,9 @@ Trait/StatTooltip/7900803┃Gain {0}% Critical Strike Chance.
 Trait/StatTooltip/7920101┃Gain additional Defense and Omnisyphon when below {0}% HP.\n\nDefense Increase: {1}\nOminisyphon Increase: {2}%
 Trait/StatTooltip/7920102┃Gain additional Defense and Omnisyphon when below {0}% HP.\n\nDefense Increase: {1}\nOminisyphon Increase: {2}%
 Trait/StatTooltip/7920103┃Gain additional Defense and Omnisyphon when below {0}% HP.\n\nDefense Increase: {1}\nOminisyphon Increase: {2}%
-Trait/StatTooltip/7920201┃Gain {1}% Critical Strike Chance and {2}% Critical Damage when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nCritical Damage Increase: {2}%
-Trait/StatTooltip/7920202┃Gain {1}% Critical Strike Chance and {2}% Critical Damage when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nCritical Damage Increase: {2}%
-Trait/StatTooltip/7920203┃Gain {1}% Critical Strike Chance and {2}% Critical Damage when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nCritical Damage Increase: {2}%
+Trait/StatTooltip/7920201┃Gain {1}% Critical Strike Chance and {2}% Attack Speed when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nAttack Speed Increase: {2}%
+Trait/StatTooltip/7920202┃Gain {1}% Critical Strike Chance and {2}% Attack Speed when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nAttack Speed Increase: {2}%
+Trait/StatTooltip/7920203┃Gain {1}% Critical Strike Chance and {2}% Attack Speed when below {0}% HP.\n\nCritical Strike Chance Increase: {1}%\nAttack Speed Increase: {2}%
 Trait/StatTooltip/7920301┃Whenever you deal skill damage to an enemy test subject, drain them for {5}% of their current HP as true damage to recover {6}% of your current HP. (Cooldown: {0}s)\n\n(Melee) Drain {1}% of target's current HP to recover (2)% of your current HP.\n(Ranged) Drain {3}% of target's current HP to recover (4)% of your current HP.\n\nApplied Damage Ratio: {5}%\nApplied HP Recovery Ratio: {6}%
 Trait/StatTooltip/7920302┃Whenever you deal skill damage to an enemy test subject, drain them for {5}% of their current HP as true damage to recover {6}% of your current HP. (Cooldown: {0}s)\n\n(Melee) Drain {1}% of target's current HP to recover (2)% of your current HP.\n(Ranged) Drain {3}% of target's current HP to recover (4)% of your current HP.\n\nApplied Damage Ratio: {5}%\nApplied HP Recovery Ratio: {6}%
 Trait/StatTooltip/7920303┃Whenever you deal skill damage to an enemy test subject, drain them for {5}% of their current HP as true damage to recover {6}% of your current HP. (Cooldown: {0}s)\n\n(Melee) Drain {1}% of target's current HP to recover (2)% of your current HP.\n(Ranged) Drain {3}% of target's current HP to recover (4)% of your current HP.\n\nApplied Damage Ratio: {5}%\nApplied HP Recovery Ratio: {6}%
@@ -12038,9 +12164,9 @@ CharacterState/Group/Desc/7920110┃Gain additional Defense and Omnisyphon when 
 CharacterState/Group/Name/7920100┃Barricade
 CharacterState/Group/Desc/7920100┃Defense and Omnisyphon increased.
 CharacterState/Group/Name/7920210┃Hyperfocus
-CharacterState/Group/Desc/7920210┃Gain additional Critical Strike Chance and Critical Damage when low on HP.
+CharacterState/Group/Desc/7920210┃Gain additional Critical Strike Chance and Attack Speed when low on HP.
 CharacterState/Group/Name/7920200┃Hyperfocus
-CharacterState/Group/Desc/7920200┃Critical Strike Chance and Critical Damage increased.
+CharacterState/Group/Desc/7920200┃Critical Strike Chance and Attack Speed increased.
 CharacterState/Group/Name/7920310┃Sadistic Nature
 CharacterState/Group/Desc/7920310┃Whenever you deal damage to an enemy test subject with a skill, deal true damage and drain some of their HP.\n
 CharacterState/Group/Name/7920300┃Sadistic Nature
@@ -12278,9 +12404,9 @@ Infusion/Trait/Desc/7900803┃Gain {0}% Critical Strike Chance.
 Infusion/Trait/Desc/7920101┃Gain additional Defense and Omnisyphon when below {0}% HP.
 Infusion/Trait/Desc/7920102┃Gain additional Defense and Omnisyphon when below {0}% HP.
 Infusion/Trait/Desc/7920103┃Gain additional Defense and Omnisyphon when below {0}% HP.
-Infusion/Trait/Desc/7920201┃Gain additional Critical Strike Chance and Critical Damage when below {0}% HP.\n\n
-Infusion/Trait/Desc/7920202┃Gain additional Critical Strike Chance and Critical Damage when below {0}% HP.\n\n
-Infusion/Trait/Desc/7920203┃Gain additional Critical Strike Chance and Critical Damage when below {0}% HP.\n\n
+Infusion/Trait/Desc/7920201┃Gain additional Critical Strike Chance and Attack Speed when below {0}% HP.\n\n
+Infusion/Trait/Desc/7920202┃Gain additional Critical Strike Chance and Attack Speed when below {0}% HP.\n\n
+Infusion/Trait/Desc/7920203┃Gain additional Critical Strike Chance and Attack Speed when below {0}% HP.\n\n
 Infusion/Trait/Desc/7920301┃Whenever you deal skill damage to an enemy test subject, drain a percentage of their current HP as true damage to recover a percentage of your current HP. (Cooldown: {0}s)\n
 Infusion/Trait/Desc/7920302┃Whenever you deal skill damage to an enemy test subject, drain a percentage of their current HP as true damage to recover a percentage of your current HP. (Cooldown: {0}s)\n
 Infusion/Trait/Desc/7920303┃Whenever you deal skill damage to an enemy test subject, drain a percentage of their current HP as true damage to recover a percentage of your current HP. (Cooldown: {0}s)\n
@@ -12393,8 +12519,8 @@ Item/Skills/6506001/Desc┃After {0} seconds, deals {2} damage to enemies in a {
 Item/Skills/6507000┃Tether
 Item/Skills/6507001┃Tether
 Item/Skills/6507001/Name┃<color=yellow>Tether</color>
-Item/Skills/6507001/Body┃Connect to your closest ally within {0}m range to obtain <color=#688A08> {2}% Max HP</color> + {3} defense for {1} seconds, increasing your movement speed by {4}%. \n\nYou share 12% of damage dealt on your ally to yourself instead. \n\nCooldown: {7} seconds
-Item/Skills/6507001/Desc┃Connect to your closest ally within {0}m range to obtain <color=#688A08> {2}% Max HP</color> + {3} defense for {1} seconds, increasing your movement speed by {4}%. \n\nYou share 12% of damage dealt on your ally to yourself instead. \n\nCooldown: {7} seconds
+Item/Skills/6507001/Body┃Connect to your closest ally within {0}m range to obtain <color=#688A08> {2}% Max HP</color> + {3} defense for {1} seconds, increasing your movement speed by {4}%. \n\nYou share {5}% of damage dealt on your ally to yourself instead. \n\nCooldown: {7} seconds
+Item/Skills/6507001/Desc┃Connect to your closest ally within {0}m range to obtain <color=#688A08> {2}% Max HP</color> + {3} defense for {1} seconds, increasing your movement speed by {4}%. \n\nYou share {5}% of damage dealt on your ally to yourself instead. \n\nCooldown: {7} seconds
 Item/Skills/6508000┃Prayer
 Item/Skills/6508001┃Prayer
 Item/Skills/6508001/Name┃<color=yellow>Prayer</color>
@@ -12526,7 +12652,7 @@ Cobalt/부활남은시간┃Press <color=#47D5FF>B</color> to visit the Synthesi
 감마아군처치노티┃Your team has slain Gamma!
 감마적군처치노티┃The enemy team has slain Gamma!
 감마처치어나운스┃{0}({1}) has slain Gamma!
-적 팀 전원 마무리!┃Enemy team wiped! 
+적 팀 전원 마무리!┃Enemy team wiped!
 특수지원안내노티┃Awaiting Mystery Supply Box
 특수지원생성노티┃Request Mystery Supply Box
 특수지원안내┃A Mystery Supply Box is arriving soon.
