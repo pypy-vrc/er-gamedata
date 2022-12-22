@@ -1275,7 +1275,7 @@ Item/Effects/302308┃在18秒内恢复耐力值。
 Item/Effects/302309┃在18秒内恢复耐力值。
 Item/Effects/302310┃在18秒内恢复耐力值。
 Item/Effects/302311┃在18秒内恢复耐力值。
-Item/Effects/302312┃18秒内恢复耐力值，恢复期间攻击力增加10、技能增幅增加15。
+Item/Effects/302312┃永久获得攻击力3，技能增幅5。最多可以重叠3次。
 Item/Effects/301102┃在18秒内恢复体力
 Item/Effects/301104┃在18秒内恢复体力
 Item/Effects/301105┃在18秒内恢复体力
@@ -1295,7 +1295,7 @@ Item/Effects/301205┃在18秒内恢复体力
 Item/Effects/301206┃在18秒内恢复体力
 Item/Effects/301207┃在18秒内恢复体力
 Item/Effects/301209┃在18秒内恢复体力
-Item/Effects/301305┃在18秒内恢复体力，恢复期间防御力增加10。
+Item/Effects/301305┃永久获得防御力5。最多可以重叠3次。
 Item/Effects/301213┃在18秒内恢复体力
 Item/Effects/301216┃在18秒内恢复体力
 Item/Effects/301217┃在18秒内恢复体力
@@ -1340,12 +1340,13 @@ Item/Effects/301325┃在18秒内恢复体力
 Item/Effects/301326┃在18秒内恢复体力
 Item/Effects/301327┃在18秒内恢复体力
 Item/Effects/301328┃在18秒内恢复体力
-Item/Effects/301329┃在18秒内恢复体力
+Item/Effects/301329┃永久获得体力30。最多可以重叠3次。
 Item/Effects/301330┃在18秒内恢复体力
 Item/Effects/301401┃在18秒内恢复体力
 Item/Effects/301331┃在18秒内恢复体力
-Item/Effects/301403┃在18秒内恢复体力
-Item/Effects/802601┃在18秒内恢复耐力并在600秒间获得以下效果。\n\n- 移动速度 +0.2\n- 吸血-所有伤害 +15%
+Item/Effects/301333┃在18秒内恢复耐力。
+Item/Effects/301403┃在18秒内恢复体力。
+Item/Effects/802601┃在600秒间获得以下效果。\n\n- 移动速度 +0.2\n- 吸血-所有伤害 +15%
 Item/BulletCapacity/Reload┃<color=yellow>弹药数:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>弹药上限:</color> {0}发(充电: {1}秒)
 Item/Skills/NotEquip┃<color=red>仅在装备物品时生效。</color>
@@ -1418,6 +1419,8 @@ Character/Name/59┃伊萨克
 Character/Name/60┃塔齐娅
 Character/Name/61┃爱琳
 Character/Name/62┃西奥多
+Character/Name/63┃伊安
+Character/Name/64┃万尼亚
 Monster/Name/1┃鸡
 Monster/Name/2┃蝙蝠
 Monster/Name/3┃野猪
@@ -2140,6 +2143,12 @@ ToolTipType/ReinforcedExplosionDamage┃[破空斩] 爆炸伤害
 ToolTipType/RangeMoveSpeedDecrease┃范围移动速度减少
 ToolTipType/Irem_FirstDamage┃首击额外伤害
 ToolTipType/Irem_ContinueDamage┃连续攻击伤害
+ToolTipType/Theodore_Active1CoolDown┃[电磁火炮]冷却缩减(%)
+ToolTipType/Theodore_Active2CoolDown┃[聚变能源屏]冷却缩减(%)
+ToolTipType/Theodore_Active3CoolDown┃[磁力手雷]冷却缩减(%)
+ToolTipType/Theodore_ScreenFireDamage┃能源屏发射伤害
+ToolTipType/Theodore_ScreenFireHeal┃能源屏发射体力恢复
+ToolTipType/MaxHpShieldRatio┃和体力上限成比的护盾获得量(%)
 DayNight/Day┃白天
 DayNight/Night┃夜晚
 CastingActionType/ToRest┃休息准备中
@@ -2275,11 +2284,11 @@ MonsterDropRandom/1┃掉落<color=white>肉</color>或<color=white>羽毛</colo
 MonsterDropRandom/2┃高机率掉落<color=white>皮革</color>或低机率掉落<color=white> 一般</color> 等级物品。
 MonsterDropRandom/3┃掉落<color=white>一般</color> 物品。
 MonsterDropRandom/4┃掉落<color=white>一般</color> 物品。
-MonsterDropRandom/5┃掉落<color=#35FF94>高级</color> ~ <color=#2AC0FF>稀有</color> 等级物品。
+MonsterDropRandom/5┃掉落<color=#35FF94>高级</color>, <color=#2AC0FF>稀有</color>, 或 <color=#D05EFF>英雄</color> 物品。
 MonsterDropRandom/6┃掉落<color=#35FF94>高级</color>, <color=#2AC0FF>稀有</color>, 或 <color=#D05EFF>英雄</color> 物品。
-MonsterDropRandom/7┃有机会掉落<color=#D05EFF>秘银</color>,<color=#D05EFF>陨石</color>,<color=#D05EFF>生命之树</color>, <color=#D05EFF>圣水</color>, <color=#D05EFF>塞勒涅之泪</color> 中的一个物品。
+MonsterDropRandom/7┃有机会掉落<color=#D05EFF>秘银</color>，<color=#D05EFF>陨石</color>，<color=#D05EFF>生命之树</color>，<color=#FFD738>圣水</color>，<color=#FFD738>塞勒涅之泪</color>，<color=#FFD738>大还丹</color> 中的一个物品。
 MonsterDropRandom/8┃掉落可以与<color=#D05EFF>秘银</color>组合的<color=#C4C4C4>一般</color> ~ <color=#35FF94>高级</color> 等级中的一个物品。
-MonsterDropRandom/9┃掉落<color=#D05EFF>圣水</color>, <color=#D05EFF>塞勒涅之泪</color> 中的一个物品。
+MonsterDropRandom/9┃掉落<color=#FFD738>圣水</color>，<color=#FFD738>塞勒涅之泪</color>，<color=#FFD738>大还丹</color> 中的一个物品。
 MonsterDropRandom/12┃掉落<color=white>肉</color>或<color=white>羽毛</color>中的一个物品。
 MonsterDropRandom/13┃高机率掉落<color=white>皮革</color>或低机率掉落<color=white> 一般</color> 等级物品。
 MonsterDropRandom/14┃掉落<color=white>一般</color> 物品。
@@ -2313,6 +2322,7 @@ Skin/Name/1007001┃暗巷里 玄佑
 Skin/Name/1007002┃恶魔之子 玄佑
 Skin/Name/1007003┃军官候补生 玄佑
 Skin/Name/1007004┃军官候补生 玄佑(永恒段位皮肤)
+Skin/Name/1007005┃哼哼玄佑
 Skin/Name/1008000┃哈特
 Skin/Name/1008001┃乐队指挥 哈特
 Skin/Name/1008002┃冰雪庆典 哈特
@@ -2324,10 +2334,12 @@ Skin/Name/1010000┃李黛琳
 Skin/Name/1010001┃旅者 李黛琳
 Skin/Name/1010002┃叛逆 李黛琳
 Skin/Name/1010003┃龙之舞 李黛琳
+Skin/Name/1010004┃吼吼黛琳
 Skin/Name/1011000┃雪
 Skin/Name/1011001┃军官候补生 雪
 Skin/Name/1011002┃剑道家 雪
 Skin/Name/1011003┃夜行忍者 雪
+Skin/Name/1011004┃汪汪雪
 Skin/Name/1012000┃慧珍
 Skin/Name/1012001┃木莲花 慧珍
 Skin/Name/1012002┃军官候补生 慧珍
@@ -2374,7 +2386,7 @@ Skin/Name/1023001┃军医 凯希
 Skin/Name/1023002┃义体医生 凯希
 Skin/Name/1024000┃阿德拉
 Skin/Name/1024001┃白王后 阿德拉
-Skin/Name/1024002┃梦旅人 阿德拉
+Skin/Name/1024002┃梦德拉
 Skin/Name/1025000┃伯尼斯
 Skin/Name/1025001┃天启 伯尼斯
 Skin/Name/1025002┃恶魔猎手 伯尼斯
@@ -2431,6 +2443,7 @@ Skin/Name/1044000┃厄喀翁
 Skin/Name/1044001┃暗巷里 厄喀翁
 Skin/Name/1045000┃梅
 Skin/Name/1045001┃转校生 梅
+Skin/Name/1045002┃军官候补生 梅
 Skin/Name/1046000┃艾登
 Skin/Name/1046001┃幽灵猎人 艾登
 Skin/Name/1047000┃劳拉
@@ -2465,6 +2478,8 @@ Skin/Name/1060001┃破碎的玻璃 塔齐娅
 Skin/Name/1061000┃爱琳
 Skin/Name/1061001┃逐冰戏雪 爱琳
 Skin/Name/1062000┃西奥多
+Skin/Name/1063000┃伊安
+Skin/Name/1064000┃万尼亚
 Skin/Desc/1001001┃血染的电锯，能将人撕碎的剪与刀。\n如果听到欢快的哼歌声，逃跑是唯一的选择。
 Skin/Desc/1001002┃血色玫瑰，杀戮之中盛放。
 Skin/Desc/1001003┃有人制定规则，就一定会有人破坏规则。
@@ -2576,6 +2591,15 @@ Skin/Desc/1008003┃有吉他和音响在的地方就是我的舞台！
 Skin/Desc/1012004┃努力比命运更重要。
 Skin/Desc/1037002┃我会告诉你假面背后的真面目。
 Skin/Desc/1038002┃演员最好的武器不是颜值，而是无论在哪里都闪耀的自信。
+Skin/Desc/1060001┃在破坏中寻找艺术之美。
+Skin/Desc/1059001┃如果你能展现诚意，我自然也会以同等的方式报答你。
+Skin/Desc/1045002┃蜉蝣之羽，采采衣服。
+Skin/Desc/1024002┃梦行至何处由我决定。
+Skin/Desc/1050002┃等待，是件漫长的事。
+Skin/Desc/1061001┃别以为说我可爱我就会放过你！
+Skin/Desc/1010004┃快交出下酒菜，不然我就吃了你！
+Skin/Desc/1011004┃恶人总是散发着与常人不同的气息。
+Skin/Desc/1007005┃不想被打的话就快闪开!
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生气
 Emotion_Name_002┃笑
@@ -2667,6 +2691,77 @@ Drops_Emotion_St_GssG_01┃GssG
 Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
 Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
 Drops_Emotion_St_InPassant_01┃InPassant Baka
+EP_Drops_Emotion_St_Averse_01┃Averse Wave
+EP_Drops_Emotion_St_IKeepItTaco_01┃IKeepItTaco Rareboi
+EP_Drops_Emotion_St_FanHOTS_01┃FanHOTS Coolguy
+EP_Drops_Emotion_St_Scarra_01┃Scarra Noice
+EP_Drops_Emotion_St_Yueko_01┃Yueko Sadfox
+EP_Drops_Emotion_St_DeliciousMilkGG_01┃DeliciousMilk Cheers
+EP_Drops_Emotion_St_Kiyoon_01┃Kiyoon GJ
+EP_Drops_Emotion_St_AlexIch_01┃AlexIch Boosted
+EP_Drops_Emotion_St_Dyrus_01┃Dyrus Thumbs Up
+EP_Drops_Emotion_St_MiMiLucky_01┃狮子丸 烦
+EP_Drops_Emotion_St_Xiaoma_01┃小马 厉害了！
+EP_Drops_Emotion_St_VIVI_01┃Vivi芝衣 惊讶！
+EP_Drops_Emotion_St_lois_01┃子玄 开心
+EP_Drops_Emotion_St_Nein1203_01┃小舞 哭哭
+EP_Drops_Emotion_St_GodJJ_01┃接接 棒！
+EP_Drops_Emotion_St_Emiru_01┃Emiru Bunny
+EP_Drops_Emotion_St_MAO_01┃毛 生气了
+EP_Drops_Emotion_St_MiMiLucky_02┃狮子丸 爽喔！
+EP_Drops_Emotion_St_GodJJ_02┃接接 挥手
+EP_Drops_Emotion_St_MAO_02┃毛 叹气..
+EP_Drops_Emotion_St_Buygame_01┃大楷 哭了
+EP_Drops_Emotion_St_Dingyi_01┃丁义 加油好吗？
+EP_Drops_Emotion_St_Xiaoma_02┃小马 燃烧
+EP_Drops_Emotion_St_VIVI_02┃Vivi芝衣 V老大生气了
+EP_Drops_Emotion_St_lois_02┃子玄 小恐龙
+EP_Drops_Emotion_St_Nein1203_02┃小舞 生气气
+EP_Drops_Emotion_St_Cooldog_01┃花枝 爱心
+EP_Drops_Emotion_St_Feviknight_01┃Feviknight Stressed
+EP_Drops_Emotion_St_IKeepItTaco_02┃IKeepItTaco Trashboi
+EP_Drops_Emotion_St_Yougelly_01┃yougelly sallyStab
+EP_Drops_Emotion_St_K3soju_01┃k3sojuwu
+EP_Drops_Emotion_St_Metaphor_01┃metaphor GUN
+EP_Drops_Emotion_St_Plup_01┃plup Big Dumb Dinosaur
+EP_Drops_Emotion_St_Ddony_01┃DDony
+EP_Drops_Emotion_St_Jamddl_01┃Sleepground
+EP_Drops_Emotion_St_Duckgea_01┃Duckgae
+EP_Drops_Emotion_St_Syaruru_01┃Syaruru
+EP_Drops_Emotion_St_Englishnoob46_01┃Yomu
+EP_Drops_Emotion_St_Naruserin309_01┃Naruserin
+EP_Drops_Emotion_St_Oni_01┃Oniwasoto
+EP_Drops_Emotion_St_No17AI_01┃No17AI
+EP_Drops_Emotion_St_Tomsorcer_01┃Tomsorcer sonRiot
+EP_Drops_Emotion_St_Wingsofdeathx_01┃wingsofdeath Stylin'
+EP_Drops_Emotion_St_Ddahyoni_01┃Ddahyoni
+EP_Drops_Emotion_St_ChunhyangHi_01┃Chunhyang Hi
+EP_Drops_Emotion_St_Phoenixpark_01┃Phoenixpark
+EP_Drops_Emotion_St_Saeom_01┃saeom
+EP_Drops_Emotion_St_Bbonge_01┃Bbonge
+EP_Drops_Emotion_St_HIFIVE_01┃HIFIVE
+EP_Drops_Emotion_St_Yungi_01┃Yungi
+EP_Drops_Emotion_St_Luda_01┃Luda
+EP_Drops_Emotion_St_Jelly_01┃Jelly
+EP_Drops_Emotion_St_Sonycast_01┃Sonycast
+EP_Drops_Emotion_St_ChoromTeeHee_01┃Chorom Tee-Hee-
+EP_Drops_Emotion_St_Purin_01┃Purin
+EP_Drops_Emotion_St_Nariddyang_01┃Nariddyang
+EP_Drops_Emotion_St_JuanK_01┃JuanK
+EP_Drops_Emotion_St_Parkjand_01┃Parkjand
+EP_Drops_Emotion_St_Salgu_01┃Salgu
+EP_Drops_Emotion_St_TwitchRivals_01┃Twitch Rivals Emote
+EP_Drops_Emotion_St_Sona_01┃Sona
+EP_Drops_Emotion_St_Jukes_01┃Jukes
+EP_Drops_Emotion_St_Pimpimenta_01┃Pimpimenta
+EP_Drops_Emotion_St_Yoda_01┃Yoda
+EP_Drops_Emotion_St_Dersin2k_01┃Dersin2k
+EP_Drops_Emotion_St_HuchamS2_01┃HuchamS2
+EP_Drops_Emotion_St_Tanghyung_01┃tanghyung
+EP_Drops_Emotion_St_GssG_01┃GssG
+EP_Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
+EP_Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
+EP_Drops_Emotion_St_InPassant_01┃InPassant Baka
 Emotion_Jackie01_NP┃杰琪 最棒
 Emotion_Jackie02_NP┃杰琪 伤心
 Emotion_Jackie03_NP┃杰琪 生气
@@ -2782,6 +2877,18 @@ Emotion_ERPASS_4043┃卢克 疲惫不堪
 Emotion_ERPASS_4044┃埃琳娜 冻结
 Emotion_ERPASS_4045┃霓虹灯笑脸
 Emotion_ERPASS_4046┃凯希 听诊
+Emotion_ERPASS_4047┃玄佑 瞌睡
+Emotion_ERPASS_4048┃阿德瑞娜 消灭成功
+Emotion_ERPASS_4049┃劳拉 嘘！
+Emotion_ERPASS_4050┃马库斯 忍耐
+Emotion_ERPASS_4051┃普里亚 开颜
+Emotion_ERPASS_4052┃李黛琳 美梦
+Emotion_ERPASS_4053┃费利克斯 微笑
+Emotion_ERPASS_4054┃梅 鬼脸
+Emotion_ERPASS_4055┃奇娅拉 发抖
+Emotion_ERPASS_4056┃慧珍 好冷
+Emotion_ERPASS_4057┃雪 猛犬出没
+Emotion_ERPASS_4058┃丹尼尔 可疑的礼物
 Emotion_LiDailin02_NP┃李黛琳 干杯
 Emotion_LiDailin03_NP┃李黛琳 晕晕
 Emotion_LiDailin04_NP┃李黛琳 挑衅
@@ -2967,11 +3074,21 @@ Emotion_Aiden02_NP┃艾登 不知所措
 Emotion_Aiden03_NP┃艾登 开心
 Emotion_Aiden04_NP┃艾登 哭泣
 Emotion_Eva01_NP┃伊娃 开心
-Emotion_Eva02_NP┃伊娃 囧囧有神
+Emotion_Eva02_NP┃伊娃 炯炯有神
 Emotion_Eva03_NP┃伊娃 打呵欠
 Emotion_Eva04_NP┃伊娃 吃面包
-Emotion_Adela01_SeasonPass┃梦旅人 阿德拉Zzz...
+Emotion_Adela01_SeasonPass┃梦德拉 Zzz...
+Emotion_Season7_Reward_5014┃熊 跳舞
+Emotion_Season7_Reward_5015┃林中松鼠 猛击！
+Emotion_Season7_Reward_5016┃赛季S7 - 永恒
+Event_NewYear2023_Eleven_3048┃Eleven 耶！
+Event_NewYear2023_WhiteBear01_3049┃白熊 Hi！
+Event_NewYear2023_WhiteBear02_3050┃白熊 愤怒
 Event_HyejinStraw_3051┃慧珍 喝饱饱_kr
+Emotion_Celine01_NP┃席琳 微笑
+Emotion_Celine02_NP┃席琳 发呆
+Emotion_Celine03_NP┃席琳 不知所措
+Emotion_Celine04_NP┃席琳 最棒！
 Shop/Desc/Emotion_Hart01_NP┃可以在游戏中使用表情符号进行交流。
 Shop/Desc/Emotion_Hart02_NP┃可以在游戏中使用表情符号进行交流。
 Shop/Desc/Emotion_Hart03_NP┃可以在游戏中使用表情符号进行交流。
@@ -3257,6 +3374,33 @@ EMBLEM_MARK_S6_IMMORTAL_SQUAD┃赛季S6永恒标志(三人)
 EMBLEM_MARK_S6_IMMORTAL_SOLO_105108┃赛季S6 - 永恒(单人)荣誉标志
 EMBLEM_MARK_S6_IMMORTAL_DUO_105109┃赛季S6 - 永恒(双人)荣誉标志
 EMBLEM_MARK_S6_IMMORTAL_SQUAD_105110┃赛季S6 - 永恒(三人)荣誉标志
+EMBLEM_MARK_S7_IRON_SOLO┃赛季S7铁阎标志(单人)
+EMBLEM_MARK_S7_IRON_DUO┃赛季S7铁阎标志(双人)
+EMBLEM_MARK_S7_IRON_SQUAD┃赛季S7铁阎标志(三人)
+EMBLEM_MARK_S7_BRONZE_SOLO┃赛季S7铜魂标志(单人)
+EMBLEM_MARK_S7_BRONZE_DUO┃赛季S7铜魂标志(双人)
+EMBLEM_MARK_S7_BRONZE_SQUAD┃赛季S7铜魂标志(三人)
+EMBLEM_MARK_S7_SILVER_SOLO┃赛季S7银烙标志(单人)
+EMBLEM_MARK_S7_SILVER_DUO┃赛季S7银烙标志(双人)
+EMBLEM_MARK_S7_SILVER_SQUAD┃赛季S7银烙标志(三人)
+EMBLEM_MARK_S7_GOLD_SOLO┃赛季S7金魄标志(单人)
+EMBLEM_MARK_S7_GOLD_DUO┃赛季S7金魄标志(双人)
+EMBLEM_MARK_S7_GOLD_SQUAD┃赛季S7金魄标志(三人)
+EMBLEM_MARK_S7_PLATINUM_SOLO┃赛季S7修罗标志(单人)
+EMBLEM_MARK_S7_PLATINUM_DUO┃赛季S7修罗标志(双人)
+EMBLEM_MARK_S7_PLATINUM_SQUAD┃赛季S7修罗标志(三人)
+EMBLEM_MARK_S7_DIAMOND_SOLO┃赛季S7灭钻标志(单人)
+EMBLEM_MARK_S7_DIAMOND_DUO┃赛季S7灭钻标志(双人)
+EMBLEM_MARK_S7_DIAMOND_SQUAD┃赛季S7灭钻标志(三人)
+EMBLEM_MARK_S7_TITAN_SOLO┃赛季S7半神标志(单人)
+EMBLEM_MARK_S7_TITAN_DUO┃赛季S7半神标志(双人)
+EMBLEM_MARK_S7_TITAN_SQUAD┃赛季S7半神标志(三人)
+EMBLEM_MARK_S7_IMMORTAL_SOLO┃赛季S7永恒标志(单人)
+EMBLEM_MARK_S7_IMMORTAL_DUO┃赛季S7永恒标志(双人)
+EMBLEM_MARK_S7_IMMORTAL_SQUAD┃赛季S7永恒标志(三人)
+EMBLETM_MARK_S7_ETERNITY_SOLO┃赛季S7 - 永恒(单人)荣誉标志
+EMBLETM_MARK_S7_ETERNITY_DUO┃赛季S7 - 永恒(双人)荣誉标志
+EMBLETM_MARK_S7_ETERNITY_SQUAD┃赛季S7 - 永恒(三人)荣誉标志
 EMBLEM_MARK_EVENT_102001┃魔法少女 莉央
 EMBLEM_MARK_EVENT1┃鬼脸 
 EMBLEM_MARK_EVENT2┃最棒 
@@ -3333,6 +3477,8 @@ EMBLEM_MARK_1vs17_S4_103072┃顶尖高手
 EMBLEM_MARK_EVENT_103073┃爱琳 猫咪
 EMBLEM_MARK_EVENT_103074┃Sparky
 EMBLEM_MARK_EVENT_103075┃Sparky_chill
+EMBLEM_MARK_EVENT_103076┃白熊 Hi！
+EMBLEM_MARK_EVENT_103077┃Eleven 耶！
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃礼物树
 EMBLEM_MARK_ERPASS_104003┃红鼻子
@@ -3370,6 +3516,15 @@ EMBLEM_MARK_ERPASS_104034┃故障小威
 EMBLEM_MARK_ERPASS_104035┃全息蝙蝠
 EMBLEM_MARK_ERPASS_104036┃耳麦
 EMBLEM_MARK_ERPASS_104037┃日蚀之门
+EMBLEM_MARK_ERPASS_104038┃萌萌柴犬眼罩
+EMBLEM_MARK_ERPASS_104039┃酣睡月亮
+EMBLEM_MARK_ERPASS_104040┃汪汪雪
+EMBLEM_MARK_ERPASS_104041┃哼哼玄佑
+EMBLEM_MARK_ERPASS_104042┃吼吼黛琳
+EMBLEM_MARK_ERPASS_104043┃玩偶熊
+EMBLEM_MARK_ERPASS_104044┃梦德拉独角兽
+EMBLEM_MARK_ERPASS_104045┃哼哼肉
+EMBLEM_MARK_ERPASS_104046┃汪汪脚印
 ItemType/EMBLEM_BG/Name┃个人背景
 EMBLEM_BG_FREE1┃默认背景
 EMBLEM_BG_S3_IRON_SOLO┃赛季S3铁阎背景(单人)
@@ -3474,10 +3629,38 @@ EMBLEM_BG_S6_IMMORTAL_SQUAD┃赛季S6永恒背景(三人)
 EMBLEM_BG_S6_IMMORTAL_SOLO_205108┃赛季S6 - 永恒(单人)荣誉背景
 EMBLEM_BG_S6_IMMORTAL_DUO_205109┃赛季S6 - 永恒(双人)荣誉背景
 EMBLEM_BG_S6_IMMORTAL_SQUAD_205110┃赛季S6 - 永恒(三人)荣誉背景
+EMBLEM_BG_S7_IRON_SOLO┃赛季S7铁阎背景(单人)
+EMBLEM_BG_S7_IRON_DUO┃赛季S7铁阎背景(双人)
+EMBLEM_BG_S7_IRON_SQUAD┃赛季S7铁阎背景(三人)
+EMBLEM_BG_S7_BRONZE_SOLO┃赛季S7铜魂背景(单人)
+EMBLEM_BG_S7_BRONZE_DUO┃赛季S7铜魂背景(双人)
+EMBLEM_BG_S7_BRONZE_SQUAD┃赛季S7铜魂背景(三人)
+EMBLEM_BG_S7_SILVER_SOLO┃赛季S7银烙背景(单人)
+EMBLEM_BG_S7_SILVER_DUO┃赛季S7银烙背景(双人)
+EMBLEM_BG_S7_SILVER_SQUAD┃赛季S7银烙背景(三人)
+EMBLEM_BG_S7_GOLD_SOLO┃赛季S7金魄背景(单人)
+EMBLEM_BG_S7_GOLD_DUO┃赛季S7金魄背景(双人)
+EMBLEM_BG_S7_GOLD_SQUAD┃赛季S7金魄背景(三人)
+EMBLEM_BG_S7_PLATINUM_SOLO┃赛季S7修罗背景(单人)
+EMBLEM_BG_S7_PLATINUM_DUO┃赛季S7修罗背景(双人)
+EMBLEM_BG_S7_PLATINUM_SQUAD┃赛季S7修罗背景(三人)
+EMBLEM_BG_S7_DIAMOND_SOLO┃赛季S7灭钻背景(单人)
+EMBLEM_BG_S7_DIAMOND_DUO┃赛季S7灭钻背景(双人)
+EMBLEM_BG_S7_DIAMOND_SQUAD┃赛季S7灭钻背景(三人)
+EMBLEM_BG_S7_TITAN_SOLO┃赛季S7半神背景(单人)
+EMBLEM_BG_S7_TITAN_DUO┃赛季S7半神背景(双人)
+EMBLEM_BG_S7_TITAN_SQUAD┃赛季S7半神背景(三人)
+EMBLEM_BG_S7_IMMORTAL_SOLO┃赛季S7永恒背景(单人)
+EMBLEM_BG_S7_IMMORTAL_DUO┃赛季S7永恒背景(双人)
+EMBLEM_BG_S7_IMMORTAL_SQUAD┃赛季S7永恒背景(三人)
+EMBLEM_BG_S7_ETERNITY_SOLO┃赛季S7 - 永恒(单人)荣誉背景
+EMBLEM_BG_S7_ETERNITY_DUO┃赛季S7 - 永恒(双人)荣誉背景
+EMBLEM_BG_S7_ETERNITY_SQUAD┃赛季S7 - 永恒(三人)荣誉背景
 EMBLEM_BG_ERPASS_204001┃Aglaia文字背景
 EMBLEM_BG_EVENT_203001┃2022白色情人节 纪念背景
 EMBLEM_BG_EVENT_203002┃来一杯鸡尾酒
 EMBLEM_BG_EVENT_203003┃烟花
+EMBLEM_BG_EVENT_203004┃纯净白雪
 EMBLEM_BG_ERPASS_204002┃永恒轮回
 EMBLEM_BG_ERPASS_204003┃实验
 EMBLEM_BG_ERPASS_204004┃水滴
@@ -3497,6 +3680,11 @@ EMBLEM_BG_ERPASS_204017┃均衡器
 EMBLEM_BG_ERPASS_204018┃虚拟空间
 EMBLEM_BG_ERPASS_204019┃主板
 EMBLEM_BG_ERPASS_204020┃蜂窝网格
+EMBLEM_BG_ERPASS_204021┃森林晚霞
+EMBLEM_BG_ERPASS_204022┃萌萌柴犬
+EMBLEM_BG_ERPASS_204023┃传统童话
+EMBLEM_BG_ERPASS_204024┃星光之夜
+EMBLEM_BG_ERPASS_204025┃梦德拉独角兽
 ItemType/EMBLEM_OUTLINE/Name┃个人边框
 EMBLEM_OUTLINE_FREE1┃默认框
 EMBLEM_OUTLINE_S3_IRON_SOLO┃赛季S3铁阎框(单人)
@@ -3601,9 +3789,37 @@ EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD┃赛季S6永恒框(三人)
 EMBLEM_OUTLINE_S6_IMMORTAL_SOLO_305108┃赛季S6 - 永恒(单人)荣誉框
 EMBLEM_OUTLINE_S6_IMMORTAL_DUO_305109┃赛季S6 - 永恒(双人)荣誉框
 EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD_305110┃赛季S6 - 永恒(三人)荣誉框
+EMBLEM_OUTLINE_S7_IRON_SOLO┃赛季S7铁阎框(单人)
+EMBLEM_OUTLINE_S7_IRON_DUO┃赛季S7铁阎框(双人)
+EMBLEM_OUTLINE_S7_IRON_SQUAD┃赛季S7铁阎框(三人)
+EMBLEM_OUTLINE_S7_BRONZE_SOLO┃赛季S7铜魂框(单人)
+EMBLEM_OUTLINE_S7_BRONZE_DUO┃赛季S7铜魂框(双人)
+EMBLEM_OUTLINE_S7_BRONZE_SQUAD┃赛季S7铜魂框(三人)
+EMBLEM_OUTLINE_S7_SILVER_SOLO┃赛季S7银烙框(单人)
+EMBLEM_OUTLINE_S7_SILVER_DUO┃赛季S7银烙框(双人)
+EMBLEM_OUTLINE_S7_SILVER_SQUAD┃赛季S7银烙框(三人)
+EMBLEM_OUTLINE_S7_GOLD_SOLO┃赛季S7金魄框(单人)
+EMBLEM_OUTLINE_S7_GOLD_DUO┃赛季S7金魄框(双人)
+EMBLEM_OUTLINE_S7_GOLD_SQUAD┃赛季S7金魄框(三人)
+EMBLEM_OUTLINE_S7_PLATINUM_SOLO┃赛季S7修罗框(单人)
+EMBLEM_OUTLINE_S7_PLATINUM_DUO┃赛季S7修罗框(双人)
+EMBLEM_OUTLINE_S7_PLATINUM_SQUAD┃赛季S7修罗框(三人)
+EMBLEM_OUTLINE_S7_DIAMOND_SOLO┃赛季S7灭钻框(单人)
+EMBLEM_OUTLINE_S7_DIAMOND_DUO┃赛季S7灭钻框(双人)
+EMBLEM_OUTLINE_S7_DIAMOND_SQUAD┃赛季S7灭钻框(三人)
+EMBLEM_OUTLINE_S7_TITAN_SOLO┃赛季S7半神框(单人)
+EMBLEM_OUTLINE_S7_TITAN_DUO┃赛季S7半神框(双人)
+EMBLEM_OUTLINE_S7_TITAN_SQUAD┃赛季S7半神框(三人)
+EMBLEM_OUTLINE_S7_IMMORTAL_SOLO┃赛季S7永恒框(单人)
+EMBLEM_OUTLINE_S7_IMMORTAL_DUO┃赛季S7永恒框(双人)
+EMBLEM_OUTLINE_S7_IMMORTAL_SQUAD┃赛季S7永恒框(三人)
+EMBLEM_OUTLINE_S7_ETERNITY_SOLO_305135┃赛季S7 - 永恒(单人)荣誉框
+EMBLEM_OUTLINE_S7_ETERNITY_DUO_305136┃赛季S7 - 永恒(双人)荣誉框
+EMBLEM_OUTLINE_S7_ETERNITY_SQUAD_305137┃赛季S7 - 永恒(三人)荣誉框
 EMBLEM_OUTLINE_EVENT_303001┃2022白色情人节 纪念框
 EMBLEM_OUTLINE_EVENT_303002┃来一杯鸡尾酒
 EMBLEM_OUTLINE_EVENT_303003┃樱花装饰框
+EMBLEM_OUTLINE_EVENT_303004┃白兔
 EMBLEM_OUTLINE_ERPASS_304001┃冰雪
 EMBLEM_OUTLINE_ERPASS_304002┃圣诞派对
 EMBLEM_OUTLINE_ERPASS_304003┃彩球
@@ -3623,6 +3839,11 @@ EMBLEM_OUTLINE_ERPASS_304016┃城市疾驰
 EMBLEM_OUTLINE_ERPASS_304017┃作战开始
 EMBLEM_OUTLINE_ERPASS_304018┃机械电路
 EMBLEM_OUTLINE_ERPASS_304019┃蜂窝网格
+EMBLEM_OUTLINE_ERPASS_304020┃哼哼野猪
+EMBLEM_OUTLINE_ERPASS_304021┃萌萌柴犬
+EMBLEM_OUTLINE_ERPASS_304022┃吼吼老虎
+EMBLEM_OUTLINE_ERPASS_304023┃星光
+EMBLEM_OUTLINE_ERPASS_304024┃梦德拉独角兽
 Goods/Name/1304001┃ER积分
 ItemType/GRAVE/Name┃墓碑
 ItemType/GRAVE/Desc┃被击杀的实验体头上方会留下一块儿墓碑。
@@ -3653,10 +3874,16 @@ Goods/Name/1604023┃摇杆游戏机
 Goods/Name/1604024┃物品自动售货机
 Goods/Name/1604025┃事故警示牌
 Goods/Name/1604026┃病人监视装置
+Goods/Name/1604027┃吼吼黛琳的行囊
+Goods/Name/1604028┃哼哼肉
+Goods/Name/1604029┃机器人
+Goods/Name/1604030┃积木
+Goods/Name/1604031┃睡睡熊
+Goods/Name/1604032┃注意安全
 Goods/Name/1612001┃瘟疫医生之死
 Goods/Name/1612002┃夏日海滩 妮琪的猫
 Goods/Name/1612003┃系统冲击
-Goods/Name/1612004┃梦旅人 阿德拉
+Goods/Name/1612004┃梦德拉
 ItemType/SPRAY/Name┃喷绘
 ItemType/SPRAY/Desc┃可以在地上留下标识。
 Goods/Name/1501001┃无
@@ -3687,6 +3914,7 @@ Goods/Name/1503023┃Sparky_smirky
 Goods/Name/1503024┃Sparky_chill
 Goods/Name/1503025┃Sparky_wonder
 Goods/Name/1503026┃Sparky_angry
+Goods/Name/1503027┃Eleven 耶！
 Goods/Name/1504001┃爱心鬼脸
 Goods/Name/1504002┃卖火柴的小女孩
 Goods/Name/1504003┃冠军花环
@@ -3713,6 +3941,12 @@ Goods/Name/1504023┃麦克风
 Goods/Name/1504024┃LED鬼脸
 Goods/Name/1504025┃镜面球
 Goods/Name/1504026┃凯希的手术刀
+Goods/Name/1504027┃汉堡
+Goods/Name/1504028┃睡睡熊
+Goods/Name/1504029┃快给吼吼黛琳吃年糕
+Goods/Name/1504030┃睡眠眼罩
+Goods/Name/1504031┃睡衣松鼠
+Goods/Name/1504032┃禁止通行
 ItemType/ANNOUNCE/Name┃转播语音
 ItemType/ANNOUNCE/Desc┃可以选择转播语音
 Goods/Name/1401051┃默认(韩语)
@@ -3740,6 +3974,12 @@ Goods/Name/1404063┃芭芭拉(日语)
 Goods/Name/1404071┃皮奥洛(韩语)
 Goods/Name/1404072┃皮奥洛(英语)
 Goods/Name/1404073┃皮奥洛(日语)
+Goods/Name/1404081┃伊萨克(韩语)
+Goods/Name/1404082┃伊萨克(英语)
+Goods/Name/1404083┃伊萨克(日语)
+Goods/Name/1404091┃李黛琳(韩语)
+Goods/Name/1404092┃李黛琳(英语)
+Goods/Name/1404093┃李黛琳(日语)
 ItemType/BGM/Name┃BGM
 ItemType/BGM/Desc┃可以选择大厅背景音乐。
 BGM_None┃无
@@ -3758,6 +3998,8 @@ Goods/Name/2504003┃烟花
 Goods/Name/2504004┃降落伞
 Goods/Name/2504005┃飞行机器人
 Goods/Name/2504006┃机械蝴蝶
+Goods/Name/2504007┃UFO
+Goods/Name/2504008┃直升机
 ItemType/CAMERA/Name┃监视器皮肤
 ItemType/CAMERA/Desc┃可以选择游戏内监视器和望远监视器的外观。
 Goods/Name/2601001┃基础监视器
@@ -3767,6 +4009,8 @@ Goods/Name/2604003┃图腾柱
 Goods/Name/2604004┃贝壳灯塔
 Goods/Name/2604005┃360度全景相机
 Goods/Name/2604006┃电视
+Goods/Name/2604007┃夜灯
+Goods/Name/2604008┃企鹅
 ItemType/LOBBY_SCREEN/Name┃大厅界面
 ItemType/LOBBY_SCREEN/Desc┃可以选择游戏外大厅界面。
 Goods/Name/2701004┃实验开始
@@ -3774,6 +4018,7 @@ Goods/Name/2702001┃艾玛魔术秀
 Goods/Name/2704005┃狩猎
 Goods/Name/2704006┃夏日
 Goods/Name/2704007┃霓虹
+Goods/Name/2704008┃睡衣派對
 ItemType/KILLANNOUNCE_ICONPACK/Name┃击杀通知标志
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃可以选择在游戏中击杀时显示的UI图标。
 Goods/Name/2801001┃不屈
@@ -3789,6 +4034,10 @@ Goods/Name/2804009┃最终幸存 伦诺克斯
 Goods/Name/2804010┃最终幸存  凯希
 Goods/Name/2804011┃立方体
 Goods/Name/2804012┃治愈
+Goods/Name/2804013┃野猪
+Goods/Name/2804014┃柴犬
+Goods/Name/2804015┃老虎
+Goods/Name/2804016┃独角兽
 Shop/NPPromotion1┃{0} NP
 Shop/NPPromotion2┃+ {0} 奖励 NP
 ItemType/BOOSTER_ACOIN_2X/Name┃A-Coin Boost
@@ -3938,6 +4187,7 @@ Shop/Desc/NP┃NP 是永恒轮回中可用于购买各种商品的货币。
 Shop/Desc/ACCOUNT_Add_Traitslot┃扩展潜能格
 Shop/Spray/Desc/Base┃可以在地上留下标识。
 Shop/EmblemMark/Desc/Base┃可以装饰个人资料。
+전장보상재화부족┃战场标识不足。
 Skill/Group/Name/1001100┃鲜血盛宴
 Skill/Group/Name/1001200┃连斩
 Skill/Group/Name/1001300┃分泌肾上腺素
@@ -4062,17 +4312,17 @@ Skill/Group/Desc/1003200┃菲欧娜朝指定方向进攻，命中的敌人承�
 Skill/Group/Desc/1003300┃菲欧娜快速向前挥剑两次，各造成 <color=white>{12}</color> 技能伤害和 <color=white>{13}</color>技能伤害，并分别叠加一个刺击标识。 2次全部命中敌人时， {9}秒间封锁其普攻，并在技能使用期间，减少菲欧娜所有承受伤害{7}。
 Skill/Group/Desc/1003400┃菲欧娜向指定方向突进，对碰撞的敌人造成<color=white>{15}</color>技能伤害。\n成功造成伤害，在{4}秒内可以重新使用技能向指定方向移动并翻墙。\n\n<color=#FFFFC2>刺击标识引爆效果 : </color>刺击叠层达到上限时命中敌人，可引爆标识造成{13}技能伤害，并减少技能<color=#ffffff>长刺(Q)</color>的冷却{11} ， <color=#ffffff>复杂进攻(W)</color>的冷却{12}。
 Skill/Group/Desc/1003410┃菲欧娜向指定方向突进，对碰撞的敌人造成<color=white>{15}</color>技能伤害。\n成功造成伤害，在{4}秒内可以重新使用技能向指定方向移动并翻墙。\n\n<color=#FFFFC2>刺击标识引爆效果 : </color>刺击叠层达到上限时命中敌人，可引爆标识造成{13}技能伤害，并减少技能<color=#ffffff>长刺(Q)</color>的冷却{11} ， <color=#ffffff>复杂进攻(W)</color>的冷却{12}。
-Skill/Group/Desc/1003500┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
-Skill/Group/Desc/1003510┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
-Skill/Group/Desc/1003520┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Desc/1003500┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Desc/1003510┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Desc/1003520┃菲欧娜向正前方刺剑造成<color=white>{13}</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{13}</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
 Skill/Group/Coef/1003100┃菲欧娜每次使用技能命中敌人，可以叠加刺击标识。达到叠层上限时，通过技能<color=#ffffff>长刺(Q)，前进(E)，飞刺(R)</color> 引爆刺击标识可以获得额外效果。级别越高，需累积的叠层越少，引爆标识越容易。
 Skill/Group/Coef/1003200┃菲欧娜朝指定方向进攻，命中的敌人承受<color=white>{0}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{13})</color>技能伤害。 在范围末端被刺伤的敌人承受<color=white>{7}</color><color=#ffd775>(+攻击力的{14})</color><color=#DDA0DD>(+技能增幅的{15})</color>伤害，移动速度减少{4}，持续{6}秒，并被赋予2个刺击标识。\n\n<color=#FFFFC2>刺击叠层引爆效果 : </color>刺击叠层达到上限时命中敌人，可引爆标识造成 {11}技能伤害，在范围末端刺中敌人，降低敌人的移动速度{5}，并减少长刺剩余的冷却时间{10}。
 Skill/Group/Coef/1003300┃菲欧娜快速向前挥剑两次，各造成 <color=white>{3}</color><color=#ffd775>(+攻击力的{4})</color><color=#DDA0DD>(+技能增幅的{10})</color> 技能伤害和 <color=white>{5}</color><color=#ffd775>(+攻击力的{6})</color><color=#DDA0DD>(+技能增幅的{11})</color>技能伤害，并分别叠加一个刺击标识。 2次全部命中敌人时， {9}秒间封锁其普攻，并在技能使用期间，减少菲欧娜所有承受伤害{7}。
 Skill/Group/Coef/1003400┃菲欧娜向指定方向突进，对碰撞的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{14})</color>技能伤害。\n成功造成伤害，在{4}秒内可以重新使用技能向指定方向移动并翻墙。\n\n<color=#FFFFC2>刺击叠层引爆效果 : </color>刺击叠层达到上限时命中敌人，可引爆标识造成{13}技能伤害，并减少技能<color=#ffffff>长刺(Q)</color>的冷却{11} ， <color=#ffffff>复杂进攻(W)</color>的冷却{12}。
 Skill/Group/Coef/1003410┃菲欧娜向指定方向突进，对碰撞的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{14})</color>技能伤害。\n成功造成伤害，在{4}秒内可以重新使用技能向指定方向移动并翻墙。\n\n<color=#FFFFC2>刺击叠层引爆效果 : </color>刺击叠层达到上限时命中敌人，可引爆标识造成{13}技能伤害，并减少技能<color=#ffffff>长刺(Q)</color>的冷却{11} ， <color=#ffffff>复杂进攻(W)</color>的冷却{12}。
-Skill/Group/Coef/1003500┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
-Skill/Group/Coef/1003510┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
-Skill/Group/Coef/1003520┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于减缓状态的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Coef/1003500┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Coef/1003510┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
+Skill/Group/Coef/1003520┃菲欧娜向正前方刺剑造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害，击退敌人的同时{9}秒间减少敌人的移动速度{10}。飞刺在{3}秒间最多可以使用3次，引爆达到上限的刺击标识造成<color=white>{11}</color><color=#ffd775>(+攻击力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺剑，造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能伤害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺剑伤害量{4}的技能伤害。\n\n<color=#FFFFC2>命中3次 & 刺击叠层引爆效果 : </color>造成前1次刺剑伤害量{4}的技能伤害，成功命中3次额外造成<color=white>{5}</color>真实伤害。最后一击如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却减少{6}，并使敌人晕厥{7}秒。处于移动速度减少的敌人晕厥持续时间增加{8}秒。
 CharacterState/Group/Name/1003100┃刺击
 CharacterState/Group/Desc/1003100┃在激活的状态下命中目标可追加效果作用。
 CharacterState/Group/Name/1003200┃长刺
@@ -4265,7 +4515,7 @@ Skill/Group/Coef/1010220┃李黛琳向敌人使出八卦式的回龙腿，踢�
 Skill/Group/Coef/1010300┃拿起她的酒葫芦喝起{0}秒来，酒精能唤醒她体内沉睡中的武术细胞，同时激活她的"酒鬼状态"及同时增加她的体内酒醉值，喝酒时可回避所有普通攻击。普通攻击将"醉葫猛酌"的冷却时间缩短{3}秒。 \n\n酒鬼状态：她的下一次普通攻击所造成的伤害和醉仙模式所造成的伤害根据她"酒醉值"的比例增加{1} ~ {2}。
 Skill/Group/Coef/1010400┃李黛琳形醉意不醉，用内力向目标敌人吐出酒雨，使范围内的敌人移动速度{0}秒间降低{4}，并造成 <color=white>{1}</color><color=#ffd775>(+攻击力的{2}%)</color><color=#DDA0DD>(+技能增幅的{5}%)</color>伤害。 \n\n醉拳状态时：承受伤害的敌人陷入沉默{3}秒。
 Skill/Group/Coef/1010500┃李黛琳发动猛虎穿心踢，快速进入负面效果免疫状态并以猛虎气势击中敌人，并随后连续踢出两次如闪电般的穿心踢。每次造成 <color=white>{0}</color><color=#ffd775>(+攻击力的{1}%)</color><color=#DDA0DD>(+技能增幅的{5}%)</color> ~ <color=white>{2}</color><color=#ffd775>(+攻击力的{3}%)</color><color=#DDA0DD>(+技能增幅的{6}%)</color>与敌人失去的体力成正比的伤害。如成功击中敌人，将减少{4} 冷却时间。 \n\n醉拳状态时：连续踢出四次穿心踢。
-Skill/Group/ExpansionTip/1010100┃酒：使用<color=#C4C4C4>酒精</color>, <color=#C4C4C4>威士忌</color>为材料的所有食物， <color=#D05EFF>塞勒涅之泪</color>
+Skill/Group/ExpansionTip/1010100┃酒：使用<color=#C4C4C4>酒精</color>, <color=#C4C4C4>威士忌</color>为材料的所有食物。
 Skill/Group/ExpansionTip/1010200┃<i>此技能只能在最后使用时穿越墙壁。</i>
 CharacterState/Group/Name/1010100┃酒醉值上升
 CharacterState/Group/Desc/1010100┃技能强化
@@ -4294,12 +4544,12 @@ Skill/Group/Name/1011400┃樱花流
 Skill/Group/Name/1011500┃樱月剑舞
 Skill/Group/Desc/1011100┃雪收集钮扣，与剑刃配合使用。命中敌人时，会消耗一颗钮扣，造成<color=white>{0}</color>额外真实伤害。 \n钮扣在非战斗状态下或者使用"武士道"时，可恢复到最大值。
 Skill/Group/Desc/1011200┃雪的下一次普通攻击会造成<color=white>{20}</color>的伤害，并在 {2}秒间降低敌人的移动速度 {3} 。 \n\n武装式完全体时消耗钮扣，会使敌人昏迷{4} 秒。
-Skill/Group/Desc/1011300┃<color=green>被动效果：</color> 每次雪击中敌人，都会降低"武士道" {0}秒的冷却时间。 \n\n\n雪花 {1}秒的时间整顿衣服，充分展现武士道的荣誉与礼仪, 同时可减少"樱花流"的冷却时间 {3}。使用"武士道"时，他的防御能力会增强 {2}。 "武士道"达到最高级别时，可使武装式的钮扣恢复到最大值 {4}。
+Skill/Group/Desc/1011300┃<color=green>被动效果：</color> 每次雪击中敌人，都会降低"武士道" {0}秒的冷却时间。 \n\n雪花 {1}秒的时间整顿衣服，充分展现武士道的荣誉与礼仪, 同时可减少"樱花流"的冷却时间 {3}。使用"武士道"时，承受伤害减少 {2}。 "武士道"达到最高级别时，可使武装式的钮扣恢复到最大值 {4}。
 Skill/Group/Desc/1011400┃雪冲向目标方向{2}m，对第一个击中的敌人造成 <color=white>{20}</color>的伤害。被击中的敌人将被解除武装，从而使其在{3}秒内无法正常攻击，如果对敌人造成了伤害，樱花流的冷却将减少{4}秒。
 Skill/Group/Desc/1011500┃雪拔出剑身，挥舞出如半月的樱花阵式，对前方的敌人造成<color=white>{20}</color>的伤害并同时在其身上留下印记，及在{2}秒间降低敌人的移动速度{3}。 \n在雪把剑收回剑鞘的瞬间，印记将产生爆炸，敌人将受到最大体力比例{6}的真实伤害。
 Skill/Group/Coef/1011100┃雪收集钮扣，与剑刃配合使用。命中敌人时，会消耗一颗钮扣，造成<color=white>{0}</color>额外真实伤害。 \n钮扣在非战斗状态下进行恢复或者使用"武士道"时，可恢复到最大值。
 Skill/Group/Coef/1011200┃雪的下一次普通攻击会造成 <color=white>{0}</color><color=#ffd775>(+攻击力的 {1}) * (普攻增幅)</color>的伤害，并在 {2}秒间降低敌人的移动速度 {3} 。 \n\n武装式完全体时消耗钮扣，会使敌人昏迷{4} 秒。
-Skill/Group/Coef/1011300┃<color=green>被动效果：</color> 每次雪击中敌人，都会降低"武士道" {0}秒的冷却时间。 \n\n\n雪花 {1}秒的时间整顿衣服，充分展现武士道的荣誉与礼仪, 同时可减少"樱花流"的冷却时间 {3}。使用"武士道"时，他的防御能力会增强 {2}。 "武士道"达到最高级别时，可使武装式的钮扣恢复到最大值 {4}。
+Skill/Group/Coef/1011300┃<color=green>被动效果：</color> 每次雪击中敌人，都会降低"武士道" {0}秒的冷却时间。 \n\n\n雪花 {1}秒的时间整顿衣服，充分展现武士道的荣誉与礼仪, 同时可减少"樱花流"的冷却时间 {3}。使用"武士道"时，承受伤害减少 {2}。 "武士道"达到最高级别时，可使武装式的钮扣恢复到最大值 {4}。
 Skill/Group/Coef/1011400┃雪冲向目标方向{2}m，对第一个击中的敌人造成  <color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#dda0dd>(+技能增幅的{5})</color>的伤害。被击中的敌人将被解除武装，从而使其在{3}秒内无法正常攻击，如果对敌人造成了伤害，樱花流的冷却将减少{4}秒。
 Skill/Group/Coef/1011500┃雪拔出剑身，挥舞出如半月的樱花阵式，对前方的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的 {1})</color><color=#dda0dd>(+技能增幅的 {7})</color>的伤害并同时在其身上留下印记，及在{2}秒间降低敌人的移动速度{3}。 \n在雪把剑收回剑鞘的瞬间，印记将产生爆炸，敌人将受到最大体力比例{6}的真实伤害。
 Skill/Group/ExpansionTip/1011200┃<i>使用时会稍微增加攻击射程。</i>
@@ -4307,9 +4557,9 @@ Skill/Group/ExpansionTip/1011400┃<i>此技能无法穿越墙壁。</i>
 CharacterState/Group/Name/1011200┃气刃斩
 CharacterState/Group/Desc/1011200┃雪的下一次普通攻击会造成额外的伤害，并降低敌人的移动速度。
 CharacterState/Group/Name/1011210┃移动速度降低
-CharacterState/Group/Desc/1011210┃移动速度已降低。
-CharacterState/Group/Name/1011310┃防御力增加
-CharacterState/Group/Desc/1011310┃防御力已增加。
+CharacterState/Group/Desc/1011210┃已降低移动速度。
+CharacterState/Group/Name/1011310┃减少承受伤害
+CharacterState/Group/Desc/1011310┃已减少承受伤害。
 CharacterState/Group/Name/1011400┃普攻封锁
 CharacterState/Group/Desc/1011400┃不能进行基本攻击。
 CharacterState/Group/Name/1011500┃印记
@@ -4369,7 +4619,7 @@ Skill/Group/Coef/1013200┃修凯朝着目标方向投掷他的秘制酱油桶�
 Skill/Group/Coef/1013300┃修凯使用他的锅子猛击地面，范围内的敌人将受到 <color=white>{0}</color><color=#ffd775>(+攻击力的{1}%)</color><color=#DDA0DD>(+技能增幅的{7}%)</color>的伤害并同时降低移动速度{3} 维持 {2}秒。 \n\n处于移动受损状态的敌人会承受<color=white>{0}</color><color=#ffd775>(+攻击力的 {1}%)</color><color=#DDA0DD>(+技能增幅的{7}%)</color><color=#688A08>(+修凯体力上限的{6}%)</color>的额外伤害，及移动速度将会降低 {4}秒。
 Skill/Group/Coef/1013400┃修凯坐在锅子上快速滑向目标方向，对被击中的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1}%)</color><color=#DDA0DD>(+技能增幅的{8}%)</color><color=#688A08>(+修凯体力上限的{5}%)</color>的伤害。 \n\n如果目标陷入移动受损状态将缩减移动翻滚吧！锅子！冷却时间{7}，<color=white>{0}</color><color=#ffd775>(+攻击力的{1}%)</color><color=#DDA0DD>(+技能增幅的{8}%)</color><color=#688A08>(+修凯体力上限的{6}%)</color>伤害，陷入悬空{3}秒。
 Skill/Group/Coef/1013500┃修凯于{0}秒从锅中扑出{7}次火焰，给范围内的敌人造成<color=white>{1}</color><color=#ffd775>(+攻击力的{2}%)</color><color=#DDA0DD>(+技能增幅的{9}%)</color><color=yellow>(+{8})</color>的伤害。 (<color=yellow>料理师的热情</color>重叠{3})。 \n\n处于移动受损状态的的敌人，在一定时间内的防御力将会下降{6} 维持 {5}秒。
-Skill/Group/ExpansionTip/1013100┃<i>各等级料理师的热情获得量\n高级：{2} / 稀有：{3} / 英雄：{4}</i>
+Skill/Group/ExpansionTip/1013100┃<i>各等级料理师的热情获得量\n高级：{2} / 稀有：{3} / 英雄：{4} / 传说：{5}</i>
 CharacterState/Group/Name/1013100┃料理师的热情
 CharacterState/Group/Desc/1013100┃修凯料理时会获得料理师的热情，每次直接制作的食物和饮料都会会有更大的恢复量。
 CharacterState/Group/Name/1013200┃秘制酱油
@@ -4473,7 +4723,7 @@ Skill/Group/Coef/1016500┃西尔维娅骑乘摩托车，每{3}秒消耗{2}燃�
 Skill/Group/Coef/1016600┃西尔维娅在摩托车上旋转，对范围内的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#dda0dd>(+技能增幅的{2})</color>的伤害。
 Skill/Group/Coef/1016700┃西尔维娅向面朝的方向跳跃，对范围内的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#dda0dd>(+技能增幅的{2})</color>的伤害并将其撞至悬空。
 Skill/Group/Coef/1016800┃西尔维娅抬起摩托车前轮朝指定的敌人冲去，给敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#dda0dd>(+技能增幅的{5})</color>伤害的同时将敌人击退。\n根据摩托车当时的移动速度，追加{3}到{4}的伤害量。
-Skill/Group/Coef/1016900┃西尔维娅自摩托车上下来，技能恢复正常。\n{1秒以内的下一个普通攻击会给敌人带来<color=#ffd775>(+攻击力的{1})</color><color=#dda0dd>的伤害。
+Skill/Group/Coef/1016900┃西尔维娅自摩托车上下来，技能恢复正常。\n{1}秒内的下一个普通攻击会给敌人带来{0}的伤害。
 Skill/Group/ExpansionTip/1016700┃<i>此技能无法穿越墙壁。</i>
 CharacterState/Group/Name/1016000┃极限骑乘
 CharacterState/Group/Desc/1016000┃下一个普通攻击强化
@@ -5917,7 +6167,7 @@ Skill/Group/Desc/1049410┃费利克斯退后一步并将长枪扫向目标方�
 Skill/Group/Desc/1049420┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{1}</color>技能伤害，命中时共享冷却缩减{2}秒。
 Skill/Group/Desc/1049430┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{1}</color>技能伤害，命中时共享冷却缩减{2}秒。
 Skill/Group/Desc/1049440┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{1}</color>技能伤害，命中时共享冷却缩减{2}秒。
-Skill/Group/Desc/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成<color=white>{0}</color> ~ <color=white>{1}</color>技能伤害。蓄力至上限时命中的目标晕厥{2}秒。\n使用技能时增加{3}个<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时对移动妨碍效果免疫。
+Skill/Group/Desc/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成<color=white>{0}</color> ~ <color=white>{1}</color>技能伤害。蓄力至上限时命中的目标晕厥{2}秒。\n使用技能时增加{3}个<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时处于无法阻挡的状态。
 Skill/Group/Coef/1049100┃费利克斯以射程上限连续攻击目标敌人2次。第2次攻击造成<color=#ffd775>攻击力的{0} * (普攻增幅)</color>普攻伤害。\n\n<color=white>破风斩</color>, <color=white>疾风雷击</color>, <color=white>半月斩</color>等基础技能的冷却共享并固定为{1}秒，最多可以连接使用3次。\n\n<color=white>连攻:</color>连接下一个技能前普攻造成伤害时，增加<color=white>连攻</color>叠层，叠层上限为{3}。第三次连接时，消耗<color=white>连攻</color>层数，每叠层缩减基础技能的冷却时间{2}秒，并根据所使用的技能适用额外效果。\n\n共享冷却不受冷却缩减效果的影响。
 Skill/Group/Coef/1049200┃费利克斯突进并在目标位置挥动长枪，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{8})</color>技能伤害。破风斩最多可以重新施放2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{9})</color><color=green>(+实验体级别 * {4})</color>技能伤害并将敌人悬空{5}秒。 另外，每消耗1个<color=white>连攻</color>叠层额外造成{6}真实伤害并各增加敌人的悬空时间{7}秒。
 Skill/Group/Coef/1049210┃费利克斯突进并在目标位置挥动长枪，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{8})</color>技能伤害。破风斩最多可以重新施放2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{9})</color><color=green>(+实验体级别 * {4})</color>技能伤害并将敌人悬空{5}秒。 另外，每消耗1个<color=white>连攻</color>叠层额外造成{6}真实伤害并各增加敌人的悬空时间{7}秒。
@@ -5934,7 +6184,7 @@ Skill/Group/Coef/1049410┃费利克斯退后一步并将长枪扫向目标方�
 Skill/Group/Coef/1049420┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+实验体级别*{4})</color>技能伤害，命中时共享冷却缩减{5}秒。
 Skill/Group/Coef/1049430┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+实验体级别*{4})</color>技能伤害，命中时共享冷却缩减{5}秒。
 Skill/Group/Coef/1049440┃费利克斯退后一步并将长枪扫向目标方向，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>技能伤害，并回避普攻。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+实验体级别*{4})</color>技能伤害，命中时共享冷却缩减{5}秒。
-Skill/Group/Coef/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color> ~ <color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color>技能伤害。蓄力至上限时命中的目标晕厥{4}秒。\n使用技能时增加{5}个<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时对移动妨碍效果免疫。
+Skill/Group/Coef/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color> ~ <color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color>技能伤害。蓄力至上限时命中的目标晕厥{4}秒。\n使用技能时增加{5}个<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时处于无法阻挡的状态。
 CharacterState/Group/Name/1049150┃连攻
 CharacterState/Group/Name/1049160┃破风斩 - 悬空
 CharacterState/Group/Name/1049300┃疾风雷击 - 增加移动速度
@@ -6516,7 +6766,7 @@ Skill/Group/Desc/1061310┃爱琳在空中翻转，猫咪尾巴向下重击，�
 Skill/Group/Desc/1061400┃爱琳向指定的方向快速移动并在原位置生成小鱼标识。\n
 Skill/Group/Desc/1061410┃爱琳跳跃落地，给范围内的敌人造成<color=white>{0}</color>的技能伤害。\n朝小鱼标识方向跳跃时，可以移动至更远的距离。
 Skill/Group/Desc/1061500┃爱琳变身为猫咪。\n\n爱琳使用<color=white>跳跳球</color>或者<color=white>喵步轻俏</color>生成小鱼标识时，增加下一个普攻射程距离并造成<color=white>{0}</color>的额外技能伤害，同时赋予{1}秒的猫咪铃铛标识。\n\n猫咪铃铛标识的对象和爱琳共享视野。\n小鱼标识持续{2}秒，生成上限为{3}个。
-Skill/Group/Desc/1061510┃猫咪变身为爱琳。\n\n猫咪变身成爱琳后，移动至小鱼标识地点时可以获得护盾。护盾持续{1}秒，吸收<color=white>{0}</color>的伤害。
+Skill/Group/Desc/1061510┃猫咪变身为爱琳。\n\n变身为猫咪移动至小鱼标识地点时可以获得护盾。护盾持续{1}秒，吸收<color=white>{0}</color>的伤害。
 Skill/Group/Coef/1061100┃爱琳进入其他区域时处于高度警惕状态，此状态下增加{0}视野。在同一区域逗留超过{1}秒即可适应周围环境，取消视野增效并强化其他能力。\n爱琳：冷却缩减{2}\n猫咪：增加防御力{3}\n\n吃掉用鱼制作的食物时，立即恢复食物恢复上限{4}的体力。
 Skill/Group/Coef/1061200┃爱琳丢出的球每弹跳一次都会加强，给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{2})</color>至最多<color=white>{3}</color><color=#DDA0DD>(+技能增幅{5})</color>的技能伤害。\n球给敌人造成伤害时停止弹跳，同时生成小鱼标识。
 Skill/Group/Coef/1061210┃使用技能后，下次普攻时向对方突进并造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{8})</color>的额外技能伤害。攻击带有猫咪铃铛标识的对象时，使其晕厥{5}秒。\n\n之后{3}秒间，每{4}秒快速发起连续攻击，分别对范围内的敌人造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅{10})</color>的技能伤害。\n承受连续攻击的对象受到负面效果影响时，将承受{6}的额外技能伤害。
@@ -6525,7 +6775,7 @@ Skill/Group/Coef/1061310┃爱琳在空中翻转，猫咪尾巴向下重击，�
 Skill/Group/Coef/1061400┃爱琳向指定的方向短暂移动，同时会在原本的位置生成小鱼标识。
 Skill/Group/Coef/1061410┃爱琳跳跃落地，给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{2})</color>的技能伤害。\n朝小鱼标识方向跳跃时，可以移动至更远的距离。
 Skill/Group/Coef/1061500┃爱琳变身成猫咪。\n爱琳使用<color=white>跳跳球</color>或者<color=white>喵步轻俏</color>生成小鱼时，增加下一个普攻射程距离并造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{5})</color>的额外技能伤害，同时赋予{1}秒的猫咪铃铛标识。\n\n猫咪铃铛标识的对象和爱琳共享视野。\n小鱼标识持续{2}秒，生成上限为{3}个。\n
-Skill/Group/Coef/1061510┃猫咪变身成爱琳。\n\n猫咪变身成爱琳后，移动至小鱼标识地点时可以获得护盾。护盾持续{1}秒，吸收<color=white>{0}</color><color=#DDA0DD>(+技能增幅{3})</color>的伤害。
+Skill/Group/Coef/1061510┃猫咪变身成爱琳。\n\n移动至小鱼标识地点时可以获得护盾。护盾持续{1}秒，吸收<color=white>{0}</color><color=#DDA0DD>(+技能增幅{3})</color>的伤害。
 Skill/Group/ExpansionTip/1061200┃<i>小鱼标识持续{1}秒，最多可以生成{2}个。</i>
 Skill/Group/ExpansionTip/1061210┃<i>增加使用中普攻射程。</i>
 Skill/Group/ExpansionTip/1061400┃<i>小鱼标识持续{1}秒，最多可以生成{2}个。</i>
@@ -6742,7 +6992,7 @@ CharacterState/Group/Desc/10000┃离开自己领土的野生动物们均有回�
 CharacterState/Group/Name/10001┃休息
 CharacterState/Group/Desc/10001┃通过休息恢复体力值和耐力值。
 CharacterState/Group/Name/10002┃摄取食物
-CharacterState/Group/Desc/10002┃通过摄取食物恢复体力值。
+CharacterState/Group/Desc/10002┃通过摄取食物恢复体力值。食物恢复量不受减少治愈效果的影响。
 CharacterState/Group/Name/10003┃摄取饮料
 CharacterState/Group/Desc/10003┃通过摄取饮料恢复耐力值。
 CharacterState/Group/Name/10004┃夜晚
@@ -6751,10 +7001,14 @@ CharacterState/Group/Name/10011┃摄取食物效果
 CharacterState/Group/Desc/10011┃通过食物摄取，在一定时间内增强能力值。
 CharacterState/Group/Name/10012┃摄取饮料效果
 CharacterState/Group/Desc/10012┃通过饮料摄取，在一定时间内增强能力值。
+CharacterState/Group/Name/10023┃摄取雪花效果
+CharacterState/Group/Desc/10023┃已经摄取5个雪花了。
 CharacterState/Group/Name/11300┃传送门 - 使用效果
 CharacterState/Group/Desc/11300┃不能使用技能、食物、饮料以及监视器和探测仪以外的物品。
 CharacterState/Group/Name/11360┃使用传送门保护效果
-CharacterState/Group/Desc/11360┃使用传送门时对负面效果免疫。\n该效果仅在第一天白天启动。
+CharacterState/Group/Desc/11360┃使用传送门时对负面效果免疫。\n该效果仅在使用传送门被妨碍时启动。
+CharacterState/Group/Name/11370┃使用传送门保护效果
+CharacterState/Group/Desc/11370┃下一次使用传送门时，启动负面效果免疫。\n该效果仅在传送门使用被妨碍时启动。
 CharacterState/Group/Name/11400┃快速再生复活效果
 CharacterState/Group/Desc/11400┃无法使用技能、食物、饮料以及监视器和探测仪以外的物品。 暂时提高移动速度。
 CharacterState/Group/Name/11000┃单人模式修正
@@ -6812,7 +7066,7 @@ Skill/LobbyDesc/1003100┃菲欧娜每次使用技能命中敌人，可以叠加
 Skill/LobbyDesc/1003200┃菲欧娜朝指定方向进攻，对命中的敌人造成技能伤害。 在范围末端被刺伤的敌人承受更大的技能伤害，同时减少移动速度，并被赋予2个刺击标识。刺击叠层达到上限时命中敌人，可引爆标识造成 额外技能伤害，并降低敌人的移动速度和减少长刺剩余的冷却时间。
 Skill/LobbyDesc/1003300┃菲欧娜快速向前挥剑两次，各造成一次技能伤害并分别叠加一个刺击标识。 2次全部命中时， 暂时封锁敌人的普攻，并在技能使用期间，减少菲欧娜所有承受伤害。
 Skill/LobbyDesc/1003400┃菲欧娜向指定方向突进，对碰撞的敌人造成伤害，成功造成伤害可以重新使用技能向指定方向移动。刺击叠层达到上限时命中敌人造成 额外技能伤害，并减少技能<color=#ffffff>长刺(Q)</color>， <color=#ffffff>复杂进攻(W)</color>的冷却时间。
-Skill/LobbyDesc/1003500┃菲欧娜向正前方刺剑造成技能伤害，击退敌人的同时减少敌人的移动速度。飞刺在最多可以使用3次，引爆达到上限的刺击标识可造成额外技能伤害。每次飞刺命中，都会增加伤害量。3次全部命中时增加真实伤害，最后一次如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却时间，并使敌人暂时陷入晕厥。
+Skill/LobbyDesc/1003500┃菲欧娜向正前方刺剑造成技能伤害，击退敌人的同时减少敌人的移动速度。飞刺在最多可以使用3次，引爆达到上限的刺击标识可造成额外技能伤害。每次飞刺命中敌人实验体时，都会增加伤害量。3次全部命中时增加真实伤害，最后一次如果引爆标识，减少<color=#ffffff>长刺(Q)</color>的冷却时间，并使敌人暂时陷入晕厥。
 Skill/LobbyName/1004100┃扛打
 Skill/LobbyName/1004200┃破碎弹
 Skill/LobbyName/1004300┃17对1
@@ -7059,7 +7313,7 @@ Skill/LobbyDesc/1049100┃费利克斯以射程上限连续攻击目标敌人2�
 Skill/LobbyDesc/1049200┃费利克斯突进并在目标位置挥动长枪，造成技能伤害。破风斩最多可以重新施放2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成技能伤害并将敌人悬空。 另外，根据<color=white>连攻</color>叠层数额外造成真实伤害并增加敌人的悬空时间。
 Skill/LobbyDesc/1049300┃费利克斯使用长枪刺向指定方向造成技能伤害。疾风雷击最多可以重新施放2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成技能伤害并束缚位于近处的敌人后突进。另外，根据<color=white>连攻</color> 叠层数增加束缚时间。
 Skill/LobbyDesc/1049400┃费利克斯退后一步并将长枪扫向目标方向，造成技能伤害，并回避普通攻击。成功回避普攻时增加<color=white>连攻</color>叠层。半月斩最多可以重新施法2次，并增强最终施放效果。\n\n<color=white>最终施放:</color> 造成的技能伤害加强，命中时缩减共享冷却。
-Skill/LobbyDesc/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成技能伤害。蓄力至上限时命中的目标将陷入晕厥。\n使用技能时增加<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时对移动妨碍效果免疫。
+Skill/LobbyDesc/1049500┃费利克斯蓄力于枪尖，向前突进并用力一刺，造成技能伤害。蓄力至上限时命中的目标将陷入晕厥。\n使用技能时增加<color=white>连攻</color>叠层。\n\n蓄力期间可转变方向，突进时处于无法阻挡的状态。
 Skill/LobbyDesc/1050100┃埃琳娜用普攻和技能攻击敌人时会生成一个<color=white>冰区</color>并对<color=white>冰区</color>上的敌人施加<color=white>寒气</color>效果。在<color=white>寒气</color>值不断聚集的期间，将减少敌人的移动速度和攻击速度，并在<color=white>寒气</color>值蓄满时使敌人陷入<color=white>冻结</color>状态。\n\n<color=white>冻结</color> : 暂时冻住并晕厥，埃琳娜或其队友在攻击<color=white>冻结</color>状态的敌人时，会造成技能伤害并解除<color=white>冻结</color>状态，同时缩减<color=white>极冰</color>的冷却时间。 已解凍的敵人暫時不受<color=white>寒氣</color>效果的影響。
 Skill/LobbyDesc/1050200┃埃琳娜给前方的敌人造成技能伤害，并增加<color=white>寒气值。一定时间后，冰层爆裂时将再次对同一区域造成技能伤害，同时缩减<color=white>女王的冰封领域(P)的冷却时间并增加<color=white>寒气值。
 Skill/LobbyDesc/1050300┃埃琳娜朝指定的方向旋转，给路径上的敌人造成技能伤害，缩减<color=white>极冰</color>的冷却时间并增加自身的防御力。技能最多可以使用2次，每击中一个敌人都会增加<color=white>寒气</color>值。 \n在<color=white>冰区</color>使用技能可以增加移动距离，使用技能的过程中承受敌人的伤害时，会在攻击者的位置生成一个<color=white>冰区</color>。另外，在使用<color=white>双旋击</color>时可以连接使用<color=white>极冰</color>或<color=white>飞燕</color>，同时缩减所连接的技能冷却时间。
@@ -7114,7 +7368,7 @@ Skill/LobbyDesc/1059500┃伊萨克朝指定的方向猛击地面并造成技能
 Skill/LobbyDesc/1061100┃爱琳进入其他区域时变得警惕处于高度警惕状态，此状态下增加视野。在同一区域逗留一段时间后，取消视野增效并强化其他能力。\n\n爱琳：冷却缩减\n猫咪：增加防御力\n\n吃掉用鱼制作的食物时，立即恢复一定比例食物恢复上限的体力。
 Skill/LobbyDesc/1061200┃<color=#ffd775>爱琳：</color>\n爱琳丢出的球每弹跳一次都会加强，给范围内的敌人造成技能伤害。\n球给敌人造成伤害时停止弹跳，同时生成小鱼标识。\n\n<color=#ffd775>猫咪：</color>\n使用技能后，下次普攻时向对方突进并造成额外的技能伤害。攻击带有猫咪铃铛标识的对象时，使其晕厥。\n\n此后快速发起连续攻击，分别对范围内的敌人造成技能伤害。\n承受连续攻击的对象受到负面效果影响时，承受额外的技能伤害。\n
 Skill/LobbyDesc/1061300┃<color=#ffd775>爱琳：</color>\n爱琳散发魅力，使范围内的敌人移动速度减缓，此后给范围内的对象造成技能伤害，陷入爱琳的魅力。\n即使离开范围，减缓效果也会持续一段时间。\n\n<color=#ffd775>猫咪：</color>\n爱琳在空中翻转，猫咪尾巴向下重击，范围内的敌人承受技能伤害的同时悬空。\n该技能命中敌人时，缩减<color=white>喵步轻俏</color>及 <color=white>喵翻滚</color>的冷却时间。
-Skill/LobbyDesc/1061400┃<color=#ffd775>爱琳：</color>\n爱琳向指定的方向快速移动并在原位置生成小鱼标识。\n\n<color=#ffd775>猫咪：</color>\n爱琳跳跃落地，给范围内的敌人造成技能伤害。\n朝小鱼标识防线跳跃时，可以移动至更远的距离。
+Skill/LobbyDesc/1061400┃<color=#ffd775>爱琳：</color>\n爱琳向指定的方向快速移动并在原位置生成小鱼标识。\n\n<color=#ffd775>猫咪：</color>\n爱琳跳跃落地，给范围内的敌人造成技能伤害。\n朝小鱼标识方向跳跃时，可以移动至更远的距离。
 Skill/LobbyDesc/1061500┃<color=#ffd775>爱琳：</color>\n爱琳变身为猫咪。\n\n爱琳使用<color=white>跳跳球</color>或者<color=white>喵步轻俏</color>生成小鱼标识时，增加下一个普攻射程距离并造成额外技能伤害，暂时赋予猫咪铃铛标识。\n猫咪铃铛标识的对象和爱琳共享视野。\n\n<color=#ffd775>猫咪：</color>\n猫咪变身为爱琳。\n\n\n猫咪变身成爱琳后，移动至小鱼标识地点时可以获得吸收伤害的护盾。
 Skill/LobbyDesc/3001000┃接近短距离内的指定目标，造成伤害。
 Skill/LobbyDesc/3002000┃在一定时间内，防御所有的伤害，并将这些伤害反弹给攻击对象。（无法防御攻击的效果。）
@@ -7140,7 +7394,7 @@ Skill/LobbyDesc/3023000┃开闪光灯造成伤害。面朝自己的敌人承受
 Skill/LobbyDesc/3024000┃VF能量最多可以生成3个。如果再次使用，一个球体会在目标点爆炸并造成伤害。\n\n连续被命中的目标减少移动速度。
 Skill/LobbyDesc/3025000┃厄喀翁1秒间集中精力，并根据状态适用不同效果。\n\n<color=white>VF值小于50：</color> 消耗一定VF值，缩减武器技能以外的技能冷却时间，并增加移动速度。\n\n<color=white>VF暴走状态：</color> 延长暴走持续时间，缩减技能冷却时间并增加移动速度。\n\n<color=white>超负荷状态：</color> 超负荷状态减少一定时间。
 CharacterState/Group/Name/2100201┃战场 - 加速
-CharacterState/Group/Desc/2100101┃在该战场中实验体移动速度增加{0}%、冷却减少{1}%。不会超过冷却上限值。
+CharacterState/Group/Desc/2100201┃在该战场中实验体移动速度增加{0}%、冷却减少{1}%。不会超过冷却上限值。
 CharacterState/Group/Name/2100202┃战场 - 狂暴
 CharacterState/Group/Desc/2100202┃在该战场中造成伤害增加{0}%，吸血-所有伤害效果增加{1}%。
 CharacterState/Group/Name/2100203┃战场 - 保护
@@ -7277,7 +7531,9 @@ Item/Skills/6002005/Body┃({6})使用技能可以对意念充能。意念:{4}�
 Item/Skills/6002005/Desc┃使用技能为意念充能。充能后{4}秒内下一个普攻造成额外技能伤害。 (冷却: {5}秒)\n<color=#DDA0DD>造成技能增幅的{8}</color>的伤害。
 Item/Skills/6002006/Name┃<color=yellow>意念</color>
 Item/Skills/6002006/Body┃({6})使用技能可以对意念充能。意念:{4}秒内下一个普攻造成 <color=#008000>{8}</color>额外技能伤害。(冷却 : {5}秒)
-Item/Skills/6002006/Desc┃使用技能为意念充能。充能后{4}秒内下一个普攻造成额外技能伤害。 (冷却: {5}秒)\n造成(30 + <color=#008000>级别 * {9}</color>)伤害。
+Item/Skills/6002006/Desc┃使用技能为意念充能。充能后{4}秒内下一个普攻造成额外技能伤害。 (冷却: {5}秒)\n造成({6} + <color=#008000>级别 * {9}</color>)伤害。
+Item/Skills/6002007/Name┃<color=yellow>意念</color>
+Item/Skills/6002008/Name┃<color=yellow>意念</color>
 Item/Skills/6001000┃炽焰
 Item/Skills/6001001/Name┃<color=yellow>炽焰</color>
 Item/Skills/6001001/Body┃({0})进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
@@ -7352,6 +7608,7 @@ Item/Skills/6007004/Body┃每移动{2}m，获得一个[微步]叠层(上限:{1}
 Item/Skills/6007004/Desc┃每移动{1}m，获得一个[微步]叠层(上限:{0})\n[微步]:根据叠层最多可以增加{3}移动速度。普攻将消耗所有叠层，最多可以造成{6}技能伤害。\n(近攻)以最大叠层命中目标时，目标移动速度将在{11}秒间减少{10}。
 Item/Skills/6007005/Name┃<color=yellow>微步</color>
 Item/Skills/6007006/Name┃<color=yellow>微步</color>
+Item/Skills/6007007/Name┃<color=yellow>微步</color>
 Item/Skills/6006000┃荆棘
 Item/Skills/6006001/Name┃<color=yellow>荆棘</color>
 Item/Skills/6006001/Body┃将普攻承受的<color=gray>{4}</color>伤害作为真实伤害反射给攻击者，并在{5}秒间减少治愈效果{3}。4秒间累积{7}承受伤害，反射给周围<color=white>{6}</color>技能伤害。 (冷却 3秒)
@@ -7396,6 +7653,7 @@ Item/Skills/6013003/Desc┃下一个普攻造成<color=green>实验体级别*8</
 Item/Skills/6013004/Name┃<color=yellow>充能 - 闪光</color>
 Item/Skills/6013004/Body┃下一个普攻在{1}秒间使敌人的移动速度减少{2}%。(冷却 : {9}秒)
 Item/Skills/6013004/Desc┃下一个普攻在{1}秒间使敌人的移动速度减少{2}%。(冷却 : {6}秒)
+Item/Skills/6013005/Name┃<color=yellow>充能 - 闪光</color>
 Item/Skills/6014000┃诅咒
 Item/Skills/6014001/Name┃<color=yellow>诅咒</color>
 Item/Skills/6014001/Body┃使用技能攻击时，敌人陷入诅咒{2}秒。处于诅咒状态的敌人在解除诅咒状态时承受<color=#DDA0DD>(+{1})</color>真实伤害。一旦陷入诅咒状态，{4}秒内(普攻命中时减少1秒)不再承受诅咒。(冷却:2秒)
@@ -7478,6 +7736,11 @@ Item/Skills/6017007/Name┃<color=yellow>热情-循环</color>
 Item/Skills/6017008/Name┃<color=yellow>热情</color>
 Item/Skills/6017008/Body┃普攻命中时，造成敌方实验体当前体力{1}%的技能伤害，{8}秒间获得热情叠层，每个热情叠层获得{3}%的攻击速度。达到{9}叠层上限额外增加攻击力{5}。
 Item/Skills/6017008/Desc┃普攻命中时，造成敌方实验体当前体力{1}%的技能伤害，{8}秒间获得热情叠层，每个热情叠层获得{3}%的攻击速度。达到{9}叠层上限额外增加攻击力{5}。
+Item/Skills/6017009/Name┃<color=yellow>热情</color>
+Item/Skills/6017010/Name┃<color=yellow>热情</color>
+Item/Skills/6017021/Name┃<color=yellow>热情</color>
+Item/Skills/6017022/Name┃<color=yellow>热情</color>
+Item/Skills/6017023/Name┃<color=yellow>热情</color>
 CharacterState/Group/Name/6017000┃热情
 CharacterState/Group/Desc/6017000┃增加攻击速度。
 CharacterState/Group/Name/6017010┃热情 - 叠层上限
@@ -7596,15 +7859,15 @@ CharacterState/Group/Desc/6503100┃增加能力值。
 Item/Skills/6512000┃虚言
 Item/Skills/6512001┃虚言
 Item/Skills/6512001/Name┃<color=yellow>虚言</color>
-Item/Skills/6512001/Body┃消耗{0}体力，5秒间处于誓言状态。\n\n誓言状态下消耗的体力会逐渐恢复，同时获得{1}%的吸血 - 所有伤害和{2}的攻击力。当前体力越低，恢复的体力越多。\n\n冷却：{3}秒
-Item/Skills/6512001/Desc┃消耗{0}体力，5秒间处于誓言状态。\n\n誓言状态下消耗的体力会逐渐恢复，同时获得{1}%的吸血 - 所有伤害和{2}的攻击力。当前体力越低，恢复的体力越多。\n\n冷却：{3}秒
+Item/Skills/6512001/Body┃消耗{0}体力，6秒间处于誓言状态。\n\n誓言状态下消耗的体力会逐渐恢复，同时获得{1}%的吸血 - 所有伤害和{2}的攻击力。当前体力越低，实验体级别越高，恢复的体力越多。\n\n冷却：{3}秒
+Item/Skills/6512001/Desc┃消耗{0}体力，6秒间处于誓言状态。\n\n誓言状态下消耗的体力会逐渐恢复，同时获得{1}%的吸血 - 所有伤害和{2}的攻击力。当前体力越低，实验体级别越高，恢复的体力越多。\n\n冷却：{3}秒
 CharacterState/Group/Name/6512000┃虚言
 CharacterState/Group/Desc/6512000┃因虚言增加能力值，正在恢复体力。
 Item/Skills/6513000┃实刃
 Item/Skills/6513001┃实刃
 Item/Skills/6513001/Name┃<color=yellow>实刃</color>
-Item/Skills/6513001/Body┃给周围的敌人造成{0}+敌人当前体力{1}%的伤害，夺取敌人(近攻：{2}%) (远攻：{5}%) 移动速度。 恢复给敌人造成伤害{3}%的体力。\n\n冷却：{4}秒
-Item/Skills/6513001/Desc┃给周围的敌人造成{0}+攻击力的{6}%+敌人当前体力的 {1}%的伤害，夺取敌人(近攻：{2}%) (远攻：{5}%) 的移动速度。恢复给敌人造成伤害{3}%的体力。\n\n冷却：{4}秒
+Item/Skills/6513001/Body┃给周围的敌人造成{0}的伤害，夺取敌人(近攻：{2}%) (远攻：{5}%) 移动速度。 恢复给敌人造成伤害{3}%的体力。\n\n冷却：{4}秒
+Item/Skills/6513001/Desc┃给周围的敌人造成{0}+攻击力{6}%+技能增幅{1}%的伤害，夺取敌人(近攻：{2}%) (远攻：{5}%) 的移动速度。恢复给敌人造成伤害{3}%的体力。\n\n冷却：{4}秒
 CharacterState/Group/Name/6513010┃信念
 CharacterState/Group/Desc/6513010┃增加移动速度。
 CharacterState/Group/Name/6513020┃信念
@@ -7616,8 +7879,8 @@ CharacterState/Group/Desc/6513040┃减少移动速度。
 Item/Skills/6514000┃E.M.O.T.E
 Item/Skills/6514001┃E.M.O.T.E
 Item/Skills/6514001/Name┃<color=yellow>E.M.O.T.E</color>
-Item/Skills/6514001/Body┃召唤根据心情可以发挥不同效果的EMOTE装置！\n\n剩余体力超过一半时，召唤能使敌人速度减缓的「闪开」EMOTE；剩余体力不足一半时，召唤能恢复周围队友体力的「加油」EMOTE。\nEMOTE在{0}秒后消失，也可以被敌人的普攻摧毁。\n\n「闪开」EMOTE 减少移动速度：最少{1}%，最多可重叠{2}%\n「加油」EMOTE 每秒恢复量：{6}秒间恢复{3}的体力\n\n冷却：{4}秒
-Item/Skills/6514001/Desc┃召唤根据心情可以发挥不同效果的EMOTE装置！\n\n剩余体力超过一半时，召唤能使敌人速度减缓的「闪开」EMOTE；剩余体力不足一半时，召唤能恢复周围队友体力的「加油」EMOTE。\nEMOTE在{0}秒后消失，也可以被敌人的普攻摧毁。\n\n「闪开」EMOTE 减少移动速度：最少{1}%，最多可重叠{2}%\n「加油」EMOTE 每秒恢复量：{6}秒间恢复{3}的体力\n\n冷却：{4}秒
+Item/Skills/6514001/Body┃在{0}秒间召唤EMOTE装置，根据当前体力给周边范围内的实验体造成不同效果。\n\n（剩余体力超过一半时）使周围敌人移动速度最多减缓{2}%；\n（剩余体力不足一半时）每{6}秒恢复周围队友体力{3}% 。\n\n冷却{4}秒
+Item/Skills/6514001/Desc┃在{0}秒间召唤EMOTE装置，根据当前体力给周边范围内的实验体造成不同效果。\n\n（剩余体力超过一半时）使周围敌人移动速度最多减缓{2}%；\n（剩余体力不足一半时）每{6}秒恢复周围队友体力{3}% 。\n\n冷却{4}秒
 CharacterState/Group/Name/6514010┃闪开！
 CharacterState/Group/Desc/6514010┃减少移动速度。
 CharacterState/Group/Name/6514020┃加油！
@@ -7738,7 +8001,7 @@ BattleMission/5003004/1┃在医院击杀实验体 - 3次
 BattleMission/5003005/1┃击杀实验体 - 2次
 BattleMission/5003006/1┃食用炸鱼薯条 - 12次
 BattleMission/5003007/1┃移动熟练度达到14级以上
-BattleMission/5003008/1┃击杀武器熟练度相差2个级别以上的目标 - 3次
+BattleMission/5003007/1┃击杀武器熟练度相差2个级别以上的目标 - 3次
 BattleMission/5003009/1┃获取生命树枝 - 5次
 BattleMission/5003010/1┃通过装备最初选定的路径物品获得最终胜利 - 2次
 BattleMission/5004001/1┃在一般/排位赛中进入前三名 - 5次
@@ -7951,6 +8214,86 @@ BattleMission/7008007/1┃武器熟练度达到14级以上
 BattleMission/7008008/1┃使用无人机配送 - 50次
 BattleMission/7008009/1┃获取能源晶石 - 1次
 BattleMission/7008010/1┃达到TK 4次以上 - 1次
+BattleMission/8001001/1┃给野生动物造成50000伤害
+BattleMission/8001002/1┃击杀野狗 - 5次
+BattleMission/8001003/1┃使用无人机配送 - 3次
+BattleMission/8001004/1┃击杀实验体 - 3次
+BattleMission/8001005/1┃从航空补给箱中获取传说物品 - 2次
+BattleMission/8001006/1┃获取能源晶石 - 1次
+BattleMission/8001007/1┃在一般/排位赛中进入前三名 - 3次
+BattleMission/8001008/1┃体力熟练度达到14级以上
+BattleMission/8001009/1┃制作传说物品 - 2次
+BattleMission/8001010/1┃击杀实验体 - 7次
+BattleMission/8002001/1┃探索除研究室以外的所有区域 - 2次
+BattleMission/8002002/1┃击杀熊 - 3次
+BattleMission/8002003/1┃给实验体造成8000伤害
+BattleMission/8002004/1┃在海滩击杀实验体 - 3次
+BattleMission/8002005/1┃爆炸计时器还剩25秒以内的情况下获胜 - 1次
+BattleMission/8002006/1┃击杀实验体 - 10次
+BattleMission/8002007/1┃防御熟练度达到14级以上
+BattleMission/8002008/1┃在禁区击杀实验体 - 1次 
+BattleMission/8002009/1┃获取生命树枝 - 3次
+BattleMission/8002010/1┃爆炸计时器还剩30秒以内的情况下获胜 - 1次
+BattleMission/8003001/1┃使用无人机配送 - 15次
+BattleMission/8003002/1┃击杀野狗 - 5次
+BattleMission/8003003/1┃进行一般/排位游戏 - 10次
+BattleMission/8003004/1┃在旅馆击杀实验体 - 3次
+BattleMission/8003005/1┃击杀实验体 - 3次
+BattleMission/8003006/1┃爆炸计时器还剩30秒以内的情况下获胜 - 1次
+BattleMission/8003007/1┃移动熟练度达到14级以上
+BattleMission/8003008/1┃在禁区击杀实验体 - 1次 
+BattleMission/8003009/1┃成功逃生 1次
+BattleMission/8003010/1┃给实验体造成 15,000 伤害
+BattleMission/8004001/1┃给实验体造成50000伤害
+BattleMission/8004002/1┃猎杀狼 - 6次
+BattleMission/8004003/1┃摄取食物/饮料 - 6次 
+BattleMission/8004004/1┃从航空补给箱中获取传说物品 - 2次
+BattleMission/8004005/1┃进行一般/排位游戏 - 10次
+BattleMission/8004006/1┃击杀实验体 - 20次
+BattleMission/8004007/1┃在一般/排位赛中进入前三名 - 3次
+BattleMission/8004008/1┃武器熟练度达到14级以上
+BattleMission/8004009/1┃使用望远监视器 - 12次
+BattleMission/8004010/1┃从航空补给箱中获得物品 - 3次
+BattleMission/8005001/1┃在一般/排位赛中进入前三名 - 5次
+BattleMission/8005002/1┃击杀阿尔法 - 3次
+BattleMission/8005003/1┃给野生动物造成50000伤害
+BattleMission/8005004/1┃在靶场击杀实验体 - 3次
+BattleMission/8005005/1┃夺取首杀 - 1次
+BattleMission/8005006/1┃使用噪音产生器 - 3次
+BattleMission/8005007/1┃体力熟练度达到14级以上
+BattleMission/8005008/1┃在禁区击杀实验体 - 1次 
+BattleMission/8005009/1┃获取生命树枝 - 3次
+BattleMission/8005010/1┃给实验体造成 15,000 伤害
+BattleMission/8006001/1┃进行一般/排位游戏 - 10次
+BattleMission/8006002/1┃击杀鸡 - 10次
+BattleMission/8006003/1┃获取200以上的荣誉值
+BattleMission/8006004/1┃在医院击杀实验体 - 2次
+BattleMission/8006005/1┃制作传说物品 - 10次
+BattleMission/8006006/1┃使用传送门 - 10次
+BattleMission/8006007/1┃探索熟练度达到14级以上
+BattleMission/8006008/1┃爆炸计时器还剩30秒以内的情况下获胜 - 1次
+BattleMission/8006009/1┃使用无人机配送 - 50次
+BattleMission/8006010/1┃获取生命树枝 - 2次
+BattleMission/8007001/1┃使用传送装置 - 5次
+BattleMission/8007002/1┃进行一般/排位游戏 - 20次
+BattleMission/8007003/1┃击杀奥米加 - 2次
+BattleMission/8007004/1┃在教堂击杀实验体 - 3次 
+BattleMission/8007005/1┃使用传送装置 - 1次
+BattleMission/8007006/1┃使用传送门 - 10次
+BattleMission/8007007/1┃陷阱熟练度达到7级以上
+BattleMission/8007008/1┃使用EMP探测仪 - 15次
+BattleMission/8007009/1┃获取VF血液样本 - 3次
+BattleMission/8007010/1┃达到TK 4次以上 - 1次
+BattleMission/8008001/1┃在一般/排位赛中夺得最终胜利 - 3次
+BattleMission/8008002/1┃探索除研究室以外的所有区域 - 3次
+BattleMission/8008003/1┃在码头击杀实验体 - 3次
+BattleMission/8008004/1┃猎杀野猪 - 5次
+BattleMission/8008005/1┃体力低于500的状态下击杀实验体 - 3次
+BattleMission/8008006/1┃击杀实验体 - 10次
+BattleMission/8008007/1┃狩猎熟练度达到14级以上
+BattleMission/8008008/1┃在禁区击杀实验体 - 3次
+BattleMission/8008009/1┃获取陨石 - 2次
+BattleMission/8008010/1┃从航空补给箱中获取传说物品 - 3次
 서비스약관┃Terms of Service
 서비스약관내용┃NIMBLE NEURON TERMS OF SERVICE\n \n If you reside outside of the Republic of Korea, these Terms of Service (“Terms of Service”) are an agreement between you (as defined below) and Nimble Neuron Corp. (“Company”). By using the Service (as defined below), you accept and agree to these Terms of Service. If you do not agree to these Terms of Service, please do not install, access, or use the Service.\n \n 1. GENERAL\n \n 1.1 The Company grants to you a non-exclusive, non-transferable, non-sublicenable, revocable limited license to use and display the services (“Service”) provided by the Company for your personal, non-commercial use by any device(s) of which you are the sole, primary user. The Service means any computer, console, or mobile game, licensed product or service accessed, downloaded, or installed by you from the Company website(s) or through Steam®, Xbox™, Playstation™, App Store® and Game Center Service, Google Play™ store, and any other third-party platform (“Third-Party Marketplace”). The terms “you” and “your” refers to the user of the Service provided by the Company. You agree not to use the Service for any other purpose, or to copy or distribute the content of the Service except as specifically allowed in these Terms of Service. By installing, accessing, or using the Service, you accept and agree to the terms of these Terms of Service. \n \n 1.2 The Company has the right to change the Terms of Service in any way and at any time at its sole discretion. It is your responsibility to review these Terms of Service to find out any changes or updates. If you do not agree to these Terms of Service, discontinue your use of the Service. These Terms of Service may be revised without notice and will become effective upon posting on any of the Company website(s). You agree that you will be considered to have been given notice of any revisions once we post them on this site and that your continued use of the Service after such notice shall be deemed an acceptance of any changes.\n \n 1.3 The Company reserves the right to discontinue the Service or to change the content of the Service in any way and at any time, with or without notice to you, without liability.\n \n 1.4 Your use of the Service is conditioned upon your compliance with the Terms of Service and any use of the Service in violation will be regarded as an infringement to the Service. The Company reserves the right to terminate your access to the Service without notice if you violate these Terms.\n \n 1.5 IF YOU ARE UNDER THE AGE OF 18, YOU UNDERSTAND AND AGREE THAT YOUR LEGAL GUARDIAN HAS REVIEWED AND AGREES TO THE TERMS OF SERVICE ON YOUR BEHALF BEFORE YOUR USE OF THE SERVICE. \n \n 1.6 When you register to become a user of the Service, you may be requested to create a password, a nickname and/or user ID or register your e-mail address as your username. You are responsible for maintaining the security and confidentiality of your password and you are solely responsible for any and all use of your account and actions taken under your account. You will also be solely responsible for the maintenance of the device used for the registration. \n \n 2. VIRTUAL GOODS AND PAYMENTS\n \n 2.1 The Service may contain virtual currency (“Virtual Currency”) and/or virtual goods (“Virtual Goods”). Virtual Currency means virtual cash, such as coins, points, gold, carats, or similar items that may be (i) obtained or earned through the Service or (ii) purchased by you for actual currency. Virtual Goods are provided solely for your entertainment use, and they are virtual digital items, such as tools, abilities or other goods that may be (a) obtained or earned through the Service or (b) purchased by you for actual currency or for Virtual Currency. You may purchase Virtual Currency and/or Virtual Goods through the Company, any of its applicable licensee of the Service, or applicable Third-Party Marketplace. You agree that you have reviewed, understood, and agreed to any and all of the applicable terms of Virtual Currency and Virtual Goods prior to making any transaction, including but not limited to purchase and refund procedures. \n \n 2.2 You have non-exclusive, non-transferable, non-sublicensable, revocable, personal, limited license to use Virtual Currency and Virtual Currency within the Service that you have purchased or otherwise obtained in a method authorized by the Company. The Company may control, manage, regulate, modify, or eliminate Virtual Currency and/or Virtual Goods at any time, with or without notice. In such case, you understand and agree that the Company shall have no liability to you or any third party. Otherwise, you have no right or interest in or to any such Virtual Currency or Virtual Goods in the Service. \n \n 2.3 You may not transfer, sell, or sell Virtual Currency and Virtual Goods to any third party except where expressly authorized by the Company. Any such transfer or attempt to transfer is prohibited and void and may subject to termination of your account. You also understand and agree that all sales of Virtual Currency and Virtual Goods are final and non-refundable, except where the Company, Provider, or the applicable Third-Party Marketplace decides in its sole discretion to provide a refund. In addition, if your account or any portion of the Service is discontinued or terminated for any reason, you will forfeit all Virtual Currency and Virtual Goods and the Company shall have no liability.\n \n 3. INTELLECTUAL PROPERTY \n \n 3.1 All contents available through the Service, including without limitation, title, ownership, text, photographs, images, graphics, designs, audio, video, applications, software, files, and any and all other intellectual properties (“Company Content”) are the proprietary contents and are properties of, and are solely owned by, the Company. Such contents are protected by laws relating to copyright, patent, trademark, trade secret and/or other forms of intellectual property and by other applicable laws, and the Company reserves and retains all rights. Except where expressly authorized by the Company, you may not copy, modify, translate, distribute, transmit, publish, republish, download, upload, frame, make available, lend, hire, adapt, or sell the Company Content or any portion thereof. Any unauthorized use of the Company Content may violate copyright law, trademark law or other applicable laws and regulations and will result in the termination of the license granted hereunder. Except as expressly set forth in these Terms of Service, these Terms of Service do not, and shall not be interpreted or construed to, grant to you any license to any intellectual property rights or other proprietary rights, including any implied license or license granted by estoppel or otherwise. The obligation set forth in this section 3.1 shall survive any termination or expiration of your account or your use of the Service.\n \n 3.2 The names and marks “Nimble Neuron”, any of the Service and the Company’s game, and any other logos, graphics, designs, web/page designs, and icons of the Company used in connection with the Service are registered or unregistered trademarks, service marks or trade dress of the Company (the “Marks”). You may not use the Marks other than in connection with any incidental use, as necessary. Without limiting the foregoing, you will not be permitted to use any of the Marks or any mark that is similar to, or likely to cause confusion with, any of the Marks as part of your organization or company name, as part of a domain name, or as part of any trademark or service mark used by you. The obligation set forth in this section 3.2 shall survive any termination or expiration of your account or your use of the Service.\n \n 4. USER-GENERATED CONTENT\n \n 4.1 You are solely responsible for all text, photographs, images, graphics, designs, audio, video, games, applications, software, files, user profiles, messages, and other content (collectively, “User Content”) that you post to, or transmit through, the Service or that you share with other users. You may not post, transmit, store, or share any User Content that is not an original work of authorship by you or that you do not have rights or permission to post. The Company may review, but is not obligated to review, User Content posted to, transmitted through, or shared with other users of, the Service to verify that such User Content and actions related thereto complies with these Terms of Service. The Company may, in its sole discretion and without notice to you, modify, remove, delete, or disable access to, any User Content for any reason or for no reason, including if the applicable User Content or actions related thereto do not comply with these Terms of Service. The Company is not liable for any loss you incur as a result of the removal, deletion, or disabling of access to, any of your User Content. The Company may, but is not obligated to, monitor User Content for any reason or for no reason at all, including without limitation any messages sent by or between users by or through the Service. If the Company chooses to monitor User Content or to remove, delete, or disable access to, any User Content, such acts will not result in the Company assuming any responsibility for the User Content or the user associated with such User Content and the act of monitoring the Service or any User Conduct will not obligate the Company to modify, remove, delete, or disable access to, any User Content that does not comply with these Terms of Service. The obligation set forth in this section 4.1 shall survive any termination or expiration of your account or your use of the Service.\n \n 4.2 Subject to the following license between you and the Company, you retain ownership of all of your rights in the User Content. By posting User Content to, storing User Content at, or transmitting User Content through, the Service, you (a) authorize and direct the Company to reproduce, distribute, transmit and use such User Content as necessary to facilitate the posting, storage and transmission of, and the access to, such User Content in connection with the Service, and (b) grant to the Company a nonexclusive, worldwide, perpetual, royalty-free, fully paid, transferable license (with the right to sublicense) to use, reproduce, distribute, publicly perform, publicly display, reformat, translate, excerpt, modify, and create derivative works of your User Content, for any purpose (commercial or noncommercial), including without limitation use in connection with the Service. You may remove any User Content from the Service at any time, in which case the foregoing license will terminate with regard to its future usage upon our receipt of your notice or our acknowledgement of such removal; provided that the Company may retain archived copies of your User Content for so long as is necessary for administrative purposes and if the Company has used your User Content prior to your removal of it, the Company may continue to use your User Content in any manner the Company previously had used such content. (For example, if your User Content was included in an advertisement, the Company may continue to use such advertisement). The obligation set forth in this section 4.2 shall survive any termination or expiration of your account or your use of the Service.\n \n 4.3 The Company has no liability to you for the User Content, and makes no warranties, express or implied, as to or the accuracy, reliability or content of the User Content posted on or through the Service and such User Content does not necessarily reflect the opinions, positions, or policies of the Company. Although the Company provides rules and principles for user conduct and postings, the Company does not control, and has no liability to you for, what users post, transmit or share to or through the Service and the Company has no liability to you for any offensive, inappropriate, obscene, unlawful, or otherwise objectionable content you may encounter or access on or through the Service, including in connection with any User Content. The obligation set forth in this section 4.3 shall survive any termination or expiration of your account or your use of the Service.\n \n 5. PROHIBITED CONDUCT\n \n 5.1 You may use the Service solely for your personal, noncommercial use. You represent, warrant, and agree that you will not use the Service in an unlawful, threatening, or harassing manner, or take any action that, in the Company’s sole discretion, is offensive, libelous, defamatory, immoral, or unethical or that is otherwise inconsistent with the standards of community and good conduct that the Company intends to govern the use of Service. The Company reserves the right, in its sole discretion, to remove, reject, deny, prohibit, or refuse to post or transmit, any content or message by you, or to deny, restrict, suspend, discontinue, or terminate your account or access to the Service or any portion thereof at any time, with or without prior notice or explanation, for any or no reason, and without liability. Without limiting the foregoing, the actions set forth below are expressly prohibited and may result in suspension or termination of your account in the Company’s sole discretion. \n \n (i) Acts of Slander, Libel and Threat and Offensive Content\n \n Creating a nickname and/or user ID, posting or transmitting a message or any content or file to or through the Service, or otherwise using the Service to engage in any action, that, in the Company’s sole discretion:is slanderous, libelous, defamatory, disparaging, harmful, vulgar, abusive, unlawful, harassing, fraudulent, invasive, or insultingis threatening or intimidatingcontains or promotes excessive violence or offensive subject matterevidences bigotry or evidences bias, discrimination or hate on the basis of, or advocates physical violence against any person or group on the basis of, race, sex, sexual orientation, religion, age or other traits, or that is otherwise offensive or objectionable; or is made with an intent to defraud or mislead the Company or other users or that you know is false or misleadingStalking any other user of the Service or otherwise using the Service to threaten or stalk any individual or group; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (ii) Actions for the Purpose of Offline Interaction\n \n Utilizing the Service for the purpose of dating or engaging in sexual conduct or encouraging others to do the samePosting or transmitting a message or any content or file to or through the Service for the purpose of meeting another user, such as suggesting an offline meeting, or for the purpose of encouraging another user to engage in such actions; Utilizing the Service to provide another user with personal information not included in your profile (including telephone number, physical address, email address, etc.) or to request such information from another user; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (iii) Posting or Transmission of Adult Content\n \n Utilizing the Service to submit, send, or transmit a message, file or any other content that includes lewd, obscene, pornographic, or sexual content or subject matter; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (iv) Transmission of Advertising and Spam and Engaging in Similar Acts\n \n Utilizing the Service to post, transmit or send advertisements, junk mail, chain letters, solicitations, unsolicited content with a commercial purpose, or messages or content that otherwise harass or inconvenience users or other recipientsUtilizing the Service to direct, redirect, or drive traffic to an unrelated website or service for commercial gain or to fraudulently induce another user to access, visit or view another website or service or to cause another user to unintentionally do soCollecting or harvesting email addresses, mobile phone numbers, user identifications or other communications targets by automated or other means for the purposes of sending unsolicited emails or other unsolicited communications; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.The sending of spam through the Service will not be tolerated and the Company will take such action against spammers, including taking legal proceedings and reporting to the relevant authorities, as it may be advised.\n \n (v) Actions that Infringe on Third Party Rights\n \n Posting or transmitting a message or any content or file to or through the Service that infringes, misappropriates, dilutes or violates any copyright, trademark, privacy, publicity, or other intellectual property right or proprietary right of another person or entityOtherwise utilizing the Service in any manner that infringes, misappropriates, dilutes or violates any copyright, trademark, privacy, publicity, or other intellectual property right or proprietary right of another person or entity (including the Company); Posting or disclosing other users’ or other individuals’ photographs, personal information or other private information or data (including Social Security numbers, credit card numbers, phone numbers, physical or email addresses) or otherwise utilizing the Service in a manner that violates the privacy of another person or entitySoliciting passwords of other users, or soliciting personally identifiable information for any purpose, whether commercial or non-commercial, or lawful or unlawful; or engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (vi) Falsifying User Information and Other Actions Related to User Accounts\n \n Logging in on another user’s account or using another user’s name, nickname, avatar, or other identifier to send messages, post content or take other actions that utilize the Service; Providing any false information in the registration form to become a Registered User or otherwise providing false information in your user profile or through the Service, including, without limitation, misrepresenting your ageRegistering for more than one account as a Registered User or registering on behalf of another person, entity or groupSelling, trading, or transferring your Registered User account or purchasing or receiving the Registered User account of another user; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (vii) Interrupting Games and Falsifying Game Scores\n \n Intentionally forcing the Service to end in the middle of a Service or taking other actions that disrupt or interrupt the Service; Intentionally exploiting any bugs or weakness in the Service, hacking, or any Service game or falsifying the scores in any Service game; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (viii) Exploiting the Service\n \n Intentionally exploiting any bugs, weaknesses or vulnerabilities in the Service or taking any action that could disable, damage, impair, injure or overburden the Service; Using automated scripts, spiders or other technological methods to collect information from the Service or to otherwise engage the ServiceReverse engineering or analyzing the software or services that are provided through the Service or otherwise using the software code other than as permitted hereinPosting, introducing, or transmitting to or thorough the Service viruses, disabling code, Trojan horses, malware, spyware, adware, malicious code or other code, files or programs designed or intended to interrupt, interfere with, limit, compromise or destroy any computer or device software, hardware or telecommunications equipment, infrastructure, or networks; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (ix) Commercial Uses and Solicitation\n \n Conducting sales, exchanges, swaps, auctions or other transfer of products or services through the ServiceUsing the Service for gambling purposesPosting or transmitting a message or any content or file to or through the Service that includes links or URLs that are not approved by the CompanySoliciting other users to join organizations, associations, religious groups or other affinity or identity groups other than groups established pursuant to the Service and approved by the Company, or soliciting other users to join, invest in, or collaborate with, pyramid investment schemes, multilevel marketing enterprises, or similar groups or enterprises.Posting or transmitting a message or any content or file to or through the Service for the purpose of commercial advertisement or publicity (including, without limitation, recruitment advertisements); or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above.\n \n (x) Additional Prohibited Acts\n \n Posting or transmitting a message or any content or file to or through the Service that is unlawful or that solicits or encourages unlawful acts or otherwise using the Service to engage in any action that is unlawful or that solicits or encourages unlawful actsTaking an action or encouraging any action that disturbs the operation of the Service; Taking any action or utilizing the Service in such a manner that may expose the Company or its users to legal liability or harm of any type; or Engaging in other acts that the Company determines, in its sole discretion, are related to or similar to the above. The foregoing provides examples of the types of actions and content that are prohibited in connection with your use of the Service, but the Company reserves the right in its sole discretion to prohibit similar actions and content and to investigate and take legal action against violators as appropriate. If you believe any of the foregoing prohibited actions are taking place, please notify the Company promptly by following the process described on our support page at: eternalreturn@nimbleneuron.com. \n \n 6. TERM AND TERMINATION\n \n 6.1 Without prejudice to any other rights of the Company, these Terms of Service shall remain in effect for as long as you use or run the Service. If you fail to comply with any term hereof, the Company reserves the right, in its sole discretion, to remove, reject, deny, prohibit, or refuse to post or transmit, any content or message by you, or to deny, restrict, suspend, discontinue, or terminate your account or access to the Service or any portion thereof at any time, with or without prior notice or explanation, and without liability. Further, the Company expressly reserves the right to remove your profile or account and/or to deny, restrict, suspend, or terminate your access to the Service or any portion thereof if the Company reasonably determines or believes, in its sole discretion, that you have violated these Terms of Service or that you pose a threat to the Service, the Company and/or any other user. The obligation set forth in this section 6.1 shall survive any termination or expiration of your account or your use of the Service.\n \n 6.2 You may close your account and terminate these Terms of Service without cause at any time by uninstalling and/or stop using the Service. Please note that you may lose: (i) your original game nickname and/or ID (“Original ID”), (ii) your in-game progress, such as in-game levels and items, and (iii) any Virtual Goods and/or Virtual Goods (as defined under Sections 2.1, 2.2, and 2.3 of these Terms of Service) that you (a) earned via the Service and/or (b) purchased from the Company, any of its applicable licensee of the Service, or applicable Third-Party Marketplace accessible from that account at the time of the termination. You may not be entitled to any refunds or compensation unless specifically authorized by the Company, Provider, or applicable Third-Party Marketplace. The obligation set forth in this section 6.2 shall survive any termination or expiration of your account or your use of the Service.\n \n 6.3 Please note that the Company may remove your Original ID without notice if you do not use the Service, such as logging-in to your game account or playing the game, for 365 consecutive days (1 year). If this occurs, you may not use the Original ID and instead, the Company may provide you with following options once you use the Service again: (i) a new in-game nickname and/or ID, or (ii) a chance to create a new in-game nickname and/or ID. The obligation set forth in this section 6.3 shall survive any termination or expiration of your account or your use of the Service.\n \n 7. CHANGE TO SERVICE\n \n 7.1 The Company reserves the right, in its sole discretion, to change, suspend, discontinue, or terminate the Service or any and all content, applications, and other items used or contained in the Service at any time and from time to time and without notice.\n \n 8. Using the Service \n \n 8.1 By installing or using the Service, you agree that you have read, understand, and agree to the terms of these Terms of Service, Nimble Neuron End User License Agreement, Nimble Neuron Privacy Policy, and any other rules that are applicable to the Service. IF YOU DO NOT AGREE TO THE TERMS OF THESE TERMS OF SERVICE, END USER LICENSE AGREEMENT, PRIVACY POLICY, AND/OR ANY OTHER RULES THAT ARE APPLICABLE TO THE SERVICE, PLEASE DO NOT INSTALL OR USE THE SERVICE. \n \n 9. THIRD PARTY INTELLECTUAL PROPERTY\n \n 9.1 The Company respects others’ intellectual property rights and holds its users to the same standards. Accordingly, you may not upload, post, send or transmit to or through the Service any materials that violate third party intellectual property rights. The Company reserves the right, in its sole discretion, to remove or disable access to any infringing material and to terminate the accounts of repeat infringers in accordance with the Digital Millennium Copyright Act of the United States and other applicable law. In addition, the Company reserves the right in its sole discretion to terminate, limit or suspend the accounts of users who are infringe any third-party rights at any time, irrespective of whether such users are repeat infringers for purposes of applicable law.\n \n 10. WARRANTIES AND LIMITATIONS\n \n 10.1 YOU EXPRESSLY AGREE THAT THE USE OF THE SERVICE IS AT YOUR SOLE RISK. THE SERVICE, INCLUDING ANY CONTENT, APPLICATIONS, OR MATERIALS PROVIDED THEREUNDER, ARE PROVIDED ON AN “AS IS” BASIS AND THE COMPANY HEREBY EXPRESSLY DISCLAIMS ALL REPRESENTATIONS AND WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WITHOUT LIMITING THE FOREGOING: (I) THE COMPANY CANNOT AND DOES NOT GUARANTEE ANY SPECIFIC RESULTS FROM THE USE OF THE SERVICE AND THE COMPANY SPECIFICALLY DOES NOT MAKE ANY CLAIM OR WARRANTY THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE AND ASSUMES NO RESPONSIBILITY FOR ANY ERROR, OMISSION, INTERRUPTION, DELETION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMMUNICATIONS LINE FAILURE, THEFT OR DESTRUCTION OR UNAUTHORIZED ACCESS TO, OR ALTERATION OF, ANY CONTENT OR ANY USER COMMUNICATION OR MESSAGE; (II) THE COMPANY DOES NOT REPRESENT OR WARRANT THAT APPLICATIONS, CONTENT, DATA, OR MATERIALS ON THE SERVICE ARE ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE OR THAT THE SERVICE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS AND, ACCORDINGLY, YOU SHOULD ALWAYS EXERCISE CAUTION IN THE USE AND DOWNLOADING OR USE OF ANY SUCH APPLICATIONS, CONTENT, DATA OR MATERIALS AND USE INDUSTRY-RECOGNIZED SOFTWARE TO DETECT AND DISABLE OR BLOCK VIRUSES, MALWARE AND OTHER MALICIOUS CODE; (III) YOU UNDERSTAND AND AGREE THAT YOU DOWNLOAD, ACCESS OR OTHERWISE OBTAIN APPLICATIONS, CONTENT, DATA AND MATERIALS FROM THE SERVICE AT YOUR OWN DISCRETION AND RISK AND THAT YOU ARE SOLELY RESPONSIBLE FOR YOUR USE THEREOF AND ANY DAMAGES TO YOUR COMPUTER SYSTEM AND/OR MOBILE DEVICE, ANY LOSS OF DATA, AND ANY OTHER DAMAGE OR HARM OF ANY KIND THAT MAY RESULT THEREFROM; (IV) THE COMPANY IS NOT RESPONSIBLE FOR ANY PROBLEMS OR TECHNICAL MALFUNCTION OF ANY MOBILE PHONE OR MOBILE DEVICE, TELEPHONE NETWORK OR LINES, COMPUTER ONLINE SYSTEMS, SERVERS OR PROVIDERS, COMPUTER EQUIPMENT, SOFTWARE, FAILURE OF ANY EMAIL DUE TO TECHNICAL PROBLEMS OR TRAFFIC CONGESTION ON THE INTERNET OR ON ANY OF THE SERVICE OR COMBINATION THEREOF, INCLUDING ANY INJURY OR DAMAGE TO USERS OR TO ANY PERSON’S MOBILE PHONE OR MOBILE DEVICE OR COMPUTER RELATED TO OR RESULTING FROM PARTICIPATION OR DOWNLOADING MATERIALS IN CONNECTION WITH THE SERVICE; (V) UNDER NO CIRCUMSTANCES WILL THE COMPANY BE RESPONSIBLE FOR ANY LOSS OR DAMAGE, INCLUDING PERSONAL INJURY OR DEATH, RESULTING FROM USE OF THE SERVICE, FROM ANY USER CONTENT POSTED ON OR THROUGH THE SERVICE; AND (VI) THE COMPANY IS NOT RESPONSIBLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OF ANY USER OF THE SERVICE. TO THE EXTENT APPLICABLE LAW DOES NOT ALLOW THE WARRANTIES AND LIMITATIONS AS SET FORTH ABOVE, SOME OR ALL OF THE ABOVE WARRANTIES AND LIMITATIONS MAY NOT APPLY TO YOU, IN WHICH CASE ALL WARRANTIES WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW. THE WARRANTIES AND LIMITATIONS SET FORTH IN THIS SECTION 10.1 SHALL SURVIVE ANY TERMINATION OR EXPIRATION OF YOUR REGISTERED USER ACCOUNT OR YOUR USE OF THE SERVICE.\n \n 11. LIMITATION OF LIABILITY\n \n 11.1 UNDER THE CONDITION THAT ANY DAMAGE OR LOSS WAS NOT CAUSED BY GROSS NEGLIGENCE OR INTENTIONAL ACT BY THE COMPANY OR ANY OF ITS APPLICABLE LICENSEE OF THE SERVICE, IN NO EVENT WILL THE COMPANY OR ITS LICENSORS, ITS AFFILIATES, OR ITS AND THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, SUCCESSORS, ASSIGNEES OR PROVIDERS BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES, INCLUDING DAMAGES FOR LOST PROFITS OR LOSS OF DATA, ARISING OUT OF OR RESULTING FROM, YOUR USE OF THE SERVICE. NOTWITHSTANDING ANYTHING TO THE CONTRARY SET FORTH HEREIN, THE COMPANY OR ANY OF ITS APPLICABLE LICENSEE OF THE SERVICE’S AGGREGATE LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER, REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE ACTUAL PRICE PAID FOR THE SERVICE AS LONG AS THE DAMAGE WAS NOT CAUSED BY INTENTIONAL ACTS OR GROSS NEGLIGENCE BY THE COMPANY. IF YOU HAVE NOT PAID ANY AMOUNT TO THE COMPANY OR ANY OF ITS APPLICABLE LICENSEE OF THE SERVICE DURING SUCH PERIOD, YOU UNDERSTAND AND AGREE THAT YOUR SOLE REMEDY FOR ANY DISPUTE WITH THE COMPANY OR ANY OF ITS APPLICABLE LICENSEE OF THE SERVICE IS TO STOP USING THE SERVICE AND TO CANCEL YOUR ACCOUNT. TO THE EXTENT APPLICABLE LAW DOES NOT ALLOW THE LIMITATIONS OF LIABILITY OF DAMAGES AS SET FORTH ABOVE, SOME OR ALL OF THE LIMITATIONS OF LIABILITY MAY NOT APPLY TO YOU, IN WHICH CASE THE COMPANY OR ANY OF ITS APPLICABLE LICENSEE OF THE SERVICE’S LIABILITY TO YOU WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW. THE LIMITATIONS OF LIABILITY SET FORTH IN THIS SECTION 11.1 SHALL SURVIVE ANY TERMINATION OR EXPIRATION OF YOUR REGISTERED USER ACCOUNT OR YOUR USE OF THE SERVICE. \n \n 12. FORCE MAJEURE\n \n 12.1 The Company shall not be liable for any delay or failure to perform resulting from causes outside the reasonable control of the Company, including without limitation any failure to perform hereunder due to unforeseen circumstances or cause beyond the Company’s control such as acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, earthquakes, network infrastructure failures, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials.\n \n 13. GOVERNING LAW\n \n 13.1 Any dispute between you and the Company regarding these Terms of Service will be governed and construed in accordance with the laws of the Republic of Korea without regard to conflict of law principles or the United Nations Convention on the International Sale of Goods. You agree to any action to enforce, interpret, initiate any suit, action or proceedings that may arise out or, or in connection with these Terms of Service shall be brought in the courts located in the Republic of Korea, which it shall have the exclusive jurisdiction and venue. You expressly consent to the courts in the Republic of Koreas as the exclusive venue and hereby further irrevocably waive any claim that the courts in the Republic of Korea lacks jurisdiction over it and/or such court is an inconvenient forum. The obligation set forth in this section 13.1 shall survive any termination or expiration of your account or your use of the Service.\n \n 14. INDEMNITY\n \n 14.1 You agree to indemnify and
 개인정보동의┃Privacy Policy
@@ -8496,6 +8839,8 @@ GameSetting/PreventMinimapMove┃鼠标超过一定时间未在迷你地图上�
 AutoWeaponSkills┃自动升级武器技能
 GameSetting/EnableMinimapMove┃允许在迷你地图上点击右键移动。
 EnableMinimapMove┃允许迷你地图移动
+전장 HUD 자동 전환┃自动转换战场 HUD
+GameSetting/BattleZoneHUDAutoReplace┃进入战场预选地及战场时，将自动转换为战场HUD。
 자동 공격 설정┃设置自动攻击
 GameSetting/AutoAttack┃不适用 : 未下达攻击命令时， 不攻击附近的目标。\n标准 : 攻击附近的目标。除'始终'的条件外，制作采集后也不进行攻击。\n始终 : 攻击附近的目标。停止、休息、确认箱子、操作传送箱子时不进行攻击。
 #Standard┃标准
@@ -8592,9 +8937,20 @@ Vivox점검팝업┃语音聊天出现问题，目前无法使用。
 지역 설명┃所在区域
 금지구역┃禁止区域
 금지구역 설명┃到指定下一个禁区为止所剩余的时间
+전장규칙안내HUD 전환버튼┃转为战场 UI
+기존UI 전환버튼┃转为基础 UI
+전장규칙안내HUD 전장예정지 제목┃战场预选地
+전장규칙안내HUD 전장예정지 설명┃此区域将于白天转为战场。
+전장규칙안내HUD 전장활성화 제목┃激活战场
+전장규칙안내HUD 전장활성화 설명┃攻击战场内的穿梭机可以获得镇静剂。\n逃离或者闯入战场时，将立即死亡且无法复活。\n
+전장규칙안내HUD 전장보상 제목┃领取战场奖励
+전장규칙안내HUD 전장보상 설명┃恭喜您在战场中取得了胜利。\n请点击画面中的领取奖励按钮或者安全监控台选择奖励吧。
 전장규칙안내HUD 전장보상 수령 버튼┃领取奖励
 전장규칙안내HUD 전장보상 수령 완료 본인┃本人领取
 전장규칙안내HUD 전장보상 수령 완료 팀원┃队友领取
+아이템 분해┃分解
+아이템 분해 팝업┃分解时获得
+제한시간 내에 보상 아이템을 선택하세요.┃请在限定时间内选择奖励物品。
 전장 참여 팀원┃战场套装
 전장 참여 팀원 설명┃持有战场套装的实验体参与战场时可以获得「战场急速再生」及「战场标识」效果。\n战场中胜利的队伍会解除战场套装。
 AreaAttributes/GroupName/1┃战场 - 加速
@@ -8603,11 +8959,11 @@ AreaAttributes/GroupName/2┃战场 - 狂暴
 AreaAttributes/GroupDesc/2┃此战场内增加最终效果伤害和吸血 - 所有伤害效果。
 AreaAttributes/GroupName/3┃战场 - 保护
 AreaAttributes/GroupDesc/3┃此战场内持续一段非战斗状态时可以获得护盾。
-BattleZoneDebuffGaugeTooltip_Title┃神经暴走仪
+BattleZoneDebuffGaugeTooltip_Title┃神经暴走值
 BattleZoneDebuffGaugeTooltip_Desc┃战场中累积的有害物质数值。\n实验体将在达到上限值的一段时间后死亡。
 BattleZoneRewardGaugeTooltip_Title┃领取战场奖励
 BattleZoneRewardGaugeTooltip_Desc┃请前往安全监控领取奖励。
-신경안정제셔틀충전중┃蓄能中
+신경안정제셔틀충전중┃充能中
 생존자 수┃幸存者数
 생존자 수 설명┃现在剩余的幸存者数
 전장 생존자 수┃战场幸存者数
@@ -9037,6 +9393,10 @@ WickelineUI_ReadyTooltip┃维克莱恩博士开始出动。
 위클라인죽음어나운스┃{0}杀死了维克莱恩博士。
 위클라인이동┃发现维克莱恩博士在{0}。
 위클라인┃维克莱恩博士
+전장예정노티┃战场前1分钟
+전장예정┃1分钟后将激活{0}战场。
+전장생성노티┃战场开始
+전장생성┃{0}战场已激活。
 GameAnnounce-전장예정지선정┃战场位置已选定。将在下一阶段激活战场。
 GameAnnounce-전장시작예고┃战场即将激活。
 GameAnnounce-전장시작┃战场已激活。请在{0}秒内加入战场。
@@ -9081,7 +9441,7 @@ Ping/TransferConsole/Active┃{0}({1}) : 传送装置激活位置<color=#C2FFA0>
 오브젝트슬롯전송콘솔/활성화┃激活
 오브젝트타이머/생성장소┃生成地点
 Ping/Order/Where┃去哪里?
-Ping/Order/LetsJoin/Chatting┃集合！
+Ping/Order/LetsJoin┃集合！
 Ping/Order/Wait┃等一下!
 Ping/Order/Roger┃知道了
 Ping/Order/NeedFood┃需要食物
@@ -9232,7 +9592,7 @@ ToastMessage/CanNotResurrectionAlreadyAlive┃该队友已完成再生。
 {0}(을)를 처치┃猎杀{0}。
 {0}에서 탐색┃探索{0}
 {0}에서 채집┃从{0}收集
-{0} 상자에서 탐색┃從{0} 箱子中搜索
+{0} 상자에서 탐색┃从{0} 箱子中搜索
 DAYS┃第{0}天
 {0}에서 찾을 재료┃在{0}中可以找到的材料
 무기 스킬┃武器技能
@@ -9517,6 +9877,7 @@ ResistanceHpHealedDecrease┃治愈减少效果抵御
 Stasis┃凝滞
 Uninteractionable┃无法进行协同作业
 Frozen┃冻结
+Drowse┃昏睡
 무기 숙련도┃武器熟练度
 무기 숙련도 설명┃武器的制作和使用增加的能力值。\n根据实验体和武器装备的不同，增加数值会稍有差异。
 숙련도 레벨 선택┃选择熟练度等级
@@ -10123,6 +10484,7 @@ Product/Name/BATTLE_PASS/4┃[赛季S4] ER通行证
 Product/Name/BATTLE_PASS/5┃[赛季S5] ER通行证
 Product/Name/BATTLE_PASS/6┃[赛季S6] ER通行证
 Product/Name/BATTLE_PASS/7┃[赛季S7] ER通行证
+Product/Name/BATTLE_PASS/8┃[赛季S8] ER通行证
 Product/Name/BATTLE_PASS_POINT┃购买ER积分
 Product/Name/BATTLE_PASS┃[赛季S4] ER通行证
 Product/Name/BATTLE_PASS_BUNDLE┃[赛季S4] ER Plus
@@ -10136,6 +10498,9 @@ Product/Name/BATTLE_PASS_UPGRADE_S6┃[赛季S6] ER通行证升级
 Product/Name/BATTLE_PASS_S7┃[赛季S7] ER通行证
 Product/Name/BATTLE_PASS_BUNDLE_S7┃[赛季S7] ER Plus 
 Product/Name/BATTLE_PASS_UPGRADE_S7┃[赛季S7] ER通行证升级
+Product/Name/BATTLE_PASS_S8┃[赛季S8] ER通行证
+Product/Name/BATTLE_PASS_BUNDLE_S8┃[赛季S8] ER Plus 
+Product/Name/BATTLE_PASS_UPGRADE_S8┃[赛季S8] ER通行证升级
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>ER通行证</size></color>\n<size=14>[不支持退款]</size>\n\n购买ER通行证，可以在玩游戏的同时获得<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n 如果想要加快成长的速度，可以通过购买ER积分来实现。
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[不支持退款]</size>\n\nER Plus是包含ER通行证与增加<color=#ffdf72>19等级</color>的商品。\n<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n通过ER Plus升级增加的等级 \n如果超过通行证最高等级，<color=#f72323>差额将不予退还。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE┃通过ER通行证升级增加的等级\n如果超过通行证最高等级，差额将不予退还。
@@ -10148,6 +10513,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S6┃通过ER通行证升级增加的等级\n如�
 Shop/Desc/BATTLE_PASS_S7┃<color=#ffdf72><size=32>ER通行证</size></color>\n<size=14>[不支持退款]</size>\n\n购买ER通行证，可以在玩游戏的同时获得<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n 如果想要加快成长的速度，可以通过购买ER积分来实现。
 Shop/Desc/BATTLE_PASS_BUNDLE_S7┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[不支持退款]</size>\n\nER Plus是包含ER通行证与增加<color=#ffdf72>19等级</color>的商品。\n<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n通过ER Plus升级增加的等级 \n如果超过通行证最高等级，<color=#f72323>差额将不予退还。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE_S7┃通过ER通行证升级增加的等级\n如果超过通行证最高等级，差额将不予退还。
+Shop/Desc/BATTLE_PASS_S8┃<color=#ffdf72><size=32>ER通行证</size></color>\n<size=14>[不支持退款]</size>\n\n购买ER通行证，可以在玩游戏的同时获得<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n 如果想要加快成长的速度，可以通过购买ER积分来实现。
+Shop/Desc/BATTLE_PASS_BUNDLE_S8┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[不支持退款]</size>\n\nER Plus是包含ER通行证与增加<color=#ffdf72>19等级</color>的商品。\n<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n通过ER Plus升级增加的等级 \n如果超过通行证最高等级，<color=#f72323>差额将不予退还。</color> 
+Shop/Desc/BATTLE_PASS_UPGRADE_S8┃通过ER通行证升级增加的等级\n如果超过通行证最高等级，差额将不予退还。
 Shop/Desc/BATTLE_PASS_ACTIVE_CHANGE┃确定要激活选定的赛季吗？ \n现已激活的赛季将被禁用 。\n<size=18><color=#8C8C8C>请注意！购买后立即激活，无法取消！</color></size>
 Shop/Desc/BATTLE_PASS_POINT┃购买ER积分可以提升当前激活中的赛季级别。
 획득 가능 보상┃可获取奖励
@@ -10171,7 +10539,7 @@ EP 토큰 상점 이동 안내 문구┃恭喜你达到100级。\n当已激活�
 시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃赛季包S8
 시즌 5팩┃赛季包S8
 시즌 패스 우편 제목┃赛季包S8 - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER通行证 : 霓虹> | 3位实验体 | 10款 皮肤 | 限定版商品
+시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER通行证 : 睡衣派对> | 3位实验体 | 10款 皮肤 | 限定版商品
 시즌 패스 타이틀 설명┃<size=32>- 赛季包S5 福利! -</size>
 시즌 패스 설명┃<size=20><color=#77bce0><ER通行证 : 狩猎> 含</color></size>\n永久收藏最新 <ER通行证 : 狩猎>\n\n<size=20><color=#77bce0>包含6位实验体, 11款 皮肤</color></size>\n提供赛季S5期间推出的所有实验体和皮肤。\n\n<size=20><color=#77bce0>限定版商品</color></size>\n限定版皮肤，限定版表情，限定版墓碑各一个，仅提供给购买赛季包S5的用户。
 시즌 패스 주의 사항┃◆ 购买<ER通行证 : 狩猎>，即返还1,190 NP。\n\n◆ 限定版皮肤，表情，墓碑将在2/17日维护后发送。\n\n◆ 赛季期间推出的活动皮肤不包含在赛季包。\n\n◆ 赛季包S5中包含的商品将在推出后发送至游戏内信箱。
@@ -10230,33 +10598,34 @@ GoodsMenu/Customize/2┃UI
 탈출 실패┃逃生失败
 탈출에 실패했습니다.┃逃生失败了。
 탈출 횟수┃逃生次数
-ToastMessage/Escape1001┃稍后前往逃生区。
+ToastMessage/Escape1001┃稍后前往旧港口。
 ToastMessage/Escape1002┃试图逃生的队友已死亡，移动被取消。
-ToastMessage/Escape1003┃前往逃生区需要持有<color=#D05EFF>逃生手环</color> 。
-ToastMessage/Escape1004┃卢米亚岛上的幸存者人数太少，无法移动至逃生区。
-ToastMessage/Escape1005┃无法移动至逃生区。
-ToastMessage/Escape1006┃已有队友移动至逃生区，无法移动。
-ToastMessage/Escape1007┃逃生区人员已满，无法移动。
-ToastMessage/Escape1008┃无法移动的逃生区。
-ToastMessage/Escape1009┃已有人进入逃生区，逃生物体使用已被取消。
-ToastMessage/Escape1010┃在逃生区无法使用无人机配送。
+ToastMessage/Escape1003┃前往旧港口需要持有<color=#D05EFF>逃生手环</color> 。
+ToastMessage/Escape1004┃卢米亚岛上的幸存者人数太少，无法移动至旧港口。
+ToastMessage/Escape1005┃无法移动至旧港口。
+ToastMessage/Escape1006┃已有队友移动至旧港口，无法移动。
+ToastMessage/Escape1007┃旧港口人员已满，无法移动。
+ToastMessage/Escape1008┃无法移动的旧港口。
+ToastMessage/Escape1009┃已有人进入旧港口，逃生物体使用已被取消。
+ToastMessage/Escape1010┃在旧港口无法使用无人机配送。
 ToastMessage/Escape1011┃无法安装的位置。
 ToastMessage/Escape1012┃系统未激活。剩余时间 <color=#C2FFA0>{0}秒</color>
 ToastMessage/Escape1013┃<color=#C4C4C4>系统密码</color>已用尽，无法再传唤。
 ToastMessage/Escape1014┃队友已拥有<color=#C4C4C4>系统密码</color>。
 ToastMessage/Escape1015┃仅限有队友死亡的情况下使用。
 ToastMessage/Escape1016┃仅限拥有<color=#C4C4C4>再生手环</color>的情况下使用。
-ToastMessage/Escape1017┃有人逃生成功，逃生区已关闭。
+ToastMessage/Escape1017┃有人逃生成功，旧港口已关闭。
 ToastMessage/Escape1018┃第3天后可以从死亡的队友身上获得再生手环。
 ToastMessage/Escape1019┃只有最后1支队伍幸存的情况下才能启动潜水艇控制台。
 ToastMessage/Escape1020┃首次制作逃生手环后30秒后可以移动。剩余时间：{0}秒
 ToastMessage/Escape1021┃因有队员正在参与战场而无法移动。
-탈출 지역 이동 전체 알림 메시지┃有人已移至逃生区，幸存者人数已减少。
-루미아 섬 1등 나와서 게임 종료┃卢米亚岛已诞生最终幸存者，逃生失败。
+탈출 지역 이동 전체 알림 메시지┃有人已移至旧港口，幸存者人数已减少。
+루미아 섬 1등 나와서 게임 종료┃卢米亚岛已诞生最终幸存者，1分钟后关闭旧港口。
 시스템암호코드 3개 모두 소진┃系统密码已用尽。
 팀원 사망 어나운스┃队友已死亡。可以从死亡的队友身上获取再生手环。
-10초 후 탈출 지역 폐쇄 알림┃有人成功逃生。10秒后关闭逃生区。
-듀스 2번째팀 입장 어나운스┃有人进入逃生区，稍后门将解锁。
+10초 후 탈출 지역 폐쇄 알림┃有人成功逃生。10秒后关闭旧港口。
+듀스 2번째팀 입장 어나운스┃有人进入旧港口，稍后门将解锁。
+escape/탈출 지역 오픈 전체 알림 메시지┃有人制作了逃生手环。30秒后将开启旧港口。
 RAF/시즌1/제목┃邀请新好友 第1季
 RAF/친구수┃{0} 位
 RAF/초대수┃已邀请人数：{0} 位
@@ -10532,6 +10901,8 @@ MMR시작조정/3번설명┃(匹配新手玩家)
 MMR시작조정/설문감사┃感谢您参与问卷调查。
 MMR시작조정/전송실패┃发送失败。
 훈련┃教程
+MainTab/Tutorial┃指南
+SubMenu/Guide┃游戏指南
 필수 튜토리얼 진행후 이용가능합니다.┃[卢米亚岛]训练进行后可使用。
 매칭 중에는 이용할 수 없습니다┃战斗期间不能使用。
 훈련 중에는 목표 아이템을 삭제할 수 없습니다.┃在训练期间，你不能删除目标项目。
@@ -10727,7 +11098,7 @@ Tutorial/Announce/핵심2번/03┃当白天和黑夜交替时，指定一个禁�
 Tutorial/Announce/핵심2번/04┃武器熟练度达到7时可以解锁武器技能。
 Tutorial/Announce/핵심3번/00┃路径是制作目标物品的指南。
 Tutorial/Announce/핵심3번/01┃目标物品上有一个黄色三角形。务必要确认。
-Tutorial/Announce/핵심3번/02┃探索当前区域可获取的目标物品。
+Tutorial/Announce/핵심3번/02┃打开当前区域箱子获得目标物品。
 Tutorial/Announce/핵심3번/03┃您已获得当前区域内所有可用的目标物品。
 Tutorial/Announce/핵심3번/04┃使用传送门，快速移动至目标区域。
 Tutorial/Announce/핵심3번/05┃在地图上选择工厂进行移动。
@@ -10740,14 +11111,6 @@ Tutorial/Announce/핵심3번/11┃没有黄色标记的物品非目标物品。�
 Tutorial/Announce/핵심공통/00┃为高强度训练已设置了复活功能。请留意您的体力，不要死掉。
 Tutorial/Announce/핵심공통/01┃通过摄取食物和休息可以恢复体力和耐力。
 Tutorial/Announce/핵심공통/02┃如果能活到最后，您就是胜利了。请确认剩余的幸存者数量。
-Tutorial/Announce/초급1번/00┃这是经常会使用到的控制设置，如果准备好了，请单击右侧按钮。
-Tutorial/Announce/초급1번/01┃右键单击鼠标移动。
-Tutorial/Announce/초급1번/02┃打开箱子。
-Tutorial/Announce/초급1번/03┃单击获取物品
-Tutorial/Announce/초급1번/04┃结合两种不同的材料来制作更好的物品。\n通过快捷键或单击即可进行。
-Tutorial/Announce/초급1번/05┃此处可以确认已装备的物品。
-Tutorial/Announce/초급1번/06┃请根据方向指标移动。
-Tutorial/Announce/초급1번/07┃尝试攻击野生动物。
 Tutorial/Announce/초급1번/08┃使用技能攻击。通过快捷键或单击即可进行。 
 Tutorial/Announce/초급1번/09┃从野生动物身上获取掉落物品。
 전체 채팅무시┃/muteall
@@ -10958,6 +11321,7 @@ Season1/Name┃<color=#CDCABD>冰雪</color>
 Season5/Name┃<color=#D1E7EF>狩猎</color>
 Season6/Name┃<color=#E1EE68>夏日</color>
 Season7/Name┃<color=#FF7AFF>霓虹</color>
+Season8/Name┃<color=#FF7AFF>睡衣派对</color>
 SeasonToBeAdded/Name┃新赛季\n D - {0}
 RankBoost/PopUp┃当前选择的实验体可以额外获得LP。\n获取额外LP：各实验体在前10局游戏中可以获得额外LP。\n\n修罗段位以下 +3\n灭钻段位以上 +2\n\n分段赛和晋级赛不适用。\n额外LP获取次数每赛季都会重置。
 RankBoost/TopUI┃获得额外LP{0}次
@@ -11457,20 +11821,20 @@ Trait/Tooltip/7110601┃自动摄取食物/饮料并增加攻击力/防御力。
 Trait/Tooltip/7200101┃自身技能生成的护盾和体力恢复量持续增加。\n因自身获得护盾或体力恢复效果的目标，增加攻击力。
 Trait/Tooltip/7200301┃使用终极技能时，会出现一个治愈装置跟随自身。\n治愈装置可以给自身和周围队友恢复部分已失体力。
 Trait/Tooltip/7200201┃使用终极技能时，会出现一个强化装置跟随自身。\n强化装置可以给自身和周围队友增加移动速度和技能增幅。
-Trait/Tooltip/7200401┃击杀敌人可以减少承受伤害，同时增加移向敌人实验体时的移动速度。
+Trait/Tooltip/7200401┃击杀敌人同时增加移向敌人实验体时的移动速度，根据击杀类型的不同可以恢复体力或者减少伤害。
 Trait/Tooltip/7200501┃使用个别技能给敌人实验体造成伤害时，赋予自身和周围队友护盾效果。
-Trait/Tooltip/7210101┃置目标于无法移动的状态时，增加目标的所有伤害。
+Trait/Tooltip/7210101┃置目标于无法移动的状态时，增加目标承受的所有伤害。
 Trait/Tooltip/7210201┃使用终极技能时，自身和周围队友都可以获得护盾。
 Trait/Tooltip/7210401┃每晚都可以获得治疗药剂。 \n如果物品格没有空位，药剂将掉落在地上。
 Trait/Tooltip/7210301┃夜晚视野增加 1.25m。
 Trait/Tooltip/7210501┃敌人触发自己设置的陷阱时，增加攻击力。 触发敌人设置的陷阱时，增加防御力。
 Trait/Tooltip/7210601┃以装备“木鞋”的状态开始游戏。 \n穿戴英雄级别以上的腿部装备时，增加非战斗移动速度。
-Trait/Tooltip/7210801┃大幅减少第一次使用传送装置时的费用，之后小幅减少使用传送装置的费用。
+Trait/Tooltip/7210801┃在传送装置以优惠价格购买物品。
 Trait/DetailTooltip/7000201┃{0}秒内造成普攻或个人伤害的技能（不包括武器和物品技能）命中同一个实验体{1}次时\n额外造成（级别*{2}）的真实伤害，并降低目标防御力（级别*{4}）%，持续{3}秒。 （冷却 {5}秒）\n适用普攻连击的武器，技能以及DOT伤害技能的连续伤害只适用一次。
 Trait/DetailTooltip/7000301┃使用武器技能时，增加攻击速度。 (冷却 {0}秒)\n(近攻) {1}秒间攻击速度增加({4} + 级别*{5})%。\n(远攻) {7}秒间攻击速度增加 ({10}+级别*{11})% 。
 Trait/DetailTooltip/7000401┃每次个别技能对敌方实验体造成伤害时，[吸血 - 所有伤害]增加 {0}%，最多可重叠 {1} 次。\n达到重叠上限时，技能增幅增加({5}+级别*{2})%。\n使用个别技能给多个目标造成伤害时，重叠数与造成伤害的目标数相同。\n[吸血 - 所有伤害]可持续{3}秒，并且每次个别技能造成伤害时更新。(冷却{4}秒)
 Trait/DetailTooltip/7000501┃使用技能命中实验体时，造成{1}(+级别*{2})(+攻击力*{3})(+技能增幅*{4})技能伤害。(冷却: {5}秒)\n在技能命中实验体{7}m范围内有其他实验体，电流会转移至最近的实验体，造成缩减了{8}%的技能伤害。\n如果没有转移的目标，造成额外技能伤害。\n无可转移电流的实验体时，造成 {6}%额外技能伤害。\n每次使用个别技能给敌人实验体造成伤害时，冷却缩减{9}秒。
-Trait/DetailTooltip/7000601┃进入战斗状态后，每{0}秒或是使用普攻给敌人实验体造成个别伤害时获得叠层。 \n({11})最多可以累积{1}叠层，每叠层获得({2}+级别*{3})%攻击速度。\n达到叠层上限时额外增加({4}+级别*{5})%普攻增幅。\n({12}) 最多可以累积{1}叠层，每叠层获得({7}+级别*{8})%攻击速度。\n达到叠层上限时额外增加({9}+级别*{10})%普攻增幅。\n\n解除战斗状态时，所有叠层将消失。
+Trait/DetailTooltip/7000601┃进入战斗状态后，每{0}秒或是使用普攻给敌人实验体造成个别伤害时获得叠层。 \n({11})最多可以累积{1}叠层，每叠层获得({2}+级别*{3})%攻击速度。\n达到叠层上限时额外增加({4}+级别*{5})%普攻增幅。\n({12}) 最多可以累积{1}叠层，每叠层获得({7}+级别*{8})%攻击速度。\n达到叠层上限时额外增加({9}+级别*{10})%普攻增幅。\n\n解除战斗状态时，所有叠层将消失。(冷却 {13}秒)
 Trait/DetailTooltip/7010101┃防御穿透增加{0}%。
 Trait/DetailTooltip/7010501┃目标实验体的体力上限大于自身体力上限时，造成额外伤害。\n根据{0}% ~ {1}%的体力相差值，增加{2}% ~ {3}%的额外伤害。
 Trait/DetailTooltip/7010201┃安全区激活后，在安全区内对敌人造成的伤害增加 {0}%。
@@ -11491,7 +11855,7 @@ Trait/DetailTooltip/7110601┃体力低于{0}%时自动摄取食物，耐力低�
 Trait/DetailTooltip/7200101┃自身技能生成的护盾和体力恢复量持续增加{0}%。\n因自身获得护盾或体力恢复效果的目标在{2}秒间攻击力增加（级别*{3}）。 （冷却 {4}秒）\n不适用于通过休息、再生、吸血、食物获得的恢复效果。
 Trait/DetailTooltip/7200301┃使用终极技能时，会出现一个治愈装置，跟随自身{0}秒。\n治愈装置每秒给{1}m范围内的自身和队友恢复 ({2}+级别*{3})% 已失体力。 （冷却 {4}秒）\n治愈装置效果重叠多次时，所有装置的治愈效果变为 {5}%。
 Trait/DetailTooltip/7200201┃使用终极技能时，会出现一个强化装置，跟随自身{0}秒。\n强化装置每秒给{1}m范围内的自身和队友增加移动速度({2}+{3}*级别)%， 增加技能增幅 ({4}+{5}*级别)% 。(冷却 {6}秒)\n强化装置效果无法叠加。
-Trait/DetailTooltip/7200401┃击杀实验体和阿尔法、奥米加、伽玛、维克莱恩时， {0}秒间承受伤害减少{2}%，移向敌人实验体时的移动速度增加{1}%。增加的移动速度在{0}秒间逐渐复原。\n击杀野生动物仅适用一半的效果。(冷却:{3}秒)
+Trait/DetailTooltip/7200401┃击杀敌方时，根据已失体力恢复[{6}(+攻击力*{7})(+技能增幅*{8})]~[({9}(+攻击力*{10})(+技能增幅*{11})]的体力，同时移向敌人实验体时的移动速度逐渐增加至{1}%。\n击杀实验体和阿尔法、奥米加、伽玛、维克莱恩时，取消恢复体力的同时{0}秒间承受的伤害减少{2}%，增加移动速度{12}倍。(冷却:{3}秒)
 Trait/DetailTooltip/7200501┃使用个别技能给敌人实验体造成伤害时，自身和周围{0}m范围内的队友在{1}秒间获得持续的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n单人 : 护盾({6}+级别*{7})\n双人 : 护盾({8}+级别*{9})\n三人 : 护盾({10}+级别*{11})\n钴 : 护盾({12}+级别*{13})
 Trait/DetailTooltip/7210101┃置目标于无法移动状态时，{0}秒内目标所承受的所有伤害增加{1}%。（冷却{2}秒）
 Trait/DetailTooltip/7210201┃使用终极技能时，周围{0}m内的自身和队友在{1}秒间获得（级别*{2}）护盾。 （冷却 {3}秒）\n集结在应用1次后如{4}秒内重复应用，将减少{5}%应用值。
@@ -11499,7 +11863,7 @@ Trait/DetailTooltip/7210401┃每晚获得（{0} + 包括自身在内的幸存�
 Trait/DetailTooltip/7210301┃夜晚视野增加 1.25m。
 Trait/DetailTooltip/7210501┃敌人触发自己设置的陷阱时，攻击力在{0}秒间增加{1}%。 触发敌人设置的陷阱时，防御力在{2}秒间增加{3}%。  (冷却 {4}秒)
 Trait/DetailTooltip/7210601┃以装备' 木鞋'的状态开始游戏。 穿戴英雄和传说等级腿部装备时，非战斗移动速度增加{0}。
-Trait/DetailTooltip/7210801┃第一次使用传送装置减少{0}荣誉值。\n后续使用传送装置的费用减少{1}荣誉值。
+Trait/DetailTooltip/7210801┃传送装置费用减少{0}荣誉值。
 Trait/StatTooltip/7000201┃{0}秒内造成普攻或个人伤害的技能（不包括武器和物品技能）命中同一个实验体{1}次时\n额外造成（级别*{2}）的真实伤害，并降低目标防御力（级别*{4}）%，持续{3}秒。 （冷却 {5}秒）\n适用普攻连击的武器，技能以及DOT伤害技能的连续伤害只适用一次。\n\n造成额外伤害的总次数 : {6}\n额外伤害总量 : {7}
 Trait/StatTooltip/7000301┃使用武器技能时，增加攻击速度。(冷却 {0}秒)\n(近攻) {1}秒间攻击速度增加({4} + 级别*{5})%。\n(远攻) {7}秒间攻击速度增加 ({10}+级别*{11})% 。\n\n攻击力总增加量 : {14}\n攻击速度总增加量 : {15}
 Trait/StatTooltip/7000401┃每次个别技能对敌方实验体造成伤害时，[吸血 - 所有伤害]增加 {0}%，最多可重叠 {1} 次。\n达到重叠上限时，技能增幅增加（({5}+级别*{2}）%。\n使用个别技能给多个目标造成伤害时，重叠数与造成伤害的目标数相同。\n[吸血 - 所有伤害]可持续 {3}秒，并且每次个别技能造成伤害时更新。 (冷却 {4}秒)\n\n体力恢复总量 : {6}
@@ -11525,7 +11889,7 @@ Trait/StatTooltip/7110601┃体力低于{0}%时自动摄取食物，耐力低于
 Trait/StatTooltip/7200101┃自身技能生成的护盾和体力恢复量持续增加{0}%。\n因自身获得护盾或体力恢复效果的目标在{2}秒钟内攻击力增加(级别*{3})。 (冷却 {4}秒)\n不适用于通过休息、再生、吸血、食物获得的恢复效果。\n\n体力恢复总量 : {5}\n护盾增加总量 : {6}\n增加队友攻击力次数 : {7}
 Trait/StatTooltip/7200301┃使用终极技能时，会出现一个治愈装置，跟随自身{0}秒。\n治愈装置每秒给{1}m范围内的自身和队友恢复 ({2}+级别*{3})% 已失体力。 （冷却 {4}秒）\n治愈装置效果重叠多次时，所有装置的治愈效果变为 {5}%。\n\n体力恢复总量 : {6}
 Trait/StatTooltip/7200201┃使用终极技能时，会出现一个强化装置，跟随自身{0}秒。\n强化装置每秒给{1}m范围内的自身和队友增加移动速度({2}+{3}*级别)%， 技能增幅增幅 ({4}+{5}*级别)% 。(冷却 {6}秒)\n强化装置效果无法叠加。\n\n增加队友移动速度&技能增幅的时间 : {8}秒
-Trait/StatTooltip/7200401┃击杀实验体和阿尔法、奥米加、伽玛、维克莱恩时，{0}秒间承受伤害减少{2}%，移向敌人实验体时的移动速度增加{1}%。增加的移动速度在{0}秒间逐渐复原。\n击杀野生动物仅适用一半的效果。(冷却:{3}秒)\n\n移速增加效果激活的次数 : {4}\n移速增加(强化)效果激活的次数 : {5}
+Trait/StatTooltip/7200401┃击杀敌方时，根据已失体力恢复 {6}~{7}的体力，同时移向敌人实验体时的移动速度逐渐增加至{1}%。\n击杀实验体和阿尔法、奥米加、伽玛、维克莱恩时，取消恢复体力的同时{0}秒间承受的伤害减少{2}%，移动速度数值最多增至{12}倍。(冷却:{3}秒)\n\n移速增加效果激活的次数 : {4}\n移速增加(强化)效果激活的次数 : {5}
 Trait/StatTooltip/7200501┃使用个别技能给敌人实验体造成伤害时，自身和周围{0}m范围内的队友在{1}秒间获得持续的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n单人 : 护盾({6}+级别*{7})\n双人 : 护盾({8}+级别*{9})\n三人 : 护盾({10}+级别*{11})\n钴 : 护盾({12}+级别*{13})\n\n减少的伤害量 : {14}\n启动次数 : {15}
 Trait/StatTooltip/7210101┃置目标于无法移动状态时，{0}秒内目标所承受的所有伤害增加{1}%。（冷却{2}秒）\n\n增加伤害总量 : {3}
 Trait/StatTooltip/7210201┃使用终极技能时，周围{0}m内的自身和队友在{1}秒间获得（级别*{2}）护盾。 （冷却 {3}秒）\n集结在应用1次后如{4}秒内重复应用，将减少{5}%应用值。\n\n护盾适用总量 : {6}
@@ -11533,7 +11897,7 @@ Trait/StatTooltip/7210401┃每晚获得（{0} + 包括自身在内的幸存队�
 Trait/StatTooltip/7210301┃夜晚视野增加1.25m。
 Trait/StatTooltip/7210501┃敌人触发自己设置的陷阱时，攻击力在{0}秒间增加{1}%。 触发敌人设置的陷阱时，防御力在{2}秒间增加{3}%。  (冷却 {4}秒)\n\n增加攻击力总次数 : {6}\n增加防御力总次数 : {7}
 Trait/StatTooltip/7210601┃以装备木鞋的状态开始游戏。穿戴英雄和传说等级腿部装备时，增加非战斗移动速度。
-Trait/StatTooltip/7210801┃第一次使用传送装置需要消耗{0}荣誉值。\n后续使用转传送装置的费用减少{1}荣誉值。\n\n已获得的荣誉值优惠：{2}
+Trait/StatTooltip/7210801┃传送装置的费用减少{0}荣誉值。\n\n已获得的荣誉值优惠：{2}
 CharacterState/Group/Name/7000210┃绝对武力
 CharacterState/Group/Desc/7000210┃使用普攻或造成个别伤害的技能多次命中同一目标时\n对目标造成额外真实伤害并降低目标防御力。
 CharacterState/Group/Name/7000220┃绝对武力
@@ -11637,13 +12001,13 @@ CharacterState/Group/Desc/7200230┃增加移动速度，技能增幅。
 CharacterState/Group/Name/7200210┃强化装置
 CharacterState/Group/Desc/7200210┃冷却中。
 CharacterState/Group/Name/7200400┃追击者
-CharacterState/Group/Desc/7200400┃增加移动速度、伤害减少。
+CharacterState/Group/Desc/7200400┃增加移动速度。
 CharacterState/Group/Name/7200410┃追击者
 CharacterState/Group/Desc/7200410┃增加移动速度、伤害减少。
 CharacterState/Group/Name/7200450┃追击者
 CharacterState/Group/Desc/7200450┃冷却中。
 CharacterState/Group/Name/7200460┃追击者
-CharacterState/Group/Desc/7200460┃击杀敌人时，增加移向敌人时的移动速度并减少承受伤害。
+CharacterState/Group/Desc/7200460┃击杀敌人同时增加移向敌人实验体时的移动速度，根据击杀类型的不同可以恢复体力或者减少伤害。
 CharacterState/Group/Name/7200500┃无私
 CharacterState/Group/Desc/7200500┃获得护盾。
 CharacterState/Group/Name/7200510┃无私
@@ -12130,21 +12494,21 @@ gameTip_Desc_10170_1┃选择潜能可以增加实验体新的能力或者获得
 gameTip_Title_10200_1┃战场
 gameTip_Desc_10200_1┃战场是一个用于交战的特殊区域！战场的引入可以收集实验体在极限环境中的数据。\n\n战场内的环境非常特殊。可以增加移动速度、增强吸血能力或者获得护盾。\n\n只有战场内最终的胜利者才能获得特别的奖励！
 gameTip_Title_10200_2┃战场节奏
-gameTip_Desc_10200_2┃第一天夜晚/第二天夜晚，指定禁区中的部分区域将被选定为战场。\n\n被选定为战场的区域将于次日转为战场。\n\n应用于战场的特殊环境可以在地图安全装置的位置中确认战场标记。\n
+gameTip_Desc_10200_2┃第一天夜晚/第二天夜晚，指定禁区中的部分区域将被选定为战场预选地。\n\n战场预选地将于次日转为战场。\n\n战场内的特殊环境可以通过地图中安全装置位置的战场标记来确认。
 gameTip_Title_10200_3┃战场参与方法
-gameTip_Desc_10200_3┃战场开始时会通知该区域的玩家参与战场。\n\n参与战场的实验体死亡后，可在很短的时间内复活。\n\n但是，复活后将无法再次进入战场！\n\n闯入或者脱离战场的实验体将立即死亡且无法复活。
+gameTip_Desc_10200_3┃战场开始时会通知该区域的玩家参与战场。\n\n参与战场的实验体死亡后，可在很短的时间内复活。\n\n但是，复活后将无法再次进入战场！\n\n闯入或者逃离战场的实验体将立即死亡且无法复活。
 gameTip_Title_10200_4┃战场奖励
 gameTip_Desc_10200_4┃战场内胜利的队伍可以通过安全监控或者专用HUD购买强大的技能装饰。\n\n参与战场的队伍越多，相应获得的奖励也就越好。\n\n每支队伍只能购买一次战场奖励，在选择时要注意这一点哦！
 gameTip_Title_10210_1┃战场系统
-gameTip_Desc_10210_1┃战场由以下四个系统构成。\n\n战场套装/战场标识/神经暴走仪/神经安定剂。\n\n各个系统间有机地联系在一起。
+gameTip_Desc_10210_1┃战场由以下四个系统构成。\n\n战场套装/战场标识/神经暴走值/镇静剂。\n\n各个系统间有机地联系在一起。
 gameTip_Title_10210_2┃战场套装
 gameTip_Desc_10210_2┃持有战场套装的实验体参与战场时，可以获得「战场急速再生」及「战场标识」效果。\n\n持有「战场急速再生」加益的实验体死亡时，可以在很短的时间内复活。\n\n战场内胜利的实验体将永久解除战场套装。
 gameTip_Title_10210_3┃战场标识
 gameTip_Desc_10210_3┃独特的战场环境会赋予参与战场实验体特殊的效果。\n\n战场参与者死亡时，将收回战场标识并用作胜利队伍购买奖励的货币。\n\n战场内不存在胜利队伍时，将永久解除收回的战场标识。
-gameTip_Title_10210_4┃神经暴走仪
-gameTip_Desc_10210_4┃战场内强化实验体能力的同时会累积神经暴走仪。\n\n实验体将在神经暴走仪达到上限值的一段时间后立即死亡。\n\n神经暴走仪可以通过神经安定剂/击杀实验体/补充包恢复。
-gameTip_Title_10210_5┃神经安定剂装置
-gameTip_Desc_10210_5┃战场内载有神经安定剂的装置会沿着指定的路线循环。\n\n当该装置的体力为0时，将会释放安定剂，触碰安定剂时可以恢复神经暴走仪。\n\n释放神经安定剂的装置在经过一段时间蓄能后，将释放安定剂。
+gameTip_Title_10210_4┃神经暴走值
+gameTip_Desc_10210_4┃战场内，以强化实验体能力作为代价累积神经暴走值。\n\n实验体将在神经暴走值达到上限的一段时间后死亡。\n\n神经暴走值可以通过镇静剂/击杀实验体恢复。
+gameTip_Title_10210_5┃镇静剂穿梭机
+gameTip_Desc_10210_5┃战场内载有镇静剂的穿梭机会沿着指定的路线循环。\n\n当穿梭机的体力为0时，将会释放镇静剂，触碰镇静剂时可以恢复神经暴走值。\n\n释放镇静剂的穿梭机在经过一段时间充能后，将释放镇静剂。
 ServerError/1000┃发生未知错误，请重新开始游戏。
 ServerError/1001┃发生未知错误，请重新开始游戏。
 ServerError/1002┃发生未知错误，请重新开始游戏。
@@ -12367,6 +12731,9 @@ Trait/Name/7923101┃山鸣 I
 Trait/Name/7923102┃山鸣 II
 Trait/Name/7923103┃山鸣 III
 Trait/Name/7923002┃天坠
+Trait/Name/7923201┃超临界 I
+Trait/Name/7923202┃超临界 Il
+Trait/Name/7923203┃超临界 Ill
 Infusion/Special/Title/9000001┃怪异实验
 Trait/Name/7920301┃寄生虫 I
 Trait/Name/7920302┃寄生虫 Il
@@ -12408,7 +12775,7 @@ Trait/StatTooltip/7900803┃暴击率增加{0}%。
 Trait/StatTooltip/7920101┃自身的当前体力低于体力上限的{0}%时，增加防御力和所有伤害-吸血量。\n\n防御力增加: {1}\n所有伤害-吸血: {2}%
 Trait/StatTooltip/7920102┃自身的当前体力低于体力上限的{0}%时，增加防御力和所有伤害-吸血量。\n\n防御力增加: {1}\n所有伤害-吸血: {2}%
 Trait/StatTooltip/7920103┃自身的当前体力低于体力上限的{0}%时，增加防御力和所有伤害-吸血量。\n\n防御力增加: {1}\n所有伤害-吸血: {2}%
-Trait/StatTooltip/7920201┃自身的当前体力低于体力上限的{0}%时，增加暴击率和暴击伤害量。\n\n增加暴击率：{1}%\n增加攻击速度：{2}%
+Trait/StatTooltip/7920201┃自身的当前体力低于体力上限的{0}%时，增加暴击率和攻击速度。\n\n增加暴击率：{1}%\n增加攻击速度：{2}%
 Trait/StatTooltip/7920202┃自身的当前体力低于体力上限的{0}%时，增加暴击率和暴击伤害量。\n\n增加暴击率：{1}%\n增加攻击速度：{2}%
 Trait/StatTooltip/7920203┃自身的当前体力低于体力上限的{0}%时，增加暴击率和暴击伤害量。\n\n增加暴击率：{1}%\n增加攻击速度：{2}%
 Trait/StatTooltip/7920301┃用技能给敌人实验体造成伤害时，根据目标当前体力造成一定比例的真实伤害并恢复部分自身的当前体力。\n(冷却：{0}秒)\n\n(近攻) 当前体力的{1}%伤害，当前体力{2}%恢复\n(远攻) 当前体力的{3}%伤害，当前体力{4}%恢复\n\n当前适用的伤害比例: {5}%\n当前适用的体力恢复比例: {6}%
@@ -12804,9 +13171,11 @@ Item/Name/705605┃水星权杖
 Item/Name/705607┃图腾
 Item/Name/705606┃方舟反应炉
 Item/Name/705608┃守护之眼
+Item/Name/705609┃普赛克之刃
+Item/Name/705610┃英雄印记
 Item/Name/705611┃E.M.O.T.E
-Item/Name/705612┃克拉达戒指 MK2
-Item/Name/705613┃方舟反应炉 MK2
+Item/Name/705612┃克拉达戒指 Mk2
+Item/Name/705613┃方舟反应炉 Mk2
 Infusion/Item/705504┃极光陀螺 Mk2
 Infusion/Item/705601┃微型太阳系统
 Infusion/Item/705602┃钴蓝
@@ -12844,6 +13213,10 @@ Item/Skills/6507001┃系绳
 Item/Skills/6507001/Name┃<color=yellow>系绳</color>
 Item/Skills/6507001/Body┃连接{0}m内距离最近的队友，{1}秒间获得<color=#688A08>体力上限的{2}%</color> + {3}护盾，移动速度增加{4}%。\n\n代替连接的队友承受{5}%的最终伤害。\n\n冷却 : {7}秒
 Item/Skills/6507001/Desc┃连接{0}m内距离最近的队友，{1}秒间获得<color=#688A08>体力上限的{2}%</color> + \n<color=#93C9E7>防御力的{3}%</color>护盾，移动速度增加{4}%。\n\n代替连接的队友承受{5}%的最终伤害。\n\n冷却 : {7}秒
+Item/Skills/6507002┃系绳
+Item/Skills/6507002/Name┃<color=yellow>系绳</color>
+Item/Skills/6507002/Body┃连接{0}m内距离最近的队友，{1}秒间获得<color=#688A08>体力上限的{2}%</color> + {3}护盾，移动速度增加{4}%。\n\n代替连接的队友承受{5}%的最终伤害。\n\n冷却 : {7}秒
+Item/Skills/6507002/Desc┃连接{0}m内距离最近的队友，{1}秒间获得<color=#688A08>体力上限的{2}%</color> + \n<color=#93C9E7>防御力的{3}%</color>护盾，移动速度增加{4}%。\n\n代替连接的队友承受{5}%的最终伤害。\n\n冷却 : {7}秒
 Item/Skills/6508000┃祈愿
 Item/Skills/6508001┃祈愿
 Item/Skills/6508001/Name┃<color=yellow>祈愿</color>
@@ -12854,6 +13227,10 @@ Item/Skills/6509001┃脉冲
 Item/Skills/6509001/Name┃<color=yellow>脉冲</color>
 Item/Skills/6509001/Body┃在{0}秒间处于停止状态，解除停止状态时会迅速的向前方移动。\n\n冷却 {1} 秒。
 Item/Skills/6509001/Desc┃在{0}秒间处于停止状态，解除停止状态时会迅速的向前方移动。\n\n冷却 {1} 秒。
+Item/Skills/6509002┃脉冲
+Item/Skills/6509002/Name┃<color=yellow>脉冲</color>
+Item/Skills/6509002/Body┃在{0}秒间处于停止状态，解除停止状态时会迅速的向前方移动。\n\n冷却 {1} 秒。
+Item/Skills/6509002/Desc┃在{0}秒间处于停止状态，解除停止状态时会迅速的向前方移动。\n\n冷却 {1} 秒。
 Item/Skills/6510000┃裂痕
 Item/Skills/6510001┃裂痕
 Item/Skills/6510001/Name┃<color=yellow>裂痕</color>
@@ -13130,6 +13507,8 @@ CharacterStoryTitle/60┃破碎的玻璃无法复原，必须要让它坚不可�
 CharacterStoryDesc/60┃作为一位才华横溢的艺术家，塔齐娅的世界总是充满着不安。\n当她的作品没能满足他人的期望时，周围总是充斥着失望甚至指责的声音。\n\n塔齐娅想要摆脱这种不知何时会陷入崩溃的生活，重新享受艺术创作的纯粹。\n但作为代价，塔齐娅不得不放弃现在所拥有的一切。\n\n塔齐娅就这样来到了卢米亚岛，找回了许久不曾的自我和热情。\n扰乱这个乐园安宁的人将永远不会得到原谅。
 CharacterStoryTitle/61┃喜欢我吗？喵~
 CharacterStoryDesc/61┃\n活泼可爱的爱琳总是在寻找爱她的人。\n珍惜每一个爱和被爱的瞬间。\n\n无人知晓她来自哪里。\n甚至连她最亲近的朋友也无从得知。\n\n即使在卢米亚岛爱琳也在寻找爱她的人。\n对方是谁，这对爱琳来说一点也不重要。\n只要对她没有敌意，就可以成为朋友！
+CharacterStoryTitle/62┃你可以放心的把背后交给我。
+CharacterStoryDesc/62┃西奥多是一位百发百中的狙击手。\n高度的专注力、出众的应变力以及敏锐的判断力使他总能交出惊人的成绩。\n但他并没有想要做出一番功绩的想法。\n\n梦想使他无意间发掘了自己神奇的能力，而这个梦想现在却再也无法实现了...\n被夺走梦想的伤痛依然持续，但他也不想一直被过去束缚。\n\n西奥多仍会在背后默默帮助队友进行战斗。\n因为这个世界还有需要他的人。
 
 
 --xxxxxxxxxx--
