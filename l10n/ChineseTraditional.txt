@@ -1275,7 +1275,7 @@ Item/Effects/302308┃18秒內恢復耐力值
 Item/Effects/302309┃18秒內恢復耐力值
 Item/Effects/302310┃18秒內恢復耐力值
 Item/Effects/302311┃18秒內恢復耐力值
-Item/Effects/302312┃18秒內恢復耐力值，恢復期間將增加攻擊力10、技能增幅15。
+Item/Effects/302312┃永久獲得攻擊力3，技能增幅5。最多可重疊3次。
 Item/Effects/301102┃18秒內恢復體力值
 Item/Effects/301104┃18秒內恢復體力值
 Item/Effects/301105┃18秒內恢復體力值
@@ -1295,7 +1295,7 @@ Item/Effects/301205┃18秒內恢復體力值
 Item/Effects/301206┃18秒內恢復體力值
 Item/Effects/301207┃18秒內恢復體力值
 Item/Effects/301209┃18秒內恢復體力值
-Item/Effects/301305┃18秒内恢復體力值，恢復期間防禦力增加10。
+Item/Effects/301305┃永久獲得防禦力5。最多可重疊3次。
 Item/Effects/301213┃18秒內恢復體力值
 Item/Effects/301216┃18秒內恢復體力值
 Item/Effects/301217┃18秒內恢復體力值
@@ -1340,12 +1340,13 @@ Item/Effects/301325┃18秒內恢復體力值
 Item/Effects/301326┃18秒內恢復體力值
 Item/Effects/301327┃18秒內恢復體力值
 Item/Effects/301328┃18秒內恢復體力值
-Item/Effects/301329┃18秒內恢復體力值
+Item/Effects/301329┃永久獲得體力30。最多可重疊3次。
 Item/Effects/301330┃18秒內恢復體力值
 Item/Effects/301401┃18秒內恢復體力值
 Item/Effects/301331┃18秒內恢復體力值
-Item/Effects/301403┃18秒內恢復體力值
-Item/Effects/802601┃在18秒內恢復耐力並在600秒間獲得以下效果。\n\n- 移動速度 +0.2\n- 吸血-所有傷害 +15%
+Item/Effects/301333┃在18秒內恢復耐力。
+Item/Effects/301403┃18秒內恢復體力值。
+Item/Effects/802601┃在600秒間獲得以下效果。\n\n- 移動速度 +0.2\n- 吸血-所有傷害 +15%
 Item/BulletCapacity/Reload┃<color=yellow>彈藥數:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>彈藥上限:</color> {0}發(充電: {1}秒)
 Item/Skills/NotEquip┃<color=red>僅在裝備物品時生效。</color>
@@ -1418,6 +1419,8 @@ Character/Name/59┃艾薩克
 Character/Name/60┃塔齊雅
 Character/Name/61┃愛琳
 Character/Name/62┃西奧多
+Character/Name/63┃伊安
+Character/Name/64┃萬尼亞
 Monster/Name/1┃雞
 Monster/Name/2┃蝙蝠
 Monster/Name/3┃野豬
@@ -2140,6 +2143,12 @@ ToolTipType/ReinforcedExplosionDamage┃[玻光重劍] 爆炸傷害
 ToolTipType/RangeMoveSpeedDecrease┃範圍移動速度減少
 ToolTipType/Irem_FirstDamage┃首擊額外傷害
 ToolTipType/Irem_ContinueDamage┃連續攻擊傷害
+ToolTipType/Theodore_Active1CoolDown┃[能量射擊]冷卻縮減(%)
+ToolTipType/Theodore_Active2CoolDown┃[增幅屏]冷卻縮減(%)
+ToolTipType/Theodore_Active3CoolDown┃[聚焦彈]冷卻縮減(%)
+ToolTipType/Theodore_ScreenFireDamage┃能源屏發射傷害
+ToolTipType/Theodore_ScreenFireHeal┃能源屏發射體力恢復
+ToolTipType/MaxHpShieldRatio┃和體力上限成比的護盾獲得量(%)
 DayNight/Day┃白天
 DayNight/Night┃夜晚
 CastingActionType/ToRest┃休息準備中
@@ -2275,11 +2284,11 @@ MonsterDropRandom/1┃掉出<color=white>肉</color>或<color=white>羽毛</colo
 MonsterDropRandom/2┃高機率掉出<color=white>皮革</color>或低機率掉出<color=white> 一般</color> 等級物品。
 MonsterDropRandom/3┃掉出<color=white>一般</color> 物品。
 MonsterDropRandom/4┃掉出<color=white>一般</color> 物品。
-MonsterDropRandom/5┃掉出<color=#35FF94>高級</color> ~ <color=#2AC0FF>稀有</color> 等級物品。
+MonsterDropRandom/5┃掉出<color=#35FF94>高級</color>, <color=#2AC0FF>稀有</color>, 或 <color=#D05EFF>英雄</color> 物品。
 MonsterDropRandom/6┃掉出<color=#35FF94>高級</color>, <color=#2AC0FF>稀有</color>, 或 <color=#D05EFF>英雄</color> 物品。
-MonsterDropRandom/7┃有機會掉出<color=#D05EFF>秘銀</color>,<color=#D05EFF>隕石</color>,<color=#D05EFF>生命之樹</color>, <color=#D05EFF>聖水</color>, <color=#D05EFF>塞勒涅之淚</color> 中的一個物品。
+MonsterDropRandom/7┃有機會掉出<color=#D05EFF>秘銀</color>，<color=#D05EFF>隕石</color>，<color=#D05EFF>生命之樹</color>，<color=#FFD738>聖水</color>，<color=#FFD738>塞勒涅之淚</color>，<color=#FFD738>大還丹</color> 中的一個物品。
 MonsterDropRandom/8┃掉出可以與<color=#D05EFF>秘銀</color>組合的<color=#C4C4C4>一般</color> ~ <color=#35FF94>高級</color> 等級中的一個物品。
-MonsterDropRandom/9┃掉出<color=#D05EFF>聖水</color>, <color=#D05EFF>塞勒涅之淚</color> 中的一個物品。
+MonsterDropRandom/9┃掉出<color=#FFD738>聖水</color>，<color=#FFD738>塞勒涅之淚</color>，<color=#FFD738>大還丹</color> 中的一個物品。
 MonsterDropRandom/12┃掉出<color=white>肉</color>或<color=white>羽毛</color>中的一個物品。
 MonsterDropRandom/13┃高機率掉出<color=white>皮革</color>或低機率掉出<color=white> 一般</color> 等級物品。
 MonsterDropRandom/14┃掉出<color=white>一般</color> 物品。
@@ -2313,6 +2322,7 @@ Skin/Name/1007001┃暗巷裡 玹雨
 Skin/Name/1007002┃惡魔之子 玹雨
 Skin/Name/1007003┃軍官候補生 玹雨
 Skin/Name/1007004┃軍官候補生 玹雨（永恆段位造型）
+Skin/Name/1007005┃傲嬌豬豬 玹雨
 Skin/Name/1008000┃哈特
 Skin/Name/1008001┃樂團團長 哈特
 Skin/Name/1008002┃冰雪慶典 哈特
@@ -2324,10 +2334,12 @@ Skin/Name/1010000┃李黛琳
 Skin/Name/1010001┃旅行者 李黛琳
 Skin/Name/1010002┃叛逆 李黛琳
 Skin/Name/1010003┃龍之舞 李黛琳
+Skin/Name/1010004┃可愛吼吼 黛琳
 Skin/Name/1011000┃雪
 Skin/Name/1011001┃軍官候補生 雪
 Skin/Name/1011002┃劍道家 雪
 Skin/Name/1011003┃夜行忍者 雪
+Skin/Name/1011004┃賣萌汪汪 雪
 Skin/Name/1012000┃慧珍
 Skin/Name/1012001┃木蓮花 慧珍
 Skin/Name/1012002┃軍官候補生 慧珍
@@ -2374,7 +2386,7 @@ Skin/Name/1023001┃軍醫 凱茜
 Skin/Name/1023002┃迷幻醫生 凱茜
 Skin/Name/1024000┃阿德拉
 Skin/Name/1024001┃白王后 阿德拉
-Skin/Name/1024002┃夢行者 阿德拉
+Skin/Name/1024002┃夢德拉
 Skin/Name/1025000┃伯尼斯
 Skin/Name/1025001┃天啟 伯尼斯
 Skin/Name/1025002┃惡靈獵手 伯尼斯
@@ -2431,6 +2443,7 @@ Skin/Name/1044000┃厄喀翁
 Skin/Name/1044001┃暗巷裡 厄喀翁
 Skin/Name/1045000┃梅
 Skin/Name/1045001┃轉學生 梅
+Skin/Name/1045002┃軍官候補生 梅
 Skin/Name/1046000┃艾登
 Skin/Name/1046001┃幽靈獵人 艾登
 Skin/Name/1047000┃蘿拉
@@ -2465,6 +2478,8 @@ Skin/Name/1060001┃白璃幻夢 塔齊雅
 Skin/Name/1061000┃愛琳
 Skin/Name/1061001┃冬日戲雪 愛琳
 Skin/Name/1062000┃西奧多
+Skin/Name/1063000┃伊安
+Skin/Name/1064000┃萬尼亞
 Skin/Desc/1001001┃血染的電鋸，能將人撕碎的剪與刀。\n如果聽到愉快的哼歌聲，逃跑是唯一的選擇。
 Skin/Desc/1001002┃血色的玫瑰，在殺戮中綻放。
 Skin/Desc/1001003┃有人制定規則，就一定有人破壞規則。
@@ -2576,6 +2591,15 @@ Skin/Desc/1008003┃只要有吉...吉他與音箱，哪裡都是我的舞台！
 Skin/Desc/1012004┃努力比命運更重要。
 Skin/Desc/1037002┃我會告訴你這面具後的真實模樣。
 Skin/Desc/1038002┃演員最好的武器不是外貌，而是在哪都能閃耀的自信。
+Skin/Desc/1060001┃在破壞中尋找藝術之美。
+Skin/Desc/1059001┃如果你能展現出你的誠意，那我自然也會以同等的方式報答你。
+Skin/Desc/1045002┃這時候就驗證了人要衣裝，佛要金裝。
+Skin/Desc/1024002┃夢行何處由我決定！
+Skin/Desc/1050002┃等待，是件漫長的事。
+Skin/Desc/1061001┃說我可愛我也不會放水的！
+Skin/Desc/1010004┃快交出下酒菜，不然我就吃了你！
+Skin/Desc/1011004┃惡人總是散發著與常人有些不同的氣味。
+Skin/Desc/1007005┃不想被打的話就快閃開！
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生氣
 Emotion_Name_002┃笑
@@ -2667,6 +2691,77 @@ Drops_Emotion_St_GssG_01┃GssG
 Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
 Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
 Drops_Emotion_St_InPassant_01┃InPassant Baka
+EP_Drops_Emotion_St_Averse_01┃Averse Wave
+EP_Drops_Emotion_St_IKeepItTaco_01┃IKeepItTaco Rareboi
+EP_Drops_Emotion_St_FanHOTS_01┃FanHOTS Coolguy
+EP_Drops_Emotion_St_Scarra_01┃Scarra Noice
+EP_Drops_Emotion_St_Yueko_01┃Yueko Sadfox
+EP_Drops_Emotion_St_DeliciousMilkGG_01┃DeliciousMilk Cheers
+EP_Drops_Emotion_St_Kiyoon_01┃Kiyoon GJ
+EP_Drops_Emotion_St_AlexIch_01┃AlexIch Boosted
+EP_Drops_Emotion_St_Dyrus_01┃Dyrus Thumbs Up
+EP_Drops_Emotion_St_MiMiLucky_01┃獅子丸 吼唷!
+EP_Drops_Emotion_St_Xiaoma_01┃小馬 厲害了！
+EP_Drops_Emotion_St_VIVI_01┃Vivi芝衣 驚訝！
+EP_Drops_Emotion_St_lois_01┃子玄 開心
+EP_Drops_Emotion_St_Nein1203_01┃小舞 哭哭
+EP_Drops_Emotion_St_GodJJ_01┃接接 棒棒的！
+EP_Drops_Emotion_St_Emiru_01┃Emiru Bunny
+EP_Drops_Emotion_St_MAO_01┃毛 生氣了
+EP_Drops_Emotion_St_MiMiLucky_02┃獅子丸 爽喔！
+EP_Drops_Emotion_St_GodJJ_02┃接接 揮手
+EP_Drops_Emotion_St_MAO_02┃毛 嘆氣..
+EP_Drops_Emotion_St_Buygame_01┃大楷 哭了
+EP_Drops_Emotion_St_Dingyi_01┃丁義 加油好嗎？
+EP_Drops_Emotion_St_Xiaoma_02┃小馬 燃燒
+EP_Drops_Emotion_St_VIVI_02┃Vivi芝衣 V老大生氣了
+EP_Drops_Emotion_St_lois_02┃子玄 小恐龍
+EP_Drops_Emotion_St_Nein1203_02┃小舞 生氣氣
+EP_Drops_Emotion_St_Cooldog_01┃花枝 愛心
+EP_Drops_Emotion_St_Feviknight_01┃Feviknight Stressed
+EP_Drops_Emotion_St_IKeepItTaco_02┃IKeepItTaco Trashboi
+EP_Drops_Emotion_St_Yougelly_01┃yougelly sallyStab
+EP_Drops_Emotion_St_K3soju_01┃k3sojuwu
+EP_Drops_Emotion_St_Metaphor_01┃metaphor GUN
+EP_Drops_Emotion_St_Plup_01┃plup Big Dumb Dinosaur
+EP_Drops_Emotion_St_Ddony_01┃DDony
+EP_Drops_Emotion_St_Jamddl_01┃Sleepground
+EP_Drops_Emotion_St_Duckgea_01┃Duckgae
+EP_Drops_Emotion_St_Syaruru_01┃Syaruru
+EP_Drops_Emotion_St_Englishnoob46_01┃Yomu
+EP_Drops_Emotion_St_Naruserin309_01┃Naruserin
+EP_Drops_Emotion_St_Oni_01┃Oniwasoto
+EP_Drops_Emotion_St_No17AI_01┃No17AI
+EP_Drops_Emotion_St_Tomsorcer_01┃Tomsorcer sonRiot
+EP_Drops_Emotion_St_Wingsofdeathx_01┃wingsofdeath Stylin'
+EP_Drops_Emotion_St_Ddahyoni_01┃Ddahyoni
+EP_Drops_Emotion_St_ChunhyangHi_01┃Chunhyang Hi
+EP_Drops_Emotion_St_Phoenixpark_01┃Phoenixpark
+EP_Drops_Emotion_St_Saeom_01┃saeom
+EP_Drops_Emotion_St_Bbonge_01┃Bbonge
+EP_Drops_Emotion_St_HIFIVE_01┃HIFIVE
+EP_Drops_Emotion_St_Yungi_01┃Yungi
+EP_Drops_Emotion_St_Luda_01┃Luda
+EP_Drops_Emotion_St_Jelly_01┃Jelly
+EP_Drops_Emotion_St_Sonycast_01┃Sonycast
+EP_Drops_Emotion_St_ChoromTeeHee_01┃Chorom Tee-Hee-
+EP_Drops_Emotion_St_Purin_01┃Purin
+EP_Drops_Emotion_St_Nariddyang_01┃Nariddyang
+EP_Drops_Emotion_St_JuanK_01┃JuanK
+EP_Drops_Emotion_St_Parkjand_01┃Parkjand
+EP_Drops_Emotion_St_Salgu_01┃Salgu
+EP_Drops_Emotion_St_TwitchRivals_01┃Twitch Rivals Emote
+EP_Drops_Emotion_St_Sona_01┃Sona
+EP_Drops_Emotion_St_Jukes_01┃Jukes
+EP_Drops_Emotion_St_Pimpimenta_01┃Pimpimenta
+EP_Drops_Emotion_St_Yoda_01┃Yoda
+EP_Drops_Emotion_St_Dersin2k_01┃Dersin2k
+EP_Drops_Emotion_St_HuchamS2_01┃HuchamS2
+EP_Drops_Emotion_St_Tanghyung_01┃tanghyung
+EP_Drops_Emotion_St_GssG_01┃GssG
+EP_Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
+EP_Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
+EP_Drops_Emotion_St_InPassant_01┃InPassant Baka
 Emotion_Jackie01_NP┃傑琪 最棒
 Emotion_Jackie02_NP┃傑琪 傷心
 Emotion_Jackie03_NP┃傑琪 生氣
@@ -2721,10 +2816,10 @@ Emotion_Hyejin02_NP┃慧珍 無言
 Emotion_Hyejin03_NP┃慧珍 嘲諷
 Emotion_Hyejin04_NP┃慧珍 哭哭
 XGP_Emotion_Magnus01┃馬格努斯 Xbox
-Event_RAF_Firecracker┃邀請好友 煙火
+Event_RAF_Firecracker┃邀請好友 歡迎拉炮
 Event_RAF_Welcome┃邀請好友 歡迎！
-Event_GreatJob_kr┃Great Job_kr
-Event_GreatJob_en┃Great Job_en
+Event_GreatJob_kr┃Great Job (Korean)
+Event_GreatJob_en┃Great Job (English)
 Emotion_Halloween2021_Zahir01_NP┃萬聖節 狼人查希爾 
 Emotion_Halloween2021_Zahir02_NP┃萬聖節 死神查希爾 
 Emotion_Halloween2021_Chiara01_NP┃萬聖節 惡魔琪婭拉 
@@ -2782,6 +2877,18 @@ Emotion_ERPASS_4043┃盧克 累累
 Emotion_ERPASS_4044┃艾琳娜 冰凍
 Emotion_ERPASS_4045┃霓虹燈表情
 Emotion_ERPASS_4046┃凱茜 聽診
+Emotion_ERPASS_4047┃玹雨 打瞌睡
+Emotion_ERPASS_4048┃亞莉安娜 消滅成功
+Emotion_ERPASS_4049┃蘿拉 噓！
+Emotion_ERPASS_4050┃馬庫斯 忍耐
+Emotion_ERPASS_4051┃普里亞 心花開
+Emotion_ERPASS_4052┃李黛琳 美夢
+Emotion_ERPASS_4053┃菲利克斯 微笑
+Emotion_ERPASS_4054┃梅 鬼臉
+Emotion_ERPASS_4055┃琪婭拉 發抖
+Emotion_ERPASS_4056┃慧珍 好冷！
+Emotion_ERPASS_4057┃雪猛犬出沒
+Emotion_ERPASS_4058┃瘟疫醫生 可疑的禮物
 Emotion_LiDailin02_NP┃李黛琳 乾杯
 Emotion_LiDailin03_NP┃李黛琳 暈暈
 Emotion_LiDailin04_NP┃李黛琳 嘲諷
@@ -2966,12 +3073,22 @@ Emotion_Aiden01_NP┃艾登 生氣
 Emotion_Aiden02_NP┃艾登 不知所措
 Emotion_Aiden03_NP┃艾登 開心
 Emotion_Aiden04_NP┃艾登 哭哭
-Emotion_Eva01_NP┃伊娃 開心
-Emotion_Eva02_NP┃伊娃 囧囧有神
+Emotion_Eva01_NP┃伊娃 微笑
+Emotion_Eva02_NP┃伊娃 生氣
 Emotion_Eva03_NP┃伊娃 打呵欠
 Emotion_Eva04_NP┃伊娃 吃麵包
-Emotion_Adela01_SeasonPass┃夢的旅行者 阿德拉Zzz...
+Emotion_Adela01_SeasonPass┃夢德拉 Zzz...
+Emotion_Season7_Reward_5014┃熊 跳舞
+Emotion_Season7_Reward_5015┃摯友松鼠 開扁！
+Emotion_Season7_Reward_5016┃賽季S7 - 永恆
+Event_NewYear2023_Eleven_3048┃Eleven YA！
+Event_NewYear2023_WhiteBear01_3049┃白熊 Hi！
+Event_NewYear2023_WhiteBear02_3050┃白熊 憤怒
 Event_HyejinStraw_3051┃慧珍 好喝！(Korean)
+Emotion_Celine01_NP┃席琳 微笑
+Emotion_Celine02_NP┃席琳 發呆
+Emotion_Celine03_NP┃席琳 驚訝
+Emotion_Celine04_NP┃席琳 最棒！
 Shop/Desc/Emotion_Hart01_NP┃可在遊戲中使用表情符號進行交流。
 Shop/Desc/Emotion_Hart02_NP┃可在遊戲中使用表情符號進行交流。
 Shop/Desc/Emotion_Hart03_NP┃可在遊戲中使用表情符號進行交流。
@@ -3257,6 +3374,33 @@ EMBLEM_MARK_S6_IMMORTAL_SQUAD┃賽季S6永恆標誌(三人)
 EMBLEM_MARK_S6_IMMORTAL_SOLO_105108┃賽季S6 - 永恆(單人)榮譽標誌
 EMBLEM_MARK_S6_IMMORTAL_DUO_105109┃賽季S6 - 永恆(雙人)榮譽標誌
 EMBLEM_MARK_S6_IMMORTAL_SQUAD_105110┃賽季S6 - 永恆(三人)榮譽標誌
+EMBLEM_MARK_S7_IRON_SOLO┃賽季S7鐵閻標誌(單人)
+EMBLEM_MARK_S7_IRON_DUO┃賽季S7鐵閻標誌(雙人)
+EMBLEM_MARK_S7_IRON_SQUAD┃賽季S7鐵閻標誌(三人)
+EMBLEM_MARK_S7_BRONZE_SOLO┃賽季S7銅魂標誌(單人)
+EMBLEM_MARK_S7_BRONZE_DUO┃賽季S7銅魂標誌(雙人)
+EMBLEM_MARK_S7_BRONZE_SQUAD┃賽季S7銅魂標誌(三人)
+EMBLEM_MARK_S7_SILVER_SOLO┃賽季S7銀烙標誌(單人)
+EMBLEM_MARK_S7_SILVER_DUO┃賽季S7銀烙標誌(雙人)
+EMBLEM_MARK_S7_SILVER_SQUAD┃賽季S7銀烙標誌(三人)
+EMBLEM_MARK_S7_GOLD_SOLO┃賽季S7金魄標誌(單人)
+EMBLEM_MARK_S7_GOLD_DUO┃賽季S7金魄標誌(雙人)
+EMBLEM_MARK_S7_GOLD_SQUAD┃賽季S7金魄標誌(三人)
+EMBLEM_MARK_S7_PLATINUM_SOLO┃賽季S7修羅標誌(單人)
+EMBLEM_MARK_S7_PLATINUM_DUO┃賽季S7修羅標誌(雙人)
+EMBLEM_MARK_S7_PLATINUM_SQUAD┃賽季S7修羅標誌(三人)
+EMBLEM_MARK_S7_DIAMOND_SOLO┃賽季S7滅鑽標誌(單人)
+EMBLEM_MARK_S7_DIAMOND_DUO┃賽季S7滅鑽標誌(雙人)
+EMBLEM_MARK_S7_DIAMOND_SQUAD┃賽季S7滅鑽標誌(三人)
+EMBLEM_MARK_S7_TITAN_SOLO┃賽季S7半神標誌(單人)
+EMBLEM_MARK_S7_TITAN_DUO┃賽季S7半神標誌(雙人)
+EMBLEM_MARK_S7_TITAN_SQUAD┃賽季S7半神標誌(三人)
+EMBLEM_MARK_S7_IMMORTAL_SOLO┃賽季S7永恆標誌(單人)
+EMBLEM_MARK_S7_IMMORTAL_DUO┃賽季S7永恆標誌(雙人)
+EMBLEM_MARK_S7_IMMORTAL_SQUAD┃賽季S7永恆標誌(三人)
+EMBLETM_MARK_S7_ETERNITY_SOLO┃賽季S7 - 永恆(單人)榮譽標誌
+EMBLETM_MARK_S7_ETERNITY_DUO┃賽季S7 - 永恆(雙人)榮譽標誌
+EMBLETM_MARK_S7_ETERNITY_SQUAD┃賽季S7 - 永恆(三人)榮譽標誌
 EMBLEM_MARK_EVENT_102001┃魔法少女 莉央
 EMBLEM_MARK_EVENT1┃鬼臉 
 EMBLEM_MARK_EVENT2┃最棒
@@ -3333,6 +3477,8 @@ EMBLEM_MARK_1vs17_S4_103072┃頂尖高手
 EMBLEM_MARK_EVENT_103073┃愛琳 貓咪
 EMBLEM_MARK_EVENT_103074┃Sparky
 EMBLEM_MARK_EVENT_103075┃Sparky_chill
+EMBLEM_MARK_EVENT_103076┃白熊 Hi！
+EMBLEM_MARK_EVENT_103077┃Eleven YA！
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃禮物樹
 EMBLEM_MARK_ERPASS_104003┃紅鼻子
@@ -3370,6 +3516,15 @@ EMBLEM_MARK_ERPASS_104034┃故障小威
 EMBLEM_MARK_ERPASS_104035┃全像蝙蝠
 EMBLEM_MARK_ERPASS_104036┃耳麥
 EMBLEM_MARK_ERPASS_104037┃日蝕
+EMBLEM_MARK_ERPASS_104038┃柴犬戴眼罩
+EMBLEM_MARK_ERPASS_104039┃月兔睡睡
+EMBLEM_MARK_ERPASS_104040┃汪汪狗
+EMBLEM_MARK_ERPASS_104041┃哼哼豬
+EMBLEM_MARK_ERPASS_104042┃吼吼虎
+EMBLEM_MARK_ERPASS_104043┃玩具熊
+EMBLEM_MARK_ERPASS_104044┃夢的獨角獸
+EMBLEM_MARK_ERPASS_104045┃哼哼肉
+EMBLEM_MARK_ERPASS_104046┃汪汪腳印
 ItemType/EMBLEM_BG/Name┃個人背景
 EMBLEM_BG_FREE1┃預設背景
 EMBLEM_BG_S3_IRON_SOLO┃賽季S3鐵閻背景(單人)
@@ -3474,10 +3629,38 @@ EMBLEM_BG_S6_IMMORTAL_SQUAD┃賽季S6永恆背景(三人)
 EMBLEM_BG_S6_IMMORTAL_SOLO_205108┃賽季S6 - 永恆(單人)榮譽背景
 EMBLEM_BG_S6_IMMORTAL_DUO_205109┃賽季S6 - 永恆(雙人)榮譽背景
 EMBLEM_BG_S6_IMMORTAL_SQUAD_205110┃賽季S6 - 永恆(三人)榮譽背景
+EMBLEM_BG_S7_IRON_SOLO┃賽季S7鐵閻背景(單人)
+EMBLEM_BG_S7_IRON_DUO┃賽季S7鐵閻背景(雙人)
+EMBLEM_BG_S7_IRON_SQUAD┃賽季S7鐵閻背景(三人)
+EMBLEM_BG_S7_BRONZE_SOLO┃賽季S7銅魂背景(單人)
+EMBLEM_BG_S7_BRONZE_DUO┃賽季S7銅魂背景(雙人)
+EMBLEM_BG_S7_BRONZE_SQUAD┃賽季S7銅魂背景(三人)
+EMBLEM_BG_S7_SILVER_SOLO┃賽季S7銀烙背景(單人)
+EMBLEM_BG_S7_SILVER_DUO┃賽季S7銀烙背景(雙人)
+EMBLEM_BG_S7_SILVER_SQUAD┃賽季S7銀烙背景(三人)
+EMBLEM_BG_S7_GOLD_SOLO┃賽季S7金魄背景(單人)
+EMBLEM_BG_S7_GOLD_DUO┃賽季S7金魄背景(雙人)
+EMBLEM_BG_S7_GOLD_SQUAD┃賽季S7金魄背景(三人)
+EMBLEM_BG_S7_PLATINUM_SOLO┃賽季S7修羅背景(單人)
+EMBLEM_BG_S7_PLATINUM_DUO┃賽季S7修羅背景(雙人)
+EMBLEM_BG_S7_PLATINUM_SQUAD┃賽季S7修羅背景(三人)
+EMBLEM_BG_S7_DIAMOND_SOLO┃賽季S7滅鑽背景(單人)
+EMBLEM_BG_S7_DIAMOND_DUO┃賽季S7滅鑽背景(雙人)
+EMBLEM_BG_S7_DIAMOND_SQUAD┃賽季S7滅鑽背景(三人)
+EMBLEM_BG_S7_TITAN_SOLO┃賽季S7半神背景(單人)
+EMBLEM_BG_S7_TITAN_DUO┃賽季S7半神背景(雙人)
+EMBLEM_BG_S7_TITAN_SQUAD┃賽季S7半神背景(三人)
+EMBLEM_BG_S7_IMMORTAL_SOLO┃賽季S7永恆背景(單人)
+EMBLEM_BG_S7_IMMORTAL_DUO┃賽季S7永恆背景(雙人)
+EMBLEM_BG_S7_IMMORTAL_SQUAD┃賽季S7永恆背景(三人)
+EMBLEM_BG_S7_ETERNITY_SOLO┃賽季S7 - 永恆(單人)榮譽背景
+EMBLEM_BG_S7_ETERNITY_DUO┃賽季S7 - 永恆(雙人)榮譽背景
+EMBLEM_BG_S7_ETERNITY_SQUAD┃賽季S7 - 永恆(三人)榮譽背景
 EMBLEM_BG_ERPASS_204001┃Aglaia文字背景
 EMBLEM_BG_EVENT_203001┃2022 白色情人節 紀念背景
 EMBLEM_BG_EVENT_203002┃冰涼雞尾酒背景
 EMBLEM_BG_EVENT_203003┃煙火背景
+EMBLEM_BG_EVENT_203004┃白色雪花背景
 EMBLEM_BG_ERPASS_204002┃永恆輪迴背景
 EMBLEM_BG_ERPASS_204003┃實驗背景
 EMBLEM_BG_ERPASS_204004┃雨滴背景
@@ -3497,6 +3680,11 @@ EMBLEM_BG_ERPASS_204017┃平衡器背景
 EMBLEM_BG_ERPASS_204018┃虛擬空間背景
 EMBLEM_BG_ERPASS_204019┃電路板背景
 EMBLEM_BG_ERPASS_204020┃無形網格背景
+EMBLEM_BG_ERPASS_204021┃森林晚霞背景
+EMBLEM_BG_ERPASS_204022┃柴犬背景
+EMBLEM_BG_ERPASS_204023┃傳統童話背景
+EMBLEM_BG_ERPASS_204024┃星光之夜背景
+EMBLEM_BG_ERPASS_204025┃美夢背景
 ItemType/EMBLEM_OUTLINE/Name┃個人邊框
 EMBLEM_OUTLINE_FREE1┃預設框
 EMBLEM_OUTLINE_S3_IRON_SOLO┃賽季S3鐵閻框(單人)
@@ -3601,9 +3789,37 @@ EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD┃賽季S6永恆框(三人)
 EMBLEM_OUTLINE_S6_IMMORTAL_SOLO_305108┃賽季S6 - 永恆(單人)榮譽框
 EMBLEM_OUTLINE_S6_IMMORTAL_DUO_305109┃賽季S6 - 永恆(雙人)榮譽框
 EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD_305110┃賽季S6 - 永恆(三人)榮譽框
+EMBLEM_OUTLINE_S7_IRON_SOLO┃賽季S7鐵閻框(單人)
+EMBLEM_OUTLINE_S7_IRON_DUO┃賽季S7鐵閻框(雙人)
+EMBLEM_OUTLINE_S7_IRON_SQUAD┃賽季S7鐵閻框(三人)
+EMBLEM_OUTLINE_S7_BRONZE_SOLO┃賽季S7銅魂框(單人)
+EMBLEM_OUTLINE_S7_BRONZE_DUO┃賽季S7銅魂框(雙人)
+EMBLEM_OUTLINE_S7_BRONZE_SQUAD┃賽季S7銅魂框(三人)
+EMBLEM_OUTLINE_S7_SILVER_SOLO┃賽季S7銀烙框(單人)
+EMBLEM_OUTLINE_S7_SILVER_DUO┃賽季S7銀烙框(雙人)
+EMBLEM_OUTLINE_S7_SILVER_SQUAD┃賽季S7銀烙框(三人)
+EMBLEM_OUTLINE_S7_GOLD_SOLO┃賽季S7金魄框(單人)
+EMBLEM_OUTLINE_S7_GOLD_DUO┃賽季S7金魄框(雙人)
+EMBLEM_OUTLINE_S7_GOLD_SQUAD┃賽季S7金魄框(三人)
+EMBLEM_OUTLINE_S7_PLATINUM_SOLO┃賽季S7修羅框(單人)
+EMBLEM_OUTLINE_S7_PLATINUM_DUO┃賽季S7修羅框(雙人)
+EMBLEM_OUTLINE_S7_PLATINUM_SQUAD┃賽季S7修羅框(三人)
+EMBLEM_OUTLINE_S7_DIAMOND_SOLO┃賽季S7滅鑽框(單人)
+EMBLEM_OUTLINE_S7_DIAMOND_DUO┃賽季S7滅鑽框(雙人)
+EMBLEM_OUTLINE_S7_DIAMOND_SQUAD┃賽季S7滅鑽框(三人)
+EMBLEM_OUTLINE_S7_TITAN_SOLO┃賽季S7半神框(單人)
+EMBLEM_OUTLINE_S7_TITAN_DUO┃賽季S7半神框(雙人)
+EMBLEM_OUTLINE_S7_TITAN_SQUAD┃賽季S7半神框(三人)
+EMBLEM_OUTLINE_S7_IMMORTAL_SOLO┃賽季S7永恆框(單人)
+EMBLEM_OUTLINE_S7_IMMORTAL_DUO┃賽季S7永恆框(雙人)
+EMBLEM_OUTLINE_S7_IMMORTAL_SQUAD┃賽季S7永恆框(三人)
+EMBLEM_OUTLINE_S7_ETERNITY_SOLO_305135┃賽季S7 - 永恆(單人)榮譽框
+EMBLEM_OUTLINE_S7_ETERNITY_DUO_305136┃賽季S7 - 永恆(雙人)榮譽框
+EMBLEM_OUTLINE_S7_ETERNITY_SQUAD_305137┃賽季S7 - 永恆(三人)榮譽框
 EMBLEM_OUTLINE_EVENT_303001┃2022 白色情人節 紀念框
 EMBLEM_OUTLINE_EVENT_303002┃冰涼雞尾酒框
 EMBLEM_OUTLINE_EVENT_303003┃櫻花框
+EMBLEM_OUTLINE_EVENT_303004┃白兔框
 EMBLEM_OUTLINE_ERPASS_304001┃冰雪框
 EMBLEM_OUTLINE_ERPASS_304002┃聖誕派對框
 EMBLEM_OUTLINE_ERPASS_304003┃彩球框
@@ -3623,6 +3839,11 @@ EMBLEM_OUTLINE_ERPASS_304016┃城市奔馳框
 EMBLEM_OUTLINE_ERPASS_304017┃作戰開始框
 EMBLEM_OUTLINE_ERPASS_304018┃機械電路框
 EMBLEM_OUTLINE_ERPASS_304019┃無形網格框
+EMBLEM_OUTLINE_ERPASS_304020┃野豬框
+EMBLEM_OUTLINE_ERPASS_304021┃柴犬框
+EMBLEM_OUTLINE_ERPASS_304022┃小老虎框
+EMBLEM_OUTLINE_ERPASS_304023┃星光框
+EMBLEM_OUTLINE_ERPASS_304024┃夢的獨角獸
 Goods/Name/1304001┃ER積分
 ItemType/GRAVE/Name┃墓碑
 ItemType/GRAVE/Desc┃被擊殺的實驗體死亡時會留下一塊墓碑。
@@ -3653,10 +3874,16 @@ Goods/Name/1604023┃遊戲機
 Goods/Name/1604024┃物品自動販賣機
 Goods/Name/1604025┃事故警示牌
 Goods/Name/1604026┃病人監視器
+Goods/Name/1604027┃吼吼黛琳的行囊
+Goods/Name/1604028┃哼哼肉
+Goods/Name/1604029┃機器人
+Goods/Name/1604030┃積木
+Goods/Name/1604031┃睡睡熊
+Goods/Name/1604032┃注意安全
 Goods/Name/1612001┃瘟疫醫生之死
 Goods/Name/1612002┃夏日海灘 妮琪的貓
 Goods/Name/1612003┃系統衝擊 
-Goods/Name/1612004┃夢行者 阿德拉
+Goods/Name/1612004┃夢德拉
 ItemType/SPRAY/Name┃噴漆
 ItemType/SPRAY/Desc┃可以在地上留下標識。
 Goods/Name/1501001┃無
@@ -3687,6 +3914,7 @@ Goods/Name/1503023┃Sparky_smirky
 Goods/Name/1503024┃Sparky_chill
 Goods/Name/1503025┃Sparky_wonder
 Goods/Name/1503026┃Sparky_angry
+Goods/Name/1503027┃Eleven YA！
 Goods/Name/1504001┃愛心鬼臉
 Goods/Name/1504002┃賣火柴的小女孩
 Goods/Name/1504003┃冠軍花環
@@ -3713,6 +3941,12 @@ Goods/Name/1504023┃麥克風
 Goods/Name/1504024┃LED鬼臉
 Goods/Name/1504025┃鏡面球
 Goods/Name/1504026┃凱茜的手術刀
+Goods/Name/1504027┃漢堡
+Goods/Name/1504028┃睡睡熊
+Goods/Name/1504029┃吼吼黛琳要吃年糕！
+Goods/Name/1504030┃眼罩
+Goods/Name/1504031┃睡衣松鼠
+Goods/Name/1504032┃禁止通行
 ItemType/ANNOUNCE/Name┃轉播語音
 ItemType/ANNOUNCE/Desc┃可以選擇轉播語音
 Goods/Name/1401051┃預設(韓語)
@@ -3740,6 +3974,12 @@ Goods/Name/1404063┃芭芭拉(日語)
 Goods/Name/1404071┃皮奧洛(韓語)
 Goods/Name/1404072┃皮奧洛(英語)
 Goods/Name/1404073┃皮奧洛(日語)
+Goods/Name/1404081┃艾薩克(韓語)
+Goods/Name/1404082┃艾薩克(英語)
+Goods/Name/1404083┃艾薩克(日語)
+Goods/Name/1404091┃李黛琳(韓語)
+Goods/Name/1404092┃李黛琳(英語)
+Goods/Name/1404093┃李黛琳(日語)
 ItemType/BGM/Name┃BGM
 ItemType/BGM/Desc┃可以選擇大廳背景音樂。
 BGM_None┃無
@@ -3758,6 +3998,8 @@ Goods/Name/2504003┃煙火
 Goods/Name/2504004┃降落傘
 Goods/Name/2504005┃飛行機器人
 Goods/Name/2504006┃機器蝴蝶
+Goods/Name/2504007┃UFO
+Goods/Name/2504008┃直升機
 ItemType/CAMERA/Name┃監視器造型
 ItemType/CAMERA/Desc┃可以選擇遊戲內監視器和望遠監視器的外觀。
 Goods/Name/2601001┃基礎監視器
@@ -3767,6 +4009,8 @@ Goods/Name/2604003┃海灘圖騰柱
 Goods/Name/2604004┃貝殼燈塔
 Goods/Name/2604005┃360度全景相機
 Goods/Name/2604006┃電視
+Goods/Name/2604007┃夜燈
+Goods/Name/2604008┃企鵝
 ItemType/LOBBY_SCREEN/Name┃大廳畫面
 ItemType/LOBBY_SCREEN/Desc┃可以選擇遊戲大廳畫面。
 Goods/Name/2701004┃實驗開始
@@ -3774,6 +4018,7 @@ Goods/Name/2702001┃艾瑪魔術秀
 Goods/Name/2704005┃狩獵
 Goods/Name/2704006┃夏日
 Goods/Name/2704007┃霓虹
+Goods/Name/2704008┃睡衣派對
 ItemType/KILLANNOUNCE_ICONPACK/Name┃擊殺通知標誌
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃可以選擇在遊戲中擊殺時顯示的UI圖示。
 Goods/Name/2801001┃不屈不撓
@@ -3789,6 +4034,10 @@ Goods/Name/2804009┃最終倖存 倫諾克斯
 Goods/Name/2804010┃最終倖存 凱茜
 Goods/Name/2804011┃立方體
 Goods/Name/2804012┃治癒
+Goods/Name/2804013┃野豬
+Goods/Name/2804014┃柴犬
+Goods/Name/2804015┃老虎
+Goods/Name/2804016┃獨角獸
 Shop/NPPromotion1┃{0} NP
 Shop/NPPromotion2┃+ {0} 獎勵 NP
 ItemType/BOOSTER_ACOIN_2X/Name┃A-Coin Boost
@@ -3938,6 +4187,7 @@ Shop/Desc/NP┃NP 是永恆輪迴中可用於購買各種商品的貨幣。
 Shop/Desc/ACCOUNT_Add_Traitslot┃展開潛能格
 Shop/Spray/Desc/Base┃可以在地上留下標識。
 Shop/EmblemMark/Desc/Base┃可以裝飾個人資料。
+전장보상재화부족┃戰場標識不足。
 Skill/Group/Name/1001100┃鮮血盛宴
 Skill/Group/Name/1001200┃連斬
 Skill/Group/Name/1001300┃分泌腎上腺素
@@ -4062,17 +4312,17 @@ Skill/Group/Desc/1003200┃菲歐拉朝指定方向進攻，命中的敵人承�
 Skill/Group/Desc/1003300┃菲歐拉快速向前揮劍兩次，各造成 <color=white>{12}</color>的技能傷害和<color=white>{13}</color>的技能傷害，並分別疊加一個刺擊標識。 2次全部命中敵人時，{9}秒間封鎖此敵人對菲歐拉的普攻，並在技能使用期間，減少菲歐拉所有承受傷害{7}。
 Skill/Group/Desc/1003400┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{15}</color>的技能傷害。\n如果成功造成傷害，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊標識引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}的技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11} ， <color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
 Skill/Group/Desc/1003410┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{15}</color>的技能傷害。\n如果成功造成傷害，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊標識引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}的技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11} ， <color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
-Skill/Group/Desc/1003500┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
-Skill/Group/Desc/1003510┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
-Skill/Group/Desc/1003520┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Desc/1003500┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Desc/1003510┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Desc/1003520┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
 Skill/Group/Coef/1003100┃菲歐拉每次使用技能命中敵人，可以疊加刺擊標識。達到疊層上限時，通過技能<color=#ffffff>長刺(Q)，前進(E)，飛刺(R)</color> 引爆刺擊標識可以獲得額外效果。級別越高，需累積的疊層越少，引爆標識越容易。
 Skill/Group/Coef/1003200┃菲歐拉朝指定方向進攻，命中的敵人承受<color=white>{0}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{13})</color>技能傷害。 在範圍末端被刺傷的敵人承受<color=white>{7}</color><color=#ffd775>(+攻擊力的{14})</color><color=#DDA0DD>(+技能增幅的{15})</color>傷害，移動速度減少{4}，持續{6}秒，並被賦予2個刺擊標識。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成 {11}技能傷害，在範圍末端刺中敵人，降低敵人的移動速度{5}，並減少長刺剩餘的冷卻時間{10}。
 Skill/Group/Coef/1003300┃菲歐拉快速向前揮劍兩次，各造成 <color=white>{3}</color><color=#ffd775>(+攻擊力的{4})</color><color=#DDA0DD>(+技能增幅的{10})</color> 技能傷害和 <color=white>{5}</color><color=#ffd775>(+攻擊力的{6})</color><color=#DDA0DD>(+技能增幅的{11})</color>技能傷害，並分別疊加一個刺擊標識。 2次全部命中敵人時， {9}秒間封鎖此敵人對菲歐拉的普攻，並在技能使用期間，減少菲歐拉所有承受傷害{7}。
 Skill/Group/Coef/1003400┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{14})</color>的技能傷害。\n如果成功造成傷害，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}的技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11} ， <color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
 Skill/Group/Coef/1003410┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{14})</color>技能傷害。\n如果成功造成傷害，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11} ， <color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
-Skill/Group/Coef/1003500┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
-Skill/Group/Coef/1003510┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
-Skill/Group/Coef/1003520┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於減緩狀態的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Coef/1003500┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Coef/1003510┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
+Skill/Group/Coef/1003520┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，擊退敵人的同時{9}秒間減少敵人的移動速度{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#ffd775>(+攻擊力的{13})</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2})</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
 CharacterState/Group/Name/1003100┃刺擊
 CharacterState/Group/Desc/1003100┃在啟動的狀態下命中目標可追加效果作用。
 CharacterState/Group/Name/1003200┃長刺
@@ -4265,7 +4515,7 @@ Skill/Group/Coef/1010220┃李黛琳向敵人使出八卦式的回龍腿，踢�
 Skill/Group/Coef/1010300┃拿起她的酒葫蘆喝起 {0}秒來，酒精能喚醒她體內沉睡中的武術細胞，同時啟動她的"酒鬼狀態"及同時增加她的體內 酒醉值，喝酒時可迴避所有普通攻擊。普通攻擊將"醉葫猛酌"的冷卻時間縮短{3}秒。\n\n酒鬼狀態：她的下一次普通攻擊所造成的傷害和醉仙模式所造成的傷害根據她"酒醉值"的比例增加{1} ~ {2}。
 Skill/Group/Coef/1010400┃李黛琳形醉意不醉，用內力向目標敵人吐出酒雨，使範圍內的敵人移動速度{0}秒間降低{4}，並造成 <color=white>{1}</color><color=#ffd775>(+攻擊力的{2}%)</color><color=#DDA0DD>(+技能增幅的{5}%)</color>傷害。 \n\n醉拳狀態時：承受傷害的敵人陷入沉默{3}秒。
 Skill/Group/Coef/1010500┃李黛琳發動猛虎穿心踢，快速進入負面效果免疫狀態並以猛虎氣勢擊中敵人，隨後連續踢出兩次如閃電般的穿心踢。每次造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1}%)</color><color=#DDA0DD>(+技能增幅的{5}%)</color> ~ <color=white>{2}</color><color=#ffd775>(+攻擊力的{3}%)</color><color=#DDA0DD>(+技能增幅的{6}%)</color> 與敵人失去的體力成正比的傷害。如成功擊中敵人，將減少{4} 冷卻時間。 \n\n醉拳狀態時：連續踢出四次穿心踢。
-Skill/Group/ExpansionTip/1010100┃酒：使用<color=#C4C4C4>酒精</color>, <color=#C4C4C4>威士忌</color>為材料的所有食物， <color=#D05EFF>塞勒涅之淚</color>
+Skill/Group/ExpansionTip/1010100┃酒：使用<color=#C4C4C4>酒精</color>, <color=#C4C4C4>威士忌</color>為材料的所有食物。
 Skill/Group/ExpansionTip/1010200┃<i>此技能只能在最後使用時穿越牆壁。</i>
 CharacterState/Group/Name/1010100┃酒醉值上升
 CharacterState/Group/Desc/1010100┃技能強化
@@ -4294,12 +4544,12 @@ Skill/Group/Name/1011400┃櫻花流
 Skill/Group/Name/1011500┃櫻月劍舞
 Skill/Group/Desc/1011100┃雪收集鈕扣，與劍刃配合使用。 命中敵人時，會消耗一顆鈕扣，造成<color=white>{0}</color>額外的真實傷害。\n鈕扣在非戰鬥狀態下或者使用"武士道"時，可恢復到最大值。
 Skill/Group/Desc/1011200┃雪的下一次普通攻擊會造成<color=white>{20}</color>的傷害，並在 {2}秒間降低敵人的移動速度 {3} 。\n\n武裝式完全體時消耗鈕扣，會使敵人暈眩 {4} 秒。
-Skill/Group/Desc/1011300┃<color=green>被動效果：</color> 每次雪擊中敵人，都會降低"武士道" {0}秒的冷卻時間。 \n\n\n雪用 {1}秒的時間整頓衣服，充分展現武士道的榮譽與禮儀, 同時可減少"櫻花流"的冷卻時間 {3}。使用"武士道"時，他的防禦能力會增強 {2}。"武士道"達到最高級別時，可使武裝式的鈕扣恢復到最大值 {4}。
+Skill/Group/Desc/1011300┃<color=green>被動效果：</color> 每次雪擊中敵人，都會降低"武士道" {0}秒的冷卻時間。 \n\n雪用 {1}秒的時間整頓衣服，充分展現武士道的榮譽與禮儀, 同時可減少"櫻花流"的冷卻時間 {3}。使用"武士道"時，承受傷害減少 {2}。當"武士道"達到最高級別時，可使武裝式的鈕扣恢復到最大值 {4}。
 Skill/Group/Desc/1011400┃雪衝向目標方向{2}m，對第一個擊中的敵人造成 <color=white>{20}</color>的傷害。被擊中的敵人將被解除武裝，從而使其在 {3}秒內無法正常攻擊，如果對敵人造成了傷害，櫻花流的冷卻將減少{4}秒。
 Skill/Group/Desc/1011500┃雪拔出劍身，揮舞出如半月的櫻花陣式，對前方的敵人造成<color=white>{20}</color>的傷害並同時在其身上留下印記，並在 {2}秒間降低敵人的移動速度 {3}。\n在雪把劍收回劍鞘的瞬間，印記將產生爆炸，敵人將受到最大體力比例{6}的真實傷害。
 Skill/Group/Coef/1011100┃雪收集鈕扣，與劍刃配合使用。 命中敵人時，會消耗一顆鈕扣，造成<color=white>{0}</color>額外的真實傷害。\n鈕扣在非戰鬥狀態下進行恢復或者使用"武士道"時，可恢復到最大值。
 Skill/Group/Coef/1011200┃雪的下一次普通攻擊會造成 <color=white>{0}</color><color=#ffd775>(+攻擊力的 {1})* (普攻增幅)</color>的傷害，並在 {2}秒間降低敵人的移動速度 {3} 。\n\n武裝式完全體時消耗鈕扣，會使敵人暈眩 {4} 秒。
-Skill/Group/Coef/1011300┃<color=green>被動效果：</color> 每次雪擊中敵人，都會降低"武士道" {0}秒的冷卻時間。 \n\n\n雪用 {1}秒的時間整頓衣服，充分展現武士道的榮譽與禮儀, 同時可減少"櫻花流"的冷卻時間 {3}。使用"武士道"時，他的防禦能力會增強 {2}。"武士道"達到最高級別時，可使武裝式的鈕扣恢復到最大值 {4}。
+Skill/Group/Coef/1011300┃<color=green>被動效果：</color> 每次雪擊中敵人，都會降低"武士道" {0}秒的冷卻時間。 \n\n\n雪用 {1}秒的時間整頓衣服，充分展現武士道的榮譽與禮儀, 同時可減少"櫻花流"的冷卻時間 {3}。使用"武士道"時，承受傷害減少 {2}。當"武士道"達到最高級別時，可使武裝式的鈕扣恢復到最大值 {4}。
 Skill/Group/Coef/1011400┃雪衝向目標方向{2}m，對第一個擊中的敵人造成 <color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#dda0dd>(+技能增幅的{5})</color>的傷害。被擊中的敵人將被解除武裝，從而使其在 {3}秒內無法正常攻擊，如果對敵人造成了傷害，櫻花流的冷卻將減少{4}秒。
 Skill/Group/Coef/1011500┃雪拔出劍身，揮舞出如半月的櫻花陣式，對前方的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的 {1})</color><color=#dda0dd>(+技能增幅的 {7})</color>的傷害並同時在其身上留下印記，並在 {2}秒間降低敵人的移動速度 {3}。\n在雪把劍收回劍鞘的瞬間，印記將產生爆炸，敵人將受到最大體力比例{6}的真實傷害。
 Skill/Group/ExpansionTip/1011200┃<i>使用時會稍微增加攻擊射程。</i>
@@ -4307,9 +4557,9 @@ Skill/Group/ExpansionTip/1011400┃<i>此技能無法穿越牆壁。</i>
 CharacterState/Group/Name/1011200┃氣刃斬
 CharacterState/Group/Desc/1011200┃雪的下一次普通攻擊會造成額外的傷害，並降低敵人的移動速度。
 CharacterState/Group/Name/1011210┃移動速度降低
-CharacterState/Group/Desc/1011210┃移動速度已降低。
-CharacterState/Group/Name/1011310┃防禦力增加
-CharacterState/Group/Desc/1011310┃防禦力已增加。
+CharacterState/Group/Desc/1011210┃已降低移動速度。
+CharacterState/Group/Name/1011310┃減少承受傷害
+CharacterState/Group/Desc/1011310┃已減少承受傷害。
 CharacterState/Group/Name/1011400┃普攻封鎖
 CharacterState/Group/Desc/1011400┃不能進行基本攻擊。
 CharacterState/Group/Name/1011500┃印記
@@ -4369,7 +4619,7 @@ Skill/Group/Coef/1013200┃秀凱朝著目標方向投擲他的秘製醬油桶�
 Skill/Group/Coef/1013300┃秀凱使用他的鍋子猛擊地面，範圍內的敵人將受到 <color=white>{0}</color><color=#ffd775>(+攻擊力的{1}%)</color><color=#DDA0DD>(+技能增幅的{7}%)</color>的傷害並同時降低移動速度{3} 維持 {2}秒。 \n\n處於移動受損狀態的敵人會承受<color=white>{0}</color><color=#ffd775>(+攻擊力的 {1}%)</color><color=#DDA0DD>(+技能增幅的{7}%)</color><color=#688A08>(+秀凱體力上限的{6}%)</color>的額外傷害，及移動速度將會降低 {4}秒。
 Skill/Group/Coef/1013400┃秀凱坐在鍋子上快速滑向目標方向，對被擊中的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1}%)</color><color=#DDA0DD>(+技能增幅的{8}%)</color><color=#688A08>(+秀凱體力上限的{5}%)</color>的傷害。 \n\n目標陷入移動受損狀態時，將縮減移動翻滾吧！鍋子！冷卻時間{7}，<color=white>{0}</color><color=#ffd775>(+攻擊力的{1}%)</color><color=#DDA0DD>(+技能增幅的{8}%)</color><color=#688A08>(+秀凱體力上限的{6}%)</color>傷害，陷入懸空{3}秒。
 Skill/Group/Coef/1013500┃秀凱於{0}秒從鍋中舀出{7}次火焰，給範圍內的敵人造成<color=white>{1}</color><color=#ffd775>(+攻擊力的{2}%)</color><color=#DDA0DD>(+技能增幅的{9}%)</color><color=yellow>(+{8})</color>的傷害。 (<color=yellow>料理師的熱情</color>重疊{3})。 \n\n處於移動受損狀態的的敵人，在一定時間內的防禦力將會下降{6}維持{5}秒。
-Skill/Group/ExpansionTip/1013100┃<i>各等級料理師的熱情獲得量\n高級：{2} / 稀有：{3} / 英雄：{4}</i>
+Skill/Group/ExpansionTip/1013100┃<i>各等級料理師的熱情獲得量\n高級：{2} / 稀有：{3} / 英雄：{4} / 傳說：{5}</i>
 CharacterState/Group/Name/1013100┃料理師的熱情
 CharacterState/Group/Desc/1013100┃秀凱料理時會獲得料理師的熱情，每次直接製作的食物和飲料都會有更大的恢復量。
 CharacterState/Group/Name/1013200┃秘製醬油
@@ -4473,7 +4723,7 @@ Skill/Group/Coef/1016500┃希爾維婭騎乘摩托車，每{3}秒消耗{2}燃�
 Skill/Group/Coef/1016600┃希爾維婭在摩托車上旋轉，對範圍內的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#dda0dd>(+技能增幅的{2})</color>的傷害。
 Skill/Group/Coef/1016700┃希爾維婭向面朝的方向跳躍，對範圍內的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#dda0dd>(+技能增幅的{2})</color>的傷害並將其撞至懸空。
 Skill/Group/Coef/1016800┃希爾維婭抬起摩托車前輪朝指定的敵人衝去，給敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#dda0dd>(+技能增幅的{5})</color>傷害的同時將敵人擊退。\n根據摩托車當時的移動速度，追加{3}到{4}的傷害量。
-Skill/Group/Coef/1016900┃希爾維婭自摩托車上下來，技能恢復正常。\n{1秒以內的下一個普通攻擊會給敵人帶來<color=#ffd775>(+攻擊力的{1})</color><color=#dda0dd>的傷害。
+Skill/Group/Coef/1016900┃希爾維婭自摩托車上下來，技能恢復正常。\n{1}秒以內的下一個普通攻擊會給敵人帶來{0}的傷害。
 Skill/Group/ExpansionTip/1016700┃<i>此技能無法穿越牆壁。</i>
 CharacterState/Group/Name/1016000┃極限騎乘
 CharacterState/Group/Desc/1016000┃下一個普通攻擊強化
@@ -5917,7 +6167,7 @@ Skill/Group/Desc/1049410┃菲利克斯退後一步並將長槍掃向目標方�
 Skill/Group/Desc/1049420┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{1}</color>的技能傷害，命中時共享冷卻縮減{2}秒。
 Skill/Group/Desc/1049430┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{1}</color>的技能傷害，命中時共享冷卻縮減{2}秒。
 Skill/Group/Desc/1049440┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{1}</color>的技能傷害，命中時共享冷卻縮減{2}秒。
-Skill/Group/Desc/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能傷害。蓄力至上限時命中的目標暈眩{2}秒。\n使用技能時增加{3}個<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時對移動妨礙效果免疫。
+Skill/Group/Desc/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能傷害。蓄力至上限時命中的目標暈眩{2}秒。\n使用技能時增加{3}個<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時處於無法阻止狀態。
 Skill/Group/Coef/1049100┃菲利克斯以射程上限連續攻擊目標敵人2次。第2次攻擊造成<color=#ffd775>攻擊力的{0} * (普攻增幅)</color>的普攻傷害。\n\n<color=white>破風斬</color>, <color=white>疾風雷擊</color>, <color=white>半月斬</color>等基礎技能的冷卻共享並固定為{1}秒，最多可以連接使用3次。\n\n<color=white>連攻:</color>連接下一個技能前普攻造成傷害時，增加<color=white>連攻</color>疊層，疊層上限為{3}。第三次連接時，消耗<color=white>連攻</color>層數，最多可以重疊{3}次每疊層縮減基礎技能的冷卻時間{2}秒，並根據所使用的技能適用額外效果。\n\n共享冷卻不受冷卻縮減效果的影響。
 Skill/Group/Coef/1049200┃菲利克斯突進並在目標位置揮動長槍，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{8})</color>的技能傷害。破風斬最多可以重新施放2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{9})</color><color=green>(+實驗體級別 * {4})</color>的技能傷害並將敵人懸空{5}秒。另外，每消耗1個<color=white>連攻</color>疊層額外造成{6}的真實傷害並各增加敵人的懸空時間{7}秒。
 Skill/Group/Coef/1049210┃菲利克斯突進並在目標位置揮動長槍，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{8})</color>的技能傷害。破風斬最多可以重新施放2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{9})</color><color=green>(+實驗體級別 * {4})</color>的技能傷害並將敵人懸空{5}秒。另外，每消耗1個<color=white>連攻</color>疊層額外造成{6}的真實傷害並各增加敵人的懸空時間{7}秒。
@@ -5934,7 +6184,7 @@ Skill/Group/Coef/1049410┃菲利克斯退後一步並將長槍掃向目標方�
 Skill/Group/Coef/1049420┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+實驗體級別*{4})</color>的技能傷害，命中時共享冷卻縮減{5}秒。
 Skill/Group/Coef/1049430┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+實驗體級別*{4})</color>的技能傷害，命中時共享冷卻縮減{5}秒。
 Skill/Group/Coef/1049440┃菲利克斯退後一步並將長槍掃向目標方向，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color>的技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color><color=green>(+實驗體級別*{4})</color>的技能傷害，命中時共享冷卻縮減{5}秒。
-Skill/Group/Coef/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color> ~ <color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color>的技能傷害。蓄力至上限時命中的目標暈眩{4}秒。\n使用技能時增加{5}個<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時對移動妨礙效果免疫。
+Skill/Group/Coef/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color><color=#DDA0DD>(+技能增幅的{6})</color> ~ <color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color><color=#DDA0DD>(+技能增幅的{7})</color>的技能傷害。蓄力至上限時命中的目標暈眩{4}秒。\n使用技能時增加{5}個<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時處於無法阻止狀態。
 CharacterState/Group/Name/1049150┃連攻
 CharacterState/Group/Name/1049160┃破風斬 - 懸空
 CharacterState/Group/Name/1049300┃疾風雷擊 - 增加移動速度
@@ -6513,10 +6763,10 @@ Skill/Group/Desc/1061200┃愛琳丟出的球每彈跳一次都會加強，給�
 Skill/Group/Desc/1061210┃使用技能後，下次普攻時向對方突進並造成<color=white>{0}</color>的額外技能傷害。攻擊帶有貓咪鈴鐺標識的對象時，使其暈眩{5}秒。\n\n之後{3}秒間，每{4}秒快速發起連續攻擊時，分別對範圍內的敵人造成<color=white>{1}</color>的技能傷害。\n承受連續攻擊的對象受到負面效果影響時，承受{6}的額外技能傷害。
 Skill/Group/Desc/1061300┃愛琳散發魅力，使範圍內的敵人移動速度減緩{1}，{2}秒後給範圍內的對象造成<color=white>{0}</color>的技能傷害，同時被愛琳迷惑{3}秒。\n即使離開範圍，減緩效果也會持續{4}秒。
 Skill/Group/Desc/1061310┃愛琳在空中翻轉，貓咪尾巴向下重擊，範圍內的敵人承受<color=white>{0}</color>的技能傷害，懸空{1}秒。\n該技能命中敵人時，<color=white>喵步輕盈</color>及<color=white>喵跳跳</color>的冷卻時間縮減{2}秒。
-Skill/Group/Desc/1061400┃愛琳向指定的方向快速移動並在原位置生成小魚標識。\n
+Skill/Group/Desc/1061400┃愛琳向指定的方向快速移動並在原本位置生成小魚標識。\n
 Skill/Group/Desc/1061410┃愛琳跳躍落地，給範圍內的敵人造成<color=white>{0}</color>的技能傷害。\n朝小魚標識方向跳躍時，可以移動至更遠的距離。
 Skill/Group/Desc/1061500┃愛琳變身為貓咪。\n\n愛琳使用<color=white>跳跳球</color>或<color=white>喵步輕盈</color>生成小魚標識時，增加下一個普攻射程距離並造成<color=white>{0}</color>的額外技能傷害，同時賦予{1}秒的貓咪鈴鐺標識。\n\n貓咪鈴鐺標識的對象和愛琳共享視野。\n小魚標識持續{2}秒，生成上限為{3}個。
-Skill/Group/Desc/1061510┃貓咪變身為愛琳。\n\n貓咪變身成愛琳後，移動至小魚標識地點時可以獲得護盾。護盾持續{1}秒，吸收<color=white>{0}</color>的傷害。
+Skill/Group/Desc/1061510┃貓咪變身為愛琳。\n\n變身成貓咪後，移動至小魚標識地點時可以獲得護盾。護盾持續{1}秒，吸收<color=white>{0}</color>的傷害。
 Skill/Group/Coef/1061100┃愛琳進入其他區域時處於高度警戒狀態，此狀態下增加{0}視野。在同一區域停留超過{1}秒即可適應周圍環境，將取消視野增加效果並強化其他能力。\n愛琳：冷卻縮減{2}\n貓咪：增加防禦力{3}\n\n吃掉用魚製作的食物時，立即恢復食物恢復上限{4}的體力。
 Skill/Group/Coef/1061200┃愛琳丟出的球每彈跳一次都會加強，給範圍內的敵人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{2})</color>至最多<color=white>{3}</color><color=#DDA0DD>(+技能增幅的{5})</color>的技能傷害。\n球給敵人造成傷害時停止彈跳，同時生成小魚標識。
 Skill/Group/Coef/1061210┃使用技能後，下次普攻時向對方突進並造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{8})</color>的額外技能傷害。攻擊帶有貓咪鈴鐺標識的對象時，使其暈眩{5}秒。\n\n之後{3}秒間，每{4}秒快速發起連續攻擊，分別對範圍內的敵人造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅的{10})</color>的技能傷害。\n承受連續攻擊的對象受到負面效果影響時，將承受{6}的額外技能傷害。
@@ -6525,12 +6775,12 @@ Skill/Group/Coef/1061310┃愛琳在空中翻轉，貓咪尾巴向下重擊，�
 Skill/Group/Coef/1061400┃愛琳向指定的方向短暫移動，同時會在原本的位置生成小魚標識。
 Skill/Group/Coef/1061410┃愛琳跳躍落地，給範圍內的敵人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{2})</color>的技能傷害。\n朝小魚標識方向跳躍時，可以移動至更遠的距離。
 Skill/Group/Coef/1061500┃愛琳變身成貓咪。\n愛琳使用<color=white>跳跳球</color>或者<color=white>喵步輕盈</color>生成小魚時，增加下一個普攻射程距離並造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{5})</color>的額外技能傷害，同時賦予{1}秒的貓咪鈴鐺標識。\n\n貓咪鈴鐺標識的對象和愛琳共享視野。\n小魚標識持續{2}秒，生成上限為{3}個。\n
-Skill/Group/Coef/1061510┃貓咪變身成愛琳。\n\n貓咪變身成愛琳後，移動至小魚標識地點時可以獲得護盾。護盾持續{1}秒，吸收<color=white>{0}</color><color=#DDA0DD>(+技能增幅{3})</color>的傷害。
+Skill/Group/Coef/1061510┃貓咪變身成愛琳。\n\n變身成貓咪後，移動至小魚標識地點時可以獲得護盾。護盾持續{1}秒，吸收<color=white>{0}</color><color=#DDA0DD>(+技能增幅{3})</color>的傷害。
 Skill/Group/ExpansionTip/1061200┃<i>小魚標識持續{1}秒，最多可以生成{2}個。</i>
 Skill/Group/ExpansionTip/1061210┃<i>增加使用中普攻射程。</i>
 Skill/Group/ExpansionTip/1061400┃<i>小魚標識持續{1}秒，最多可以生成{2}個。</i>
 Skill/Group/ExpansionTip/1061500┃<i>變身喵咪！不受物品冷卻縮減效果的影響。\n愛琳普攻射程距離相比於其他投擲武器的實驗體短{0}。\n</i>
-Skill/Group/ExpansionTip/1061510┃<i>愛琳登場！不受物品冷卻縮減效果的影響。\n貓咪狀態時的愛琳由於使用投擲武器，普攻將被視為遠距離。\n投擲武器不會被消耗，但是當彈藥數為0時，將無法發起攻擊。</i>
+Skill/Group/ExpansionTip/1061510┃<i>愛琳登場！不受物品冷卻縮減效果的影響。\n貓咪狀態時的愛琳由於使用投擲武器，所以普攻也將被視為遠距離。\n投擲武器不會被消耗，但是當彈藥數為0時，將無法發起攻擊。</i>
 CharacterState/Group/Name/1061000┃愛琳變身狀態
 CharacterState/Group/Name/1061010┃貓咪變身狀態
 CharacterState/Group/Name/1061020┃陌生的區域
@@ -6547,7 +6797,7 @@ CharacterState/Group/Name/1061520┃無敵喵喵拳 - 暈眩
 CharacterState/Group/Desc/1061000┃化身愛琳時。
 CharacterState/Group/Desc/1061010┃化身貓咪時。
 CharacterState/Group/Desc/1061020┃陌生的區域內因警戒增加視野範圍。
-CharacterState/Group/Desc/1061030┃適應區域後冷卻時間縮減。
+CharacterState/Group/Desc/1061030┃適應區域後縮減冷卻時間。
 CharacterState/Group/Desc/1061040┃適應區域後增加防禦力。
 CharacterState/Group/Desc/1061050┃獲得護盾，抵禦傷害。
 CharacterState/Group/Desc/1061100┃強化下一個普攻。
@@ -6555,7 +6805,7 @@ CharacterState/Group/Desc/1061300┃被愛琳「喵心大悅」迷惑。
 CharacterState/Group/Desc/1061310┃因愛琳「喵心大悅」減少移動速度。
 CharacterState/Group/Desc/1061320┃因愛琳「喵生氣了！」飛到空中。
 CharacterState/Group/Desc/1061500┃強化下一個普攻。
-CharacterState/Group/Desc/1061510┃被愛琳強化普攻擊中時共享視野。
+CharacterState/Group/Desc/1061510┃被愛琳強化普攻命中時共享視野。
 CharacterState/Group/Desc/1061520┃被愛琳的無敵喵喵拳擊中暈眩。
 Skill/Group/Name/3015000┃斗篷和短劍
 Skill/Group/Name/3015100┃斗篷和短劍
@@ -6742,7 +6992,7 @@ CharacterState/Group/Desc/10000┃離開自己領土的野生動物們均有回�
 CharacterState/Group/Name/10001┃休息
 CharacterState/Group/Desc/10001┃通過休息恢復體力值和耐力值。
 CharacterState/Group/Name/10002┃攝取食物
-CharacterState/Group/Desc/10002┃通過攝取食物恢復體力值。
+CharacterState/Group/Desc/10002┃通過攝取食物恢復體力值。食物恢復量不受減少治癒效果的影響。
 CharacterState/Group/Name/10003┃攝取飲料
 CharacterState/Group/Desc/10003┃通過攝取飲料恢復耐力值。
 CharacterState/Group/Name/10004┃夜晚
@@ -6751,12 +7001,16 @@ CharacterState/Group/Name/10011┃攝取食物效果
 CharacterState/Group/Desc/10011┃通過食物攝取，在一定時間內增強能力值。
 CharacterState/Group/Name/10012┃攝取飲料效果
 CharacterState/Group/Desc/10012┃通過飲料攝取，在一定時間內增強能力值。
+CharacterState/Group/Name/10023┃攝取雪花效果
+CharacterState/Group/Desc/10023┃已經攝取5個雪花了。
 CharacterState/Group/Name/11300┃傳送門 - 使用效果
 CharacterState/Group/Desc/11300┃無法使用技能、食物、飲料以及監視器和探測儀以外的物品。
 CharacterState/Group/Name/11360┃使用傳送門保護效果
-CharacterState/Group/Desc/11360┃使用傳送門時對負面效果免疫。\n該效果僅在第一天白天啟動。
+CharacterState/Group/Desc/11360┃使用傳送門時對負面效果免疫。\n該效果僅在使用傳送門被妨礙時啟動。
+CharacterState/Group/Name/11370┃使用傳送門保護效果
+CharacterState/Group/Desc/11370┃下一次使用傳送門時，啟動負面效果免疫。\n該效果僅在傳送門使用被妨礙時啟動。
 CharacterState/Group/Name/11400┃快速再生復活效果
-CharacterState/Group/Desc/11400┃無法使用技能、食物、飲料以及監視器和探測儀以外的物品。
+CharacterState/Group/Desc/11400┃無法使用技能、食物、飲料以及監視器和探測儀以外的物品。暫時提高移動速度。
 CharacterState/Group/Name/11000┃單人模式修正
 CharacterState/Group/Name/11001┃雙人模式修正
 CharacterState/Group/Name/11002┃三人模式修正
@@ -6812,7 +7066,7 @@ Skill/LobbyDesc/1003100┃菲歐拉每次使用技能命中敵人，可以疊加
 Skill/LobbyDesc/1003200┃菲歐拉朝指定方向進攻，對命中的敵人造成技能傷害。 在範圍末端被刺傷的敵人承受更大的技能傷害，同時減少移動速度，並被賦予2個刺擊標識。刺擊疊層達到上限時命中敵人，可引爆標識造成 額外技能傷害，並降低敵人的移動速度和減少長刺剩餘的冷卻時間。
 Skill/LobbyDesc/1003300┃菲歐拉快速向前揮劍兩次，各造成一次技能傷害並分別疊加一個刺擊標識。 2次全部命中時，暫時封鎖此敵人對菲歐拉的普攻，並在技能使用期間，減少菲歐拉所有承受傷害。
 Skill/LobbyDesc/1003400┃菲歐拉向指定方向突進，對碰撞的敵人造成傷害，成功造成傷害可以重新使用技能向指定方向移動。刺擊疊層達到上限時命中敵人造成 額外技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>， <color=#ffffff>複雜進攻(W)</color>的冷卻時間。
-Skill/LobbyDesc/1003500┃菲歐拉向正前方刺劍造成技能傷害，擊退敵人的同時減少敵人的移動速度。飛刺在最多可以使用3次，引爆達到上限的刺擊標識可造成額外技能傷害。每次飛刺命中，都會增加傷害量。3次全部命中時增加真實傷害，最後一次如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻時間，並使敵人暫時陷入暈眩。
+Skill/LobbyDesc/1003500┃菲歐拉向正前方刺劍造成技能傷害，擊退敵人的同時減少敵人的移動速度。飛刺在最多可以使用3次，引爆達到上限的刺擊標識可造成額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。3次全部命中時增加真實傷害，最後一次如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻時間，並使敵人暫時陷入暈眩。
 Skill/LobbyName/1004100┃抗打
 Skill/LobbyName/1004200┃破碎彈
 Skill/LobbyName/1004300┃17對1
@@ -7059,7 +7313,7 @@ Skill/LobbyDesc/1049100┃菲利克斯以射程上限連續攻擊目標敵人2�
 Skill/LobbyDesc/1049200┃菲利克斯突進並在目標位置揮動長槍，造成技能傷害。破風斬最多可以重新施放2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成技能傷害並將敵人懸空。 另外，根據<color=white>連攻</color>疊層數額外造成真實傷害並增加敵人的懸空時間。
 Skill/LobbyDesc/1049300┃菲利克斯使用長槍刺向指定方向造成技能傷害。疾風雷擊最多可以重新施放2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成技能傷害並束縛位於近處的敵人後突進。另外，根據<color=white>連攻</color> 疊層數增加束縛時間。
 Skill/LobbyDesc/1049400┃菲利克斯退後一步並將長槍掃向目標方向，造成技能傷害，並迴避普通攻擊。成功迴避普攻時增加<color=white>連攻</color>疊層。半月斬最多可以重新施法2次，並增強最終施放效果。\n\n<color=white>最終施放:</color> 造成技能傷害加強，命中時縮減共享冷卻。
-Skill/LobbyDesc/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成技能傷害。蓄力至上限時命中的目標將陷入暈眩。\n使用技能時增加<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時對移動妨礙效果免疫。
+Skill/LobbyDesc/1049500┃菲利克斯蓄力於槍尖，向前突進並用力一刺，造成技能傷害。蓄力至上限時命中的目標將陷入暈眩。\n使用技能時增加<color=white>連攻</color>疊層。\n\n蓄力期間可改變方向，突進時處於無法阻止狀態。
 Skill/LobbyDesc/1050100┃艾琳娜用普攻和技能攻擊敵人時會生成一個<color=white>冰區</color>並對<color=white>冰區</color>上的敵人施加<color=white>寒氣</color>效果。在<color=white>寒氣</color>值不斷聚集的期間，將減少敵人的移動速度和攻擊速度，並在<color=white>寒氣</color>值蓄滿時陷入<color=white>凍結</color>狀態。\n\n<color=white>凍結</color> : 暫時凍住並暈眩，艾琳娜或其隊友在攻擊<color=white>凍結</color>狀態的敵人時，會造成技能傷害並解除<color=white>凍結</color>狀態，同時縮減<color=white>極冰</color>的冷卻時間。 已解凍的敵人暫時不受<color=white>寒氣</color>效果的影響。
 Skill/LobbyDesc/1050200┃艾琳娜給前方的敵人造成技能傷害，並增加<color=white>寒氣</color>值。一定時間後，冰層爆裂時將再次對同一區域造成技能傷害，同時縮減<color=white>女王的冰封領域</color>的冷卻時間並增加<color=white>寒氣</color>值。
 Skill/LobbyDesc/1050300┃艾琳娜朝指定的方向旋轉，給路徑上的敵人造成技能傷害，縮減<color=white>極冰</color>的冷卻時間並增加自身的防禦力。技能最多可以使用2次，每擊中一個敵人都會增加<color=white>寒氣</color>值。 \n在<color=white>冰區</color>使用技能可以增加移動距離，使用技能的過程中承受敵人的傷害時，會在攻擊者的位置生成一個<color=white>冰區</color>。另外，在使用<color=white>雙旋擊</color>時可以連接使用<color=white>極冰</color>或<color=white>飛燕</color>，同時縮減所連接的技能冷卻時間。
@@ -7111,10 +7365,10 @@ Skill/LobbyDesc/1059200┃艾薩克向敵人突進後，猛擊造成技能傷害
 Skill/LobbyDesc/1059300┃艾薩克加強武器並強化下一個普攻或基礎技能，造成額外的技能傷害並摧毀敵人的護盾。因該技能強化的普攻或者基礎技能觸發剝削時，減少基礎技能的冷卻時間。
 Skill/LobbyDesc/1059400┃艾薩克迅速突進，準備下一個技能。\n\n再次使用時：將前方的敵人拉向自己並造成技能傷害，使敵人暫時暈眩。
 Skill/LobbyDesc/1059500┃艾薩克朝指定的方向猛擊地面並造成技能傷害，沒有剝削標識的敵人會被推出範圍外。因該技能發動剝削時，會造成目標已失體力比例的額外技能傷害，並暫時大幅減少移動速度。
-Skill/LobbyDesc/1061100┃愛琳進入其他區域時變得警惕處於高度警惕狀態，此狀態下增加視野。在同一區域逗留一段時間後，取消視野增效並強化其他能力。\n\n愛琳：冷卻縮減\n貓咪：增加防禦力\n\n吃掉用魚製作的食物時，立即恢復一定比例食物恢復上限的體力。
+Skill/LobbyDesc/1061100┃愛琳進入其他區域時變得警惕處於高度警戒狀態，此狀態下增加視野。在同一區域逗留一段時間後，取消視野增加效果並強化其他能力。\n\n愛琳：冷卻縮減\n貓咪：增加防禦力\n\n吃掉用魚製作的食物時，立即恢復一定比例食物恢復上限的體力。
 Skill/LobbyDesc/1061200┃<color=#ffd775>愛琳：</color>\n愛琳丟出的球每彈跳一次都會加強，給範圍內的敵人造成技能傷害。\n球給敵人造成傷害時停止彈跳，同時生成小魚標識。\n\n<color=#ffd775>貓咪：</color>\n使用技能後，下次普攻時向對方突進並造成額外的技能傷害。攻擊帶有貓咪鈴鐺標識的對象時，使其暈眩。\n\n此後快速發起連續攻擊，分別對範圍內的敵人造成技能傷害。\n承受連續攻擊的對象受到負面效果影響時，承受額外的技能傷害。\n
 Skill/LobbyDesc/1061300┃<color=#ffd775>愛琳：</color>\n愛琳散發魅力，使範圍內的敵人移動速度減緩，此後給範圍內的對象造成技能傷害，陷入愛琳的魅力。\n即使離開範圍，減緩效果也會持續一段時間。\n\n<color=#ffd775>貓咪：</color>\n愛琳在空中翻轉，貓咪尾巴向下重擊，範圍內的敵人承受技能傷害的同時懸空。\n該技能命中敵人時，縮減<color=white>喵步輕盈</color>及 <color=white>喵跳跳</color>的冷卻時間。
-Skill/LobbyDesc/1061400┃<color=#ffd775>愛琳：</color>\n愛琳向指定的方向快速移動並在原位置生成小魚標識。\n\n<color=#ffd775>貓咪：</color>\n愛琳跳躍落地，給範圍內的敵人造成技能傷害。\n朝小魚標識防線跳躍時，可以移動至更遠的距離。
+Skill/LobbyDesc/1061400┃<color=#ffd775>愛琳：</color>\n愛琳向指定的方向快速移動並在原本位置生成小魚標識。\n\n<color=#ffd775>貓咪：</color>\n愛琳跳躍落地，給範圍內的敵人造成技能傷害。\n朝小魚標識方向跳躍時，可以移動至更遠的距離。
 Skill/LobbyDesc/1061500┃<color=#ffd775>愛琳：</color>\n愛琳變身為貓咪。\n\n愛琳使用<color=white>跳跳球</color>或者<color=white>喵步輕盈</color>生成小魚標識時，增加下一個普攻射程距離並造成額外技能傷害，暫時賦予貓咪鈴鐺標識。\n貓咪鈴鐺標識的對象和愛琳共享視野。\n\n<color=#ffd775>貓咪：</color>\n貓咪變身為愛琳。\n\n\n貓咪變身成愛琳後，移動至小魚標識地點時可以獲得吸收傷害的護盾。
 Skill/LobbyDesc/3001000┃接近短距離內的指定目標，造成傷害。
 Skill/LobbyDesc/3002000┃在一定時間內，防禦所有的傷害，並將這些傷害反彈給攻擊對象。（無法防禦攻擊的效果。）
@@ -7140,7 +7394,7 @@ Skill/LobbyDesc/3023000┃開閃光燈造成傷害。面朝自己的敵人承受
 Skill/LobbyDesc/3024000┃VF能量最多可以生成3個。如果再次使用，一個球體會在目標點爆炸並造成傷害。\n\n連續被命中的目標減少移動速度。
 Skill/LobbyDesc/3025000┃厄喀翁1秒間集中精力，並根據狀態適用不同效果。\n\n<color=white>VF值小於50：</color> 消耗一定VF值，縮減武器技能以外的技能冷卻時間，並增加移動速度。\n\n<color=white>VF暴走狀態：</color> 延長暴走持續時間，縮減技能冷卻時間並增加移動速度。\n\n<color=white>超負荷狀態：</color> 超負荷狀態減少一定時間。
 CharacterState/Group/Name/2100201┃戰場 - 加速
-CharacterState/Group/Desc/2100101┃在該戰場中實驗體移動速度增加{0}%、冷卻減少{1}%。不會超過冷卻上限數值。
+CharacterState/Group/Desc/2100201┃在該戰場中實驗體移動速度增加{0}%、冷卻減少{1}%。不會超過冷卻上限數值。
 CharacterState/Group/Name/2100202┃戰場 - 狂暴
 CharacterState/Group/Desc/2100202┃在該戰場中造成傷害增加{0}%，吸血-所有傷害效果增加{1}%。
 CharacterState/Group/Name/2100203┃戰場 - 保護
@@ -7148,9 +7402,9 @@ CharacterState/Group/Desc/2100203┃在該戰場中持續{0}秒非戰鬥狀態�
 CharacterState/Group/Name/2120000┃戰場熟練度限制
 CharacterState/Group/Desc/2120000┃戰場內可獲得的武器/防禦/體力熟練度有上限值限制。
 CharacterState/Group/Name/2110002┃戰場急速再生
-CharacterState/Group/Desc/2110002┃當戰場急速再生增益被啟動時，將消耗戰場套裝。\n戰場內的隊伍全軍覆沒時，可以通過增益復活。
+CharacterState/Group/Desc/2110002┃當戰場急速再生增益被啟動時，將消耗戰場套裝。\n戰場內的隊伍全軍覆沒時，可通過增益效果復活。
 CharacterState/Group/Name/2101001┃解除戰場套裝
-CharacterState/Group/Desc/2101001┃戰場套裝已解除。進入戰場時無法獲得「戰場急速再生」增益和「戰場標識」。
+CharacterState/Group/Desc/2101001┃戰場套裝已解除。進入戰場時無法獲得「戰場急速再生」增益效果和「戰場標識」。
 CharacterState/Group/Name/2140000┃治癒包
 CharacterState/Group/Desc/2140000┃一定時間內恢復體力和耐力。
 CharacterState/Group/Name/2160000┃護盾包
@@ -7277,7 +7531,9 @@ Item/Skills/6002005/Body┃({6})使用技能可以對意念充能。意念:{4}�
 Item/Skills/6002005/Desc┃使用技能為意念充能。充能後{4}秒內下一個普攻造成額外技能傷害。 (冷卻: {5}秒)\n<color=#DDA0DD>造成技能增幅的{8}</color>的傷害。
 Item/Skills/6002006/Name┃<color=yellow>意念</color>
 Item/Skills/6002006/Body┃({6})使用技能可以對意念充能。意念:{4}秒內下一個普攻造成 <color=#008000>{8}</color>的額外技能傷害。(冷卻 : {5}秒)
-Item/Skills/6002006/Desc┃使用技能為意念充能。充能後{4}秒內下一個普攻造成額外技能傷害。 (冷卻: {5}秒)\n造成(30 + <color=#008000>級別 * {9}</color>)的傷害。
+Item/Skills/6002006/Desc┃使用技能為意念充能。充能後{4}秒內下一個普攻造成額外技能傷害。 (冷卻: {5}秒)\n造成({6} + <color=#008000>級別 * {9}</color>)的傷害。
+Item/Skills/6002007/Name┃<color=yellow>意念</color>
+Item/Skills/6002008/Name┃<color=yellow>意念</color>
 Item/Skills/6001000┃熾焰
 Item/Skills/6001001/Name┃<color=yellow>熾焰</color>
 Item/Skills/6001001/Body┃({0})進入戰鬥狀態時，每{6}秒給{1}m範圍內的敵人造成<color=#688A08>{4}</color>的技能傷害。 
@@ -7352,6 +7608,7 @@ Item/Skills/6007004/Body┃每移動{2}m，獲得一個[微步]疊層(上限:{1}
 Item/Skills/6007004/Desc┃每移動{1}m，獲得一個[微步]疊層(上限:{0})\n根據疊層最多可以增加{3}移動速度。普攻將消耗所有疊層，最多可以造成{6}的技能傷害。\n(近攻)以最大疊層命中目標時，目標移動速度將在{11}秒間減少{10}。
 Item/Skills/6007005/Name┃<color=yellow>微步</color>
 Item/Skills/6007006/Name┃<color=yellow>微步</color>
+Item/Skills/6007007/Name┃<color=yellow>微步</color>
 Item/Skills/6006000┃荊棘
 Item/Skills/6006001/Name┃<color=yellow>荊棘</color>
 Item/Skills/6006001/Body┃將普攻承受的<color=gray>{4}</color>傷害作為真實傷害反射給攻擊者，並在{5}秒間減少治癒效果{3}。4秒間累積{7}承受傷害，反射給周圍<color=white>{6}</color>的技能傷害。 (冷卻 3秒)
@@ -7396,6 +7653,7 @@ Item/Skills/6013003/Desc┃下一個普攻造成<color=green>實驗體級別*8</
 Item/Skills/6013004/Name┃<color=yellow>充能 - 閃光</color>
 Item/Skills/6013004/Body┃下一個普攻在{1}秒間使敵人的移動速度減少{2}%。(冷卻 : {9}秒)
 Item/Skills/6013004/Desc┃下一個普攻在{1}秒間使敵人的移動速度減少{2}%。(冷卻 : {6}秒)
+Item/Skills/6013005/Name┃<color=yellow>充能 - 閃光</color>
 Item/Skills/6014000┃詛咒
 Item/Skills/6014001/Name┃<color=yellow>詛咒</color>
 Item/Skills/6014001/Body┃使用技能攻擊時，敵人陷入詛咒{2}秒。處於詛咒狀態的敵人在解除詛咒狀態時承受<color=#DDA0DD>(+{1})</color>的真實傷害。一旦陷入詛咒狀態，{4}秒內(普攻命中時減少1秒)不再承受詛咒。(冷卻:2秒)
@@ -7478,6 +7736,11 @@ Item/Skills/6017007/Name┃<color=yellow>熱情-循環</color>
 Item/Skills/6017008/Name┃<color=yellow>熱情</color>
 Item/Skills/6017008/Body┃普攻命中時，造成敵方實驗體當前體力{1}%的技能傷害，{8}秒間獲得熱情疊層，每個熱情疊層獲得{3}%的攻擊速度。達到{9}疊層上限額外增加攻擊力{5}。
 Item/Skills/6017008/Desc┃普攻命中時，造成敵方實驗體當前體力{1}%的技能傷害，{8}秒間獲得熱情疊層，每個熱情疊層獲得{3}%的攻擊速度。達到{9}疊層上限額外增加攻擊力{5}。
+Item/Skills/6017009/Name┃<color=yellow>熱情</color>
+Item/Skills/6017010/Name┃<color=yellow>熱情</color>
+Item/Skills/6017021/Name┃<color=yellow>熱情</color>
+Item/Skills/6017022/Name┃<color=yellow>熱情</color>
+Item/Skills/6017023/Name┃<color=yellow>熱情</color>
 CharacterState/Group/Name/6017000┃熱情
 CharacterState/Group/Desc/6017000┃增加攻擊速度。
 CharacterState/Group/Name/6017010┃熱情 - 疊層上限
@@ -7596,15 +7859,15 @@ CharacterState/Group/Desc/6503100┃增加能力值。
 Item/Skills/6512000┃虛言
 Item/Skills/6512001┃虛言
 Item/Skills/6512001/Name┃<color=yellow>虛言</color>
-Item/Skills/6512001/Body┃消耗{0}的體力，5秒間處於誓約狀態。\n\n誓約狀態下消耗的體力會逐漸恢復，同時獲得{1}%的吸血 - 所有傷害和{2}的攻擊力。當前體力越低，恢復的體力越多。\n\n冷卻：{3}秒
-Item/Skills/6512001/Desc┃消耗{0}體力，5秒間處於誓約狀態。\n\n誓約狀態下消耗的體力會逐漸恢復，同時獲得{1}%的吸血 - 所有傷害和{2}的攻擊力。當前體力越低，恢復的體力越多。\n\n冷卻：{3}秒
+Item/Skills/6512001/Body┃消耗{0}的體力，6秒間處於誓約狀態。\n\n誓約狀態下消耗的體力會逐漸恢復，同時獲得{1}%的吸血 - 所有傷害和{2}的攻擊力。當前體力越低，實驗體級別越高，恢復的體力越多。\n\n冷卻：{3}秒
+Item/Skills/6512001/Desc┃消耗{0}體力，6秒間處於誓約狀態。\n\n誓約狀態下消耗的體力會逐漸恢復，同時獲得{1}%的吸血 - 所有傷害和{2}的攻擊力。當前體力越低，實驗體級別越高，恢復的體力越多。\n\n冷卻：{3}秒
 CharacterState/Group/Name/6512000┃虛言
 CharacterState/Group/Desc/6512000┃因虛言增加能力值，正在恢復體力。
 Item/Skills/6513000┃實刃
 Item/Skills/6513001┃實刃
 Item/Skills/6513001/Name┃<color=yellow>實刃</color>
-Item/Skills/6513001/Body┃給周圍的敵人造成{0}+敵人當前體力{1}%的傷害，奪取敵人(近攻：{2}%) (遠攻：{5}%) 的移動速度。 恢復給敵人造成傷害{3}%的體力。\n\n冷卻：{4}秒
-Item/Skills/6513001/Desc┃給周圍的敵人造成{0}+攻擊力的{6}%+敵人當前體力 {1}%的傷害，奪取敵人(近攻：{2}%) (遠攻：{5}%) 的移動速度。恢復給敵人造成傷害{3}%的體力。\n\n冷卻：{4}秒
+Item/Skills/6513001/Body┃給周圍的敵人造成{0}的傷害，奪取敵人(近攻：{2}%) (遠攻：{5}%) 的移動速度。 恢復給敵人造成傷害{3}%的體力。\n\n冷卻：{4}秒
+Item/Skills/6513001/Desc┃給周圍的敵人造成{0}+攻擊力的{6}%+技能增幅{1}%的傷害，奪取敵人(近攻：{2}%) (遠攻：{5}%) 的移動速度。恢復給敵人造成傷害{3}%的體力。\n\n冷卻：{4}秒
 CharacterState/Group/Name/6513010┃信念
 CharacterState/Group/Desc/6513010┃增加移動速度。
 CharacterState/Group/Name/6513020┃信念
@@ -7616,8 +7879,8 @@ CharacterState/Group/Desc/6513040┃減少移動速度。
 Item/Skills/6514000┃E.M.O.T.E
 Item/Skills/6514001┃E.M.O.T.E
 Item/Skills/6514001/Name┃<color=yellow>E.M.O.T.E</color>
-Item/Skills/6514001/Body┃召喚根據心情可以發揮不同效果的EMOTE裝置！\n\n剩餘體力超過一半時，召喚能使敵人速度減緩的「閃開」EMOTE；剩餘體力不足一半時，召喚能恢復周圍隊友體力的「加油」EMOTE。\nEMOTE在{0}秒後消失，也可被敵人的普攻摧毀。\n\n「閃開」EMOTE 減少移動速度：最少{1}%，最多可重疊{2}%\n「加油」EMOTE 每秒恢復量：{6}秒間恢復{3}的體力\n\n冷卻：{4}秒
-Item/Skills/6514001/Desc┃可召喚根據心情發揮不同效果的EMOTE裝置！\n\n剩餘體力超過一半時，召喚能使敵人速度減緩的「閃開」EMOTE；剩餘體力不足一半時，召喚能恢復周圍隊友體力的「加油」EMOTE。\nEMOTE在{0}秒後消失，也可被敵人的普攻摧毀。\n\n「閃開」EMOTE 減少移動速度：最少{1}%，最多可重疊{2}%\n「加油」EMOTE 每秒恢復量：{6}秒間恢復{3}的體力\n\n冷卻：{4}秒
+Item/Skills/6514001/Body┃在{0}秒間召喚EMOTE裝置，根據當前體力給周邊範圍內的實驗體造成不同效果。\n\n(剩餘體力超過一半時) 使周圍敵人移動速度最多減緩{2}%；\n(剩餘體力不足一半時) 每{6}秒恢復周圍隊友體力{3}% 。\n\n冷卻{4}秒
+Item/Skills/6514001/Desc┃在{0}秒間召喚EMOTE裝置，根據當前體力給周邊範圍內的實驗體造成不同效果。\n\n(剩餘體力超過一半時) 使周圍敵人移動速度最多減緩{2}%；\n(剩餘體力不足一半時) 每{6}秒恢復周圍隊友體力{3}% 。\n\n冷卻{4}秒
 CharacterState/Group/Name/6514010┃閃開！
 CharacterState/Group/Desc/6514010┃減少移動速度。
 CharacterState/Group/Name/6514020┃加油！
@@ -7738,7 +8001,7 @@ BattleMission/5003004/1┃在醫院擊殺實驗體 3次
 BattleMission/5003005/1┃擊殺實驗體 2次
 BattleMission/5003006/1┃食用炸魚薯條 12次
 BattleMission/5003007/1┃移動熟練度達到14級以上
-BattleMission/5003008/1┃擊殺武器熟練度相差2個級別以上的目標 3次
+BattleMission/5003007/1┃擊殺武器熟練度相差2個級別以上的目標 3次
 BattleMission/5003009/1┃獲得生命樹枝 5次
 BattleMission/5003010/1┃通過裝備最初選定的路徑物品獲得最終勝利 2次
 BattleMission/5004001/1┃在一般/排位賽中進入前三名 5次
@@ -7951,6 +8214,86 @@ BattleMission/7008007/1┃武器熟練度達到 14級以上
 BattleMission/7008008/1┃使用無人機配送 50次
 BattleMission/7008009/1┃獲得能源晶石 1次
 BattleMission/7008010/1┃達到TK 4次以上 1次
+BattleMission/8001001/1┃給野生動物造成50,000傷害
+BattleMission/8001002/1┃擊殺野狗 5次
+BattleMission/8001003/1┃使用無人機配送 3次
+BattleMission/8001004/1┃擊殺實驗體 3次
+BattleMission/8001005/1┃從航空補給箱中獲得傳說物品 2次
+BattleMission/8001006/1┃獲得能源晶石 1次
+BattleMission/8001007/1┃在一般/排位賽中進入前三名 3次
+BattleMission/8001008/1┃體力熟練度達到14級以上
+BattleMission/8001009/1┃製作傳說物品 2次
+BattleMission/8001010/1┃擊殺實驗體 7次
+BattleMission/8002001/1┃探索除研究中心以外的所有區域 2次
+BattleMission/8002002/1┃擊殺熊3次
+BattleMission/8002003/1┃給實驗體造成 8,000 傷害
+BattleMission/8002004/1┃在海灘擊殺實驗體 3次
+BattleMission/8002005/1┃爆炸計時器還剩25秒以內的情況下獲勝 1次
+BattleMission/8002006/1┃擊殺實驗體 10次
+BattleMission/8002007/1┃防禦熟練度達到 14級以上
+BattleMission/8002008/1┃在禁區擊殺實驗體 1次
+BattleMission/8002009/1┃獲得生命樹枝 3次
+BattleMission/8002010/1┃爆炸計時器還剩30秒以內的情況下獲勝 1次
+BattleMission/8003001/1┃使用無人機配送 15次
+BattleMission/8003002/1┃擊殺野狗 5次
+BattleMission/8003003/1┃進行一般/排位遊戲 10次
+BattleMission/8003004/1┃在旅館擊殺實驗體 3次
+BattleMission/8003005/1┃擊殺實驗體 3次
+BattleMission/8003006/1┃爆炸計時器還剩30秒以內的情況下獲勝 1次
+BattleMission/8003007/1┃移動熟練度達到14級以上
+BattleMission/8003008/1┃在禁區擊殺實驗體 1次
+BattleMission/8003009/1┃成功逃脫 - 1次
+BattleMission/8003010/1┃給實驗體造成 15,000 傷害
+BattleMission/8004001/1┃給實驗體造成50,000傷害
+BattleMission/8004002/1┃獵殺狼 6次
+BattleMission/8004003/1┃飲用食物/飲料 6次
+BattleMission/8004004/1┃從航空補給箱中獲得傳說物品 2次
+BattleMission/8004005/1┃進行一般/排位遊戲 10次
+BattleMission/8004006/1┃擊殺實驗體 20次
+BattleMission/8004007/1┃在一般/排位賽中進入前三名 3次
+BattleMission/8004008/1┃武器熟練度達到 14級以上
+BattleMission/8004009/1┃使用望遠監視器 12次
+BattleMission/8004010/1┃從航空補給箱中獲得物品 3次
+BattleMission/8005001/1┃在一般/排位賽中進入前三名 5次
+BattleMission/8005002/1┃擊殺阿爾法 3次
+BattleMission/8005003/1┃給野生動物造成50,000傷害
+BattleMission/8005004/1┃在射箭場擊殺實驗體 3次
+BattleMission/8005005/1┃取得首殺 1次
+BattleMission/8005006/1┃使用噪音產生器 3次
+BattleMission/8005007/1┃體力熟練度達到14級以上
+BattleMission/8005008/1┃在禁區擊殺實驗體 1次
+BattleMission/8005009/1┃獲得生命樹枝 3次
+BattleMission/8005010/1┃給實驗體造成 15,000 傷害
+BattleMission/8006001/1┃進行一般/排位遊戲 10次
+BattleMission/8006002/1┃擊殺雞 10次
+BattleMission/8006003/1┃獲得 200 以上的榮譽值
+BattleMission/8006004/1┃在醫院擊殺實驗體 2次
+BattleMission/8006005/1┃製作傳說物品 10次
+BattleMission/8006006/1┃使用傳送門 10次
+BattleMission/8006007/1┃探索熟練度達到14級以上
+BattleMission/8006008/1┃爆炸計時器還剩30秒以內的情況下獲勝 1次
+BattleMission/8006009/1┃使用無人機配送 50次
+BattleMission/8006010/1┃獲得生命樹枝 2次
+BattleMission/8007001/1┃使用傳送裝置 5次
+BattleMission/8007002/1┃進行一般/排位遊戲 20次
+BattleMission/8007003/1┃擊殺奧米加 2次
+BattleMission/8007004/1┃在教堂擊殺實驗體3次
+BattleMission/8007005/1┃使用傳送裝置 1次
+BattleMission/8007006/1┃使用傳送門 10次
+BattleMission/8007007/1┃陷阱熟練度達到7級以上
+BattleMission/8007008/1┃設置EMP探測儀 15次
+BattleMission/8007009/1┃獲得VF血液樣本 3次
+BattleMission/8007010/1┃達到TK 4次以上 1次
+BattleMission/8008001/1┃在一般/排位賽中取得最終勝利 3次
+BattleMission/8008002/1┃探索除研究中心以外的所有區域 3次
+BattleMission/8008003/1┃在碼頭擊殺實驗體 3次
+BattleMission/8008004/1┃獵殺野豬 5次
+BattleMission/8008005/1┃體力低於500的狀態下擊殺實驗體 3次
+BattleMission/8008006/1┃擊殺實驗體 10次
+BattleMission/8008007/1┃狩獵熟練度達到14級以上
+BattleMission/8008008/1┃在禁區擊殺實驗體 3次
+BattleMission/8008009/1┃獲得隕石 2次
+BattleMission/8008010/1┃從航空補給箱中獲得傳說物品 3次
 서비스약관┃Terms of Service
 개인정보동의┃Privacy Policy
 약관동의┃我已閱讀並同意服務條款。
@@ -8495,6 +8838,8 @@ GameSetting/PreventMinimapMove┃滑鼠游標超過一定時間未停在迷你�
 AutoWeaponSkills┃自動升級武器技能
 GameSetting/EnableMinimapMove┃允許在迷你地圖上點擊右鍵移動。
 EnableMinimapMove┃允許迷你地圖移動
+전장 HUD 자동 전환┃自動轉換戰場 HUD
+GameSetting/BattleZoneHUDAutoReplace┃進入戰場預選地及戰場時，將自動轉換為戰場HUD。
 자동 공격 설정┃自動攻擊設定
 GameSetting/AutoAttack┃不適用 : 未下達攻擊命令時， 不攻擊附近的目標。\n標準 : 攻擊附近的目標。除'始終'的條件外，製作採集後也不進行攻擊。\n始終 : 攻擊附近的目標。停止、休息、確認箱子、操作傳送箱子時不進行攻擊。
 #Standard┃標準
@@ -8591,6 +8936,20 @@ Vivox점검팝업┃語音聊天出現問題，目前無法使用。
 지역 설명┃所在區域
 금지구역┃禁止區域
 금지구역 설명┃到指定下一個禁區為止所剩餘的時間
+전장규칙안내HUD 전환버튼┃轉為戰場 UI
+기존UI 전환버튼┃轉為基礎 UI
+전장규칙안내HUD 전장예정지 제목┃戰場預選地
+전장규칙안내HUD 전장예정지 설명┃此區域將於白天轉為戰場。
+전장규칙안내HUD 전장활성화 제목┃啟動戰場
+전장규칙안내HUD 전장활성화 설명┃攻擊戰場內的穿梭機可以獲得鎮定劑。\n逃離或者闖入戰場時，將立即死亡且無法復活。\n
+전장규칙안내HUD 전장보상 제목┃領取戰場獎勵
+전장규칙안내HUD 전장보상 설명┃恭喜您在戰場中贏得了勝利。\n請點擊畫面中的領取獎勵按鈕或安全監控台選擇獎勵吧！
+전장규칙안내HUD 전장보상 수령 버튼┃領取獎勵
+전장규칙안내HUD 전장보상 수령 완료 본인┃本人領取
+전장규칙안내HUD 전장보상 수령 완료 팀원┃隊友領取
+아이템 분해┃分解
+아이템 분해 팝업┃分解時獲得
+제한시간 내에 보상 아이템을 선택하세요.┃請在限時內選擇獎勵物品。
 전장 참여 팀원┃戰場套裝
 전장 참여 팀원 설명┃持有戰場套裝的實驗體參與戰場時可獲得「戰場急速再生」及「戰場標識」效果。\n戰場中勝利的隊伍會解除戰場套裝。
 AreaAttributes/GroupName/1┃戰場 - 加速
@@ -8599,7 +8958,7 @@ AreaAttributes/GroupName/2┃戰場 - 狂暴
 AreaAttributes/GroupDesc/2┃此戰場內增加最終效果傷害和吸血 - 所有傷害效果。
 AreaAttributes/GroupName/3┃戰場 - 保護
 AreaAttributes/GroupDesc/3┃此戰場內持續一定非戰鬥狀態時間後，將獲得護盾。
-BattleZoneDebuffGaugeTooltip_Title┃神經暴走儀
+BattleZoneDebuffGaugeTooltip_Title┃神經暴走值
 BattleZoneDebuffGaugeTooltip_Desc┃戰場中累積的有害物質數值。\n實驗體將在達到上限值的一段時間後死亡。
 BattleZoneRewardGaugeTooltip_Title┃領取戰場獎勵
 BattleZoneRewardGaugeTooltip_Desc┃請前往安全監控領取獎勵。
@@ -9033,6 +9392,10 @@ WickelineUI_ReadyTooltip┃維克萊恩博士開始出動。
 위클라인죽음어나운스┃{0}殺死了維克萊恩博士。
 위클라인이동┃發現維克萊恩博士在{0}。
 위클라인┃維克萊恩博士
+전장예정노티┃戰場前1分鐘
+전장예정┃1分鐘後將啟動{0}戰場。
+전장생성노티┃戰場開始
+전장생성┃{0}戰場已啟動。
 GameAnnounce-전장예정지선정┃戰場位置已選定。將在下一階段啟動戰場。
 GameAnnounce-전장시작예고┃戰場即將啟動。
 GameAnnounce-전장시작┃戰場已啟動。請在{0}秒內加入戰場。
@@ -9077,7 +9440,7 @@ Ping/TransferConsole/Active┃{0}({1}) : 傳送裝置啟動位置<color=#C2FFA0>
 오브젝트슬롯전송콘솔/활성화┃啟動
 오브젝트타이머/생성장소┃生成地點
 Ping/Order/Where┃去哪裡呢?
-Ping/Order/LetsJoin/Chatting┃集合!
+Ping/Order/LetsJoin┃集合!
 Ping/Order/Wait┃請等一下
 Ping/Order/Roger┃知道了!
 Ping/Order/NeedFood┃需要食物
@@ -9091,7 +9454,7 @@ Ping/Order/Roger/Chatting┃{0}({1})說<color=#C2FFA0>知道了!</color>
 Ping/Order/NeedFood/Chatting┃{0}({1})說<color=#C2FFA0>需要食物</color>
 Ping/Order/NeedWater/Chatting┃{0}({1})說<color=#C2FFA0>需要飲料</color>
 Ping/Order/NeedWhat/Chatting┃{0}({1})問<color=#C2FFA0>需要什麼?</color>
-Ping/BattleZone/WinnderTeamGetReward┃{0}({1})已經獲得<color=#C2FFA0>{2}</color>戰場獎勵。
+Ping/BattleZone/WinnderTeamGetReward┃{0}({1})已獲得<color=#C2FFA0>{2}</color>戰場獎勵。
 아군빈사┃{0}({1}) 在{2}中處於瀕死狀態。
 야생동물빈사알림┃{0}把{1}({2})擊倒了。
 금지구역사망알림┃{0}({1})在禁區中自爆了。
@@ -9513,6 +9876,7 @@ ResistanceHpHealedDecrease┃治癒減少效果抵禦
 Stasis┃凝滯
 Uninteractionable┃無法進行協同作業
 Frozen┃凍結
+Drowse┃昏睡
 무기 숙련도┃武器熟練度
 무기 숙련도 설명┃武器的製作和使用增加的能力值。\n根據實驗體和武器裝備的不同，增加數值會稍有差異。
 숙련도 레벨 선택┃選擇熟練度等級
@@ -10119,6 +10483,7 @@ Product/Name/BATTLE_PASS/4┃[賽季S4] ER通行證
 Product/Name/BATTLE_PASS/5┃[賽季S5] ER通行證
 Product/Name/BATTLE_PASS/6┃[賽季S6] ER通行證
 Product/Name/BATTLE_PASS/7┃[賽季S7] ER通行證
+Product/Name/BATTLE_PASS/8┃[賽季S8] ER通行證
 Product/Name/BATTLE_PASS_POINT┃購買ER積分
 Product/Name/BATTLE_PASS┃[賽季S4] ER通行證
 Product/Name/BATTLE_PASS_BUNDLE┃[賽季S4] ER Plus
@@ -10132,6 +10497,9 @@ Product/Name/BATTLE_PASS_UPGRADE_S6┃[賽季S6] ER通行證升級
 Product/Name/BATTLE_PASS_S7┃[賽季S7] ER通行證
 Product/Name/BATTLE_PASS_BUNDLE_S7┃[賽季S7] ER Plus
 Product/Name/BATTLE_PASS_UPGRADE_S7┃[賽季S7] ER通行證升級
+Product/Name/BATTLE_PASS_S8┃[賽季S8] ER通行證
+Product/Name/BATTLE_PASS_BUNDLE_S8┃[賽季S8] ER Plus
+Product/Name/BATTLE_PASS_UPGRADE_S8┃[賽季S8] ER通行證升級
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>ER通行證</size></color>\n<size=14>[無法退款]</size>\n\n購買ER通行證，可以在玩遊戲的同時獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n 如果想要加快成長的速度，可以通過購買ER積分來實現。
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[無法退款]</size>\n\nER Plus是包含ER通行證與增加<color=#ffdf72>19等級</color>的商品。\n可獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵。</color>\n只需玩遊戲即可輕鬆提升ER通行證的賽季級別。\n通過ER Plus增加的等級 \n如果超過通行證最高等級，<color=#f72323>差額將不予退還。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
@@ -10144,6 +10512,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S6┃通過ER通行證升級增加的等級\n如�
 Shop/Desc/BATTLE_PASS_S7┃<color=#ffdf72><size=32>ER通行證</size></color>\n<size=14>[無法退款]</size>\n\n購買ER通行證，可以在玩遊戲的同時獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n 如果想要加快成長的速度，可以通過購買ER積分來實現。
 Shop/Desc/BATTLE_PASS_BUNDLE_S7┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[無法退款]</size>\n\nER Plus是包含ER通行證與增加<color=#ffdf72>19等級</color>的商品。\n<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n通過ER Plus增加的等級 \n如果超過通行證最高等級，<color=#f72323>差額將不予退還。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE_S7┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
+Shop/Desc/BATTLE_PASS_S8┃<color=#ffdf72><size=32>ER通行證</size></color>\n<size=14>[無法退款]</size>\n\n購買ER通行證，可以在玩遊戲的同時獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n 如果想要加快成長的速度，可以通過購買ER積分來實現。
+Shop/Desc/BATTLE_PASS_BUNDLE_S8┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[無法退款]</size>\n\nER Plus是包含ER通行證與增加<color=#ffdf72>19等級</color>的商品。\n<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n通過ER Plus增加的等級 \n如果超過通行證最高等級，<color=#f72323>差額將不予退還。</color> 
+Shop/Desc/BATTLE_PASS_UPGRADE_S8┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
 Shop/Desc/BATTLE_PASS_ACTIVE_CHANGE┃確定要啟動選定的賽季嗎？ \n當前已啟動的賽季將停止 。\n<size=18><color=#8C8C8C>請注意！購買後立即啟動，無法進行取消或退款。</color></size>
 Shop/Desc/BATTLE_PASS_POINT┃購買ER積分可以提升當前啟動中的賽季級別。
 획득 가능 보상┃可獲取獎勵
@@ -10167,7 +10538,7 @@ EP 토큰 상점 이동 안내 문구┃恭喜你達到100級。\n當已啟動�
 시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃賽季組合包S8
 시즌 5팩┃賽季組合包S8
 시즌 패스 우편 제목┃賽季組合包S8 - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER通行證 : 霓虹> | 3位實驗體 | 10款 造型 | 限定版商品
+시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER通行證 : 睡衣派對> | 3位實驗體 | 10款造型 | 限定商品
 시즌 패스 타이틀 설명┃<size=32>- 賽季S5組合包 福利! -</size>
 시즌 패스 설명┃<size=20><color=#77bce0><ER通行證 : 狩獵> 含</color></size>\n永久收藏最新 <ER通行證 : 狩獵>\n\n<size=20><color=#77bce0>包含6位實驗體, 11款 造型</color></size>\n提供賽季S5期間推出的所有實驗體和造型。\n\n<size=20><color=#77bce0>限定版商品</color></size>\n限定版造型，限定版表情，限定版墓碑各一個，僅提供給購買賽季组合包S5的用戶。
 시즌 패스 주의 사항┃◆ 購買<ER通行證 : 狩獵>，可返回1,190 NP。\n\n◆ 限定版造型、表情、墓碑將在2/17日維護後發送。\n\n◆ 賽季期間推出的活動造型不包含在賽季組合包。\n\n◆ 賽季組合包S5中包含的商品將在推出後發送至遊戲內信箱。
@@ -10204,9 +10575,9 @@ SeasonPassIcon/8┃Img_SeasonPack8_box_02
 시즌 8 특별 아이템┃賽季S8特別物品
 <ER PASS : 파자마> 포함┃<ER通行證 : 睡衣派對>包含
 시즌 8 출시 캐릭터 3종 + 스킨 9종┃賽季S8發布的3位角色&9款造型
-시즌 8팩 주의사항 1┃購買<ER 通行證 : 睡衣派對>，退回1,190 NP。
+시즌 8팩 주의사항 1┃如已購買<ER 通行證 : 睡衣派對>，將退回1,190 NP。
 시즌 8팩 주의사항 2┃賽季包S8中包含的商品將在推出後發送至遊戲內信箱。
-시즌 8팩 주의사항 3┃將不包含賽季內推出的活動造型，根據開發情況，賽季S8組合包中包含的商品和添加的時間可能會有所變化。
+시즌 8팩 주의사항 3┃不包含賽季內推出的活動造型，根據開發情況，賽季S8組合包中包含的商品和添加的時間可能會有所變化。
 시즌 8팩 주의사항 4┃賽季S8組合包中的商品，日後可能在其他的活動中進行販售。
 시즌 8팩 주의사항 5┃特別早鳥優惠結束後，將以10,500 NP的價格販售。
 시즌 8팩 주의사항 5 얼리버드 혜택 종료┃限定商品只提供給購買賽季S8組合包的玩家。
@@ -10229,30 +10600,31 @@ GoodsMenu/Customize/2┃UI
 ToastMessage/Escape1001┃稍後前往廢棄的碼頭。
 ToastMessage/Escape1002┃試圖逃生的隊友已死亡，移動已被取消。
 ToastMessage/Escape1003┃前往逃生區需要持有<color=#D05EFF>逃生手環</color> 。
-ToastMessage/Escape1004┃盧米亞島上的倖存者人數太少，無法移動至逃生區。
-ToastMessage/Escape1005┃無法移動至逃生區。
-ToastMessage/Escape1006┃已有隊友移動至逃生區，無法移動。
-ToastMessage/Escape1007┃逃生區人員已滿，無法移動。
-ToastMessage/Escape1008┃無法移動的逃生區。
-ToastMessage/Escape1009┃已有人進入逃生區，逃生物體使用已被取消。
-ToastMessage/Escape1010┃在逃生區無法使用無人機配送。
+ToastMessage/Escape1004┃盧米亞島上的倖存者人數太少，無法移動至廢棄的碼頭。
+ToastMessage/Escape1005┃無法移動至廢棄的碼頭。
+ToastMessage/Escape1006┃已有隊友移動至廢棄的碼頭，無法移動。
+ToastMessage/Escape1007┃廢棄的碼頭人員已滿，無法移動。
+ToastMessage/Escape1008┃無法移動的廢棄的碼頭。
+ToastMessage/Escape1009┃已有人進入廢棄的碼頭，逃生物體使用已被取消。
+ToastMessage/Escape1010┃在廢棄的碼頭無法使用無人機配送。
 ToastMessage/Escape1011┃無法安裝的位置。
 ToastMessage/Escape1012┃系統未啟動。剩餘時間 <color=#C2FFA0>{0}秒</color>
 ToastMessage/Escape1013┃<color=#C4C4C4>系統密碼</color>已用盡，無法再傳喚。
 ToastMessage/Escape1014┃隊友已擁有<color=#C4C4C4>系統密碼</color>。
 ToastMessage/Escape1015┃僅限有隊友死亡的情況下使用。
 ToastMessage/Escape1016┃僅限擁有<color=#C4C4C4>再生手環</color>的情況下使用。
-ToastMessage/Escape1017┃有人脫逃成功，逃生區已關閉。
+ToastMessage/Escape1017┃有人脫逃成功，廢棄的碼頭已關閉。
 ToastMessage/Escape1018┃第3天後可以從死亡的隊友身上獲得再生手環。
 ToastMessage/Escape1019┃只有最後1支隊伍倖存的狀況下才能啟動潛水艇控制台。
 ToastMessage/Escape1020┃首次製作逃生手環30秒後可以傳送。剩餘時間：{0}秒
 ToastMessage/Escape1021┃因有隊員正在參與戰場而無法傳送。
-탈출 지역 이동 전체 알림 메시지┃有人已前往逃生區，倖存者人數已減少。
-루미아 섬 1등 나와서 게임 종료┃盧米亞島已誕生最終倖存者，脫逃失敗。
+탈출 지역 이동 전체 알림 메시지┃有人已移至廢棄的碼頭，倖存者人數已減少。
+루미아 섬 1등 나와서 게임 종료┃盧米亞島已誕生最終倖存者，1分鐘後將關閉廢棄的碼頭。
 시스템암호코드 3개 모두 소진┃系統密碼已用盡。
 팀원 사망 어나운스┃隊友已死亡。可以從死亡的隊友身上獲取再生手環。
-10초 후 탈출 지역 폐쇄 알림┃有人成功脫逃。10秒後關閉逃生區。
-듀스 2번째팀 입장 어나운스┃有人進入逃生區，稍後門將被解鎖。
+10초 후 탈출 지역 폐쇄 알림┃有人成功脫逃。10秒後關閉廢棄的碼頭。
+듀스 2번째팀 입장 어나운스┃有人進入廢棄的碼頭，稍後門將被解鎖。
+escape/탈출 지역 오픈 전체 알림 메시지┃有人製作了逃生手環。30秒後將開啟廢棄的碼頭區域。
 RAF/시즌1/제목┃邀請新好友 第1季
 RAF/친구수┃{0} 位
 RAF/초대수┃已邀請人數：{0} 位
@@ -10528,6 +10900,8 @@ MMR시작조정/3번설명┃(配對新手玩家)
 MMR시작조정/설문감사┃感謝您參與問卷調查。
 MMR시작조정/전송실패┃發送失敗。
 훈련┃教學
+MainTab/Tutorial┃指南
+SubMenu/Guide┃遊戲指南
 필수 튜토리얼 진행후 이용가능합니다.┃[盧米亞島]訓練進行後可使用。
 매칭 중에는 이용할 수 없습니다┃戰鬥期間不能使用。
 훈련 중에는 목표 아이템을 삭제할 수 없습니다.┃在訓練期間，你不能刪除目標項目。
@@ -10723,7 +11097,7 @@ Tutorial/Announce/핵심2번/03┃當白天和黑夜交替時，指定一個禁�
 Tutorial/Announce/핵심2번/04┃武器熟練度達到7時可以解鎖武器技能。
 Tutorial/Announce/핵심3번/00┃路徑是製作目標物品的指南。
 Tutorial/Announce/핵심3번/01┃目標物品上有一個黃色三角形。務必要確認。
-Tutorial/Announce/핵심3번/02┃探索當前區域可獲取的目標物品。
+Tutorial/Announce/핵심3번/02┃打開當前區域箱子獲得目標物品。
 Tutorial/Announce/핵심3번/03┃您已獲得當前區域內所有可用的目標物品。
 Tutorial/Announce/핵심3번/04┃使用傳送門，快速移動至目標區域。
 Tutorial/Announce/핵심3번/05┃在地圖上選擇工廠進行移動。
@@ -10736,14 +11110,6 @@ Tutorial/Announce/핵심3번/11┃沒有黃色標記的物品為非目標物品�
 Tutorial/Announce/핵심공통/00┃為高強度訓練已設置了復活功能。請留意您的體力，不要死掉。
 Tutorial/Announce/핵심공통/01┃通過攝取食物和休息可以恢復體力和耐力。
 Tutorial/Announce/핵심공통/02┃如果能活到最後，您就是勝利了。請確認剩餘的倖存者數量。
-Tutorial/Announce/초급1번/00┃這是經常會使用到的控制設置，如果準備好了，請單擊右側按鈕。
-Tutorial/Announce/초급1번/01┃右鍵單擊滑鼠移動。
-Tutorial/Announce/초급1번/02┃打開箱子。
-Tutorial/Announce/초급1번/03┃單擊獲取物品
-Tutorial/Announce/초급1번/04┃結合兩種不同的材料來製作更好的物品。\n通過快捷鍵或單擊即可進行。
-Tutorial/Announce/초급1번/05┃此處可以確認已裝備的物品。
-Tutorial/Announce/초급1번/06┃請根據方向指標移動。
-Tutorial/Announce/초급1번/07┃嘗試攻擊野生動物。
 Tutorial/Announce/초급1번/08┃使用技能攻擊。通過快捷鍵或單擊即可進行。
 Tutorial/Announce/초급1번/09┃從野生動物身上獲取掉落物品。
 전체 채팅무시┃/muteall
@@ -10954,6 +11320,7 @@ Season1/Name┃<color=#CDCABD>冰雪</color>
 Season5/Name┃<color=#D1E7EF>狩獵</color>
 Season6/Name┃<color=#E1EE68>夏日</color>
 Season7/Name┃<color=#FF7AFF>霓虹</color>
+Season8/Name┃<color=#FF7AFF>睡衣派對</color>
 SeasonToBeAdded/Name┃新賽季\n D - {0}
 RankBoost/PopUp┃當前選擇的實驗體可以額外獲得LP。\n獲得額外LP：各實驗體在前10局遊戲中可以獲得額外LP。\n\n修羅段位以下 : +3\n滅鑽段位以上 : +2\n\n分段賽和晉級賽不適用。\n額外LP獲得次數每賽季都會重置。
 RankBoost/TopUI┃獲得額外LP{0}次
@@ -11453,20 +11820,20 @@ Trait/Tooltip/7110601┃自動攝取食物/飲料，並增加攻擊力/防禦力
 Trait/Tooltip/7200101┃自身技能生成的護盾和體力恢復量持續增加。\n因自身獲得護盾或體力恢復效果的目標，增加攻擊力。
 Trait/Tooltip/7200301┃使用終極技能時，會出現一個治癒裝置跟隨自身。\n治癒裝置可以給自身和周圍隊友恢復部分已失體力。
 Trait/Tooltip/7200201┃使用終極技能時，會出現一個強化裝置跟隨自身。\n強化裝置可以給自身和周圍隊友增加移動速度和技能增幅。
-Trait/Tooltip/7200401┃擊殺敵人可以減少承受傷害，同時增加移向敵人實驗體時的移動速度。
+Trait/Tooltip/7200401┃擊殺敵人同時增加移向敵人實驗體時的移動速度，根據擊殺類型的不同可以恢復體力或者減少傷害。
 Trait/Tooltip/7200501┃使用個別技能給敵人實驗體造成傷害時，賦予自身和周圍隊友護盾效果。
-Trait/Tooltip/7210101┃置目標於無法移動狀態時，增加目標的所有傷害。
+Trait/Tooltip/7210101┃置目標於無法移動狀態時，增加目標承受的所有傷害。
 Trait/Tooltip/7210201┃使用終極技能時，自身和周圍隊友都可以獲得護盾。
 Trait/Tooltip/7210401┃每晚都可以獲得治療藥水。 \n如果物品格沒有空位，藥水將掉落在地上。
 Trait/Tooltip/7210301┃夜晚視野增加 1.25m。
 Trait/Tooltip/7210501┃敵人觸發自己設置的陷阱時，增加攻擊力。 觸發敵人設置的陷阱時，增加防禦力。
 Trait/Tooltip/7210601┃以裝備“木鞋”的狀態開始遊戲。 \n穿戴英雄級別以上的腿部裝備時，增加非戰鬥移動速度。
-Trait/Tooltip/7210801┃大幅減少第一次使用傳送裝置時的費用，之後小幅減少使用傳送裝置的費用。
+Trait/Tooltip/7210801┃在傳送裝置以折扣價格購買物品。
 Trait/DetailTooltip/7000201┃{0}秒內造成普攻或個人傷害的技能（不包括武器和物品技能）命中同一個實驗體{1}次時\n額外造成（級別*{2}）的真實傷害，並降低目標防禦力（級別*{4}）%，持續{3}秒。 （冷卻 {5}秒）\n適用普攻連擊的武器，技能以及DOT傷害技能的連續傷害只適用一次。
 Trait/DetailTooltip/7000301┃使用武器技能時，增加攻擊速度。 (冷卻 {0}秒)\n(近攻) {1}秒間攻擊速度增加({4} + 級別*{5})%。\n(遠攻) {7}秒間攻擊速度增加 ({10}+級別*{11})% 。
 Trait/DetailTooltip/7000401┃每次個別技能對敵方實驗體造成傷害時，[吸血 - 所有傷害]增加 {0}%，最多可重疊 {1} 次。\n達到重疊上限時，技能增幅增加 ({5}+級別*{2})%。\n使用個別技能給多個目標造成傷害時，重疊數與造成傷害的目標數相同。\n[吸血 - 所有傷害]可持續 {3}秒，並且每次個別技能造成傷害時更新。 (冷卻 {4}秒)
-Trait/DetailTooltip/7000501┃使用技能命中實驗體時，造成{1}(+級別*{2})(+攻擊力*{3})(+技能增幅*{4})的技能傷害。(冷卻: {5}秒)\n在技能命中實驗體{7}m範圍內有其他實驗體，電流會轉移至最近的實驗體，造成縮減了{8}%的技能傷害。\n如果沒有可轉移電流的實驗體時，造成 {6}%的額外技能傷害。\n每次使用個別技能給敵人實驗體造成傷害時，冷卻縮減{9}秒。
-Trait/DetailTooltip/7000601┃進入戰鬥狀態後，每{0}秒或是使用普攻給敵人實驗體造成個別傷害時獲得疊層。 \n({11})最多可累積{1}疊層，每疊層獲得({2}+級別*{3})%的攻擊速度。\n達到疊層上限時額外增加({4}+級別*{5})%的普攻增幅。\n({12}) 最多可累積{1}疊層，每疊層獲得({7}+級別*{8})%攻擊速度。\n達到疊層上限時額外增加({9}+級別*{10})%的普攻增幅。\n\n解除戰鬥狀態時，所有疊層將消失。
+Trait/DetailTooltip/7000501┃使用技能命中實驗體時，造成{1}(+級別*{2})(+攻擊力*{3})(+技能增幅*{4})的技能傷害。(冷卻: {5}秒)\n在技能命中實驗體{7}m範圍內有其他實驗體，電流會轉移至最近的實驗體，造成減少了{8}%的技能傷害。\n如果沒有可轉移電流的實驗體時，造成 {6}%的額外技能傷害。\n每次使用個別技能給敵人實驗體造成傷害時，冷卻縮減{9}秒。
+Trait/DetailTooltip/7000601┃進入戰鬥狀態後，每{0}秒或是使用普攻給敵人實驗體造成個別傷害時獲得疊層。 \n({11})最多可累積{1}疊層，每疊層獲得({2}+級別*{3})%的攻擊速度。\n達到疊層上限時額外增加({4}+級別*{5})%的普攻增幅。\n({12}) 最多可累積{1}疊層，每疊層獲得({7}+級別*{8})%攻擊速度。\n達到疊層上限時額外增加({9}+級別*{10})%的普攻增幅。\n\n解除戰鬥狀態時，所有疊層將消失。(冷卻 {13}秒)
 Trait/DetailTooltip/7010101┃防禦穿透增加{0}%。
 Trait/DetailTooltip/7010501┃目標實驗體的體力上限大於自身體力上限時，造成額外傷害。\n根據{0}% ~ {1}%的體力相差值，增加額外傷害{2}% ~ {3}%。
 Trait/DetailTooltip/7010201┃安全區啟動後，在安全區內對敵人造成的傷害增加 {0}%。
@@ -11487,7 +11854,7 @@ Trait/DetailTooltip/7110601┃體力低於{0}%時自動攝取食物，耐力低�
 Trait/DetailTooltip/7200101┃自身技能生成的護盾和體力恢復量持續增加{0}%。\n因自身獲得護盾或體力恢復效果的目標在 {2}秒間攻擊力增加（級別*{3}）。 (冷卻 {4}秒)\n不適用於通過休息、再生、吸血、食物獲得的恢復效果。
 Trait/DetailTooltip/7200301┃使用終極技能時，會出現一個治癒裝置，跟隨自身{0}秒。\n治癒裝置每秒給{1}m 範圍內自身和隊友恢復已失體力的 ({2}+級別*{3})% 體力。(冷卻 {4}秒)\n治癒裝置效果重疊多次時，所有裝置的治癒效果變為 {5}%。
 Trait/DetailTooltip/7200201┃使用終極技能時，會出現一個強化裝置，跟隨自身{0}秒。\n強化裝置每秒為{1}m範圍內包括自身和隊友增加移動速度({2}+{3}*級別)%，增加技能增幅 ({4}+{5}*級別)% 。(冷卻 {6}秒)\n強化裝置效果無法疊加。
-Trait/DetailTooltip/7200401┃擊殺實驗體和阿爾法、奧米加、伽瑪、維克萊恩時， {0}秒間承受傷害減少{2}%，移向敵人實驗體時的移動速度增加{1}%。增加的移動速度在{0}秒間逐漸復原。\n擊殺野生動物僅適用一半的效果。(冷卻:{3}秒)
+Trait/DetailTooltip/7200401┃擊殺敵方時，根據已失體力恢復[{6}(+攻擊力*{7})(+技能增幅*{8})]~[({9}(+攻擊力*{10})(+技能增幅*{11})]的體力，同時移向敵人實驗體時的移動速度逐漸增加至{1}%。\n擊殺實驗體和阿爾法、奧米加、伽瑪、維克萊恩時，取代恢復體力{0}秒間承受的傷害減少{2}%，移動速度數值最多增至{12}倍。(冷卻:{3}秒)
 Trait/DetailTooltip/7200501┃使用個別技能給敵人實驗體造成傷害時，自身和周圍{0}m範圍內的隊友在{1}秒間獲得持續的護盾效果。(冷卻: {2}秒)\n體力低於{3}%以下的目標，獲得{4}倍的護盾，但護盾無法超過體力上限的{5}%。\n\n單人 : 護盾({6}+級別*{7})\n雙人 : 護盾({8}+級別*{9})\n三人 : 護盾({10}+級別*{11})\n鈷協議 : 護盾({12}+級別*{13})
 Trait/DetailTooltip/7210101┃置目標於無法移動狀態時，{0}秒內目標所承受的所有傷害增加{1}%。（冷卻{2}秒）
 Trait/DetailTooltip/7210201┃使用終極技能時，周圍{0}m內的自身和隊友在{1}秒間獲得（級別*{2}）的護盾。 （冷卻 {3}秒）\n集結在應用1次後如{4}秒內重複應用，將減少{5}%應用值。
@@ -11495,7 +11862,7 @@ Trait/DetailTooltip/7210401┃每晚獲得（{0} + 包括自身在內的倖存�
 Trait/DetailTooltip/7210301┃夜晚視野增加 1.25m。
 Trait/DetailTooltip/7210501┃敵人觸發自己設置的陷阱時，攻擊力在{0}秒間增加{1}%。 觸發敵人設置的陷阱時，防禦力在{2}秒間增加{3}%。  (冷卻 {4}秒)
 Trait/DetailTooltip/7210601┃以裝備'木鞋'的狀態開始遊戲。 穿戴英雄或傳說等級腿部裝備時，非戰鬥移動速度增加{0}。
-Trait/DetailTooltip/7210801┃第一次使用傳送裝置減少{0}的榮譽值。\n後續使用傳送裝置的費用減少{1}的榮譽值。
+Trait/DetailTooltip/7210801┃傳送裝置費用減少{0}榮譽值。
 Trait/StatTooltip/7000201┃{0}秒內造成普攻或個人傷害的技能（不包括武器和物品技能）命中同一個實驗體{1}次時\n額外造成（級別*{2}）的真實傷害，並降低目標防禦力（級別*{4}）%，持續{3}秒。 （冷卻 {5}秒）\n適用普攻連擊的武器，技能以及DOT傷害技能的連續傷害只適用一次。\n\n造成額外傷害的總次數 : {6}\n額外傷害總量 : {7}
 Trait/StatTooltip/7000301┃使用武器技能時，增加攻擊速度。(冷卻 {0}秒)\n(近攻) {1}秒間攻擊速度增加({4} + 級別*{5})%。\n(遠攻) {7}秒間攻擊速度增加 ({10}+級別*{11})%。\n\n攻擊力總增加量 : {14}\n攻擊速度總增加量 : {15}
 Trait/StatTooltip/7000401┃每次個別技能對敵方實驗體造成傷害時，[吸血 - 所有傷害]增加 {0}%，最多可重疊 {1} 次。\n達到重疊上限時，技能增幅增加 ({5}+級別*{2})%。\n使用個別技能給多個目標造成傷害時，重疊數與造成傷害的目標數相同。\n[吸血 - 所有傷害]可持續 {3}秒，並且每次個別技能造成傷害時更新。 (冷卻 {4}秒)\n\n體力恢復總量 : {6}
@@ -11521,7 +11888,7 @@ Trait/StatTooltip/7110601┃體力低於{0}%時自動攝取食物，耐力低於
 Trait/StatTooltip/7200101┃自身技能生成的護盾和體力恢復量持續增加 {0}%。\n因自身獲得護盾或體力恢復效果的目標在{2}秒鐘內攻擊力增加（級別*{3}）。 （冷卻 {4}秒）\n不適用於通過休息、再生、吸血、食物獲得的恢復效果。\n\n體力恢復總量 : {5}\n護盾增加總量 : {6}\n增加隊友攻擊力次數 : {7}
 Trait/StatTooltip/7200301┃使用終極技能時，會出現一個治癒裝置，跟隨自身{0}秒。\n治癒裝置每秒給{1}m範圍內的自身和隊友恢復 ({2}+級別*{3})% 已失體力。 （冷卻 {4}秒）\n治癒裝置效果重疊多次時，所有裝置的治癒效果變為 {5}%。\n\n體力恢復總量 :  {6}
 Trait/StatTooltip/7200201┃使用終極技能時，會出現一個強化裝置，跟隨自身{0}秒。\n強化裝置每秒為{1}m 範圍內包括自身和隊友增加移動速度({2}+{3}*級別)%，增加技能增幅 ({4}+{5}*級別)% 。(冷卻 {6}秒)\n強化裝置效果無法疊加。\n\n增加隊友移動速度&技能增幅的時間 : {8}秒
-Trait/StatTooltip/7200401┃擊殺實驗體和阿爾法、奧米加、伽瑪、維克萊恩時，{0}秒間承受傷害減少{2}%，移向敵人實驗體時的移動速度增加{1}%。增加的移動速度在{0}秒間逐漸復原。\n擊殺野生動物僅適用一半的效果。(冷卻:{3}秒)\n\n移速增加效果啟動的次數 : {4}\n移速增加(強化)效果啟動的次數 : {5}
+Trait/StatTooltip/7200401┃擊殺敵方時，根據已失體力恢復 {6}~{7}的體力，同時移向敵人實驗體時的移動速度逐漸增加至{1}%。\n擊殺實驗體和阿爾法、奧米加、伽瑪、維克萊恩時，取代恢復體力在{0}秒間承受的傷害減少{2}%，移動速度數值最多增至{12}倍。(冷卻:{3}秒)\n\n移速增加效果啟動的次數 : {4}\n移速增加(強化)效果啟動的次數 : {5}
 Trait/StatTooltip/7200501┃使用個別技能給敵人實驗體造成傷害時，自身和周圍{0}m範圍內的隊友在{1}秒間獲得持續的護盾效果。(冷卻: {2}秒)\n體力低於{3}%以下的目標獲得{4}倍護盾，但無法超過體力上限的{5}%。\n\n單人 : 護盾({6}+級別*{7})\n雙人 : 護盾({8}+級別*{9})\n三人 : 護盾({10}+級別*{11})\n鈷協議 : 護盾({12}+級別*{13})\n\n減少的傷害量 : {14}\n啟動次數 : {15}
 Trait/StatTooltip/7210101┃置目標於無法移動狀態時，{0}秒內目標所承受的所有傷害增加{1}%。（冷卻{2}秒）\n\n增加傷害總量 : {3}
 Trait/StatTooltip/7210201┃使用終極技能時，周圍{0}m內的自身和隊友在{1}秒間獲得（級別*{2}）護盾。 （冷卻 {3}秒）\n集結在應用1次後如{4}秒內重複應用，將減少{5}%應用值。\n\n護盾適用總量 : {6}
@@ -11529,7 +11896,7 @@ Trait/StatTooltip/7210401┃每晚獲得（{0} + 包括自身在內的倖存隊�
 Trait/StatTooltip/7210301┃夜晚視野增加1.25m。
 Trait/StatTooltip/7210501┃敵人觸發自己設置的陷阱時，攻擊力增加{1}%，持續{0}秒。 觸發敵人設置的陷阱時，防禦力增加{3}%，持續{2}秒。  (冷卻 {4}秒)\n\n增加攻擊力總次數 : {6}\n增加防禦力總次數 : {7}
 Trait/StatTooltip/7210601┃以裝備木鞋的狀態開始遊戲。穿戴英雄或傳說等級腿部裝備時，增加非戰鬥移動速度。
-Trait/StatTooltip/7210801┃第一次使用傳送裝置減少{0}的榮譽值。\n後續使用傳送裝置的費用減少{1}的榮譽值。\n\n已獲得的榮譽值優惠：{2}
+Trait/StatTooltip/7210801┃傳送裝置的費用減少{0}榮譽值。\n\n已獲得的榮譽值折扣：{2}
 CharacterState/Group/Name/7000210┃絕對武力
 CharacterState/Group/Desc/7000210┃使用普攻或造成個別傷害的技能多次命中同一目標時\n對目標造成額外真實傷害並降低目標防禦力。
 CharacterState/Group/Name/7000220┃絕對武力
@@ -11633,13 +12000,13 @@ CharacterState/Group/Desc/7200230┃增加移動速度，技能增幅。
 CharacterState/Group/Name/7200210┃強化裝置
 CharacterState/Group/Desc/7200210┃冷卻中
 CharacterState/Group/Name/7200400┃追擊者
-CharacterState/Group/Desc/7200400┃增加移動速度、傷害減少。
+CharacterState/Group/Desc/7200400┃增加移動速度。
 CharacterState/Group/Name/7200410┃追擊者
 CharacterState/Group/Desc/7200410┃增加移動速度、傷害減少。
 CharacterState/Group/Name/7200450┃追擊者
 CharacterState/Group/Desc/7200450┃冷卻中。
 CharacterState/Group/Name/7200460┃追擊者
-CharacterState/Group/Desc/7200460┃擊殺敵人時，增加移向敵人時的移動速度並減少承受傷害。
+CharacterState/Group/Desc/7200460┃擊殺敵人同時增加移向敵人實驗體時的移動速度，根據擊殺類型的不同可恢復體力或減少傷害。
 CharacterState/Group/Name/7200500┃無私
 CharacterState/Group/Desc/7200500┃獲得護盾。
 CharacterState/Group/Name/7200510┃無私
@@ -12126,21 +12493,21 @@ gameTip_Desc_10170_1┃選擇潛能可以增加實驗體新的能力或者獲得
 gameTip_Title_10200_1┃戰場
 gameTip_Desc_10200_1┃戰場是為交戰而形成的特殊區域！戰場的引入可以收集在極限環境下的實驗體數據。\n\n戰場內的環境非常特殊。可增加移動速度、加強吸血能力或得到護盾。\n\n戰場內只有最終的勝利者才能獲得特別獎勵！
 gameTip_Title_10200_2┃戰場流程
-gameTip_Desc_10200_2┃第一天夜晚/第二天夜晚，指定的部分禁區將被選定為戰場。\n\n被選定為戰場的區域將於次日轉換為戰場。\n\n應用於戰場的特殊環境可以在地圖安全裝置的位置中確認戰場標記。\n
+gameTip_Desc_10200_2┃第一天夜晚/第二天夜晚，指定的部分區域將被選為戰場。\n\n戰場預選地將於次日轉換為戰場。\n\n戰場內適用的特殊環境可通過地圖上安全控制台位置上方的標記來確認。\n
 gameTip_Title_10200_3┃戰場參加方法
-gameTip_Desc_10200_3┃戰場開始時會通知該區域的玩家參加戰場。\n\n參加戰場的實驗體死亡後可在短時間內復活。\n\n但是，復活後將無法再次進入戰場！\n\n闖入或者脫離戰場的實驗體將立即死亡並且無法復活。
+gameTip_Desc_10200_3┃戰場開始時會通知該區域的玩家參加戰場。\n\n參加戰場的實驗體死亡後可在短時間內復活。\n\n但是，復活後將無法再次進入戰場！\n\n闖入或者逃離戰場的實驗體將立即死亡並且無法復活。
 gameTip_Title_10200_4┃戰場獎勵
 gameTip_Desc_10200_4┃戰場內勝利的隊伍可通過安全監控台或專用HUD購買強大的技能裝飾。\n\n參與戰場的隊伍越多，相對獲得的獎勵也就越好。\n\n每支隊伍只能購買一次戰場獎勵，在選擇時要多注意喔！
 gameTip_Title_10210_1┃戰場系統
-gameTip_Desc_10210_1┃戰場由以下四個系統組成。\n\n戰場套裝/戰場標識/神經暴走儀/神經安定劑。\n\n各個系統間緊密地連接在一起。
+gameTip_Desc_10210_1┃戰場由以下四個系統組成。\n\n戰場套裝/戰場標識/神經暴走值/鎮定劑。\n\n各個系統間緊密地連結在一起。
 gameTip_Title_10210_2┃戰場套裝
-gameTip_Desc_10210_2┃持有戰場套裝的實驗體參加戰場時，可以獲得「戰場急速再生」及「戰場標識」效果。\n\n持有「戰場急速再生」增益的實驗體死亡時，可以在短時間內復活。\n\n戰場內勝利的實驗體將永久解除戰場套裝。
+gameTip_Desc_10210_2┃持有戰場套裝的實驗體參加戰場時，可以獲得「戰場急速再生」及「戰場標識」效果。\n\n持有「戰場急速再生」增益的實驗體死亡時，可在短時間內復活。\n\n戰場內勝利的實驗體將永久解除戰場套裝。
 gameTip_Title_10210_3┃戰場標識
-gameTip_Desc_10210_3┃獨特的戰場環境會賦予參加戰場實驗體特殊效果。\n\n戰場參加者死亡時，將收回戰場標識並用作勝利隊伍購買獎勵的貨幣。\n\n戰場內不存在勝利隊伍時，將永久解除收回的戰場標識。
-gameTip_Title_10210_4┃神經暴走儀
-gameTip_Desc_10210_4┃戰場內強化實驗體能力的同時會累積神經暴走儀。\n\n實驗體將在神經暴走儀達到上限值的一段時間後立即死亡。\n\n神經暴走儀可通過神經安定劑/擊殺實驗體/補充包恢復。
-gameTip_Title_10210_5┃神經安定劑裝置
-gameTip_Desc_10210_5┃戰場內載有神經安定劑的裝置會沿著指定的路線循環。\n\n當該裝置的體力為0時，將會釋放安定劑，觸碰安定劑時可以恢復神經暴走儀。\n\n釋放神經安定劑的裝置在經過一段時間充能後，將釋放安定劑。
+gameTip_Desc_10210_3┃獨特的戰場環境會賦予參加戰場實驗體特殊效果。\n\n戰場參加者死亡時，將回收戰場標識並用作勝利隊伍購買獎勵的貨幣。\n\n戰場內不存在勝利隊伍時，將永久解除回收的戰場標識。
+gameTip_Title_10210_4┃神經暴走值
+gameTip_Desc_10210_4┃戰場內強化實驗體能力的同時會累積神經暴走值。\n\n實驗體將在神經暴走值達到上限的一段時間後死亡。\n\n神經暴走值可通過鎮定劑/擊殺實驗體恢復。
+gameTip_Title_10210_5┃鎮定劑穿梭機
+gameTip_Desc_10210_5┃戰場內裝有鎮定劑的穿梭機會沿著指定的路線循環。\n\n當穿梭機的體力為0時，將會釋放鎮定劑，觸碰鎮定劑時可恢復神經暴走值。\n\n釋放鎮定劑的穿梭機在經過一段時間充能後，將釋放鎮定劑。
 ServerError/1000┃發生未知錯誤，請重新開始遊戲。
 ServerError/1001┃發生未知錯誤，請重新開始遊戲。
 ServerError/1002┃發生未知錯誤，請重新開始遊戲。
@@ -12363,6 +12730,9 @@ Trait/Name/7923101┃山鳴 I
 Trait/Name/7923102┃山鳴 II
 Trait/Name/7923103┃山鳴 III
 Trait/Name/7923002┃天墜
+Trait/Name/7923201┃超臨界 I
+Trait/Name/7923202┃超臨界 Il
+Trait/Name/7923203┃超臨界 Ill
 Infusion/Special/Title/9000001┃怪異實驗
 Trait/Name/7920301┃寄生蟲 I
 Trait/Name/7920302┃寄生蟲 Il
@@ -12404,7 +12774,7 @@ Trait/StatTooltip/7900803┃暴擊率增加{0}%。
 Trait/StatTooltip/7920101┃自身的當前體力低於體力上限的{0}%時，增加防禦力和所有傷害-吸血量。\n\n防禦力增加: {1}\n所有傷害-吸血: {2}%
 Trait/StatTooltip/7920102┃自身的當前體力低於體力上限的{0}%時，增加防禦力和所有傷害-吸血量。\n\n防禦力增加: {1}\n所有傷害-吸血: {2}%
 Trait/StatTooltip/7920103┃自身的當前體力低於體力上限的{0}%時，增加防禦力和所有傷害-吸血量。\n\n防禦力增加: {1}\n所有傷害-吸血: {2}%
-Trait/StatTooltip/7920201┃自身的當前體力低於體力上限的{0}%時，增加暴擊率和暴擊傷害量。\n\n增加暴擊率：{1}%\n增加攻擊速度：{2}%
+Trait/StatTooltip/7920201┃自身的當前體力低於體力上限的{0}%時，增加暴擊率和攻擊速度。\n\n增加暴擊率：{1}%\n增加攻擊速度：{2}%
 Trait/StatTooltip/7920202┃自身的當前體力低於體力上限的{0}%時，增加暴擊率和暴擊傷害量。\n\n增加暴擊率：{1}%\n增加攻擊速度：{2}%
 Trait/StatTooltip/7920203┃自身的當前體力低於體力上限的{0}%時，增加暴擊率和暴擊傷害量。\n\n增加暴擊率：{1}%\n增加攻擊速度：{2}%
 Trait/StatTooltip/7920301┃用技能給敵人實驗體造成傷害時，根據目標當前體力造成一定比例的真實傷害\n並恢復部分自身的當前體力。(冷卻：{0}秒)\n\n(近攻) 當前體力{1}%傷害，當前體力{2}%恢復\n(遠攻) 當前體力{3}%傷害，當前體力{4}%恢復\n\n當前適用的傷害比例: {5}%\n當前適用的體力恢復比例: {6}%
@@ -12800,9 +13170,11 @@ Item/Name/705605┃水星權杖
 Item/Name/705607┃圖騰
 Item/Name/705606┃方舟反應爐
 Item/Name/705608┃守護之眼
+Item/Name/705609┃普賽克之刃
+Item/Name/705610┃英雄印記
 Item/Name/705611┃E.M.O.T.E
-Item/Name/705612┃克拉達戒指 MK2
-Item/Name/705613┃方舟反應爐 MK2
+Item/Name/705612┃克拉達戒指 Mk2
+Item/Name/705613┃方舟反應爐 Mk2
 Infusion/Item/705504┃極光陀螺 Mk2
 Infusion/Item/705601┃微型太陽系統
 Infusion/Item/705602┃鈷藍
@@ -12840,6 +13212,10 @@ Item/Skills/6507001┃繫繩
 Item/Skills/6507001/Name┃<color=yellow>繫繩</color>
 Item/Skills/6507001/Body┃連接{0}m內距離最近的隊友，{1}秒間獲得<color=#688A08>體力上限的{2}%</color> + {3}的護盾，移動速度增加{4}%。\n\n代替連接的隊友承受{5}%的最終傷害。\n\n冷卻 : {7}秒
 Item/Skills/6507001/Desc┃連接{0}m內距離最近的隊友，{1}秒間獲得<color=#688A08>體力上限的{2}%</color> + \n<color=#93C9E7>防禦力的{3}%</color>護盾，移動速度增加{4}%。\n\n代替連接的隊友承受{5}%的最終傷害。\n\n冷卻 : {7}秒
+Item/Skills/6507002┃繫繩
+Item/Skills/6507002/Name┃<color=yellow>繫繩</color>
+Item/Skills/6507002/Body┃連接{0}m內距離最近的隊友，{1}秒間獲得<color=#688A08>體力上限的{2}%</color> + {3}的護盾，移動速度增加{4}%。\n\n代替連接的隊友承受{5}%的最終傷害。\n\n冷卻 : {7}秒
+Item/Skills/6507002/Desc┃連接{0}m內距離最近的隊友，{1}秒間獲得<color=#688A08>體力上限的{2}%</color> + \n<color=#93C9E7>防禦力的{3}%</color>護盾，移動速度增加{4}%。\n\n代替連接的隊友承受{5}%的最終傷害。\n\n冷卻 : {7}秒
 Item/Skills/6508000┃祈願
 Item/Skills/6508001┃祈願
 Item/Skills/6508001/Name┃<color=yellow>祈願</color>
@@ -12850,6 +13226,10 @@ Item/Skills/6509001┃脈衝
 Item/Skills/6509001/Name┃<color=yellow>脈衝</color>
 Item/Skills/6509001/Body┃在{0}秒間處於靜止狀態，解除靜止狀態時會迅速的向前方移動。\n\n冷卻 {1} 秒
 Item/Skills/6509001/Desc┃在{0}秒間處於靜止狀態，解除靜止狀態時會迅速的向前方移動。\n\n冷卻 {1} 秒
+Item/Skills/6509002┃脈衝
+Item/Skills/6509002/Name┃<color=yellow>脈衝</color>
+Item/Skills/6509002/Body┃在{0}秒間處於靜止狀態，解除靜止狀態時會迅速的向前方移動。\n\n冷卻 {1} 秒
+Item/Skills/6509002/Desc┃在{0}秒間處於靜止狀態，解除靜止狀態時會迅速的向前方移動。\n\n冷卻 {1} 秒
 Item/Skills/6510000┃裂痕
 Item/Skills/6510001┃裂痕
 Item/Skills/6510001/Name┃<color=yellow>裂痕</color>
@@ -13126,6 +13506,8 @@ CharacterStoryTitle/60┃破碎的玻璃無法復原，必須要讓它堅不可�
 CharacterStoryDesc/60┃身為一位才華洋溢的天才玻璃藝術家，塔齊雅的世界卻如玻璃一樣隨手可摧。\n當新作品推出卻未能滿足他人的期待時，周圍總是充滿著失望甚至譴責的聲音。\n\n塔齊雅想要擺脫這種不安與隨時都會崩潰的生活，重新享受藝術創作的純粹。\n但作為代價，塔齊雅不得不放棄現有的一切。\n\n塔齊雅就這樣來到了盧米亞島，找回了許久不曾的自我和熱情。\n擾亂這個樂園安寧的人將永遠不會得到原諒。
 CharacterStoryTitle/61┃你剛才是說了喜歡我嗎？
 CharacterStoryDesc/61┃\n活潑可愛的愛琳總是在尋找愛與愛她的人。\n珍惜每一個愛與被愛的瞬間。\n\n無人知曉她來自哪裡。\n甚至連她最親近的朋友也無從得知。\n\n即使在盧米亞島愛琳也在尋找愛她的人。\n對方是誰，這對愛琳來說一點也不重要。\n只要不是她的敵人，那就是她的朋友了！ 
+CharacterStoryTitle/62┃後面就放心交給我！
+CharacterStoryDesc/62┃西奧多是位百發百中的狙擊手。\n高度的專注力、出眾的應變力以及敏銳的判斷力使他總能交出驚人的成績。\n但他從未想因此獲得名譽或聲望。\n\n為完成夢想使他無意間發現了自己神奇的能力，但這個夢想現在卻再也無法實現了...\n被奪走夢想的傷口依然疼痛，但他不願再被過去束縛。\n\n西奧多將使用他的神奇力量在隊友背後默默幫助他們。\n因爲這個世界上還有需要他力量的人。
 
 
 --xxxxxxxxxx--
