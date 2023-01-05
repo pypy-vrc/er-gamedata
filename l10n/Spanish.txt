@@ -114,6 +114,7 @@ Item/Name/109404┃Látigo de plasma
 Item/Name/109405┃Látigo de cátodo
 Item/Name/109406┃Urano
 Item/Name/109501┃Látigo del Nueve Colas Sangrientas
+Item/Name/109502┃Espada de Escamas
 Item/Name/110101┃Nudillos de latón
 Item/Name/110102┃Guantes de algodón
 Item/Name/110201┃Guantes de cuero
@@ -264,6 +265,7 @@ Item/Name/118403┃Tac-50
 Item/Name/118404┃Intervención
 Item/Name/118405┃NTW-20
 Item/Name/118406┃Polaris
+Item/Name/118407┃Rifle de Plasma
 Item/Name/118501┃Rayo mortal
 Item/Name/118502┃Cañón de Fuego negro
 Item/Name/119101┃Cadena de acero
@@ -1274,7 +1276,7 @@ Item/Effects/302308┃Recupera PE durante 18 segundos.
 Item/Effects/302309┃Recupera PE durante 18 segundos.
 Item/Effects/302310┃Recupera PE durante 18 segundos.
 Item/Effects/302311┃Recupera PE durante 18 segundos.
-Item/Effects/302312┃recupera PE durante 18 segundos. Aumenta el poder de ataque en 10 durante la recuperación.
+Item/Effects/302312┃Gana permanentemente 3 de Poder de Ataque y 5 de Amp. de Habilidades. El efecto puede acumularse hasta 3 veces.
 Item/Effects/301102┃Recupera PV durante 18 segundos.
 Item/Effects/301104┃Recupera PV durante 18 segundos.
 Item/Effects/301105┃Recupera PV durante 18 segundos.
@@ -1294,7 +1296,7 @@ Item/Effects/301205┃Recupera PV durante 18 segundos.
 Item/Effects/301206┃Recupera PV durante 18 segundos.
 Item/Effects/301207┃Recupera PV durante 18 segundos.
 Item/Effects/301209┃Recupera PV durante 18 segundos.
-Item/Effects/301305┃Recupera PV durante 18 segundos. Incrementa la defensa en 10 durante la recuperación.
+Item/Effects/301305┃Gana permanentemente 3 de Defensa. El efecto puede acumularse hasta 3 veces.
 Item/Effects/301213┃Recupera PV durante 18 segundos.
 Item/Effects/301216┃Recupera PV durante 18 segundos.
 Item/Effects/301217┃Recupera PV durante 18 segundos.
@@ -1339,7 +1341,7 @@ Item/Effects/301325┃Recupera PV durante 18 segundos.
 Item/Effects/301326┃Recupera PV durante 18 segundos.
 Item/Effects/301327┃Recupera PV durante 18 segundos.
 Item/Effects/301328┃Recupera PV durante 18 segundos.
-Item/Effects/301329┃Recupera PV durante 18 segundos.
+Item/Effects/301329┃Añade permanentemente 30 puntos a los PV Máximos. El efecto puede acumularse hasta 3 veces.
 Item/Effects/301330┃Recupera PV durante 18 segundos.
 Item/Effects/301401┃Recupera PV durante 18 segundos.
 Item/Effects/301331┃Recupera PV durante 18 segundos.
@@ -1546,6 +1548,9 @@ MiscItemType/Material┃Material
 ItemConsumableType/None┃Ninguno
 ItemConsumableType/Food┃Comida
 ItemConsumableType/Beverage┃Bebida
+ItemConsumableType/Special┃Especial
+ItemConsumableType/SpecialFood┃Especial
+ItemConsumableType/SpecialBeverage┃Especial
 MasteryType/None┃Ninguno
 MasteryType/Glove┃Guantes
 MasteryType/Tonfa┃Tonfa
@@ -1711,7 +1716,7 @@ StatType/MoveSpeedOutOfCombat┃Velocidad de Movimiento fuera de Combate
 StatType/IncreaseBasicAttackDamage┃Daño Extra con Ataques Básicos
 StatType/IncreaseBasicAttackDamageByLv┃Daño Extra con Ataques Básicos por nivel
 StatType/IncreaseBasicAttackDamageRatio┃Amplificación de Daño de Ataques Básicos
-StatType/IncreaseBasicAttackDamageRatio/Desc┃Aumenta el daño de los ataques básicos. Afectado por el nivel de Maestría de armas.
+StatType/IncreaseBasicAttackDamageRatio/Desc┃Aumenta el daño de los ataques básicos. 
 StatType/IncreaseBasicAttackDamageRatioByLv┃Amplificación de Daño de Ataques Básicos por nivel
 StatType/PreventDamage┃Reducción de daño
 StatType/PreventDamage/Desc┃Reduce el daño de varios tipos de daño.\nLa Maestría de Defensa afecta la Reducción de daño de ataque básico y la Reducción de daño de habilidad.
@@ -1733,10 +1738,10 @@ StatType/InfluencePointByLv┃Amplificación de Daño de Habilidades por nivel
 StatType/InfluencePointRatio┃Amplificación de Daño de Habilidades
 StatType/InfluencePointRatioByLv┃Amplificación de Daño de Habilidades por nivel
 StatType/SkillAmp┃Amplificación de Daño de Habilidades
-StatType/SkillAmp/Desc┃Amplificación de Habilidades: El daño de habilidades es aumentado por la Amplificación de Habilidades.
+StatType/SkillAmp/Desc┃El daño de habilidades es aumentado por la Amplificación de Habilidades.
 StatType/SkillAmpByLv┃Amplificación de Daño de Habilidades por nivel
 StatType/SkillAmpRatio┃Amplificación de Daño de Habilidades
-StatType/SkillAmpRatio/Desc┃Amplificación de Habilidades: El daño de habilidades es aumentado por la Amplificación de Habilidades.
+StatType/SkillAmpRatio/Desc┃El daño de habilidades es aumentado por la Amplificación de Habilidades.
 StatType/SkillAmpRatioByLv┃Amplificación de Daño de Habilidades por nivel
 StatType/PenetrationDefense┃Penetración de armadura
 StatType/PenetrationDefenseRatio┃Penetración de armadura
@@ -1840,8 +1845,8 @@ ToolTipType/AddFixedDamage┃Daño verdadero adicional
 ToolTipType/AddSkillDamage┃Daño Extra de Habilidad
 ToolTipType/DoNotNormalAttackTime┃Desarmado
 ToolTipType/DamagePerLevel┃Daño por nivel
-ToolTipType/JackieGrade1┃Jugador, Oso, Alpha, Omega, Wickeline, Gamma
-ToolTipType/JackieGrade2┃Otros Animales Salvajes
+ToolTipType/JackieGrade1┃Carnicería Lunática
+ToolTipType/JackieGrade2┃Carnicería
 ToolTipType/DamageCount┃Daño Total
 ToolTipType/SkillApCoef┃Bonus de Poder de Ataque Total
 ToolTipType/SkillDfCoef┃Bonus de Defensa Total
@@ -1933,6 +1938,7 @@ ToolTipType/DamageTargetLossHpCoefByLevel┃Daño Extra proporcional a los PV re
 ToolTipType/HammerFinalRatioDamage2ByLevel┃[Mejorado] Daño Extra en el desplazamiento
 ToolTipType/HealBurger┃Recuperación de la Hamburguesa de Eleven
 ToolTipType/ExplodeDecreaseMoveRatio┃Ralentización por explosión (%)
+ToolTipType/SecondDamageApcoef┃Poder de Ataque del Segundo Golpe
 ToolTipType/ShortBowFirstAttackCoef┃Poder de Ataque de la primera flecha del Hankyu
 ToolTipType/ShortBowSecondAttackCoef┃Poder de Ataque de la segunda flecha del Hankyu
 ToolTipType/YumiAttackCoef┃Poder de Ataque del Daikyu
@@ -2088,6 +2094,7 @@ ToolTipType/EstelleDecreaseMoveSpeed┃[Solo] Ralentización
 ToolTipType/EstelleSkillDamage4_2┃[Global] Daño
 ToolTipType/EstelleProtection4_2┃[Global] Escudo
 ToolTipType/EstelleProtectionDuration4_2┃[Global] Duración del Escudo
+ToolTipType/LostHpDamage┃Daño Adicional en comparación a PV perdidos
 ToolTipType/PioloPassiveCoolTimeChange┃Velocidad de Ataque incrementada por cada 1% de Reducción de Enfriamiento
 ToolTipType/TrainingResultCount┃[Bien Entrenado] Cargas
 ToolTipType/Piolo_Q1_Damage┃[Giro Helicoptero] Daño
@@ -2113,6 +2120,7 @@ ToolTipType/Martina_FinalInSector_Damage┃Daño en el centro de la Grabación c
 ToolTipType/Haze_GrenadeInnerDamage┃Daño Interno de Granada 40mm
 ToolTipType/Haze_GrenadeOuterDamage┃Daño Externo de Granada 40mm
 ToolTipType/Haze_SubmachinegunDamage┃Daño de Ráfaga SMG
+ToolTipType/Haze_RocketDamage┃Daño de Cohete
 ToolTipType/Haze_AccRocketDamage┃Daño de Aceleración de cohete
 ToolTipType/Haze_GrenadeCooldown┃Enfriamiento de Granada 40mm
 ToolTipType/Haze_GrenadeCost┃Coste de Granada 40mm
@@ -2122,6 +2130,12 @@ ToolTipType/ReinforcedExplosionDamage┃[Spada] Daño de Explosión
 ToolTipType/RangeMoveSpeedDecrease┃Reducción de Velocidad de Movimiento a Distancia
 ToolTipType/Irem_FirstDamage┃Daño Adicional del Primer Golpe
 ToolTipType/Irem_ContinueDamage┃Daño de Ataque Continuo
+ToolTipType/Theodore_Active1CoolDown┃[Cañón de Energía] Reducción de Enfriamiento (%)
+ToolTipType/Theodore_Active2CoolDown┃[Pantalla de energía] Reducción de Enfriamiento (%)
+ToolTipType/Theodore_Active3CoolDown┃[Granada de chispa] Reducción de Enfriamiento (%)
+ToolTipType/Theodore_ScreenFireDamage┃Daño por disparar a través de la Pantalla de Energía
+ToolTipType/Theodore_ScreenFireHeal┃PV recuperados a través de la Pantalla de Energía
+ToolTipType/MaxHpShieldRatio┃(%) de Escudo Obtenido según los PV Máx.
 DayNight/Day┃Día
 DayNight/Night┃Noche
 CastingActionType/ToRest┃Preparándose para descansar
@@ -2165,6 +2179,7 @@ CastingActionType/EscapeObject┃Activando la consola del Submarino
 CastingActionType/EscapeTriggerObject┃Activando Controles de la puerta
 CastingActionType/EscapeHyperloop┃Moviéndose al Muelle Abandonado
 CastingActionType/RetrieveEscapeMaterial┃Recuperando Brazalete de Regeneración
+CastingActionType/TeleportToTeamMemberInAreaAttributes┃Operando Hyperloop hacia aliados en el campo de batalla: <color=#FFBB00>{0}</color>
 ItemOptionCategory/AttackPower┃Poder de Ataque
 ItemOptionCategory/AttackSpeed┃Velocidad de Ataque
 ItemOptionCategory/CriticalStrike┃Golpe Crítico
@@ -2255,7 +2270,7 @@ MonsterDropRandom/5┃Suelta un objeto <color=#35FF94>Poco común</color>, \n<co
 MonsterDropRandom/6┃Suelta un objeto <color=#35FF94>Poco común</color>, \n<color=#2AC0FF>Raro</color> o \n<color=#D05EFF>Épico</color>.
 MonsterDropRandom/7┃Puede tener <color=#D05EFF>Mithril</color>, o <color=#D05EFF>Meteorito</color>, o <color=#D05EFF>Árbol de la Vida</color>, o <color=#D05EFF>Agua Bendita</color>, o <color=#D05EFF>Lágrima de Selene</color>.
 MonsterDropRandom/8┃Suelta un objeto <color=#35FF94>Poco común</color> o <color=#2AC0FF>Raro</color> que puede usarse para fabricar con <color=#D05EFF>Mithril</color>.
-MonsterDropRandom/9┃Suelta <color=#D05EFF>Agua Bendita</color> o <color=#D05EFF>Lágrima de Selene</color>.
+MonsterDropRandom/9┃Suelta <color=#FFD738>Agua Bendita</color> o <color=#FFD738>Lágrima de Selene</color>.
 MonsterDropRandom/12┃Puede tener tanto <color=white>Carne</color> o <color=white>Pluma</color>.
 MonsterDropRandom/13┃Puede tener <color=white>Cuero</color>(Alta probabilidad), \no un objeto <color=white>Común</color>(Poca probabilidad).
 MonsterDropRandom/14┃Suelta un objeto <color=white>Común</color>.
@@ -2656,77 +2671,6 @@ Drops_Emotion_St_GssG_01┃GssG
 Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
 Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
 Drops_Emotion_St_InPassant_01┃InPassant Baka
-EP_Drops_Emotion_St_Averse_01┃Averse Wave
-EP_Drops_Emotion_St_IKeepItTaco_01┃IKeepItTaco Rareboi
-EP_Drops_Emotion_St_FanHOTS_01┃FanHOTS Coolguy
-EP_Drops_Emotion_St_Scarra_01┃Scarra Noice
-EP_Drops_Emotion_St_Yueko_01┃Yueko Sadfox
-EP_Drops_Emotion_St_DeliciousMilkGG_01┃DeliciousMilk Cheers
-EP_Drops_Emotion_St_Kiyoon_01┃Kiyoon GJ
-EP_Drops_Emotion_St_AlexIch_01┃AlexIch Boosted
-EP_Drops_Emotion_St_Dyrus_01┃Dyrus Thumbs Up
-EP_Drops_Emotion_St_MiMiLucky_01┃MiMiLucky Annoyed
-EP_Drops_Emotion_St_Xiaoma_01┃Xiaoma Good Job!
-EP_Drops_Emotion_St_VIVI_01┃Vivi Shocked!
-EP_Drops_Emotion_St_lois_01┃Lois Happy
-EP_Drops_Emotion_St_Nein1203_01┃Nein1203 Crying
-EP_Drops_Emotion_St_GodJJ_01┃GodJJ Great!
-EP_Drops_Emotion_St_Emiru_01┃Emiru Bunny
-EP_Drops_Emotion_St_MAO_01┃GALALA Mad
-EP_Drops_Emotion_St_MiMiLucky_02┃MiMiLucky Awesome!
-EP_Drops_Emotion_St_GodJJ_02┃GodJJ Hey!
-EP_Drops_Emotion_St_MAO_02┃GALALA Sigh..
-EP_Drops_Emotion_St_Buygame_01┃Buygame Cry
-EP_Drops_Emotion_St_Dingyi_01┃Dingyi Dude?
-EP_Drops_Emotion_St_Xiaoma_02┃Xiaoma Heatin' Up
-EP_Drops_Emotion_St_VIVI_02┃Vivi Angry
-EP_Drops_Emotion_St_lois_02┃Lois Dinosaur
-EP_Drops_Emotion_St_Nein1203_02┃Nein1203 Mad
-EP_Drops_Emotion_St_Cooldog_01┃Cooldog Heart
-EP_Drops_Emotion_St_Feviknight_01┃Feviknight Stressed
-EP_Drops_Emotion_St_IKeepItTaco_02┃IKeepItTaco Trashboi
-EP_Drops_Emotion_St_Yougelly_01┃yougelly sallyStab
-EP_Drops_Emotion_St_K3soju_01┃k3sojuwu
-EP_Drops_Emotion_St_Metaphor_01┃metaphor GUN
-EP_Drops_Emotion_St_Plup_01┃plup Big Dumb Dinosaur
-EP_Drops_Emotion_St_Ddony_01┃DDony
-EP_Drops_Emotion_St_Jamddl_01┃Sleepground
-EP_Drops_Emotion_St_Duckgea_01┃Duckgae
-EP_Drops_Emotion_St_Syaruru_01┃Syaruru
-EP_Drops_Emotion_St_Englishnoob46_01┃Yomu
-EP_Drops_Emotion_St_Naruserin309_01┃Naruserin
-EP_Drops_Emotion_St_Oni_01┃Oniwasoto
-EP_Drops_Emotion_St_No17AI_01┃No17AI
-EP_Drops_Emotion_St_Tomsorcer_01┃Tomsorcer sonRiot
-EP_Drops_Emotion_St_Wingsofdeathx_01┃wingsofdeath Stylin'
-EP_Drops_Emotion_St_Ddahyoni_01┃Ddahyoni
-EP_Drops_Emotion_St_ChunhyangHi_01┃Chunhyang Hi
-EP_Drops_Emotion_St_Phoenixpark_01┃Phoenixpark
-EP_Drops_Emotion_St_Saeom_01┃saeom
-EP_Drops_Emotion_St_Bbonge_01┃Bbonge
-EP_Drops_Emotion_St_HIFIVE_01┃HIFIVE
-EP_Drops_Emotion_St_Yungi_01┃Yungi
-EP_Drops_Emotion_St_Luda_01┃Luda
-EP_Drops_Emotion_St_Jelly_01┃Jelly
-EP_Drops_Emotion_St_Sonycast_01┃Sonycast
-EP_Drops_Emotion_St_ChoromTeeHee_01┃Chorom Tee-Hee-
-EP_Drops_Emotion_St_Purin_01┃Purin
-EP_Drops_Emotion_St_Nariddyang_01┃Nariddyang
-EP_Drops_Emotion_St_JuanK_01┃JuanK
-EP_Drops_Emotion_St_Parkjand_01┃Parkjand
-EP_Drops_Emotion_St_Salgu_01┃Salgu
-EP_Drops_Emotion_St_TwitchRivals_01┃Twitch Rivals Emote
-EP_Drops_Emotion_St_Sona_01┃Sona
-EP_Drops_Emotion_St_Jukes_01┃Jukes
-EP_Drops_Emotion_St_Pimpimenta_01┃Pimpimenta
-EP_Drops_Emotion_St_Yoda_01┃Yoda
-EP_Drops_Emotion_St_Dersin2k_01┃Dersin2k
-EP_Drops_Emotion_St_HuchamS2_01┃HuchamS2
-EP_Drops_Emotion_St_Tanghyung_01┃tanghyung
-EP_Drops_Emotion_St_GssG_01┃GssG
-EP_Drops_Emotion_St_YukiUsada_01┃Sua Bonks YukiUsada
-EP_Drops_Emotion_St_TheNamesNiko_01┃TheNamesNiko Fishing
-EP_Drops_Emotion_St_InPassant_01┃InPassant Baka
 Emotion_Jackie01_NP┃Jackie Aprueba
 Emotion_Jackie02_NP┃Jackie Llorona
 Emotion_Jackie03_NP┃Jackie Furiosa
@@ -3048,6 +2992,13 @@ Event_NewYear2023_Eleven_3048┃¡Es EleVen!
 Event_NewYear2023_WhiteBear01_3049┃¡El Oso Polar está de vuelta!
 Event_NewYear2023_WhiteBear02_3050┃¡Furia del Oso Polar!
 Event_HyejinStraw_3051┃¡Sorbe, sorbe, Hyejin! (Coreano)
+Emotion_Celine01_NP┃Celine está Tramando algo
+Emotion_Celine02_NP┃Mente en Blanco
+Emotion_Celine03_NP┃No le Preguntes a Celine
+Emotion_Celine04_NP┃Celine lo Aprueba
+Event_NewYear2023_ShyRabbit_3052┃¡Conejo Feliz de Año Nuevo!
+Event_NewYear2023_AngryRabbit_3053┃¡Conejo Enojado de Año Nuevo!
+Event_Theodore_3054┃Sombrero de Lana Theodore
 Shop/Desc/Emotion_Hart01_NP┃Utiliza emotes para comunicarte en la partida.
 Shop/Desc/Emotion_Hart02_NP┃Utiliza emotes para comunicarte en la partida.
 Shop/Desc/Emotion_Hart03_NP┃Utiliza emotes para comunicarte en la partida.
@@ -3837,9 +3788,9 @@ Goods/Name/1604027┃Lonchera de Li Dailin
 Goods/Name/1604028┃Carne de la Bestia Adorable Hyunwoo
 Goods/Name/1604029┃Robot Retro
 Goods/Name/1604030┃Construyendo Bloques
-Goods/Name/1604031┃Reina del Ajedrez
+Goods/Name/1604031┃Oso Durmiente
 Goods/Name/1604032┃Medidas de Seguridad
-Goods/Name/1612001┃Tumba del Doctor de la peste
+Goods/Name/1612001┃Médico de la Peste
 Goods/Name/1612002┃La curiosidad mató al gato
 Goods/Name/1612003┃Sobrevoltaje
 Goods/Name/1612004┃Explosión Mágica Adela
@@ -3904,7 +3855,7 @@ Goods/Name/1504027┃Anvorgesa
 Goods/Name/1504028┃Jabalí Durmiente
 Goods/Name/1504029┃¡Darle a Li Dailin un pastel de arroz!
 Goods/Name/1504030┃Antifaz para Dormir
-Goods/Name/1504031┃Pijama de Tia
+Goods/Name/1504031┃Ardilla de Tia en Pijama
 Goods/Name/1504032┃PELIGRO
 ItemType/ANNOUNCE/Name┃Paquete de presentador
 ItemType/ANNOUNCE/Desc┃Cambia la voz del locutor en el juego.
@@ -4043,6 +3994,7 @@ Mai_4Emote_Pack_01┃Paquete de 4 Emotes de Mai
 BlackFriday2022_Skin_RandomBox_01┃Información Misteriosa
 Aiden_4Emote_Pack_01┃Paquete de 4 Emotes de Aiden
 Eva_4Emote_Pack_01┃Paquete de 4 Emotes de Eva
+Celine_4Emote_Pack_01┃Paquete de 4 Emotes de Celine
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emoticones\n\nEl 58% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emoticones\n\nEl 56% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emoticones\n\nEl 58% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
@@ -4080,6 +4032,7 @@ Shop/Desc/Mai_4Emote_Pack_01┃Contenidos:\n\nEl contenido de este paquete será
 Shop/Desc/BlackFriday2022_Skin_RandomBox_01┃* Solo podrás comprar este paquete una vez.\n* Solo 1 Skin Poco Común/Raro/Épico de la lista de objetos podrá ser reclamado mediante este paquete.\n* Si no hay objetos obtenibles, este paquete no estará disponible para ti.\n* Las probabilidades son determinadas como 1/N, el cual cambia dependiendo de la cantidad de aspectos que poseas.\n* No podrás obtener ningún aspecto que no este incluido en la lista de objetos. (Por favor refiera al anuncio)\n* Los nuevos objetos comprados serán inmediatamente añadidos a tu colección.
 Shop/Desc/Aiden_4Emote_Pack_01┃Contenidos:\n\nEl contenido de este paquete será enviado a tu buzón, e incluirá lo siguiente:\n\n- 4 Emotes de Aiden\n- Personaje Mai\n- Skin Cazador de Espíritus Aiden\n- Bono A-Coin de 3 Días\n- Bono Puntos EP de 3 Días\n\n* Los objetos de este paquete se venden con un descuento y no son reembolsables.\n* El precio del paquete puede cambiar dependiendo de los objetos ya adquiridos.\n* Los nuevos objetos comprados serán añadidos inmediatamente a tu colección.
 Shop/Desc/Eva_4Emote_Pack_01┃Contenidos:\n\nEl contenido de este paquete será enviado a tu buzón, e incluirá lo siguiente:\n\n- 4 Emotes de Eva\n- Personaje Eva\n- Skin Torre del Reloj Celestial Eva\n- Bono A-Coin de 3 Días\n- Bono Puntos EP de 3 Días\n\n* Los objetos de este paquete se venden con un descuento y no son reembolsables.\n* El precio del paquete puede cambiar dependiendo de los objetos ya adquiridos.\n* Los nuevos objetos comprados serán añadidos inmediatamente a tu colección.
+Shop/Desc/Celine_4Emote_Pack_01┃Contenidos:\n\nEl contenido de este paquete será enviado a tu buzón, e incluirá lo siguiente:\n\n- 4 Emotes de Celine\n- Personaje Celine\n- Skin Agente de Desactivaciones Celine\n- Bono A-Coin de 3 Días\n- Bono Puntos EP de 3 Días\n\n* Los objetos de este paquete se venden con un descuento y no son reembolsables.\n* El precio del paquete puede cambiar dependiendo de los objetos ya adquiridos.\n* Los nuevos objetos comprados serán añadidos inmediatamente a tu colección.
 Product/Name/SEASON_PASS_S5┃Paquete de la Temporada 5
 Shop/Desc/SEASON_PASS_S5┃¡Consigue todo el contenido de la Temporada 5 a un precio increíble!
 Product/Name/SEASON_PASS_S6┃Paquete de la Temporada 6
@@ -4113,6 +4066,18 @@ Product/Name/EP_Event_Neon_3029┃Neo Genial
 Product/Name/EP_SPRAY_TastyCarpBread┃Panecillo de Carpa
 Product/Name/EP_SPRAY_YuleLog┃Tarta Tronco de Yule
 Product/Name/EP_SPRAY_WinnerWinner┃Cena Victoriosa
+Product/Name/EP_EMBLEM_MARK_EVENT_103063┃Cóctel Refrescante
+Product/Name/EP_EMBLEM_MARK_EVENT_103064┃Wilson de Loto
+Product/Name/EP_EMBLEM_MARK_EVENT_103065┃Flor Lumia Land Felix
+Product/Name/EP_SPRAY_CobaltOpenEvent01┃Wilson de Loto
+Product/Name/EP_SPRAY_CobaltOpenEvent02┃Flor Lumia Land Felix
+Product/Name/EP_SPRAY_WilsonCon01┃Wilson Gran Bocadillo
+Product/Name/EP_SPRAY_FlamingoWilson01┃Wilson Flotante
+Product/Name/EP_SPRAY_HulaWilson01┃Wilson Fiesta Tropical
+Product/Name/EP_Emotion_JeeNyBurger_Magnus01┃JeeNy's Taunty Magnus
+Product/Name/EP_Emotion_JeeNyBurger_Magnus02┃JeeNy's Approving Magnus
+Product/Name/EP_Emotion_JeeNyBurger_Magnus03┃JeeNy's Madnus
+Product/Name/EP_Emotion_JeeNyBurger_Magnus04┃JeeNy's Sadnus
 Shop/Desc/EP_TOKEN_1000┃Moneda utilizada para comprar artículos exclusivos con Fichas EP.
 Shop/Desc/EP_TOKEN_200┃Moneda utilizada para comprar artículos exclusivos con Fichas EP.
 Shop/Desc/EP_TOKEN_RANDOM_01┃Consigue un artículo al azar de la siguiente lista.
@@ -4477,6 +4442,8 @@ Skill/Group/Coef/1010220┃Li Dailin carga hacia adelante e inflige {0}<color=#f
 Skill/Group/Coef/1010300┃Li Dailin toma un trago durante {0} segundos, gana Fuerza Líquida y aumenta su CAS. Los ataques normales reducen el enfriamiento de Echar un trago 1 segundo.\n\nFuerza líquida: el daño de su próximo ataque normal y el daño de Enfocada incrementa de {1} a {2} dependiendo de su CAS.
 Skill/Group/Coef/1010400┃Li Dailin escupe licor barato en un cono frente a ella, reduciendo la velocidad de movimiento de los enemigos dentro del alcance en {4} durante {0} segundos e inflige {1}<color=#ffd775>(+{2}% Poder de ataque)</color><color=#DDA0DD>(+{5}% Amp. Habilidades.)</color> de daño. \n\nAchispada: Silencia a los enemigos durante {3} segundos.
 Skill/Group/Coef/1010500┃Li Dailin se lanza hacia adelante, sin poder ser detenida, inmune al control de multitudes y suprimiendo el primer enemigo golpeado y lo sigue con dos patadas consecutivas. Cada golpe inflige <color=#ffd775>(+{1}% Poder de ataque)</color><color=#DDA0DD>(+{5}% Amp. Habilidades.)</color> a {2}<color=#ffd775>(+{3}% Poder de ataque)</color><color=#DDA0DD>(+{6}% Amp. Habilidades.)</color> de daño en propoción de los PV faltantes al enemigo. Golpear un enemigo disminuye el tiempo de reutilización de Carga del Tigre en un 40%.\n\nAchispada: sigue con 4 patadas consecutivas.
+Skill/Group/ExpansionTip/1010100┃Bebidas alcohólicas: Todos los consumibles fabricados con <color=#C4C4C4>Alcohol</color> y <color=#C4C4C4>Whisky</color>, <color=#D05EFF>Lágrima de Selene</color>
+Skill/Group/ExpansionTip/1010200┃<i>Puedes atravesar las paredes en la última activación.</i>
 CharacterState/Group/Name/1010100┃Achispada
 CharacterState/Group/Desc/1010100┃Habilidades amplificadas
 CharacterState/Group/Name/1010110┃Ebria
@@ -4919,8 +4886,8 @@ Skill/Group/Coef/1023100┃Bajo el cuchillo: Cuando Cathy inflige daño a los en
 Skill/Group/Coef/1023200┃<color=green>Pasiva</color>: Después de usar una habilidad, el siguiente ataque básico de Cathy inflige <color=#DDA0DD>{2}% Amp. Habilidades.</color> de daño de habilidades.\n\nCathy se desliza en la dirección seleccionada, infligiendo <color=white>{0}</color><color=#ffd775>(+{1}% Poder de ataque)</color><color=#DDA0DD>(+{5}% Amp. Habilidades.)</color> de daño a los enemigos golpeados.\nEl enfriamiento de Bypass Doble se reduce en {4} si Cathy Hiere Gravemente a un enemigo.
 Skill/Group/Coef/1023300┃Cathy blande su sierra frente a ella infligiendo <color=white>{0}</color><color=#ffd775>(+{1}% Poder de ataque)</color><color=#DDA0DD>(+{8}% Amp. Habilidades.)</color> de daño. Los enemigos golpeados son ralentizan un {3} durante {2}s, además, los golpeados por el filo exterior reciben <color=white>{5}</color><color=#ffd775>(+{6}% Poder de ataque)</color><color=#DDA0DD>(+{9}% Amp. Habilidades.)</color> de daño, reciben cargas extra de Herido y son Anclados durante {4} segundo.
 Skill/Group/Coef/1023400┃Cathy lanza su hilo de Sutura, infligiendo <color=white>{0}</color><color=#ffd775>(+{1}% Poder de ataque)</color><color=#DDA0DD>(+{6}% Amp. Habilidades.)</color> de daño al primer enemigo golpeado y lo Inmoviliza durante {2} segundos.\nLas Suturas pueden atravesar el objetivo y golpear un enemigo extra. Las Suturas que golpean a un segundo objetivo empujan el primer objetivo inicial hacia el segundo objetivo, infligiendo <color=white>{4}</color><color=#ffd775>(+{5}% Poder de ataque)</color><color=#DDA0DD>(+{7}% Amp. Habilidades.)</color> de daño adicional y Aturdiéndolos durante {3} segundos. Las Suturas que golpean una pared empujan al enemigo contra la pared, infligiendo <color=white>{4}</color><color=#ffd775>(+{5}% Poder de ataque)</color><color=#DDA0DD>(+{7}% Amp. Habilidades.)</color> de daño adicional y Aturdiéndolo durante {3} segundos.
-Skill/Group/ExpansionTip/1023100┃<i>El daño de habilidad de la bonificación pasiva infligirá al menos 1 daño.</i>
-Skill/Group/ExpansionTip/1023200┃<i>No puedes atravesar las paredes.</i>
+Skill/Group/ExpansionTip/1023100┃<i></i>
+Skill/Group/ExpansionTip/1023200┃<i>No puedes atravesar las paredes.\n\nEl daño de habilidad de la bonificación pasiva infligirá al menos 1 daño.</i>
 Skill/Group/ExpansionTip/1023500┃<i>El daño se maximiza cuando los PV actuales del enemigo están por debajo del {0}%.</i>
 CharacterState/Group/Name/1023100┃Herido
 CharacterState/Group/Name/1023110┃Severamente Herido
@@ -5406,8 +5373,9 @@ Skill/Group/Coef/1035210┃<color=#ffffC2>Golpe de rodilla :</color> Jan ataca c
 Skill/Group/Coef/1035300┃Jan barre el área frente a él con una patada, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{6} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance. Los enemigos golpeados en el cono exterior serán derribados hacia atrás y los enemigos golpeados contra el terreno son Aturdido durante <color=white>{2}</color> segundos. \n<color=#ffffC2>Mejora :</color> Inflige <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color> de daño y repele a todos los enemigos dentro del alcance. Los enemigos golpeados contra el terreno quedan aturdidos durante {4} segundos.
 Skill/Group/Coef/1035400┃Jan se lanza hacia adelante y hace que su siguiente ataque básico inflija <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{5} Amp. Habilidades.)</color> de daño de habilidades adicional. \nAl golpear con Rodillazo o Tomahawk Asesino después de lanzarse, lo cura un {2} por ciento del daño infligido, que aumenta en {3} en función de sus PV faltantes. Jan puede utilizar Bob and Weave mientras usa Tomahawk Asesino. \n<color=#ffffC2>Mejora :</color> El tiempo de reutilización de Bob and Weave se reduce en {4}.
 Skill/Group/Coef/1035500┃Jan invoca un cuadrilátero durante {0} segundos, lo que le otorga {9} carga de Inquebrantable cada segundo. Los enemigos que tocan las cuerdas se ralentizan {4} durante {3} segundos y reciben <color=white>{1}</color><color=#ffd775>(+{2} Poder de ataque)</color><color=#DDA0DD>(+{10} Amp. Habilidades.)</color> de daño. Los enemigos que son empujados hacia las cuerdas son empujados hacia el centro del ring y los aturde durante {5} segundos. Las cuerdas desaparecen al hacer contacto.  Matar a un jugador dentro del ring otorga {6} cargas de Inquebrantable y aumenta la velocidad de movimiento de Jan en {8} durante {7} segundos.
-Skill/Group/ExpansionTip/1035200┃<i> Cuando hay más de 5 acumulaciones de Inquebrantable, Salto de Rodilla se mejora y no consume acumulaciones.</i>
+Skill/Group/ExpansionTip/1035200┃<i> Cuando hay más de 5 acumulaciones de Inquebrantable, Salto de Rodilla se mejora y no consume acumulaciones.\nNo puedes atravesar muros.</i>
 Skill/Group/ExpansionTip/1035210┃<i> Cuando hay más de 5 acumulaciones de Inquebrantable, Salto de Rodilla se mejora y no consume acumulaciones.</i>
+Skill/Group/ExpansionTip/1035300┃<i>No puedes atravesar muros.</i>
 CharacterState/Group/Name/1035100┃Inquebrantable
 CharacterState/Group/Name/1035230┃Rodillazo
 CharacterState/Group/Name/1035260┃Rodillazo mejorado
@@ -6739,6 +6707,42 @@ CharacterState/Group/Desc/1061320┃Lanzado por los aires por la habilidad Histe
 CharacterState/Group/Desc/1061500┃El siguiente Ataque básico está mejorado.
 CharacterState/Group/Desc/1061510┃Golpeado por el ataque básico mejorado de Irem. Compartiendo Visión.
 CharacterState/Group/Desc/1061520┃Aturdido por el Puñegato de Irem.
+Skill/Group/Name/1062100┃Protocolo Zafiro
+Skill/Group/Name/1062200┃Cañon de Energía
+Skill/Group/Name/1062300┃Pantalla de Energía
+Skill/Group/Name/1062400┃Granada de Chispa
+Skill/Group/Name/1062500┃Campo de Energía Explosiva
+Skill/Group/Desc/1062100┃Al salir del arbusto, Theodore se vuelve Invisible y su Velocidad de movimiento aumenta en {1} durante {0} segundos. Theodore también obtiene un escudo basado en {3} de sus PV máximos durante {2} segundos. Cualquier acción que no sea moverse termina con su Invisibilidad.\n\nUsar un ataque básico reduce el enfriamiento de <color=white>Cañón de Energía</color> en {4} y <color=white>otras habilidades básicas</color> en {8}. Si el objetivo no es un Sujeto de pruebas, solamente la mitad de la reducción del enfriamiento es aplicada.\n\nTheodore no obtiene PV adicionales del equipo. En vez de eso, obtiene {7} Velocidad de Ataque por {6} PV del equipo.
+Skill/Group/Desc/1062200┃<color=green>Pasiva</color>: si la habilidad golpea un enemigo, el alcance de su próximo ataque básico aumenta en {6}.\n\nCargando: Theodore carga su cañón de rayo con energía durante 1,5 segundos, Ralentizándolo a {0}.\n\nDisparo: al reutilizarse, se dispara un rayo en una dirección específica, infligiendo <color=white>{1}</color> de daño a los enemigos. Los aliados recuperan <color=white>{3}</color> PV durante {2} segundos. El alcance aumenta con el tiempo de carga.\n\nCuando el <color=white>Cañón de Energía</color> golpea la <color=white>Pantalla de energía</color>, otro rayo también se dispara desde el frente de la Pantalla de Energía, infligiendo <color=white>{4}</color> de daño a los enemigos. Los aliados recuperan <color=white>{5}</color> PV durante {2} segundos.
+Skill/Group/Desc/1062300┃Theodore crea una Pantalla de Energía en una ubicación específica durante {0} segundos.\n\nLas balas del <color=white>Ataque básico</color> y <color=white>Granada de chispa</color> que atraviesan la Pantalla de Energía se dispersan alrededor del enemigo. Los ataques básicos que atraviesan la pantalla infligen <color=white>{1}</color> daño de habilidades adicional y aumentan la Velocidad del proyectil y alcance de Granada de chispa.
+Skill/Group/Desc/1062400┃<color=green>Pasiva</color>: si la habilidad golpea un enemigo, el alcance de su próximo Ataque básico aumenta en {5}.\n\nTheodore lanza un Granada de Chispa, Ralentizándo los enemigos en {1} durante {0} segundos. <color=white>Objetivo</color> se fija durante {2} segundos y Theodore obtiene una Visión del objetivo. Golpear al objetivo con un ataque básico o habilidad, inflige <color=white>{3}</color> de daño de habilidades e Inmoviliza durante {4} segundos.
+Skill/Group/Desc/1062500┃Theodore maximiza su energía, creando un <color=white>Campo de Energía Explosiva</color> durante {1} segundos hacia la dirección seleccionada. La Velocidad de movimiento de todos los aliados en esa dirección aumenta en {2} y los enemigos golpeados por la fuerte ola de energía reciben <color=white>{0}</color> daño de habilidades.\n\nDespués de disparar, Theodore se vuelve <color=white>Sobrecargado</color>. Su Velocidad de ataque aumenta en {4} durante {3} segundos y el tiempo máximo de carga del <color=white>Cañón de Energía</color> se reduce a {5} segundos.
+Skill/Group/Coef/1062100┃Al salir del arbusto, Theodore se vuelve Invisible y su Velocidad de movimiento aumenta en {1} durante {0} segundos. Theodore también obtiene un escudo basado en {3} de sus PV máximos durante {2} segundos. Cualquier acción que no sea moverse termina con si Invisibilidad.\n\nUsar un ataque básico reduce el enfriamiento de <color=white>Cañón de Energía</color> en {4} y <color=white>otras habilidades básicas</color> en {8}. Si el objetivo no es un Sujeto de pruebas, solamente la mitad de la Reducción del enfriamiento sera aplicada.\n\nTheodore no obtiene PV adicionales del equipo. En vez de eso, obtiene {7} Velocidad de Ataque por {6} PV del equipo.
+Skill/Group/Coef/1062200┃<color=green>Pasiva</color>: si la habilidad golpea un enemigo, el alcance de su próximo Ataque básico aumenta en {6}.\n\nCargando: Theodore carga su cañón de rayo con energía durante 1,5 segundos, Ralentizándolo a {0}.\n\nDisparo: al reutilizarlo, se dispara un rayo hacia una dirección específica, infligiendo <color=white>{7}</color><color=#ffd775>(+{8}% Poder de ataque)</color><color=#DDA0DD>(+{9}% Amplificación de habilidades)</color> de daño a los enemigos. Los aliados recuperan <color=white>{10}</color><color=#ffd775>(+{11}% poder de ataque)</color><color=#DDA0DD>(+{12}% Amplificación de habilidades)</color> PV durante {2} segundos. El alcance aumenta con el tiempo de carga.\n\nCuando el <color=white>Cañón de Energía</color> golpea la <color=white>Pantalla de Energía</color>, otro rayo también se dispara desde el frente de la Pantalla de Energía, infligiendo<color=white>{13}</color> <color=#ffd775>(+{14}% Poder de ataque)</color><color=#DDA0DD>(+{15}% Amplificación de habilidades)</color> de daño a los enemigos. Los aliados recuperan <color=white>{16}</color><color=#ffd775>(+{17}% Poder de ataque)</color><color=#DDA0DD>(+{18} % Amplificación de habilidades)</color> PV durante {2} segundos.
+Skill/Group/Coef/1062300┃Theodore crea una Pantalla de Energía hacia una ubicación específica durante {0} segundos.\n\nSus balas de <color=white>Ataque básico</color> y <color=white>Granada de chispa</color> que atraviesan la Pantalla de Energía se dispersan alrededor del enemigo. Los ataques básicos que atraviesan la pantalla infligen <color=white>{2}</color><color=#DDA0DD>(+{3}% Amplificación de habilidades)</color> de daño de habilidades adicional, la Velocidad y alcance del proyectil de Granada de chispa aumentan.
+Skill/Group/Coef/1062400┃<color=green>Pasiva</color>: si la habilidad golpea un enemigo, el alcance del próximo Ataque básico aumenta en {5}.\n\nTheodore lanza un Granada de chispa, Ralentizándo los enemigos en {1} durante {0} segundos. <color=white>Objetivo</color> se fija durante {2} segundos y Theodore obtiene una Visión del objetivo. Cuando ataca al objetivo con un ataque básico o habilidad, inflige <color=white>{6}</color><color=#ffd775>(+{7}% Poder de ataque)</color><color=#DDA0DD >(+{8}% Amplificación de habilidades)</color> de daño de habilidades e inmoviliza al objetivo durante {4} segundos.
+Skill/Group/Coef/1062500┃Theodore maximiza su energía y crea un <color=white>Campo de Energía Explosiva</color> durante {1} segundos hacia la dirección seleccionada. La Velocidad de movimiento de todos los aliados que se mueven hacia esa dirección aumenta en {10}<color=#DDA0DD>(+{9}% Amplificación de habilidades)</color> y los enemigos golpeados por la fuerte ola de energía reciben <color=white> {6}</color><color=#ffd775>(+{7}% Poder de ataque)</color><color=#DDA0DD>(+{8}% Amplificación de habilidades)</color> de daño de habilidades.\n\nDespués de disparar, Theodore se vuelve <color=white>Sobrecargado</color>. Su Velocidad de ataque aumenta en {4} durante {3} segundos y el tiempo máximo de carga del <color=white>Cañón de Energía</color> se reduce a {5} segundos.
+CharacterState/Group/Name/1062000┃Protocolo Zafiro - Escudo
+CharacterState/Group/Name/1062010┃Protocolo Zafiro - Invisible
+CharacterState/Group/Name/1062040┃Aumento del alcance de ataque básico
+CharacterState/Group/Name/1062110┃Cañón de Energía - Recuperación de PV
+CharacterState/Group/Name/1062120┃Cañón de energía en Pantalla de Energía - Recuperación de PV
+CharacterState/Group/Name/1062410┃Granada de Chispa - Objetivo fijado activado
+CharacterState/Group/Name/1062420┃Granada de Chispa - Inmovilizado
+CharacterState/Group/Name/1062430┃Granada de Chispa - Ralentizado
+CharacterState/Group/Name/1062500┃Campo de Energía Explosiva - Sobrecargado
+CharacterState/Group/Name/1062510┃Campo de Energía Explosiva - Aumento de Velocidad de movimiento
+CharacterState/Group/Desc/1062000┃Escudo obtenido. Bloqueando daño.\n
+CharacterState/Group/Desc/1062010┃Teodoro es invisible. Velocidad de movimiento aumentada.
+CharacterState/Group/Desc/1062040┃Alcance del siguiente ataque básico aumentado.
+CharacterState/Group/Desc/1062110┃Recuperando PV debido al Cañon de Energía.
+CharacterState/Group/Desc/1062120┃Recuperando PV debido al Cañón de Energía disparado a través de la Pantalla de Energía.
+CharacterState/Group/Desc/1062410┃Objetivo bloqueado debido a Granada de Chispa.
+CharacterState/Group/Desc/1062420┃Inmovilizado debido a Granada de Chispa.
+CharacterState/Group/Desc/1062430┃Velocidad de movimiento reducida debido a Granada de Chispa.
+CharacterState/Group/Desc/1062500┃Sobrecargado. Velocidad de ataque aumentada ahora. Tiempo máximo de carga del Cañón de Energía reducido.
+CharacterState/Group/Desc/1062510┃Velocidad de movimiento aumentada debido al Campo de Energía Explosiva.
+Skill/Group/ExpansionTip/1062200┃<i>Si la habilidad no se utiliza después de cargar, la mitad del enfriamiento y PE se restauran.</i>
 Skill/Group/Name/3015000┃A Capa y Daga
 Skill/Group/Name/3015100┃A Capa y Daga
 Skill/Group/Name/3016000┃Bloqueo
@@ -7283,10 +7287,15 @@ Skill/LobbyDesc/1059300┃El arma de Isaac se vuelve más fuerte y su próximo A
 Skill/LobbyDesc/1059400┃Isaac carga rápidamente y prepara su próxima habilidad. Tras reutilizarlo: Atrae los enemigos frente a él, infligiendo daño de habilidades y Aturdiéndolos.
 Skill/LobbyDesc/1059500┃Isaac golpea fuertemente hacia el suelo, infligiendo daño de habilidades y empujando los enemigos sin Vulnerabilidad fuera del alcance. Si Vulnerabilidad se activa debido a esta habilidad, Isaac inflige daño de habilidades adicional al enemigo en función de sus PV faltantes y Ralentiza extremadamente por un corto tiempo.
 Skill/LobbyDesc/1061100┃Cuando Irem ingresa a un área diferente, su Alcance de Visión aumenta. Después de permanecer en la misma área durante un cierto tiempo, en lugar de Alcance de Visión, sus otras habilidades mejoran.\nComo Irem: Reducción de Enfriamiento\nComo gato: Aumento de Defensa\n\nComer comida hecha con pescado recupera inmediatamente sus PV por una cantidad fija de Regeneración máxima de PV por comida.
-Skill/LobbyDesc/1061200┃<color=#ffd775>Irem:</color>\nIrem lanza una pelota saltarina, volviendose más fuerte con cada rebote e infligiendo daño de habilidades a los enemigos dentro de su alcance.\nCuando la pelota golpea un enemigo, deja de rebotar y deja una Marca de Pez.\n\n<color=#ffd775>Gato:</color>\nEn su siguiente ataque básico, Irem arremete contra su objetivo, infligiendo daño de habilidades adicional. Si atacas un objetivo con una Marca Cascabel de gato, el enemigo quedará Aturdido.\n\nLuego, Irem ataca continuamente y cada enemigo dentro de su alcance recibe daño de habilidades.\nSi el objetivo se ve afectado por Control de multitudes, inflige daño de habilidades adicional.
+Skill/LobbyDesc/1061200┃<color=#ffd775>Irem:</color>\nIrem lanza una pelota saltarina, volviendose más fuerte con cada rebote e infligiendo daño de habilidades a los enemigos dentro de su alcance.\nCuando la pelota golpea un enemigo, deja de rebotar y deja una Marca de Pez.\n\n<color=#ffd775>Gato:</color>\nEn su siguiente ataque básico, Irem arremete contra su objetivo, infligiendo daño de habilidades adicional. Si atacas un objetivo con una Marca Cascabel de gato, el enemigo quedará Inmovilizado.\n\nLuego, Irem ataca continuamente y cada enemigo dentro de su alcance recibe daño de habilidades.\nSi el objetivo se ve afectado por Control de multitudes, inflige daño de habilidades adicional.
 Skill/LobbyDesc/1061300┃<color=#ffd775>Irem:</color>\nIrem crea un pequeño campo que Ralentiza los enemigos e inflige daño de habilidades a los enemigos dentro de si alcance. Los enemigos golpeados por el daño quedan Encantados. La Ralentización se mantiene durante un breve período de tiempo después de que el enemigo abandone el campo.\n\n<color=#ffd775>Gato:</color>\nIrem gira en el aire, golpea poderosamente a los enemigos con su cola, inflige daño de habilidades y lanza los enemigos por los aires.\n¡Dañar un enemigo con esta habilidad reduce el enfriamiento de <color=white>Salto amoroso ♥</color>! y <color=white>¡Salto purrfecto!</color>.
 Skill/LobbyDesc/1061400┃<color=#ffd775>Irem:</color>\nIrem se mueve rápidamente hacia una dirección determinada y deja una Marca de Pez en su lugar original.\n\n<color=#ffd775>Gato:</color>\nIrem salta, infligiendo daño de habilidades a los enemigos dentro de su alcance.\nSaltar hacia una Marca de Pez aumenta la distancia de su salto.
 Skill/LobbyDesc/1061500┃<color=#ffd775>Irem:</color>\nIrem se transforma en gato.\n\nSi se crea una Marca de Pez con <color=white>Pelota saltarina</color> o <color=white>¡Salto amoroso! ♥</color>, el próximo ataque básico de Irem tiene mayor alcance, inflige daño de habilidades adicional y deja una Marca Cascabel de gato por un corto período de tiempo.\nEl objetivo con una Marca Cascabel de gato comparte su Visión con Irem.\n\n<color=#ffd775>Gato:</color>\nGato se transforma en Irem.\n\nMoverse por una Marca de Pez como gato otorga un escudo que absorbe daño.
+Skill/LobbyDesc/1062100┃Al salir de un arbusto, Theodore se vuelve Invisible y su Velocidad de movimiento aumenta. Theodore también obtiene un escudo que bloquea daño. Cualquier acción que no sea moverse terminará con su Invisibilidad.\n\nEl uso de un ataque básico reduce el enfriamiento de <color=white>Cañón de Energía</color> y <color=white>otras habilidades básicas</color>.\nSi el objetivo no es un Sujeto de prueba, solamente a la mitad de la reducción del enfriamiento se aplicará.\nTheodore no obtiene PV adicionales del equipo. En vez de eso, obtiene Velocidad de Ataque.
+Skill/LobbyDesc/1062200┃<color=green>Pasiva</color>: Cuando la habilidad golpea, aumenta el alcance del siguiente Ataque básico.\n\nCargando: Theodore carga su cañón de rayo con energía, reduciendo lentamente su Velocidad de movimiento.\n\nDisparo: Al reutilizarse, se dispara un rayo hacia una dirección específica, infligiendo daño a los enemigos. Los aliados recuperan PV. El alcance aumenta con el tiempo de carga.\n\nCuando el <color=white>Cañón de Energía</color> golpea la <color=white>Pantalla de Energía</color>, otro rayo también se dispara desde el frente de la Pantalla de Energía, infligiendo daño a los enemigos. Los aliados recuperan PV con el tiempo.
+Skill/LobbyDesc/1062300┃Theodore crea una pantalla de energía en una ubicación específica.\n\nSus balas de <color=white>ataque básico</color> y <color=white>Granada de Chispa</color> que atraviesan la Pantalla de Energía se dispersan alrededor del enemigo. Los ataques básicos que atraviesan la pantalla infligen daño de habilidades adicional, aumentan la Velocidad del proyectil y alcance de Granada de Chispa.
+Skill/LobbyDesc/1062400┃<color=green>Pasiva</color>: Cuando la habilidad golpea, aumenta el alcance del siguiente Ataque básico.\n\nTheodore lanza una Granada de chispa, Ralentizándo los enemigos. <color=white>Objetivo</color> es fijado y Theodore obtiene una Visión de este. Cuando ataca al objetivo con un ataque básico o habilidad, inflige daño de habilidades e Inmoviliza al objetivo.
+Skill/LobbyDesc/1062500┃Theodore maximiza su energía, creando un <color=white>Campo de Energía Explosiva</color> en una dirección específica.\n\nAumenta la velocidad de movimiento de todos los aliados que se mueven hacia esa dirección. Dispara una fuerte ola de energía a los enemigos, infligiendo daño de habilidades.\n\nDespués de disparar, Theodore se vuelve <color=white>Sobrecargado</color>. Su Velocidad de ataque aumenta y el tiempo máximo de carga de <color=white>Cañón de Energía</color> se reduce.
 Skill/LobbyDesc/3001000┃Te proyectas hacia el enemigo objetivo infligiendole daño.
 Skill/LobbyDesc/3002000┃Bloquea todo daño recibido por un cierto tiempo y regresa el daño a el enemigo atacante.
 Skill/LobbyDesc/3003000┃Hace daño a todos los enemigos en frente a ti y los empuja hacia atrás. Si los enemigos chocan contra una pared cuando son empujados, ellos se desorientan.
@@ -7354,6 +7363,8 @@ CharacterState/Group/Name/4008000┃Ajustes del Modo
 CharacterState/Group/Desc/4008000┃PV y Defensa aumentados.
 CharacterState/Group/Name/4008010┃Sistema Sobrecargado
 CharacterState/Group/Desc/4008010┃El Sistema Sobrecargado ocurre cada pocos segundos, haciendo que Omega reciba 250 de daño verdadero adicional cuando es golpeado por habilidades.
+CharacterState/Group/Name/4008020┃Sistema Sobrecargado
+CharacterState/Group/Desc/4008020┃Sistema Sobrecargado ocurre cada pocos segundos. Recibes 1000 de daño verdadero adicional cuando eres golpeado por habilidades.
 CharacterState/Group/Name/4008100┃Derribado hacia atrás
 CharacterState/Group/Desc/4008100┃Derribado hacia atrás por la energía de FV en las Cuchillas Ark.
 CharacterState/Group/Name/4008110┃Aturdido
@@ -7370,6 +7381,12 @@ Skill/Group/Name/2010400┃Ametralladora Montada
 Skill/LobbyDesc/2010400┃Gamma dispara su ametralladora mientras gira en el sentido de las agujas del reloj.
 Skill/Group/Name/2010500┃Prototipo Lanza Misiles
 Skill/LobbyDesc/2010500┃Gamma dispara misiles en la dirección seleccionada, infligiendo daño en un círculo.
+CharacterState/Group/Name/503501┃Agua Bendita
+CharacterState/Group/Desc/503501┃Gana permanentemente 3 de Defensa. (Acumulaciones Máx. 3)
+CharacterState/Group/Name/503502┃Lágrima de Selene
+CharacterState/Group/Desc/503502┃Gana permanentemente 3 de Poder de Ataque y 5 de Amp. de Habilidades. (Acumulaciones Máx. 3)
+CharacterState/Group/Name/503503┃Vitalidad Zen
+CharacterState/Group/Desc/503503┃Añade permanentemente 30 puntos a los PV Máximos. (Acumulaciones Máx. 3)
 CharacterState/Group/Name/5001000┃Reducción de Curación
 CharacterState/Group/Desc/5001000┃Toda curación sobre ti es menos efectiva.
 CharacterState/Group/Name/5001100┃Reducción de Curación
@@ -7554,6 +7571,7 @@ Item/Skills/6013004/Body┃Tu próximo ataque básico reduce la velocidad de mov
 Item/Skills/6013004/Desc┃Tu próximo ataque básico reduce la velocidad de movimiento un {2}% durante {1} segundos. (Enfriamiento: {6}s)
 Item/Skills/6013005/Name┃<color=yellow>Carga: Medianoche Magnética</color>
 Item/Skills/6013006/Name┃<color=yellow>Carga: Medianoche Magnética</color>
+Item/Skills/6013007/Name┃<color=yellow>Carga: Medianoche Magnética</color>
 Item/Skills/6014000┃Maleficio Primordial
 Item/Skills/6014001/Name┃<color=yellow>Maleficio Primordial</color>
 Item/Skills/6014001/Body┃Golpear un enemigo con una habilidad lo maldice durante {2}s, infligiendo {0}<color=#DDA0DD>(+ {1})</color> de daño verdadero cuando el maleficio expira. Los objetivos no pueden volver a ser maldecidos durante {4}s. (Los ataques básicos reducen este tiempo de reutilización en 1 segundo) \n(Enfriamiento: 2 segundos)
@@ -7675,14 +7693,17 @@ Item/Skills/6019004/Desc┃Infligir daño a un enemigo con una habilidad lo rale
 Item/Skills/6019005/Name┃<color=yellow>Abrazo del Liche</color>
 Item/Skills/6019005/Body┃Infligir daño a un enemigo con una habilidad lo ralentiza un {1}% y reduce su Velocidad de ataque un {3}% durante {4} segundos.\n(Enfriamiento: {5} segundos)
 Item/Skills/6019005/Desc┃Infligir daño a un enemigo con una habilidad lo ralentiza un {1}% y reduce su Velocidad de ataque un {3}% durante {4} segundos.\n(Enfriamiento: {5} segundos)
+Item/Skills/6019006/Name┃<color=yellow>Abrazo del Liche</color>
+Item/Skills/6019006/Body┃Infligir daño a un enemigo con una habilidad lo ralentiza un {1}% durante {4} segundos.\nEnfriamiento: {5} segundos
+Item/Skills/6019006/Desc┃Infligir daño a un enemigo con una habilidad lo ralentiza un {1}% durante {4} segundos.\nEnfriamiento: {5} segundos
 CharacterState/Group/Name/6019000┃Agarre del Liche
 CharacterState/Group/Desc/6019000┃El liche te esta apretando con su agarre, relantizándote.
 Item/Skills/6020000┃Tranquilidad
 Item/Skills/6020001/Name┃<color=yellow>Tranquilidad</color>
 Item/Skills/6020001/Body┃Descansar durante {0} segundos otorga un escudo de 45+<color=green>{14}</color> PS.
 Item/Skills/6020001/Desc┃Descansar durante {0} segundos otorga un escudo de 45+<color=green>Nivel de personaje*{3}(Cuerpo a cuerpo)/{4}(A distancia)</color> PS.
-Item/Skills/6020002/Name┃<color=amarillo>Tranquilidad</color>
-Item/Skills/6020003/Name┃<color=amarillo>Tranquilidad</color>
+Item/Skills/6020002/Name┃<color=yellow>Tranquilidad</color>
+Item/Skills/6020003/Name┃<color=yellow>Tranquilidad</color>
 CharacterState/Group/Name/6020000┃Tranquilidad - En Enfriamiento
 CharacterState/Group/Desc/6020000┃Encontrando la paz interior con respiraciones profundas.
 CharacterState/Group/Name/6020100┃Tranquilidad
@@ -7862,7 +7883,7 @@ BattleMission/5003004/1┃Mata 3 sujetos de prueba en Hospital
 BattleMission/5003005/1┃Mata 2 sujetos de prueba
 BattleMission/5003006/1┃Comete 12 Fish & chips
 BattleMission/5003007/1┃Consigue nivel 14 de maestria de movimiento
-BattleMission/5003007/1┃Mata 3 sujetos de prueba que tengan 2 o mas nivel de maestria de arma que tu.
+BattleMission/5003008/1┃Mata 3 sujetos de prueba que tengan 2 o mas nivel de maestria de arma que tu.
 BattleMission/5003009/1┃Consigue 5 Arboles de la vida
 BattleMission/5003010/1┃Gana 2 veces mientras estás equipado con los artículos de tu primer plan seleccionado
 BattleMission/5004001/1┃Acaba 3 puesto o mas alto en 5 partidas normales/clasificatorias.
@@ -8055,6 +8076,13 @@ EP 토큰 재화 툴팁 설명┃¡Cuando tienes un Pase ER al Nivel 100, cualqu
 DLC 보상!┃DLC
 OwnedCharacterRefund┃Tienes correo sobre el reembolso de un artículo. Haz clic en el ícono de campana en la esquina superior derecha para abrirlo.
 배틀패스 환불안내 팝업┃Un mensaje de reembolso sera enviado <color=#FF9F36>a aquellos que han comprado el pase ER.</color> Porfavor mira las notificaciones en la parte superior derecha del menu principal.
+콘텐츠 잠금 해제!┃¡Desbloqueado!
+일반 대전 플레이 가능┃<color=#FFB62F>Modo Normal</color> disponible.
+랭크 대전 플레이 가능┃<color=#FFB62F>Partida Clasificatoria</color> disponible.
+코발트 모드 플레이 가능┃<color=#FFB62F>Protocolo Cobalto</color> disponible.
+AI 대전 플레이 가능┃<color=#FFB62F>Modo Un Jugador</color> disponible.
+커스텀 모드 플레이 가능┃<color=#FFB62F>Partida Personalizada</color> disponible.
+연습 모드 플레이 가능┃<color=FFB62F>Modo de Práctica</color> disponible.
 구매일로부터 7일이내 가능┃Los reembolsos podrán solamente solicitarse dentro de 7 días posteriores a su compra (excluyendo artículos usados o gastados).
 등록 또는 사용하는 경우 구매 취소 불가능┃Artículos usados o gastados no pueden ser reembolsados.
 구매 즉시 활성화되어 구매 취소 불가능┃Este contenido se activará inmediatamente después de su compra y no puede ser reembolsado.
@@ -8199,6 +8227,7 @@ ToolTip/LevelUpGuide/WeaponSkill┃Haz clic o presiona {0} para subir Nivel de h
 언어┃Idioma
 음성┃Voces
 최대 FPS┃Límite de FPS
+마우스 크기┃Tamaño del mouse
 입력┃Entrada
 시전방식┃Método de lanzamiento
 게임┃Juego
@@ -8248,6 +8277,7 @@ SubjectTitleLocalizationHelpingTeamVietnamese┃Vietnamita
 유효 기간이 만료된 쿠폰입니다.┃Cupón caducado.
 이미 사용된 쿠폰입니다.┃Este cupón ya ha sido canjeado.
 이미 동일한 종류의 쿠폰을 사용하셨습니다.┃El mismo tipo de cupón ya ha sido canjeado.
+카카오게임즈 PC방에서만 사용할 수 있는 쿠폰입니다.┃Cupón disponible solo en cuartos de PCs de Kakao Games
 사용 기간 전에 쿠폰 입력┃Cupón no activo todavía. Por favor comprueba la fecha del cupón.
 정보 오버레이 세부설정┃Personalización de Panel de Información
 전투 능력 정보┃Panel de Información de Combate
@@ -8385,7 +8415,7 @@ DecayWarning/tooltip┃Te quedan <color=#FFB62F>{0}</color> Puntos de Gracia.\nT
 연습모드/누적피해량┃Daño Acumulado
 연습모드/종료┃Finalizar Modo de Práctica?
 연습모드/더미┃Maniquí
-연습 해보기┃Practicar personaje
+연습 해보기┃Practicar Personaje
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃* Si usas las teclas de activación rápida en tu teclado, podrás activar una habilidad inmediatamente en la ubicación del cursor al presionarlas.
 * 캐릭터마다 즉시 시전 여부를 다르게 설정할 수 있습니다.┃* Activación Rapida/Normal puede seleccionarse ahora por personajes
 즉시 시전 사거리 표시┃Indicador de Activación Rápida
@@ -8436,6 +8466,7 @@ ShowObjectText┃Marca información sobre enemigos, objetos y objetos dejados en
 ToggleShowOverlay┃Presiona [Display lock] para obtener información sobre enemigos, objetos y articulos dejados en el suelo.
 Escape┃Abre la configuración del juego
 ShowRouteList┃Mostrar lista de planes guardados
+ShowProgressItem┃Checa la lista guardada de objetos para juego tardío.
 MaxChatWindow┃Extiende la ventana de chat.
 MinimapZoomIn┃Enfocar en el minimapa
 MinimapZoomOut┃Alejar en el minimapa
@@ -8468,6 +8499,7 @@ ChangeEnableTrackerName┃Mostrar nombre de jugador
 ChangeEnableTrackerStatusBar┃Activa/Desactiva la interfaz para los PV y PE
 ChangeEnableReplayControllerUI┃Activar/Desactivar interfaz de control durante la reproducción.
 HideSummonObjectUI┃Activa/Desactiva la interfaz para mostrar trampas y cámaras durante las repeticiones.
+ChangeEnableBattleZoneRuleGuideHUD┃Activar la Interfaz de Zona de Batalla durante la espectación o repeticiones.
 AddGuide┃Añade el objeto al proyecto (Clic en el icono del objeto)
 MoveToAttack┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
 MoveToAttackMouse┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
@@ -8529,6 +8561,8 @@ GameSetting/PreventMinimapMove┃Para mejorar el control, si un movimiento o com
 AutoWeaponSkills┃Autoaprendizaje de Habilidad en Armas
 GameSetting/EnableMinimapMove┃Te permite moverte al hacer click derecho en el Minimapa.
 EnableMinimapMove┃Permitir Movimiento del Minimapa
+전장 HUD 자동 전환┃Cambio automático a Zona de Batalla HUD
+GameSetting/BattleZoneHUDAutoReplace┃Cambiar automáticamente a Zona de Batalla HUD cuando ingresas a la ubicación de Zona de Batalla y Zona de Batalla.
 자동 공격 설정┃Ajustes de Autoataque
 GameSetting/AutoAttack┃Nunca: No atacarás a enemigos cercanos de manera automática.\nPredeterminado: Atacarás a enemigos cercanos automáticamente. No atacarás automáticamente después de fabricar o recolectar.\nSiempe: Atacarás enemigos cercanos automáticamente a menos que presiones el comando de detenerse, estés descansando, checando una caja, o interactuando con una consola.
 #Standard┃Predeterminado
@@ -8593,6 +8627,10 @@ Vivox점검팝업┃El Chat de Voz no está disponible actualmente debido a un e
 음성 채팅 안하기┃Deshabilitar Chat de Voz
 음성 채팅 참여┃Unirse al Chat de Voz
 음성 채팅 이탈┃Salir del Chat de Voz
+캐릭터 추가 정보 - 주스탯┃Información de Estado
+캐릭터 추가 정보 - 주스탯 설명┃Consulta las estadísticas e información de los Personajes.
+캐릭터 추가 정보 - 특성┃Información de las Mejoras
+캐릭터 추가 정보 - 특성 설명┃Verifica las estadísticas e información de Mejoras.
 보유 크레딧┃Balance de Créditos
 획득 예정 크레딧┃Ingreso de Créditos
 획득 예정 크레딧 설명┃Obtienes esta cantidad de créditos con cada cambio de ciclo Día/Noche.
@@ -8621,8 +8659,37 @@ Vivox점검팝업┃El Chat de Voz no está disponible actualmente debido a un e
 지역 설명┃Área actual
 금지구역┃Área restringida
 금지구역 설명┃Tiempo restante hasta la asignación de las próximas áreas restringidas
+전장규칙안내HUD 전환버튼┃Cambiar a la Interfaz de usuario de Zona de Batalla
+기존UI 전환버튼┃Cambiar a la Interfaz de usuario Normal
+전장규칙안내HUD 전장예정지 제목┃Zona de Batalla Prevista
+전장규칙안내HUD 전장예정지 설명┃Esta área se establecerá como Zona de Batalla durante el siguiente día.
+전장규칙안내HUD 전장활성화 제목┃Activación de la Zona de Batalla
+전장규칙안내HUD 전장활성화 설명┃Ataca el Transbordador de Estabilizador Nervioso para obtener Estabilizadores Nerviosos.\nSalir o entrar en una Zona de Batalla activa hará que seas eliminado inmediatamente sin posibilidad de ser revivido.
+전장규칙안내HUD 전장보상 제목┃Recibe recompensas de la Zona de Batalla
+전장규칙안내HUD 전장보상 설명┃¡Felicitaciones por sobrevivir en la Zona de Batalla!\nHaz click en el botón "Reclamar recompensa" o haz click en el botón de la Consola de seguridad para seleccionar su recompensa.
+전장규칙안내HUD 전장보상 수령 버튼┃Reclamar recompensa
+전장규칙안내HUD 전장보상 수령 완료 본인┃Reclamar para sí mismo
+전장규칙안내HUD 전장보상 수령 완료 팀원┃Reclamar para miembro del equipo
+아이템 분해┃Destruir
+아이템 분해 팝업┃Obtenido tras la destrucción del artículo.
+제한시간 내에 보상 아이템을 선택하세요.┃Elige un artículo de recompensa dentro del límite de tiempo.
+전장 참여 팀원┃Equipo de Zona de Batalla
+전장 참여 팀원 설명┃Cuando tus personajes participan en la Zona de Batalla, se les otorgará "Reconstrucción rápida de la Zona de batalla" y un efecto de "Marca de Zona de batalla".\nEl equipo será removido para el equipo ganador.
+AreaAttributes/GroupName/1┃Zona de Batalla - Aceleración
+AreaAttributes/GroupDesc/1┃Esta Zona de batalla aumenta la Velocidad de movimiento y reduce el tiempo de enfriamiento.
+AreaAttributes/GroupName/2┃Zona de Batalla - Berserker
+AreaAttributes/GroupDesc/2┃Esta Zona de batalla aumenta el daño final infligido y otorga Omnisucción.
+AreaAttributes/GroupName/3┃Zona de Batalla - Defensa
+AreaAttributes/GroupDesc/3┃Esta Zona de Batalla te otorga un escudo después de una cierta cantidad de tiempo fuera del combate.
+BattleZoneDebuffGaugeTooltip_Title┃Indicador de Desbordamiento Nervioso
+BattleZoneDebuffGaugeTooltip_Desc┃Se han acumulado varios materiales tóxicos en la Zona de batalla.\nUna vez que se alcanza el máximo, el Sujeto de pruebas morirá después de un cierto período de tiempo.
+BattleZoneRewardGaugeTooltip_Title┃Reclamar recompensas de la Zona de Batalla
+BattleZoneRewardGaugeTooltip_Desc┃Reclama las recompensas de Zona de Batalla en la Consola de seguridad.
+신경안정제셔틀충전중┃Cargando
 생존자 수┃Sobrevivientes
 생존자 수 설명┃Número de sobrevivientes vivos
+전장 생존자 수┃Número de sobrevivientes en la Zona de Batalla
+전장 생존자 수 설명┃Número de supervivientes que permanecen actualmente en la zona de batalla
 팀 처치 수┃Eliminaciones del equipo
 팀 처치 수 설명┃Total de eliminaciones de tu equipo
 플레이어 처치 수┃Número de jugadores eliminados
@@ -8657,7 +8724,7 @@ Vivox점검팝업┃El Chat de Voz no está disponible actualmente debido a un e
 방어력┃Defensa
 방어력 설명┃Reduce el daño recibido de Ataques normales y Habilidades.
 공격 속도┃Velocidad de ataque
-공격 속도 설명┃Aumenta el número de ataques por segundo. 
+공격 속도 설명┃Número de ataques por segundo.
 이동 속도┃Velocidad de movimiento
 이동 속도 설명┃Aumenta la velocidad de movimiento. Es afectado por tu nivel de Maestría en movimiento.
 쿨다운 감소┃Reducción de tiempo de recarga
@@ -8861,6 +8928,7 @@ TempNickname┃Sujeto de pruebas{0}
 지금은 사용할 수 없습니다!┃¡No puedes usarla ahora!
 장착된 무기가 없어 공격할 수 없습니다.┃No puedes atacar sin un arma equipada.
 전투중휴식불가┃No puedes descansar en combate.
+전장전투단계중휴식불가┃Descanso desactivado en Zona de Batalla.
 전투중제작불가┃No puedes fabricar objetos en combate.
 자원이 부족합니다!┃Recursos insuficientes.
 임시안전지대휴식불가┃Dscanso deshabilitado en el area segura temporal.
@@ -9027,6 +9095,7 @@ NOTICE┃NOTICE
 WickelineUI_WaitTooltip┃Tiempo restante hasta que entre el Dr. Wickeline.
 WickelineUI_ReadyTooltip┃La Dra. Wickeline ha sido activada.
 오브젝트생성지역┃Área: {0}
+위클라인경로안내┃{0} > {1}
 원격전송드론호출노티┃Dron Control Remoto
 원격전송드론호출가능안내┃¡Listo para el despliegue!
 원격전송드론호출가능채팅안내┃¡Drones Control Remoto listos para el despliegue!
@@ -9048,6 +9117,15 @@ WickelineUI_ReadyTooltip┃La Dra. Wickeline ha sido activada.
 위클라인죽음어나운스┃{0} ha eliminado a la Dra. Wickeline
 위클라인이동┃Se ha avistado a la Dra. Wickeline en {0}.
 위클라인┃Dra. Wickeline
+전장예정노티┃1 Minuto antes de la Zona de Batalla
+전장예정┃Zona de Batalla se abrirá a las {0} en 1 minuto.
+전장생성노티┃Comienzo de la Zona de Batalla
+전장생성┃Se ha abierto una Zona de Batalla en {0}.
+GameAnnounce-전장예정지선정┃Se ha seleccionado la ubicación de la Zona de batalla. La Zona de Batalla se activará en la siguiente fase.
+GameAnnounce-전장시작예고┃Zona de Batalla se activará pronto.
+GameAnnounce-전장시작┃La Zona de Batalla ha sido activada. Uniéndose a la Zona de Batalla en {0} segundos.
+GameAnnounce-전장승자팀발생┃¡Has sobrevivido en la Zona de Batalla! Reclama tus recompensas en la Consola de seguridad de la Zona de Batalla en {0} segundos.
+GameAnnounce-전장종료┃La Zona de Batalla ha cerrado. La Zona de Batalla cerrada se establecerá como un Área Restringida.
 더미알파생성┃Alpha llegará en 1 minuto en {0}.
 더미오메가생성┃Omega llegará en 1 minuto en {0}.
 더미알파생성완료┃Alpha ha aparecido en {0}.
@@ -9189,6 +9267,10 @@ SP 알림┃{0}({1}): <color=#86E57F>PE {2}%</color>
 하이퍼루프재료알림┃{0}({1}):  <color=#FFBB00>{2}</color> - <color=#86E57F>{3}</color> Materiales necesarios
 하이퍼루프알림┃{0}({1}): Area objetivo - <color=#FFBB00>{2}</color>
 ToastMessage/HyperloopNotLab┃No puedes teletransportarte al Laboratorio.
+ToastMessage/HyperloopNotBattlezone┃No puedes realizar Hyperloop hacia esta área hasta que la Zona de Batalla haya terminado.
+ToastMessage/HyperloopNotBattlezonePlayer┃Los compañeros de equipo que participan en la Zona de Batalla no pueden realizar Hyperloop.
+ToastMessage/HyperloopErrorInBattlezone┃No puedes realizar Hyperloop desde la Zona de Batalla.
+ToastMessage/AlreadyBoughtBattlezoneReward┃El equipo ya ha recibido una recompensa.
 팀원상태알림┃{0}({1}): <color=#FFBB00>{2}({3})</color> - <color=#86E57F>{4}</color>
 팀원빈사알림┃{0}({1}): <color=#FFBB00>{2}({3})</color> - Muerte en <color=#86E57F>{4}</color>s
 팀원상태생존┃<color=#86E57F>Vivo</color>
@@ -9286,6 +9368,7 @@ CBT스케줄링크┃https://www.playeternalreturn.com/schedule/
 바로 시작하기┃Iniciar
 순위표┃Clasificación
 통계┃Estadísticas
+그래프┃Gráfica
 총 플레이 시간┃Tiempo total de juego
 게임ID┃ID de la partida:
 기본┃Básico
@@ -9517,9 +9600,14 @@ ResistanceHpHealedDecrease┃Resistente a reduc. de curación
 Stasis┃Estasis
 Uninteractionable┃Incapaz de Interactuar
 Frozen┃Congelado
+Drowse┃Soñoliento
 무기 숙련도┃Maestría de arma
+무기 숙련도 설명┃Una estadística que aumenta según la fabricación y uso de armas.\nLos diferentes valores aumentan a diferentes grados según el personaje y arma equipada.
 숙련도 레벨 선택┃Selección de nivel de maestría
 {0} 장착 시 증가 옵션┃Bonus con {0} equipado
+모드별 보정 수치┃Ajustes de Modo
+모드별 보정 수치 설명┃Hay una corrección de valores ajustada para cada modo en Eternal Return. Este valor es diferente dependiendo del Sujeto de Prueba y del Arma Equipada.
+모드 보정 없음┃Sin Ajustes de Modo
 개편 특성 순서 저장┃Guardar Orden de Destrezas
 개편 특성 순서 저장 확인 팝업┃¿Guardar Cambios en el Orden de Destrezas?
 개편 사용 가능한 무기 타입┃El tipo de arma seleccionada puede se utilizada por el personaje seleccionado.
@@ -9688,6 +9776,7 @@ ID로 가져오기┃Importar Plan Guardado
 루트 복사하기┃Importar Plan Guardado
 루트 리스트┃Lista de rutas
 후반 아이템 리스트┃Recomendaciones de artículos en juego tardío
+후반 아이템 리스트 설명┃Obtener información de la lista actual de Artículos guardados en Juego tardío.
 변경된 루트를 저장하시겠습니까?┃¿Quieres guardar tus cambios?
 이미 공유된 루트 변경 후 저장┃Los Planos Guardados modificados se actualizarán de inmediato.\n¿Continuar guardando cambios?\n(el ID no cambiará)
 루트 이름┃Nombre del Plan Guardado
@@ -10096,8 +10185,8 @@ ER 패스 구매 완료┃Compra Completada
 신규시즌 자동활성화 경고 3항┃<color=#ff3e3e>Cambiar a una temporada distinta cuesta 300NP.</color>
 비활성화된최대레벨시즌활성화불가팝업┃Los pases anteriores en el nivel máximo no pueden activarse.\n<color=#ff3e3e>¡Las recompensas pueden canjearse del pase sin necesidad de activación!</color>
 신규 시즌 추가 안내┃<color=#8398a0>Noticia de nueva temporada</color>
-신규 시즌 추가 설명1┃<color=#ffffff>¡Nueva temporada, nuevas recompensas! ¡Desbloquea skins de temporada, pantalla de sala de espera, fondos de perfil y más en el Pase ER!</color>
-신규 시즌 추가 설명2┃<color=#acb3b9>¡Llegó la Temporada 7! ¡Sube de nivel tu Pase ER y consigue recompensas!</color>\n<color=#ff3e3e>La nueva temporada se habilitará automáticamente y la temporada anterior se deshabilitará.</color>\n<color=#acb3b9>Puede cambiar las estaciones a través del centro en el Pase ER. Las recompensas no reclamadas se pueden reclamar en cualquier momento.</color>\n<color=#ff3e3e>Cada cambio costará 300NP.</color>
+신규 시즌 추가 설명1┃<color=#8B48BD>¡Nueva temporada, nuevas recompensas! ¡Desbloquea skins de temporada, pantalla de sala de espera, fondos de perfil y más en el Pase ER!</color>
+신규 시즌 추가 설명2┃<color=#FFFFFF>¡Llegó la Temporada 7! ¡Sube de nivel tu Pase ER y consigue recompensas!</color>\n<color=#89FFE2>La nueva temporada se habilitará automáticamente y la temporada anterior se deshabilitará.</color>\n<color=#FFFFFF>Puede cambiar las estaciones a través del centro en el Pase ER. Las recompensas no reclamadas se pueden reclamar en cualquier momento.<\n> Cada cambio costará 300NP.</color>
 배틀패스┃Pase ER
 ER Point┃Puntos ER
 ER 패스 구매┃Comprar Pase ER
@@ -10172,7 +10261,7 @@ EP 토큰 상점 이동 안내 문구┃¡Felicidades por alcanzar el Nivel 100!
 시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃Paquete de temporada 8
 시즌 5팩┃Paquete de temporada 8
 시즌 패스 우편 제목┃Paquete de temporada 8 - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃PASE ER: Ataque Neón | 3 Personajes  | 10 Skins | Artículos exclusivos
+시즌 패스 아이콘 마우스 오버 툴팁 내용┃<PASE ER: Fiesta de Pijamas | 3 Personajes  | 10 Skins | Artículos Exclusivos
 시즌 패스 타이틀 설명┃<size=32>- Beneficios del paquete de temporada 5 -</size>
 시즌 패스 설명┃<size=20><color=#77bce0>Incluye el Pase ER: Presencia Fantasmal</color></size>\n¡Desbloquea el nuevo Pase ER: Presencia Fantasmal ahora!\n\n<size=20><color=#77bce0>Incluye 6 Personajes, 11 skins</color></size>\nConsigue todos los personajes y skins de la temporada 5.\n\n<size=20><color=#77bce0>Artículos Exclusivos</color></size>\nSe proporcionará una skin, un emoticón y una lápida exclusivos sólo para los usuarios que hayan comprado el paquete de la temporada 5.
 시즌 패스 주의 사항┃◆ Usuarios que ya hayan comprado Pase ER: Presencia Fantasmal recibirán un reembolso de 1190 NP.\n\n◆ Se proporcionarán skins, emotes y lápidas exclusivas después del mantenimiento del 16 de febrero.\n\n◆ Los skins de eventos durante la temporada no se incluirán en el paquete de temporada.\n\n◆ Los productos incluidos en el paquete de temporada 5 se enviarán a través del buzón después del lanzamiento.
@@ -10203,7 +10292,16 @@ SeasonPassIcon/8┃Img_SeasonPack8_box_02
 시즌 7팩 주의사항 4┃El paquete de Temporada 7 costará 11,900 NP después de que finalice la oferta de reserva anticipada.
 시즌 7팩 주의사항 4 얼리버드 혜택 종료┃Los artículos exclusivos sólo se pueden obtenerse comprando el Paquete de Temporada 7.
 시즌 7팩 주의사항 5┃Los productos pueden ser cambiados debido a problemas de desarrollo internos.
+시즌팩 특별 스킨┃Skin especial del Paquete de temporada
+상점 미출시 영웅 스킨 (3월 업데이트)┃La actualización estará disponible en Marzo del 2023.
+시즌 8 출시 영웅 스킨 1종┃¡1 Skin épica no disponible en la Tienda!
+시즌 8 특별 아이템┃Artículo especial de la Temporada 8
+<ER PASS : 파자마> 포함┃Incluye Pase ER: Fiesta de Pijamas
+시즌 8 출시 캐릭터 3종 + 스킨 9종┃¡La Temporada 8 incluye 3 Personajes y 9 Skin!
+시즌 8팩 주의사항 1┃Los jugadores que ya poseen ER Pass: Fiesta de Pijamas recibirán un reembolso de 1190 NP.
 시즌 8팩 주의사항 2┃¡Los artículos incluidos en el paquete de Temporada 8 se enviarán a través del correo del juego al momento de su lanzamiento!
+시즌 8팩 주의사항 3┃Las skin de eventos lanzados durante la temporada no están incluidos. Los productos y tiempo adicional pueden variar según el desarrollo.
+시즌 8팩 주의사항 4┃Los productos incluidos en el Paquete de Temporada 8 pueden revenderse durante promociones posteriores.
 시즌 8팩 주의사항 5┃El paquete de Temporada 8 costará 10,500 NP después de que finalice la oferta de reserva anticipada.
 시즌 8팩 주의사항 5 얼리버드 혜택 종료┃Los artículos exclusivos sólo se pueden obtenerse comprando el Paquete de Temporada 8.
 GoodsMenu/InGame┃Personalización de partida
@@ -10212,6 +10310,10 @@ GoodsMenu/InGame/1┃Sprays y Tumbas
 GoodsMenu/InGame/2┃Skins de objetivo
 GoodsMenu/Customize/1┃Sonido
 GoodsMenu/Customize/2┃UI
+프리미엄 PC방 혜택┃Beneficios de la sala PC Premium
+프리미엄 PC방 혜택(카카오)┃Kakao Games PC Cafe\nBeneficios Premium de PC Cafe.
+혜택 내용┃Todos los personajes desbloqueados.\nUn 50% de aumento en A-Coin ganados.
+혜택 내용(skin 포함)┃Todos los personajes desbloqueados.\nTodas las skins desbloqueadas.\nUn 50% de aumento en A-Coin ganados.
 탈출 성공┃Escape Completo
 탈출 성공 결과화면 텍스트┃E S C A P E  C O M P L E T O
 탈출에 성공했습니다.┃¡Has escapado con éxito!
@@ -10237,12 +10339,15 @@ ToastMessage/Escape1016┃¡Necesitas un <color=#C4C4C4>Brazalete de Regeneraci�
 ToastMessage/Escape1017┃¡Alguien ha escapado de la Isla Lumia! El Muelle Abandonado está cerrándose ahora.
 ToastMessage/Escape1018┃Sólo puedes obtener el Brazalete de Regeneración de un compañero de equipo a partir del Día 3.
 ToastMessage/Escape1019┃Más de un equipo está actualmente en el area. Submarino desactivado.
+ToastMessage/Escape1020┃Puedes teletransportarse 30 segundos después de que se active el primer software de rootkit. Tiempo restante: {0}s
+ToastMessage/Escape1021┃Un compañero de equipo está participando en la Zona de Batalla. No puede teletransportarse.
 탈출 지역 이동 전체 알림 메시지┃Un sujeto de prueba se ha hecho hyperloop al Muelle Abandonado.
 루미아 섬 1등 나와서 게임 종료┃Un sujeto de prueba ha asesinado a todos los demás sobrevivientes en la Isla Lumia. Intento de escape fallido.
 시스템암호코드 3개 모두 소진┃Códigos de Apagado de Sistema Agotados
 팀원 사망 어나운스┃Un compañero de equipo ha sido eliminado. Obtén el Brazalete de Regeneración de su cuerpo para poder revivirle.
 10초 후 탈출 지역 폐쇄 알림┃¡Alguien ha escapado de la Isla Lumia! El Muelle Abandonado se cerrará en 10 segundos.
 듀스 2번째팀 입장 어나운스┃Un sujeto de pruebas ha entrado al Muelle Abandonado.\nActivando controles de puerta.
+escape/탈출 지역 오픈 전체 알림 메시지┃Un Sujeto de pruebas ha creado un Software de Rootkit. El Muelle Abandonado se abrirá en 30 segundos.
 RAF/시즌1/제목┃Recomienda-A-Amigos Temporada 1
 RAF/친구수┃{0}
 RAF/초대수┃Amigos Reclutados: {0}
@@ -10389,6 +10494,8 @@ MS_DLC_SkinsXBoostsPremium_Bundle제목┃Paquete de Skins & Bonificación Premi
 MS_DLC_SkinsXBoostsPremium_Bundle내용┃¡Contiene 3 skins + 2 bonificaciones de 7 días!
 SummerBundle_2022제목┃DLC Paquete de Pensonaje Chapoteo Veraniego
 SummerBundle_2022내용┃¡Contiene 4 personajes, 4 aspectos y 6 emotes!
+Halloween_DLC_2022제목┃¡¡Feliz Halloween, Calabaza!!
+Halloween_DLC_2022내용┃¡Contiene Celine, Calabaza Electro Celine, 4 Emotes de Halloween y NP!
 BoosterTooltip/Result/PC방/Acoin┃Potenciador por PC Cafe A-Coin
 BoosterTooltip/Result/Event/Acoin┃Potenciador doble de A-Coin
 BoosterTooltip/Result/Booster/Acoin┃Potenciador A-Coin
@@ -10449,6 +10556,7 @@ EP 토큰 상점에서 구매 가능┃Disponible para su compra en la tienda de
 스킨을 시즌4 보상으로 획득 가능┃Aspecto no disponible para la compra. (Recompensa de la Temporada 4)
 스킨을 시즌5 보상으로 획득 가능┃Aspecto no disponible para la compra. (Recompensa de la Temporada 5)
 스킨을 시즌6 보상으로 획득 가능┃Aspecto no disponible para la compra. (Recompensa de la Temporada 6)
+스킨을 시즌7 보상으로 획득 가능┃Aspecto no disponible para la compra. (Recompensa de la Temporada 7)
 스킨을 DROPS 보상으로 획득 가능┃Aspecto desbloqueable como recompensa de los Drops de Twitch.
 스킨을 GEFORCE NOW 보상으로 획득 가능┃Adquirido al participar en el Evento GeForce Now.
 이모티콘을 시즌1 보상으로 획득 가능┃Emoticono no disponible para la compra. (Recompensa de la Temporada 1)
@@ -10457,6 +10565,7 @@ EP 토큰 상점에서 구매 가능┃Disponible para su compra en la tienda de
 이모티콘을 시즌4 보상으로 획득 가능┃Emoticono no disponible para la compra. (Recompensa de la Temporada 4)
 이모티콘을 시즌5 보상으로 획득 가능┃Emoticono no disponible para la compra. (Recompensa de la Temporada 5)
 이모티콘을 시즌6 보상으로 획득 가능┃Emoticono no disponible para la compra. (Recompensa de la Temporada 6)
+이모티콘을 시즌7 보상으로 획득 가능┃Emoticono no disponible para la compra. (Recompensa de la Temporada 7)
 이모티콘을 DROPS 보상으로 획득 가능┃Este emote puede ser obtenido como recompensa de Drops de Twitch
 이모티콘을 GEFORCE NOW 보상으로 획득 가능┃Adquirido al participar en el Evento GeForce Now.
 이모티콘을 이벤트로 획득 가능┃Emote obtenible a través de un evento.
@@ -10469,6 +10578,7 @@ EP 토큰 상점에서 구매 가능┃Disponible para su compra en la tienda de
 엠블럼을 시즌4 보상으로 획득 가능┃Artículo limitado. (Recompensa Temporada 4)
 엠블럼을 시즌5 보상으로 획득 가능┃Artículo limitado. (Recompensa Temporada 5)
 엠블럼을 시즌6 보상으로 획득 가능┃Artículo limitado. (Recompensa Temporada 6)
+엠블럼을 시즌7 보상으로 획득 가능┃Artículo limitado. (Recompensa Temporada 7)
 엠블럼을 이벤트로 획득 가능┃Obtenible participando en el evento.
 엠블럼을 배틀패스 구매 가능┃Obtenible a través del Pase ER {0} Nivel {1}
 엠블럼을 시즌패스 구매 가능┃Obtenido como recompensa del Paquete de Temporada
@@ -10513,6 +10623,7 @@ MMR시작조정/설문감사┃Gracias por completar la encuesta.
 MMR시작조정/전송실패┃No se pudo enviar la respuesta.
 훈련┃Tutorial
 MainTab/Tutorial┃Guía
+SubMenu/Guide┃Consejos de Juego
 필수 튜토리얼 진행후 이용가능합니다.┃¡Puedes jugar después de completar [Isla Lumia]!
 매칭 중에는 이용할 수 없습니다┃No se puede usar mientras buscas una partida.
 훈련 중에는 목표 아이템을 삭제할 수 없습니다.┃No puedes modificar los objetos marcados durante el entrenamiento.
@@ -10708,7 +10819,7 @@ Tutorial/Announce/핵심2번/03┃Nueva áreas estarán restringidas al pasar el
 Tutorial/Announce/핵심2번/04┃Puedes usar Habilidades con armas (D) cuando tu Maestría con armas alcance el nivel 7.
 Tutorial/Announce/핵심3번/00┃La guía de planes guardados te ayuda a hacer tus artículos.
 Tutorial/Announce/핵심3번/01┃Los artículos marcados tienen un triángulo amarillo. Siempre busca el triángulo amarillo.
-Tutorial/Announce/핵심3번/02┃Busca los artículos marcados que puedes obtener en el área actual.
+Tutorial/Announce/핵심3번/02┃Abre las cajas en el área actual para obtener los artículos marcados.
 Tutorial/Announce/핵심3번/03┃Tienes todos los elementos seleccionados que pueden encontrarse en esta área.
 Tutorial/Announce/핵심3번/04┃Usa el Hyperloop para teletransportarte a la siguiente área.
 Tutorial/Announce/핵심3번/05┃Teletransportarte a la fábrica haciendo clic en el área del mapa
@@ -10799,6 +10910,7 @@ Friend/InviteTeam┃Invitar a Equipo
 Friend/FriendListToolTip┃Amigos conectados
 팀이 이미 매칭을 시작하여 입장할 수 없습니다.┃No puedes unirte a esta partida, el equipo ya está en cola.
 팀이 이미 게임을 시작하여 입장할 수 없습니다.┃No puedes unirte al juego, el equipo ya está en el juego.
+팀이 아직 게임을 진행 중입니다.┃El equipo aún está jugando la partida.
 {0}님은 이미 팀에 속해 있습니다.┃{0} ya está en tu equipo.
 {0}님이 팀장입니다.┃{0} es el Líder del equipo.
 UserStatus/Online┃En línea
@@ -10929,6 +11041,7 @@ Season1/Name┃<color=#CDCABD>Flores nevadas</color>
 Season5/Name┃<color=#D1E7EF>Presencia fantasmal</color>
 Season6/Name┃<color=#E1EE68>Vamos a la playa</color>
 Season7/Name┃<color=#FF7AFF>Ataque Neón</color>
+Season8/Name┃<color=#FF7AFF>Fiesta de Pijamas</color>
 SeasonToBeAdded/Name┃Nueva Temporada \n D - {0}
 RankBoost/PopUp┃Este personaje puede otorgar LP adicionales.\nGanancias de LP adicionales: Cada personaje puede otorgar LP adicionales en hasta 10 partidas.\n\nPlatino o inferior: +3\nDiamante o superior: +2\n\n*No afecta a posicionamiento o promociones.\n*Las ganancias de LP adicionales se resetean cada temporada.
 RankBoost/TopUI┃LP adicionales: {0}
@@ -10953,6 +11066,7 @@ Gift/Send/ServiceUnavailable┃El sistema de regalos no está disponible tempora
 이번 달 선물 내역이 없습니다.┃Sin historial de regalos.
 보냄┃Enviado
 받음┃Recibido
+환불┃Reembolsado
 검색 알림 텍스트┃El historial de regalos es guardado hasta por 30 días.
 [선물 대상자]┃De
 친구에게 보낼 메모를 남기세요.┃Puedes introducir un máximo de 50 caracteres.
@@ -10967,14 +11081,20 @@ Gift/Send/ServiceUnavailable┃El sistema de regalos no está disponible tempora
 수령┃Reclamado
 선물 내역┃Lista de Regalos
 친구 조건 하단 문구┃Algunas cuentas pueden no ser capaces de recibir regalos.
-선물 가능 친구 정보 툴팁┃<color=#FFB62F>Límite de Regalos</color>\n - No puedes enviar más de 10 regalos por día.\n<color=#FFB62F>Reglas para Regalar</color>\n - El destinatario debe estar en tu lista de amigos.\n - Los Regalos no pueden ser enviados a cuentas suspendidas.\n - El Destinatario debe ser Nivel 5 o superior.\n - Los Regalos no pueden ser enviados a cuentas creadas hace menos de 24 horas.
-선물 가능 친구 정보 툴팁 MS┃<color=#FFB62F>Límite de Regalos</color>\n - No puedes enviar más de 10 regalos por día.\n<color=#FFB62F>Reglas para Regalar</color>\n - El destinatario debe estar en tu lista de amigos.\n - Los Regalos no pueden ser enviados a cuentas suspendidas.\n - El Destinatario debe ser Nivel 5 o superior.\n - Los Regalos no pueden ser enviados a cuentas creadas hace menos de 24 horas.\n - Los regalos no pueden ser enviados a usuarios bloqueados.
+선물 가능 친구 정보 툴팁┃<color=#FFB62F>Límite de Regalos</color>\n - No puedes enviar más de 10 regalos por día.\n<color=#FFB62F>Reglas para Regalar</color>\n - El destinatario debe estar en tu lista de amigos.\n - Los Regalos no pueden ser enviados a cuentas suspendidas.\n - El Destinatario debe ser Nivel 20 o superior.\n - Los Regalos no pueden ser enviados a cuentas creadas hace menos de 24 horas.
+선물 가능 친구 정보 툴팁 MS┃<color=#FFB62F>Límite de Regalos</color>\n - No puedes enviar más de 10 regalos por día.\n<color=#FFB62F>Reglas para Regalar</color>\n - El destinatario debe estar en tu lista de amigos.\n - Los Regalos no pueden ser enviados a cuentas suspendidas.\n - El Destinatario debe ser Nivel 20 o superior.\n - Los Regalos no pueden ser enviados a cuentas creadas hace menos de 24 horas.\n - Los regalos no pueden ser enviados a usuarios bloqueados.
 유저 변경┃Cambiar Destinatario
 오류┃Error
 대기┃Esperando
 알겠습니다┃Confirmar
 자리비움 유저 툴팁┃Usuario Ausente
 미리보기┃Vista previa
+프리셋 보기┃Ver Preestablecidos
+스프레이세트┃Establecer
+미보유 아이템 사용 불가┃No puedes usar un objeto que no poseas.
+스프레이 없음 등록 불가┃Este objeto no puede ser añadido a la rueda.
+설정된 스프레이를 초기화하시겠습니까?┃¿Reestablecer el spray actual?
+보유하지 않은 아이템은 사용할 수 없습니다.┃No puedes usar un objeto que no poseas.
 오늘의 도전┃Misión Diaria
 오늘의 도전과제를 모두 완수하였습니다.┃Has completado todas las Misiones Diarias.
 도전과제 변경 가능┃Puedes cambiar tu Misión Diaria una vez al día. ¿Quieres cambiar tu Misión Diaria?
@@ -11330,7 +11450,7 @@ VF혈액샘플 아이템 획득┃Se teoriza que la FV (Fuerza Vital) es causa d
 들개 처치하기┃Los perros salvajes aparecerán 50 segundos después de que comience el juego. Mátalos y reaparecerán en el mismo lugar en 2 minutos y 10 segundos.\n\n\nLos perros salvajes sueltan <color=white>Cuero</color> y un <color=white>Artículo</color>. ¡Los perros salvajes duelen y reducirán tu curación!
 늑대 처치하기┃Los lobos aparecerán 1 minuto y 50 segundos después de que comience el juego. Mátalos y reaparecerán en el mismo lugar en 2 minutos y 30 segundos.\n\nLos lobos dejan <color=white>Carne</color>, <color=white>Cuero</color> y un Artículo <color=#35FF94>poco común</color> o <color=#2AC0FF>Raro</color>.\n\nLos lobos generalmente viajan en parejas, y si atacas a uno, ¡aullará y hará que su amigo lo ayude para enfrentarte!
 곰 처치하기┃Los osos aparecerán 2 minutos y 50 segundos después de que comience el juego. Mátalos y reaparecerán en el mismo lugar en 3 minutos y 30 segundos.\n\nLos osos dejan <color=white>Carne</color>, <color=white>Cuero</color> y un <color=#35FF94>Artículo poco común</color>.\nLos osos por encima del nivel 6 pueden dejar un <color=#D05EFF>Árbol de la Vida</color>, <color=#D05EFF>Meteorito</color>, <color=#D05EFF>Mithril</color>, o <color=#D05EFF>Núcleo de poder</color>.\n\n¡Estate atento al golpe de tierra del oso, te aturdirá y dolerá!
-위클라인 박사 처치하기┃Se piensa que Wickline estuvo involucrada en experimentos anteriores de alguna forma, pero aún no está confirmado.\n\nElla comienza a moverse alrededor de la Isla Lumia al comenzar el tercer día (A las 13:00).\n\nElla es dura, pero deja caer algunos bienes: Una <color=#D05EFF>muestra de sangre de FV</color>, <color=#2AC0FF>Botiquín de primeros auxilios</color> y un artículo extra!\n\nElimínala y también obtendrás un beneficio de "Mejora por Fuerza Vital" durante 6 minutos.\n\nLos sujetos Mejorados por la Fuerza Vital infligen daño adicional durante 3 segundos cuando atacan.\n\nWickeline es fuerte, pero vale la pena arriesgarse a derribarla.
+위클라인 박사 처치하기┃Se piensa que Wickline estuvo involucrada en experimentos anteriores de alguna forma, pero aún no está confirmado.\n\nElla sale del Centro de Investigación y comienza a moverse alrededor de la Isla Lumia al comenzar la Noche 3.\n\nElla es dura, pero deja caer algunos bienes: Una <color=#D05EFF>muestra de sangre de FV</color>, <color=#2AC0FF>Botiquín de primeros auxilios</color> y un artículo extra!\n\nElimínala y también obtendrás un beneficio de "Mejora por Fuerza Vital" durante 6 minutos.\n\nLos sujetos Mejorados por la Fuerza Vital infligen daño adicional durante 3 segundos cuando atacan.\n\nWickeline es fuerte, pero vale la pena arriesgarse a derribarla.
 사냥 숙련도 달성하기┃Caza animales salvajes para aumentar tu Maestría en la caza.\n\nTambién puedes aumentar la Maestría de la caza al infligir daño o recibir daño de animales salvajes.\n\nInfligirás mayor daño en los animales salvajes a medida que aumentes tu Maestría de caza.
 제작 숙련도 달성하기┃Crea objetos para aumentar la Maestría de fabricación.\n\nPuede aumentar la Maestría de fabricación al crear Armas, Armadura para la cabeza, Armadura de pecho, Armadura del brazo, Armadura de pierna y Comida.\n\nLos efectos de los objetos equipados aumentarán a medida que aumentes tu Maestría de fabricación.
 탐색 숙련도 달성하기┃Explora la Isla Lumia para aumentar tu Dominio de búsqueda.\n\nPuedes aumentar la Maestría de búsqueda abriendo cajas de artículos, abriendo suministros del aire, recolectando recursos y operando las Consolas de seguridad.\n\nTu Alcance de Visión aumentará a medida que aumentes la Maestría de búsqueda.
@@ -11342,6 +11462,22 @@ VF혈액샘플 아이템 획득┃Se teoriza que la FV (Fuerza Vital) es causa d
 무기 숙련도 달성하기┃Aumenta tu Maestría de armas atacando los enemigos.\n\nAumenta la Maestría en las armas infligiendo daño o eliminando jugadores y animales salvajes, o creando armas.\n\nTu Ataque normal y Daño de tus habilidades aumentarán a medida que aumentes tu Dominio de armas.
 알파 처치하기┃Alpha es un Androide impulsado por Fuerza Vital.\n\nAlpha aparece el Día 2 en el Callejón, Zona Residencial, Fábrica, Hospital, Muelle, Playa, Hotel o Arquería.\n\n\nAlpha suelta <color=# 2AC0FF>Mithril</color> y <color=# 35FF94>Drone de Reconocimiento</color>.
 오메가 처치하기┃Omega es un Androide funcionando con Fuerza Vital.\n\nOmega aparece el Día 3 (10:40) en el Callejón, Zona Residencial, Fábrica, Hospital, Muelle, Playa, Hotel o Arquería. No aparecerá en la misma área que Alpha.\n\nOmega usa habilidades especiales de su infusión de Fuerza Vital, pero se vuelve inestable en algunas ocasiones, revelando su debilidad.\n\nEl Sistema Sobrecargado ocurre cada 8 segundos, haciendo que Omega reciba 250 de daños verdadero adicional cuando es golpeado por habilidades.\n\nOmega suelta <color=# D05EFF>Núcleo de Poder</color> y <color=#2AC0FF>Drone EMP</color>
+루미아 전송드론 사용하기┃Los Drones Remotos eran originalmente Drones de Vigilancia sigilosos utilizados para rastrear Sujetos de Prueba en la Isla Lumia.\n\nDesde entonces, los investigadores le dieron a estos Drones la capacidad de entregar materiales a los Sujetos de Pruebas que pagasen por ello con <color=#F4FF63>Créditos</color>.\n\n¿No consigues buen RNG de una caja? ¿Tus materiales requeridos se quedaron en Áreas Restringidas? ¡Déjalo en manos de un Dron de Transferencia!
+루미아 전송콘솔 사용하기┃Los investigadores han colocado Consolas de Transferencia en la Isla Lumia para intensificar los resultados de sus experimentos.\nEn la Consola de Transferencia, los Sujetos de Pruebas pueden pagar <color=#F4FF63>Créditos</color> para llamar una Caja de Suministro de Transferencia.\n\n¡Pide convenientemente un <color=#2AC0FF>Botiquín de Primeros Auxilios</color> o Material Especial (<color=#D05EFF>Árbol de la Vida, Meteorito, Mithril, Núcleo de Poder, Muestra de Sangre FV</color>)!\n\nTen en cuenta que llamar una Caja de Suministros de Transferencia notificará a todos los demás jugadores dentro de un cierto alcance. ¡Puede que tengas que luchar para evitar que roben el paquete!
+코발트 모드 승리하기┃¡Prueba Protocolo Cobalto, el modo más nuevo de Eternal Return!\n\nSi necesitas un descanso de la fabricación y el farmeo, ¡enfréntate al frenético combate del Protocolo Cobalto! Además, no tendrás que preocuparte por el posicionamiento.\n¡Consigue la victoria agotando la Puntuación de Vida del equipo enemigo!
+코발트 모드 실험체 처치하기┃¡Lánzate al combate en Protocolo Cobalto sin correr el riesgo de ser eliminado del juego!
+코발트 모드 증폭 장치 점령하기┃Puedes afectar la Puntuación de Vida del equipo enemigo capturando Balizas de Poder.\n\n¡Las Balizas de Poder también mejoran tus aliados, siendo un objetivo por el que vale la pena luchar!
+코발트 모드 죽지 않고 실험체 연속 처치하기┃¡Consigue una Racha de eliminaciones matando varios Sujetos de Pruebas seguidos sin morir!\n\nA medida que elimines más Sujetos de Prueba sin morir, ganarás Reputación. ¡Una alta Reputación te permite obtener más Créditos!
+코발트 모드 연속 킬 저지하기┃Acabar con una Racha de Eliminaciones enemiga otorga a tu equipo una recompensa de Crédito.\n¡Incluso si el equipo enemigo parece estar muy por delante, obtener dicho cierre podría cambiar el juego a tu favor!
+코발트 모드 교전에서 연속 킬 달성하기┃¡Intenta eliminar varios Sujetos de Pruebas en una pelea!\n\nEscucharás anuncios especiales por eliminar 2 o más Sujetos de Pruebas dentro de un cierto período de tiempo.
+코발트 모드 크레딧 사용하기┃¡Gasta Créditos en el Sintetizador para comprar Infusiones y Artículos!\n\n¡Compra Infusiones, actualiza equipo o recoja nuevos artículos que solo están disponibles en Protocolo  Cobalto!
+코발트 모드 크레딧 획득하기┃Hay múltiples formas de obtener Créditos en Protocolo Cobalto.\n\nCaza Mutantes, elimina Sujetos de Pruebas o simplemente...¡existe!\nAdemás, si tu equipo está atrasado en Puntos de Vida, se incrementará la obtención de Créditos en todas las fuentes.
+코발트 모드 특정 메인 특성 사용하기┃En Protocolo Cobalto, podrás solamente seleccionar una Mejora central durante la pantalla de Selección de Personajes.\nSi deseas probar una Mejora determinada, ¿Por qué no la ves en el Protocolo Cobalto?
+코발트 모드 사전 팀 구성으로 플레이 ┃¡Juega al Protocolo Cobalto con amigos o jugadores con quienes hayas sido emparejado anteriormente!\n¡Protocolo Cobalto ahora te permitirá disfrutar de Eternal Return con un grupo de hasta cuatro personas!
+코발트 모드 플레이하기┃¡Prueba el nuevo modo de Eternal Return, Protocolo Cobalto!\n\n¡No hay búsqueda de materiales ni fabricación de artículos en Protocolo Cobalto! Este nuevo modo se centra en el reanimación sin fin, el combate acelerado y la preparación de artículos.
+코발트 모드 특정 레벨 인퓨전 구매하기┃Algunas Infusiones en el Protocolo Cobalto pueden actualizarse al Nivel 2 o incluso al Nivel 3.\n\n¡Las Infusiones que pueden actualizarse se fortalecen con más actualizaciones!
+코발트 모드 모든 증폭 장치를 점령하고 유지하기┃Las Balizas de Poder mejoran a tu equipo y restan Puntos de Vida del equipo enemigo por cada 45s de control mantenido por tu equipo.\n¡Captura todas las Balizas de Poder y domina el campo de batalla!
+코발트 모드 힐팩 획득하기┃¡Recoger un Paquete de Curación recupera PV, PS y recarga las armas Shuriken y Lanzamiento para todo tu equipo!\n\n¡Son una herramienta poderosa que solamente se encuentran en el  Protocolo Cobalto!
 Trait/Name/7000000┃Destrucción
 Trait/Name/7100000┃Fortificación
 Trait/Name/7200000┃Soporte
@@ -11446,7 +11582,7 @@ Trait/DetailTooltip/7210401┃Obtienes ({0}+Número de aliados supervivientes) p
 Trait/DetailTooltip/7210301┃Aumenta tu alcance de Visión por la noche en 1.25m.
 Trait/DetailTooltip/7210501┃Obtienes un {1}% de Poder de Ataque durante {0} segundos si un enemigo activa una de tus trampas. Obtienes un {3}% de Defensa durante {2} segundos si activas la trampa de un enemigo. (Tiempo de enfriamiento: {4}s)
 Trait/DetailTooltip/7210601┃Comienza el juego con 'Zuecos' equipado. La velocidad de movimiento fuera del combate aumenta mientras está equipado con un artículo de pierna Épico o Legendario.
-Trait/DetailTooltip/7210801┃Tu primer uso de la consola de transferencia recibe un descuento de {0} Créditos.\nUsos subsecuentes de la consola de transferencia reciben un descuento de {1} Créditos.
+Trait/DetailTooltip/7210801┃El uso de la Consola tiene un descuento de {0} Créditos.
 Trait/StatTooltip/7000201┃Tu {1}er Ataque básico o Habilidad contra el mismo enemigo en {0} segundos inflige (Nivel*{2}) de daño verdadero y reduce su defensa un (Nivel*{4})% durante {3} segundos. (Tiempo de enfriamiento: {5}s). Los efectos de múltiples golpes solamente otorgarán 1 acumulación.\n\nCuenta total de daño adicional: {6}\nDaño adicional total: {7}
 Trait/StatTooltip/7000301┃Usar tu Habilidad de Arma te otorga más velocidad de ataque.\n({22})% de Velocidad de Ataque durante ({21}) {23} segundos.\n\nIncremento Total de Velocidad de Ataque: {15}
 Trait/StatTooltip/7000401┃Dañar un sujeto de pruebas con una habilidad te otorga un {0}% adicional de Omnisucción hasta {1} veces. Con acumulaciones máximas, obtienes ({5}Nivel*{2})% de amplificación de habilidades.\nTu Omnisucción adicional permanece durante {3} segundos y se reinicia cuando infliges año a un enemigo con una habilidad. (Tiempo de enfriamiento: {4}s)\n\nPV Totales recuperados: {5}
@@ -11480,7 +11616,7 @@ Trait/StatTooltip/7210401┃Obtienes ({0}+Número de aliados supervivientes) poc
 Trait/StatTooltip/7210301┃Aumenta tu alcance de Visión por la noche en 1.25m.
 Trait/StatTooltip/7210501┃Obtienes un {1}% de Poder de Ataque durante {0} segundos si un enemigo activa una de tus trampas. Obtienes un {3}% de Defensa durante {2} segundos si activas la trampa de un enemigo. (Enfriamiento: {4} s)\n\nVeces que el Poder de ataque aumentó: {6}\nVeces de defensa aumentada: {7}
 Trait/StatTooltip/7210601┃Comienza el juego con 'Zuecos' equipado. La velocidad de movimiento fuera del combate aumenta mientras está equipado con un artículo de pierna Épico o Legendario.
-Trait/StatTooltip/7210801┃Tu primer uso de la consola de transferencia recibe un descuento de {0} Créditos.\nUsos subsecuentes de la consola de transferencia reciben un descuento de {1} Créditos.\n\nCréditos Descontados: {2} Ahorros totales: {2}
+Trait/StatTooltip/7210801┃El uso de la Consola tiene un descuento de {0} Créditos.\nAhorros totales: {2}
 CharacterState/Group/Name/7000210┃Inflicción de Fragilidad
 CharacterState/Group/Desc/7000210┃Acertar múltiples ataques básicos o habilidades contra el mismo enemigo inflige daño verdadero y reduce su defensa.
 CharacterState/Group/Name/7000220┃Inflicción de Fragilidad
@@ -11584,13 +11720,13 @@ CharacterState/Group/Desc/7200230┃Velocidad de movimiento y amplificación de 
 CharacterState/Group/Name/7200210┃Dron Amplificador
 CharacterState/Group/Desc/7200210┃En tiempo de enfriamiento.
 CharacterState/Group/Name/7200400┃Regreso
-CharacterState/Group/Desc/7200400┃Velocidad de movimiento aumentada, daño recibido reducido.
+CharacterState/Group/Desc/7200400┃Velocidad de movimiento aumentada.
 CharacterState/Group/Name/7200410┃Regreso
 CharacterState/Group/Desc/7200410┃Velocidad de movimiento aumentada, daño recibido reducido.
 CharacterState/Group/Name/7200450┃Regreso
 CharacterState/Group/Desc/7200450┃En enfriamiento
 CharacterState/Group/Name/7200460┃Regreso
-CharacterState/Group/Desc/7200460┃La velocidad de movimiento hacia sujetos de pruebas enemigos aumenta y el daño recibido se reducen tras eliminar a un enemigo.
+CharacterState/Group/Desc/7200460┃La velocidad de movimiento hacia sujetos de pruebas enemigos aumenta y el daño recibido se reducen tras eliminar a un enemigo. Según el tipo de muerte, se restaurarán PV o se reducirá el daño recibido.
 CharacterState/Group/Name/7200500┃Centinela
 CharacterState/Group/Desc/7200500┃Escudo ganado
 CharacterState/Group/Name/7200510┃Centinela
@@ -12073,6 +12209,24 @@ gameTip_Title_10160_1┃Nivel / Habilidad
 gameTip_Desc_10160_1┃¡Usa los puntos que ganas para subir de nivel y aprender distintas habilidades!\n\nCuando alcanzas cierto nivel de maestría, el "nivel" de tu sujeto de pruebas sube. Según su nivel incrementa, también lo hacen sus estadísticas. Gana puntos de habilidad para volver tus habilidades incluso más poderosas.\n\n¡Sube de nivel y vuélvete tan fuerte como puedas!
 gameTip_Title_10170_1┃Destrezas
 gameTip_Desc_10170_1┃Puedes añadir nuevas habilidades y mejoras a tus sujetos de pruebas al seleccionar Destrezas.\n\nLas Destrezas permiten más variedad y opciones. Por ejemplo, al usar Destrezas del tipo Fortificación incrementará tu Defensa y reducirá el Daño. Si usas Destrezas del tipo Soporte, ¡puede que seas capaz de ayudar a tus compañeros de equipo y llevarles a la victoria!\n\n¿No sabes que Destreza es la más adecuada para tu sujeto de pruebas? ¡Revísalas en [Equipamiento → Destrezas]!
+gameTip_Title_10200_1┃Zona de Batalla
+gameTip_Desc_10200_1┃Las Zonas de Batalla son áreas creadas deliberadamente para combatir. Su propósito es recolectar información sobre los sujetos de pruebas que se hacen presentes en tales ambientes extremos.\n\nCada Zona de Batalla tiene un ambiente especial. Algunas pueden incrementar la velocidad de movimiento, algunas incrementar las capacidades de Omnisucción, y otrás pueden recargar tu escudo.\n\nEl ganador recibe premios especiales que solo pueden ser encontrados en la Zona de Batalla.
+gameTip_Title_10200_2┃Flujo de la Zona de Batalla
+gameTip_Desc_10200_2┃En las ubicaciones previstas como áreas restringidas de la 1ra Noche / 2da Noche, algunas serán escogidas para que la Zona de Batalla tenga lugar.\n\nLa ubicación de la Zona de Batalla cambiará la siguiente tarde.\n\nEl tipo de Zona de Batalla puede ser revisado al checar la Marca de Zona de Batalla en la Consola de Seguridad de dicho lugar en el Mapa Mundial.
+gameTip_Title_10200_3┃Como Participar en Zonas de Batalla
+gameTip_Desc_10200_3┃Cuando una Zona de Batalla comienza, los sujetos de pruebas dentro del área se vuelven participantes de la Zona de Batalla.\n\nSi los participantes mueren en la Zona de Batalla, serán revividos después de un corto periodo de tiempo.\n\nSin embargo, no podrás participar en la Zona de Batalla nuevamente una vez hayas revivido, ¡así que ten cuidado!\n\nSi un sujeto de pruebas entra o deja la Zona de Batalla, morirá inmediatamente y no podrá ser revivido.
+gameTip_Title_10200_4┃Recompensas de la Zona de Batalla
+gameTip_Desc_10200_4┃El equipo ganador de una Zona de Batalla puede comprar accesorios llenos de habilidades poderosas ya sea en el HUD o en la Consola de Seguridad.\n\n¡Entre más participantes haya en la Zona de Batalla, las recompensas serán mejores!\n\nLas recompensas de la Zona de Batalla solo pueden ser compradas una vez por equipo, ¡elige con cuidado!
+gameTip_Title_10210_1┃Sistema de Zona de Batalla
+gameTip_Desc_10210_1┃La Zona de Batalla está compuesta por los siguientes cuatro sistemas:\n\nKit de Zona de Batalla / Marca de Zona de Batalla / Indicador de Desbordamiento Neural / Transbordador de Estabilizadores Neurales\n\nCada sistema está vinculado sistematicamente.
+gameTip_Title_10210_2┃Kit de Zona de Batalla
+gameTip_Desc_10210_2┃Cuando un sujeto de pruebas participa en una Zona de Batalla su Kit de Zona de Batalla se activa, obteniendo una mejora de Reconstrucción Rápida y una Marca de Zona de Batalla.\n\nUn sujeto de pruebas con la mejora de Reconstrucción Rápida es revivido después de un corto periodo si es que muere.\n\nEl Kit de Zona de Batalla es permanentemente removido para los sujetos de pruebas quienes ganaron una Zona de Batalla.
+gameTip_Title_10210_3┃Marca de Zona de Batalla
+gameTip_Desc_10210_3┃La Marca de Zona de Batalla simboliza el ambiente único y otorga efectos especiales a los participantes.\n\nSi un participante muere, la Marca de Zona de Batalla puede ser recuperada y usada como moneda por el equipo ganador para comprar recompensas.\n\nSi no hay equipo ganador, las Marcas de Zona de Batalla son removidas permanentemente.
+gameTip_Title_10210_4┃Indicador de Desbordamiento Neural
+gameTip_Desc_10210_4┃En la Zona de Batalla, el Indicador de Desbordamiento Neural se reduce a cambio de mejorar las habilidades del sujeto de pruebas.\n\nLos sujetos de pruebas quienes agotan por completo su Indicador de Desbordamiento Neural morirán después de cierto periodo de tiempo.\n\nEl indicador de Desbordamiento Neural puede ser recuperado con Estabilizadores Neurales o al matar a otros sujetos de pruebas.
+gameTip_Title_10210_5┃Transbordador de Estabilizadores Neurales
+gameTip_Desc_10210_5┃En una Zona de Batalla, transbordadores que contienen Estabilizadores Neurales se moverán siguendo rutas designadas.\n\nSi los PV del transbordador llegan a 0, dejará caer un Estabilizador Neural que recuperará tu Indicador de Desbordamiento Neural.\n\nLos transbordadores que dejan caer un estabilizador pueden dejar caer otro después de recargarse por un cierto periodo de tiempo.
 Trait/Name/7900101┃Vigor I
 Trait/Name/7900102┃Vigor II
 Trait/Name/7900103┃Vigor III
@@ -12148,7 +12302,7 @@ Trait/Name/7923103┃Problema Doble III
 Trait/Name/7923002┃Presencia Inmovilizadora
 Trait/Name/7923201┃Hiperconcentración I
 Trait/Name/7923202┃Hiperconcentración II
-Trait/Name/7923203┃Hiperconcentración III
+Trait/Name/7923203┃Hiperconcentración
 Infusion/Special/Title/9000001┃Experimento Sospechoso
 Trait/Name/7920301┃Naturaleza Sádica I
 Trait/Name/7920302┃Naturaleza Sádica II
@@ -12217,7 +12371,7 @@ Trait/StatTooltip/7921103┃Utilizar tu Definitiva (R) reduce el tiempo de enfri
 Trait/StatTooltip/7921203┃Vuélvete Imparable por {0} segundos con Velocidad de Movimiento incrementada por {2}% después de utilizar tu Definitiva (R).\n(Tiempo de Enfriamiento: {1}s)
 Trait/StatTooltip/7921301┃Por cada Baliza de Poder bajo control aliado, el efecto de cada Baliza de Poder se ve incrementado en {0}%.\n\nIncremento de Poder de Ataque Adicional: {1}\nIncremento de Defensa Adicional: {2}\nIncremento de Velocidad de Movimiento Adicional: {3}
 Trait/StatTooltip/7921302┃Por cada Baliza de Poder bajo control aliado, el efecto de cada Baliza de Poder se ve incrementado en {0}%.\n\nIncremento de Poder de Ataque Adicional: {1}\nIncremento de Defensa Adicional: {2}\nIncremento de Velocidad de Movimiento Adicional: {3}
-Trait/StatTooltip/7921303┃La Penetración de Armadura y los PV incrementan en 25 y 450 respectivamente.
+Trait/StatTooltip/7921303┃La Penetración de Armadura y los PV incrementan en {4} y {5} respectivamente.
 Trait/StatTooltip/7921401┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)\n\nDaño Adicional Actual: {3}%
 Trait/StatTooltip/7921402┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)\n\nDaño Adicional Actual: {3}%
 Trait/StatTooltip/7921403┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)\n\nDaño Adicional Actual: {3}%
@@ -12244,6 +12398,7 @@ Trait/StatTooltip/7922903┃Moverse deja un rastro de pasos venenosos que inflig
 Trait/StatTooltip/7923101┃Mientras poseas esta Infusión, tu Poder de ataque se reduce un {1}%.\nTus ataques básicos ahora golpean a los enemigos dos veces.\n(Enfriamiento: {0}s)
 Trait/StatTooltip/7923102┃Mientras poseas esta infusión, tu Poder de ataque se reduce un {1}%.\nTus ataques básicos ahora golpean a los enemigos dos veces.\n(Enfriamiento: {0}s)El daño de los Ataques Básicos se inflige dos veces.\n(Tiempo de Enfriamiento {0}s)
 Trait/StatTooltip/7923103┃Tus ataques básicos ahora golpean a los enemigos dos veces.\n(Enfriamiento: {0}s)
+Trait/StatTooltip/7923203┃Golpe Crítico se activa cuando infliges daño de habilidades. Probabilidad de Crítico aumenta un {0}% y Poder de ataque se reduce un {1}%.
 Trait/StatTooltip/7923002┃Cuando revives, todos los demás Sujetos de pruebas e invocaciones queda en estasis durante {0} segundos.
 CharacterState/Group/Name/7900100┃Vigor
 CharacterState/Group/Desc/7900100┃Poder de Ataque incrementado.
@@ -12403,6 +12558,8 @@ CharacterState/Group/Name/7923010┃Presencia Inmovilizadora
 CharacterState/Group/Desc/7923010┃¡En Estasis!
 CharacterState/Group/Name/7923020┃Presencia Inmovilizadora
 CharacterState/Group/Desc/7923020┃¡Actualmente en enfriamiento!
+CharacterState/Group/Name/7923200┃Hiperenfoque
+CharacterState/Group/Desc/7923200┃Golpe Crítico se activa cuando infliges daño de habilidades
 CharacterState/Group/Name/10021┃Epinefrina de Combate
 CharacterState/Group/Desc/10021┃¡Sientes que la energía del plasma se pone frenética!\n\n-Velocidad de movimiento incrementada\n- Aumento de Omnisucción
 CharacterState/Group/Name/10020┃Dron de Vigilancia
@@ -12533,7 +12690,7 @@ Infusion/Trait/Desc/7921103┃Utilizar tu Definitiva (R) reduce el tiempo de enf
 Infusion/Trait/Desc/7921203┃Vuélvete Imparable por {0} segundos con Velocidad de Movimiento incrementada por {2}% después de utilizar tu Definitiva (R).\n(Tiempo de Enfriamiento: {1}s)
 Infusion/Trait/Desc/7921301┃Por cada Baliza de Poder bajo control aliado, el efecto de cada Baliza de Poder se ve incrementado en {0}%.
 Infusion/Trait/Desc/7921302┃Por cada Baliza de Poder bajo control aliado, el efecto de cada Baliza de Poder se ve incrementado en {0}%.
-Infusion/Trait/Desc/7921303┃La Penetración de Armadura y los PV incrementan en 25 y 450 respectivamente.
+Infusion/Trait/Desc/7921303┃La Penetración de Armadura y los PV incrementan en {4} y {5} respectivamente.
 Infusion/Trait/Desc/7921401┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)
 Infusion/Trait/Desc/7921402┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)
 Infusion/Trait/Desc/7921403┃Cuando fueras a ganar cualquier cantidad de Creditos, en su lugar gana esa cantidad más uno.\nPor cada {0} Creditos en tu posesión, inflije {1}% de daño adicional. (Hasta {2} acumulaciones.)
@@ -12565,6 +12722,7 @@ Infusion/Trait/Desc/7923101┃Mientras poseas esta Infusión, tu poder de ataque
 Infusion/Trait/Desc/7923102┃Mientras poseas esta Infusión, tu poder de ataque se reduce un {1}%.\nTus ataques básicos ahora golpean los enemigos dos veces.\n(Enfriamiento: {0}s)
 Infusion/Trait/Desc/7923103┃Tus ataques básicos ahora golpean los enemigos dos veces.\n(Enfriamiento: {0}s)
 Infusion/Trait/Desc/7923002┃Cuando revives, todos los demás Sujetos de prueba e invocaciones quedan en estasis durante {0} segundos.
+Infusion/Trait/Desc/7923203┃Golpe Crítico se activa cuando infliges daño de habilidades. Probabilidad de Crítico aumenta un {0}% adicional y Poder de ataque se reduce un {1}%.
 Infusion/Special/Desc/9000001┃Obtén una Infusión aleatoria.
 CastingActionType/TakeOverTurbine┃Capturando una Baliza de Poder
 CastingActionType/DeployingLoop┃Activando Loop de Despliegue
@@ -12586,6 +12744,11 @@ Item/Name/705605┃Mercurio
 Item/Name/705607┃Tótem Aplastante
 Item/Name/705606┃Reactor Arc
 Item/Name/705608┃Artefacto del Faraón
+Item/Name/705609┃Cuchilla de Psique
+Item/Name/705610┃Registro del Héroe
+Item/Name/705611┃E.M.O.T.E
+Item/Name/705612┃Anillo Claddagh Mk2
+Item/Name/705613┃Reactor Arc Mk2
 Infusion/Item/705504┃Tótem Mk2
 Infusion/Item/705601┃Sistema Solar Miniatura
 Infusion/Item/705602┃Azul Cobalto
@@ -12916,6 +13079,8 @@ CharacterStoryTitle/60┃El vidrio roto jamás podrá ser reparado.
 CharacterStoryDesc/60┃Como una genia artesana del vidrio, Tazia vivía en un mundo desagradable. Si ella no era capaz de producir asombrosos trabajos vez tras vez, todo lo que escucharía serían las críticas y la decepción de los demás.\n\nTazia quería escapar de su opresiva, inestable vida y encontrar la felicidad en crear piezas de arte una vez más, incluso si eso significaba renunciar a todo por lo que había estado trabajando tan duro.\n\nDespués de venir a Lumia, recuperó su confianza en sí misma, así como la pasión que había perdido hace tanto.\nAhora ella llama a la isla su "paraíso" y no se la pondrá fácil a aquellos quienes intenten estropearla.
 CharacterStoryTitle/61┃¿Acabas de decir que te gusto?
 CharacterStoryDesc/61┃La pequeña y encantadora Irem siempre está en busqueda de personas y de amor. Ella atesora las relaciones amorosas, ofreciendo su amor en cambio.\n\nNadie sabe realmente de donde vino Irem. Ella ni siquiera se lo dirá a sus mejores y más cercanos amigos, manteniendo el secreto guardado profundo en su corazón.\n\nIncluso en Lumia, ella sigue buscando por quienes la amen. No importa contra quien se enfrente. Si tan solo no fueran enemigos, ¡entonces definitivamente serían sus mejores amigos!
+CharacterStoryTitle/62┃Déjamelo a mí.
+CharacterStoryDesc/62┃Theodore es un hábil tirador. Su concentración, adaptabilidad notable y juicio agudo lo convierten en el soldado perfecto, pero en realidad nunca buscó obtener dicha reputación.\n\nLas admirables cualidades que tiene fueron, de hecho, cultivadas para un sueño que ya no puede lograr.\nLas cicatrices de su pasado y las heridas de su sueño perdido aún persisten en lo profundo de él.\nSin embargo, no desea dejar que el pasado lo persiga.\n\nEn cambio, Theodore ha aceptado su llamado con gran responsabilidad. Cubrirá a sus compañeros de equipo por detrás sin importar qué pase, y si alguien en este mundo necesita su poder y habilidades, con gusto se los dará.
 
 
 --xxxxxxxxxx--
