@@ -1626,21 +1626,27 @@ MasteryResultValueType/KillPlayer┃Com base no Nível do Inimigo
 MasteryResultValueType/KillMonster┃Com base no Nível do Animal Selvagem
 StatType/None┃Nenhum
 StatType/MaxHp┃Vida Máxima
+StatType/MaxHp/Desc┃Aumenta Vida Máxima
 StatType/MaxHpByLv┃Vida Máxima por nível
 StatType/MaxHpCoef┃Vida Máxima
 StatType/MaxSp┃Energia Máxima
+StatType/MaxSp/Desc┃Aumenta Energia Máxima
 StatType/AttackPower┃Poder de Ataque
+StatType/AttackPowerAfterAmplication┃Amplificação de Dano de Habilidade
 StatType/AttackPower/Desc┃Aumenta o poder dos Ataques Básicos e da maioria das habilidades;
 StatType/AttackPowerByLv┃Poder de Ataque por nível
 StatType/Defense┃Defesa
 StatType/Defense/Desc┃Reduz o dano recebido de ataques básicos e de habilidades.
 StatType/DefenseByLv┃Defesa por nível
+StatType/PreventDamageByDefense┃Dano reduzido % pela defesa
 StatType/HpRegen┃Regeneração de Vida
 StatType/SpRegen┃Regeneração de Energia
 StatType/AttackSpeed┃Velocidade de Ataque
 StatType/AttackSpeed/Desc┃Número de ataques básicos por segundo.
 StatType/AttackSpeedRatio/Desc┃Número de ataques básicos por segundo.
 StatType/AttackSpeedRatioByLv┃Velocidade de Ataque por nível
+StatType/AttackSpeedRatioValue┃Velocidade de Ataque Adicional %
+StatType/BaseAttackSpeed┃Velocidade de Ataque Base
 StatType/MoveSpeed┃Velocidade de Movimento
 StatType/SightRange┃Alcance de Visão
 StatType/SightRange/Desc┃Alcance do que você pode ver. Diminui a noite.
@@ -3021,6 +3027,22 @@ Shop/Desc/Emotion_Mai01_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Mai02_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Mai03_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Mai04_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Aiden01_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Aiden02_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Aiden03_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Aiden04_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Eva01_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Eva02_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Eva03_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Eva04_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Celine01_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Celine02_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Celine03_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Celine04_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Jan01_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Jan02_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Jan03_NP┃Use emotes para se comunicar em jogo.
+Shop/Desc/Emotion_Jan04_NP┃Use emotes para se comunicar em jogo.
 ItemType/EMBLEM_MARK/Name┃Ícone de Perfil
 EMBLEM_MARK_FREE1┃Ícone da Aglaia
 EMBLEM_MARK_S3_IRON_SOLO┃Ícone de Ferro(Solo) da Temporada 3
@@ -4381,15 +4403,16 @@ Skill/Group/Desc/1016600┃Silvia gira sua moto, causando <color=white>{20}</col
 Skill/Group/Desc/1016700┃Silvia pula na direção na qual está olhando, causando <color=white>{20}</color> de dano a inimigos no alcance e jogando eles para cima.
 Skill/Group/Desc/1016800┃Silvia faz um wheelie na direção do inimigo causando <color=white>{20}</color> de dano e jogando-os para trás. Ela causa {3} a {4} de dano adicional dependendo de sua velocidade de movimento.
 Skill/Group/Desc/1016900┃Silvia desmonta de sua moto e troca suas habilidades. Seu próximo ataque básico dentro de {1} segundo(s) causa <color=white>{0}</color> de dano.
-Skill/Group/Coef/1016100┃Ao entrar em uma nova área, fora o Centro de Pesquisa, a Amplificação de Habilidade de Silvia e sua Velocidade de Ataque são aumentadas em {0}. Se ela visitar todas as 15 áreas, sua Amplificação de Habilidade é aumentada em {2}%, sua Velocidade de Ataque é aumentada em {6} e seu Combustível Máximo aumenta em {7}. \nA cada {4} segundo(s), Silvia pode receber {3} de Combustível quando visitar uma nova área. Ela recebe ainda {5} de gasolina a cada {1} segundo(s) quando não está usando sua moto.
-Skill/Group/Coef/1016200┃Silvia atira com sua Arma de Radar, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{7}</color> de dano a inimigos acertados e curando a si mesma e aliados em <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{8}</color> de pontos de vida.\nSilvia ganha {6} de combustível por cada alvo que ela acertar, exceto a si mesma.
+Skill/Group/Coef/1016100┃Ao entrar em uma nova área, fora o Centro de Pesquisa, a Velocidade de Ataque é aumentada em {0}  e o aumento de dano de habilidade em {8}. Se ela visitar todas as 15 áreas, sua Amplificação de Habilidade é aumentada em {2}%, sua Velocidade de Ataque é aumentada em {6} e seu Combustível Máximo aumenta em {7}. \nA cada {4} segundo(s), Silvia pode receber {3} de Combustível quando visitar uma nova área. Ela recebe ainda {5} de gasolina a cada {1} segundo(s) quando não está usando sua moto.
+Skill/Group/Coef/1016200┃Silvia atira com sua Arma de Radar, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{7} Skill Amp)</color> de dano a inimigos acertados e curando a si mesma e aliados em <color=white>{2}</color><color=#ffd775>(+{3} Attack Power)</color><color=#dda0dd>(+{8} Skill Amp)</color> de pontos de vida.\nSilvia ganha {6} de combustível por cada alvo que ela acertar, exceto a si mesma.
 Skill/Group/Coef/1016300┃Silvia monta uma Linha de Chegada no local desejado, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{5}</color> de dano e reduzindo a velocidade de movimento de inimigos que a atravessarem em {3} por {2} segundo(s).\nSó pode ocorrer uma vez por inimigo.
 Skill/Group/Coef/1016400┃Silvia arremessa um Pneu Reserva na direção desejada, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{7}</color> até <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{8}</color> de dano baseado na distância.\nInimigos em até {4}m são jogados para trás.\nAo acertar um inimigo Silvia ganha {5}~{6} de combustível baseado na distância percorrida pelo pneu.
 Skill/Group/Coef/1016500┃Silvia monta em sua motocicleta, consumindo{2} de combustível a cada {3} segundo(s), aumentando sua velocidade de movimento em {0}, e dando a ela diferentes habilidades.\nSua velocidade de movimento muda conforme sua motocicleta vai sendo aquecida.\nVelocidade de Movimento após {5} segundos: {6}\nEla pode usar suas habilidades de moto enquanto seu combustível estiver acima de {1}.\nSilvia não consegue usar ataques básicos ou habilidades de arma enquanto montada em sua motocicleta.
-Skill/Group/Coef/1016600┃Silvia gira sua moto, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{2}</color> de dano em inimigos no alcance.
-Skill/Group/Coef/1016700┃Silvia pula na direção na qual está olhando, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{2}</color> de dano a inimigos no alcance e jogando eles para cima.
-Skill/Group/Coef/1016800┃Silvia faz um wheelie na direção do inimigo causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{5}</color> de dano e jogando-os para trás. Ela causa {3} a {4} de dano adicional dependendo de sua velocidade de movimento.
-Skill/Group/Coef/1016900┃Silvia desmonta de sua moto e troca suas habilidades. Seu próximo ataque básico dentro de {1} segundo(s) causa <color=white>{0}</color> de dano.
+Skill/Group/Coef/1016600┃Silvia gira sua moto, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{2} Skill Amp)</color> de dano em inimigos no alcance.
+Skill/Group/Coef/1016700┃Silvia pula na direção na qual está olhando, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{2} Skill Amp)</color>  de dano a inimigos no alcance e jogando eles para cima.
+Skill/Group/Coef/1016800┃Silvia faz um wheelie na direção do inimigo causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{5} Skill Amp)</color> de dano e jogando-os para trás. Ela causa {3} a {4} de dano adicional dependendo de sua velocidade de movimento.
+Skill/Group/Coef/1016900┃Silvia desmonta de sua moto e troca suas habilidades. Seu próximo ataque básico dentro de {1} segundo(s) causa {0} de dano.
+Skill/Group/ExpansionTip/1016700┃<i> Não pode pular paredes. </i>
 CharacterState/Group/Name/1016000┃Troca de Marcha
 CharacterState/Group/Desc/1016000┃Próximo ataque básico melhorado.
 CharacterState/Group/Name/1016050┃Troca de Marcha
@@ -4465,6 +4488,7 @@ CharacterState/Group/Name/1018400┃Negócio Arriscado
 CharacterState/Group/Desc/1018400┃Velocidade de movimento reduzida.
 CharacterState/Group/Name/1018500┃Impiedoso
 CharacterState/Group/Desc/1018500┃Desacelerado por um engravatado impiedoso.
+Skill/Group/ExpansionTip/1018400┃<i> Não pode pular paredes. </i>
 Skill/Group/Name/1019100┃Ânimo♥
 Skill/Group/Name/1019200┃Soltar Pomba
 Skill/Group/Name/1019300┃Cartola Mágica
@@ -4475,9 +4499,9 @@ Skill/Group/Desc/1019200┃Emma lança sua carta na direção alvo, causando <co
 Skill/Group/Desc/1019300┃Emma joga seu chapéu na área-alvo. Após {4} segundo(s), ele explode, causando <color=white>{20}</color> de dano aos inimigos dentro da área.\nA cartola desaparece após {2} segundos.\nAtingir um inimigo com Cartola Mágica reduz seu Tempo de Recarga em {3}.
 Skill/Group/Desc/1019400┃<color=green>Passiva:</color> Toda vez que Emma consome Energia, ela recupera Vida igual a {3} da Energia consumida.\n\nEmma conjura mágica no inimigo-alvo, transformando-o em um coelho por {0} segundo(s).\n Inimigos transformados em coelhos são enraizados por {1} segundo(s) e recebem lentidão em {2}.\nEsta habilidade não pode ser usada em inimigos derrubados.
 Skill/Group/Desc/1019500┃Emma magicamente teleporta para uma pomba, cartola ou coelho e usa uma mágica que varia de acordo com o alvo selecionado.\n<color=green>Pomba</color>: A pomba de Emma voa em direção ao local em que Emma estava, causando <color=white>{20}</color> de dano aos inimigos no caminho e enraizando-os por {4} segundo(s).\n<color=green>Cartola</color>: Emma troca de lugar com sua cartola, causando <color=white>{21}</color> de dano aos inimigos na área, além de puxá-los para o centro dessa área.\n<color=green>Coelho</color>: Inimigos na área do coelho também são transformados por {5} segundo(s).\nInimigos transformados em coelhos são enraizados por {6} segundo(s) e recebem lentidão de {7}, além de reiniciar o Tempo de Recarga de Ânimo♥.\n\nTrocar★ pode guardar até {8} acúmulos e é recarregado a cada {9} segundos.
-Skill/Group/Coef/1019100┃A cada {0} segundos, o próximo Ataque Básico de Emma causa dano extra igual a {1} de sua Energia, além de conceder a ela um escudo que absorve {2}(<color=#008000>+{4}</color>). ({4} de sua Energia Máxima).
-Skill/Group/Coef/1019200┃Emma lança sua carta na direção alvo, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{9}</color> de dano ao primeiro inimigo atingido. Após {2} segundo(s), ela revela sua pomba escondida por {3} segundos.\nSe a pomba for revelada quando ela jogar a carta, a pomba também arremessará uma carta na direção-alvo.\n\nAtingir um inimigo com 1 carta reduz o tempo de recarga de Soltar Pomba em {4} segundo.\nInimigos atingidos por ambas as cartas recebem <color=white>{7}</color><color=#ffd775>(+{8})</color><color=#dda0dd>{10}</color><color=#ffd775>(+{8}) de dano e têm sua velocidade de movimento reduzida em {6} por {5} segundo.
-Skill/Group/Coef/1019300┃Emma joga seu chapéu na área-alvo. Após {4} segundo(s), ele explode, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{5}</color> de dano aos inimigos dentro da área.\nA cartola desaparece após {2} segundos.\nAtingir um inimigo com Cartola Mágica reduz seu Tempo de Recarga em {3}.
+Skill/Group/Coef/1019100┃A cada {0} segundos, o próximo Ataque Básico de Emma causa dano extra igual a <color=#95F5F5>(+ Max SP {1}) </color>and grants her a shield, absorbing <color=white>{2}</color><color=#95F5F5>(+ {3} Max SP)</color>.
+Skill/Group/Coef/1019200┃Emma lança sua carta na direção alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{9} Skill Amp)</color> de dano ao primeiro inimigo atingido. Após {2} segundo(s), ela revela sua pomba escondida por {3} segundos.\nSe a pomba for revelada quando ela jogar a carta, a pomba também arremessará uma carta na direção-alvo.\n\nAtingir um inimigo com 1 carta reduz o tempo de recarga de Soltar Pomba em {4} segundo.\nInimigos atingidos por ambas as cartas recebem <color=white>{7}</color><color=#ffd775>(+{8} Attack Power)</color><color=#dda0dd>(+{10} Skill Amp)</color> de dano e têm sua velocidade de movimento reduzida em {6} por {5} segundo.
+Skill/Group/Coef/1019300┃Emma joga seu chapéu na área-alvo. Após {4} segundo(s), ele explode, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{5} Skill Amp)</color> de dano aos inimigos dentro da área.\nA cartola desaparece após {2} segundos.\nAtingir um inimigo com Cartola Mágica reduz seu Tempo de Recarga em {3}.
 Skill/Group/Coef/1019400┃<color=green>Passiva:</color> Toda vez que Emma consome Energia, ela recupera Vida igual a {3} da Energia consumida.\n\nEmma conjura mágica no inimigo-alvo, transformando-o em um coelho por {0} segundo(s).\n Inimigos transformados em coelhos são enraizados por {1} segundo(s) e recebem lentidão em {2}.
 Skill/Group/Coef/1019500┃Emma magicamente teleporta para uma pomba, cartola ou coelho e usa uma mágica que varia de acordo com o alvo selecionado.\n<color=green>Pomba</color>: A pomba de Emma voa em direção ao local em que Emma estava, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{4}</color> de dano aos inimigos no caminho e enraizando-os por {4} segundo(s).\n<color=green>Cartola</color>: Emma troca de lugar com sua cartola, causando <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{11}</color> de dano aos inimigos na área, além de puxá-los para o centro dessa área.\n<color=green>Coelho</color>: Inimigos na área do coelho também são transformados por {5} segundo(s).\nInimigos transformados em coelhos são enraizados por {6} segundo(s) e recebem lentidão de {7}, além de reiniciar o Tempo de Recarga de Ânimo♥.\n\nTrocar★ pode guardar até {8} acúmulos e é recarregado a cada {9} segundos.
 CharacterState/Group/Name/1019100┃Ânimo♥
@@ -4538,8 +4562,8 @@ Skill/Group/Desc/1021300┃Rozzi descarrega uma enxurrada de balas na área em t
 Skill/Group/Desc/1021400┃Rozzi salta sobre seu alvo e dispara nele, causando <color=white>{20}</color> de dano.\nDurante o salto, Rozzi é inalvejável e incapaz de receber dano.\nRozzi pode usar Salto Armado novamente dentro de {2} segundo(s) após um inimigo ser atingido, empurrando-o para trás e causando <color=white>{21}</color> de dano. Inimigos que colidirem com a parede são atordoados por {5} segundo(s).
 Skill/Group/Desc/1021410┃Rozzi salta sobre seu alvo e dispara nele, causando <color=white>{20}</color> de dano.\nDurante o salto, Rozzi é inalvejável e incapaz de receber dano.\nRozzi pode usar Salto Armado novamente dentro de {2} segundo(s) após um inimigo ser atingido, empurrando-o para trás e causando <color=white>{21}</color> de dano. Inimigos que colidirem com a parede são atordoados por {5} segundo(s).
 Skill/Group/Desc/1021500┃Rozzi lança uma bomba semtex que explode {0} segundos após ser conectada a um inimigo ou ser colocada no chão, causando <color=white>{20}</color> de dano.\nInimigos que estiverem com a bomba presa a eles têm sua velocidade de movimento diminuída em {1}.\nAtacar o alvo {4} vezes fará com que a bomba exploda imediatamente, causando dano adicional igual a {5} da Vida Máxima do alvo e aplicando lentidão de {10} por {9} segundos, além de reduzir o Tempo de Recarga da habilidade em {6} e aumentar a velocidade de movimento de Rozzi em {8} por {7} segundos.\nHabilidades usadas contra um inimigo que possua a bomba contam como {9} ataques básicos.
-Skill/Group/Coef/1021100┃Depois que Rozzi usa uma habilidade, seu próximo ataque básico dentro de {2} segundo(s) será um ataque duplo, causando <color=#ffd775>{0}</color> e <color=#ffd775>(+{1})</color></color> de dano, respectivamente.\n\nRozzi ganha Energia igual a {3} da recuperação de Vida obtida ao comer alimentos feitos de chocolate. Ela ganha Vida igual a {4} da recuperação de Energia quando ela bebe algo feito de chocolate.
-Skill/Group/Coef/1021200┃Rozzi atira com suas pistolas na direção-alvo, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{4}</color> de dano aos inimigos atingidos.\nSe ela acertar um inimigo, seu próximo comando de movimento dentro de {3} segundos será uma investida e reduzirá o Tempo de Recarga de Disparo Fácil em {2} segundo(s).
+Skill/Group/Coef/1021100┃Depois que Rozzi usa uma habilidade, seu próximo ataque básico dentro de {2} segundo(s) será um ataque duplo, causando <color=#ffd775>({0} Attack Power) * (Basic Attack Amp)</color> and <color=#ffd775>({1} Attack Power) * (Basic Attack Amp)</color> e <color=#ffd775>({1} Attack Power) * (Basic Attack Amp)</color> de dano.\n\nRozzi ganha Energia igual a {3} da recuperação de Vida obtida ao comer alimentos feitos de chocolate. Ela ganha Vida igual a {4} da recuperação de Energia quando ela bebe algo feito de chocolate.
+Skill/Group/Coef/1021200┃Rozzi atira com suas pistolas na direção-alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Attack Power)</color><color=#dda0dd>(+{4} Skill Amp)</color> de dano aos inimigos atingidos.\nSe ela acertar um inimigo, seu próximo comando de movimento dentro de {3} segundos será uma investida e reduzirá o Tempo de Recarga de Disparo Fácil em {2} segundo(s).
 Skill/Group/Coef/1021300┃Rozzi descarrega uma enxurrada de balas na área em torno dela, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{6}</color> de dano aos inimigos dentro do alcance, reduzindo a defesa deles em {4} por {3} segundos, reduzindo o Roubo de Vida e a regeneração de Vida passiva deles, além de reduzir a recuperação de Vida por alimentos em {5}.\nEnquanto Rozzi está atirando, sua velocidade de movimento é aumentada em {2} e sua munição é recarregada.
 Skill/Group/Coef/1021400┃Rozzi salta sobre seu alvo e dispara nele, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{6}</color> de dano.\nDurante o salto, Rozzi é inalvejável e incapaz de receber dano.\nRozzi pode usar Salto Armado novamente dentro de {2} segundo(s) após um inimigo ser atingido, empurrando-o para trás e causando <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#dda0dd>{7}</color> de dano. Inimigos que colidirem com a parede são atordoados por {5} segundo(s).
 Skill/Group/Coef/1021410┃Rozzi salta sobre seu alvo e dispara nele, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{6}</color> de dano.\nDurante o salto, Rozzi é inalvejável e incapaz de receber dano.\nRozzi pode usar Salto Armado novamente dentro de {2} segundo(s) após um inimigo ser atingido, empurrando-o para trás e causando <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#dda0dd>{7}</color> de dano. Inimigos que colidirem com a parede são atordoados por {5} segundo(s).
@@ -5453,7 +5477,7 @@ CharacterState/Group/Name/1044400┃Bote Sem Veneno - Marcado
 CharacterState/Group/Name/1044410┃Bote Sem Veneno - Marcado
 CharacterState/Group/Name/1044420┃Bote Sem Veneno - Marcado
 CharacterState/Group/Name/1044430┃Bote Sem Veneno - Marcado
-Exuviation┃Sobrecarga de FV
+CharacterState/Group/Name/1044500┃Sobrecarga de FV
 CharacterState/Group/Name/1044510┃Exúvia
 CharacterState/Group/Name/1044610┃Cascavel - Lentidão
 CharacterState/Group/Desc/1044200┃Desacelerado pela Víbora Crescente
@@ -6129,6 +6153,42 @@ CharacterState/Group/Desc/1056410┃Levantado ao Ar causado pelo Arremeso Lento 
 CharacterState/Group/Desc/1056440┃Levantado ao Ar causado pelo Arremeso Lento de Piolore
 CharacterState/Group/Desc/1056130┃O próximo Ataque Básico numa cobaia inimiga reduz em 1 segundo todos os tempos de recarga que não sao habilidade de arma.
 CharacterState/Group/Desc/1056140┃O próximo Ataque Básico será um Acerto Crítico.
+Skill/Group/Name/1062100┃Protocólo Safira
+Skill/Group/Name/1062200┃Canhão de Energia
+Skill/Group/Name/1062300┃Tela de Poder
+Skill/Group/Name/1062400┃Granada de energia
+Skill/Group/Name/1062500┃Explosão do Campo de Energia
+Skill/Group/Desc/1062100┃Quando saindo do mato, Theodore fica invisivel e sua velociadede de movimento é aumentada em {1} por {0} segundos. Theodore também ganha um escudo baseado em {3} da sua vida máxima por {2} segundos. Qualquer ação além de se mover acaba com a invisibilidade. \n\nUsar um Ataque básico reduz o tempo de recarga de <color=white>Canhão de energia</color> em {4} e <color=white> outras habilidades base </color> em {8}. Se o alvo não for outra cobaia apenas metade da redução é aplicada. \n\nTheodore não ganha Vida adicional de  equipamentos, ao invés disso ele ganha {7} de velocidade de ataque por {6} de  Vida de equipamentos.
+Skill/Group/Desc/1062200┃<color=green>Passiva</color>: Se a habilidade acertar um inimigo, o Alcance do próximo ataque básico aumenta em {6}.\n\nCarregando: Theodore carrega seu Canhão elétrico com energia por 1.5 segundos, causando lentidão a ele mesmo por {0}.\n\nAtirando: Ao reultilizar, um raio é atirado na direção especificada, dando <color=white>{1}</color> de dano a inimigos. Aliados são curados em <color=white>{3}</color>  ao longo de {2} segundos. O alcance aumenta enquanto carrega.\n\nQuando <color=white>Canhão de energia</color> acerta <color=white>Tela de Poder</color>, outro raio também é atirado da frente da  Tela de Poder dando <color=white>{4}</color> de dano a enemigos, Aliados são curados em <color=white>{5}</color> de vida ao longo de {2} segundos.
+Skill/Group/Desc/1062300┃Theodore cria uma Tela de Poder na direção especificada por {0} segundos. \n\nTiros de <color=white>Ataque básico</color> e a <color=white>Granda de Energia</color>  que passam pela Tela se dispersam ao redor de inimigos. Ataques básicos que passam pela tela dão <color=white>{1}</color> de dano de Habilidade adicional, e a velocidade e alcance da Granada de Energia são aumentados.
+Skill/Group/Desc/1062400┃<color=green>Passiva</color>: Se a habilidade acertar um inimigo, o Alcance do próximo ataque básico aumenta em {5}.\n\nTheodore taca uma Granade de Energia, Aplicando lentidão de {1} por {0} segundos.O <color=white>Alvo</color> é marcado por {2} segundos, e Theodore ganha visão do alvo. Acertar o alvo com uma habilidade ou com um ataque básico, dá <color=white>{3}</color> de dano de habilidade e enraiza por {4} segundos.\n
+Skill/Group/Desc/1062500┃Theodore máximiza sua energia, criando uma <color=white>Explosão do Campo de Energia</color> por {1} segundos na direção escolhida.Aumenta em {2} a velocidade de movimento dele e de aliados na direção escolhida e Acerta inimigos com uma onda de energia dando <color=white>{0}</color> de dano de habilidade.\n\nDespois de atirar. Theodore fica <color=white>Sobrecarregado</color>. Sua velocidade de ataque é aumentada em {4} por {3} segundos e o tempo máximo pra carregar <color=white>Canhão de Energia</color> é reduzido para {5} segundos.
+Skill/Group/Coef/1062100┃Quando saindo do mato, Theodore fica invisivel e sua velociadede de movimento é aumentada em {1} por {0} segundos. Theodore também ganha um escudo baseado em {3} da sua vida máxima por {2} segundos. Qualquer ação além de se mover acaba com a invisibilidade. \n\nUsar um Ataque básico reduz o tempo de recarga de <color=white>Canhão de energia</color> em {4} e <color=white> outras habilidades base </color> em {8}. Se o alvo não for outra cobaia apenas metade da redução é aplicada. \n\nTheodore não ganha Vida adicional de  equipamentos, ao invés disso ele ganha {7} de velocidade de ataque por {6} de  Vida de equipamentos.
+Skill/Group/Coef/1062200┃<color=green>Passiva</color>: Se a habilidade acertar um inimigo, o Alcance do próximo ataque básico aumenta em {6}.\n\nCarregando: Theodore carrega seu Canhão elétrico com energia por 1.5 segundos, causando lentidão a ele mesmo por {0}.\n\nAtirando: Ao reultilizar, um raio é atirado na direção especificada, dando <color=white>{7}</color><color=#ffd775>(+{8}% Attack Power)</color><color=#DDA0DD>(+{9}% Skill Amp)</color> de dano a inimigos. Aliados são curados em <color=white>{10}</color><color=#ffd775>(+{11}% Attack Power)</color><color=#DDA0DD>(+{12}% Skill Amp)</color>  ao longo de {2} segundos. O alcance aumenta enquanto carrega.\n\nQuando <color=white>Canhão de energia</color> acerta <color=white>Tela de Poder</color>, outro raio também é atirado da frente da  Tela de Poder dando <color=white>{13}</color><color=#ffd775>(+{14}% Attack Power)</color><color=#DDA0DD>(+{15}% Skill Amp)</color> de dano a enemigos, Aliados são curados em <color=white>{16}</color><color=#ffd775>(+{17}% Attack Power)</color><color=#DDA0DD>(+{18}% Skill Amp)</color> de vida ao longo de {2} segundos.
+Skill/Group/Coef/1062300┃Theodore cria uma Tela de Poder na direção especificada por {0} segundos. \n\nTiros de <color=white>Ataque básico</color> e a <color=white>Granda de Energia</color>  que passam pela Tela se dispersam ao redor de inimigos. Ataques básicos que passam pela tela dão <color=white>{2}</color><color=#DDA0DD>(+{3}% Skill Amp)</color> de dano de Habilidade adicional, e a velocidade e alcance da Granada de Energia são aumentados.
+Skill/Group/Coef/1062400┃<color=green>Passiva</color>: Se a habilidade acertar um inimigo, o Alcance do próximo ataque básico aumenta em {5}.\n\nTheodore taca uma Granade de Energia, Aplicando lentidão de {1} por {0} segundos.O <color=white>Alvo</color> é marcado por {2} segundos, e Theodore ganha visão do alvo. Acertar o alvo com uma habilidade ou com um ataque básico, dá <color=white>{6}</color><color=#ffd775>(+{7}% Attack Power)</color><color=#DDA0DD>(+{8}% Skill Amp)</color> de dano de habilidade e enraiza por {4} segundos.\n
+Skill/Group/Coef/1062500┃Theodore máximiza sua energia, criando uma <color=white>Explosão do Campo de Energia</color> por {1} segundos na direção escolhida.Aumenta em {10}<color=#DDA0DD>(+{9}% Skill Amp)</color> a velocidade de movimento dele e de aliados na direção escolhida e Acerta inimigos com uma onda de energia dando <color=white>{6}</color><color=#ffd775>(+{7}% Attack Power)</color><color=#DDA0DD>(+{8}% Skill Amp)</color> de dano de habilidade.\n\nDespois de atirar. Theodore fica <color=white>Sobrecarregado</color>. Sua velocidade de ataque é aumentada em {4} por {3} segundos e o tempo máximo pra carregar <color=white>Canhão de Energia</color> é reduzido para {5} segundos.
+CharacterState/Group/Name/1062000┃Protocólo Safira - Escudo
+CharacterState/Group/Name/1062010┃Protocólo Safira - Invisibilidade
+CharacterState/Group/Name/1062040┃Aumento de Alcance do Ataque Básico
+CharacterState/Group/Name/1062110┃Canhão de Energia - Recuperação de vida
+CharacterState/Group/Name/1062120┃Tela de Poder Canhão de Energia - Recuperação de vida
+CharacterState/Group/Name/1062410┃Granada de energia - Alvo marcado
+CharacterState/Group/Name/1062420┃Granada de energia - Enraizado
+CharacterState/Group/Name/1062430┃Granada de energia - Lento
+CharacterState/Group/Name/1062500┃Explosão do Campo de Energia - Sobrecarregado
+CharacterState/Group/Name/1062510┃Explosão do Campo de Energia - Aumento da Velocidade de Movimento
+CharacterState/Group/Desc/1062000┃Ganhou escudo. Bloqueando dano.
+CharacterState/Group/Desc/1062010┃Theodore está invisivel. Aumento na velocidade de movimento.
+CharacterState/Group/Desc/1062040┃Alcance do próximo ataque basico aumentado.
+CharacterState/Group/Desc/1062110┃Recuperando vida pelo Canhão de Energia.
+CharacterState/Group/Desc/1062120┃Recuperando vida pelo Canhão de Energia pela Tela de Poder.
+CharacterState/Group/Desc/1062410┃Alvo marcado pela Granade de Energia
+CharacterState/Group/Desc/1062420┃Enraizado pela Granada de Energia.
+CharacterState/Group/Desc/1062430┃Velocidade de Movimento reduzida pela Granade de Energia.
+CharacterState/Group/Desc/1062500┃Sobrecarregado. Velocidade de Ataque aumentado. Tempo máximo para carregar Canhão de Energia reduzido.
+CharacterState/Group/Desc/1062510┃Velocidade de Movimento aumentado pela Explosão  do Campo de Energia.
+Skill/Group/ExpansionTip/1062200┃<i>Se a habilidade não for usada enquanto carregando, metade do custo de  mana e do tempo de recarga são restaurados.</i>
 Skill/Group/Name/3015000┃Disfarçar e Esfaquear
 Skill/Group/Name/3015100┃Disfarçar e Esfaquear
 Skill/Group/Name/3016000┃Aparar
@@ -6245,6 +6305,8 @@ CharacterState/Group/Name/3010100┃Superaquecimento
 CharacterState/Group/Desc/3010100┃Acúmulos de Superaquecimento se acumulam cada vez que você ataca. No número máximo de acúmulos, você pode ativar a habilidade para aumentar sua Velocidade de Ataque, além de recarregar sua arma automaticamente.
 CharacterState/Group/Name/3011000┃Zona da Morte
 CharacterState/Group/Desc/3011000┃Ativa Zona da Morte. Mover-se ou receber efeitos de controle de grupo desabilita Zona da Morte.
+CharacterState/Group/Name/3011020┃Tiro Alejante
+CharacterState/Group/Desc/3011020┃Não pode usar habilidades de movimento.
 CharacterState/Group/Name/3013000┃Penetração de Armadura
 CharacterState/Group/Desc/3013000┃Defesa reduzida.
 CharacterState/Group/Name/3014000┃Berserk
@@ -6294,6 +6356,8 @@ CharacterState/Group/Name/2000020┃Êxtase
 CharacterState/Group/Desc/2000020┃Invulnerável e inalvejável, mas incapaz de se mover, atacar, usar itens ou habilidades.
 CharacterState/Group/Name/2001009┃Velocidade de Movimento reduzida
 CharacterState/Group/Desc/2001009┃Velocidade de Movimento reduzida.
+CharacterState/Group/Name/2000024┃Congelado
+CharacterState/Group/Desc/2000024┃Você está congelado!
 CharacterState/Group/Name/1000┃Velocidade de Movimento reduzida
 CharacterState/Group/Desc/1000┃Velocidade de Movimento foi reduzida
 CharacterState/Group/Name/10000┃Instinto de Retorno
@@ -6301,7 +6365,7 @@ CharacterState/Group/Desc/10000┃Todo animal selvagem tem um instinto inato de 
 CharacterState/Group/Name/10001┃Descansando
 CharacterState/Group/Desc/10001┃Recuperando Vida e Energia por descansar.
 CharacterState/Group/Name/10002┃Comer
-CharacterState/Group/Desc/10002┃Recuperando Vida por comer comida.
+CharacterState/Group/Desc/10002┃Recuperando Vida por comer comida. Essa cura não é afetada por Redução de Cura.
 CharacterState/Group/Name/10003┃Beber
 CharacterState/Group/Desc/10003┃Recuperando Energia por tomar uma bebida.
 CharacterState/Group/Name/10004┃Noite
@@ -6310,10 +6374,14 @@ CharacterState/Group/Name/10011┃Comer - Efeito
 CharacterState/Group/Desc/10011┃Um atributo ou habilidade é aprimorado ao comer.
 CharacterState/Group/Name/10012┃Beber - Efeito
 CharacterState/Group/Desc/10012┃Um atributo ou habilidade é aprimorado ao ingerir uma bebida.
+CharacterState/Group/Name/10023┃Efeito - Flocos de neve
+CharacterState/Group/Desc/10023┃Comeu 5 flocos de neve.
 CharacterState/Group/Name/11300┃Hyperloop - Efeitos Colaterais
 CharacterState/Group/Desc/11300┃Incapaz de usar habilidades ou itens, com exceção de comidas, bebidas, câmeras e drones
-CharacterState/Group/Desc/11360┃Incapaz de usar habilidades ou itens, com exceção de comidas, bebidas, câmeras e drones
-CharacterState/Group/Desc/11370┃Incapaz de usar habilidades ou itens, com exceção de comidas, bebidas, câmeras e drones
+CharacterState/Group/Name/11360┃Efeito de defesa enquanto usa o Hyperloop
+CharacterState/Group/Desc/11360┃Você fica imune a controles de grupos enquanto usa o Hyperloop.  O efeito é ativado mesmo se você for enterrompido enquanto usa o hyperloop.
+CharacterState/Group/Name/11370┃Efeito de defesa enquanto usa o Hyperloop
+CharacterState/Group/Desc/11370┃Seu próximo Hyperloop ativara o Escudo de Efeitos de Grupo.  O efeito é ativado mesmo se você for enterrompido enquanto usa o Hyperloop.
 CharacterState/Group/Name/11400┃Efeito de Reconstrução Rápida
 CharacterState/Group/Desc/11400┃Incapaz de usar habilidades ou itens, com exceção de comidas, bebidas, câmeras e drones. Velocidade de movimento aumentada temporariamente.
 CharacterState/Group/Name/11000┃Ajuste de Modo Solo
@@ -6352,7 +6420,7 @@ Skill/LobbyName/1001200┃Cortar & Massacrar
 Skill/LobbyName/1001300┃Explosão de Adrenalina
 Skill/LobbyName/1001400┃Golpe no Ar
 Skill/LobbyName/1001500┃Massacre da Serra Elétrica
-Skill/LobbyDesc/1001100┃Se Jackie matar seu alvo, seu Poder de Ataque será temporariamente aumentado.\nCobaias, androides e ursos garantem mais Poder de Ataque.
+Skill/LobbyDesc/1001100┃Se Jackie matar seu alvo, seu Poder de Ataque será temporariamente aumentado.\nCobaias, androides e ursos ativam <colo=white>Carnifina Lunática</color>. Matar outros animais ativa <color=white>Carnificina</color>.
 Skill/LobbyDesc/1001200┃Jackie balança sua arma duas vezes, fazendo seu alvo Sangrar. Inimigos sangrando sofrerão dano constante durante um certo período de tempo.
 Skill/LobbyDesc/1001300┃A adrenalina explosiva de Jackie faz com que ela se mova mais rápido.\nEnquanto esta habilidade estiver ativa, Jackie move-se mais rápido em direção a alvos com hemorragia e seus ataques a estes alvos causam mais dano e restauram a Vida de Jackie.
 Skill/LobbyDesc/1001400┃Jackie salta para o local alvo, causando dano aos inimigos próximos ao aterrissar e aplicando lentidão a eles. Atingir inimigos sangrando com Golpe no Ar aplica ainda mais lentidão.
@@ -6371,7 +6439,7 @@ Skill/LobbyDesc/1003100┃Toda vez que Fiora causa dano a um inimigo com uma hab
 Skill/LobbyDesc/1003200┃Fiora realiza uma estocada na direção-alvo, causando dano aos inimigos atingidos. A ponta da habilidade causa dano adicional, aplica lentidão e 2 acúmulos de Touché.\nAtivar Touché com acúmulos maximos usando Fente faz com que a marca exploda, causando dano de habilidade. Acertar um inimigo com a ponta da espada desacelera os inimigos e reduz o tempo de recarga de Fente.
 Skill/LobbyDesc/1003300┃Fiora balança a espada na direção-alvo duas vezes, causando dano de habilidade nos dois ataques. Fiora recebe redução de dano enquanto usa essa habilidade. Atingir um inimigo com os 2 ataques de Attaque Composée o desarma.
 Skill/LobbyDesc/1003400┃Fiora avança para a área alvo, causando dano de habilidade. Se ela causa dano a um inimigo ela pode reativar a habilidade novamente para avançar a área alvo. Ativar Touché com acúmulos maximos com Marche & Rompre causa dano aumentado e redução de tempo de recarga de <color=#ffffff>Fente</color> and <color=#ffffff>Attaque Composée</color>.
-Skill/LobbyDesc/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando dano, lentidão e empurrando inimigos para trás. Flèche pode ser usado até 3 vezes, e causa dano de habilidade adicional ao acertar inimigos com acúmulos maximos de Touché. Flèche causa dano adicional ao acertar múltiplos alvos. Acertar as 3 cargas de Flèche causa dano verdadeiro adicional. Ativar Touché com a terceira carga da habilidade reduz o tempo de recarga de <color=#ffffff>Fente</color> e atordoa os inimigos.
+Skill/LobbyDesc/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando dano, lentidão e empurrando inimigos para trás. Flèche pode ser usado até 3 vezes, e causa dano de habilidade adicional ao acertar inimigos com acúmulos maximos de Touché. Flèche causa dano adicional ao acertar inimigos várias vezes. Acertar as 3 cargas de Flèche causa dano verdadeiro adicional. Ativar Touché com a terceira carga da habilidade reduz o tempo de recarga de <color=#ffffff>Fente</color> e atordoa os inimigos.
 Skill/LobbyName/1004100┃Corpo Rígido
 Skill/LobbyName/1004200┃Impacto Interrompido
 Skill/LobbyName/1004300┃1vs17
@@ -6734,8 +6802,8 @@ Skill/Group/Name/2010200┃Presença Esmagadora
 Skill/LobbyDesc/2010200┃Gamma recebe significativamente menos dano de qualquer fonte de dano que escala com %HP
 Skill/Group/Name/2010300┃Pulso Laser
 Skill/LobbyDesc/2010300┃Gamma atira um poderoso canhão laser em uma linha reta. A área atingida pelo laser fica queimada e explode depois de alguns segundos, causando dano a tudo em cima dela.
-Skill/Group/Name/2010400┃Metralhadora Montada
-Skill/LobbyDesc/2010400┃Gamma atira sua metralhadora enquanto gira no sentido horário
+Skill/Group/Name/2010410┃Metralhadora Montada
+Skill/LobbyDesc/2010410┃Gamma atira sua metralhadora enquanto gira no sentido horário
 Skill/Group/Name/2010500┃Protótipo de Lançador de Mísseis
 Skill/LobbyDesc/2010500┃Gamma atira mísseis na direçãoa alvo, causando dano em um círculo.
 CharacterState/Group/Name/5001000┃Redução de Cura
@@ -7864,6 +7932,9 @@ TierLP/Eternity┃Acima de 2600 LP / Top 200
 유예포인트┃Pontos de Imunidade: {0}
 데미갓,이터니티 유예설명┃O elo Imortal/Titã recebe 1 ponto de Imunidade por partida (máximo de 10 pontos).\n1 ponto de imunidade será subtraído a cada dia que você ficar sem jogar partidas ranqueadas.Quando acabar seus pontos de imunidade perderá 150lp por dia que não jogar.
 다이아몬드 유예설명┃O elo Diamante recebe 3 pontos de Imunidade por partida (máximo de 15 pontos).\nApós 15 dias sem jogar, 1 ponto é deduzido por dia. \nQuando acabar seus pontos de imunidade perderá 150lp por dia que não jogar..
+DecayWarning/PopupContents┃Você tem pontos de Imunidade prestes a expirar no modo Ranqueado.\nSeu LP diminui uma vez por dia assim que a penalidade de inativade é ativada.Isso pode rebaixar sua liga.
+DecayWarning/RemainPoint┃Pontos de Imunidade restantes:
+DecayWarning/tooltip┃Você tem <color=#FFB62F>{0}</color> pontos de Imunidade restantes.\nSeu LP diminui em {1} uma vez por dia assim que a penalidade de inativade é ativada.Isso pode rebaixar sua liga.
 연습 모드┃Modo de Treino
 연습모드/아이템아이콘┃Escolha um item
 연습모드/야생동물아이콘┃Fazer surgir Animal Selvagem
@@ -10672,40 +10743,74 @@ Mission/1230103/1┃Use um Console de Transferência
 Mission/8000101/1┃Conquiste vitória no Protocolo Cobalt
 Mission/8000101/2┃Jogue uma partida normal ou ranqueada
 Mission/8000101/3┃Conquiste vitória no Protocolo Cobalt
-Mission/8000201/1┃Mate una cobaia no Protocolo Cobalt
-Mission/8000301/1┃Capture um Farol de Energia no Protocolo Cobalt
-Mission/8000401/1┃Conquiste uma sequência de 2 abates no Protocolo Cobalt
-Mission/8000402/1┃Conquiste uma sequência de 3 abates no Protocolo Cobalt
-Mission/8000501/1┃Pare uma sequência de 3 ou mais abates inimiga no Protocolo Cobalt
-Mission/8000601/1┃Consiga um double kill no Protocolo Cobalt
-Mission/8000602/1┃Pegue um triple kill no Protocolo Cobalt
-Mission/8000701/1┃Use créditos no Protocolo Cobalt
-Mission/8000702/1┃Use créditos no Protocolo Cobalt
-Mission/8000703/1┃Use créditos no Protocolo Cobalt
-Mission/8000801/1┃Ganhe créditos no Protocolo Cobalt
-Mission/8000802/1┃Ganhe créditos no Protocolo Cobalt
-Mission/8000803/1┃Ganhe créditos no Protocolo Cobalt
-Mission/8000901/1┃Use o Aumento Inflingir Fragilidade no Protocolo Cobalt
-Mission/8000902/1┃Use o Aumento Frenesi no Protocolo Cobalt
-Mission/8000903/1┃Use o Aumento Linhagem Vampirica no Protocolo Cobalt
-Mission/8000904/1┃Use o Aumento Espírito Vermelho no Protocolo Cobalt
-Mission/8000905/1┃Use o Aumento Lasca de Diamante no Protocolo Cobalt
-Mission/8000906/1┃Use o Aumento Encouraçado no Protocolo Cobalt
-Mission/8000907/1┃Use o Aumento Highlander no Protocolo Cobalt
-Mission/8000908/1┃Use o Aumento Fator de Cura no Protocolo Cobalt
-Mission/8000909/1┃Use o Aumento Drone Amplificador no Protocolo Cobalt
-Mission/8000910/1┃Use o Aumento Drone de Cura no Protocolo Cobalt
-Mission/8001001/1┃Jogue Protocolo Cobalt com uma equipe predefinida
-Mission/8001101/1┃Jogue Protocolo Cobalt
-Mission/8001102/1┃Jogue Protocolo Cobalt
-Mission/8001201/1┃Compre uma infusão lv 1 no Protocolo Cobalt
-Mission/8001202/1┃Compre uma infusão lv 2 no Protocolo Cobalt
-Mission/8001203/1┃Compre uma infusão lv 3 no Protocolo Cobalt
-Mission/8001301/1┃Capture e Mantenha o controle de todos os Faróis de Energia no Protocolo Cobalt
-Mission/8001401/1┃Use Pacotes de Cura no Protocolo Cobalt
-Mission/8001402/1┃Use Pacotes de Cura no Protocolo Cobalt
-Mission/8001403/1┃Use Pacotes de Cura no Protocolo Cobalt
-Mission/8001404/1┃Use Pacotes de Cura no Protocolo Cobalt
+Mission/8000201/2┃Mate una cobaia no Protocolo Cobalt
+Mission/8000201/3┃Mate outros jogadores
+Mission/8000301/2┃Capture um Farol de Energia no Protocolo Cobalt
+Mission/8000301/3┃Mate Wickeline
+Mission/8000401/2┃Conquiste uma sequência de 2 abates no Protocolo Cobalt
+Mission/8000401/3┃Cause dano a um jogador
+Mission/8000402/2┃Conquiste uma sequência de 3 abates no Protocolo Cobalt
+Mission/8000402/3┃Obtenha <color=#D05EFF>Núcleo de Força</color>
+Mission/8000501/2┃Pare uma sequência de 3 ou mais abates inimiga no Protocolo Cobalt
+Mission/8000501/3┃Termine entre os 5 melhores da partida
+Mission/8000601/2┃Consiga um double kill no Protocolo Cobalt
+Mission/8000601/3┃Mate animais selvagens
+Mission/8000602/2┃Pegue um triple kill no Protocolo Cobalt
+Mission/8000602/3┃Obtenha <color=#D05EFF>Árvore da Vida</color>
+Mission/8000701/2┃Use créditos no Protocolo Cobalt
+Mission/8000701/3┃Mate Ômega
+Mission/8000702/2┃Use créditos no Protocolo Cobalt
+Mission/8000702/3┃Termine entre os 5 melhores da partida
+Mission/8000703/2┃Use créditos no Protocolo Cobalt
+Mission/8000703/3┃Mate outros jogadores
+Mission/8000801/2┃Ganhe créditos no Protocolo Cobalt
+Mission/8000801/3┃Mate ursos
+Mission/8000802/2┃Ganhe créditos no Protocolo Cobalt
+Mission/8000802/3┃Mate animais selvagens
+Mission/8000803/2┃Ganhe créditos no Protocolo Cobalt
+Mission/8000803/3┃Mate javalis
+Mission/8000901/2┃Use o Aumento Inflingir Fragilidade no Protocolo Cobalt
+Mission/8000901/3┃Mate Ômega
+Mission/8000902/2┃Use o Aumento Frenesi no Protocolo Cobalt
+Mission/8000902/3┃Termine entre os 5 melhores da partida
+Mission/8000903/2┃Use o Aumento Linhagem Vampirica no Protocolo Cobalt
+Mission/8000903/3┃Cause dano a um jogador
+Mission/8000904/2┃Use o Aumento Espírito Vermelho no Protocolo Cobalt
+Mission/8000904/3┃Obtenha <color=#35FF94>Leite com Mel</color>
+Mission/8000905/2┃Use o Aumento Lasca de Diamante no Protocolo Cobalt
+Mission/8000905/3┃Mate ursos
+Mission/8000906/2┃Use o Aumento Encouraçado no Protocolo Cobalt
+Mission/8000905/3┃Mate galinhas
+Mission/8000907/2┃Use o Aumento Highlander no Protocolo Cobalt
+Mission/8000907/3┃Mate cães selvagens
+Mission/8000908/2┃Use o Aumento Fator de Cura no Protocolo Cobalt
+Mission/8000908/3┃Obtenha <color=#D05EFF>Amostra de Sangue FV</color>
+Mission/8000909/2┃Use o Aumento Drone Amplificador no Protocolo Cobalt
+Mission/8000909/3┃Cause dano a um jogador
+Mission/8000910/2┃Use o Aumento Drone de Cura no Protocolo Cobalt
+Mission/8000910/3┃Cause dano a um animal selvagem
+Mission/8001001/2┃Jogue Protocolo Cobalt com uma equipe predefinida
+Mission/8001001/3┃Mate lobos
+Mission/8001101/2┃Jogue Protocolo Cobalt
+Mission/8001101/3┃Mate cães selvagens
+Mission/8001102/2┃Jogue Protocolo Cobalt
+Mission/8001102/3┃Mate javalis
+Mission/8001201/2┃Compre uma infusão lv 1 no Protocolo Cobalt
+Mission/8001201/3┃Termine entre os 7 melhores da partida
+Mission/8001202/2┃Compre uma infusão lv 2 no Protocolo Cobalt
+Mission/8001202/3┃Cause dano a um animal selvagem
+Mission/8001203/2┃Compre uma infusão lv 3 no Protocolo Cobalt
+Mission/8001203/3┃Ganhe Maestria de Meditação
+Mission/8001301/2┃Capture e Mantenha o controle de todos os Faróis de Energia no Protocolo Cobalt
+Mission/8001301/3┃Adquira Créditos
+Mission/8001401/2┃Use Pacotes de Cura no Protocolo Cobalt
+Mission/8001401/3┃Mate animais selvagens
+Mission/8001402/2┃Use Pacotes de Cura no Protocolo Cobalt
+Mission/8001402/3┃Mate lobos
+Mission/8001403/2┃Use Pacotes de Cura no Protocolo Cobalt
+Mission/8001403/3┃Mate animais selvagens
+Mission/8001404/2┃Use Pacotes de Cura no Protocolo Cobalt
+Mission/8001404/3┃Adquira Créditos
 Mission/8001501/2┃Mate outros jogadores
 Mission/8001501/3┃Conquiste uma sequência de 2 abates no Protocolo Cobalt
 Mission/8001601/2┃Mate outros jogadores
