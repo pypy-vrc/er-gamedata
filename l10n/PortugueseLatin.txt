@@ -253,8 +253,10 @@ Item/Name/118403┃Tac-50
 Item/Name/118404┃Intervenção
 Item/Name/118405┃NTW-20
 Item/Name/118406┃Polaris
+Item/Name/118407┃Rifle de Gauss
 Item/Name/118501┃O Raio Mortal
 Item/Name/118502┃Dragão de Aço
+Item/Name/118503┃Andromeda
 Item/Name/119101┃Corrente de Aço
 Item/Name/119201┃Nunchaku
 Item/Name/119301┃Sharper
@@ -276,6 +278,7 @@ Item/Name/120404┃Claymore Meteórica
 Item/Name/120405┃Joyeuse
 Item/Name/120406┃Pantera Escarlate
 Item/Name/120407┃Espírito
+Item/Name/120501┃Olho de Argos
 Item/Name/121101┃Guitarra Amadora
 Item/Name/121201┃Ponte Dourada
 Item/Name/121202┃Captador Único
@@ -457,6 +460,7 @@ Item/Name/203501┃Bracelete de Skadi
 Item/Name/203502┃Radar
 Item/Name/203503┃Braços Automáticos
 Item/Name/203504┃Proeminência
+Item/Name/203510┃Escama de Dragão
 Item/Name/204101┃Pantufa
 Item/Name/204102┃Tênis de Corrida
 Item/Name/204103┃Meia-Calça
@@ -880,6 +884,7 @@ Item/Help/116403┃Você pode atingir uma pontaria perfeita vendendo sua alma ao
 Item/Help/116404┃Embora pareça uma arma antiga, na verdade é uma versão menor da\npistola eletromagnética. Até 8 balas podem ser carregadas em um pente. À primeira vista,\npode parecer uma arma decorativa, mas na verdade é tão eficaz quanto a versão original.
 Item/Help/116405┃Não é tão forte quanto as armas laser usadas no outro lado do cosmos,\nmas ainda é bastante poderosa.
 Item/Help/116501┃A arma de Manas, um herói do Quirguistão. O cano da arma foi forjado em\naço de Damasco e dispara morte em forma de bala.
+Item/Help/116502┃Uma pistola capaz de caçar tão rapido e hábil quanto uma águia
 Item/Help/117402┃A primeira metralhadora do mundo, dispara através de vários canos\namarrados. Pode causar enormes danos ao inimigo em um curto período\nde tempo.
 Item/Help/117501┃Agni, o deus do fogo, controla os infernos do mundo.\nTem boa relação de trabalho com Ignite.
 Item/Help/118101┃Um tipo antigo de arma que atualmente não é muito usado.\nRequeria acender uma câmara de pólvora com uma pederneira para disparar.
@@ -1002,6 +1007,7 @@ Item/Help/203407┃Uma espada usada pelo imperador que liderou o grande Império
 Item/Help/203408┃Feito de um material extraterrestre e desconhecido.\nO que acontece se eu girá-lo?
 Item/Help/203409┃Feito por Hefesto, o deus grego dos ferreiros, a pedido de Atena, a deusa da guerra.
 Item/Help/203410┃Embora feito com os Cães de Tíndalos em mente, esse bracelete medonho lembra mais um morcego do que um cachorro.
+Item/Help/203415┃Você pode juntar os Guardas Reais apenas por coloca-la
 Item/Help/203501┃Uma pulseira usada pela deusa Skadi, associada ao inverno na mitologia\ndo norte da Europa. Brrr! Ficou frio aqui.
 Item/Help/203502┃Se conseguir fazer isso funcionar direito, pode te ajudar a conseguir a localização\nde qualquer pessoa no mundo.
 Item/Help/204101┃Um chinelo ensopado de suor.\nO fedor faz dele um candidato sério a arma letal.
@@ -1515,6 +1521,9 @@ MiscItemType/Material┃Material
 ItemConsumableType/None┃Nenhum
 ItemConsumableType/Food┃Comida
 ItemConsumableType/Beverage┃Bebida
+ItemConsumableType/Special┃Especial
+ItemConsumableType/SpecialFood┃Especial
+ItemConsumableType/SpecialBeverage┃Especial
 MasteryType/None┃Nenhum
 MasteryType/Glove┃Luva
 MasteryType/Tonfa┃Tonfa
@@ -1709,8 +1718,12 @@ StatType/InfluencePointByLv┃Aumento de Dano de Habilidade por nível
 StatType/InfluencePointRatio┃Aumento de Dano de Habilidade
 StatType/InfluencePointRatioByLv┃Aumento de Dano de Habilidade por nível
 StatType/SkillAmp┃Aumento de Dano de Habilidade
+StatType/SkillAmp/Desc┃Aumento de Dano de Habilidade: Suas habilidades causam mais dano com mais Aumento de Dano de Habilidade
 StatType/SkillAmpByLv┃Aumento de Dano de Habilidade por nível
 StatType/SkillAmpRatio┃Aumento de Dano de Habilidade
+StatType/SkillAmpRatio/Desc┃Dano de habilidade é aumentado por Aumento de Dano de Habilidade
+StatType/SkillAmpRatiotoValue┃Aumentado com Dano de Habilidade(%)
+StatType/SkillAmpByCraftMastery┃Aumento do Dano de Habilidade por Maestria de Construção
 StatType/SkillAmpRatioByLv┃Aumento de Dano de Habilidade por nível
 StatType/PenetrationDefense┃Penetração de Armadura
 StatType/PenetrationDefenseRatio┃Penetração de Armadura
@@ -2274,6 +2287,7 @@ Skin/Name/1012003┃Hyejin Caçadora de Espíritos
 Skin/Name/1013000┃Xiukai
 Skin/Name/1013001┃Xiukai Sushiman
 Skin/Name/1013002┃Xiukai Rei da Queimada
+Skin/Name/1013003┃Xiukai Panda Faminto
 Skin/Name/1014000┃Chiara
 Skin/Name/1014001┃Chiara Árbitra
 Skin/Name/1014002┃Chiara Caçadora de Espíritos
@@ -2370,6 +2384,7 @@ Skin/Name/1046000┃Aiden
 Skin/Name/1046001┃Aiden Caçador de Espíritos
 Skin/Name/1047000┃Laura
 Skin/Name/1047001┃Laura Fantasma da Prisão
+Skin/Name/1047002┃Laura Organização Clandestina
 Skin/Name/1048000┃Tia
 Skin/Name/1048001┃Tia Artista de Rua
 Skin/Name/1049000┃Felix
@@ -2391,6 +2406,15 @@ Skin/Name/1056001┃Piolo Desafiante
 Skin/Name/1057000┃Martina
 Skin/Name/1057001┃Martina Steampunk
 Skin/Name/1058000┃Haze
+Skin/Name/1058001┃Haze Organização Clandestina
+Skin/Name/1059000┃Isaac
+Skin/Name/1059001┃Isaac Organização Clandestina
+Skin/Name/1060000┃Tazia
+Skin/Name/1060001┃Tazia Vitral Despedaçado
+Skin/Name/1061000┃Irem
+Skin/Name/1061001┃Irem Bola de Neve Fofa
+Skin/Name/1062000┃Theodore
+Skin/Name/1063000┃Ly Ahn
 Skin/Desc/1001001┃Equipada com sua clássica motosserra ensanguentada, um par de tesouras e uma faca ótima para fatiar.\n Se você ouvi-la cantarolando, corra!
 Skin/Desc/1001002┃O sangue rega e faz florescer a rosa da carnificina
 Skin/Desc/1001003┃Existe as pessoas que criam as regras... E as que quebram elas.
@@ -2492,6 +2516,29 @@ Skin/Desc/1016003┃Obrigado por esperar, aqui está seu pedido!
 Skin/Desc/1018003┃Me chame para o melhor serviço da cidade.
 Skin/Desc/1030002┃É melhor não chegar atrasado, ou ficará sem sobremesa.
 Skin/Desc/1057001┃Fique de olho na bússola.
+Skin/Desc/1026002┃Não há lugar que eu não possa alcançar. Eu não tenho limites
+Skin/Desc/1025002┃Há coisas que não podem ser concertadas com reza..
+Skin/Desc/1043002┃O que você prefere:  um sabor picante ou aquele que destróia a sua boca ?
+Skin/Desc/1058001┃Mesmo os piores inimigos podem ser parceiros em potencial
+Skin/Desc/1019003┃Você está pronto pro show ?
+Skin/Desc/1003003┃Uma espada é como o vinho: Frio e suave.
+Skin/Desc/1008003┃Tudo que eu preciso é do  amplificador e da minha guitarra, e é hora do show!
+Skin/Desc/1012004┃Esforço é mais importante que o destino.
+Skin/Desc/1037002┃Vou te mostrar quem eu realmente sou por baixo da máscara.
+Skin/Desc/1038002┃A melhor parte de um ator não é a sua aparencia impecavel, mas sim sua confiança inabalavél
+Skin/Desc/1060001┃Arte é achar beleza onde só tem destruição.
+Skin/Desc/1059001┃Eu te cubro!.. Se você me cubrir também.
+Skin/Desc/1045002┃Roupas podem ser como asas. Esse é a hora perfeita para provar!
+Skin/Desc/1024002┃Eu sou o dono do meus sonhos, o mestre do meu destino.
+Skin/Desc/1050002┃Esteja aqui na hora. Eu não vou esperar por ninguém.
+Skin/Desc/1061001┃Eu seu que sou fofinha mas não me subestime!
+Skin/Desc/1010004┃Me de lanchinhos ou eu vou comer você!
+Skin/Desc/1011004┃Você pode dizer quem é mal ou perverso pelo cheiro.
+Skin/Desc/1007005┃Se você não quer ser atinjido, saia do meu caminho
+Skin/Desc/1009003┃É uma boa noite para um novo começo.
+Skin/Desc/1040002┃Obrigado por passar outro ano comigo.\n<color=#10adff> É o que a nina diria!</color>
+Skin/Desc/1036003┃Você está pronto para seu presente?
+Skin/Desc/1013003┃Eu estou pronto para minha estréia como mascote!
 ItemType/EMOTION/Name┃Emote
 Emotion_Name_001┃Irritado
 Emotion_Name_002┃Rir
@@ -2702,6 +2749,17 @@ Emotion_ERPASS_4043┃Um pouco de café Luke?
 Emotion_ERPASS_4044┃Rainha Gelada
 Emotion_ERPASS_4045┃Preocupada mas Brilhante
 Emotion_ERPASS_4046┃Está aqui pelo checkup?
+Emotion_ERPASS_4047┃Hyunwoo Bons sonhos
+Emotion_ERPASS_4048┃Exterminação completa!
+Emotion_ERPASS_4049┃Laura Precisa de Silêncio
+Emotion_ERPASS_4050┃Makus Banho de Neve
+Emotion_ERPASS_4051┃O Desejo da Priya Se Tornou Realidade!
+Emotion_ERPASS_4052┃Li Dailin Sonhos Selvagens
+Emotion_ERPASS_4053┃Felix Natal
+Emotion_ERPASS_4055┃Chiara Numa Fria
+Emotion_ERPASS_4056┃De Repente Frio
+Emotion_ERPASS_4057┃CUIDADO COM O CÃO
+Emotion_ERPASS_4058┃Esse presente é Sus
 Emotion_LiDailin02_NP┃Um brinde!
 Emotion_LiDailin03_NP┃Só mais um...
 Emotion_LiDailin04_NP┃Li Dailin Provocativa
@@ -2788,6 +2846,8 @@ Event_Daesshu_3022┃Feastin' DAESSHU
 Emotion_Season5_Reward_5008┃Rindo da sua vida
 Emotion_Season5_Reward_5009┃Esquilo Sofrendo
 Emotion_Season5_Reward_5010┃Temporada 5 - Imortal
+Emotion_Season6_Reward_5011┃Coelhinho Salvo
+Emotion_Season6_Reward_5012┃O Gato Mais Sortudo
 Emotion_Season6_Reward_5013┃Temporada 6 - Imortal
 Emotion_Camilo01_NP┃Camilo Sedutor
 Emotion_Camilo02_NP┃Camilo em Lágrimas
@@ -2846,10 +2906,47 @@ Emotion_Adina01_NP┃Tristina
 Emotion_Adina02_NP┃Bom Trabalho Adina!
 Emotion_Adina03_NP┃Adina vê seu Futuro
 Emotion_Adina04_NP┃Adina não encontrada 404
+Emotion_Elena01_NP┃Elena Irritada
+Emotion_Elena02_NP┃Elana Suspiro
+Emotion_Elena03_NP┃Timidaelena
+Event_2ndAnniversary_3037┃2 Anos com Wilson!
+Emotion_Markus01_NP┃Markus Hey
+Emotion_Markus02_NP┃Markus Bravo
+Emotion_Markus03_NP┃Markus Bahaha
+Emotion_Markus04_NP┃Markus Corado
+Emotion_Halloween2022_2001┃Comiau você está ?
+Emotion_Halloween2022_2002┃O Gato no Chapéu
+Emotion_Halloween2022_2003┃Chocado
+Emotion_Halloween2022_2004┃Gatastrofe!
+Emotion_Estelle01_NP┃Estell-olá
+Emotion_Estelle02_NP┃Estelle Insegura
+Emotion_Estelle03_NP┃Estelle Dá sua Benção
+Emotion_Estelle04_NP┃Estelle Animada
+Emotion_Mai01_NP┃Mai Gasp!
+Emotion_Mai02_NP┃Mai Já Sabia
+Emotion_Mai03_NP┃Sai do Meu Caminho
+Emotion_Mai04_NP┃Pegue um lenço, Mai
+Emotion_BlackFriday_Fiora01_NP┃Fiora Sabe Muito
+Emotion_BlackFriday_Chiara01_NP┃Chiara Viu um Fantasma
+Emotion_BlackFriday_Adriana01_NP┃Adriana Em Choque
+Emotion_BlackFriday_Eleven01_NP┃Eleven Oh Yeah!
+Emotion_BlackFriday_Nicky01_NP┃Nicky Estranhando
 Event_SparkySmirky_3044┃Sparky_smirky
 Event_SparkyChill_3045┃Sparky_chill
 Event_SparkyWonder_3046┃Sparky_wonder
 Event_SparkyAngry_3047┃Sparky_angry
+Emotion_Aiden01_NP┃Aiden Puto !
+Emotion_Aiden02_NP┃Aiden Confuso
+Emotion_Aiden03_NP┃Boa, Aiden!
+Emotion_Aiden04_NP┃Aiden Quase Chorando
+Emotion_Eva01_NP┃Eva Foi Divertido
+Emotion_Eva02_NP┃Não mecha com a Eva
+Emotion_Eva03_NP┃Eva Precisa Cafeina
+Emotion_Eva04_NP┃Eva ama café da manhã
+Emotion_Jan01_NP┃Jan Pretensioso
+Emotion_Jan02_NP┃Impensável
+Emotion_Jan03_NP┃Jãon Pode Se
+Emotion_Jan04_NP┃Vem pra cima
 Shop/Desc/Emotion_Hart01_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes para se comunicar em jogo.
@@ -3249,12 +3346,18 @@ EMBLEM_MARK_EVENT_103067┃Gen.G ERCC
 EMBLEM_MARK_EVENT_103068┃Aya Flor de Cerejeira
 EMBLEM_MARK_EVENT_103069┃Aya máscara de Kitsune
 EMBLEM_MARK_EVENT_103070┃Popo rolando!
+EMBLEM_MARK_EVENT_103071┃2 Anos Com Wilson!
+EMBLEM_MARK_1vs17_S4_103072┃Apenas o Melhor
 EMBLEM_MARK_EVENT_103074┃Sparky
 EMBLEM_MARK_EVENT_103075┃Sparky_chill
+EMBLEM_MARK_EVENT_103076┃A Volta do Urso Polar
+EMBLEM_MARK_EVENT_103077┃É ONZE Horas
+EMBLEM_MARK_EVENT_103078┃Theodore Chapéu de Lã
 EMBLEM_MARK_EVENT_103079┃SEASON 7 CHAMPION HAQUEEN
 EMBLEM_MARK_EVENT_103080┃SEASON 7 CHAMPION ONECIRCLE
 EMBLEM_MARK_EVENT_103081┃SEASON 7 CHAMPION SATEN
 EMBLEM_MARK_EVENT_103082┃SEASON 7 CHAMPION GWORK
+EMBLEM_MARK_EVENT_103087┃Season 8 Lumia Marathoner
 EMBLEM_MARK_ERPASS_104001┃Gelo Cristalizado
 EMBLEM_MARK_ERPASS_104002┃Árvore de Presentes!
 EMBLEM_MARK_ERPASS_104003┃Nariz Vermelho
@@ -3446,6 +3549,11 @@ EMBLEM_BG_ERPASS_204017┃Fundo Equalizador
 EMBLEM_BG_ERPASS_204018┃Fundo Realidade Virtual
 EMBLEM_BG_ERPASS_204019┃Fundo Placa Mãe
 EMBLEM_BG_ERPASS_204020┃Fundo Projeto SHELL
+EMBLEM_BG_ERPASS_204021┃Fundo Floresta ao Por do Sol
+EMBLEM_BG_ERPASS_204022┃Fundo Shiba Inu
+EMBLEM_BG_ERPASS_204023┃Fundo Folclore
+EMBLEM_BG_ERPASS_204024┃Fundo Céu Noturno
+EMBLEM_BG_ERPASS_204025┃Fundo Unicórnio da Adela
 ItemType/EMBLEM_OUTLINE/Name┃Borda de Perfil
 EMBLEM_OUTLINE_FREE1┃Borda Padrão
 EMBLEM_OUTLINE_S3_IRON_SOLO┃Borda de Ferro da Temporada 3 - Solo
@@ -5753,6 +5861,7 @@ CharacterState/Group/Name/1048430┃Tinta Amarela
 CharacterState/Group/Name/1048440┃Tinta Vermelha
 CharacterState/Group/Name/1048450┃Tinta Azul
 CharacterState/Group/Name/1048460┃Tinta Azul
+CharacterState/Group/Name/1048470┃Tinta Azul
 CharacterState/Group/Name/1048530┃Tinta Amarela
 CharacterState/Group/Name/1048540┃Tinta Vermelha
 CharacterState/Group/Name/1048550┃Tinta Azul
@@ -5762,7 +5871,7 @@ CharacterState/Group/Desc/1048310┃Causando dano ao inimigo pintado, curando Ti
 CharacterState/Group/Desc/1048320┃Enraizado.
 CharacterState/Group/Desc/1048430┃Tinta Amarela - Desacelerado
 CharacterState/Group/Desc/1048440┃Tinta Vermelha - Desacelerado
-CharacterState/Group/Desc/1048450┃Tinta Azul - Preso ao Chão
+CharacterState/Group/Desc/1048450┃Tinta Azul
 CharacterState/Group/Desc/1048460┃Tinta Vermelha - Desacelerado
 CharacterState/Group/Desc/1048470┃Tinta Azul - Desacelerado
 CharacterState/Group/Desc/1048530┃Desacelerado.
@@ -6645,7 +6754,7 @@ Skill/LobbyDesc/1037500┃Se o alvo possuir <color=#ffffff>Inspiração Floresce
 Skill/LobbyDesc/1038100┃<color=#ffffff>Ensaio</color>: Ataques Básicos concedem acúmulos de Ensaio e reduzem o tempo de recarga de <color=#ffffff>Persona (E)</color>. Assumir um novo papel usando <color=#ffffff>Persona (E)</color> temporariamente concede a Jenny efeitos extras. O papel <color=yellow>Vinho Tinto</color> aumenta sua velocidade de ataque, enquanto que <color=yellow>Chá Preto</color> aumenta sua velocidade de movimento.\n\n<color=#ffffff>Fingir de Morta</color>: Se Jenny tiver acúmulos de Ensaio suficientes e sua vida cair para 0, ela simula morte, recebendo lentidão mas tornando-se invisível, invencível e inalvejável. Quando Jenny terminar sua atuação, ela se cura.
 Skill/LobbyDesc/1038200┃Jenny acende holofotes no local escolhido 3 vezes, causando dano.\nSe os holofotes iluminarem Jenny quando ela tiver acúmulos de Ensaio suficientes, ela recebe atributos extras com base no seu papel atual. Se estiver com o papel <color=yellow>Vinho Tinto</color>, ela recebe velocidade de ataque; e se estiver com <color=yellow>Chá Preto</color>, ela recebe velocidade de movimento.
 Skill/LobbyDesc/1038300┃Jenny desenrola um tapete vermelho na direção escolhida, causando dano e retardando inimigos.\n\nReative Tapete Vermelho para causar dano a todos os inimigos sobre o tapete. O Tapete Vermelho tem efeitos extras com base no papel atual de Jenny.\n\n<color=yellow>Vinho Tinto</color>: Puxa inimigos sobre o tapete.\n<color=yellow>Chá Preto</color>: Empurra inimigos sobre o tapete.
-Skill/LobbyDesc/1038400┃<color=green>Passiva</color>: Jenny causa dano extra de habilidade a cada 4° ataque básico ou ao ativar esta habilidade.\n\nJenny avança na direção escolhida e assume um novo papel, recebendo efeitos adicionais.\nHolofotes e Tapetes Vermelhos já existentes não são afetados.
+Skill/LobbyDesc/1038400┃<color=green>Passiva</color>: Jenny causa dano extra de habilidade a cada 3° ataque básico ou ao ativar esta habilidade.\n\nJenny avança na direção escolhida e assume um novo papel, recebendo efeitos adicionais.\nHolofotes e Tapetes Vermelhos já existentes não são afetados.
 Skill/LobbyDesc/1038500┃Jenny cria uma cerimônia de premiação ao seu redor, retardando inimigos e reiniciando o tempo de recarga de <color=#ffffff>Persona (E)</color>.\nA cerimônia implode após alguns segundos, causando dano de habilidade e encantando inimigos.
 Skill/LobbyDesc/1039100┃Causar dano a um inimigo reduz a Energia dele, garante um escudo a Camilo e aumenta sua velocidade de ataque.\nAlternar entre ataques básicos e habilidades reduz o tempo de recarga de Olé! e de Cierre.
 Skill/LobbyDesc/1039200┃Camilo varre a área à sua frente com suas espadas, causando dano de ataque básico.\nAtingir um inimigo com a parte mais externa garante a Camilo 1 acúmulo de Paso, aumentando sua velocidade de movimento.\nAo atingir 2 acúmulos, Camilo pode usar Vuelta Aprimorada, fazendo com que ele gire duas vezes, causando dano de ataque básico ao seu redor, puxando inimigos e se curando.\nVuelta só recebe redução de tempo de recarga com base na velocidade de ataque adicional de Camilo.\n\nQuando usa Vuelta durante o avanço inicial de Al Compás, Camilo causa dano em um círculo ao seu entorno e recebe Paso por atingir inimigos nas bordas do círculo.
@@ -7944,7 +8053,7 @@ TierLP/Silver┃800 ~ 1200 LP
 TierLP/Gold┃1200 ~ 1600 LP
 TierLP/Platinum┃1600 ~ 2000 LP
 TierLP/Diamond┃2000 ~ 2400 LP
-TierLP/Demigod┃Acima de 2400 LP
+TierLP/Mithril┃Acima de 2400 LP
 TierLP/Eternity┃Acima de 2600 LP / Top 200
 유예포인트┃Pontos de Imunidade: {0}
 데미갓,이터니티 유예설명┃O elo Imortal/Titã recebe 1 ponto de Imunidade por partida (máximo de 10 pontos).\n1 ponto de imunidade será subtraído a cada dia que você ficar sem jogar partidas ranqueadas.Quando acabar seus pontos de imunidade perderá 150lp por dia que não jogar.
@@ -10252,6 +10361,7 @@ Tutorial/나쟈/Dialogue/02┃Você pode começar o experimento imediatamente.
 Tutorial/나쟈/Dialogue/03┃Pressione o botão Iniciar para começar.
 Tutorial/나쟈/Dialogue/04┃Ou, então, você pode continuar seu treino.
 Tutorial/나쟈/Dialogue/05┃Você precisa de talento para chegar aqui, então acho que você vai se dar bem. \nEm todo caso, boa sorte.
+스킵┃Pular
 Tutorial/Announce/핵심1번/00┃Estes são os controles mais comuns. Clique no botão à direita quando estiver pronto.
 Tutorial/Announce/핵심1번/01┃Clique com o botão direito para se mover.
 Tutorial/Announce/핵심1번/02┃Abra um recipiente.
@@ -10650,9 +10760,9 @@ Mission/1040301/1┃Obtenha <color=#35FF94>Leite com Mel</color>
 Mission/1040302/1┃Obtenha <color=#35FF94>Leite com Mel</color>
 Mission/1040401/1┃Obtenha <color=#35FF94>Pão de Alho</color>
 Mission/1040402/1┃Obtenha <color=#35FF94>Pão de Alho</color>
-Mission/1040501/1┃Obtenha <color=#D05EFF>Árvore da Vida</color>
-Mission/1040502/1┃Obtenha <color=#D05EFF>Árvore da Vida</color>
-Mission/1040503/1┃Obtenha <color=#D05EFF>Árvore da Vida</color>
+Mission/1040501/1┃Obtenha <color=#D05EFF>Pedra Lunar</color>
+Mission/1040502/1┃Obtenha <color=#D05EFF>Pedra Lunar</color>
+Mission/1040503/1┃Obtenha <color=#D05EFF>Pedra Lunar</color>
 Mission/1040601/1┃Obtenha <color=#D05EFF>Meteorito</color>
 Mission/1040602/1┃Obtenha <color=#D05EFF>Meteorito</color>
 Mission/1040701/1┃Obtenha <color=#D05EFF>Amostra de Sangue FV</color>
@@ -11011,10 +11121,10 @@ Trait/Tooltip/7110401┃Leva menos dano quando imobilizado.
 Trait/Tooltip/7110301┃Depois de receber um dano crítico, dano crítico recebido depois é reduzido.
 Trait/Tooltip/7110501┃Status de redução de dano de itens em você são mais efetivos.
 Trait/Tooltip/7110601┃Consome Automaticamente comida e bebidas quando o HP e Mana estiver abaixo de certa quantidade. Comidas e Bebidas consumidas dessa maneira garantem Dano de Ataque e Defesa Respectivamente.
-Trait/Tooltip/7200101┃Curas e Escudos das suas habilidades são aumentados. Alvos escudados ou curados ganham Dano de Ataque.
+Trait/Tooltip/7200101┃Curas e Escudos das suas habilidades e aumentos são aumentados. Alvos escudados ou curados ganham Dano de Ataque.
 Trait/Tooltip/7200301┃Usando sua ultimate cria um Drone de Cura que lhe segue. O drone cura você e seus aliados em um certo alcance a cada segundo.
 Trait/Tooltip/7200201┃Usando seu ultimate cria um Drone de Amplificação que lhe segue. O drone aumenta sua velocidade de movimento e dano de habilidade, para você e seus aliados em um certo alcance.
-Trait/Tooltip/7200401┃Logo depois de matar um inimigo, se mover na direção de uma cobaia inimiga garante velocidade de movimento adicional  e reduz o dano sofrido.
+Trait/Tooltip/7200401┃Logo depois de matar um inimigo, se mover na direção de uma cobaia inimiga garante velocidade de movimento adicional  e reduz o dano sofrido.Baseado no tipo de morte ou restaura Vida ou toma dano reduzido.
 Trait/Tooltip/7200501┃Causar dano em uma cobaia inimiga com uma skill de alvo único garante a você e todos os aliados próximos um escudo. Com a vida Baixa, o escudo é dobrado.
 Trait/Tooltip/7210101┃Imobilizando um alvo causa ele a receber mais dano de todas as fontes.
 Trait/Tooltip/7210201┃Usando sua ultimate garante a você e seus aliados em um certo alcance um escudo.
@@ -11022,7 +11132,7 @@ Trait/Tooltip/7210401┃Ganha Poções de Cura toda noite. Poções caem no chã
 Trait/Tooltip/7210301┃Aumenta seu alcance de vião a noite em 1,25m.
 Trait/Tooltip/7210501┃Ganha Poder de Ataque se um inimigo ativa uma das suas armadilhas. Ganha defesa se você ativa uma armadilha inimiga.
 Trait/Tooltip/7210601┃Começa o jogo com 'tamancos' equipados. Velocidade de movimento fora de combate é aumentada quando equipado com um item de perna Epico ou Lendário.
-Trait/Tooltip/7210801┃Seu primeiro uso do console de tranferência tem um grande desconto. Os próximos usos tem um pequeno desconto.
+Trait/Tooltip/7210801┃Seu primeiro uso do console de tranferência tem um grande desconto.
 Trait/DetailTooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
 Trait/DetailTooltip/7000301┃Usar sua Habilidade de Arma aumenta sua Velocidade de Ataque. Corpo-a-Corpo: Recebe  ({4} + Nível x {5}%) de Velocidade de Ataque por {1} segundos. À distância: Recebe  ({10} + Nível x {11}%) de Velocidade de Ataque por {7} segundos. (Tempo de Recarga: {0} s)
 Trait/DetailTooltip/7000401┃Causar dano com uma Habilidade a uma Cobaia concede {0}% de Omnisyphon extra, acumulando-se até {1} vezes. Com o máximo de acúmulos, você recebe (Nível x {2})% de Amplificação de Habilidade. Seu Omnisyphon bônus dura {3} segundos e é renovado quando causar dano a um inimigo com uma Habilidade. (Tempo de Recarga: {4} s)
@@ -11042,9 +11152,10 @@ Trait/DetailTooltip/7110201┃Reduz o dano recebido em (Cobaias ao redor x {1})%
 Trait/DetailTooltip/7110401┃Reduz o dano recebido em {0}+Level*{1}% quando imobilizado.
 Trait/DetailTooltip/7110301┃Após receber um Ataque Crítico, Ataques Críticos recebidos dentro dos próximos {0} segundos causam dano reduzido em {1}%. (Tempo de Recarga: {2}s)
 Trait/DetailTooltip/7110501┃Atributos de Redução de Dano provenientes de itens são {0}% mais eficientes em você.
-Trait/DetailTooltip/7200101┃Escudos e curas de suas Habilidades são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
+Trait/DetailTooltip/7200101┃Escudos e curas de suas Habilidades ou Aumentos são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
 Trait/DetailTooltip/7200301┃Usar sua Ultimate invoca um Drone de Cura que te acompanha por {0} segundos. O drone cura você e aliados dentro de um raio de {1}m em ({2}+Nível x {3})% da Vida Perdida a cada segundo. (Tempo de Recarga: {4}s). Receber cura de múltiplos drones faz com que a cura de cada um seja de {5}%.
 Trait/DetailTooltip/7200201┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha por {0} segundos. O drone aumenta a Velocidade de Movimento em ({2}+{3}*Nível)% e Amplificação de Habilidade em ({4}+Nível)% para você e seus aliados dentro de um raio de {1}m. (Tempo de Recarga: {5}s)
+Trait/DetailTooltip/7200401┃Depois de matar uma cobaia inimiga, recupera [{6}(+Attack Power*{7})(+Skill Amp*{8})]~[({9}(+Attack Power*{10})(+Skill Amp*{11})] de Vida, dependendo na Vida perdida. Se mover em direção de um inimigo aumenta sua Velocidade de Movimento em até {1}%. Ao invés de Recuperar Vida, matar uma cobaia, Alfa, Omega, Gamma ou Wickline reduz o dano recebido em {2}% por {0}s, e aumenta sua velocidade de movimento por {12}x. \n(tempo de recarga {3}s)
 Trait/DetailTooltip/7210101┃Imobilizar um alvo faz com que ele receba {1}% a mais de dano de todas as fontes por {0} segundos. (Tempo de Recarga: {2} s)
 Trait/DetailTooltip/7210201┃Usar sua Ultimate concede a você e a aliados dentro de um raio de {0}m um escudo por {1} segundos, absorvendo até (Nível x {2}) de dano. (Tempo de Recarga: {3}s) Quando recebendo outro escudo de Reunir dentro de {4} segundos, o escudo é reduzido em {5}.
 Trait/DetailTooltip/7210401┃Recebe ({0}+Número de Aliados Vivos) Poções de Cura a cada noite. As poções são deixadas no chão se você estiver com o inventário cheio.
@@ -11137,7 +11248,7 @@ CharacterState/Group/Desc/7110300┃Dano Crítico recebido reduzido.
 CharacterState/Group/Name/7110310┃Lâminas Cegas
 CharacterState/Group/Desc/7110310┃Em Recarga
 CharacterState/Group/Name/7200100┃Fator de Cura
-CharacterState/Group/Desc/7200100┃Curas e escudos de habilidades aumentados. Alvos protegidos ou curados por você recebem Poder de Ataque. (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
+CharacterState/Group/Desc/7200100┃Curas e escudos de habilidades ou Aumentos aumentados. Alvos protegidos ou curados por você recebem Poder de Ataque. (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
 CharacterState/Group/Name/7200120┃Fator de Cura
 CharacterState/Group/Desc/7200120┃Poder de Ataque Aumentado.
 CharacterState/Group/Name/7200110┃Fator de Cura
