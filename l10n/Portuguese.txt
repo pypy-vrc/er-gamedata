@@ -408,6 +408,7 @@ Item/Name/202501┃Kabana
 Item/Name/202502┃Rainha de Copas
 Item/Name/202503┃Ordem Sagrada
 Item/Name/202507┃Traje de Guardião
+Item/Name/202508┃Vestido Elegante
 Item/Name/203101┃Relógio
 Item/Name/203102┃Ligadura
 Item/Name/203103┃Aquecedores de Braços
@@ -1292,12 +1293,16 @@ Item/Effects/301330┃recupere Vida durante 18 segundos
 Item/Effects/301401┃recupere Vida durante 18 segundos
 Item/Effects/301331┃recupere Vida durante 18 segundos
 Item/Effects/301403┃recupere Vida durante 18 segundos
+Item/Effects/802601┃Ganha os seguintes efeitos por 600 segundos:\n\n-Velocidade de Movimento +0.2\n-Roubo de Vida Universal +15%
 Item/BulletCapacity/Reload┃<color=yellow>Munições Máx.:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Munições Máx.:</color> {0} (Recarga: {1}s)
 Item/Skills/NotEquip┃<color=red>O efeito só é ativado quando equipado.</color>
 Item/Skills/UniqueSkill┃<color=red>O mesmo efeito só é aplicado uma única vez.</color>
 Item/Skills/OnlyCloseCombat┃<color=red>Não é aplicado a armas de ataque à distância.</color>
 Item/Skills/OnlyRangedCombat┃<color=red>Não é aplicado a armas de ataque corpo-a-corpo.</color>
+EscapeType/EscapeMaterial┃Esse item é usado para construir color=#D05EFF>Rootkit</color>.\nPegue um <color=#C4C4C4>Código de Desativação do Sistema</color> de um console de transferencia e use para contruir um <color=#D05EFF>Rootkit</color>.
+EscapeType/EscapeKey┃Esse item é usado para construir color=#D05EFF>Rootkit</color>.\nPegue um <color=#C4C4C4>Bandana de Regeneração</color> caçando animais selvagens e abrindo suprimentos aéreos e use para contruir um <color=#D05EFF>Rootkit</color>.
+EscapeType/EscapeQualification┃Você precisa de um <color=#D05EFF>Rootkit</color> para ir até a doca abandonada
 Character/Name/0┃Aleatório
 Character/Name/1┃Jackie
 Character/Name/2┃Aya
@@ -1616,7 +1621,7 @@ StatType/InfluencePointByLv┃Amplificação de Habilidade por nível
 StatType/InfluencePointRatio┃Amplificação de Habilidade
 StatType/InfluencePointRatioByLv┃Amplificação de Habilidade por nível
 StatType/SkillAmp┃Amplificação de Habilidade
-StatType/SkillAmp/Desc┃Amp. Habilidades: Dano de Habilidades é aumentado por Amp. Habilidades
+StatType/SkillAmp/Desc┃Dano de Habilidades é aumentado por Amp. Habilidades
 StatType/SkillAmpByLv┃Amplificação de Habilidade por nível
 StatType/SkillAmpRatio┃Amplificação de Habilidade
 StatType/SkillAmpRatio/Desc┃Dano de Habilidades é aumentado por Amp. Habilidades
@@ -1723,6 +1728,9 @@ ToolTipType/JackieGrade2┃Bloodfest
 ToolTipType/DamageCount┃Dano Total
 ToolTipType/SkillApCoef┃Rácio do Bónus de Poder de Ataque
 ToolTipType/SkillDfCoef┃Rácio do Bónus de Defesa
+ToolTipType/SkillSkillAmpCoef┃Total de Amp. Habilidades
+ToolTipType/LegShotApCoef┃Dano de Ataque de Disparo Paralizante
+ToolTipType/DeadEyeApCoef┃Dano de Ataque de Bem Aplicado
 ToolTipType/ReturnDamageCoef┃Rácio do Bónus de Dano Devolvido
 ToolTipType/ProjectileDamage┃Dano do Presságio
 ToolTipType/MoveDamage┃Dano do Teletransporte
@@ -1752,6 +1760,7 @@ ToolTipType/StaminaCostRatio┃Percentagem de consumo de Energia (%)
 ToolTipType/HpShieldRatio┃Escudo baseado no HP máximo (%)
 ToolTipType/PigeonDamage┃Dano da Pomba
 ToolTipType/HatDamage┃Dano do Chapéu
+ToolTipType/ReuseTime┃Tempo de Espera para Reutilizar
 ToolTipType/BulletDamage┃Dano da Bala
 ToolTipType/DashDamage┃Dano da Investida
 ToolTipType/HpRegenRatioPlayer┃Recuperação de Vida (%) por matar jogadores
@@ -1805,6 +1814,7 @@ ToolTipType/DamageTargetLossHpCoefByLevel┃Dano Extra proporcional à Vida perd
 ToolTipType/HammerFinalRatioDamage2ByLevel┃[Aumentado] Dano Extra da Investida
 ToolTipType/HealBurger┃Recuperação do Hambúrguer da Eleven
 ToolTipType/ExplodeDecreaseMoveRatio┃Desaceleração devido à explosão (%)
+ToolTipType/SecondDamageApcoef┃Poder de Araque do Segundo Hit
 ToolTipType/ShortBowFirstAttackCoef┃Poder de Ataque da primeira flecha do Hankyu
 ToolTipType/ShortBowSecondAttackCoef┃Poder de Ataque da segunda flecha do Hankyu
 ToolTipType/YumiAttackCoef┃Poder de Ataque do Daikyu
@@ -1925,6 +1935,11 @@ ToolTipType/ConjunctionStarHeal┃Conjunto Estelar: Recuperação por Segundo
 ToolTipType/ShockDamage┃Dano de Choque
 ToolTipType/KarlaSkill03CooldownReduce┃Redução do Tempo da Aterragem Pirata
 ToolTipType/KarlaExtraPointModifyCoef┃Ganho do Indicador de Recarga
+ToolTipType/ReinforcedDamage┃[Spada] Dano
+ToolTipType/ReinforcedExplosionDamage┃[Spada] Dano de explosão
+ToolTipType/RangeMoveSpeedDecrease┃Velocidade de Movimento reduzida à Distância
+ToolTipType/Irem_FirstDamage┃Dano Extra do Primeiro Ataque
+ToolTipType/Irem_ContinueDamage┃Dano de Ataque Continuo
 CastingActionType/ToRest┃A preparar-se para descansar
 CastingActionType/ToSearch┃À procura
 CastingActionType/ToBattle┃A parar descanso
@@ -1954,6 +1969,7 @@ CastingActionType/CraftRareFood┃A criar
 CastingActionType/CraftEpicFood┃A criar
 CastingActionType/CraftLegendFood┃A criar
 CastingActionType/Hyperloop┃A Utilizar o Hyperloop: <color=#FFBB00>{0}</color>
+CastingActionType/HyperloopToTeammate┃Ir para aliados usando Hyperloop: <color=#FFBB00>{0}</color>
 CastingActionType/InstallTrap┃A Instalar Armadilha
 CastingActionType/Resurrect┃A Reviver
 CastingActionType/Resurrected┃A Reviver
@@ -2057,46 +2073,60 @@ ItemType/SKIN/Name┃Skin
 Skin/Name/1001000┃Jackie
 Skin/Name/1001001┃Executora Jackie
 Skin/Name/1001002┃Jackie Rosa Escarlate
+Skin/Name/1001003┃Jackie Sobrecarregada
 Skin/Name/1002000┃Aya
 Skin/Name/1002001┃Agente Aya
+Skin/Name/1002002┃Aya Festival de Verão
 Skin/Name/1003000┃Fiora
 Skin/Name/1003001┃Tenente Fiora
 Skin/Name/1003002┃Fiora Mosqueteira
+Skin/Name/1003003┃Fiora Banquete
 Skin/Name/1004000┃Magnus
 Skin/Name/1004001┃Magnus Mafioso
+Skin/Name/1004002┃Magnus Festa Tropical
 Skin/Name/1005000┃Zahir
 Skin/Name/1005001┃O Ceifador Áureo Zahir
+Skin/Name/1005002┃Zahir Evolução de Cobalto
 Skin/Name/1006000┃Nadine
 Skin/Name/1006001┃Nadine Caçadora
 Skin/Name/1006002┃Nadine Capuzinho Vermelho
+Skin/Name/1006003┃Nadine Espírito do Lobo
 Skin/Name/1007000┃Hyunwoo
 Skin/Name/1007001┃Demónio das Ruas Hyunwoo!
 Skin/Name/1007002┃Hyunwoo Demônio Vermelho
 Skin/Name/1007003┃Hyunwoo Cadete
 Skin/Name/1007004┃Hyunwoo Cadete (Imortal)
+Skin/Name/1007005┃Hyunwoo Besta Dócil
 Skin/Name/1008000┃Hart
 Skin/Name/1008001┃Líder da Banda Hart
 Skin/Name/1008002┃Hart Festival de Inverno
+Skin/Name/1008003┃Heart no País das Maravilhas
 Skin/Name/1009000┃Isol
 Skin/Name/1009001┃Apocalipse Isol
 Skin/Name/1009002┃Isol Caçador de Espíritos
+Skin/Name/1009003┃Isol Coelho da Sorte
 Skin/Name/1010000┃Li Dailin
 Skin/Name/1010001┃Turista Li Dailin
 Skin/Name/1010002┃Li Dailin Rebelde
 Skin/Name/1010003┃Li Dailin Dança do Dragão
+Skin/Name/1010004┃Li Dailin Rugido Festivo
 Skin/Name/1011000┃Yuki
 Skin/Name/1011001┃Cadete Yuki
 Skin/Name/1011002┃Yuki Lâmina do Vento
 Skin/Name/1011003┃Yuki Shinobi da Meia Noite
+Skin/Name/1011004┃Yuki Au Au
 Skin/Name/1012000┃Hyejin
 Skin/Name/1012001┃Hyejin Oráculo de Magnólia
 Skin/Name/1012002┃Hyejin Cadete
+Skin/Name/1012003┃Hyejin Caçadora de Espíritos
+Skin/Name/1012004┃Hyejin Universitária
 Skin/Name/1013000┃Xiukai
 Skin/Name/1013001┃Chefe Japonês Xiukai
 Skin/Name/1013002┃Xiukai Rei do Mata
 Skin/Name/1013003┃Xiukai Panda Esfomeado
 Skin/Name/1014000┃Chiara
 Skin/Name/1014001┃Chiara Árbitra
+Skin/Name/1014002┃Chiara Caçadora de Espíritos
 Skin/Name/1015000┃Sissela
 Skin/Name/1015001┃Trevo do Gelo Sissela
 Skin/Name/1015002┃Lady Sissela
@@ -2795,7 +2825,7 @@ Skill/Group/Desc/1006500┃Por um tempo, Nadine invoca um Lobo a cada {0} ataque
 Skill/Group/Coef/1006100┃<color=#FFFFC2>Clarividente : </color>Animais Selvagens próximos a Nadine aparecem no minimapa.\n<color=#FFFFC2>Selvagem : </color>Nadine recebe um acúmulo de Selvagem por cada Animal Selvagem que ela mata.\nGalinha : {0} / Morcego, Javali : {1} / Cão de Caça, Lobo: {2} / Urso : {3}
 Skill/Group/Coef/1006200┃Nadine reúne sua força por {0} segundos, reduzindo sua Velocidade de Movimento até atingir {2} e aumentando o alcance e o dano de Na Mosca em {1} vezes. Se ela tiver mais de {8} acúmulos em Selvagem, seu alcance de Na Mosca aumentará até {9} vezes.\nQuando reativa a habilidade, Nadine dispara uma flecha e causa <color=white>{3}</color><color=#ffd775>(+{5} )</color><color=#DDA0DD>(+{12} )</color>~<color=white>{4}</color><color=#ffd775>(+{6} )</color><color=#DDA0DD>(+{13} )</color><color=yellow>(+Wild Stacks Damage)</color> de dano(Nadine causa mais dano com base em seus acúmulos de <color=yellow>Selvagem</color>).\nApós {7} segundos, os efeitos terminam e ela recupera {10} de seus PE perdidos.
 Skill/Group/Coef/1006300┃Nadine deixa uma Armadilha para Esquilos no local alvo, causando <color=white>{0}</color><color=#ffd775>(+{6} )</color><color=#DDA0DD>(+{11} )</color> de dano a todos os inimigos atingidos e se armando depois de cair.\nAtive a habilidade novamente para colocar outra Armadilha em {1} segundos. Se as armadilhas estiverem a menos de {2}m de distância, elas se conectam.\nOs inimigos presos nas armadilhas conectadas sofrem <color=white>{7}</color><color=#ffd775>(+{6} )</color><color=#DDA0DD>(+{11} )</color> de dano e têm seu movimento e velocidade de ataque reduzidos em {3} e {10}, respectivamente. Nadine terá visão deles por {4} segundos.\nInimigos desacelerados pela Armadilha de Esquilo recebem <color=white>{9}</color><color=#ffd775>(+{8} )</color><color=#DDA0DD>(+{12} )</color> de dano.\nAs armadilhas conectadas desaparecem após {5} segundos.
-Skill/Group/Coef/1006310┃Nadine deixa uma Armadilha para Esquilos no local alvo, causando {0}<color=#ffd775>(+{6})</color> de dano a todos os inimigos atingidos e se armando depois de cair.\nAtive a habilidade novamente para colocar outra Armadilha em {1} segundos. Se as armadilhas estiverem a menos de {2}m de distância, elas se conectam.\nOs inimigos presos nas armadilhas conectadas sofrem {7}<color=#ffd775>(+{6})</color> de dano e têm seu movimento e velocidade de ataque reduzidos em {3}. Nadine terá visão deles por {4} segundos.\nAs armadilhas conectadas desaparecem após {5} segundos.
+Skill/Group/Coef/1006310┃Nadine pode jogar outra armadilha.
 Skill/Group/Coef/1006400┃<color=green>Passivo :</color> A Velocidade de Ataque de Nadine aumenta em {0}. \n\nNadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo do Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
 Skill/Group/Coef/1006410┃<color=green>Passivo :</color> A Velocidade de Ataque de Nadine aumenta em {0}. \n\nNadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo do Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
 Skill/Group/Coef/1006500┃Por um tempo, Nadine invoca um Lobo a cada {0} ataques básicos. O Lobo ataca o inimigo, causando <color=white>{9}</color><color=#ffd775>(+{8} )</color><color=#DDA0DD>(+{12} )</color><color=yellow>(+Wild Stacks Damage)</color> de dano, e reduzindo a Velocidade de Ataque e Movimento deles em {3} e {5}, respectivamente.
