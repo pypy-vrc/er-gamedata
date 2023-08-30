@@ -517,6 +517,8 @@ StatType/SkillAmpRatio/Desc┃Dano de habilidade é aumentado por Aumento de Dan
 StatType/SkillAmpRatiotoValue┃Aumentado com Dano de Habilidade(%)
 StatType/SkillAmpByCraftMastery┃Aumento do Dano de Habilidade por Maestria de Construção
 StatType/SkillAmpRatioByLv┃Aumento de Dano de Habilidade por nível
+StatType/AdaptiveForce┃Poder de Ataque ou Amplificação de Habilidade
+StatType/AdaptiveForceByLv┃Poder de Ataque ou Amplificação de Habilidade por Nível
 StatType/AttackPowerByAdaptiveForce┃[Adaptabilidade] Poder de Ataque Adicional
 StatType/SkillAmpByAdaptiveForce┃[Adaptabilidade] Amplificação de Habilidade Adicional
 StatType/PenetrationDefense┃Penetração de Armadura
@@ -959,6 +961,11 @@ ToolTipType/AllyShield┃Absorção de Escudo de Aliados
 ToolTipType/MarleneSkill02Count┃Número de Disparos
 ToolTipType/DebiSkill03Damage┃Dano da Debi
 ToolTipType/MarleneSkill03Damage┃Dano da Marlene
+ToolTipType/ArdaPassiveStack┃[Análise de Artefato] Acumulos de Essência Necessários
+ToolTipType/ArdaActive1Damage┃[Código de Shamash] Dano do Feitiço
+ToolTipType/ArdaActive2Damage┃[Dado da Babilônia] Dano da Barreira
+ToolTipType/ArdaActive2Duration┃[Dado da Babilônia] Duração do Enraizamento
+ToolTipType/ArdaActive3Range┃[Portão de Nimrod] Alcance Aumentado
 ToolTipType/HpThreshold┃Limite do Consumo de Vida
 ToolTipType/DurationReset┃Efeitos de Renovação de Duração
 ToolTipType/MoveRange┃Distância de Curso
@@ -975,6 +982,7 @@ ToolTipType/HitMoveSpeedUp┃Aumento Adicional de Velocidade de Movimento
 ToolTipType/BaseHealingWind┃Recuperação de Vida Mínima
 ToolTipType/HealingWindByLv┃Recuperação de Vida Adicional por Nível de Personagem
 ToolTipType/AddedHpShield┃Escudo Adicional Baseado na Vida adicional
+ToolTipType/FinalDamage┃Aumento de Todo Dano
 DayNight/Day┃Dia
 DayNight/Night┃Noite
 CastingActionType/ToRest┃Preparando para descansar
@@ -1021,6 +1029,7 @@ CastingActionType/EscapeHyperloop┃Se movendo para as Docas Abandonadas
 CastingActionType/RetrieveEscapeMaterial┃Recuperando Pulseira Regenerativa
 CastingActionType/TeleportToTeamMemberInAreaAttributes┃Operando Hyperloop até seus aliados no campo de batalha: <color=#FFBB00>{0}</color>
 CastingActionType/CreditResurrection┃Reconstruindo Cobaia
+CastingActionType/ArdaReinforceActive3Interact┃Portão de Nimrod
 ItemOptionCategory/AttackPower┃Poder de Ataque
 ItemOptionCategory/AttackSpeed┃Velocidade de Ataque (VdA)
 ItemOptionCategory/CriticalStrike┃Golpe Crítico
@@ -2080,6 +2089,19 @@ Emotion_Daniel01_NP┃Você Precisa de um Corte de Cabelo
 Emotion_Daniel02_NP┃Você Vai Pagar por Isso...
 Emotion_Daniel03_NP┃Ei, você!
 Emotion_Daniel04_NP┃Exótico
+Emotion_Tazia01_NP┃Tazia enlouquecendo!
+Emotion_Tazia02_NP┃Esmague-os em pedacinhos!
+Emotion_Tazia03_NP┃Eureka!
+Emotion_Tazia04_NP┃Tá tudo bem Tazia?
+Emotion_Vanya01_NP┃Vanya Oiii!
+Emotion_Vanya02_NP┃Fofa e Confusa
+Emotion_Vanya03_NP┃Olhar Pidão da Vanya
+Emotion_Vanya04_NP┃Dorminhoca
+Emotion_AdmiralLeon01_NP┃Sob Ataque
+Event_S9Champion_ONECIRCLE_3082┃SEASON 9 CHAMPION ONECIRCLE
+Event_S9Champion_GWORK_3083┃SEASON 9 CHAMPION GWORK
+Event_S9Champion_DHANA_3084┃SEASON 9 CHAMPION DHANA
+Event_S9Champion_FANG_3085┃SEASON 9 CHAMPION FANG
 Shop/Desc/Emotion_Hart01_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes para se comunicar em jogo.
@@ -2586,6 +2608,11 @@ EMBLEM_MARK_EVENT_103114┃Fogo Master
 EMBLEM_MARK_EVENT_103115┃Season 9 Lumia Marathoner
 EMBLEM_MARK_EVENT_103116┃GLUP!
 EMBLEM_MARK_EVENT_103117┃Preciso...Cafeína...
+EMBLEM_MARK_EVENT_103122┃SEASON 9 CHAMPION ONECIRCLE
+EMBLEM_MARK_EVENT_103123┃SEASON 9 CHAMPION GWORK
+EMBLEM_MARK_EVENT_103124┃SEASON 9 CHAMPION DHANA
+EMBLEM_MARK_EVENT_103125┃SEASON 9 CHAMPION FANG
+EMBLEM_MARK_EVENT_103126┃9ambler
 EMBLEM_MARK_ERPASS_104001┃Gelo Cristalizado
 EMBLEM_MARK_ERPASS_104002┃Árvore de Presentes!
 EMBLEM_MARK_ERPASS_104003┃Nariz Vermelho
@@ -3410,6 +3437,67 @@ LiDailin_Emblem_Pack_01┃Pacote Especial da Li Dailin
 Jackie_Emblem_Pack_01┃Pacote Especial da Jackie
 Rio_Emblem_Pack_01┃Pacote Especial da Rio
 SkinDataChip_RandomBox_01┃Chip DATA de Skin
+Product/Name/Aya_ComboPack_01┃Pacote Skin & Emote Aya\n<size=20>[Non-Refundable]</size>
+Product/Name/Hyunwoo_ComboPack_01┃Pacote Skin & Emote Hyunwoo\n<size=20>[Non-Refundable]</size>
+Product/Name/Adriana_ComboPack_01┃Pacote Skin & Emote Adriana\n<size=20>[Non-Refundable]</size>
+Product/Name/Luke_ComboPack_01┃Pacote Skin & Emote Luke\n<size=20>[Non-Refundable]</size>
+Product/Name/LIDailin_NewYear2022_ComboPack_01┃Pacote Li Dailin Dança do Dragão
+Product/Name/Sua_NewYear2022_ComboPack_01┃Pacote Sua Herança Melancólica
+Product/Name/Shoichi_NewYear2022_ComboPack_01┃Pacote Shoichi Assassino de Aluguel
+Product/Name/Adela_NewYear2022_ComboPack_01┃Pacote Adela Rainha Branca
+Product/Name/Character_Bundle_Pack_01┃Pacote de Expansão de Personagens
+Product/Name/Skin_Bundle_Pack_01┃Pacote de Expansão de Skins
+Product/Name/Character_Skin_Bundle_Pack_01┃Conjunto Personagem X Skins
+Product/Name/Silvia_4Emote_Pack_01┃Pacote de Emotes da Silvia
+Product/Name/Cathy_4Emote_Pack_01┃Pacote de Emotes da Cathy
+Product/Name/Nicky_4Emote_Pack_01┃Pacote de Emotes da Nicky
+Product/Name/Eleven_4Emote_Pack_01┃Pacote de Emotes da Eleven
+Product/Name/Rio_Magical_ComboPack_01┃Pacote Rio Garota Mágica Edição Limitada
+Product/Name/Adela_4Emote_Pack_01┃Pacote de Emotes da Adela
+Product/Name/Camilo_4Emote_Pack_01┃Pacote de Emotes do Camilo
+Product/Name/Bernice_4Emote_Pack_01┃Pacote de Emotes do Bernice
+Product/Name/Hart_Summer_Bundle_2022_Pack_01┃Splash à Beira-Mar Cobaia - Conjunto Hart
+Product/Name/Bianca_Summer_Bundle_2022_Pack_01┃Splash à Beira-Mar Cobaia - Conjunto Bianca
+Product/Name/Adina_Summer_Bundle_2022_Pack_01┃Splash à Beira-Mar Cobaia - Conjunto Adina
+Product/Name/Elena_Summer_Bundle_2022_Pack_01┃Splash à Beira-Mar Cobaia -  Conjunto Elena
+Product/Name/Jenny_4Emote_Pack_01┃Pacote de Emotes da Jenny
+Product/Name/Chloe_4Emote_Pack_01┃Pacote de Emotes da Chloe
+Product/Name/Tia_4Emote_Pack_01┃Pacote de Emotes da Tia
+Product/Name/Sua_4Emote_Pack_01┃Pacote de Emotes da Sua
+Product/Name/Bianca_4Emote_Pack_01┃Pacote de 4 Emotes da Bianca
+Product/Name/Adina_4Emote_Pack_01┃Pacote de 4 Emotes da Adina
+Product/Name/Elena_4Emote_Pack_01┃Pacote de 4 Emotes da Elena
+Product/Name/Markus_4Emote_Pack_01┃Pacote de 4 Emotes do Markus
+Product/Name/Halloween2022_Skin_RandomBox_01┃Informação de Skin Misteriosa
+Product/Name/Estelle_4Emote_Pack_01┃Pacote de 4 Emotes da Estelle
+Product/Name/Mai_4Emote_Pack_01┃Pacote de 4 Emotes da Mai
+Product/Name/BlackFriday2022_Skin_RandomBox_01┃Informação Misteriosa
+Product/Name/Aiden_4Emote_Pack_01┃Pacote de 4 Emotes do Aiden
+Product/Name/Eva_4Emote_Pack_01┃Pacote de 4 Emotes da Eva
+Product/Name/Celine_4Emote_Pack_01┃Pacote de 4 Emotes da Celine
+Product/Name/Jan_4Emote_Pack_01┃Pacote de 4 Emotes do Jan
+Product/Name/Rio_4Emote_Pack_01┃Pacote de 4 Emotes da Rio
+Product/Name/William_4Emote_Pack_01┃Pacote de 4 Emotes do William
+Product/Name/Laura_4Emote_Pack_01┃Pacote de 4 Emotes da Laura
+Product/Name/Zahir_4Emote_Pack_01┃Pacote de 4 Emotes do Zahir
+Product/Name/Lenox_4Emote_Pack_01┃Pacote de 4 Emotes da Lenox
+Product/Name/Nathapon_4Emote_Pack_01┃Pacote de 4 Emotes do Nathapon
+Product/Name/Hyunwoo_Emblem_Pack_01┃Pacote Especial do Hyunwoo
+Product/Name/LiDailin_Emblem_Pack_01┃Pacote Especial da Li Dailin
+Product/Name/Jackie_Emblem_Pack_01┃Pacote Especial da Jackie
+Product/Name/Rio_Emblem_Pack_01┃Pacote Especial da Rio
+Product/Name/SkinDataChip_RandomBox_01┃Chip DATA de Skin
+Product/Name/LOOTBOX_BASIC_SINGLE_01┃Caixa DATA do Centro de Pesquisa
+Product/Name/LOOTBOX_SKIN_SINGLE_01┃Caixa DATA de Skins
+Product/Name/RANDOM_KEY_SINGLE_01┃Chave DATA
+Product/Name/LOOTBOX_BASICxKEY_SET_01┃Caixa DATA do Centro de Pesquisa
+Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Set Centro de Pesquisa
+Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Set Centro de Pesquisa
+Product/Name/LOOTBOX_SKINxKEY_SET_01┃Set DATA de Skin
+Product/Name/LOOTBOX_SKINxKEY_SET_05┃5 Set DATA de Skin
+Product/Name/LOOTBOX_SKINxKEY_SET_10┃11 Set DATA de Skin
+Product/Name/MONTHLY_PURCHASE_SET_01┃Pacote Mensal de Skin DATA
+Product/Name/MONTHLY_PURCHASE_SET_02┃Pacote de Chave DATA Mensal
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emotes\n\n58% do preço de cada item que você já possua será reembolsado no seu Correio.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emotes\n\n56% do preço de cada item que você já possua será reembolsado no seu Correio.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emotes\n\n58% do preço de cada item que você já possua será reembolsado no seu Correio.
@@ -3606,6 +3694,7 @@ Item/Name/101404┃Vibrolâmina
 Item/Name/101405┃Fragarach
 Item/Name/101406┃Espinho de aço damasco
 Item/Name/101407┃Maharaja
+Item/Name/101408┃Adaga das Terras Altas
 Item/Name/101501┃Eclipse
 Item/Name/101502┃Ceifador
 Item/Name/102101┃Espada Enferrujada
@@ -3623,6 +3712,7 @@ Item/Name/102409┃Laevateinn
 Item/Name/102410┃Monohoshizao
 Item/Name/102411┃Hovud
 Item/Name/102412┃Espada da Aurora
+Item/Name/102413┃Gume Arcano
 Item/Name/102501┃Dáinsleif
 Item/Name/102502┃Almas
 Item/Name/102503┃Pesadelo Acorrentado
@@ -3633,6 +3723,7 @@ Item/Name/103302┃Par de Ás
 Item/Name/103401┃Espadas Duplas Divinas
 Item/Name/103402┃Espadas Duplas de Aço Estelar
 Item/Name/103403┃Asura
+Item/Name/103404┃Borboleta Negra
 Item/Name/103501┃Dioscuri
 Item/Name/103502┃Lloigor & Zahr
 Item/Name/103503┃Primavera e Outono
@@ -3649,6 +3740,7 @@ Item/Name/104405┃Varinha Mágica
 Item/Name/104406┃O Peso do Mundo
 Item/Name/104409┃Mestre dos Livros
 Item/Name/104501┃Pacificadora
+Item/Name/104502┃Marreta Barulhenta
 Item/Name/108503┃Mão Fantasma
 Item/Name/105102┃Picareta
 Item/Name/105103┃Machadinha
@@ -3664,6 +3756,8 @@ Item/Name/105405┃Parashu
 Item/Name/105406┃Harpe
 Item/Name/105407┃O Juggernaut
 Item/Name/105408┃Machado de Pangu
+Item/Name/105501┃Paraíso Perdido
+Item/Name/105502┃Foice Escarlate
 Item/Name/107101┃Lança Curta
 Item/Name/107201┃Lança de Bambu
 Item/Name/107301┃Forquilha
@@ -3707,6 +3801,7 @@ Item/Name/109404┃Chicote de Plasma
 Item/Name/109405┃Chicote Catódico
 Item/Name/109406┃Uranus
 Item/Name/109501┃Chicote das Nove Caudas Sangrentas
+Item/Name/109502┃Espada de Escamas
 Item/Name/110101┃Soco Inglês
 Item/Name/110102┃Luva de Algodão
 Item/Name/110201┃Luva de Couro
@@ -3727,15 +3822,17 @@ Item/Name/110411┃Punhos de Garra Branca
 Item/Name/110412┃Luva de Seda Imperial
 Item/Name/110501┃Marca da Fênix
 Item/Name/110502┃Permafrost
-Item/Name/111101┃Punho Moedor
-Item/Name/111201┃Tonfa de Madeira
-Item/Name/111301┃Cacetete Policial
-Item/Name/111401┃Tonfa de Ryukyu
-Item/Name/111402┃Tonfa Tática
-Item/Name/111403┃Mai Sok
-Item/Name/111404┃Tonfa de Plasma
-Item/Name/111405┃Windrunner
-Item/Name/111501┃Jitte de Obsidian
+Item/Name/110503┃Punho Moedor
+Item/Name/111101┃Tonfa de Madeira
+Item/Name/111201┃Cacetete Policial
+Item/Name/111301┃Tonfa de Ryukyu
+Item/Name/111401┃Tonfa Tática
+Item/Name/111402┃Mai Sok
+Item/Name/111403┃Tonfa de Plasma
+Item/Name/111404┃Windrunner
+Item/Name/111405┃Tonfa Coldre
+Item/Name/111406┃Jitte de Obsidian
+Item/Name/111501┃Eco Congelado
 Item/Name/112101┃Pedra
 Item/Name/112103┃Bola de Ferro
 Item/Name/112104┃Garrafa de Vidro
@@ -3805,6 +3902,7 @@ Item/Name/114406┃Arco Modificado de Jebe
 Item/Name/114501┃Arco Elemental
 Item/Name/114502┃Failnaught
 Item/Name/114503┃Argyrotoxus
+Item/Name/114504┃Arco Carmesim
 Item/Name/114407┃Ártemis
 Item/Name/115101┃Besta Curta
 Item/Name/115201┃Besta Longa
@@ -3817,6 +3915,7 @@ Item/Name/115402┃A Lenda do General
 Item/Name/115403┃Balista
 Item/Name/115404┃Besta de Elite
 Item/Name/115405┃O Fantasma Dourado
+Item/Name/115406┃Besta Envenenada
 Item/Name/115501┃Sharanga
 Item/Name/116101┃Walther PPK
 Item/Name/116201┃Magnum Python
@@ -3843,7 +3942,9 @@ Item/Name/117403┃Type 95
 Item/Name/117404┃AK-12
 Item/Name/117405┃XCR
 Item/Name/117406┃Julgamento
+Item/Name/117407┃Febre do Ouro
 Item/Name/117501┃Agni
+Item/Name/117502┃Viúva Negra
 Item/Name/118101┃Rifle de Cano Longo
 Item/Name/118201┃Springfield
 Item/Name/118301┃Arbalete
@@ -3866,9 +3967,10 @@ Item/Name/119402┃Nunchaku Vibrante
 Item/Name/119403┃Cérbero
 Item/Name/119404┃Blue Three
 Item/Name/119501┃Hidra
+Item/Name/119502┃Amantes Vermelho Carmesim
 Item/Name/120101┃Agulha
 Item/Name/120201┃Florete de Esgrima
-Item/Name/120301┃Espada de Damasco
+Item/Name/120301┃Florescer
 Item/Name/120302┃Espada da Justiça
 Item/Name/120303┃Estoque
 Item/Name/120401┃Durendal Mk2
@@ -3895,6 +3997,7 @@ Item/Name/121404┃Satisfaction
 Item/Name/121405┃Wonderful Tonight
 Item/Name/121406┃The Wall
 Item/Name/121407┃Teen Spirit
+Item/Name/121501┃Cap. Pepper
 Item/Name/122101┃Lentes
 Item/Name/122201┃Câmera-pistola
 Item/Name/122301┃Câmera Compacta
@@ -3904,6 +4007,7 @@ Item/Name/122401┃Câmera Mirrorless
 Item/Name/122402┃Designador a Laser
 Item/Name/122403┃Câmera-canhão
 Item/Name/122404┃V.I.C.G
+Item/Name/122405┃Câmera Instantânea
 Item/Name/122501┃Ultravioleta
 Item/Name/130101┃Orbe de Vidro
 Item/Name/130201┃Núcleo Espelhado
@@ -3918,6 +4022,7 @@ Item/Name/130403┃Temperança
 Item/Name/130404┃A Estrela
 Item/Name/130405┃A Lua
 Item/Name/130501┃A Imperatriz
+Item/Name/130502┃A Morte
 Item/Name/131101┃Chamado do Cadmo Lv2
 Item/Name/131102┃Chamado do Cadmo Lv3
 Item/Name/131201┃Víbora
@@ -3978,6 +4083,7 @@ Item/Name/201414┃Coroa de Infante
 Item/Name/201415┃Capacete de Cruzado
 Item/Name/201416┃Harmonia no Florescer Pleno
 Item/Name/201417┃Chapéu de Cowboy
+Item/Name/201418┃Capacete de Plasma
 Item/Name/201501┃Auréola Elisiana
 Item/Name/201502┃Pegasus Decaído
 Item/Name/201503┃Persona
@@ -3986,6 +4092,7 @@ Item/Name/201505┃Capacete de Corrida
 Item/Name/201506┃A Estrela Silvestre
 Item/Name/201507┃Capacete de Astronauta
 Item/Name/201508┃Capacete de Anão
+Item/Name/201509┃Crepúsculo
 Item/Name/202101┃Jaqueta Corta-Vento
 Item/Name/202103┃Túnica de Monge
 Item/Name/202104┃Jaleco Médico
@@ -4035,6 +4142,7 @@ Item/Name/202504┃Terno Borgonha 47
 Item/Name/202505┃Áo Dài
 Item/Name/202506┃Jaqueta Fantasma
 Item/Name/202507┃Traje do Guardião
+Item/Name/202508┃Vestido Elegante
 Item/Name/202509┃Traje Bélissimo
 Item/Name/202510┃Espectro
 Item/Name/202511┃Manto de Sangue
@@ -4073,6 +4181,14 @@ Item/Name/203501┃Bracelete de Skadi
 Item/Name/203502┃Radar
 Item/Name/203503┃Braços Automáticos
 Item/Name/203504┃Proeminência
+Item/Name/203505┃Ombreira de Centopeia
+Item/Name/203506┃Relógio Esportivo
+Item/Name/203507┃Monarca Tindalos
+Item/Name/203508┃Escudo de Reis
+Item/Name/203509┃Estripador de Sangue
+Item/Name/203510┃Escama de Dragão
+Item/Name/203511┃Corrente de Espinhos
+Item/Name/203512┃Luva do Pesadelo
 Item/Name/204101┃Pantufa
 Item/Name/204102┃Tênis de Corrida
 Item/Name/204103┃Meia-Calça
@@ -4102,6 +4218,8 @@ Item/Name/204414┃Dama de Ferro
 Item/Name/204415┃VAC
 Item/Name/204501┃Botas de Hermes
 Item/Name/204502┃Tênis Vermelhos
+Item/Name/204503┃Botas com Lâminas
+Item/Name/204504┃Alexandre
 Item/Name/204505┃Pernas de Aço
 Item/Name/205101┃Pena
 Item/Name/205102┃Flor
@@ -4147,6 +4265,7 @@ Item/Name/205406┃Abraço Lunar
 Item/Name/205407┃Aljava de Mithril
 Item/Name/205408┃Sultão Adornado
 Item/Name/205409┃Sultão Adornado Mk2
+Item/Name/205501┃Dado do Destino
 Item/Name/205502┃Gunbai Sangrento
 Item/Name/205503┃Kundala
 Item/Name/205504┃Totem
@@ -4283,6 +4402,7 @@ Item/Name/301405┃Salmão
 Item/Name/301406┃Batata Doce Amarela
 Item/Name/301407┃Pizza Congelada
 Item/Name/301408┃Sorvete de Chocolate com Menta
+Item/Name/301501┃Filé de Salmão
 Item/Name/301502┃Pizza Havaiana
 Item/Name/301503┃Batata Doce
 Item/Name/303501┃Recompensa
@@ -4391,6 +4511,7 @@ Item/Help/101406┃Nada poderia expressar força e durabilidade tão bem quanto 
 Item/Help/101501┃A lâmina que cortou a Lua ao meio. \n(É verdade, eu juro...)
 Item/Help/101502┃Uma adaga que rasga o coração de uma pessoa em pedaços.\nUse isso para ceifar alguém e o mande ao reino das sombras.
 Item/Help/102101┃Todo espadachim deve treinar com essa espada longa comum.
+Item/Help/102201┃Longa e afiada, essa espada é perfeita para cortar inimigos de uma vez só.
 Item/Help/102301┃Igual àquelas dos seus filmes favoritos!
 Item/Help/102401┃Uma espada feita por Masamune, o maior fabricante de espadas da\nhistória do Japão. Destaca-se como uma das mais fortes e afiadas espadas do\nJapão.
 Item/Help/102402┃Uma espada amaldiçoando a família Tokugawa, os fundadores do\nshogunato Tokugawa japonês. O avô, pai e filho de Ieyasu Tokugawa foram mortos por essa espada, e o próprio Ieyasu teve\num de seus dedos decepado por ela.
@@ -4445,12 +4566,13 @@ Item/Help/108301┃Um demônio sobrenatural do Oriente e brincalhão com os\nser
 Item/Help/108401┃Você pode se perguntar como isso pode se tornar uma arma, mas é frequentemente usada como a arma do crime em histórias de mistério.
 Item/Help/108402┃A tocha que acende seu caminho ajudará a impedir que sua própria vida\nse apague. Se você vir um inimigo, não hesite em queimá-lo.
 Item/Help/108403┃Dai-me os seus fatigados, os seus pobres, as suas massas encurraladas, ansiosas por respirar liberdade, o miserável refugo das suas costas apinhadas.\nMandai-me os sem abrigo, os arremessados pelas tempestades, pois eu ergo o meu farol junto ao portal dourado.
+Item/Help/108405┃Uma das armas dos caras durões.\nVocê saberá o quão durões eles são quando chegar bem perto deles.
 Item/Help/108501┃Há uma agulha envenenada escondida na ponta do guarda-chuva. \nVocê pode usá-la no momento certo. Finja espetar acidentalmente o pé do \nseu alvo com isto em um dia chuvoso.
 Item/Help/108502┃Uma ferramenta, fabricada por Daode Tianzun, usada para medir a profundidade do\nrio e do mar. O Rei Dragão do Mar do Leste manteve-a\nno depósito de seu palácio, mas Sun Wukong a roubou e usou-a como uma arma.
 Item/Help/109101┃Pode parecer que tudo o que você precisa fazer é chicotear aleatoriamente,\nmas para ser eficaz é necessária uma técnica bem treinada.
 Item/Help/109201┃Uma corda vermelha grossa que era originalmente usada para amarrar\num criminoso ou um ladrão.
 Item/Help/109202┃Uma arma portátil usada nos últimos períodos da dinastia Joseon.\nTambém conhecido como chicote de aço.
-Item/Help/109402┃É feita juntando um chicote de ferro e uma bateria descarregada. Você pode pensar nisso como um taco de ferro em forma\nde chicote
+Item/Help/109402┃É feita juntando um chicote de ferro e uma bateria. Você pode pensar nisso como um taco de ferro em forma\nde chicote
 Item/Help/109403┃Corda inquebrável que amarrava o lobo Fenrir. Feita do cabelo de uma\nmulher, uma pedra, o som da garra de um gato, o hálito de um peixe,\no tendão de um urso e cuspe de pássaro.
 Item/Help/109404┃Um chicote feito de substâncias metálicas que parece doloroso só de\nolhar para ele. Quando ligado, o plasma flui através do chicote pelas de\njuntas de tungstênio especialmente projetadas, o que pode causar\nferimentos térmicos graves.
 Item/Help/110101┃Essas armas são ilegais em muitos países.
@@ -4543,18 +4665,21 @@ Item/Help/118401┃Um rifle decorado com ouro. Alta precisão, poder destrutivo 
 Item/Help/118402┃Usa eletroimãs para rapidamente acelerar e lançar um projétil de metal.
 Item/Help/118406┃Quando uma pessoa morre, a alma dela vai para o mundo pós-vida.\nEntretanto, ao morrer para esta arma, sua alma é banida para ainda mais longe.\nTalvez para a Estrela do Norte?
 Item/Help/118501┃Mire as estrelas
+Item/Help/118503┃Um rifle de precisão com tal precisão que você poder ver a Galáxia de Andrômeda apenas mirando com ele. Capaz de perfurar inimigos em um flash.\nCalma... você acabou de ver essa luz?
 Item/Help/119101┃Uma corda de corrente, feita pela conexão de anéis de aço.\nAmplamente usada como arma no passado e por fantasmas para provocar os desavisados.
 Item/Help/119201┃Esta arma não é uma boa escolha para iniciantes como uma arma de autodefesa.\nSomente aqueles que treinaram por muitas horas dominaram esta arma\ne exercerão seu verdadeiro potencial.
 Item/Help/119401┃Inventado pelo próprio e único Imperador Taizu,\nfundador e primeiro imperador da Dinastia Song, da China.
 Item/Help/119403┃O cão de três cabeças que protege os portões do reino de Hades.
 Item/Help/120101┃Um item com múltiplos usos; limitados apenas pela sua imaginação.
 Item/Help/120201┃Uma espada de uma mão para combate pessoal com uma lâmina reta, longa e fina, ideal para estocadas.\nUsada principalmente nos séculos XVI e XVII.
+Item/Help/120301┃Tenha uma morte perfumada.
 Item/Help/120302┃Livros de História dizem que Hong Gil-dong, o Robin Hood da antiga Coréia, usou esta espada.
 Item/Help/120303┃Uma espada longa usada na Europa entre os séculos XIV e XVII.\nEra capaz de perfurar uma cota de malha com relativa facilidade.
 Item/Help/120401┃Esta espada apareceu no poema épico francês "A Canção de Rolando" (La Chanson de Roland).\nA espada original foi dividida em vários fragmentos após a morte de Rolando,\nmas os fragmentos encontrados possuíam um poder ancião e misterioso e foram reunidos na versão moderna.
 Item/Help/120403┃A palavra Volticletto combina 'voltaica', que se refere à corrente elétrica,\ncom a faca Stiletto italiana. Ser ferido por esta arma fará com que\nvocê sinta o dobro da dor.
 Item/Help/120404┃Os metais prateados encontrados no Meteorito podem ser\nusados para fazer uma grande espada de grande força.\nEntretanto, fabricá-la não é uma tarefa fácil.
 Item/Help/120406┃Uma lâmina carmesim capaz de cortar humanos de cima a baixo, fazendo jus ao seu nome.
+Item/Help/120501┃Esse florete ganhou esse nome porque lembra as penas de um pavão\ne o olho do gigante, Argos. O Sangue de seus\ninimigos dá uma sensação mais luxuosa.
 Item/Help/121201┃Algumas pessoas pensam que quanto mais cara for, melhor ela soa.
 Item/Help/121202┃As guitarras de único captador geralmente têm uma saída mais brilhante,\nmais nítida e com um som mais claro.
 Item/Help/121301┃Uma guitarra única que é tão vermelha quanto um rubi.
@@ -4570,6 +4695,7 @@ Item/Help/121404┃A natureza humana de não estar satisfeito é o que impulsion
 Item/Help/121405┃Se já é tarde da noite, e você está se perguntando que item fabricar,\nexperimente este aqui!
 Item/Help/121406┃As cobaias desta ilha podem muito bem ser, no final, mais alguns tijolos numa parede.
 Item/Help/121407┃Os humanos brilham mais quando são adolescentes. Esta aura brilhante\ndesaparece lentamente com o passar do tempo, de forma inevitável...
+Item/Help/121501┃Você sabia que o instrumento tradicional indiano, a cítara, foi usado em um dos maiores álbuns de rock 'n' roll ?
 Item/Help/201101┃Se você usar uma de má qualidade, a cola pode grudar no seu cabelo ou nas suas orelhas.
 Item/Help/201102┃Nada é melhor do que um simples boné quando está muito ensolarado,\nchovendo ou nevando.
 Item/Help/201104┃Um capacete gasto e barato para quando for dar um rolê de bicicleta.
@@ -4596,7 +4722,7 @@ Item/Help/201417┃O chapéu de um atirador montado em um cavalo branco. \nTem u
 Item/Help/201501┃É através do sofrimento que humanos se tornam anjos.
 Item/Help/201503┃Diz ser usado por um bando de ladrões fantasmas.
 Item/Help/201504┃\nUm legado deixado por um sultão desconhecido. Apesar de sua antiguidade, este item parece mais prático do que você imagina.
-Item/Help/201505┃Este capacete é feito de material de carbono e pode fornecer excelente proteção ao usuário. No entanto, pessoas com cabeças grandes podem exigir que este capacete seja personalizado.\n
+Item/Help/201505┃Este capacete é feito de material de carbono e pode fornecer excelente proteção ao usuário.\nNo entanto, pessoas com cabeças grandes podem exigir que este capacete seja personalizado.\n
 Item/Help/201506┃O chapéi do sheriff que guarda o Velho Oeste.\nEstrelas podem ser vistas brilhando, mesmo com os ventos empoeirados.
 Item/Help/201507┃Um capacete usado para cruzar o espaço sideral.\nApresse-se e você poderá alcançar a galáxia que está brilhando através janela.
 Item/Help/202101┃Uma jaqueta que mantém você aquecido, bloqueando o vento.\nFunciona melhor quando bloqueia o vento completamente, portanto,\ncertifique-se de ajustar a frente e as mangas corretamente ao usá-la.
@@ -4827,6 +4953,7 @@ Item/Help/502206┃Use este item para emitir ruídos na área atual.
 Item/Help/502207┃Uma câmera fotográfica que garante visão em um raio de até 13m.
 Item/Help/502208┃Um drone de reconhecimento que garante visão do local designado.
 Item/Help/502209┃Uma câmera fotográfica que garante visão em um raio de até 13m. É camuflada com galhos, o que permite que ela fique oculta no ambiente.
+Item/Help/502211┃Uma câmera especial com visão longa na direção de sua escolha.\nGanhe visão de 45 graus na direção instalada.
 Item/Help/502302┃Uma armadilha de roleta que contém um chamariz um tanto familiar.
 Item/Help/502303┃Contemple, França! Uma nova guilhotina chegou à cidade.\nUma lâmina escondida no mato corta a cabeça do oponente preso instantaneamente.
 Item/Help/502304┃Seria uma sorte se você a encontrasse sem pisar nela.
@@ -4834,6 +4961,7 @@ Item/Help/502305┃Assim que a armadilha é ativada, um enorme machado desce par
 Item/Help/502306┃Uma armadilha que explode quando tocada. Pode causar danos pesados​\nse for colocada no lugar onde seu inimigo passar.
 Item/Help/502307┃Composto explosivo de nitroamina.\nComumente usado em aplicações comerciais e militares.
 Item/Help/502308┃Um drone de Pulso Eletromagnético que neutraliza armadilhas e objetos eletrônicos.\nEste drone também é equipado com um escudo contra outros PEMs. Após a decolagem, garante visão da região.
+Item/Help/502310┃Armadilha impiedosa que envia impulsos aos nervos periféricos de todo o corpo, causando arrepios na espinha.
 Item/Help/502401┃O fio de mithril, extraído do mithril, é mais fino que um barbante, mas é mais forte\nque o aço. Sua quase invisibilidade torna ele ainda mais ameaçador.
 Item/Help/502402┃Numerosas agulhas disparam com uma explosão e perfuram o corpo.\nAs agulhas podem penetrar profundamente nos músculos e chegar até\nos vasos sanguíneos. Se colocar veneno nessas agulhas, a morte é quase certa.
 Item/Help/502403┃Armadilha assustadora que explode em chamas fortes quando tocada.
@@ -4843,6 +4971,7 @@ Item/Help/502406┃Mina antipessoal que dispara partículas de ferro na zona de 
 Item/Help/502407┃Quando pisada, uma placa de metal pontiaguda rola em forma de cilindro,\nprendendo a vítima em um casulo pontudo.\nRetarda quem ativa a armadilha.
 Item/Help/502501┃Uma mina que usa detectores de movimento e pode causar grandes\nferimentos se plantada na rota esperada do inimigo.\nExplode imediatamente quando alguém tenta passar pela área onde a\nmina está plantada ou as áreas circundantes
 Item/Help/502502┃Tem um poder de matar incrível e força destrutiva. Use essa armadilha\napenas quando o inimigo precisar ser eliminado o mais rápido possível.
+Item/Help/999999┃Um dispositivo construído com tecnologia agora perdida. Este dispositivo é destruído automaticamente quando os dados são transferidos.
 Item/Help/204411┃Que tipo de rinoceronte veste botas..?
 Item/Help/204412┃Um exoesqueleto futurista que oferece tanto mobilidade quanto proteção.\nAssim que você se acostumar a usá-lo, seus movimentos serão rápidos e suaves.
 Item/Help/205210┃Se você abanar seu rosto com isso, tente não se arranhar.
@@ -4852,6 +4981,7 @@ Item/Help/103502┃Você vai adorar criar essas espadas gêmeas, apenas tome cui
 Item/Effects/502101┃Clique para instalar uma <color=lightblue>Câmera de Vigilância</color> que revelará o ambiente.\nRevela armadilhas e jogadores escondidos perto de você.\nLimite de Posicionamento de Câmeras: 2
 Item/Effects/502102┃Clique para instalar uma armadilha <color=lightblue>Laço</color>.
 Item/Effects/502103┃Clique para instalar uma <color=lightblue>Ratoeira</color>.
+Item/Effects/502105┃Clique para instalar um <color=lightblue>Kit de Fogueira</color>. \nUma fogueira será instalada na direção selecionada e ficará lá por 15 segundos.
 Item/Effects/502202┃Clique para instalar uma <color=lightblue>Ratoeira Aprimorada</color>.
 Item/Effects/502203┃Clique para instalar <color=lightblue>Dinamite</color>.\n<color=yellow>Efeitos da armadilha:</color> Explode em uma grande área após 1,5 segundos.
 Item/Effects/502204┃Clique para instalar uma <color=lightblue>Armadilha de Bambu</color>.\n<color=yellow>Efeitos da armadilha:</color> Inimigos ficam enraizados por 0.5 segundo.
@@ -4860,6 +4990,7 @@ Item/Effects/502206┃Clique para instalar um <color=lightblue>Ruído Metálico<
 Item/Effects/502207┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revelará uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você.\nLimite de Posicionamento de Câmeras: 2
 Item/Effects/502208┃Clique para lançar o <color=lightblue>Drone de Reconhecimento</color> na área designada.\nGarante visão do local alvo por 7 segundos.
 Item/Effects/502209┃Clique para instalar uma <color=lightblue>Câmera de Trilha</color> que revela seus arredores.\nRevela inimigos e armadilhas ocultas.\nApós 3 segundos,\na câmera entrará no modo Infiltração.\nLimite de Posicionamento de Câmeras: 2
+Item/Effects/502211┃Clique para instalar uma <color=lightblue>Câmera de Aumento</color> que oferece visão ampla em uma direção específica.\nRevela armadilhas e sobreviventes próximos.\nÉ possível instalar até três câmeras.
 Item/Effects/502212┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revelará uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você.\nLimite de Posicionamento de Câmeras: 3
 Item/Effects/502301┃Clique para instalar um <color=lightblue>Cordão Espinhoso</color>.
 Item/Effects/502302┃Clique para instalar a <color=lightblue>Roleta de Meiji</color>.
@@ -4878,6 +5009,7 @@ Item/Effects/502406┃Clique para instalar uma <color=lightblue>Claymore</color>
 Item/Effects/502407┃Clique para instalar uma <color=lightblue>Donzela Oculta</color>.\n<color=yellow>Efeito da armadilha:</color> Inimigos tem sua velocidade de movimento reduzida em 40%\npor 2.5 segundos.
 Item/Effects/502501┃Clique para instalar uma <color=lightblue>Mina Remota</color>.\n<color=yellow>Efeito da armadilha:</color> Explode em uma grande área depois de 1.4 segundos.
 Item/Effects/502502┃Clique para instalar uma <color=lightblue>Bomba Inteligente</color>.\n<color=yellow>Efeito da armadilha:</color> Explode em uma grande área depois de 1.4 segundos.
+Item/Effects/502310┃Clique para instalar um <color=lightblue>Tapete de Acupressão</color>.\n<color=yellow>Efeitos de armadilha:</color> os alvos recebem lentidão de 40% por 1,5 segundos.
 Item/Effects/302101┃recupera Energia durante 15 segundos.
 Item/Effects/302102┃recupera Energia durante 15 segundos.
 Item/Effects/302103┃recupera Energia durante 15 segundos.
@@ -4901,6 +5033,7 @@ Item/Effects/302214┃recupera Energia durante 15 segundos.
 Item/Effects/302215┃recupera Energia durante 15 segundos.
 Item/Effects/302216┃recupera Energia durante 15 segundos.
 Item/Effects/302217┃recupera Energia durante 15 segundos.
+Item/Effects/302218┃recupera Energia durante 15 segundos.
 Item/Effects/302215┃recupera Energia durante 15 segundos.
 Item/Effects/302219┃recupera Energia durante 15 segundos.
 Item/Effects/302220┃recupera Energia durante 15 segundos.
@@ -4917,9 +5050,9 @@ Item/Effects/302308┃recupera Energia durante 15 segundos.
 Item/Effects/302309┃recupera Energia durante 15 segundos.
 Item/Effects/302310┃recupera Energia durante 15 segundos.
 Item/Effects/302311┃recupera Energia durante 15 segundos.
-Item/Effects/302312┃Ganha permanentemente 3 de Poder de Ataque e 5 de Amplificação de Habilidade. Acumúla até 3 vezes.
-Item/Effects/302313┃recupera Energia durante 15 segundos.
-Item/Effects/302314┃recupera Energia durante 15 segundos.
+Item/Effects/302312┃Permanentemente ganhe 2 de Poder de Ataque e 4 de Amplificação de Habilidade. Pode ser acumulado até 3 vezes.
+Item/Effects/302313┃Recupera Energia durante 15 segundos.
+Item/Effects/302314┃Recupera Energia durante 15 segundos.
 Item/Effects/301102┃recupera Vida durante 15 segundos.
 Item/Effects/301104┃recupera Vida durante 15 segundos.
 Item/Effects/301105┃recupera Vida durante 15 segundos.
@@ -4938,11 +5071,12 @@ Item/Effects/301204┃recupera Vida durante 15 segundos.
 Item/Effects/301205┃recupera Vida durante 15 segundos.
 Item/Effects/301206┃recupera Vida durante 15 segundos.
 Item/Effects/301207┃recupera Vida durante 15 segundos.
-Item/Effects/301209┃recupera Vida durante 15 segundos.
-Item/Effects/301305┃Ganha permanentemente 3 de defesa. Acumúla até 3 vezes
+Item/Effects/301209┃Recupera Vida durante 15 segundos.
+Item/Effects/301305┃Ganha permanentemente 3 de defesa. Acumúla até 3 vezes.
 Item/Effects/301213┃recupera Vida durante 15 segundos.
 Item/Effects/301216┃recupera Vida durante 15 segundos.
 Item/Effects/301217┃recupera Vida durante 15 segundos.
+Item/Effects/301218┃recupera Vida durante 15 segundos.
 Item/Effects/301215┃recupera Vida durante 15 segundos.
 Item/Effects/301222┃recupera Vida durante 15 segundos.
 Item/Effects/301224┃recupera Vida durante 15 segundos.
@@ -4960,7 +5094,7 @@ Item/Effects/301235┃recupera Vida durante 15 segundos.
 Item/Effects/301236┃recupera Vida durante 15 segundos.
 Item/Effects/301237┃recupera Vida durante 15 segundos.
 Item/Effects/301238┃recupera Vida durante 15 segundos.
-Item/Effects/301239┃recupera Vida durante 15 segundos.
+Item/Effects/301239┃Recupera Vida e Energia durante 15 segundos.
 Item/Effects/301240┃recupera Vida durante 15 segundos.
 Item/Effects/301241┃recupera Vida durante 15 segundos.
 Item/Effects/301242┃recupera Vida durante 15 segundos.
@@ -4991,10 +5125,11 @@ Item/Effects/301325┃recupera Vida durante 15 segundos.
 Item/Effects/301326┃recupera Vida durante 15 segundos.
 Item/Effects/301327┃recupera Vida durante 15 segundos.
 Item/Effects/301328┃recupera Vida durante 15 segundos.
-Item/Effects/301329┃Permanentemente adiciona 30 de vida máxima. Acumúla até 3 vezes
+Item/Effects/301329┃Permanentemente adiciona 30 de Vida Máxima. Acumúla até 3 vezes.
 Item/Effects/301330┃recupera Vida durante 15 segundos.
 Item/Effects/301401┃recupera Vida durante 15 segundos.
 Item/Effects/301331┃recupera Vida durante 15 segundos.
+Item/Effects/301333┃Recupera Energia durante 15 segundos.
 Item/Effects/301334┃recupera Vida durante 15 segundos.
 Item/Effects/301335┃recupera Vida durante 15 segundos.
 Item/Effects/301336┃recupera Vida durante 15 segundos.
@@ -5011,12 +5146,17 @@ Item/Effects/301408┃recupera Vida durante 15 segundos.
 Item/Effects/301501┃recupera Vida durante 15 segundos.
 Item/Effects/301502┃recupera Vida durante 15 segundos.
 Item/Effects/301503┃recupera Vida durante 15 segundos.
+Item/Effects/303501┃Obtenha {0} crédito(s).
+Item/Effects/802601┃Ganhe os seguintes efeitos por 600 segundos. \n \n- Velocidade de Movimento +0.2 \n- Vampirismo Universal +15%
 Item/BulletCapacity/Reload┃<color=yellow>Munições Máx.:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Munições Máx.:</color> {0} (Recarga: {1}s)
 Item/Skills/NotEquip┃<color=red>O efeito só é ativado quando equipado.</color>
 Item/Skills/UniqueSkill┃<color=red>O mesmo efeito só é aplicado uma única vez.</color>
 Item/Skills/OnlyCloseCombat┃<color=red>Não é aplicado a armas de ataque à distância.</color>
 Item/Skills/OnlyRangedCombat┃<color=red>Não é aplicado a armas de ataque corpo-a-corpo.</color>
+EscapeType/EscapeMaterial┃Esse item é utilizado para criar um <color=#D05EFF>Rootkit</color>. \nConsiga um <color=#C4C4C4>Código de Desligamento de Sistema</color> de um Quiosque e use ambos os itens para criar um <color=#D05EFF>Rootkit</color>.
+EscapeType/EscapeKey┃Esse item é utilizado para criar um <color=#D05EFF>Rootkit</color>. \nConsiga uma <color=#C4C4C4>Pulseira Regenerativa</color> ao caçar Animais Selvagens ou looteando Suprimentos Aéreos e use ambos os itens para criar um <color=#D05EFF>Rootkit</color>.
+EscapeType/EscapeQualification┃Você precisa de um <color=#D05EFF>Rootkit</color> para usar o hyperloop para a Doca Abandonada.
 보유하지 않은 캐릭터입니다.┃Você não possui este personagem.\nPor favor, desbloqueie-o na loja para poder jogar com ele. 
 매칭 중 캐릭 변경 금지┃Você não pode trocar de personagem enquanto procura por partida.
 로딩 중┃Carregando\n< Aperte o botão X para sentar e descansar. >
@@ -8545,20 +8685,29 @@ VF혈액샘플 아이템 획득┃FV(Força Vital) é tida como a causa de fenô
 개인정보동의┃Privacy Policy
 Skill/Group/Name/1001100┃Carnificina
 Skill/Group/Name/1001200┃Cortar e Dilacerar
+Skill/Group/Name/1001210┃Cortar e Dilacerar
 Skill/Group/Name/1001300┃Explosão de Adrenalina
 Skill/Group/Name/1001400┃Golpe no Ar
 Skill/Group/Name/1001500┃Massacre da Serra Elétrica
-Skill/Group/Name/1001510┃Massacre da Serra Elétrica
-Skill/Group/Desc/1001100┃Quando Jackie mata um inimigo, seu Poder de Ataque é aumentado por {0} segundos.\n\nMatar outro sobrevivente ou um urso aumenta seu Poder de Ataque em {1}.\nMatar qualquer outro animal selvagem aumenta seu Poder de Ataque em {2}.
-Skill/Group/Desc/1001200┃Jackie ataca com sua arma na direção alvo, causando <color=white>{0}</color>, <color=white>{1}</color> de dano.\n\nCausar dano à inimigos com o machado faz eles sangrar por <color=white>{3}</color> de dano ao longo de {2} segundos.
-Skill/Group/Desc/1001300┃Ao ativar Explosão de Adrenalina, a Velocidade de Movimento de Jackie aumenta em {1}, decaindo ao longo de {0} segundos.\nEnquanto Explosão de Adrenalina está ativa e estiver perseguindo um inimigo afetado por hemorragia, Jackie tem um aumento na sua velocidade de movimento em {4}, causa <color=white>{2}</color> de dano extra ao atacar um inimigo com hemorragia e cada ataque garante a ela uma cura de <color=white>{3}</color>.
-Skill/Group/Desc/1001400┃Jackie salta em direção ao alvo e causa <color=white>{0}</color> de dano ao aterrissar, além de aplicar lentidão em {4} por {3} segundos.\n\nOs inimigos que estão com Hemorragia têm sua velocidade de Movimento diminuída em {2} por {1} segundos.
-Skill/Group/Desc/1001500┃Jackie saca sua Serra Elétrica por {0} segundos.\nA Velocidade de Ataque dela aumenta em {1} e seus ataques básicos causam hemorragia aos inimigos, causando <color=white>{5}</color> de dano ao longo de {4} segundos.\n\nJackie pode reativar a habilidade após {6} segundos, encerrando a habilidade. Quando o efeito de Massacre da Serra Elétrica termina, ela dá um grande giro com a Serra Elétrica, causando de <color=white>{2}</color> a <color=white>{3}</color> de dano antes de voltar a usar sua arma anterior.\nA serra elétrica causa mais dano quanto mais tempo ela for utilizada.
-Skill/Group/Coef/1001100┃Quando Jackie mata um inimigo, seu Poder de Ataque é aumentado por {0} segundos.\n\nMatar outro sobrevivente ou um urso aumenta seu Poder de Ataque em {1}.\nMatar qualquer outro animal selvagem aumenta seu Poder de Ataque em {2}.
-Skill/Group/Coef/1001200┃Jackie balança sua arma duas vezes na direção do alvo e causa <color=white>{0}</color><color=#ffd775>(+{1})</color>, <color=white><color=white>{2}</color></color><color=#ffd775>(+{3})</color> de dano.\n\nAtingir inimigos com um machado causa hemorragia e faz com que recebam <color=white>{5}</color> de dano por {4} segundos.
-Skill/Group/Coef/1001300┃Ao ativar Explosão de Adrenalina, a Velocidade de Movimento de Jackie aumenta em {1}, decaindo ao longo de {0} segundos.\nEnquanto Explosão de Adrenalina está ativa e estiver perseguindo um inimigo afetado por hemorragia, Jackie tem um aumento na sua velocidade de movimento em {5}, causa {2} de dano extra ao atacar um inimigo com hemorragia e cada ataque garante a ela uma cura de <color=white>{3}</color><color=#ffd775>(+{4})</color>.
-Skill/Group/Coef/1001400┃Jackie salta em direção ao alvo e causa <color=white>{0}</color><color=#ffd775>(+{1})</color> de dano ao aterrissar, além de aplicar lentidão em {5} por {4} segundos.\n\nOs inimigos que estão com Hemorragia têm sua velocidade de Movimento diminuída em {3} por {2} segundos.
-Skill/Group/Coef/1001500┃Jackie saca sua Serra Elétrica por {0} segundos.\nA Velocidade de Ataque dela aumenta em {1} e seus ataques básicos causam hemorragia aos inimigos, causando <color=white>{5}</color> de dano ao longo de {4} segundos.\n\nJackie pode reativar a habilidade após {6} segundos, encerrando a habilidade. Quando o efeito de Massacre da Serra Elétrica termina, ela dá um grande giro com a Serra Elétrica, causando de <color=white>{2}</color><color=#ffd775>(+{3})</color> a <color=white>{7}</color><color=#ffd775>(+{8})</color> de dano antes de voltar a usar sua arma anterior.\nA serra elétrica causa mais dano quanto mais tempo ela for utilizada.
+Skill/Group/Name/1001510┃Massacre
+Skill/Group/Desc/1001100┃Se a Jackie derrubar ou matar um inimigo que tomou dano dela dentro de 3 segundos, os tempos de recargar dela são resetados.\n\nSe a jackie causar dano com uma habilidade, o alvo Sangra, causando <color=white>{1}</color> dano por tempo por {0} segundos. Jackie Da <color=white>{2}</color> de dano a mais contra personagens Sangrando e reseta a duração do Sangramento
+Skill/Group/Desc/1001200┃Jackie golpeia com sua arma na direção selecionada, causando <color=white>{0}</color><color=#688A08>(+{2} da Vida atual do alvo)</color> de dano de habilidade. Se ela acertar um inimigo com <color=white>Cortar e Dilacerar</color>, ela pode reutilizar a habilidade. Ao reutilizar, ela se move ligeiramente para frente e golpeia com sua arma na direção selecionada, causando <color=white>{1}</color> de dano de habilidade.
+Skill/Group/Desc/1001210┃Jackie golpeia com sua arma na direção selecionada, causando <color=white>{0}</color><color=#688A08>(+{2} da Vida atual do alvo)</color> de dano de habilidade. Se ela acertar um inimigo com <color=white>Cortar e Dilacerar</color>, ela pode reutilizar a habilidade. Ao reutilizar, ela se move ligeiramente para frente e golpeia com sua arma na direção selecionada, causando <color=white>{1}</color> de dano de habilidade.
+Skill/Group/Desc/1001300┃A adrenalina de Jackie flui, aumentando sua velocidade de movimento em {1}, diminuindo em {0} segundos.\nEnquanto a explosão de adrenalina está ativa, se mover em direção a inimigos sangrando aumenta sua velocidade de movimento em {4}. Atacar inimigos sangrando recupera <color=white>{2}</color> - <color=white>{3}</color> de Vida baseado na Vida perdida dela.
+Skill/Group/Desc/1001400┃Jackie salta no local escolhido, causando <color=white>{0}</color> de dano de habilidade aos inimigos próximos.
+Skill/Group/Desc/1001500┃Jackie saca sua serra elétrica por {0} segundos. Seus ataques básicos causam um adicional de <color=white>{3}</color> dano de habilidade e a duração de Massacre da Serra Elétrica aumenta em {1} segundos se ela ajudar a matar uma cobaia inimiga.\n\n{2} segundos após o Massacre da Serra Elétrica for ativado, ela pode usar <color=white>Massacre</color>. \n \n<color=white>Massacre</color>: Jackie balança a serra elétrica em uma grande área ao seu redor, causando <color=white>{4}</color> - <color=white>{5}</color> de dano de habilidade baseado na Vida perdida do inimigo.
+Skill/Group/Desc/1001510┃Jackie balança a serra elétrica em uma grande área ao seu redor, causando <color=white>{0}</color> - <color=white>{1}</color> de dano de habilidade baseado na Vida perdida do inimigo.
+Skill/Group/Coef/1001100┃Se Jackie derrubar ou matar um inimigo que tomou dano dentro de 3 segundos, o tempo de recarga de suas habilidades básicas são resetados. \n \nSe Jackie causar dano com uma habilidade, ela deixa o com uma Hemorragia, causando <color=white>{1}</color><color=#ffd775>(+{3} Poder de Ataque)</color> de dano ao longo do tempo por {0} segundos. Jackie causa um adicional de <color=white>{2}</color><color=#ffd775>(+{5} Poder de Ataque)</color> dano de habilidade a alvos com Hemorragia e a duração da Hemorragia é reiniciada.
+Skill/Group/Coef/1001200┃Jackie golpeia com sua arma na direção selecionada, causando <color=white>{0}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#688A08>(+{6} da Vida atual do alvo)</color> de dano de habilidade. \n\n Se ela acertar um inimigo com <color=white>Cortar e Dilacerar</color>, ela pode reutilizar a habilidade. Ao reutilizar, ela se move ligeiramente para frente e golpeia com sua arma na direção selecionada, causando <color=white>{1}</color><color=#ffd775>(+{4} Poder de Ataque)</color> de dano de habilidade.
+Skill/Group/Coef/1001210┃Jackie golpeia com sua arma na direção selecionada, causando <color=white>{0}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#688A08>(+{6} da Vida atual do alvo)</color> de dano de habilidade. \n\n Se ela acertar um inimigo com <color=white>Cortar e Dilacerar</color>, ela pode reutilizar a habilidade. Ao reutilizar, ela se move ligeiramente para frente e golpeia com sua arma na direção selecionada, causando <color=white>{1}</color><color=#ffd775>(+{4} Poder de Ataque)</color> de dano de habilidade.
+Skill/Group/Coef/1001300┃A adrenalina de Jackie flui, aumentando sua velocidade de movimento em {1}, diminuindo em {0} segundos.\nEnquanto a explosão de adrenalina está ativa, se mover em direção a inimigos sangrando aumenta sua velocidade de movimento em {4}. Atacar inimigos sangrando recupera <color=white>{2}</color><color=#ffd775>(+{5} Poder de Ataque)</color> - <color=white>{3}</color><color=#ffd775>(+{7} Poder de Ataque)</color> de Vida baseado na Vida perdida dela.
+Skill/Group/Coef/1001400┃Jackie salta no local escolhido, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos próximos.
+Skill/Group/Coef/1001500┃Jackie saca sua serra elétrica por {0} segundos. Seus ataques básicos causam um adicional de <color=white>{3}</color><color=#ffd775>(+{4} Poder de Ataque)</color> dano de habilidade e a duração de Massacre da Serra Elétrica aumenta em {1} segundos se ela ajudar a matar uma cobaia inimiga.\n\n{2} segundos após o Massacre da Serra Elétrica for ativado, ela pode usar <color=white>Massacre</color>.  \n \n<color=white>Massacre</color>: Jackie balança a serra elétrica em uma grande área ao seu redor, causando <color=white>{6}</color><color=#ffd775>(+{8} Poder de Ataque)</color> - <color=white>{7}</color><color=#ffd775>(+{10} Poder de Ataque)</color> de dano de habilidade baseado na Vida perdida do inimigo.
+Skill/Group/Coef/1001510┃Jackie balança a serra elétrica em uma grande área ao seu redor, causando <color=white>{0}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color> - <color=white>{1}</color><color=#ffd775>(+{4} Poder de Ataque)</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade baseado na Vida perdida do inimigo.
+Skill/Group/ExpansionTip/1001100┃<i></i>
+Skill/Group/ExpansionTip/1001300┃<i>A recuperação de Vida chega ao máximo quando a Vida atual dela é {0}.</i>
+Skill/Group/ExpansionTip/1001500┃<i>Quando Jackie estiver equipada com Espadas Duplas, seu Ataque Básico é mudado para 1 acerto apenas, mas ela causa {1} de dano de Poder de Ataque.\n\nDano de Massacre atinge o máximo quando a Vida atual do alvo é {0}.</i>
+Skill/Group/ExpansionTip/1001510┃<i>O Dano de Massacre atinge o máximo quando a Vida atual do alvo é {0}.</i>
 CharacterState/Group/Name/1001100┃Carnificina Lunática
 CharacterState/Group/Desc/1001100┃O instinto assassino inato de Jackie aumenta consideravelmente seu Poder de Ataque.
 CharacterState/Group/Name/1001110┃Carnificina
@@ -8572,7 +8721,7 @@ CharacterState/Group/Desc/1001400┃Velocidade de Movimento reduzida por um per�
 CharacterState/Group/Name/1001410┃Velocidade de Movimento Diminuída
 CharacterState/Group/Desc/1001410┃Velocidade de Movimento reduzida por um período de tempo.
 CharacterState/Group/Name/1001500┃Massacre da Serra Elétrica
-CharacterState/Group/Desc/1001500┃Jackie liga sua serra elétrica mortal. Sua serra elétrica aumenta sua Velocidade de Ataque.
+CharacterState/Group/Desc/1001500┃Jackie liga sua serra elétrica mortal. Ataques básicos causam dano de habilidade adicional.
 CharacterState/Group/Name/1001510┃Laceração de Motosserras
 CharacterState/Group/Desc/1001510┃A Laceração da Motosserra causa Hemorragia, causando danos contínuos.
 Skill/Group/Name/1002100┃Justiça de Aya
@@ -8581,33 +8730,40 @@ Skill/Group/Name/1002300┃Tiro Estável
 Skill/Group/Name/1002400┃Se Mexendo
 Skill/Group/Name/1002500┃Cartucho Vazio
 Skill/Group/Desc/1002100┃Quando Aya é atacada, ela é envolvida por um campo de proteção que bloqueia <color=white>{1}</color> de dano por {0} segundos.\nToda vez que ela usa seu ataque básico em um inimigo, o Tempo de Recarga da Justiça de Aya diminui em {2} segundos.
-Skill/Group/Desc/1002200┃Aya dispara rapidamente duas vezes na direção do alvo. Seu segundo ataque causa <color=white>{0}</color> de dano.
+Skill/Group/Desc/1002200┃Aya dispara rapidamente duas vezes em seu alvo. A primeira bala causa <color=white>{1}</color> de dano de ataque básico e a segunda bala causa <color=white>{1}</color> de dano de habilidade. A Velocidade de Ataque de Aya aumenta em {3} por {2} segundos.
+Skill/Group/Desc/1002300┃Aya dispara {3} balas na direção selecionada durante {2} segundos. Cada bala causa <color=white>{0}</color> de dano de habilidade.\n\nO número de balas que Aya dispara por {1} de Velocidade de Ataque adicional é aumentada para um máximo de {4} balas.
 Skill/Group/Desc/1002400┃Aya corre rapidamente na direção alvo.
-Skill/Group/Desc/1002500┃Aya dispara para o céu, surpreendendo os inimigos em uma área ao seu redor. Inimigos na área recebem de <color=white>{1}</color> a <color=white>{2}</color> de dano e são atordoados de {0} a {3} segundos, dependendo do tempo de conjuração.
+Skill/Group/Desc/1002500┃Aya dispara um festim para o céu, causando <color=white>{1}</color> de dano de habilidade a inimigos próximos e os deixando com Medo por {0} segundos.
 Skill/Group/Coef/1002100┃Quando Aya é atacada, ela é envolvida por um campo de proteção que bloqueia <color=white>{1}</color><color=#ffd775>(+{2})</color> de dano por {0} segundos.\nToda vez que ela usa seu ataque básico em um inimigo, o Tempo de Recarga da Justiça de Aya diminui em {3} segundos.
-Skill/Group/Coef/1002200┃Aya dispara rapidamente duas vezes na direção do alvo. Seu segundo ataque causa <color=white>{1}</color><color=#ffd775>(+{0})</color><color=#DDA0DD>(+{2})</color> de dano.
+Skill/Group/Coef/1002200┃Aya dispara rapidamente duas vezes em seu alvo. A primeira bala causa <color=#ffd775>{3} Poder de Ataque * (Amplificação de Ataque Básico)</color> de dano de ataque básico e a segunda bala causa <color=white>{1}</color><color=#ffd775>(+{0} Poder de Ataque)</color><color=#DDA0DD>(+{2} Amplificação de Habilidade)</color> de dano de habilidade. A Velocidade de Ataque de Aya aumenta em {5} por {4} segundos.
+Skill/Group/Coef/1002300┃Aya dispara {4} balas na direção selecionada durante {3} segundos. Cada bala causa <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade.\n\nO número de balas que Aya dispara por {6} de Velocidade de Ataque adicional é aumentada para um máximo de {7} balas.
 Skill/Group/Coef/1002400┃Aya corre rapidamente na direção alvo.
-Skill/Group/Coef/1002500┃Aya dispara para o céu, surpreendendo os inimigos em uma área ao seu redor. Inimigos na área recebem de <color=white>{1}</color><color=#ffd775>(+{2})</color><color=#DDA0DD>(+{6})</color> a <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{7})</color> de dano e são atordoados de {0} a {3} segundos, dependendo do tempo de conjuração.
+Skill/Group/Coef/1002500┃Aya dispara um festim para o céu, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color> de dano de habilidade a inimigos próximos e os deixando com Medo por {0} segundos.
+Skill/Group/ExpansionTip/1002200┃<i>Se a velocidade de ataque de Aya for superior a 1, o tempo de conjuração e velocidade do projétil ficam mais rápidos com base na velocidade de ataque.</i>
+Skill/Group/ExpansionTip/1002300┃<i></i>
+Skill/Group/ExpansionTip/1002500┃<i></i>
 CharacterState/Group/Name/1002100┃Justiça de Aya
 CharacterState/Group/Desc/1002100┃Absorve certa quantidade de dano.
+CharacterState/Group/Name/1002200┃Disparo Duplo - Velocidade de Ataque Aumentada
+CharacterState/Group/Desc/1002200┃Velocidade de Ataque aumentada graças ao Disparo Duplo
 CharacterState/Group/Name/1002300┃Tiro Estável
 CharacterState/Group/Desc/1002300┃Dano reduzido por acertos consecutivos de Tiro Estável.
 CharacterState/Group/Name/1002500┃Cartucho Vazio
-CharacterState/Group/Desc/1002500┃Cartucho Vazio - Enraizado
+CharacterState/Group/Desc/1002500┃Cartucho Vazio - Amedrontado
 Skill/Group/Name/1004100┃Corpo Rígido
 Skill/Group/Name/1004200┃Impacto Interrompido
 Skill/Group/Name/1004300┃1vs17
 Skill/Group/Name/1004400┃Golpe Pesado
 Skill/Group/Name/1004500┃Motocicleta do Inferno
 Skill/Group/Desc/1004100┃Se Magnus acerta um inimigo com um ataque básico, ele ganha {3} acúmulos de Corpo Rígido, e se ele acertar um inimigo com uma habilidade, ele ganha {4}. Sua defesa aumenta em <color=#93C9E7>{0}</color> por acúmulo, e acúmula até {1} vezes, Ao máximo de acúmulos, a recuperação de HP por segundo de Magnus aumenta em {2}.
-Skill/Group/Desc/1004200┃Magnus bate violentamente no chão e lança uma pedra em direção à área alvo, causando <color=white>{20}</color> de dano. Os inimigos atingidos pela rocha têm sua Velocidade de Movimento reduzida em {2} por {4} segundos. A Velocidade do Movimento se recupera lentamente ao longo do tempo.
+Skill/Group/Desc/1004200┃Magnus bate violentamente no chão e lança uma pedra em direção à área alvo, causando <color=white>{20}</color> de dano de habilidade. Os inimigos atingidos pela rocha têm sua Velocidade de Movimento reduzida em {2} por {4} segundos. A Velocidade do Movimento se recupera lentamente ao longo do tempo.
 Skill/Group/Desc/1004300┃Magnus balança sua arma em uma área ao seu redor por {0} segundos, causando <color=white>{20}</color><color=aqua>(+{3})</color> de dano {4} vezes.\n\nAtingir um inimigo reduz o tempo de recarga desta habilidade em {6}s. A tenacidade de Magnus aumenta enquanto 1vs17 estiver ativo.
 Skill/Group/Desc/1004400┃Magnus esmaga o inimigo alvo, causando <color=white>{20}</color><color#688A08>(+{21} do HP máximo do alvo)</color> dano de habilidade, empurrando-o {2}m à esquerda para onde Magnus está voltado atualmente.\nSe o alvo colidir com uma parede, ele fica atordoado por {3} segundos.
 Skill/Group/Desc/1004500┃Magnus liga sua motocicleta e comera a dirigir por {0} segundos. A motocicleta lentamente fica mais rápida, e alcança sua velocidade máxima {3} segundos depois. Se a motocicleta bater em um Jogador ou parede, eles recebem <color=white>{20}</color><color=#688A08>(+{21} do HP atual do alvo)</color> dano de habilidade.\n\nReative para pular da motocicleta e lança-lá para frente.
 Skill/Group/Coef/1004100┃Se Magnus acerta um inimigo com um ataque básico, ele ganha {3} acúmulos de Corpo Rígido, e se ele acertar um inimigo com uma habilidade, ele ganha {4}. Sua defesa aumenta em <color=#93C9E7>{0}</color> por acúmulo, e acúmula até {1} vezes, Ao máximo de acúmulos, a recuperação de HP por segundo de Magnus aumenta em {2}.
 Skill/Group/Coef/1004200┃Magnus bate violentamente no chão e lança uma pedra em direção à área alvo, causando {0}<color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#dda0dd>(+{3} Amplificação de Habilidade)</color> dano de habilidade. Os inimigos atingidos pela rocha têm sua Velocidade de Movimento reduzida em {2} por {4} segundos. A Velocidade do Movimento se recupera lentamente ao longo do tempo.
 Skill/Group/Coef/1004300┃Magnus balança sua arma em uma área ao seu redor por {0} segundos, causando <color=white>{1}</color><color=#ffd775>(+{3} Poder de Ataque Adicional)</color><color=#dda0dd>(+{7} Amplificação de Habilidade)</color><color=#93c9e7>(+{2} Defesa)</color> dano de habilidade {4} vezes.\n\nAtingir um inimigo reduz o tempo de recarga desta habilidade em {6} segundos. A tenacidade de Magnus aumenta em {8} enquanto 1vs17 estiver ativo.
-Skill/Group/Coef/1004400┃Magnus esmaga o inimigo alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#dda0dd>(+{4} Amplificação de Habilidade)</color> dano de habilidade, empurrando-o {2}m à esquerda para onde Magnus está voltado atualmente.\nSe o alvo colidir com uma parede, ele fica atordoado por {3} segundos.
+Skill/Group/Coef/1004400┃Magnus esmaga o inimigo alvo, causando <color=white>{0}</color><color=#ffd775>(+{5} Poder de Ataque Adicional)</color><color=#dda0dd>(+{4} Amplificação de Habilidade)</color><color=#688a08>(+{1} da Vida Máxima do alvo)</color> dano de habilidade, empurrando-o {2}m à esquerda para onde Magnus está voltado atualmente.\nSe o alvo colidir com uma parede, ele fica atordoado por {3} segundos.
 Skill/Group/Coef/1004500┃Magnus liga sua motocicleta e comera a dirigir por {0} segundos. A motocicleta lentamente fica mais rápida, e alcança sua velocidade máxima {3} segundos depois. Se a motocicleta bater em um Jogador ou parede, eles recebem <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque Adicional)</color><color=#dda0dd>(+{4} Amplificação de Habilidade)</color><color=#688A08>(+(21 do HP máximo do alvo)</color> dano de habilidade.\n\nReative para pular da motocicleta e lança-lá para frente.
 CharacterState/Group/Name/1004100┃Corpo Rígido
 CharacterState/Group/Desc/1004100┃Toda luta faz o Magnus mais forte. Defesa aumenta com cada acúmulo. Ao atingir acúmulos máximos, recuperação de HP aumenta.
@@ -8631,12 +8787,13 @@ Skill/Group/Desc/1007200┃Hyunwoo pisoteia na área alvo e causa <color=white>{
 Skill/Group/Desc/1007300┃Hyunwoo blefa e ganha <color=white>{20}</color><color=#008000>(+{1})</color>defensa extra por {3} segundos, imunidade a efeitos de impedimento de movimento por {2} segundos, e ativando <color=white>Cão de Briga</color>. Ataques básicos no Hyunwoo durante Blefe garantem {4} acúmulos de <color=white>Cão de Briga</color>.
 Skill/Group/Desc/1007400┃Hyunwoo corre na direção do alvo. Se ele colidir com um inimigo, ele causa <color=white>{20}</color><color=#688A08>(+{0} da vida atual do inimigo)</color> de dano de habilidade e os empurra para longe.\nSe os inimigos são empurrados contra uma parede, ficam atordoados por {1} segundos e sofrem <color=white>{21}</color> de dano de habilidade.
 Skill/Group/Desc/1007500┃Hyunwoo reúne suas forças por {0} segundos e dá um soco poderoso, causando <color=white>{20}</color> - <color=white>21</color> de dano de habilidade, reduzindo a defesa em {4} por {3} segundos e empurrando inimigos ligeiramente para trás.\n\nQuando totalmente carregado, ele empurra os inimigos para fora do alcance e os atordoa por {2} segundos.
-Skill/Group/Coef/1007100┃Hyunwoo recebe {2} acúmulos de Cão de Briga quando ataca um inimigo.\nDepois de juntar {0} acúmulos, Cão de Briga é ativado e seu próximo ataque causa {3}<color=#ffd775>(+{4})</color> de dano de habilidade e restaura seu HP em <color=white>{1}</color>, e reduz seu tempo de recarga em <color=white>Blefe</color> por {5} segundos.
+Skill/Group/Coef/1007100┃Hyunwoo recebe {2} acúmulos de Cão de Briga quando ataca um inimigo.\nDepois de juntar {0} acúmulos, Cão de Briga é ativado e seu próximo ataque causa {3}<color=#ffd775>(+{4})</color> de dano de habilidade e restaura seu HP em {1}, e reduz seu tempo de recarga em <color=white>Blefe</color> por {5} segundos.
 Skill/Group/Coef/1007200┃Hyunwoo pisoteia na área alvo e causa <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color><color=#dda0dd>(+{4} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos e reduz a Velocidade de Movimento deles em {3} por {2} segundos.
 Skill/Group/Coef/1007300┃Hyunwoo blefa e ganha {0}<color=#008000>(+{5})</color>defensa extra por {3} segundos, imunidade a efeitos de impedimento de movimento por {2} segundos, e ativando <color=white>Cão de Briga</color>. Ataques básicos no Hyunwoo durante Blefe garantem {4} acúmulos de <color=white>Cão de Briga</color>.\n\nEfeitos de impedimento de movimento: arremesso ao ar, lentidão, medo, charme, atordoamento, empurrão, supressão, dançando, provocado, estase.
-Skill/Group/Coef/1007400┃Hyunwoo corre na direção do alvo. Se ele colidir com um inimigo, ele causa <color=#ffd775>(+{3} Poder de Ataque)</color><color=#dda0dd>(+{8} Amplificação de Habilidade)</color><color=#688A08>(+{0} da vida atual do inimigo)</color> de dano de habilidade e os empurra para longe.\nSe os inimigos são empurrados contra uma parede, ficam atordoados por {1} segundos e sofrem <color=white>{2}</color><color=#ffd775>(+{7} Poder de Ataque)</color><color=#dda0dd>(+{9} Amplificação de Habilidade)</color> de dano de habilidade.
-Skill/Group/Coef/1007500┃Hyunwoo reúne suas forças por {0} segundos e dá um soco poderoso, causando <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color><color=#dda0dd>(+{12} Amplificação de Habilidade)</color> - <color=white>{13}</color><color=#ffd775>(+{14} Poder de Ataque)</color><color=#dda0dd>(+{15} Amplificação de Habilidade)</color> de dano de habilidade, reduzindo a defesa em {4} por {3} segundos e empurrando inimigos ligeiramente para trás.\n\nQuando totalmente carregado, ele empurra os inimigos para fora do alcance e os atordoa por {2} segundos.
+Skill/Group/Coef/1007400┃Hyunwoo corre na direção do alvo. Se ele colidir com um inimigo, ele causa <color=#ffd775>(+{3} Poder de Ataque Adicional)</color><color=#dda0dd>(+{8} Amplificação de Habilidade)</color><color=#688A08>(+{0} da vida atual do inimigo)</color> de dano de habilidade e os empurra para longe. \n\nSe os inimigos são empurrados contra uma parede, ficam atordoados por {1} segundos e sofrem <color=white>{2}</color><color=#ffd775>(+{7} Poder de Ataque Adicional)</color><color=#dda0dd>(+{9} Amplificação de Habilidade)</color> de dano de habilidade. 
+Skill/Group/Coef/1007500┃Hyunwoo reúne suas forças por {0} segundos e dá um soco poderoso, causando <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque Adicional)</color><color=#dda0dd>(+{12} Amplificação de Habilidade)</color> - <color=white>{13}</color><color=#ffd775>(+{14} Poder de Ataque Adicional)</color><color=#dda0dd>(+{15} Amplificação de Habilidade)</color> de dano de habilidade, reduzindo a defesa em {4} por {3} segundos e empurrando inimigos ligeiramente para trás.\n\nQuando totalmente carregado, ele empurra os inimigos para fora do alcance e os atordoa por {2} segundos.
 Skill/Group/ExpansionTip/1007300┃<i>Efeitos de impedimento de movimento: arremesso ao ar, lentidão, medo, charme, atordoamento, empurrão, supressão, dançando, provocado, estase.</i>
+Skill/Group/ExpansionTip/1007400┃<i>Não pode atravessar paredes.</i>
 Skill/Group/ExpansionTip/1007500┃<i>Até {0} pós-atraso é aplicado dependendo do tempo de carregamento da habilidade.</i>
 CharacterState/Group/Name/1007100┃Cão de Briga
 CharacterState/Group/Desc/1007100┃Causa dano adicional e recupera Vida atacando inimigos.
@@ -8662,17 +8819,17 @@ Skill/Group/Desc/1003200┃Fiora realiza uma estocada na direção-alvo, causand
 Skill/Group/Desc/1003300┃Fiora balança a espada na direção-alvo duas vezes, causando <color=white>{12}</color> e <color=white>{13}</color> de dano de habilidade duas vezes. Fiora recebe {7} de redução de dano enquanto usa essa habilidade.\nAtingir um inimigo com os 2 ataques de Attaque Composée os desarma por {9} segundos.
 Skill/Group/Desc/1003400┃Fiora avança na direção-alvo, causando <color=white>{15}</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2> Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
 Skill/Group/Desc/1003410┃Fiora avança na direção-alvo, causando <color=white>{15}</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2> Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
-Skill/Group/Desc/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
-Skill/Group/Desc/1003510┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
-Skill/Group/Desc/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
+Skill/Group/Desc/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
+Skill/Group/Desc/1003510┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
+Skill/Group/Desc/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
 Skill/Group/Coef/1003100┃Toda vez que Fiora causa dano a um inimigo com uma habilidade, ela aplica um acúmulo de Touché no inimigo. Quando acumulado ao máximo,Touché pode ser ativado com <color=#ffffff>Fente, Marche & Rompre ou Flèche</color> para ativar efeitos adicionais. Aumentar o nível de Touché diminui o número de acúmulos necessários para a ativação.
 Skill/Group/Coef/1003200┃Fiora realiza uma estocada na direção-alvo, causando<color=white>{0}</color><color=#DDA0DD>(+{13} Amplificação de Habilidade)</color> de dano aos inimigos atingidos. A ponta da habilidade causa <color=white>{7}</color><color=#DDA0DD>(+{15} Amplificação de Habilidade)</color> de dano, aplica {4} de lentidão por {6} segundos e aplica 2 acúmulos de Touché.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>A marca explode, causando {11} de dano de habilidade. Atingir um inimigo com a ponta da habilidade causa {5} de lentidão e reduz o tempo de recarga restante de Fente em {10}.
 Skill/Group/Coef/1003300┃Fiora balança a espada na direção-alvo duas vezes, causando <color=white>{3}</color></color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> e <color=white>{5}</color><color=#DDA0DD>(+{11} Amplificação de Habilidade)</color> de dano de habilidade duas vezes. Fiora recebe {7} de redução de dano enquanto usa essa habilidade.
 Skill/Group/Coef/1003400┃Fiora avança na direção-alvo, causando <color=white>{0}</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
 Skill/Group/Coef/1003410┃Fiora avança na direção-alvo, causando <color=white>{0}</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
-Skill/Group/Coef/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
-Skill/Group/Coef/1003510┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
-Skill/Group/Coef/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, empurrando inimigos para trás e causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
+Skill/Group/Coef/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
+Skill/Group/Coef/1003510┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
+Skill/Group/Coef/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
 CharacterState/Group/Name/1003100┃Touché
 CharacterState/Group/Desc/1003100┃Atingir um alvo com um habilidade aplica um acúmulo de Touché
 CharacterState/Group/Name/1003200┃Fente
@@ -8699,14 +8856,14 @@ Skill/Group/Name/1006410┃Cabo do Macaco
 Skill/Group/Name/1006500┃Investida do Lobo
 Skill/Group/Desc/1006100┃Nadine recebe um acúmulo de Selvagem ao matar Animais Selvagens.\nGalinha: {0} / Morcego, Javali: {1} / Cão Selvagem, Lobo: {2} / Urso: {3}
 Skill/Group/Desc/1006200┃Nadine reúne sua força por {0} segundos, reduzindo sua Velocidade de Movimento até atingir {2} e aumentando o alcance e o dano de Na Mosca em {1} vezes. Se ela tiver mais de {8} acúmulos em Selvagem, seu alcance de Na Mosca aumenta até {9} vezes.\nQuando reativa a habilidade, Nadine dispara uma flecha e causa <color=white>{14}</color> ~ <color=white>{15}</color> de dano de habilidade.\nApós {7} segundos, os efeitos terminam e ela recupera {10} de sua Energia perdida.\nO alcance de Na Mosca aumenta com o alcance de ataque dela.
-Skill/Group/Desc/1006300┃Nadine joga uma Armadilha para Esquilos no local alvo. Ative a habilidade novamente para colocar outra armadilha dentro do alcance de reinstalação em {1} segundos.\nOs inimigos pegos nas armadilhas conectadas sofrem <color=white>{14}</color> de dano de habilidade e tem sua velocidade de movimento reduzida em {3}, sua velocidade de ataque reduzia em {10} e Nadine terá visão deles por {4} segundos.\nInimigos desacelerados pela Armadilha de Esquilo apenas recebem <color=white>{15}</color> de dano de habilidade quando são pegos na armadilha de novo.\nAs armadilhas conectadas desaparecem após {5} segundos. Um total de 3 conjuntos pode ser instalado de cada vez.
+Skill/Group/Desc/1006300┃Nadine joga uma Armadilha para Esquilos no local alvo. Ative a habilidade novamente para colocar outra armadilha dentro do alcance de reinstalação em {1} segundos.\nOs inimigos pegos nas armadilhas conectadas sofrem <color=white>{14}</color> de dano de habilidade e tem sua velocidade de movimento reduzida em {3}, sua velocidade de ataque reduzida em {10} e Nadine terá visão deles por {4} segundos.\nInimigos desacelerados pela Armadilha de Esquilo apenas recebem <color=white>{15}</color> de dano de habilidade quando são pegos na armadilha de novo.\nAs armadilhas conectadas desaparecem após {5} segundos. Um total de 3 conjuntos podem ser instalado de cada vez.
 Skill/Group/Desc/1006310┃Nadine pode jogar outra armadilha.
 Skill/Group/Desc/1006400┃Nadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo de Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
 Skill/Group/Desc/1006410┃Nadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo do Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
 Skill/Group/Desc/1006500┃Nadine invoca um Lobo a cada {0} ataques básicos. O Lobo morde o inimigo, causando <color=white>{7}</color> de dano de habilidade, e reduzindo a Velocidade de Ataque em {3} e Velocidade de Movimento em {5}.
 Skill/Group/Coef/1006100┃Nadine recebe um acúmulo de Selvagem ao matar Animais Selvagens.\nGalinha: {0} / Morcego, Javali: {1} / Cão Selvagem, Lobo: {2} / Urso: {3}
 Skill/Group/Coef/1006200┃Nadine reúne sua força por {0} segundos, reduzindo sua Velocidade de Movimento até atingir {2} e aumentando o alcance e o dano de Na Mosca em {1} vezes. Se ela tiver mais de {8} acúmulos em Selvagem, seu alcance de Na Mosca aumenta até {9} vezes.\nQuando reativa a habilidade, Nadine dispara uma flecha e causa <color=white>{3}</color><color=#ffd775>(+{5} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color><color=yellow>(+Dano de Acúmulos de Selvagem)</color> - <color=white>{4}</color><color=#ffd775>(+{6} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{13} Skill Amp)</color><color=yellow>(+W Dano de Acúmulos de Selvagem)</color> de dano de habilidade.\nApós {7} segundos, os efeitos terminam e ela recupera {10} de sua Energia perdida.\nO alcance de Na Mosca aumenta com o alcance de ataque dela.
-Skill/Group/Coef/1006300┃Nadine joga uma Armadilha para Esquilos no local alvo. Ative a habilidade novamente para colocar outra armadilha dentro do alcance de reinstalação em {1} segundos.\nOs inimigos pegos nas armadilhas conectadas sofrem <color=white>{7}</color><color=#ffd775>(+{6} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{11} Amplificação de Habilidade)</color> de dano de habilidade e tem sua velocidade de movimento reduzida em {3}, sua velocidade de ataque reduzia em {10} e Nadine terá visão deles por {4} segundos.\nInimigos desacelerados pela Armadilha de Esquilo apenas recebem <color=white>{9}</color> de dano de habilidade do dano de Armadilha quando são pegos na sua armadilha de novo.\nAs armadilhas conectadas desaparecem após {5} segundos. Um total de 3 conjuntos pode ser instalado de cada vez.
+Skill/Group/Coef/1006300┃Nadine joga uma Armadilha para Esquilos no local alvo. Ative a habilidade novamente para colocar outra armadilha dentro do alcance de reinstalação em {1} segundos.\nOs inimigos pegos nas armadilhas conectadas sofrem <color=white>{7}</color><color=#ffd775>(+{6} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{11} Amplificação de Habilidade)</color> de dano de habilidade e tem sua velocidade de movimento reduzida em {3}, sua velocidade de ataque reduzida em {10} e Nadine terá visão deles por {4} segundos.\nInimigos desacelerados pela Armadilha de Esquilo apenas recebem <color=white>{9}</color> de dano de habilidade do dano de Armadilha quando são pegos na sua armadilha de novo.\nAs armadilhas conectadas desaparecem após {5} segundos. Um total de 3 conjuntos podem ser instalado de cada vez.
 Skill/Group/Coef/1006310┃Nadine pode jogar outra armadilha.
 Skill/Group/Coef/1006400┃Nadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo de Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
 Skill/Group/Coef/1006410┃Nadine conecta um cabo a si mesma e no local de destino. O cabo instalado permanece conectado a Nadine por {1} segundos em uma faixa de {2}m. Quando conectado ao Cabo de Macaco, a Velocidade de Ataque de Nadine aumenta em {3}. Ativando a habilidade, o cabo puxa Nadine para o ponto de ancoragem.
@@ -8735,12 +8892,12 @@ Skill/Group/Name/1005400┃Vayvayastra
 Skill/Group/Name/1005500┃Bhargavastra
 Skill/Group/Desc/1005100┃Se Zahir atingir um inimigo com uma habilidade, um indicador Olho de Azrael é aplicado ao inimigo por {5} segundos, concendendo a Zahir visão do inimigo. A Velocidade de Movimento de Zahir aumenta em {0}, decaindo ao longo de {6} segundos. Se você acertar um inimigo com o indicador com uma habilidade, ele consumirá o indicador de Olho de Azrael, causando <color=white>{8}</color> dano de habilidade e um efeito de Olho de Azrael é aplicado a habilidade usada.
 Skill/Group/Desc/1005200┃Zahir invoca a força de Deus, causando <color=#ffd775><color=white>{9}</color>(+{3})</color> de dano em uma área-alvo após um breve momento.\n<color=#ffffC2>Efeito do Olho de Azrael :</color> Narayanastra causa {6} de dano.
-Skill/Group/Desc/1005300┃<color=green>Passivo:</color> Se Zahir acertar um inimigo com qualquer habilidade, exceto Gandiva, ele ganha {2} Chakrams que flutuam atrás dele por {4} segundos (máx. {3} Chakrams). Ganhar um Chakram atualiza esta duração.\n\nUsar o Gandiva consome um Chakram, jogando-o na direção desejada e causando <color=white>{9}</color> de dano. Dano é reduzido em {10} começando do segundo alvo.\n<color=#ffffC2>Efeito do Olho de Azrael :</color> Atingir um inimigo reduz o tempo de recarga de todas as habilidades, excluindo Gandiva e a Habilidade de Arma, em {7} segundos.
+Skill/Group/Desc/1005300┃<color=green>Passiva:</color> Se Zahir acertar um inimigo com qualquer habilidade, exceto Gandiva, ele ganha {2} Chakrams que flutuam atrás dele por {4} segundos (máx. {3} Chakrams). Ganhar um Chakram atualiza esta duração.\n\nUsar o Gandiva consome um Chakram, jogando-o na direção desejada e causando <color=white>{9}</color> de dano.\n<color=#ffffC2>Efeito do Olho de Azrael :</color> Atingir um inimigo reduz o tempo de recarga de Narayanastra e Vayvayastra em {7} segundos.
 Skill/Group/Desc/1005400┃Zahir invoca um tornado, causando <color=white>{6}</color> dano de habilidade. Inimigos atingidos são Lançados ao Ar por {2} segundos.\n<color=#ffffC2>Efeito de Olho de Azrael :</color> Inimigos são Lançados ao Ar por {4} segundos.
 Skill/Group/Desc/1005500┃Zahir invoca Chakrams do céu para causar dano a inimigos na direção escolhida, causando <color=#ffd775><color=white>{6}</color>(+{2})</color> de dano inicial e <color=#ffd775><color=white>{7}</color>(+{3})</color> de dano a cada segundo. Bhargavastra aplica Olho de Azrael aos inimigos se eles não tiverem um.
 Skill/Group/Coef/1005100┃Se Zahir atingir um inimigo com uma habilidade, um indicador Olho de Azrael é aplicado ao inimigo por {5} segundos, concendendo a Zahir visão do inimigo. A Velocidade de Movimento de Zahir aumenta em {0}, decaindo ao longo de {6} segundos. Acertar um inimigo com o indicador com uma habilidade, ele consumirá o indicador de Olho de Azrael, causando <color=white>{1}</color><color=#DDA0DD>(+{7} Amplificação de Habilidade)</color> dano de habilidade e um efeito de Olho de Azrael é aplicado a habilidade usada.
 Skill/Group/Coef/1005200┃Zahir invoca a força de Deus, causando <color=white>{0}</color><color=#DDA0DD>(+{7} Amplificação de Habilidade</color> dano de habilidade em uma área-alvo.\n<color=#ffffC2>Efeito do Olho de Azrael: </color> Narayanastra causa <color=white>{2}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> dano de habilidade.
-Skill/Group/Coef/1005300┃<color=green>Passivo:</color> Se Zahir acertar um inimigo com qualquer habilidade, exceto Gandiva, ele ganha {2} Chakrams que flutuam atrás dele por {4} segundos (máx. {3} Chakrams). Ganhar um Chakram atualiza esta duração.\n\nUsar o Gandiva consome um Chakram, jogando-o na direção desejada e causando <color=white>{0}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> dano de habilidade. Dano é reduzido em {9} começando do segundo alvo.\n<color=#ffffC2>Efeito de Olho de Azrael :</color> Atingir um inimigo reduz o tempo de recarga de todas as habilidades, excluindo Gandiva, Olho de Azrael e a Habilidade de Arma, em {7} segundos.
+Skill/Group/Coef/1005300┃<color=green>Passiva:</color> Se Zahir acertar um inimigo com qualquer habilidade, exceto Gandiva, ele ganha {2} Chakrams que flutuam atrás dele por {4} segundos (máx. {3} Chakrams). Ganhar um Chakram atualiza esta duração.\n\nUsar o Gandiva consome um Chakram, jogando-o na direção desejada e causando <color=white>{0}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de dano.\n<color=#ffffC2>Efeito do Olho de Azrael :</color> Atingir um inimigo reduz o tempo de recarga de Narayanastra e Vayvayastra em {7} segundos.
 Skill/Group/Coef/1005400┃Zahir invoca um tornado, causando <color=white>{0}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> dano de habilidade. Inimigos atingidos são Lançados ao Ar por {2} segundos.\n<color=#ffffC2>Efeito de Olho de Azrael :</color> Inimigos são Lançados ao Ar por {4} segundos.
 Skill/Group/Coef/1005500┃Zahir invoca Chakrams do céu na direção escolhida, causando <color=white>{0}<color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano inicial e <color=white>{1}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> dano de habilidade a cada segundo. Bhargavastra aplica Olho de Azrael aos inimigos se eles não tiverem um.
 Skill/Group/ExpansionTip/1005300┃<i>Gandiva não pode ser usado sem Chakram ou arma</i>
@@ -8828,6 +8985,8 @@ Skill/Group/Coef/1009400┃Isol rola para frente e se camufla em seus arredores,
 Skill/Group/Coef/1009500┃Isol prepara uma Mina Operacional MOK no chão que detecta inimigos por {0} segundos. A mina explode quando um inimigo entra em seu alcance, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color> de dano de habilidade.\nUm máximo de {4} Minas MOK podem ser mantidas com um máximo de {5} podendo ser instaladas.
 Skill/Group/ExpansionTip/1009100┃<i>Memória Fotográfica: se um inimigo coloca uma armadilha no alcance da visão de Isol, ele se lembra da armadilha, impedindo que ela se torne invisível para ele</i>
 Skill/Group/ExpansionTip/1009200┃<i>Essa habilidade conta como uma das "Armadilhas do Isol Instaladas".</i>
+Skill/Group/ExpansionTip/1009300┃<i>Investida Rebelde pode causar dano a instalações inimigas.</i>
+Skill/Group/ExpansionTip/1009400┃<i>Não pode atravessar paredes.</i>
 Skill/Group/ExpansionTip/1009500┃<i>Essa habilidade conta como uma das "Armadilhas do Isol Instaladas".</i>
 CharacterState/Group/Name/1009100┃Tática de Guerrilha
 CharacterState/Group/Desc/1009100┃Se um inimigo coloca uma armadilha no alcance da visão de Isol, ele se lembra da armadilha, impedindo que ela se torne invisível para ele.\nIsol monta as armadilhas mais rapidamente.
@@ -8892,21 +9051,23 @@ Skill/Group/Name/1011300┃Abotoar
 Skill/Group/Name/1011400┃Investida do Engomadinho
 Skill/Group/Name/1011500┃Golpe de Misericórdia
 Skill/Group/Desc/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color> de dano verdadeiro adicional.\nYuki recupera todas as abotoaduras quando fora de combate.\n\Ativar Abotoar recupera todas suas abotoaduras.
-Skill/Group/Desc/1011200┃O próximo ataque de Yuki causa <color=white>{20}</color> de dano e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
-Skill/Group/Desc/1011300┃<color=green>Passivo:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, sua defesa é aumentada em {2}. Quando Abotoar acaba, ele recebe {4} abotoaduras.
-Skill/Group/Desc/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{20}</color> de dano ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
-Skill/Group/Desc/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{20}</color> de dano inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a {6} da vida máxima do inimigo.
+Skill/Group/Desc/1011200┃O próximo ataque de Yuki causa <color=white>{20}</color> de dano de ataque básico e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
+Skill/Group/Desc/1011300┃<color=green>Passiva:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, o dano recebido é reduzido em {2}. Quando Abotoar acaba, ele recebe {4} abotoaduras.
+Skill/Group/Desc/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{20}</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
+Skill/Group/Desc/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{20}</color> de dano de habilidade inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a {6} da vida máxima do inimigo.
 Skill/Group/Coef/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color> de dano verdadeiro adicional.\nYuki recupera todas as abotoaduras quando fora de combate.\n\Ativar Abotoar recupera todas suas abotoaduras.
-Skill/Group/Coef/1011200┃O próximo ataque de Yuki causa {0}<color=#ffd775>(+{1})</color> de dano e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
-Skill/Group/Coef/1011300┃<color=green>Passivo:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, sua defesa é aumentada em {2}. Quando Abotoar acaba, ele recebe {4} abotoaduras.
-Skill/Group/Coef/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando {0}<color=#ffd775>(+{1})</color> de dano ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
-Skill/Group/Coef/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando {0}<color=#ffd775>(+{1})</color> de dano inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a {6} da vida máxima do inimigo.
+Skill/Group/Coef/1011200┃O próximo ataque de Yuki causa <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque) * (Poder de Ataque Básico)</color> de dano de ataque básico e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
+Skill/Group/Coef/1011300┃<color=green>Passivo:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, o dano recebido é reduzido em {2}. Quando Abotoar acaba, ele recebe {4} abotoaduras.
+Skill/Group/Coef/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
+Skill/Group/Coef/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a {6} da vida máxima do inimigo.
+Skill/Group/ExpansionTip/1011200┃<i>O alcance do Ataque Básico é ligeiramente aumentado enquanto em uso.</i>
+Skill/Group/ExpansionTip/1011400┃<i>Não pode atravessar paredes.</i>
 CharacterState/Group/Name/1011200┃Da Cabeça Aos Pés
 CharacterState/Group/Desc/1011200┃Próximo ataque básico causa dano adicional e reduz a Velocidade de Movimento dos inimigos.
 CharacterState/Group/Name/1011210┃Redução de Velocidade de Movimento
 CharacterState/Group/Desc/1011210┃Velocidade de Movimento reduzida.
-CharacterState/Group/Name/1011310┃Aumento de Defesa
-CharacterState/Group/Desc/1011310┃Defesa aumentada.
+CharacterState/Group/Name/1011310┃Redução do Dano Recebido
+CharacterState/Group/Desc/1011310┃Dano recebido foi reduzido.
 CharacterState/Group/Name/1011400┃Desarmado
 CharacterState/Group/Desc/1011400┃Não pode realizar ataques básicos.
 CharacterState/Group/Name/1011500┃Marca
@@ -8971,8 +9132,10 @@ CharacterState/Group/Name/1013200┃Viajando na Maionese
 CharacterState/Group/Desc/1013200┃Velocidade de movimento reduzida pelo molho.
 CharacterState/Group/Name/1013410┃Refeição Pesada
 CharacterState/Group/Desc/1013410┃Defesa reduzida por uma refeição pesada.
+CharacterState/Group/Name/1013300┃Come Ai! - Defesa Aumentada
+CharacterState/Group/Desc/1013300┃Defesa foi aumentada.
 CharacterState/Group/Name/1013400┃Wok Fora
-CharacterState/Group/Desc/1013400┃Lançado no ar por Wok Fora
+CharacterState/Group/Desc/1013400┃Empurrado e lançado no ar por Wok Fora
 CharacterState/Group/Name/1013500┃Queimando até ficar crocante
 CharacterState/Group/Desc/1013500┃Velocidade de movimento reduzida pelo TEMPERO.
 CharacterState/Group/Name/1013510┃Queimando até ficar crocante
@@ -11248,17 +11411,17 @@ Skill/Group/Coef/1065210┃Marlene solta sua energia, causando <color=white>{0}<
 Skill/Group/Desc/1065300┃Debi ataca com sua espada selvagemente, causando <color=white>{0}</color><color=#688A08>(+{1} HP Máximo do alvo)</color> dano de habilidade e bloqueando projéteis inimigos e ataque básicos em seu alcance.
 Skill/Group/ExpansionTip/1065300┃<i>Tempo de recarga e Tempo de conjuração são reduzidos com base de sua Velocidade de Ataque Adicional.</i>"
 Skill/Group/Coef/1065300┃Debi ataca com sua espada selvagemente, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#688A08>(+{3} HP Máximo do alvo)</color> dano de habilidade e bloqueando projéteis inimigos e ataque básicos em seu alcance.
-Skill/Group/Desc/1065310┃Marlene solta <color=white>{0}</color> raios de energia que giram rápidamente e voam atrás de inimigos próximos. Cada inimigo atingido recebe <color=white>{1}</color> dano de habilidade e são marcados <color=white>Azul e Vermelho</color> a cada {2} hits. Inimigos que já foram acertados pela energia recebem {3} de dano.
+Skill/Group/Desc/1065310┃Marlene solta <color=white>{0}</color> raios de energia que giram rapidamente e voam atrás de inimigos próximos. Cada inimigo atingido recebe <color=white>{1}</color> dano de habilidade e são marcados com <color=white>Vermelho</color> de <color=white>Azul e Vermelho</color> a cada {2} acertos. Inimigos que já foram acertados pela energia recebem {3} de dano.
 Skill/Group/ExpansionTip/1065310┃<i>Aumenta o número de raios de energia atirados até um máximo de {0} com base em sua Velocidade de Ataque Adicional, enquanto reduz o tempo de recarga.</i>
-Skill/Group/Coef/1065310┃Marlene gira rápidamente, soltando <color=white>{0}</color><color=#ADA478>(+{1} Velocidade de Ataque Adicional)</color> raios de energia que voam atrás de inimigos próximos. Inimigos recebem <color=white>{2}</color><color=#ffd775>(+{3} Poder de Ataque Adicional)</color> dano de habilidade e são marcados com <color=white>Azul e Vermelho</color> a cada {5} hits. Inimigos que já foram acertados pela energia recebem {6} de dano
+Skill/Group/Coef/1065310┃Marlene gira rapidamente, soltando <color=white>{0}</color><color=#ADA478>(+{1} Velocidade de Ataque Adicional)</color> raios de energia que voam atrás de inimigos próximos. Inimigos recebem <color=white>{2}</color><color=#ffd775>(+{3} Poder de Ataque Adicional)</color> dano de habilidade e são marcados com <color=white>Vermelho</color> de <color=white>Azul e Vermelho</color> a cada {5} acertos. Inimigos que já foram acertados pela energia recebem {6} de dano.
 Skill/Group/Desc/1065400┃<color=green>Passiva: </color>A velocidade de movimento de Debi e Marlene aumenta em {6} quando elas trocam, e retorna ao normal depois de {7} segundos.\n\nChame Marlene para trocar. Enquanto troca, ela se move para trás e solta energia, causando <color=white>{0}</color> dano de habilidade ao primeiro inimigo que ela acertar. Depois de {1} segundo, esse inimigo e todos inimigos próximos tem sua velocidade de movimento reduzida em {8} por {2} segundos.\n\nDebi fica em sua posição de troca por {3} segundos, e usar <color=white>Corte Crescente</color> faz Debi avançar para frente, causando <color=white>{4}</color> dano de habilidade a inimigos em seu caminho e levantando-os para o ar por {5} segundos.
 Skill/Group/ExpansionTip/1065400┃<i>Essa habilidade é considerada como um ataque básico, e seu efeito é ativado ao acertar um inimigo pela primeira vez.</i>\n<i>Tempo de recarga e Tempo de conjuração são reduzidos com base de sua Velocidade de Ataque Adicional.</i>
 Skill/Group/Coef/1065400┃<color=green>Passiva: </color>A velocidade de movimento de Debi e Marlene aumenta em {10} quando elas trocam, e retorna ao normal depois de {11} segundos.\n\nChame Marlene para trocar. Enquanto troca, ela se move para trás e solta energia, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color> dano de habilidade ao primeiro inimigo que ela acertar. Depois de {3} segundo, esse inimigo e todos inimigos próximos tem sua velocidade de movimento reduzida em {12} por {4} segundos.\n\nDebi fica em sua posição de troca por {5} segundos, e usar <color=white>Corte Crescente</color> faz Debi avançar para frente, causando <color=white>{6}</color><color=#ffd775>(+{7} Poder de Ataque Adicional)</color> dano de habilidade a inimigos em seu caminho e levantando-os para o ar por {9} segundos.
 Skill/Group/Desc/1065410┃<color=green>Passiva: </color>A velocidade de movimento de Debi e Marlene aumenta em {6} quando elas trocam, e retorna ao normal depois de {7} segundos.\n\nChame Debi para trocar. Enquanto troca, Debi avança para frente, causando <color=white>{0}</color> dano de habilidade a inimigos em seu caminho e levantando-os para o ar por {1} segundo.\n\nMarlene fica em sua posição alternativa por {2} segundos, usar <color=white>Corte Forte</color> faz Marlene se mover para trás e soltar energia, causando  <color=white>{3}</color> dano de habilidade ao primeiro inimigo atingido. Depois de {4} segundos, o inimigo atingido e todos inimigos próximos tem sua velocidade de movimento reduzida em {8} por {5} segundos.
 Skill/Group/ExpansionTip/1065410┃<i>Essa habilidade é considerada como um ataque básico, e seu efeito é ativado ao acertar um inimigo pela primeira vez.</i>\n<i>Tempo de recarga e Tempo de conjuração são reduzidos com base de sua Velocidade de Ataque Adicional.</i>
 Skill/Group/Coef/1065410┃<color=green>Passiva: </color>A velocidade de movimento de Debi e Marlene aumenta em {10} quando elas trocam, e retorna ao normal depois de {11} segundos.\n\nChame Debi para trocar. Enquanto troca, Debi avança para frente, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color> dano de habilidade a inimigos em seu caminho e levantando-os para o ar por {3} segundo.\n\nMarlene fica em sua posição alternativa por {4} segundos, usar <color=white>Corte Forte</color> faz Marlene se mover para trás e soltar energia, causando  <color=white>{5}</color><color=#ffd775>(+{6} Poder de Ataque Adicional)</color> dano de habilidade ao primeiro inimigo atingido. Depois de {8} segundos, o inimigo atingido e todos inimigos próximos tem sua velocidade de movimento reduzida em {12} por {9} segundos.
-Skill/Group/Desc/1065500┃Debi e Marlene avançam juntas, causando <color=white>{0}</color> dano de habilidade a todos os inimigos em seu caminho, puxando e atordoando eles por um tempo. \nInimigos também recebem <color=white>{1}</color> dano verdadeiro {2} vezes adicionais, e são marcados com <color=white>Azul e Vermelho</color>. O tempo de recarga de <color=white>Me Proteja, Marlene!</color> e <color=white>Agora, Debi!</color> também é resetado.
-Skill/Group/Coef/1065500┃Debi e Marlene avançam juntas, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color> dano de habilidade a todos os inimigos em seu caminho, puxando e atordoando eles por um tempo. \nInimigos também recebem <color=white>{3}</color><color=#ffd775>(+{4} Poder de Ataque Adicional)</color> de dano verdadeiro {6} vezes adicionais, e são marcados com <color=white>Azul e Vermelho</color>. O tempo de recarga de <color=white>Me Proteja, Marlene!</color> e <color=white>Agora, Debi!</color> também é resetado.
+Skill/Group/Desc/1065500┃Debi e Marlene avançam juntas, causando <color=white>{0}</color> dano de habilidade a todos os inimigos em seu caminho, puxando e atordoando eles por um curto período de tempo. \nInimigos também recebem <color=white>{1}</color> dano verdadeiro {2} vezes adicionais, e são marcados com <color=white>Azul e Vermelho</color>.
+Skill/Group/Coef/1065500┃Debi e Marlene avançam juntas, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color> dano de habilidade a todos os inimigos em seu caminho, puxando e atordoando eles por um curto período de tempo. \nInimigos também recebem <color=white>{3}</color><color=#ffd775>(+{4} Poder de Ataque Adicional)</color> de dano verdadeiro {6} vezes adicionais, e são marcados com <color=white>Azul e Vermelho</color>.
 CharacterState/Group/Name/1065000┃Azul e Vermelho - Debi (Azul)
 CharacterState/Group/Desc/1065000┃Defesa da Debi Aumenta.
 CharacterState/Group/Name/1065010┃Azul e Vermelho - Marlene (Vermelho)
@@ -11289,6 +11452,90 @@ CharacterState/Group/Name/1065510┃Avanço das Gêmeas - Atingido
 CharacterState/Group/Desc/1065510┃Você foi acertado pelo Avança das Gêmeas e não pode se mover.
 CharacterState/Group/Name/1065520┃Avanço das Gêmeas - Empurrado para trás
 CharacterState/Group/Desc/1065520┃Empurrado para trás pelo Avanço das Gêmeas.
+Skill/Group/Name/1066100┃Busca por Relíquias
+Skill/LobbyName/1066100┃Busca por Relíquias
+Skill/Group/Name/1066200┃Papiro de Shamash
+Skill/Group/Name/1066210┃Código de Shamash
+Skill/LobbyName/1066200┃Papiro de Shamash / Código de Shamash
+Skill/Group/Name/1066300┃Cubo da Babilônia
+Skill/Group/Name/1066310┃Dado da Babilônia
+Skill/LobbyName/1066300┃Cubo da Babilônia / Dado da Babilônia
+Skill/Group/Name/1066400┃Lápide de Nimrod
+Skill/Group/Name/1066410┃Portão de Nimrod
+Skill/Group/Name/1066420┃Portão de Nimrod
+Skill/Group/Name/1066430┃Portão de Nimrod
+Skill/LobbyName/1066400┃Portão de Nimrod / Lápide de Nimrod
+Skill/Group/Name/1066500┃Poder Desencadeado
+Skill/LobbyName/1066500┃Poder Desencadeado
+Skill/Group/Desc/1066100┃<color=white>Controle de Escavação</color>: Quando Arda começa a coletar a Árvore da Vida ou o Meteorito, uma zona em volta dele é criada que silencia inimigos. A zona criada existe pela duração da coleta. \n \n<color=white>Análise de Artefato</color>: Se Arda usa uma relíquia que causa dano a um inimigo, ele ganha <color=white>Essência da Antiguidade</color>. Quando a <color=white>Essência da Antiguidade</color> acumula {2} vezes, a lanterna solta uma força mística que recupera a Vida de Arda e de aliados próximos em <color=white>{1}</color>.\n
+Skill/Group/Coef/1066100┃<color=white>Controle de Escavação</color>: Quando Arda começa a coletar a Árvore da Vida ou o Meteorito, uma zona em volta dele é criada que silencia inimigos. A zona criada existe pela duração da coleta. \n \n<color=white>Análise de Artefato</color>: Se Arda usa uma relíquia que causa dano a um inimigo, ele ganha <color=white>Essência da Antiguidade</color>. Quando a <color=white>Essência da Antiguidade</color> acumula {2} vezes, a lanterna solta uma força mística que recupera a Vida de Arda e de aliados próximos em <color=white>{1}</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color>.
+Skill/LobbyDesc/1066100┃<color=white>Controle de Escavação</color>: Quando Arda começa a coletar a Árvore da Vida ou o Meteorito, uma zona em volta dele é criada que silencia inimigos. A zona criada dura pela duração da coleta. \n \n<color=white>Análise de Artefato</color>: Se Arda usa uma relíquia que causa dano a um inimigo, ele ganha <color=white>Essência da Antiguidade</color>. Quando o suficiente de <color=white>Essência da Antiguidade</color> é acumulado, a lanterna solta uma força mística que recupera a Vida de Arda e de aliados próximos.\n
+Skill/Group/ExpansionTip/1066100┃Zonas de Silenciamento criadas pelo Controle de Escavação não silenciam Animais Selvagens e Monstros Chefes.
+Skill/Group/Desc/1066200┃Desdobra o Papiro de Shamash na direção selecionada. Inimigos atingidos pelo Papiro de Shamash recebem <color=white>{0}</color> de dano de habilidade.
+Skill/Group/Coef/1066200┃Desdobra o Papiro de Shamash na direção selecionada. Inimigos atingidos pelo Papiro de Shamash recebem <color=white>{0}</color><color=#DDA0DD>(+{1} Amplificação de Habilidade)</color> de dano de habilidade.
+Skill/Group/Desc/1066210┃Desdobra o Código de Shamash na direção selecionada. O Código de Shamash causa <color=white>{0}</color> de dano de habilidade aos inimigos com quais colide e deixa uma área de feitiço para trás, causando <color=white>{2}</color> de dano de habilidade aos inimigos ao longo de seu caminho após {1} segundos. \n \nGanhe {3} do tempo de recarga de <color=white>Poder Desencadeado</color> de volta quando usar o <color=white>Código de Shamash</color>.
+Skill/Group/Coef/1066210┃Desdobra o Código de Shamash na direção selecionada. O Código de Shamash causa <color=white>{0}</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos com quais colide e deixa uma área de feitiço para trás, causando <color=white>{2}</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos ao longo de seu caminho após {1} segundos. \n \nGanhe {5} do tempo de recarga de <color=white>Poder Desencadeado</color> de volta quando usar o <color=white>Código de Shamash</color>.
+Skill/LobbyDesc/1066200┃Desdobra o Papiro de Shamash na direção selecionada. Inimigos atingidos pelo Papiro de Shamash recebem dano de habilidade. \n \n<color=white>Código de Shamash</color>: Desdobra o Código de Shamash na direção selecionada. O Código de Shamash causa dano aos inimigos com quais colide e deixa uma área de feitiço para trás, causando dano de habilidade aos inimigos ao longo de seu caminho após um curto período de tempo. \n \nGanhe parte do tempo de recarga de <color=white>Poder Desencadeado</color> quando usar o <color=white>Código de Shamash</color>.
+Skill/Group/Desc/1066300┃Invoca o Cubo da Babilônia no local selecionado. O Cubo da Babilônia causa <color=white>{0}</color> de dano de habilidade e causa lentidão a inimigos na sua área em {2} por {1} segundos.  \nApós {3} segundos, o Cubo da Babilônia desaparece, causando <color=white>{4}</color> de dano de habilidade e atordoando inimigos na área por {5} segundos. 
+Skill/Group/Coef/1066300┃Invoca o Cubo da Babilônia no local selecionado. O Cubo da Babilônia causa <color=white>{0}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade e causa lentidão a inimigos na sua área em {2} por {1} segundos.  \nApós {3} segundos, o Cubo da Babilônia desaparece, causando <color=white>{4}</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color> de dano de habilidade e atordoando inimigos na área por {7} segundos.
+Skill/Group/Desc/1066310┃Invoca o Dado da Babilônia no local selecionado, espalhando uma barreira pela sua borda e enraizando inimigos que a tocam por {5} segundos. \nAs barreiras são destruídas no sentido horário por {7} segundos, causando <color=white>{3}</color> de dano de habilidade a inimigos, <color=white>{0}</color> de dano de habilidade a inimigos dentro da área do dado e causando lentidão a eles em {2} por {1} segundos.  \nQuando todas as barreiras são destruídas, o Dado da Babilônia desaparece, causando <color=white>{4}</color> de dano de habilidade e atordoando inimigos dentro da área por {6} segundos.
+Skill/Group/Coef/1066310┃Invoca o Dado da Babilônia no local selecionado, espalhando uma barreira pela sua borda e enraizando inimigos que a tocam por {5} segundos.  \nAs barreiras são destruídas no sentido horário por {7} segundos, causando <color=white>{3}</color><color=#DDA0DD>(+{7} Amplificação de Habilidade)</color> de dano de habilidade a inimigos, <color=white>{0}</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color> de dano de habilidade a inimigos dentro da área do dado e causando lentidão a eles em {2} por {1} segundos.  \nQuando todas as barreiras são destruídas, o Dado da Babilônia desaparece, causando <color=white>{4}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de dano de habilidade e atordoando inimigos dentro da área por {9} segundos.
+Skill/LobbyDesc/1066300┃Invoca o Cubo da Babilônia no local selecionado. O Cubo da Babilônia causa dano de habilidade e lentidão a inimigos na área.  \nApós um curto período, o Cubo da Babilônia desaparece, causando dano de habilidade e atordoando os inimigos na área. \n \n<color=white>Dado da Babilônia</color>: Invoca o Dado da Babilônia no local selecionado, espalhando uma barreira em sua borda e enraizando inimigos que a tocarem. \nAs Barreiras são destruídas no sentido horário causando dano de habilidade a inimigos e dano de habilidade e lentidão a inimigos dentro da área do dado.  \nQuando todas as barreiras são destruídas, o Dado da Babilônia desaparece, causando dano de habilidade e atordoando inimigos por um tempo.
+Skill/Group/Desc/1066400┃Solte a Lápide de Nimrod no local selecionado, causando <color=white>{0}</color> de dano de habilidade e empurrando os inimigos dentro da área.
+Skill/Group/Coef/1066400┃Solte a Lápide de Nimrod no local selecionado, causando <color=white>{0}</color><color=#DDA0DD>(+{1} Amplificação de Habilidade)</color> de dano de habilidade e empurrando os inimigos dentro da área.
+Skill/Group/Desc/1066410┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/Group/Coef/1066410┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/Group/Desc/1066420┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/Group/Coef/1066420┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/Group/Desc/1066430┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/Group/Coef/1066430┃Seu alcance é aumentado em {3}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{0}</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano de habilidade e empurrando os inimigos dentro da área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite aos aliados se moverem {2} vezes por {1} segundos.
+Skill/LobbyDesc/1066400┃Soltar uma Lápide de Nimrod no local selecionado causa dano de habilidade e empurra os inimigos dentro da área. \n \n<color=white>Portão de Nimrod</color>: Seu alcance é aumentado. Soltar uma Lápide de Nimrod no local selecionado e uma na sua localização causa dano de habilidade e empurra os inimigos dentro da área. \nDepois disso, as duas lápides são conectadas por um poder misterioso e se tornam um portal através do qual aliados podem se mover uma vez.
+Skill/Group/Desc/1066500┃Arda decifra a origem oculta da relíquia e restaura suas habilidades originais. Sua próxima habilidade básica é melhorada por {0} segundos. \n \n<color=white>Código de Shamash</color>: Arda desdobra o Código de Shamash na direção selecionada, causando <color=white>{2}</color> de dano de habilidade a inimigos com quais colide e deixa uma área de feitiço para trás. Após {3} segundos, inimigos ao longo de seu caminho recebem  <color=white>{4}</color> de dano de habilidade. \n \nGanhe {1} do tempo de recarga de <color=white>Poder Desencadeado</color> de volta quando usar <color=white>Código de Shamash</color>. \n \n<color=white>Dado da Babilônia</color>: Invoca o Dado da Babilônia no local selecionado, espalhando uma barreira pela sua borda e enraizando inimigos que a tocam por {10} segundos. \nAs barreiras são destruídas no sentido horário por {15} segundos, causando <color=white>{8}</color> de dano de habilidade a inimigos e <color=white>{5}</color> de dano de habilidade a inimigos dentro da área do dado e causando lentidão a eles em {7} por {6} segundos.  \nQuando todas as barreiras são destruídas, o Dado da Babilônia desaparece, causando <color=white>{9}</color> de dano de habilidade e atordoando os inimigos dentro da área por {16} segundos. \n \n<color=white>Portão de Nimrod</color>: Seu alcance é aumentado em {14}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{11}</color> de dano de habilidade e empurrando inimigos na área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite que seus aliados se movam {13} vezes por {12} segundos.
+Skill/Group/Coef/1066500┃Arda decifra a origem oculta da relíquia e restaura suas habilidades originais. Sua próxima habilidade básica é melhorada por {0} segundos. \n \n<color=white>Código de Shamash</color>: Arda desdobra o Código de Shamash na direção selecionada, causando <color=white>{2}</color><color=#DDA0DD>(+{15} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com quais colide e deixa uma área de feitiço para trás. Após {3} segundos, inimigos ao longo de seu caminho recebem <color=white>{4}</color><color=#DDA0DD>(+{16} Amplificação de Habilidade)</color> de dano de habilidade. \n \nGanhe {1} do tempo de recarga de <color=white>Poder Desencadeado</color> de volta quando usar <color=white>Código de Shamash</color>. \n \n<color=white>Dado da Babilônia</color>: Invoca o Dado da Babilônia no local selecionado, espalhando uma barreira pela sua borda e enraizando inimigos que a tocam por {10} segundos. \nAs barreiras são destruídas no sentido horário por {21} segundos, causando <color=white>{8}</color><color=#DDA0DD>(+{18} Amplificação de Habilidade)</color> de dano de habilidade a inimigos e <color=white>{5}</color><color=#DDA0DD>(+{17} Amplificação de Habilidade)</color> de dano de habilidade a inimigos dentro da área do dado e causando lentidão a eles em {7} por {6} segundos.  \nQuando todas as barreiras são destruídas, o Dado da Babilônia desaparece, causando <color=white>{9}</color><color=#DDA0DD>(+{19} Amplificação de Habilidade)</color> de dano de habilidade e atordoando os inimigos dentro da área por {16} segundos. \n \n<color=white>Portão de Nimrod</color>: Seu alcance é aumentado em {14}m. Solte uma Lápide de Nimrod no local selecionado e uma na sua localização causando <color=white>{11}</color><color=#DDA0DD>(+{20} Amplificação de Habilidade)</color> de dano de habilidade e empurrando inimigos na área. \nAs duas lápides são conectadas por um poder místico, criando um portal que permite que seus aliados se movam {13} vezes por {12} segundos.
+Skill/LobbyDesc/1066500┃Arda decifra as origens ocultas na relíquia e restaura as suas habilidades originais. Melhora a próxima habilidade básica que você usar por um certo período de tempo.
+CharacterState/Group/Name/1066100┃Controle de Escavação - Silenciamento
+CharacterState/Group/Name/1066110┃Análise de Artefato
+CharacterState/Group/Name/1066300┃Cubo da Babilônia - Lentidão
+CharacterState/Group/Name/1066310┃Cubo da Babilônia - Atordoado
+CharacterState/Group/Name/1066320┃Dado da Babilônia - Imunidade a Enraizamento
+CharacterState/Group/Name/1066330┃Dado da Babilônia - Enraizado
+CharacterState/Group/Name/1066500┃Poder Desencadeado - Melhoria de Habilidade
+CharacterState/Group/Desc/1066100┃Você entrou na área do Controle de Escavação e está silenciado.
+CharacterState/Group/Desc/1066110┃Arda está coletando a essência de um artefato misterioso. Quando um certo número é coletado, ele solta um poder que cura seus aliados.
+CharacterState/Group/Desc/1066300┃Lentidão devido ao Cubo da Babilônia
+CharacterState/Group/Desc/1066310┃Atordoado devido ao Cubo da Babilônia
+CharacterState/Group/Desc/1066320┃Não enraizado devido ao Dado da Babilônia
+CharacterState/Group/Desc/1066330┃Enraizado devido ao Dado da Babilônia
+CharacterState/Group/Desc/1066500┃Arda decifrou as origens ocultas da relíquia. Melhora a próxima habilidade básica que você usar.
+Skill/Group/Name/1067100┃Lâmina Dilacerante
+Skill/Group/Name/1067200┃Rotação Binária
+Skill/Group/Name/1067300┃Fenda Dimensional
+Skill/Group/Name/1067400┃Salto Quântico
+Skill/Group/Name/1067500┃Golpe Dimensional
+Skill/Group/Desc/1067100┃O próximo ataque básico de Abigail causa <color=white>{20}</color> de dano de habilidade adicional e reduz a defesa do alvo em {4} por {3} segundos. \nQuando acertar um inimigo com uma habilidade, o tempo de recarga de <color=white>Lâmina Dilacerante</color> é reduzido em {0} segundos. \n \nEsse ataque básico também é considerado como uma habilidade.
+Skill/Group/Desc/1067200┃Abigail gira com sua foice. O primeiro giro causa <color=white>{20}</color> de dano de habilidade e o segundo giro causa <color=white>{21}</color> de dano de habilidade. \nAo utilizar Rotação Binária, sua velocidade de movimento aumenta em {1} por {0} segundos.
+Skill/Group/Desc/1067300┃Abigail corta pelo espaço, causando <color=white>{20}</color><color=#688A08>(+{21} da Vida atual do alvo)</color> de dano de habilidade.  \nAcertar um inimigo dá a ela um escudo que absorve <color=white>{22}</color> de dano por {1} segundos. \nAcertar múltiplos inimigos aumenta a defesa dela em {0} para cada inimigo adicional atingido. (Máx {7}) \n \n \nAlvos atingidos pela habilidade são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por {8} segundos.
+Skill/Group/Desc/1067400┃Abigail se teletransporta através de uma fenda dimensional para o local selecionado próximo ao inimigo, causando <color=white>{20}</color> de dano de habilidade. \n \nQuando utilizado em um alvo marcado com <color=white>Coordenadas</color>, o tempo de recarga de <color=white>Salto Quântico</color> é redefinido.
+Skill/Group/Desc/1067500┃Abigail se esconde numa dimensão diferente se torna inalvejável por {0} segundos. \nEla então reaparece, causando <color=white>{20}</color> de dano de habilidade e causando lentidão a inimigos em {2} por {1} segundos. \n \nAlvos atingidos pela habilidade são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por {8} segundos.
+Skill/Group/Coef/1067100┃O próximo ataque básico de Abigail causa <color=white>{1}</color><color=#DDA0DD>(+{2} Amplificação de Habilidade)</color> de dano de habilidade adicional e reduz a defesa do alvo em {4} por {3} segundos.  \nQuando acertar um inimigo com uma habilidade, o tempo de recarga de <color=white>Lâmina Dilacerante</color> é reduzido em {0} segundos.
+Skill/Group/Coef/1067200┃Abigail gira com sua foice. O primeiro giro causa <color=white>{2}</color><color=#DDA0DD>(+{3} Amplificação de Habilidade)</color> de dano de habilidade e o segundo giro causa <color=white>{4}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade.  \nAo utilizar Rotação Binária, sua velocidade de movimento aumenta em {1} por {0} segundos.
+Skill/Group/Coef/1067300┃Abigail corta pelo espaço, causando <color=white>{2}</color><color=#688A08>(+{3} da Vida atual do alvo)</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color><color=#688A08>)</color> de dano de habilidade.  \nAcertar um inimigo dá a ela um escudo que absorve <color=white>{5}</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color> de dano por {1} segundos.  \nAcertar múltiplos inimigos aumenta a defesa dela em {0} para cada inimigo adicional atingido. (Máx {7})  \n \n \nAlvos atingidos pela habilidade são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por {8} segundos.
+Skill/Group/Coef/1067400┃Abigail se teletransporta através de uma fenda dimensional para o local selecionado próximo ao inimigo, causando <color=white>{0}</color><color=#DDA0DD>(+{1} Amplificação de Habilidade)</color> de dano de habilidade.  \n \nQuando utilizado em um alvo marcado com <color=white>Coordenadas</color>, o tempo de recarga de <color=white>Salto Quântico</color> é redefinido.
+Skill/Group/Coef/1067500┃Abigail se esconde numa dimensão diferente se torna inalvejável por {0} segundos.  \nEla então reaparece, causando <color=white>{3}</color><color=#DDA0DD>(+{4} Amplificação de Habilidade)</color> de dano de habilidade e causando lentidão a inimigos em {2} por {1} segundos.  \n \nAlvos atingidos pela habilidade são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por {8} segundos.
+CharacterState/Group/Name/1067110┃Lâmina Dilacerante – Ataque Básico Melhorado
+CharacterState/Group/Desc/1067110┃O próximo ataque básico de Abigail causa dano de habilidade adicional.
+CharacterState/Group/Name/1067120┃Lâmina Dilacerante – Defesa Reduzida
+CharacterState/Group/Desc/1067120┃A Defesa foi reduzida.
+CharacterState/Group/Name/1067200┃Rotação Binária - Velocidade de Movimento Aumentada
+CharacterState/Group/Desc/1067200┃Aumenta a velocidade de movimento e ignora colisões.
+CharacterState/Group/Name/1067300┃Marcadores de Coordenadas
+CharacterState/Group/Desc/1067300┃A localização permanece em coordenadas.
+CharacterState/Group/Name/1067310┃Fenda Dimensional - Escudo
+CharacterState/Group/Desc/1067310┃Ganhe um escudo para bloquear dano.
+CharacterState/Group/Name/1067500┃Golpe Dimensional - Inalvejável
+CharacterState/Group/Desc/1067500┃Abigail está escondida em outra dimensão e não pode ser alvejada.
+CharacterState/Group/Name/1067510┃Golpe Dimensional - Lentidão
+CharacterState/Group/Desc/1067510┃Lentidão
 Skill/Group/Name/3015000┃Disfarçar e Esfaquear
 Skill/Group/Name/3015100┃Disfarçar e Esfaquear
 Skill/Group/Name/3016000┃Aparar
@@ -11821,15 +12068,15 @@ Skill/LobbyDesc/1053200┃Para seus próximos 3 ataques básicos, a velocidade d
 Skill/LobbyDesc/1053300┃Markus quebra o chão na direção selecionada, causando dano de habilidade e arremessando inimigos ao ar.\n\nSe ele acertar um inimigo dentro da <color=white>Fenda Tectônica</color>, todos os inimigos atingidos são lançados para trás dele.
 Skill/LobbyDesc/1053400┃Markus realiza uma investida na direção alvo. Markus para quando ele colidir com um alvo, dando dano de habilidade e os arremessando para trás, atordoando-os.\n\nSe Markus tiver 50 ou mais <color=white>Ousadia</color>, inimigos acertados recebem dano de habilidade e arremessados pra trás ainda mais longe e atordoados.
 Skill/LobbyDesc/1053500┃Markus bate seu machado na direção selecionada, criando uma <color=white>Fenda Tectônica</color> na área. Inimigos acertados tem sua velocidade de movimento reduzida decaindo por um tempo e recebem dano de habilidade. \n\nAlvos que são arremessados ao ar ou para trás dentro da <color=white>Fenda Tectônica</color> recebem o dano de <color=white>Abalados</color> e são <color=white>Abalados</color>. Esse efeito só pode ocorrer uma vez dentro de uma <color=white>Fenda Tectônica</color>.\n\nMarcar inimigos com <color=white>Abalado</color> reduz o tempo de recarga de <color=white>Quebrar aos Pedaços</color>.
-Skill/LobbyDesc/1054100┃A Velocidade de Ataque de Karla é limitada, e sua Amplificação de Habilidade aumenta cada vez que a sua Velocidade de Ataque exceder o limite.  \n \nKarla carrega Prontidão por um certo período de tempo. Ataques básicos não carregados consomem um pouco da sua Prontidão e causam dano de Habilidade. Ataques básicos totalmente carregados consomem todo o Medidor de Recarga, causando dano de habilidade, e reduzindo velocidade de movimento. Todos os arpões não conectados são instalados no chão. \n \nOs ataques básicos de Karla não disparam automaticamente. 
+Skill/LobbyDesc/1054100┃A Velocidade de Ataque de Karla é limitada, e sua Amplificação de Habilidade aumenta cada vez que a sua Velocidade de Ataque exceder o limite.  \n \nKarla carrega Prontidão por um certo período de tempo. Ataques básicos não carregados consomem um pouco da sua Prontidão e causam dano de Habilidade. Ataques básicos totalmente carregados consomem a sua Prontidão por inteira, causando dano de habilidade e reduzindo a Velocidade de Movimento. Todos os arpões não conectados são instalados no chão. \n \nOs ataques básicos de Karla não disparam automaticamente. 
 Skill/LobbyDesc/1054200┃Karla atira um arpão na direção alvo, dando dano de ataque básico. Arpões atirados ficam presos no chão. Karla pode se acorrentar os arpões dela ao mesmo tempo. Correntes quebram quando Karla se move para longe de seus arpões. \n\nO tempo de recarga de Corrente Perfurante é reduzido baseado na Velocidade de Ataque da Karla.
 Skill/LobbyDesc/1054300┃Karla recupera todos seus arpões acorrentados, dando dano de habilidade á inimigos acertados e reduzindo a velocidade de movimento deles. Se essa habilidade acertar um inimigo, Karla recebe  Preparo e o tempo de recarga de Manobra de Agarro é reduzido baseado nos números de inimigos acertados.\n\nSalvamento não é afetado pela Redução de Tempo de Recarga.
 Skill/LobbyDesc/1054400┃Karla se agarra ao arpão alvo e ressalta na direção alvo, dando dano de habilidade a inimigos atingidos. Escolher um arpão desacorrentado com essa habilidade acorrenta ela novamente a o arpão.
 Skill/LobbyDesc/1054500┃Karla lança um arpão gigante na direção alvo dando dano de habilidade, algemando todos os inimigos, e reduzindo a velocidade de movimento deles. Após poucos segundos, inimigos ainda algemados são puxados para o arpão, recebendo dano de habilidade e são atordoados.
-Skill/LobbyDesc/1055100┃O machado de fogo de Estelle causa dano reduzido, mas é muito mais rápido que outros.\n\nA cura para Estelle e aliados próximos é aumentada.\nEstelle é imune ao controle de multidões enquanto levanta seus aliados caídos. Os aliados também são curados adicionalmente ao se recuperarem de serem derrubados.
-Skill/LobbyDesc/1055220┃Estelle pode lançar [Supressão Ⅰ ] e [Supressão Ⅱ ] consequentemente.\n\n[Supressão Ⅰ]\nEstelle fortalece seu machado de fogo, aumentando o alcance de ataque de seu próximo ataque básico e causa dano extra de habilidade ao acertar.\n\n[Supressão Ⅱ]\nSe Estelle acertou SupressãoⅠ, ela fortalece seu escudo, aumentando o alcance de ataque de seu próximo ataque básico e causa dano de habilidade extra ao acertar. O alvo também pode ser atordoado se [Supressão Ⅱ ] foi usado após [Supressão Ⅰ ].
-Skill/LobbyDesc/1055300┃[Primeira resposta]\nEstelle bate no chão com seu escudo, causando dano de habilidade aos inimigos ao alcance, desacelerando-os.\n\n[Extinção de Emergência]\nQuando lançado durante o Hazard Shield, Estelle pode se mover enquanto pulveriza inimigos ao alcance com seu extintor, causando dano de habilidade por segundo e diminuindo seu alcance de visão. O alcance de visão é cada vez mais reduzido cada vez que a habilidade causa dano. Pode ser reconjurado para ser cancelado.
-Skill/LobbyDesc/1055400┃[Escudo de Perigo]\nEstelle espalha seu Hazard Shield e pode se mover durante esse período. Os danos de ataques inimigos são negados primeiro e depois são reduzidos após um certo período de tempo. Aliados próximos a Estelle enquanto seu Hazard Shield está ativo também recebem dano reduzido.\n\n[Entrada Forçada]\nQuando lançado durante o Hazard Shield, Estelle avança e para no impacto, causando dano de habilidade ao alvo e empurrando-o para longe. O alvo pode ser atordoado com base na quantidade de alcance que Estelle disparou. Durante a carga, Estelle é Imparável e destrói instantaneamente objetos como câmeras de vigilância inimigas. Pode ser reconjurado para ser cancelado.
+Skill/LobbyDesc/1055100┃A cura para Estelle e aliados próximos é aumentada. Estelle pode reviver aliados derrubados mais rápido e aliados revividos recuperam Vida adicional.
+Skill/LobbyDesc/1055220┃Estelle fortalece seu escudo, causando dano de habilidade adicional em seu próximo ataque básico e atordoando inimigos.
+Skill/LobbyDesc/1055300┃Estelle bate no chão com seu escudo, causando dano de habilidade e lentidão aos inimigos ao alcance.\nQuando usado Escudo de Perigo, Estelle pode se mover enquanto extingue inimigos ao alcance com seu extintor, causando dano de habilidade e diminuindo a velocidade de inimigos com cada acerto.
+Skill/LobbyDesc/1055400┃[Escudo de Perigo]\nEstelle abre seu Escudo de Perigo e pode se mover durante esse período. Ela bloqueia ataques inimigos por um curto período de tempo e cria uma área de proteção que reduz o dano recebido por aliados.\n\n[Entrada Forçada]\nQuando utilizado durante o Escudo de Perigo, Estelle avança e para no impacto, causando dano de habilidade ao alvo e empurrando-o. Durante a investida, Estelle é Imparável e destrói instantaneamente objetos como câmeras de vigilância inimigas.
 Skill/LobbyDesc/1055500┃[Lançar a si]\nEstelle se protege e solicita um backup de heliponto. O heliponto localizará as coordenadas de Estelle e lançará uma bomba hidráulica no local, causando dano de habilidade e retardando os inimigos atingidos.\n\n[Lançar em Aliado]\nEstelle protege seu aliado e solicita um reforço de heliponto. Depois, Estelle desce do seu Helicoptero e causa dano de habilidade aos inimigos ao alcance e os levanta no ar.
 Skill/LobbyDesc/1056100┃Sempre que Piolo estiver fora de combate, ele ganha um acúmulo de [Bem-Treinado]. Se ele descansar por 2 ou mais segundos, ele ganha acúmulos adicionais quando terminar\n\nSe Piolo conjura [Justiceiro] enquanto [Bem-Treinado], seu próximo ataque básico causa dano de habilidade adicional.
 Skill/LobbyDesc/1056200┃<color=#ffffff>Girocópitero</color>: Piolo gira seu nunchaku na direção escolhida, causando dano de habilidade a cada 0.12 segundos nos inimigos dentro do alcance. Piolo causa  de dano aumentado contra inimigos a cada certa quantidade de tempo. Se Girocópitero foi lançado pela sua duração completa ou causou dano aumentado num numero vezes, Piolo poderá conjurar <color=#ffffff>Chokeslam</color>. \n\n<color=#ffffff>Chokeslam</color>: Piolo bate seu nunchaku na direção escolhida, causando dano de habilidade em inimigos dependendo se estão no interior ou no exterior do indicador. Inimigos atingidos no interior do indicador também sofrem lentidão.
@@ -11846,6 +12093,11 @@ Skill/LobbyDesc/1065200┃<color=white>Debi: </color>Debi bate sua espada para f
 Skill/LobbyDesc/1065300┃<color=white>Debi: </color>Debi ataca com sua espada selvagemente, causando dano de habilidade e bloqueando projéteis inimigos e ataque básicos em seu alcance.\n\n<color=white>Marlene: </color>Marlene gira rápidamente e solta multiplos raios de energia que voam atrás de inimigos próximos. Inimigos recebem dano de habilidade por cada hit <color=white>Azul e Vermelho</color>. Inimigos que já foram acertados pela energia recebem dano reduzido.
 Skill/LobbyDesc/1065400┃<color=green>Passiva: </color>A velocidade de movimento de Debi e Marlene aumenta quando elas trocam.\n\n<color=white>Debi: </color>Chame Marlene para trocar. Enquanto troca, ela se move para trás e solta energia, causando  dano de habilidade ao primeiro inimigo que ela acertar. Depois de um período de tempo, esse inimigo e todos inimigos próximos tem sua velocidade de movimento reduzida.\nDebi fica em sua posição de troca por um curto tempo, e usar <color=white>Corte Crescente</color> faz Debi avançar para frente, causando dano de habilidade a inimigos em seu caminho e levantando-os para o ar.\n\n<color=white>Marlene: </color>Chame Debi para trocar. Enquanto troca, Debi avança para frente, causando dano de habilidade a inimigos em seu caminho e levantando-os para o ar.\nMarlene fica em sua posição alternativa por um tempo curto, usar <color=white>Corte Forte</color> faz Marlene se mover para trás e soltar energia, causando dano de habilidade ao primeiro inimigo atingido. O inimigo atingido e todos inimigos próximos tem sua velocidade de movimento reduzida.
 Skill/LobbyDesc/1065500┃Debi e Marlene avançam juntas, causando dano de habilidade a todos os inimigos em seu caminho, puxando e atordoando eles por um tempo.\nInimigos recebem multiplos hits de dano verdadeiro e são marcados com <color=white>Azul e Vermelho</color>.
+Skill/LobbyDesc/1067100┃O Próximo ataque básico de Abigail causa dano de habilidade adicional e reduz a defesa do alvo. \nQuando acertar um inimigo com uma habilidade, o tempo de recarga de <color=white>Lâmina Dilacerante</color> é reduzido.
+Skill/LobbyDesc/1067200┃Abigail gira com sua foice. O primeiro giro causa dano de habilidade e o segundo giro causa um dano de habilidade mais forte.\nAo utilizar Rotação Binária, sua velocidade de movimento é brevemente aumentada.
+Skill/LobbyDesc/1067300┃Abigail corta pelo espaço, causando dano de habilidade.  \nAo acertar um inimigo ela recebe um escudo que absorve dano por um período de tempo. \n \nAlvos acertados pela habilidade são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por um período de tempo. 
+Skill/LobbyDesc/1067400┃Abigail se teletransporta por uma fenda dimensional para o local selecionado em volta do inimigo, causando dano de habilidade. \n \nQuando utilizado em um alvo marcado com <color=white>Coordenadas</color>, o tempo de recarga de <color=white>Salto Quântico</color> é redefinido.
+Skill/LobbyDesc/1067500┃Abigail se esconde numa dimensão diferente e se torna inalvejável por um tempo. \nEla então reaparece, causando dano de habilidade e lentidão a inimigos. \n \nAlvos atingidos são marcados com <color=white>Coordenadas</color>, garantindo Abigail visão de seus alvos por um período de tempo.
 Skill/LobbyDesc/3001000┃Soca seu alvo e causa dano.
 Skill/LobbyDesc/3002000┃Bloqueia todo o dano por um certo tempo e devolve dano verdadeiro ao inimigo atacante. (Não bloqueia efeitos de ataque.)
 Skill/LobbyDesc/3003000┃Causa dano a todos os inimigos à sua frente e os empurra. Se os inimigos atingirem uma parede ao serem empurrados, ficarão atordoados.
@@ -12853,7 +13105,7 @@ BattleMission/10003010/1┃Mate uma cobaia na área restrita
 BattleMission/10004001/1┃Use 6 consumíveis
 BattleMission/10004002/1┃Cause 50.000 de dano em cobaias inimigas
 BattleMission/10004003/1┃Jogue 10 Partidas Normais/Ranqueadas
-BattleMission/10004004/1┃Mate 10 cobaias
+BattleMission/10004004/1┃Mate 20 cobaias
 BattleMission/10004005/1┃Instale 12 Câmeras Fotográficas
 BattleMission/10004006/1┃Obtenha 3 itens Lendários por meio de Caixas de Suprimento
 BattleMission/10004007/1┃Obtenha 2 itens lendários por meio de caixa de suprimentos
@@ -13684,6 +13936,8 @@ InGameGuide/Nadja/Group/Desc/10123000┃Vejo que você é o vencedor da Zona de 
 오퍼레이터 신규유저 보상 내용┃Se ajustar a ilha não deve ter sido fácil, mas parece que você está pronto agora. \nEmbora eu não possa mais chamá-lo de meu aprendiz...Estou feliz por você. \nObrigada por fazer seu melhor. Eu me diverti muito. \nEu não sei se devo chamar isso de presente ou recompensa, mas aqui...divirta-se! 
 오퍼레이터 기존유저 보상 제목┃Para você, nossa cobaia sênior.
 오퍼레이터 기존유저 보상 내용┃Tenho certeza que você já sabia de tudo, mas ouviu mesmo assim. \nVocê estava tentando ser gentil ou você é apenas muito paciente? \nDe qualquer forma, obrigada por isso. Eu me diverti muito. \nEu não sei se devo chamar isso de presente ou recompensa, mas aqui... divirta-se! 
+신규유저 오퍼레이터 프리셋 변경 안내 내용┃Eu acho que você está um pouco acostumado com o experimento agora. \nEntão acho que não preciso supervisionar você o tempo todo.  \nEstou ansiosa para encontrá-lo novamente!
+기존유저 오퍼레이터 프리셋 변경 안내 내용┃Você não precisa mais de mim para ficar de olho em você.  \nEntão acho que não preciso supervisionar você o tempo todo. \nMantenha o bom trabalho. Você está indo bem!
 신규유저 오퍼레이터 비활성화 안내 내용┃Eu acho que você está um pouco acostumado com o experimento agora. \nEntão acho que não preciso supervisionar você o tempo todo.  \nEstou ansiosa para encontrá-lo novamente!
 기존유저 오퍼레이터 비활성화 안내 내용┃Você não precisa mais de mim para ficar de olho em você.  \nEntão acho que não preciso supervisionar você o tempo todo. \nMantenha o bom trabalho. Você está indo bem!
 ServerError/1000┃Um erro ocorreu. Por favor, reinicie seu jogo.
@@ -13969,7 +14223,7 @@ Trait/StatTooltip/7920403┃Ao morrer, cria uma explosão após {0} segundos com
 Trait/StatTooltip/7920501┃Se você não recebeu dano de combate nos últimos {0} segundos, você recupera {1}% do HP e SP perdidos por segundo.
 Trait/StatTooltip/7920502┃Se você não recebeu dano de combate nos últimos {0} segundos, você recupera {1}% do HP e SP perdidos por segundo.
 Trait/StatTooltip/7920503┃Se você não recebeu dano de combate nos últimos {0} segundos, você recupera {1}% do HP e SP perdidos por segundo.
-Trait/StatTooltip/7920603┃Ao morrer, revive automaticamente com HP e SP totalmente recuperados após 3 segundos. (Tempo de Recarga: {0}s)\nDurante o tempo de recarga, receba {1} de Poder de Ataque e {2} de Amplificação de Habilidade.\n
+Trait/StatTooltip/7920603┃Ao morrer, revive automaticamente com HP e SP totalmente recuperados após 3 segundos. (Tempo de Recarga: {0}s)\nDurante o tempo de recarga, receba 25{1} de Poder de Ataque e 35{2} de Amplificação de Habilidade.
 Trait/StatTooltip/7920701┃Ampliação de Habilidade aumentada em {0}.\nGanhe {1}% de Ampliação de Habilidade adicional para cada Infusão anexada, até 2 cargas.\n\nAumento total de Amplificação de Habilidade: {2}% 
 Trait/StatTooltip/7920702┃Ampliação de Habilidade aumentada em {0}.\nGanhe {1}% de Ampliação de Habilidade adicional para cada Infusão anexada, até 2 cargas.\n\nAumento total de Amplificação de Habilidade: {2}% 
 Trait/StatTooltip/7920703┃Ampliação de Habilidade aumentada em {0}.\nGanhe {1}% de Ampliação de Habilidade adicional para cada Infusão anexada, até 2 cargas.\n\nAumento total de Amplificação de Habilidade: {2}% 
@@ -14274,7 +14528,7 @@ Infusion/Trait/Desc/7920403┃Após morrer, crie uma onda que joga os inimigos a
 Infusion/Trait/Desc/7920501┃Se você não recebeu dano de combate nos ultimos (0) segundos , recupere {1}% de seu HP e MP perdidos por segundos.
 Infusion/Trait/Desc/7920502┃Se você não recebeu dano de combate nos ultimos (0) segundos , recupere {1}% de seu HP e MP perdidos por segundos.
 Infusion/Trait/Desc/7920503┃Se você não recebeu dano de combate nos ultimos (0) segundos , recupere {1}% de seu HP e MP perdidos por segundos.
-Infusion/Trait/Desc/7920603┃Ao morrer, automaticamente reviva com HP e SP cheios após 3 segundos. (Tempo de Recarga: {0}s) \nDurante o tempo de recarga, você ganha {1} de Poder de Ataque e {2} de Amplificação de Habilidade.
+Infusion/Trait/Desc/7920603┃Ao morrer, automaticamente reviva com HP e SP cheios após 3 segundos. (Tempo de Recarga: {0}s) \nDurante o tempo de recarga, você ganha 25{1} de Poder de Ataque e 35{2} de Amplificação de Habilidade.
 Infusion/Trait/Desc/7920701┃Amplificação de Habilidade aumentada por {0}. Ganhe {1}% amplificação de Habilidade adicional para cada Infusão anexado.
 Infusion/Trait/Desc/7920702┃Amplificação de Habilidade aumentada por {0}. Ganhe {1}% amplificação de Habilidade adicional para cada Infusão anexado.
 Infusion/Trait/Desc/7920703┃Amplificação de Habilidade aumentada por {0}. Ganhe {1}% amplificação de Habilidade adicional para cada Infusão anexado.
@@ -14572,11 +14826,15 @@ ItemType/LOOT_TOKEN/Name┃Tokens de Temporada
 Forge/Category/Recent┃Mais Recente
 Forge/Category/All┃Todos
 Forge/Category/CharacterSkin┃Skins
+캐릭터 보유중┃Já Obtido
 Forge/Category/Character┃Personagens
 Forge/Category/Emotion┃Emotes
 Forge/Category/Emblem┃Emblemas
 Forge/Category/Goods┃Outros
 Forge/Category/Token┃Tokens
+Forge/Type/All┃Todos
+Forge/Type/Blueprint┃Designs
+Forge/Type/Complete┃Itens Completos
 BoxRewardInfoWindow/Character┃Personagens
 BoxRewardInfoWindow/Skin┃Skins
 BoxRewardInfoWindow/Emoticon┃Emotes
@@ -14657,6 +14915,7 @@ Goods/Name/3102001┃Caixa DATA de Skin
 Goods/Name/3102002┃Caixa DATA do Centro de Pesquisa
 Goods/Desc/3102001┃Esta caixa contém skins e designs de skin. \nSkins do PASSE ER, Recompensas Ranqueadas ou de Evento Limitados não estão incluídas.\n\nCaixas DATA podem ser compradas de Pacotes de loja ou outros produtos.
 Goods/Desc/3102002┃Esta caixa contém vários itens e designs.\nRecompensas Ranqueadas e Itens de Tempo Limitado não estão incluídos.
+Goods/Desc/3102003┃Você pode obter 1 dos seguintes: Caixa de DATA do Centro de Pesquisa, Chave de DATA, NP, Material Comum ou Tokens.
 Goods/Name/3104009┃Caixa DATA da Temporada 9
 Goods/Desc/3104009┃Está caixa contém todos os itens da Temporada 9. Abra para obter recompensas aleatórias!
 Goods/Name/3202000┃Chave DATA
@@ -15070,6 +15329,12 @@ CharacterStoryHeight/66┃179 cm
 CharacterStoryGender/66┃Masculino
 CharacterStoryTitle/66┃Que a investigação comece!
 CharacterStoryDesc/66┃Um arqueólogo que estava em ascensão. \nArda podia decifrar qualquer conhecimento oculto que os outros não podiam ver graças às suas habilidades de observação aguçadas. \n \nInteressado apenas em suas pesquisas, ele nunca gastou seu tempo em “ter uma boa aparência”. \nEle também não confia rápido nos outros e só acredita no que vê com seus próprios olhos. \nAfinal, as pessoas não são sempre o que parecem. \n \nEmbora sua expressão facial quase nunca mude, isso não significa que ele não tem emoções. Na verdade, ele se esforça para não se deixar levar por elas. \nIncluindo a culpa por ter causado a queda de um mentor respeitado por causa de um mal-entendido.
+CharacterStoryName/67┃Abigail Locke
+CharacterStoryAge/67┃18 Anos
+CharacterStoryHeight/67┃159 cm
+CharacterStoryGender/67┃Feminino
+CharacterStoryTitle/67┃Não pisque. Eu posso desaparecer a qualquer momento.
+CharacterStoryDesc/67┃A única sobrevivente de um acidente horrível. \nEngolida por um espaço onde nada existia e puxada de volta para fora. \nEla perdeu sua família e sua casa, e ficou sozinha. \nDurante suas caminhadas solitárias, houve momentos em que ela considerou em voltar para o vazio. \n \nSe ela se fundisse naquele espaço vazio, ela esqueceria da sua tristeza, sua solidão e desapareceria desse mundo... \n \nMas naquele momento, havia alguém que a segurava. \nEla que mostrou que o acidente não foi sua culpa, que ela ainda tinha motivo para viver. \nE foi por isso que ela pisou na Ilha de Lumia, por causa de uma promessa que fez a ela.
 CharacterPlayTip/1┃Jackie é uma assassina em série que persegue e massacra implacavelmente seus alvos. Ela fica ainda mais poderosa com cada assassinato.
 CharacterPlayTip/2┃Aya é uma personagem de longo alcance com grande estabilidade que pode facilmente acertar inimigos de uma longa distância com suas habilidades.
 CharacterPlayTip/3┃Fiora usa sua agilidade como esgrimista para controlar sua distância dos inimigos, causando dano extra a cada golpe sucessivo.
@@ -15135,6 +15400,8 @@ CharacterPlayTip/62┃Theodore é um franco-atirador com a pontaria perfeita. El
 CharacterPlayTip/63┃Possuída por um fantasma, Ly Anh aterroriza os inimigos conforme a batalha continua. Suas habilidades se tornam mais forte após a possessão, com uma habilidade tendo o poderoso poder de drenar sangue.
 CharacterPlayTip/64┃Vanya voa livremente com suas borboletas, acumulando dano ao longo do tempo com sua mobilidade e viabilidade. Ela pode até adormecer seus inimigos, deixando-os indefesos e abertos para ataques.
 CharacterPlayTip/65┃As gêmeas, Debi e Marlene são mais poderosas que qualquer um quando lutam juntas graças ao seu poder especial. Elas acumulam dano marcando e coordenando uma à outra para dominar a batalha.
+CharacterPlayTip/66┃Arda engaja em batalhas usando seus artefatos. Ele é capaz de descobrir e usar os poderes ocultos nesses artefatos e criar batalhas variáveis de jeitos diferentes.
+CharacterPlayTip/67┃Abigail desafia o conceito de espaço e se teletransporta para o seu alvo. Ela golpeia com sua grande foice para causar dano massivo na área.
 
 
 --xxxxxxxxxx--
