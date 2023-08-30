@@ -383,6 +383,7 @@ ItemGrade/Uncommon┃Ungewöhnlich
 ItemGrade/Rare┃Selten
 ItemGrade/Epic┃Episch
 ItemGrade/Legend┃Legendär
+ItemGrade/Mythic┃Mythisch
 MasteryConditionType/None┃Nichts
 MasteryConditionType/AttackDamage┃Physischer Schaden
 MasteryConditionType/TrueDamage┃Absoluter Schaden
@@ -516,6 +517,8 @@ StatType/SkillAmpRatio/Desc┃Fähigkeitsschaden wird durch Fähigkeitsverstärk
 StatType/SkillAmpRatiotoValue┃Erhöhung durch Fähigkeitsverstärkung(%)
 StatType/SkillAmpByCraftMastery┃Erhöhte Fähigkeitsverstärkung durch Handwerkskönnen
 StatType/SkillAmpRatioByLv┃Fähigkeitsverstärkung pro Level
+StatType/AdaptiveForce┃Angriffskraft oder Fähigkeitsverstärkung
+StatType/AdaptiveForceByLv┃Angriffskraft oder Fähigkeitsverstärkung pro Level
 StatType/AttackPowerByAdaptiveForce┃[Anpassbar] Zusätzliche Angriffskraft
 StatType/SkillAmpByAdaptiveForce┃[Anpassbar] Zusätzliche Fähigkeitsverstärkung
 StatType/PenetrationDefense┃Rüstungsdurchdringung
@@ -937,6 +940,7 @@ ToolTipType/AllyShield┃Verbündete Schildabsorption
 ToolTipType/MarleneSkill02Count┃Anzahl Schüsse
 ToolTipType/DebiSkill03Damage┃Debi Schaden
 ToolTipType/MarleneSkill03Damage┃Marlene Schaden
+ToolTipType/FinalDamage┃Alle Schadenserhöhung
 DayNight/Day┃Tag
 DayNight/Night┃Nacht
 CastingActionType/ToRest┃Bereite aufs Ausruhen vor
@@ -983,6 +987,7 @@ CastingActionType/EscapeHyperloop┃Reise zum verlassenen Dock
 CastingActionType/RetrieveEscapeMaterial┃Sammle Regenerationsmanschetten
 CastingActionType/TeleportToTeamMemberInAreaAttributes┃Operiere Hyperloop zu Verbündeten auf dem Schlachtfeld: <color=#FFBB00>{0}</color>
 CastingActionType/CreditResurrection┃Stelle Testobjekt wieder her
+CastingActionType/ArdaReinforceActive3Interact┃Nimrods Tor
 ItemOptionCategory/AttackPower┃Angriffskraft
 ItemOptionCategory/AttackSpeed┃Angriffstempo
 ItemOptionCategory/CriticalStrike┃Kritischer Treffer
@@ -1503,6 +1508,8 @@ Skin/Desc/1058002┃Harte Arbeit zahlt sich aus.
 Skin/Desc/1045003┃Kannst du ein bisschen weiter weg spielen, damit ich nicht bespritzt werde?
 Skin/Desc/1022004┃Double L hat nie geschlossen. Auch im Sommer!
 Skin/Desc/1052002┃Wirst du mein Schicksal akzeptieren?
+Skin/Desc/1049003┃Hey, du siehst verdächtig aus! Lass uns eine schnelle Inspektion durchführen.
+Skin/Desc/1014003┃Ich will nicht zu einem Hexenzirkel gehen...
 ItemType/EMOTION/Name┃Emoticon
 Emotion_Name_001┃Wütend
 Emotion_Name_002┃Lachen
@@ -2039,6 +2046,19 @@ Emotion_Daniel01_NP┃You Need a Haircut
 Emotion_Daniel02_NP┃Dafür wirst du bezahlen...
 Emotion_Daniel03_NP┃Hey, du!
 Emotion_Daniel04_NP┃Exquisit
+Emotion_Tazia01_NP┃Tazia dreht durch!
+Emotion_Tazia02_NP┃Zertrümmer sie in Stücke!
+Emotion_Tazia03_NP┃Heureka!
+Emotion_Tazia04_NP┃Alles ok Tazia?
+Emotion_Vanya01_NP┃Hiya Vanya!
+Emotion_Vanya02_NP┃Süß und Verdutzt
+Emotion_Vanya03_NP┃Vanyas Hundeblick
+Emotion_Vanya04_NP┃Schlafmütze
+Emotion_AdmiralLeon01_NP┃Unter Beschuss
+Event_S9Champion_ONECIRCLE_3082┃SEASON 9 CHAMPION ONECIRCLE
+Event_S9Champion_GWORK_3083┃SEASON 9 CHAMPION GWORK
+Event_S9Champion_DHANA_3084┃SEASON 9 CHAMPION DHANA
+Event_S9Champion_FANG_3085┃SEASON 9 CHAMPION FANG
 Shop/Desc/Emotion_Hart01_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
 Shop/Desc/Emotion_Hart02_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
 Shop/Desc/Emotion_Hart03_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
@@ -2389,6 +2409,9 @@ EMBLEM_MARK_S8_PLATINUM_SQUAD┃Saison 8 Platin(Squad) Symbol
 EMBLEM_MARK_S8_DIAMOND_SOLO┃Saison 8 Diamant(Solo) Symbol
 EMBLEM_MARK_S8_DIAMOND_DUO┃Saison 8 Diamant(Duo) Symbol
 EMBLEM_MARK_S8_DIAMOND_SQUAD┃Saison 8 Diamant(Squad) Symbol
+EMBLEM_MARK_S8_MITHRIL_SOLO┃Saison 8 Mythril(Solo) Symbol
+EMBLEM_MARK_S8_MITHRIL_DUO┃Saison 8 Mythril(Duo) Symbol
+EMBLEM_MARK_S8_MITHRIL_SQUAD┃Saison 8 Mythril(Squad) Symbol
 EMBLEM_MARK_S8_TITAN_SOLO┃Saison 8 Titan(Solo) Symbol
 EMBLEM_MARK_S8_TITAN_DUO┃Saison 8 Titan(Duo) Symbol
 EMBLEM_MARK_S8_TITAN_SQUAD┃Saison 8 Titan(Squad) Symbol
@@ -2539,6 +2562,12 @@ EMBLEM_MARK_EVENT_103114┃Feuer-Meister
 EMBLEM_MARK_EVENT_103115┃Season 9 Lumia Marathoner
 EMBLEM_MARK_EVENT_103116┃GULP!
 EMBLEM_MARK_EVENT_103117┃Brauche... Kaffee...
+EMBLEM_MARK_EVENT_103118┃Unter Beschuss
+EMBLEM_MARK_EVENT_103122┃SEASON 9 CHAMPION ONECIRCLE
+EMBLEM_MARK_EVENT_103123┃SEASON 9 CHAMPION GWORK
+EMBLEM_MARK_EVENT_103124┃SEASON 9 CHAMPION DHANA
+EMBLEM_MARK_EVENT_103125┃SEASON 9 CHAMPION FANG
+EMBLEM_MARK_EVENT_103126┃9ambler
 EMBLEM_MARK_ERPASS_104001┃Kristallisiertes Eis
 EMBLEM_MARK_ERPASS_104002┃Baum der Geschenke!
 EMBLEM_MARK_ERPASS_104003┃Rote Nase
@@ -2747,6 +2776,9 @@ EMBLEM_BG_S8_PLATINUM_SQUAD┃Season 8 Platin Hintergrund - Squad
 EMBLEM_BG_S8_DIAMOND_SOLO┃Season 8 Diamant Hintergrund - Solo
 EMBLEM_BG_S8_DIAMOND_DUO┃Season 8 Diamant Hintergrund - Duo
 EMBLEM_BG_S8_DIAMOND_SQUAD┃Season 8 Diamant Hintergrund - Squad
+EMBLEM_BG_S8_MITHRIL_SOLO┃Saison 8 Mythril Hintergrund - Solo
+EMBLEM_BG_S8_MITHRIL_DUO┃Saison 8 Mythril Hintergrund - Duo
+EMBLEM_BG_S8_MITHRIL_SQUAD┃Saison 8 Mythril Hintergrund - Squad
 EMBLEM_BG_S8_TITAN_SOLO┃Season 8 Titan Hintergrund - Solo
 EMBLEM_BG_S8_TITAN_DUO┃Season 8 Titan Hintergrund - Duo
 EMBLEM_BG_S8_TITAN_SQUAD┃Season 8 Titan Hintergrund - Squad
@@ -2774,6 +2806,9 @@ EMBLEM_BG_S9_PLATINUM_SQUAD┃Season 9 Platin Hintergrund - Squad
 EMBLEM_BG_S9_DIAMOND_SOLO┃Season 9 Diamant Hintergrund - Solo
 EMBLEM_BG_S9_DIAMOND_DUO┃Season 9 Diamant Hintergrund - Duo
 EMBLEM_BG_S9_DIAMOND_SQUAD┃Season 9 Diamant Hintergrund - Squad
+EMBLEM_BG_S9_MITHRIL_SOLO┃Saison 9 Mythril Hintergrund - Solo
+EMBLEM_BG_S9_MITHRIL_DUO┃Saison 9 Mythril Hintergrund - Duo
+EMBLEM_BG_S9_MITHRIL_SQUAD┃Saison 9 Mythril Hintergrund - Squad
 EMBLEM_BG_S9_TITAN_SOLO┃Season 9 Titan Hintergrund - Solo
 EMBLEM_BG_S9_TITAN_DUO┃Season 9 Titan Hintergrund - Duo
 EMBLEM_BG_S9_TITAN_SQUAD┃Season 9 Titan Hintergrund - Squad
@@ -2971,6 +3006,9 @@ EMBLEM_OUTLINE_S8_PLATINUM_SQUAD┃Saison 8 Platin Rahmen - Squad
 EMBLEM_OUTLINE_S8_DIAMOND_SOLO┃Saison 8 Diamant Rahmen - Solo
 EMBLEM_OUTLINE_S8_DIAMOND_DUO┃Saison 8 Diamant Rahmen - Duo
 EMBLEM_OUTLINE_S8_DIAMOND_SQUAD┃Saison 8 Diamant Rahmen - Squad
+EMBLEM_OUTLINE_S8_MITHRIL_SOLO┃Saison 8 Mythril Rahmen - Solo
+EMBLEM_OUTLINE_S8_MITHRIL_DUO┃Saison 8 Mythril Rahmen - Duo
+EMBLEM_OUTLINE_S8_MITHRIL_SQUAD┃Saison 8 Mythril Rahmen - Squad
 EMBLEM_OUTLINE_S8_TITAN_SOLO┃Saison 8 Titan Rahmen - Solo
 EMBLEM_OUTLINE_S8_TITAN_DUO┃Saison 8 Titan Rahmen - Duo
 EMBLEM_OUTLINE_S8_TITAN_SQUAD┃Saison 8 Titan Rahmen - Squad
@@ -3353,6 +3391,66 @@ Hyunwoo_Emblem_Pack_01┃Hyunwoo Spezialpaket
 LiDailin_Emblem_Pack_01┃Li Dailin Spezialpaket
 Jackie_Emblem_Pack_01┃Jackie Spezialpaket
 Rio_Emblem_Pack_01┃Rio Spezialpaket
+Product/Name/Aya_ComboPack_01┃Aya Skin & Emote Paket\n<size=20>[Nicht erstattbar]</size>
+Product/Name/Hyunwoo_ComboPack_01┃Hyunwoo Skin & Emote Paket\n<size=20>[Nicht erstattbar]</size>
+Product/Name/Adriana_ComboPack_01┃Adriana Skin & Emote Paket\n<size=20>[Nicht erstattbar]</size>
+Product/Name/Luke_ComboPack_01┃Luke Skin & Emote Paket\n<size=20>[Nicht erstattbar]</size>
+Product/Name/LIDailin_NewYear2022_ComboPack_01┃Drachentanz Li Dailin Paket
+Product/Name/Sua_NewYear2022_ComboPack_01┃Wehmütiges Erbe Sua Paket
+Product/Name/Shoichi_NewYear2022_ComboPack_01┃Auftragsmörder Shoichi Paket
+Product/Name/Adela_NewYear2022_ComboPack_01┃Weiße Dame Adela Paket
+Product/Name/Character_Bundle_Pack_01┃Charakter-Erweiterungspaket
+Product/Name/Skin_Bundle_Pack_01┃Skin-Erweiterungspaket
+Product/Name/Character_Skin_Bundle_Pack_01┃Charakter X Skin Paket
+Product/Name/Silvia_4Emote_Pack_01┃Silvia Emoticon Paket
+Product/Name/Cathy_4Emote_Pack_01┃Cathy Emoticon Paket
+Product/Name/Nicky_4Emote_Pack_01┃Nicky Emoticon Paket
+Product/Name/Eleven_4Emote_Pack_01┃Eleven Emoticon Paket
+Product/Name/Rio_Magical_ComboPack_01┃Magical Girl Rio Limitiertes Paket
+Product/Name/Adela_4Emote_Pack_01┃Adela Emoticon Paket
+Product/Name/Camilo_4Emote_Pack_01┃Camilo Emoticon Paket
+Product/Name/Bernice_4Emote_Pack_01┃Bernice Emoticon Paket
+Product/Name/Hart_Summer_Bundle_2022_Pack_01┃Beachside Splash Testobjekt - Hart Paket
+Product/Name/Bianca_Summer_Bundle_2022_Pack_01┃Beachside Splash Testobjekt - Bianca Paket
+Product/Name/Adina_Summer_Bundle_2022_Pack_01┃Beachside Splash Testobjekt - Adina Paket
+Product/Name/Elena_Summer_Bundle_2022_Pack_01┃Beachside Splash Testobjekt - Elena Paket
+Product/Name/Jenny_4Emote_Pack_01┃Jenny Emoticon Paket
+Product/Name/Chloe_4Emote_Pack_01┃Chloe Emoticon Paket
+Product/Name/Tia_4Emote_Pack_01┃Tia Emoticon Paket
+Product/Name/Sua_4Emote_Pack_01┃Sua Emoticon Paket
+Product/Name/Bianca_4Emote_Pack_01┃Bianca 4 Emoticon Paket
+Product/Name/Adina_4Emote_Pack_01┃Adina 4 Emoticon Paket
+Product/Name/Elena_4Emote_Pack_01┃Elena 4 Emoticon Paket
+Product/Name/Markus_4Emote_Pack_01┃Markus 4 Emoticon Paket
+Product/Name/Halloween2022_Skin_RandomBox_01┃Mysteriöse Skin-Daten
+Product/Name/Estelle_4Emote_Pack_01┃Estelle 4 Emoticon Paket
+Product/Name/Mai_4Emote_Pack_01┃Mai 4 Emotion Paket
+Product/Name/BlackFriday2022_Skin_RandomBox_01┃Mysteriöse Daten
+Product/Name/Aiden_4Emote_Pack_01┃Aiden 4 Emoticon Paket
+Product/Name/Eva_4Emote_Pack_01┃Eva 4 Emoticon Paket
+Product/Name/Celine_4Emote_Pack_01┃Celine 4 Emoticon Paket
+Product/Name/Jan_4Emote_Pack_01┃Jan 4 Emoticon Paket
+Product/Name/Rio_4Emote_Pack_01┃Rio 4 Emoticon Paket
+Product/Name/William_4Emote_Pack_01┃Wiliam 4 Emoticon Paket
+Product/Name/Laura_4Emote_Pack_01┃Laura 4 Emoticon Pack
+Product/Name/Zahir_4Emote_Pack_01┃Zahir 4 Emote Pack
+Product/Name/Lenox_4Emote_Pack_01┃Lenox 4 Emote Pack
+Product/Name/Nathapon_4Emote_Pack_01┃Nathapon 4 Emote Pack
+Product/Name/Hyunwoo_Emblem_Pack_01┃Hyunwoo Spezialpaket
+Product/Name/LiDailin_Emblem_Pack_01┃Li Dailin Spezialpaket
+Product/Name/Jackie_Emblem_Pack_01┃Jackie Spezialpaket
+Product/Name/Rio_Emblem_Pack_01┃Rio Spezialpaket
+Product/Name/LOOTBOX_BASIC_SINGLE_01┃Forschungsdaten-Box
+Product/Name/LOOTBOX_SKIN_SINGLE_01┃Skindaten-Box
+Product/Name/RANDOM_KEY_SINGLE_01┃Datenschlüssel
+Product/Name/LOOTBOX_BASICxKEY_SET_01┃Forschungsdaten-Set
+Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Forschungsdaten-Set
+Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Forschungsdaten-Set
+Product/Name/LOOTBOX_SKINxKEY_SET_01┃Skindaten-Set
+Product/Name/LOOTBOX_SKINxKEY_SET_05┃5 Skindaten-Set
+Product/Name/LOOTBOX_SKINxKEY_SET_10┃11 Skindaten-Set
+Product/Name/MONTHLY_PURCHASE_SET_01┃Monatliches Skindaten-Paket
+Product/Name/MONTHLY_PURCHASE_SET_02┃Monatliches Datenschlüssel-Paket
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emoticons\n\n56% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
@@ -3549,6 +3647,7 @@ Item/Name/101406┃Damaszener Stahldorn
 Item/Name/101407┃Maharaja
 Item/Name/101408┃Hochland-Langdolch
 Item/Name/101501┃Sonnenfinsternis
+Item/Name/101502┃Seelenernter
 Item/Name/102101┃Rostiges Schwert
 Item/Name/102201┃Langschwert
 Item/Name/102301┃Katana
@@ -3609,6 +3708,7 @@ Item/Name/105406┃Sichelschwert
 Item/Name/105407┃Der Berserker
 Item/Name/105408┃Axt des Pangu
 Item/Name/105501┃Verlorenes Paradies
+Item/Name/105502┃Scharlachrote Sense
 Item/Name/107101┃Kurzspeer
 Item/Name/107201┃Bambusspeer
 Item/Name/107301┃Zweizack
@@ -3821,7 +3921,7 @@ Item/Name/119501┃Hydra
 Item/Name/119502┃Karmesinrote Liebhaber
 Item/Name/120101┃Nadel
 Item/Name/120201┃Rapier
-Item/Name/120301┃Aprikosenschwert
+Item/Name/120301┃Blüte
 Item/Name/120302┃Schwert der Gerechtigkeit
 Item/Name/120303┃Estoc
 Item/Name/120401┃Durendal Mk2
@@ -3873,6 +3973,7 @@ Item/Name/130403┃Die Mäßigkeit
 Item/Name/130404┃Der Stern
 Item/Name/130405┃Der Mond
 Item/Name/130501┃Die Herrscherin
+Item/Name/130502┃Der Tod
 Item/Name/131101┃Ruf des Cadmus Stufe 2
 Item/Name/131102┃Ruf des Cadmus Stufe 3
 Item/Name/131201┃Viper
@@ -3933,6 +4034,7 @@ Item/Name/201414┃Diadem
 Item/Name/201415┃Helm des Kreuzritters
 Item/Name/201416┃Einklang in voller Blüte
 Item/Name/201417┃Cowboyhut
+Item/Name/201418┃Plasmahelm
 Item/Name/201501┃Elysischer Heiligenschein
 Item/Name/201502┃Gefallener Pegasus
 Item/Name/201503┃Persona
@@ -3941,6 +4043,7 @@ Item/Name/201505┃Racing Helmet
 Item/Name/201506┃Stern der Wildnis
 Item/Name/201507┃Astronautenhelm
 Item/Name/201508┃Zwergenhelm
+Item/Name/201509┃Dämmerung
 Item/Name/202101┃Windbrecher
 Item/Name/202103┃Mönchsrobe
 Item/Name/202104┃Arztkittel
@@ -4035,6 +4138,8 @@ Item/Name/203507┃Tindalos Monarch
 Item/Name/203508┃Schild der Könige
 Item/Name/203509┃Blutreißer
 Item/Name/203510┃Drachenschuppe
+Item/Name/203511┃Dornenkette
+Item/Name/203512┃Albtraumnägel
 Item/Name/204101┃Hausschuhe
 Item/Name/204102┃Laufschuhe
 Item/Name/204103┃Strumpfhose
@@ -4184,7 +4289,7 @@ Item/Name/301305┃Weihwasser
 Item/Name/301213┃Desinfektionsmittel
 Item/Name/301216┃Schoko-Kuchen
 Item/Name/301217┃Akupunkturnadeln
-Item/Name/301218┃`
+Item/Name/301218┃Orchidee
 Item/Name/301222┃Tandoori Hühnchen
 Item/Name/301224┃Speck- und Knoblauchstangen
 Item/Name/301225┃Brötchen
@@ -4248,6 +4353,7 @@ Item/Name/301405┃Lachs
 Item/Name/301406┃Gelbe Süßkartoffel
 Item/Name/301407┃Tiefkühlpizza
 Item/Name/301408┃Schoko-Pfefferminz-Eiscreme
+Item/Name/301501┃Lachssteak
 Item/Name/301502┃Pizza Hawaii
 Item/Name/301503┃Süßkartoffel
 Item/Name/303501┃Belohnung
@@ -4354,7 +4460,9 @@ Item/Help/101404┃Die hohe Frequenze der Klinge schneidet Objekte auf Molekular
 Item/Help/101405┃Bekannt als "Die Antwort" in der irishen Mythologie.\nEs wurde behauptet, dass mit der Klinge am Genick niemand lügen konnte.
 Item/Help/101406┃Nichts weist so viel Stärke und Beständigkeit auf wie Damaszener Stahl.
 Item/Help/101501┃Die Klinge, die den Mond entzwei schnitt.\n(Doch doch, es stimmt wirklich...)
+Item/Help/101502┃Ein Dolch, der das Herz einer Person in Stücke reißt. Damit schickt man jemanden in das Schattenreich.
 Item/Help/102101┃Jeder Schwertkämpfer hat einmal mit diesem gewöhnlichen Langschwert sein Training begonnen.
+Item/Help/102201┃Dieses lange und scharfe Schwert ist perfekt, um Feinde auf einmal zu zerschneiden.
 Item/Help/102301┃Ein Japanisches Schwert genau wie aus den Filmen!
 Item/Help/102401┃Eines der besten Schwerter Japans, geschmiedet von Masamune, dem besten Schwertschmied in der Geschichte Japans.
 Item/Help/102402┃Ein Schwert und Fluch der Tokugawa Familie, Gründer des Tokugawa Shogunat Japans.\nTokugawa Ieyasu's Großvater, Vater, und Sohn\nstarben alle oder wurden durch dieses Schwert verwundet, auch er verlor sein Finger durch dieses Schwert.
@@ -4388,6 +4496,7 @@ Item/Help/105302┃Die Waffe des Sensenmannes. Wenn die Sichel jemanden berührt
 Item/Help/105402┃Vielseitig genutzt seit dem Steinzeitalter, es wurde zum Meisterwerk\nin Kombination mit moderner Technik.
 Item/Help/105403┃Santa Muerte, die mexikanische Göttin des Todes, zerschlägt alle negative\nEnergie mit einer langen Sichel.
 Item/Help/105406┃Hermes gab Perseus, dem Gott der Diebe, dieses Schwert. Er benutzte es\num Medusas Kopf abzuschlagen und um Andromeda vor dem\nSeemonster zu retten.
+Item/Help/105407┃"Die moderne Welt ist ein Juggernaut, ein Motor von enormer Kraft, der bis zu einem gewissen Grad gelenkt werden kann, der aber auch außer Kontrolle zu geraten droht".
 Item/Help/107101┃Ein Speer mit einem kurzen Schaft, cirka halb so lang wie ein Langspeer.\nLearn how to move freely during battle while wielding this weapon\nand attack in a fearless combat posture
 Item/Help/107201┃Ein Speer gefertigt aus Bambus.
 Item/Help/107301┃Die Waffe von Hades, dem grieschischem Gott der Unterwelt.  Ein Speer\n mit zwei Spitzen, einer der Schätze Hades neben Cornucopia\nund Kynee.
@@ -4408,13 +4517,13 @@ Item/Help/108301┃Komm heraus Gold. komm heraus Silber. Eine Waffe benutzt von 
 Item/Help/108401┃Vielleicht fragst du dich warum er eine Waffe ist, dennoch ist\nes oft die Mordwaffe in Mord-Geschichten.
 Item/Help/108402┃Die Fackel zeigt dir den Weg damit dein Leben\nnicht erlischt. Solltest du einen Gegner sehen, zöger nicht\nnach ihm zu schlagen.
 Item/Help/108403┃Gib mir deine müde, arme, exsessive Sehnsucht wieder frei zu\nAtmen, die Leidenden misachten dein überlaufendes Ufer. Gib ihn dies,sagte der\nObdachlose,und warf sie mir entgegen.Ich erhob meine Lampe neben der\ngoldenen Tür.
-Item/Help/108405┃Stab + Stahl = NOCH MÄCHTIGER
+Item/Help/108405┃Eine der Waffen der harten Jungs.\n Du wirst wissen, wie hart sie sind, wenn Sie dir ganz nahe kommen.
 Item/Help/108501┃Eine Giftspritze ist in der Spitze versteckt\nWas es zur perfekten geheim Waffe macht.Nutze sie\n indem du die Spitze "ausversehen" in den Fuß deines Opfers/n an einem regnerischen Tag drückst.
 Item/Help/108502┃Ein Werkzeug von Daode Tianzun, benutzt um die Tiefe in\nFlüssen und Seen zu messen. Der "Dragon King" der östlichen See hiel es lange\n doch Sun WuKong stahl es und benutzte es als Waffe.
 Item/Help/109101┃Es mag aussehen als müsstest du es nur wild umher schwingen, aber\num effektiv zu sein braucht es eine hart erlernte Technik
 Item/Help/109201┃Ein dickes Seil was zum fesseln von Dieben oder\n Räubern benutzt wurde.
 Item/Help/109202┃Eine portable Waffe aus der Epoche der Joseon-Dynastie.\nAuch als \nStahlpeitsche benutzt.
-Item/Help/109402┃Teile für die Herstellung: 1. Eisenpeitsche 2. eine leere Batterie. Stell\n dir einfach einen Metalschläger in Peitschenform vor.
+Item/Help/109402┃Hergestellt durch die Kombination einer Eisenpeitsche und einer Batterie. Man kann es sich als eine Eisenkeule in Form einer Peitsche vorstellen.
 Item/Help/109403┃Unzertrennbarer Faden der den Wolf Fenrir hielt. Hergestellt aus Frauen-\nHaar, einem Stein, dem Geräusch von Katzen-Krallen, atmenden Fischen, Sehnen\n eines Bärs und dem Speichel eines Vogels.
 Item/Help/109404┃Eine Peitsche hergestellt aus einer metalartigen Substanz. Schon der Anblick ist ...\ sieht schmerzhaft aus. Wenn angestellt, fliest Plasma aus speziellen\nStellen, was zu mehreren extra Verletzungen führt.
 Item/Help/110101┃Schlagringe wie diese sind vielerorts illegal.
@@ -4507,33 +4616,36 @@ Item/Help/118401┃Ein Gewehr welches eine goldene Betonung hat. Hohe Genauigkei
 Item/Help/118402┃Benutzt Elektromagnete um ein metal Geschoss schnell zu\nbeschleunigen und abzufeuern.
 Item/Help/118406┃Sobald eine Person stirbt geht die Seele in die Welt nach dem Tod.\nAllerdings, wenn du durch diese Waffe stirbst wird sie noch\nweiter verbannt. Vieleicht zum Nordpol ?
 Item/Help/118501┃In den Sternenhimmel schießen.
+Item/Help/118503┃Ein Scharfschützengewehr mit einer solchen Präzision, dass man die Andromeda-Galaxie sehen kann, wenn man nur darauf zielt. Kann Feinde blitzschnell durchdringen.\nWarte... hast du gerade ein Licht gesehen?
 Item/Help/119101┃Eine Ketten die aus Stahlringen gemacht wird. Weit verbreitet\nals Waffe in der Vergangenheit oder benutzt bei Geistern um\nahnunglose zu verängstigen.
 Item/Help/119201┃Diese Waffe ist nicht für Anfänger geignet. Nur die, die sich Stunden an\ntraining gestellt haben und die Waffen gemeistert haben können\nihr volles Potenzial nutzen.
 Item/Help/119401┃Erfunden von dem einzig wahren Imperator Taizu,\nGründer und erster Kaiser der chinesischen Song Dynastie.
 Item/Help/119403┃Der dreiköpfige Höllenhund, der das Tor zur Unterwelt beschützt.
 Item/Help/120101┃Dieser Gegenstand hat mehrere Funktionen; er ist wirklich nur durch\ndeine Vostellungskraft eingeschränkt.
 Item/Help/120201┃Eine Einhandschwert mit einer langen, dünnen Klinge welche ideal zum\nstechen ist. Es wurde hauptsächlich im 16ten und 17ten\nJahundert genutzt.
-Item/Help/120302┃Historische Schreiben behaupten das Hong Gil-dong, der Robin Hood des\n antiken Korea es benutzte. 
-Item/Help/120303┃Eine mittelgroße Stichwaffe, die in Europa etwa im 14. bis 17. Jahrhundert verwendet wurde. \nEs konnte Kettenhemden mit relativer Leichtigkeit durchbohren.  
+Item/Help/120302┃Historische Schreiben behaupten das Hong Gil-dong, der Robin Hood des\n antiken Korea es benutzte.
+Item/Help/120303┃Eine mittelgroße Stichwaffe, die in Europa etwa im 14. bis 17. Jahrhundert verwendet wurde. \nEs konnte Kettenhemden mit relativer Leichtigkeit durchbohren.
 Item/Help/120401┃Dieses Schwert taucht auf in dem epischen französischem Gedicht\n"Rolandslied". Das original Schwert wurde in mehere\nStücke zerbrochen nach dem Tod Rolands, doch die Fragmente die uralte\nund mysteriöse Kräfte habe wurden in der modernen Version wiedervereint.
 Item/Help/120403┃Das Wort "Volticletto" ist ein Kofferwort aus 'Voltaic' was soviel heißt wie\nelektrischer Strom, und dem Italienischen\n'Stiletto Messer'. Einstiche mit dieser Waffe bringen doppelten Schmerz.
 Item/Help/120404┃Die silber-grauen Metalle die in Meteorstahl gefunden wurden können\nzum herstellen eines Großschwerts das große Kraft\nbesitzt genutzt werden. Jedoch ist die Produktion nicht so leicht.
 Item/Help/120406┃Ein Karmesinrotes Rapier, welches ohne mühe die Knochen deiner Feinde durchtrennt.
-Item/Help/121201┃Einige Leute behaupten, umso teuer es ist, umso besser klingt es. 
+Item/Help/120501┃Dieses Rapier erhielt seinen Namen, weil es den Federn eines Pfaus und dem Auge des Riesen Argos ähnelt. Das Blut seiner Feinde verleiht ihm ein luxuriöseres Gefühl.
+Item/Help/121201┃Einige Leute behaupten, umso teuer es ist, umso besser klingt es.
 Item/Help/121202┃Single Coil Guitarren haben grundsätzlich eine hellere, knuspigere\nAusgabe und klaren Klang.
-Item/Help/121301┃Eine einzigartige Guitare die rot wie ein Rubin ist. 
+Item/Help/121301┃Eine einzigartige Guitare die rot wie ein Rubin ist.
 Item/Help/121302┃Eine Guitare mit Dual-Coil Pickups. Sie hat einen dunkleren Klang.
 Item/Help/121303┃Diese Guitare hat eine ungewöhnliche V Form. Obwohl sie eine\nSensation war nachdem sie veröffentlicht wurde hat sie nie große Pouplarität gefunden.
 Item/Help/121304┃Der meistgenutzte Titel in Kunst ist "Untitled". Gibt es nicht eine\nunausgesprochene Regel, das nicht mit Gitarrennamen zu tun?
 Item/Help/121305┃Sie gehören zusammen zu den berühmtesten Gitarren der Welt.
 Item/Help/121306┃Wenn es in die Fußstapfen dieser Performance fällt, weißt du sie wird\nGroßartig.
-Item/Help/121401┃"Bohemian" wurde erstmals genutzt um die Tschechische Population zu\nbeschreiben, jetzt wiederrum wird es für die Repräsentation des\nfreien Geistes genutzt. 
-Item/Help/121402┃Der Himmel ist vielleicht schön und hell leuchtend, das selbe kann\nman aber nicht über den Weg dorthin behaupten. 
+Item/Help/121401┃Bohemian wurde erstmals genutzt um die Tschechische Population zu\nbeschreiben, jetzt wiederrum wird es für die Repräsentation des\nfreien Geistes genutzt.
+Item/Help/121402┃Der Himmel ist vielleicht schön und hell leuchtend, das selbe kann\nman aber nicht über den Weg dorthin behaupten.
 Item/Help/121403┃Ob Morgen auf dich wartet, oder ob es das Ende ist... diese Insel hat\ndarauf keine Antwort.
 Item/Help/121404┃Die Natur der Menschen niemals zufrieden zu sein ist was Entwicklung\nantreibt. Menschen glauben immer blind and der Fortschritt.
 Item/Help/121405┃Es ist spät am Abend, und du fragst dich welchen Gegenstand du\nherstellen willst, versuche diesen hier!
 Item/Help/121406┃Die Test Objekte auf dieser Insel könnten auch, alles in allem, ein paar\nZiegel in einer Wand sein.
-Item/Help/121407┃Menschen strahlen am hellsten als Teenager. Dieses Licht\nverschwindet aber langsam über Zeit. 
+Item/Help/121407┃Menschen strahlen am hellsten als Teenager. Dieses Licht\nverschwindet aber langsam über Zeit.
+Item/Help/121501┃Wusstest du, dass das traditionelle indische Instrument, die Sitar, auf einem der größten Rock 'n' Roll-Alben verwendet wurde?
 Item/Help/201101┃Wenn du einen billigen nimmst, endet der Kleber vielleicht in deinen\nHaaren oder Ohren. 
 Item/Help/201102┃Nichts geht über eine Kappe wenn die Sonne scheint, es regnet, \noder schneit.
 Item/Help/201104┃Ein alter und schäbiger Helm für die Spritztour mit deinem Bike.  
@@ -4791,6 +4903,7 @@ Item/Help/502206┃Verwende, um im aktuellen Bereich Geräusche zu machen.
 Item/Help/502207┃Eine Telezoomkamera, die in einem 13 m Umkreis alles aufdeckt.
 Item/Help/502208┃Eine Aufklärdrone die das Zielgebiet aufdeckt.
 Item/Help/502209┃Eine Telezoomkamera, die in einem 13 m Umkreis alles aufdeckt. Sie ist mit Zweigen getarnt, die sie mit Ihrer Umgebung verschmelzen lassen.
+Item/Help/502211┃Eine spezielle Kamera mit Weitsicht in die von dir gewünschte Richtung. Erzielt eine 45-Grad-Sicht in die installierte Richtung.
 Item/Help/502302┃Eine Roulettefalle, die einen etwas vertrauten Köder enthält.
 Item/Help/502303┃Pass auf Frankreich, eine neue Guillotine betritt die Bühne. \nDie im Busch versteckte Klinge schneidet jedes gefangene Opfer blitzschnell auf.
 Item/Help/502304┃Wahrscheinlich unter Blättern versteckt oder begraben. Versuche nicht\nauf einen zu treten.
@@ -4798,6 +4911,7 @@ Item/Help/502305┃Sobald du es auslöst, schwingt eine riesige Axt nach unten, 
 Item/Help/502306┃Explodiert bei Berührung. Versuche es, genau dort abzulegen, wo dein\nFeind hingehen wird.
 Item/Help/502307┃Stärker als TNT. Wird häufig in historischen Konflikten verwendet und wird\nimmer noch in modernen Kriegsanwendungen verwendet.
 Item/Help/502308┃Eine EMP-Drohne, die Fallen und elektrische Geräte deaktiviert.\nDiese Drone ist mit einem EMP-Schild ausgestatted. Nach dem EMP-Puls hebt die Drone ab und gewährt Sicht
+Item/Help/502310┃Eine erbarmungslose Falle, die Impulse an die peripheren Nerven des gesamten Körpers sendet, die einem Schauer über den Rücken jagen.
 Item/Help/502401┃Die Mythril-Saite, die aus Mythril gewonnen wird, ist dünner als ein Faden,\naber stärker als Stahl. Seine nahezu Unsichtbarkeit macht\nes noch bedrohlicher.
 Item/Help/502402┃Tonnenweise Nadeln schießen mit einer Explosion heraus. Die Nadeln\nkönnen tief in die Haut eindringen. Das Auftragen von Gift auf die\nNadeln verursacht fast augenblickliche Beschwerden.
 Item/Help/502403┃Eine heiße Falle, die bei Berührung in böse Flammen ausbricht.
@@ -4807,6 +4921,7 @@ Item/Help/502406┃Antipersonenmine, die Eisenpellets in die Tötungszone schie�
 Item/Help/502407┃Beim Betreten schnappen die mit Stacheln versehenen Metallplatten\nnach oben und fangen das Opfer in einem schmerzhaften,\nmit Stacheln versehenen Kokon ein.
 Item/Help/502501┃Eine futuristische Mine, die weit entfernt und sicher vor Gefahren\naktiviert werden kann.
 Item/Help/502502┃Es hat eine unglaublich tödlich und zerstörerische Kraft. Verwende\ndiese Falle als letzten Ausweg.
+Item/Help/999999┃Ein Gerät, das mit längst vergessener Technologie gebaut wurde. Dieses Gerät wird automatisch zerstört, wenn Daten übertragen werden.
 Item/Help/204411┃Was für ein Nashorn trägt Stiefel?
 Item/Help/204412┃Ein futuristisches Exoskelet, welches Schutz und Mobilität bietet.\nWenn man sich einmal drann gewöhnt hat und den verkrampften Griff löst, ist es eigentlich eine entspannte fahrt.
 Item/Help/205210┃Wenn du dein Gesicht damit fächerst, versuche, dich nicht zu kratzen.
@@ -4816,6 +4931,7 @@ Item/Help/103502┃Du wirst es lieben, diese Zwillingsschwerter herzustellen. Se
 Item/Effects/502101┃Klicke um eine <color=lightblue>Überwachungskamera</color>\nzu installieren, welche deine Umgebung aufdeckt.\nSie zeigt dir versteckte Fallen und Gegner in deiner Nähe an.\nMaximal gleichzeitig platzierbare Anzahl: 2
 Item/Effects/502102┃Klicke um eine <color=lightblue>Snare</color> Falle zu installieren.
 Item/Effects/502103┃Klicke um eine <color=lightblue>Mausefalle</color> zu installieren.
+Item/Effects/502105┃Klicke, um ein <color=hellblau>Lagerfeuer-Kit</color> zu installieren.\nEin Lagerfeuer wird an der gewünschten Stelle erzeugt und bleibt dort für 15 Sekunden.
 Item/Effects/502202┃Klicke um eine <color=lightblue>verbesserte Mausefalle</color> zu installieren.
 Item/Effects/502203┃Klicke um ein <color=lightblue>Dynamite-Falle </color>zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert in einem großen Gebiet nach 1.25 Sekunden.
 Item/Effects/502204┃Klicke um eine <color=lightblue>Bambus-Falle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr für 0.5 Sekunden.
@@ -4824,6 +4940,7 @@ Item/Effects/502206┃Klicke um einen <color=lightblue>Krachmacher</color> zu in
 Item/Effects/502207┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung. Zeigt dir versteckte Fallen und Gegner in deiner Nähe. \nMaximal gleichzeitig platzierbare Anzahl: 2
 Item/Effects/502208┃Klicke um die <color=lightblue>Aufklärdrone</color>zu starten im gewähltem gebiet.\nErzeugt Sicht im Zielgebiet für 7 sekunden.
 Item/Effects/502209┃Klicke, um eine <color=lightblue>Wildkamera</color> zu platzieren, die deine Umgebung aufdeckt.\nDeckt versteckte Fallen und Spieler in der Nähe auf,.\nNach 3 Sekunden,\ngeht die Kamera in den Infiltrationsmodus über.\nMaximal gleichzeitig platzierbare Anzahl: 2
+Item/Effects/502211┃Klicke, um eine <color=hellblau>Vergrößerungskamera</color> zu installieren, die dir eine Fernsicht in eine bestimmte Richtung ermöglicht.\nSie zeigt Fallen und Überlebende in der Nähe an.\nDu kannst bis zu 3 Kameras installieren.
 Item/Effects/502212┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung. Zeigt dir versteckte Fallen und Gegner in deiner Nähe. \nMaximal gleichzeitig platzierbare Anzahl: 3
 Item/Effects/502301┃Klicke um eine <color=lightblue>Nagelperlen-Falle</color> zu installieren.
 Item/Effects/502302┃Klicke um eine <color=lightblue>Meiji's Roulette-Falle </color> zu installieren.
@@ -4842,6 +4959,7 @@ Item/Effects/502406┃Klicke um eine <color=lightblue>Claymore</color> zu instal
 Item/Effects/502407┃Klicke um eine <color=lightblue>Bärenfalle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner haben ihre Bewegungsgeschwindigkeit um 40%\nfür 2.5 Sekunden reduziert.
 Item/Effects/502501┃Klicke um eine <color=lightblue>ferngesteuerte Mine</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert in einem großen Gebiet nach 1.4 Sekunden.
 Item/Effects/502502┃Klicke um eine <color=lightblue>intelligente Bombe</color> zu installieren.\n<color=yellow>Falleneffekt:</color> Explodiert nach 1.4 Sekunden in einem großen Gebiet.
+Item/Effects/502310┃Klicke, um eine <color=hellblau>Akupressur-Matte</color> zu installieren.<color=gelb>Falleneffekte:</color> Ziele werden 1,5 Sekunden lang um 40% verlangsamt.
 Item/Effects/302101┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302102┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302103┃stellt AP über 15 Sekunden wieder her.
@@ -4865,6 +4983,7 @@ Item/Effects/302214┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302215┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302216┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302217┃stellt AP über 15 Sekunden wieder her.
+Item/Effects/302218┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302215┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302219┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302220┃stellt AP über 15 Sekunden wieder her.
@@ -4881,100 +5000,102 @@ Item/Effects/302308┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302309┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302310┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302311┃stellt AP über 15 Sekunden wieder her.
-Item/Effects/302312┃stellt AP über 15 Sekunden wieder her. Erhöht Angriffskraft und Fähigkeitsverstärkung während der Erholung.
-Item/Effects/302313┃stellt AP über 15 Sekunden wieder her.
-Item/Effects/302314┃stellt AP über 15 Sekunden wieder her.
-Item/Effects/301102┃stellt LP über 15 Sekunden her.
-Item/Effects/301104┃stellt LP über 15 Sekunden her.
-Item/Effects/301105┃stellt LP über 15 Sekunden her.
-Item/Effects/301106┃stellt LP über 15 Sekunden her.
-Item/Effects/301107┃stellt LP über 15 Sekunden her.
-Item/Effects/301109┃stellt LP über 15 Sekunden her.
-Item/Effects/301110┃stellt LP über 15 Sekunden her.
-Item/Effects/301111┃stellt LP über 15 Sekunden her.
-Item/Effects/301112┃stellt LP über 15 Sekunden her.
-Item/Effects/301113┃stellt LP über 15 Sekunden her.
-Item/Effects/301116┃stellt LP über 15 Sekunden her.
-Item/Effects/301119┃stellt LP über 15 Sekunden her.
-Item/Effects/301120┃stellt LP über 15 Sekunden her.
-Item/Effects/301201┃stellt LP über 15 Sekunden her.
-Item/Effects/301204┃stellt LP über 15 Sekunden her.
-Item/Effects/301205┃stellt LP über 15 Sekunden her.
-Item/Effects/301206┃stellt LP über 15 Sekunden her.
-Item/Effects/301207┃stellt LP über 15 Sekunden her.
-Item/Effects/301209┃stellt LP über 15 Sekunden her.
-Item/Effects/301305┃stellt LP über 15 Sekunden her. Erhöht die Verteidigung während der Erholung um 10.
-Item/Effects/301213┃stellt LP über 15 Sekunden her.
-Item/Effects/301216┃stellt LP über 15 Sekunden her.
-Item/Effects/301217┃stellt LP über 15 Sekunden her.
-Item/Effects/301215┃stellt LP über 15 Sekunden her.
-Item/Effects/301222┃stellt LP über 15 Sekunden her.
-Item/Effects/301224┃stellt LP über 15 Sekunden her.
-Item/Effects/301225┃stellt LP über 15 Sekunden her.
-Item/Effects/301226┃stellt LP über 15 Sekunden her.
-Item/Effects/301227┃stellt LP über 15 Sekunden her.
-Item/Effects/301228┃stellt LP über 15 Sekunden her.
-Item/Effects/301229┃stellt LP über 15 Sekunden her.
-Item/Effects/301230┃stellt LP über 15 Sekunden her.
-Item/Effects/301231┃stellt LP über 15 Sekunden her.
-Item/Effects/301232┃stellt LP über 15 Sekunden her.
-Item/Effects/301233┃stellt LP über 15 Sekunden her.
-Item/Effects/301234┃stellt LP über 15 Sekunden her.
-Item/Effects/301235┃stellt LP über 15 Sekunden her.
-Item/Effects/301236┃stellt LP über 15 Sekunden her.
-Item/Effects/301237┃stellt LP über 15 Sekunden her.
-Item/Effects/301238┃stellt LP über 15 Sekunden her.
-Item/Effects/301239┃stellt LP über 15 Sekunden her.
-Item/Effects/301240┃stellt LP über 15 Sekunden her.
-Item/Effects/301241┃stellt LP über 15 Sekunden her.
-Item/Effects/301242┃stellt LP über 15 Sekunden her.
-Item/Effects/301243┃stellt LP über 15 Sekunden her.
-Item/Effects/301244┃stellt LP über 15 Sekunden her.
-Item/Effects/301245┃stellt LP über 15 Sekunden her.
-Item/Effects/301301┃stellt LP über 15 Sekunden her.
-Item/Effects/301302┃stellt LP über 15 Sekunden her.
-Item/Effects/301303┃stellt LP über 15 Sekunden her.
-Item/Effects/301304┃stellt LP über 15 Sekunden her.
-Item/Effects/301306┃stellt LP über 15 Sekunden her.
-Item/Effects/301307┃stellt LP über 15 Sekunden her.
-Item/Effects/301308┃stellt LP über 15 Sekunden her.
-Item/Effects/301309┃stellt LP über 15 Sekunden her.
-Item/Effects/301311┃stellt LP über 15 Sekunden her.
-Item/Effects/301312┃stellt LP über 15 Sekunden her.
-Item/Effects/301313┃stellt LP über 15 Sekunden her.
-Item/Effects/301314┃stellt LP über 15 Sekunden her.
-Item/Effects/301315┃stellt LP über 15 Sekunden her.
-Item/Effects/301316┃stellt LP über 15 Sekunden her.
-Item/Effects/301317┃stellt LP über 15 Sekunden her.
-Item/Effects/301315┃stellt LP über 15 Sekunden her.
-Item/Effects/301319┃stellt LP über 15 Sekunden her.
-Item/Effects/301322┃stellt LP über 15 Sekunden her.
-Item/Effects/301323┃stellt LP über 15 Sekunden her.
-Item/Effects/301324┃stellt LP über 15 Sekunden her.
-Item/Effects/301325┃stellt LP über 15 Sekunden her.
-Item/Effects/301326┃stellt LP über 15 Sekunden her.
-Item/Effects/301327┃stellt LP über 15 Sekunden her.
-Item/Effects/301328┃stellt LP über 15 Sekunden her.
-Item/Effects/301329┃stellt LP über 15 Sekunden her.
-Item/Effects/301330┃stellt LP über 15 Sekunden her.
-Item/Effects/301401┃stellt LP über 15 Sekunden her.
-Item/Effects/301331┃stellt LP über 15 Sekunden her.
-Item/Effects/301334┃stellt LP über 15 Sekunden her.
-Item/Effects/301335┃stellt LP über 15 Sekunden her.
-Item/Effects/301336┃stellt LP über 15 Sekunden her.
-Item/Effects/301337┃stellt LP über 15 Sekunden her.
-Item/Effects/301338┃stellt LP über 15 Sekunden her.
-Item/Effects/301339┃stellt LP über 15 Sekunden her.
-Item/Effects/301340┃stellt LP über 15 Sekunden her.
-Item/Effects/301346┃stellt LP über 15 Sekunden her.
-Item/Effects/301403┃stellt LP über 15 Sekunden her.
-Item/Effects/301405┃stellt LP über 15 Sekunden her.
-Item/Effects/301406┃stellt LP über 15 Sekunden her.
-Item/Effects/301407┃stellt LP über 15 Sekunden her.
-Item/Effects/301408┃stellt LP über 15 Sekunden her.
-Item/Effects/301501┃stellt LP über 15 Sekunden her.
-Item/Effects/301502┃stellt LP über 15 Sekunden her.
-Item/Effects/301503┃stellt LP über 15 Sekunden her.
+Item/Effects/302312┃Erhalte dauerhaft 2 Angriffskraft und 4 Fähigkeitsverstärkung. Kann bis zu 3 Mal gestapelt werden.
+Item/Effects/302313┃Stellt AP über 15 Sekunden her.
+Item/Effects/302314┃Stellt LP über 15 Sekunden her.
+Item/Effects/301102┃Stellt LP über 15 Sekunden her.
+Item/Effects/301104┃Stellt LP über 15 Sekunden her.
+Item/Effects/301105┃Stellt LP über 15 Sekunden her.
+Item/Effects/301106┃Stellt LP über 15 Sekunden her.
+Item/Effects/301107┃Stellt LP über 15 Sekunden her.
+Item/Effects/301109┃Stellt LP über 15 Sekunden her.
+Item/Effects/301110┃Stellt LP über 15 Sekunden her.
+Item/Effects/301111┃Stellt LP über 15 Sekunden her.
+Item/Effects/301112┃Stellt LP über 15 Sekunden her.
+Item/Effects/301113┃Stellt LP über 15 Sekunden her.
+Item/Effects/301116┃Stellt LP über 15 Sekunden her.
+Item/Effects/301119┃Stellt LP über 15 Sekunden her.
+Item/Effects/301120┃Stellt LP über 15 Sekunden her.
+Item/Effects/301201┃Stellt LP über 15 Sekunden her.
+Item/Effects/301204┃Stellt LP über 15 Sekunden her.
+Item/Effects/301205┃Stellt LP über 15 Sekunden her.
+Item/Effects/301206┃Stellt LP über 15 Sekunden her.
+Item/Effects/301207┃Stellt LP über 15 Sekunden her.
+Item/Effects/301209┃Stellt LP über 15 Sekunden her.
+Item/Effects/301305┃Erhalte dauerhaft 3 Verteidigung. Kann bis zu 3 Mal gestapelt werden.
+Item/Effects/301213┃Stellt LP über 15 Sekunden her.
+Item/Effects/301216┃Stellt LP über 15 Sekunden her.
+Item/Effects/301217┃Stellt LP über 15 Sekunden her.
+Item/Effects/301218┃Stellt LP über 15 Sekunden her.
+Item/Effects/301215┃Stellt LP über 15 Sekunden her.
+Item/Effects/301222┃Stellt LP über 15 Sekunden her.
+Item/Effects/301224┃Stellt LP über 15 Sekunden her.
+Item/Effects/301225┃Stellt LP über 15 Sekunden her.
+Item/Effects/301226┃Stellt LP über 15 Sekunden her.
+Item/Effects/301227┃Stellt LP über 15 Sekunden her.
+Item/Effects/301228┃Stellt LP über 15 Sekunden her.
+Item/Effects/301229┃Stellt LP über 15 Sekunden her.
+Item/Effects/301230┃Stellt LP über 15 Sekunden her.
+Item/Effects/301231┃Stellt LP über 15 Sekunden her.
+Item/Effects/301232┃Stellt LP über 15 Sekunden her.
+Item/Effects/301233┃Stellt LP über 15 Sekunden her.
+Item/Effects/301234┃Stellt LP über 15 Sekunden her.
+Item/Effects/301235┃Stellt LP über 15 Sekunden her.
+Item/Effects/301236┃Stellt LP über 15 Sekunden her.
+Item/Effects/301237┃Stellt LP über 15 Sekunden her.
+Item/Effects/301238┃Stellt LP über 15 Sekunden her.
+Item/Effects/301239┃Stellt LP und AP über 15 Sekunden her.
+Item/Effects/301240┃Stellt LP über 15 Sekunden her.
+Item/Effects/301241┃Stellt LP über 15 Sekunden her.
+Item/Effects/301242┃Stellt LP über 15 Sekunden her.
+Item/Effects/301243┃Stellt LP über 15 Sekunden her.
+Item/Effects/301244┃Stellt LP über 15 Sekunden her.
+Item/Effects/301245┃Stellt LP über 15 Sekunden her.
+Item/Effects/301301┃Stellt LP über 15 Sekunden her.
+Item/Effects/301302┃Stellt LP über 15 Sekunden her.
+Item/Effects/301303┃Stellt LP über 15 Sekunden her.
+Item/Effects/301304┃Stellt LP über 15 Sekunden her.
+Item/Effects/301306┃Stellt LP über 15 Sekunden her.
+Item/Effects/301307┃Stellt LP über 15 Sekunden her.
+Item/Effects/301308┃Stellt LP über 15 Sekunden her.
+Item/Effects/301309┃Stellt LP über 15 Sekunden her.
+Item/Effects/301311┃Stellt LP über 15 Sekunden her.
+Item/Effects/301312┃Stellt LP über 15 Sekunden her.
+Item/Effects/301313┃Stellt LP über 15 Sekunden her.
+Item/Effects/301314┃Stellt LP über 15 Sekunden her.
+Item/Effects/301315┃Stellt LP über 15 Sekunden her.
+Item/Effects/301316┃Stellt LP über 15 Sekunden her.
+Item/Effects/301317┃Stellt LP über 15 Sekunden her.
+Item/Effects/301315┃Stellt LP über 15 Sekunden her.
+Item/Effects/301319┃Stellt LP über 15 Sekunden her.
+Item/Effects/301322┃Stellt LP über 15 Sekunden her.
+Item/Effects/301323┃Stellt LP über 15 Sekunden her.
+Item/Effects/301324┃Stellt LP über 15 Sekunden her.
+Item/Effects/301325┃Stellt LP über 15 Sekunden her.
+Item/Effects/301326┃Stellt LP über 15 Sekunden her.
+Item/Effects/301327┃Stellt LP über 15 Sekunden her.
+Item/Effects/301328┃Stellt LP über 15 Sekunden her.
+Item/Effects/301329┃Erhalte dauerhaft 30 LP. Kann bis zu 3 Mal gestapelt werden.
+Item/Effects/301330┃Stellt LP über 15 Sekunden her.
+Item/Effects/301401┃Stellt LP über 15 Sekunden her.
+Item/Effects/301331┃Stellt LP über 15 Sekunden her.
+Item/Effects/301334┃Stellt LP über 15 Sekunden her.
+Item/Effects/301335┃Stellt LP über 15 Sekunden her.
+Item/Effects/301336┃Stellt LP über 15 Sekunden her.
+Item/Effects/301337┃Stellt LP über 15 Sekunden her.
+Item/Effects/301338┃Stellt LP über 15 Sekunden her.
+Item/Effects/301339┃Stellt LP über 15 Sekunden her.
+Item/Effects/301340┃Stellt LP über 15 Sekunden her.
+Item/Effects/301346┃Stellt LP über 15 Sekunden her.
+Item/Effects/301403┃Stellt LP über 15 Sekunden her.
+Item/Effects/301405┃Stellt LP über 15 Sekunden her.
+Item/Effects/301406┃Stellt LP über 15 Sekunden her.
+Item/Effects/301407┃Stellt LP über 15 Sekunden her.
+Item/Effects/301408┃Stellt LP über 15 Sekunden her.
+Item/Effects/301501┃Stellt LP über 15 Sekunden her.
+Item/Effects/301502┃Stellt LP über 15 Sekunden her.
+Item/Effects/301503┃Stellt LP über 15 Sekunden her.
+Item/Effects/303501┃Erhalte {0} Credit(s).
 Item/Effects/802601┃Erhalte die folgenden Effekte für 600 Sekunden:\n\n- Lauftempo +0.2\n- Omnisyphon +15%
 Item/BulletCapacity/Reload┃<color=yellow>Maximale Munition:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Maximale Munition:</color> {0}
@@ -4982,6 +5103,9 @@ Item/Skills/NotEquip┃<color=red>Der Effekt ist nur ausgerüstet anwendbar.</co
 Item/Skills/UniqueSkill┃<color=red>Der gleiche Effekt ist wird nicht mehrfach angewendet.</color>
 Item/Skills/OnlyCloseCombat┃<color=red>Gilt nicht für Fernkampfwaffen.</color>
 Item/Skills/OnlyRangedCombat┃<color=red>Gilt nicht für Nahkampfwaffen.</color>
+EscapeType/EscapeMaterial┃Dieser Gegenstand wird zur Herstellung eines <color=#D05EFF>Rootkits</color> verwendet.\nHol dir einen <color=#C4C4C4>Systemabschaltcode</color> von einem Kiosk und benutze beide Gegenstände, um ein <color=#D05EFF>Rootkit</color> herzustellen.
+EscapeType/EscapeKey┃Dieser Gegenstand wird zur Herstellung eines <color=#D05EFF>Rootkits</color> verwendet.\nHol dir eine <color=#C4C4C4>Regenerationsmanschette</color>, indem du wilde Tiere jagst oder Luftvorräte plünderst, und benutze beide Gegenstände, um ein <color=#D05EFF>Rootkit</color> herzustellen.
+EscapeType/EscapeQualification┃Du brauchst ein <color=#D05EFF>Rootkit</color>, um mit dem Hyperloop zum Verlassenen Dock zu gelangen.
 보유하지 않은 캐릭터입니다.┃Diesen Charakter hast du noch nicht freigeschaltet.\nSchalte ihn im Laden frei, um diesen Charakter zu spielen.
 매칭 중 캐릭 변경 금지┃Während der Matchsuche kannst du deinen Charakter nicht wechseln.
 로딩 중┃Lädt\n<Mit der X-Taste kannst du dich hinsetzen und ausruhen.>
@@ -8648,7 +8772,7 @@ Skill/Group/Desc/1007200┃Hyunwoo stampft in einem Kegel vor sich, verursacht <
 Skill/Group/Desc/1007300┃Hyunwoo erhöht seine Verteidigung um <color=white>{20}</color> für 3 Sekunden, erhält Immunität gegen bewegungsbeeinträchtigende Effekte für {2} Sekunden und aktiviert <color=white>Nahkampf</color>.\nNormale Angriffe gegen Hyunwoo während Bluff erhöhen seine Steigerungen von <color=white>Nahkampf</color> um {4} pro Angriff.
 Skill/Group/Desc/1007400┃Hyunwoo dasht in die anvisierte Richtung. Wenn er mit einem Feind zusammenstößt, verursacht er <color=white>{20}</color><color=#688A08>(+{0} der aktuellen LP des Feindes)</color> Schaden und stößt ihn zurück. \Werden die Feinde gegen eine Wand gestoßen, werden sie für {1} Sekunden betäubt und erleiden <color=white>{21}</color> Fähigkeitsschaden.
 Skill/Group/Desc/1007500┃Hyunwoo lädt bis zu {0}-lang einen mächtigen Schlag auf, der <color=white>{20}</color> - <color=white>21</color> Schaden verursacht und die Verteidigung von Gegnern {3}-lang um {4} reduziert. Danach stößt er sie leicht zurück.\nWenn die Fähigkeit vollständig geladen wurde, werden Gegner für {2} betäubt.
-Skill/Group/Coef/1007100┃Hyunwoo sammelt {2} Steigerungen von Nahkampf, wenn er einen Gegener angreift.\nNachdem er {0} Steigerungen gesammelt hat, richtet Hyunwoos nächster Angriff {3}<color=#ffd775>(+{4} Angriffskraft)</color> zusätzlichen Fertigkeitsschaden an, heilt ihn um <color=white>{1}</color> Lebenspunkte und reduziert die Abklingzeit von <color=white>Bluff</color> um {5} Sekunden.
+Skill/Group/Coef/1007100┃Hyunwoo sammelt {2} Steigerungen von Nahkampf, wenn er einen Gegener angreift.\nNachdem er {0} Steigerungen gesammelt hat, richtet Hyunwoos nächster Angriff {3}<color=#ffd775>(+{4} Angriffskraft)</color> zusätzlichen Fertigkeitsschaden an, heilt ihn um {1} Lebenspunkte und reduziert die Abklingzeit von <color=white>Bluff</color> um {5} Sekunden.
 Skill/Group/Coef/1007200┃Hyunwoo stampft in einem Kegel vor sich, verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#dda0dd>(+{4} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Gegnern und verringert deren Lauftempo um {3} für {2} Sekunden.
 Skill/Group/Coef/1007300┃Hyunwoo erhöht seine Verteidigung um {0}<color=#008000>(+{5})</color> für 3 Sekunden, erhält Immunität gegen bewegungsbeeinträchtigende Effekte für {2} Sekunden und aktiviert <color=white>Nahkampf</color>.\nNormale Angriffe gegen Hyunwoo während Bluff erhöhen seine Steigerungen von <color=white>Nahkampf</color> um {4} pro Angriff.\n\n\nBewegunsbeeinträchtigende Effekte: In der Luft, Verlangsamt, Angst, Bezaubert, Betäubt, Zurückgestoßen, Unterdrückt, Tanzen, Verspottet, Stase.
 Skill/Group/Coef/1007400┃Hyunwoo dasht in die anvisierte Richtung. Wenn er mit einem Feind zusammenstößt, verursacht er <color=#ffd775>(+{3} Angriffskraft)</color><color=#dda0dd>(+{8} Fähigkeitsverstärkung)</color><color=#688A08>(+{0} der aktuellen LP des Feindes)</color> Schaden und stößt ihn zurück. \Werden die Feinde gegen eine Wand gestoßen, werden sie für {1} Sekunden betäubt und erleiden <color=white>{2}</color><color=#ffd775>(+{7} Angriffskraft)</color><color=#dda0dd>(+{9} Fähigkeitsverstärkung)</color> Fähigkeitsschaden.
@@ -11329,7 +11453,7 @@ BattleMission/10003010/1┃Töte ein Testobjekt in einem geschlossenen Gebiet.
 BattleMission/10004001/1┃Benutze 6 verbrauchbare Gegenstände.
 BattleMission/10004002/1┃Richte 50.000 Schaden an Testobjekten an
 BattleMission/10004003/1┃Spiele 10 Normale/Gewertete Spiele
-BattleMission/10004004/1┃Töte 10 Testobjekte
+BattleMission/10004004/1┃Töte 20 Testobjekte
 BattleMission/10004005/1┃Platziere 12 Telekameras
 BattleMission/10004006/1┃Erhalte 3 Gegenstände durch Luftversorgungen
 BattleMission/10004007/1┃Erhalte 2 legendäre Gegenstände durch Luftversorgungen
@@ -12181,6 +12305,8 @@ InGameGuide/Nadja/Group/Desc/10123000┃Wie ich sehe, bist du der Gewinner der K
 오퍼레이터 신규유저 보상 내용┃Es war sicher nicht leicht, sich auf der Insel einzugewöhnen, aber es sieht so aus, als ob du jetzt bereit wärst.\nAuch wenn ich dich nicht mehr meinen Schüler nennen kann, freue ich mich irgendwie für dich.\nDanke, dass du dein Bestes gegeben hast. Es hat mir sehr viel Spaß gemacht.\nIch bin mir nicht sicher, ob ich das als Geschenk oder als Belohnung bezeichnen soll, aber hier... genieße es!
 오퍼레이터 기존유저 보상 제목┃An dich, erfahrenes Testobjekt
 오퍼레이터 기존유저 보상 내용┃Ich bin sicher, du wusstest schon alles, aber du hast trotzdem zugehört.\nWolltest du nett sein oder warst du einfach nur sehr geduldig?\nWie auch immer, danke dafür. Es hat mir sehr viel Spaß gemacht.\nIch bin mir nicht sicher, ob ich das als Geschenk oder als Belohnung bezeichnen soll, aber hier... genieße es!
+신규유저 오퍼레이터 프리셋 변경 안내 내용┃Ich denke, du hast dich inzwischen an das Experiment gewöhnt.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen. \nIch freue mich auf ein Wiedersehen mit dir!
+기존유저 오퍼레이터 프리셋 변경 안내 내용┃Du brauchst mich nicht mehr, um auf dich aufzupassen.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen.\nArbeite weiter so hart. Du machst das gut!
 신규유저 오퍼레이터 비활성화 안내 내용┃Ich denke, du hast dich inzwischen an das Experiment gewöhnt.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen. \nIch freue mich auf ein Wiedersehen mit dir!
 기존유저 오퍼레이터 비활성화 안내 내용┃Du brauchst mich nicht mehr, um auf dich aufzupassen.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen.\nArbeite weiter so hart. Du machst das gut!
 ServerError/1000┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
@@ -12467,7 +12593,7 @@ Trait/StatTooltip/7920403┃Wenn du stirbst, erzeugst du {0} Sekunden nach deine
 Trait/StatTooltip/7920501┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Trait/StatTooltip/7920502┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Trait/StatTooltip/7920503┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
-Trait/StatTooltip/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du {1} Angriffskraft und {2} Fähigkeitsverstärkung.
+Trait/StatTooltip/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 25{1} Angriffskraft und 35{2} Fähigkeitsverstärkung.
 Trait/StatTooltip/7920701┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
 Trait/StatTooltip/7920702┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
 Trait/StatTooltip/7920703┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
@@ -12774,7 +12900,7 @@ Infusion/Trait/Desc/7920403┃Wenn du stirbst, erzeugst du eine Explosion, die G
 Infusion/Trait/Desc/7920501┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Infusion/Trait/Desc/7920502┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Infusion/Trait/Desc/7920503┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
-Infusion/Trait/Desc/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du {1} Angriffskraft und {2} Fähigkeitsverstärkung.
+Infusion/Trait/Desc/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 25{1} Angriffskraft und 35{2} Fähigkeitsverstärkung.
 Infusion/Trait/Desc/7920701┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
 Infusion/Trait/Desc/7920702┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
 Infusion/Trait/Desc/7920703┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
@@ -13059,6 +13185,9 @@ Forge/Category/Emotion┃Emotes
 Forge/Category/Emblem┃Embleme
 Forge/Category/Goods┃Sonstiges
 Forge/Category/Token┃Tokens
+Forge/Type/All┃Alle
+Forge/Type/Blueprint┃Designs
+Forge/Type/Complete┃Vervollständigte Items
 Loot┃LOOT
 보유중┃Momentan im Besitz
 보유상태┃Im Besitz
@@ -13134,6 +13263,7 @@ Goods/Name/3102001┃Skindaten-Box
 Goods/Name/3102002┃Forschungsdaten-Box
 Goods/Desc/3102001┃Diese Box enthält Skins und Skin-Designs. \nER-PASS, Ranglisten-Belohnungen oder Limitierte Event-Skins sind nicht enthalten.\n\nDatenboxen können über Shop-Pakete oder andere Produkte erworben werden.
 Goods/Desc/3102002┃Diese Boxe enthält verschiedene Items und Designs.\nRanglisten-Belohnungen und Limitierte Items sind nicht enthalten.
+Goods/Desc/3102003┃Du kannst 1 der folgenden erhalten: Forschungsdaten-Box, Datenschlüssel, NP, Gewöhnliches Material oder Token.
 Goods/Name/3104009┃Saison 9 Datenbox
 Goods/Desc/3104009┃Diese Box enthält alle Goodies aus Saison 9. Öffne sie, um zufällige Belohnungen zu erhalten!
 Goods/Name/3202000┃Datenschlüssel
@@ -13543,6 +13673,12 @@ CharacterStoryHeight/66┃179cm
 CharacterStoryGender/66┃Männlich
 CharacterStoryTitle/66┃Die Forschung kann beginnen!
 CharacterStoryDesc/66┃Ein Archäologe, der auf dem Vormarsch war.\nEr konnte dank seiner scharfen Beobachtungsfähigkeiten jedes verborgene Wissen entschlüsseln, das andere nicht sehen konnten.\n\nEr war nur an seinen Forschungen interessiert und verschwendete nie Zeit damit, "gut auszusehen".\nAuch vertraut er anderen nicht so schnell und glaubt nur an das, was er mit eigenen Augen sieht.\nSchließlich sind die Menschen nicht immer das, was sie zu sein scheinen.\n\nObwohl sich seine Mimik kaum verändert, bedeutet das nicht, dass es ihm an Gefühlen mangelt. Im Gegenteil, er bemüht sich, sich nicht von ihnen mitreißen zu lassen.\nSo auch die Schuldgefühle, die ihn plagen, weil er durch ein Missverständnis den Sturz eines angesehenen Mentors verursacht hat.
+CharacterStoryName/67┃Abigail Locke
+CharacterStoryAge/67┃18 Jahre alt
+CharacterStoryHeight/67┃159 cm
+CharacterStoryGender/67┃Weiblich
+CharacterStoryTitle/67┃Blinzel nicht. Ich könnte jeden Moment verschwinden.
+CharacterStoryDesc/67┃Die einzige Überlebende eines schrecklichen Unfalls.\nSie wurde von einem Raum verschluckt, in dem nichts existierte, und wieder herausgezogen.\nSie hat ihre Familie und ihr Zuhause verloren und ist allein geblieben.\nWährend ihrer einsamen Wanderschaft gab es Zeiten, in denen sie darüber nachdachte, wieder in die Leere zu gehen.\n\nWenn sie mit diesem leeren Raum verschmelze, würde sie ihre Traurigkeit und ihre Einsamkeit vergessen und aus dieser Welt verschwinden...\n\nDoch in diesem Moment gab es jemanden, der sie festhielt.\nSie, die ihr zeigte, dass der Unfall nicht ihre Schuld war, dass sie noch einen Grund zum Leben hatte.\nUnd deshalb kam sie auf die Insel Lumia, wegen eines Versprechens, das sie ihr gegeben hatte.
 CharacterPlayTip/1┃Jackie ist eine Serienmörderin, die ihre Opfer unerbittlich verfolgt und massakriert. Mit jedem Mord wird sie stärker und stärker.
 CharacterPlayTip/2┃Aya ist eine Fernkämpferin mit hoher Stabilität, die ihre Gegner mit Fähigkeiten auch leicht aus großer Entfernung treffen kann.
 CharacterPlayTip/3┃Fiora nutzt ihre Beweglichkeit als Fechterin, um die Distanz zu ihren Gegnern zu kontrollieren und mit jedem weiteren Treffer zusätzlichen Schaden zu verursachen.
@@ -13608,6 +13744,8 @@ CharacterPlayTip/62┃Theodore ist ein Scharfschütze mit perfekter Treffsicherh
 CharacterPlayTip/63┃Ly Anh ist von einem Geist besessen und versetzt ihre Feinde in Angst und Schrecken, wenn sich die Kämpfe hinziehen. Ihre Fähigkeiten werden nach der Besessenheit stärker, eine davon ist ihre mächtige Lebensraub-Fähigkeit.
 CharacterPlayTip/64┃Vanya fliegt frei mit ihren Schmetterlingen und richtet mit ihrer Beweglichkeit und Widerstandsfähigkeit über Zeit Schaden an. Sie kann Feinde sogar in den Schlaf wiegen, sodass sie wehrlos und angreifbar werden.
 CharacterPlayTip/65┃Die Zwillinge Debi und Marlene sind dank ihrer besonderen Kräfte stärker als alle anderen, wenn sie gemeinsam kämpfen. Sie häufen Schaden an, indem sie sich gegenseitig markieren und koordinieren, um den Kampf zu dominieren.
+CharacterPlayTip/66┃Arda führt Kämpfe mit Hilfe von Artefakten. Er ist in der Lage, die in diesen Artefakten verborgenen Kräfte zu entdecken und zu nutzen und auf verschiedene Weise Kampfvariablen zu schaffen.
+CharacterPlayTip/67┃Abigail setzt sich über das Konzept des Raums hinweg und teleportiert sich zu ihrem Ziel. Sie schwingt ihre große Sense, um in dem Gebiet massiven Schaden anzurichten.
 
 
 --xxxxxxxxxx--
