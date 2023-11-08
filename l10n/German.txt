@@ -429,6 +429,7 @@ MasteryResultValueType/KillPlayer┃Basierend auf dem Level des Feindes
 MasteryResultValueType/KillMonster┃Basierend auf dem Level des Tieres
 StatType/None┃Nichts
 StatType/MaxHp┃Maximale LP
+StatType/MaxHpBonus┃Maximale LP
 StatType/MaxHp/Desc┃Erhöht Maximale LP
 StatType/MaxHpByLv┃Maximale LP pro Level
 StatType/MaxHpCoef┃Maximale LP
@@ -1609,6 +1610,7 @@ Drops_Emotion_S7Champion_Haqueen_6075┃SEASON 7 CHAMPION HAQUEEN
 Drops_Emotion_S7Champion_Onecricle_6076┃SEASON 7 CHAMPION ONECIRCLE
 Drops_Emotion_S7Champion_Saten_6077┃SEASON 7 CHAMPION SATEN
 Drops_Emotion_S7Champion_Gwork_6078┃SEASON 7 CHAMPION GWORK
+Drops_Emotion_St_Chunhyang_6079┃Chunhyang Erm..
 Emotion_Jackie01_NP┃Passt so! Jackie
 Emotion_Jackie02_NP┃Weinende Jackie
 Emotion_Jackie03_NP┃Wütende Jackie
@@ -3478,9 +3480,6 @@ Product/Name/Rio_Emblem_Pack_01┃Rio Spezialpaket
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃Forschungsdaten-Box
 Product/Name/LOOTBOX_SKIN_SINGLE_01┃Skindaten-Box
 Product/Name/RANDOM_KEY_SINGLE_01┃Datenschlüssel
-Product/Name/LOOTBOX_BASICxKEY_SET_01┃Forschungsdaten-Set
-Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Forschungsdaten-Set
-Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Forschungsdaten-Set
 Product/Name/LOOTBOX_SKINxKEY_SET_01┃Skindaten-Set
 Product/Name/LOOTBOX_SKINxKEY_SET_05┃5 Skindaten-Set
 Product/Name/LOOTBOX_SKINxKEY_SET_10┃11 Skindaten-Set
@@ -5267,7 +5266,7 @@ LV20┃Level 20
 구매하러 가기┃Charakter kaufen
 무료 플레이 가능 캐릭터┃Charakter kostenlos spielbar
 코발트 프로토콜에서 사용 가능 캐릭터┃In Cobalt Protocol spielbare Charaktere
-시즌1이 종료되었습니다.┃Saison 5 ist zu Ende!
+시즌1이 종료되었습니다.┃Saison 1 ist zu Ende!
 시즌6이 종료되었습니다.┃Saison 6 ist zu Ende!
 시즌7이 종료되었습니다.┃Saison 7 ist zu Ende!
 시즌8이 종료되었습니다.┃Saison 8 ist zu Ende!
@@ -6043,6 +6042,7 @@ SeasonPassIcon/6┃Img_SeasonPack6_Box_02
 SeasonPassIcon/7┃Img_SeasonPack7_box_02
 SeasonPassIcon/8┃Img_SeasonPack8_box_02
 SeasonPassIcon/10┃Img_SeasonPack10_box_02
+SeasonPassIcon/11┃Img_SeasonPack11_box_02
 다시보지 않기┃Nicht mehr anzeigen
 오늘 다시 보지 않기┃Heute nicht mehr anzeigen
 한정판 스킨┃Exklusiver Skin
@@ -7415,7 +7415,7 @@ Item/Name/204402┃Federstiefel
 Item/Name/204403┃Hightech Heelys
 Item/Name/204404┃Kampfstiefel
 Item/Name/204405┃Killer Heels
-Item/Name/204406┃Zwangsjacken Turnschuhe
+Item/Name/204406┃Zwangsjacken-Sneaker
 Item/Name/204407┃Mythrilstiefel
 Item/Name/204408┃Bucephalus
 Item/Name/204409┃EOD-Stiefel
@@ -7926,10 +7926,12 @@ Item/Help/201409┃Eine Krone gebaut für den ersten und einzigen Monarchen von 
 Item/Help/201410┃Eine extravagante Sturmhaube die vom Kaiserhaus genutzt wurde. Anders\n als eine normaler Helm, dieser ist reich geschmückt.
 Item/Help/201411┃In "Der König der Masken", einem traditionellen chinesischen Theaterstück, sind Sie dafür bekannt, dass sie im Handumdrehen zwischen Dutzenden von Masken wechseln - fast so, als wäre es Magie.
 Item/Help/201412┃Benannt nach den einheimischen Hütern der östlichen Tore, es ist ein einzigartiger Helm mit traditionellem Tragegefühl.
+Item/Help/201417┃Der Hut eines Revolverhelden, der auf einem weißen Pferd reitet. Er riecht überwältigend nach Schießpulver. Yeehaw!
 Item/Help/201501┃Nur durch Leid werden Menschen zu Engeln.
 Item/Help/201503┃Man sagt, es wurde einst von einer Bande von Phantomdieben benutzt.
 Item/Help/201504┃Ein Vermächtnis, hinterlassen von einem unbekannten Sultan. Trotz seines alters, erscheint dieser Gegenstand nutzvoller als du vielleicht denkst.
 Item/Help/201505┃Dieser Integralhelm besteht auf Kohlenstoffmaterial und stellt seinem Träger exzellenten Schutz. Jedoch werden Personen mit großen Köpfen vielleicht eine Anpassung am Helm brauchen.
+Item/Help/201506┃Der Hut des Sheriffs, der den Wilden Westen bewacht. Selbst am Ende der staubigen, windigen Wildnis kann man die Sterne funkeln sehen.
 Item/Help/201507┃Ein Helm für die Erkundung des Weltraums. Wenn du alles gibst, kannst du selbst die Galaxie am Ende des Horizonts erreichen.
 Item/Help/202101┃Eine Jacke die dich warm hält indem sie dich vor Wind schützt. Sollte es\nschneien brauchst du etwas wärmeres. 
 Item/Help/202103┃Kleidung für Mönche. Der Ärmel auf jeder Seite ist in vier Teiler geteilt,\nsie representieren Manjushri, Samantabhadra, Guanyin und\nKsitigarbha.
@@ -8001,6 +8003,8 @@ Item/Help/203501┃Ein Armband von Skadi, einer nordischen Göttin, die mit dem 
 Item/Help/203502┃Wenn Sie es richtig zum Laufen bringen können, kann es Ihnen helfen,\nden Standort von irgendjemandem auf der Welt zu finden.
 Item/Help/203505┃It seems that people call it the 'Centipede's Pauldron' because it has spikes coming out that look like a centipede.\nI can't accept the fact that the name was given out of such laziness.
 Item/Help/203506┃It's a sports watch that dared to use a skeleton design. Of course, this watch doesn't offer any sports functionality. A dumb product that was buried in its concept.
+Item/Help/203511┃Diese Rüstung schützt mit ihren scharfen, spitzen Dornen vor feindlichen Angriffen und fügt im Gegenzug Schaden zu.
+Item/Help/203512┃Handschuhe mit Messern als Finger. Genau wie eine Giftschlange ist sie still, bis sie den tödlichen Schlag ausführt.
 Item/Help/204101┃Ein schweißgebadeter Pantoffel. Allein der Gestank macht es zu einem\nernsthaften Konkurrenten als tödliche Waffe.
 Item/Help/204102┃Jeder mag Laufschuhe. Du kannst auch in ihnen laufen, weißt du?
 Item/Help/204103┃Es ist dünn und eng. Sie können sie an ihren Beinen oder über ihrem\nKopf tragen, wenn sie eine Bank ausrauben wollen.
@@ -8212,12 +8216,12 @@ Item/Effects/502401┃Klicke um einen <color=lightblue>Mythrilfaden</color> zu i
 Item/Effects/502402┃Klicke um eine <color=lightblue>Nagelbombe</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner haben ihre Bewegungsgeschwindigkeit um 50%\nfür 3 Sekunden reduziert.
 Item/Effects/502403┃Klicke um eine <color=lightblue>Feuer-Falle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert im großen Umkreis nach 1.25 Sekunden.
 Item/Effects/502404┃Klicke um <color=lightblue>C4</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert im großen Umkreis nach 1.25 Sekunden.
-Item/Effects/502405┃Klicke um eine <color=lightblue>doppelte Guillotine</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr für 1.5 Sekunden.
-Item/Effects/502406┃Klicke um eine <color=lightblue>Claymore</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert im nahem Gebiet nach, stunning enemies\nfür 1.1 Sekunden.
+Item/Effects/502405┃Klicke um eine <color=lightblue>doppelte Guillotine</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr für 1.2 Sekunden.
+Item/Effects/502406┃Klicke um eine <color=lightblue>Claymore</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert im nahem Gebiet nach, stunning enemies\nfür 1.5 Sekunden.
 Item/Effects/502407┃Klicke um eine <color=lightblue>Bärenfalle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner haben ihre Bewegungsgeschwindigkeit um 40%\nfür 2.5 Sekunden reduziert.
 Item/Effects/502501┃Klicke um eine <color=lightblue>ferngesteuerte Mine</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> explodiert in einem großen Gebiet nach 1.4 Sekunden.
 Item/Effects/502502┃Klicke um eine <color=lightblue>intelligente Bombe</color> zu installieren.\n<color=yellow>Falleneffekt:</color> Explodiert nach 1.4 Sekunden in einem großen Gebiet.
-Item/Effects/502310┃Klicke, um eine <color=hellblau>Akupressur-Matte</color> zu installieren.<color=gelb>Falleneffekte:</color> Ziele werden 1,5 Sekunden lang um 40% verlangsamt.
+Item/Effects/502310┃Klicke, um eine <color=hellblau>Akupressur-Matte</color> zu installieren.<color=gelb>Falleneffekte:</color> Ziele werden 2 Sekunden lang um 50% verlangsamt.
 Item/Effects/302101┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302102┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302103┃stellt AP über 15 Sekunden wieder her.
@@ -10626,6 +10630,7 @@ Item/Skills/6024001/Desc┃Gewährt alle {11} Sekunden pro Angriff eine Steigeru
 Item/Skills/6024002/Name┃<color=yellow>Elektrischer Schock</color>
 Item/Skills/6024002/Body┃Gewährt für {7} Sekunden pro Angriff eine Steigerung von Elektrischer Schock. (bis zu {0})\nNormale Angriffe bei maximaler Steigerung oder gegen geschildete Gegner richten <color=#688A08>{1} Gegnerische Max LP</color> + <color=green>{6}</color> zusätzlichen Schaden an und entfernen all deine Steigerungen von Elektrischer Schock.
 Item/Skills/6024002/Desc┃Gewährt alle {11} Sekunden pro Angriff eine Steigerung von Elektrischer Schock. (bis zu {0})\nNormale Angriffe bei maximaler Steigerung oder gegen geschildete Gegner richten zusätzlichen Fertigkeitsschaden an und entfernen all deine Steigerungen von Elektrischer Schock. \n(Nahkampf) Richte<color=#688A08>{1} Gegnerische Max LP</color> + <color=green>{4}~{5}(Proportional zum Charakter Level)</color> zellularer Schaden an.\n(Fernkampf) Richte <color=#688A08>{6} Gegnerische Max LP</color> + <color=green>{9}~{10}(Proportional zum Charakter Level)</color> Fertigkeitsschaden an.
+Item/Skills/6024003/Name┃<color=yellow>Elektrischer Schock</color>
 Item/Skills/6024003/Body┃Gewährt für {7} Sekunden pro Angriff eine Steigerung von Elektrischer Schock. (bis zu {0})\nNormale Angriffe bei maximaler Steigerung oder gegen geschildete Gegner richten <color=#688A08>{1} Gegnerische Max LP</color> + <color=green>{6}</color> zusätzlichen Schaden an und entfernen all deine Steigerungen von Elektrischer Schock.
 Item/Skills/6024003/Desc┃Gewährt alle {11} Sekunden pro Angriff eine Steigerung von Elektrischer Schock. (bis zu {0})\nNormale Angriffe bei maximaler Steigerung oder gegen geschildete Gegner richten zusätzlichen Fertigkeitsschaden an und entfernen all deine Steigerungen von Elektrischer Schock. \n(Nahkampf) Richte<color=#688A08>{1} Gegnerische Max LP</color> + <color=green>{4}~{5}(Proportional zum Charakter Level)</color> zellularer Schaden an.\n(Fernkampf) Richte <color=#688A08>{6} Gegnerische Max LP</color> + <color=green>{9}~{10}(Proportional zum Charakter Level)</color> Fertigkeitsschaden an.
 CharacterState/Group/Name/6024000┃Sammelt Elektrischen Schock
@@ -10979,12 +10984,12 @@ Mission/8000801/1┃Verdiene Credits in Cobalt Protocol
 Mission/8000802/1┃Verdiene Credits in Cobalt Protocol
 Mission/8000803/1┃Verdiene Credits in Cobalt Protocol
 Mission/8000901/1┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
-Mission/8000902/1┃Benutze die "Raserei" Augmentierung in Cobalt Protocol
+Mission/8000902/1┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
 Mission/8000903/1┃Benutze die "Vampirerbe" Augmentierung in Cobalt Protocol
 Mission/8000904/1┃Benutze die "Rote Fee" Augmentierung in Cobalt Protocol
 Mission/8000905/1┃Benutze die "Diamantsplitter" Augmentierung in Cobalt Protocol
 Mission/8000906/1┃Benutze die "Eisern" Augmentierung in Cobalt Protocol
-Mission/8000907/1┃Benutze die "Das Ende kann warten" Augmentierung in Cobalt Protocol
+Mission/8000907/1┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
 Mission/8000908/1┃Benutze die "Heilungsfaktor" Augmentierung in Cobalt Protocol
 Mission/8000909/1┃Benutze die "Verstärkungsdrohne" Augmentierung in Cobalt Protocol
 Mission/8000910/1┃Benutze die "Heilungsdrohne" Augmentierung in Cobalt Protocol
@@ -11039,7 +11044,7 @@ Mission/8003301/2┃Verdiene Credits in Cobalt Protocol
 Mission/8003301/3┃Töte ein Wildschwein
 Mission/8003401/2┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
 Mission/8003401/3┃Töte Omega
-Mission/8003501/2┃Benutze die "Raserei" Augmentierung in Cobalt Protocol
+Mission/8003501/2┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
 Mission/8003501/3┃Erreiche die Top 5 eines Spiels
 Mission/8003601/2┃Benutze die "Vampirerbe" Augmentierung in Cobalt Protocol
 Mission/8003601/3┃Füge einem Spieler schaden zu
@@ -11049,7 +11054,7 @@ Mission/8003801/2┃Benutze die "Diamantsplitter" Augmentierung in Cobalt Protoc
 Mission/8003801/3┃Töte einen Bär
 Mission/8003901/2┃Benutze die "Eisern" Augmentierung in Cobalt Protocol
 Mission/8003901/3┃Töte ein Huhn
-Mission/8004001/2┃Benutze die "Das Ende kann warten" Augmentierung in Cobalt Protocol
+Mission/8004001/2┃Benutze die "Schwächen" Augmentierung in Cobalt Protocol
 Mission/8004001/3┃Töte einen wilden Hund
 Mission/8004101/2┃Benutze die "Heilungsfaktor" Augmentierung in Cobalt Protocol
 Mission/8004101/3┃Erhalte <color=#D05EFF>Lebenskräftige Blutprobe</color>
@@ -12530,7 +12535,7 @@ ServerError/5202┃Kann Spielersuche nicht starten, weil zu große Rangunterschi
 ServerError/6100┃Skin Information nicht gefunden.
 ServerError/6101┃Held bereits erworben.
 ServerError/7100┃Freundschaftsanfragen sind Voll
-ServerError/7101┃bis zu 100 Freunde kann man hinzufügen.
+ServerError/7101┃bis zu 200 Freunde kann man hinzufügen.
 ServerError/7102┃Freundesliste ist voll.
 ServerError/7103┃Du kannst dich selber nicht als Freund einfügen.
 ServerError/7104┃Ihr seit schon befreundet
@@ -12748,10 +12753,10 @@ Trait/StatTooltip/7920403┃Wenn du stirbst, erzeugst du {0} Sekunden nach deine
 Trait/StatTooltip/7920501┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Trait/StatTooltip/7920502┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Trait/StatTooltip/7920503┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
-Trait/StatTooltip/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 25{1} Angriffskraft und 35{2} Fähigkeitsverstärkung.
-Trait/StatTooltip/7920701┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
-Trait/StatTooltip/7920702┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
-Trait/StatTooltip/7920703┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.\n\nGesamte zusätzliche Fertigkeitsverstärkung: {2}%
+Trait/StatTooltip/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 35{1} Angriffskraft und 50{2} Fähigkeitsverstärkung.
+Trait/StatTooltip/7920701┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.
+Trait/StatTooltip/7920702┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.
+Trait/StatTooltip/7920703┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion, bis zu 2 Steigerungen maximal.
 Trait/StatTooltip/7920801┃Wenn du stirbst, erzeuge einen Sumpf der alle Gegner darin für {0} um {1}% verlangsamt und ihre Verteidigung um {2}% senkt.
 Trait/StatTooltip/7920802┃Wenn du stirbst, erzeuge einen Sumpf der alle Gegner darin für {0} um {1}% verlangsamt und ihre Verteidigung um {2}% senkt.
 Trait/StatTooltip/7920803┃Wenn du stirbst, erzeuge einen Sumpf der alle Gegner darin für {0} um {1}% verlangsamt und ihre Verteidigung um {2}% senkt.
@@ -13055,7 +13060,7 @@ Infusion/Trait/Desc/7920403┃Wenn du stirbst, erzeugst du eine Explosion, die G
 Infusion/Trait/Desc/7920501┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Infusion/Trait/Desc/7920502┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
 Infusion/Trait/Desc/7920503┃Wenn du in den letzten {0} Sekunden keinen Kampfschaden erlitten hast, erhältst du {1}% deiner fehlenden LP und AP pro Sekunde zurück.
-Infusion/Trait/Desc/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 25{1} Angriffskraft und 35{2} Fähigkeitsverstärkung.
+Infusion/Trait/Desc/7920603┃Wenn du stirbst, wirst du 3 Sekunden nach deinem Tod automatisch mit vollen AP und LP wiederbelebt. (Abklingzeit: {0}s)\nWährend der Abklingzeit erhältst du 35{1} Angriffskraft und 50{2} Fähigkeitsverstärkung.
 Infusion/Trait/Desc/7920701┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
 Infusion/Trait/Desc/7920702┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
 Infusion/Trait/Desc/7920703┃Fertigkeitsverstärkung um {0} erhöht.\nErhalte {1}% zusätzliche Fertigkeitsverstärkung für jede angelegte Infusion.
