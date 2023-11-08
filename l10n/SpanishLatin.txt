@@ -429,6 +429,7 @@ MasteryResultValueType/KillPlayer┃Basado en el Nivel del enemigo
 MasteryResultValueType/KillMonster┃Basado en el Nivel del animal salvaje
 StatType/None┃Ninguno
 StatType/MaxHp┃PV Máximo
+StatType/MaxHpBonus┃PV Máximo
 StatType/MaxHp/Desc┃Aumenta PV Máximos
 StatType/MaxHpByLv┃PV Máximos por nivel
 StatType/MaxHpCoef┃PV Máximos
@@ -1662,6 +1663,7 @@ Drops_Emotion_S7Champion_Haqueen_6075┃SEASON 7 CHAMPION HAQUEEN
 Drops_Emotion_S7Champion_Onecricle_6076┃SEASON 7 CHAMPION ONECIRCLE
 Drops_Emotion_S7Champion_Saten_6077┃SEASON 7 CHAMPION SATEN
 Drops_Emotion_S7Champion_Gwork_6078┃SEASON 7 CHAMPION GWORK
+Drops_Emotion_St_Chunhyang_6079┃Chunhyang Erm..
 Emotion_Jackie01_NP┃Jackie Aprobando
 Emotion_Jackie02_NP┃Jackie Llorando
 Emotion_Jackie03_NP┃Jackie Furiosa
@@ -3540,9 +3542,6 @@ Product/Name/SkinDataChip_RandomBox_01┃Chip de Datos de Skin
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃Paquete de Datos del Centro de Investigación
 Product/Name/LOOTBOX_SKIN_SINGLE_01┃Paquete de Datos de Skins
 Product/Name/RANDOM_KEY_SINGLE_01┃Clave de Datos
-Product/Name/LOOTBOX_BASICxKEY_SET_01┃Conjunto de Datos del Centro de Investigación
-Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Paquetes de Datos del Centro de Investigación
-Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Conjunto de datos del Centro de Investigación
 Product/Name/LOOTBOX_SKINxKEY_SET_01┃Paquete de Datos de Skins
 Product/Name/LOOTBOX_SKINxKEY_SET_05┃6 Paquetes de Datos de Skins
 Product/Name/LOOTBOX_SKINxKEY_SET_10┃11 Paquete de Datos de Skins
@@ -5396,7 +5395,7 @@ LV20┃Nivel 20
 구매하러 가기┃Comprar Personaje
 무료 플레이 가능 캐릭터┃Personaje jugable gratuito
 코발트 프로토콜에서 사용 가능 캐릭터┃Personajes jugables en Protocolo Cobalto
-시즌1이 종료되었습니다.┃¡La Temporada 5 ha terminado!
+시즌1이 종료되었습니다.┃¡La Temporada 1 ha terminado!
 시즌6이 종료되었습니다.┃¡La Temporada 6 ha terminado!
 시즌7이 종료되었습니다.┃¡La Temporada 7 ha terminado!
 시즌8이 종료되었습니다.┃¡La Temporada 8 ha terminado!
@@ -6228,6 +6227,7 @@ SeasonPassIcon/6┃Img_SeasonPack6_Box_02
 SeasonPassIcon/7┃Img_SeasonPack7_box_02
 SeasonPassIcon/8┃Img_SeasonPack8_box_02
 SeasonPassIcon/10┃Img_SeasonPack10_box_02
+SeasonPassIcon/11┃Img_SeasonPack11_box_02
 다시보지 않기┃No mostrar de nuevo.
 오늘 다시 보지 않기┃No mostrar de nuevo hoy
 한정판 스킨┃Skin Limitada
@@ -7952,6 +7952,7 @@ Item/Name/502305┃Hacha de Péndulo
 Item/Name/502306┃Trampa Explosiva
 Item/Name/502307┃RDX
 Item/Name/502308┃Dron EMP
+Item/Name/502309┃Trampa para Osos
 Item/Name/502310┃Tapete de Acupresión
 Item/Name/502401┃Cable de Mithril
 Item/Name/502402┃Bomba de Metralla
@@ -8039,7 +8040,7 @@ Item/Help/108502┃Una herramienta creada por Daode Tianzun, usada para medir la
 Item/Help/109101┃Podría parecer que todo lo que hay que hacer es esgrimirlo al azar,\npero para que sea efectivo, requiere una técnica muy entrenada
 Item/Help/109201┃Una cuerda roja y estrecha usada originalmente para atar a un criminal\no un ladrón
 Item/Help/109202┃Un arma portable usada en el ultimo periodo de la dinastia Chosun.\nTambién llamado látigo de acero de campana de caballo
-Item/Help/109402┃Se puede crear combinando un látigo de acero con una batería descargada.\nPuedes pensar en el como un bate de acero con forma de látigo
+Item/Help/109402┃Se puede crear combinando un látigo de acero con una batería descargada.\nPuedes pensar en él como un bate de acero con forma de látigo.
 Item/Help/109403┃una cuerda irromible que sostuvo el lobo Fenrir. Hecha de los cabellos\nde una mujer, una piedra, el sonido de las garras de un gato, el\naliento de un pez, el tendón de un oso y la saliva de un pájaro
 Item/Help/109404┃Un látigo hecho por metales que parece doloroso solo al mirarlo.\nCuando se enciende, el plasma fluye a través del látigo a través\nde juntas de tungsteno especialmente diseñadas, lo que puede causar\nlesiones térmicas severas
 Item/Help/110101┃Estos extravagantes nudillos son ilegales en muchos países.
@@ -8260,6 +8261,8 @@ Item/Help/203410┃Aunque fue creado con los Sabuesos de Tíndalos en mente, est
 Item/Help/203415┃Puedes reunir a los Minutemen con solo ponértelo.
 Item/Help/203501┃Un brazalete usado por la Diosa Skadi, asociada con el invierno en\nla mitología del Norte de Europa. ¡Brrr! ¿Acaba de ponerse frío por\naquí
 Item/Help/203502┃Cuando lleves esto en tus brazos, podrás averiguar la localización\nde cualquier jugador en la isla
+Item/Help/203505┃Al parecer la gente lo llama "Hombrera del Ciempiés" porque tiene puas salientes que lo asemejan a un ciempiés.\nNo puedo aceptar el hecho de que se le otorgase ese nombre por pura pereza.
+Item/Help/203506┃Es un reloj deportivo que se atreve a usar un diseño de esqueleto. Por supuesto, este reloj no ofrece ninguna funcionalidad deportiva. Un producto tonto que fue enterrado desde su concepción.
 Item/Help/203511┃Esta armadura protege de los ataques enemigos con sus afiladas y puntiagudas espinas, y a cambio inflige daño.
 Item/Help/203512┃Guantes con cuchillos en los dedos. Al igual que una serpiente venenosa, permanece en silencio hasta dar el golpe fatal.
 Item/Help/204101┃Zapatillas cubiertas de dulces. El pestazo hace que sea una contundente\narma letal
@@ -8277,6 +8280,7 @@ Item/Help/204405┃Tacones lo suficientemente altos como para usar como arma.
 Item/Help/204407┃Botas fabricadas en mitrilo, más fuerte que el acero y aumenta su\ndefensa
 Item/Help/204409┃Botas usadas por equipos de eliminación de explosivos. Protegen las\npiernas de toda metralla si algo sale mal.
 Item/Help/204501┃Los zapatos vestidos por Hermes, el Dios de los Ladrones. Aligeran\ntu cuerpo para que no te canses
+Item/Help/204503┃Unas botas de corte alto de asesino con cuchillos que pueden salir de ellas.\nEs difícil infligir heridas si estas botas no son fabricadas con proficiencia.
 Item/Help/205101┃Es básicamente piel mutada. Ideal para la preservación del calor\ny se usa a menudo para decora
 Item/Help/205102┃Nada romántico si las ves como los órganos de reproducción sexual\nen las plantas
 Item/Help/205103┃Será bonito si lo pones en tu pelo.
@@ -8420,6 +8424,7 @@ Item/Help/502206┃Usa el objeto para hacer ruido en la zona actual.
 Item/Help/502207┃Una cámara telefotográfica que revela hasta 13 m a su alrededor.
 Item/Help/502208┃Un dron de reconocimiento que te otorga una visión de la ubicación seleccionada.
 Item/Help/502209┃Una cámara telefotográfica que revela hasta 13m a su alrededor. Se camufla con ramas que hacen que se confunda en su entorno.
+Item/Help/502211┃Una cámara especial con visión a larga distancia en la dirección que elijas.\nGana visión de 45 grados en la dirección instalada.
 Item/Help/502302┃Una trampa de ruleta que contiene un señuelo algo familiar.
 Item/Help/502303┃Mira a Francia, una nueva guillotina ha llegado a la ciudad. \nUna hoja oculta en el arbusto cortará limpiamente cualquier victima atrapada.
 Item/Help/502304┃Probablemente escondida bajo hojas o enterrada. Intenta no pisar una.
@@ -8470,12 +8475,12 @@ Item/Effects/502401┃Haz click para instalar <color=lightblue>Cable de Mithril 
 Item/Effects/502402┃Haz click para instalar <color=lightblue>Bomba de Metralla</color>.\n<color=yellow>Efecto de trampa:</color>la velocidad de movimiento de los enemigos se reduce en 50%\npor 3 segundos.
 Item/Effects/502403┃Haz click para instalar <color=lightblue>Trampa Incendiaria</color>.\n<color=yellow>Efecto de trampa:</color> explota en una gran área después 1,5 segundos.
 Item/Effects/502404┃Haz click para instalar <color=lightblue>C-4</color>.\n<color=yellow>Efecto de trampa:</color> explota en una gran área después 1,5 segundos.
-Item/Effects/502405┃Haz click para instalar <color=lightblue>Guillotina Doble</color>.\n<color=yellow>Efecto de trampa:</color>los enemigos son inmobilizados por 1.5 segundo.
-Item/Effects/502406┃Haz click para instalar <color=lightblue>Claymore</color>.\n<color=yellow>Efecto de trampa:</color> explota en una estrecha área, aturdiendo a los enemigos \npor 1.1 segundo.
+Item/Effects/502405┃Haz click para instalar <color=lightblue>Guillotina Doble</color>.\n<color=yellow>Efecto de trampa:</color>los enemigos son inmobilizados por 1.2 segundo.
+Item/Effects/502406┃Haz click para instalar <color=lightblue>Claymore</color>.\n<color=yellow>Efecto de trampa:</color> explota en una estrecha área, aturdiendo a los enemigos \npor 1.5 segundo.
 Item/Effects/502407┃Haz click para instalar <color=lightblue>Doncella Oculta</color>.\n<color=yellow>Efecto de trampa:</color>la velocidad de movimiento de los enemigos se reduce en 40%\npor 2.5 segundos.
 Item/Effects/502501┃Haz click para instalar <color=lightblue>Mina Remota</color>.\n<color=yellow>Efecto de trampa:</color> explota en una gran área después 1.4 segundos.
 Item/Effects/502502┃Haz click para instalar <color=lightblue>Bomba Inteligente</color>.\n<color=yellow>Efecto de trampa:</color> explota en una gran área después 1.4 segundos.
-Item/Effects/502310┃Haz click para instalar un<color=lightblue>Mat de Acupresión</color>.\n<color=yellow>Efectos de trampa:</color> Los objetivos son ralentizados un 40% por 1.5 segundos.
+Item/Effects/502310┃Haz click para instalar un<color=lightblue>Mat de Acupresión</color>.\n<color=yellow>Efectos de trampa:</color> Los objetivos son ralentizados un 50% por 2 segundos.
 Item/Effects/302101┃Recupera PE durante 15 segundos.
 Item/Effects/302102┃Recupera PE durante 15 segundos.
 Item/Effects/302103┃Recupera PE durante 15 segundos.
@@ -8516,7 +8521,7 @@ Item/Effects/302308┃Recupera PE durante 15 segundos.
 Item/Effects/302309┃Recupera PE durante 15 segundos.
 Item/Effects/302310┃Recupera PE durante 15 segundos.
 Item/Effects/302311┃Recupera PE durante 15 segundos.
-Item/Effects/302312┃Recupera PE durante 15 segundos.
+Item/Effects/302312┃Obtén permanentemente 2 de Poder de Ataque y 4 de Amp. de Habilidad. Este efecto puede acumularse hasta 3 veces.
 Item/Effects/302313┃Recupera PE durante 15 segundos.
 Item/Effects/302314┃Recupera PV durante 15 segundos.
 Item/Effects/301102┃Recupera PV durante 15 segundos.
@@ -8537,8 +8542,8 @@ Item/Effects/301204┃Recupera PV durante 15 segundos.
 Item/Effects/301205┃Recupera PV durante 15 segundos.
 Item/Effects/301206┃Recupera PV durante 15 segundos.
 Item/Effects/301207┃Recupera PV durante 15 segundos.
-Item/Effects/301209┃Obtiene permanentemente 3 de Defensa. El efecto puede acumularse hasta 3 veces.
-Item/Effects/301305┃Recupera PV durante 15 segundos.
+Item/Effects/301209┃Recupera PV durante 15 segundos.
+Item/Effects/301305┃Obtén permanentemente 3 de Defensa. El efecto puede acumularse hasta 3 veces.
 Item/Effects/301213┃Recupera PV durante 15 segundos.
 Item/Effects/301216┃Recupera PV durante 15 segundos.
 Item/Effects/301217┃Recupera PV durante 15 segundos.
@@ -8560,7 +8565,7 @@ Item/Effects/301235┃Recupera PV durante 15 segundos.
 Item/Effects/301236┃Recupera PV durante 15 segundos.
 Item/Effects/301237┃Recupera PV durante 15 segundos.
 Item/Effects/301238┃Recupera PV durante 15 segundos.
-Item/Effects/301239┃Recupera PV durante 15 segundos.
+Item/Effects/301239┃Recupera PV y PE durante 15 segundos.
 Item/Effects/301240┃Recupera PV durante 15 segundos.
 Item/Effects/301241┃Recupera PV durante 15 segundos.
 Item/Effects/301242┃Recupera PV durante 15 segundos.
@@ -8620,7 +8625,7 @@ Item/Skills/NotEquip┃<color=red>El efecto solo ocurre cuando está equipado.</
 Item/Skills/UniqueSkill┃<color=red>El mismo efecto no se aplica varias veces.</color>
 Item/Skills/OnlyCloseCombat┃<color=red> No se aplica a las armas a distancia.</color>
 Item/Skills/OnlyRangedCombat┃<color=red> No se aplica a las armas cuerpo a cuerpo.</color>
-EscapeType/EscapeMaterial┃Este artículo es utilizado para crear un <color=#D05EFF>Paquete de Malware</color>.\nConsigue un <color=#C4C4C4>Código de Apagado del Sistema</color> de una Consola de Transferencia y usa ambos artículos para crear un <color=#D05EFF>Paquete de Malware</color>.
+EscapeType/EscapeMaterial┃Este artículo es utilizado para crear un <color=#D05EFF>Paquete de Malware</color>.\nConsigue un <color=#C4C4C4>Código de Apagado del Sistema</color> de un Kiosco y usa ambos artículos para crear un <color=#D05EFF>Paquete de Malware</color>.
 EscapeType/EscapeKey┃Este artículo es utilizado para crear un <color=#D05EFF>Paquete de Malware</color>.\nConsigue un <color=#C4C4C4>Brazalete de Regeneración</color> cazando animales salvajes o saqueando suministros aéreos y usa ambos artículos para crear un <color=#D05EFF>Paquete de Malware</color>.
 EscapeType/EscapeQualification┃Necesitas un <color=#D05EFF>Paquete de Malware</color> para utilizar un Hyperloop al Muelle Abandonado.
 Skill/Group/Name/1001100┃Carnicería
@@ -10287,12 +10292,12 @@ Skill/Group/Evolution/Name/441013┃Llamada de Cadmus - Serpiente de Cascabel
 Skill/Group/Evolution/Name/441021┃Llamada de Cadmus - Reina Culebra de la Muerte
 Skill/Group/Evolution/Name/441022┃Llamada de Cadmus - Rey Mamba Negra
 Skill/Group/Evolution/Name/441023┃Llamada de Cadmus - Alfa Serpiente de Cascabel
-Skill/Group/Name/441011┃Llamada de Cadmus - Culebra de la Muerte
-Skill/Group/Name/441012┃Llamada de Cadmus - Mamba Negra
-Skill/Group/Name/441013┃Llamada de Cadmus - Serpiente de Cascabel
-Skill/Group/Name/441021┃Llamada de Cadmus - Reina Culebra de la Muerte
-Skill/Group/Name/441022┃Llamada de Cadmus - Rey Mamba Negra
-Skill/Group/Name/441023┃Llamada de Cadmus - Alfa Serpiente de Cascabel
+Skill/Group/Name/1044101┃Llamada de Cadmus - Culebra de la Muerte
+Skill/Group/Name/1044111┃Llamada de Cadmus - Mamba Negra
+Skill/Group/Name/1044121┃Llamada de Cadmus - Serpiente de Cascabel
+Skill/Group/Name/1044102┃Llamada de Cadmus - Reina Culebra de la Muerte
+Skill/Group/Name/1044112┃Llamada de Cadmus - Rey Mamba Negra
+Skill/Group/Name/1044122┃Llamada de Cadmus - Alfa Serpiente de Cascabel
 CharacterState/Group/Name/1044110┃Culebra de la Muerte - Maestro de Guerra
 CharacterState/Group/Name/1044200┃Víbora Creciente - Ralentizado
 CharacterState/Group/Name/1044300┃Escamas Quilladas - Escudado
@@ -12637,6 +12642,7 @@ Item/Skills/6024001/Desc┃Otorga una acumulación de Descarga eléctrica por{11
 Item/Skills/6024002/Name┃<color=yellow>Descarga Eléctrica</color>
 Item/Skills/6024002/Body┃Otorga una acumulación de Descarga Eléctrica por {7} segundos por ataque básico. (Máximo {0} veces)\nLos ataques básicos con acumulaciones máximas o hacia un enemigo escudado infligen <color=#688A08>{1} PV máximos del enemigo</color> + <color=green>{6}</color> de daño adicional y elimina todas tus acumulaciones de Descargas Eléctrica.
 Item/Skills/6024002/Desc┃Otorga una acumulación de Descarga eléctrica por{11} segundos por ataque básico. (Máximo {0} veces)\nLos ataques básicos con acumulaciones máximas o hacia un enemigo protegido infligen daño de habilidades adicional y eliminan todas tus acumulaciones de Descarga Eléctrica.\n(Cuerpo a cuerpo) Inflige <color=#688A08>{1} PV máximos del enemigo</color> + <color=green>{4}~{5}(proporcional al nivel del personaje)</color> de daño de habilidades.\n(A distancia) Inflige <color=#688A08>{6} PV máximos del enemigo</color> + <color=green>{9}~{10}(proporcional al nivel del personaje)</color> de daño de habilidades.
+Item/Skills/6024003/Name┃<color=yellow>Descarga Eléctrica</color>
 Item/Skills/6024003/Body┃Otorga una acumulación de Descarga Eléctrica por {7} segundos por ataque básico. (Máximo {0} veces)\nLos ataques básicos con acumulaciones máximas o hacia un enemigo escudado infligen <color=#688A08>{1} PV máximos del enemigo</color> + <color=green>{6}</color> de daño adicional y elimina todas tus acumulaciones de Descargas Eléctrica.
 Item/Skills/6024003/Desc┃Otorga una acumulación de Descarga eléctrica por{11} segundos por ataque básico. (Máximo {0} veces)\nLos ataques básicos con acumulaciones máximas o hacia un enemigo protegido infligen daño de habilidades adicional y eliminan todas tus acumulaciones de Descarga Eléctrica.\n(Cuerpo a cuerpo) Inflige <color=#688A08>{1} PV máximos del enemigo</color> + <color=green>{4}~{5}(proporcional al nivel del personaje)</color> de daño de habilidades.\n(A distancia) Inflige <color=#688A08>{6} PV máximos del enemigo</color> + <color=green>{9}~{10}(proporcional al nivel del personaje)</color> de daño de habilidades.
 CharacterState/Group/Name/6024000┃Reuniendo Descarga Eléctrica
@@ -13100,12 +13106,12 @@ Mission/8000801/1┃Consigue Créditos en Protocolo Cobalto
 Mission/8000802/1┃Consigue Créditos en Protocolo Cobalto
 Mission/8000803/1┃Consigue Créditos en Protocolo Cobalto
 Mission/8000901/1┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
-Mission/8000902/1┃Utiliza la Mejora Frenesí en Protocolo Cobalto\n
+Mission/8000902/1┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
 Mission/8000903/1┃Utiliza la Mejora Linaje Vampírico en Protocolo Cobalto\n
 Mission/8000904/1┃Utiliza la Mejora Alma Roja en Protocolo Cobalto
 Mission/8000905/1┃Utiliza la Mejora Fragmentos de Diamante en Protocolo Cobalto
 Mission/8000906/1┃Utiliza la Mejora Blindado en Protocolo Cobalto
-Mission/8000907/1┃Utiliza la Mejora Oblivion en Protocolo Cobalto
+Mission/8000907/1┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
 Mission/8000908/1┃Utiliza la Mejora Factor Curativo en Protocolo Cobalto
 Mission/8000909/1┃Utiliza la Mejora Dron Amplificador en Protocolo Cobalto
 Mission/8000910/1┃Utiliza la Mejora Dron Curativo en Protocolo Cobalto
@@ -13160,7 +13166,7 @@ Mission/8003301/2┃Consigue Créditos en Protocolo Cobalto
 Mission/8003301/3┃Elimina a un javalí
 Mission/8003401/2┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
 Mission/8003401/3┃Elimina a Omega
-Mission/8003501/2┃Utiliza la Mejora Frenesí en Protocolo Cobalto\n
+Mission/8003501/2┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
 Mission/8003501/3┃Alcanza el Top 5 en una partida
 Mission/8003601/2┃Utiliza la Mejora Linaje Vampírico en Protocolo Cobalto\n
 Mission/8003601/3┃Inflinge daño a un jugador
@@ -13170,7 +13176,7 @@ Mission/8003801/2┃Utiliza la Mejora Fragmentos de Diamante en Protocolo Cobalt
 Mission/8003801/3┃Elimina a un oso
 Mission/8003901/2┃Utiliza la Mejora Blindado en Protocolo Cobalto
 Mission/8003901/3┃Elimina a una gallina
-Mission/8004001/2┃Utiliza la Mejora Oblivion en Protocolo Cobalto
+Mission/8004001/2┃Utiliza la Mejora Infligir Fragilidad en Protocolo Cobalto
 Mission/8004001/3┃Elimina a un perro salvaje
 Mission/8004101/2┃Utiliza la Mejora Factor Curativo en Protocolo Cobalto
 Mission/8004101/3┃Obtén <color=#D05EFF>Muestra de Sangre VF</color>
@@ -14813,9 +14819,9 @@ Trait/StatTooltip/7920501┃Si no has recibido daño de combate en los últimos 
 Trait/StatTooltip/7920502┃Si no has recibido daño de combate en los últimos {0} segundos, recupera {1}% de tus PV y PE faltantes por segundo.
 Trait/StatTooltip/7920503┃Si no has recibido daño de combate en los últimos {0} segundos, recupera {1}% de tus PV y PE faltantes por segundo.
 Trait/StatTooltip/7920603┃Al morir, revive automáticamente con tus PV y PE completamente recuperados después de 3 segundos. (Tiempo de enfriamiento: {0}s)
-Trait/StatTooltip/7920701┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.\n\nIncremento de Amplificación de Habilidades Total: {2}%
-Trait/StatTooltip/7920702┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.\n\nIncremento de Amplificación de Habilidades Total: {2}%
-Trait/StatTooltip/7920703┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.\n\nIncremento de Amplificación de Habilidades Total: {2}%
+Trait/StatTooltip/7920701┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.
+Trait/StatTooltip/7920702┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.
+Trait/StatTooltip/7920703┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria, hasta 2 acumulaciones.
 Trait/StatTooltip/7920801┃Al morir, crea un pantano que ralentiza a los enemigos en él un {1}% y reduce sus defensas en {2}% durante {0} segundos.
 Trait/StatTooltip/7920802┃Al morir, crea un pantano que ralentiza a los enemigos en él un {1}% y reduce sus defensas en {2}% durante {0} segundos.
 Trait/StatTooltip/7920803┃Al morir, crea un pantano que ralentiza a los enemigos en él un {1}% y reduce sus defensas en {2}% durante {0} segundos.
@@ -15130,7 +15136,7 @@ Infusion/Trait/Desc/7920403┃Al morir, crea una explosión que aerotransporta a
 Infusion/Trait/Desc/7920501┃Si no has recibido daño de combate en los últimos {0} segundos, recupera {1}% de tus PV y PE faltantes por segundo.
 Infusion/Trait/Desc/7920502┃Si no has recibido daño de combate en los últimos {0} segundos, recupera {1}% de tus PV y PE faltantes por segundo.
 Infusion/Trait/Desc/7920503┃Si no has recibido daño de combate en los últimos {0} segundos, recupera {1}% de tus PV y PE faltantes por segundo.
-Infusion/Trait/Desc/7920603┃Al morir, revives automáticamente con tus PV y PE completamente recuperados después de 3 segundos. (Tiempo de enfriamiento: {0}s)\nDurante el enfriamiento, obtienes 25{1} de Poder de Ataque y 35{2} de Amp. de Habilidades.
+Infusion/Trait/Desc/7920603┃Al morir, revives automáticamente con tus PV y PE completamente recuperados después de 3 segundos. (Tiempo de enfriamiento: {0}s)\nDurante el enfriamiento, obtienes 35{1} de Poder de Ataque y 50{2} de Amp. de Habilidades.
 Infusion/Trait/Desc/7920701┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria.
 Infusion/Trait/Desc/7920702┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria.
 Infusion/Trait/Desc/7920703┃Amplificación de Habilidades incrementada por {0}.\nGana {1}% de Amplificación de Habilidades adicional por cada Infusión complementaria.
