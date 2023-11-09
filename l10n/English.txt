@@ -431,6 +431,7 @@ MasteryResultValueType/KillPlayer┃Based on Enemy Level
 MasteryResultValueType/KillMonster┃Based on Wild Animal Level
 StatType/None┃None
 StatType/MaxHp┃Max HP
+StatType/MaxHpBonus┃Max HP
 StatType/MaxHp/Desc┃Increases Max HP
 StatType/MaxHpByLv┃Max HP per level
 StatType/MaxHpCoef┃Max HP 
@@ -470,7 +471,7 @@ StatType/LifeSteal/Desc┃Omnisyphon: Applies to all damage dealt, besides trap 
 StatType/NormalLifeSteal┃Life Steal
 StatType/NormalLifeSteal/Desc┃Life Steal: Applies to basic attack damage.
 StatType/Bloodsucking┃Omnisyphon | Life Steal
-StatType/Bloodsucking/Desc┃Dealing damage also recovers some of your HP. (Damage to wild animals scaled at 60%)
+StatType/Bloodsucking/Desc┃Dealing damage also recovers some of your HP. (Applies only 50% to Area Damage and 60% to Wild Animals.)
 StatType/SkillLifeSteal┃Skill Vamp
 StatType/AttackPowerRatio┃Attack Power 
 StatType/DefenseRatio┃Defense 
@@ -1066,6 +1067,7 @@ Collectible/6┃Potato vine
 Collectible/7┃Ancient Tree
 Collectible/8┃Crater
 Collectible/9┃Flower
+Collectible/10┃Fishing spot
 DropFrequency/Never┃Never
 DropFrequency/Rare┃Rarely
 DropFrequency/Often┃Often
@@ -1227,6 +1229,7 @@ Skin/Name/1012001┃Magnolia Oracle Hyejin
 Skin/Name/1012002┃Cadet Hyejin
 Skin/Name/1012003┃Spirit Hunter Hyejin
 Skin/Name/1012004┃Test-taker Hyejin
+Skin/Name/1012005┃Candy Cane Hyejin
 Skin/Name/1013000┃Xiukai
 Skin/Name/1013001┃Itamae Xiukai
 Skin/Name/1013002┃Dodgeball King Xiukai
@@ -1244,7 +1247,7 @@ Skin/Name/1016000┃Silvia
 Skin/Name/1016001┃Midnight Breeze Silvia
 Skin/Name/1016002┃GeForce Now Silvia
 Skin/Name/1016003┃Donutdasher Silvia
-Skin/Name/1016004┃World Traveler Silvia
+Skin/Name/1016004┃Cozy Camper Silvia
 Skin/Name/1017000┃Adriana
 Skin/Name/1017001┃Firebat Adriana
 Skin/Name/1017002┃Exterminator Adriana
@@ -1273,6 +1276,7 @@ Skin/Name/1022001┃Bartender Luke
 Skin/Name/1022002┃Street Fiend Luke
 Skin/Name/1022003┃Cadet Luke
 Skin/Name/1022004┃Pool Boy Luke
+Skin/Name/1022005┃Ludolph
 Skin/Name/1023000┃Cathy
 Skin/Name/1023001┃Combat Medic Cathy
 Skin/Name/1023002┃Android Medic Cathy
@@ -1348,6 +1352,7 @@ Skin/Name/1042003┃Cadet Bianca
 Skin/Name/1043000┃Celine
 Skin/Name/1043001┃Defusal Agent Celine
 Skin/Name/1043002┃Electro Pumpkin Celine
+Skin/Name/1043003┃Tropical Getaway Celine
 Skin/Name/1044000┃Echion
 Skin/Name/1044001┃Crimson Devil Echion
 Skin/Name/1044002┃Cadet Echion
@@ -1405,6 +1410,7 @@ Skin/Name/1061000┃Irem
 Skin/Name/1061001┃Fluffy Snowball Irem
 Skin/Name/1062000┃Theodore
 Skin/Name/1062001┃Special Task Force Theodore
+Skin/Name/1062002┃Battle Priest Theodore
 Skin/Name/1063000┃Ly Anh
 Skin/Name/1063001┃Trapped Ly Anh
 Skin/Name/1064000┃Vanya
@@ -1604,12 +1610,13 @@ Skin/Desc/1018004┃It's going to be a long night.
 Skin/Desc/1023003┃Failing students need extra classes.
 Skin/Desc/1003004┃Entering the field. The first priority is to ensure the safety of the client!
 Skin/Desc/1066001┃History is about to be rewritten once again.
-Skin/Desc/1042003┃Did I really need this body that badly? Well... I'll praise it!
-Skin/Desc/1021003┃Full Course ready. I hope the main dish suits your palate.
+Skin/Desc/1042003┃Were you really looking forward to meet me? Hehe, what a compliment! 
+Skin/Desc/1021003┃I've prepared a full course meal for you. Hope you like the main dish. 
 Skin/Desc/1002003┃I will not let you get in the way of our business!
 Skin/Desc/1025003┃All members of the unit, prepare a welcome party for our uninvited guests.
 Skin/Desc/1056002┃It looks like you need to clear your mind a bit.
-Skin/Desc/1016004┃So, where do we go from here?
+Skin/Desc/1016004┃So, where do we go next?
+Skin/Desc/1067001┃A bad deed always brings a punishment. 
 ItemType/EMOTION/Name┃Emote
 Emotion_Name_001┃Angry
 Emotion_Name_002┃Laugh
@@ -1705,6 +1712,7 @@ Drops_Emotion_S7Champion_Haqueen_6075┃SEASON 7 CHAMPION HAQUEEN
 Drops_Emotion_S7Champion_Onecricle_6076┃SEASON 7 CHAMPION ONECIRCLE
 Drops_Emotion_S7Champion_Saten_6077┃SEASON 7 CHAMPION SATEN
 Drops_Emotion_S7Champion_Gwork_6078┃SEASON 7 CHAMPION GWORK
+Drops_Emotion_St_Chunhyang_6079┃Chunhyang Erm..
 Emotion_Jackie01_NP┃Jackie Approves
 Emotion_Jackie02_NP┃Tearful Jackie
 Emotion_Jackie03_NP┃Enraged Jackie
@@ -1844,11 +1852,18 @@ Emotion_ERPASS_4067┃Glass Guru Tazia
 Emotion_ERPASS_4068┃Commandore!
 Emotion_ERPASS_4069┃I can't hear you!
 Emotion_ERPASS_4070┃ChillDailin
-Emotion_ERPASS_4071┃Rozzi Taken Aback
-Emotion_ERPASS_4072┃Spot Check!
-Emotion_ERPASS_4074┃Late, but never sorry
+Emotion_ERPASS_4071┃Spot Check!
+Emotion_ERPASS_4072┃Caught Chocolate-handed!
+Emotion_ERPASS_4073┃Aya's Tea Time
+Emotion_ERPASS_4074┃You're Late Again
+Emotion_ERPASS_4075┃Pose!
 Emotion_ERPASS_4076┃Bingo!
-Emotion_ERPASS_4077┃Nina Don't Cry!
+Emotion_ERPASS_4077┃Don't Cry Nina!
+Emotion_ERPASS_4078┃Laura's Little Surprise 
+Emotion_ERPASS_4079┃Too Tired For This
+Emotion_ERPASS_4080┃Hot Cocoa for One 
+Emotion_ERPASS_4081┃Street Fighter Piolo Is Broke
+Emotion_ERPASS_4082┃Stop Right There!
 Emotion_LiDailin02_NP┃Cheers!
 Emotion_LiDailin03_NP┃One too many...
 Emotion_LiDailin04_NP┃Disrespectin' Dailin
@@ -2210,17 +2225,25 @@ Emotion_Leon01_NP┃Nope, Not My Business
 Emotion_Leon02_NP┃Leon Says NO!
 Emotion_Leon03_NP┃You, over here
 Emotion_Leon04_NP┃No.1 Leon
+Emotion_Barbara01_NP┃Confidence On Point
+Emotion_Barbara02_NP┃Ready To Smash!
+Emotion_Barbara03_NP┃You're Funny
+Emotion_Barbara04_NP┃Boohoo
 Emotion_Felix01_NP┃Hey Felix!
 Emotion_Felix02_NP┃Awkwardly Cute
 Emotion_Felix03_NP┃Count On Me
 Emotion_Felix04_NP┃Felix Approves
-Collection/Name/10001┃All for my daughter.
-Collection/Name/10002┃Yeah, but why?
-Collection/Name/10003┃An Iced Coffee, please!
-Collection/Name/10004┃Let's complete the tutorial!
-Collection/Name/10005┃What's next?
-Collection/Name/10006┃Enemy defeated.
-Collection/Name/10007┃Dr. Nadja's new look
+Collection/Name/11001┃All for my daughter.
+Collection/Name/11002┃Do you... like pixel art?
+Collection/Name/13001┃Yeah, but why?
+Collection/Name/13002┃An Iced Coffee, please!
+Collection/Name/13003┃Let's complete the tutorial!
+Collection/Name/13004┃What's next?
+Collection/Name/13005┃Enemy defeated.
+Collection/Name/13006┃Dr. Nadja's new look
+Collection/Name/13007┃It's dangerous out there!
+Collection/Name/13008┃Thanks for your hard work.
+Collection/Name/13009┃My eyes are sweating...
 Shop/Desc/Emotion_Hart01_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes to communicate with other players in-game.
@@ -2501,9 +2524,9 @@ EMBLEM_MARK_S5_TITAN_SQUAD┃Season 5 Titan(Squad) Icon
 EMBLEM_MARK_S5_IMMORTAL_SOLO┃Season 5 Immortal(Solo) Icon
 EMBLEM_MARK_S5_IMMORTAL_DUO┃Season 5 Immortal(Duo) Icon
 EMBLEM_MARK_S5_IMMORTAL_SQUAD┃Season 5 Immortal(Squad) Icon
-EMBLEM_MARK_S5_IMMORTAL_SOLO_105081┃Season 5 Immortal(Solo) Honorary Icon
-EMBLEM_MARK_S5_IMMORTAL_DUO_105082┃Season 5 Immortal(Duo) Honorary Icon
-EMBLEM_MARK_S5_IMMORTAL_SQUAD_105083┃Season 5 Immortal(Squad) Honorary Icon
+EMBLEM_MARK_S5_IMMORTAL_SOLO_105081┃EA Season 5 Immortal(Solo) Honorary Icon
+EMBLEM_MARK_S5_IMMORTAL_DUO_105082┃EA Season 5 Immortal(Duo) Honorary Icon
+EMBLEM_MARK_S5_IMMORTAL_SQUAD_105083┃EA Season 5 Immortal(Squad) Honorary Icon
 EMBLEM_MARK_S6_IRON_SOLO┃Season 6 Iron(Solo) Icon
 EMBLEM_MARK_S6_IRON_DUO┃Season 6 Iron(Duo) Icon
 EMBLEM_MARK_S6_IRON_SQUAD┃Season 6 Iron(Squad) Icon
@@ -2528,9 +2551,9 @@ EMBLEM_MARK_S6_TITAN_SQUAD┃Season 6 Titan(Squad) Icon
 EMBLEM_MARK_S6_IMMORTAL_SOLO┃Season 6 Immortal(Solo) Icon
 EMBLEM_MARK_S6_IMMORTAL_DUO┃Season 6 Immortal(Duo) Icon
 EMBLEM_MARK_S6_IMMORTAL_SQUAD┃Season 6 Immortal(Squad) Icon
-EMBLEM_MARK_S6_IMMORTAL_SOLO_105108┃Season 6 Immortal(Solo) Honorary Icon
-EMBLEM_MARK_S6_IMMORTAL_DUO_105109┃Season 6 Immortal(Duo) Honorary Icon
-EMBLEM_MARK_S6_IMMORTAL_SQUAD_105110┃Season 6 Immortal(Squad) Honorary Icon
+EMBLEM_MARK_S6_IMMORTAL_SOLO_105108┃EA Season 6 Immortal(Solo) Honorary Icon
+EMBLEM_MARK_S6_IMMORTAL_DUO_105109┃EA Season 6 Immortal(Duo) Honorary Icon
+EMBLEM_MARK_S6_IMMORTAL_SQUAD_105110┃EA Season 6 Immortal(Squad) Honorary Icon
 EMBLEM_MARK_S7_IRON_SOLO┃Season 7 Iron(Solo) Icon
 EMBLEM_MARK_S7_IRON_DUO┃Season 7 Iron(Duo) Icon
 EMBLEM_MARK_S7_IRON_SQUAD┃Season 7 Iron(Squad) Icon
@@ -2555,9 +2578,9 @@ EMBLEM_MARK_S7_TITAN_SQUAD┃Season 7 Titan(Squad) Icon
 EMBLEM_MARK_S7_IMMORTAL_SOLO┃Season 7 Immortal(Solo) Icon
 EMBLEM_MARK_S7_IMMORTAL_DUO┃Season 7 Immortal(Duo) Icon
 EMBLEM_MARK_S7_IMMORTAL_SQUAD┃Season 7 Immortal(Squad) Icon
-EMBLETM_MARK_S7_ETERNITY_SOLO┃Season 7 Immortal(Solo) Honorary Icon
-EMBLETM_MARK_S7_ETERNITY_DUO┃Season 7 Immortal(Duo) Honorary Icon
-EMBLETM_MARK_S7_ETERNITY_SQUAD┃Season 7 Immortal(Squad) Honorary Icon
+EMBLETM_MARK_S7_ETERNITY_SOLO┃EA Season 7 Immortal(Solo) Honorary Icon
+EMBLETM_MARK_S7_ETERNITY_DUO┃EA Season 7 Immortal(Duo) Honorary Icon
+EMBLETM_MARK_S7_ETERNITY_SQUAD┃EA Season 7 Immortal(Squad) Honorary Icon
 EMBLEM_MARK_S8_IRON_SOLO┃Season 8 Iron(Solo) Icon
 EMBLEM_MARK_S8_IRON_DUO┃Season 8 Iron(Duo) Icon
 EMBLEM_MARK_S8_IRON_SQUAD┃Season 8 Iron(Squad) Icon
@@ -2585,9 +2608,9 @@ EMBLEM_MARK_S8_TITAN_SQUAD┃Season 8 Titan(Squad) Icon
 EMBLEM_MARK_S8_IMMORTAL_SOLO┃Season 8 Immortal(Solo) Icon
 EMBLEM_MARK_S8_IMMORTAL_DUO┃Season 8 Immortal(Duo) Icon
 EMBLEM_MARK_S8_IMMORTAL_SQUAD┃Season 8 Immortal(Squad) Icon
-EMBLEM_MARK_S8_IMMORTAL_SOLO_105165┃Season 8 Immortal(Solo) Honorary Icon
-EMBLEM_MARK_S8_IMMORTAL_DUO_105166┃Season 8 Immortal(Duo) Honorary Icon
-EMBLEM_MARK_S8_IMMORTAL_SQUAD_105167┃Season 8 Immortal(Squad) Honorary Icon
+EMBLEM_MARK_S8_IMMORTAL_SOLO_105165┃EA Season 8 Immortal(Solo) Honorary Icon
+EMBLEM_MARK_S8_IMMORTAL_DUO_105166┃EA Season 8 Immortal(Duo) Honorary Icon
+EMBLEM_MARK_S8_IMMORTAL_SQUAD_105167┃EA Season 8 Immortal(Squad) Honorary Icon
 EMBLEM_MARK_S9_IRON_SOLO┃Season 9 Iron(Solo) Icon
 EMBLEM_MARK_S9_IRON_DUO┃Season 9 Iron(Duo) Icon
 EMBLEM_MARK_S9_IRON_SQUAD┃Season 9 Iron(Squad) Icon
@@ -2615,9 +2638,9 @@ EMBLEM_MARK_S9_TITAN_SQUAD┃Season 9 Titan(Squad) Icon
 EMBLEM_MARK_S9_IMMORTAL_SOLO┃Season 9 Immortal(Solo) Icon
 EMBLEM_MARK_S9_IMMORTAL_DUO┃Season 9 Immortal(Duo) Icon
 EMBLEM_MARK_S9_IMMORTAL_SQUAD┃Season 9 Immortal(Squad) Icon
-EMBLEM_MARK_S9_IMMORTAL_SOLO_105195┃Season 9 Immortal(Solo) Honorary Icon
-EMBLEM_MARK_S9_IMMORTAL_DUO_105196┃Season 9 Immortal(Duo) Honorary Icon
-EMBLEM_MARK_S9_IMMORTAL_SQUAD_105197┃Season 9 Immortal(Squad) Honorary Icon
+EMBLEM_MARK_S9_IMMORTAL_SOLO_105195┃EA Season 9 Immortal(Solo) Honorary Icon
+EMBLEM_MARK_S9_IMMORTAL_DUO_105196┃EA Season 9 Immortal(Duo) Honorary Icon
+EMBLEM_MARK_S9_IMMORTAL_SQUAD_105197┃EA Season 9 Immortal(Squad) Honorary Icon
 EMBLEM_MARK_S10_IRON_SQUAD┃Season 1 Iron Icon
 EMBLEM_MARK_S10_BRONZE_SQUAD┃Season 1 Bronze Icon
 EMBLEM_MARK_S10_SILVER_SQUAD┃Season 1 Silver Icon
@@ -2911,9 +2934,9 @@ EMBLEM_BG_S5_TITAN_SQUAD┃Season 5 Titan Background - Squad
 EMBLEM_BG_S5_IMMORTAL_SOLO┃Season 5 Immortal Background - Solo
 EMBLEM_BG_S5_IMMORTAL_DUO┃Season 5 Immortal Background - Duo
 EMBLEM_BG_S5_IMMORTAL_SQUAD┃Season 5 Immortal Background - Squad
-EMBLEM_BG_S5_IMMORTAL_SOLO_205081┃Season 5 Immortal Honorary Background - Solo
-EMBLEM_BG_S5_IMMORTAL_DUO_205082┃Season 5 Immortal Honorary Background - Duo
-EMBLEM_BG_S5_IMMORTAL_SQUAD_205083┃Season 5 Immortal Honorary Background - Squad
+EMBLEM_BG_S5_IMMORTAL_SOLO_205081┃EA Season 5 Immortal Honorary Background - Solo
+EMBLEM_BG_S5_IMMORTAL_DUO_205082┃EA Season 5 Immortal Honorary Background - Duo
+EMBLEM_BG_S5_IMMORTAL_SQUAD_205083┃EA Season 5 Immortal Honorary Background - Squad
 EMBLEM_BG_S6_IRON_SOLO┃Season 6 Iron Background - Solo
 EMBLEM_BG_S6_IRON_DUO┃Season 6 Iron Background - Duo
 EMBLEM_BG_S6_IRON_SQUAD┃Season 6 Iron Background - Squad
@@ -2938,9 +2961,9 @@ EMBLEM_BG_S6_TITAN_SQUAD┃Season 6 Titan Background - Squad
 EMBLEM_BG_S6_IMMORTAL_SOLO┃Season 6 Immortal Background - Solo
 EMBLEM_BG_S6_IMMORTAL_DUO┃Season 6 Immortal Background - Duo
 EMBLEM_BG_S6_IMMORTAL_SQUAD┃Season 6 Immortal Background - Squad
-EMBLEM_BG_S6_IMMORTAL_SOLO_205108┃Season 6 Immortal Honorary Background - Solo
-EMBLEM_BG_S6_IMMORTAL_DUO_205109┃Season 6 Immortal Honorary Background - Duo
-EMBLEM_BG_S6_IMMORTAL_SQUAD_205110┃Season 6 Immortal Honorary Background - Squad
+EMBLEM_BG_S6_IMMORTAL_SOLO_205108┃EA Season 6 Immortal Honorary Background - Solo
+EMBLEM_BG_S6_IMMORTAL_DUO_205109┃EA Season 6 Immortal Honorary Background - Duo
+EMBLEM_BG_S6_IMMORTAL_SQUAD_205110┃EA Season 6 Immortal Honorary Background - Squad
 EMBLEM_BG_S7_IRON_SOLO┃Season 7 Iron Background - Solo
 EMBLEM_BG_S7_IRON_DUO┃Season 7 Iron Background - Duo
 EMBLEM_BG_S7_IRON_SQUAD┃Season 7 Iron Background - Squad
@@ -2965,9 +2988,9 @@ EMBLEM_BG_S7_TITAN_SQUAD┃Season 7 Titan Background - Squad
 EMBLEM_BG_S7_IMMORTAL_SOLO┃Season 7 Immortal Background - Solo
 EMBLEM_BG_S7_IMMORTAL_DUO┃Season 7 Immortal Background - Duo
 EMBLEM_BG_S7_IMMORTAL_SQUAD┃Season 7 Immortal Background - Squad
-EMBLEM_BG_S7_ETERNITY_SOLO┃Season 7 Immortal Honorary Background - Solo
-EMBLEM_BG_S7_ETERNITY_DUO┃Season 7 Immortal Honorary Background - Duo
-EMBLEM_BG_S7_ETERNITY_SQUAD┃Season 7 Immortal Honorary Background - Squad
+EMBLEM_BG_S7_ETERNITY_SOLO┃EA Season 7 Immortal Honorary Background - Solo
+EMBLEM_BG_S7_ETERNITY_DUO┃EA Season 7 Immortal Honorary Background - Duo
+EMBLEM_BG_S7_ETERNITY_SQUAD┃EA Season 7 Immortal Honorary Background - Squad
 EMBLEM_BG_S8_IRON_SOLO┃Season 8 Iron Background - Solo
 EMBLEM_BG_S8_IRON_DUO┃Season 8 Iron Background - Duo
 EMBLEM_BG_S8_IRON_SQUAD┃Season 8 Iron Background - Squad
@@ -2995,9 +3018,9 @@ EMBLEM_BG_S8_TITAN_SQUAD┃Season 8 Titan Background - Squad
 EMBLEM_BG_S8_IMMORTAL_SOLO┃Season 8 Immortal Background - Solo
 EMBLEM_BG_S8_IMMORTAL_DUO┃Season 8 Immortal Background - Duo
 EMBLEM_BG_S8_IMMORTAL_SQUAD┃Season 8 Immortal Background - Squad
-EMBLEM_BG_S8_IMMORTAL_SOLO_205165┃Season 8 Immortal Honorary Background - Solo
-EMBLEM_BG_S8_IMMORTAL_DUO_205166┃Season 8 Immortal Honorary Background - Duo
-EMBLEM_BG_S8_IMMORTAL_SQUAD_205167┃Season 8 Immortal Honorary Background - Squad
+EMBLEM_BG_S8_IMMORTAL_SOLO_205165┃EA Season 8 Immortal Honorary Background - Solo
+EMBLEM_BG_S8_IMMORTAL_DUO_205166┃EA Season 8 Immortal Honorary Background - Duo
+EMBLEM_BG_S8_IMMORTAL_SQUAD_205167┃EA Season 8 Immortal Honorary Background - Squad
 EMBLEM_BG_S9_IRON_SOLO┃Season 9 Iron Background - Solo
 EMBLEM_BG_S9_IRON_DUO┃Season 9 Iron Background - Duo
 EMBLEM_BG_S9_IRON_SQUAD┃Season 9 Iron Background - Squad
@@ -3025,9 +3048,9 @@ EMBLEM_BG_S9_TITAN_SQUAD┃Season 9 Titan Background - Squad
 EMBLEM_BG_S9_IMMORTAL_SOLO┃Season 9 Immortal Background - Solo
 EMBLEM_BG_S9_IMMORTAL_DUO┃Season 9 Immortal Background - Duo
 EMBLEM_BG_S9_IMMORTAL_SQUAD┃Season 9 Immortal Background - Squad
-EMBLEM_BG_S9_IMMORTAL_SOLO_205195┃Season 9 Immortal Honorary Background - Solo
-EMBLEM_BG_S9_IMMORTAL_DUO_205196┃Season 9 Immortal Honorary Background - Duo
-EMBLEM_BG_S9_IMMORTAL_SQUAD_205197┃Season 9 Immortal Honorary Background - Squad
+EMBLEM_BG_S9_IMMORTAL_SOLO_205195┃EA Season 9 Immortal Honorary Background - Solo
+EMBLEM_BG_S9_IMMORTAL_DUO_205196┃EA Season 9 Immortal Honorary Background - Duo
+EMBLEM_BG_S9_IMMORTAL_SQUAD_205197┃EA Season 9 Immortal Honorary Background - Squad
 EMBLEM_BG_S10_IRON_SQUAD┃Season 1 Iron Background
 EMBLEM_BG_S10_BRONZE_SQUAD┃Season 1 Bronze Background
 EMBLEM_BG_S10_SILVER_SQUAD┃Season 1 Silver Background
@@ -3162,9 +3185,9 @@ EMBLEM_OUTLINE_S5_TITAN_SQUAD┃Season 5 Titan Border - Squad
 EMBLEM_OUTLINE_S5_IMMORTAL_SOLO┃Season 5 Immortal Border - Solo
 EMBLEM_OUTLINE_S5_IMMORTAL_DUO┃Season 5 Immortal Border - Duo
 EMBLEM_OUTLINE_S5_IMMORTAL_SQUAD┃Season 5 Immortal Border - Squad
-EMBLEM_OUTLINE_S5_IMMORTAL_SOLO_305081┃Season 5 Immortal Honorary Border - Solo
-EMBLEM_OUTLINE_S5_IMMORTAL_DUO_305082┃Season 5 Immortal Honorary Border - Duo
-EMBLEM_OUTLINE_S5_IMMORTAL_SQUAD_305083┃Season 5 Immortal Honorary Border - Squad
+EMBLEM_OUTLINE_S5_IMMORTAL_SOLO_305081┃EA Season 5 Immortal Honorary Border - Solo
+EMBLEM_OUTLINE_S5_IMMORTAL_DUO_305082┃EA Season 5 Immortal Honorary Border - Duo
+EMBLEM_OUTLINE_S5_IMMORTAL_SQUAD_305083┃EA Season 5 Immortal Honorary Border - Squad
 EMBLEM_OUTLINE_S6_IRON_SOLO┃Season 6 Iron Border - Solo
 EMBLEM_OUTLINE_S6_IRON_DUO┃Season 6 Iron Border - Duo
 EMBLEM_OUTLINE_S6_IRON_SQUAD┃Season 6 Iron Border - Squad
@@ -3189,9 +3212,9 @@ EMBLEM_OUTLINE_S6_TITAN_SQUAD┃Season 6 Titan Border - Squad
 EMBLEM_OUTLINE_S6_IMMORTAL_SOLO┃Season 6 Immortal Border - Solo
 EMBLEM_OUTLINE_S6_IMMORTAL_DUO┃Season 6 Immortal Border - Duo
 EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD┃Season 6 Immortal Border - Squad
-EMBLEM_OUTLINE_S6_IMMORTAL_SOLO_305108┃Season 6 Immortal Honorary Border - Solo
-EMBLEM_OUTLINE_S6_IMMORTAL_DUO_305109┃Season 6 Immortal Honorary Border - Duo
-EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD_305110┃Season 6 Immortal Honorary Border - Squad
+EMBLEM_OUTLINE_S6_IMMORTAL_SOLO_305108┃EA Season 6 Immortal Honorary Border - Solo
+EMBLEM_OUTLINE_S6_IMMORTAL_DUO_305109┃EA Season 6 Immortal Honorary Border - Duo
+EMBLEM_OUTLINE_S6_IMMORTAL_SQUAD_305110┃EA Season 6 Immortal Honorary Border - Squad
 EMBLEM_OUTLINE_S7_IRON_SOLO┃Season 7 Iron Border - Solo
 EMBLEM_OUTLINE_S7_IRON_DUO┃Season 7 Iron Border - Duo
 EMBLEM_OUTLINE_S7_IRON_SQUAD┃Season 7 Iron Border - Squad
@@ -3216,9 +3239,9 @@ EMBLEM_OUTLINE_S7_TITAN_SQUAD┃Season 7 Titan Border - Squad
 EMBLEM_OUTLINE_S7_IMMORTAL_SOLO┃Season 7 Immortal Border - Solo
 EMBLEM_OUTLINE_S7_IMMORTAL_DUO┃Season 7 Immortal Border - Duo
 EMBLEM_OUTLINE_S7_IMMORTAL_SQUAD┃Season 7 Immortal Border - Squad
-EMBLEM_OUTLINE_S7_ETERNITY_SOLO_305135┃Season 7 Immortal Honorary Border - Solo
-EMBLEM_OUTLINE_S7_ETERNITY_DUO_305136┃Season 7 Immortal Honorary Border - Duo
-EMBLEM_OUTLINE_S7_ETERNITY_SQUAD_305137┃Season 7 Immortal Honorary Border - Squad
+EMBLEM_OUTLINE_S7_ETERNITY_SOLO_305135┃EA Season 7 Immortal Honorary Border - Solo
+EMBLEM_OUTLINE_S7_ETERNITY_DUO_305136┃EA Season 7 Immortal Honorary Border - Duo
+EMBLEM_OUTLINE_S7_ETERNITY_SQUAD_305137┃EA Season 7 Immortal Honorary Border - Squad
 EMBLEM_OUTLINE_S8_IRON_SOLO┃Season 8 Iron Border - Solo
 EMBLEM_OUTLINE_S8_IRON_DUO┃Season 8 Iron Border - Duo
 EMBLEM_OUTLINE_S8_IRON_SQUAD┃Season 8 Iron Border - Squad
@@ -3246,9 +3269,9 @@ EMBLEM_OUTLINE_S8_TITAN_SQUAD┃Season 8 Titan Border - Squad
 EMBLEM_OUTLINE_S8_IMMORTAL_SOLO┃Season 8 Immortal Border - Solo
 EMBLEM_OUTLINE_S8_IMMORTAL_DUO┃Season 8 Immortal Border - Duo
 EMBLEM_OUTLINE_S8_IMMORTAL_SQUAD┃Season 8 Immortal Border - Squad
-EMBLEM_OUTLINE_S8_IMMORTAL_SOLO_305165┃Season 8 Immortal Honorary Border - Solo
-EMBLEM_OUTLINE_S8_IMMORTAL_DUO_305166┃Season 8 Immortal Honorary Border - Duo
-EMBLEM_OUTLINE_S8_IMMORTAL_SQUAD_305167┃Season 8 Immortal Honorary Border - Squad
+EMBLEM_OUTLINE_S8_IMMORTAL_SOLO_305165┃EA Season 8 Immortal Honorary Border - Solo
+EMBLEM_OUTLINE_S8_IMMORTAL_DUO_305166┃EA Season 8 Immortal Honorary Border - Duo
+EMBLEM_OUTLINE_S8_IMMORTAL_SQUAD_305167┃EA Season 8 Immortal Honorary Border - Squad
 EMBLEM_OUTLINE_S9_IRON_SOLO┃Season 9 Iron Border - Solo
 EMBLEM_OUTLINE_S9_IRON_DUO┃Season 9 Iron Border - Duo
 EMBLEM_OUTLINE_S9_IRON_SQUAD┃Season 9 Iron Border - Squad
@@ -3276,9 +3299,9 @@ EMBLEM_OUTLINE_S9_TITAN_SQUAD┃Season 9 Titan Border - Squad
 EMBLEM_OUTLINE_S9_IMMORTAL_SOLO┃Season 9 Immortal Border - Solo
 EMBLEM_OUTLINE_S9_IMMORTAL_DUO┃Season 9 Immortal Border - Duo
 EMBLEM_OUTLINE_S9_IMMORTAL_SQUAD┃Season 9 Immortal Border - Squad
-EMBLEM_OUTLINE_S9_IMMORTAL_SOLO_305195┃Season 9 Immortal Honorary Border - Solo
-EMBLEM_OUTLINE_S9_IMMORTAL_DUO_305196┃Season 9 Immortal Honorary Border - Duo
-EMBLEM_OUTLINE_S9_IMMORTAL_SQUAD_305197┃Season 9 Immortal Honorary Border - Squad
+EMBLEM_OUTLINE_S9_IMMORTAL_SOLO_305195┃EA Season 9 Immortal Honorary Border - Solo
+EMBLEM_OUTLINE_S9_IMMORTAL_DUO_305196┃EA Season 9 Immortal Honorary Border - Duo
+EMBLEM_OUTLINE_S9_IMMORTAL_SQUAD_305197┃EA Season 9 Immortal Honorary Border - Squad
 EMBLEM_OUTLINE_S10_IRON_SQUAD┃Season 1 Iron Border
 EMBLEM_OUTLINE_S10_BRONZE_SQUAD┃Season 1 Bronze Border
 EMBLEM_OUTLINE_S10_SILVER_SQUAD┃Season 1 Silver Border
@@ -3582,6 +3605,7 @@ Goods/Name/2704007┃Neon Aftershock
 Goods/Name/2704008┃Slumber Party
 Goods/Name/2704009┃Class of '23
 Goods/Name/2704010┃VACANCE
+Goods/Name/2704011┃Battle Maids
 ItemType/KILLANNOUNCE_ICONPACK/Name┃Kill Announcement Icon
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃Customize kill announcement UI in-game.
 Goods/Name/2801001┃Unwavering
@@ -3741,16 +3765,18 @@ Product/Name/VampireShoichi_CollectPack_01┃Scarlet Vampire Shoichi Collection 
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃Research Center Data Box
 Product/Name/LOOTBOX_SKIN_SINGLE_01┃Skin Data Box
 Product/Name/RANDOM_KEY_SINGLE_01┃Data Key
-Product/Name/LOOTBOX_BASICxKEY_SET_01┃Research Center Data Set
-Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Research Center Data Sets
-Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Research Center Data Sets
+Product/Name/LOOTBOX_BASICxKEY_SET_01┃Research Center Data Box
+Product/Name/LOOTBOX_BASICxKEY_SET_05┃5 Research Center Data Boxes
+Product/Name/LOOTBOX_BASICxKEY_SET_10┃11 Research Center Data Boxes
 Product/Name/LOOTBOX_SKINxKEY_SET_01┃Skin Data Set
 Product/Name/LOOTBOX_SKINxKEY_SET_05┃5 Skin Data Sets
 Product/Name/LOOTBOX_SKINxKEY_SET_10┃11 Skin Data Sets
 Product/Name/MONTHLY_PURCHASE_SET_01┃Monthly Skin Data Bundle
+Product/Name/MONTHLY_PURCHASE_SET_02┃Monthly Data Key Bundle
 Product/Name/ThanksGiving_Special_2023_Pack_01┃Mid-Autumn Special Box Bundle
 Product/Name/ThanksGiving_Special_2023_Pack_02┃Epic Design Box Bundle
 Product/Name/ThanksGiving_Special_2023_Pack_03┃Beachside & Ghostly Box Bundle
+Product/Name/BlackFriday2023_ComboPack_01┃Black Friday Bundle
 Product/Name/TEST_SEQ_PRODUCTS┃시퀀스 패키지
 Product/Name/TEST_SEQ_PRODUCTS_01┃연구소 데이터 세트 (5개)
 Product/Name/TEST_SEQ_PRODUCTS_02┃연구소 데이터 세트 (3개)
@@ -3834,9 +3860,9 @@ Shop/Desc/RANDOM_KEY_SINGLE_01┃The Data Key can open any Data Box.
 LOOTBOX_BASICxKEY_SET_01┃Research Center Data Set
 Shop/Desc/LOOTBOX_BASICxKEY_SET_01┃This product contains one Research Center Data Box and one Data Key.\nVarious items and designs can be obtained from the Research Center Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging using the Data Key.
 LOOTBOX_BASICxKEY_SET_05┃5 Research Center Data Set
-Shop/Desc/LOOTBOX_BASICxKEY_SET_05┃This product contains 5 Research Center Data Boxes and 5 Data Keys.\nVarious items and designs can be obtained from the Research Center Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging using the Data Key.
+Shop/Desc/LOOTBOX_BASICxKEY_SET_05┃This product contains 5 Research Center Data Boxes.\nVarious items and designs can be obtained from the Research Center Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging.
 LOOTBOX_BASICxKEY_SET_10┃11 Research Center Data Set
-Shop/Desc/LOOTBOX_BASICxKEY_SET_10┃This product contains 11 Research Center Data Boxes and 11 Data Keys.\nVarious items and designs can be obtained from the Research Center Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging using the Data Key.
+Shop/Desc/LOOTBOX_BASICxKEY_SET_10┃This product contains 11 Research Center Data Boxes.\nVarious items and designs can be obtained from the Research Center Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging.
 LOOTBOX_SKINxKEY_SET_01┃Skin Data Set
 Shop/Desc/LOOTBOX_SKINxKEY_SET_01┃This product contains one Skin Data Box and 1 Data Key.\nSkins and skin designs can be obtained from the Skin Data Box.\n<color=orange>Ranked rewards and some specially utilized items are not included.</color>\n\nPurchased boxes can be opened in Forging using the Data Key.
 LOOTBOX_SKINxKEY_SET_05┃5 Skins Data Set
@@ -3852,7 +3878,14 @@ Goods/Name/3102005┃Uncommon/Rare Skin Vouchers
 Shop/Desc/DAILY_PURCHASE_SET_01┃You can get 1 of the following: Research Center Data Box, Data Key, NP, Common Material, or Token.\n\nThe number of purchases for this product resets daily at 20:00 (PT).\n<color=orange>It will be opened immediately upon purchase.</color>
 Shop/Desc/S10_KEY_LIMITED┃You can use the Data Key to open any kind of box.\n\nThe number of exchanges per account is not reset.
 Shop/Desc/Vacance Token┃This is a Vacance Token that can be used to redeem items added to Exchange in the Forging menu.<color=red>\nThis token has an expiration date. Please be sure to check the expiration date as it will not be available later.</color>
-Shop/Desc/BatlleMaids Token┃This is a Vacance Token that can be used to redeem items added to Exchange in the Forging menu.<color=red>\nThis token has an expiration date. Please be sure to check the expiration date as it will not be available later.</color>
+Shop/Desc/BatlleMaids Token┃This is a Battle Maids Token that can be used to redeem items added to Exchange in the Forging menu.<color=red>\nThis token has an expiration date. Please be sure to check the expiration date as it will not be available later.</color>
+Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
+Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
+Product/Name/ACCOUNT_XP_boost_1┃XP Boost (1 Day)
+Product/Name/ACCOUNT_XP_boost_3┃XP Boost (3 Days)
+Product/Name/ACCOUNT_XP_boost_7┃XP Boost (7 Days)
+Product/Name/ACCOUNT_XP_boost_15┃XP Boost (15 Days)
+Shop/Desc/ACCOUNT_XP_boost┃Double the account experience (XP) earned based on your game results during XP Boost.
 Product/Name/EP_TOKEN_1000┃1000 EP Tokens
 Product/Name/EP_TOKEN_200┃200 EP Tokens
 Product/Name/EP_TOKEN_RANDOM_01┃Random EP Token Box
@@ -3893,6 +3926,7 @@ Product/Name/EP_Emotion_JeeNyBurger_Magnus04┃JeeNy's Sadnus
 Product/Name/EP_S10_RareDataFragments_01┃Rare Data Fragments
 Product/Name/EP_S10_DataFragments_01┃Data Fragments X10
 Product/Name/EP_S10_Vacance Token┃Vacance Tokens X10
+Product/Name/EP_S11_BatlleMaids Token┃Batlle Maids Tokens X10
 Shop/Desc/EP_TOKEN_1000┃Currency used to purchase EP Token exclusive items.
 Shop/Desc/EP_TOKEN_200┃Currency used to purchase EP Token exclusive items.
 Shop/Desc/EP_TOKEN_RANDOM_01┃Get one random item from the following list. \n\n[Contents]\n- Emma's Magic Show (Lobby Screen)\n- 50 ~ 400 EP Tokens
@@ -4028,6 +4062,7 @@ LootWindow/Disintegrate_Mode┃Disassemble
 카테고리┃Type
 분해 아이템 선택┃Disassemble Settings
 분해시 필요한 ACoin┃Consumed Coins
+분해시 필요한 분해권┃Disassemble Tickets
 잠금상태의 아이템이 있는 경우 1개를 제외한 나머지 아이템이 슬롯에 등록 됩니다.┃All locked items cannot be disassembled.
 잠금┃Owned
 AssemblePopUp┃Do you want to continue crafting?\nDesigns and materials used for crafting will not be returned.
@@ -4043,8 +4078,9 @@ Forge/Blueprint/ItemType┃{0} Designs
 Forge/NotEnoughBox┃Not enough boxes.
 Forge/NotEnoughKey┃Not enough data keys.
 Forge/NotEnoughBoxKey┃Not enough boxes and data keys.
-Forge/ToolTip/RareMatter┃This is a Rare Data Fragment that can be obtained by disassembling an Epic or Rare skin.\nRare Data Fragments are only used to craft Epic skins.
-Forge/ToolTip/NormalMatter┃This is a Data Fragment that can be obtained by disassembling Uncommon skins or other items and designs.\nThis Data Fragment can be used to craft an item from a design.
+Forge/ToolTip/RareMatter┃This is a Rare Data Fragment that can be obtained wtih a certain probability by disassembling Epic or Rare skins.\nRare Data Fragments are only used to craft Epic skins.
+Forge/ToolTip/NormalMatter┃This is a Data Fragment that can be obtained in certain quantities by disassembling Uncommon skins or other items and designs.\nThis Data Fragment can be used to craft designs into items.
+Forge/ToolTip/disintegrateTicket┃This is an item that can be disassembled without consuming additional goods. Disassembling 1 item uses 1 Disassemble Ticket.
 Rare-Matter┃Rare Data Fragments
 Normal-Matter┃Data Fragments
 Forge/ToolTip/DisintegrateMode┃Select the items to be disassembled.
@@ -4053,6 +4089,7 @@ Forge/ToolTip/RightClickToRemove┃Right-click to remove the item from the list.
 Forge/ToolTip/SelectToAdd┃Select the items to be disassembled.
 Forge/Disintegrate/MaxAmount┃You can add up to 20 items to the list.
 Forge/Disintegrate/NotEnoughMaterial┃You do not have enough A-Coin to disassemble these items.
+Forge/Disintegrate/NotEnoughDisintegrateTicket┃You do not have enough Disassemble Tickets to disassemble.
 Forge/Disintegrate/IsLocked┃Locked items cannot be disassembled.
 Forge/Disintegrate/CountLimit┃You can only disassemble 50 items at the same time.
 Forge/TokenExchange/ResetTime/Week┃{0} Week(s)
@@ -4085,9 +4122,9 @@ Goods/Desc/3104009┃This box contains all goodies from Season 9. Open it to obt
 Goods/Name/3202000┃Data Key
 Goods/Desc/3202000┃Data Keys can be used to open all types of Data Boxes.
 Goods/Name/3303000┃Vacance Tokens
-Goods/Desc/3303000┃Tokens can be obtained through the ER PASS, Season Pack, or by disassembling skins in Forging.\nExpired Tokens are converted into next season's Tokens.
+Goods/Desc/3303000┃Tokens can be randomly obtained through ER PASS, Season Packs, or by disassembling intact items in Forging.\nTokens not claimed during the expiration period are automatically exchanged for tokens from the ongoing season. (Less than 3 will expire)
 Goods/Name/3303001┃Battle Maids Tokens
-Goods/Desc/3303001┃Tokens can be obtained through the ER PASS, Season Pack, or by disassembling skins in Forging.\nExpired Tokens are converted into next season's Tokens.
+Goods/Desc/3303001┃Tokens can be randomly obtained through ER PASS, Season Packs, or by disassembling intact items in Forging.\nTokens not claimed during the expiration period are automatically exchanged for tokens from the ongoing season. (Less than 3 will expire)
 Goods/Name/3303999┃Mileage
 Goods/Desc/3303999┃Mileage can be obtained when purchasing NP products.
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃Overall Probability List
@@ -4100,8 +4137,8 @@ Goods/Name/9999999┃Unclaimed Skin Voucher <#00ffee>No.01</color>
 Goods/Name/9999998┃Unclaimed Skin Voucher <#00ffee>No.02</color>
 Goods/Name/3119001┃Unclaimed Skin Voucher <#00ffee>No.01</color>
 Goods/Name/3119002┃Unclaimed Skin Voucher <#00ffee>No.02</color>
-Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b> : Summertime Sua, Transfer Student Bianca, Sweet Beast Hyunwoo, Overvolt Jackie, Wilson Bakery Sissela\n----\n<color=#2AC0FF> Rare Skin</color> : Spirit Hunter Hyejin, Summertime Leon, Cobalt Evolution Zahir, Summertime Rio, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio\n----\n<color=#35FF94>Uncommon Skin</color> : Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
-Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b> : Beachside Nicky, Spirit Hunter Chiara, Student Council President Elena, Android Medic Cathy, Magic Crush Adela\n----\n<color=#2AC0FF>Rare Skin</color> : Midnight Shinobi Lenox, Festive Roar Li Dailin, Bow Wow Yuki, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio\n----\n<color=#35FF94>Uncommon Skin</color> : Spirit Hunter Isol, Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b> : Summertime Sua, Transfer Student Bianca, Sweet Beast Hyunwoo, Overvolt Jackie, Wilson Bakery Sissela. Summer Party Magician Emma\n----\n<color=#2AC0FF> Rare Skin</color> : Spirit Hunter Hyejin, Summertime Leon, Cobalt Evolution Zahir, Summertime Rio, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio, Winter Carnival Sissela, Midnight Aurora Rio, Nightmare Holder Vanya, Popstar Camilo, Demon Hunter Johann, Death Challenger Jan, Adventurer Nathapon, Fire Drill Estelle, Treasure Finder Lenox, Winter Breeze Elena, Burning Maid Adriana, Little Sailor Eleven\n----\n<color=#35FF94>Uncommon Skin</color> : Spec Ops Leon, Winter Carnival Shoichi, OP.GG Felix, GeForce Now Silvia\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b> : Beachside Nicky, Spirit Hunter Chiara, Student Council President Elena, Android Medic Cathy, Magic Crush Adela, Plague Doctor Daniel, Winter Carnival Hart\n----\n<color=#2AC0FF>Rare Skin</color> : Midnight Shinobi Lenox, Festive Roar Li Dailin, Bow Wow Yuki, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio, Midnight Aurora Rio, Nightmare Holder Vanya, Demon Hunter Johann, Death Challenger Jan, Adventurer Nathapon, Fire Drill Estelle, Treasure Finder Lenox, Winter Breeze Elena, Burning Maid Adriana, Little Sailor Eleven\n----\n<color=#35FF94>Uncommon Skin</color> : Spirit Hunter Isol, Spec Ops Leon, Winter Carnival Shoichi, OP.GG Felix, GeForce Now Silvia\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
 Product/Name/S10_RARE_MATTER┃1 Rare Data Fragments
 Product/Name/S10_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S10_S11TOKEN_EXCHANGE┃2 x Batlle Maids Tokens
@@ -4139,6 +4176,8 @@ EP 토큰 재화 툴팁 설명┃When you already have an ER Pass at Level 100, 
 이벤트 NP 재화 툴팁 설명┃NP you can obtain from events that gets used before regular NP. Event NP has an expiration date, so make sure to use it before you lose it!
 이벤트 배너 오버레이 툴팁 타이틀┃Event Banner
 이벤트 배너 오버레이 툴팁 설명┃You can check the ongoing events banner.
+출석부 오버레이 툴팁 타이틀┃Attendance
+출석부 오버레이 툴팁 설명┃You can check the ongoing attendance record.
 매치메이킹지역선택 팝업 툴팁 타이틀┃Choose your server
 매치메이킹지역선택 팝업 툴팁 설명┃You can choose the server region for matchmaking.
 우편함 오버레이 툴팁 타이틀┃Mailbox
@@ -4185,6 +4224,7 @@ StrategyMap/음성채팅┃Voice Chatting
 아이템을 버릴 수 없습니다.┃Cannot drop item.
 제목 없음┃Untitled
 알 수 없음┃Unknown
+미지정┃Unspecified
 추천 목표┃Recommended target
 목표┃Target
 일일 보상!┃Get reward
@@ -4403,6 +4443,10 @@ subMenu/Infomation/Profile┃Profile
 subMenu/Mail/Notice┃Notice
 subMenu/Mail/Mailbox┃Mailbox
 subMenu/Mail/SeasonPack┃Season Pack
+subMenu/Attendance/Season┃Season
+subMenu/Attendance/NRU┃New Players
+subMenu/Attendance/RU┃Returning Players
+subMenu/Attendance/Event┃Event
 Shopmenu/Package/ALL┃All
 Shopmenu/Package/SeasonPack_box┃Season Pack & Box
 Shopmenu/Package/Character┃Character Special Bundle
@@ -4583,6 +4627,7 @@ SEASON_7┃Season 7
 SEASON_8┃Season 8
 SEASON_9┃Season 9
 SEASON_10┃ER 1.0 Season 1
+SEASON_11┃Season 2
 SEASON_22┃Season 22
 플레이 타임┃Time
 플레이 날짜┃Date
@@ -4845,9 +4890,8 @@ GameSetting/BattleInfo┃Displays the weapon mastery of characters.
 전투 능력 정보┃Combat Info Overlay
 GameSetting/NameDisplayAboveHealthBar┃Determine how to display the name above the HP bar
 체력바 상단 이름 표기┃Name displayed above the HP bar
-체력바 이름 없음┃None
-체력바 이름 생존자┃Player Name
-체력바 이름 실험체┃Test Subject Name
+Option/NameDisplay/Nickname┃Player Name
+Option/NameDisplay/Subject┃Test Subject Name
 GameSetting/InteractionObject┃Displays markers for interactable objects such as Hyperloops, Kiosks, etc.
 상호작용 오브젝트┃Interactable Objects
 GameSetting/Box┃Displays markers on item boxes.
@@ -4873,7 +4917,7 @@ GameSetting/AutoChangeEquipment┃When obtaining a higher rarity equipment in yo
 캐릭터 그림자┃Enable Character Shadows
 GameSetting/CharacterShadow┃Toggle Character Shadows 
 탐색 가이드 원격 호출 사용┃Search Guide Remote Drone Calling
-GameSetting/NavigaionHUDRemoteDroneActive┃Toggle Remote Drone Calling in the Search Guide.
+GameSetting/NavigaionHUDRemoteDroneActive┃Items can be called up from the Search Guide.
 매칭 자동수락 사용┃Auto Accept Matching
 StreamingModeSetting/AutoAcceptMatching┃After matching is completed, it is automatically accepted. Matching rejection is not possible when using this feature.
 StreamingModeSetting/IgnoreRequestFriends┃Disable all incoming friend requests.
@@ -4955,7 +4999,7 @@ Vivox점검팝업┃Voice Chat is currently unavailable due to an error.
 원격전송드론 호출┃Request a Remote Drone
 원격전송드론 호출 설명┃You can use Credits to acquire items.\n You can use them by right-clicking on items that have the Remote Drone Call icon.
 원격전송드론 호출 사용법┃Right-click to call a Remote Drone.
-원격드론호출 잠금 토글┃Lock Remote Drone Calls
+원격드론호출 잠금 토글┃Items can be called up from the Search Guide.
 숙련도┃Mastery
 숙련도 설명┃Your Mastery increases by performing different actions.\nDepending on the Mastery, you can obtain different improvements and effects.
 제작 가이드┃Crafting Guide
@@ -5057,7 +5101,7 @@ BattleZoneRewardGaugeTooltip_Desc┃Claim Battle Zone rewards in the security co
 사거리┃Attack Range
 사거리 설명┃The maximum distance that Basic Attacks can reach.
 모든 피해 흡혈 스탯┃Omnisyphon | Life Steal
-모든 피해 흡혈 설명┃Dealing damage also recovers some of your HP. (Damage to wild animals scaled at 60%)\n\nOmnisyphon: Applies to all damage dealt, besides trap damage.\nLife Steal: Applies to basic attack damage.
+모든 피해 흡혈 설명┃Dealing damage also recovers some of your HP. (Applies only 50% to Area Damage and 60% to Wild Animals.)\n\nOmnisyphon: Applies to all damage dealt, besides trap damage.\nLife Steal: Applies to basic attack damage.
 시야┃Vision Range
 시야 설명┃Range that you can see. Decreases at night.
 최대 체력┃Max HP
@@ -5182,6 +5226,7 @@ SP 재생┃SP Regen
 고유 이동 속도┃Unique Movement Speed
 비전투중 체력회복┃Out of combat HP Regeneration
 비전투중 스태미너회복┃Out of combat SP Regeneration
+사용시영구적으로┃Permanently when used
 모드사용가능여부┃Available Modes
 모드사용불가┃This item is currently unusable in this mode.
 부활시아이템소멸┃This item will be lost upon <color=#B90005>Rapid Reconstruction.</color>
@@ -5371,6 +5416,7 @@ PlayerReportConfirm┃Report player for <color=#FF9F36>{0}</color>?\nFalse repor
 플레이어처치안내7┃{0}({1}) has taken out half of the survivors alone.
 플레이어처치안내8┃{0}({1}) is legendary!
 플레이어부활안내┃{0}({1}) has rejoined the experiment!
+플레이어부활불가능안내┃{0}({1}) has not been eliminated.
 아군플레이어부활안내┃{0}({1}) has rejoined the experiment in {2}!
 KILL┃KILL
 Kill┃KILL
@@ -5492,6 +5538,8 @@ Ping/AutoResurrection/None┃{0}({1}): Disable Auto-Revival
 Ping/CreditResurrection/Wait┃{0}({1}): Time Left until <color=#F4FF63>Credit Revival</color> <color=#C2FFA0>{2}</color>
 Ping/CreditResurrection/None┃{0}({1}): Disable Credit Revival
 Ping/KioskNeedItemChatting┃{0}({1}) has requested {2} at Kiosk.
+3일차부터구매가능┃- Available for purchase from Day 3
+인원수부족탈출불가┃- Unable to escape due to low total number of survivors
 Ping/KioskResurrectionChatting┃{0}({1}) has requested to revive <color=#FFBB00>{2}({3})</color> at Kiosk.
 오브젝트타이머/활성화장소┃Targeted Location
 오브젝트슬롯전송콘솔/비활성화┃Deactivated
@@ -5517,9 +5565,9 @@ Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>needs food</color>.
 Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>needs drinks</color>.
 Ping/Order/NeedWhat/Chatting┃{0}({1}) says <color=#C2FFA0>need something</color>?
 Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) has received <color=#C2FFA0>{2}</color> as a Battle Zone reward.
-Ping/Default/Warring┃Warning
+Ping/Default/Warning┃Warning
 Ping/Default/Escape┃Danger
-Ping/Default/Help┃Request Support
+Ping/Default/Help┃Support
 Ping/Default/Run┃Moving
 아군빈사┃{0}({1}) has been downed in {2}.
 야생동물빈사알림┃{0} has downed {1}({2}).
@@ -5555,8 +5603,10 @@ CreditResurrectionEnable┃Reviveable
 크레딧지목┃{0}({1}) has pointed {2}({3})'s <color=#F4FF63>{4}</color> Credits.
 아이템보유┃{0}({1}) has {2} {3}.
 아이템지목┃{0}({1}) has targeted {2}.
+장착하지않음┃Not equipped.
 아이템발견┃{0}({1}) spotted {3} in {2}.
 아이템탐색┃{0}({1}) is looking for {2}.
+아이템제작가능┃{0}({1}): {2} craftable
 아이템지역탐색┃{0}({1}) is looking for [{3}] in {2}.
 원격전송드론 아군에게 전송┃{0}({1}) has sent {4} to {2}({3}).
 적실험체아이템발견┃{0}({1}) has found {5} from {3}({4}) in {2}.
@@ -5566,6 +5616,7 @@ CreditResurrectionEnable┃Reviveable
 풀숲을지목┃{0}({1}) has targeted Bush in {2}
 점프패들지목┃{0}({1}) has targeted Launch Pad in {2}
 모닥불지목┃{0}({1}) has targeted Campfire in {2}
+야생동물등장핑┃{0}({1}): {2} spawned {3} seconds ago
 핑대상_무기숙련도┃{0}({1}): {2}({3}) - Weapon Mastery: {4}
 핑대상_팀킬┃{0}({1}): {2}({3}) - TK count: {4}
 핑대상_킬┃{0}({1}): {2}({3}) -  Kills: {4}
@@ -5646,6 +5697,7 @@ ToastMessage/AlreadyBoughtBattlezoneReward┃Team has already received a reward.
 탈출투표반대채팅창노출┃You can't escape with {0} votes in favor, {1} votes against, and {2} abstentions.
 추가신호금지┃You must wait before sending another signal.
 마크지정불가┃You cannot put a pin in this location.
+아군플레이어부활지역안내┃{0}({1}) is reviving in {2}.
 아군하이퍼루프도착┃{0}({1}) teleported to {2}.
 DyingCondition┃Cannot perform while downed.
 지금은 할 수 없습니다.┃Cannot perform right now.
@@ -5899,7 +5951,7 @@ LV20┃Level 20
 구매하러 가기┃Purchase Character
 무료 플레이 가능 캐릭터┃Character playable for free
 코발트 프로토콜에서 사용 가능 캐릭터┃Character playable in Cobalt Protocol
-시즌1이 종료되었습니다.┃Season 5 has ended!
+시즌1이 종료되었습니다.┃Season 1 has ended!
 시즌6이 종료되었습니다.┃Season 6 has ended!
 시즌7이 종료되었습니다.┃Season 7 has ended!
 시즌8이 종료되었습니다.┃Season 8 has ended!
@@ -6628,18 +6680,18 @@ Shop/Desc/er_np2450┃NP is the currency used for multiple products within Etern
 Shop/Desc/er_np4450┃NP is the currency used for multiple products within Eternal Return.
 Shop/Desc/er_np6550┃NP is the currency used for multiple products within Eternal Return.
 Shop/Desc/er_np13500┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP800┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP1205┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP2435┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP4335┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP6500┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/NP13550┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np800┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np1205┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np2435┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np4335┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np6500┃NP is the currency used for multiple products within Eternal Return.
-Shop/Desc/er_np13550┃NP is the currency used for multiple products within Eternal Return.
+Shop/Desc/NP800┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>4 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/NP1205┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>8 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/NP2435┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>17 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/NP4335┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>30 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/NP6500┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>43 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/NP13550┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>85 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np800┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>4 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np1205┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>8 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np2435┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>17 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np4335┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>30 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np6500┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>43 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
+Shop/Desc/er_np13550┃NP is the currency used for multiple products within Eternal Return.\n\n<color=#ffF134>85 Mileage Included</color>\n\n*Mileage can be used at the Mileage Exchange menu.
 Shop/Desc/MS_NP800┃NP is the currency used for multiple products within Eternal Return.
 Shop/Desc/MS_NP1205┃NP is the currency used for multiple products within Eternal Return.
 Shop/Desc/MS_NP2435┃NP is the currency used for multiple products within Eternal Return.
@@ -6798,14 +6850,14 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S7┃Levels added through the purchase of the ER P
 Shop/Desc/BATTLE_PASS_S8┃<color=#ffdf72><size=32>ER Pass</size></color>\n<size=14>[Non-Refundable]</size>\n\nPurchase the ER Pass, play some games, and earn over 100 unique rewards including<color=#B2EBF4> skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing Eternal Return!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!
 Shop/Desc/BATTLE_PASS_BUNDLE_S8┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[Non-Refundable]</size>\n\nER Plus includes the ER Pass and instantly grants you 19 levels.\nEarn over 100 unique rewards including<color=#B2EBF4> skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!
 Shop/Desc/BATTLE_PASS_UPGRADE_S8┃Levels added through the purchase of the ER Pass Upgrade\nwill not be refunded if you exceed max level.
-Shop/Desc/BATTLE_PASS_S10┃<color=#ffdf72><size=32>ER Pass</size></color>\n<size=14>[Non-Refundable]</size>\n\nPurchase the ER Pass, play some games, and earn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing Eternal Return!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n<color=#f72323>You will not be refunded</color> if you exceed the max level of the Pass.\n\nItems included in ER Pass can be used in different ways at a later time.
-Shop/Desc/BATTLE_PASS_BUNDLE_S10┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[Non-Refundable]</size>\n\nER Plus includes the ER Pass and instantly grants you 25 levels.\nEarn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n<color=#f72323>You will not be refunded</color> if you exceed the max level of the Pass.\n\nItems included in ER Pass can be used in different ways at a later time.
+Shop/Desc/BATTLE_PASS_S10┃Purchase the ER Pass, play some games, and earn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing Eternal Return!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n\nItems included in ER Pass can be used in different ways at a later time.
+Shop/Desc/BATTLE_PASS_BUNDLE_S10┃ER Plus includes the ER Pass and instantly grants you 25 levels.\nEarn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n<color=#FF7575>You will not be refunded</color> if you exceed the max level of the Pass.\n\nItems included in ER Pass can be used in different ways at a later time.
 Shop/Desc/BATTLE_PASS_UPGRADE_S10┃Levels added through the purchase of the ER Pass Upgrade\nwill not be refunded if you exceed max level.
-Shop/Desc/BATTLE_PASS_S11┃Purchase the ER Pass, play some games, and earn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing Eternal Return!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n<color=#FF7575>You will not be refunded</color> if you exceed the max level of the Pass.\n\nItems included in ER Pass can be used in different ways at a later time.
+Shop/Desc/BATTLE_PASS_S11┃Purchase the ER Pass, play some games, and earn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing Eternal Return!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n\nItems included in ER Pass can be used in different ways at a later time.
 Shop/Desc/BATTLE_PASS_BUNDLE_S11┃ER Plus includes the ER Pass and instantly grants you 25 levels.\nEarn over 100 unique rewards including <color=#B2EBF4>skins, emotes, NP and more!</color>\nGain levels for the ER Pass just by playing!\nIf you want your rewards even FASTER, you can always buy ER Points to speed up your progress!\n<color=#FF7575>You will not be refunded</color> if you exceed the max level of the Pass.\n\nItems included in ER Pass can be used in different ways at a later time.
 Shop/Desc/BATTLE_PASS_UPGRADE_S11┃Levels added through the purchase of the ER Pass Upgrade\nwill not be refunded if you exceed max level.
-Shop/Desc/BATTLE_PASS_CHECK┃<color=#B2EBF4>Premium Rewards</color> and <color=#B2EBF4>Paid Missions</color> are activated when purchasing ER Pass items.\nou can also use the <color=#B2EBF4>ER Point Purchase feature</ color>.
-Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃Purchasing ER Plus items increases your ER Pass level by <color=#ffdf72>24 levels</color> and activates <color=#B2EBF4>Premium Rewards</color> and <color=#B2EBF4>Special Missions</color>. \You can also use the <color=#B2EBF4>ER Point Purchase feature</color>. \n\nIf your ER Pass level increases the max level of the ER Pass through ER Plus, <color=#FF7575>the difference will not be refunded.</color>
+Shop/Desc/BATTLE_PASS_CHECK┃<color=#B2EBF4>Premium Rewards</color> and <color=#B2EBF4>Paid Missions</color> are activated when purchasing ER Pass items.\nou can also use the <color=#B2EBF4>ER Point Purchase feature</color>.\n\nER PASS is available for two seasons: the current and the following season.\nOnly one ER PASS will be activated.\nYou can freely activate the ER PASS you want without any limit.
+Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃Purchasing ER Plus items increases your ER Pass level by <color=#ffdf72>24 levels</color> and activates <color=#B2EBF4>Premium Rewards</color> and <color=#B2EBF4>Special Missions</color>. \You can also use the <color=#B2EBF4>ER Point Purchase feature</color>. \n\nIf your ER Pass level increases the max level of the ER Pass through ER Plus, <color=#FF7575>the difference will not be refunded.</color>\n\nER PASS is available for two seasons: the current and the following season.\nOnly one ER PASS will be activated.\nYou can freely activate the ER PASS you want without any limit.
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃\nAfter upgrading the ER Pass, if the increased ER Pass level\nexceeds the max level, the difference will not be refunded.
 Shop/Desc/BATTLE_PASS_ACTIVE_CHANGE┃Do you want to activate the selected season?\nYour current season will be disabled.
 Shop/Desc/BATTLE_PASS_POINT┃Purchase ER Points to increase your current season level.
@@ -6843,6 +6895,7 @@ SeasonPassIcon/6┃Img_SeasonPack6_Box_02
 SeasonPassIcon/7┃Img_SeasonPack7_box_02
 SeasonPassIcon/8┃Img_SeasonPack8_box_02
 SeasonPassIcon/10┃Img_SeasonPack10_box_02
+SeasonPassIcon/11┃Img_SeasonPack11_box_02
 다시보지 않기┃Don't show again
 오늘 다시 보지 않기┃Don't show again today
 한정판 스킨┃Limited Skin
@@ -7166,27 +7219,27 @@ EP 토큰 상점에서 구매 가능┃Available for purchase in the EP token st
 스킨을 시즌패스 획득 가능┃Obtained via Season Pack Reward
 기본으로 지급되는 스킨┃Default Skin
 해당 스킨은 현재 구매할 수 없습니다.┃Skin not available for purchase.
-스킨을 시즌1 보상으로 획득 가능┃Skin not available for purchase. (Season 1 reward)
-스킨을 시즌2 보상으로 획득 가능┃Skin not available for purchase. (Season 2 reward)
-스킨을 시즌3 보상으로 획득 가능┃Skin not available for purchase. (Season 3 reward)
-스킨을 시즌4 보상으로 획득 가능┃Skin not available for purchase. (Season 4 reward)
-스킨을 시즌5 보상으로 획득 가능┃Skin not available for purchase. (Season 5 reward)
-스킨을 시즌6 보상으로 획득 가능┃Skin not available for purchase. (Season 6 reward)
-스킨을 시즌7 보상으로 획득 가능┃Skin not available for purchase. (Season 7 reward)
-스킨을 시즌8 보상으로 획득 가능┃Skin not available for purchase. (Season 8 reward)
-스킨을 시즌9 보상으로 획득 가능┃Skin not available for purchase. (Season 9 reward)
+스킨을 시즌1 보상으로 획득 가능┃Skin not available for purchase. (EA Season 1 reward)
+스킨을 시즌2 보상으로 획득 가능┃Skin not available for purchase. (EA Season 2 reward)
+스킨을 시즌3 보상으로 획득 가능┃Skin not available for purchase. (EA Season 3 reward)
+스킨을 시즌4 보상으로 획득 가능┃Skin not available for purchase. (EA Season 4 reward)
+스킨을 시즌5 보상으로 획득 가능┃Skin not available for purchase. (EA Season 5 reward)
+스킨을 시즌6 보상으로 획득 가능┃Skin not available for purchase. (EA Season 6 reward)
+스킨을 시즌7 보상으로 획득 가능┃Skin not available for purchase. (EA Season 7 reward)
+스킨을 시즌8 보상으로 획득 가능┃Skin not available for purchase. (EA Season 8 reward)
+스킨을 시즌9 보상으로 획득 가능┃Skin not available for purchase. (EA Season 9 reward)
 스킨을 시즌10 보상으로 획득 가능┃Skin not available for purchase. (Season 1 reward)
 스킨을 DROPS 보상으로 획득 가능┃Obtained via Twitch Drops reward.
 스킨을 GEFORCE NOW 보상으로 획득 가능┃Obtained by participating in the GeForce Now event.
-이모티콘을 시즌1 보상으로 획득 가능┃Emote not available for purchase.\n(Season 1 reward)
-이모티콘을 시즌2 보상으로 획득 가능┃Emote not available for purchase.\n(Season 2 reward)
-이모티콘을 시즌3 보상으로 획득 가능┃Emote not available for purchase.\n(Season 3 reward)
-이모티콘을 시즌4 보상으로 획득 가능┃Emote not available for purchase.\n(Season 4 reward)
-이모티콘을 시즌5 보상으로 획득 가능┃Emote not available for purchase.\n(Season 5 reward)
-이모티콘을 시즌6 보상으로 획득 가능┃Emote not available for purchase.\n(Season 6 reward)
-이모티콘을 시즌7 보상으로 획득 가능┃Emote not available for purchase.\n(Season 7 reward)
-이모티콘을 시즌8 보상으로 획득 가능┃Emote not available for purchase.\n(Season 8 reward)
-이모티콘을 시즌9 보상으로 획득 가능┃Emote not available for purchase.\n(Season 9 reward)
+이모티콘을 시즌1 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 1 reward)
+이모티콘을 시즌2 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 2 reward)
+이모티콘을 시즌3 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 3 reward)
+이모티콘을 시즌4 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 4 reward)
+이모티콘을 시즌5 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 5 reward)
+이모티콘을 시즌6 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 6 reward)
+이모티콘을 시즌7 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 7 reward)
+이모티콘을 시즌8 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 8 reward)
+이모티콘을 시즌9 보상으로 획득 가능┃Emote not available for purchase.\n(EA Season 9 reward)
 이모티콘을 시즌10 보상으로 획득 가능┃Emote not available for purchase.\n(Season 1 reward)
 이모티콘을 DROPS 보상으로 획득 가능┃Emote obtained as a Drops reward from Twitch.
 이모티콘을 GEFORCE NOW 보상으로 획득 가능┃Obtained by participating in the GeForce Now event
@@ -7194,15 +7247,15 @@ EP 토큰 상점에서 구매 가능┃Available for purchase in the EP token st
 이모티콘을 XBOX GAMEPASS 보상으로 획득 가능┃Obtained through Xbox Game Pass Ultimate Perks.
 이모티콘을 배틀패스 구매 가능┃Obtained via reaching ER Pass {0} Level {1}
 이모티콘을 시즌패스 획득 가능┃Obtained via Season Pack Reward
-엠블럼을 시즌1 보상으로 획득 가능┃Not available for purchase. (Season 1 Reward)
-엠블럼을 시즌2 보상으로 획득 가능┃Not available for purchase. (Season 2 Reward)
-엠블럼을 시즌3 보상으로 획득 가능┃Not available for purchase. (Season 3 Reward)
-엠블럼을 시즌4 보상으로 획득 가능┃Not available for purchase. (Season 4 Reward)
-엠블럼을 시즌5 보상으로 획득 가능┃Not available for purchase. (Season 5 Reward)
-엠블럼을 시즌6 보상으로 획득 가능┃Not available for purchase. (Season 6 Reward)
-엠블럼을 시즌7 보상으로 획득 가능┃Not available for purchase. (Season 7 Reward)
-엠블럼을 시즌8 보상으로 획득 가능┃Not available for purchase. (Season 8 Reward)
-엠블럼을 시즌9 보상으로 획득 가능┃Not available for purchase. (Season 9 Reward)
+엠블럼을 시즌1 보상으로 획득 가능┃Not available for purchase. (EA Season 1 Reward)
+엠블럼을 시즌2 보상으로 획득 가능┃Not available for purchase. (EA Season 2 Reward)
+엠블럼을 시즌3 보상으로 획득 가능┃Not available for purchase. (EA Season 3 Reward)
+엠블럼을 시즌4 보상으로 획득 가능┃Not available for purchase. (EA Season 4 Reward)
+엠블럼을 시즌5 보상으로 획득 가능┃Not available for purchase. (EA Season 5 Reward)
+엠블럼을 시즌6 보상으로 획득 가능┃Not available for purchase. (EA Season 6 Reward)
+엠블럼을 시즌7 보상으로 획득 가능┃Not available for purchase. (EA Season 7 Reward)
+엠블럼을 시즌8 보상으로 획득 가능┃Not available for purchase. (EA Season 8 Reward)
+엠블럼을 시즌9 보상으로 획득 가능┃Not available for purchase. (EA Season 9 Reward)
 엠블럼을 시즌10 보상으로 획득 가능┃Not available for purchase. (Season 1 Reward)
 엠블럼을 이벤트로 획득 가능┃Obtained through an event.
 엠블럼을 배틀패스 구매 가능┃Obtained via reaching ER Pass {0} Level {1}
@@ -7994,7 +8047,7 @@ Gift/Send/ServiceUnavailable┃Gifting service is temporarily unavailable.
 수령┃Claimed
 선물 내역┃Gift List
 친구 조건 하단 문구┃Some accounts may not be able to receive gifts.
-선물 가능 친구 정보 툴팁┃<color=#FFB62F>Gift Limit</color>\n- You cannot send more than 10 gifts per day.\n<color=#FFB62F>Gifting Rules</color>\n - The recipient must be on your friends list.\n - Gifts cannot be sent to suspended accounts.\n - Recipient must be Level 20 or higher.\n - Gifts cannot be sent to accounts created less than 24 hours ago.
+선물 가능 친구 정보 툴팁┃<color=#FFB62F>Gift Limit</color>\n- You cannot send more than 10 gifts per day.\n<color=#FFB62F>Gifting Rules</color>\n - Gifts cannot be sent to suspended accounts.\n - Recipient must be Level 20 or higher.\n - Gifts cannot be sent to accounts created less than 24 hours ago.
 선물 가능 친구 정보 툴팁 MS┃<color=#FFB62F>Gift Limit</color>\n - You cannot send more than 10 gifts per day.\n - Cross-platform access must be on.\n<color=#FFB62F>Gifting Rules</color> \n- Gifts cannot be sent to suspended accounts.\n - Recipient must be Level 20 or higher.\n - Gifts cannot be sent to accounts created less than 24 hours ago.\n -  Gifts cannot be sent to blocked users.
 유저 변경┃Change Recipient
 오류┃Error
@@ -8033,6 +8086,7 @@ Item/Name/101407┃Maharaja
 Item/Name/101408┃Highlander Dirk
 Item/Name/101501┃Eclipse
 Item/Name/101502┃Soul Reaper
+Item/Name/101503┃Scarlet Dagger
 Item/Name/102101┃Rusty Sword
 Item/Name/102201┃Long Sword
 Item/Name/102301┃Katana
@@ -8170,6 +8224,7 @@ Item/Name/111405┃Windrunner
 Item/Name/111406┃Holster Tonfa
 Item/Name/111501┃Obsidian Jitte
 Item/Name/111502┃Frozen Echo
+Item/Name/111503┃Blade Tonfa
 Item/Name/112101┃Stone
 Item/Name/112103┃Iron Ball
 Item/Name/112104┃Glass Bottle
@@ -8296,6 +8351,7 @@ Item/Name/118407┃Gauss Rifle
 Item/Name/118501┃The Deadly Ray
 Item/Name/118502┃Blackfire Cannon
 Item/Name/118503┃Andromeda
+Item/Name/118504┃Widow Maker
 Item/Name/119101┃Steel Chain
 Item/Name/119201┃Nunchaku
 Item/Name/119301┃Sharper
@@ -8319,6 +8375,7 @@ Item/Name/120405┃Joyeuse
 Item/Name/120406┃Red Panther
 Item/Name/120407┃Esprit
 Item/Name/120501┃Eye of Argos
+Item/Name/120502┃Nosferatu
 Item/Name/121101┃Starter Guitar
 Item/Name/121201┃Golden Bridge
 Item/Name/121202┃Single Coil Pickup
@@ -8852,6 +8909,7 @@ Item/Help/101405┃Known as "The Answerer" in Irish mythology.\nIt was said that
 Item/Help/101406┃Nothing says strength and durability quite like Damascus steel.
 Item/Help/101501┃The blade that sliced the moon in half.\n(It's true, I swear...)
 Item/Help/101502┃A dagger that rips a person's heart to pieces.\nUse this to send someone to the shadow realm.
+Item/Help/101503┃The strangely sharp glass blade\nseemed to turn redder with delight at the touch of blood.
 Item/Help/102101┃Every swordsman must train with this common longsword.
 Item/Help/102201┃Long and sharp, this sword is perfect for cutting enemies at once.
 Item/Help/102301┃Just like the swords you see in your favorite movies!
@@ -8937,6 +8995,7 @@ Item/Help/110503┃A special glove used to suppress power.\nYou must continuousl
 Item/Help/111201┃A weapon that is modified and widely used in Okinawa.\nTonfa-based martial arts shares many similarities with bare-handed martial arts.
 Item/Help/111404┃A tonfa-shaped weapon made out of plasma. It uses a chip that\nregisters its owner's information, so it won't harm its owner and will be safe to use.
 Item/Help/111501┃A non-bladed weapon wielded by security guards.\nThis particular shadowy version has 2 kagi protruding from its sides
+Item/Help/111503┃A tonfa with a blade on its body.\nThe well-forged blade seems to be looking for another target.
 Item/Help/112101┃A stone that can be used to make something. I wish I could throw it...
 Item/Help/112104┃Put something inside it or break it into tiny pieces.\nOr not. I'm a tooltip, not a cop.
 Item/Help/112202┃Be careful! The moment you relax and forget you're carrying a\ngrenade is the moment that you become a victim. Boom.
@@ -9011,6 +9070,7 @@ Item/Help/118402┃Uses electromagnets to rapidly accelerate and launch a metal 
 Item/Help/118406┃When a person dies, their soul will head to the afterlife.\nHowever, dying from this weapon appears to banish their soul even\nfurther. Perhaps to the North Star?
 Item/Help/118501┃Shoot at a starlight.
 Item/Help/118503┃A sniper rifle with such precision that you can see the Andromeda Galaxy just by aiming. Able to penetrate enemies in a flash.\nWait... did you just see a light?
+Item/Help/118504┃A gun so lethal that it turned the spouses of enemy soldiers into widows, hence the name Widow Maker.\nIn this hopeless battlefield, the last step is never home.
 Item/Help/119101┃A chain rope made by connecting steel rings. Widely used as a\nweapon in the past and by ghosts to rattle the unsuspecting.
 Item/Help/119201┃This weapon is not a good choice for beginners to choose for\nself-defense. Only those who have trained for many hours have\nmastered this weapon and will exert its true potential and not hit themselves in the face.
 Item/Help/119401┃Invented by the one and only Emperor Taizu,\nfounder and first emperor of China's Song Dynasty, and most skilled martial artist of every emperor. 
@@ -9025,6 +9085,7 @@ Item/Help/120403┃The word "Volticletto" is a portmanteau of 'voltaic,' meaning
 Item/Help/120404┃The silver-gray colored metals found in Meteorsteel can be used to\nmake a great sword with great strength. However, manufacturing\nit is no easy task. 
 Item/Help/120406┃A crimson blade capable of slashing through humans, much like its namesake.
 Item/Help/120501┃This rapier got its name because it resembles the feathers of a peacock\nand the eye of the giant, Argos. Blood from its\n enemies gives it a more luxurious feel.
+Item/Help/120502┃Offer me fresh blood,\nfor this body will become increasingly sacred to you, and you will humbly accept it.
 Item/Help/121201┃Some people think that the more expensive it is, the better it sounds.
 Item/Help/121202┃Single coil guitars generally have a brighter, crisper output, and\nsound clearer.
 Item/Help/121301┃A unique guitar that is as red as a ruby.
@@ -9360,12 +9421,12 @@ Item/Effects/502401┃Click to install a <color=lightblue>Mythril String</color>
 Item/Effects/502402┃Click to install a <color=lightblue>Stingburst</color>.\n<color=yellow>Trap effects:</color> enemies have their movement speed reduced by 50%\nfor 3 seconds.
 Item/Effects/502403┃Click to install a <color=lightblue>Fire Trap</color>.\n<color=yellow>Trap effects:</color> explodes in a large range after 1.25 seconds.
 Item/Effects/502404┃Click to install <color=lightblue>C4</color>.\n<color=yellow>Trap effects:</color> explodes in a large range after 1.25 seconds.
-Item/Effects/502405┃Click to install a <color=lightblue>Double Guillotine</color>.\n<color=yellow>Trap effects:</color> enemies are rooted for 1.5 second.
-Item/Effects/502406┃Click to install a <color=lightblue>Claymore</color>.\n<color=yellow>Trap effects:</color> explodes in a narrow area, stunning enemies\nfor 1.1 seconds.
+Item/Effects/502405┃Click to install a <color=lightblue>Double Guillotine</color>.\n<color=yellow>Trap effects:</color> enemies are rooted for 1.2 second.
+Item/Effects/502406┃Click to install a <color=lightblue>Claymore</color>.\n<color=yellow>Trap effects:</color> explodes in a narrow area, stunning enemies\nfor 1.5 seconds.
 Item/Effects/502407┃Click to install a <color=lightblue>Hidden Maiden</color>.\n<color=yellow>Trap effects:</color> enemies have their movement speed reduced by 40%\nfor 2.5 seconds.
 Item/Effects/502501┃Click to install a <color=lightblue>Remote Mine</color>.\n<color=yellow>Trap effects:</color> explodes in a large range after 1.4 seconds.
 Item/Effects/502502┃Click to install a <color=lightblue>Smart Bomb</color>.\n<color=yellow>Trap effects:</color> explodes in a large range after 1.4 seconds.
-Item/Effects/502310┃Click to install a <color=lightblue>Acupressure Mat</color>.\n<color=yellow>Trap effects:</color> targets are slowed by 40% for 1.5 seconds.
+Item/Effects/502310┃Click to install a <color=lightblue>Acupressure Mat</color>.\n<color=yellow>Trap effects:</color> targets are slowed by 50% for 2 seconds.
 Item/Effects/302101┃Recover SP over 15 seconds.
 Item/Effects/302102┃Recover SP over 15 seconds.
 Item/Effects/302103┃Recover SP over 15 seconds.
@@ -9687,14 +9748,14 @@ Skill/Group/Name/1006310┃Squirrel Trap
 Skill/Group/Name/1006400┃Monkey Wire
 Skill/Group/Name/1006410┃Monkey Wire
 Skill/Group/Name/1006500┃Wolf Assault
-Skill/Group/Desc/1006100┃Nadine gains a stack of Wild upon slaying Wild Animals and Test Subjects.\n\nChicken: {0} / Bat, Wild Boar: {1} / Wild Dog, Wolf: {2} / Bear: {3} / Test Subject: {4}
+Skill/Group/Desc/1006100┃Nadine gains a stack of Wild when involved in slaying Wild Animals and Test Subjects.\n\nChicken: {0} / Bat, Wild Boar: {1} / Wild Dog, Wolf: {2} / Bear: {3} / Test Subject: {4}
 Skill/Group/Desc/1006200┃Nadine gathers her strength for {0} seconds, reducing her movement speed until it reaches {2} and increasing the range and damage of Bullseye up to {1} times. If she has more than {8} Wild stacks, her Bullseye range increases up to {9} times.\nWhen she reactivates the skill, Nadine fires an arrow and deals <color=white>{14}</color> - <color=white>{15}</color> skill damage.\nThe range of Bullseye increases with her attack range.
 Skill/Group/Desc/1006300┃Nadine throws a Squirrel Trap at the targeted location. Activate the skill again to throw another trap within the reinstallation range in {1} seconds.\nEnemies caught in the connected traps take <color=white>{14}</color> skill damage and are slowed by {3}. Their attack speed is also reduced by {10}, and Nadine gains vision of them for {4} seconds.\n\nEnemies slowed by her Squirrel Trap only take <color=white>{15}</color> skill damage when they are caught in her trap again.\nThe connected traps disappear after {5} seconds. A total of 3 sets can be installed at a time.
 Skill/Group/Desc/1006310┃Nadine can throw another trap.
 Skill/Group/Desc/1006400┃Nadine attaches a wire to herself and at the targeted location. The installed wire stays attached to Nadine for {1} seconds in a {2}m range. When attached to Monkey Wire, Nadine's attack speed is increased by {3}. By reactivating the skill, the wire pulls Nadine to its anchor point.
 Skill/Group/Desc/1006410┃Nadine attaches a wire to herself and at the targeted location. The installed wire stays attached to Nadine for {1} seconds in a {2}m range. When attached to Monkey Wire, Nadine's attack speed is increased by {3}. By reactivating the skill, the wire pulls Nadine to its anchor point.
 Skill/Group/Desc/1006500┃Nadine summons a wolf every {0} basic attacks for {8} seconds. The wolf bites, dealing <color=white>{7}</color> skill damage to enemies, and reducing their Attack Speed by {3} and Movement Speed by {5}.
-Skill/Group/Coef/1006100┃Nadine gains a stack of Wild upon slaying Wild Animals and Test Subjects.\n\nChicken: {0} / Bat, Wild Boar: {1} / Wild Dog, Wolf: {2} / Bear: {3} / Test Subject: {4}
+Skill/Group/Coef/1006100┃Nadine gains a stack of Wild when involved in slaying Wild Animals and Test Subjects.\n\nChicken: {0} / Bat, Wild Boar: {1} / Wild Dog, Wolf: {2} / Bear: {3} / Test Subject: {4}
 Skill/Group/Coef/1006200┃Nadine gathers her strength for {0} seconds, reducing her movement speed until it reaches {2} and increasing the range and damage of Bullseye up to {1} times. If she has more than {8} Wild stacks, her Bullseye range increases up to {9} times.\nWhen she reactivates the skill, Nadine fires an arrow and deals <color=white>{3}</color><color=#ffd775>(+{5} Extra Attack Power)</color><color=#DDA0DD>(+{12} Skill Amp)</color><color=yellow>(+Wild Stacks Damage)</color> - <color=white>{4}</color><color=#ffd775>(+{6} Extra Attack Power)</color><color=#DDA0DD>(+{13} Skill Amp)</color><color=yellow>(+Wild Stacks Damage)</color> skill damage. (Nadine deals more damage based on her number of <color=yellow>Wild</color> stacks.) \nAfter {7} seconds, the effects end and she recovers {10} of her lost SP.\nThe range of Bullseye increases with her attack range.
 Skill/Group/Coef/1006300┃Nadine throws a Squirrel Trap at the targeted location. Activate the skill again to throw another trap within the reinstallation range in {1} seconds.\nEnemies caught in the connected traps take <color=white>{7}</color><color=#ffd775>(+{6} Extra Attack Power)</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage and are slowed by {3}. Their attack speed is also reduced by {10}, and Nadine gains vision of them for {4} seconds.\n\nEnemies who had their Attack Speed and Movement Speed reduced by her Squirrel Trap only take <color=white>{9}</color> of the trap's damage as skill damage when they are caught in her trap again.\nThe connected traps disappear after {5} seconds. A total of 3 sets can be installed at a time.
 Skill/Group/Coef/1006310┃Nadine can throw another trap.
@@ -9809,7 +9870,7 @@ Skill/Group/Name/1009500┃MOK Operational Mine
 Skill/Group/Desc/1009100┃Enemies that take damage from one of his traps have their defense reduced by {3} for {2} seconds.
 Skill/Group/Desc/1009200┃Isol throws a bomb to the target location that sticks to an enemy or on the ground. If the bomb is thrown on the ground, it explodes after {0} seconds, dealing <color=white>{1}</color> skill damage. Enemies caught in the blast are rooted for {2} seconds.\nIf the bomb is stuck to an enemy, the bomb will explode in {3} seconds. Each attack to a target reduces its timer by {4} seconds, and increases the damage of the explosion by <color=white>{5}</color>. Root duration is also increased by {6} seconds for up to {7} seconds.
 Skill/Group/Desc/1009300┃Isol unleashes a fury of bullets in front of him for {0} seconds, dealing <color=white>{7}</color> skill damage every {1} seconds.
-Skill/Group/Desc/1009400┃Isol rolls forward and blends into his surroundings, going invisible for {0} seconds. The invisibility is lifted if Isol does any action other than movement. Performing the first basic attack deals an additional <color=white>{1}</color> skill damage for {2} seconds.
+Skill/Group/Desc/1009400┃Isol rolls forward and blends into his surroundings, going invisible for {0} seconds. The invisibility is lifted if Isol does any action other than movement. The first basic attack within {2} seconds deals an additional <color=white>{1}</color> skill damage.
 Skill/Group/Desc/1009500┃Isol installs a MOK Operational Mine on the ground that detects enemies for {0} seconds. The mine explodes when an enemy enters its range, dealing <color=white>{1}</color><color=#688A08>(+{4} of the target's current HP)</color> skill damage.\n\nA max number of {2} MOK mines can be kept at one time, with a max number of {3} able to be installed.
 Skill/Group/Coef/1009100┃Enemies that take damage from one of his traps have their defense reduced by {3} for {2} seconds.
 Skill/Group/Coef/1009200┃Isol throws a bomb to the target location that sticks to an enemy or on the ground. If the bomb is thrown on the ground, it explodes after {0} seconds, dealing <color=white>{1}</color><color=#FFD775>(+{2} Attack Power)</color><color=#DDA0DD>(+{3} Skill Amp)</color> skill damage. Enemies caught in the blast are rooted for {4} seconds.\nIf the bomb is stuck to an enemy, the bomb will explode in {5} seconds. Each attack to a target reduces its timer by {6} seconds, and increases the damage of the explosion by <color=white>{7}</color><color=#FFD775>(+{8} Attack Power)</color><color=#DDA0DD>(+{9} Skill Amp)</color>. Root duration is also increased by {10} seconds for up to {11} seconds.
@@ -10019,12 +10080,12 @@ Skill/Group/Name/1015300┃Girl in a Bubble
 Skill/Group/Name/1015400┃Play With Us!
 Skill/Group/Name/1015500┃Free at Last
 Skill/Group/Desc/1015100┃As Sissela's HP decreases, she gains HP Regen and extra Skill Amp.\nHP Regen per second: {0} - {1}\nSkill Amp: {2} - {3}\n\nWhen Wilson returns to Sissela, her next basic attack deals an additional <color=white>{9}</color> skill damage and slows enemies by {7} for {6} seconds.
-Skill/Group/Desc/1015200┃Wilson flies in the targeted direction, dealing <color=white>{7}</color> skill damage to enemies in her path and <color=white>{8}</color> skill damage to enemies in range upon arrival.
+Skill/Group/Desc/1015200┃Wilson flies in the targeted direction, dealing <color=white>{7}</color> skill damage to enemies in his path and <color=white>{8}</color> skill damage to enemies in range upon arrival.
 Skill/Group/Desc/1015300┃Wilson embraces Sissela, blocking all damage for {0} seconds and increasing her movement speed by {5}.\nWilson explodes when the skill is used again or after expiration, dealing <color=white>{4}</color> skill damage to enemies in an area around her.
 Skill/Group/Desc/1015400┃Wilson stretches his body in the targeted direction, pulling the first target hit.\Herself: She receives a shield, absorbing <color=white>{9}</color> skill damage for {2} seconds and the cooldown of Play With Us! is reduced by {6} seconds.\nEnemy pull: Wilson deals <color=white>{10}</color> damage and stuns the target for {5} second. \nMoving Wilson while grabbing an enemy will drag the enemy with him.
 Skill/Group/Desc/1015500┃Sissela channels for 1 second. After 3 seconds, Sissela deals <color=white>{10}</color> skill damage to players within a {5}m radius of her in the same area, as well herself.\nSissela deals {2} additional damage for every 1% of her missing HP.\nSissela's HP will not drop below {8} when taking damage from this skill.\n\nDealing damage with this skill increases the damage from Agony by {4}% for {3} seconds.
 Skill/Group/Coef/1015100┃As Sissela's HP decreases, she gains HP Regen and Skill Amp.\nHP Regen per second: {0} - {1}\nSkill Amp: {2} - {3}\n\nWhen Wilson returns to Sissela, her next basic attack deals an additional <color=white>{4}</color><color=#dda0dd>(+{8} Skill Amp)</color><color=green>(+{10} * Character Level)</color> skill damage and slows enemies by {7} for {6} seconds.
-Skill/Group/Coef/1015200┃Wilson flies in the targeted direction, dealing <color=white>{1}</color><color=#dda0dd>(+{5} Skill Amp)</color> skill damage to enemies in her path, and <color=white>{3}</color><color=#dda0dd>(+{6} Skill Amp)</color> skill damage to enemies in range upon arrival.
+Skill/Group/Coef/1015200┃Wilson flies in the targeted direction, dealing <color=white>{1}</color><color=#dda0dd>(+{5} Skill Amp)</color> skill damage to enemies in his path, and <color=white>{3}</color><color=#dda0dd>(+{6} Skill Amp)</color> skill damage to enemies in range upon arrival.
 Skill/Group/Coef/1015300┃Wilson embraces Sissela, blocking all damage for {0} seconds and increasing her movement speed by {5}.\nWilson explodes when the skill is used again or after expiration, dealing <color=white>{1}</color><color=#dda0dd>(+{3} Skill Amp)</color> skill damage to enemies in an area around her.
 Skill/Group/Coef/1015400┃Wilson stretches his body in the targeted direction, pulling the first target hit.\nHerself: she receives a shield, absorbing <color=white>{0}</color><color=#dda0dd>(+{8} Skill Amp)</color> skill damage for {2} seconds and the cooldown of Play With Us! is reduced by {6} seconds.\nEnemy pull: Wilson deals <color=white>{3}</color><color=#dda0dd>(+{7} Skill Amp)</color> damage and stuns the target for {5} second. \nMoving Wilson while grabbing an enemy will drag the enemy with him.
 Skill/Group/Coef/1015500┃Sissela channels for 1 second. After 3 seconds, Sissela deals <color=white>{0}</color><color=#dda0dd>(+{9} Skill Amp)</color> skill damage to players within a {5}m radius of her and to those in the same area as her, as well herself.\nSissela deals {2} additional damage for every 1% of her missing HP.\n\nSissela's HP will not drop below {8} when taking damage from this skill.\nDealing damage with this skill increases the damage from Agony by {4}% for {3} seconds.
@@ -10301,16 +10362,16 @@ Skill/Group/Name/1023200┃Double Bypass
 Skill/Group/Name/1023300┃Amputation
 Skill/Group/Name/1023400┃Suture
 Skill/Group/Name/1023500┃Emergency Surgery
-Skill/Group/Desc/1023100┃When Cathy deals skill damage to an enemy, she applies Wounded, dealing <color=white>{1}</color> true damage over {0} seconds. Upon reaching {5} stacks, Cathy Severely Wounds an enemy, dealing true damage equal to  {7}+<color=white>{8}</color> of their max HP for {6} seconds. Severely Wounded enemies take {16} Healing Reduction.\n\nSeverely Wounding enemies grants her a shield, absorbing <color=white>{10}</color> damage for {9} seconds. Her movement speed increases by {12} if she moves toward Wounded or Severely Wounded enemies, decaying over time.
+Skill/Group/Desc/1023100┃When Cathy deals skill damage to an enemy, she applies Wounded, dealing <color=white>{1}</color> true damage over {0} seconds. Upon reaching {5} stacks, Cathy Severely Wounds an enemy, dealing true damage equal to <color=white>{8}</color><color=#688A08>(+{7} of target's Max HP)</color> for {6} seconds. Severely Wounded enemies take {16} Healing Reduction.\n\nSeverely Wounding enemies grants her a shield, absorbing <color=white>{10}</color> damage for {9} seconds. Her movement speed increases by {12} if she moves toward Wounded or Severely Wounded enemies, decaying over time.
 Skill/Group/Desc/1023200┃<color=green>Passive</color>: After using a skill, Cathy's next basic attack deals <color=white>{2}</color> skill damage.\n\nCathy dashes in the targeted direction, dealing <color=white>{0}</color> skill damage to enemies hit.\nThe cooldown of Double Bypass is reduced by {4} if Cathy Severely Wounds an enemy. 
 Skill/Group/Desc/1023300┃Cathy swings her saw in front of her. Enemies hit by the inner range take <color=white>{0}</color> skill damage but do not receive stacks of Wounded. Enemies hit by the outer range take <color=white>{1}</color> skill damage and are slowed by {3} for {2} seconds.
 Skill/Group/Desc/1023400┃Cathy throws her suture thread, dealing <color=white>{0}</color> skill damage to the first enemy hit and rooting them for {2} second.\nSutures can pass through the target and hit an extra enemy. Sutures that hit a second target push the initial target towards the second target, dealing <color=white>{1}</color> extra skill damage and stunning them for {3} seconds. Sutures that hit a wall push the enemy into the wall, dealing <color=white>{1}</color> extra skill damage and stunning them for {3} seconds.\n\nDamage from the suture does not apply stacks of Wounded.
-Skill/Group/Desc/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's HP by {0} max HP +{14} per second for {10} seconds.\n\nCathy charges in the targeted direction, dealing <color=white>{1}</color> - <color=white>{2}</color> skill damage based on the enemy's missing HP and causing Severe Wounds.\nA healing zone is created where Cathy dashes, recovering her and her allies HP by {0}+<color=white>{14}</color> per second over {11} seconds.
+Skill/Group/Desc/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's HP by <color=white>{14}</color><color=#688A08>(+{0} of Max HP)</color> per second for {10} seconds.\n\nCathy charges in the targeted direction, dealing <color=white>{1}</color> - <color=white>{2}</color> skill damage based on the enemy's missing HP and causing Severe Wounds.\nA healing zone is created where Cathy dashes, recovering her and her allies HP by <color=white>{14}</color><color=#688A08>(+{0} of Max HP)</color> every second for {11} seconds.\n\nBecomes unstoppable while moving.
 Skill/Group/Coef/1023100┃When Cathy deals skill damage to an enemy, she applies Wounded, dealing <color=#DDA0DD>{13} Skill Amp</color> true damage over {0} seconds. Upon reaching {5} stacks, Cathy Severely Wounds an enemy, dealing true damage equal to <color=white>{7}</color><color=#DDA0DD>(+{14} Skill Amp)</color> of their max HP for {6} seconds. Severely Wounded enemies take {16} Healing Reduction.\n\nSeverely Wounding enemies grants her a shield, absorbing <color=white>{10}</color><color=#DDA0DD>(+{15} Skill Amp)</color> damage for {9} seconds. Her movement speed increases by {12} if she moves toward Wounded or Severely Wounded enemies, decaying over time.
 Skill/Group/Coef/1023200┃<color=green>Passive</color>: After using a skill, Cathy's next basic attack deals <color=#DDA0DD>(+{2} Skill Amp)</color> skill damage.\n\nCathy dashes in the targeted direction, dealing <color=white>{0}</color><color=#DDA0DD>(+{5} Skill Amp)</color> skill damage to enemies hit.\nThe cooldown of Double Bypass is reduced by {4} if Cathy Severely Wounds an enemy. 
 Skill/Group/Coef/1023300┃Cathy swings her saw in front of her. Enemies hit by the inner range take <color=white>{0}</color><color=#DDA0DD>(+{8} Skill Amp)</color> skill damage but do not receive stacks of Wounded. Enemies hit by the outer range take <color=white>{5}</color><color=#DDA0DD>(+{9} Skill Amp)</color> skill damage and are slowed by {3} for {4} seconds.
 Skill/Group/Coef/1023400┃Cathy throws her suture thread, dealing <color=white>{0}</color><color=#dda0dd>(+{6} Skill Amp)</color> skill damage to the first enemy hit and rooting them for {2} second.\nSutures can pass through the target and hit an extra enemy. Sutures that hit a second target push the initial target towards the second target, dealing <color=white>{4}</color><color=#DDA0DD>(+{7} Skill Amp)</color> extra skill damage and stunning them for {3} seconds. Sutures that hit a wall push the enemy into the wall, dealing <color=white>{4}</color><color=#DDA0DD>(+{7} Skill Amp)</color> extra damage and stunning them for {3} seconds.\n\nDamage from the suture does not apply stacks of Wounded.
-Skill/Group/Coef/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's max HP by {0} <color=#DDA0DD>(+{14} Skill Amp)</color> per second for {10} seconds.\n\nCathy charges in the targeted direction, dealing <color=white>{1}</color><color=#DDA0DD>(+{12} Skill Amp)</color> - <color=white>{3}</color><color=#DDA0DD>(+{13} Skill Amp)</color> skill damage based on the enemy's missing HP and causing Severe Wounds.\nA healing zone is created where Cathy dashes, recovering her and her allies HP by {0}<color=#DDA0DD>(+{14} Skill Amp)</color> max HP per second over {11} seconds.
+Skill/Group/Coef/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's max HP by {0} <color=#DDA0DD>(+{14} Skill Amp)</color> per second for {10} seconds.\n\nCathy charges in the targeted direction, dealing <color=white>{1}</color><color=#DDA0DD>(+{12} Skill Amp)</color> - <color=white>{3}</color><color=#DDA0DD>(+{13} Skill Amp)</color> skill damage based on the enemy's missing HP and causing Severe Wounds.\nA healing zone is created where Cathy dashes, recovering her and her allies HP by {0}<color=#DDA0DD>(+{14} Skill Amp)</color> max HP per second over {11} seconds.\n\nBecomes unstoppable while moving.
 Skill/Group/ExpansionTip/1023100┃<i></i>
 Skill/Group/ExpansionTip/1023200┃<i>Passive bonus skill damage will deal at least 1 damage.\nIf Cathy's Attack Speed is more than 1, her Passive Basic Attack time gets faster based on her Attack Speed.\nWhen using Dual Swords, Passive Basic Attacks deal {0} Attack Power damage.</i>
 Skill/Group/ExpansionTip/1023500┃<i>Damage is maxed when enemy's current HP is below {0}.</i>
@@ -10858,19 +10919,19 @@ Skill/Group/Name/1036300┃Phase Vortex
 Skill/Group/Name/1036400┃Amethyst Flow
 Skill/Group/Name/1036410┃Amethyst Flow
 Skill/Group/Name/1036500┃VF Eruption
-Skill/Group/Desc/1036100┃Telekinesis: Starting at Level {6}, Eva can open boxes and air supplies, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supplies, Meteorite and Tree of Life in range during combat.\n\nEvery {2} seconds, the range of Eva's next basic attack increases by {13}, and she deals <color=white>{20}</color> skill damage.\n\nEva gains {9} Vital Force every {8} seconds when out of combat, {10} per kill, and {11} per assist. Hitting with basic attack, grants {7} Vital Force.
+Skill/Group/Desc/1036100┃Telekinesis: Starting at Level {6}, Eva can open item and air supply boxes, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supply boxes, Meteorite and Tree of Life in range during combat.\n\nEvery {2} seconds, the range of Eva's next basic attack increases by {13}, and she deals <color=white>{20}</color> skill damage.\n\nEva gains {9} Vital Force every {8} seconds when out of combat, {10} per kill, and {11} per assist. Hitting with an enhanced basic attack, grants {7} Vital Force.
 Skill/Group/Desc/1036200┃Eva casts an orb of light in the targeted direction, dealing <color=white>{20}</color> skill damage to enemies it hits. When the orb reaches maximum range or the skill is reactivated, it explodes, dealing <color=white>{21}</color> skill damage.\n If the explosion hits an enemy, cooldown is reduced by {7} seconds.\n\nHitting an enemy with Light Triad grants {4} Vital Force.
 Skill/Group/Desc/1036210┃Eva casts an orb of light in the targeted direction, dealing <color=white>{20}</color> skill damage to enemies it hits. When the orb reaches maximum range or the skill is reactivated, it explodes, dealing <color=white>{21}</color> skill damage.\n\nHitting an enemy with Light Triad grants {4} Vital Force.
 Skill/Group/Desc/1036300┃Eva forms a Phase Vortex in the targeted location, dealing <color=white>{20}</color> skill damage. Enemies inside the vortex are slowed by {8}.\nThe vortex collapses after {4} seconds, dealing <color=white>{21}</color> skill damage and launching enemies in the middle airborne for {6} second.\n\nHitting an enemy with Phase Vortex grants {9} Vital Force.
 Skill/Group/Desc/1036400┃Eva's Movement Speed is increased by {10} for {9} seconds, but she cannot do anything but move. She immediately gains {8} Vital Force, granting her vision of all enemies near her for {4} seconds.\nIf Eva deals skill damage on a target during the duration, VF Light fires for {5} seconds, dealing a total of <color=white>{20}</color> skill damage.\n\nVF Light is not triggered on targets damaged with basic damage from <color=white>VF Eruption</color>, but on targets damaged by stack damage.
 Skill/Group/Desc/1036500┃Eva releases her stored VF, dealing <color=white>{20}</color> skill damage and applying a stack of VF Dissonance every {0} seconds to enemies in range. Upon reaching {2} stacks, Eva consumes the stacks, dealing <color=white>{21}</color> skill damage.\nA minimum of {5} Vital Force is required to use VF Eruption.\nVF Eruption consumes {7} Vital Force every {6} second while channeling.
-Skill/Group/Coef/1036100┃Telekinesis: Starting at level {6}, Eva can open boxes and air supplies, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supplies, Meteorite and Tree of Life in range during combat.\n\nEvery {2} seconds, the range of Eva's next basic attack increases by {13}, and she deals <color=white>{0}</color><color=#dda0dd>(+{12} Skill Amp)</color> skill damage.\n\nEva gains {9} Vital Force every {8} seconds when out of combat, {10} per kill, and {11} per assist. Hitting with basic attack, grants {7} Vital Force.
+Skill/Group/Coef/1036100┃Telekinesis: Starting at level {6}, Eva can open item and air supply boxes, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supply boxes, Meteorite and Tree of Life in range during combat.\n\nEvery {2} seconds, the range of Eva's next basic attack increases by {13}, and she deals <color=white>{0}</color><color=#dda0dd>(+{12} Skill Amp)</color> skill damage.\n\nEva gains {9} Vital Force every {8} seconds when out of combat, {10} per kill, and {11} per assist. Hitting with an enhanced basic attack, grants {7} Vital Force.
 Skill/Group/Coef/1036200┃Eva casts an orb of light in the targeted direction, dealing <color=white>{0}</color><color=#dda0dd>(+{5} Skill Amp)</color> skill damage to enemies it hits. When the orb reaches maximum range or the skill is reactivated, it explodes, dealing <color=white>{2}</color><color=#dda0dd>(+{6} Skill Amp)</color> skill damage.\n If the explosion hits an enemy, cooldown is reduced by {7} seconds.\n\nHitting an enemy with Light Triad grants {4} Vital Force.
 Skill/Group/Coef/1036210┃Eva casts an orb of light in the targeted direction, dealing <color=white>{0}</color><color=#dda0dd>(+{5} Skill Amp)</color> skill damage to enemies it hits. When the orb reaches maximum range or the skill is reactivated, it explodes, dealing <color=white>{2}</color><color=#dda0dd>(+{6} Skill Amp)</color> skill damage.\n If the explosion hits an enemy, cooldown is reduced by {7} seconds.\n\nHitting an enemy with Light Triad grants {4} Vital Force.
 Skill/Group/Coef/1036300┃Eva forms a Phase Vortex in the targeted location, dealing <color=white>{0}</color><color=#dda0dd>(+{10} Skill Amp)</color> skill damage. Enemies inside the vortex are slowed by {8}.\nThe vortex collapses after {4} seconds, dealing <color=white>{2}</color><color=#dda0dd>(+{11} Skill Amp)</color> skill damage and launching enemies in the middle airborne for {6} second.\n\nHitting an enemy with Phase Vortex grants {9} Vital Force.
 Skill/Group/Coef/1036400┃Eva's Movement Speed is increased by {10} for {9} seconds, but she cannot do anything but move. Eva immediately gains {8} Vital Force, granting her vision of all enemies near her for {4} seconds.\nIf Eva deals skill damage on a target during the duration, VF Light fires for {5} seconds, dealing a total of <color=white>{0}</color><color=#dda0dd>(+{7} Skill Amp)</color> skill damage.\n\nVF Light is not triggered on targets damaged with basic damage from <color=white>VF Eruption</color>, but on targets damaged by stack damage.
 Skill/Group/Coef/1036500┃Eva releases her stored VF, dealing <color=white>{1}</color><color=#dda0dd>(+{8} Skill Amp)</color> skill damage and applying a stack of VF Dissonance every {0} seconds to enemies in range. Upon reaching {2} stacks, Eva consumes the stacks, dealing <color=white>{3}</color><color=#dda0dd>(+{9} Skill Amp)</color> skill damage.\nA minimum of {5} Vital Force is required to use VF Eruption.\nVF Eruption consumes {7} Vital Force every {6} second while channeling.
-Skill/Group/ExpansionTip/1036100┃<i>This basic attack is also considered as a skill.</i>
+Skill/Group/ExpansionTip/1036100┃<i>Enhanced basic attacks are considered as skills.</i>
 Skill/Group/ExpansionTip/1036400┃<i>Avoid collisions as your movement speed increases.\nGain vision regardless of terrain while VF Light is activated.</i>
 CharacterState/Group/Name/1036110┃Telekinesis
 CharacterState/Group/Name/1036120┃Telekinesis - Slowed
@@ -11157,7 +11218,7 @@ CharacterState/Group/Desc/1042140┃Bianca heals herself by dipping into her Blo
 CharacterState/Group/Desc/1042150┃Your next basic attack deals extra skill damage.
 CharacterState/Group/Desc/1042210┃Rooted by being pierced with a Sanguine Javelin.
 CharacterState/Group/Desc/1042310┃Bianca has confined herself to her coffin, healing and taking less damage.
-CharacterState/Group/Desc/1042320┃Bianca has confined herself in her coffin, healing and reducing incoming damage. Damage is dealt to nearby enemies upon her glorious emergence.
+CharacterState/Group/Desc/1042320┃Bianca has confined herself in her coffin, healing and reducing incoming damage. 
 CharacterState/Group/Desc/1042410┃Bianca is charging her circulation. Damage, radius, and dash range are increased based on charge time.
 CharacterState/Group/Desc/1042510┃Bianca's skill vamp is increased.
 CharacterState/Group/Desc/1042520┃Bianca's vampiric reign has a grip on you, slowing you and rendering your movement skills useless.
@@ -11196,12 +11257,12 @@ Skill/Group/Evolution/Name/441013┃Call of Cadmus - Sidewinder
 Skill/Group/Evolution/Name/441021┃Call of Cadmus - Death Adder Queen
 Skill/Group/Evolution/Name/441022┃Call of Cadmus - Black Mamba King
 Skill/Group/Evolution/Name/441023┃Call of Cadmus - Alpha Sidewinder
-Skill/Group/Name/441011┃Call of Cadmus - Death Adder
-Skill/Group/Name/441012┃Call of Cadmus - Black Mamba
-Skill/Group/Name/441013┃Call of Cadmus - Sidewinder
-Skill/Group/Name/441021┃Call of Cadmus - Death Adder Queen
-Skill/Group/Name/441022┃Call of Cadmus - Black Mamba King
-Skill/Group/Name/441023┃Call of Cadmus - Alpha Sidewinder
+Skill/Group/Name/1044101┃Call of Cadmus - Death Adder
+Skill/Group/Name/1044111┃Call of Cadmus - Black Mamba
+Skill/Group/Name/1044121┃Call of Cadmus - Sidewinder
+Skill/Group/Name/1044102┃Call of Cadmus - Death Adder Queen
+Skill/Group/Name/1044112┃Call of Cadmus - Black Mamba King
+Skill/Group/Name/1044122┃Call of Cadmus - Alpha Sidewinder
 CharacterState/Group/Name/1044110┃Death Adder - War Master
 CharacterState/Group/Name/1044200┃Crescent Viper - Slowed
 CharacterState/Group/Name/1044300┃Keeled Scales - Shield
@@ -11441,18 +11502,18 @@ CharacterState/Group/Desc/1047330┃Slowed.
 CharacterState/Group/Desc/1047340┃You have been slowed due to being in range of Calling Card.
 CharacterState/Group/Desc/1047350┃You are currently Laura's target.
 Skill/Group/Name/1048100┃Color Mixing
-Skill/Group/Name/1048400┃Brush Stroke - <color=yellow>Yellow</color>
-Skill/Group/Name/1048410┃Brush Stroke - <color=red>Red</color>
-Skill/Group/Name/1048420┃Brush Stroke - <color=#2AC0FF>Blue</color>
-Skill/Group/Name/1048430┃Brush Stroke - <color=grey>Dry</color>
-Skill/Group/Name/1048500┃Palette Swap - <color=yellow>Yellow</color>
-Skill/Group/Name/1048510┃Palette Swap - <color=red>Red</color>
-Skill/Group/Name/1048520┃Palette Swap - <color=#2AC0FF>Blue</color>
-Skill/Group/Name/1048530┃Palette Swap - <color=grey>Dry</color>
-Skill/Group/Name/1048600┃A Dash of Color - <color=yellow>Yellow</color>
-Skill/Group/Name/1048610┃A Dash of Color - <color=red>Red</color>
-Skill/Group/Name/1048620┃A Dash of Color - <color=#2AC0FF>Blue</color>
-Skill/Group/Name/1048630┃A Dash of Color - <color=grey>Dry</color>
+Skill/Group/Name/1048400┃Brush Stroke - Yellow
+Skill/Group/Name/1048410┃Brush Stroke - Red
+Skill/Group/Name/1048420┃Brush Stroke - Blue
+Skill/Group/Name/1048430┃Brush Stroke - Dry
+Skill/Group/Name/1048500┃Palette Swap - Yellow
+Skill/Group/Name/1048510┃Palette Swap - Red
+Skill/Group/Name/1048520┃Palette Swap - Blue
+Skill/Group/Name/1048530┃Palette Swap - Dry
+Skill/Group/Name/1048600┃A Dash of Color - Yellow
+Skill/Group/Name/1048610┃A Dash of Color - Red
+Skill/Group/Name/1048620┃A Dash of Color - Blue
+Skill/Group/Name/1048630┃A Dash of Color - Dry
 Skill/Group/Name/1048700┃Full Rainbow
 Skill/Group/Desc/1048100┃If Tia colors her enemy with two different colors using either <color=#ffffff>Brush Stroke</color> or <color=#ffffff>A Dash of Color</color>, <color=#FFFFC2>Chipmunk effect</color> is activated. Her basic skills are not affected by cooldown reduction effects. Instead, her Skill Amp is increased by 12 per 10% of her cooldown reduction.\n\n<color=#FFFFC2>Mad Chipmunk: </color>Painting an enemy with <color=yellow>Yellow</color> and <color=red>Red</color> activates Mad Chipmunk, silencing them and dealing <color=#ffffff>{18}</color> skill damage over {1} times for {0} seconds.\n\n<color=#FFFFC2>Blessed Chipmunk: </color>Painting an enemy with <color=red>Red</color> and <color=#2AC0FF>Blue</color> activates Blessed Chipmunk, dealing <color=#ffffff>{19}</color> skill damage, healing {27} of Tia's dealt damage as HP, and increasing her movement speed by {10}, decaying over {9} seconds.\n\n<color=#FFFFC2>Magic Chipmunk: </color>Painting an enemy with <color=#2AC0FF>Blue</color> and <color=yellow>Yellow</color> activates Magic Chipmunk, dealing <color=#ffffff>{20}</color> skill damage and rooting them for {15} seconds.\n
 Skill/Group/Desc/1048400┃Tia tosses her yellow paint tube in the targeted direction, which explodes in a 1.5m radius, dealing <color=#ffffff>{5}</color> skill damage to enemies, slowing them by {3} for {4} seconds, and painting them <color=yellow>Yellow</color>.
@@ -12366,7 +12427,7 @@ Skill/Group/Name/1065400┃Cover Me, Marlene!
 Skill/Group/Name/1065410┃Now, Debi!
 Skill/Group/Name/1065500┃Twins Rush
 Skill/Group/Desc/1065100┃<color=green>Passive</color>: When Debi's in control, her Defense is increased by {11}, and when Marlene takes over, her basic attack range changes to {12}. Debi & Marlene's basic attack deals <color=white>{5}</color> damage.\n\nDebi & Marlene's basic attacks and skills ink the target with <color=white>Blue & Red</color>, respectively. This effect stacks up to {2} times. \nWhen <color=white>Blue & Red</color>'s ink changes from one color to another, the original color disappears, dealing <color=white>{3}</color> skill damage to the target and increasing Debi & Marlene's Movement Speed by {6} for {4} seconds. (Max Stacks: {7})\nAdditionally, the cooldown of <color=white>Cover Me, Marlene!</color> or <color=white>Now, Debi!</color> is reduced by {8} seconds when the colors are inked, and dealing damage with <color=white>Blue & Red</color> reduces their cooldown by an additional {9} seconds.
-Skill/Group/ExpansionTip/1065100┃<i>Debi & Marlene's Basic Attack doesn't critically hit, but increases the critical strike chance by {2} for every {1} critical strike damage Increase<color=white>Blue & Red</color>'s damage by {0} of their Critical Strike Chance.</i>
+Skill/Group/ExpansionTip/1065100┃<i>Debi & Marlene's Basic Attack doesn't critically hit, but increases the critical strike chance by {2} for every {1} critical strike damage increase. Additionally, <color=white>Blue & Red</color>'s damage is increased by {0} of their Critical Strike Chance.</i>
 Skill/Group/Coef/1065100┃<color=green>Passive:</color>When Debi's in control, her Defense is increased by {1}, and when Marlene takes over, her basic attack range changes to {2}. Debi & Marlene basic attack deals <color=#ffd775>{3}</color> damage.\n\nDebi & Marlene's basic attack and skills ink the target with <color=white>Blue & Red</color>, respectively. This effect stacks up to {4} times. \nWhen <color=white>Blue & Red</color>'s ink changes from one color to another, the original color disappears, dealing <color=white>{5}</color><color=#ffd775>(+{6} Extra Attack Power)</color><color=#FF6171>+{8} = ({9} Critical Strike Chance)</color> skill damage to the target and increasing Debi & Marlene's movement speed by {6} for {4} seconds. (Max Stacks: {12})\nAdditionally, the cooldown of <color=white>Cover Me, Marlene!</color> or <color=white>Now, Debi!</color> is reduced by {13} seconds when the colors are inked, and dealing damage with <color=white>Blue & Red</color> reduces their cooldown by an additional {14} seconds.
 Skill/Group/Desc/1065200┃Debi slams her sword forward, dealing <color=white>{0}</color> skill damage. Hitting an enemy increases her Attack Speed by {1} for {2} seconds. (Max Stacks: {3})
 Skill/Group/ExpansionTip/1065200┃<i>This skill is also considered as a basic attack and its effect is activated upon hitting an enemy for the first time.</i>\n<i>Cooldown and Casting Time are reduced based on additional Attack Speed.</i>
@@ -12511,12 +12572,12 @@ Skill/Group/Desc/1068100┃Alonso becomes immune to immobilization effects for <
 Skill/Group/Desc/1068200┃Alonso throws a Magnetic Punch forward, dealing <color=white>{0}</color> skill damage and <color=white>connecting</color> magnetically to enemies hit.\n\nWhen he is facing a <color=white>Connected</color> target, his movement speed increases by <color=white>{1}</color> and up to <color=white>{2}</color> depending on the distance between him and his target.\n\nPerforming a basic attack on <color=white>Connected</color> enemies will break the connection, dealing <color=white>{12}</color><color=#688a08>(+{13} of target's Max HP)</color> skill damage and stunning them for <color=white>{3}</color> seconds.
 Skill/Group/Desc/1068300┃Alonso unleashes a magnetic shield that blocks attacks for <color=white>{0}</color> seconds, reducing damage taken from enemies in front by <color=white>{1}</color>.\n\nThe shield fires a total of <color=white>{2}</color> waves, each dealing <color=white>{3}</color> skill damage. The projectiles are fired at increasingly faster intervals.\n\nReusing or ending the skill deals <color=white>{4}</color> skill damage.
 Skill/Group/Desc/1068400┃Alonso points at his target and puts a metal ring on them. \n\nAfter a moment, he dashes towards the target, dealing <color=white>{0}</color> skill damage and rooting them for <color=white>{1}</color> seconds.
-Skill/Group/Desc/1068500┃Alonso briefly pulls enemies nearby to him, dealing <color=white>{0}</color> skill damage.\n\nHe then collects metal fragments from the ground, recovering <color=white>{2}</color> HP every <color=white>{1}</color> seconds and dealing <color=white>{3}</color> of damage over time to enemies. Enemies in the outer range are slowed by <color=white>{4}</color>.\n\nReusing or ending the skill deals <color=white>{5}</color> to <color=white>{6}</color> skill damage based on the skill duration.
+Skill/Group/Desc/1068500┃Alonso briefly pulls enemies nearby to him, dealing <color=white>{0}</color> skill damage.\n\nHe then collects metal fragments from the ground, recovering <color=white>{2}</color> HP every <color=white>{1}</color> seconds and dealing <color=white>{3}</color> skill damage over time to enemies. Enemies in the outer range are slowed by <color=white>{4}</color>.\n\nReusing or ending the skill deals <color=white>{5}</color> to <color=white>{6}</color> skill damage based on the skill duration.
 Skill/Group/Coef/1068100┃Alonso becomes immune to immobilization effects for <color=white>{0}</color> seconds. This effect is reactivated if he takes no damage for <color=white>{1}</color> seconds.\n\nWhen Alonso's skill immobilizes an enemy, he recovers <color=white>{10}</color><color=#688a08>(+{11} of Max HP)</color> HP per enemy.
 Skill/Group/Coef/1068200┃Alonso throws a Magnetic Punch forward, dealing <color=white>{10}</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage and <color=white>Connecting</color> magnetically to enemies hit.\n\nWhen Alonso is facing a <color=white>Connected</color> target, his movement speed increases by <color=white>{1}</color> and up to <color=white>{2}</color> depending on the distance between him and his target.\n.\n\nPerforming a basic attack on <color=white>Connected</color> enemies will break the connection, dealing <color=white>({12} per Alonso level)</color><color=#688a08>(+{13} of target's Max HP)</color> skill damage and stunning them for <color=white>{3}</color> seconds.
 Skill/Group/Coef/1068300┃Alonso unleashes a magnetic shield that blocks attacks for <color=white>{0}</color> seconds, reducing damage taken from enemies in front by <color=white>{1}</color>.\n\nThe shield fires a total of <color=white>{2}</color> waves, each dealing <color=white>{10}</color><color=#DDA0DD>(+{11} Skill Amp)</color><color=#688a08>(+{12} of Additional HP)</color> skill damage. The projectiles are fired at increasingly faster intervals.\n\nReusing or ending the skill deals <color=white>{13}</color><color=#DDA0DD>(+{14} Skill Amp)</color><color=#688a08>(+{15} of Additional HP)</color> skill damage.
 Skill/Group/Coef/1068400┃Alonso points at his target and puts a metal ring on them. \n\nAfter a moment, he dashes towards the target, dealing <color=white>{10}</color><color=#93c9e7>(+{11} Defense)</color><color=#688a08>(+{12} of Max HP)</color> skill damage and rooting them for <color=white>{1}</color> seconds.
-Skill/Group/Coef/1068500┃Alonso briefly pulls nearby enemies to him, dealing <color=white>{10}</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage.\n\nHe then collects metal fragments from the ground, recovering<color=white>{12}</color><color=#688a08>(+{13} of Max HP)</color> HP every <color=white>{1}</color> seconds and dealing <color=white>{14}</color><color=#DDA0DD>(+{15} Skill Amp)</color> damage over time to enemies. Enemies in the outer range are slowed by <color=white>{4}</color>.\n\nReusing or ending the skill deals <color=white>{16}</color><color=#DDA0DD>(+{17} Skill Amp)</color><color=#688a08>(+{18} of Additional HP)</color> ~ <color=white>{19}</color><color=#DDA0DD>(+{20} Skill Amp)</color><color=#688a08>(+{21} of Additional HP)</color> skill damage based on the skill duration.
+Skill/Group/Coef/1068500┃Alonso briefly pulls nearby enemies to him, dealing <color=white>{10}</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage.\n\nHe then collects metal fragments from the ground, recovering<color=white>{12}</color><color=#688a08>(+{13} of Max HP)</color> HP every <color=white>{1}</color> seconds and dealing <color=white>{14}</color><color=#DDA0DD>(+{15} Skill Amp)</color> skill damage over time to enemies. Enemies in the outer range are slowed by <color=white>{4}</color>.\n\nReusing or ending the skill deals <color=white>{16}</color><color=#DDA0DD>(+{17} Skill Amp)</color><color=#688a08>(+{18} of Additional HP)</color> ~ <color=white>{19}</color><color=#DDA0DD>(+{20} Skill Amp)</color><color=#688a08>(+{21} of Additional HP)</color> skill damage based on the skill duration.
 Skill/Group/ExpansionTip/1068100┃<i>Immobilized: Unable to move or receive movement commands.</i>
 Skill/Group/ExpansionTip/1068300┃<i>Alonso is slowed by {0}.</i>
 Skill/Group/ExpansionTip/1068400┃<i>The dash is cancelled if the target moves away or disappears.</i>
@@ -12540,6 +12601,43 @@ CharacterState/Group/Name/1068500┃Magnetic Field - Slowed
 CharacterState/Group/Desc/1068500┃You've been slowed by a magnetic field. 
 CharacterState/Group/Name/1068510┃Magnetic Field
 CharacterState/Group/Desc/1068510┃Enemies are slowed by the strong magnetic field, while Alonso continues to recover HP.
+Skill/Group/Name/1069100┃Teddy Bear Attack!
+Skill/Group/Name/1069200┃Carrot Bazooka!
+Skill/Group/Name/1069300┃Whack-a-mole!
+Skill/Group/Name/1069400┃Air Horn Gun! 
+Skill/Group/Name/1069500┃Spring Launch!
+Skill/Group/Desc/1069100┃Upon hitting an ally test subject, a teddy bear spawns on the target. The teddy bear lasts for {0} seconds.\n\nWhen an ally's attack hits an enemy, the teddy bear flies away dealing <color=white>{1}</color> additional skill damage. Dealing damage with the teddy bear reduces the cooldown of Leni's basic skill by {2} seconds.
+Skill/Group/Desc/1069200┃Leni is knocked back slightly when firing the Carrot Bazooka. The carrot flies to the end of its range, or explodes when it hits an enemy or ally. Different effects are triggered on enemies and allies within the explosion's range.\n\nEnemy: Takes <color=white>{0}</color> skill damage. \nAlly: Recovers <color=white>{1}</color> HP.\n
+Skill/Group/Desc/1069300┃Leni jumps up and smashes her mallet at the targeted location. Different effects are triggered for enemies and allies.\n\nEnemy: Takes <color=white>{0}</color> skill damage and is slowed for {2} seconds. Enemies hit in the inner area are slowed by {3} and those hit in the outer range are slowed by {4}.\n\nAlly: Slowed by {6} for {5} seconds, then movement speed increases by {8} for {7} seconds.
+Skill/Group/Desc/1069400┃Leni fires her Air Horn Gun!. Different effects are triggered for enemies and allies.\n\nEnemy: Takes <color=white>{0}</color> skill damage and is stunned for {1} seconds. \nAlly: Gains <color=white>{2}</color> shield for {3} seconds.
+Skill/Group/Desc/1069500┃Leni sets the Spring Launch! dealing <color=white>{0}</color> skill damage to enemies hit and sending them flying in the targeted direction. If they hit a wall, they're slowed by {2} for {1} seconds.\n\n<i>Leni flies away too!</i>
+Skill/Group/Coef/1069100┃Upon hitting an ally test subject, a teddy bear spawns on the target. The teddy bear lasts for {0} seconds.\n\nWhen an ally's attack hits an enemy, the teddy bear flies away dealing <color=white>{1}</color><color=green>(+ Character Level</color><color=white> * {2}</color><color=green>)</color> additional skill damage. \nDealing damage with the teddy bear reduces the cooldown of Leni's basic skill by {3} seconds.
+Skill/Group/Coef/1069200┃Leni is knocked back slightly when firing the Carrot Bazooka. The carrot flies to the end of its range, or explodes when it hits an enemy or ally. Different effects are triggered on enemies and allies within the explosion's range.\n\nEnemy: Takes <color=white>{0}</color><color=green>(+Character Level</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+{2} Skill Amp)</color> skill damage. \nAlly: Recovers HP by <color=white>{3}</color><color=green>(+Character Level</color><color=white> * {4}</color><color=green>)</color><color=#DDA0DD>(+{5} Skill Amp)</color>.
+Skill/Group/Coef/1069300┃Leni jumps up and smashes her mallet at the targeted location. Different effects are triggered for enemies and allies.\n\nEnemy: Takes <color=white>{0}</color><color=green>(+ Leni Level</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+{2} Skill Amp)</color> skill damage and is slowed for {2} seconds. Enemies hit in the inner area are slowed by {3} and those hit in the outer range are slowed by {4}.\n\nAlly: Slowed by {10} for {9} seconds, then movement speed increases by {12}<color=green>(+ Leni Level</color><color=white> * {13}</color><color=green>)</color> for {11} seconds.
+Skill/Group/Coef/1069400┃Leni fires her Air Horn Gun!. Different effects are triggered for enemies and allies.\n\nEnemy: Takes <color=white>{0}</color><color=green>(+Character Level</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+{2} Skill Amp)</color> skill damage and is stunned for {3} seconds. \nAlly: Gains <color=white>{4}</color><color=green>(+Character Level</color><color=white> * {5}</color><color=green>)</color><color=#DDA0DD>(+{6} Skill Amp)</color> shield for {7} seconds.
+Skill/Group/Coef/1069500┃Leni sets the Spring Trap! dealing <color=white>{0}</color><color=green>(+ Leni Level</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+{2} Skill Amp)</color> skill damage to enemies hit and sending them flying in the targeted direction. If they hit a wall, they're slowed by {4} for {3} seconds.\n\n<i>Leni flies away too!</i>
+Skill/Group/ExpansionTip/1069200┃<i>Ally effects apply to Leni as well. \nCannot go over walls.</i>
+Skill/Group/ExpansionTip/1069300┃<i>If an ally test subject is hit, Leni receives the same effect.</i>
+Skill/Group/ExpansionTip/1069400┃<i>If an ally test subject is hit, Leni receives the same effect.</i>
+Skill/Group/ExpansionTip/1069500┃<i>Cannot go over walls.</i>
+CharacterState/Group/Name/1069100┃Teddy Bear Attack!
+CharacterState/Group/Desc/1069100┃Upon attacking, the teddy bear flies to the target, dealing additional skill damage.\n<i>"Hi! This is Goltbear!"</i>
+CharacterState/Group/Name/1069300┃Whack-a-mole! - Slowed
+CharacterState/Group/Desc/1069300┃Slowed by Leni's mallet! 
+CharacterState/Group/Name/1069310┃Whack-a-mole! - Slowed
+CharacterState/Group/Desc/1069310┃Slowed by Leni's mallet! 
+CharacterState/Group/Name/1069320┃Whack-a-mole! - Slowed
+CharacterState/Group/Desc/1069320┃Slowed by Leni's mallet! 
+CharacterState/Group/Name/1069330┃Whack-a-mole! - Slowed
+CharacterState/Group/Desc/1069330┃Leni has increased your movement speed as an apology for her prank.
+CharacterState/Group/Name/1069400┃Air Horn Gun! - Stunned
+CharacterState/Group/Desc/1069400┃Stunned by Air Horn Gun!
+CharacterState/Group/Name/1069410┃Air Horn Gun! - Shield
+CharacterState/Group/Desc/1069410┃Shielded by Air Horn Gun! 
+CharacterState/Group/Name/1069500┃Spring Launch! - Knocked Back
+CharacterState/Group/Desc/1069500┃Knocked back by Spring Launch!
+CharacterState/Group/Name/1069520┃Spring Launch! - Slowed
+CharacterState/Group/Desc/1069520┃Slowed from being hit into a wall.
 Skill/Group/Name/3015000┃Cloak and Dagger
 Skill/Group/Name/3015100┃Cloak and Dagger
 Skill/Group/Name/3016000┃Parry
@@ -12640,6 +12738,8 @@ Skill/Group/ExpansionTip/3024000┃<i>Skill Level up at Weapon Mastery <color=wh
 Skill/Group/Desc/3025000┃Echion channels for 1 second, gaining additional effects based on the state of his VF.\n\n<color=white>Below {0}:</color> Gains {1} VF.\n\n<color=white>{0} or higher:</color> Consume {2} VF to reduce the cooldown of all non-weapon skills by {3} and increase your movement speed by {5} for {4} seconds.\n\n<color=white>During VF Overflow:</color> The duration of VF Overflow is increased by {6} seconds, the cooldown of all skills, excluding VF Stabilization, is reduced by {7}, and his movement speed is increased by {9} for {8} seconds.\n\n<color=white>During Exuviation:</color> The duration of Exuviation is reduced by {10} seconds.
 Skill/Group/Coef/3025000┃Echion channels for 1 second, gaining additional effects based on the state of his VF.\n\n<color=white>Below {0}:</color> Gains {1} VF.\n\n<color=white>{0} or higher:</color> Consume {2} VF to reduce the cooldown of all non-weapon skills by {3} and increase your movement speed by {5} for {4} seconds.\n\n<color=white>During VF Overflow:</color> The duration of VF Overflow is increased by {6} seconds, the cooldown of all skills, excluding VF Stabilization, is reduced by {7}, and his movement speed is increased by {9} for {8} seconds.\n\n<color=white>During Exuviation:</color> The duration of Exuviation is reduced by {10} seconds.
 Skill/Group/ExpansionTip/3025000┃<i>Skill Level up at Weapon Mastery <color=white>Lv5, Lv10, and Lv15</color></i>
+CharacterState/Group/Name/3016000┃Parry
+CharacterState/Group/Desc/3016000┃Deflects enemy attacks
 CharacterState/Group/Name/3006000┃Caltrops
 CharacterState/Group/Desc/3006000┃Slowed from stepping on the Caltrops
 CharacterState/Group/Name/3001000┃Uppercut
@@ -12819,7 +12919,7 @@ Skill/LobbyDesc/1005200┃Zahir calls upon God's strength, dealing damage in a t
 Skill/LobbyDesc/1005300┃Zahir throws a Chakram in the targeted direction, dealing damage.\nIf Zahir hits an enemy with any skill but Gandiva, he gains 2 Chakrams that float behind him.\n\nEye of Azrael effect: Hitting an enemy reduces the cooldown of Narayanastra and Vayvayastra.
 Skill/LobbyDesc/1005400┃Zahir summons and launches a gust of wind, dealing damage. Enemies hit are launched airborne.\n\nEye of Azrael effect: The enemy is launched airborne for longer.
 Skill/LobbyDesc/1005500┃Zahir calls down Chakrams from the heavens in the targeted direction, dealing damage. Bhargavastra marks enemies with Eye of Azrael if they don't have one.
-Skill/LobbyDesc/1006100┃Nadine gains a stack of Wild upon slaying Wild Animals and Test Subjects.
+Skill/LobbyDesc/1006100┃Nadine gains a stack of Wild when involved in slaying Wild Animals and Test Subjects.
 Skill/LobbyDesc/1006200┃Nadine gathers her strength, reducing her movement speed, and gradually increasing the range and damage of Bullseye. Reactivate the skill to shoot the arrow, dealing skill damage.\nBullseye does more skill damage and has a longer ranger with more stacks of Wild.
 Skill/LobbyDesc/1006300┃Nadine throws a Squirrel Trap at the targeted location. Reactivate to throw a second trap within the reinstallation range and deal skill damage to enemies caught in the connected traps. Enemies are slowed and have their Attack Speed reduced, and Nadine gains vision of them.\n\nEnemies slowed by Squirrel Trap take reduced skill damage from consecutive Squirrel Traps.\nThe connected traps disappear after a certain time.
 Skill/LobbyDesc/1006400┃Nadine attaches a wire at the targeted location. While installed and she is attached to it, her attack speed increases.\nReactivate to dash to the anchor point of the wire.
@@ -12842,7 +12942,7 @@ Skill/LobbyDesc/1008500┃Hart puts on a show, causing everyone around her to da
 Skill/LobbyDesc/1009100┃Enemies that take damage from his traps have their defense reduced.
 Skill/LobbyDesc/1009200┃Isol throws a bomb to the target location that sticks to an enemy or on the ground. The bomb explodes, dealing damage, and rooting enemies caught in the blast.\nIf the bomb is stuck to an enemy, each attack reduces its timer and increases the damage and root duration.
 Skill/LobbyDesc/1009300┃Isol unleashes a fury of bullets in front of him, dealing skill damage. 
-Skill/LobbyDesc/1009400┃Isol rolls forward and blends into his surroundings, going invisible. The invisibility is lifted after a certain time or if Isol does any action other than movement. The first basic attack damage deals an additional skill damage for a limited time.
+Skill/LobbyDesc/1009400┃Isol rolls forward and blends into his surroundings, going invisible. The invisibility is lifted after a certain time or if Isol does any action other than movement. The first basic attack damage within a certain amount of time deals an additional skill damage.
 Skill/LobbyDesc/1009500┃Isol installs a MOK Operational Mine on the ground. The mine explodes when an enemy enters its range, dealing damage.
 Skill/LobbyDesc/1010100┃Li Dailin can use <color=white>Drink Up</color> to fill her BAC bar. Depending on her BAC, she can trigger <color=white>Dialed In</color>.\n\n<color=white>Dialed In:</color> Li Dailin's Attack Speed is increased and she attacks with two consecutive basic attacks.\n\n<color=white>When her BAC is over 40,</color> Li Dailin gets drunk. Her <color=white>Spirited Kick</color> and <color=white>Bottom Shelf</color> skills become enhanced with <color=yellow>Tipsy.</color> She gains Dialed In for her next basic attack after using a basic skill.\n\n<color=white>When her BAC is 100,</color> she becomes Inebriated and cannot use her skills for a certain amount of time. While she is Inebriated, she gains Dialed In.\n\n
 Skill/LobbyDesc/1010200┃Li Dailin charges forward, dealing damage to enemies hit. She can reactivate this skill two more times.\n\n\n<color=yellow>Tipsy:</color> Consumes BAC to increase range and damage dealt.
@@ -12871,7 +12971,7 @@ Skill/LobbyDesc/1014300┃Chiara creates a shield that absorbs damage based on h
 Skill/LobbyDesc/1014400┃Chiara sends out a shackle in the targeted direction, dealing skill damage to enemies hit and linking them to Chiara. If the link is maintained, she deals skill damage and roots the enemy.
 Skill/LobbyDesc/1014500┃Chiara channels the darkness inside of her causing a Plague and transforming into a fallen angel. Her basic attack range and max HP increase. She consumes Plague gauge every second while she has transformed. Enemies nearby take skill damage, and Chiara recovers HP per target and recharges the Plague gauge. Chiara can perform Last Judgement during the Plague.\n\nLast Judgement: Chiara descends quickly upon her target, dealing true damage based on Stacks of Stigma. If she kills a Test Subject, the Plague resets and she can use Last Judgement again. If she doesn't kill them, the Plague ends.\n\nAfter using Last Judgement, she becomes Untargetable while descending upon the target.
 Skill/LobbyDesc/1015100┃As Sissela's HP decreases, she gains HP Regen and Skill Amp.\nWhen Wilson returns to Sissela, her next basic attack deals additional skill damage and reduces the movement speed of enemies.
-Skill/LobbyDesc/1015200┃Wilson flies in the targeted direction, dealing skill damage to enemies in her path and skill damage to enemies in range upon arrival.
+Skill/LobbyDesc/1015200┃Wilson flies in the targeted direction, dealing skill damage to enemies in his path and skill damage to enemies in range upon arrival.
 Skill/LobbyDesc/1015300┃Wilson embraces Sissela, blocking all damage and increasing her movement speed.\nWilson then explodes when used again or after some time, dealing skill damage to enemies in an area around her.
 Skill/LobbyDesc/1015400┃Wilson streches his body in the targeted direction, pulling the first target hit.\nHerself: she receives a shield and the cooldown of Play With Us! is reduced.\nEnemy pull: Wilson deals skill damage and stuns the target. \nMoving Wilson while grabbing an enemy will drag the enemy with him.
 Skill/LobbyDesc/1015500┃Sissela channels and deals skill damage to players nearby and in the same area, including herself.\nShe deals additional damage based on her missing HP.\nSissela's HP will not drop below 100 when taking damage from this skill.\n\nDealing damage with this skill momentarily increases the damage dealt from Agony.
@@ -12918,7 +13018,7 @@ Skill/LobbyDesc/1023100┃When Cathy damages enemies with a skill, she applies W
 Skill/LobbyDesc/1023200┃<color=green>Passive</color>: After using a skill, Cathy's next basic attack deals skill damage instead.\n\nCathy dashes in the targeted direction, dealing damage to enemies hit.\nThe cooldown of Double Bypass is reduced if Cathy Severely Wounds an enemy.
 Skill/LobbyDesc/1023300┃Cathy swings her saw in front of her. Enemies hit by the inner range take skill damage but do not receive stacks of Wounded. Enemies hit by the outer range take skill damage and are slowed for a few seconds.
 Skill/LobbyDesc/1023400┃Cathy throws her suture thread, dealing skill damage to the first enemy hit and rooting them for a few seconds.\nSutures can pass through the target and hit an extra enemy. Sutures that hit a second target push the initial target towards the second target, dealing extra skill damage and stunning them. Sutures that hit a wall push the enemy into the wall, dealing extra skill damage and stunning them.\n\nDamage from the suture does not apply stacks of Wounded.
-Skill/LobbyDesc/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's max HP per second for a few seconds.\n\nCathy charges in the targeted direction, dealing skill damage based on the enemy's missing HP and causing Severe Wounds. Hitting a Severely Wounded enemy resets the duration.\nA healing zone is created where Cathy dashes, recovering her and her allies' HP.
+Skill/LobbyDesc/1023500┃<color=green>Passive</color>: If Cathy revives a downed ally, she creates a healing zone, recovering her ally's max HP per second for a few seconds.\n\nCathy charges in the targeted direction, dealing skill damage based on the enemy's missing HP and causing Severe Wounds. Hitting a Severely Wounded enemy resets the duration.\nA healing zone is created where Cathy dashes, recovering her and her allies' HP.\n\nBecomes unstoppable while moving.
 Skill/LobbyDesc/1024100┃Adela's attack range is increased, her attack speed is fixed. If her Attack Speed increases, her Attack Power increases too.
 Skill/LobbyDesc/1024200┃Adela places her pawn at the targeted location, dealing skill damage. Placing a pawn grants her a stack. Upon reaching a certain amount of stacks, her movement speed increases. Her next pawn will be Queened, dealing skill damage and stunning enemies hit for a few seconds.\nStacks are reset if Promotion is not reactivated within a few seconds.\nPawns and Queens remain for a few seconds.\nPromotion's cooldown can not be reduced. 
 Skill/LobbyDesc/1024300┃Adela moves her Knight to the targeted location, dealing skill damage. It hops, dealing skill damage upon landing.\nHitting a pawn, queen, or rook with the initial landing spot pushes the piece opposite of the knight, causing different effects.\nPawn and Queen: Piece stops upon hitting an enemy, dealing damage proportional to the damage dealt with Promotion, and knocking them airborne.\nRook: deals damage proportional to the damage dealt with Castling to enemies hit, knocking them airborne.\n\nKnights remain for a few seconds. Summoning another Knight will cause the first Knight to dissappear. 
@@ -12982,7 +13082,7 @@ Skill/LobbyDesc/1035200┃Jan's attacks with a knee strike, dealing damage to en
 Skill/LobbyDesc/1035300┃Jan sweeps the area in front of him with a kick, dealing damage to enemies in range. Enemies hit in the outer cone are knocked back. Enemies knocked into terrain are stunned.\n\nEnhanced: Deals more damage and knocks back all enemies in range. Enemies knocked into terrain are stunned for a longer duration.
 Skill/LobbyDesc/1035400┃Jan dashes forward and causes his next basic attack to deal extra skill damage.\nHitting Knee Strike or Tomahawk Roundhouse after dashing heals him for a percentage of damage dealt, increasing based on his missing HP.\nJan can Bob and Weave while using Tomahawk Roundhouse.\n\nEnhanced: The cooldown of Bob and Weave is reduced.
 Skill/LobbyDesc/1035500┃Jan summons a square ring, granting him stacks of Unyielding. Enemies that touch the ropes are slowed and take damage. Enemies that are knocked back into the ropes are then knocked back towards the center of the ring. Ropes disappear upon contact.\nKilling a player inside the ring grants a stack of Unyielding and increases Jan's movement speed.
-Skill/LobbyDesc/1036100┃Telekinesis: Starting at level 6, Eva can open boxes and air supplies, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supplies, Meteorite and Tree of Life in range during combat.\n\nVF Bead: When Eva lands a skill or is hit by a basic attack, Eva expels a bead of concentrated VF energy towards the enemy, dealing damage and slowing targets hit.\nLanding a VF Bead on an enemy reduces its cooldown and grants Vital Force.\n\nEva gains Vital Force constantly when out of combat, and receives a bonus for kills and assists.
+Skill/LobbyDesc/1036100┃Telekinesis: Starting at level 6, Eva can open item and air supply boxes, fish, collect, and recover downed allies in range. She can only revive, loot corpses and carcasses, or collect air supply boxes, Meteorite and Tree of Life in range during combat.\n\nVF Bead: When Eva lands a skill or is hit by a basic attack, Eva expels a bead of concentrated VF energy towards the enemy, dealing damage and slowing targets hit.\nLanding a VF Bead on an enemy reduces its cooldown and grants Vital Force.\n\nEva gains Vital Force constantly when out of combat, and receives a bonus for kills and assists. Enhanced Basic Attacks grant Vital Force.
 Skill/LobbyDesc/1036200┃Eva casts an orb of light in the targeted direction, dealing skill damage to enemies it hits. When the orb reaches maximum range or the skill is reactivated, it explodes dealing skill damage.\n If the explosion hits an enemy, cooldown is reduced.\n\nHitting an enemy with Light Triad grants Vital Force.
 Skill/LobbyDesc/1036300┃Eva forms a Phase Vortex in the targeted location, dealing skill damage. Enemies inside the vortex are slowed.\nThe vortex collapses after a few seconds, dealing skill damage and launching enemies in the middle airborne.\n\nHitting an enemy with Phase Vortex grants Vital Force. 
 Skill/LobbyDesc/1036400┃Eva's Movement Speed is increased, but she cannot do anything but move. Eva immediately gains Vital Force, granting her vision of all enemies near her. If Eva deals skill damage on a target during the duration, VF Light fires for a certain period of time, dealing skill damage.\nVF Light is not triggered on targets damaged with basic damage from <color=white>VF Eruption</color>, but on targets damaged by stack damage.
@@ -13032,7 +13132,7 @@ Skill/LobbyDesc/1045200┃Mai whips her shawl, dealing skill damage to enemies i
 Skill/LobbyDesc/1045300┃Mai veils herself with her shawl. While veiled, basic attacks against her deal minimal damage, she gradually gains an additional movement speed boost, and her defense is increased. The veil then explodes, dealing skill damage to enemies in range.\nMai can hold up to 2 charges and has a short cooldown between casts. Basic attacks reduce the recharge cooldown.
 Skill/LobbyDesc/1045400┃Mai dashes to an enemy, allied player, wild animal, or camera and gains a shield. Targeting an ally shields them for the same amount.\n\n<color=white>Strut</color>: Mai dashes in the targeted direction, dealing skill damage to enemies in range and taunting them.
 Skill/LobbyDesc/1045500┃Mai entangles herself or a targeted ally with her shawl, making them invincible and suppressed. When they are released, they are healed and the effects of <color=white>Shaw Veil</color> activate.\nCasting on an ally pulls them towards Mai.
-Skill/LobbyDesc/1046100┃Aiden gains an <color=white>Ampere</color> for each enemy hit by his skills.\n\nWhen Aiden has enough <color=white>Amperes</color>, if there are no enemies nearby or he uses <color=white>Backstep</color>, he becomes <color=white>Overcharged</color> for {4} seconds. At this time, <color=white>Amperes</color> is switched to <color=white>Bullets</color> and the basic attack is changed to a long-range attack.\n\nWhile <color=white>Overcharged</color>, Aiden’s gains critical strike damage for every 1% of his critical strike chance and his basic attacks always critically strike, but he loses attack speed and critical strike damage.\n\nAfter <color=white>Overcharge</color> expires, Aiden's movement speed is increased for a few seconds.
+Skill/LobbyDesc/1046100┃Aiden gains an <color=white>Ampere</color> for each enemy hit by his skills.\n\nWhen Aiden has enough <color=white>Amperes</color>, if there are no enemies nearby or he uses <color=white>Backstep</color>, he becomes <color=white>Overcharged</color> for {4} seconds. At this time, <color=white>Amperes</color> is switched to <color=white>Bullets</color> and the basic attack is changed to a long-range attack.\n\nWhile <color=white>Overcharged</color>, Aiden’s gains critical strike damage for every 1% of his critical strike chance and his basic attacks always critically strike, but he loses attack speed and critical strike damage.\nAfter <color=white>Overcharge</color> expires, Aiden's movement speed is increased for a few seconds.
 Skill/LobbyDesc/1046200┃<color=white>Lightning Strike</color>: Aiden thrusts his gunblade forward, dealing basic attack damage to the first enemy hit and gaining 2 <color=white>Amperes</color>. Basic attacks reduce the cooldown of <color=white>Lightning Strike</color>.\n\nDuring <color=white>Overcharge</color>, Aiden changes to <color=white>Volt Cannon</color>.\n\n<color=white>Volt Cannon</color>: Aiden fires an electric bullet in the targeted direction, dealing basic attack damage to the first enemy hit and slowing them. Dealing damage to an enemy decreases <color=white>Volt Cannon</color>'s cooldown.\n\nThis skill is not affected by Cooldown Reduction.
 Skill/LobbyDesc/1046300┃Aiden slows himself while he channels high voltage into his gunblade.\nWhen recast, or at max duration, Aiden deals skill damage to enemies nearby based on charge time and slows them. If fully charged, Aiden leaves behind a <color=white>Sparkring</color>, dealing skill damage to enemies that touch it and rooting them.
 Skill/LobbyDesc/1046400┃<color=green>Passive</color>: The cooldown of this skill is reset upon reaching full<color=white>Amperes</color>.\n\n<color=white>Backstep</color>: Aiden steps back and fires an electric bullet, dealing skill damage to the first enemy hit and marking them. The mark provides vision to Aiden and enables him to use<color=white>Bolt Rush</color>. Aiden’s movement speed is increased after using <color=white>Backstep</color>.\n\n<color=white>Bolt Rush</color>: Aiden dashes to the marked enemy, dealing skill damage. 
@@ -13136,7 +13236,12 @@ Skill/LobbyDesc/1068100┃Alonso becomes immune to immobilization effects for a 
 Skill/LobbyDesc/1068200┃Alonso throws a Magnetic Punch forward that deals skill damage and <color=white>Connects</color> with enemies it hits.\n\nWhen Alonso is facing a <color=white>Connected</color> target, his movement speed increases depending on the distance between him and his target.\n\nPerforming a basic attack on <color=white>Connected</color> enemies will break the connection, dealing skill damage and briefly stunning them.
 Skill/LobbyDesc/1068300┃Alonso unleashes a magnetic shield that blocks attacks, reducing damage taken from enemies in front.\n\nThe shield fires waves at incresingly faster intervals dealing skill damage.\n\nReusing or ending the skill deals skill damage.
 Skill/LobbyDesc/1068400┃Alonso points at his target and puts a metal ring on them. \n\nAfter a moment, he dashes towards the target, dealing skill damage and rooting them.
-Skill/LobbyDesc/1068500┃Alonso briefly pulls nearby enemies to him, dealing skill damage.\n\nHe then collects metal fragments from the ground, recovering HP and dealing damage over time to enemies. Enemies in the outer range are slowed.\n\nReusing or ending the skill deals skill damage based on the skill duration.
+Skill/LobbyDesc/1068500┃Alonso briefly pulls nearby enemies to him, dealing skill damage.\n\nHe then collects metal fragments from the ground, recovering HP and dealing skill damage over time to enemies. Enemies in the outer range are slowed.\n\nReusing or ending the skill deals skill damage based on the skill duration.
+Skill/LobbyDesc/1069100┃Upon hitting an ally test subject, a teddy bear spawns on the target. \n\nWhen an attack from an ally who has gained a teddy bear hits an enemy, the teddy bear flies away dealing additional skill damage.\nDealing damage with the teddy bear reduces the cooldown of Leni's basic skill.
+Skill/LobbyDesc/1069200┃Leni fires her Carrot Bazooka and is knocked back slightly. The carrot flies to the end of its range, or explodes if it hits an enemy or ally. When it explodes, it deals skill damage to enemies and heals allies.\n
+Skill/LobbyDesc/1069300┃Leni jumps up and smashes her mallet on the targeted location, dealing skill damage and slowing enemies.  Enemies hit in the center are slowed even more.\nHitting an ally slows them for a short period of time, then increases their movement speed.
+Skill/LobbyDesc/1069400┃Leni fires her Air Horn Gun!, dealing skill damage to enemies and stunning them for a certain amount of time. Allies hit gain a shield.
+Skill/LobbyDesc/1069500┃Leni starts the Spring Launch! dealing skill damage to enemies hit and sending them flying in the targeted direction. \nEnemies that hit a wall are slowed for a certain amount of time.\n\n<i>Leni flies away too!</i>
 Skill/LobbyDesc/3001000┃Punch your target and deal damage.
 Skill/LobbyDesc/3002000┃Block all damage for a fixed amount of time and return true damage to the attacking enemy. (Does not block attack effects.)
 Skill/LobbyDesc/3003000┃Deal damage to all enemies in front of you and knock them back. If the enemies hit a wall from the knockback, they are stunned.
@@ -13283,19 +13388,19 @@ Skill/Code/Desc/4110003┃Basic Attacks deal damage over a wider range for {0} s
 Skill/Code/Coef/4110003┃Basic Attacks deal damage over a wider range for {0} seconds. Nearby enemies take (Melee: {1}% / Ranged: {2}%) skill damage.\n\n<color=#FFFFC2>Module Enhancement: </color> Deal skill damage equal to <color=#688A08>{4}%</color> of your current HP when using a Basic Attack.
 CharacterState/Group/Name/4110000┃Blasting Bullet
 CharacterState/Group/Desc/4110000┃Ready!
-Skill/Group/Name/4114000┃The Strijder - A13
-Skill/Group/LobbyDesc/4114000┃Increases your movement speed toward the enemy when used. The effect ends by dealing additional skill damage to the enemy during its duration.\n\n<color=#FF3399>Upon Enhancement:</color>Enemies damaged by The Chase are slowed. 
-Skill/Code/Desc/4114001┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing {3} additional skill damage to the enemy during its duration.\n\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Chase are slowed by {5}% for {4} seconds</color>
-Skill/Code/Coef/4114001┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage to the enemy during its duration.\n\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Chase are slowed by {5}% for {4} seconds</color>
+Skill/Group/Name/4114000┃The Strijder
+Skill/Group/LobbyDesc/4114000┃Increases your movement speed toward the enemy, and if you damage them during the duration, you deal additional skill damage and the effect ends.\n\n<color=#FF3399>Upon Enhancement:</color>Enemies damaged by The Strijder are slowed. 
+Skill/Code/Desc/4114001┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal <color=white>{3}</color> additional skill damage and the effect ends.\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Strijder are slowed by {5}% for {4} seconds</color>
+Skill/Code/Coef/4114001┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage and the effect ends.\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Strijder are slowed by ({11}Melee {8}%{13} | {12}Ranged {9}%{14}) for {4} seconds |  </color>
 Skill/Code/ExpansionTip/4114001┃<i>Use <color=#b245ff>Tactical Skill Modules</color> to reach Level 3.</i>
-Skill/Code/Desc/4114002┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing {3} additional skill damage to the enemy during its duration.\n\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Chase are slowed by {5}% for {4} seconds</color>
-Skill/Code/Coef/4114002┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage to the enemy during its duration.\n\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Chase are slowed by {5}% for {4} seconds</color>
+Skill/Code/Desc/4114002┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal <color=white>{3}</color> additional skill damage and the effect ends.\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Strijder are slowed by {5}% for {4} seconds</color>
+Skill/Code/Coef/4114002┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage and the effect ends.\n\n<color=#565730>Module Enhancement: </color><color=#595959> Enemies damaged by The Strijder are slowed by ({11}Melee {8}%{13} | {12}Ranged {9}%{14}) for {4} seconds</color>
 Skill/Code/ExpansionTip/4114002┃<i>Use <color=#b245ff>Tactical Skill Modules</color> to reach Level 3.</i>
-Skill/Code/Desc/4114003┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing {3} additional skill damage to the enemy during its duration.\n\n\n<color=#FFFFC2>Module Enhancement: Enemies damaged by The Chase are slowed by {5}% for {4} seconds</color>
-Skill/Code/Coef/4114003┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used. The effect ends by dealing (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage to the enemy during its duration.\n\n\n<color=#FFFFC2>Module Enhancement: </color> Enemies damaged by The Chase are slowed by {5}% for {4} seconds
-CharacterState/Group/Name/4114000┃The Strijder - A13
-CharacterState/Group/Desc/4114000┃Movement Speed Increases
-CharacterState/Group/Name/4114020┃The Strijder - A13 (Strike)
+Skill/Code/Desc/4114003┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal <color=white>{3}</color> additional skill damage and the effect ends.\n\n<color=#FFFFC2>Module Enhancement: Enemies damaged by The Strijder are slowed by {5}% for {4} seconds</color>
+Skill/Code/Coef/4114003┃Increases your movement speed toward the enemy by {2}% for {1} seconds when used, and if you damage an enemy during the duration, you deal (<color=white>{6}</color>+<color=green>Character Level*{7}</color>) additional skill damage and the effect ends.\n\n<color=#FFFFC2>Module Enhancement: </color> Enemies damaged by The Strijder are slowed by ({11}Melee {8}%{13} | {12}Ranged {9}%{14}) for {4} seconds
+CharacterState/Group/Name/4114000┃The Strijder
+CharacterState/Group/Desc/4114000┃Movement Speed Increased
+CharacterState/Group/Name/4114020┃The Strijder (Strike)
 CharacterState/Group/Desc/4114020┃Slowed
 Skill/Group/Name/4112000┃Blade of Truth
 Skill/Group/LobbyDesc/4112000┃Deals damage to nearby enemies and increases Movement Speed based on how many targets were hit. \n\n<color=#ff3399>Upon enhancement:</color> Damage dealt to the target increases.
@@ -13598,13 +13703,13 @@ Item/Skills/6007007/Name┃<color=yellow>Swift Strides</color>
 Item/Skills/6006000┃Reflection
 Item/Skills/6006001/Name┃<color=yellow>Reflection</color>
 Item/Skills/6006001/Body┃When hit by a basic attack, reflect <color=grey>{4}</color> true damage to the attacker and reduce their healing by {3} for {5} seconds.\nTaking {7} or more damage over 4 seconds deals <color=white>{6}</color> skill damage to nearby enemies. (Cooldown: 3s)
-Item/Skills/6006001/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker.\nMelee: Reduce enemy healing by {5} for {8} seconds.｜Ranged: Reduce enemy healing by {4} for {8} seconds.\nTaking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 3s)
+Item/Skills/6006001/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker and reduce their healing by {5} for {8} seconds. Taking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 3s)
 Item/Skills/6006002/Name┃<color=yellow>Reflection</color>
 Item/Skills/6006002/Body┃When hit by a basic attack, reflect <color=grey>{4}</color> true damage to the attacker and reduce their healing by {3} for {5} seconds.\nTaking {7} or more damage over 4 seconds deals <color=white>{6}</color> skill damage to nearby enemies. (Cooldown: 1s)
-Item/Skills/6006002/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker.\nMelee: Reduce enemy healing by {5} for {8} seconds.｜Ranged: Reduce enemy healing by {4} for {8} seconds.\nTaking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 1s)
+Item/Skills/6006002/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker and reduce their healing by {5} for {8} seconds.Taking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 1s)
 Item/Skills/6006003/Name┃<color=yellow>Reflection</color>
 Item/Skills/6006003/Body┃When hit by a basic attack, reflect <color=grey>{4}</color> true damage to the attacker and reduce their healing by {3} for {5} seconds.\nTaking {7} or more damage over 4 seconds deals <color=white>{6}</color> skill damage to nearby enemies. (Cooldown: 1s)
-Item/Skills/6006003/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker.\nMelee: Reduce enemy healing by {5} for {8} seconds.｜Ranged: Reduce enemy healing by {4} for {8} seconds.\nTaking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 1s)
+Item/Skills/6006003/Desc┃When hit by a basic attack, reflect <color=grey>{6}</color> true damage to the attacker and reduce their healing by {5} for {8} seconds.Taking {10} or more damage over 4 seconds deals <color=white>{9}</color> skill damage to nearby enemies. (Cooldown: 1s)
 Item/Skills/6009000┃Attack Range
 Item/Skills/6009001/Name┃<color=Yellow>Attack Range</color>
 Item/Skills/6009002/Name┃<color=Yellow>Attack Range</color>
@@ -13807,6 +13912,7 @@ Item/Skills/6024001/Desc┃Charges Electric Shock for {11} seconds per basic att
 Item/Skills/6024002/Name┃<color=yellow>Electric Shock</color>
 Item/Skills/6024002/Body┃Charges Electric Shock for {7} seconds per basic attack. (Maximum {0} times)\nBasic attacks with maximum stacks or towards a shielded enemy deal <color=#688A08>{1} Enemy's Max HP</color> <color=green>(+{6})</color> additional skill damage and remove all your Electric Shock charges.
 Item/Skills/6024002/Desc┃Charges Electric Shock for {11} seconds per basic attack. (Maximum {0} times)\nBasic attacks with maximum stacks or towards a shielded enemy deal additional skill damage and remove all your Electric Shock stacks.\n(Melee) Deal <color=#688A08>{1} Enemy's Max HP</color> + <color=green>{4} - {5}(Based on Character Level)</color> skill damage.｜(Ranged) Deal <color=#688A08>{6} Enemy's Max HP</color> + <color=green>{9} - {10}(Based on Character Level)</color> skill damage.
+Item/Skills/6024003/Name┃<color=yellow>Electric Shock</color>
 Item/Skills/6024003/Body┃Charges Electric Shock for {7} seconds per basic attack. (Maximum {0} times)\nBasic attacks with maximum stacks or towards a shielded enemy deal <color=#688A08>{1} Enemy's Max HP</color> <color=green>(+{6})</color> additional skill damage and remove all your Electric Shock charges.
 Item/Skills/6024003/Desc┃Charges Electric Shock for {11} seconds per basic attack. (Maximum {0} times)\nBasic attacks with maximum stacks or towards a shielded enemy deal additional skill damage and remove all your Electric Shock stacks.\n(Melee) Deal <color=#688A08>{1} Enemy's Max HP</color> + <color=green>{4} - {5}(Based on Character Level)</color> skill damage.｜(Ranged) Deal <color=#688A08>{6} Enemy's Max HP</color> + <color=green>{9} - {10}(Based on Character Level)</color> skill damage.
 CharacterState/Group/Name/6024000┃Gathering Electric Shock
@@ -14021,12 +14127,12 @@ CharacterState/Group/Name/6022100┃Enlightenment - Reaper's Scythe
 CharacterState/Group/Desc/6022100┃Stat requirements are met and Reaper's Scythe has been activated.
 Item/Skills/6027001┃Enlightenment - Spearhead
 Item/Skills/6027001/Name┃<color=yellow>Enlightenment - Spearhead</color>
-Item/Skills/6027001/Body┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%.
-Item/Skills/6027001/Desc┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%.
+Item/Skills/6027001/Body┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%. (Cooldown: {7}s)
+Item/Skills/6027001/Desc┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%. (Cooldown: {7}s)
 Item/Skills/6027101┃Enlightenment - Spearhead
 Item/Skills/6027101/Name┃<color=yellow>Enlightenment - Spearhead</color>
-Item/Skills/6027101/Body┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your crowd tenacity increased by {6}%.
-Item/Skills/6027101/Desc┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%.
+Item/Skills/6027101/Body┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your crowd tenacity increased by {6}%. (Cooldown: {7}s)
+Item/Skills/6027101/Desc┃Activates when you gain {0} or more Additional HP.\nIf you take {2} or more damage from your enemies within {1} seconds when activated, enemies within {4}m around you are slowed by {5}% for {3} seconds and your tenacity increased by {6}%. (Cooldown: {7}s)
 CharacterState/Group/Name/6027000┃Spearhead
 CharacterState/Group/Desc/6027000┃You've taken enough damage to trigger Spearhead.
 CharacterState/Group/Name/6027010┃Spearhead - Buffing Effects
@@ -14035,17 +14141,17 @@ CharacterState/Group/Name/6027020┃Spearhead - Debuff Effects
 CharacterState/Group/Desc/6027020┃Attack speed is reduced by the enemy's Spearhead Effect.
 Item/Skills/6022101┃Enlightenment - Reaper's Scythe
 Item/Skills/6022101/Name┃<color=yellow>Enlightenment - Reaper's Scythe</color>
-Item/Skills/6022101/Body┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than 6% HP will instantly eliminate them.
-Item/Skills/6022101/Desc┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than 6% HP will instantly eliminate them.
-Item/Skills/6030001┃Decomposition
-Item/Skills/6030001/Name┃<color=yellow>Decomposition</color>
-Item/Skills/6030001/Body┃If a skill attack hits, it grants a debuff effect that deals <color=#688A08>0.5% of Max HP</color><color=#DDA0DD>(+0.35% Skill Amp)</color> skill damage to the enemy every second for 3 seconds. (Max Stacks: 2)
-Item/Skills/6030001/Desc┃If a skill attack hits, it grants a debuff effect that deals <color=#688A08>0.5% of Max HP</color><color=#DDA0DD>(+0.35% Skill Amp)</color> skill damage to the enemy every second for 3 seconds. (Max Stacks: 2)
-Item/Skills/6030002┃Decomposition
-Item/Skills/6030002/Name┃<color=yellow>Decomposition</color>
-Item/Skills/6030002/Body┃If a skill attack hits, it grants a debuff effect that deals <color=#688A08>0.5% of Max HP</color><color=#DDA0DD>(+0.35% Skill Amp)</color> skill damage to the enemy every second for 3 seconds. (Max Stacks: 2)
-Item/Skills/6030002/Desc┃If a skill attack hits, it grants a debuff effect that deals <color=#688A08>0.5% of Max HP</color><color=#DDA0DD>(+0.35% Skill Amp)</color> skill damage to the enemy every second for 3 seconds. (Max Stacks: 2)
-CharacterState/Group/Name/6030000┃Decomposition
+Item/Skills/6022101/Body┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than <color=#688A08>8%</color> HP will instantly eliminate them. (Cooldown: {1}s)
+Item/Skills/6022101/Desc┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than <color=#688A08>8%</color> HP will instantly eliminate them. (Cooldown: {1}s)
+Item/Skills/6030001┃Debilitation
+Item/Skills/6030001/Name┃<color=yellow>Debilitation</color>
+Item/Skills/6030001/Body┃Enemies hit by a skill are debilitated, taking <color=#688A08>{0} of the target's Max HP</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color> skill damage every second for {2} seconds. (Max Stacks: {3})
+Item/Skills/6030001/Desc┃Enemies hit by a skill are debilitated, taking <color=#688A08>{0} of the target's Max HP</color><color=#DDA0DD>(+{1}% Skill Amp)</color><color=#688A08>%</color> skill damage every second for {2} seconds. (Max Stacks: {3})
+Item/Skills/6030002┃Debilitation
+Item/Skills/6030002/Name┃<color=yellow>Debilitation</color>
+Item/Skills/6030002/Body┃Enemies hit by a skill are debilitated, taking <color=#688A08>{0} of the target's Max HP</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color> skill damage every second for {2} seconds. (Max Stacks: {3})
+Item/Skills/6030002/Desc┃Enemies hit by a skill are debilitated, taking <color=#688A08>{0} of the target's Max HP</color><color=#DDA0DD>(+{1}% Skill Amp)</color><color=#688A08>%</color> skill damage every second for {2} seconds. (Max Stacks: {3})
+CharacterState/Group/Name/6030000┃Debilitation
 CharacterState/Group/Desc/6030000┃You take damage based on your HP each second.
 Item/Skills/6028001┃Pulverization
 Item/Skills/6028001/Name┃<color=yellow>Pulverization</color>
@@ -14057,14 +14163,14 @@ CharacterState/Group/Name/6028010┃Pulverization - Movement Speed
 CharacterState/Group/Desc/6028010┃Movement speed is briefly increased.
 Item/Skills/6008201┃Healing Reduction - Weak
 Item/Skills/6008201/Name┃<color=yellow>Healing Reduction - Weak</color>
-Item/Skills/6008201/Body┃Dealing damage to a target causes a 40% healing reduction.
-Item/Skills/6008201/Desc┃Dealing damage to a target causes a 40% healing reduction.
+Item/Skills/6008201/Body┃Dealing damage to a target reduces their healing by 40% for 4 seconds.
+Item/Skills/6008201/Desc┃Dealing damage to a target reduces their healing by 40% for 4 seconds.
 CharacterState/Group/Name/6008000┃Healing Reduction
 CharacterState/Group/Desc/6008000┃All healing on you is less effective.
 Item/Skills/6008202┃Healing Reduction - Strong
 Item/Skills/6008202/Name┃<color=yellow>Healing Reduction - Strong</color>
-Item/Skills/6008202/Body┃Dealing damage to a target causes a 60% healing reduction.
-Item/Skills/6008202/Desc┃Dealing damage to a target causes a 60% healing reduction.
+Item/Skills/6008202/Body┃Dealing damage to a target reduces their healing by 60% for 4 seconds.
+Item/Skills/6008202/Desc┃Dealing damage to a target reduces their healing by 60% for 4 seconds.
 CharacterState/Group/Name/6008010┃Healing Reduction
 CharacterState/Group/Desc/6008010┃All healing on you is much less effective.
 오늘의 도전┃Daily Quest
@@ -14079,6 +14185,7 @@ CharacterState/Group/Desc/6008010┃All healing on you is much less effective.
 그리고┃AND
 카카오 PC방 미션┃Kakao Game PC Cafe Event Mission
 미션 그룹 변경 불가┃There are currently no event missions in progress.
+미션 보상 획득 완료┃You have already claimed your reward.
 Mission/1/1┃Play a normal PvP or Ranked match.
 Mission/2/1┃Play a normal PvP or Ranked match.
 Mission/3/1┃Play a normal PvP or Ranked match.<color=#FFBB00>(Event)</color>
@@ -14342,12 +14449,12 @@ Mission/8000801/1┃Earn Credits in Cobalt Protocol
 Mission/8000802/1┃Earn Credits in Cobalt Protocol
 Mission/8000803/1┃Earn Credits in Cobalt Protocol
 Mission/8000901/1┃Use the Frailty Infliction Augment in Cobalt Protocol
-Mission/8000902/1┃Use the Frenzy Augment in Cobalt Protocol
+Mission/8000902/1┃Use the Frailty Infliction Augment in Cobalt Protocol
 Mission/8000903/1┃Use the Vampiric Bloodline Augment in Cobalt Protocol
 Mission/8000904/1┃Use the Red Sprite Augment in Cobalt Protocol
 Mission/8000905/1┃Use the Diamond Shard Augment in Cobalt Protocol
 Mission/8000906/1┃Use the Ironclad Augment in Cobalt Protocol
-Mission/8000907/1┃Use the Oblivion Can Wait Augment in Cobalt Protocol
+Mission/8000907/1┃Use the Frailty Infliction Augment in Cobalt Protocol
 Mission/8000908/1┃Use the Healing Factor Augment in Cobalt Protocol
 Mission/8000909/1┃Use the Amplification Drone Augment in Cobalt Protocol
 Mission/8000910/1┃Use the Healing Drone Augment in Cobalt Protocol
@@ -14402,7 +14509,7 @@ Mission/8003301/2┃Earn Credits in Cobalt Protocol
 Mission/8003301/3┃Kill boar
 Mission/8003401/2┃Use the Frailty Infliction Augment in Cobalt Protocol
 Mission/8003401/3┃Kill Omega
-Mission/8003501/2┃Use the Frenzy Augment in Cobalt Protocol
+Mission/8003501/2┃Use the Frailty Infliction Augment in Cobalt Protocol
 Mission/8003501/3┃Place in the Top 5 of a match.
 Mission/8003601/2┃Use the Vampiric Bloodline Augment in Cobalt Protocol
 Mission/8003601/3┃Deal damage to a Test Subject
@@ -14412,7 +14519,7 @@ Mission/8003801/2┃Use the Diamond Shard Augment in Cobalt Protocol
 Mission/8003801/3┃Kill bear
 Mission/8003901/2┃Use the Ironclad Augment in Cobalt Protocol
 Mission/8003901/3┃Kill chicken
-Mission/8004001/2┃Use the Oblivion Can Wait Augment in Cobalt Protocol
+Mission/8004001/2┃Use the Frailty Infliction Augment in Cobalt Protocol
 Mission/8004001/3┃Kill wild dog
 Mission/8004101/2┃Use the Healing Factor Augment in Cobalt Protocol
 Mission/8004101/3┃Obtain <color=#D05EFF>VF Blood Sample</color>
@@ -15055,7 +15162,7 @@ BattleMission/11001007/1┃Hyperloop 5 times.
 BattleMission/11001008/1┃Deal 10,000+ damage to test subjects.
 BattleMission/11001009/1┃Request Remote Drone 10 times.
 BattleMission/11001010/1┃Survive for 300 seconds or more.
-BattleMission/11002001/1┃Achieve First Blood Once
+BattleMission/11002001/1┃Get first blood.
 BattleMission/11002002/1┃Reach level 11 Craft Mastery.
 BattleMission/11002003/1┃Reach level 18 Weapon Mastery.
 BattleMission/11002004/1┃Use Food/Beverages 6 Times.
@@ -15099,8 +15206,8 @@ BattleMission/11006001/1┃Deal 26,000 damage to test subjects.
 BattleMission/11006002/1┃Use Kiosk 3 times.
 BattleMission/11006003/1┃Hunt 8 Wild Dogs.
 BattleMission/11006004/1┃Craft 6+ Legendary items.
-BattleMission/11006005/1┃Open 3 Legendary Supply Boxes.
-BattleMission/11006006/1┃Finish in the Top 3
+BattleMission/11006005/1┃Open 2 Legendary Supply Boxes.
+BattleMission/11006006/1┃Finish 3rd place or higher.
 BattleMission/11006007/1┃Reach level 18 Weapon Mastery.
 BattleMission/11006008/1┃Kill 1 test subject in Hotel.
 BattleMission/11006009/1┃Obtain 2 Meteorite.
@@ -15314,9 +15421,9 @@ Trait/Tooltip/7110201┃Reduce damage taken for each other player near you.
 Trait/Tooltip/7110401┃Take less damage when immobilized. 
 Trait/Tooltip/7110301┃Upon receiving critical strike damage, critical strike damage taken later is reduced.
 Trait/Tooltip/7110501┃Damage Reduction stats on items are effective on you.
-Trait/Tooltip/7110601┃Automatically consume food and beverages when HP or SP falls below a threshold. Food and beverages consumed this way increase your Attack Power and Defense, respectively.
+Trait/Tooltip/7110601┃Automatically consume food and beverages when HP or SP falls below a threshold. Food and beverages consumed this way increase your Attack Power/Skill Amplification and Defense, respectively.
 Trait/Tooltip/7200101┃Healing and shields from your skills or augments are increased. Targets shielded or healed by you gain increased Attack Power or Skill Amp.
-Trait/Tooltip/7200301┃If you and your allies take damage while below a certain amount of HP, a Healing Drone will follow you.\nThe drone heals you and your allies in a certain range missing health every second.
+Trait/Tooltip/7200301┃If you and your ally test subjects take damage while below a certain amount of HP, a Healing Drone will follow you.\nThe drone heals you and your allies in a certain range missing health every second.
 Trait/Tooltip/7200201┃Using your ultimate summons an Amplification Drone that follows you around, increasing Movement Speed and granting Skill Amplification to all allies in range.
 Trait/Tooltip/7200401┃Right after killing an enemy or a wild animal, moving towards another enemy test subject increases movement speed and reduces your damage taken. Based on the type of kill, either HP is restored or taken damage is reduced.
 Trait/Tooltip/7200501┃Damaging an enemy test subject with a skill grants you and nearby allies a shield.\nAt low health, the shield's HP is doubled.\n
@@ -15330,7 +15437,7 @@ Trait/Tooltip/7210801┃Items can be purchased from a Kiosk at a discount.
 Trait/DetailTooltip/7000201┃Your {1}rd basic attack or skill against the same test subject within {0} seconds deals <color=#ffffff>(Level*{2})</color> true damage and reduces their defense by <color=#ffffff>(Level*{4})%</color> for {3} seconds. (Cooldown: {5}s)\nMulti-hit effects only grant 1 stack.
 Trait/DetailTooltip/7000301┃When you use your Weapon Skill, gain additional Attack Speed.\n(Melee) Gain {4} (+ Level*{5}%) Attack Speed for {1} seconds. \n(Ranged) Gain {10} (+ Level*{11}%) Attack Speed for {7} seconds. \n\n(Cooldown: {0}s)
 Trait/DetailTooltip/7000401┃Damaging a test subject with a skill grants you {0}% Omnisyphon, for up to {1} stacks. At max stacks, attack power is increased by <color=#ffffff>{5}(+ Level*{2})</color> or skill amp by <color=#ffffff>{6}(+ Level*{7})</color>.\nOmnisyphon gained from Vampiric Bloodline lasts for {3} seconds and is regained every time you damage an enemy with a skill.(Cooldown: {4}s)
-Trait/DetailTooltip/7000501┃Damaging an enemy with a skill spawns a sprite that deals <color=#ffffff>{1}(+Level*{2})(+{3} Attack Power)(+{4} Skill Amp)</color> additional skill damage and can chain to multiple enemy test subjects. If at least one other test subject is within {7}m of the sprite, its additional damage is reduced by {8}% but chains and damages both enemies. If no other test subjects were in range, the sprite's additional damage is increased by <color=#ffffff>{6}%</color>. Every time you damage an enemy test subject with a skill, the cooldown of Red Sprite is reduced by {9} seconds. (Cooldown: {5} seconds)
+Trait/DetailTooltip/7000501┃Damaging an enemy with a skill spawns a sprite that deals <color=#ffffff>{1}(+Level*{2})(+{3} Additional Attack Power)(+{4} Skill Amp)</color> additional skill damage and can chain to multiple enemy test subjects. If at least one other test subject is within {7}m of the sprite, its additional damage is reduced by {8}% but chains and damages both enemies. If no other test subjects were in range, the sprite's additional damage is increased by <color=#ffffff>{6}%</color>. Every time you damage an enemy test subject with a skill, the cooldown of Red Sprite is reduced by {9} seconds. (Cooldown: {5} seconds)
 Trait/DetailTooltip/7000601┃For each Basic Attack on an enemy test subject or every {0} seconds spent in combat, gain a stack of Adrenaline up to a maximum of {1} stacks. \n\n<color=#ffffff>({11}) Gain {2}(+Level*{3})%</color> / <color=#ffffff>({12}) Gain {7}(+Level*{8})%</color> Attack Speed per Adrenaline stack.\nWhile at max stacks, gain an additional <color=#ffffff>({11}) {4}(+level*{5})%</color> / <color=#ffffff>({12}) {9}(+level*{10})%</color> Basic Attack Amplification.\n\nAdrenaline stacks expire upon exiting combat. (Cooldown: {13} s)
 Trait/DetailTooltip/7010101┃Gain {0}% Armor Penetration.
 Trait/DetailTooltip/7010501┃Deal <color=#ffffff>{2}%</color> ~ <color=#ffffff>{3}%</color> extra damage to enemy test subjects with <color=#ffffff>{0}%</color> ~ <color=#ffffff>{1}%</color> more Max HP than you.\n
@@ -15348,9 +15455,9 @@ Trait/DetailTooltip/7110201┃Damage taken is reduced by <color=#ffffff>{1}%</co
 Trait/DetailTooltip/7110401┃Take <color=#ffffff>{0}(+Level*{1})%</color> less damage when immobilized. 
 Trait/DetailTooltip/7110301┃Upon receiving critical strike damage, critical strike damage taken in the next {0} seconds is reduced by <color=#ffffff>{1}%</color>. (Cooldown: {2}s)
 Trait/DetailTooltip/7110501┃Damage Reduction stats on items are {0}% effective on you.
-Trait/DetailTooltip/7110601┃Automatically consumes a food item in your inventory when your HP falls below <color=#ffffff>{0}%</color>, increasing your Attack Power based on the rarity of the food consumed. Automatically consumes a beverage in your inventory when your SP falls below <color=#ffffff>{1}%</color>, increasing your Defense based on the rarity of the beverage consumed.\nHigher rarity consumables will be consumed first. Consumables of the same rarity will be consumed in inventory order.\n\nUncommon: Attack Power ({2}+Level*{3}) or Skill Amp ({14}+Level*{15}), Defense ({4}+Level*{5})\nRare: Attack Power ({6}+Level*{7}) or Skill Amp ({16}+Level*{17}), Defense ({8}+Level*{9})\nEpic: Attack Power ({10}+Level*{11}) or Skill Amp ({18}+Level*{19}), Defense ({12}+Level*{13})\nLegendary: Attack Power ({20}+Level*{21}) or Skill Amp ({22}+Level*{23}), Defense ({24}+Level*{25})
+Trait/DetailTooltip/7110601┃Automatically consumes a food item in your inventory when your HP falls below <color=#ffffff>{0}%</color>, increasing your Attack Power/Skill Amplification based on the rarity of the food consumed. Automatically consumes a beverage in your inventory when your SP falls below <color=#ffffff>{1}%</color>, increasing your Defense based on the rarity of the beverage consumed.\nHigher rarity consumables will be consumed first. Consumables of the same rarity will be consumed in inventory order.\n\nUncommon: Attack Power ({2}+Level*{3}) or Skill Amp ({14}+Level*{15}), Defense ({4}+Level*{5})\nRare: Attack Power ({6}+Level*{7}) or Skill Amp ({16}+Level*{17}), Defense ({8}+Level*{9})\nEpic: Attack Power ({10}+Level*{11}) or Skill Amp ({18}+Level*{19}), Defense ({12}+Level*{13})\nLegendary: Attack Power ({20}+Level*{21}) or Skill Amp ({22}+Level*{23}), Defense ({24}+Level*{25})
 Trait/DetailTooltip/7200101┃Your skills or augments' heals and shields are <color=#ffffff>{0}%</color> more effective. Whenever you heal or shield a target, their Attack Power is increased by <color=#ffffff>(Level*{3})</color> or Skill Amp is increased by <color=#ffffff>(Level*{5})</color> for {2} seconds. (Cooldown: {4}s)\nDoes not include HP recovery from consumables, Life Steal, HP Regeneration, or Resting.\n
-Trait/DetailTooltip/7200301┃If you and any ally within {7}m around you take damage when your HP is below {8}%, a Healing Drone will follow you for {0} seconds.\nThe drone heals you and your allies in a {1}m radius for <color=#ffffff>{2}(+Level*{3})%</color> missing health every second. (Cooldown: {4}s)\nWhen receiving healing from multiple Healing Drones, each Drone heals you for {5}% of its original amount instead.
+Trait/DetailTooltip/7200301┃If you and any ally test subject within {1}m around you take damage when your HP is below {8}%, a Healing Drone will follow you for {0} seconds.\nThe drone heals you and your allies in a {1}m radius for <color=#ffffff>{2}(+Level*{3})%</color> missing health every second. (Cooldown: {4}s)\nWhen receiving healing from multiple Healing Drones, each Drone heals you for {5}% of its original amount instead.
 Trait/DetailTooltip/7200201┃Using your ultimate summons an Amplification Drone that follows you around for {0} seconds.\nThe drone increases Movement Speed by <color=#ffffff>{2}(+Level*{3})%</color> and Skill Amplification by <color=#ffffff>{4}(+Level*{5})%</color> to all allies within a {1}m radius. (Cooldown: {6}s)\n\n\nMultiple Amplification Drones do not stack.
 Trait/DetailTooltip/7200401┃After killing a Wild Animal, you recover <color=#ffffff>[{6}(+{7} Attack Power)(+{8} Skill Amp)]</color> - <color=#ffffff>[({9}(+{10} Attack Power)(+{11} Skill Amp)]</color> of HP, depending of your lost HP. Moving towards another enemy gradually increases your movement speed up to <color=#ffffff>{1}%</color>.\nInstead of recovering HP, slaying a test subject, Alpha, Omega, Gamma, or Wickeline reduces taken damage by {2}% for {0}s, and increases your movement speed by {12}x.\n(Cooldown: {3}s)
 Trait/DetailTooltip/7200501┃Damaging an enemy test subject with a skill grants you and your allies within <color=#ffffff>{0}m</color> a shield that lasts up to <color=#ffffff>{1} second(s)</color>. (Cooldown: {2}s)\nWhen you fall below {3}% HP, the shield is increased by {4} times. This shield's HP cannot exceed {5}% of your max HP.\n\nSquad: Shield {10}(+Level*{11})\nCobalt: Shield {12}(+Level*{13})
@@ -15379,13 +15486,13 @@ Trait/StatTooltip/7100401┃Gain a shield proportional to your max HP. (Cooldown
 Trait/StatTooltip/7100501┃Gain 1 stack per {0}% HP lost in damage taken from enemy test subjects.(Max {2} stacks)\n\nDamage taken is reduced by {11} per stack held.\n\n({21}) At max stacks, your next Basic Attack consumes this Augment's stacks to deal {22} additional skill damage. (Cooldown: {8}s){25}\n\nIf stacks expire, you return to a Calm state and recover {7} of your max HP for each stack that expired.\n\nTotal Bitter Retribution Attacks Performed: {10}\nAmount Healed with Calm: {9}
 Trait/StatTooltip/7100501/Melee┃\nAt max stacks, your next basic attack slows enemies by {1} for {0} seconds.
 Trait/StatTooltip/7110101┃Increase your Defense by {2} for {0} seconds after gaining a shield from a skill or being healed by a skill or an augment. (Cooldown: {3}s)\n\nDefense Increase Count: {4}\nTotal Defense Increased: {5}
-Trait/StatTooltip/7110201┃Damage taken is reduced by {1}% if there are no allies within {0}m.\n\nTotal Damage Reduced: {2}
+Trait/StatTooltip/7110201┃Damage taken is reduced by {1}% if there are no ally test subjects within {0}m.\n\nTotal Damage Reduced: {2}
 Trait/StatTooltip/7110401┃Take {1}% less damage when immobilized. \n\nTotal Damage Reduced: {2}
 Trait/StatTooltip/7110301┃Upon receiving critical strike damage, critical strike damage taken in the next {0} seconds is reduced by {1}%. (Cooldown: {2}s)\n\nTimes Triggered: {3}
 Trait/StatTooltip/7110501┃Damage Reduction stats on items are {0}% more effective on you.
-Trait/StatTooltip/7110601┃Automatically consumes a food item in your inventory when your HP falls below {0}%, increasing your Attack Power based on the rarity of the food consumed. Automatically consumes a beverage in your inventory when your SP falls below {1}%, increasing your Defense based on the rarity of the beverage consumed.\nHigher rarity consumables will be consumed first. Consumables of the same rarity will be consumed in inventory order.\n\nUncommon: {16} {17}, Defense {5}\nRare: {16} {18}, Defense {9}\nEpic: {16} {19}, Defense {13}\nLegendary: {16} {20}, Defense {21} \n\nTimes Attack Power Increased: {14}\nTimes Defense Increased: {15}
+Trait/StatTooltip/7110601┃Automatically consumes a food item in your inventory when your HP falls below {0}%, increasing your Attack Power/Skill Amplification based on the rarity of the food consumed. Automatically consumes a beverage in your inventory when your SP falls below {1}%, increasing your Defense based on the rarity of the beverage consumed.\nHigher rarity consumables will be consumed first. Consumables of the same rarity will be consumed in inventory order.\n\nUncommon: {16} {17}, Defense {5}\nRare: {16} {18}, Defense {9}\nEpic: {16} {19}, Defense {13}\nLegendary: {16} {20}, Defense {21} \n\nTimes {16} Increased: {14}\nTimes Defense Increased: {15}
 Trait/StatTooltip/7200101┃Your skills or augments' heals and shields are {0}% more effective. Whenever you heal or shield a target, {10} is increased by {9} for {2} seconds. (Cooldown: {4}s)\nDoes not include HP recovery from consumables, Life Steal, HP Regeneration, or Resting.\n\nTotal HP recovered: {5}\nTotal Defense Increase: {6}\nTimes Ally {10} Increased: {7}
-Trait/StatTooltip/7200301┃If you and any ally within {7}m around you take damage when your HP is below {8}%, a Healing Drone will follow you for {0} seconds.\nThe drone heals you and your allies in a {1}m radius for 3% missing health every second. (Cooldown: {4}s)\nWhen receiving healing from multiple Healing Drones, each drone is only {5}% as effective.\n\nTotal HP recovered: {6}
+Trait/StatTooltip/7200301┃If you and any ally test subject within {1}m around you take damage when your HP is below {8}%, a Healing Drone will follow you for {0} seconds.\nThe drone heals you and your allies in a {1}m radius for 3% missing health every second. (Cooldown: {4}s)\nWhen receiving healing from multiple Healing Drones, each drone is only {5}% as effective.\n\nTotal HP recovered: {6}
 Trait/StatTooltip/7200201┃Using your ultimate summons an Amplification Drone that follows you around for {0} seconds.\nThe drone increases Movement Speed by 3% and Skill Amplification by 5% for you and your allies in a {1}m radius. (Cooldown: {6}s)\n\n\nMultiple Amplification Drones do not stack.\n\nTotal Active Drone Duration: {8}s
 Trait/StatTooltip/7200401┃After killing a wild animal, you recover {6}-{7} of HP, depending of your lost HP. Moving towards another enemy gradually increases your movement speed up to {1}%.\nInstead of recovering HP, slaying a test subject, Alpha, Omega, Gamma, or Wickeline reduces taken damage by {2}% for {0}s, and increases your movement speed by {12}x.\n(Cooldown: {3}s)\n\nTimes Movement Speed Increased: {4}\nTimes Movement Speed Increased (Enhanced): {5}
 Trait/StatTooltip/7200501┃Damaging an enemy test subject with a skill grants you and your allies within {0}m a shield that lasts up to {1} second(s). (Cooldown: {2}s)\nWhen you fall below {3}% HP, gain a {4} HP shield. This shield's HP cannot exceed {5}% of your max HP.\n\n\nSquad: Defense {11}\nCobalt: Defense {13}\n\nDamage Absorbed: {14}\nTimes Shielded: {15}
@@ -15467,7 +15574,7 @@ CharacterState/Group/Desc/7100520┃Bitter Retribution stack granted! Damage tak
 CharacterState/Group/Name/7100530┃Calm
 CharacterState/Group/Desc/7100530┃Healed for a certain amount.
 CharacterState/Group/Name/7100540┃Bitter Retribution
-CharacterState/Group/Desc/7100540┃Taking damage from enemy test subjects grants you a stack of Bitter Distribution. Damage taken is reduced based on the stacks you have. Basic attacks deal additional damage 
+CharacterState/Group/Desc/7100540┃Taking damage from enemy test subjects grants you a stack of Bitter Distribution. Damage taken is reduced based on the stacks you have. Basic attacks deal additional damage at max stacks.
 CharacterState/Group/Name/7110100┃Embolden
 CharacterState/Group/Desc/7110100┃Defense increased.
 CharacterState/Group/Name/7110110┃Embolden
@@ -15491,11 +15598,11 @@ CharacterState/Group/Desc/7200310┃On cooldown
 CharacterState/Group/Name/7200320┃Healing Drone
 CharacterState/Group/Desc/7200320┃Currently healing.
 CharacterState/Group/Name/7200200┃Amplification Drone
-CharacterState/Group/Desc/7200200┃Using your ultimate summons an Amplification Drone that follows you around, increasing the Movement Speed and Skill Amplification of all allies in range.\n\nMultiple Amplification Drones do not stack.
+CharacterState/Group/Desc/7200200┃Using your ultimate summons an Amplification Drone that follows you around, increasing the Movement Speed and Skill Damage of all allies in range.\n\nMultiple Amplification Drones do not stack.
 CharacterState/Group/Name/7200220┃Amplification Drone
 CharacterState/Group/Desc/7200220┃Being boosted by an Amplification Drone!
 CharacterState/Group/Name/7200230┃Amplification Drone
-CharacterState/Group/Desc/7200230┃Movement Speed and Skill Amplification increased
+CharacterState/Group/Desc/7200230┃Movement Speed and Skill Damage increased
 CharacterState/Group/Name/7200210┃Amplification Drone
 CharacterState/Group/Desc/7200210┃On cooldown
 CharacterState/Group/Name/7200400┃Run It Back
@@ -15593,9 +15700,9 @@ Trait/Tooltip/7110901┃The recovery amount from meat, a Common food, is increas
 Trait/DetailTooltip/7110901┃The recovery amount from meat, a Common food, is increased by <color=#ffffff>{0}%</color>. Also, as soon as the meat's recovery effect is activated, <color=#ffffff>{1}</color> of HP is recovered.
 Trait/StatTooltip/7110901┃The recovery amount from meat, a Common food, is increased by {0}%. Also, as soon as the meat's recovery is activated, {1} of HP is recovered.\n\nTotal amount of recovery from meat: {2}
 Trait/Name/7211001┃Thrill of the Hunt
-Trait/Tooltip/7211001┃Increases the damage you or your summons deal to wild animals. Killing a wild animal heals you for the amount of HP you lost, and movement speed increases and then gradually decreases. 
-Trait/DetailTooltip/7211001┃Increases the damage you or your summons deal to wild animals by {0}%. Killing a wild animal heals you for <color=#ffffff>[{6}(+{7} Attack Power)(+{8} Skill Amp)]</color>-<color=#ffffff>[{9}(+{10} Attack Power)(+{11}Skill Amp]</color> of HP lost, and movement speed increases by <color=#ffffff>{1}%</color>and gradually decreases over {13} seconds. (Cooldown: {3}s)
-Trait/StatTooltip/7211001┃Increases the damage you or your summons deal to wild animals by {0}%. Killing a wild animal heals you for [{6}(+{7}% Attack Power)(+{8}% Skill Amp)]-[{9}(+{10}% Attack Power)(+{11}%Skill Amp] of HP lost, and  movement speed increases by {1}% and gradually decreases over {13} seconds. (Cooldown: {3}s)\n\nTotal triggers: {14} 
+Trait/Tooltip/7211001┃Increases the damage you or your summons deal to wild animals. Killing a wild animal heals you for the amount of HP you lost, and your movement speed increases and then gradually decreases. 
+Trait/DetailTooltip/7211001┃Increases the damage you or your summons deal to wild animals by {0}%. Killing a wild animal heals you for <color=#ffffff>[{6}(+{7} Attack Power)(+{8} Skill Amp)]</color>-<color=#ffffff>[{9}(+{10} Attack Power)(+{11} Skill Amp]</color> of HP lost, and your movement speed increases by <color=#ffffff>{1}%</color> and gradually decreases over {13} seconds. (Cooldown: {3}s)
+Trait/StatTooltip/7211001┃Increases the damage you or your summons deal to wild animals by {0}%. Killing a wild animal heals you for {6}-{9} of HP lost, and  your movement speed increases by {1}% and gradually decreases over {13} seconds. (Cooldown: {3}s)\n\nTotal triggers: {14} 
 CharacterState/Group/Name/7211000┃Thrill of the Hunt
 CharacterState/Group/Desc/7211000┃Movement speed increases, then decreases gradually.
 CharacterState/Group/Name/7211010┃Thrill of the Hunt
@@ -16159,7 +16266,7 @@ ServerError/5203┃Mythril Tier or higher are not eligible for pre-made team mat
 ServerError/6100┃DLC already redeemed.
 ServerError/6101┃Invalid product information.
 ServerError/7100┃Player friend request list is full.
-ServerError/7101┃You can add up to 150 friends.
+ServerError/7101┃You can add up to 200 friends.
 ServerError/7102┃Player friend list is full.
 ServerError/7103┃You cannot add yourself as a friend!
 ServerError/7104┃Already friends.
@@ -16377,10 +16484,10 @@ Trait/StatTooltip/7920403┃Upon dying, create a blast after {0} seconds with a 
 Trait/StatTooltip/7920501┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
 Trait/StatTooltip/7920502┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
 Trait/StatTooltip/7920503┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
-Trait/StatTooltip/7920603┃Upon death, automatically revive with fully recovered HP and SP after 3 seconds. (Cooldown: {0}s)\nDuring cooldown, you gain 25{1} Attack Power and 35{2} Skill Amplification.
-Trait/StatTooltip/7920701┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks.\n\nTotal Skill Amplification Increase: {2}%
-Trait/StatTooltip/7920702┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks.\n\nTotal Skill Amplification Increase: {2}%
-Trait/StatTooltip/7920703┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks.\n\nTotal Skill Amplification Increase: {2}%
+Trait/StatTooltip/7920603┃Upon death, automatically revive with fully recovered HP and SP after 3 seconds. (Cooldown: {0}s)\nDuring cooldown, you gain 35{1} Attack Power and 50{2} Skill Amplification.
+Trait/StatTooltip/7920701┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks.
+Trait/StatTooltip/7920702┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks
+Trait/StatTooltip/7920703┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached, up to 2 stacks
 Trait/StatTooltip/7920801┃Upon dying, create a swamp that slows enemies in it by {1}% and lowers their defense by {2}% for {0} seconds.
 Trait/StatTooltip/7920802┃Upon dying, create a swamp that slows enemies in it by {1}% and lowers their defense by {2}% for {0} seconds.
 Trait/StatTooltip/7920803┃Upon dying, create a swamp that slows enemies in it by {1}% and lowers their defense by {2}% for {0} seconds.
@@ -16695,7 +16802,7 @@ Infusion/Trait/Desc/7920403┃Upon dying, create a blast that knocks enemies air
 Infusion/Trait/Desc/7920501┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
 Infusion/Trait/Desc/7920502┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
 Infusion/Trait/Desc/7920503┃If you haven't received combat damage in the last {0} seconds, recover {1}% of your missing HP and SP per second. 
-Infusion/Trait/Desc/7920603┃Upon death, automatically revive with fully recovered HP and SP after 3 seconds. (Cooldown: {0}s)\nDuring cooldown, you gain 25{1} Attack Power and 35{2} Skill Amplification.
+Infusion/Trait/Desc/7920603┃Upon death, automatically revive with fully recovered HP and SP after 3 seconds. (Cooldown: {0}s)\nDuring cooldown, you gain 35{1} Attack Power and 50{2} Skill Amplification.
 Infusion/Trait/Desc/7920701┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached.
 Infusion/Trait/Desc/7920702┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached.
 Infusion/Trait/Desc/7920703┃Skill Amplification increased by {0}.\nGain {1}% additional Skill Amplification for each Infusion attached.
@@ -17476,6 +17583,7 @@ CharacterPlayTip/65┃When they fight together, twins Debi & Marlene, are more p
 CharacterPlayTip/66┃Arda engages in battles using artifacts. He is able to uncover and use the powers hidden in these artifacts and create battle variables in various ways.
 CharacterPlayTip/67┃Abigail defies the concept of space and teleports herself to her target. She swings her large scythe to deal massive damage in the area.
 CharacterPlayTip/68┃Alonso is a leader of action who specializes in controlling enemies with his magnetic powers and holding up the front lines.
+CharacterPlayTip/69┃Leni loves to play pranks on everyone, taunting her enemies and helping her allies with her toys.
 
 
 --xxxxxxxxxx--
