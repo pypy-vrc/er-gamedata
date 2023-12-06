@@ -930,7 +930,7 @@ ToolTipType/Haze_GrenadeOuterDamage┃40mm Grenade Outer Damage
 ToolTipType/Haze_SubmachinegunDamage┃SMG Burst Damage
 ToolTipType/Haze_RocketDamage┃Rocket Damage
 ToolTipType/Haze_AccRocketDamage┃Rocket Acceleration Damage
-ToolTipType/Haze_GrenadeCooldown┃40mm Grenade Cooldown
+ToolTipType/Haze_GrenadeCooldown┃40mm Grenade Charging Time
 ToolTipType/Haze_GrenadeCost┃40mm Grenade Cost
 ToolTipType/Haze_SwingDamage┃Swing Damage
 ToolTipType/ReinforcedDamage┃[Spada] Damage
@@ -983,6 +983,7 @@ ToolTipType/AlonsoActive2ProjectileDamage┃Projectile Damage
 ToolTipType/AlonsoActive2FinishDamage┃Final Damage
 ToolTipType/AlonsoActive4FinishDamage_Min┃Final Damage (Min)
 ToolTipType/AlonsoActive4FinishDamage_Max┃Final Damage (Max)
+ToolTipType/TsubamePassiveCooldownDeacrease┃[Switching Technique] Cooldown Reduction
 ToolTipType/HpThreshold┃HP Consumption Limit 
 ToolTipType/DurationReset┃Duration Reset Effects
 ToolTipType/MoveRange┃Travel Distance
@@ -1138,6 +1139,7 @@ SummonData/Name/1293┃Giant harpoon
 SummonData/Name/1294┃Giant harpoon
 SummonData/Name/1351┃Miniature Camera
 SummonData/Name/1458┃Nimrod's Gate
+SummonData/Name/1480┃Wooden Log
 MonsterDropRandom/1┃Drops either <color=white>Meat</color> or <color=white>Feather</color>.
 MonsterDropRandom/2┃Drops either <color=white>Leather</color>(high probability), or a <color=white>Common</color> item (low probability).
 MonsterDropRandom/3┃Drops a <color=white>Common</color> item.
@@ -1449,7 +1451,7 @@ Skin/OnSelectVO/1058002┃My long-awaited vacation, gotta enjoy it!
 Skin/OnSelectVO/1018004┃Wise choice. 
 Skin/OnSelectVO/1003004┃I'm at your disposal. Chore list updated.
 Skin/OnSelectVO/1021003┃Maid Rozzi, ready for action.
-Skin/OnSelectVO/1048003┃I'll try something different today...!
+Skin/OnSelectVO/1048003┃Do you like...pixel art?
 Skin/Desc/1001001┃If you hear her humming, maybe run the other direction.
 Skin/Desc/1001002┃A rose by any other name would also have thorns.
 Skin/Desc/1001003┃There are people who make rules... and people who break them.
@@ -1626,6 +1628,8 @@ Skin/Desc/1016004┃So, where do we go next?
 Skin/Desc/1067001┃A bad deed always brings a punishment. 
 Skin/Desc/1048003┃Don't you love seeing pixel art transitions?
 Skin/Desc/1068001┃There's no such thing as being too old for romance.
+Skin/Desc/1012005┃I'm not used to this, but... do I match the vibe?
+Skin/Desc/1022005┃Ready for your Christmas gifts?
 ItemType/EMOTION/Name┃Emote
 Emotion_Name_001┃Angry
 Emotion_Name_002┃Laugh
@@ -2102,7 +2106,7 @@ Event_BlueMarbleEmma_2019008┃Activated Emma's Trap Card!
 Event_BlueMarbleEmma_2019009┃Roll the Dice!
 Event_BlueMarbleEmma_2019010┃Lady Luck
 Event_TiaAngrySquirrel_3060┃Tia's Squirrel Madge
-Event_TiaBlessingSquirrel_3061┃Tia's Squirrel Blessed
+Event_TiaBlessingSquirrel_3061┃Tia's Squirrel Bliss
 Event_OperatorNadjaReward_3062┃To the Lobby!
 Emotion_Zahir01_NP┃Zen-hir
 Emotion_Zahir02_NP┃Zahir Thonk
@@ -2247,9 +2251,20 @@ Emotion_DebiMarlene01_NP┃Enraged Twins
 Emotion_DebiMarlene02_NP┃Oops...
 Emotion_DebiMarlene03_NP┃Tough Choice
 Emotion_DebiMarlene04_NP┃The Twins Approve
-Emotion_Isaac02_NP┃To Isaac!
+Emotion_Isaac01_NP┃Isaac Enraged!
+Emotion_Isaac02_NP┃To Isaac
+Emotion_Isaac03_NP┃Suspect Found
+Emotion_Isaac04_NP┃Oh My Neck...
 Emotion_PixelArtTia_2048006┃Pixels of Shame
 Emotion_PixelArtTia_2048007┃Pixel Art Love
+Emotion_Xmas2023_Hyejin_2012009┃Hyejin's Xmas Gift
+Emotion_Xmas2023_Sissela_2015007┃Sissela's Xmas Gift
+Emotion_Xmas2023_Luke_2022005┃Ludolph's Xmas Gift
+Emotion_Xmas2023_Elena_2050009┃Elena's Xmas Gift
+Emotion_Abigail01_NP┃Out of Space
+Emotion_Abigail02_NP┃Lightbulb Moment
+Emotion_Abigail03_NP┃Thumbs High
+Emotion_Abigail04_NP┃Abigail Says Okay
 Collection/Name/11001┃All for my daughter.
 Collection/Name/11002┃Do you... like pixel art?
 Collection/Name/13001┃Yeah, but why?
@@ -2261,6 +2276,7 @@ Collection/Name/13006┃Dr. Nadja's new look
 Collection/Name/13007┃It's dangerous out there!
 Collection/Name/13008┃Thanks for your hard work.
 Collection/Name/13009┃My eyes are sweating...
+Collection/Name/21001┃Holiday Specials!
 Shop/Desc/Emotion_Hart01_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes to communicate with other players in-game.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes to communicate with other players in-game.
@@ -3657,11 +3673,12 @@ Goods/Name/2804023┃White Rose
 Goods/Name/2804024┃Target
 ItemType/TEAMSLOT_BG/Name┃Team Slot BG
 Goods/Name/3401001┃Default Team Slot BG
+Goods/Name/3402001┃Christmas Teddy Bear
 Goods/Name/3403001┃Mechanical Circuit
 Goods/Name/3403002┃Starry Night
 Goods/Name/3403003┃Autumn Leaves
+Goods/Name/3403004┃Christmas Tree
 Goods/Name/3419001┃Snowflake
-Goods/Name/3419002┃Christmas Tree
 Shop/NPPromotion1┃{0} NP
 Shop/NPPromotion2┃+ {0} Bonus NP
 ItemType/BOOSTER_ACOIN_2X/Name┃A-Coin Boost
@@ -3802,6 +3819,11 @@ Product/Name/ThanksGiving_Special_2023_Pack_02┃Epic Design Box Bundle
 Product/Name/ThanksGiving_Special_2023_Pack_03┃Beachside & Ghostly Box Bundle
 Product/Name/BlackFriday2023_ComboPack_01┃Black Friday Bundle
 Product/Name/PixelArtTia_CollectPack_01┃Pixel Art Tia Collection Bundle
+Product/Name/Xmas2023Pack_SINGLE_01┃Holiday Data Box
+Product/Name/Goodbye2023_Pack_01┃Last Bundle Sale 2023 1
+Product/Name/Goodbye2023_Pack_02┃Last Bundle Sale 2023 2
+Product/Name/Goodbye2023_Pack_03┃Last Bundle Sale 2023 3
+Product/Name/Goodbye2023_Pack_04┃Last Bundle Sale 2023 4
 Product/Name/TEST_SEQ_PRODUCTS┃시퀀스 패키지
 Product/Name/TEST_SEQ_PRODUCTS_01┃연구소 데이터 세트 (5개)
 Product/Name/TEST_SEQ_PRODUCTS_02┃연구소 데이터 세트 (3개)
@@ -3855,7 +3877,7 @@ Shop/Desc/Hyunwoo_Emblem_Pack_01┃Contents: \n\nThe contents of the bundle will
 Shop/Desc/LiDailin_Emblem_Pack_01┃Contents: \n\nThe contents of the bundle will be sent to your Mailbox, and will contain the following:\n\n- Li Dailin\n- Rebel Li Dailin\n- Dragon Dance Li Dailin\n- 4 Li Dailin Emotes \n- Li Dailin Icon\n- Li Dailin Border\n- Li Dailin Background\n- 3 Day A-Coin Boost \n- 3 Day ER Point Boost \n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
 Shop/Desc/Jackie_Emblem_Pack_01┃Contents: \n\nThe contents of the bundle will be sent to your Mailbox, and will contain the following:\n\n- Jackie\n- Executioner Jackie\n- Scarlet Corsage Jackie\n- 4 Jackie Emotes \n- Jackie Icon\n- Jackie Border\n- Jackie Background\n- 3 Day A-Coin Boost \n- 3 Day ER Point Boost \n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
 Shop/Desc/Rio_Emblem_Pack_01┃Contents: \n\nThe contents of the bundle will be sent to your Mailbox, and will contain the following:\n\n- Rio\n- Shrine Maiden Rio\n- Magical Girl Rio\n- 4 Rio Emotes \n- Rio Icon\n- Rio Border\n- Rio Background\n- 3 Day A-Coin Boost \n- 3 Day ER Point Boost \n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
-Shop/Desc/UR_Grade_Skin_Voucher_01┃*You can make a total of 5 purchases.\n*You can get 1 of the Uncommon/Rare skins in the product list that you don't have.\n*Includes event skins that are not sold in Store.\n*For a detailed product list, please refer to the box probability disclosure link.\n*If you have all the skins in the product list, you can still purchase the product but will only receive 1 of all the skins included.\n*The probability of getting a skin is based on the individual odds of the unowned skins in the product list.\n*This product is obtained immediately upon purchase.
+Shop/Desc/UR_Grade_Skin_Voucher_01┃*You can get 1 of the Uncommon/Rare skins in the product list that you don't have.\n*Includes event skins that are not sold in Store.\n*For a detailed product list, please refer to the box probability disclosure link.\n*If you have all the skins in the product list, you can still purchase the product but will only receive 1 of all the skins included.\n*The probability of getting a skin is based on the individual odds of the unowned skins in the product list.\n*This product is obtained immediately upon purchase.
 Shop/Desc/VampireShoichi_CollectPack_01┃Contents\n\n- 2 Scarlet Vampire Shoichi Emotes\n- Scarlet Vampire Shoichi Icon\n- Scarlet Vampire Shoichi Border\n- Scarlet Vampire Shoichi Background\n- 10 Vacance Tokens\n- 3 Day A-Coin Boost\n- 3 Day ER Point Boost\n\n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.
 Shop/Desc/Aya_Emblem_Pack_01┃Contents\n\n- Aya\n- On-Duty Aya\n- Midsummer Festival Aya\n- 4 Aya Emotes\n- Aya Icon\n- Aya Border\n- Aya Background\n- 3 Day A-Coin Boost\n- 3 Day ER Point Boost\n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
 Shop/Desc/Fiora_Emblem_Pack_01┃Contents\n\n- Fiora\n- Lieutenant Fiora\n- Musketeer Fiora\n- 4 Fiora Emotes\n- Fiora Icon\n- Fiora Border\n- Fiora Background\n- 3 Day A-Coin Boost\n- 3 Day ER Point Boost\n\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The price of the pack may change depending on already owned items. \n* The newly purchased items will be immediately added to your collection.
@@ -3866,6 +3888,11 @@ Shop/Desc/ThanksGiving_Special_2023_Pack_02┃Contents\n\n- Epic Skin Design Box
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃Contents\n\n- 2 Beachside & Ghostly Boxes\n- 2 Data Keys\n- 5,000 A-Coin\n- 10 Vacance Tokens
 Shop/Desc/BlackFriday2023_ComboPack_01┃Contents\n\n- 2 Skin Data Boxes\n- 2 Research Center Data Boxes\n- 2 Data Keys\n- 10 Battle Maids Tokens
 Shop/Desc/PixelArtTia_CollectPack_01┃Contents\n\n- 2 Pixel Art Tia Emotes\n- Pixel Art Tia Icon\n- Pixel Art Tia Border\n- Pixel Art Tia Background\n- 10 Battle Maids Tokens\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.
+Shop/Desc/Xmas2023Pack_SINGLE_01┃Contents\n\n- 1 Holiday Data Box\n\nPurchased boxes can be opened in Forging using the Data Key.
+Shop/Desc/Goodbye2023_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n8 Skins\nScarlet Corsage Jackie, On-Duty Aya, Frost Clover Sissela, Shrine Maiden Rio, Comfy Bianca, Arctic Expedition Nathapon, Gilded Reaper Zahir, Boss Magnus\n\n<#00ffee>[100NP Set] </color>\n8 characters and emotes (4 per character)\n- Jackie, Aya, Sissela, Rio, Bianca, Nathapon, Zahir, Magnus\n\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The purchase price may vary depending on the items owned, excluding the 100NP set.
+Shop/Desc/Goodbye2023_Pack_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n8 Skins\nFirebat Adriana, Jade Drifter Li Dailin, Capo Lenox, Little Nadine Riding Hood, Arbiter Chiara, Combat Medic Cathy, Street Fiend Luke, White Queen Adela\n\n<#00ffee>[100NP Set]</color>\n8 characters and emotes (4 per character) \n- Adriana (5), Li Dailin, Lenox, Nadine, Chiara (5), Cathy, Luke, Adela\n\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The purchase price may vary depending on the items owned, excluding the 100NP set.
+Shop/Desc/Goodbye2023_Pack_03┃<b><color=#FFBB00>[Contents]</color></b>\n\n8 Skins\nSpec Ops Estelle, Challenger Piolo, Donut Meister Shoichi, Interstellar Barbara, Electro Pumpkin Celine, Whimsical Picnic Emma, Wonderland Hart, Broken Glass Tazia\n\n<#00ffee>[100NP Set]</color>\n8 characters and emotes (4 per character)\n- Estelle, Piolo, Shoichi, Barbara, Celine, Emma, Hart, Tazia\n\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The purchase price may vary depending on the items owned, excluding the 100NP set.
+Shop/Desc/Goodbye2023_Pack_04┃<b><color=#FFBB00>[Contents]</color></b>\n\n8 Skins\nFluffy Snowball Irem, Lucky Bunny Chloe, Lucky Bunny Isol, Hungry Panda Xiukai, Underground Org Laura, Private Eye Alex, Street Fiend William, Trapped Ly Anh\n\n<#00ffee>[100NP Set]</color>\n8 characters and emotes (4 per character)\n- Irem, Chlow, Isol, Xiukai, Laura, Alex, William, Ly Anh\n\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The newly purchased items will be immediately added to your collection.\n* Products containing Boost items that are used immediately upon purchase are not eligible for refunds.\n* The items of this pack are sold and applied at a discount and are non-refundable. \n* The purchase price may vary depending on the items owned, excluding the 100NP set.
 Product/Name/SEASON_PASS_S5┃Season 5 Pack
 Shop/Desc/SEASON_PASS_S5┃Get ALL the content from season 5 at a stellar price!
 Product/Name/SEASON_PASS_S6┃Season 6 Pack
@@ -3901,7 +3928,7 @@ MONTHLY_PURCHASE_SET_02┃Monthly Data Key Bundle
 Shop/Desc/MONTHLY_PURCHASE_SET_02┃This product contains 3 Data Keys.\nYou can use the Data Keys to open any kind of box.\n\nThe number of purchases for this product resets monthly at 20:00 (PT).
 Goods/Name/3102003┃Daily Box
 Goods/Name/3102005┃Uncommon/Rare Skin Vouchers
-Shop/Desc/DAILY_PURCHASE_SET_01┃You can get 1 of the following: Research Center Data Box, Data Key, NP, Common Material, or Token.\n\nThe number of purchases for this product resets daily at 20:00 (PT).\n<color=orange>It will be opened immediately upon purchase.</color>
+Shop/Desc/DAILY_PURCHASE_SET_01┃You can get 1 of the following: Research Center Data Box, Data Key, NP, Data Fragment, or Token.\n\nThe number of purchases for this product resets daily at 15:00 (UTC).\n<color=orange>It will be opened immediately upon purchase.</color>
 Shop/Desc/S10_KEY_LIMITED┃You can use the Data Key to open any kind of box.\n\nThe number of exchanges per account is not reset.
 Shop/Desc/Vacance Token┃This is a Vacance Token that can be used to redeem items added to Exchange in the Forging menu.<color=red>\nThis token has an expiration date. Please be sure to check the expiration date as it will not be available later.</color>
 Shop/Desc/BatlleMaids Token┃This is a Battle Maids Token that can be used to redeem items added to Exchange in the Forging menu.<color=red>\nThis token has an expiration date. Please be sure to check the expiration date as it will not be available later.</color>
@@ -3989,6 +4016,9 @@ ItemTag/Ex_Regen┃HP Regen
 ItemTag/Ex_Sight┃Vision
 ItemTag/Unique_Range┃Increased Basic Attack Range
 ItemTag/Ex_None┃-
+ItemTag/Ex_Stun┃Stun
+ItemTag/Ex_Root┃Root
+ItemTag/Ex_Slow┃Slow
 ItemTag/Ex_ItemSkill┃Active Item Skill
 ItemTag/Ex_Dummy1┃Healing Reduction
 ItemTag/Ex_Dummy2┃Utility
@@ -4000,6 +4030,7 @@ Shop/Spray/Desc/Base┃Leave your mark on the ground!
 Shop/EmblemMark/Desc/Base┃An icon used to decorate your profile.
 Shop/EmblemBG/Desc/Base┃A background used to decorate your profile.
 Shop/EmblemOutline/Desc/Base┃A border used to decorate your profile.
+Shop/TeamslotBG/Desc/Base┃A Team Slot BG to decorate your team lobby slot.
 전장보상재화부족┃Not enough Battle Zone marks.
 Product/ResetTime/Week┃{0} W
 Product/ResetTime/Day┃{0} D
@@ -4013,7 +4044,7 @@ ItemType/CHARACTER/Name┃Character
 ItemType/EVENT_NP/Name┃Event NP
 ItemType/RANDOM_BOX/Name┃Box
 ItemType/RANDOM_KEY/Name┃Data Key
-ItemType/LOOT_TOKEN/Name┃Season Tokens
+ItemType/LOOT_TOKEN/Name┃Token
 제작소┃Forging
 교환소┃Exchange
 추가상품/박스┃Box
@@ -4021,6 +4052,10 @@ Forge/Category/Recent┃Most Recent
 Forge/Category/All┃All
 Forge/Category/CharacterSkin┃Skins
 캐릭터 보유중┃Currently Owned
+미보유 아이템┃Unowned Item
+선택권 아이템 선택┃Select
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
 Forge/Category/Character┃Characters
 Forge/Category/Emotion┃Emotes
 Forge/Category/Emblem┃Emblems
@@ -4064,6 +4099,7 @@ LootRandomBoxWindow/Count┃Owned
 한번에 받기┃Receive All
 1회┃Open 1 Box
 LootRandomBoxWindow/Btn_Once┃Open 1 Box
+선택권 사용┃Open 1 Box
 10회┃Open 10 Boxes
 LootRandomBoxWindow/Btn_All┃Open 10 Boxes
 전체보상 정보보기┃All Rewards
@@ -4107,10 +4143,13 @@ Forge/NotEnoughKey┃Not enough data keys.
 Forge/NotEnoughBoxKey┃Not enough boxes and data keys.
 Forge/ToolTip/RareMatter┃This Rare Data Fragment can be obtained wtih a certain probability by disassembling Epic or Rare skins. \nIt can be only used to craft Epic skins.
 Forge/ToolTip/NormalMatter┃This Data Fragment can be obtained in certain quantities by disassembling Uncommon skins or other items and designs. \nIt can be used to craft designs into items.
-Forge/ToolTip/disintegrateTicket┃This is an item can be disassembled without consuming additional goods. Disassembling 1 item uses 1 Disassembly Voucher.
+Forge/ToolTip/disintegrateTicket┃This is an item that can be disassembled without consuming additional goods. Disassembling 1 item uses 1 Disassembly Voucher.
 Rare-Matter┃Rare Data Fragments
 Normal-Matter┃Data Fragments
 Forge/ToolTip/DisintegrateMode┃Select the items to be disassembled.
+Forge/ToolTip/DisintegrateMode/Btn_Filter┃Change item disassemble filters.
+Forge/ToolTip/DisintegrateMode/Btn_Select┃Reselect items with the current filters.
+Forge/ToolTip/DisintegrateMode/Btn_Reset┃Reset all selected items.
 Forge/ToolTip/HighGradeItemAlert┃<color=red>A high rarity item is included in the disassemble list.</color>
 Forge/ToolTip/RightClickToRemove┃Right-click to remove the item from the list.
 Forge/ToolTip/SelectToAdd┃Select the items to be disassembled.
@@ -4127,11 +4166,15 @@ Forge/TokenExchange/NotEnoughToken┃Not enough Tokens.
 Forge/TokenExchange/ExceedExchangeLimit┃Exchange Limit Exceeded
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Months┃{0} M {1} D {2} H {3} Mins
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Days┃{0} D {1} H {2} Mins
-LootExchangeWindow/tokenInfo/TokenTimeRemainder/Hours┃{0} H {1} Mins
+ㅈ┃{0} H {1} Mins
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Minutes┃{0} mins {1} s
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Seconds┃{0} s
-LootExchangeWindow/tokenInfo/TokenRemainder┃Tokens will expire once the remaining time passes and will be converted into the next season's Tokens.
+LootExchangeWindow/tokenInfo/TokenRemainder┃Exchange will not be available after the Token expiration date.
+선택권 만료기간 안내┃Items will not be available after the expiration date.
 교환 남은 기간: ┃Until Token Expiration:
+제작소 아이템 남은 기간┃Time remaining
+선택권 선택 확인┃Would you like to select this item?
+선택권 중복 선택 확인┃You will get a duplicate if you select an item you already own.
 재화가 부족합니다. 제작소(상자)로 이동하시겠습니까?┃Insufficient currency. Move to Forging (Box)?
 재화가 부족합니다. 제작소로 이동하시겠습니까?┃Insufficient currency. Move to Forging?
 {0} 회┃{0} Times
@@ -4139,7 +4182,7 @@ Goods/Name/3102001┃Skin Data Box
 Goods/Name/3102002┃Research Center Data Box
 Goods/Desc/3102001┃This box contains skins and skin designs. \nRanked rewards and some specially utilized items are not included.\n\nData Boxes can be purchased from Store bundles or other products.
 Goods/Desc/3102002┃This box contains various items and designs.\nRanked Rewards and Limited Time items are not included.\n\nData Boxes can be purchased from Store bundles or other products.
-Goods/Desc/3102003┃You can get 1 of the following: Research Center Data Box, Data Key, NP, Common Material, or Token.
+Goods/Desc/3102003┃You can get 1 of the following: Research Center Data Box, Data Key, NP, Data Fragment, or Token.
 Goods/Name/3102006┃Beachside & Ghostly Box
 Goods/Desc/3102006┃You can definitely get a skin. \nItems can be found in the reward list.
 Goods/Name/3102007┃Epic Skin Design Box
@@ -4155,6 +4198,9 @@ Goods/Desc/3303001┃Tokens can be randomly obtained through ER PASS, Season Pac
 Goods/Name/3303999┃Mileage
 Goods/Desc/3303999┃Mileage can be obtained when purchasing NP products.
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃Overall Probability List
+Goods/Name/2005┃Skin Data Chip
+Goods/Name/4000000┃[더미] 영웅 등급 스킨 선택권
+Goods/Desc/4000000┃여러가지 아이템들 중 1개를 선택하여 확정적으로 획득할 수 있습니다.\n랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.
 특정 지역에서 구매할 수 없는 상품입니다.┃This product is not approved for sales in your region.
 Goods/Name/1┃Twitch Drops
 Goods/Name/3┃Random Character Box
@@ -4165,9 +4211,9 @@ Goods/Name/9999998┃Unclaimed Skin Voucher <#00ffee>No.02</color>
 Goods/Name/3119001┃Unclaimed Skin Voucher <#00ffee>No.01</color>
 Goods/Name/3119002┃Unclaimed Skin Voucher <#00ffee>No.02</color>
 Goods/Name/3119003┃Unclaimed Skin Voucher <#00ffee>No.03</color>
-Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Summertime Sua, Transfer Student Bianca, Sweet Beast Hyunwoo, Overvolt Jackie, Wilson Bakery Sissela\n----\n<color=#2AC0FF> Rare Skin</color>: Spirit Hunter Hyejin, Summertime Leon, Cobalt Evolution Zahir, Summertime Rio, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio\n----\n<color=#35FF94>Uncommon Skin</color>: Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
-Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Beachside Nicky, Spirit Hunter Chiara, Student Council President Elena, Android Medic Cathy, Magic Crush Adela\n----\n<color=#2AC0FF>Rare Skin</color>: Midnight Shinobi Lenox, Festive Roar Li Dailin, Bow Wow Yuki, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya, Lovely Magical Girl Rio\n----\n<color=#35FF94>Uncommon Skin</color>: Spirit Hunter Isol, Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
-Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Student Council President Elena, Plague Doctor Daniel, Summer Party Magician Emma, Winter Carnival Hart, Transfer Student Bianca. \n----\n<color=#2AC0FF>Rare Skin</color>: Winter Carnival Sissela, Midnight Aurora Rio, Nightmare Holder Vanya, Popstar Camilo, Demon Hunter Johann, Death Challenger Jan, Adventurer Nathapon, Fire Drill Estelle, Treasure Finder Lenox, Winter Breeze Elena, Burning Maid Adriana, Little Sailor Eleven.\n----\n<color=#35FF94>Uncommon Skin</color>: Winter Carnival Shoichi, OP.GG Felix, GeForce Now Silvia.\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Summertime Sua, Transfer Student Bianca, Sweet Beast Hyunwoo, Overvolt Jackie, Wilson Bakery Sissela\n----\n<color=#2AC0FF> Rare Skin</color>: Spirit Hunter Hyejin, Summertime Leon, Cobalt Evolution Zahir, Summertime Rio, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya\n----\n<color=#35FF94>Uncommon Skin</color>: Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Spirit Hunter Chiara, Student Council President Elena, Android Medic Cathy, Magic Crush Adela\n----\n<color=#2AC0FF>Rare Skin</color>: Midnight Shinobi Lenox, Festive Roar Li Dailin, Bow Wow Yuki, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya\n----\n<color=#35FF94>Uncommon Skin</color>: Spirit Hunter Isol, Spec Ops Leon\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[Contents]</color></b>\n\n<b><color=#D05EFF>Epic Skin</color></b>: Student Council President Elena, Plague Doctor Daniel, Summer Party Magician Emma, Winter Carnival Hart, Transfer Student Bianca. \n----\n<color=#2AC0FF>Rare Skin</color>: Winter Carnival Sissela, Midnight Aurora Rio, Nightmare Holder Vanya, Popstar Camilo, Death Challenger Jan, Adventurer Nathapon, Fire Drill Estelle, Treasure Finder Lenox, Winter Breeze Elena, Little Sailor Eleven.\n----\n<color=#35FF94>Uncommon Skin</color>: Winter Carnival Shoichi, OP.GG Felix, GeForce Now Silvia.\n\n<b><color=#F15F5F>[Before You Purchase]</color></b>\n*This product allows you to acquire skins that are not currently in your inventory.\n*Items are given immediately upon purchase.\n*If you have all the items on the list, you will receive 1 of the entire list.\n*You can check the probability of each item through the Box Probability Disclosure.
 Product/Name/S10_RARE_MATTER┃1 Rare Data Fragments
 Product/Name/S10_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S10_S11TOKEN_EXCHANGE┃2 Battle Maids Tokens
@@ -4225,6 +4271,7 @@ EP 토큰 재화 툴팁 설명┃When you already have an ER Pass at Level 100, 
 지역선택을 위해 연구소로 이동합니다┃Heading to the research center to choose starting area.
 시스템 벤 캐릭터┃You cannot play this character.
 팀원과 같은 캐릭터를 선택할 수 없습니다.┃You cannot select the same character as your teammate. Please select a different character.
+루트 경로 외 지역 선택 시 경고 ┃This area is not registered in the Saved Plan.
 미보유┃Unowned
 정렬하기┃Sort
 StrategyMap/루트 선택┃Select a Saved Plan
@@ -4421,6 +4468,7 @@ AI 대전 어려움 설명 문구┃Test your skills in battle with [Hard] diffi
 팀구성 중에는 이용할 수 없습니다.┃Unavailable as a pre-made team.
 매칭 취소 페널티 팝업┃Matching penalty applied for leaving matchmaking.
 팀원 중 이탈자가 발생하여 매칭이 취소되었습니다.┃A teammate has left. Matchmaking canceled.
+매칭 거절 결과 팝업┃Queue has been declined. Matchmaking canceled.
 매칭을 취소하여 사용자 설정 대전 참여자에서 제외되었습니다.┃You have been excluded from the custom game as you have left the lobby.
 팀원이 이미 선택 중인 캐릭터입니다.┃This character has already been selected by a teammate.
 매칭 거절로 인해 페널티가 부여될 수 있습니다.┃Declining queue may incur a penalty.
@@ -4670,10 +4718,12 @@ SEASON_22┃Season 22
 RankManagementSystem┃Rank Management System
 CurrentTier┃Current Tier
 RankEntryCostRP┃Rank Entry Cost 
-RankEntryCostRPDesc┃RP that is immediately deducted after matching based on your current tier and division.
+RankEntryCostRPDesc┃RP deducted after matching based on your current tier and division.\n2-person premade team: {0} added\n3-person premade team: {1} added
 Rank_Introduce01┃Compete against similar level teams. 
 Rank_Introduce02┃Earn Rank Points (RP) and climb up the ladder.
 Rank_Introduce03┃Premade teams' matchmaking will go by the highest-ranked member. 
+Rank_Introduce04┃There may be a separate entry cost based on the number of teams formed before matchmaking.
+Rank_Introduce05┃If you abandon the game or escape, you will lose all RP earned during the match and pay double the entry cost.
 Rank_SeeMore┃See More
 RankDetailedManagementSystem┃Rank Detailed Information
 RankKillRP┃Placement / Kill Points
@@ -4776,9 +4826,9 @@ DecayWarning/RemainPoint┃Remaining Grace Points:
 연습모드/더미┃Dummy
 연습 해보기┃Practice Character
 체험 해보기┃Try Out Character
-사망개요┃Death Overview Information
+사망개요┃Death Overlay
 사망개요 설명┃Damage taken by the test subject until death during battle is analyzed and displayed.
-Shortcut/DeathRecapOnOff┃Death Overview Information
+Shortcut/DeathRecapOnOff┃Death Overlay
 DeathRecapOnOff┃Damage taken by the test subject until death during battle is analyzed and displayed.
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃* Setting a keyboard shortcut for quick cast allows you to immediately use an ability at the location of your cursor by pressing the shortcut button.
 * 캐릭터마다 즉시 시전 여부를 다르게 설정할 수 있습니다.┃* Quick/Normal cast can now be set per character.
@@ -4824,6 +4874,7 @@ InstantCastWeaponSkill┃Quick Cast Weapon Skill
 InstantCastTacticalSkill┃Quick Cast Tactical Skill
 InstantUseActiveItem1┃Quick Cast Item Skill
 ChangeCameraMode┃Fixes to or removes the camera from your character's location.
+CameraDragScroll┃Moves the camera while holding down the hotkey.
 OpenCombineWindow┃Opens the crafting menu.
 OpenScoreboard┃Displays scoreboard and match status.
 OpenMap┃Opens the map. (Separate from Mouse Wheel click)
@@ -5034,7 +5085,7 @@ Vivox점검팝업┃Voice Chat is currently unavailable due to an error.
 원격전송드론 호출┃Request a Remote Drone
 원격전송드론 호출 설명┃You can use Credits to acquire items.\n You can use them by right-clicking on items that have the Remote Drone Call icon.
 원격전송드론 호출 사용법┃Right-click to call a Remote Drone.
-원격드론호출 잠금 토글┃Items can be called up from the Search Guide.
+원격드론호출 잠금 토글┃Items can be called up from the Search Guide.\nToggle in Settings - Game - Advanced Settings
 숙련도┃Mastery
 숙련도 설명┃Your Mastery increases by performing different actions.\nDepending on the Mastery, you can obtain different improvements and effects.
 제작 가이드┃Crafting Guide
@@ -5261,7 +5312,6 @@ SP 재생┃SP Regen
 고유 이동 속도┃Unique Movement Speed
 비전투중 체력회복┃Out of combat HP Regeneration
 비전투중 스태미너회복┃Out of combat SP Regeneration
-사용시영구적으로┃Permanently when used
 모드사용가능여부┃Available Modes
 모드사용불가┃This item is currently unusable in this mode.
 부활시아이템소멸┃This item will be lost upon <color=#B90005>Rapid Reconstruction.</color>
@@ -5354,6 +5404,8 @@ TempNickname┃Test Subject {0}
 매칭 대기 인원 21명 이상┃More than 21 people waiting for matching.
 매칭오픈종료안내┃Matchmaking for this mode has closed for the day. \nTry out a different mode or come back when matchmaking reopens tomorrow!
 시도 중┃Connecting
+WarnTextIsExceptDuoPremadeTeam┃Disabling the Exclude 2-people Premade Teams option\nmay speed up matching.
+CheckBoxIsExcepDuoPreamdeTeam┃Exclude 2-people Premade Teams
 대기실로 나가기┃Exit
 신고하기┃Report player
 관전하기┃Spectate
@@ -5638,7 +5690,8 @@ CreditResurrectionEnable┃Reviveable
 크레딧지목┃{0}({1}) has pointed {2}({3})'s <color=#F4FF63>{4}</color> Credits.
 아이템보유┃{0}({1}) has {3} {2}.
 아이템지목┃{0}({1}) has targeted {2}.
-장착하지않음┃{0}({1}) {2}({3}) - <color=#C4C4C4>{4}</color> <color=#FF4848>is not equipped.</color>
+아군장착하지않음┃{0}({1}) {2}({3}) - <color=#C4C4C4>{4}</color> <color=#FF4848>is not equipped.</color>
+장착하지않음┃{0}({1}) - <color=#C4C4C4>{4}</color> <color=#FF4848>is not equipped.</color>
 아이템발견┃{0}({1}) spotted {3} in {2}.
 아이템탐색┃{0}({1}) is looking for {2}.
 아이템제작가능┃{0}({1}): {2} craftable
@@ -5808,6 +5861,7 @@ SingleHard┃Hard
 코발트┃Cobalt
 스쿼드/코발트┃Squad/Cobalt
 잘못된 매칭 모드┃Check which mode you can play today!\nPlayable mode:
+매칭 스케줄이 닫혀있을 때 나오는 팝업┃The current mode is not available for matching.\nPlease check the matching schedule.
 없음┃None
 자세히 보기┃See more
 이벤트┃Event
@@ -5887,7 +5941,7 @@ CBT스케줄링크┃https://www.playeternalreturn.com/schedule/
 크레딧 소비 원격 드론 호출 - 자신┃Remote Drones Requested - Self
 크레딧 소비 원격 드론 호출 - 아군에게 전송┃Remote Drones Requested - Transfer to Ally
 크레딧 소비 전송콘솔 - 특수재료 호출┃Kiosk - Requested Special Materials
-크레딧 소비 전송콘솔 - 탈출키 호출┃Kiosk - Requested Escape Items
+크레딧 소비 전송콘솔 - 탈출키 호출┃Kiosk - Requested Rootkit
 크레딧 소비 전송콘솔 - 크레딧 부활┃Kiosk - Credit Revival
 크레딧 소비 전술 스킬 업그레이드┃Tactical Skill Upgrades
 크레딧 소비 인퓨전 구매┃Infusions Purchased
@@ -6110,6 +6164,7 @@ Default/부활남은시간┃Time remaining until revival
 AutoResurrectionHUD/CannotReviveText┃Can no longer be revived.
 자동부활까지 남은 시간┃Time remaining to select revival area
 하이퍼루프┃Hyperloop
+부활지역선택┃Select Revival Area
 부활 지점을 선택하세요.┃Select your revival area.
 보안 카메라┃CCTV
 아이템 정보┃Item information
@@ -6364,7 +6419,7 @@ ID로 가져오기┃Import Saved Plan ID
 루트 복사하기┃Import Saved Plan
 루트 리스트┃Saved Plan List
 후반 아이템 리스트┃Late-game Items List
-후반 아이템 리스트 설명┃Getting information from the current Saved Late-game Items List.
+후반 아이템 리스트 설명┃You can register items to be replaced after completing all the starting items.\nYou can change the target items to registered items via the in-game hotkey P button.\nIf you enable the "Automatically Replace Late-game Items" option in Settings - Game - Advanced Settings, \nitems will be replaced with the first list after completing it without any additional manipulation.
 변경된 루트를 저장하시겠습니까?┃Do you want to save your changes?
 이미 공유된 루트 변경 후 저장┃Changed Saved Plans will be updated immediately. \nContinue to save changes?\n(ID will not change)
 루트 이름┃Saved Plan name
@@ -6528,6 +6583,7 @@ Shortcut/InstantCastTacticalSkill┃Quick Cast Tactical Skill
 Shortcut/InstantUseActiveItem1┃Quick Cast Item Skill
 Shortcut/LearnKeyGuide┃Click the button or press {0} to level up.
 Shortcut/ChangeCameraMode┃Change Camera Mode
+Shortcut/CameraDragScroll┃Drag Scroll
 Shortcut/OpenCombineWindow┃Crafting Menu
 Shortcut/OpenScoreboard┃Scoreboard / Match Status
 Shortcut/OpenMap┃Map
@@ -6765,8 +6821,8 @@ NP 구매 최종 확인┃Spend {0} NP to purchase?
 ACoin 구매 최종 확인┃Spend {0} A-Coin to purchase?
 EP 구매 최종 확인┃Spend {0} EP Token(s) to purchase?
 현금 구매 최종 확인┃Purchase this item?
-RARE_MAT 구매 최종 확인┃Spend {0} rare materials to purchase?
-NORMAL_MAT 구매 최종 확인┃Spend {0} normal materials to purchase?
+RARE_MAT 구매 최종 확인┃Spend {0} rare data fragments to purchase?
+NORMAL_MAT 구매 최종 확인┃Spend {0} data fragments to purchase?
 CharacterDropDown/Name┃By Name
 CharacterDropDown/MostPlay┃By Most Played Character
 CharacterDropDown/LetterAscend┃Alphabetical ▲
@@ -8048,6 +8104,22 @@ Season10/Name┃<color=#83F5FF>VACANCE</color>
 Season11/Name┃<color=#FFF8E0>Battle Maids</color>
 SeasonToBeAdded/Name┃New Season \n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1}) has left the session.
+100001_Title┃Season 3 Attendance Event
+10000101_7_Title┃Adriana's Sip 'n Smile Set
+10000101_7_Desc┃Adriana's Sip 'n Smile Profile & Emote
+10000101_14_Title┃Skin Data Set
+10000101_14_Desc┃Skin Data Box + Data Key
+10000101_21_Title┃Estelle's Yummy Sip Set
+10000101_21_Desc┃Estelle's Yummy Sip Profile & Emote
+10000101_28_Title┃Skin Data Set
+10000101_28_Desc┃Skin Data Box + Data Key
+100001_ExtraSlot_Name┃Daily Bonus Rewards
+100001_ExtraSlot_Warning┃Daily bonus rewards can only be claimed on the same day.
+100001_PolicyToolTip┃Season Attendance will be running from February 9th after maintenance - May 9th before maintenance.\nYou have until May 9th to claim your reward.\nYou must abide by Eternal Return's Event Policies.
+200001_Title┃New Player Attendance
+200001_Nadja_Name┃Dr. Nadja
+200001_Nadja_Text┃Nice to meet you. Here's a gift for your upcoming experiment.\nI'll count on you.
+200001_PolicyToolTip┃New player attendance is only available once per account.\nThe new attendance list can be used for 14 days after activation.\n[New Player Attendance] and [Season Attendance] can be run at the same time.\nYou must abide by Eternal Return's Event Policies.
 적군탈주사안내┃{0}({1}) has been kicked from the game for idling.
 아군탈주사안내┃{0}({1}) has been kicked from the game for idling.
 탈주 위험 안내┃Idling in a safe zone for 3 minutes or longer will determine you are not commited to the game and you will automatically be considered a deserter and may be penalized.
@@ -8246,7 +8318,6 @@ Skill/Group/Desc/1003510┃Fiora swiftly lunges her weapon in the targeted direc
 Skill/Group/Desc/1003520┃Fiora swiftly lunges her weapon in the targeted direction, dealing <color=white>{13}</color> skill damage, and slowing them by {10} for {9} seconds. Flèche can be used up to 3 times within {3} seconds, and deals an additional <color=white>{11}</color> skill damage to enemies with max Touché stacks. Flèche deals additional damage every time she hits an enemy test subject.\n\n<color=#FFFFC2>1st Hit : </color>Fiora swiftly pierces in the targeted direction, dealing <color=white>{13}</color> skill damage.\n\n<color=#FFFFC2>2nd Hit : </color>Deal {4} of the previous hit damage as skill damage. \n\n<color=#FFFFC2>3rd Hit & Touché Activation Effect : </color>Deal {4} of the previous hit damage as skill damage. Hitting all 3 parts of Flèche deals an additional <color=white>{5}</color> true damage. Activating Touché with the third part of the skill reduces the cooldown of <color=#ffffff>Fente</color> by {6} and stuns enemies for {7} seconds. Slowed enemies are stunned for an additional {8} seconds.
 Skill/Group/Coef/1003100┃Every time Fiora damages an enemy with a skill, she applies a stack of Touché to her enemy. The Touché indicator can be activated at full stacks with <color=#ffffff>Fente, Marche & Rompre, or Flèche</color> for additional effects. Leveling up Touché lowers the number of stacks required for activation.
 Skill/Group/Coef/1003200┃Fiora stabs in the targeted direction, dealing <color=white>{0}</color><color=#DDA0DD>(+{13} Skill Amp)</color> skill damage to enemies hit. The edge of the skill deals <color=white>{7}</color><color=#DDA0DD>(+{15} Skill Amp)</color> skill damage, slows enemies by {4} for {6} seconds, and applies 2 stacks of Touché.\n\n<color=#FFFFC2>Touché Activation Effect : </color>The mark explodes, dealing {11} skill damage. Hitting an enemy with the edge of the skill slows them by {5} and reduces the remaining cooldown of Fente by {10}.
-Skill/Group/Coef/1003300┃Fiora swings her weapon twice in the targeted direction, dealing <color=white>{3}</color><color=#DDA0DD>(+{10} Skill Amp)</color> and <color=white>{5}</color><color=#DDA0DD>(+{11} Skill Amp)</color> skill damage. Fiora takes {7} reduced damage while using the skill.
 Skill/Group/Coef/1003400┃Fiora dashes in the targeted direction, dealing <color=white>{0}</color><color=#DDA0DD>(+{14} Skill Amp)</color> skill damage.\nIf she hits an enemy, she can activate the skill again to dash in the targeted direction within the next {4} seconds.\n\n<color=#FFFFC2>Touché Activation Effect : </color>Deals {13} skill damage and reduces the cooldown of <color=#ffffff>Fente</color> by {11} and <color=#ffffff>Attaque Composée</color> by {12}.
 Skill/Group/Coef/1003410┃Fiora dashes in the targeted direction, dealing <color=white>{0}</color><color=#DDA0DD>(+{14} Skill Amp)</color> skill damage.\nIf she hits an enemy, she can activate the skill again to dash in the targeted direction within the next {4} seconds.\n\n<color=#FFFFC2>Touché Activation Effect : </color>Deals {13} skill damage and reduces the cooldown of <color=#ffffff>Fente</color> by {11} and <color=#ffffff>Attaque Composée</color> by {12}.
 Skill/Group/Coef/1003500┃Fiora swiftly lunges her weapon in the targeted direction, dealing <color=white>{1}</color><color=#DDA0DD>(+{12} Skill Amp)</color> skill damage, and slowing them by {10} for {9} seconds. Flèche can be used up to 3 times within {3} seconds, and deals an additional <color=white>{11}</color><color=#DDA0DD>(+{14} Skill Amp)</color> skill damage to enemies with max Touché stacks. Flèche deals additional damage every time she hits an enemy test subject.\n\n<color=#FFFFC2>1st Hit : </color>Fiora swiftly pierces in the targeted direction, dealing <color=white>{1}</color><color=#DDA0DD>(+{12} Skill Amp)</color> skill damage.\n\n<color=#FFFFC2>2nd Hit : </color>Deal {4} of the previous hit damage as skill damage. \n\n<color=#FFFFC2>3rd Hit & Touché Activation Effect : </color>Deal {4} of the previous hit damage as skill damage. Hitting all 3 parts of Flèche deals an additional <color=white>{5}</color> true damage. Activating Touché with the third part of the skill reduces the cooldown of Fente by {6} and stuns enemies for {7} seconds. Slowed enemies are stunned for an additional {8} seconds.
@@ -11166,6 +11237,42 @@ CharacterState/Group/Name/1069500┃Spring Launch! - Knocked Back
 CharacterState/Group/Desc/1069500┃Knocked back by Spring Launch!
 CharacterState/Group/Name/1069520┃Spring Launch! - Slowed
 CharacterState/Group/Desc/1069520┃Slowed from being hit into a wall.
+Skill/Group/Name/1070100┃Higuruma's Elimination Tecnique
+Skill/Group/Name/1070200┃Shuriken Deployment
+Skill/Group/Name/1070300┃Whirlwind
+Skill/Group/Name/1070400┃The Art Of Camouflage
+Skill/Group/Name/1070500┃Life and Death Seal
+Skill/Group/Desc/1070100┃Tsubame's basic attack range is fixed at <color=white>{0}</color>, and can not critically strike. Instead, her attack power increases by <color=white>{1}</color> based on Critical Strike Chance and Critical Damage.\n\n<color=white>Switching Technique</color>: When Tsubame uses <color=white>The Art Of Camouflage</color> and <color=white>Life and Death Seal</color>, she leaves a <color=white>Wooden Log</color> at her location that lasts for {2} seconds.
+Skill/Group/Coef/1070100┃Tsubame's basic attack range is fixed at <color=white>{0}</color>, and can not critically strike. Instead, her attack power increases by <color=white>{1}</color> for every 1% Critical Strike Chance and by <color=white>{3}</color> for every 1% Critical Damage.\n\n<color=white>Switching Technique</color>: When Tsubame uses <color=white>The Art Of Camouflage</color> and <color=white>Life and Death Seal</color>, she leaves a <color=white>Wooden Log</color> at her location that lasts for {2} seconds.
+Skill/LobbyDesc/1070100┃Tsubame's basic attack range is fixed and can not critically strike. Instead, her damage increases based on Critical Strike Chance and Critical Damage.\n\n<color=white>Switching Technique</color>: When Tsubame uses <color=white>The Art Of Camouflage</color> and <color=white>Life and Death Seal</color>, she leaves a <color=white>Wooden Log</color> at her location.
+Skill/Group/Desc/1070200┃Tsubame throws 3 shuriken to the targeted location. As the shuriken fly to the end of their path, they spin around, dealing <color=white>{0}</color> skill damage to enemies hit and slowing them by {2} for {1} seconds.\n\nMarked enemies get 1 additional stack of the mark.
+Skill/Group/Coef/1070200┃Tsubame throws 3 shuriken to the targeted location. As the shuriken fly to the end of their path, they spin around, dealing <color=white>{0}</color><color=#ffd775>(+{3} Attack Power)</color> skill damage to enemies hit and slowing them by {2} for {1} seconds.\n\nMarked enemies get 1 additional stack of the mark.
+Skill/LobbyDesc/1070200┃Tsubame throws 3 shuriken to the targeted location. As the shuriken fly to the end of their path, they spin around, dealing skill damage and slowing enemies they hit.\n\nMarked enemies get 1 additional stack of the mark.
+Skill/Group/Desc/1070300┃Tsubame moves faster with a concise move, increasing her movement speed by {1} and then gradually decreasing it for {0} seconds. The attack speed of her next {4} basic attacks increases by {3} for {2} seconds.
+Skill/Group/Coef/1070300┃Tsubame moves faster with a concise move, increasing her movement speed by {1} and then gradually decreasing it for {0} seconds. The attack speed of her next {4} basic attacks increases by {3} for {2} seconds.
+Skill/LobbyDesc/1070300┃Tsubame moves faster with a concise move, increasing her movement speed, then gradually decreasing it. The attack speed of her next 2 basic attacks increases.
+Skill/Group/Desc/1070400┃<color=green>Passive</color>: The cooldown of <color=white>Switching Technique</color> is reduced by {0} seconds.\n\nTsubame spins in the targeted location and becomes invisible. Invisibility lasts for {1} seconds and can't be targeted while spinning.\n\nUsing <color=white>Whirlwind</color> while invisible due to <color=white>The Art Of Camouflage</color> will activate without breaking invisibility.
+Skill/Group/Coef/1070400┃<color=green>Passive</color>: The cooldown of <color=white>Switching Technique</color> is reduced by {0} seconds.\n\nTsubame spins in the targeted direction and becomes invisible. Invisibility lasts for {1} seconds and can't be targeted while spinning.\n\nUsing <color=white>Whirlwind</color> while invisible due to <color=white>The Art Of Camouflage</color> will activate without breaking invisibility.
+Skill/LobbyDesc/1070400┃<color=green>Passive</color>: The cooldown of <color=white>Switching Technique</color> is reduced.\n\nTsubame spins in the targeted direction and becomes invisible. She can't be targeted while spinning.\n\nUsing <color=white>Whirlwind</color> while invisible due to <color=white>The Art Of Camouflage</color> will activate without breaking invisibility.
+Skill/Group/Desc/1070500┃<color=green>Passive</color>: Tsubame marks enemies hit by her basic attack that lasts for {8} seconds. The mark can stack up to {0} times, and when the target is fully stacked, they share vision with Tsubame.\n\nWhen a fully stacked enemy target is within range, Tsubame quickly moves toward them and slashes through their marks, dealing <color=white>{1}</color><color=#688A08>(+{2} of target's Max HP)</color> skill damage and recovering {3} of the damage dealt.\n\nDealing damage to enemy test subjects reduces the cooldown of <color=white>Whirlwind</color> by {7}, <color=white>Switching Technique</color> by {4}, and awakens <color=white>Engraved Battle Sense</color> for {9} seconds.\n<color=white>Engraved Battle Sense</color> can stack up to {5} times, increasing the damage of <color=white>Life and Death Seal</color> by {6} per stack.\n\n\nDesignating a <color=white>Wooden Log</color> as a target with this skill, allows Tsubame to move quickly to its location and swap places.
+Skill/Group/Coef/1070500┃<color=green>Passive</color>: Tsubame marks enemies hit by her basic attack that lasts for {8} seconds. The mark can stack up to {0} times, and when the target is fully stacked, they share vision with Tsubame.\n\nWhen a fully stacked enemy target is within range, Tsubame quickly moves toward them and slashes through their marks, dealing <color=white>{1}</color><color=#ffd775>(+{10} Attack Power)</color><color=#688A08>(+{2} of target's Max HP<color=#ffd775>(+{11} per 1 Attack Power)</color>)</color> skill damage and recovering {3} of the damage dealt.\n\nDealing damage to an enemy test subject reduces the cooldown of <color=white>Whirlwind</color> by {7}, <color=white>Switching Technique</color> by {4}, and awakens <color=white>Engraved Battle Sense</color> for {9} seconds.\n<color=white>Engraved Battle Sense</color> stacks up to {5} times, increasing the damage of <color=white>Life and Death Seal</color> by {6} per stack.\n\n\nDesignating a <color=white>Wooden Log</color> as a target with this skill, allows Tsubame to move quickly to its location and swap places.
+Skill/LobbyDesc/1070500┃<color=green>Passive</color>: Tsubame marks enemies hit by her basic attack. The mark stacks up to 3 times, and fully stacked targets share vision with Tsubame.\n\nWhen a fully stacked enemy target is within range, Tsubame quickly moves toward them and slashes through their marks, dealing skill damage and recovering a portion of the damage.\nDealing damage to an enemy test subject reduces the cooldown of <color=white>Whirlwind</color> and <color=white>Switching Technique</color>, and awakens <color=white>Engraved Battle Sense</color>. <color=white>Engraved Battle Sense</color> can stack up to 3 times, increasing the damage of <color=white>Life and Death Seal</color> per stack.\n\nDesignating a <color=white>Wooden Log</color> as a target with this skill, allows Tsubame to move quickly to its location and swap places.
+Skill/Group/ExpansionTip/1070400┃<i>Cannot go over walls.</i>
+Skill/Group/ExpansionTip/1070500┃<i>Life and Death Seal is not affected by cooldown reduction stats. \nYou can only mark a maximum of 1 enemy. Marking a new target removes the previous mark. \nThe mark is instantly removed if the target is more than {0} meters away from Tsubame. \nIf Tsubame uses Life and Death Seal on a target, they will not get a new mark for {1} seconds.</i>
+CharacterState/Group/Name/1070200┃Shuriken Deployment - Slow
+CharacterState/Group/Desc/1070200┃Slowed due to Shuriken Deployment.
+CharacterState/Group/Name/1070300┃Whirlwind - Movement Speed Increase
+CharacterState/Group/Desc/1070300┃Movement speed increases and then decreases due to Whirlwind.
+CharacterState/Group/Name/1070310┃Whirlwind - Increased Attack Speed
+CharacterState/Group/Desc/1070310┃Attack Speed Increases due to Whirlwind.
+CharacterState/Group/Name/1070400┃The Art Of Camouflage - Invisible
+CharacterState/Group/Desc/1070400┃Invisible due to The Art Of Camouflage.
+CharacterState/Group/Name/1070500┃Life and Death Seal - Marked
+CharacterState/Group/Desc/1070500┃Marked by Tsubame. At 3 stacks vision is shared with Tsubame.
+CharacterState/Group/Name/1070520┃Life and Death Seal - Marking Waiting Time
+CharacterState/Group/Desc/1070520┃Tsubame leaves behind traces of the marked seal. No additional marks are made during this time.
+CharacterState/Group/Name/1070540┃Engraved Battle Sense
+CharacterState/Group/Desc/1070540┃Tsubame's Battle Sense awakens, increasing the damage of Life and Death Seal.
 Skill/Group/Name/3015000┃Cloak and Dagger
 Skill/Group/Name/3015100┃Cloak and Dagger
 Skill/Group/Name/3016000┃Parry
@@ -11469,7 +11576,7 @@ Skill/LobbyDesc/1008400┃Hart moves a short distance toward the targeted locati
 Skill/LobbyDesc/1008500┃Hart puts on a show, causing everyone around her to dance. She recovers HP while she's playing.\n<color=yellow>Evolution effect:</color> While she's putting on her show, allies within range recover HP.
 Skill/LobbyDesc/1009100┃Enemies that take damage from his traps have their defense reduced.
 Skill/LobbyDesc/1009200┃Isol throws a bomb to the target location that sticks to an enemy or on the ground. The bomb explodes, dealing damage, and rooting enemies caught in the blast.\nIf the bomb is stuck to an enemy, each attack reduces its timer and increases the damage and root duration.
-Skill/LobbyDesc/1009300┃Isol unleashes a fury of bullets in front of him, dealing skill damage. 
+Skill/LobbyDesc/1009300┃Isol unleashes a fury of bullets in front of him, dealing skill damage.
 Skill/LobbyDesc/1009400┃Isol rolls forward and blends into his surroundings, going invisible. The invisibility is lifted after a certain time or if Isol does any action other than movement. The first basic attack damage within a certain amount of time deals an additional skill damage.
 Skill/LobbyDesc/1009500┃Isol installs a MOK Operational Mine on the ground. The mine explodes when an enemy enters its range, dealing damage.
 Skill/LobbyDesc/1010100┃Li Dailin can use <color=white>Drink Up</color> to fill her BAC bar. Depending on her BAC, she can trigger <color=white>Dialed In</color>.\n\n<color=white>Dialed In:</color> Li Dailin's Attack Speed is increased and she attacks with two consecutive basic attacks.\n\n<color=white>When her BAC is over 40,</color> Li Dailin gets drunk. Her <color=white>Spirited Kick</color> and <color=white>Bottom Shelf</color> skills become enhanced with <color=yellow>Tipsy.</color> She gains Dialed In for her next basic attack after using a basic skill.\n\n<color=white>When her BAC is 100,</color> she becomes Inebriated and cannot use her skills for a certain amount of time. While she is Inebriated, she gains Dialed In.\n\n
@@ -11599,7 +11706,7 @@ Skill/LobbyDesc/1033100┃Nicky converts damage taken by other characters into R
 Skill/LobbyDesc/1033200┃<color=#ffffff>Slugfest</color>: Nicky puts her full strength into a punch. Reactivate the skill to let loose, knocking back the first enemy hit and dealing damage. Distance and damage dealt is increased based on how long she charges. If Nicky hits an enemy, cooldown is reduced and she can land a Body Blow. \n\n<color=#ffffff>Body Blow</color>: Deals damage to enemies in front of her and gains Rage for each enemy hit.
 Skill/LobbyDesc/1033300┃<color=#ffffff>Guard</color>: Nicky guards, reducing damage taken and becoming immune to all debuffs and crowd control. Successful Guards reduce the cooldown of Guard & Reverse, Enrage Nicky, and allows her to Reverse.\n\n<color=#ffffff>Reverse</color>: Nicky rushes forward, dealing damage to enemies and rooting them.
 Skill/LobbyDesc/1033400┃<color=#ffffff>Knockout Punch</color>: Nicky throws a knockout punch in front of her, dealing damage and slowing enemies.\n\n<color=#ffffff>Fury Jab!!</color>: While Enraged, Nicky can use Fury Jab!!, dealing damage, slowing enemies, and stunning them.\n\n<color=#ffffff>Fury Jab!!</color> does not share a cooldown with <color=#ffffff>Knockout Punch</color>. Using Fury Jab!! will Calm Nicky.
-Skill/LobbyDesc/1033500┃Nicky dashes to the targeted enemy, becoming unstoppable, and uppercuts them, dealing skill damage and knocking them airborne. Nicky knocks back other enemies in the way, dealing damage. Short Tempered is filled with Rage so she deals increased skill damage.
+Skill/LobbyDesc/1033500┃Nicky dashes unstoppably to the targeted enemy and uppercuts them, dealing skill damage and knocking them airborne. Nicky knocks back other enemies in the way, dealing damage. Short Tempered is filled with Rage so she deals increased skill damage.
 Skill/LobbyDesc/1034100┃Nathapon captures every moment he can on camera. His attack speed is fixed but his basic attacks deal Extra Skill Damage. Nathapon's basic attacks can not deal critical strikes.\n\n<color=green>Picturesque</color> Dealing skill damage to an enemy grants a stack of Picturesque. Picturesque can stack up to {3} times, and each stack increases Nathapon's damage.\nPicturesque stacks are removed as soon as they are out of his sight.\n\nCombining <color=#808080>Surveillance Camera</color> and <color=#808080>Branch</color> will create a <color=#008000>Trail Camera</color> with Infiltration effects.
 Skill/LobbyDesc/1034200┃Nathapon snaps a photograph at the targeted area, dealing skill damage. Enemies with max stacks of <color=white>Picturesque</color> have their attack speed and movement speed reduced for a short duration.
 Skill/LobbyDesc/1034300┃Nathapon takes a Timelapse, dealing skill damage to enemies per second in range. Enemies in the Timelapse are slowed.\nThe final photograph deals extra damage and roots subjects in frame.
@@ -11838,13 +11945,13 @@ CharacterState/Group/Desc/4101010┃Defense reduced.
 Skill/Group/Name/4102000┃Electric Shift
 Skill/Group/LobbyDesc/4102000┃Quickly move a short distance. Basic Attack Range is increased for a certain amount of time.\n\n<color=#ff3399>Upon enhancement:</color> The effect range is increased.
 Skill/Code/Desc/4102001┃Upon use, move <color=white>{1}m</color> toward the cursor. Basic Attack Range is increased by {2}%.\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased.</color>
-Skill/Code/Coef/4102001┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased.</color>
+Skill/Code/Coef/4102001┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased by {4}.</color>
 Skill/Code/ExpansionTip/4102001┃<i>Use <color=#b245ff>Tactical Skill Modules</color> to reach Level 3.</i>
 Skill/Code/Desc/4102002┃Upon use, move <color=white>{1}m</color> toward the cursor. Basic Attack Range is increased by {2}%.\n\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased.</color>
-Skill/Code/Coef/4102002┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased.</color>
+Skill/Code/Coef/4102002┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n<color=#565730>Module Enhancement: </color><color=#595959>The effect range is increased by {4}.</color>
 Skill/Code/ExpansionTip/4102002┃<i>Use <color=#b245ff>Tactical Skill Modules</color> to reach Level 3.</i>
 Skill/Code/Desc/4102003┃Upon use, move <color=white>{1}m</color> toward the cursor. Basic Attack Range is increased by {2}%.\n\n<color=#FFFFC2>Module Enhancement: </color>The effect range is increased.
-Skill/Code/Coef/4102003┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n\n<color=#FFFFC2>Module Enhancement: </color>The effect range is increased.
+Skill/Code/Coef/4102003┃Upon use, move <color=white>{1}m</color> toward the cursor. You become Electric for {3} seconds and your Basic Attack Range is increased by {2}%.\nYou stop being Electric when the duration is over.\n\n<color=#FFFFC2>Module Enhancement: </color>The effect range is increased by {4}.
 CharacterState/Group/Name/4102000┃Electric
 CharacterState/Group/Desc/4102000┃Basic Attack Range increased.
 Skill/Group/Name/4103000┃Force Field
@@ -12615,7 +12722,7 @@ Skill/Group/Name/4504000┃Truth Explosion
 Skill/Code/Name/4504001┃Truth Explosion
 TacticalSkillSet/Code/Name/500041┃Truth Explosion
 Skill/Group/4504000/Name┃<color=yellow>Truth Explosion</color>
-Skill/LobbyDesc/4504000┃Chi bursts, striking nearby enemy test subjects after a short time, gaining a bonus on successful hits.\nFailed hits are penalized.
+Skill/LobbyDesc/4504000┃Energy bursts, striking nearby enemy test subjects after a short time, gaining a bonus on successful hits.\nFailed hits are penalized.
 Skill/Group/LobbyDesc/4504000┃Bursts out energy, striking nearby enemy test subjects after a short time, gaining a bonus on successful hits.\nFailed hits are penalized.
 Skill/Code/Desc/4504001┃After {0} seconds, deals {2} damage to enemies in a {1}m range. Become enhanced with Burst\nfor {7} seconds to gain additional capabilities.\n\nFailing to deal damage to an enemy stuns you for {6} seconds and slows you by {5}% for {3} seconds.\n\nWhile in Burst, your Attack Speed is increased by {8}% and your movement speed is increased by {9}%. \nAdditional effects below are gained according to the number of enemies hit. \n\n(Melee) \nDamage dealt increased by 6%, damage taken decreased by 12% \n(Ranged) \nDamage dealt increased by 4.5%, damage taken decreased by 10%
 Skill/Code/Coef/4504001┃After {0} seconds, deals {2} damage to enemies in a {1}m range. Become enhanced with Burst\nfor {7} seconds to gain additional effects.\n\nFailing to deal damage to an enemy stuns you for {6} seconds and slows you by {5}% for {3} seconds.\n\nWhile in Burst, your Attack Speed is increased by {8}% and your movement speed is increased by {9}%. \nAdditional effects below are gained according to the number of enemies hit. \n\n(Melee) \nDamage dealt increased by 6%, damage taken decreased by 12% \n(Ranged) \nDamage dealt increased by 4.5%, damage taken decreased by 10%
@@ -12669,8 +12776,8 @@ CharacterState/Group/Name/6027020┃Spearhead - Debuff Effects
 CharacterState/Group/Desc/6027020┃Attack speed is reduced by the enemy's Spearhead Effect.
 Item/Skills/6022101┃Enlightenment - Reaper's Scythe
 Item/Skills/6022101/Name┃<color=yellow>Enlightenment - Reaper's Scythe</color>
-Item/Skills/6022101/Body┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than <color=#688A08>8%</color> HP will instantly eliminate them. (Cooldown: {1}s)
-Item/Skills/6022101/Desc┃Activates when you gain 30 or more Armor Penetration.\nWhile activated, dealing damage to an enemy with less than <color=#688A08>8%</color> HP will instantly eliminate them. (Cooldown: {1}s)
+Item/Skills/6022101/Body┃Activates when Armor Penetration is 30 or higher. \nEnemy test subjects are instantly eliminated when their HP drops below <color=#688A08>8%</color> due to damage. (Cooldown {1} seconds)
+Item/Skills/6022101/Desc┃Activates when Armor Penetration is 30 or higher. \nEnemy test subjects are instantly eliminated when their HP drops below <color=#688A08>8%</color> due to damage. (Cooldown {1} seconds)
 Item/Skills/6030001┃Debilitation
 Item/Skills/6030001/Name┃<color=yellow>Debilitation</color>
 Item/Skills/6030001/Body┃Enemies hit by a skill are debilitated, taking <color=#688A08>{0} of the target's Max HP</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color> skill damage every second for {2} seconds. (Max Stacks: {3})
@@ -13375,6 +13482,7 @@ Item/Name/112406┃Dyadic Prism
 Item/Name/112407┃Astrapē
 Item/Name/112408┃Sticky Bomb
 Item/Name/112502┃Imugi's Pearl
+Item/Name/112503┃Chaser
 Item/Name/113101┃Razor
 Item/Name/113102┃Playing Cards
 Item/Name/113103┃CD
@@ -13518,6 +13626,7 @@ Item/Name/121405┃Wonderful Tonight
 Item/Name/121406┃The Wall
 Item/Name/121407┃Teen Spirit
 Item/Name/121501┃Cpt. Pepper
+Item/Name/121502┃Heartbreaker
 Item/Name/122101┃Lens
 Item/Name/122201┃Pistol Camera
 Item/Name/122301┃Compact Camera
@@ -14008,7 +14117,6 @@ Item/Name/502305┃Pendulum Axe
 Item/Name/502306┃Explosive Trap
 Item/Name/502307┃RDX
 Item/Name/502308┃EMP Drone
-Item/Name/502309┃Bear Trap
 Item/Name/502310┃Acupressure Mat
 Item/Name/502401┃Mythril String
 Item/Name/502402┃Stingburst
@@ -14134,6 +14242,7 @@ Item/Help/112402┃Inflicts immense damage by emitting a poisonous gas. It is ma
 Item/Help/112403┃A rubber ball with sharp fragments on the surface. It hurts. Also, don't\nunderestimate its bouncing capability!
 Item/Help/112305┃When the pin is pulled, Mr. Grenade is not your friend.
 Item/Help/112502┃In Korean folk tales, if the ancient snake-serpent Imugi tries to carry two or more pearls with him to Heaven, he is too heavy and cannot ascend.\nCast aside your greed and be content with just one pearl. Heaven awaits.
+Item/Help/112503┃Though it has a name, everyone just calls it "Little Angel".\nSwiftly flying in to bring a sweet death.
 Item/Help/112405┃Every sorcerer (and Italian plumber) wants to wield the power of the Fireball. \n\nIt's difficult to realistically burn spherical gas, so researchers have harnessed the power of VF to make it happen.
 Item/Help/112406┃The Dyadic Prism is made by harnessing the energy of a Force Core within a special housing, balancing its volatility and energy.\n\nImpacts disrupt this balance, causing a sudden burst of energy. 
 Item/Help/112501┃Made out of Ruthenium, which is the hardest element among the\nplatinum metals. It also has applications as a superconductor.
@@ -14227,6 +14336,7 @@ Item/Help/121405┃If it's late in the evening, and you're wondering what item t
 Item/Help/121406┃The test subjects on this island might as well just be, all in all,\nbricks in a wall.
 Item/Help/121407┃Humans shine the most as teens. This shining aura fades slowly, but inevitably,\nas times passes by.
 Item/Help/121501┃Did you know that the traditional Indian instrument, the sitar, was used on one of the greatest rock 'n' roll albums?
+Item/Help/121502┃How to heal a broken heart with another love.\nAfter a painful breakup, it's time to move on and find your next love.
 Item/Help/130502┃Some deaths leave behind love, some leave behind regret,\n and some mark a new beginning.
 Item/Help/201101┃If you use a cheap one, the glue might stick to your hair or ears.
 Item/Help/201102┃Nothing beats than a simple cap when it's sunny, raining,\nor snowing.
@@ -14592,7 +14702,7 @@ Item/Effects/302308┃Recover SP over 15 seconds.
 Item/Effects/302309┃Recover SP over 15 seconds.
 Item/Effects/302310┃Recover SP over 15 seconds.
 Item/Effects/302311┃Recover SP over 15 seconds.
-Item/Effects/302312┃Permanently gain 2 Attack Power and 4 Skill Amp. Can be stacked up to 3 times.
+Item/Effects/302312┃Permanently gain 2 Attack Power and 4 Skill Amp.\nCan be stacked up to 3 times.
 Item/Effects/302313┃Recover SP over 15 seconds.
 Item/Effects/302314┃Recover SP over 15 seconds.
 Item/Effects/301102┃Recover HP over 15 seconds.
@@ -14614,7 +14724,7 @@ Item/Effects/301205┃Recover HP over 15 seconds.
 Item/Effects/301206┃Recover HP over 15 seconds.
 Item/Effects/301207┃Recover HP over 15 seconds.
 Item/Effects/301209┃Recover HP over 15 seconds.
-Item/Effects/301305┃Permanently gain 3 Defense. Can stack up to 3 times.
+Item/Effects/301305┃Permanently gain 3 Defense.\nCan stack up to 3 times.
 Item/Effects/301213┃Recover HP over 15 seconds.
 Item/Effects/301216┃Recover HP over 15 seconds.
 Item/Effects/301217┃Recover HP over 15 seconds.
@@ -14667,7 +14777,7 @@ Item/Effects/301325┃Recover HP over 15 seconds.
 Item/Effects/301326┃Recover HP over 15 seconds.
 Item/Effects/301327┃Recover HP over 15 seconds.
 Item/Effects/301328┃Recover HP over 15 seconds.
-Item/Effects/301329┃Permanently add 30 to Max HP. Can stack up to 3 times.
+Item/Effects/301329┃Permanently add 30 to Max HP.\nCan stack up to 3 times.
 Item/Effects/301330┃Recover HP over 15 seconds.
 Item/Effects/301401┃Recover HP over 15 seconds.
 Item/Effects/301331┃Recover HP over 15 seconds.
@@ -15217,7 +15327,7 @@ BattleMission/11003008/1┃Craft 5 Legendary items.
 BattleMission/11003009/1┃Deal 14,000+ damage to test subjects.
 BattleMission/11003010/1┃Obtain 2 Tree of Life.
 BattleMission/11004001/1┃Hyperloop 15 times.
-BattleMission/11004002/1┃Open 10 Air Supply Boxes.
+BattleMission/11004002/1┃Obtain 10 items from Air Supply Boxes.
 BattleMission/11004003/1┃Gain 800 or more credits.
 BattleMission/11004004/1┃Craft 15 Legendary items.
 BattleMission/11004005/1┃Kill 12+ test subjects.
@@ -15240,7 +15350,7 @@ BattleMission/11006001/1┃Deal 26,000 damage to test subjects.
 BattleMission/11006002/1┃Use Kiosk 3 times.
 BattleMission/11006003/1┃Hunt 8 Wild Dogs.
 BattleMission/11006004/1┃Craft 6+ Legendary items.
-BattleMission/11006005/1┃Open 2 Legendary Supply Boxes.
+BattleMission/11006005/1┃Obtain 2 Legendary items from Supply Boxes.
 BattleMission/11006006/1┃Finish 3rd place or higher.
 BattleMission/11006007/1┃Reach level 18 Weapon Mastery.
 BattleMission/11006008/1┃Kill 1 test subject in Hotel.
@@ -15254,12 +15364,12 @@ BattleMission/11007005/1┃Kill 2 enemies with less than 250 HP.
 BattleMission/11007006/1┃Reach level 18 Weapon Mastery.
 BattleMission/11007007/1┃Score 6 TK
 BattleMission/11007008/1┃Deal 19,000 damage to test subjects.
-BattleMission/11007009/1┃Open 2 Legendary Supply Boxes.
+BattleMission/11007009/1┃Obtain 2 Legendary items from Supply Boxes.
 BattleMission/11007010/1┃Kill 10 test subjects.
 BattleMission/11008001/1┃Kill 3 test subjects.
 BattleMission/11008002/1┃Play 3 Normal/Ranked games.
 BattleMission/11008003/1┃Kill 16 test subjects.
-BattleMission/11008004/1┃Open 6 Air Supply Boxes.
+BattleMission/11008004/1┃Obtain 6 items from Air Supply Boxes.
 BattleMission/11008005/1┃Kill 3 test subjects in a restricted area.
 BattleMission/11008006/1┃Craft 8 Legendary items.
 BattleMission/11008007/1┃Kill 3 test subjects while under 600 HP.
@@ -17549,6 +17659,12 @@ CharacterStoryHeight/69┃145 cm
 CharacterStoryGender/69┃Female
 CharacterStoryTitle/69┃"I need to be careful with my toys."
 CharacterStoryDesc/69┃At first glance, she seems like an ordinary girl. She loves playing silly pranks on others and laughs at their reactions as if she were still a child.\n\nWhen she was younger, she couldn't bear the misfortunes that happened to her family and the people around her. Frustrated, Leni decided to run away instead of facing it, which made her want to continue being a child, oblivious to what was happening in the world.\n\nFor her, death was the only way to avoid growing up and remain a child. It must have been her only salvation. It would have been... until that accident stopped her from growing...
+CharacterStoryName/70┃Tsubame Tachibana
+CharacterStoryAge/70┃17 years old
+CharacterStoryHeight/70┃157cm
+CharacterStoryGender/70┃Female
+CharacterStoryTitle/70┃"I'll accept your request."
+CharacterStoryDesc/70┃She was tricked into coming to Lumia Island by an offer to help her seek revenge. In the past, she lived with an old gangster named Goro, guarding the neon-lit night market and 999 Street.\n\nEven now, she presents herself as an errand girl for the Anything and Everything Agency, but she has an unspeakable secret: she was sold to an organization called Nichirinkai and subjected to horrific procedures and grueling training to become a killing machine with no self, no soul, just a body that does what they tell it to do. \n\nOn the day her mission failed and she was abandoned, she was ready to die. But instead, she met a benefactor and was given a new life under the name Tsubame.\n\n"The best thing that ever happened to me was meeting you." Those were the last words of Goro, the old rascal who taught her how to smile.
 CharacterPlayTip/1┃Jackie is a serial killer who relentlessly pursues and massacres her targets. She gains even more power with every kill.
 CharacterPlayTip/2┃Aya is a ranged character with high stability who can easily hit enemies with her skills from a long distance.
 CharacterPlayTip/3┃Fiora uses her agility as a fencer to control her distance from enemies, dealing extra damage with each successive hit.
@@ -17618,6 +17734,7 @@ CharacterPlayTip/66┃Arda engages in battles using artifacts. He is able to unc
 CharacterPlayTip/67┃Abigail defies the concept of space and teleports herself to her target. She swings her large scythe to deal massive damage in the area.
 CharacterPlayTip/68┃Alonso is a leader of action who specializes in controlling enemies with his magnetic powers and holding up the front lines.
 CharacterPlayTip/69┃Leni loves to play pranks on everyone, taunting her enemies and helping her allies with her toys.
+CharacterPlayTip/70┃Tsubame is a rigorously trained combat agent. She carves marks on her targets with her kunai and cuts through them to deal great damage.
 
 
 --xxxxxxxxxx--
