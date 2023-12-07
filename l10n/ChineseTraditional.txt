@@ -659,6 +659,7 @@ ToolTipType/Shield┃護盾吸收
 ToolTipType/MaxHpRegen┃體力恢復上限
 ToolTipType/MaxSkill┃技能增幅上限
 ToolTipType/MoveSpeedUpRatio┃移動速度增加量(%)
+ToolTipType/MoveSpeedUpTime┃移動速度增加持續時間
 ToolTipType/AttackSpeedUpRatio┃攻擊速度增加量(%)
 ToolTipType/DotDamage┃持續傷害
 ToolTipType/JudgmentDamage┃最後的審判傷害
@@ -928,7 +929,7 @@ ToolTipType/Haze_GrenadeOuterDamage┃40mm手榴彈外圍傷害量
 ToolTipType/Haze_SubmachinegunDamage┃衝鋒槍連發傷害量
 ToolTipType/Haze_RocketDamage┃火箭傷害量
 ToolTipType/Haze_AccRocketDamage┃火箭加速器傷害量
-ToolTipType/Haze_GrenadeCooldown┃40mm手榴彈冷卻
+ToolTipType/Haze_GrenadeCooldown┃40mm手榴彈充能時間
 ToolTipType/Haze_GrenadeCost┃40mm手榴彈消耗量
 ToolTipType/Haze_SwingDamage┃揮動傷害量
 ToolTipType/ReinforcedDamage┃[玻光重劍] 傷害
@@ -981,6 +982,7 @@ ToolTipType/AlonsoActive2ProjectileDamage┃投射物傷害
 ToolTipType/AlonsoActive2FinishDamage┃技能結束傷害量
 ToolTipType/AlonsoActive4FinishDamage_Min┃技能結束傷害量 (最小)
 ToolTipType/AlonsoActive4FinishDamage_Max┃技能結束傷害量 (最大)
+ToolTipType/TsubamePassiveCooldownDeacrease┃[變身術] 冷卻縮減量
 ToolTipType/HpThreshold┃體力消耗限制
 ToolTipType/DurationReset┃持續時間更新效果
 ToolTipType/MoveRange┃移動距離
@@ -1135,6 +1137,7 @@ SummonData/Name/1293┃巨型魚叉
 SummonData/Name/1294┃巨型魚叉
 SummonData/Name/1351┃微型相機
 SummonData/Name/1458┃尼姆羅德之門
+SummonData/Name/1480┃木樁
 MonsterDropRandom/1┃掉出<color=white>肉</color>或<color=white>羽毛</color>中的一個物品。
 MonsterDropRandom/2┃高機率掉出<color=white>皮革</color>或低機率掉出<color=white> 一般</color> 等級物品。
 MonsterDropRandom/3┃掉出<color=white>一般</color> 物品。
@@ -1445,7 +1448,7 @@ Skin/OnSelectVO/1058002┃久違的假期，要好好享受。
 Skin/OnSelectVO/1018004┃這是一個明智的選擇。
 Skin/OnSelectVO/1003004┃這是主人的委託，現在開始執行任務。
 Skin/OnSelectVO/1021003┃女僕洛茲，準備好了！
-Skin/OnSelectVO/1048003┃今天來嘗試一下新方法...！
+Skin/OnSelectVO/1048003┃你喜歡像素藝術嗎...？
 Skin/Desc/1001001┃血染的電鋸，能將人撕碎的剪與刀。\n如果聽到愉快的哼歌聲，逃跑是唯一的選擇。
 Skin/Desc/1001002┃血色的玫瑰，在殺戮中綻放。
 Skin/Desc/1001003┃有人制定規則，就一定有人破壞規則。
@@ -1620,8 +1623,10 @@ Skin/Desc/1025003┃全體人員，讓我們一起歡迎不速之客。
 Skin/Desc/1056002┃看起來，你需要冷靜一下。
 Skin/Desc/1016004┃那麼，我們應該去哪裡呢？
 Skin/Desc/1067001┃做了壞事就該受到懲罰。
-Skin/Desc/1048003┃用一個個小點組成一副作品的時候，很期待吧...！
+Skin/Desc/1048003┃用一個個小點組合而成，是不是很讓人期待？
 Skin/Desc/1068001┃歲月和浪漫永不逝去。
+Skin/Desc/1012005┃我不太習慣這樣的活動....這適合我嗎？
+Skin/Desc/1022005┃準備好迎接聖誕禮物了嗎？
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生氣
 Emotion_Name_002┃笑
@@ -2085,7 +2090,7 @@ Event_EvaCongrats_3056┃伊娃 告白禮盒
 Event_SuaDizzy_3057┃秀雅 用頭收禮物！
 Event_LyanhGhost_3058┃伊安 毛骨悚然
 Event_VanyaButterfly_3059┃萬尼亞 晚安
-Emotion_William01_NP┃威廉 HI！
+Emotion_William01_NP┃威廉 Hi！
 Emotion_William02_NP┃威廉 哭哭
 Emotion_William03_NP┃威廉 生氣
 Emotion_William04_NP┃威廉 OK
@@ -2245,10 +2250,18 @@ Emotion_DebiMarlene03_NP┃黛比&瑪蓮 嗯...
 Emotion_DebiMarlene04_NP┃黛比&瑪蓮 讚！
 Emotion_Isaac01_NP┃艾薩克 憤怒
 Emotion_Isaac02_NP┃艾薩克 來一杯
-Emotion_Isaac03_NP┃伊薩卡 來試試看
-Emotion_Isaac04_NP┃伊薩卡 血壓飆升
+Emotion_Isaac03_NP┃艾薩克 來試試看
+Emotion_Isaac04_NP┃艾薩克 血壓飆升
 Emotion_PixelArtTia_2048006┃像素畫家 蒂亞 不要！
 Emotion_PixelArtTia_2048007┃像素畫家 蒂亞 嘿嘿
+Emotion_Xmas2023_Hyejin_2012009┃慧珍的禮物
+Emotion_Xmas2023_Sissela_2015007┃希瑟拉的禮物
+Emotion_Xmas2023_Luke_2022005┃盧克的禮物
+Emotion_Xmas2023_Elena_2050009┃艾琳娜的禮物
+Emotion_Abigail01_NP┃艾比蓋爾 觀察
+Emotion_Abigail02_NP┃艾比蓋爾 想到了！
+Emotion_Abigail03_NP┃艾比蓋爾 讚！
+Emotion_Abigail04_NP┃艾比蓋爾 OK
 Collection/Name/11001┃一切都是爲了我的女兒...
 Collection/Name/11002┃你喜歡像素藝術嗎？
 Collection/Name/13001┃啊不是...怎麼這樣
@@ -2260,6 +2273,7 @@ Collection/Name/13006┃娜佳的新形象
 Collection/Name/13007┃被子外面很危險！
 Collection/Name/13008┃辛苦了。
 Collection/Name/13009┃眼睛要出汗了...
+Collection/Name/21001┃節日特別活動！
 Shop/Desc/Emotion_Hart01_NP┃可在遊戲中使用表情符號進行交流。
 Shop/Desc/Emotion_Hart02_NP┃可在遊戲中使用表情符號進行交流。
 Shop/Desc/Emotion_Hart03_NP┃可在遊戲中使用表情符號進行交流。
@@ -3656,11 +3670,12 @@ Goods/Name/2804023┃白玫瑰
 Goods/Name/2804024┃目標
 ItemType/TEAMSLOT_BG/Name┃隊伍格背景
 Goods/Name/3401001┃預設隊伍格背景
+Goods/Name/3402001┃節日小熊
 Goods/Name/3403001┃機械電路
 Goods/Name/3403002┃星光之夜
 Goods/Name/3403003┃秋日楓紅
+Goods/Name/3403004┃節日樹
 Goods/Name/3419001┃冬日雪花
-Goods/Name/3419002┃聖誕樹
 Shop/NPPromotion1┃{0} NP
 Shop/NPPromotion2┃+ {0} 獎勵 NP
 ItemType/BOOSTER_ACOIN_2X/Name┃A-Coin Boost
@@ -3801,6 +3816,11 @@ Product/Name/ThanksGiving_Special_2023_Pack_02┃英雄碎片箱子組
 Product/Name/ThanksGiving_Special_2023_Pack_03┃夏日&狩獵箱子組
 Product/Name/BlackFriday2023_ComboPack_01┃黑色星期五組合包
 Product/Name/PixelArtTia_CollectPack_01┃像素畫家 蒂亞收藏組合包
+Product/Name/Xmas2023Pack_SINGLE_01┃節日DATA箱
+Product/Name/Goodbye2023_Pack_01┃2023 LAST SALE組合包1
+Product/Name/Goodbye2023_Pack_02┃2023 LAST SALE組合包2
+Product/Name/Goodbye2023_Pack_03┃2023 LAST SALE組合包3
+Product/Name/Goodbye2023_Pack_04┃2023 LAST SALE組合包4
 Product/Name/TEST_SEQ_PRODUCTS┃시퀀스 패키지
 Product/Name/TEST_SEQ_PRODUCTS_01┃연구소 데이터 세트 (5개)
 Product/Name/TEST_SEQ_PRODUCTS_02┃연구소 데이터 세트 (3개)
@@ -3854,7 +3874,7 @@ Shop/Desc/Hyunwoo_Emblem_Pack_01┃組合包內容\n\n- 玹雨 角色\n- 暗巷�
 Shop/Desc/LiDailin_Emblem_Pack_01┃組合包內容\n\n- 李黛琳 角色\n- 叛逆 李黛琳 造型\n- 龍之舞 李黛琳 造型\n- 李黛琳  表情 4款\n- 李黛琳  頭像\n- 李黛琳  個人邊框\n- 李黛琳  個人背景\n- A-Coin Boost 3日\n- ER 積分 Boost 3日\n\n* 已持有的物品適用折扣，不適用退款。\n* 根據已解鎖的商品購買價格將有所變動。\n* 商品購買後將直接發放至藏品。
 Shop/Desc/Jackie_Emblem_Pack_01┃組合包內容\n\n- 傑琪 角色\n- 絞殺者 傑琪 造型\n- 血宴禮服 傑琪 造型\n- 傑琪  表情 4款\n- 傑琪  頭像\n- 傑琪  個人邊框\n- 傑琪  個人背景\n- A-Coin Boost 3日\n- ER 積分 Boost 3日\n\n* 已持有的物品適用折扣，不適用退款。\n* 根據已解鎖的商品價格將有所變動\n* 商品將直接發放至藏品。
 Shop/Desc/Rio_Emblem_Pack_01┃組合包內容\n\n- 莉央 角色\n- 巫女 莉央 造型\n- 正義的魔法少女 莉央 造型\n- 莉央 4款表情\n- 莉央 頭像\n- 莉央 個人邊框\n- 莉央 個人背景\n- A-Coin Boost 3日\n- ER 積分 Boost 3日\n\n* 已持有的物品適用折扣，不適用退款。\n* 根據已解鎖的商品價格會有所變動。\n* 商品直接發放至藏品。
-Shop/Desc/UR_Grade_Skin_Voucher_01┃※ 該商品僅能購買5次。\n※ 可以從商品列表中獲得一款未持有的高級/稀有造型。\n※ 含有未通過商店出售的活動造型。\n※ 請通過箱子機率公告確認詳細商品列表。\n※ 當已擁有商品列表中的造型時，進行購買時將會重複獲得已持有的造型。\n※ 根據商品列表中未持有造型的計算獲得造型的機率。\n※ 購買時將立即發放。
+Shop/Desc/UR_Grade_Skin_Voucher_01┃※ 可以從商品列表中獲得一款未持有的高級/稀有造型。\n※ 含有未通過商店出售的活動造型。\n※ 請通過箱子機率公告確認詳細商品列表。\n※ 當已擁有商品列表中的造型時，進行購買時將會重複獲得已持有的造型。\n※ 根據商品列表中未持有造型的計算獲得造型的機率。\n※ 購買時將立即發放。
 Shop/Desc/VampireShoichi_CollectPack_01┃組合包內容\n\n- 吸血鬼 彰一 2款表情\n- 吸血鬼 彰一 頭像\n- 吸血鬼 彰一 個人邊框\n- 吸血鬼 彰一 個人背景\n- 渡假代幣 10個\n- A-Coin Boost (3日)\n- ER 積分 Boost (3日)\n\n※ 商品將發放至藏品中並立即適用，不會發放至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。
 Shop/Desc/Aya_Emblem_Pack_01┃組合包內容\n\n- 綾 角色\n- 警察 綾 造型\n- 煙火慶典 綾 造型\n- 綾 4款表情\n- 綾 頭像\n- 綾 個人邊框\n- 綾 個人背景\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n* 已持有的物品適用折扣，不適用重複退款。\n* 根據已解鎖的商品價格將有所變動。\n* 商品將直接發放至藏品。
 Shop/Desc/Fiora_Emblem_Pack_01┃組合包內容\n\n- 菲歐拉 角色\n- 將校 菲歐拉 造型\n- 劍客 菲歐拉 造型\n- 菲歐拉 4款表情\n- 菲歐拉 頭像\n- 菲歐拉 個人邊框\n- 菲歐拉 個人背景\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n* 已持有的物品適用折扣，不適用退款。\n* 根據已解鎖的商品價格將有所變動\n* 商品將直接發放至藏品。
@@ -3865,6 +3885,11 @@ Shop/Desc/ThanksGiving_Special_2023_Pack_02┃組合包內容\n\n- 英雄造型�
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃組合包內容\n\n- 夏日&狩獵箱 2個\n- 開箱鑰匙 2個\n- A-Coin 5,000\n- 渡假代幣 10個
 Shop/Desc/BlackFriday2023_ComboPack_01┃組合包內容\n\n- 造型DATA箱 2個\n- 研究中心DATA箱 2個\n- 開箱鑰匙 2個\n- 戰鬥女僕代幣 10個
 Shop/Desc/PixelArtTia_CollectPack_01┃組合包內容\n\n- 像素畫家 蒂亞 2款表情\n- 像素畫家 蒂亞 頭像\n- 像素畫家 蒂亞 個人邊框\n- 像素畫家 蒂亞 個人背景\n- 戰鬥女僕代幣 10個\n- A-Coin Boost (3日)\n- ER 積分 Boost (3日)\n\n※ 商品將發放至藏品中並立即適用，不會發放至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。
+Shop/Desc/Xmas2023Pack_SINGLE_01┃組合包內容\n\n- 節日DATA箱 1個\n\n可以在製作所內使用開箱鑰匙開啟已購買的箱子。
+Shop/Desc/Goodbye2023_Pack_01┃<b><color=#FFBB00>[內容物]</color></b>\n\n8款造型\n血宴禮服 傑琪、警察 綾、冬季四葉草 希瑟拉、巫女 莉央、睡衣 比安卡、極地探險 納塔朋、死神 查希爾、BOSS 馬格努斯\n\n<#00ffee>[角色/表情 100NP組合] </color>\n8位角色及表情(每位角色4款) 100NP組合\n- 傑琪、綾、希瑟拉、莉央、比安卡、納塔朋、查希爾、馬格努斯\n\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n<b><color=#F15F5F>[購買前注意事項]</color></b> \n※ 商品將直接發放至藏品，不會發送至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。\n※ 以上商品不適用重複退款，而是適用折扣。\n※ 除100NP組合外，根據已持有的物品，商品售價可能會發生變動。
+Shop/Desc/Goodbye2023_Pack_02┃<b><color=#FFBB00>[內容物]</color></b>\n\n8款造型\n火焰兵 亞莉安娜、旅行者 李黛琳、副首領 倫諾克斯、小紅帽 娜汀、審判官 琪婭拉、軍醫 凱茜、暗巷裡 盧克、白王后 阿德拉\n\n<#00ffee>[角色/表情 100NP組合]</color>\n8位角色及表情(每位角色4款) 100NP組合\n- 亞莉安娜(5款)、李黛琳、倫諾克斯、娜汀、琪婭拉(5款)、凱茜、盧克、阿德拉\n\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n<b><color=#F15F5F>[購買前注意事項]</color></b> \n※ 商品將直接發放至藏品，不會發送至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。\n※ 以上商品不適用重複退款，而是適用折扣。\n※ 除100NP組合外，根據已持有的物品，商品售價可能會發生變動。
+Shop/Desc/Goodbye2023_Pack_03┃<b><color=#FFBB00>[內容物]</color></b>\n\n8款造型\n消防隊員 艾絲黛爾、挑戰者 皮奧洛、極致服務 彰一、太空工程師 芭芭拉、萬聖南瓜 席琳、森林摯友 艾瑪、紫心皇后 哈特、白璃幻夢 塔齊雅\n\n<#00ffee>[角色/表情 100NP組合] </color>\n8位角色及表情(每位角色4款) 100NP組合\n- 艾絲黛爾、皮奧洛、彰一、芭芭拉、席琳、艾瑪、哈特、塔齊雅\n\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n<b><color=#F15F5F>[購買前注意事項]</color></b> \n※ 商品將直接發放至藏品，不會發送至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。\n※ 以上商品不適用重複退款，而是適用折扣。\n※ 除100NP組合外，根據已持有的物品，商品售價可能會發生變動。
+Shop/Desc/Goodbye2023_Pack_04┃<b><color=#FFBB00>[內容物]</color></b>\n\n8款造型\n冬日戲雪 愛琳、幸運兔子 克洛伊、幸運兔子 伊索爾、熊貓大主廚 秀凱、黑暗街頭 蘿拉、私家偵探 亞歷克斯、暗巷裡 威廉、禁錮者 伊安\n\n<#00ffee>[角色/表情 100NP組合] </color>\n8位角色及表情(每位角色4款) 100NP組合\n- 愛琳、克洛伊、伊索爾、秀凱、蘿拉、亞歷克斯、威廉、伊安\n\n- A-Coin Boost (3日)\n- ER積分 Boost (3日)\n\n<b><color=#F15F5F>[購買前注意事項]</color></b> \n※ 商品將直接發放至藏品，不會發送至禮物箱。\n※ 商品中包含Boost時購買後將立即適用，不支援退款。\n※ 以上商品不適用重複退款，而是適用折扣。\n※ 除100NP組合外，根據已持有的物品，商品售價可能會發生變動。
 Product/Name/SEASON_PASS_S5┃賽季S5組合包
 Shop/Desc/SEASON_PASS_S5┃以優惠價預購將在賽季S5推出的組合商品。
 Product/Name/SEASON_PASS_S6┃賽季S6組合包
@@ -3900,7 +3925,7 @@ MONTHLY_PURCHASE_SET_02┃每月開箱鑰匙組
 Shop/Desc/MONTHLY_PURCHASE_SET_02┃包含3個開箱鑰匙。\n開箱鑰匙可以打開任何一種DATA箱。\n\n將於每月最後一天的23:00(GMT+8)重置購買次數。\n可購買次數將於每月進行更新重置。
 Goods/Name/3102003┃每日箱子
 Goods/Name/3102005┃高級 / 稀有造型補給券
-Shop/Desc/DAILY_PURCHASE_SET_01┃可以獲得研究中心DATA箱、開箱鑰匙、NP、一般材料或者代幣中其中一種。\n\n將於每日23:00(GMT+8)重置購買次數。\n<color=orange>購買時立即開啟。</color>
+Shop/Desc/DAILY_PURCHASE_SET_01┃可以獲得研究中心DATA箱、開箱鑰匙、NP、DATA材料或者代幣中其中一種。\n\n將於每日23:00(GMT+8)重置購買次數。\n<color=orange>購買時立即開啟。</color>
 Shop/Desc/S10_KEY_LIMITED┃開箱鑰匙可以打開任何一種DATA箱。\n\n每個帳戶交換的次數無法進行重置。
 Shop/Desc/Vacance Token┃渡假代幣可用於交換製作所中交換所內的商品。<color=red>\n代幣具有使用期效。到期後無法繼續使用，請務必確認有效期限間。</color>
 Shop/Desc/BatlleMaids Token┃戰鬥女僕代幣可用於交換製作所中交換所內的商品。<color=red>\n代幣具有使用期效。到期後無法繼續使用，請務必確認有效期限間。</color>
@@ -3988,6 +4013,9 @@ ItemTag/Ex_Regen┃體力再生
 ItemTag/Ex_Sight┃視野
 ItemTag/Unique_Range┃普攻射程增加
 ItemTag/Ex_None┃-
+ItemTag/Ex_Stun┃暈眩效果
+ItemTag/Ex_Root┃束縛效果
+ItemTag/Ex_Slow┃移動速度變緩
 ItemTag/Ex_ItemSkill┃主動物品技能
 ItemTag/Ex_Dummy1┃降癒
 ItemTag/Ex_Dummy2┃功能
@@ -3999,6 +4027,7 @@ Shop/Spray/Desc/Base┃可以在地上留下標識。
 Shop/EmblemMark/Desc/Base┃可以用頭像裝飾個人資料。
 Shop/EmblemBG/Desc/Base┃可以用背景裝飾個人資料。
 Shop/EmblemOutline/Desc/Base┃可以用邊框裝飾個人資料。
+Shop/TeamslotBG/Desc/Base┃可以裝飾隊伍大廳的隊伍格背景。
 전장보상재화부족┃戰場標識不足。
 Product/ResetTime/Week┃{0}週
 Product/ResetTime/Day┃{0}天
@@ -4012,7 +4041,7 @@ ItemType/CHARACTER/Name┃實驗體
 ItemType/EVENT_NP/Name┃活動NP
 ItemType/RANDOM_BOX/Name┃箱子
 ItemType/RANDOM_KEY/Name┃開箱鑰匙
-ItemType/LOOT_TOKEN/Name┃賽季代幣
+ItemType/LOOT_TOKEN/Name┃代幣
 제작소┃製作所
 교환소┃交換所
 추가상품/박스┃箱子
@@ -4020,6 +4049,10 @@ Forge/Category/Recent┃近期獲得
 Forge/Category/All┃全部
 Forge/Category/CharacterSkin┃造型
 캐릭터 보유중┃持有中
+미보유 아이템┃未持有的物品
+선택권 아이템 선택┃選擇
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
 Forge/Category/Character┃角色
 Forge/Category/Emotion┃表情
 Forge/Category/Emblem┃徽章
@@ -4063,6 +4096,7 @@ LootRandomBoxWindow/Count┃持有
 한번에 받기┃領取全部
 1회┃開啟
 LootRandomBoxWindow/Btn_Once┃開啟
+선택권 사용┃開啟
 10회┃開啟10次
 LootRandomBoxWindow/Btn_All┃開啟10次
 전체보상 정보보기┃全部獎勵
@@ -4110,6 +4144,9 @@ Forge/ToolTip/disintegrateTicket┃無需額外消耗貨幣即可分解物品。
 Rare-Matter┃稀有DATA材料
 Normal-Matter┃DATA材料
 Forge/ToolTip/DisintegrateMode┃選擇要分解的物品。
+Forge/ToolTip/DisintegrateMode/Btn_Filter┃更改分解物品的篩選條件。
+Forge/ToolTip/DisintegrateMode/Btn_Select┃請按照當前篩選重新選擇物品。
+Forge/ToolTip/DisintegrateMode/Btn_Reset┃重置所有已選物品。
 Forge/ToolTip/HighGradeItemAlert┃<color=red>列表中含有高級物品。</color>
 Forge/ToolTip/RightClickToRemove┃點擊右鍵以從列表中刪除所選項目。
 Forge/ToolTip/SelectToAdd┃請選擇想要分解的物品。
@@ -4126,11 +4163,15 @@ Forge/TokenExchange/NotEnoughToken┃代幣不足。
 Forge/TokenExchange/ExceedExchangeLimit┃超過交換上限
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Months┃{0}月{1}天{2}小時{3}分
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Days┃{0}天{1}小時{2}分
-LootExchangeWindow/tokenInfo/TokenTimeRemainder/Hours┃{0}小時{1}分
+ㅈ┃{0}小時{1}分
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Minutes┃{0}分{1}秒
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Seconds┃{0}秒
-LootExchangeWindow/tokenInfo/TokenRemainder┃剩餘時間結束後代幣將會過期，屆時將以一定的比例轉換為下一個賽季的代幣。
+LootExchangeWindow/tokenInfo/TokenRemainder┃剩餘時間結束後，將無法在交換所中使用該代幣。
+선택권 만료기간 안내┃剩餘時間結束後無法使用該物品。
 교환 남은 기간: ┃代幣剩餘時間 :
+제작소 아이템 남은 기간┃剩餘時間
+선택권 선택 확인┃確認選擇該物品嗎？
+선택권 중복 선택 확인┃選擇已持有的物品時，將重複獲得物品。
 재화가 부족합니다. 제작소(상자)로 이동하시겠습니까?┃貨幣不足，要前往製作所嗎？
 재화가 부족합니다. 제작소로 이동하시겠습니까?┃貨幣不足，要前往製作所嗎？
 {0} 회┃{0}次
@@ -4138,7 +4179,7 @@ Goods/Name/3102001┃造型DATA箱
 Goods/Name/3102002┃研究中心DATA箱
 Goods/Desc/3102001┃可以獲得造型和造型碎片的箱子。\n但無法獲得排位獎勵與一些以特殊形式使用的造型。\n\n可以在商店組合包或其他商品中購買箱子。
 Goods/Desc/3102002┃可以獲得多種物品和碎片的箱子。\n但無法獲得排位獎勵與一些以特殊形式使用的造型。\n\n可以在商店組合包或其他商品中購買箱子。
-Goods/Desc/3102003┃可獲得以下商品其中一種 : 研究中心DATA箱、開箱鑰匙、NP、一般材料或代幣。
+Goods/Desc/3102003┃可獲得以下商品其中一種 : 研究中心DATA箱、開箱鑰匙、NP、DATA材料或代幣。
 Goods/Name/3102006┃夏日&狩獵箱
 Goods/Desc/3102006┃可以獲得造型的箱子。\n通過連結可以查看商品內容物。
 Goods/Name/3102007┃英雄造型碎片箱
@@ -4154,6 +4195,8 @@ Goods/Desc/3303001┃代幣可以通過ER通行證、賽季包與製作所分解
 Goods/Name/3303999┃哩程
 Goods/Desc/3303999┃購買NP商品時將獲得哩程。
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃查看全部機率
+Goods/Name/4000000┃[더미] 영웅 등급 스킨 선택권
+Goods/Desc/4000000┃여러가지 아이템들 중 1개를 선택하여 확정적으로 획득할 수 있습니다.\n랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.
 Goods/Name/1┃Twitch Drops
 Goods/Name/3┃隨機角色箱
 Goods/Desc/1┃可獲得300活動NP或1,500A-Coin獎勵。
@@ -4163,9 +4206,9 @@ Goods/Name/9999998┃未解鎖造型補給券 <#00ffee>No.02</color>
 Goods/Name/3119001┃未解鎖造型補給券 <#00ffee>No.01</color>
 Goods/Name/3119002┃未解鎖造型補給券 <#00ffee>No.02</color>
 Goods/Name/3119003┃未解鎖造型補給券 <#00ffee>No.03</color>
-Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 盛夏派對 秀雅、轉學生 比安卡、傲嬌豬豬 玹雨、系統衝擊 傑琪、小威烘焙坊 希瑟拉\n----\n<color=#2AC0FF> 稀有造型</color> : 幽靈獵人 慧珍、盛夏派對 里昂、鈷進化 查希爾、盛夏派對 莉央、甜蜜情人 伊娃、叛逆 馬格努斯、問題學生 妮琪、見習魔女 蒂亞、化裝舞會 珍妮、問題終結者 艾登、創作歌手 普里亞、愛的魔法少女 莉央\n----\n<color=#35FF94>高級造型</color> : 海軍突擊隊 里昂\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
-Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 夏日海灘 妮琪、幽靈獵人 琪婭拉、學生會長 艾琳娜、迷幻醫生 凱茜、夢德拉\n----\n<color=#2AC0FF>稀有造型</color> : 未來戰士 倫諾克斯、可愛吼吼 黛琳、賣萌汪汪 雪、甜蜜情人 伊娃、叛逆 馬格努斯、問題學生 妮琪、見習魔女 蒂亞、化裝舞會 珍妮、問題終結者 艾登、創作歌手 普里亞、愛的魔法少女 莉央\n----\n<color=#35FF94>高級造型</color> : 幽靈獵人 伊索爾, 海軍突擊隊 里昂\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
-Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 學生會長 艾琳娜，瘟疫醫生 丹尼爾，夏日魔術師 艾瑪，冰雪慶典 哈特，轉學生 比安卡\n----\n<color=#2AC0FF>稀有造型</color> : 冰雪慶典 希瑟拉，星夜極光 莉央，不祥之夢 萬尼亞，偶像 卡米洛，惡靈獵手 約翰，拳擊手的挑戰 揚，探險家 納塔朋，見習消防員 艾絲黛爾，海盜 倫諾克斯，寒冬 艾琳娜，女僕 亞莉安娜，蜜糖水手 Eleven\n----\n<color=#35FF94>高級造型</color> : 冰雪慶典 彰一，OP.GG 菲利克斯，GeForce Now 希爾維婭\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 盛夏派對 秀雅、轉學生 比安卡、傲嬌豬豬 玹雨、系統衝擊 傑琪、小威烘焙坊 希瑟拉\n----\n<color=#2AC0FF> 稀有造型</color> : 幽靈獵人 慧珍、盛夏派對 里昂、鈷進化 查希爾、盛夏派對 莉央、甜蜜情人 伊娃、叛逆 馬格努斯、問題學生 妮琪、見習魔女 蒂亞、化裝舞會 珍妮、問題終結者 艾登、創作歌手 普里亞\n----\n<color=#35FF94>高級造型</color> : 海軍突擊隊 里昂\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 幽靈獵人 琪婭拉、學生會長 艾琳娜、迷幻醫生 凱茜、夢德拉\n----\n<color=#2AC0FF>稀有造型</color> : 未來戰士 倫諾克斯、可愛吼吼 黛琳、賣萌汪汪 雪、甜蜜情人 伊娃、叛逆 馬格努斯、問題學生 妮琪、見習魔女 蒂亞、化裝舞會 珍妮、問題終結者 艾登、創作歌手 普里亞\n----\n<color=#35FF94>高級造型</color> : 幽靈獵人 伊索爾, 海軍突擊隊 里昂\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄造型</color></b> : 學生會長 艾琳娜，瘟疫醫生 丹尼爾，夏日魔術師 艾瑪，冰雪慶典 哈特，轉學生 比安卡\n----\n<color=#2AC0FF>稀有造型</color> : 冰雪慶典 希瑟拉，星夜極光 莉央，不祥之夢 萬尼亞，偶像 卡米洛，拳擊手的挑戰 揚，探險家 納塔朋，見習消防員 艾絲黛爾，海盜 倫諾克斯，寒冬 艾琳娜，蜜糖水手 Eleven\n----\n<color=#35FF94>高級造型</color> : 冰雪慶典 彰一，OP.GG 菲利克斯，GeForce Now 希爾維婭\n\n<b><color=#F15F5F>[購買前的注意事項]</color></b>\n※ 該商品可以獲得商品列表中未解鎖的造型。\n※ 該商品購買後將立即發送。\n※ 當商品列表中的全部造型都已解鎖時，購買後將隨機獲得列表中的一款。\n※ 可以通過箱子機率公告確認商品列表中個別商品的獲得機率。
 Product/Name/S10_RARE_MATTER┃稀有DATA材料 X 1
 Product/Name/S10_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/S10_S11TOKEN_EXCHANGE┃戰鬥女僕代幣 X 2
@@ -4223,6 +4266,7 @@ EP 토큰 재화 툴팁 설명┃可用於EP專屬商店的貨幣。 \n通行證
 지역선택을 위해 연구소로 이동합니다┃進入研究所選擇區域。
 시스템 벤 캐릭터┃無法使用此實驗體。
 팀원과 같은 캐릭터를 선택할 수 없습니다.┃無法選擇與隊友相同的實驗體。請更換角色。
+루트 경로 외 지역 선택 시 경고 ┃未登錄路徑的區域。
 미보유┃未擁有
 정렬하기┃分類
 StrategyMap/루트 선택┃選擇路徑
@@ -4680,10 +4724,12 @@ SEASON_22┃正式賽季 S13
 RankManagementSystem┃排位運行方式
 CurrentTier┃目前段位
 RankEntryCostRP┃排位賽入場費
-RankEntryCostRPDesc┃根據當前段位及段位配對立即扣除RP
+RankEntryCostRPDesc┃根據當前段位及段位配對立即扣除RP\n2人預組 : 增加{0}\n3人預組 : 增加{1}
 Rank_Introduce01┃和實力相近的隊伍競爭。
 Rank_Introduce02┃在每場對局中獲得排位分數(RP)提升排名。
 Rank_Introduce03┃以預先組隊排名最高的隊友為準進行對局。
+Rank_Introduce04┃根據配對前形成的隊伍人數調整入場費。
+Rank_Introduce05┃放棄遊戲或逃跑時，將失去對局中獲得的RP並扣取2倍入場費。
 Rank_SeeMore┃查看詳情
 RankDetailedManagementSystem┃排位詳細運行方式
 RankKillRP┃排名 / 擊殺分數
@@ -4834,6 +4880,7 @@ InstantCastWeaponSkill┃立即施法武器技能。
 InstantCastTacticalSkill┃立即施法戰術技能。
 InstantUseActiveItem1┃立即施法物品技能。
 ChangeCameraMode┃將攝影頭固定在實驗體位置，或解除固定。
+CameraDragScroll┃按住快捷鍵移動視角。
 OpenCombineWindow┃打開製作菜單。
 OpenScoreboard┃打開遊戲現況。
 OpenMap┃打開地圖。(滾輪鍵除外)
@@ -5044,7 +5091,7 @@ Vivox점검팝업┃語音聊天出現問題，目前無法使用。
 원격전송드론 호출┃呼叫無人機配送
 원격전송드론 호출 설명┃消耗榮譽值呼叫無人機配送來獲得物品。\n通過點擊對應物品的無人機配送圖示即可使用。
 원격전송드론 호출 사용법┃點擊右鍵呼叫無人機配送
-원격드론호출 잠금 토글┃可以設置探索引導內的無人機配送。
+원격드론호출 잠금 토글┃可以設置探索引導內的無人機配送。\n設置 - 遊戲 - 通過詳細設置 On/Off。
 숙련도┃熟練度
 숙련도 설명┃熟練度會隨著各種行動增加。\n並且不同的熟練度會獲得不同的熟練效果。
 제작 가이드┃製作指南
@@ -5271,7 +5318,6 @@ SP 재생┃耐力值再生
 고유 이동 속도┃獨有移動速度
 비전투중 체력회복┃非戰鬥中 體力恢復
 비전투중 스태미너회복┃非戰鬥中 耐力恢復
-사용시영구적으로┃使用時永久
 모드사용가능여부┃可使用模式
 모드사용불가┃該物品無法在此模式下使用。
 부활시아이템소멸┃該物品在<color=#B90005>快速再生時將消失。</color>
@@ -5364,6 +5410,8 @@ TempNickname┃實驗體{0}
 매칭 대기 인원 21명 이상┃配對隊列超過21人
 매칭오픈종료안내┃配對模式的開放時間已結束。\n請進行其他遊戲模式。\n很抱歉給您帶來不便。
 시도 중┃連接中
+WarnTextIsExceptDuoPremadeTeam┃禁用不包括雙人預組隊時，\n配對速度可能會變快。
+CheckBoxIsExcepDuoPreamdeTeam┃不包括雙人預組隊
 대기실로 나가기┃離開
 신고하기┃檢舉
 관전하기┃觀戰
@@ -5648,7 +5696,8 @@ CreditResurrectionEnable┃可以復活
 크레딧지목┃{0}({1})指定{2}({3})持有的<color=#F4FF63>{4}</color>榮譽值
 아이템보유┃{0}({1})擁有{3}個{2}。
 아이템지목┃{0}({1})目標{2}。
-장착하지않음┃{0}({1})標記了{2}({3})玩家 - <color=#FF4848>沒有裝備</color><color=#C4C4C4>{4}</color> 
+아군장착하지않음┃{0}({1})標記了{2}({3})玩家 - <color=#FF4848>沒有裝備</color><color=#C4C4C4>{4}</color> 
+장착하지않음┃{0}({1}) - <color=#FF4848>沒有裝備</color><color=#C4C4C4>{4}</color> 
 아이템발견┃{0}({1})在{2}中發現{3}
 아이템탐색┃{0}({1})正在探索{2}
 아이템제작가능┃{0}({1}) : 可以製作{2}
@@ -5818,6 +5867,7 @@ SingleHard┃難
 코발트┃鈷協議
 스쿼드/코발트┃三人/鈷協議
 잘못된 매칭 모드┃請確認今天可玩模式！\n可玩模式:
+매칭 스케줄이 닫혀있을 때 나오는 팝업┃該模式當前無法進行配對。\n請確認配對日程時間。
 없음┃無
 자세히 보기┃更多詳情
 이벤트┃活動
@@ -5897,7 +5947,7 @@ CBT스케줄링크┃https://www.playeternalreturn.com/schedule/trad_cn.html
 크레딧 소비 원격 드론 호출 - 자신┃呼叫無人機配送 - 自身
 크레딧 소비 원격 드론 호출 - 아군에게 전송┃呼叫無人機配送 - 傳送至隊友
 크레딧 소비 전송콘솔 - 특수재료 호출┃Kiosk - 呼叫特殊材料
-크레딧 소비 전송콘솔 - 탈출키 호출┃Kiosk - 呼叫系統密碼
+크레딧 소비 전송콘솔 - 탈출키 호출┃Kiosk - 呼叫逃生手環
 크레딧 소비 전송콘솔 - 크레딧 부활┃Kiosk - 榮譽值復活
 크레딧 소비 전술 스킬 업그레이드┃升級戰術技能
 크레딧 소비 인퓨전 구매┃購買能量灌注
@@ -5939,7 +5989,7 @@ ServerRegion/NONE┃原因不明
 개요┃簡要
 시나리오┃故事
 보이스┃語音
-상세 스탯 보기┃查看統計數值
+상세 스탯 보기┃屬性
 Inventory/voice/category/행동┃行動
 Inventory/voice/sub/선택 완료┃完成選擇
 Inventory/voice/sub/게임 시작┃開始遊戲
@@ -6120,6 +6170,7 @@ Default/부활남은시간┃復活的剩餘時間
 AutoResurrectionHUD/CannotReviveText┃無法再復活了。
 자동부활까지 남은 시간┃選擇復活地點的剩餘時間
 하이퍼루프┃傳送門
+부활지역선택┃選擇復活區域
 부활 지점을 선택하세요.┃請選擇復活區域。
 보안 카메라┃安全監控台
 아이템 정보┃物品情報
@@ -6374,7 +6425,7 @@ ID로 가져오기┃導入路徑ID
 루트 복사하기┃導入路徑
 루트 리스트┃路徑清單
 후반 아이템 리스트┃後期物品清單
-후반 아이템 리스트 설명┃載入目前路徑收藏的後期物品列表。
+후반 아이템 리스트 설명┃可以登錄完成所有起始物品後替換的物品。\n在遊戲內也可以使用快捷鍵P將目標物品更換為已登錄的物品。\n開啟設置 – 遊戲 – 詳細設置中的「自動替換後期物品」時，\n在起始物品後不需要額外的操作就可以自動替換成首個列表中的物品。
 변경된 루트를 저장하시겠습니까?┃確定要儲存變更的路徑嗎？
 이미 공유된 루트 변경 후 저장┃更改的路徑即將共享。 確定要儲存嗎？\n(保留路徑ID。)
 루트 이름┃路徑名稱
@@ -6538,6 +6589,7 @@ Shortcut/InstantCastTacticalSkill┃戰術技能快速施法
 Shortcut/InstantUseActiveItem1┃物品技能快速施法
 Shortcut/LearnKeyGuide┃請點擊按鈕或按{0}鍵升級等級。
 Shortcut/ChangeCameraMode┃改變鏡頭模式
+Shortcut/CameraDragScroll┃拖拽滾動
 Shortcut/OpenCombineWindow┃製作菜單
 Shortcut/OpenScoreboard┃遊戲現況
 Shortcut/OpenMap┃地圖
@@ -6773,8 +6825,8 @@ NP 구매 최종 확인┃確定要用{0}NP購買此商品嗎？
 ACoin 구매 최종 확인┃確定要用{0}A-Coin購買此商品嗎？
 EP 구매 최종 확인┃確定要用{0}EP代幣購買嗎？
 현금 구매 최종 확인┃確定要購買此商品嗎？
-RARE_MAT 구매 최종 확인┃確定要使用{0}個稀有材料來購買嗎？
-NORMAL_MAT 구매 최종 확인┃確定要使用{0}個一般材料來購買嗎？
+RARE_MAT 구매 최종 확인┃確定要使用{0}個稀有DATA材料來購買嗎？
+NORMAL_MAT 구매 최종 확인┃確定要使用{0}個DATA材料來購買嗎？
 CharacterDropDown/Name┃名稱順序
 CharacterDropDown/MostPlay┃常用的角色順序
 CharacterDropDown/LetterAscend┃按字母 ▲
@@ -8055,6 +8107,22 @@ Season10/Name┃<color=#83F5FF>渡假</color>
 Season11/Name┃<color=#FFF8E0>戰鬥女僕</color>
 SeasonToBeAdded/Name┃新賽季\n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})已終止對話。
+100001_Title┃賽季S3 簽到簿
+10000101_7_Title┃<亞莉安娜 好喝！>組合
+10000101_7_Desc┃<亞莉安娜 好喝！>頭像及表情
+10000101_14_Title┃造型DATA箱子組
+10000101_14_Desc┃造型DATA箱 + 開箱鑰匙
+10000101_21_Title┃<艾絲黛爾 好喝！>組合
+10000101_21_Desc┃<艾絲黛爾 好喝！>頭像及表情
+10000101_28_Title┃造型DATA箱子組
+10000101_28_Desc┃造型DATA箱 + 開箱鑰匙
+100001_ExtraSlot_Name┃每日額外獎勵
+100001_ExtraSlot_Warning┃僅能在當日領取每日額外獎勵。
+100001_PolicyToolTip┃賽季簽到簿活動時間為2月9日 (週四) 維護後 ~  5月9日 (週四) 維護前。\n5月9日 (週四)維護前可以領取獎勵。
+200001_Title┃新玩家簽到簿
+200001_Nadja_Name┃Dr.娜佳
+200001_Nadja_Text┃很高興見到你，這是為即將到來的實驗準備的禮物。\n那就拜託你了。
+200001_PolicyToolTip┃新玩家簽到簿每個帳戶僅能適用一次。\n新玩家簽到簿在啟動後可以使用14天。\n[新玩家簽到簿]和[賽季簽到簿]可以同時使用。
 적군탈주사안내┃{0}({1})因待機時間過長而被踢出遊戲。
 아군탈주사안내┃{0}({1})因待機時間過長而被踢出遊戲。
 탈주 위험 안내┃在安全區域待機超過3分鐘的情形，\n將被認定為沒有遊戲意志，\n自動判定為逃跑處理並給予處罰。
@@ -8253,7 +8321,6 @@ Skill/Group/Desc/1003510┃菲歐拉向正前方刺劍造成<color=white>{13}</c
 Skill/Group/Desc/1003520┃菲歐拉向正前方刺劍造成<color=white>{13}</color>的技能傷害，{9}秒間敵人的移動速度減少{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{13}</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
 Skill/Group/Coef/1003100┃菲歐拉每次使用技能命中敵人，可以疊加刺擊標識。達到疊層上限時，通過技能<color=#ffffff>長刺(Q)，前進(E)，飛刺(R)</color> 引爆刺擊標識可以獲得額外效果。級別越高，需累積的疊層越少，引爆標識越容易。
 Skill/Group/Coef/1003200┃菲歐拉朝指定方向進攻，命中的敵人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{13})</color>的技能傷害。 在範圍末端被刺傷的敵人承受<color=white>{7}</color><color=#DDA0DD>(+技能增幅的{15})</color>的技能傷害，移動速度減少{4}，持續{6}秒，並被賦予2個刺擊標識。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成 {11}的技能傷害，在範圍末端刺中敵人，降低敵人的移動速度{5}，並減少長刺剩餘的冷卻時間{10}。
-Skill/Group/Coef/1003300┃菲歐拉快速向前揮劍兩次，各造成 <color=white>{3}</color><color=#DDA0DD>(+技能增幅的{10})</color>的技能傷害和 <color=white>{5}</color><color=#DDA0DD>(+技能增幅的{11})</color>的技能傷害，並分別疊加一個刺擊標識疊層。技能使用期間，減少菲歐拉所有承受傷害{7}。
 Skill/Group/Coef/1003400┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{14})</color>的技能傷害。\n命中時，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}的技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11}，<color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
 Skill/Group/Coef/1003410┃菲歐拉向指定方向突進，對碰撞的敵人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{14})</color>的技能傷害。\n命中時，在{4}秒內可以重新使用技能向指定方向移動並翻牆。\n\n<color=#FFFFC2>刺擊疊層引爆效果 : </color>刺擊疊層達到上限時命中敵人，可引爆標識造成{13}的技能傷害，並減少技能<color=#ffffff>長刺(Q)</color>的冷卻{11}，<color=#ffffff>複雜進攻(W)</color>的冷卻{12}。
 Skill/Group/Coef/1003500┃菲歐拉向正前方刺劍造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅的{12})</color>技能傷害，{9}秒間敵人的移動速度減少{10}。飛刺在{3}秒間最多可以使用3次，引爆達到上限的刺擊標識造成<color=white>{11}</color><color=#DDA0DD>(+技能增幅的{14})</color>的額外技能傷害。每次飛刺命中敵人實驗體時，都會增加傷害量。\n\n<color=#FFFFC2>命中1次 : </color>向前方刺劍，造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅的{12})</color>的技能傷害。\n\n<color=#FFFFC2>命中2次 : </color>造成前1次刺劍傷害量{4}的技能傷害。\n\n<color=#FFFFC2>命中3次 & 刺擊疊層引爆效果 : </color>造成前1次刺劍傷害量{4}的技能傷害，成功命中3次額外造成<color=white>{5}</color>真實傷害。最後一次攻擊如果引爆標識，減少<color=#ffffff>長刺(Q)</color>的冷卻減少{6}，並使敵人暈眩{7}秒。處於移動速度減少的敵人暈眩持續時間增加{8}秒。
@@ -8817,12 +8884,12 @@ Skill/Group/Desc/1021100┃如果洛茲在使用技能後{2}秒內進行普通�
 Skill/Group/Desc/1021200┃洛茲朝指定的方向開槍，給路徑上的敵人帶來<color=white>{20}</color>的技能傷害。\n如果擊中目標，{3}秒內下一個移動執行突進，同時隨意射擊的冷卻會減少{2}秒。
 Skill/Group/Desc/1021300┃洛茲舉槍進行360度全視角狙擊，給周圍的敵人帶來<color=white>{20}</color>的技能傷害，{3}秒間減少敵人{4}防禦力及{5}治癒效果。\n洛茲在狙擊期間移動速度增加{2}並重載子彈，命中敵人時冷卻減少{7}秒。
 Skill/Group/Desc/1021400┃洛茲翻越指定的目標，在目標所處位置發射一枚子彈，造成<color=white>{20}</color>的技能傷害並使目標陷入暈眩{2}秒。\n洛茲在翻越的途中不能被指定為目標。
-Skill/Group/Desc/1021500┃洛茲發射子彈，附著在敵人或地面，子彈會在{0}秒後爆破。\n如果子彈附著在敵人身上，敵人的移動速度將降低{1}，並在爆破時給敵人造成<color=white>{20}</color>的技能傷害。\n在子彈爆破前使用普攻命中敵人{4}回，子彈將馬上爆破，給造成敵人體力上限{5}的真實傷害，並在{10}秒間減少移動速度{11}。\n在子彈附著在敵人身上時使用技能擊中敵人算作{9}回普通攻擊。\n\n子彈爆破使塞姆汀高爆彈 Mk-II的技能冷卻時間減少{6}，移動速度{7}秒間增加{8}。
+Skill/Group/Desc/1021500┃洛茲發射子彈，附著在敵人或地面，子彈會在{0}秒後爆破。\n如果子彈附著在敵人身上，敵人的移動速度將降低{1}，並在爆破時給敵人造成<color=white>{20}</color>的技能傷害。\n在子彈爆破前使用普攻命中敵人{4}回，子彈將馬上爆破，給造成敵人體力上限{5}的真實傷害，並在{10}秒間減少移動速度{11}。\n在子彈附著在敵人身上時使用技能擊中敵人算作{9}回普通攻擊。\n\n子彈立即爆破使塞姆汀高爆彈 Mk-II的技能冷卻時間減少{6}，移動速度{7}秒間增加{8}。
 Skill/Group/Coef/1021100┃如果洛茲在使用技能後{2}秒內進行普通攻擊，可以快速連發兩枚子彈，給敵人造成<color=#ffd775>(+攻擊力的{0}) * (普攻增幅)</color>和 <color=#ffd775>(+攻擊力的{1}) * (普攻增幅)</color>的普攻傷害。\n\n洛茲吃帶有巧克力成分的食物可以獲得體力恢復量{3}的額外耐力值，飲用含有巧克力成分的飲料可以獲得耐力恢復量{4}的額外體力值。
 Skill/Group/Coef/1021200┃洛茲朝指定的方向開槍，給路徑上的敵人帶來<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害。\n如果擊中目標，{3}秒內下一個移動執行突進，同時隨意射擊的冷卻會減少{2}秒。
 Skill/Group/Coef/1021300┃洛茲舉槍進行360度全視角狙擊，給周圍的敵人帶來<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害，{3}秒間減少敵人{4}防禦力及{5}治癒效果。\n洛茲在狙擊期間移動速度增加{2}並重載子彈，命中敵人時冷卻減少{7}秒。
 Skill/Group/Coef/1021400┃洛茲翻越指定的目標，在目標所處位置發射一枚子彈，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害，使目標陷入暈眩{2}秒。\n洛茲在翻越的途中不能被指定為目標。
-Skill/Group/Coef/1021500┃洛茲發射子彈，附著在敵人或地面，子彈會在{0}秒後爆破。\n如果子彈附著在敵人身上，敵人的移動速度將降低{1}，並在爆破時給敵人造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color>的技能傷害。\n在子彈爆破前使用普攻命中敵人{4}回，子彈將馬上爆破，給造成敵人體力上限{5}的真實傷害，並在{10}秒間減少移動速度{11}。\n在子彈附著在敵人身上時使用技能擊中敵人算作{9}回普通攻擊。\n\n子彈爆破使塞姆汀高爆彈 Mk-Il的技能冷卻時間減少{6}，移動速度{7}秒間增加{8}。
+Skill/Group/Coef/1021500┃洛茲發射子彈，附著在敵人或地面，子彈會在{0}秒後爆破。\n如果子彈附著在敵人身上，敵人的移動速度將降低{1}，並在爆破時給敵人造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color>的技能傷害。\n在子彈爆破前使用普攻命中敵人{4}回，子彈將馬上爆破，給造成敵人體力上限{5}的真實傷害，並在{10}秒間減少移動速度{11}。\n在子彈附著在敵人身上時使用技能擊中敵人算作{9}回普通攻擊。\n\n子彈立即爆破使塞姆汀高爆彈 Mk-Il的技能冷卻時間減少{6}，移動速度{7}秒間增加{8}。
 Skill/Group/ExpansionTip/1021200┃<i>此技能無法穿越牆壁。</i>
 Skill/Group/ExpansionTip/1021400┃<i>此技能無法穿越牆壁。</i>
 CharacterState/Group/Name/1021100┃雙殺
@@ -11173,6 +11240,42 @@ CharacterState/Group/Name/1069500┃雷妮的惡作劇 - 擊退
 CharacterState/Group/Desc/1069500┃被雷妮的惡作劇擊飛了。
 CharacterState/Group/Name/1069520┃雷妮的惡作劇 - 減少移動速度
 CharacterState/Group/Desc/1069520┃撞到了牆壁，減少了移動速度。
+Skill/Group/Name/1070100┃日車流暗殺術
+Skill/Group/Name/1070200┃螺旋手裏劍
+Skill/Group/Name/1070300┃踏燕
+Skill/Group/Name/1070400┃霧隱之術
+Skill/Group/Name/1070500┃奧義 - 生死印記
+Skill/Group/Desc/1070100┃青燕普攻射程固定為<color=white>{0}</color>，普攻不會觸發暴擊，但會根據暴擊率和暴擊傷害增加量增加<color=white>{1}</color>的攻擊力。\n\n<color=white>替身術</color> : 青燕在使用<color=white>霧隱之術</color>和<color=white>奧義 - 生死印記</color>時，將於自身所處位置留下<color=white>木樁</color>。<color=white>木樁</color>維持{2}秒。
+Skill/Group/Coef/1070100┃青燕普攻射程固定為<color=white>{0}</color>，普攻不會觸發暴擊，但每1%暴擊率增加<color=white>{1}</color>攻擊力，每1%暴擊傷害增量增加<color=white>{3}</color>攻擊力。\n\n<color=white>替身術</color> : 青燕在使用<color=white>霧隱之術</color>和<color=white>奧義 - 生死印記</color>時，將於自身所處位置留下<color=white>木樁</color>。<color=white>木樁</color>維持{2}秒。
+Skill/LobbyDesc/1070100┃青燕普攻射程固定，普攻不會觸發暴擊。但會隨著暴擊率和暴擊傷害的增量增加攻擊力。\n\n<color=white>替身術</color> : 青燕在使用<color=white>霧隱之術</color>和<color=white>奧義 - 生死印記</color>時，將於自身所處位置留下<color=white>木樁</color>。
+Skill/Group/Desc/1070200┃青燕向指定位置投擲三個手裏劍。手裏劍到達路徑終點後將旋轉並對命中的敵人造成<color=white>{0}</color>的技能傷害，使敵人{1}秒間的移動速度減少{2}。\n\n對已持有標記的敵人將額外賦予一個標記。
+Skill/Group/Coef/1070200┃青燕向指定位置投擲三個手裏劍。手裏劍到達路徑終點後將旋轉並對命中的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力{3})</color>的技能傷害，使敵人{1}秒間移動速度減少{2}。\n\n對已持有標記的敵人將額外賦予一個標記。
+Skill/LobbyDesc/1070200┃青燕向指定位置投擲三個手裏劍。手裏劍到達路徑終點後將旋轉並對命中的敵人造成技能傷害，使其移動速度減緩。\n\n對已持有標記的敵人將額外賦予一個標記。
+Skill/Group/Desc/1070300┃青燕步履輕快、快速前進，移動速度在增加{1}後，於{0}秒間逐漸減緩，接下來{2}秒內發起的{4}次普攻攻速增加{3}。
+Skill/Group/Coef/1070300┃青燕步履輕快、快速前進，移動速度在增加{1}後，於{0}秒間逐漸減緩，接下來{2}秒內發起的{4}次普攻攻速增加{3}。
+Skill/LobbyDesc/1070300┃青燕步履輕快、快速前進，移動速度在增加後逐漸變緩。接下來一段時間內發起的兩次普攻攻速增加。
+Skill/Group/Desc/1070400┃<color=green>被動</color> : <color=white>替身術</color>冷卻時間減少{0}秒。\n\n青燕隱身朝指定方向空中旋轉。隱身持續{1}秒，在空中旋轉期間處於無法指定目標的狀態。\n\n施法<color=white>霧隱之術</color>後在隱身的情況下使用<color=white>踏燕</color>時，將在不解除隱身狀態的情況下啟動技能。
+Skill/Group/Coef/1070400┃<color=green>被動</color> : <color=white>替身術</color>冷卻時間減少{0}秒。\n\n青燕隱身朝指定方向空中旋轉。隱身持續{1}秒，在空中旋轉期間處於無法指定目標的狀態。\n\n施法<color=white>霧隱之術</color>後在隱身的情況下使用<color=white>踏燕</color>時，將在不解除隱身狀態的情況下啟動技能。
+Skill/LobbyDesc/1070400┃<color=green>被動</color> : 縮減<color=white>替身術</color>的冷卻時間。\n\n青燕隱身朝指定方向空中旋轉。在空中旋轉期間處於無法指定目標的狀態。\n\n施法<color=white>霧隱之術</color>後在隱身的情況下使用<color=white>踏燕</color>時，將在不解除隱身狀態的情況下啟動技能。
+Skill/Group/Desc/1070500┃<color=green>被動</color> : 青燕普攻將對命中的敵人刻上持續{8}秒的標記。標記最多可以疊加{0}次，當敵人持有的標記達到上限時，將與青燕共享視野。\n\n當視野範圍內存在持有標記疊層上限的敵人時可以使用技能。施法時將快速向目標所處方向移動，砍斷標記造成<color=white>{1}</color><color=#688A08>(+目標體力上限{2})</color>的技能傷害，並恢復傷害量{3}的體力。\n\n對敵人實驗體造成傷害時，<color=white>踏燕</color>的冷卻時間縮減{7}，<color=white>替身術</color>的冷卻時間縮減{4}，喚醒持續{9}秒的<color=white>戰鬥之力</color>。\n\n<color=white>戰鬥之力</color>最多可以疊加{5}次，每個疊層將使<color=white>奧義 - 生死印記</color>的傷害量增加{6}。\n\n指定<color=white>木樁</color>為目標使用技能時，將快速移動至<color=white>木樁</color>所在之處並更換位置。
+Skill/Group/Coef/1070500┃<color=green>被動</color> : 青燕普攻將對命中的敵人刻上持續{8}秒的標記。標記最多可以疊加{0}次，當敵人持有的標記達到上限時，將與青燕共享視野。\n\n當視野範圍內存在持有標記疊層上限的敵人時可以使用技能。施法時將快速向目標所處方向移動，砍斷標記造成<color=white>{1}</color><color=#ffd775>(+攻擊力{10})</color><color=#688A08>(+目標體力上限{2}<color=#ffd775>(每1攻擊力+{11})</color>)</color>的技能傷害，恢復傷害量{3}的體力。\n\n對敵人實驗體造成傷害時，<color=white>踏燕</color>的冷卻時間縮減{7}，<color=white>替身術</color>的冷卻時間縮減{4}，並喚醒持續{9}秒的<color=white>戰鬥之力</color>。 \n\n<color=white>戰鬥之力</color>最多可以疊加{5}次，每個疊層將使<color=white>奧義 - 生死印記</color>的傷害量增加{6}。\n\n指定<color=white>木樁</color>為目標使用技能時，將快速移動至<color=white>木樁</color>所在之處並更換位置。
+Skill/LobbyDesc/1070500┃<color=green>被動</color> : 青燕普攻將對命中的敵人刻上標記。標記最多可以疊加三次，當敵人持有的標記達到上限時，將與青燕共享視野。\n\n當視野範圍內存在持有標記疊層上限的敵人時可以使用技能。施法時將快速向目標所處方向移動，砍斷標記造成技能傷害，並根據傷害量恢復部分體力。\n\n對敵人實驗體造成傷害時，將縮減<color=white>踏燕</color>和<color=white>替身術</color>的冷卻時間，喚醒<color=white>戰鬥之力</color>。<color=white>戰鬥之力</color>最多可以疊加三次，每個疊層將增加<color=white>奧義 - 生死印記</color>的傷害量。\n\n指定<color=white>木樁</color>為目標使用技能時，將快速移動至<color=white>木樁</color>所在之處並更換位置。
+Skill/Group/ExpansionTip/1070400┃<i>此技能無法穿越牆壁。</i>
+Skill/Group/ExpansionTip/1070500┃<i>奧義 - 生死印記不受冷卻縮減屬性影響。\n最多只能標記一位敵人目標。標記新的目標時，將會移除現有的標記。\n當標記的目標距離青燕超過{0}m以上時，將立即解除標記。\n青燕使用奧義 - 生死印記標記的目標在{1}秒內不會再被刻上新標記。</i>
+CharacterState/Group/Name/1070200┃螺旋手裏劍 - 減少移動速度
+CharacterState/Group/Desc/1070200┃因螺旋手裏劍移動速度減少。
+CharacterState/Group/Name/1070300┃踏燕 - 移動速度增加
+CharacterState/Group/Desc/1070300┃施法踏燕後，移動速度在增加後逐漸變緩。
+CharacterState/Group/Name/1070310┃踏燕 - 移動速度增加
+CharacterState/Group/Desc/1070310┃因踏燕移動速度增加。
+CharacterState/Group/Name/1070400┃霧隱之術 - 隱身
+CharacterState/Group/Desc/1070400┃因霧隱之術處於隱身狀態。
+CharacterState/Group/Name/1070500┃奧義 - 生死印記 - 標記
+CharacterState/Group/Desc/1070500┃被青燕刻上標記。達到3疊層時，將和青燕共享視野。
+CharacterState/Group/Name/1070520┃奧義 - 生死印記 - 賦予標記等待時間
+CharacterState/Group/Desc/1070520┃青燕所刻的標記依舊殘留，不會刻上新的標記。
+CharacterState/Group/Name/1070540┃戰鬥之力
+CharacterState/Group/Desc/1070540┃喚醒了青燕的戰鬥之力，增加奧義 - 生死印記的傷害量。
 Skill/Group/Name/3015000┃斗篷和短劍
 Skill/Group/Name/3015100┃斗篷和短劍
 Skill/Group/Name/3016000┃格擋
@@ -11474,7 +11577,7 @@ Skill/LobbyDesc/1008200┃哈特邊彈吉他邊為聲波充電。之後可以再
 Skill/LobbyDesc/1008300┃哈特彈起吉他，增加一段時間內的攻擊力和普攻射程。\n\n<color=yellow>升級效果</color> : 範圍內隊友發起技能攻擊時，造成額外技能傷害。
 Skill/LobbyDesc/1008400┃哈特快速向指定方向移動一小段距離，對附近的敵人釋放聲波，造成技能傷害。\n此技能可以再次使用一次。\n\n<color=#FFFFC2>升級效果</color> : 增加可以再次使用技能的次數。
 Skill/LobbyDesc/1008500┃哈特彈奏吉他期間，範圍內的所有人都忍不住跳起舞來。彈奏吉他期間，哈特的體力也會隨著恢復。\n\n<color=yellow>升級效果</color> : 彈奏吉他期間恢復範圍內隊友的體力。
-Skill/LobbyDesc/1009100┃在陷阱爆炸中受到傷害的敵人防禦力會降低。 
+Skill/LobbyDesc/1009100┃在陷阱爆炸中受到傷害的敵人防禦力會降低。
 Skill/LobbyDesc/1009200┃伊索爾向目標位置投擲一個炸藥，可以扔在敵人身上或地面上。它會在特定的時間後爆炸，對敵人造成傷害並束縛敵人。\n每次攻擊身上帶著炸藥的敵人時，都會減少炸藥計時器爆炸時間並增加束縛時間和爆炸的傷害量。
 Skill/LobbyDesc/1009300┃伊索爾向前方掃射出無數子彈，對敵人造成技能傷害。
 Skill/LobbyDesc/1009400┃伊索爾向前滾動並融入他周圍的環境，悄無聲息地在島上偽裝潛行。如果伊索爾除了基本移動外進行任何其他動作，偽裝潛行狀態會被解除。一定時間內發起的首次普攻將造成額外技能傷害。
@@ -11606,7 +11709,7 @@ Skill/LobbyDesc/1033100┃妮琪將承受敵方實驗體傷害量轉為憤怒值
 Skill/LobbyDesc/1033200┃<color=#ffffff>格鬥動作</color> : 妮琪用拳頭蓄力。再次使用技能向滑鼠方向突進，短暫擊退第一個衝撞的敵人並造成傷害。根據蓄力時間增加傷害和突進距離。命中敵人時，減少冷卻並可以使用技能特技動作。\n\n<color=#ffffff>特技動作</color> : 給前方範圍內的敵人造成傷害，按命中數對憤怒值進行充能。
 Skill/LobbyDesc/1033300┃<color=#ffffff>格擋</color>: 向滑鼠所指方向採取戰鬥姿勢， 短時間內減少所有承受傷害，並對所有減益效果和負面效果免疫。成功減少傷害或是免疫移動受損效果時，可以使用<color=white>憤怒重拳！</color>，持續時間結束後啟動 <color=white>反擊</color>。\n\n<color=#ffffff>反擊</color>: 短距離突進對範圍內敵人造成傷害，減少移動速度。
 Skill/LobbyDesc/1033400┃<color=#ffffff>重拳</color>: 妮琪給前方敵人一記重拳，造成傷害的同時降低敵人的移動速度。\n\n<color=#ffffff>憤怒重拳！</color>: 防禦成功時可以使用憤怒重拳！。<color=#ffffff>憤怒重拳！</color>: 給前方敵人造成更大的傷害並降低敵人的移動速度，同時還可以暈眩敵人。\n\n<color=#ffffff>憤怒重拳！</color>不與<color=#ffffff>重拳</color>共享冷卻時間。
-Skill/LobbyDesc/1033500┃妮琪以敵人實驗體為目標突進，使用上勾拳攻擊造成技能傷害，使目標懸空。狂躁狀態下，憤怒攻擊增加傷害。
+Skill/LobbyDesc/1033500┃妮琪以無法阻止的狀態向敵人實驗體突進，使用上勾拳攻擊造成技能傷害，使目標懸空。狂躁狀態下，憤怒攻擊增加傷害。
 Skill/LobbyDesc/1034100┃納塔朋捕捉每一個珍貴的瞬間，記錄在相機裡。納塔朋使用的相機攻擊速度固定，普攻無法造成暴擊，但普攻時可以給敵人造成額外技能傷害。\n\n<color=green>焦距</color> : 對敵人造成技能傷害時獲得焦距疊層。焦距最多可疊加至3次，每個疊層能增加納塔朋造成的傷害。\n當<color=green>焦距</color>疊層從納塔朋視野中消失時，將立即解除疊層。\n\n<color=green>潛行相機</color> : <color=#808080>監視器</color>和<color=#808080>樹枝</color>組合起來可以製作具有隱身效果的<color=#008000>潛行相機</color>。
 Skill/LobbyDesc/1034200┃納塔朋在指定地點拍照造成技能傷害。被賦予3個焦距疊層的敵人，短時間降低移動速度和攻擊速度。
 Skill/LobbyDesc/1034300┃納塔朋設置縮時攝影功能，每秒對範圍內的敵人造成技能傷害。 範圍內敵人移動速度降低。\n最後一瞬間，被拍到的敵人，承受額外傷害並被束縛。
@@ -11845,13 +11948,13 @@ CharacterState/Group/Desc/4101010┃減少了防禦力。
 Skill/Group/Name/4102000┃赤色風暴
 Skill/Group/LobbyDesc/4102000┃使用時短距離移動，暫時增加普攻射程。\n\n<color=#ff3399>強化 : </color>強化射程增加效果。
 Skill/Code/Desc/4102001┃使用後按照滑鼠方向移動<color=white>{1}m</color>，普攻射程暫時增加{2}%。\n\n<color=#565730>戰術強化組件 : </color><color=#595959>強化射程增加效果。</color>
-Skill/Code/Coef/4102001┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時，將解除靜電狀態。\n\n<color=#565730>戰術強化組件 : </color><color=#595959>強化射程增加效果。</color>
+Skill/Code/Coef/4102001┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時，將解除靜電狀態。\n\n<color=#565730>戰術強化組件 :  </color><color=#595959>射程增加效果強化{4}。</color>
 Skill/Code/ExpansionTip/4102001┃<i>強化至3級需要使用<color=#b245ff>戰術強化組件</color>。</i>
 Skill/Code/Desc/4102002┃使用後按照滑鼠方向移動<color=white>{1}m</color>，普攻射程暫時增加{2}%。\n\n<color=#565730>戰術強化組件 : </color><color=#595959>強化射程增加效果。</color>
-Skill/Code/Coef/4102002┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時解除靜電狀態。\n\n<color=#565730>戰術強化組件 : </color><color=#595959>強化射程增加效果。</color>
+Skill/Code/Coef/4102002┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時解除靜電狀態。\n\n<color=#565730>戰術強化組件 :  </color><color=#595959>射程增加效果強化{4}。</color>
 Skill/Code/ExpansionTip/4102002┃<i>強化至3級需要使用<color=#b245ff>戰術強化組件</color>。</i>
 Skill/Code/Desc/4102003┃使用後按照滑鼠方向移動<color=white>{1}m</color>，普攻射程暫時增加{2}%。\n\n<color=#FFFFC2>戰術強化組件 : </color>強化射程增加效果。
-Skill/Code/Coef/4102003┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時解除靜電狀態。\n\n<color=#FFFFC2>戰術強化組件 : </color>大幅增加效果。
+Skill/Code/Coef/4102003┃使用後按照滑鼠方向移動<color=white>{1}m</color>，{3}秒間處於靜電狀態，普攻射程增加{2}%。\n持續時間結束時解除靜電狀態。\n\n<color=#FFFFC2>戰術強化組件 : </color>射程增加效果強化{4}。
 CharacterState/Group/Name/4102000┃靜電
 CharacterState/Group/Desc/4102000┃增加普攻射程。
 Skill/Group/Name/4103000┃超越
@@ -12672,8 +12775,8 @@ CharacterState/Group/Name/6027020┃先鋒 - 減益效果
 CharacterState/Group/Desc/6027020┃受到敵人先鋒效果影響，減少攻擊速度。
 Item/Skills/6022101┃領悟 - 宣告
 Item/Skills/6022101/Name┃<color=yellow>領悟 - 宣告</color>
-Item/Skills/6022101/Body┃當防禦穿透達到30以上時啟動。\n啟動時，對體力低於<color=#688A08>8%</color>的敵人實驗體造成傷害時，敵人將立即被擊殺。(冷卻 : {1}秒)
-Item/Skills/6022101/Desc┃當防禦穿透達到30以上時啟動。\n啟動時，對體力低於<color=#688A08>8%</color>的敵人實驗體造成傷害時，敵人將立即被擊殺。(冷卻 : {1}秒)
+Item/Skills/6022101/Body┃當防禦穿透達到30以上時啟動。\n如果對敵人實驗體造成傷害且目標體力降至低於<color=#688A08>8%</color>時，敵人將立即被擊殺。(冷卻 : {1}秒)
+Item/Skills/6022101/Desc┃當防禦穿透達到30以上時啟動。\n如果對敵人實驗體造成傷害且目標體力降至低於<color=#688A08>8%</color>時，敵人將立即被擊殺。(冷卻 : {1}秒)
 Item/Skills/6030001┃腐化
 Item/Skills/6030001/Name┃<color=yellow>腐化</color>
 Item/Skills/6030001/Body┃技能攻擊命中時，將賦予敵人每秒造成<color=#688A08>目標體力上限的{0}</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color>技能傷害的腐化狀態，並持續{2}秒。(疊層上限 : {3})
@@ -13378,6 +13481,7 @@ Item/Name/112406┃魔導稜鏡
 Item/Name/112407┃阿斯特拉普
 Item/Name/112408┃黏性炸彈
 Item/Name/112502┃如意珠
+Item/Name/112503┃追獵者
 Item/Name/113101┃剃刀
 Item/Name/113102┃撲克牌
 Item/Name/113103┃CD
@@ -13521,6 +13625,7 @@ Item/Name/121405┃絕色之夜
 Item/Name/121406┃紅磚
 Item/Name/121407┃少年魂
 Item/Name/121501┃Cpt. Pepper
+Item/Name/121502┃負心人
 Item/Name/122101┃鏡頭
 Item/Name/122201┃攝影槍
 Item/Name/122301┃數位相機
@@ -14185,6 +14290,7 @@ Item/Help/112402┃通過形成有毒氣體來造成巨大的傷害。它由火�
 Item/Help/112403┃表面遍布鋒利碎片的橡膠球。打到會很痛。別小看它的彈跳力。
 Item/Help/112305┃碰到它可是很痛的唷。如果你貼近讓它爆炸，那就更痛了。
 Item/Help/112502┃在神話故事中，吞下二個以上如意珠的蛟龍會由於過重而無法升天。\n丟掉野心，學會只滿足於一顆「如意珠」。
+Item/Help/112503┃雖然它有自己的名字，但大家也都叫它小天使。\n飛行速度極快，給人一種在甜蜜中死亡的感覺。
 Item/Help/112404┃主啊，請用這神聖的手榴彈祝福敵人\n請賜予你的恩典，賜予敵人永恆的安息！
 Item/Help/112405┃火球是每個巫師的第一個夢想。\n然而，在技術上實現以球形燃燒的氣體，\n難度相當大，只能借用VF的力量。
 Item/Help/112406┃Vital Force的能量凝聚在中央，宛如活生生地波動。\n當外部衝擊傳遞到核心時，凝聚的力量就會爆發，造成強大的傷害。
@@ -14280,6 +14386,7 @@ Item/Help/121405┃夜太美！……（儘管太危險）
 Item/Help/121406┃這個島上的實驗體也不過如同牆壁上的磚頭一般，\n沒有什麼特別，大家都一樣。
 Item/Help/121407┃世人總覺得少年時代是最耀眼的時光。\n那燦然的笑容會隨著時間的推移一點一滴地消逝。\n莫惜金縷衣，惜取少年時。
 Item/Help/121501┃你知道嗎？這張專輯收錄的曲子使用了印度的傳統樂器西塔琴，並且被譽為是搖滾樂的傳奇。
+Item/Help/121502┃如何用愛來治癒因愛情受傷的心靈。\n經歷痛苦的分手之後，擦乾眼淚繼續前進尋找下一份愛吧。
 Item/Help/122301┃方便攜帶的小型相機。
 Item/Help/130502┃有些死亡留下了愛，有些死亡殘留下了遺憾。\n而有些死亡寓意著新的開始。
 Item/Help/201101┃如果你的頭太大，戴上可能有點痛。
@@ -14646,7 +14753,7 @@ Item/Effects/302308┃15秒內恢復耐力值。
 Item/Effects/302309┃15秒內恢復耐力值。
 Item/Effects/302310┃15秒內恢復耐力值。
 Item/Effects/302311┃15秒內恢復耐力值
-Item/Effects/302312┃永久獲得攻擊力2，技能增幅4。最多可重疊3次。
+Item/Effects/302312┃永久獲得攻擊力2，技能增幅4。\n最多可重疊3次。
 Item/Effects/302313┃15秒內恢復耐力值。
 Item/Effects/302314┃15秒內恢復耐力值。
 Item/Effects/301102┃15秒內恢復體力值。
@@ -14668,7 +14775,7 @@ Item/Effects/301205┃15秒內恢復體力值。
 Item/Effects/301206┃15秒內恢復體力值。
 Item/Effects/301207┃15秒內恢復體力值。
 Item/Effects/301209┃15秒內恢復體力值。
-Item/Effects/301305┃永久獲得防禦力3。最多可重疊3次。
+Item/Effects/301305┃永久獲得防禦力3。\n最多可重疊3次。
 Item/Effects/301213┃15秒內恢復體力值。
 Item/Effects/301216┃15秒內恢復體力值。
 Item/Effects/301217┃15秒內恢復體力值。
@@ -14721,7 +14828,7 @@ Item/Effects/301325┃15秒內恢復體力值。
 Item/Effects/301326┃15秒內恢復體力值。
 Item/Effects/301327┃15秒內恢復體力值。
 Item/Effects/301328┃15秒內恢復體力值。
-Item/Effects/301329┃永久獲得體力30。最多可重疊3次。
+Item/Effects/301329┃永久獲得體力30。\n最多可重疊3次。
 Item/Effects/301330┃15秒內恢復體力值。
 Item/Effects/301401┃15秒內恢復體力值。
 Item/Effects/301331┃15秒內恢復體力值。
@@ -15249,7 +15356,7 @@ BattleMission/11001010/1┃生存300秒以上
 BattleMission/11002001/1┃取得首殺 1次
 BattleMission/11002002/1┃製作熟練度達到11級以上
 BattleMission/11002003/1┃武器熟練度達到18級以上
-BattleMission/11002004/1┃使用食物 / 飲料 6次
+BattleMission/11002004/1┃飲用食物 / 飲料 6次
 BattleMission/11002005/1┃進行一般/排位遊戲 14次
 BattleMission/11002006/1┃獲得榮譽值 450
 BattleMission/11002007/1┃狩獵野豬 5次
@@ -15267,7 +15374,7 @@ BattleMission/11003008/1┃製作傳說等級物品 5次
 BattleMission/11003009/1┃對實驗體造成14,000以上傷害
 BattleMission/11003010/1┃累計獲得生命樹枝 2次
 BattleMission/11004001/1┃使用傳送門 15次
-BattleMission/11004002/1┃開啟傳說補給箱 10次
+BattleMission/11004002/1┃從傳說補給箱中獲得物品 - 10次
 BattleMission/11004003/1┃獲得800榮譽值
 BattleMission/11004004/1┃製作傳說等級物品 15次
 BattleMission/11004005/1┃擊殺實驗體 12次
@@ -15290,7 +15397,7 @@ BattleMission/11006001/1┃對實驗體造成26,000傷害
 BattleMission/11006002/1┃使用Kiosk 3次
 BattleMission/11006003/1┃狩獵野狗 8次
 BattleMission/11006004/1┃製作傳說等級物品 6次
-BattleMission/11006005/1┃開啟傳說補給箱 2次
+BattleMission/11006005/1┃從傳說補給箱中獲得物品 2次
 BattleMission/11006006/1┃進入前三名
 BattleMission/11006007/1┃武器熟練度達到18級以上
 BattleMission/11006008/1┃在旅館擊殺實驗體 1次
@@ -15304,12 +15411,12 @@ BattleMission/11007005/1┃在體力低於250時擊殺實驗體 2次
 BattleMission/11007006/1┃武器熟練度達到18級以上
 BattleMission/11007007/1┃達成TK6
 BattleMission/11007008/1┃對實驗體造成19,000以上傷害
-BattleMission/11007009/1┃累計開啟2次傳說補給箱
+BattleMission/11007009/1┃從傳說補給箱中獲得物品 2次
 BattleMission/11007010/1┃擊殺實驗體 10次
 BattleMission/11008001/1┃擊殺實驗體 3次
 BattleMission/11008002/1┃進行一般/排位遊戲 3次
 BattleMission/11008003/1┃擊殺實驗體 16次
-BattleMission/11008004/1┃開啟傳說補給箱 6次
+BattleMission/11008004/1┃從傳說補給箱中獲得物品 6次
 BattleMission/11008005/1┃擊殺禁區內的實驗體 3次
 BattleMission/11008006/1┃製作傳說等級物品 8次
 BattleMission/11008007/1┃在體力低於600的情況下擊殺實驗體 3次
@@ -17604,6 +17711,12 @@ CharacterStoryHeight/69┃145cm
 CharacterStoryGender/69┃女
 CharacterStoryTitle/69┃「要愛惜玩具喔！」
 CharacterStoryDesc/69┃外表看起來就像一個普通的女孩。\n她喜歡惡作劇，看到有人被捉弄時會像個孩子一樣哈哈大笑。\n\n但在更年幼的時候，她無法承受發生在家人和自己身邊的不幸。\n絕望之下的雷妮選擇了逃避。\n她想要做一個對任何事情都漠不關心的孩子。\n\n對她來說，死亡是可以逃避長大、永遠做個孩子唯一的方法。\n這原本是她唯一的出路，也是唯一的救贖。\n\n直到一場事故阻止了她長大...
+CharacterStoryName/70┃橘青燕
+CharacterStoryAge/70┃17歲
+CharacterStoryHeight/70┃157cm
+CharacterStoryGender/70┃女
+CharacterStoryTitle/70┃「我會接受這個委託。」
+CharacterStoryDesc/70┃她是一位因復仇提議而被騙往盧米亞島的少女。\n過去，她與一位名為「吾郎」的混混生活在一起，守護著霓虹閃爍的螢火蟲之街。\n\n雖然她稱自己是萬能事務所的跑腿，但青燕背後隱藏著不可告人的秘密。\n\n在過去她被賣給了一個名為「日輪會」的組織，在那邊接受著恐怖又嚴厲的訓練。\n她是一個沒有靈魂和自我的殺戮機器，一切按照指令行事。\n在任務失敗被拋棄的那天，她甚至已做好了死亡的準備。\n但幸運的是，她遇到了一位恩人為她取名「青燕」，以這名字重獲新生。\n\n「我此生最幸運的事就是遇見了你。」\n這是教她如何微笑的吾郎留下的最後一句話。
 CharacterPlayTip/1┃傑琪是位連環殺人魔，無情地追擊和屠殺目標，每次擊殺都能獲得更強大的爆發力。
 CharacterPlayTip/2┃綾是位高穩定性的遠程實驗體。可輕鬆使用技能從遠處命中目標。
 CharacterPlayTip/3┃菲歐拉利用擊劍選手敏捷的特性，控制與敵人間的距離，每次連招技能命中時，都將造成更大的傷害。
@@ -17673,6 +17786,7 @@ CharacterPlayTip/66┃阿爾達善於使用文物進行戰鬥，能夠激發文�
 CharacterPlayTip/67┃艾比蓋爾能夠穿越異次元空間瞬間移動到目標所在位置，揮動鐮刀造成廣域傷害。
 CharacterPlayTip/68┃阿隆索善於利用磁力控制敵人，是一位堅守前線的行動隊長。
 CharacterPlayTip/69┃雷妮善於使用多種玩具攻擊敵人協助隊友，是位喜歡對他人做惡作劇的實驗體。
+CharacterPlayTip/70┃青燕曾受過嚴厲的訓練。她善於使用苦無刻上標記，並通過標記對敵人造成巨大的傷害。
 
 
 --xxxxxxxxxx--
