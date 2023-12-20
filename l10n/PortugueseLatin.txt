@@ -2120,6 +2120,10 @@ Event_S9Champion_ONECIRCLE_3082┃SEASON 9 CHAMPION ONECIRCLE
 Event_S9Champion_GWORK_3083┃SEASON 9 CHAMPION GWORK
 Event_S9Champion_DHANA_3084┃SEASON 9 CHAMPION DANANA
 Event_S9Champion_FANG_3085┃SEASON 9 CHAMPION FANG
+Event_S10Champion_Haemyu_3088┃SEASON 10 CHAMPION HAEMYU
+Event_S10Champion_Narvic_3089┃SEASON 10 CHAMPION NARVIC
+Event_S10Champion_Mangnani_3090┃SEASON 10 CHAMPION MANGNANI
+Event_S10Champion_Noguri_3091┃SEASON 10 CHAMPION NOGURI
 Shop/Desc/Emotion_Hart01_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes para se comunicar em jogo.
@@ -2644,6 +2648,10 @@ EMBLEM_MARK_EVENT_103124┃SEASON 9 CHAMPION DANANA
 EMBLEM_MARK_EVENT_103125┃SEASON 9 CHAMPION FANG
 EMBLEM_MARK_EVENT_103126┃9ambler
 EMBLEM_MARK_EVENT_103132┃Chunhyang Hi
+EMBLEM_MARK_EVENT_103140┃SEASON 10 CHAMPION HAEMYU
+EMBLEM_MARK_EVENT_103141┃SEASON 10 CHAMPION NARVIC
+EMBLEM_MARK_EVENT_103142┃SEASON 10 CHAMPION MANGNANI
+EMBLEM_MARK_EVENT_103143┃SEASON 10 CHAMPION NOGURI
 EMBLEM_MARK_ERPASS_104001┃Gelo Cristalizado
 EMBLEM_MARK_ERPASS_104002┃Árvore de Presentes!
 EMBLEM_MARK_ERPASS_104003┃Nariz Vermelho
@@ -3641,7 +3649,6 @@ MONTHLY_PURCHASE_SET_01┃Pacote Mensal de Skin DATA
 Shop/Desc/MONTHLY_PURCHASE_SET_01┃Este produto contém 3 Caixa de Skin DATA e 3 Chave DATA.\nVários itens e designs podem ser obtidos na Caixa de Skin DATA.\n<color=orange>Recompensas ranqueadas e alguns itens especiais não estão incluídos.</color>\n\nO número de compras para este produto é redefinido mensalmente às 20:00 (PT).\nAs caixas compradas podem ser abertas em Forjamento usando a Chave DATA. 
 MONTHLY_PURCHASE_SET_02┃Pacote de Chave DATA Mensal
 Shop/Desc/MONTHLY_PURCHASE_SET_02┃Este produto contém 3 Caixa de Skin DATA e 3 Chave DATA.\nVocê pode usar as Chave de DATA para abrir qualquer tipo de caixa.\n\n\nO número de compras para este produto é redefinido mensalmente às 20:00 (PT).\n
-Goods/Name/3102003┃Caixa Diária
 Shop/Desc/DAILY_PURCHASE_SET_01┃Você pode obter 1 dos seguintes: Caixa de DATA do Centro de Pesquisa, Chave de DATA, NP, Material Comum ou Tokens.\n\nO número de compras para este produto é redefinido diariamente às 20:00 (PT).\n<color=orange>Será aberto imediatamente após a compra.</color>
 Shop/Desc/S10_KEY_LIMITED┃Você pode usar as Chave de DATA para abrir qualquer tipo de caixa.\n\nO número de trocas por conta não é redefinido.
 Shop/Desc/Vacance Token┃Este é um Token de Férias que pode ser usado para resgatar itens adicionados na Troca do menu de Forjamento.<color=red>\nEste token tem uma data de validade. Certifique-se de verificar a data de validade, pois não estará disponível posteriormente.</color>
@@ -3745,13 +3752,18 @@ ItemType/CHARACTER/Name┃Personagem
 ItemType/EVENT_NP/Name┃NP de Evento
 ItemType/RANDOM_BOX/Name┃Caixa
 ItemType/RANDOM_KEY/Name┃Chave DATA
+ItemType/LOOT_TOKEN/Name┃Tokens de Temporada
 제작소┃Forjamento
 교환소┃Trocar
 추가상품/박스┃Caixa
 Forge/Category/Recent┃Mais Recente
 Forge/Category/All┃Todos
-Forge/Category/CharacterSkin┃Skins
 캐릭터 보유중┃Já Obtido
+미보유 아이템┃Item não Obtido
+선택권 아이템 선택┃Selecionar
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
+선택권 아이템 타입 도안┃DESIGN
 Forge/Category/Character┃Personagens
 Forge/Category/Emotion┃Emotes
 Forge/Category/Emblem┃Emblemas
@@ -3759,7 +3771,13 @@ Forge/Category/Goods┃Outros
 Forge/Category/Token┃Tokens
 Forge/Type/All┃Todos
 Forge/Type/Blueprint┃Designs
+Forge/Type/Unowned┃Não Obtido
+Forge/Type/Forgable┃A ser Construido
 Forge/Type/Complete┃Itens Completos
+Forge/Category┃Categoria
+Forge/Type┃Tipo
+선택 초기화┃Reiniciar
+필터┃Filtrar
 BoxRewardInfoWindow/Character┃Personagens
 BoxRewardInfoWindow/Skin┃Skins
 BoxRewardInfoWindow/Emoticon┃Emotes
@@ -3773,7 +3791,11 @@ Loot┃LOOT
 Forge/UI/AlreadyOwned┃Já Obtido
 Forge/UI/ItemCount┃Obtido
 획득가능한보상┃Recompensas Principais
-LootRandomBoxWindow/Reward┃Lista de Itens
+LootRandomBoxWindow/Reward┃Lista de Recompensas
+보상 목록 툴팁 타이틀┃Lista de Recompensas
+보상 목록 툴팁 설명┃Recompensas que você pode receber quando abrir as Caixas.\nClique no Ícone de Informação para ver a lista completa.
+보유한 열쇠 툴팁 타이틀┃Chaves DATA Obtidas
+보유한 열쇠 툴팁 설명┃Numero de Chaves DATA atualmente obtidas.
 전체보상정보┃Todas Recompensas
 상자 구매┃Comprar Caixa
 LootRandomBoxWindow/Btn_BuyBox┃Comprar Caixa
@@ -3790,6 +3812,7 @@ LootRandomBoxWindow/Btn_Once┃Abrir 1 Caixa
 LootRandomBoxWindow/Btn_All┃Abrir 10 Caixas
 전체보상 정보보기┃Todas Recompensas
 LootRandomBoxWindow/RefundAgreement┃Itens usados para abrir a caixa são não reembolsáveis
+상자 구성품 확인 툴팁┃Clique para ver as recompensas disponíveis.
 잠금 상태 알림┃Bloqueado
 선택된 아이템이 없습니다.┃Sem item selecionado.
 온전한 아이템 보기┃Itens Completos
@@ -3806,20 +3829,29 @@ LootWindow/Disintegrate_Mode┃Modo de desmontagem
 잠금 설명┃Todos os itens bloqueados não podem ser desmontados.
 최신 획득 아이템┃Obtido Mais Recentemente
 분해┃Desmontar
+분해 비용┃Custo para Desmontar
 카테고리┃Tipo
 분해 아이템 선택┃Configurações de Desmontagem
 분해시 필요한 ACoin┃Moedas Consumidas
+분해시 필요한 분해권┃Vales de Desmontagem
 잠금상태의 아이템이 있는 경우 1개를 제외한 나머지 아이템이 슬롯에 등록 됩니다.┃Todos os itens bloqueados não podem ser desmontados.
 잠금┃Obtido
 AssemblePopUp┃Você deseja continuar criando?\nDesigns e materiais usados para criar não serão devolvidos.
 DisintegratePopUp┃Você deseja continuar com a desmontagem?\nItens e mercadorias usados na desmontagem não serão devolvidos.
 ExchangeTokenPopUp┃Deseja trocá-lo?\nNão haverá reembolso após a troca.
+BoxRewardInfo/RewardInfoFormat/Default┃{0} {1}
+BoxRewardInfo/RewardInfoFormat/Morethan1┃{0} {1} x {2} ~ {3}
+BoxRewardInfo/RewardInfoFormat/SameAmount┃{0} {1} x {2}
+DisintegrateMode/ToolTip/AddByFilter┃Adicione Itens a lista que atendam os critérios de filtro.
+DisintegrateMode/ToolTip/ShowFilter┃Modifique os filtros aplicados às adições em lote.
+DisintegrateMode/ToolTip/RemoveAllSelection┃Redefinir a lista.
 Forge/Blueprint/ItemType┃{0} Designs
 Forge/NotEnoughBox┃Sem caixas suficientes.
 Forge/NotEnoughKey┃Sem chaves DATA suficientes.
 Forge/NotEnoughBoxKey┃Sem caixa e chaves suficientes.
 Forge/ToolTip/RareMatter┃Esse é um Fragmento de DATA Raro que pode ser obtido ao desmontar uma Skin Épica ou Rara.\nFragmentos de DATA Raros são utilizados apenas para criar skins Épicas.
 Forge/ToolTip/NormalMatter┃Esse é um Fragmento de DATA que pode ser obtido ao desmontar uma Skin Incomum ou outros itens e designs.\nFragmentos de DATA são utilizados apenas para criar um item a partir de um design.
+Forge/ToolTip/disintegrateTicket┃Esse item pode ser desmontado sem consumir recursos extras.\nDesmontar 1 Item usa 1 Vale de Desmontagem..
 Rare-Matter┃Fragmento DATA Raro
 Normal-Matter┃Fragmentos DATA
 Forge/ToolTip/DisintegrateMode┃Selecione os itens para serem desmontados.
@@ -3828,6 +3860,7 @@ Forge/ToolTip/RightClickToRemove┃Clique com o Botão Direito do Mouse para rem
 Forge/ToolTip/SelectToAdd┃Selecione os itens para serem desmontados.
 Forge/Disintegrate/MaxAmount┃Você pode adicionar até 20 itens na lista.
 Forge/Disintegrate/NotEnoughMaterial┃Você não tem A-Coin suficiente para desmontar esses itens.
+Forge/Disintegrate/NotEnoughDisintegrateTicket┃Você não possui Vales de Desmontagem suficientes para desmontar.
 Forge/Disintegrate/IsLocked┃Itens travados não podem ser desmontados.
 Forge/Disintegrate/CountLimit┃Você só pode desmontar 50 itens ao mesmo tempo.
 Forge/TokenExchange/ResetTime/Week┃{0} Semana(s)
@@ -3843,6 +3876,8 @@ LootExchangeWindow/tokenInfo/TokenTimeRemainder/Minutes┃{0} mins {1} s
 LootExchangeWindow/tokenInfo/TokenTimeRemainder/Seconds┃{0} s
 LootExchangeWindow/tokenInfo/TokenRemainder┃Tokens não podem ser trocados por outros itens após terem expirado.
 교환 남은 기간: ┃Até que o Token Expire:
+제작소 아이템 남은 기간┃Tempo Restante.
+선택권 선택 확인┃Gostaria de selecionar este item?
 재화가 부족합니다. 제작소(상자)로 이동하시겠습니까?┃Dinheiro insuficiente. Ir para o Forjamento (Caixa)?
 재화가 부족합니다. 제작소로 이동하시겠습니까?┃Dinheiro insuficiente. Ir para o Forjamento?
 {0} 회┃{0} Vezes
@@ -3850,19 +3885,44 @@ Goods/Name/3102001┃Caixa DATA de Skin
 Goods/Name/3102002┃Caixa DATA do Centro de Pesquisa
 Goods/Desc/3102001┃Esta caixa contém skins e designs de skin. \nSkins do PASSE ER, Recompensas Ranqueadas ou de Evento Limitados não estão incluídas.\n\nCaixas DATA podem ser compradas de Pacotes de loja ou outros produtos.
 Goods/Desc/3102002┃Esta caixa contém vários itens e designs.\nRecompensas Ranqueadas e Itens de Tempo Limitado não estão incluídos.
+Goods/Name/3102003┃Caixa Diária
 Goods/Desc/3102003┃Você pode obter 1 dos seguintes: Caixa de DATA do Centro de Pesquisa, Chave de DATA, NP, Material Comum ou Tokens.
+Goods/Name/3102006┃Caixa de Ferias & Fantasmagorica
+Goods/Desc/3102006┃Você definitivamente pode receber uma skin.\nItens podem ser visualizados na lista de recompensas.
+Goods/Name/3102007┃Caixa de Skin de Design Êpico
+Goods/Desc/3102007┃Você pode obter Design de Skins Èpicas e Fragmentos de DATA Raras.
 Goods/Name/3104009┃Caixa DATA da Temporada 9
 Goods/Desc/3104009┃Está caixa contém todos os itens da Temporada 9. Abra para obter recompensas aleatórias!
 Goods/Name/3202000┃Chave DATA
 Goods/Desc/3202000┃Chaves DATA podem ser usadas para abrir todos os tipos de Caixas DATA
 Goods/Name/3303000┃Tokens de FÉRIAS
 Goods/Desc/3303000┃Tokens pode ser obtidos através do PASSE ER, Pacote da Temporada e Forjamento. Tokens podem ser usados na Troca no menu de Forjamento.
+Goods/Name/3303001┃Tokens de Empregadas de Batalha
+Goods/Desc/3303001┃Os tokens podem ser obtidos aleatoriamente através do PASSE ER, Pacotes de Season ou desmontando itens intactos no Forjamento.\nOs tokens não reivindicados durante o período de expiração são automaticamente trocados por tokens da temporada em andamento. (Menos de 3 expirarão)
+Goods/Name/3303999┃Quilometragem
+Goods/Desc/3303999┃Quilometragem pode ser obtida ao comprar produtos NP.
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃Lista de Probrabilidade Geral
 Goods/Name/2005┃Chip DATA de Skin
 특정 지역에서 구매할 수 없는 상품입니다.┃Esse produto não está disponível para venda em sua região.
 Goods/Name/1┃Twitch Drops
+Goods/Name/3┃Caixa de Personagens Aleatórios
 Goods/Desc/1┃Você pode receber 300 NP de Evento ou 1,500 A-Coin como recompensa.
 Goods/Desc/3┃Você pode receber 1 Personagem.
+Goods/Name/9999999┃Vale de Skin Não Obtida <#00ffee>No.01</color>
+Goods/Name/9999998┃Vale de Skin Não Obtida <#00ffee>No.02</color>
+Goods/Name/3119001┃Vale de Skin Não Obtida <#00ffee>No.01</color>
+Goods/Name/3119002┃Vale de Skin Não Obtida <#00ffee>No.02</color>
+Goods/Name/3119003┃Vale de Skin Não Obtida <#00ffee>No.03</color>
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[Conteúdos]</color></b>\n\n<b><color=#D05EFF>Skin Épica</color></b>: Summertime Sua, Transfer Student Bianca, Sweet Beast Hyunwoo, Overvolt Jackie, Wilson Bakery Sissela\n----\n<color=#2AC0FF>Skin Rara</color>: Spirit Hunter Hyejin, Summertime Leon, Cobalt Evolution Zahir, Summertime Rio, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya.\n----\n<color=#35FF94>Skin Incomum</color>: Spec Ops Leon\n\n<b><color=#F15F5F>[Antes de Comprar]</color></b>\n*Este produto permite que você adquira skins que não estão atualmente em seu inventário.\n*Os itens são fornecidos imediatamente após a compra.\n*Se você tiver todos os itens da lista, receberá 1 da lista completa.\n*Você pode verificar a probabilidade de cada item através da Divulgação de Probabilidade da Caixa.
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[Conteúdos]</color></b>\n\n<b><color=#D05EFF>Skin Épica</color></b>: Spirit Hunter Chiara, Student Council President Elena, Android Medic Cathy, Magic Crush Adela\n----\n<color=#2AC0FF>Skin Rara</color>: Midnight Shinobi Lenox, Festive Roar Li Dailin, Bow Wow Yuki, Sweet Valentine Eva, Rebel Magnus, Rebellious Nicky, Apprentice Witch Tia, Luxury Masquerade Jenny, Problem Solver Aiden, Singer-songwriter Priya\n----\n<color=#35FF94>Skin Incomum</color>: Spirit Hunter Isol, Spec Ops Leon\n\n<b><color=#F15F5F>[Antes de Comprar]</color></b>\n*Este produto permite que você adquira skins que não estão atualmente em seu inventário.\n*Os itens são fornecidos imediatamente após a compra.\n*Se você tiver todos os itens da lista, receberá 1 da lista completa.\n*Você pode verificar a probabilidade de cada item através da Divulgação de Probabilidade da Caixa.
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[Conteúdos]</color></b>\n\n<b><color=#D05EFF>Skin Épica</color></b>: Student Council President Elena, Plague Doctor Daniel, Summer Party Magician Emma, Winter Carnival Hart, Transfer Student Bianca. \n----\n<color=#2AC0FF>Skin Rara</color>: Winter Carnival Sissela, Midnight Aurora Rio, Nightmare Holder Vanya, Popstar Camilo, Death Challenger Jan, Adventurer Nathapon, Fire Drill Estelle, Treasure Finder Lenox, Winter Breeze Elena, Little Sailor Eleven.\n----\n<color=#35FF94>Skin Incomum</color>: Winter Carnival Shoichi, OP.GG Felix, GeForce Now Silvia.\n\n<b><color=#F15F5F>[Antes de Comprar]</color></b>\n*Este produto permite que você adquira skins que não estão atualmente em seu inventário.\n*Os itens são fornecidos imediatamente após a compra.\n*Se você tiver todos os itens da lista, receberá 1 da lista completa.\n*Você pode verificar a probabilidade de cada item através da Divulgação de Probabilidade da Caixa.
+Product/Name/S10_RARE_MATTER┃1 Fragmento de DATA Raro
+Product/Name/S10_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S10_S11TOKEN_EXCHANGE┃2 Tokens Empregadas de Batalha
+Product/Name/S11_RARE_MATTER┃1 Fragmento de DATA Raro
+Product/Name/S11_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S11_S10TOKEN_EXCHANGE┃2 Tokens de Férias
+Product/Name/XMAS2023_EVENT_3000022┃500 A-Coin
 보유하지 않은 캐릭터입니다.┃Você não possui este personagem.\nPor favor, desbloqueie-o na loja para poder jogar com ele. 
 매칭 중 캐릭 변경 금지┃Você não pode trocar de personagem enquanto procura por partida.
 로딩 중┃Carregando\n< Aperte o botão X para sentar e descansar. >
@@ -4234,7 +4294,6 @@ SEASON_9┃Temporada 9
 RankManagementSystem┃Sistema de Gerenciamento de Ranque
 CurrentTier┃Tier Atual
 RankEntryCostRP┃Custo de entrada por elo
-RankEntryCostRPDesc┃PL que é imediatamente reduzido depois da partida baseado no seu tier e elo atual.
 Rank_Introduce01┃Dispute com times de level similar.
 Rank_Introduce02┃Ganhe Pontos de Liga (PL) e suba de elo.
 Rank_Introduce03┃Matchmaking de Times Premade serão baseados no membro com maior elo.
@@ -5329,6 +5388,7 @@ ServerRegion/Frankfurt┃Europa
 ServerRegion/Singapore┃Sudeste Asiático
 ServerRegion/SaoPaulo┃América do Sul
 ServerRegion/HongKong┃Hong Kong (Ásia)
+ServerRegion/DevChina┃DevChina
 홍콩리전으로 변경되었습니다┃Aceleração de rede para o servidor de Seoul desabilitada. Você foi reconectado ao servidor de Hong Kong.
 접속 가능 지역 없음┃Não é possível encontrar um servidor. Por favor, verifique sua conexão de internet.
 ServerRegion/NONE┃Desconhecido
@@ -7065,6 +7125,7 @@ Skill/Group/Desc/1003510┃Fiora agilmente ataca com sua arma na direção-alvo,
 Skill/Group/Desc/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{13}</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga.\n\n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{13}</color> de dano de habilidade.\n\n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade.\n\n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché</color>. Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais.
 Skill/Group/Coef/1003100┃Toda vez que Fiora causa dano a um inimigo com uma habilidade, ela aplica um acúmulo de Touché no inimigo. Quando acumulado ao máximo,Touché pode ser ativado com <color=#ffffff>Fente, Marche & Rompre ou Flèche</color> para ativar efeitos adicionais. Aumentar o nível de Touché diminui o número de acúmulos necessários para a ativação.
 Skill/Group/Coef/1003200┃Fiora realiza uma estocada na direção-alvo, causando<color=white>{0}</color><color=#DDA0DD>(+{13} Amplificação de Habilidade)</color> de dano aos inimigos atingidos. A ponta da habilidade causa <color=white>{7}</color><color=#DDA0DD>(+{15} Amplificação de Habilidade)</color> de dano, aplica {4} de lentidão por {6} segundos e aplica 2 acúmulos de Touché.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>A marca explode, causando {11} de dano de habilidade. Atingir um inimigo com a ponta da habilidade causa {5} de lentidão e reduz o tempo de recarga restante de Fente em {10}.
+Skill/Group/Coef/1003300┃Fiora balança a espada na direção-alvo duas vezes, causando <color=white>{3}</color></color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> e <color=white>{5}</color><color=#DDA0DD>(+{11} Amplificação de Habilidade)</color> de dano de habilidade duas vezes. Fiora recebe {7} de redução de dano enquanto usa essa habilidade.
 Skill/Group/Coef/1003400┃Fiora avança na direção-alvo, causando <color=white>{0}</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
 Skill/Group/Coef/1003410┃Fiora avança na direção-alvo, causando <color=white>{0}</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade.\nSe ela acertar um inimigo, ela pode ativar a habilidade dentro de {4} segundos para avançar na direção-alvo novamente.\n\n<color=#FFFFC2>Efeito de ativação de Touché : </color>Causa {13} de dano de habilidade e reduz o tempo de recarga de <color=#ffffff>Fente</color> em {11} e de <color=#ffffff>Attaque Composée</color> em {12}.
 Skill/Group/Coef/1003500┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
@@ -7072,6 +7133,7 @@ Skill/Group/Coef/1003510┃Fiora agilmente ataca com sua arma na direção-alvo,
 Skill/Group/Coef/1003520┃Fiora agilmente ataca com sua arma na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade, causando {10} de lentidão por {9} segundos. Flèche pode ser usado até 3 vezes dentro de {3} segundos, e causa um adicional de <color=white>{11}</color><color=#ffd775>(+{13} Poder de Ataque)</color><color=#DDA0DD>(+{14} Amplificação de Habilidade)</color> de dano de habilidade a inimigos com máximo de acúmulos de Touché. Fléche causa dano adicional cada vez que ela acerta uma cobaia inimiga. \n \n<color=#FFFFC2> 1º Uso : </color>Fiora perfura na direção-alvo, causando <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque)</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano de habilidade. \n \n<color=#FFFFC2> 2º Uso : </color>Causa {4} do dano do último ataque como dano de habilidade. \n \n<color=#FFFFC2> 3º Uso & Efeito de ativação de Touché : </color>Causa {4} do dano do último ataque como dano de habilidade. Acertar todos os 3 ataques de Flèche causa <color=white>{5}</color> de dano verdadeiro adicional. Ativar Touché com o 3º uso da habilidade reduz o tempo de recarga de Fente em {6} e atordoa os inimigos por {7} segundos. Inimigos com lentidão são atordoados por {8} segundos adicionais. 
 CharacterState/Group/Name/1003100┃Touché
 CharacterState/Group/Desc/1003100┃Atingir um alvo com um habilidade aplica um acúmulo de Touché
+CharacterState/Group/Name/1003110┃Touché
 CharacterState/Group/Name/1003200┃Fente
 CharacterState/Group/Desc/1003200┃Desacelerado
 CharacterState/Group/Name/1003210┃Fente
@@ -7237,7 +7299,7 @@ CharacterState/Group/Desc/1009200┃Enraizado
 CharacterState/Group/Name/1009210┃Bomba Semtex
 CharacterState/Group/Desc/1009210┃A Bomba Semtex está presa.
 CharacterState/Group/Name/1009300┃Investida Rebelde
-CharacterState/Group/Desc/1009300┃Velocidade de movimento reduzida.
+CharacterState/Group/Desc/1009300┃Defesa reduzida.
 CharacterState/Group/Name/1009400┃Invisível
 CharacterState/Group/Desc/1009400┃Velocidade de movimento aumentada enquanto invisível.
 CharacterState/Group/Name/1009500┃Mina Operacional MOK
@@ -7477,7 +7539,6 @@ Skill/Group/Coef/1016600┃Silvia gira sua moto, causando <color=white>{0}</colo
 Skill/Group/Coef/1016700┃Silvia pula na direção na qual está olhando, causando <color=white>{0}</color><color=#dda0dd>(+{2} Amplificação de Habilidade)</color> dano de habilidade a inimigos no alcance e jogando eles para cima.
 Skill/Group/Coef/1016800┃Silvia faz um wheelie na direção do inimigo causando <color=white>{0}</color><color=#dda0dd>(+{5} Amplificação de Habilidade)</color> dano de habilidade e jogando-os para trás. Ela causa {3} a {4} de dano adicional dependendo de sua velocidade de movimento.
 Skill/Group/Coef/1016900┃Silvia desmonta de sua moto e troca suas habilidades. Seu próximo ataque básico dentro de {1} segundo(s) causa <color=white>{0}</color><color=#ffd775>(+{2} Attack Power)</color><color=#dda0dd>(+{3} Skill Amp)</color> dano de habilidade adicional.
-Skill/Group/ExpansionTip/1016700┃<i> Não pode pular paredes. </i>
 CharacterState/Group/Name/1016000┃Troca de Marcha
 CharacterState/Group/Desc/1016000┃Próximo ataque básico melhorado.
 CharacterState/Group/Name/1016050┃Troca de Marcha
