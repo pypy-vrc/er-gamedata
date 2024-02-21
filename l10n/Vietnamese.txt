@@ -1781,6 +1781,8 @@ ItemOptionCategory/SightRange┃Tầm Nhìn
 ItemOptionCategory/NormalAttackIncrease┃Sát Thương Đánh Thường Cộng Thêm
 ItemOptionCategory/SkillAttackIncrease┃Sát Thương Kỹ Năng
 ItemOptionCategory/DamageReduction┃Giảm Sát Thương
+ItemOptionCategory/PenetrationDefense┃Xuyên Giáp
+ItemOptionCategory/HpHealedDecrease┃Giảm Khả Năng Hồi Phục
 Collectible/1┃Nước
 Collectible/2┃Mảnh Gỗ
 Collectible/3┃Tảng Đá
@@ -4401,7 +4403,7 @@ Shop/Desc/SEASON_PASS_S7┃Nhận TẤT CẢ nội dung có trong mùa 7 với m
 Product/Name/SEASON_PASS_S8┃Gói Mùa 8
 Shop/Desc/SEASON_PASS_S8┃Nhận TẤT CẢ nội dung có trong mùa 8 với mức giá rẻ ngất ngưởng!
 Product/Name/SEASON_PASS_S10┃GÓI 1.0: KỲ NGHỈ NHIỆT ĐỚI
-Shop/Desc/SEASON_PASS_COMMON┃<color=#ffdf72><size=32>Gói Mùa Giải</size></color>\n<size=14>[Không Hoàn Tiền Khi Mua]</size>\n\n<color=#B2EBF4>Cơ hội để nhận được các Trang Phục Đặc Biệt, Biểu Cảm, Bia Mộ và các vật phẩm khác được phát hành trong mùa với giá cực kỳ ưu đãi!\nNâng cao trải nghiệm chơi game của bạn với Gói Mùa Giải.\nVui lòng tham khảo thông báo trên trang chủ để biết thêm thông tin chi tiết về các vật phẩm được bao gồm trong Gói Mùa Giải. Nội dung có thể thay đổi.
+Shop/Desc/SEASON_PASS_COMMON┃<color=#ffdf72><size=32>Gói Mùa Giải</size></color>\n<color=#B2EBF4>Cơ hội để nhận được các Trang Phục Đặc Biệt, Biểu Cảm, Bia Mộ và các vật phẩm khác được phát hành trong mùa với giá cực kỳ ưu đãi!\nNâng cao trải nghiệm chơi game của bạn với Gói Mùa Giải.\nVui lòng tham khảo thông báo trên trang chủ để biết thêm thông tin chi tiết về các vật phẩm được bao gồm trong Gói Mùa Giải. Nội dung có thể thay đổi.
 LOOTBOX_BASIC_SINGLE_01┃Hòm Dữ Liệu Viện Nghiên Cứu
 Shop/Desc/LOOTBOX_BASIC_SINGLE_01┃Một hòm chứa tối đa 4 vật phẩm và mảnh chế tác khác nhau.\n<color=orange>Không bao gồm phần thưởng xếp hạng và một số vật phẩm đặc biệt chỉ có trong sự kiện.</color>\n\nCác hòm đã mua có thể được mở trong phần Chế Tác bằng cách sử dụng Chìa Khóa Dữ Liệu.
 LOOTBOX_SKIN_SINGLE_01┃Hòm Dữ Liệu Trang Phục
@@ -8628,7 +8630,7 @@ CharacterState/Group/Name/6015020┃Thần Tốc - Lá Chắn
 CharacterState/Group/Desc/6015020┃Bạn đang được che chắn
 Item/Skills/6016000┃Tái Sinh
 Item/Skills/6016001/Name┃<color=yellow>Tái Sinh: Khế Ước Máu</color>
-Item/Skills/6016001/Body┃Khi lượng máu rớt xuống ngưỡng {0}% sau khi chịu sát thương từ kẻ địch, bạn sẽ nhận một lớp Khiên chặn <color=green>{11}</color> sát thương và {4}% Kháng Hiệu Ứng trong {1} giây đồng thời tăng {16} {15} và {9}% Hiệu Quả Hồi Phục trong {5} giây. (Hồi chiêu: {13} giây)
+Item/Skills/6016001/Body┃Khi lượng máu rớt xuống ngưỡng {0}% sau khi chịu sát thương từ kẻ địch, bạn sẽ nhận một lớp Khiên chặn <color=green>{11}</color> sát thương và 50% Kháng Hiệu Ứng trong {1} giây đồng thời tăng {16} {15} và {9}% Hiệu Quả Hồi Phục trong {5} giây. (Hồi chiêu: {13} giây)
 Item/Skills/6016001/Desc┃Khi lượng máu rớt xuống ngưỡng {0}% sau khi chịu sát thương từ kẻ địch, bạn sẽ nhận một lớp Khiên chặn {2} <color=green>(+Cấp Độ * {3})</color> sát thương và {4}% Kháng Hiệu Ứng trong {1} giây đồng thời tăng <color=#FFD775>Sức Tấn Công thêm {13}</color> HOẶC <color=#DDA0DD>Cường Hóa Kỹ Năng thêm {14}</color> và {9}% Hiệu Quả Hồi Phục trong {5} giây. (Hồi chiêu: {11} giây)
 Item/Skills/6016002/Name┃<color=yellow>Tái Sinh: Khát Máu</color>
 Item/Skills/6016002/Body┃Khi lượng máu rớt xuống ngưỡng {0}% sau khi chịu sát thương từ kẻ địch, bạn sẽ nhận một lớp Khiên chặn <color=green>{11}</color> sát thương trong {1} giây đồng thời tăng {16} {15} và {12}% Hiệu Quả Hồi Phục trong {5} giây. (Hồi chiêu: {13} giây)
@@ -9005,6 +9007,7 @@ Item/Skills/6008202/Body┃Gây sát thương cho một mục tiêu sẽ làm gi
 Item/Skills/6008202/Desc┃Gây sát thương cho một mục tiêu sẽ làm giảm khả năng hồi phục của kẻ đó đi 60% trong 4 giây.
 CharacterState/Group/Name/6008010┃Giảm Hồi Phục
 CharacterState/Group/Desc/6008010┃Hồi máu từ mọi nguồn đều bị giảm đáng kể hiệu quả
+Skill/Group/Desc/1009300┃Isol xả hàng loạt đạn về phía trước theo hình nón trong {0} giây, gây <color=white>{7}</color> Sát Thương Kỹ năng mỗi {1} giây.
 ItemType/CHARACTER/Name┃Nhân Vật
 ItemType/EVENT_NP/Name┃NP Sự Kiện
 ItemType/RANDOM_BOX/Name┃Hòm
@@ -12990,13 +12993,13 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃Gấp đôi phí tham gia vì đã b�
 배치고사 중┃Cấp độ chỉ định/Vị trí cấp độ
 강등┃Giáng cấp
 승급!┃Thăng Cấp thành{0}.
-TierRP/IRON_SUBJECT┃<color=#807D7D>0RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>1000RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>2000RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>3000RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>4000RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>5000RP</color>
-TierRP/MITHRIL┃<color=#6CE6E5>6000RP</color>
+TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
 TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
 MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>Hạng Hiện Tại</color>
@@ -13799,7 +13802,7 @@ Ping/Order/Roger┃Đã hiểu
 Ping/Order/NeedFood┃Cần đồ ăn
 Ping/Order/NeedWater┃Cần đồ uống
 Ping/Order/NeedWhat┃Bạn cần gì à?
-Ping/Order/Cancel┃Không Đồng Ý
+Ping/Communication/Cancel┃Không Đồng Ý
 Ping/Order/Where/Chatting┃{0}({1}) hỏi <color=#C2FFA0>đi đâu bây giờ</color>?
 Ping/Order/LetsJoin/Chatting┃{0}({1}) muốn <color=#C2FFA0>tập hợp</color>!
 Ping/Order/Wait/Chatting┃{0}({1}) nói <color=#C2FFA0>khoan đã</color>!
@@ -13808,10 +13811,6 @@ Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>cần đồ ăn</color>.
 Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>cần đồ uống</color>.
 Ping/Order/NeedWhat/Chatting┃{0}({1}) nói <color=#C2FFA0>bạn cần gì à</color>?
 Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) đã nhận Phần Thưởng Tranh Đoạt là <color=#C2FFA0>{2}</color>.
-핑퇴각┃{0} ({1}) ra hiệu rút lui khỏi {2}.
-핑지원┃{0} ({1}) đang cần hỗ trợ ở {2}.
-핑주의┃{0} ({1}) ra hiệu cẩn thận ở {2}.
-핑이동┃{0} ({1}) đang trên đường đến {2}.
 아군빈사┃{0} ({1}) bị đánh ngã ở {2}.
 야생동물빈사알림┃{0} đã đánh ngã {1} ({2}).
 금지구역사망알림┃{0} ({1}) đã phát nổ ở khu vực cấm.
@@ -14058,8 +14057,7 @@ ServerRegion/Frankfurt┃Châu Âu
 ServerRegion/Singapore┃Đông Nam Á
 ServerRegion/SaoPaulo┃Nam Mỹ 
 ServerRegion/HongKong┃Hồng Kông (Châu Á)
-ServerRegion/DevChina┃Asia2 (Beta)
-ServerRegion/Beijing┃Asia2 (Beta)
+ServerRegion/Asia2┃Asia2 (Beta)
 홍콩리전으로 변경되었습니다┃Tăng tốc mạng đến máy chủ Seoul đã bị tắt. Bạn đã được kết nối lại với máy chủ Hồng Kông.
 접속 가능 지역 없음┃Không tìm thấy máy chủ. Vui lòng kiểm tra lại kết nối.
 개요┃Sơ Lược
@@ -14976,6 +14974,8 @@ GoodsMenu/Customize/2┃UI
 프리미엄 PC방 혜택(카카오)┃Kakao Games PC Cafe\nCác lợi ích của Cafe PC Cao Cấp.
 혜택 내용┃Mở khóa toàn bộ nhân vật.\nTăng 50% số lượng A-Coin nhận được.
 혜택 내용(skin 포함)┃Mở khóa toàn bộ nhân vật.\nMở khóa toàn bộ trang phục.\nTăng 50% số lượng A-Coin nhận được.
+스킨 체험 이벤트 - 이벤트┃Sự Kiện
+체험 해보기 - 체험 해보기┃Thử Nghiệm Nhân Vật
 탈출 성공┃Tẩu Thoát Thành Công
 탈출 성공 결과화면 텍스트┃T Ẩ U T H O Á T  T H À N H C Ô N G
 탈출에 성공했습니다.┃Bạn đã tẩu thoát thành công!
