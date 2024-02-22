@@ -1720,6 +1720,8 @@ ItemOptionCategory/SightRange┃Sichtreichweite
 ItemOptionCategory/NormalAttackIncrease┃Bonusschaden für Normale Angriffe
 ItemOptionCategory/SkillAttackIncrease┃Fertigkeitsschaden
 ItemOptionCategory/DamageReduction┃Schadensminderung
+ItemOptionCategory/PenetrationDefense┃Rüstungsdurchdringung
+ItemOptionCategory/HpHealedDecrease┃Heilungsreduktion
 Collectible/1┃Wasserquelle
 Collectible/2┃Stöcke
 Collectible/3┃Steinhaufen
@@ -4319,7 +4321,7 @@ Shop/Desc/SEASON_PASS_S7┃Der GESAMTE Inhalt von Saison 7 zu einem schaurig gut
 Product/Name/SEASON_PASS_S8┃Saison 8 Paket
 Shop/Desc/SEASON_PASS_S8┃Der GESAMTE Inhalt von Saison 8 zu einem schaurig guten Preis!
 Product/Name/SEASON_PASS_S10┃1.0 PAKET: SOMMERFERIEN
-Shop/Desc/SEASON_PASS_COMMON┃<color=#ffdf72><size=32>Saisonpaket</size></color>\n<size=14>[Nicht erstattungsfähiger Gegenstand]</size>\n<color=#B2EBF4>Eine Chance, spezielle Skins, Emotes, Grabsteine und andere Gegenstände, die während der Saison veröffentlicht werden, zu einem großartigen Preis zu erhalten!\nErweiter dein Spielerlebnis mit dem Saisonpaket.\nBitte beachte die separate Mitteilung für die detaillierten Gegenstände, die im Saisonpaket enthalten sind. Der Inhalt kann sich ändern.
+Shop/Desc/SEASON_PASS_COMMON┃<color=#ffdf72><size=32>Saisonpaket</size></color>\n<color=#B2EBF4>Eine Chance, spezielle Skins, Emotes, Grabsteine und andere Gegenstände, die während der Saison veröffentlicht werden, zu einem großartigen Preis zu erhalten!\nErweiter dein Spielerlebnis mit dem Saisonpaket.\nBitte beachte die separate Mitteilung für die detaillierten Gegenstände, die im Saisonpaket enthalten sind. Der Inhalt kann sich ändern.
 LOOTBOX_BASIC_SINGLE_01┃Forschungsdaten-Box
 Shop/Desc/LOOTBOX_BASIC_SINGLE_01┃Eine Box mit bis zu 4 verschiedenen intakten Gegenständen und Designs.\n<color=orange>Ranglistenbelohnungen und einige speziell genutzte Gegenstände sind nicht enthalten.</color>\n\nGekaufte Kisten können in der Schmiede mit dem Datenschlüssel geöffnet werden.
 LOOTBOX_SKIN_SINGLE_01┃Skindaten-Box
@@ -6591,7 +6593,7 @@ CharacterState/Group/Name/6015020┃Windschnittig - Schild
 CharacterState/Group/Desc/6015020┃Du wirst beschützt.
 Item/Skills/6016000┃Letzte Chance
 Item/Skills/6016001/Name┃<color=yellow>Letzte Chance: Blutpakt</color>
-Item/Skills/6016001/Body┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, erhältst du einen <color=green>{11}</color> LP Schild und {4}% Zähigkeit für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
+Item/Skills/6016001/Body┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, erhältst du einen <color=green>{11}</color> LP Schild und 50% Zähigkeit für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
 Item/Skills/6016001/Desc┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, erhältst du einen {2} + <color=green>Charakerstufe*{3}</color> LP Schild und {4}% Zähigkeit für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
 Item/Skills/6016002/Name┃<color=yellow>Letzte Chance: Notfallknopf</color>
 Item/Skills/6016002/Body┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, wirst du von allen Debuffs und Massenkontrolleffekten befreit, erhältst einen <color=green>{11}</color> LP Schild für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
@@ -6861,6 +6863,7 @@ Skill/Code/Desc/4506001┃Verbündete regenerieren sofort  {0} + <color=#688A08>
 Skill/Code/Coef/4506001┃Verbündete regenerieren sofort  {0} + <color=#688A08> {1}% der verlorenen LP</color> und erhalten um {3} erhöhte Verteidigung für {2} Sekunden. 
 CharacterState/Group/Name/6008000┃Heilungsreduzierung
 CharacterState/Group/Desc/6008000┃Jegliche Heilung auf dir ist weniger effektiv.
+Skill/Group/Desc/1009300┃Isol feuert für {0} Sekunden einen Kugelhagel ab, richtet <color=white>{7}</color> Schaden alle {1} Sekunden, und reduziert mit jedem Treffer das Lauftempo von Gegnern um {5} für {4} Sekunden.
 ItemType/CHARACTER/Name┃Charakter
 ItemType/EVENT_NP/Name┃Event-NP
 ItemType/RANDOM_BOX/Name┃Box
@@ -10772,13 +10775,13 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃Verdoppelung der Einstiegskosten für
 배치고사 중┃Kalibierungsphase
 강등┃Abstieg
 승급!┃Aufstieg
-TierRP/IRON_SUBJECT┃<color=#807D7D>0RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>1000RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>2000RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>3000RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>4000RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>5000RP</color>
-TierRP/MITHRIL┃<color=#6CE6E5>6000RP</color>
+TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
 TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
 MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
@@ -11538,7 +11541,7 @@ Ping/Order/Roger┃Verstanden
 Ping/Order/NeedFood┃Brauche Essen
 Ping/Order/NeedWater┃Brauche Trinken
 Ping/Order/NeedWhat┃Brauchst du etwas?
-Ping/Order/Cancel┃Abbrechen
+Ping/Communication/Cancel┃Abbrechen
 Ping/Order/Where/Chatting┃{0}({1}) fragt <color=#C2FFA0>Wohin</color>?
 Ping/Order/LetsJoin/Chatting┃{0}({1}) sagt <color=#C2FFA0>Lasst uns uns treffen</color>!
 Ping/Order/Wait/Chatting┃{0}({1}) sagt <color=#C2FFA0>Warte!</color>!
@@ -11546,10 +11549,6 @@ Ping/Order/Roger/Chatting┃{0}({1}) sagt <color=#C2FFA0>Verstanden</color>!
 Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>braucht Essen</color>.
 Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>braucht Trinken</color>.
 Ping/Order/NeedWhat/Chatting┃{0}({1}) sagt <color=#C2FFA0>Brauchst du etwas?</color>.
-핑퇴각┃{0}({1}) signalisiert <color=#FFBB00>Gefahr</color> in {2}.
-핑지원┃{0}({1}) bittet um <color=#FFBB00>Unterstützung</color> in {2}.
-핑주의┃{0}({1}) signalisiert, in {2} <color=#FFBB00>vorsichtig</color> zu sein.
-핑이동┃{0}({1}) ist <color=#FFBB00>unterwegs</color> nach {2}.
 아군빈사┃{0}({1}) wurde in {2} besiegt.
 야생동물빈사알림┃{0} hat {1}({2}) besiegt.
 금지구역사망알림┃{0}({1}) ist in einer gesperrten Zone gestorben.
@@ -11792,8 +11791,7 @@ ServerRegion/Frankfurt┃Europa
 ServerRegion/Singapore┃Süd-Ost Asien
 ServerRegion/SaoPaulo┃Südamerika
 ServerRegion/HongKong┃Hong Kong (Asien)
-ServerRegion/DevChina┃Asia2 (Beta)
-ServerRegion/Beijing┃Asia2 (Beta)
+ServerRegion/Asia2┃Asia2 (Beta)
 홍콩리전으로 변경되었습니다┃Netzwerkbeschleunigung nach Seoul wurde deaktiviert. Du wurdest mit den Hong Kong Servern verbunden.
 접속 가능 지역 없음┃Konnte nicht mit dem Server verbinden prüfe deine Internet Verbindung
 자동┃Automatisch
@@ -12656,6 +12654,8 @@ GoodsMenu/InGame/1┃Sprays & Grabsteine
 GoodsMenu/InGame/2┃Skins für Spielziele
 GoodsMenu/Customize/1┃Sound
 GoodsMenu/Customize/2┃UI
+스킨 체험 이벤트 - 이벤트┃Ereignis
+체험 해보기 - 체험 해보기┃Charakter ausprobieren
 탈출 성공┃Flucht abgeschlossen
 탈출 성공 결과화면 텍스트┃F L U C H T  A B G E S C H L O S S E N
 탈출에 성공했습니다.┃Du bist erfolgreich geflohen.
