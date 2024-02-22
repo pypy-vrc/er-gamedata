@@ -1012,6 +1012,8 @@ ItemOptionCategory/SightRange┃Champ de Vision
 ItemOptionCategory/NormalAttackIncrease┃Dégâts Supplémentaires des Attaques de Base
 ItemOptionCategory/SkillAttackIncrease┃Dégâts de Compétence
 ItemOptionCategory/DamageReduction┃Réduction des Dégâts Subis
+ItemOptionCategory/PenetrationDefense┃Pénétration d'Armure
+ItemOptionCategory/HpHealedDecrease┃Réduction des Soins Reçus
 Collectible/1┃Source d'eau
 Collectible/2┃Tas de bois
 Collectible/3┃Pile de pierres
@@ -6267,7 +6269,7 @@ CharacterState/Group/Name/6015020┃Aérodynamique - Bouclier
 CharacterState/Group/Desc/6015020┃Vous êtes protégé par un bouclier.
 Item/Skills/6016000┃Second Souffle
 Item/Skills/6016001/Name┃<color=yellow>Second Souffle : Pacte de Sang</color>
-Item/Skills/6016001/Body┃Lorsque vos PV tombent en-dessous de {0}% après avoir subi des dégâts d'un joueur ennemi, purge tout malus ou effet de contrôle vous affectant, puis vous octroie {4}% de Ténacité et un bouclier absorbant <color=green>{11}</color> dégâts pendant {1} secondes. De plus, votre Puissance d'Attaque augmente de {6} pendant {5} secondes, et votre PV Régen. est augmentée de {9}% pendant {5} secondes. (Temps de recharge : {13} secondes)
+Item/Skills/6016001/Body┃Lorsque vos PV tombent en-dessous de {0}% après avoir subi des dégâts d'un joueur ennemi, purge tout malus ou effet de contrôle vous affectant, puis vous octroie 50% de Ténacité et un bouclier absorbant <color=green>{11}</color> dégâts pendant {1} secondes. De plus, votre Puissance d'Attaque augmente de {6} pendant {5} secondes, et votre PV Régen. est augmentée de {9}% pendant {5} secondes. (Temps de recharge : {13} secondes)
 Item/Skills/6016001/Desc┃Lorsque vos PV tombent en-dessous de {0}% après avoir subi des dégâts d'un joueur ennemi, purge tout malus ou effet de contrôle vous affectant, puis vous octroie {4}% de Ténacité et un bouclier absorbant {2}+<color=green>Niveau*{3}</color> dégâts pendant {1} secondes. De plus, votre Puissance d'Attaque augmente de {6} pendant {5} secondes, et votre PV Régen. est augmentée de {9}% pendant {5} secondes. (Temps de recharge : {11} secondes)
 Item/Skills/6016002/Name┃<color=yellow>Second Souffle : Bouton de Secours</color>
 Item/Skills/6016002/Body┃Lorsque vos PV tombent en-dessous de {0}% après avoir subi des dégâts d'un joueur ennemi, vous octroie un bouclier absorbant <color=green>{11}</color> dégâts pendant {1} secondes. De plus, votre Puissance d'Attaque augmente de {6} pendant {5} secondes, et votre PV Régen. est augmentée de {12}% pendant {5} secondes. (Temps de recharge : {13} secondes)
@@ -6419,6 +6421,7 @@ CharacterState/Group/Name/6008000┃Réduction de Soins
 CharacterState/Group/Desc/6008000┃Les soins reçus sont moins efficaces.
 CharacterState/Group/Name/6008010┃Réduction de Soins
 CharacterState/Group/Desc/6008010┃Les soins reçus sont moins efficaces.
+Skill/Group/Desc/1009300┃Isol déchaîne une furie de balles devant lui pendant {0} secondes, infligeant <color=white>{7}</color> dégâts de compétence toutes les {1} secondes.
 ItemType/CHARACTER/Name┃Personnage
 ItemType/EVENT_NP/Name┃NP d'Évènement
 ItemType/RANDOM_BOX/Name┃Boîte
@@ -10548,7 +10551,7 @@ Ping/Order/Roger┃Compris !
 Ping/Order/NeedFood┃Besoin de nourriture
 Ping/Order/NeedWater┃Besoin de boissons
 Ping/Order/NeedWhat┃Avez vous besoin de quelquechose?
-Ping/Order/Cancel┃Annuler
+Ping/Communication/Cancel┃Annuler
 Ping/Order/Where/Chatting┃{0}({1}) demande <color=#C2FFA0>où aller</color>
 Ping/Order/LetsJoin/Chatting┃{0}({1}) veut <color=#C2FFA0>se regrouper</color>!
 Ping/Order/Wait/Chatting┃{0}({1}) demande <color=#C2FFA0>d'attendre</color>!
@@ -10556,10 +10559,6 @@ Ping/Order/Roger/Chatting┃{0}({1}) dit <color=#C2FFA0>compris</color>!
 Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>besoin de nourriture</color>.
 Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>besoin de boissons</color>.
 Ping/Order/NeedWhat/Chatting┃{0}({1}) dit <color=#C2FFA0>Avez vous besoin de quelquechose</color> ?
-핑퇴각┃{0} ({1}) signale un <color=#FFBB00>danger</color> dans {2}.
-핑지원┃{0} ({1}) demande de l' <color=#FFBB00>aide</color> à {2}.
-핑주의┃{0} ({1}) indique qu'il faut faire  <color=#FFBB00>attention</color> à {2}.
-핑이동┃{0} ({1}) est  <color=#FFBB00>en chemin</color> vers {2}.
 아군빈사┃{0}({1}) est à terre à {2}.
 야생동물빈사알림┃{0} a mis à terre {1} ({2}).
 금지구역사망알림┃{0} ({1}) a explosé dans une zone restreinte.
@@ -10792,8 +10791,7 @@ ServerRegion/Frankfurt┃Europe
 ServerRegion/Singapore┃Singapour (Asie du Sud-Est)
 ServerRegion/SaoPaulo┃Amérique du Sud
 ServerRegion/HongKong┃Hong Kong (Asie)
-ServerRegion/DevChina┃Asia2 (Beta)
-ServerRegion/Beijing┃Asia2 (Beta)
+ServerRegion/Asia2┃Asia2 (Beta)
 홍콩리전으로 변경되었습니다┃L'accélération de réseau a été désactivée pour le serveur Séoul. Vous avez été reconnecté au serveur Hong Kong.
 접속 가능 지역 없음┃Impossible de trouver un serveur. Veuillez vérifier votre connexion Internet.
 자동┃Auto
@@ -11684,6 +11682,8 @@ GoodsMenu/InGame/1┃Tags & Tombes
 GoodsMenu/InGame/2┃Skins d'Objectifs
 GoodsMenu/Customize/1┃Son
 GoodsMenu/Customize/2┃Interface
+스킨 체험 이벤트 - 이벤트┃Évènement
+체험 해보기 - 체험 해보기┃Essai De Personnage
 탈출 성공┃Évasion Réussie
 탈출 성공 결과화면 텍스트┃É V A S I O N   R É U S S I E
 탈출에 성공했습니다.┃Vous avez réussi à vous évader !
