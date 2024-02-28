@@ -711,6 +711,7 @@ CastingActionType/CraftUncommonFood┃A criar
 CastingActionType/CraftRareFood┃A criar
 CastingActionType/CraftEpicFood┃A criar
 CastingActionType/CraftLegendFood┃A criar
+CastingActionType/CraftCustom_1┃A criar
 CastingActionType/Hyperloop┃A Utilizar o Hyperloop: <color=#FFBB00>{0}</color>
 CastingActionType/HyperloopToTeammate┃Ir para aliados usando Hyperloop: <color=#FFBB00>{0}</color>
 CastingActionType/InstallTrap┃A Instalar Armadilha
@@ -751,6 +752,7 @@ DropFrequency/Never┃Nunca
 DropFrequency/Rare┃Raramente
 DropFrequency/Often┃Ocasionalmente
 DropFrequency/Always┃Sempre
+DropFrequency/Exclusive┃Sempre
 GradeColor/None┃Sem cor
 GradeColor/Common┃Cinza
 GradeColor/Uncommon┃Verde
@@ -1477,6 +1479,11 @@ Shop/Desc/ACCOUNT_Add_Traitslot┃Adiciona um novo slot de Aumento.
 ShopMenu/Etc/RANDOM_BOX┃Caixa
 ShopMenu/Etc/EMOTION┃Emote
 ShopMenu/Etc/Account┃Conta
+ItemType/CHARACTER/Name┃Personagem
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
+선택권 아이템 타입 도안┃DESIGN
+Loot┃LOOT
 Skill/Group/Name/1001100┃Carnificina
 Skill/Group/Name/1001200┃Cortar e Dilacerar
 Skill/Group/Name/1001300┃Explosão de Adrenalina
@@ -1882,8 +1889,8 @@ Skill/Group/Desc/1013200┃Xiukai joga seu barril de molho na direção alvo, ca
 Skill/Group/Desc/1013500┃Xiukai atira fogo de seu wok {7} vezes em {0} segundos, causando <color=white>{20}</color><color=yellow>(+{8})</color> de dano aos inimigos em um cone à sua frente. (<color=yellow>Chefe Colossal:</color> {3}).\n\nInimigos com movimento reduzido têm sua defesa reduzida em {6} por {5} segundos.
 Skill/Group/Coef/1013100┃Alimentos e bebidas feitos por Xiukai têm {0} de bônus de recuperação. Ao criar um alimento ou bebida de raridade incomum ou superior, ele ganha um acúmulo de Chefe Colossal, que aumenta sua Vida Máxima em {6} para cada acúmulo, além de receber atributos extras de acordo com seu número de acúmulos.\n\nBônus de Vida atual: {1}\n\n(Bônus recebidos por acúmulos de Chefe Colossal)\n{7} : Defesa {8}\n{9} : Poder de Ataque {10}\n{11} : Queimando até ficar Crocante ativa até 7 vezes.\n\nAcúmulos fornecidos por raridade de alimento\n\nIncomum: {2}\nRaro: {3}\nÉpico: {4}
 Skill/Group/Coef/1013200┃Xiukai joga seu barril de molho na direção alvo, causando {0}<color=#ffd775>(+{1})</color> de dano aos inimigos atingidos e reduzindo sua velocidade de movimento em {3} por {2} segundos.
-Skill/Group/Coef/1013410┃Xiukai golpeia o chão com seu wok gigante, causando {0}<color=#ffd775>(+{1})</color> de dano em uma área ao seu redor e reduzindo a velocidade de movimento dos inimigos atingidos por {3} durante {2} segundos.\n\nInimigos com movimento reduzido recebem <color=#688A08>{6}</color> de dano adicional ({5} do HP máximo do Xiukai) e sua velocidade de movimento é reduzida por mais {4} segundos.
-Skill/Group/Coef/1013400┃Xiukai desliza em seu wok na direção alvo, causando {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} do HP máximo do Xiukai) de dano aos inimigos atingidos.\n\nInimigos com movimento reduzido recebem {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> de dano ({4} do HP máximo do Xiukai) e são lançados no ar por {3} segundos.
+Skill/Group/Coef/1013400┃Xiukai golpeia o chão com seu wok gigante, causando {0}<color=#ffd775>(+{1})</color> de dano em uma área ao seu redor e reduzindo a velocidade de movimento dos inimigos atingidos por {3} durante {2} segundos.\n\nInimigos com movimento reduzido recebem <color=#688A08>{6}</color> de dano adicional ({5} do HP máximo do Xiukai) e sua velocidade de movimento é reduzida por mais {4} segundos.
+Skill/Group/Coef/1013410┃Xiukai desliza em seu wok na direção alvo, causando {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} do HP máximo do Xiukai) de dano aos inimigos atingidos.\n\nInimigos com movimento reduzido recebem {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> de dano ({4} do HP máximo do Xiukai) e são lançados no ar por {3} segundos.
 Skill/Group/Coef/1013500┃Xiukai atira fogo de seu wok {7} vezes em {0} segundos, causando {1}<color=#ffd775>(+{2})</color><color=yellow>(+{8})</color> de dano aos inimigos em um cone à sua frente. (<color=yellow>Chefe Colossal:</color> {3}).\n\nInimigos com movimento reduzido têm sua defesa reduzida em {6} por {5} segundos.
 CharacterState/Group/Name/1013100┃Chefe Colossal
 CharacterState/Group/Desc/1013100┃Xiukai ganha um acúmulo de Chefe Colossal quando cria alimentos. Alimentos e bebidas feitos por Xiukai concedem mais recuperação de PV/PE.
@@ -3561,13 +3568,6 @@ CharacterState/Group/Name/6008000┃Redução de Cura
 CharacterState/Group/Desc/6008000┃Toda cura sobre você é menos eficiente.
 CharacterState/Group/Name/6008010┃Redução de Cura
 CharacterState/Group/Desc/6008010┃Toda cura sobre você é menos eficiente.
-Skill/Group/Desc/1009300┃Isol solta uma rajada de balas a sua frente por {0} segundos, causando <color=#ffd775><color=white>{7}</color>(+{3})</color> de dano cada {1} segundo, e reduzindo a Velocidade de Movimento dos inimigos em {5} por {4} segundos, começando pelo último dano causado por Investida Rebelde.
-ItemType/CHARACTER/Name┃Personagem
-선택권 아이템 타입 캐릭터┃SUBJECT
-선택권 아이템 타입 스킨┃SKIN
-선택권 아이템 타입 도안┃DESIGN
-Loot┃LOOT
-Goods/Name/1┃Twitch Drops
 오늘의 도전┃Missões Diárias
 오늘의 도전과제를 모두 완수하였습니다.┃Completou as Missões Diárias.
 도전과제 변경 가능┃Pode alterar uma Missão Diária uma vez por dia.\nGostaria de alterar para uma nova Missão Diária?
@@ -5305,527 +5305,6 @@ Item/Skills/OnlyCloseCombat┃<color=red>Não é aplicado a armas de ataque à d
 Item/Skills/OnlyRangedCombat┃<color=red>Não é aplicado a armas de ataque corpo-a-corpo.</color>
 서비스약관┃Terms of Service
 개인정보동의┃Privacy Policy
-BattleMission/1001001/1┃Jogue 30 partidas Normais/Ranqueadas
-BattleMission/1001002/1┃Obtém 10.000 A-Coins jogando partidas. (Excluem-se DROPS)
-BattleMission/1001003/1┃Mate 200 Galinhas
-BattleMission/1001004/1┃Mate 3 Sobreviventes na Floresta
-BattleMission/1001007/1┃Sobreviva por pelo menos 15 minutos em 7 partidas
-BattleMission/1001008/1┃Obtenha 10 Árvores da Vida
-BattleMission/1002001/1┃Elimine Wickeline 1 vez
-BattleMission/1002002/1┃Obtenha 10 Núcleos de Força
-BattleMission/1002003/1┃Mate 200 Morcegos
-BattleMission/1002005/1┃Estando com menos de 300 de Vida, mate 3 Sobreviventes
-BattleMission/1002006/1┃Ganhe com menos de 25 segundos na sua contagem de área restrita
-BattleMission/1002007/1┃Ganhe estando equipado apenas com os itens do seu primeiro Plano Salvo selecionado
-BattleMission/1002008/1┃Mate 4 Sobreviventes
-BattleMission/1003001/1┃Jogue 20 Partidas Normais/Ranqueadas
-BattleMission/1003002/1┃Use o Hyperloop 30 vezes
-BattleMission/1003003/1┃Mate 100 Javalis
-BattleMission/1003004/1┃Obtenha 5 itens lendários através de Caixas de Suprimentos
-BattleMission/1003005/1┃Mate 3 Sobreviventes em uma área restrita
-BattleMission/1003006/1┃Mate 10 Alfas
-BattleMission/1004001/1┃Termine no top 3 em 3 partidas Normais/Raqueadas.
-BattleMission/1004002/1┃Cause 50.000 de dano a animais selvagens.
-BattleMission/1004003/1┃Mate Alfa 7 vezes
-BattleMission/1004004/1┃Obtenha 40 itens através de Caixas de Suprimentos
-BattleMission/1004005/1┃Visite todas as áreas (Exceto Centro de Pesquisa)
-BattleMission/1004007/1┃Mate 180 Morcegos
-BattleMission/1004008/1┃Use o Hyperloop 50 vezes
-BattleMission/1005001/1┃Obtenha 10 Amostras de Sangue FV
-BattleMission/1005002/1┃Obtenha 5 itens lendários através de Caixas de Suprimentos
-BattleMission/1005003/1┃Mate 100 Cães Selvagens
-BattleMission/1005004/1┃Use o Hyperloop 15 vezes
-BattleMission/1005005/1┃Cause 50.000 de dano a animais selvagens.
-BattleMission/1005006/1┃Mate 75 Lobos
-BattleMission/1005007/1┃Obtenha 10 Bombas Inteligentes
-BattleMission/1006001/1┃Mate 3 Sobreviventes em uma área restrita
-BattleMission/1006002/1┃Cause 50.000 de dano a animais selvagens.
-BattleMission/1006004/1┃Cause 6.000 de dano a Sobreviventes
-BattleMission/1006005/1┃Vença 1 Partida Normal/Ranqueada
-BattleMission/1006006/1┃Mate 3 Sobreviventes
-BattleMission/1006007/1┃Mate 50 Ursos
-BattleMission/1007001/1┃Obtenha 30 itens através de Caixas de Suprimentos
-BattleMission/1007002/1┃Cause 8.000 de dano a Sobreviventes
-BattleMission/1007003/1┃Mate 25 Ursos
-BattleMission/1007004/1┃Mate a Wickeline 5 vezes
-BattleMission/1007005/1┃Mate 5 Sobreviventes
-BattleMission/1007006/1┃Mate 100 Cães Selvagens
-BattleMission/1007007/1┃Visite todas as áreas (Exceto Centro de Pesquisa)
-BattleMission/1007008/1┃Mate 4 Sobreviventes
-BattleMission/1008001/1┃Sobreviva por pelo menos 15 minutos em 3 partidas
-BattleMission/1008003/1┃Mate Ômega 5 vezes
-BattleMission/1008004/1┃Cause 50.000 de dano a animais selvagens.
-BattleMission/1008007/1┃Ganhe com menos de 20 segundos na sua contagem de área restrita
-BattleMission/1008008/1┃Mate 10 Sobreviventes
-BattleMission/1009002/1┃Mate 150 Galinhas
-BattleMission/1009003/1┃Mate a Wickeline 3 vezes
-BattleMission/1009004/1┃Cause 30.000 de dano a Sobreviventes
-BattleMission/1009005/1┃Obtenha 3 itens Lendários por meio de Caixas de Suprimento
-BattleMission/1009006/1┃Ganhe estando equipado apenas com os itens do seu primeiro Plano Salvo selecionado
-BattleMission/1009007/1┃Termine no top 5 em 7 partidas Normais/Ranqueadas
-BattleMission/1009008/1┃Mate 50 Ursos
-BattleMission/1010002/1┃Obtenha 10 Pedras Lunares
-BattleMission/1010003/1┃Mate 5 Sobreviventes
-BattleMission/1010004/1┃Mate 40 Lobos
-BattleMission/1010005/1┃Mate 3 Ômegas
-BattleMission/1010006/1┃Mate 70 Javalis
-BattleMission/1010007/1┃Estando com menos de 150 de Vida, mate 2 Sobreviventes
-BattleMission/6001001/1┃Obtém 2.000 A-Coins jogando partidas. (Excluem-se DROPS)
-BattleMission/10002006/1┃Ganhe com menos de 25 segundos na sua contagem de área restrita
-BattleMission/10002008/1┃Mate 10 Sobreviventes
-BattleMission/10007008/1┃Jogue 20 Partidas Normais/Ranqueadas
-BattleMission/10008005/1┃Obtenha 3 itens Lendários por meio de Caixas de Suprimento
-BattleMission/10008009/1┃Mate 10 Sobreviventes
-BattleMission/10008010/1┃Mate 3 Sobreviventes em uma área restrita
-로딩팁 튜토리얼1┃Um artigo marcado com um triângulo amarelo indica que é um dos artigos selecionados para o teu plano atual.\nApanha os teus artigos marcados primeiro!
-로딩팁 튜토리얼2┃Artigos que precisas e podes encontrar na tua área atual estão exibidos acima do teu minimapa.
-로딩팁 튜토리얼3┃Prioriza criar a tua arma.\nQuando mais rápido a tiveres, mais probabilidade tens de ganhar. Ou de matar inimigos mais cedo.
-로딩팁 튜토리얼4┃Procura no minimapa o símbolo do Hyperloop (≫)\nUsa-o para te teletransportares pela Ilha Lumia!
-로딩팁 튜토리얼5┃Usa o mapa para veres onde podes apanhar os artigos!\nPodes clicar em [F8] para os encontrar!
-로딩팁 튜토리얼6┃Se vires uma consola de segurança, ativa-a!\nAs CCTV dão-te visão na tua área para te ajudar a ver os inimigos.
-로딩팁 튜토리얼7┃Estás sem Vida ou Energia? Clica no [X] para Descansar.\nMas… certifica-te antes de que estás num lugar seguro.
-로딩팁 튜토리얼8┃Com a função de loot automático ativada, os artigos selecionados serão automaticamente recolhidos após um tempo.
-로딩팁 튜토리얼9┃Podes usar a Criação Rápida com a tecla-atalho de 'Criação Rápida'!(Quem diria?!)\nAo cliclar nessa tecla irás criar o item mais à esquerda na lista de itens de criação.
-로딩팁 튜토리얼10┃Com o mapa aberto (M), podes mover-te ao pressionar CTRL e clicar com o botão direito no mapa.\nAssim, fica mais fácil de viajar para zonas mais longínquas.
-로딩팁 튜토리얼11┃Podes usar as teclas numéricas (0-9) para consumir os teus... consumíveis.
-로딩팁 튜토리얼12┃Pressiona [A] e o Botão Esquerdo do Rato para usar o Movimento de Ataque.\nA tua personagem atacará qualquer inimigo no caminho até o ponto que selecionaste.
-로딩팁 튜토리얼13┃Usa o Botão Esquerdo do rato enquanto seguras [Alt] para usar o Menu de Sinalizações.\nUsa-o para comunicares rapidamente com tua equipa.
-Trait/Name/7000000┃Destruição
-Trait/Name/7100000┃Fortificação
-Trait/Name/7200000┃Suporte
-Trait/Name/7000201┃Inflingir Fragilidade
-Trait/Name/7000301┃Frenesi
-Trait/Name/7000401┃Linhagem Vampírica
-Trait/Name/7010101┃Poder de Retenção
-Trait/Name/7010501┃Matador de Gigantes
-Trait/Name/7010201┃Vingança
-Trait/Name/7010301┃Sacrifício Espiritual
-Trait/Name/7010401┃Extinguir
-Trait/Name/7100101┃Fragmento de Diamante
-Trait/Name/7100201┃Blindado
-Trait/Name/7100301┃Oblivion
-Trait/Name/7110101┃Encorajado
-Trait/Name/7110201┃Marcha
-Trait/Name/7110401┃Inquebrável
-Trait/Name/7110301┃Lâminas Cegas
-Trait/Name/7110501┃Armadura Reforçada
-Trait/Name/7200101┃Fator Curativo
-Trait/Name/7200301┃Drone Curativo
-Trait/Name/7200201┃Drone Amplificador
-Trait/Name/7210101┃Prisão de Espinhos
-Trait/Name/7210201┃Reunir
-Trait/Name/7210401┃Logística
-Trait/Name/7210301┃Theia
-Trait/Name/7210501┃Guerra Urbana
-Trait/Tooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
-Trait/DetailTooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
-Trait/DetailTooltip/7000301┃Usar sua Habilidade de Arma aumenta o seu Dano e Velocidade de Ataque, mas também aumenta o dano recebido. Corpo-a-Corpo: Recebe ({2} + Nível x {3}) de Poder de Ataque e ({4} + Nível x {5}%) de Velocidade de Ataque por {1} segundos. Recebe {6}% de dano aumentado por {1} segundos. À distância: Recebe ({8} + Nível x {9}) de Poder de Ataque e ({10} + Nível x {11}%) de Velocidade de Ataque por {7} segundos. Recebe {12}% de dano aumentado por {7} segundos. (Tempo de Recarga: {0} s)
-Trait/DetailTooltip/7000401┃Causar dano com uma Habilidade a um Sobrevivente concede {0}% de Omnisyphon extra, acumulando-se até {1} vezes. Com o máximo de acúmulos, você recebe (Nível x {2})% de Amplificação de Habilidade. Seu Omnisyphon bônus dura {3} segundos e é renovado quando causar dano a um inimigo com uma Habilidade. (Tempo de Recarga: {4} s)
-Trait/DetailTooltip/7010101┃Recebe {0}% de Penetração de Armadura.
-Trait/DetailTooltip/7010501┃Causa {2}% ~ {3}% de dano extra a alvos com {0}% ~ {1}% mais Vida Máxima que você.
-Trait/DetailTooltip/7010201┃Causa {0}% a mais de dano em áreas seguras depois que a última área restrita é ativada.
-Trait/DetailTooltip/7010301┃Restaura {0}% do seu dano causado como Energia(SP).
-Trait/DetailTooltip/7010401┃Causa {0}% a mais de dano a animais e andróides e se cura em {1}% do dano causado a eles.
-Trait/DetailTooltip/7100101┃Imobilizar um Sobrevivente inimiga aumenta sua Defesa em ({1}+Nível x {2}) por {0} segundos. Após {0} segundos, causa (Nível x {4}) de Dano de Habilidade em um raio de {3}m ao seu redor. Inimigos atingidos recebem lentidão de {6}% por {5} segundos. (Tempo de Recarga: {7} s)
-Trait/DetailTooltip/7100201┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e garantindo Tenacidade. Corpo-a-Corpo: Reduz o dano em {2}% e concede ({3}+Defesa x {4})% de Tenacidade por {1} segundos. À Distância: Reduz o dano em {6}% e concede ({7}+Defesa x {8})% de Tenacidade por {5} segundos. (Tempo de Recarga: {0} s)
-Trait/DetailTooltip/7100301┃Recebe dano reduzido de Ataques Básicos quando está com pouca Vida. Corpo-a-Corpo: Reduz o dano em {2} ~ {3}% quando está com {0}% ~ {1}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({4}+Defesa x {5}) e o dano é refletido como Dano Celular. À Distância: Reduz o dano em {8} ~ {9}% quando está com {6}% ~ {7}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({10}+Defesa x {11}) e o dano é refletido como Dano Celular.
-Trait/DetailTooltip/7110101┃Aumenta sua Defesa em ({1} + Nível x {2}) por {0} segundos após receber um escudo ou ser curado por uma Habilidade. (Tempo de Recarga: {3}s)
-Trait/DetailTooltip/7110201┃Reduz o dano recebido em (Sobreviventes ao redor x {1})% para cada Sobrevivente(incluindo si mesmo) em um raio de {0}m.
-Trait/DetailTooltip/7110401┃Reduz o dano recebido em {0}% quando imobilizado.
-Trait/DetailTooltip/7110301┃Após receber um Ataque Crítico, Ataques Críticos recebidos dentro dos próximos {0} segundos causam dano reduzido em {1}%. (Tempo de Recarga: {2}s)
-Trait/DetailTooltip/7110501┃Atributos de Redução de Dano provenientes de itens são {0}% mais eficientes em você.
-Trait/DetailTooltip/7200101┃Escudos e curas de suas Habilidades são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
-Trait/DetailTooltip/7200301┃Usar sua Ultimate invoca um Drone Curativo que te acompanha por {0} segundos. O drone cura você e aliados dentro de um raio de {1}m em ({2}+Nível x {3})% da Vida Perdida a cada segundo. (Tempo de Recarga: {4}s). Receber cura de múltiplos drones faz com que a cura de cada um seja de {5}%.
-Trait/DetailTooltip/7200201┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha por {0} segundos. O drone aumenta a Velocidade de Movimento em ({2}+{3}*Nível)% e Amplificação de Habilidade em ({4}+Nível)% para você e seus aliados dentro de um raio de {1}m. (Tempo de Recarga: {5}s)
-Trait/DetailTooltip/7210101┃Imobilizar um alvo faz com que ele receba {1}% a mais de dano de todas as fontes por {0} segundos. (Tempo de Recarga: {2} s)
-Trait/DetailTooltip/7210201┃Usar sua Ultimate concede a você e a aliados dentro de um raio de {0}m um escudo por {1} segundos, absorvendo até (Nível x {2}) de dano. (Tempo de Recarga: {3}s)
-Trait/DetailTooltip/7210401┃Recebe ({0}+Número de Aliados Vivos) Poções de Cura a cada noite. As poções são deixadas no chão se você estiver com o inventário cheio.
-Trait/DetailTooltip/7210301┃Aumenta seu Raio de Visão durante a noite em {0}m.
-Trait/DetailTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
-Trait/StatTooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
-Trait/StatTooltip/7000301┃Usar sua Habilidade de Arma concede mais dano e velocidade de ataque, mas faz com que você receba mais dano. Corpo-a-Corpo: Recebe ({2}+Nível x {3}) de Poder de Ataque e ({4}+Nível x {5}%) de Velocidade de Ataque por {1} segundos. Recebe {6}% a mais de dano por {1} segundos. À Distância: Recebe ({8}+Nível x {9}) de Poder de Ataque e ({10}+Nível x {11}%) de Velocidade de Ataque por {7} segundos. Recebe {12}% a mais de dano por {7} segundos. (Tempo de Recarga: {0} s)
-Trait/StatTooltip/7000401┃Causar dano com uma Habilidade a um Sobrevivente concede {0}% de Omnisyphon extra, acumulando-se até {1} vezes. Com o máximo de acúmulos, você recebe (Nível x {2})% de Amplificação de Habilidade. Seu Omnisyphon bônus dura {3} segundos e é renovado quando causar dano a um inimigo com uma Habilidade. (Tempo de Recarga: {4} s)
-Trait/StatTooltip/7010101┃Recebe {0}% de Penetração de Armadura.
-Trait/StatTooltip/7010501┃Causa {2}% ~ {3}% de dano extra a alvos com {0}% ~ {1}% mais Vida Máxima que você.
-Trait/StatTooltip/7010201┃Causa {0}% a mais de dano em áreas seguras depois que a última área restrita é ativada.
-Trait/StatTooltip/7010301┃Restaura {0}% do seu dano causado como Energia.
-Trait/StatTooltip/7010401┃Causa {0}% a mais de dano a animais e andróides e se cura em {1}% do dano causado a eles.
-Trait/StatTooltip/7100101┃Imobilizar um Sobrevivente inimigo aumenta sua Defesa em ({1}+Nível x {2}) por {0} segundos. Após {0} segundos, causa (Nível x {4}) de Dano de Habilidade em um raio de {3}m ao seu redor. Inimigos atingidos recebem lentidão de {6}% por {5} segundos. (Tempo de Recarga: {7} s)
-Trait/StatTooltip/7100201┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e garantindo Tenacidade. Corpo-a-Corpo: Reduz o dano em {2}% e concede ({3}+Defesa x {4})% de Tenacidade por {1} segundos. À Distância: Reduz o dano em {6}% e concede ({7}+Defesa x {8})% de Tenacidade por {5} segundos. (Tempo de Recarga: {0} s)
-Trait/StatTooltip/7100301┃Recebe dano reduzido de Ataques Básicos quando está com pouca Vida. Corpo-a-Corpo: Reduz o dano em {2} ~ {3}% quando está com {0}% ~ {1}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({4}+Defesa x {5}) e o dano é refletido como Dano Celular. À Distância: Reduz o dano em {8} ~ {9}% quando está com {6}% ~ {7}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({10}+Defesa x {11}) e o dano é refletido como Dano Celular.
-Trait/StatTooltip/7110101┃Aumenta sua Defesa em ({1} + Nível x {2}) por {0} segundos após receber um escudo ou ser curado por uma Habilidade. (Tempo de Recarga: {3}s)
-Trait/StatTooltip/7110201┃Reduz o dano recebido em (Sobreviventes próximos x {1})% para cada Sobrevivente(incluindo si mesmo) em um raio de {0}m.
-Trait/StatTooltip/7110401┃Reduz o dano recebido em {0}% quando imobilizado.
-Trait/StatTooltip/7110301┃Após receber um Ataque Crítico, Ataques Críticos recebidos dentro dos próximos {0} segundos causam dano reduzido em {1}%. (Tempo de Recarga: {2}s)
-Trait/StatTooltip/7110501┃Atributos de Redução de Dano provenientes de itens são {0}% mais eficientes em você.
-Trait/StatTooltip/7200101┃Escudos e curas de suas Habilidades são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
-Trait/StatTooltip/7200301┃Usar sua Ultimate invoca um Drone Curativo que te acompanha por {0} segundos. O drone cura você e aliados dentro de um raio de {1}m em ({2}+Nível x {3})% da Vida Perdida a cada segundo. (Tempo de Recarga: {4}s). Receber cura de múltiplos drones faz com que a cura de cada um seja de {5}%.
-Trait/StatTooltip/7200201┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha por {0} segundos. O drone aumenta a Velocidade de Movimento em ({2}+{3}*Nível)% e Amplificação de Habilidade em ({4}+Nível)% para você e seus aliados dentro de um raio de {1}m. (Tempo de Recarga: {6}s)
-Trait/StatTooltip/7210101┃Imobilizar um alvo faz com que ele receba {1}% a mais de dano de todas as fontes por {0} segundos. (Tempo de Recarga: {2} s)
-Trait/StatTooltip/7210201┃Usar sua Ultimate concede a você e a aliados dentro de um raio de {0}m um escudo por {1} segundos, absorvendo até (Nível x {2}) de dano. (Tempo de Recarga: {3}s)
-Trait/StatTooltip/7210401┃Recebe ({0}+Número de Aliados Vivos) Poções de Cura a cada noite. As poções são deixadas no chão se você estiver com o inventário cheio.
-Trait/StatTooltip/7210301┃Aumenta seu Raio de Visão durante a noite em {0}m.
-Trait/StatTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
-CharacterState/Group/Name/7000210┃Inflingir Fragilidade
-CharacterState/Group/Desc/7000210┃Desferir múltiplos ataques básicos ou habildades contra o mesmo alvo causa Dano Verdadeiro e reduz a Defesa.
-CharacterState/Group/Name/7000220┃Inflingir Fragilidade
-CharacterState/Group/Desc/7000220┃Em Recarga
-CharacterState/Group/Name/7000200┃Inflingir Fragilidade
-CharacterState/Group/Desc/7000200┃Defesa Reduzida
-CharacterState/Group/Name/7000300┃Frenesi
-CharacterState/Group/Desc/7000300┃Poder de Ataque, Velocidade de Ataque aumentados.
-CharacterState/Group/Name/7000310┃Frenesi
-CharacterState/Group/Desc/7000310┃Recebe Poder de Ataque e Velocidade de Ataque após usar sua Habilidade de Arma, mas também aumenta o dano recebido.
-CharacterState/Group/Name/7000320┃Frenesi
-CharacterState/Group/Desc/7000320┃Em Recarga
-CharacterState/Group/Name/7000400┃Linhagem Vampírica
-CharacterState/Group/Desc/7000400┃Causar dano a um inimigo com uma Habilidade garante acúmulos de Omnisyphon. Com o máximo de acúmulos, recebe Amplificação de Habilidade. O Omnisyphon recebido é renovado sempre que causar dano com uma Habilidade.
-CharacterState/Group/Name/7000410┃Linhagem Vampírica
-CharacterState/Group/Desc/7000410┃Em Recarga
-CharacterState/Group/Name/7000420┃Linhagem Vampírica
-CharacterState/Group/Desc/7000420┃Omnisyphon Aumentado.
-CharacterState/Group/Name/7000430┃Linhagem Vampírica
-CharacterState/Group/Desc/7000430┃Amplificação de Habilidade aumentada
-CharacterState/Group/Name/7010100┃Poder de Retenção
-CharacterState/Group/Desc/7010100┃Penetração de Armadura Aumentada
-CharacterState/Group/Name/7010200┃Vingança
-CharacterState/Group/Desc/7010200┃Causa mais dano em áreas seguras depois que a última área restrita é ativada.
-CharacterState/Group/Name/7100100┃Fragmento de Diamante
-CharacterState/Group/Desc/7100100┃Imobilizar um Sobrevivente inimigo aumenta sua Defesa. Após algum tempo, causa dano ao seu redor. Inimigos atingidos recebem lentidão.
-CharacterState/Group/Name/7100110┃Fragmento de Diamante
-CharacterState/Group/Desc/7100110┃Defesa aumentada
-CharacterState/Group/Name/7100120┃Fragmento de Diamante
-CharacterState/Group/Desc/7100120┃Retardado
-CharacterState/Group/Name/7100130┃Fragmento de Diamante
-CharacterState/Group/Desc/7100130┃Em Recarga
-CharacterState/Group/Name/7100200┃Blindado
-CharacterState/Group/Desc/7100200┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e concedendo Tenacidade.
-CharacterState/Group/Name/7100220┃Blindado
-CharacterState/Group/Desc/7100220┃Dano recebido reduzido. Tenacidade aumentada.
-CharacterState/Group/Name/7100210┃Blindado
-CharacterState/Group/Desc/7100210┃Em Recarga
-CharacterState/Group/Name/7100300┃Oblivion
-CharacterState/Group/Desc/7100300┃Dano recebido reduzido.
-CharacterState/Group/Name/7100310┃Oblivion
-CharacterState/Group/Desc/7100310┃Refletindo parte do dano recebido.
-CharacterState/Group/Name/7110100┃Encorajado
-CharacterState/Group/Desc/7110100┃Defesa aumentada
-CharacterState/Group/Name/7110110┃Encorajado
-CharacterState/Group/Desc/7110110┃Em Recarga
-CharacterState/Group/Name/7110400┃Inquebrável
-CharacterState/Group/Desc/7110400┃Dano recebido reduzido.
-CharacterState/Group/Name/7110300┃Lâminas Cegas
-CharacterState/Group/Desc/7110300┃Dano Crítico recebido reduzido.
-CharacterState/Group/Name/7110310┃Lâminas Cegas
-CharacterState/Group/Desc/7110310┃Em Recarga
-CharacterState/Group/Name/7200100┃Fator Curativo
-CharacterState/Group/Desc/7200100┃Curas e escudos de habilidades aumentados. Alvos protegidos ou curados por você recebem Poder de Ataque. (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
-CharacterState/Group/Name/7200120┃Fator Curativo
-CharacterState/Group/Desc/7200120┃Poder de Ataque Aumentado.
-CharacterState/Group/Name/7200110┃Fator Curativo
-CharacterState/Group/Desc/7200110┃Em Recarga
-CharacterState/Group/Name/7200300┃Drone Curativo
-CharacterState/Group/Desc/7200300┃Usar sua ultimate invoca um Drone Curativo que irá te acompanhar, curando você e seus aliados com base na Vida Perdida. Se você receber cura de múltiplos drones, a cura será reduzida em certa porcentagem.
-CharacterState/Group/Name/7200310┃Drone Curativo
-CharacterState/Group/Desc/7200310┃Em Recarga
-CharacterState/Group/Name/7200320┃Drone Curativo
-CharacterState/Group/Desc/7200320┃Protocolo de Cura.
-CharacterState/Group/Name/7200200┃Drone Amplificador
-CharacterState/Group/Desc/7200200┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha. O drone aumenta a Velocidade de Movimento e Amplificação de Habilidade sua e de seus aliados.\nMúltiplos Drones de Amplificação não se acumulam.
-CharacterState/Group/Name/7200220┃Drone Amplificador
-CharacterState/Group/Desc/7200220┃O Drone de Amplificação está fortalecendo você e seus aliados.
-CharacterState/Group/Name/7200230┃Drone Amplificador
-CharacterState/Group/Desc/7200230┃Velocidade de Movimento e Amplificação de Habilidade aumentadas.
-CharacterState/Group/Name/7200210┃Drone Amplificador
-CharacterState/Group/Desc/7200210┃Em Recarga
-CharacterState/Group/Name/7210120┃Prisão de Espinhos
-CharacterState/Group/Desc/7210120┃Imobilizar um alvo faz com que ele receba dano aumentado.
-CharacterState/Group/Name/7210100┃Prisão de Espinhos
-CharacterState/Group/Desc/7210100┃Recebendo dano aumentado quando imobilizado.
-CharacterState/Group/Name/7210110┃Prisão de Espinhos
-CharacterState/Group/Desc/7210110┃Em Recarga
-CharacterState/Group/Name/7210220┃Reunir
-CharacterState/Group/Desc/7210220┃Usar sua Ultimate concede a você e seus aliados um escudo.
-CharacterState/Group/Name/7210200┃Reunir
-CharacterState/Group/Desc/7210200┃Protegido.
-CharacterState/Group/Name/7210210┃Reunir
-CharacterState/Group/Desc/7210210┃Em Recarga
-CharacterState/Group/Name/7210500┃Guerra Urbana
-CharacterState/Group/Desc/7210500┃Poder de Ataque aumentado
-CharacterState/Group/Name/7210510┃Guerra Urbana
-CharacterState/Group/Desc/7210510┃Defesa aumentada.
-CharacterState/Group/Name/7210520┃Guerra Urbana - Poder de Ataque Aumentado
-CharacterState/Group/Desc/7210520┃Em Recarga
-CharacterState/Group/Name/7210530┃Guerra Urbana - Defesa Aumentada
-CharacterState/Group/Desc/7210530┃Em Recarga
-특성┃Aumentos
-모든 특성┃Todos os Aumentos
-기본 슬롯 숨기기┃Ocultar Slots Padrão
-새 특성 슬롯┃Novo Slot
-Product/Name/ACCOUNT_Add_Traitslot_NP┃Novo Slot de Aumento
-Shop/Desc/ACCOUNT_Add_Traitslot_NP┃Adiciona um novo slot de Aumento.
-Product/Name/ACCOUNT_Add_Traitslot_ACOIN┃Novo Slot de Aumento
-Shop/Desc/ACCOUNT_Add_Traitslot_ACOIN┃Adiciona um novo slot de Aumento.
-슬롯 삭제 확인┃Deseja apagar o slot atual?
-미설정 저장 확인┃O slot atual possui Aumentos faltando e, por isso, não pode ser usado! Gostaria de salvar esse slot incompleto?
-미저장 종료 확인┃Gostaria de salvar o slot atual? Qualquer dado não salvo será perdido.
-특성/파괴/한줄설명┃Aumento de Poder Ofensivo
-특성/저항/한줄설명┃Sustentação e Controle de Grupo
-특성/지원/한줄설명┃Utilidades de Combate
-핵심 특성 선택┃Selecione seu Aumento Principal
-부 특성 선택┃Selecione seus Aumentos Secundários
-특성 선택┃Selecionar Aumentos
-특성 개방 알림┃O Aumento {0} foi desbloqueado.
-파괴기본특성 제목┃Aumentos de Base Devastação
-저항기본특성 제목┃Aumentos de Base Fortificação
-지원기본특성 제목┃Aumentos de Base Suporte
-기본 지원 슬롯┃Slot base
-CharacterState/Group/Name/7110601┃Comer
-CharacterState/Group/Desc/7110601┃Recuperando Vida por comer comida. Essa cura não é afetada por Redução de Cura.
-CharacterState/Group/Name/7110611┃Beber
-CharacterState/Group/Desc/7110611┃Recuperando PE por tomar uma bebida.
-ButtonType/Confirm┃Confirmar
-ButtonType/Cancel┃Cancelar
-SupportLanguage/Korean┃한국어
-SupportLanguage/English┃English
-SupportLanguage/Japanese┃日本語
-SupportLanguage/ChineseSimplified┃简体中文
-SupportLanguage/ChineseTraditional┃繁體中文
-SupportLanguage/French┃Français (BETA)
-SupportLanguage/Spanish┃Español (España - BETA)
-SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
-SupportLanguage/Portuguese┃Português (BETA)
-SupportLanguage/Russian┃Русский (BETA)
-SupportLanguage/German┃Deutsch (BETA)
-SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
-SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
-SupportLanguage/Thai┃ภาษาไทย (BETA)
-SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
-SupportLanguage/Italian┃Italiano (BETA)
-SupportLanguage/Polish┃Polski (BETA)
-SupportCountryCharacterVoice/Korean┃한국어 (Korean)
-SupportCountryCharacterVoice/English┃English
-SupportCountryCharacterVoice/Japanese┃日本語
-중국지역가속안내┃Acceleration Option
-Graphic/Low┃Muito Baixo
-Graphic/Medium┃Normal
-Graphic/High┃Alto
-Graphic/Ultra┃Ultra
-FullScreenMode/ExclusiveFullScreen┃Fullscreen
-FullScreenMode/FullScreenWindow┃Borderless Fullscreen
-FullScreenMode/MaximizedWindow┃Borderless Fullscreen
-FullScreenMode/Windowed┃Windowed
-Internal┃Erro desconhecido
-ObjectNotFound┃Objeto não encontrado
-NotEnoughInventory┃Espaço no inventário insuficiente
-인벤토리 공간이 부족 합니다.┃Espaço no inventário insuficiente
-NotEnoughItem┃Itens insuficientes
-NotEnoughItemBox┃Inventário cheio
-CantCraft┃Este item não pode ser criado
-PreventedItem┃{0} é um item do plano salvo! (Uso Protegido da Combinação Rápida)\n
-InvalidItemCode┃Item desconhecido
-ItemNotFound┃Item não encontrado
-InvalidAction┃Ação inválida
-LackOfCredit┃Créditos Insuficientes
-CharacterNotAlive┃Ação inválida
-CannotPerformRightNow┃Não o pode fazer agora.
-NotAvailableYet┃Ainda indisponível
-RemoteDroneNotAvailableYet┃O Drone de Transferência ainda não está disponível
-CantConsumeItem┃Ainda indisponível
-NotEnoughSp┃Sem Energia suficiente
-NotExistUserId┃Jogador não encontrado
-InvalidBattleToken┃Jogo inválido
-AlreadyExistUserId┃ID já existe
-GameStartedAlready┃O Jogo já começou
-NoBattleHost┃Não foi possível encontrar o servidor
-CantConsumItem┃Não pode comer mais.
-Evasion┃Desviar
-Guard┃Em Guarda!
-NotInvalidTarget┃Alvo Inválido
-InvalidTarget┃Alvo Inválido
-ServerUnavailable┃Impossível abrir o jogo. Por favor, verifique o calendário de testes.
-OutOfService┃Impossível abrir o jogo. Por favor, verifique o calendário de testes.
-OutOfService_Temp┃Atualmente em manutenção, por favor, verifique em breve.\nTempo restante: {0} {1} {2}
-InvalidMatchingMode┃Modo de jogo inválido
-AlreadyJoinedMatching┃A procura de jogo já começou
-EmptyMatchingToken┃Jogo inválido
-InvalidCommand┃Comando desconhecido
-NotMatchingUser┃Pedido inválido
-InvalidMatchingToken┃Pedido inválido
-UnknownMatchingError┃A área selecionada para a procura de jogo não está indisponível.
-MatchingServerNone┃A área selecionada para a procura de jogo não está indisponível.
-UnavailableNickname┃Desculpe, esse nome de utilizador já está em uso.
-매칭서버 타임아웃┃Por favor verifique sua ligação à internet.
-서버 부족으로 매칭을 시작할 수 없습니다. 잠시 후 다시 시도해주세요.┃Servidores insuficientes - Não foi possível começar a procura de jogo. Por favor tente novamente mais tarde.
-UserGameFinished┃Não foi possível encontrar um jogo.
-서버 점검중입니다.┃Manutenção do servidor em curso.
-남은시간┃Tempo restante
-종료하기┃Sair
-공지사항 바로가기┃Aviso
-LoadingText/Connect┃A lista de itens que pode criar está localizada no topo do seu inventário.
-LoadingText/Handshake┃Clique [X] para se sentar e descansar, para recuperar rapidamente a sua Vida e Energia
-LoadingText/Join┃Enquanto tiver visão do inimigo pode atacá-lo, não importando o ambiente ao vosso redor.
-LoadingText/LoadCharacter┃O contador começa quando se encontra numa área restrita. Ao chegar ao 0, a sua personagem explode.
-LoadingText/LoadLevel┃Caixas com um contorno branco indicam que ainda não foram abertas por si.
-LoadingText/LoadEffect┃Aperte CTRL + 1 ~ 6 para ouvir as interações do seu personagem.
-LoadingText/Done┃Você pode usar habildiades de armas quando você chegar na maestria nível 7.
-LoadingText/SceneLoad┃Pode mover a sua personagem mesmo com o mapa aberto (M). Basta pressionar a tecla CTRL enquanto clica no mapa.
-설문조사 배너┃Responda ao inquérito
-설문조사 링크┃https://steamcommunity.com/app/1049590/guides/?l=portuguese
-커뮤니티 이벤트 배너┃Ganhe recompensas!
-커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
-기본 커뮤니티┃Resolução de Problemas
-기본 커뮤니티 링크┃https://discord.gg/eternalreturn
-기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
-LINK┃LINK
-스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
-디스코드 링크┃https://discord.gg/eternalreturn
-트위터 링크┃https://twitter.com/_EternalReturn_/
-페이스북 링크┃https://www.facebook.com/eternalreturngame
-레딧 링크┃https://www.reddit.com/r/eternalreturn/
-QQ 그룹1┃QQ 实验群1
-QQ 그룹2┃QQ 实验群2
-QQ 그룹3┃QQ 实验群3
-QQ 그룹 링크1┃https://jq.qq.com/?_wv=1027&k=IYl8z46K
-QQ 그룹 링크2┃https://jq.qq.com/?_wv=1027&k=5Hfvfd0B
-QQ 그룹 링크3┃https://jq.qq.com/?_wv=1027&k=CELT5poZ
-웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
-사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/pt-BR/
-플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
-하트지급 링크┃https://discord.gg/HkVHuAh
-빌리빌리 링크┃https://space.bilibili.com/413651489
-팬북 링크┃https://fanbook.mobi/PZgT8F9W
-공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
-공식 홈페이지 링크 카카오┃https://er.game.daum.net/
-디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
-트위터 링크 한국어┃https://twitter.com/EternalReturnKR
-KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
-유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
-공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
-QQ 링크1 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=MsrpOner3Hs0BkT0s1eA1nuHeAol6QI3&authKey=RZbAWOF1D4NBZkRwelqi9nSwfbkCitCHQPQG%2FiowNy%2BIL8tttZvenE0yitNmC04t&noverify=0&group_code=810996599
-QQ 링크2 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=FvkFPZcF9TUAdFbY0RT2pPMLKaUG4Xe1&authKey=CAdSKMyeC6BR%2FSwKkYvy5t3g5Kx1G%2FJ0TVWYpodJ4vpyv%2FvHVlymeK%2BdfPISw1za&noverify=0&group_code=736777815
-QQ 링크3 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=SGpsq5COXboI-aerraP9r6toHosfIGS_&authKey=BaF66UtBn1q3CLAtrO7o9AV7i7rqf40QdM3uE84hahY6WPc2PkRV6KU%2BNrLQmxKB&noverify=0&group_code=808618259
-웨이보 링크 중문간체┃https://weibo.com/6511008423
-빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
-팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
-공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
-디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
-유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
-페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
-인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
-공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
-트위터 링크 일본어┃https://twitter.com/EternalReturnJP
-유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
-디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
-공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
-공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
-디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
-트위터 링크 스페인어┃https://twitter.com/EternalReturnES
-페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
-공식 홈페이지 링크 영어┃https://playeternalreturn.com/
-디스코드 링크 영어┃https://discord.com/invite/eternalreturn
-트위터 링크 영어┃https://twitter.com/_EternalReturn_/
-페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
-신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
-신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
-신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
-고객지원 링크┃https://playeternalreturn.com/help
-고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
-고객지원 링크_MS┃https://playeternalreturn.com/help
-점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
-점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
-점검 중 링크_MS┃https://playeternalreturn.com/posts/news
-카카오 홈페이지 링크┃http://er.game.daum.net/
-카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
-OutLink/Desc/1┃Bem vindo(a) à comunidade ER!
-OutLink/Desc/2┃Junte-se aos nossos eventos da comunidade no Discord! Não se esqueça de adicionar o jogo à sua Lista de Desejos e de nos seguir na Steam para receber notificações sobre o lançamento!
-OutLink/Desc/3┃Partilhe sua opinião connosco
-OutLink/Desc/4┃\nGuias do jogador
-OutLink/Desc/5┃Apoiar o jogo
-OutLink/Desc/6┃Seja um contribuidor do Eternal Return
-플레이 가이드┃Guia de Jogabilidade
-{0}년-{1}월-{2}일-{3:00}:{4:00}┃{3:00}:{4:00}-{2}-{1}-{0}
-{0}년-{1}월-{2}일┃{2}-{1}-{0}
-{0}월 {1}일┃{1}/{0}
-게임 데이터를 불러오는데 실패했습니다.┃Erro na comunicação com o servidor
-모드매칭불가안내┃Confira que modo de jogo está disponível hoje!\nModo de hoje: {0}, {1}
-접속이 제한된 계정입니다.┃Conta temporariamente suspensa.\nTempo restante: {0} {1} {2}\nRazão da Suspensão: {3}
-영구 정지┃Conta permanentemente suspensa.
-클라이언트 버전 업데이트 이후 이용 가능합니다.┃Atualize o jogo para jogar.\nPode ser necessário reiniciar a Steam.
-클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Atualize o jogo para jogar.
-클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Atualize o jogo para jogar.
-서버와연결할수없음┃Erro ao ligar-se ao servidor.
-팀원 중 누군가가 매칭 실패┃Um membro da equipa não pôde começar o jogo. Por favor, tente novamente.
-매칭 중 결제 불가┃Não é possível comprar durante a procura de jogo.
-현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Ligação à internet instável. ErrorCode: {0}
-점검중┃Servidores em manutenção. Desculpe o inconveniente.
-해결방법┃Resolução de Problemas
-해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
-해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
-해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
-서버와 연결이 끊어졌습니다.┃Erro ao ligar-se ao servidor.
-에러가 발생하여 서버와 연결이 종료되었습니다┃Ocorreu um erro. A conexão com o servidor foi encerrada.
-FirstLoading1┃Loading Text
-FirstLoading2┃Verifying Account...
-FirstLoading3┃Loading ...
-게임문화개선캠페인┃<color=#FF0000>Eternal Return valoriza o fair-play. Os jogadores que violarem as regras enfrentarão suspensão de conta.</color>
-게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
-접속시간경과안내┃Tem estado a jogar por {0} hora(s). Não te esqueças de fazer uma pausa!
-MasteryType/Glove/Desc┃Luvas tem um alcance muito baixo, mas elas podem realizar vários ataques consecutivos rápidos.
-MasteryType/Tonfa/Desc┃Tonfas são as únicas armas de batalha capazes de manter sua Defesa.
-MasteryType/Hammer/Desc┃Martelos têm uma velocidade de ataque muito baixa, mas podem restringir o movimento do oponente com um único golpe forte.
-MasteryType/Bat/Desc┃Bastões são armas flexíveis e equilibradas que podem lidar com diversos inimigos facilmente.
-MasteryType/Whip/Desc┃Chicotes são armas bastante complicadas devido à sua capacidade de restringir o movimento de inimigos.
-MasteryType/HighAngleFire/Desc┃Armas lançáveis comumente possuem poder de ataque alto. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza que você está prestando atenção em quantas unidades você pode criar.
-MasteryType/DirectFire/Desc┃Shurikens tem uma variedade grande de tipos de arma e são muito versáteis. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza que você está prestando atenção em quantas unidades você pode criar.
-MasteryType/Bow/Desc┃Arcos são armas de longo alcance que ficam mais fortes quanto mais domínio você obtém. São especialmente eficazes contra animais selvagens.
-MasteryType/CrossBow/Desc┃A experiência da Besta reside em sua capacidade de atacar inimigos enquanto concentra ataques em apenas uma direção.
-MasteryType/Pistol/Desc┃Pistolas permitem que você use habilidades com mais frequência. Essas armas são especializadas em agilidade e mobilidade elegante.
-MasteryType/AssaultRifle/Desc┃Rifles de assalto são armas de longo alcance especializadas em ataques rápidos e constantes.
-MasteryType/SniperRifle/Desc┃Os Rifles de Precisão possuem um forte Poder de Ataque e o maior alcance de ataque. Eles cobrem mais distância do que o alcance da visão, portanto, certifique-se de selecionar cuidadosamente uma posição e garantir um bom alcance da visão.
-MasteryType/Axe/Desc┃Machados podem ser muito lentos, mas causam mais danos. Armas que são rápidas de fabricar oferecem uma vantagem de tempo na batalha.
-MasteryType/OneHandSword/Desc┃Adagas são armas especializadas para ataques surpresa. Eles são uma das melhores e mais fortes armas para batalhas curtas.
-MasteryType/TwoHandSword/Desc┃Espadas de duas mãos são armas bem equilibradas. Quanto mais tempo você gasta dominando-os, mais você os aprecia. No entanto, jogadores iniciantes devem ter cuidado ao tentar manejá-las.
-MasteryType/Polearm/Desc┃As armas de haste têm o maior equilíbrio de poder destrutivo e longo alcance - especialmente quando se lida com muitos inimigos ao mesmo tempo.
-MasteryType/DualSword/Desc┃As espadas duplas são especializadas em desencadear duas estrofes de belos ataques consecutivos.
-MasteryType/Spear/Desc┃Lanças podem parecer desencadear ataques de longo alcance com alto poder de destruição. No entanto, eles são fracos contra inimigos que se aproximam demais. É importante controlar sua distância com lanças.
-MasteryType/Nunchaku/Desc┃Nunchakus são difíceis de aprender a se usar, mas podem ser armas versáteis nas mãos de um mestre.
-MasteryType/Rapier/Desc┃Rapieiras são capazes de movimentos chamativos que evitam os ataques inimigos, tornando seus próprios ataques um sucesso.
-MasteryType/Guitar/Desc┃Guitarras são armas de longo alcance que usam ondas sonoras. Essas armas são muito versáteis, pois sua jogabilidade e estratégia podem mudar completamente, dependendo do número de pontos de Evoluções aplicados às suas habilidades.
-MasteryType/Camera/Desc┃Câmeras são armas de longo alcance que não utilizam projéteis. Elas podem ser usadas para cegar inimigos, impedindo-os de acertar ataques.
-MasteryType/Glove/Stats┃Equipar Luvas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Tonfa/Stats┃Equipar Bastão aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Hammer/Stats┃Equipar Martelo aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Axe/Stats┃Equipar Machado aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Bat/Stats┃Equipar Taco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Whip/Stats┃Equipar Chicote aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/OneHandSword/Stats┃Equipar Adaga aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/TwoHandSword/Stats┃Equipar Espada de Duas Mãos aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/DualSword/Stats┃Equipar Duas Espadas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Spear/Stats┃Equipar Lança aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/HighAngleFire/Stats┃Equipar Projétil aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/DirectFire/Stats┃Equipar Shuriken aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Bow/Stats┃Equipar Arco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/CrossBow/Stats┃Equipar Besta aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Pistol/Stats┃Equipar Pistola aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/AssaultRifle/Stats┃Equipar Fuzil de Assalto aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/SniperRifle/Stats┃Equipar Fuzil de Precisão aumenta {2} em {3}\n{4} em {5}
-MasteryType/Nunchaku/Stats┃Equipar Nunchaku aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Rapier/Stats┃Equipar Florete aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Guitar/Stats┃Equipar Guitarra aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Camera/Stats┃Equipar Câmera aumenta {0} em {1}\n{4} por {5}
-MasteryType/Hunt/Stats┃{0} {1} de Aumento
-MasteryType/Craft/Stats┃{0} {1} de Aumento
-MasteryType/Search/Stats┃{0} {1} de Aumento
-MasteryType/Move/Stats┃{0} {1} de Aumento
-MasteryType/Health/Stats┃{0} {1} de Aumento\n{2} {3} de Aumento
-MasteryType/Defense/Stats┃{0} {1} de Aumento\n{2} {3} de Aumento
-MasteryType/Meditation/Stats┃{0} {1} de Aumento
-MasteryType/Trap/Stats┃{0} {1} de Aumento
 보유하지 않은 캐릭터입니다.┃Não possui esta personagem.\nPor favor, desbloquei-e a personagem na loja para poder usá-la.
 매칭 중 캐릭 변경 금지┃Não pode mudar de personagem enquanto procura um jogo.
 로딩 중┃A carregar\n< Clique na tecla X para se sentar e descansar. >
@@ -6761,19 +6240,7 @@ Ping/Alpha/Dead┃{0}({1}) : Alfa foi eliminado.
 Ping/Omega/Dead┃{0}({1}) : Ômega foi eliminado.
 Ping/AlphaOmega/Dead┃{0}({1}) : Alfa e Ômega foram eliminados.
 오브젝트타이머/생성장소┃Área de Surgimento
-Ping/Order/Where┃Para onde?
-Ping/Order/LetsJoin┃Reagrupar!
-Ping/Order/Wait┃Espera!
-Ping/Order/Roger┃Entendido!
-Ping/Order/NeedFood┃Preciso de Comida
-Ping/Order/NeedWater┃Preciso de Bebidas
 Ping/Order/Cancel┃Cancelar
-Ping/Order/Where/Chatting┃{0}({1}) pergunta <color=#C2FFA0>para onde?</color>
-Ping/Order/LetsJoin/Chatting┃{0}({1}) quer <color=#C2FFA0>reagrupar!</color>
-Ping/Order/Wait/Chatting┃{0}({1}) diz <color=#C2FFA0>espera!</color>
-Ping/Order/Roger/Chatting┃{0}({1}) diz <color=#C2FFA0>entendido!</color>
-Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>precisa de comida</color>.
-Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>precisa de bebidas</color>.
 아군빈사┃{0}({1}) foi derrubado em {2}.
 야생동물빈사알림┃{0} derrubou {1} ({2}).
 금지구역사망알림┃{0}({1}) explodiu numa área restrita.
@@ -6798,9 +6265,9 @@ DNA 팔찌가 없습니다.┃Você não tem uma Pulseira Regenerativa.
 핑대상지정_시체┃{0}({1}) alvejou o cadáver de {3}({4}) em {2}
 핑특수지정┃{0} ({1}) tem como alvo {3} em {2}
 핑특수지정_시체┃{0}({1}) alvejou o cadáver de {3} em {2}
-핑퇴각┃{0} ({1}) sinaliza <color=#FFBB00>perigo</color> em {2}.
-핑지원┃{0} ({1}) está pedindo <color=#FFBB00>assistência</color> em {2}.
-핑주의┃{0} ({1}) sinaliza para <color=#FFBB00>tomar cuidado</color> em {2}.
+핑흔적발견┃{0} ({1}) sinaliza <color=#FFBB00>perigo</color> em {2}.
+핑위험┃{0} ({1}) está pedindo <color=#FFBB00>assistência</color> em {2}.
+핑지원┃{0} ({1}) sinaliza para <color=#FFBB00>tomar cuidado</color> em {2}.
 핑이동┃{0} ({1}) está <color=#FFBB00>a caminho</color> de {2}.
 아이템보유┃{0} ({1}) tem {2}.
 아이템지목┃{0} ({1}) tem como alvo {2}.
@@ -8092,6 +7559,527 @@ QuickStart/ButtonNotice/Matching┃Na Fila
 Season7/Name┃<color=#FF7AFF>Neon Aftershock</color>
 알겠습니다┃Confirmar
 미리보기┃Pré-visualização
+BattleMission/1001001/1┃Jogue 30 partidas Normais/Ranqueadas
+BattleMission/1001002/1┃Obtém 10.000 A-Coins jogando partidas. (Excluem-se DROPS)
+BattleMission/1001003/1┃Mate 200 Galinhas
+BattleMission/1001004/1┃Mate 3 Sobreviventes na Floresta
+BattleMission/1001007/1┃Sobreviva por pelo menos 15 minutos em 7 partidas
+BattleMission/1001008/1┃Obtenha 10 Árvores da Vida
+BattleMission/1002001/1┃Elimine Wickeline 1 vez
+BattleMission/1002002/1┃Obtenha 10 Núcleos de Força
+BattleMission/1002003/1┃Mate 200 Morcegos
+BattleMission/1002005/1┃Estando com menos de 300 de Vida, mate 3 Sobreviventes
+BattleMission/1002006/1┃Ganhe com menos de 25 segundos na sua contagem de área restrita
+BattleMission/1002007/1┃Ganhe estando equipado apenas com os itens do seu primeiro Plano Salvo selecionado
+BattleMission/1002008/1┃Mate 4 Sobreviventes
+BattleMission/1003001/1┃Jogue 20 Partidas Normais/Ranqueadas
+BattleMission/1003002/1┃Use o Hyperloop 30 vezes
+BattleMission/1003003/1┃Mate 100 Javalis
+BattleMission/1003004/1┃Obtenha 5 itens lendários através de Caixas de Suprimentos
+BattleMission/1003005/1┃Mate 3 Sobreviventes em uma área restrita
+BattleMission/1003006/1┃Mate 10 Alfas
+BattleMission/1004001/1┃Termine no top 3 em 3 partidas Normais/Raqueadas.
+BattleMission/1004002/1┃Cause 50.000 de dano a animais selvagens.
+BattleMission/1004003/1┃Mate Alfa 7 vezes
+BattleMission/1004004/1┃Obtenha 40 itens através de Caixas de Suprimentos
+BattleMission/1004005/1┃Visite todas as áreas (Exceto Centro de Pesquisa)
+BattleMission/1004007/1┃Mate 180 Morcegos
+BattleMission/1004008/1┃Use o Hyperloop 50 vezes
+BattleMission/1005001/1┃Obtenha 10 Amostras de Sangue FV
+BattleMission/1005002/1┃Obtenha 5 itens lendários através de Caixas de Suprimentos
+BattleMission/1005003/1┃Mate 100 Cães Selvagens
+BattleMission/1005004/1┃Use o Hyperloop 15 vezes
+BattleMission/1005005/1┃Cause 50.000 de dano a animais selvagens.
+BattleMission/1005006/1┃Mate 75 Lobos
+BattleMission/1005007/1┃Obtenha 10 Bombas Inteligentes
+BattleMission/1006001/1┃Mate 3 Sobreviventes em uma área restrita
+BattleMission/1006002/1┃Cause 50.000 de dano a animais selvagens.
+BattleMission/1006004/1┃Cause 6.000 de dano a Sobreviventes
+BattleMission/1006005/1┃Vença 1 Partida Normal/Ranqueada
+BattleMission/1006006/1┃Mate 3 Sobreviventes
+BattleMission/1006007/1┃Mate 50 Ursos
+BattleMission/1007001/1┃Obtenha 30 itens através de Caixas de Suprimentos
+BattleMission/1007002/1┃Cause 8.000 de dano a Sobreviventes
+BattleMission/1007003/1┃Mate 25 Ursos
+BattleMission/1007004/1┃Mate a Wickeline 5 vezes
+BattleMission/1007005/1┃Mate 5 Sobreviventes
+BattleMission/1007006/1┃Mate 100 Cães Selvagens
+BattleMission/1007007/1┃Visite todas as áreas (Exceto Centro de Pesquisa)
+BattleMission/1007008/1┃Mate 4 Sobreviventes
+BattleMission/1008001/1┃Sobreviva por pelo menos 15 minutos em 3 partidas
+BattleMission/1008003/1┃Mate Ômega 5 vezes
+BattleMission/1008004/1┃Cause 50.000 de dano a animais selvagens.
+BattleMission/1008007/1┃Ganhe com menos de 20 segundos na sua contagem de área restrita
+BattleMission/1008008/1┃Mate 10 Sobreviventes
+BattleMission/1009002/1┃Mate 150 Galinhas
+BattleMission/1009003/1┃Mate a Wickeline 3 vezes
+BattleMission/1009004/1┃Cause 30.000 de dano a Sobreviventes
+BattleMission/1009005/1┃Obtenha 3 itens Lendários por meio de Caixas de Suprimento
+BattleMission/1009006/1┃Ganhe estando equipado apenas com os itens do seu primeiro Plano Salvo selecionado
+BattleMission/1009007/1┃Termine no top 5 em 7 partidas Normais/Ranqueadas
+BattleMission/1009008/1┃Mate 50 Ursos
+BattleMission/1010002/1┃Obtenha 10 Pedras Lunares
+BattleMission/1010003/1┃Mate 5 Sobreviventes
+BattleMission/1010004/1┃Mate 40 Lobos
+BattleMission/1010005/1┃Mate 3 Ômegas
+BattleMission/1010006/1┃Mate 70 Javalis
+BattleMission/1010007/1┃Estando com menos de 150 de Vida, mate 2 Sobreviventes
+BattleMission/6001001/1┃Obtém 2.000 A-Coins jogando partidas. (Excluem-se DROPS)
+BattleMission/10002006/1┃Ganhe com menos de 25 segundos na sua contagem de área restrita
+BattleMission/10002008/1┃Mate 10 Sobreviventes
+BattleMission/10007008/1┃Jogue 20 Partidas Normais/Ranqueadas
+BattleMission/10008005/1┃Obtenha 3 itens Lendários por meio de Caixas de Suprimento
+BattleMission/10008009/1┃Mate 10 Sobreviventes
+BattleMission/10008010/1┃Mate 3 Sobreviventes em uma área restrita
+로딩팁 튜토리얼1┃Um artigo marcado com um triângulo amarelo indica que é um dos artigos selecionados para o teu plano atual.\nApanha os teus artigos marcados primeiro!
+로딩팁 튜토리얼2┃Artigos que precisas e podes encontrar na tua área atual estão exibidos acima do teu minimapa.
+로딩팁 튜토리얼3┃Prioriza criar a tua arma.\nQuando mais rápido a tiveres, mais probabilidade tens de ganhar. Ou de matar inimigos mais cedo.
+로딩팁 튜토리얼4┃Procura no minimapa o símbolo do Hyperloop (≫)\nUsa-o para te teletransportares pela Ilha Lumia!
+로딩팁 튜토리얼5┃Usa o mapa para veres onde podes apanhar os artigos!\nPodes clicar em [F8] para os encontrar!
+로딩팁 튜토리얼6┃Se vires uma consola de segurança, ativa-a!\nAs CCTV dão-te visão na tua área para te ajudar a ver os inimigos.
+로딩팁 튜토리얼7┃Estás sem Vida ou Energia? Clica no [X] para Descansar.\nMas… certifica-te antes de que estás num lugar seguro.
+로딩팁 튜토리얼8┃Com a função de loot automático ativada, os artigos selecionados serão automaticamente recolhidos após um tempo.
+로딩팁 튜토리얼9┃Podes usar a Criação Rápida com a tecla-atalho de 'Criação Rápida'!(Quem diria?!)\nAo cliclar nessa tecla irás criar o item mais à esquerda na lista de itens de criação.
+로딩팁 튜토리얼10┃Com o mapa aberto (M), podes mover-te ao pressionar CTRL e clicar com o botão direito no mapa.\nAssim, fica mais fácil de viajar para zonas mais longínquas.
+로딩팁 튜토리얼11┃Podes usar as teclas numéricas (0-9) para consumir os teus... consumíveis.
+로딩팁 튜토리얼12┃Pressiona [A] e o Botão Esquerdo do Rato para usar o Movimento de Ataque.\nA tua personagem atacará qualquer inimigo no caminho até o ponto que selecionaste.
+로딩팁 튜토리얼13┃Usa o Botão Esquerdo do rato enquanto seguras [Alt] para usar o Menu de Sinalizações.\nUsa-o para comunicares rapidamente com tua equipa.
+Trait/Name/7000000┃Destruição
+Trait/Name/7100000┃Fortificação
+Trait/Name/7200000┃Suporte
+Trait/Name/7000201┃Inflingir Fragilidade
+Trait/Name/7000301┃Frenesi
+Trait/Name/7000401┃Linhagem Vampírica
+Trait/Name/7010101┃Poder de Retenção
+Trait/Name/7010501┃Matador de Gigantes
+Trait/Name/7010201┃Vingança
+Trait/Name/7010301┃Sacrifício Espiritual
+Trait/Name/7010401┃Extinguir
+Trait/Name/7100101┃Fragmento de Diamante
+Trait/Name/7100201┃Blindado
+Trait/Name/7100301┃Oblivion
+Trait/Name/7110101┃Encorajado
+Trait/Name/7110201┃Marcha
+Trait/Name/7110401┃Inquebrável
+Trait/Name/7110301┃Lâminas Cegas
+Trait/Name/7110501┃Armadura Reforçada
+Trait/Name/7200101┃Fator Curativo
+Trait/Name/7200301┃Drone Curativo
+Trait/Name/7200201┃Drone Amplificador
+Trait/Name/7210101┃Prisão de Espinhos
+Trait/Name/7210201┃Reunir
+Trait/Name/7210401┃Logística
+Trait/Name/7210301┃Theia
+Trait/Name/7210501┃Guerra Urbana
+Trait/Tooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
+Trait/DetailTooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
+Trait/DetailTooltip/7000301┃Usar sua Habilidade de Arma aumenta o seu Dano e Velocidade de Ataque, mas também aumenta o dano recebido. Corpo-a-Corpo: Recebe ({2} + Nível x {3}) de Poder de Ataque e ({4} + Nível x {5}%) de Velocidade de Ataque por {1} segundos. Recebe {6}% de dano aumentado por {1} segundos. À distância: Recebe ({8} + Nível x {9}) de Poder de Ataque e ({10} + Nível x {11}%) de Velocidade de Ataque por {7} segundos. Recebe {12}% de dano aumentado por {7} segundos. (Tempo de Recarga: {0} s)
+Trait/DetailTooltip/7000401┃Causar dano com uma Habilidade a um Sobrevivente concede {0}% de Omnisyphon extra, acumulando-se até {1} vezes. Com o máximo de acúmulos, você recebe (Nível x {2})% de Amplificação de Habilidade. Seu Omnisyphon bônus dura {3} segundos e é renovado quando causar dano a um inimigo com uma Habilidade. (Tempo de Recarga: {4} s)
+Trait/DetailTooltip/7010101┃Recebe {0}% de Penetração de Armadura.
+Trait/DetailTooltip/7010501┃Causa {2}% ~ {3}% de dano extra a alvos com {0}% ~ {1}% mais Vida Máxima que você.
+Trait/DetailTooltip/7010201┃Causa {0}% a mais de dano em áreas seguras depois que a última área restrita é ativada.
+Trait/DetailTooltip/7010301┃Restaura {0}% do seu dano causado como Energia(SP).
+Trait/DetailTooltip/7010401┃Causa {0}% a mais de dano a animais e andróides e se cura em {1}% do dano causado a eles.
+Trait/DetailTooltip/7100101┃Imobilizar um Sobrevivente inimiga aumenta sua Defesa em ({1}+Nível x {2}) por {0} segundos. Após {0} segundos, causa (Nível x {4}) de Dano de Habilidade em um raio de {3}m ao seu redor. Inimigos atingidos recebem lentidão de {6}% por {5} segundos. (Tempo de Recarga: {7} s)
+Trait/DetailTooltip/7100201┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e garantindo Tenacidade. Corpo-a-Corpo: Reduz o dano em {2}% e concede ({3}+Defesa x {4})% de Tenacidade por {1} segundos. À Distância: Reduz o dano em {6}% e concede ({7}+Defesa x {8})% de Tenacidade por {5} segundos. (Tempo de Recarga: {0} s)
+Trait/DetailTooltip/7100301┃Recebe dano reduzido de Ataques Básicos quando está com pouca Vida. Corpo-a-Corpo: Reduz o dano em {2} ~ {3}% quando está com {0}% ~ {1}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({4}+Defesa x {5}) e o dano é refletido como Dano Celular. À Distância: Reduz o dano em {8} ~ {9}% quando está com {6}% ~ {7}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({10}+Defesa x {11}) e o dano é refletido como Dano Celular.
+Trait/DetailTooltip/7110101┃Aumenta sua Defesa em ({1} + Nível x {2}) por {0} segundos após receber um escudo ou ser curado por uma Habilidade. (Tempo de Recarga: {3}s)
+Trait/DetailTooltip/7110201┃Reduz o dano recebido em (Sobreviventes ao redor x {1})% para cada Sobrevivente(incluindo si mesmo) em um raio de {0}m.
+Trait/DetailTooltip/7110401┃Reduz o dano recebido em {0}% quando imobilizado.
+Trait/DetailTooltip/7110301┃Após receber um Ataque Crítico, Ataques Críticos recebidos dentro dos próximos {0} segundos causam dano reduzido em {1}%. (Tempo de Recarga: {2}s)
+Trait/DetailTooltip/7110501┃Atributos de Redução de Dano provenientes de itens são {0}% mais eficientes em você.
+Trait/DetailTooltip/7200101┃Escudos e curas de suas Habilidades são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
+Trait/DetailTooltip/7200301┃Usar sua Ultimate invoca um Drone Curativo que te acompanha por {0} segundos. O drone cura você e aliados dentro de um raio de {1}m em ({2}+Nível x {3})% da Vida Perdida a cada segundo. (Tempo de Recarga: {4}s). Receber cura de múltiplos drones faz com que a cura de cada um seja de {5}%.
+Trait/DetailTooltip/7200201┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha por {0} segundos. O drone aumenta a Velocidade de Movimento em ({2}+{3}*Nível)% e Amplificação de Habilidade em ({4}+Nível)% para você e seus aliados dentro de um raio de {1}m. (Tempo de Recarga: {5}s)
+Trait/DetailTooltip/7210101┃Imobilizar um alvo faz com que ele receba {1}% a mais de dano de todas as fontes por {0} segundos. (Tempo de Recarga: {2} s)
+Trait/DetailTooltip/7210201┃Usar sua Ultimate concede a você e a aliados dentro de um raio de {0}m um escudo por {1} segundos, absorvendo até (Nível x {2}) de dano. (Tempo de Recarga: {3}s)
+Trait/DetailTooltip/7210401┃Recebe ({0}+Número de Aliados Vivos) Poções de Cura a cada noite. As poções são deixadas no chão se você estiver com o inventário cheio.
+Trait/DetailTooltip/7210301┃Aumenta seu Raio de Visão durante a noite em {0}m.
+Trait/DetailTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
+Trait/StatTooltip/7000201┃Seu {1}° Ataque Básico ou Habilidade contra o mesmo inimigo dentro de {0} segundos causa (Nível x {2}) de Dano Verdadeiro e reduz a Defesa em (Nível x {4})% por {3} segundos. (Tempo de Recarga: {5}s). Efeitos de múltiplos acertos concedem apenas 1 acúmulo.
+Trait/StatTooltip/7000301┃Usar sua Habilidade de Arma concede mais dano e velocidade de ataque, mas faz com que você receba mais dano. Corpo-a-Corpo: Recebe ({2}+Nível x {3}) de Poder de Ataque e ({4}+Nível x {5}%) de Velocidade de Ataque por {1} segundos. Recebe {6}% a mais de dano por {1} segundos. À Distância: Recebe ({8}+Nível x {9}) de Poder de Ataque e ({10}+Nível x {11}%) de Velocidade de Ataque por {7} segundos. Recebe {12}% a mais de dano por {7} segundos. (Tempo de Recarga: {0} s)
+Trait/StatTooltip/7000401┃Causar dano com uma Habilidade a um Sobrevivente concede {0}% de Omnisyphon extra, acumulando-se até {1} vezes. Com o máximo de acúmulos, você recebe (Nível x {2})% de Amplificação de Habilidade. Seu Omnisyphon bônus dura {3} segundos e é renovado quando causar dano a um inimigo com uma Habilidade. (Tempo de Recarga: {4} s)
+Trait/StatTooltip/7010101┃Recebe {0}% de Penetração de Armadura.
+Trait/StatTooltip/7010501┃Causa {2}% ~ {3}% de dano extra a alvos com {0}% ~ {1}% mais Vida Máxima que você.
+Trait/StatTooltip/7010201┃Causa {0}% a mais de dano em áreas seguras depois que a última área restrita é ativada.
+Trait/StatTooltip/7010301┃Restaura {0}% do seu dano causado como Energia.
+Trait/StatTooltip/7010401┃Causa {0}% a mais de dano a animais e andróides e se cura em {1}% do dano causado a eles.
+Trait/StatTooltip/7100101┃Imobilizar um Sobrevivente inimigo aumenta sua Defesa em ({1}+Nível x {2}) por {0} segundos. Após {0} segundos, causa (Nível x {4}) de Dano de Habilidade em um raio de {3}m ao seu redor. Inimigos atingidos recebem lentidão de {6}% por {5} segundos. (Tempo de Recarga: {7} s)
+Trait/StatTooltip/7100201┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e garantindo Tenacidade. Corpo-a-Corpo: Reduz o dano em {2}% e concede ({3}+Defesa x {4})% de Tenacidade por {1} segundos. À Distância: Reduz o dano em {6}% e concede ({7}+Defesa x {8})% de Tenacidade por {5} segundos. (Tempo de Recarga: {0} s)
+Trait/StatTooltip/7100301┃Recebe dano reduzido de Ataques Básicos quando está com pouca Vida. Corpo-a-Corpo: Reduz o dano em {2} ~ {3}% quando está com {0}% ~ {1}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({4}+Defesa x {5}) e o dano é refletido como Dano Celular. À Distância: Reduz o dano em {8} ~ {9}% quando está com {6}% ~ {7}% de Vida ou abaixo disso. A redução de dano é multiplicada em ({10}+Defesa x {11}) e o dano é refletido como Dano Celular.
+Trait/StatTooltip/7110101┃Aumenta sua Defesa em ({1} + Nível x {2}) por {0} segundos após receber um escudo ou ser curado por uma Habilidade. (Tempo de Recarga: {3}s)
+Trait/StatTooltip/7110201┃Reduz o dano recebido em (Sobreviventes próximos x {1})% para cada Sobrevivente(incluindo si mesmo) em um raio de {0}m.
+Trait/StatTooltip/7110401┃Reduz o dano recebido em {0}% quando imobilizado.
+Trait/StatTooltip/7110301┃Após receber um Ataque Crítico, Ataques Críticos recebidos dentro dos próximos {0} segundos causam dano reduzido em {1}%. (Tempo de Recarga: {2}s)
+Trait/StatTooltip/7110501┃Atributos de Redução de Dano provenientes de itens são {0}% mais eficientes em você.
+Trait/StatTooltip/7200101┃Escudos e curas de suas Habilidades são aumentados em ({0}+Amplificação de Habilidade x {1})%. Alvos protegidos ou curados por você recebem (Nível x {3}) de Poder de Ataque por {2} segundos. (Tempo de Recarga: {4}s) (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
+Trait/StatTooltip/7200301┃Usar sua Ultimate invoca um Drone Curativo que te acompanha por {0} segundos. O drone cura você e aliados dentro de um raio de {1}m em ({2}+Nível x {3})% da Vida Perdida a cada segundo. (Tempo de Recarga: {4}s). Receber cura de múltiplos drones faz com que a cura de cada um seja de {5}%.
+Trait/StatTooltip/7200201┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha por {0} segundos. O drone aumenta a Velocidade de Movimento em ({2}+{3}*Nível)% e Amplificação de Habilidade em ({4}+Nível)% para você e seus aliados dentro de um raio de {1}m. (Tempo de Recarga: {6}s)
+Trait/StatTooltip/7210101┃Imobilizar um alvo faz com que ele receba {1}% a mais de dano de todas as fontes por {0} segundos. (Tempo de Recarga: {2} s)
+Trait/StatTooltip/7210201┃Usar sua Ultimate concede a você e a aliados dentro de um raio de {0}m um escudo por {1} segundos, absorvendo até (Nível x {2}) de dano. (Tempo de Recarga: {3}s)
+Trait/StatTooltip/7210401┃Recebe ({0}+Número de Aliados Vivos) Poções de Cura a cada noite. As poções são deixadas no chão se você estiver com o inventário cheio.
+Trait/StatTooltip/7210301┃Aumenta seu Raio de Visão durante a noite em {0}m.
+Trait/StatTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
+CharacterState/Group/Name/7000210┃Inflingir Fragilidade
+CharacterState/Group/Desc/7000210┃Desferir múltiplos ataques básicos ou habildades contra o mesmo alvo causa Dano Verdadeiro e reduz a Defesa.
+CharacterState/Group/Name/7000220┃Inflingir Fragilidade
+CharacterState/Group/Desc/7000220┃Em Recarga
+CharacterState/Group/Name/7000200┃Inflingir Fragilidade
+CharacterState/Group/Desc/7000200┃Defesa Reduzida
+CharacterState/Group/Name/7000300┃Frenesi
+CharacterState/Group/Desc/7000300┃Poder de Ataque, Velocidade de Ataque aumentados.
+CharacterState/Group/Name/7000310┃Frenesi
+CharacterState/Group/Desc/7000310┃Recebe Poder de Ataque e Velocidade de Ataque após usar sua Habilidade de Arma, mas também aumenta o dano recebido.
+CharacterState/Group/Name/7000320┃Frenesi
+CharacterState/Group/Desc/7000320┃Em Recarga
+CharacterState/Group/Name/7000400┃Linhagem Vampírica
+CharacterState/Group/Desc/7000400┃Causar dano a um inimigo com uma Habilidade garante acúmulos de Omnisyphon. Com o máximo de acúmulos, recebe Amplificação de Habilidade. O Omnisyphon recebido é renovado sempre que causar dano com uma Habilidade.
+CharacterState/Group/Name/7000410┃Linhagem Vampírica
+CharacterState/Group/Desc/7000410┃Em Recarga
+CharacterState/Group/Name/7000420┃Linhagem Vampírica
+CharacterState/Group/Desc/7000420┃Omnisyphon Aumentado.
+CharacterState/Group/Name/7000430┃Linhagem Vampírica
+CharacterState/Group/Desc/7000430┃Amplificação de Habilidade aumentada
+CharacterState/Group/Name/7010100┃Poder de Retenção
+CharacterState/Group/Desc/7010100┃Penetração de Armadura Aumentada
+CharacterState/Group/Name/7010200┃Vingança
+CharacterState/Group/Desc/7010200┃Causa mais dano em áreas seguras depois que a última área restrita é ativada.
+CharacterState/Group/Name/7100100┃Fragmento de Diamante
+CharacterState/Group/Desc/7100100┃Imobilizar um Sobrevivente inimigo aumenta sua Defesa. Após algum tempo, causa dano ao seu redor. Inimigos atingidos recebem lentidão.
+CharacterState/Group/Name/7100110┃Fragmento de Diamante
+CharacterState/Group/Desc/7100110┃Defesa aumentada
+CharacterState/Group/Name/7100120┃Fragmento de Diamante
+CharacterState/Group/Desc/7100120┃Retardado
+CharacterState/Group/Name/7100130┃Fragmento de Diamante
+CharacterState/Group/Desc/7100130┃Em Recarga
+CharacterState/Group/Name/7100200┃Blindado
+CharacterState/Group/Desc/7100200┃Usar uma Habilidade de Arma torna-te Blindado, reduzindo o dano recebido e concedendo Tenacidade.
+CharacterState/Group/Name/7100220┃Blindado
+CharacterState/Group/Desc/7100220┃Dano recebido reduzido. Tenacidade aumentada.
+CharacterState/Group/Name/7100210┃Blindado
+CharacterState/Group/Desc/7100210┃Em Recarga
+CharacterState/Group/Name/7100300┃Oblivion
+CharacterState/Group/Desc/7100300┃Dano recebido reduzido.
+CharacterState/Group/Name/7100310┃Oblivion
+CharacterState/Group/Desc/7100310┃Refletindo parte do dano recebido.
+CharacterState/Group/Name/7110100┃Encorajado
+CharacterState/Group/Desc/7110100┃Defesa aumentada
+CharacterState/Group/Name/7110110┃Encorajado
+CharacterState/Group/Desc/7110110┃Em Recarga
+CharacterState/Group/Name/7110400┃Inquebrável
+CharacterState/Group/Desc/7110400┃Dano recebido reduzido.
+CharacterState/Group/Name/7110300┃Lâminas Cegas
+CharacterState/Group/Desc/7110300┃Dano Crítico recebido reduzido.
+CharacterState/Group/Name/7110310┃Lâminas Cegas
+CharacterState/Group/Desc/7110310┃Em Recarga
+CharacterState/Group/Name/7200100┃Fator Curativo
+CharacterState/Group/Desc/7200100┃Curas e escudos de habilidades aumentados. Alvos protegidos ou curados por você recebem Poder de Ataque. (Exclui recuperação por Comida, Bebidas, Roubo de Vida, Regeneração Passiva e Descanso)
+CharacterState/Group/Name/7200120┃Fator Curativo
+CharacterState/Group/Desc/7200120┃Poder de Ataque Aumentado.
+CharacterState/Group/Name/7200110┃Fator Curativo
+CharacterState/Group/Desc/7200110┃Em Recarga
+CharacterState/Group/Name/7200300┃Drone Curativo
+CharacterState/Group/Desc/7200300┃Usar sua ultimate invoca um Drone Curativo que irá te acompanhar, curando você e seus aliados com base na Vida Perdida. Se você receber cura de múltiplos drones, a cura será reduzida em certa porcentagem.
+CharacterState/Group/Name/7200310┃Drone Curativo
+CharacterState/Group/Desc/7200310┃Em Recarga
+CharacterState/Group/Name/7200320┃Drone Curativo
+CharacterState/Group/Desc/7200320┃Protocolo de Cura.
+CharacterState/Group/Name/7200200┃Drone Amplificador
+CharacterState/Group/Desc/7200200┃Usar sua Ultimate invoca um Drone de Amplificação que te acompanha. O drone aumenta a Velocidade de Movimento e Amplificação de Habilidade sua e de seus aliados.\nMúltiplos Drones de Amplificação não se acumulam.
+CharacterState/Group/Name/7200220┃Drone Amplificador
+CharacterState/Group/Desc/7200220┃O Drone de Amplificação está fortalecendo você e seus aliados.
+CharacterState/Group/Name/7200230┃Drone Amplificador
+CharacterState/Group/Desc/7200230┃Velocidade de Movimento e Amplificação de Habilidade aumentadas.
+CharacterState/Group/Name/7200210┃Drone Amplificador
+CharacterState/Group/Desc/7200210┃Em Recarga
+CharacterState/Group/Name/7210120┃Prisão de Espinhos
+CharacterState/Group/Desc/7210120┃Imobilizar um alvo faz com que ele receba dano aumentado.
+CharacterState/Group/Name/7210100┃Prisão de Espinhos
+CharacterState/Group/Desc/7210100┃Recebendo dano aumentado quando imobilizado.
+CharacterState/Group/Name/7210110┃Prisão de Espinhos
+CharacterState/Group/Desc/7210110┃Em Recarga
+CharacterState/Group/Name/7210220┃Reunir
+CharacterState/Group/Desc/7210220┃Usar sua Ultimate concede a você e seus aliados um escudo.
+CharacterState/Group/Name/7210200┃Reunir
+CharacterState/Group/Desc/7210200┃Protegido.
+CharacterState/Group/Name/7210210┃Reunir
+CharacterState/Group/Desc/7210210┃Em Recarga
+CharacterState/Group/Name/7210500┃Guerra Urbana
+CharacterState/Group/Desc/7210500┃Poder de Ataque aumentado
+CharacterState/Group/Name/7210510┃Guerra Urbana
+CharacterState/Group/Desc/7210510┃Defesa aumentada.
+CharacterState/Group/Name/7210520┃Guerra Urbana - Poder de Ataque Aumentado
+CharacterState/Group/Desc/7210520┃Em Recarga
+CharacterState/Group/Name/7210530┃Guerra Urbana - Defesa Aumentada
+CharacterState/Group/Desc/7210530┃Em Recarga
+특성┃Aumentos
+모든 특성┃Todos os Aumentos
+기본 슬롯 숨기기┃Ocultar Slots Padrão
+새 특성 슬롯┃Novo Slot
+Product/Name/ACCOUNT_Add_Traitslot_NP┃Novo Slot de Aumento
+Shop/Desc/ACCOUNT_Add_Traitslot_NP┃Adiciona um novo slot de Aumento.
+Product/Name/ACCOUNT_Add_Traitslot_ACOIN┃Novo Slot de Aumento
+Shop/Desc/ACCOUNT_Add_Traitslot_ACOIN┃Adiciona um novo slot de Aumento.
+슬롯 삭제 확인┃Deseja apagar o slot atual?
+미설정 저장 확인┃O slot atual possui Aumentos faltando e, por isso, não pode ser usado! Gostaria de salvar esse slot incompleto?
+미저장 종료 확인┃Gostaria de salvar o slot atual? Qualquer dado não salvo será perdido.
+특성/파괴/한줄설명┃Aumento de Poder Ofensivo
+특성/저항/한줄설명┃Sustentação e Controle de Grupo
+특성/지원/한줄설명┃Utilidades de Combate
+핵심 특성 선택┃Selecione seu Aumento Principal
+부 특성 선택┃Selecione seus Aumentos Secundários
+특성 선택┃Selecionar Aumentos
+특성 개방 알림┃O Aumento {0} foi desbloqueado.
+파괴기본특성 제목┃Aumentos de Base Devastação
+저항기본특성 제목┃Aumentos de Base Fortificação
+지원기본특성 제목┃Aumentos de Base Suporte
+기본 지원 슬롯┃Slot base
+CharacterState/Group/Name/7110601┃Comer
+CharacterState/Group/Desc/7110601┃Recuperando Vida por comer comida. Essa cura não é afetada por Redução de Cura.
+CharacterState/Group/Name/7110611┃Beber
+CharacterState/Group/Desc/7110611┃Recuperando PE por tomar uma bebida.
+ButtonType/Confirm┃Confirmar
+ButtonType/Cancel┃Cancelar
+SupportLanguage/Korean┃한국어
+SupportLanguage/English┃English
+SupportLanguage/Japanese┃日本語
+SupportLanguage/ChineseSimplified┃简体中文
+SupportLanguage/ChineseTraditional┃繁體中文
+SupportLanguage/French┃Français (BETA)
+SupportLanguage/Spanish┃Español (España - BETA)
+SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
+SupportLanguage/Portuguese┃Português (BETA)
+SupportLanguage/Russian┃Русский (BETA)
+SupportLanguage/German┃Deutsch (BETA)
+SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
+SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
+SupportLanguage/Thai┃ภาษาไทย (BETA)
+SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
+SupportLanguage/Italian┃Italiano (BETA)
+SupportLanguage/Polish┃Polski (BETA)
+SupportCountryCharacterVoice/Korean┃한국어 (Korean)
+SupportCountryCharacterVoice/English┃English
+SupportCountryCharacterVoice/Japanese┃日本語
+중국지역가속안내┃Acceleration Option
+Graphic/Low┃Muito Baixo
+Graphic/Medium┃Normal
+Graphic/High┃Alto
+Graphic/Ultra┃Ultra
+FullScreenMode/ExclusiveFullScreen┃Fullscreen
+FullScreenMode/FullScreenWindow┃Borderless Fullscreen
+FullScreenMode/MaximizedWindow┃Borderless Fullscreen
+FullScreenMode/Windowed┃Windowed
+Internal┃Erro desconhecido
+ObjectNotFound┃Objeto não encontrado
+NotEnoughInventory┃Espaço no inventário insuficiente
+인벤토리 공간이 부족 합니다.┃Espaço no inventário insuficiente
+NotEnoughItem┃Itens insuficientes
+NotEnoughItemBox┃Inventário cheio
+CantCraft┃Este item não pode ser criado
+PreventedItem┃{0} é um item do plano salvo! (Uso Protegido da Combinação Rápida)\n
+InvalidItemCode┃Item desconhecido
+ItemNotFound┃Item não encontrado
+InvalidAction┃Ação inválida
+LackOfCredit┃Créditos Insuficientes
+CharacterNotAlive┃Ação inválida
+CannotPerformRightNow┃Não o pode fazer agora.
+NotAvailableYet┃Ainda indisponível
+RemoteDroneNotAvailableYet┃O Drone de Transferência ainda não está disponível
+CantConsumeItem┃Ainda indisponível
+NotEnoughSp┃Sem Energia suficiente
+NotExistUserId┃Jogador não encontrado
+InvalidBattleToken┃Jogo inválido
+AlreadyExistUserId┃ID já existe
+GameStartedAlready┃O Jogo já começou
+NoBattleHost┃Não foi possível encontrar o servidor
+CantConsumItem┃Não pode comer mais.
+Evasion┃Desviar
+Guard┃Em Guarda!
+NotInvalidTarget┃Alvo Inválido
+InvalidTarget┃Alvo Inválido
+ServerUnavailable┃Impossível abrir o jogo. Por favor, verifique o calendário de testes.
+OutOfService┃Impossível abrir o jogo. Por favor, verifique o calendário de testes.
+OutOfService_Temp┃Atualmente em manutenção, por favor, verifique em breve.\nTempo restante: {0} {1} {2}
+InvalidMatchingMode┃Modo de jogo inválido
+AlreadyJoinedMatching┃A procura de jogo já começou
+EmptyMatchingToken┃Jogo inválido
+InvalidCommand┃Comando desconhecido
+NotMatchingUser┃Pedido inválido
+InvalidMatchingToken┃Pedido inválido
+UnknownMatchingError┃A área selecionada para a procura de jogo não está indisponível.
+MatchingServerNone┃A área selecionada para a procura de jogo não está indisponível.
+UnavailableNickname┃Desculpe, esse nome de utilizador já está em uso.
+매칭서버 타임아웃┃Por favor verifique sua ligação à internet.
+서버 부족으로 매칭을 시작할 수 없습니다. 잠시 후 다시 시도해주세요.┃Servidores insuficientes - Não foi possível começar a procura de jogo. Por favor tente novamente mais tarde.
+UserGameFinished┃Não foi possível encontrar um jogo.
+서버 점검중입니다.┃Manutenção do servidor em curso.
+남은시간┃Tempo restante
+종료하기┃Sair
+공지사항 바로가기┃Aviso
+LoadingText/Connect┃A lista de itens que pode criar está localizada no topo do seu inventário.
+LoadingText/Handshake┃Clique [X] para se sentar e descansar, para recuperar rapidamente a sua Vida e Energia
+LoadingText/Join┃Enquanto tiver visão do inimigo pode atacá-lo, não importando o ambiente ao vosso redor.
+LoadingText/LoadCharacter┃O contador começa quando se encontra numa área restrita. Ao chegar ao 0, a sua personagem explode.
+LoadingText/LoadLevel┃Caixas com um contorno branco indicam que ainda não foram abertas por si.
+LoadingText/LoadEffect┃Aperte CTRL + 1 ~ 6 para ouvir as interações do seu personagem.
+LoadingText/Done┃Você pode usar habildiades de armas quando você chegar na maestria nível 7.
+LoadingText/SceneLoad┃Pode mover a sua personagem mesmo com o mapa aberto (M). Basta pressionar a tecla CTRL enquanto clica no mapa.
+설문조사 배너┃Responda ao inquérito
+설문조사 링크┃https://steamcommunity.com/app/1049590/guides/?l=portuguese
+커뮤니티 이벤트 배너┃Ganhe recompensas!
+커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
+기본 커뮤니티┃Resolução de Problemas
+기본 커뮤니티 링크┃https://discord.gg/eternalreturn
+기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
+LINK┃LINK
+스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
+디스코드 링크┃https://discord.gg/eternalreturn
+트위터 링크┃https://twitter.com/_EternalReturn_/
+페이스북 링크┃https://www.facebook.com/eternalreturngame
+레딧 링크┃https://www.reddit.com/r/eternalreturn/
+QQ 그룹1┃QQ 实验群1
+QQ 그룹2┃QQ 实验群2
+QQ 그룹3┃QQ 实验群3
+QQ 그룹 링크1┃https://jq.qq.com/?_wv=1027&k=IYl8z46K
+QQ 그룹 링크2┃https://jq.qq.com/?_wv=1027&k=5Hfvfd0B
+QQ 그룹 링크3┃https://jq.qq.com/?_wv=1027&k=CELT5poZ
+웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
+사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/pt-BR/
+플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
+하트지급 링크┃https://discord.gg/HkVHuAh
+빌리빌리 링크┃https://space.bilibili.com/413651489
+팬북 링크┃https://fanbook.mobi/PZgT8F9W
+공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
+공식 홈페이지 링크 카카오┃https://er.game.daum.net/
+디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
+트위터 링크 한국어┃https://twitter.com/EternalReturnKR
+KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
+유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
+공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
+QQ 링크1 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=MsrpOner3Hs0BkT0s1eA1nuHeAol6QI3&authKey=RZbAWOF1D4NBZkRwelqi9nSwfbkCitCHQPQG%2FiowNy%2BIL8tttZvenE0yitNmC04t&noverify=0&group_code=810996599
+QQ 링크2 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=FvkFPZcF9TUAdFbY0RT2pPMLKaUG4Xe1&authKey=CAdSKMyeC6BR%2FSwKkYvy5t3g5Kx1G%2FJ0TVWYpodJ4vpyv%2FvHVlymeK%2BdfPISw1za&noverify=0&group_code=736777815
+QQ 링크3 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=SGpsq5COXboI-aerraP9r6toHosfIGS_&authKey=BaF66UtBn1q3CLAtrO7o9AV7i7rqf40QdM3uE84hahY6WPc2PkRV6KU%2BNrLQmxKB&noverify=0&group_code=808618259
+웨이보 링크 중문간체┃https://weibo.com/6511008423
+빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
+팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
+공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
+디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
+유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
+페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
+인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
+공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
+트위터 링크 일본어┃https://twitter.com/EternalReturnJP
+유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
+디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
+공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
+공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
+디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
+트위터 링크 스페인어┃https://twitter.com/EternalReturnES
+페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
+공식 홈페이지 링크 영어┃https://playeternalreturn.com/
+디스코드 링크 영어┃https://discord.com/invite/eternalreturn
+트위터 링크 영어┃https://twitter.com/_EternalReturn_/
+페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
+신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
+신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
+신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
+고객지원 링크┃https://playeternalreturn.com/help
+고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
+고객지원 링크_MS┃https://playeternalreturn.com/help
+점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
+점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
+점검 중 링크_MS┃https://playeternalreturn.com/posts/news
+카카오 홈페이지 링크┃http://er.game.daum.net/
+카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
+OutLink/Desc/1┃Bem vindo(a) à comunidade ER!
+OutLink/Desc/2┃Junte-se aos nossos eventos da comunidade no Discord! Não se esqueça de adicionar o jogo à sua Lista de Desejos e de nos seguir na Steam para receber notificações sobre o lançamento!
+OutLink/Desc/3┃Partilhe sua opinião connosco
+OutLink/Desc/4┃\nGuias do jogador
+OutLink/Desc/5┃Apoiar o jogo
+OutLink/Desc/6┃Seja um contribuidor do Eternal Return
+플레이 가이드┃Guia de Jogabilidade
+{0}년-{1}월-{2}일-{3:00}:{4:00}┃{3:00}:{4:00}-{2}-{1}-{0}
+{0}년-{1}월-{2}일┃{2}-{1}-{0}
+{0}월 {1}일┃{1}/{0}
+게임 데이터를 불러오는데 실패했습니다.┃Erro na comunicação com o servidor
+모드매칭불가안내┃Confira que modo de jogo está disponível hoje!\nModo de hoje: {0}, {1}
+접속이 제한된 계정입니다.┃Conta temporariamente suspensa.\nTempo restante: {0} {1} {2}\nRazão da Suspensão: {3}
+영구 정지┃Conta permanentemente suspensa.
+클라이언트 버전 업데이트 이후 이용 가능합니다.┃Atualize o jogo para jogar.\nPode ser necessário reiniciar a Steam.
+클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Atualize o jogo para jogar.
+클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Atualize o jogo para jogar.
+서버와연결할수없음┃Erro ao ligar-se ao servidor.
+팀원 중 누군가가 매칭 실패┃Um membro da equipa não pôde começar o jogo. Por favor, tente novamente.
+매칭 중 결제 불가┃Não é possível comprar durante a procura de jogo.
+현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Ligação à internet instável. ErrorCode: {0}
+점검중┃Servidores em manutenção. Desculpe o inconveniente.
+해결방법┃Resolução de Problemas
+해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
+해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
+해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
+서버와 연결이 끊어졌습니다.┃Erro ao ligar-se ao servidor.
+에러가 발생하여 서버와 연결이 종료되었습니다┃Ocorreu um erro. A conexão com o servidor foi encerrada.
+FirstLoading1┃Loading Text
+FirstLoading2┃Verifying Account...
+FirstLoading3┃Loading ...
+게임문화개선캠페인┃<color=#FF0000>Eternal Return valoriza o fair-play. Os jogadores que violarem as regras enfrentarão suspensão de conta.</color>
+게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
+접속시간경과안내┃Tem estado a jogar por {0} hora(s). Não te esqueças de fazer uma pausa!
+MasteryType/Glove/Desc┃Luvas tem um alcance muito baixo, mas elas podem realizar vários ataques consecutivos rápidos.
+MasteryType/Tonfa/Desc┃Tonfas são as únicas armas de batalha capazes de manter sua Defesa.
+MasteryType/Hammer/Desc┃Martelos têm uma velocidade de ataque muito baixa, mas podem restringir o movimento do oponente com um único golpe forte.
+MasteryType/Bat/Desc┃Bastões são armas flexíveis e equilibradas que podem lidar com diversos inimigos facilmente.
+MasteryType/Whip/Desc┃Chicotes são armas bastante complicadas devido à sua capacidade de restringir o movimento de inimigos.
+MasteryType/HighAngleFire/Desc┃Armas lançáveis comumente possuem poder de ataque alto. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza que você está prestando atenção em quantas unidades você pode criar.
+MasteryType/DirectFire/Desc┃Shurikens tem uma variedade grande de tipos de arma e são muito versáteis. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza que você está prestando atenção em quantas unidades você pode criar.
+MasteryType/Bow/Desc┃Arcos são armas de longo alcance que ficam mais fortes quanto mais domínio você obtém. São especialmente eficazes contra animais selvagens.
+MasteryType/CrossBow/Desc┃A experiência da Besta reside em sua capacidade de atacar inimigos enquanto concentra ataques em apenas uma direção.
+MasteryType/Pistol/Desc┃Pistolas permitem que você use habilidades com mais frequência. Essas armas são especializadas em agilidade e mobilidade elegante.
+MasteryType/AssaultRifle/Desc┃Rifles de assalto são armas de longo alcance especializadas em ataques rápidos e constantes.
+MasteryType/SniperRifle/Desc┃Os Rifles de Precisão possuem um forte Poder de Ataque e o maior alcance de ataque. Eles cobrem mais distância do que o alcance da visão, portanto, certifique-se de selecionar cuidadosamente uma posição e garantir um bom alcance da visão.
+MasteryType/Axe/Desc┃Machados podem ser muito lentos, mas causam mais danos. Armas que são rápidas de fabricar oferecem uma vantagem de tempo na batalha.
+MasteryType/OneHandSword/Desc┃Adagas são armas especializadas para ataques surpresa. Eles são uma das melhores e mais fortes armas para batalhas curtas.
+MasteryType/TwoHandSword/Desc┃Espadas de duas mãos são armas bem equilibradas. Quanto mais tempo você gasta dominando-os, mais você os aprecia. No entanto, jogadores iniciantes devem ter cuidado ao tentar manejá-las.
+MasteryType/Polearm/Desc┃As armas de haste têm o maior equilíbrio de poder destrutivo e longo alcance - especialmente quando se lida com muitos inimigos ao mesmo tempo.
+MasteryType/DualSword/Desc┃As espadas duplas são especializadas em desencadear duas estrofes de belos ataques consecutivos.
+MasteryType/Spear/Desc┃Lanças podem parecer desencadear ataques de longo alcance com alto poder de destruição. No entanto, eles são fracos contra inimigos que se aproximam demais. É importante controlar sua distância com lanças.
+MasteryType/Nunchaku/Desc┃Nunchakus são difíceis de aprender a se usar, mas podem ser armas versáteis nas mãos de um mestre.
+MasteryType/Rapier/Desc┃Rapieiras são capazes de movimentos chamativos que evitam os ataques inimigos, tornando seus próprios ataques um sucesso.
+MasteryType/Guitar/Desc┃Guitarras são armas de longo alcance que usam ondas sonoras. Essas armas são muito versáteis, pois sua jogabilidade e estratégia podem mudar completamente, dependendo do número de pontos de Evoluções aplicados às suas habilidades.
+MasteryType/Camera/Desc┃Câmeras são armas de longo alcance que não utilizam projéteis. Elas podem ser usadas para cegar inimigos, impedindo-os de acertar ataques.
+MasteryType/Glove/Stats┃Equipar Luvas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Tonfa/Stats┃Equipar Bastão aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Hammer/Stats┃Equipar Martelo aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Axe/Stats┃Equipar Machado aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Bat/Stats┃Equipar Taco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Whip/Stats┃Equipar Chicote aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/OneHandSword/Stats┃Equipar Adaga aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/TwoHandSword/Stats┃Equipar Espada de Duas Mãos aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/DualSword/Stats┃Equipar Duas Espadas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Spear/Stats┃Equipar Lança aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/HighAngleFire/Stats┃Equipar Projétil aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/DirectFire/Stats┃Equipar Shuriken aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Bow/Stats┃Equipar Arco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/CrossBow/Stats┃Equipar Besta aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Pistol/Stats┃Equipar Pistola aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/AssaultRifle/Stats┃Equipar Fuzil de Assalto aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/SniperRifle/Stats┃Equipar Fuzil de Precisão aumenta {2} em {3}\n{4} em {5}
+MasteryType/Nunchaku/Stats┃Equipar Nunchaku aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Rapier/Stats┃Equipar Florete aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Guitar/Stats┃Equipar Guitarra aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Camera/Stats┃Equipar Câmera aumenta {0} em {1}\n{4} por {5}
+MasteryType/Hunt/Stats┃{0} {1} de Aumento
+MasteryType/Craft/Stats┃{0} {1} de Aumento
+MasteryType/Search/Stats┃{0} {1} de Aumento
+MasteryType/Move/Stats┃{0} {1} de Aumento
+MasteryType/Health/Stats┃{0} {1} de Aumento\n{2} {3} de Aumento
+MasteryType/Defense/Stats┃{0} {1} de Aumento\n{2} {3} de Aumento
+MasteryType/Meditation/Stats┃{0} {1} de Aumento
+MasteryType/Trap/Stats┃{0} {1} de Aumento
 ServerError/1000┃Ocorreu um erro. Por favor, reinicie o jogo.
 ServerError/1001┃Ocorreu um erro. Por favor, reinicie o jogo.
 ServerError/1002┃Ocorreu um erro. Por favor, reinicie o jogo.
