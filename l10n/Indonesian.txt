@@ -428,6 +428,7 @@ CastingActionType/CraftUncommonFood┃Membuat
 CastingActionType/CraftRareFood┃Membuat
 CastingActionType/CraftEpicFood┃Membuat
 CastingActionType/CraftLegendFood┃Membuat
+CastingActionType/CraftCustom_1┃Membuat
 CastingActionType/Hyperloop┃Mengoperasikan Hyperloop: <color=#FFBB00>{0}</color>
 CastingActionType/InstallTrap┃Memasang Perangkap
 ItemOptionCategory/AttackPower┃Kekuatan Serangan
@@ -458,6 +459,7 @@ DropFrequency/Never┃Tidak Pernah
 DropFrequency/Rare┃Jarang
 DropFrequency/Often┃Sering
 DropFrequency/Always┃Selalu
+DropFrequency/Exclusive┃Selalu
 GradeColor/None┃Tidak berwarna
 GradeColor/Common┃Abu
 GradeColor/Uncommon┃Hijau
@@ -1025,6 +1027,11 @@ ItemTag/Ex_None┃-
 Emotion/Desc/Base┃Gunakan Emote untuk berkomunikasi di dalam game.
 Shop/Desc/NP┃NP adalah mata uang yang digunakan untuk beberapa produk didalam Eternal Return
 ShopMenu/Etc/RANDOM_BOX┃Kotak
+ItemType/CHARACTER/Name┃Karakter
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
+선택권 아이템 타입 도안┃DESIGN
+Loot┃LOOT
 Skill/Group/Name/1001100┃Bloodfest
 Skill/Group/Name/1001200┃Hack & Slash
 Skill/Group/Name/1001300┃Adrenaline Burst
@@ -1395,8 +1402,8 @@ Skill/Group/Desc/1013200┃Xiukai melemparkan barel sausnya ke arah target, memb
 Skill/Group/Desc/1013500┃Xiukai menyemburkan api di atas wajannya {7} kali dalam {0} detik, memberi <color=white>{20}</color>(+{8}) kerusakan ke musuh di area kerucut di depannya. (Juggernaut Chef: {3}).\n\nMusuh dengan gerakan yang terganggu akan dikurangi pertahanannya sebanyak {6} untuk {5} detik.
 Skill/Group/Coef/1013100┃Makanan dan minuman yang dibuat Xiukai mempunyai {0} bonus pemulihan. Saat membuat jenis makanan Tidak Biasa atau lebih, dia mendapatkan tumpukan Juggernaut Chef, meningkatkan HP maks. sebanyak {6} setiap tumpukan.\nBonus HP saat ini: {1}\n\nTumpukan yang diberikan per jenis makanan\n\nTidak Biasa: {2}\nLangka: {3}\nEpik: {4}
 Skill/Group/Coef/1013200┃Xiukai melemparkan barel sausnya ke arah target, memberi {0}<color=#ffd775>(+{1})</color> kerusakan ke musuh yang terkena dan mengurangi kecepatan gerak sebanyak {3} untuk {2} detik.
-Skill/Group/Coef/1013410┃Xiukai membanting wajan raksasanya ke tanah, memberi {0}<color=#ffd775>(+{1})</color> kerusakan di sekitarnya dan mengurangi kecepatan gerak musuh yang terkena sebanyak {3} untuk {2} detik.\n\nMusuh yang terganggu gerakannya menerima <color=#688A08>{6}</color> kerusakan tambahan ({5} dari HP maks. Xiukai) dan kecepatan gerakan mereka berkurang selama tambahan {4} detik.
-Skill/Group/Coef/1013400┃Xiukai meluncur di atas wajannya ke arah target, menimbulkan {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} dari HP maks. Xiukai) kerusakan ke musuh.\n\nMusuh yang terganggu gerakannya menerima {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> kerusakan ({4} dari maks. HP Xiukai) dan akan terlempar ke udara untuk {3} detik.
+Skill/Group/Coef/1013400┃Xiukai membanting wajan raksasanya ke tanah, memberi {0}<color=#ffd775>(+{1})</color> kerusakan di sekitarnya dan mengurangi kecepatan gerak musuh yang terkena sebanyak {3} untuk {2} detik.\n\nMusuh yang terganggu gerakannya menerima <color=#688A08>{6}</color> kerusakan tambahan ({5} dari HP maks. Xiukai) dan kecepatan gerakan mereka berkurang selama tambahan {4} detik.
+Skill/Group/Coef/1013410┃Xiukai meluncur di atas wajannya ke arah target, menimbulkan {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{5})</color>({2} dari HP maks. Xiukai) kerusakan ke musuh.\n\nMusuh yang terganggu gerakannya menerima {0}<color=#ffd775>(+{1})</color><color=#688A08>(+{6})</color> kerusakan ({4} dari maks. HP Xiukai) dan akan terlempar ke udara untuk {3} detik.
 Skill/Group/Coef/1013500┃Xiukai menyemburkan api di atas wajannya {7} kali dalam {0} detik, memberi {1}<color=#ffd775>(+{2})</color>(+{8}) kerusakan ke musuh di area kerucut di depannya. (Juggernaut Chef: {3}).\n\nMusuh dengan gerakan yang terganggu akan dikurangi pertahanannya sebanyak {6} untuk {5} detik.
 CharacterState/Group/Name/1013100┃Juggernaut Chef
 CharacterState/Group/Desc/1013100┃Xiukai mendapatkan tumpukan Juggernaut Chef ketika membuat makanan. Makanan dan minuman yang dibuat Xiukai memberi lebih banyak pemulihan HP/SP.
@@ -1580,13 +1587,13 @@ Skill/Group/Desc/1036200┃Eva phóng ra một quả cầu ánh sáng đến v�
 Skill/Group/Desc/1036210┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây <color=white>{20}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây <color=white>{21}</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
 Skill/Group/Desc/1036300┃Eva tạo ra một vùng năng lượng tại vị trí chỉ định, gây <color=white>{20}</color> Sát Thương Kỹ Năng. Những kẻ địch đứng trên Pha Vortex sẽ phải chịu thêm {5} sát thương từ bộ kỹ năng của Eva và bị Làm Chậm đi {8}.\nPha Vortex sẽ phân tán sau {4} giây, gây <color=white>{21}</color> Sát Thương Kỹ Năng và Hất Tung những kẻ địch ở trung tâm kỹ năng trong {6} giây.\n\nKỹ năng trúng địch sẽ nhận {9} Trường Lực.
 Skill/Group/Desc/1036400┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng <color=white>{20}</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
-Skill/Group/Desc/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây <color=white>{20}</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây <color=white>{21}</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.
+Skill/Group/Desc/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây <color=white>{20}</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây <color=white>{21}</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\n\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.
 Skill/Group/Coef/1036100┃Siêu Năng Ngoại Cảm: Bắt đầu từ cấp độ {6}, Eva thức tỉnh năng lực ngoại cảm và có thể mở hộp, hòm tiếp tế, cứu đồng đội từ xa. Cô ấy chỉ có thể cứu đồng đội hoặc thu thập Thiên Thạch và Cây Sinh Mệnh từ xa khi đang trong giao tranh.\n\nHạt Trường Lực: Khi Eva đánh trúng kỹ năng hoặc bị đánh thường, cô ấy phóng thích một Hạt Trường Lực chứa năng lượng VF tới vị trí kẻ địch, gây <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{12}</color> Sát Thương Kỹ Năng và Làm Chậm kẻ địch trúng chiêu đi {4} trong {3} giây.\nHạt Trường Lực rơi trúng kẻ địch sẽ nhận giảm hồi chiêu đi {5} và nhận {7} Trường Lực.\n\nEva nhận {9} Trường Lực mỗi {8} giây ngoài giao tranh, {10} với mỗi mạng hạ gục, và {11} với mỗi mạng hỗ trợ.
 Skill/Group/Coef/1036200┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{5}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{6}</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
 Skill/Group/Coef/1036210┃Eva phóng ra một quả cầu ánh sáng đến vị trí chỉ định, gây <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{5}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu. Khi quả cầu đạt đến tầm phóng tối đa hoặc tái kích hoạt kỹ năng, nó phát nổ và gây <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{6}</color> Sát Thương Kỹ Năng.\n\nKỹ năng trúng địch sẽ nhận {4} Trường Lực.
 Skill/Group/Coef/1036300┃Eva tạo ra một vùng năng lượng tại vị trí chỉ định, gây <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{10}</color> Sát Thương Kỹ Năng. Những kẻ địch đứng trên Pha Vortex sẽ phải chịu thêm {5} sát thương từ bộ kỹ năng của Eva và bị Làm Chậm đi {8}.\nPha Vortex sẽ phân tán sau {4} giây, gây <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#dda0dd>{11}</color> Sát Thương Kỹ Năng và Hất Tung những kẻ địch ở trung tâm kỹ năng trong {6} giây.\n\nKỹ năng trúng địch sẽ nhận {9} Trường Lực.
 Skill/Group/Coef/1036400┃Eva trở nên Không Thể Cản Phá và lướt tới vị trí chỉ định, cho cô ấy tầm nhìn của tất cả những kẻ địch ở gần trong {4} giây.\nĐòn đánh thường tiếp theo của Eva sẽ khiến mục tiêu bị Câm Lặng trong {5} giây và cô sẽ nhận {6} Trường Lực. Đánh thường sẽ ngay lập tức hủy tầm nhìn nhận được từ Dòng Chảy Thạch Anh.\nNếu Eva đánh thường trúng kẻ địch đang phải chịu bất kì một khống chế nào của cô ấy, chúng sẽ phải chịu Cưỡng Chế Ma Pháp, gây tổng <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#dda0dd>{7}</color> Sát Thương Kỹ Năng trong {3} giây và cho Eva tầm nhìn của kẻ đó.\n\nDòng Chảy Thạch Anh không chịu ảnh hưởng bởi chỉ số giảm hồi chiêu.
-Skill/Group/Coef/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây <color=white>{1}</color><color=#ffd775>(+{10})</color><color=#dda0dd>{8}</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#dda0dd>{9}</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.
+Skill/Group/Coef/1036500┃Eva giải phóng lượng Trường Lực cô ấy tích trữ, gây <color=white>{1}</color><color=#ffd775>(+{10})</color><color=#dda0dd>{8}</color> Sát Thương Kỹ Năng và gây cộng dồn Nhiễu Loạn Trường Lực mỗi {0} giây lên những kẻ địch trúng chiêu. Khi đạt {2} cộng dồn, Eva hấp thụ chúng, gây <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#dda0dd>{9}</color> Sát Thương Kỹ Năng.\nLượng Trường Lực tối thiểu để kích hoạt Phát Xạ VF phải đạt {5}.\n\nPhát Xạ VF tiêu thụ {7} Trường Lực mỗi {6} giây khi đang vận sức.
 CharacterState/Group/Name/1036110┃Siêu Năng Ngoại Cảm
 CharacterState/Group/Name/1036120┃Siêu Năng Ngoại Cảm - Làm Chậm
 CharacterState/Group/Name/1036330┃Pha Vortex
@@ -2118,13 +2125,6 @@ Item/Skills/6013005/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013006/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013007/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013008/Name┃<color=yellow>Magnetic Midnight</color>
-Skill/Group/Desc/1009300┃Isol menembakkan hujan peluru ke arah depannya selama {0} detik, memberi <color=#ffd775><color=white>{7}</color>(+{3})</color> selama {1} detik, dan mengurangi pergerakan musuh sebesar {5} selama {4} detik, dimulai dari kerusakan terakhir yang diterima dari Rebel Assault
-ItemType/CHARACTER/Name┃Karakter
-선택권 아이템 타입 캐릭터┃SUBJECT
-선택권 아이템 타입 스킨┃SKIN
-선택권 아이템 타입 도안┃DESIGN
-Loot┃LOOT
-Goods/Name/1┃Twitch Drops
 오늘의 도전┃Tugas Harian
 오늘의 도전과제를 모두 완수하였습니다.┃Kamu sudah menyelesaikan semua Tugas Harian
 도전과제 변경 가능┃Kamu bisa mmengganti Tugas Harian satu kali adalam sehari. Apa kamu ingin mengganti ke Tuhas Harian baru?
@@ -3652,213 +3652,6 @@ Item/BulletCapacity/Reload┃<color=yellow>Amunisi Maks.:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Amunisi Maks.:</color> {0}
 서비스약관┃Terms of Service
 개인정보동의┃Privacy Policy
-로딩팁 튜토리얼12┃Tekan [A] dan Klik Kanan untuk menyerang!\nKaraktermu akan menyerang musuh disekitar ketika kamu berjalan ke arah yang dituju.
-로딩팁 튜토리얼13┃Klik kiri dan tarik Mouse sambil menahan [Alt] Untuk menggunakan Ping Wheel.\nKamu dapat berkomunikasi dengan teammu!!
-CharacterState/Group/Name/7110601┃Makan
-CharacterState/Group/Desc/7110601┃Memulihkan HP dari makanan.
-CharacterState/Group/Name/7110611┃Minum
-CharacterState/Group/Desc/7110611┃Memulihkan SP dari minuman.
-ButtonType/Confirm┃Konfirmasi
-ButtonType/Cancel┃Batal
-SupportLanguage/Korean┃한국어
-SupportLanguage/English┃English
-SupportLanguage/Japanese┃日本語
-SupportLanguage/ChineseSimplified┃简体中文
-SupportLanguage/ChineseTraditional┃繁體中文
-SupportLanguage/French┃Français (BETA)
-SupportLanguage/Spanish┃Español (España - BETA)
-SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
-SupportLanguage/Portuguese┃Português (BETA)
-SupportLanguage/Russian┃Русский (BETA)
-SupportLanguage/German┃Deutsch (BETA)
-SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
-SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
-SupportLanguage/Thai┃ภาษาไทย (BETA)
-SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
-SupportLanguage/Italian┃Italiano (BETA)
-SupportLanguage/Polish┃Polski (BETA)
-SupportCountryCharacterVoice/Korean┃한국어 (Korean)
-SupportCountryCharacterVoice/English┃English
-SupportCountryCharacterVoice/Japanese┃日本語
-중국지역가속안내┃Acceleration Option
-Graphic/Low┃Sangat Rendah
-Graphic/Medium┃Biasa
-Graphic/High┃Tinggi
-Graphic/Ultra┃Ultra
-FullScreenMode/ExclusiveFullScreen┃Layar Penuh
-FullScreenMode/FullScreenWindow┃Layar Penuh Tanpa Garis 
-FullScreenMode/MaximizedWindow┃Layar Penuh Tanpa Garis 
-FullScreenMode/Windowed┃Layar Kecil
-Internal┃Kesalahan yang tidak diketahui
-ObjectNotFound┃Target tidak ditemukan
-NotEnoughInventory┃Ruang inventaris penuh
-인벤토리 공간이 부족 합니다.┃Ruang inventaris penuh
-NotEnoughItem┃Barang tidak cukup
-NotEnoughItemBox┃Inventaris penuh
-InvalidItemCode┃Barang tidak diketahui
-ItemNotFound┃Barang tidak ditemukan
-InvalidAction┃Tindakan tidak valid
-CharacterNotAlive┃Tindakan tidak valid
-CannotPerformRightNow┃Tidak bisa dilakukan sekarang.
-NotAvailableYet┃Belum tersedia.
-CantConsumeItem┃Belum tersedia.
-NotEnoughSp┃SP tidak cukup
-NotExistUserId┃Pemain tidak ditemukan
-InvalidBattleToken┃Permainan tidak valid
-AlreadyExistUserId┃ID sudah ada
-GameStartedAlready┃Permainan sudah dimulai
-NoBattleHost┃Tuan rumah tidak ditemukan
-CantConsumItem┃Kamu tidak bisa makan lagi
-Evasion┃Menghindar
-NotInvalidTarget┃Target tidak Sah
-InvalidTarget┃Target tidak Sah
-ServerUnavailable┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
-OutOfService┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
-OutOfService_Temp┃Sedang dalam maintenance, silahkan kembali lagi nanti.\nWaktu tersisa: {0} {1} {2}
-InvalidMatchingMode┃Mode pencocokan tidak valid
-AlreadyJoinedMatching┃Pencocokan sudah dimulai
-EmptyMatchingToken┃Permainan tidak valid
-InvalidCommand┃Perintah tidak diketahui
-NotMatchingUser┃Permintaan tidak valid
-InvalidMatchingToken┃Permintaan tidak valid
-UnknownMatchingError┃Daerah yang dipilih tidak tersedia untuk pencocokan.
-MatchingServerNone┃Daerah yang dipilih tidak tersedia untuk pencocokan.
-UnavailableNickname┃Maaf, nama sudah dipakai
-매칭서버 타임아웃┃Silahkan cek koneksi internet anda.
-UserGameFinished┃Tidak dapat menemukan game.
-LoadingText/Connect┃Daftar barang yang bisa kamu buat terletak di sebelah atas inventaris.
-LoadingText/Handshake┃Karaktermu akan duduk dan istirahat ketika kamu menekan X
-LoadingText/Join┃Jika kamu bisa melihat musuhmu, kamu bisa menyerang mereka, tidak peduli dengan tempatnya.
-LoadingText/LoadCharacter┃Hitung mundur dimulai ketika kamu berada di area terlarang. Saat mencapai 0, karaktermu akan meledak.
-LoadingText/LoadLevel┃Kamu bisa mengubah pengaturan Pengaktifan Cepat di bagian Pengaturan.
-LoadingText/LoadEffect┃Tekan CTRL + 1 ~ 6 untuk mendengar lelucon, ejekan karaktermu, dan lain-lainnya.
-LoadingText/Done┃Kamu bisa menggunakan jurus senjata ketika kamu mencapai tingkatan 7 di Penguasaan
-LoadingText/SceneLoad┃Dengan membuka peta (M), kamu bisa menggerakan karaktermu dengan menahan CTRL dan klik kanan pada peta.
-설문조사 배너┃Silahkan jawab survey
-설문조사 링크┃https://steamcommunity.com/app/1049590/guides
-커뮤니티 이벤트 배너┃Menangkan Hadiah !
-커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
-기본 커뮤니티┃Troubleshooting.
-기본 커뮤니티 링크┃https://discord.gg/eternalreturn
-기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
-LINK┃LINK
-스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
-디스코드 링크┃https://discord.gg/eternalreturn
-트위터 링크┃https://twitter.com/_EternalReturn_/
-페이스북 링크┃https://www.facebook.com/eternalreturngame
-레딧 링크┃https://www.reddit.com/r/eternalreturn/
-QQ 그룹1┃QQ 实验群1
-QQ 그룹2┃QQ 实验群2
-QQ 그룹3┃QQ 实验群3
-QQ 그룹 링크1┃https://jq.qq.com/?_wv=1027&k=IYl8z46K
-QQ 그룹 링크2┃https://jq.qq.com/?_wv=1027&k=5Hfvfd0B
-QQ 그룹 링크3┃https://jq.qq.com/?_wv=1027&k=CELT5poZ
-웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
-사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/
-플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
-하트지급 링크┃https://discord.gg/HkVHuAh
-빌리빌리 링크┃https://space.bilibili.com/413651489
-팬북 링크┃https://fanbook.mobi/PZgT8F9W
-공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
-공식 홈페이지 링크 카카오┃https://er.game.daum.net/
-디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
-트위터 링크 한국어┃https://twitter.com/EternalReturnKR
-KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
-유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
-공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
-QQ 링크1 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=MsrpOner3Hs0BkT0s1eA1nuHeAol6QI3&authKey=RZbAWOF1D4NBZkRwelqi9nSwfbkCitCHQPQG%2FiowNy%2BIL8tttZvenE0yitNmC04t&noverify=0&group_code=810996599
-QQ 링크2 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=FvkFPZcF9TUAdFbY0RT2pPMLKaUG4Xe1&authKey=CAdSKMyeC6BR%2FSwKkYvy5t3g5Kx1G%2FJ0TVWYpodJ4vpyv%2FvHVlymeK%2BdfPISw1za&noverify=0&group_code=736777815
-QQ 링크3 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=SGpsq5COXboI-aerraP9r6toHosfIGS_&authKey=BaF66UtBn1q3CLAtrO7o9AV7i7rqf40QdM3uE84hahY6WPc2PkRV6KU%2BNrLQmxKB&noverify=0&group_code=808618259
-웨이보 링크 중문간체┃https://weibo.com/6511008423
-빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
-팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
-공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
-디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
-유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
-페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
-인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
-공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
-트위터 링크 일본어┃https://twitter.com/EternalReturnJP
-유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
-디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
-공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
-공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
-디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
-트위터 링크 스페인어┃https://twitter.com/EternalReturnES
-페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
-공식 홈페이지 링크 영어┃https://playeternalreturn.com/
-디스코드 링크 영어┃https://discord.com/invite/eternalreturn
-트위터 링크 영어┃https://twitter.com/_EternalReturn_/
-페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
-신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
-신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
-신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
-고객지원 링크┃https://playeternalreturn.com/help
-고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
-고객지원 링크_MS┃https://playeternalreturn.com/help
-점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
-점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
-점검 중 링크_MS┃https://playeternalreturn.com/posts/news
-카카오 홈페이지 링크┃http://er.game.daum.net/
-카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
-OutLink/Desc/1┃Selamat datang di komunitas ER!
-OutLink/Desc/2┃Gabung dengan acara komunitas kami di Discord! Jangan lupa menaruh kami pada WISHLIST dan Follow kami di Steam untuk mendapatkan pemberitahuan tentang rilisnya permainan kami.
-OutLink/Desc/3┃Bagikan timbal balikmu bersama kami
-OutLink/Desc/4┃Panduan bermain
-OutLink/Desc/5┃Dukung permainan ini
-OutLink/Desc/6┃Jadilah penyokong Eternal Return
-플레이 가이드┃Panduan bermain
-{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
-{0}년-{1}월-{2}일┃{2}-{1}-{0}
-게임 데이터를 불러오는데 실패했습니다.┃Gagal melakukan kontak dengan server
-모드매칭불가안내┃Cek mode apa yang bisa dimainkan hari ini!\nMode hari ini: {0}, {1}
-접속이 제한된 계정입니다.┃Akun diberhentikan untuk sementara.\nWaktu tersisa: {0} {1} {2}\nReason for suspension: {3}
-영구 정지┃Akun diberhentikan secara permamen.
-클라이언트 버전 업데이트 이후 이용 가능합니다.┃Perbaharui game untuk dimainkan.\nKamu mungkin harus membuka ulang Steam.
-클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Perbaharui game untuk dimainkan.
-클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Perbaharui game untuk dimainkan.
-서버와연결할수없음┃Gagal menyambungkan ke server.
-팀원 중 누군가가 매칭 실패┃Member di dalam tim tidak bisa memulai permainan. Silahkan coba lagi.
-매칭 중 결제 불가┃Tidak bisa membeli saat mencari permainan.
-현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Jaringan tidak stabil. ErrorCode: {0}
-점검중┃Server sedang maintenance.\nMohon maaf atas ketidaknyamanannya.
-해결방법┃Troubleshooting.
-해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
-해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
-해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
-서버와 연결이 끊어졌습니다.┃Gagal menyambungkan ke server.
-FirstLoading1┃Loading Text
-FirstLoading2┃Verifying Account...
-FirstLoading3┃Loading ...
-게임문화개선캠페인┃<color=#FF0000>Eternal Return menghargai permainan yang adil. Pemain yang ditemukan melanggar aturan tim akan menghadapi pemberhentian akun.</color>
-게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
-접속시간경과안내┃Kamu telah bermain selama {0} jam.
-MasteryType/Glove/Desc┃Sarung tangan memiliki jarak yang sangat dekat, tetapi memiliki kecepatan paling tinggi untuk serangan beruntun.
-MasteryType/Tonfa/Desc┃Tonfa adalah satu-satunya senjata rakitan yang bisa dipakai untuk bertahan.
-MasteryType/Hammer/Desc┃Martil memiliki kecepatan yang sangat lambat, tapi pukulan kuatnya bisa menghambat gerakan lawan.
-MasteryType/Bat/Desc┃Pentungan adalah senjata fleksibel dan seimbang yang bisa dipakai untuk menghadapi berbagai macam jenis musuh dengan mudah.
-MasteryType/Whip/Desc┃Cambuk merupakan senjata yang cukup rumit karena bisa menghambat pergerakan lawan.
-MasteryType/HighAngleFire/Desc┃Senjata lempar seringkali memiliki kekuatan serangan yang tinggi. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
-MasteryType/DirectFire/Desc┃Shuriken memiliki berbagai macam jenis senjata dan sangat fleksibel. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
-MasteryType/Bow/Desc┃Busur adalah senjata jarak jauh yang bertambah kuat seiring bertambahnya penguasaanmu. Busur sangat efektif untuk digunakan pada hewan liar.
-MasteryType/CrossBow/Desc┃Crossbow memiliki keunggulan pada kemampuannya untuk  menghajar musuh sambil memfokuskan serangan ke satu arah.
-MasteryType/Pistol/Desc┃Pistol memudahkanmu untuk lebih sering menggunakan jurus. Senjata ini berkeahlian dalam kelincahan dan mobilitas.
-MasteryType/AssaultRifle/Desc┃Senapan serbu adalah senjata jarak jauh yang ahli dalam serangan yang konstan dan beruntun.
-MasteryType/SniperRifle/Desc┃Senapan sniper memliki Kekuatan Serang yang sangat tinggi diiringi dengan jarak yang sangat jauh. Senjata ini menempuh jarak serang melebihi jarak pandang, pastikan kamu memilih tempat dengan jarak pandang yang bagus.
-MasteryType/Axe/Desc┃Kapak mungkin sangat lambat, tapi kerusakannya adalah yang tertinggi. Senjata yang mudah dan cepat untuk dibuat akan memberikanmu keunggulan dalam pertarungan.
-MasteryType/OneHandSword/Desc┃Pisau adalah senjata yang berkeahlian dalam serangan kejutan. Senjata ini adalah salah satu yang terbaik dan terkuat untuk pertarungan yang singkat.
-MasteryType/TwoHandSword/Desc┃Pedang dua tangan adalah senjata yang cukup stabil. Semakin lama kamu menguasainya, semakin kamu memahaminya. Namun, pemain yang masih baru harus hati-hati ketika menggunakannya.
-MasteryType/Polearm/Desc┃Tongkat senjata adalah senjata dengan kekuatan serangan dan jarak yang seimbang - terutama ketika melawan musuh yang banyak dalam satu waktu.
-MasteryType/DualSword/Desc┃Pedang ganda berkeahlian dalam melepaskan dua serangan yang anggun dan berkelanjutan.
-MasteryType/Spear/Desc┃Tombak mungkin terlihat sebagai senjata yang memiliki jarak lumayan dengan kerusakan yang tinggi. Namun, senjata ini lemah ketika melawan musuh yang terlalu dekat. Penting bagimu untuk menjaga jarak ketika menggunakan tombak
-MasteryType/Nunchaku/Desc┃\nNunchaku sulit dipelajari, tetapi bisa menjadi senjata serbaguna dengan penggunaan kreatif jika dikuasai.
-MasteryType/Rapier/Desc┃Pedang tipis sanggup melakukan gerakan mencolok yang bisa menghindari serangan musuh, menyebabkan serangannya sendiri yang berhasil.
-MasteryType/Guitar/Desc┃Gitar adalah senjata jarak jauh yang menggunakan gelombang suara. Senjata ini sangat beragam dengan cara bermain dan strategimu yang akan berubah total bergantung pada jumlah Poin Evolusi yang kamu terapak ke tiap jurusnya
-MasteryType/Camera/Desc┃Kamera adalah senjata jarak jauh tanpa ada projektil. Juga bisa digunakan untuk membutakan musuh, yang membuat serangan mereka meleset karena cahaya yang terang.
 보유하지 않은 캐릭터입니다.┃Kamu tidak memiliki karakter ini.\nSilahkan buka karakter di Toko untuk memainkannya
 매칭 중 캐릭 변경 금지┃Kamu tidak bisa mengganti karakter saat mencari petandingan.
 로딩 중┃Loading\n< Tekan tombol X untuk duduk dan istirahat >
@@ -4484,19 +4277,7 @@ WickelineUI_ReadyTooltip┃Dr. Wickeline telah aktif.
 더미알파생성완료노티┃Alpha telah muncul
 더미오메가생성완료노티┃Omega telah muncul
 Ping/AlphaOmega/Dead┃{0}({1}) : Alpha dan Omega telah dibunuh.
-Ping/Order/Where┃Mau kemana?
-Ping/Order/LetsJoin┃Ayo bergabung!
-Ping/Order/Wait┃Tunggu!
-Ping/Order/Roger┃Ok!
-Ping/Order/NeedFood┃Butuh Makanan
-Ping/Order/NeedWater┃Butuh Minuman
 Ping/Order/Cancel┃Batal
-Ping/Order/Where/Chatting┃{0}({1}) bertanya <color=#C2FFA0>Mau kemana</color>?
-Ping/Order/LetsJoin/Chatting┃{0}({1}) ingin <color=#C2FFA0>Bergabung bersama</color>!
-Ping/Order/Wait/Chatting┃{0}({1}) bilang <color=#C2FFA0>Tunggu</color>!
-Ping/Order/Roger/Chatting┃{0}({1}) bilang <color=#C2FFA0>Ok!</color>!
-Ping/Order/NeedFood/Chatting┃{0}({1}) <color=#C2FFA0>butuh makanan</color>.
-Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>butuh minuman</color>.
 아군빈사┃{0}({1}) почти мёртв в {2}.
 야생동물빈사알림┃{0} telah ditumbangkan {1}({2}).
 금지구역사망알림┃{0}({1}) telah meledak di area terlarang.
@@ -4507,9 +4288,9 @@ Ping/Order/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>butuh minuman</color>.
 마크특수지정┃{0}({1}) telah menargetkan {3} di {2}
 핑대상지정┃{0}({1}) telah menargetkan {3}({4} di {2}
 핑특수지정┃{0}({1}) telah menargetkan {3} di{2}
-핑퇴각┃{0}({1}) meminta untuk mundur dari {2}.
-핑지원┃{0}({1}) meminta bantuan di {2}.
-핑주의┃{0}({1}) meminta untuk berhati-hati di {2}.
+핑흔적발견┃{0}({1}) meminta untuk mundur dari {2}.
+핑위험┃{0}({1}) meminta bantuan di {2}.
+핑지원┃{0}({1}) meminta untuk berhati-hati di {2}.
 핑이동┃{0}({1}) dalam perjalanan ke {2}.
 아이템보유┃{0}({1}) memiliki {2}
 아이템지목┃{0}({1}) telah menargetkan {2}.
@@ -5307,6 +5088,213 @@ QuickStart/TeamFinding┃Sun Jan 02 2022 00:00:00 GMT+0900 (한국 표준시)
 QuickStart/Matching┃Wed Feb 02 2022 00:00:00 GMT+0900 (한국 표준시)
 Season7/Name┃<color=#FF7AFF>Neon Aftershock</color>
 알겠습니다┃Konfirmasi
+로딩팁 튜토리얼12┃Tekan [A] dan Klik Kanan untuk menyerang!\nKaraktermu akan menyerang musuh disekitar ketika kamu berjalan ke arah yang dituju.
+로딩팁 튜토리얼13┃Klik kiri dan tarik Mouse sambil menahan [Alt] Untuk menggunakan Ping Wheel.\nKamu dapat berkomunikasi dengan teammu!!
+CharacterState/Group/Name/7110601┃Makan
+CharacterState/Group/Desc/7110601┃Memulihkan HP dari makanan.
+CharacterState/Group/Name/7110611┃Minum
+CharacterState/Group/Desc/7110611┃Memulihkan SP dari minuman.
+ButtonType/Confirm┃Konfirmasi
+ButtonType/Cancel┃Batal
+SupportLanguage/Korean┃한국어
+SupportLanguage/English┃English
+SupportLanguage/Japanese┃日本語
+SupportLanguage/ChineseSimplified┃简体中文
+SupportLanguage/ChineseTraditional┃繁體中文
+SupportLanguage/French┃Français (BETA)
+SupportLanguage/Spanish┃Español (España - BETA)
+SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
+SupportLanguage/Portuguese┃Português (BETA)
+SupportLanguage/Russian┃Русский (BETA)
+SupportLanguage/German┃Deutsch (BETA)
+SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
+SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
+SupportLanguage/Thai┃ภาษาไทย (BETA)
+SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
+SupportLanguage/Italian┃Italiano (BETA)
+SupportLanguage/Polish┃Polski (BETA)
+SupportCountryCharacterVoice/Korean┃한국어 (Korean)
+SupportCountryCharacterVoice/English┃English
+SupportCountryCharacterVoice/Japanese┃日本語
+중국지역가속안내┃Acceleration Option
+Graphic/Low┃Sangat Rendah
+Graphic/Medium┃Biasa
+Graphic/High┃Tinggi
+Graphic/Ultra┃Ultra
+FullScreenMode/ExclusiveFullScreen┃Layar Penuh
+FullScreenMode/FullScreenWindow┃Layar Penuh Tanpa Garis 
+FullScreenMode/MaximizedWindow┃Layar Penuh Tanpa Garis 
+FullScreenMode/Windowed┃Layar Kecil
+Internal┃Kesalahan yang tidak diketahui
+ObjectNotFound┃Target tidak ditemukan
+NotEnoughInventory┃Ruang inventaris penuh
+인벤토리 공간이 부족 합니다.┃Ruang inventaris penuh
+NotEnoughItem┃Barang tidak cukup
+NotEnoughItemBox┃Inventaris penuh
+InvalidItemCode┃Barang tidak diketahui
+ItemNotFound┃Barang tidak ditemukan
+InvalidAction┃Tindakan tidak valid
+CharacterNotAlive┃Tindakan tidak valid
+CannotPerformRightNow┃Tidak bisa dilakukan sekarang.
+NotAvailableYet┃Belum tersedia.
+CantConsumeItem┃Belum tersedia.
+NotEnoughSp┃SP tidak cukup
+NotExistUserId┃Pemain tidak ditemukan
+InvalidBattleToken┃Permainan tidak valid
+AlreadyExistUserId┃ID sudah ada
+GameStartedAlready┃Permainan sudah dimulai
+NoBattleHost┃Tuan rumah tidak ditemukan
+CantConsumItem┃Kamu tidak bisa makan lagi
+Evasion┃Menghindar
+NotInvalidTarget┃Target tidak Sah
+InvalidTarget┃Target tidak Sah
+ServerUnavailable┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
+OutOfService┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
+OutOfService_Temp┃Sedang dalam maintenance, silahkan kembali lagi nanti.\nWaktu tersisa: {0} {1} {2}
+InvalidMatchingMode┃Mode pencocokan tidak valid
+AlreadyJoinedMatching┃Pencocokan sudah dimulai
+EmptyMatchingToken┃Permainan tidak valid
+InvalidCommand┃Perintah tidak diketahui
+NotMatchingUser┃Permintaan tidak valid
+InvalidMatchingToken┃Permintaan tidak valid
+UnknownMatchingError┃Daerah yang dipilih tidak tersedia untuk pencocokan.
+MatchingServerNone┃Daerah yang dipilih tidak tersedia untuk pencocokan.
+UnavailableNickname┃Maaf, nama sudah dipakai
+매칭서버 타임아웃┃Silahkan cek koneksi internet anda.
+UserGameFinished┃Tidak dapat menemukan game.
+LoadingText/Connect┃Daftar barang yang bisa kamu buat terletak di sebelah atas inventaris.
+LoadingText/Handshake┃Karaktermu akan duduk dan istirahat ketika kamu menekan X
+LoadingText/Join┃Jika kamu bisa melihat musuhmu, kamu bisa menyerang mereka, tidak peduli dengan tempatnya.
+LoadingText/LoadCharacter┃Hitung mundur dimulai ketika kamu berada di area terlarang. Saat mencapai 0, karaktermu akan meledak.
+LoadingText/LoadLevel┃Kamu bisa mengubah pengaturan Pengaktifan Cepat di bagian Pengaturan.
+LoadingText/LoadEffect┃Tekan CTRL + 1 ~ 6 untuk mendengar lelucon, ejekan karaktermu, dan lain-lainnya.
+LoadingText/Done┃Kamu bisa menggunakan jurus senjata ketika kamu mencapai tingkatan 7 di Penguasaan
+LoadingText/SceneLoad┃Dengan membuka peta (M), kamu bisa menggerakan karaktermu dengan menahan CTRL dan klik kanan pada peta.
+설문조사 배너┃Silahkan jawab survey
+설문조사 링크┃https://steamcommunity.com/app/1049590/guides
+커뮤니티 이벤트 배너┃Menangkan Hadiah !
+커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
+기본 커뮤니티┃Troubleshooting.
+기본 커뮤니티 링크┃https://discord.gg/eternalreturn
+기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
+LINK┃LINK
+스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
+디스코드 링크┃https://discord.gg/eternalreturn
+트위터 링크┃https://twitter.com/_EternalReturn_/
+페이스북 링크┃https://www.facebook.com/eternalreturngame
+레딧 링크┃https://www.reddit.com/r/eternalreturn/
+QQ 그룹1┃QQ 实验群1
+QQ 그룹2┃QQ 实验群2
+QQ 그룹3┃QQ 实验群3
+QQ 그룹 링크1┃https://jq.qq.com/?_wv=1027&k=IYl8z46K
+QQ 그룹 링크2┃https://jq.qq.com/?_wv=1027&k=5Hfvfd0B
+QQ 그룹 링크3┃https://jq.qq.com/?_wv=1027&k=CELT5poZ
+웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
+사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/
+플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
+하트지급 링크┃https://discord.gg/HkVHuAh
+빌리빌리 링크┃https://space.bilibili.com/413651489
+팬북 링크┃https://fanbook.mobi/PZgT8F9W
+공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
+공식 홈페이지 링크 카카오┃https://er.game.daum.net/
+디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
+트위터 링크 한국어┃https://twitter.com/EternalReturnKR
+KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
+유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
+공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
+QQ 링크1 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=MsrpOner3Hs0BkT0s1eA1nuHeAol6QI3&authKey=RZbAWOF1D4NBZkRwelqi9nSwfbkCitCHQPQG%2FiowNy%2BIL8tttZvenE0yitNmC04t&noverify=0&group_code=810996599
+QQ 링크2 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=FvkFPZcF9TUAdFbY0RT2pPMLKaUG4Xe1&authKey=CAdSKMyeC6BR%2FSwKkYvy5t3g5Kx1G%2FJ0TVWYpodJ4vpyv%2FvHVlymeK%2BdfPISw1za&noverify=0&group_code=736777815
+QQ 링크3 중문간체┃https://qm.qq.com/cgi-bin/qm/qr?k=SGpsq5COXboI-aerraP9r6toHosfIGS_&authKey=BaF66UtBn1q3CLAtrO7o9AV7i7rqf40QdM3uE84hahY6WPc2PkRV6KU%2BNrLQmxKB&noverify=0&group_code=808618259
+웨이보 링크 중문간체┃https://weibo.com/6511008423
+빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
+팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
+공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
+디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
+유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
+페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
+인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
+공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
+트위터 링크 일본어┃https://twitter.com/EternalReturnJP
+유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
+디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
+공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
+공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
+디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
+트위터 링크 스페인어┃https://twitter.com/EternalReturnES
+페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
+공식 홈페이지 링크 영어┃https://playeternalreturn.com/
+디스코드 링크 영어┃https://discord.com/invite/eternalreturn
+트위터 링크 영어┃https://twitter.com/_EternalReturn_/
+페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
+신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
+신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
+신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
+고객지원 링크┃https://playeternalreturn.com/help
+고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
+고객지원 링크_MS┃https://playeternalreturn.com/help
+점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
+점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
+점검 중 링크_MS┃https://playeternalreturn.com/posts/news
+카카오 홈페이지 링크┃http://er.game.daum.net/
+카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
+OutLink/Desc/1┃Selamat datang di komunitas ER!
+OutLink/Desc/2┃Gabung dengan acara komunitas kami di Discord! Jangan lupa menaruh kami pada WISHLIST dan Follow kami di Steam untuk mendapatkan pemberitahuan tentang rilisnya permainan kami.
+OutLink/Desc/3┃Bagikan timbal balikmu bersama kami
+OutLink/Desc/4┃Panduan bermain
+OutLink/Desc/5┃Dukung permainan ini
+OutLink/Desc/6┃Jadilah penyokong Eternal Return
+플레이 가이드┃Panduan bermain
+{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
+{0}년-{1}월-{2}일┃{2}-{1}-{0}
+게임 데이터를 불러오는데 실패했습니다.┃Gagal melakukan kontak dengan server
+모드매칭불가안내┃Cek mode apa yang bisa dimainkan hari ini!\nMode hari ini: {0}, {1}
+접속이 제한된 계정입니다.┃Akun diberhentikan untuk sementara.\nWaktu tersisa: {0} {1} {2}\nReason for suspension: {3}
+영구 정지┃Akun diberhentikan secara permamen.
+클라이언트 버전 업데이트 이후 이용 가능합니다.┃Perbaharui game untuk dimainkan.\nKamu mungkin harus membuka ulang Steam.
+클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Perbaharui game untuk dimainkan.
+클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Perbaharui game untuk dimainkan.
+서버와연결할수없음┃Gagal menyambungkan ke server.
+팀원 중 누군가가 매칭 실패┃Member di dalam tim tidak bisa memulai permainan. Silahkan coba lagi.
+매칭 중 결제 불가┃Tidak bisa membeli saat mencari permainan.
+현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Jaringan tidak stabil. ErrorCode: {0}
+점검중┃Server sedang maintenance.\nMohon maaf atas ketidaknyamanannya.
+해결방법┃Troubleshooting.
+해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
+해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
+해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
+서버와 연결이 끊어졌습니다.┃Gagal menyambungkan ke server.
+FirstLoading1┃Loading Text
+FirstLoading2┃Verifying Account...
+FirstLoading3┃Loading ...
+게임문화개선캠페인┃<color=#FF0000>Eternal Return menghargai permainan yang adil. Pemain yang ditemukan melanggar aturan tim akan menghadapi pemberhentian akun.</color>
+게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
+접속시간경과안내┃Kamu telah bermain selama {0} jam.
+MasteryType/Glove/Desc┃Sarung tangan memiliki jarak yang sangat dekat, tetapi memiliki kecepatan paling tinggi untuk serangan beruntun.
+MasteryType/Tonfa/Desc┃Tonfa adalah satu-satunya senjata rakitan yang bisa dipakai untuk bertahan.
+MasteryType/Hammer/Desc┃Martil memiliki kecepatan yang sangat lambat, tapi pukulan kuatnya bisa menghambat gerakan lawan.
+MasteryType/Bat/Desc┃Pentungan adalah senjata fleksibel dan seimbang yang bisa dipakai untuk menghadapi berbagai macam jenis musuh dengan mudah.
+MasteryType/Whip/Desc┃Cambuk merupakan senjata yang cukup rumit karena bisa menghambat pergerakan lawan.
+MasteryType/HighAngleFire/Desc┃Senjata lempar seringkali memiliki kekuatan serangan yang tinggi. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
+MasteryType/DirectFire/Desc┃Shuriken memiliki berbagai macam jenis senjata dan sangat fleksibel. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
+MasteryType/Bow/Desc┃Busur adalah senjata jarak jauh yang bertambah kuat seiring bertambahnya penguasaanmu. Busur sangat efektif untuk digunakan pada hewan liar.
+MasteryType/CrossBow/Desc┃Crossbow memiliki keunggulan pada kemampuannya untuk  menghajar musuh sambil memfokuskan serangan ke satu arah.
+MasteryType/Pistol/Desc┃Pistol memudahkanmu untuk lebih sering menggunakan jurus. Senjata ini berkeahlian dalam kelincahan dan mobilitas.
+MasteryType/AssaultRifle/Desc┃Senapan serbu adalah senjata jarak jauh yang ahli dalam serangan yang konstan dan beruntun.
+MasteryType/SniperRifle/Desc┃Senapan sniper memliki Kekuatan Serang yang sangat tinggi diiringi dengan jarak yang sangat jauh. Senjata ini menempuh jarak serang melebihi jarak pandang, pastikan kamu memilih tempat dengan jarak pandang yang bagus.
+MasteryType/Axe/Desc┃Kapak mungkin sangat lambat, tapi kerusakannya adalah yang tertinggi. Senjata yang mudah dan cepat untuk dibuat akan memberikanmu keunggulan dalam pertarungan.
+MasteryType/OneHandSword/Desc┃Pisau adalah senjata yang berkeahlian dalam serangan kejutan. Senjata ini adalah salah satu yang terbaik dan terkuat untuk pertarungan yang singkat.
+MasteryType/TwoHandSword/Desc┃Pedang dua tangan adalah senjata yang cukup stabil. Semakin lama kamu menguasainya, semakin kamu memahaminya. Namun, pemain yang masih baru harus hati-hati ketika menggunakannya.
+MasteryType/Polearm/Desc┃Tongkat senjata adalah senjata dengan kekuatan serangan dan jarak yang seimbang - terutama ketika melawan musuh yang banyak dalam satu waktu.
+MasteryType/DualSword/Desc┃Pedang ganda berkeahlian dalam melepaskan dua serangan yang anggun dan berkelanjutan.
+MasteryType/Spear/Desc┃Tombak mungkin terlihat sebagai senjata yang memiliki jarak lumayan dengan kerusakan yang tinggi. Namun, senjata ini lemah ketika melawan musuh yang terlalu dekat. Penting bagimu untuk menjaga jarak ketika menggunakan tombak
+MasteryType/Nunchaku/Desc┃\nNunchaku sulit dipelajari, tetapi bisa menjadi senjata serbaguna dengan penggunaan kreatif jika dikuasai.
+MasteryType/Rapier/Desc┃Pedang tipis sanggup melakukan gerakan mencolok yang bisa menghindari serangan musuh, menyebabkan serangannya sendiri yang berhasil.
+MasteryType/Guitar/Desc┃Gitar adalah senjata jarak jauh yang menggunakan gelombang suara. Senjata ini sangat beragam dengan cara bermain dan strategimu yang akan berubah total bergantung pada jumlah Poin Evolusi yang kamu terapak ke tiap jurusnya
+MasteryType/Camera/Desc┃Kamera adalah senjata jarak jauh tanpa ada projektil. Juga bisa digunakan untuk membutakan musuh, yang membuat serangan mereka meleset karena cahaya yang terang.
 ServerError/1000┃Terjadi kesalahan. Silahkan buka kembali permainannya.
 ServerError/1001┃Terjadi kesalahan. Silahkan buka kembali permainannya.
 ServerError/1002┃Terjadi kesalahan. Silahkan buka kembali permainannya.
