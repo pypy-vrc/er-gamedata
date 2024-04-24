@@ -1606,7 +1606,7 @@ Item/Effects/502402┃클릭하여 사용: <color=lightblue>폭뢰침</color>을
 Item/Effects/502403┃클릭하여 사용: <color=lightblue>화염트랩</color>을 설치합니다.\n<color=yellow>트랩 발동:</color> {1}초 후 넓은 범위로 폭발합니다.
 Item/Effects/502404┃클릭하여 사용: <color=lightblue>C4</color>를 설치합니다.\n<color=yellow>트랩 발동:</color> {1}초 후 넓은 범위로 폭발합니다.
 Item/Effects/502405┃클릭하여 사용: <color=lightblue>더블 기요틴</color>을 설치합니다.\n<color=yellow>트랩 발동:</color> 대상을 {0}초 간 속박합니다.
-Item/Effects/502406┃클릭하여 사용: <color=lightblue>크레모어</color>를 설치합니다.\n<color=yellow>트랩 발동:</color> 좁은 범위로 폭발하며,\n피격된 대상은 {0}초간 기절합니다.
+Item/Effects/502406┃클릭하여 사용: <color=lightblue>크레모어</color>를 설치합니다.\n<color=yellow>트랩 발동:</color> 좁은 범위로 폭발하며,\n대상의 이동 속도가 {0}초간 99% 감소합니다.
 Item/Effects/502407┃클릭하여 사용: <color=lightblue>히든 메이든</color>을 설치합니다.\n<color=yellow>트랩 발동:</color> 대상의 이동 속도가 {0}초간\n40% 감소합니다.
 Item/Effects/502501┃클릭하여 사용: <color=lightblue>리모트 마인</color>을 설치합니다.\n<color=yellow>트랩 발동:</color> {1}초 후 넓은 범위로 폭발합니다.
 Item/Effects/502502┃클릭하여 사용: <color=lightblue>스마트 폭탄</color>을 설치합니다.\n<color=yellow>트랩 발동:</color> {1}초 후 넓은 범위로 폭발합니다.
@@ -2693,6 +2693,13 @@ Monster/Name/114┃변이 멧돼지
 Monster/Name/115┃변이 들개
 Monster/Name/116┃변이 늑대
 Monster/Name/117┃변이 곰
+Installation/Name/1┃반딧불 꽃
+Installation/Name/2┃모래 광대 버섯
+Installation/Name/3┃힐링 스프레이
+Installation/Name/4┃하늘나리
+Installation/Name/5┃심연 단지
+Installation/Name/6┃폭탄열매
+Installation/Name/7┃인화성 드럼통
 Object/Name/ItemBox┃상자
 Object/Name/AirSupplyItemBox┃항공 보급 상자
 Object/Name/StaticItemBox┃상자
@@ -3263,8 +3270,6 @@ ToolTipType/DamageTargetLossHpCoefByLevel┃적의 잃은 체력 대비 추가 �
 ToolTipType/HammerFinalRatioDamage2ByLevel┃[강화 시] 도약 피해 대비 추가 피해량
 ToolTipType/HealBurger┃일레븐 버거 회복량
 ToolTipType/FinalDamageReduction┃최종 피해 감소량
-ToolTipType/ElevenFinalDamageReduction1┃최종 피해 감소량 - 최소
-ToolTipType/ElevenFinalDamageReduction2┃최종 피해 감소량 - 최대
 ToolTipType/ExplodeDecreaseMoveRatio┃폭발 시 이동 속도 감소량(%)
 ToolTipType/SecondDamageApcoef┃2타 공격력 계수
 ToolTipType/ShortBowFirstAttackCoef┃단궁 1타 공격력 계수
@@ -4243,7 +4248,7 @@ Skin/Desc/1005003┃재물이 많다면 마음도 풍요로워 지는 법이오.
 Skin/Desc/1033004┃현장에서 이런 사람을 발견하면 꼭 연락해!\n
 Skin/Desc/1058003┃프로가 내려주는 특별한 커피 맛이 궁금하지 않아?
 Skin/Desc/1024003┃주인님, 오늘 아침 식사 후 예정은, 저와 함께하는 체스 연습입니다.
-Skin/Desc/1006004┃악에 물든 자들을 사냥할 시간이다.
+Skin/Desc/1006004┃악에 물든 자들을 사냥할 시간이다.\n
 Skin/Desc/1044003┃빨리 덤벼. 내가 지금 시간이 없어서 말이야.
 Skin/Desc/1071001┃전부 태워주지. 네놈의 업보까지.
 ItemType/EMOTION/Name┃이모티콘
@@ -4701,6 +4706,7 @@ Emotion_Eva01_NP┃이바 웃음
 Emotion_Eva02_NP┃이바 안광
 Emotion_Eva03_NP┃이바 하품
 Emotion_Eva04_NP┃이바 식빵
+Emotion_Eva01_SeasonPass┃한여름의 추억 이바 헉!
 Emotion_Adela01_SeasonPass┃꿈델라 Zzz...
 Emotion_Season7_Reward_5014┃곰 댄스
 Emotion_Season7_Reward_5015┃숲속 다람쥐 덤벼!
@@ -4944,10 +4950,22 @@ Emotion_Kenneth01_NP┃케네스 고민
 Emotion_Kenneth02_NP┃케네스 도발
 Emotion_Kenneth03_NP┃케네스 분노
 Emotion_Kenneth04_NP┃케네스 OK
+Emotion_Katja01_NP┃카티야 10점 만점에 10점
+Emotion_Katja02_NP┃카티야 날 속인거니
+Emotion_Katja03_NP┃카티야 WIN
+Emotion_Katja04_NP┃카티야 싫어
 Event_S10Champion_Haemyu_3088┃SEASON 1 CHAMPION HAEMYU
 Event_S10Champion_Narvic_3089┃SEASON 1 CHAMPION NARVIC
 Event_S10Champion_Mangnani_3090┃SEASON 1 CHAMPION MANGNANI
 Event_S10Champion_Noguri_3091┃SEASON 1 CHAMPION NOGURI
+Event_S11Champion_Zerojin_3095┃SEASON 2 CHAMPION ZEROJIN
+Event_S11Champion_SeoEunSeol_3096┃SEASON 2 CHAMPION SEOEUNSEOL
+Event_S11Champion_Dasoo_3097┃SEASON 2 CHAMPION DASOO
+Emotion_2024FestivalShoichi_2018009┃쇼이치 아빠왔다
+Emotion_2024FestivalSissela_2015008┃시셀라 눈물젖은빵이에요
+Emotion_2024FestivalSilvia_2016005┃실비아 배달이야
+Emotion_2024FestivalEmma_2019012┃엠마 설렘
+Emotion_2024FestivalAdela_2024008┃메이드 아델라 체크
 Collection/Name/11001┃모든 건 딸을 위해서입니다.
 Collection/Name/11002┃픽셀아트.. 좋아해..?
 Collection/Name/11003┃길잃은 영혼에게 구원을.
@@ -5187,6 +5205,8 @@ EMBLEM_MARK_SHOP_102015┃시셀라 아이콘
 EMBLEM_MARK_SHOP_102016┃실비아 아이콘
 EMBLEM_MARK_SHOP_102017┃로지 아이콘
 EMBLEM_MARK_SHOP_102018┃아이솔 아이콘
+EMBLEM_MARK_SHOP_102019┃하트 아이콘
+EMBLEM_MARK_SHOP_102020┃알렉스 아이콘
 EMBLEM_MARK_S3_IRON_SOLO┃시즌 3 아이언(솔로) 아이콘
 EMBLEM_MARK_S3_IRON_DUO┃시즌 3 아이언(듀오) 아이콘
 EMBLEM_MARK_S3_IRON_SQUAD┃시즌 3 아이언(스쿼드) 아이콘
@@ -5396,6 +5416,16 @@ EMBLEM_MARK_S11_MITHRIL_SQUAD┃시즌 2 미스릴 아이콘
 EMBLEM_MARK_S11_TITAN_SQUAD┃시즌 2 데미갓 아이콘
 EMBLEM_MARK_S11_IMMORTAL_SQUAD┃시즌 2 이터니티 아이콘
 EMBLEM_MARK_S11_IMMORTAL_SQUAD_105217┃시즌 2 - 이터니티 명예 아이콘
+EMBLEM_MARK_S12_IRON_SQUAD┃시즌 3 아이언 아이콘
+EMBLEM_MARK_S12_BRONZE_SQUAD┃시즌 3 브론즈 아이콘
+EMBLEM_MARK_S12_SILVER_SQUAD┃시즌 3 실버 아이콘
+EMBLEM_MARK_S12_GOLD_SQUAD┃시즌 3 골드 아이콘
+EMBLEM_MARK_S12_PLATINUM_SQUAD┃시즌 3 플래티넘 아이콘
+EMBLEM_MARK_S12_DIAMOND_SQUAD┃시즌 3 다이아몬드 아이콘
+EMBLEM_MARK_S12_MITHRIL_SQUAD┃시즌 3 미스릴 아이콘
+EMBLEM_MARK_S12_TITAN_SQUAD┃시즌 3 데미갓 아이콘
+EMBLEM_MARK_S12_IMMORTAL_SQUAD┃시즌 3 이터니티 아이콘
+EMBLEM_MARK_S12_IMMORTAL_SQUAD_105217┃시즌 3 - 이터니티 명예 아이콘
 EMBLEM_MARK_EVENT_102001┃마법소녀 리오
 EMBLEM_MARK_EVENT1┃메롱 아이콘
 EMBLEM_MARK_EVENT2┃최고 아이콘
@@ -5550,6 +5580,10 @@ EMBLEM_MARK_EVENT_103151┃DAK.GG 챌린지 동메달
 EMBLEM_MARK_EVENT_103152┃DAK.GG 챌린지 도전자
 EMBLEM_MARK_EVENT_103153┃DAK.GG 챌린지 2관왕
 EMBLEM_MARK_EVENT_103154┃DAK.GG 챌린지 다관왕
+EMBLEM_MARK_EVENT_103155┃SEASON 2 CHAMPION ZEROJIN
+EMBLEM_MARK_EVENT_103156┃SEASON 2 CHAMPION SEOEUNSEOL
+EMBLEM_MARK_EVENT_103157┃SEASON 2 CHAMPION DASOO
+EMBLEM_MARK_EVENT_103158┃메이드 아델라 아이콘
 EMBLEM_MARK_ERPASS_104001┃얼어붙은 얼음 결정체 아이콘
 EMBLEM_MARK_ERPASS_104002┃선물주는 나무 아이콘
 EMBLEM_MARK_ERPASS_104003┃빨간 코 아이콘
@@ -5647,7 +5681,6 @@ EMBLEM_BG_SHOP_202016┃로지 배경
 EMBLEM_BG_SHOP_202017┃아이솔 배경
 EMBLEM_BG_SHOP_202018┃하트 배경
 EMBLEM_BG_SHOP_202019┃알렉스 배경
-EMBLEM_BG_SHOP_202020┃엠마 배경
 EMBLEM_BG_S3_IRON_SOLO┃시즌 3 아이언(솔로) 배경
 EMBLEM_BG_S3_IRON_DUO┃시즌 3 아이언(듀오) 배경
 EMBLEM_BG_S3_IRON_SQUAD┃시즌 3 아이언(스쿼드) 배경
@@ -5857,12 +5890,23 @@ EMBLEM_BG_S11_MITHRIL_SQUAD┃시즌 2 미스릴 배경
 EMBLEM_BG_S11_TITAN_SQUAD┃시즌 2 데미갓 배경
 EMBLEM_BG_S11_IMMORTAL_SQUAD┃시즌 2 이터니티 배경
 EMBLEM_BG_S11_IMMORTAL_SQUAD_205217┃시즌 2 - 이터니티 명예 배경
+EMBLEM_BG_S12_IRON_SQUAD┃시즌 3 아이언 배경
+EMBLEM_BG_S12_BRONZE_SQUAD┃시즌 3 브론즈 배경
+EMBLEM_BG_S12_SILVER_SQUAD┃시즌 3 실버 배경
+EMBLEM_BG_S12_GOLD_SQUAD┃시즌 3 골드 배경
+EMBLEM_BG_S12_PLATINUM_SQUAD┃시즌 3 플래티넘 배경
+EMBLEM_BG_S12_DIAMOND_SQUAD┃시즌 3 다이아몬드 배경
+EMBLEM_BG_S12_MITHRIL_SQUAD┃시즌 3 미스릴 배경
+EMBLEM_BG_S12_TITAN_SQUAD┃시즌 3 데미갓 배경
+EMBLEM_BG_S12_IMMORTAL_SQUAD┃시즌 3 이터니티 배경
+EMBLEM_BG_S12_IMMORTAL_SQUAD_205217┃시즌 3 - 이터니티 명예 배경
 EMBLEM_BG_ERPASS_204001┃아글라이아 문양 배경
 EMBLEM_BG_EVENT_203001┃2022 화이트데이 기념 배경
 EMBLEM_BG_EVENT_203002┃시원~한 칵테일 배경
 EMBLEM_BG_EVENT_203003┃불꽃놀이 배경
 EMBLEM_BG_EVENT_203004┃하얀 눈송이 배경
 EMBLEM_BG_EVENT_203005┃나쟈 배경
+EMBLEM_BG_EVENT_203006┃메이드 아델라 배경
 EMBLEM_BG_ERPASS_204002┃이터널 리턴 배경
 EMBLEM_BG_ERPASS_204003┃실험 배경
 EMBLEM_BG_ERPASS_204004┃방울방울 배경
@@ -5922,6 +5966,8 @@ EMBLEM_OUTLINE_SHOP_302014┃시셀라 테두리
 EMBLEM_OUTLINE_SHOP_302015┃실비아 테두리
 EMBLEM_OUTLINE_SHOP_302016┃로지 테두리
 EMBLEM_OUTLINE_SHOP_302017┃아이솔 테두리
+EMBLEM_OUTLINE_SHOP_302018┃하트 테두리
+EMBLEM_OUTLINE_SHOP_302019┃알렉스 테두리
 EMBLEM_OUTLINE_S3_IRON_SOLO┃시즌 3 아이언(솔로) 테두리
 EMBLEM_OUTLINE_S3_IRON_DUO┃시즌 3 아이언(듀오) 테두리
 EMBLEM_OUTLINE_S3_IRON_SQUAD┃시즌 3 아이언(스쿼드) 테두리
@@ -6131,11 +6177,22 @@ EMBLEM_OUTLINE_S11_MITHRIL_SQUAD┃시즌 2 미스릴 테두리
 EMBLEM_OUTLINE_S11_TITAN_SQUAD┃시즌 2 데미갓 테두리
 EMBLEM_OUTLINE_S11_IMMORTAL_SQUAD┃시즌 2 이터니티 테두리
 EMBLEM_OUTLINE_S11_IMMORTAL_SQUAD_305217┃시즌 2 - 이터니티 명예 테두리
+EMBLEM_OUTLINE_S12_IRON_SQUAD┃시즌 3 아이언 테두리
+EMBLEM_OUTLINE_S12_BRONZE_SQUAD┃시즌 3 브론즈 테두리
+EMBLEM_OUTLINE_S12_SILVER_SQUAD┃시즌 3 실버 테두리
+EMBLEM_OUTLINE_S12_GOLD_SQUAD┃시즌 3 골드 테두리
+EMBLEM_OUTLINE_S12_PLATINUM_SQUAD┃시즌 3 플래티넘 테두리
+EMBLEM_OUTLINE_S12_DIAMOND_SQUAD┃시즌 3 다이아몬드 테두리
+EMBLEM_OUTLINE_S12_MITHRIL_SQUAD┃시즌 3 미스릴 테두리
+EMBLEM_OUTLINE_S12_TITAN_SQUAD┃시즌 3 데미갓 테두리
+EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD┃시즌 3 이터니티 테두리
+EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD_305217┃시즌 3 - 이터니티 명예 테두리
 EMBLEM_OUTLINE_EVENT_303001┃2022 화이트데이 기념 테두리
 EMBLEM_OUTLINE_EVENT_303002┃시원~한 칵테일 테두리
 EMBLEM_OUTLINE_EVENT_303003┃벚꽃 장식 테두리
 EMBLEM_OUTLINE_EVENT_303004┃하얀 토끼 테두리
 EMBLEM_OUTLINE_EVENT_303005┃나쟈 테두리
+EMBLEM_OUTLINE_EVENT_303006┃메이드 아델라 테두리
 EMBLEM_OUTLINE_ERPASS_304001┃얼음 테두리
 EMBLEM_OUTLINE_ERPASS_304002┃크리스마스 파티 테두리
 EMBLEM_OUTLINE_ERPASS_304003┃색깔공 장식 테두리
@@ -6237,6 +6294,7 @@ Goods/Name/1612004┃꿈델라 비석
 Goods/Name/1612005┃썸머 파티 매지션 엠마 비석
 Goods/Name/1612006┃피오라의 오믈렛
 Goods/Name/1612007┃위클라인 주사기 비석
+Goods/Name/1612008┃선셋 코코넛 비석
 ItemType/SPRAY/Name┃스프레이
 ItemType/SPRAY/Desc┃바닥에 표식을 남길 수 있습니다.
 Goods/Name/1501001┃없음
@@ -6348,6 +6406,9 @@ Goods/Name/1503054┃알론소 꿀맛
 Goods/Name/1503055┃발렌타인 타지아 늦잖아
 Goods/Name/1503056┃발렌타인 타지아 달콤한 선물이야!
 Goods/Name/1503057┃깨지지 않는 마음
+GroupItemAttribute/KR┃한국어
+GroupItemAttribute/EN┃영어
+GroupItemAttribute/JA┃일본어
 ItemType/ANNOUNCE/Name┃중계 어나운스
 ItemType/ANNOUNCE/Desc┃중계 음성을 선택할 수 있습니다.
 Goods/Name/1401051┃기본(한국어)
@@ -6401,6 +6462,30 @@ Goods/Name/1404152┃카밀로(영어)
 Goods/Name/1404153┃카밀로(일본어)
 Goods/Name/1406001┃천시아 캐스터(한국어)
 Goods/Name/1406011┃신일 캐스터(한국어)
+GoodsGroup/Name/1401051┃기본
+GoodsGroup/Name/1401021┃생존의 목소리
+GoodsGroup/Name/1404011┃경기 캐스터
+GoodsGroup/Name/1404021┃리오
+GoodsGroup/Name/1404031┃펠릭스
+GoodsGroup/Name/1404041┃아디나
+GoodsGroup/Name/1404051┃루크
+GoodsGroup/Name/1404061┃바바라
+GoodsGroup/Name/1404071┃피올로
+GoodsGroup/Name/1404081┃아이작
+GoodsGroup/Name/1404091┃리 다이린
+GoodsGroup/Name/1404101┃데비&마를렌
+GoodsGroup/Name/1404111┃쇼이치
+GoodsGroup/Name/1404121┃다니엘
+GoodsGroup/Name/1404131┃니키
+GoodsGroup/Name/1404141┃이렘
+GoodsGroup/Name/1404151┃카밀로
+GoodsGroup/Name/1404161┃요한
+GoodsGroup/Name/1404171┃비앙카
+GoodsGroup/Name/1406001┃천시아
+GoodsGroup/Name/1406011┃신일
+GoodsGroup/Name/1406021┃이비스 & 황블린
+GroupItemAttribute/Inst┃Inst.
+GroupItemAttribute/Vocal┃Vocal.
 ItemType/BGM/Name┃BGM
 ItemType/BGM/Desc┃로비 배경음악을 선택할 수 있습니다.
 BGM_None┃없음
@@ -6411,6 +6496,11 @@ Goods/Name/1703001┃Intro BGM
 Goods/Name/1704001┃Emma Character Song(Kor ver.)
 Goods/Name/1704002┃Emma Character Song(Inst ver.)
 Goods/Name/1799999┃없음
+GoodsGroup/Name/1701001┃기본
+GoodsGroup/Name/1701002┃Eternal World
+GoodsGroup/Name/1703001┃Intro BGM
+GoodsGroup/Name/1704001┃Emma Character Song
+GoodsGroup/Name/1799999┃없음
 ItemType/DRONE/Name┃드론 스킨
 ItemType/DRONE/Desc┃인게임 정찰 드론 및 EMP 드론의 외관을 선택할 수 있습니다.
 Goods/Name/2501001┃기본 드론
@@ -6469,6 +6559,7 @@ Goods/Name/2704009┃학교
 Goods/Name/2704010┃바캉스
 Goods/Name/2704011┃전투 메이드
 Goods/Name/2704012┃체인지
+Goods/Name/2704013┃선셋
 ItemType/KILLANNOUNCE_ICONPACK/Name┃킬 어나운스 아이콘
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃인게임에서 처치 시 노출되는 UI 아이콘을 선택할 수 있습니다.
 Goods/Name/2801001┃불굴
@@ -6596,12 +6687,16 @@ Sissela_Emblem_Pack_01┃시셀라 스페셜 패키지
 Silvia_Emblem_Pack_01┃실비아 스페셜 패키지
 Rozzi_Emblem_Pack_01┃로지 스페셜 패키지
 Isol_Emblem_Pack_01┃아이솔 스페셜 패키지
+Hart_Emblem_Pack_01┃하트 스페셜 패키지
+Alex_Emblem_Pack_01┃알렉스 스페셜 패키지
 SkinDataChip_RandomBox_01┃스킨 데이터 칩
 UR_Grade_Skin_Voucher_01┃고급/희귀 스킨 보급권
 UR_Grade_Skin_Voucher_02┃고급/희귀 스킨 보급권
 VampireShoichi_CollectPack_01┃뱀파이어 쇼이치 컬렉션 패키지
 GhostHunterYuki_CollectPack_01┃고스트헌터 유키 컬렉션 패키지
 BlackFriday2023_ComboPack_01┃블랙 프라이데이 패키지
+2024_Festival_Box_02┃엠마의 빵 바구니
+2024_Festival_Box_03┃시셀라의 빵 봉투
 Product/Name/Aya_ComboPack_01┃아야 스킨 + 이모티콘 팩
 Product/Name/Hyunwoo_ComboPack_01┃현우 스킨 + 이모티콘 팩
 Product/Name/Adriana_ComboPack_01┃아드리아나 스킨 + 이모티콘 팩
@@ -6660,11 +6755,15 @@ Product/Name/Sissela_Emblem_Pack_01┃시셀라 스페셜 패키지
 Product/Name/Silvia_Emblem_Pack_01┃실비아 스페셜 패키지
 Product/Name/Rozzi_Emblem_Pack_01┃로지 스페셜 패키지
 Product/Name/Isol_Emblem_Pack_01┃아이솔 스페셜 패키지
+Product/Name/Hart_Emblem_Pack_01┃하트 스페셜 패키지
+Product/Name/Alex_Emblem_Pack_01┃알렉스 스페셜 패키지
 Product/Name/SkinDataChip_RandomBox_01┃스킨 데이터 칩
 Product/Name/UR_Grade_Skin_Voucher_01┃고급/희귀 스킨 보급권
 Product/Name/UR_Grade_Skin_Voucher_02┃고급/희귀 스킨 보급권
 Product/Name/VampireShoichi_CollectPack_01┃뱀파이어 쇼이치 컬렉션 패키지
 Product/Name/GhostHunterYuki_CollectPack_01┃고스트헌터 유키 컬렉션 패키지
+Product/Name/2024_Festival_Box_02┃엠마의 빵 바구니
+Product/Name/2024_Festival_Box_03┃시셀라의 빵 봉투
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃연구소 데이터 박스
 Product/Name/LOOTBOX_SKIN_SINGLE_01┃스킨 데이터 박스
 Product/Name/RANDOM_KEY_SINGLE_01┃박스 키
@@ -6717,6 +6816,9 @@ Product/Name/LuckyBox2024_Seq_Pack_08┃행운 구슬(8단계)
 Product/Name/HappinessBox2024_Seq_Pack_01┃행복 패키지 Ⅰ
 Product/Name/HappinessBox2024_Seq_Pack_02┃행복 패키지 Ⅱ
 Product/Name/HappinessBox2024_Seq_Pack_03┃행복 패키지 Ⅲ
+Product/Name/2024_Festival_Seq_Pack_01┃쇼이치의 도넛 박스 패키지
+Product/Name/2024_Festival_Seq_Pack_02┃스테인리스 돔커버 패키지
+Product/Name/2024_Festival_Seq_Pack_03┃영웅 스킨 도안 선택권 패키지
 Shop/Desc/Aya_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Hyunwoo_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 56%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Adriana_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
@@ -6778,8 +6880,8 @@ Shop/Desc/Sissela_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 시셀라\n- 
 Shop/Desc/Silvia_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 실비아\n- 퍼펙트 딜리버리 실비아 스킨\n- 미드나잇 브리즈 실비아 스킨\n- 실비아 이모티콘 4종\n- 실비아 아이콘\n- 실비아 배경\n- 실비아 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.                                                                                
 Shop/Desc/Rozzi_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 로지\n- 네메시스 로지 스킨\n- 블랙로즈 로지 스킨\n- 로지 이모티콘 4종\n- 로지 아이콘\n- 로지 배경\n- 로지 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/Isol_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 아이솔\n- 새해 토끼 아이솔 스킨\n- 아포칼립스 아이솔 스킨\n- 아이솔 이모티콘 4종\n- 아이솔 아이콘\n- 아이솔 배경\n- 아이솔 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
-Shop/Desc/Emma_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 엠마\n- 숲속 친구들 엠마 스킨\n- 메이드 엠마 스킨\n- 엠마 이모티콘 4종\n- 엠마 아이콘\n- 엠마 배경\n- 엠마 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
-Shop/Desc/Luke_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 루크\n- 뒷골목 루크 스킨\n- 바텐더 루크 스킨\n- 루크 이모티콘 4종\n- 루크 아이콘\n- 루크 배경\n- 루크 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/Hart_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 하트\n- 퍼플퀸 하트 스킨\n- 밴드 리더 하트 스킨\n- 하트 이모티콘 4종\n- 하트 아이콘\n- 하트 배경\n- 하트 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/Alex_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 알렉스\n- 사립탐정 알렉스 스킨\n- 오퍼레이터 알렉스 스킨\n- 알렉스 이모티콘 4종\n- 알렉스 아이콘\n- 알렉스 배경\n- 알렉스 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/ThanksGiving_Special_2023_Pack_01┃구성품 안내\n\n- 썸머&고스트 박스 5개\n- 스킨 데이터 박스 5개\n- 박스 키 10개\n- 바캉스 토큰 35개
 Shop/Desc/ThanksGiving_Special_2023_Pack_02┃구성품 안내\n\n- 영웅 스킨 도안 박스 1개\n- 박스 키 1개\n- 바캉스 토큰 20개
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃구성품 안내\n\n- 썸머&고스트 박스 2개\n- 박스 키 2개\n- A-Coin 5,000\n- 바캉스 토큰 10개
@@ -6815,6 +6917,9 @@ Shop/Desc/LuckyBox2024_Seq_Pack_08┃<b><color=#FFBB00>[구성품 안내]</color
 Shop/Desc/HappinessBox2024_Seq_Pack_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 스킨 데이터 박스 3개\n- 박스 키 3개\n- A-Coin 10,000\n- 행복 토큰 100개\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b> \n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/HappinessBox2024_Seq_Pack_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 고급/희귀 스킨 보급권 1개\n- A-Coin 20,000\n- 행복 토큰 x200\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b> \n※ 고급/희귀 스킨 보급권은 보유하지 않은 스킨 중 1개를 획득할 수 있습니다.\n※ 고급/희귀 스킨 보급권에는 일반 상점 판매를 하지 않는 이벤트 스킨이 포함되어 있습니다.\n※ 상세 상품 리스트는 박스 확률 공시 링크를 참조 부탁드립니다.\n※ 고급/희귀 스킨 보급권에 포함된 모든 스킨을 보유한 경우 상품 구매는 가능하지만, 상품에 포함된 전체 스킨 중 1개를 지급합니다.\n※ 스킨 획득 확률은 상품 리스트 내 보유하지 않은 스킨의 개별 확률이 적용됩니다.\n※ 고급/희귀 스킨 보급권은 구매 즉시 개봉되어 획득하는 상품입니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품의 경우 청약 철회가 가능하지 않습니다.
 Shop/Desc/HappinessBox2024_Seq_Pack_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 영웅 스킨 도안 박스 1개\n- 박스 키 1개\n- A-Coin 50,000\n- 행복 토큰 500개\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b> \n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/2024_Festival_Seq_Pack_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 쇼이치의 도넛 박스 3개\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n- 체인지 토큰 10개\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/2024_Festival_Seq_Pack_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 스테인리스 돔커버 1개\n- 박스 키 1개\n- 쇼이치의 도넛 박스 5개\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n- 체인지 토큰 25개\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/2024_Festival_Seq_Pack_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 영웅 스킨 도안 선택권 1개\n- 쇼이치의 도넛 박스 10개\n- A-Coin 부스트(1일)\n- ER Point 부스트(1일)\n- 체인지 토큰 55개\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/2024_Festival_Box_02┃메이드 아델라의 베이커리 카페 이벤트 아이템과 토큰을 획득할 수 있는 엠마의 빵 바구니입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.\n\n※ 구매 즉시 개봉되는 상품입니다.\n※ 획득한 베이커리 카페 토큰은 교환소에서 사용할 수 있습니다.
 Shop/Desc/2024_Festival_Box_03┃메이드 아델라의 베이커리 카페 이벤트 아이템을 획득할 수 있는 시셀라의 빵 봉투입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.\n\n※ 구매 즉시 개봉되는 상품입니다.\n※ 1일 1회 구매 가능한 상품입니다.
 Product/Name/SEASON_PASS_S5┃시즌 5 팩
@@ -6995,6 +7100,8 @@ Forge/Category/All┃전체
 Forge/Category/CharacterSkin┃스킨
 캐릭터 보유중┃캐릭터 보유 중
 미보유 아이템┃미보유 아이템
+보유 도안 제외┃보유 도안 제외
+보유 스킨 제외┃보유 스킨 제외
 선택권 아이템 선택┃선택
 선택권 아이템 타입 캐릭터┃SUBJECT
 선택권 아이템 타입 스킨┃SKIN
@@ -7185,6 +7292,8 @@ Goods/Name/3303301┃홀리데이 토큰
 Goods/Desc/3303301┃홀리데이 데이터 박스 개봉 시 획득할 수 있습니다. 이벤트 종료 시, 해당 토큰은 사라집니다.
 Goods/Name/3303302┃행복 토큰
 Goods/Desc/3303302┃행운 구슬 및 행복 패키지 구매 시 획득할 수 있습니다. 이벤트 종료 시, 해당 토큰은 사라집니다.
+Goods/Name/3303303┃베이커리 카페 토큰
+Goods/Desc/3303303┃엠마의 빵 바구니 개봉 시 획득할 수 있습니다. 이벤트 종료 시, 해당 토큰은 사라집니다.
 Goods/Name/3303999┃마일리지
 Goods/Desc/3303999┃마일리지는 NP 상품 구매 시 획득할 수 있습니다.
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃전체 확률 보기
@@ -7219,6 +7328,14 @@ Goods/Name/3103015┃행운 구슬(7단계)
 Goods/Desc/3103015┃확률적으로 행복 토큰 32개를 획득할 수 있으며, 토큰 획득에 실패하면 구매 금액을 돌려받습니다.
 Goods/Name/3103016┃행운 구슬(8단계)
 Goods/Desc/3103016┃확정적으로 행복 토큰 50개를 획득할 수 있습니다.
+Goods/Name/3103017┃쇼이치의 도넛 박스
+Goods/Desc/3103017┃다양한 아이템 4종을 획득할 수 있는 쇼이치의 도넛 박스입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3103018┃엠마의 빵 바구니
+Goods/Desc/3103018┃메이드 아델라의 베이커리 카페 이벤트 아이템과 토큰을 획득할 수 있는 엠마의 빵 바구니입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3103019┃시셀라의 빵 봉투
+Goods/Desc/3103019┃메이드 아델라의 베이커리 카페 이벤트 아이템을 획득할 수 있는 시셀라의 빵 봉투입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3103020┃스테인리스 돔커버
+Goods/Desc/3103020┃희귀 스킨 아이템을 획득할 수 있는 돔커버입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
 특정 지역에서 구매할 수 없는 상품입니다.┃해당 지역에서는 구매할 수 없는 상품입니다.
 Goods/Name/1┃시크릿 드롭스
 Goods/Name/3┃캐릭터 랜덤 지급 박스
@@ -7245,6 +7362,7 @@ Product/Name/S12_S11TOKEN_EXCHANGE┃전투 메이드 토큰 X 2
 Product/Name/S12_RARE_MATTER┃희귀 데이터 조각 X 1
 Product/Name/S12_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
+Product/Name/Festival2024_ACoin_100┃A-Coin X 100
 Product/Name/LuckyMarble2024_Change_Token_01┃체인지 토큰 X10
 Skill/Group/Name/1001100┃피의 축제
 Skill/Group/Name/1001200┃연참
@@ -7452,7 +7570,6 @@ CharacterState/Group/Name/1006300┃다람쥐 덫
 CharacterState/Group/Desc/1006300┃공격 속도와 이동 속도가 감소하였습니다.
 CharacterState/Group/Name/1006400┃원숭이 와이어
 CharacterState/Group/Desc/1006400┃공격 속도가 증가했습니다.
-CharacterState/Group/Name/1006410┃원숭이 와이어
 CharacterState/Group/Name/1006500┃늑대 맹습
 CharacterState/Group/Desc/1006500┃기본 공격 시 늑대가 등장합니다.
 CharacterState/Group/Name/1006510┃늑대 맹습
@@ -7670,7 +7787,7 @@ Skill/Group/Coef/1012400┃혜진이 지정한 방향으로 이동부를 날려 
 Skill/Group/Coef/1012410┃혜진이 지정한 방향으로 이동부를 날려 경로상의 적들에게 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 스킬 피해를 줍니다.\n스킬을 다시 사용하면 이동부의 위치로 순간 이동합니다.
 Skill/Group/Coef/1012500┃혜진이 5개의 부적을 소환하며 주변 적들에게 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 스킬 피해를 줍니다. 부적들은 {3}초 동안 혜진의 주위를 돌며 충돌한 적들에게 각각 <color=white>{4}</color><color=#DDA0DD>(+스킬 증폭의 {6})</color>의 스킬 피해를 주고 사라집니다.
 Skill/Group/ExpansionTip/1012100┃<i>공포에 걸린 대상은 {0}초 동안 삼재에 걸리지 않습니다.\n추가 스킬 피해는 최소 1의 피해를 입힙니다.</i>
-Skill/Group/ExpansionTip/1012500┃<i>스킬 시전 중에는 이동 속도가 {0}만큼 느려집니다.</i>\n<i>실험체 및 보스 몬스터만 적중됩니다.</i>
+Skill/Group/ExpansionTip/1012500┃<i>스킬 시전 중에는 이동 속도가 {0}만큼 느려집니다.</i>
 CharacterState/Group/Name/1012100┃삼재
 CharacterState/Group/Desc/1012100┃혜진의 삼재에 걸려 있습니다.
 CharacterState/Group/Name/1012110┃삼재 - 공포
@@ -8866,6 +8983,8 @@ CharacterState/Group/Name/1041410┃인도하는 빛 - 이동 속도 증가
 CharacterState/Group/Desc/1041410┃이동 속도가 증가합니다.
 CharacterState/Group/Name/1041450┃인도하는 빛 - 대상을 향해 이동 속도 증가
 CharacterState/Group/Desc/1041450┃요한은 인도하는 빛을 따라갈 때 이동 속도가 증가합니다.
+CharacterState/Group/Name/1041460┃인도하는 빛 - 보호막
+CharacterState/Group/Desc/1041460┃신성의 향로에 강화되어 보호막을 획득했습니다.
 CharacterState/Group/Name/1041510┃구원의 성역 - 방어력 증가 및 지속 회복
 CharacterState/Group/Desc/1041510┃요한의 성역 내 아군은 방어력이 증가하고 지속 회복합니다.
 Skill/Group/Name/1042100┃흡혈귀
@@ -9708,7 +9827,7 @@ Skill/Group/Desc/1057410┃마르티나가 비디오테이프로 돌아옵니다
 Skill/Group/Desc/1057430┃마르티나가 현재 위치에 비디오테이프를 남기고 지정한 방향으로 도약합니다. 이후 최대 5초 동안 되감기 상태를 유지합니다. 되감기 상태 동안 마르티나의 이동 속도가 {0} 증가합니다.\n\n되감기 상태가 종료되면 모든 방해 면역 상태로 비디오테이프로 빠르게 돌아오며 마르티나에 닿은 적은 <color=white>{6}</color>의 스킬 피해를 입고, {3}초 동안 기절합니다. 마르티나는 비디오테이프로 돌아온 뒤 되감기 상태 동안 실험체로부터 받은 피해의 {4}만큼 체력을 회복합니다.\n\n재사용 시: 비디오테이프로 더 일찍 돌아옵니다.
 Skill/Group/Desc/1057440┃마르티나가 비디오테이프로 돌아옵니다.
 Skill/Group/Desc/1057500┃<color=#ffffff>[취재 중]</color>\n마르티나가 최대 4초 동안 지정한 방향을 촬영합니다. 촬영하는 동안 범위 내 촬영 대상이 들어올 경우 녹화 지속 시간 동안 이동 속도가 {11} 증가합니다. 촬영에 성공하면 대상에 따라 <color=white>녹화 중첩</color>을 획득하고 {0}초 동안 이동 속도가 {1} 증가합니다.\n\n<color=white>녹화 중첩</color>을 {3}개 이상 쌓으면 마르티나가 취재를 마치고 <color=#ffd775>방송</color>을 시작하며 스킬 위력이 강화됩니다.\n\n<color=#819FF7>촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 2개의 대상을 {4}초 이상 촬영 시 녹화 중첩 {5}와 무기 숙련도 {6} 획득.\n<color=#819FF7>시체 촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 1개의 시체를 {10}초 이상 촬영 시 녹화 중첩 {7}과 무기 숙련도 {8} 획득. (최대: {9}중첩 획득 가능, 동일한 시체 중복 촬영 불가)\n<color=#2ECCFA>촬영 대상</color>: 적 실험체, 생명의 나무, 운석, 알파, 오메가, 위클라인, 감마\n\n촬영 대상 중 생명의 나무와 운석을 제외한 대상은 촬영을 한 이후 {24}초 동안 재촬영이 불가능합니다.\n\n<color=#ffd775>[방송 중]</color>\n마르티나가 지정한 방향을 촬영하여 적에게 피해를 입힙니다. 스킬이 종료될 때 더 큰 피해를 주며 가운데에 있는 적들을 기절시킵니다.
-Skill/Group/Desc/1057510┃마르티나가 지정한 방향을 촬영하여 적중한 적의 방어력을 {4}만큼 감소시키며 1.5초에 걸쳐 스킬 가장자리의 적들에게 <color=white>{20}</color>의 스킬 피해를 입히고 가운데에 있는 적들에게 <color=white>{21}</color>의 스킬 피해를 입힙니다.\n\n녹화 지속 시간이 종료될 때 스킬 가장자리의 적들에게 <color=white>{22}</color>의 스킬 피해를 입히고. 가운데에 있는 적들에게 <color=white>{23}</color>의 스킬 피해를 입히고 기절시킵니다. 기절 지속 시간은 스킬 지속 시간 동안 스킬로 피해를 받은 횟수마다 {9}초씩 증가합니다.
+Skill/Group/Desc/1057510┃마르티나가 지정한 방향을 촬영하여 적중한 적의 방어력을 {4}만큼 감소시키며 1.5초에 걸쳐 스킬 가장자리의 적들에게 <color=white>{20}</color>의 스킬 피해를 입히고 가운데에 있는 적들에게 <color=white>{21}</color>의 스킬 피해를 입힙니다.\n\n녹화 지속 시간이 종료될 때 스킬 가장자리의 적들에게 <color=white>{22}</color>의 스킬 피해를 입히고. 가운데에 있는 적들에게 <color=white>{23}</color>의 스킬 피해를 입히고, {9}초 동안 기절시킵니다.
 Skill/Group/Coef/1057100┃<color=#D6D6D6>감시 카메라</color>와 <color=#D6D6D6>나뭇가지</color>를 조합하여 잠입 효과를 가진 <color=#35CB38>위장 카메라</color>를 제작할 수 있습니다.\n\n마르티나의 4K UHD 카메라는 기본 공격을 할 때마다 <color=#ffd775>(공격력의 {11}) * (기본 공격 증폭)</color>의 피해를 입히며 전력을 소모하고 충전이 완료될 때까지 기본 공격을 할 수 없습니다. 충전 시간은 <color=white>녹화</color> 스킬 레벨이 높아질수록 감소합니다.\n충전에 걸리는 시간: {0}초\n\n마르티나의 기본 공격은 대상자의 시야를 제공 받으며, 공격 속도가 50% 증가할 때마다 공격력이 {3}씩 증가합니다.\n\n<color=#ffffff>[취재 중]</color>\n종군 기자인 마르티나는 취재 중일 때 직감적으로 교전이 일어나는 지역을 파악할 수 있습니다. {1}m 범위 내에서 적 실험체 간 교전이 발생한 지점에 특수핑이 표시됩니다.\n마르티나가 적에게 기본 공격을 {4}회 연속해서 피해를 입히면 표식을 부여합니다. 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 <color=white>{5}</color><color=#ffd775>(+공격력의 {6})</color>의 스킬 피해를 입힙니다.\n\n<color=#ffd775>[방송 중]</color>\n기본 공격이 <color=#ffd775>(공격력의 {12}) * (기본 공격 증폭)</color>의 피해를 입히며, 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 <color=white>{7}</color><color=#ffd775>(+공격력의 {8})</color>의 스킬 피해를 입힙니다.
 Skill/Group/Coef/1057110┃<color=#D6D6D6>감시 카메라</color>와 <color=#D6D6D6>나뭇가지</color>를 조합하여 잠입 효과를 가진 <color=#35CB38>위장 카메라</color>를 제작할 수 있습니다.\n\n마르티나의 4K UHD 카메라는 기본 공격을 할 때마다 <color=#ffd775>(공격력의 {11}) * (기본 공격 증폭)</color>의 피해를 입히며 전력을 소모하고 충전이 완료될 때까지 기본 공격을 할 수 없습니다. 충전 시간은 <color=white>녹화</color> 스킬 레벨이 높아질수록 감소합니다.\n충전에 걸리는 시간: {0}초\n\n마르티나의 기본 공격은 대상자의 시야를 제공 받으며, 공격 속도가 50% 증가할 때마다 공격력이 {3}씩 증가합니다.\n\n<color=#ffffff>[취재 중]</color>\n종군 기자인 마르티나는 취재 중일 때 직감적으로 교전이 일어나는 지역을 파악할 수 있습니다. {1}m 범위 내에서 적 실험체 간 교전이 발생한 지점에 특수핑이 표시됩니다.\n마르티나가 적에게 기본 공격을 {4}회 연속해서 피해를 입히면 표식을 부여합니다. 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 <color=white>{5}</color><color=#ffd775>(+공격력의 {6})</color>의 스킬 피해를 입힙니다.\n\n<color=#ffd775>[방송 중]</color>\n기본 공격이 <color=#ffd775>(공격력의 {12}) * (기본 공격 증폭)</color>의 피해를 입히며, 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 <color=white>{7}</color><color=#ffd775>(+공격력의 {8})</color>의 스킬 피해를 입힙니다.
 Skill/Group/Coef/1057200┃<color=#ffffff>[취재 중]</color>\n마르티나가 지정한 방향을 촬영하여 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 스킬 적중 시 쿨다운이 {2} 감소하고, 표식을 소모시키면 마르티나의 이동 속도가 {3}초 동안 {4} 증가합니다.\n\n<color=#ffd775>[방송 중]</color>\n스킬 사거리와 피해량이 증가하며 표식을 소모시키면 이동 속도와 공격 속도가 증가합니다.
@@ -9720,7 +9839,7 @@ Skill/Group/Coef/1057410┃마르티나가 비디오테이프로 돌아옵니다
 Skill/Group/Coef/1057430┃마르티나가 현재 위치에 비디오테이프를 남기고 지정한 방향으로 도약합니다. 이후 최대 5초 동안 되감기 상태를 유지합니다. 되감기 상태 동안 마르티나의 이동 속도가 {0} 증가합니다.\n\n되감기 상태가 종료되면 모든 방해 면역 상태로 비디오테이프로 빠르게 돌아오며 마르티나에 닿은 적은 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color>의 스킬 피해를 입고, {3}초 동안 기절합니다. 마르티나는 비디오테이프로 돌아온 뒤 되감기 상태 동안 실험체로부터 받은 피해의 {4}만큼 체력을 회복합니다.\n\n재사용 시: 비디오테이프로 더 일찍 돌아옵니다.
 Skill/Group/Coef/1057440┃마르티나가 비디오테이프로 돌아옵니다.
 Skill/Group/Coef/1057500┃<color=#ffffff>[취재 중]</color>\n마르티나가 최대 4초 동안 지정한 방향을 촬영합니다. 촬영하는 동안 범위 내 촬영 대상이 들어올 경우 녹화 지속 시간 동안 이동 속도가 {11} 증가합니다. 촬영에 성공하면 대상에 따라 <color=white>녹화 중첩</color>을 획득하고 {0}초 동안 이동 속도가 {1} 증가합니다.\n\n<color=white>녹화 중첩</color>을 {3}개 이상 쌓으면 마르티나가 취재를 마치고 <color=#ffd775>방송</color>을 시작하며 스킬 위력이 강화됩니다.\n\n<color=#819FF7>촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 2개의 대상을 {4}초 이상 촬영 시 녹화 중첩 {5}와 무기 숙련도 {6} 획득.\n<color=#819FF7>시체 촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 1개의 시체를 {10}초 이상 촬영 시 녹화 중첩 {7}과 무기 숙련도 {8} 획득. (최대: {9}중첩 획득 가능, 동일한 시체 중복 촬영 불가)\n<color=#2ECCFA>촬영 대상</color>: 적 실험체, 생명의 나무, 운석, 알파, 오메가, 위클라인, 감마\n\n촬영 대상 중 생명의 나무와 운석을 제외한 대상은 촬영을 한 이후 {24}초 동안 재촬영이 불가능합니다.\n\n<color=#ffd775>[방송 중]</color>\n마르티나가 지정한 방향을 촬영하여 적에게 피해를 입힙니다. 스킬이 종료될 때 더 큰 피해를 주며 가운데에 있는 적들을 기절시킵니다.
-Skill/Group/Coef/1057510┃마르티나가 지정한 방향을 촬영하여 적중한 적의 방어력을 {4}만큼 감소시키며 1.5초에 걸쳐 스킬 가장자리의 적들에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입히고 가운데에 있는 적들에게 <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입힙니다.\n\n녹화 지속 시간이 종료될 때 스킬 가장자리의 적들에게 <color=white>{5}</color><color=#ffd775>(+공격력의 {6})</color>의 스킬 피해를 입히고. 가운데에 있는 적들에게 <color=white>{7}</color><color=#ffd775>(+공격력의 {8})</color>의 스킬 피해를 입히고 기절시킵니다. 기절 지속 시간은 스킬 지속 시간 동안 스킬로 피해를 받은 횟수마다 {9}초씩 증가합니다.
+Skill/Group/Coef/1057510┃마르티나가 지정한 방향을 촬영하여 적중한 적의 방어력을 {4}만큼 감소시키며 1.5초에 걸쳐 스킬 가장자리의 적들에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입히고 가운데에 있는 적들에게 <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입힙니다.\n\n녹화 지속 시간이 종료될 때 스킬 가장자리의 적들에게 <color=white>{5}</color><color=#ffd775>(+공격력의 {6})</color>의 스킬 피해를 입히고. 가운데에 있는 적들에게 <color=white>{7}</color><color=#ffd775>(+공격력의 {8})</color>의 스킬 피해를 입히고, {9}초 동안 기절시킵니다.
 CharacterState/Group/Name/1057030┃재생
 CharacterState/Group/Name/1057040┃재생
 CharacterState/Group/Name/1057080┃재생 - 공격력 전환
@@ -9819,7 +9938,7 @@ Skill/Group/Desc/1059300┃아이작이 무기의 경도를 높여 다음 기본
 Skill/Group/Desc/1059400┃아이작이 재빠르게 돌진하고, {0}초 동안 다음 스킬을 준비합니다.\n\n재사용 시: 전방의 적들을 끌어당겨 보호막을 파괴하며 <color=white>{1}</color>의 스킬 피해를 입히고, {2}초 동안 기절시킵니다.
 Skill/Group/Desc/1059410┃아이작이 재빠르게 돌진하고, {0}초 동안 다음 스킬을 준비합니다.\n\n재사용 시: 전방의 적들을 끌어당겨 보호막을 파괴하며 <color=white>{1}</color>의 스킬 피해를 입히고, {2}초 동안 기절시킵니다.
 Skill/Group/Desc/1059500┃아이작이 지정한 지점을 강하게 내려치며 <color=white>{0}</color>의 스킬 피해를 입히고, 착취 표식이 없는 적들을 범위 밖으로 밀어버립니다. 대상의 착취 표식 중첩에 비례해 <color=white>대상의 잃은 체력 {1} ~ {3}</color>에 해당하는 추가 스킬 피해를 입히고, 잠시 동안 이동 속도를 {2} 감소시킵니다.
-Skill/Group/Coef/1059100┃같은 적에게 {0}번째 공격을 할 때마다 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color><color=#688A08>(+대상의 최대 체력 {10})</color>의 스킬 피해를 입히고, 이동 속도가 {5} 증가한 뒤 {6}초에 걸쳐 원래대로 돌아옵니다. 입힌 착취 피해량의 {7}만큼 아이작의 체력을 회복시킵니다. 야생 동물 상대로는 회복 효과가 {9}로 감소합니다.
+Skill/Group/Coef/1059100┃같은 적에게 {0}번째 공격을 할 때마다 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color>의 스킬 피해를 입히고, 이동 속도가 {5} 증가한 뒤 {6}초에 걸쳐 원래대로 돌아옵니다. 입힌 착취 피해량의 {7}만큼 아이작의 체력을 회복시킵니다. 야생 동물 상대로는 회복 효과가 {9}로 감소합니다.
 Skill/Group/Coef/1059200┃아이작이 적에게 돌진 후, 강하게 타격하여 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다.
 Skill/Group/Coef/1059300┃아이작이 무기의 경도를 높여 다음 기본 공격이나 기본 스킬을 강화해 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 추가로 입힙니다. 이 스킬로 강화된 기본 공격 또는 기본 스킬이 착취를 발동시키면 기본 스킬의 쿨다운이 {3} 감소합니다.
 Skill/Group/Coef/1059400┃아이작이 재빠르게 돌진하고, {0}초 동안 다음 스킬을 준비합니다.\n\n재사용 시: 전방의 적들을 끌어당겨 보호막을 파괴하며 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color>의 스킬 피해를 입히고, {4}초 동안 기절시킵니다.
@@ -9956,12 +10075,12 @@ Skill/Group/Name/1062200┃에너지 포
 Skill/Group/Name/1062300┃증폭 스크린
 Skill/Group/Name/1062400┃스파크탄
 Skill/Group/Name/1062500┃에너지 필드
-Skill/Group/Desc/1062100┃테오도르가 부쉬에서 벗어날 때 {0}초 동안 은신 상태가 되며 그동안 이동 속도가 {1} 증가합니다. 이때, {2}초 동안 최대 체력의 {3}만큼 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 {4} 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 {8} 감소합니다.\n실험체가 아닌 대상에게 기본 공격 적중 시 쿨다운 감소 효과가 절반만 적용됩니다.
+Skill/Group/Desc/1062100┃테오도르가 부쉬에서 벗어날 때 {0}초 동안 은신 상태가 되며 그동안 이동 속도가 {1} 증가합니다. 이때, {2}초 동안 최대 체력의 {3}만큼 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 {4} 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 {8} 감소합니다.
 Skill/Group/Desc/1062200┃충전: 테오도르가 1.5초에 걸쳐 자신의 레일건에 에너지를 충전하며 이동 속도가 {0}까지 서서히 감소합니다.\n\n발사: 다시 사용하면 지정한 방향으로 광선을 발사하여 적에게는 <color=white>{1}</color>의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 <color=white>{3}</color>의 체력을 회복시킵니다. 충전 시간에 비례해 사거리가 증가합니다.\n\n<color=white>에너지 포</color>가 <color=white>증폭 스크린</color>에 적중하면 잠시 뒤 스크린 정면으로 광선을 발사해 적에게는 <color=white>{4}</color>의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 <color=white>{5}</color>의 체력을 회복시킵니다.
 Skill/Group/Desc/1062300┃테오도르가 지정한 위치에 {0}초 동안 유지되는 증폭 스크린을 생성합니다.\n\n증폭 스크린을 통과한 테오도르의 <color=white>기본 공격</color> 탄환과 <color=white>스파크탄</color>은 적중한 적 주변으로 확산됩니다. 스크린을 통과한 기본 공격은 <color=white>{1}</color>의 추가 스킬 피해를 입히고, 스파크탄은 투사체 속도와 사거리가 증가합니다.
 Skill/Group/Desc/1062400┃<color=green>지속 효과</color>: <color=white>에너지 포</color> 또는 <color=white>스파크탄</color> 적중 시 다음 기본 공격 사거리가 {5} 증가합니다.\n\n테오도르가 스파크탄을 던져 적중한 적의 이동 속도를 {0}초 동안 {1} 감소시키며 {2}초 동안 <color=white>목표물</color>로 지정합니다. 테오도르는 목표물이 된 대상으로부터 시야를 제공받으며, 기본 공격 또는 스킬로 공격하면 <color=white>{3}</color>의 스킬 피해를 입히고 {4}초 동안 속박합니다.
 Skill/Group/Desc/1062500┃테오도르가 에너지를 최대로 끌어올려 지정한 방향으로 {1}초 동안 유지되는 <color=white>에너지 필드</color>를 생성해 같은 방향으로 이동하는 아군의 이동 속도를 {2} 증가시키고, 강력한 에너지 파동을 발사하여 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n\n발사 이후, 테오도르는 <color=white>과충전 상태</color>가 되어, 공격 속도가 {3}초 동안 {4} 증가하며, <color=white>에너지 포</color> 최대 충전 시간이 {5}초로 감소합니다.
-Skill/Group/Coef/1062100┃테오도르가 부쉬에서 벗어날 때 {0}초 동안 은신 상태가 되며 그동안 이동 속도가 {1} 증가합니다. 이때, {2}초 동안 최대 체력의 {3}만큼 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 {4} 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 {8} 감소합니다.\n실험체가 아닌 대상에게 기본 공격 적중 시 쿨다운 감소 효과가 절반만 적용됩니다.
+Skill/Group/Coef/1062100┃테오도르가 부쉬에서 벗어날 때 {0}초 동안 은신 상태가 되며 그동안 이동 속도가 {1} 증가합니다. 이때, {2}초 동안 최대 체력의 {3}만큼 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 {4} 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 {8} 감소합니다.
 Skill/Group/Coef/1062200┃충전: 테오도르가 1.5초에 걸쳐 자신의 레일건에 에너지를 충전하며 이동 속도가 {0}까지 서서히 감소합니다.\n\n발사: 다시 사용하면 지정한 방향으로 광선을 발사하여 적에게는 <color=white>{7}</color><color=#DDA0DD>(+스킬 증폭의 {9})</color>의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 <color=white>{10}</color><color=#DDA0DD>(+스킬 증폭의 {12})</color>의 체력을 회복시킵니다. 충전 시간에 비례해 사거리가 증가합니다.\n\n<color=white>에너지 포</color>가 <color=white>증폭 스크린</color>에 적중하면 잠시 뒤 스크린 정면으로 광선을 발사해 적에게는 <color=white>{13}</color><color=#DDA0DD>(+스킬 증폭의 {15})</color>의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 <color=white>{16}</color><color=#DDA0DD>(+스킬 증폭의 {18})</color>의 체력을 회복시킵니다.
 Skill/Group/Coef/1062300┃테오도르가 지정한 위치에 {0}초 동안 유지되는 증폭 스크린을 생성합니다.\n\n증폭 스크린을 통과한 테오도르의 <color=white>기본 공격</color> 탄환과 <color=white>스파크탄</color>은 적중한 적 주변으로 확산됩니다. 스크린을 통과한 기본 공격은 <color=white>{2}</color><color=#DDA0DD>(+스킬 증폭의 {3})</color>의 추가 스킬 피해를 입히고, 스파크탄은 투사체 속도와 사거리가 증가합니다.
 Skill/Group/Coef/1062400┃<color=green>지속 효과</color>: <color=white>에너지 포</color> 또는 <color=white>스파크탄</color> 적중 시 다음 기본 공격 사거리가 {5} 증가합니다.\n\n테오도르가 스파크탄을 던져 적중한 적의 이동 속도를 {0}초 동안 {1} 감소시키며 {2}초 동안 <color=white>목표물</color>로 지정합니다. 테오도르는 목표물이 된 대상으로부터 시야를 제공받으며, 기본 공격 또는 스킬로 공격하면 <color=white>{6}</color><color=#DDA0DD>(+스킬 증폭의 {8})</color>의 스킬 피해를 입히고 {4}초 동안 속박합니다.
@@ -9997,7 +10116,7 @@ Skill/Group/Name/1063210┃피하세요! / 옥죄는 손아귀
 Skill/Group/Name/1063310┃미안해요.. / 피투성이 손톱
 Skill/Group/Name/1063420┃비키세요! / 갈퀴손
 Skill/Group/Name/1063510┃넌 벗어날 수 없어
-Skill/Group/Desc/1063100┃<color=white>잠식 :</color> 이안은 기본 공격, 스킬 사용 시 잠식이 진행됩니다. 잠식이 100까지 진행되면 빙의 상태가 됩니다. 비전투 상태일 경우 초당 {7}씩 감소합니다.\n\n이안은 귀신에게 몸을 빼앗기지 않기 위해 계속 저항하고 있습니다. 이안은 각 상태에 따라 기본 공격의 피해량이 달라집니다.\n인간 상태 : <color=#ffd775>공격력의 {1}</color>\n빙의 상태 : <color=#ffd775>공격력의 {2}</color>\n귀신 상태 : <color=#ffd775>공격력의 {3}</color>\n\n이안의 내면에 있는 귀신에 의해 무의식적으로 잔혹성이 깨어납니다. 빙의, 귀신 상태에서 스킬 피해에 <color=white>{0}</color>만큼 추가 고정 피해를 입힙니다. 빙의 상태에서는 고정 피해의 {8}, 귀신 상태에서는 {9} 만큼 체력을 회복합니다.
+Skill/Group/Desc/1063100┃<color=white>잠식 :</color> 이안은 기본 공격 및 기본 스킬 사용 시 잠식이 진행됩니다. 잠식이 100까지 진행되면 빙의 상태가 됩니다. 비전투 상태일 경우 초당 {7}씩 감소합니다.\n\n이안은 귀신에게 몸을 빼앗기지 않기 위해 계속 저항하고 있습니다. 이안은 각 상태에 따라 기본 공격의 피해량이 달라집니다.\n인간 상태 : <color=#ffd775>공격력의 {1}</color>\n빙의 상태 : <color=#ffd775>공격력의 {2}</color>\n귀신 상태 : <color=#ffd775>공격력의 {3}</color>\n\n이안의 내면에 있는 귀신에 의해 무의식적으로 잔혹성이 깨어납니다. 빙의, 귀신 상태에서 스킬 피해에 <color=white>{0}</color>만큼 추가 고정 피해를 입힙니다. 빙의 상태에서는 고정 피해의 {8}, 귀신 상태에서는 {9} 만큼 체력을 회복합니다.
 Skill/Group/Desc/1063200┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 단검을 찌르게 해, 대상에게 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적중 시 쿨다운이 1초로 줄어듭니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 지정한 영역 내 대상에게 <color=white>{1}</color>의 스킬 피해를 입히고 {2}초 동안 속박 시킵니다.
 Skill/Group/Desc/1063300┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 전방으로 단검을 휘두르게 해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적중당한 대상은 이동 속도가 {1} 감소합니다. 감소된 이동 속도는 {2}초에 걸쳐 원래대로 돌아옵니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 전방으로 귀수를 휘둘러 <color=white>{3}</color>의 스킬 피해를 입힙니다. 스킬 적중 시 <color=white>[갉아먹기]</color> 중첩을 획득하고, 이동 속도가 {4} 증가합니다. 증가한 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다. 중첩량에 따라 해당 스킬 사용 시 소모 되는 체력량이 증가하며, 적중 시 <color=white>옥죄는 손아귀</color>와 <color=white>갈퀴손</color>의 쿨다운이 중첩 당 {6}초 감소합니다. 최대 {7}개까지 중첩됩니다.
 Skill/Group/Desc/1063400┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 <color=white>{1}</color>의 스킬 피해를 입히고 대상을 끌어오면서 <color=white>{2}</color>의 스킬 피해를 입힙니다.
@@ -10007,7 +10126,7 @@ Skill/Group/Desc/1063210┃<color=#ffffC2>인간 상태 :</color> 귀신이 이�
 Skill/Group/Desc/1063310┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 전방으로 단검을 휘두르게 해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적중당한 대상은 이동 속도가 {1} 감소합니다. 감소된 이동 속도는 {2}초에 걸쳐 원래대로 돌아옵니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 전방으로 귀수를 휘둘러 <color=white>{3}</color>의 스킬 피해를 입힙니다. 스킬 적중 시 <color=white>[갉아먹기]</color> 중첩을 획득하고, 이동 속도가 {4} 증가합니다. 증가한 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다. 중첩량에 따라 해당 스킬 사용 시 소모 되는 체력량이 증가하며, 적중 시 <color=white>옥죄는 손아귀</color>와 <color=white>갈퀴손</color>의 쿨다운이 중첩당 {6}초 감소합니다. 최대 {7}개까지 중첩됩니다.
 Skill/Group/Desc/1063420┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 <color=white>{1}</color>의 스킬 피해를 입히고 대상을 끌어오면서 <color=white>{2}</color>의 스킬 피해를 입힙니다.
 Skill/Group/Desc/1063510┃<color=white>"네 멋대로 설치게 두지 않겠어!!"</color>\n\n이안이 귀신에게 저항하여 인간 상태로 돌아갑니다. 잠식 중첩량이 전부 소모됩니다.
-Skill/Group/Coef/1063100┃<color=white>잠식 :</color> 이안은 기본 공격, 스킬 사용 시 잠식이 진행됩니다. 잠식이 100까지 진행되면 빙의 상태가 됩니다. 비전투 상태일 경우 초당 {7}씩 감소합니다.\n\n이안은 귀신에게 몸을 빼앗기지 않기 위해 계속 저항하고 있습니다. 이안은 각 상태에 따라 기본 공격의 피해량이 달라집니다.\n인간 상태 : <color=#ffd775>공격력의 {1}</color>\n빙의 상태 : <color=#ffd775>공격력의 {2}</color>\n귀신 상태 : <color=#ffd775>공격력의 {3}</color>\n\n이안의 내면에 있는 귀신에 의해 무의식적으로 잔혹성이 깨어납니다. 빙의, 귀신 상태에서 스킬 피해에 <color=#ffd775>공격력의 {0}</color>만큼 추가 고정 피해를 입힙니다. 빙의 상태에서는 고정 피해의 {8}, 귀신 상태에서는 {9} 만큼 체력을 회복합니다.
+Skill/Group/Coef/1063100┃<color=white>잠식 :</color> 이안은 기본 공격 및 기본 스킬 사용 시 잠식이 진행됩니다. 잠식이 100까지 진행되면 빙의 상태가 됩니다. 비전투 상태일 경우 초당 {7}씩 감소합니다.\n\n이안은 귀신에게 몸을 빼앗기지 않기 위해 계속 저항하고 있습니다. 이안은 각 상태에 따라 기본 공격의 피해량이 달라집니다.\n인간 상태 : <color=#ffd775>공격력의 {1}</color>\n빙의 상태 : <color=#ffd775>공격력의 {2}</color>\n귀신 상태 : <color=#ffd775>공격력의 {3}</color>\n\n이안의 내면에 있는 귀신에 의해 무의식적으로 잔혹성이 깨어납니다. 빙의, 귀신 상태에서 스킬 피해에 <color=#ffd775>공격력의 {0}</color>만큼 추가 고정 피해를 입힙니다. 빙의 상태에서는 고정 피해의 {8}, 귀신 상태에서는 {9} 만큼 체력을 회복합니다.
 Skill/Group/Coef/1063200┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 단검을 찌르게 해, 대상에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 적중 시 쿨다운이 1초로 줄어듭니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 지정한 영역 내 대상에게 <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입히고 {4}초 동안 속박 시킵니다.
 Skill/Group/Coef/1063300┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 전방으로 단검을 휘두르게 해 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 적중당한 대상은 이동 속도가 {2} 감소합니다. 감소된 이동 속도는 {3}초에 걸쳐 원래대로 돌아옵니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 전방으로 귀수를 휘둘러 <color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color>의 스킬 피해를 입힙니다. 스킬 적중 시 <color=white>[갉아먹기]</color> 중첩을 획득하고, 이동 속도가 {6} 증가합니다. 증가한 이동 속도는 {7}초에 걸쳐 원래대로 돌아옵니다. 중첩량에 따라 해당 스킬 사용 시 소모 되는 체력량이 증가하며, 적중 시 <color=white>옥죄는 손아귀</color>와 <color=white>갈퀴손</color>의 쿨다운이 중첩당 {8}초 감소합니다. 최대 {9}개까지 중첩됩니다.
 Skill/Group/Coef/1063400┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입히고 대상을 끌어오면서 <color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color>의 스킬 피해를 입힙니다.
@@ -10447,17 +10566,17 @@ Skill/Group/Name/1073500┃기적 실현
 Skill/Group/Desc/1073100┃샬럿 주변 아군의 체력이 적의 공격에 의해 {0} 감소할 때마다 <color=white>고결한 마음</color> 중첩을 획득하며, 중첩 당 주는 회복 및 보호막 효과가 <color=white>{1}</color> 증가합니다. (최대 {2}중첩)
 Skill/Group/Desc/1073200┃샬럿이 지정한 위치에 {0}초 동안 유지되는 빛의 구체를 생성합니다. 빛의 구체는 범위 내 가장 가까운 적에게 날아가 부착되어 잠시 후에 폭발하며 <color=white>{2}</color>의 스킬 피해를 입히고 {3}초 동안 이동 속도를 {4} 감소시킵니다. 감소된 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다.
 Skill/Group/Desc/1073300┃샬럿이 치유의 빛으로 체력 비율이 가장 낮은 아군과 자신의 체력을 <color=white>{0}</color>만큼 회복시킵니다.
-Skill/Group/Desc/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 {0}초 동안 <color=white>{1}</color>의 보호막을 부여합니다.
+Skill/Group/Desc/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 {0}초 동안 <color=white>{1}</color>의 보호막을 부여합니다.\n자신에게 사용 시에는 이동 없이 즉시 보호막을 획득합니다.
 Skill/Group/Desc/1073500┃샬럿이 기적을 실현합니다. {0}초 후에 주변 아군은 {1}초 동안 무적 상태가 됩니다.
 Skill/Group/Coef/1073100┃샬럿 주변 아군의 체력이 적의 공격에 의해 {0} 감소할 때마다 <color=white>고결한 마음</color> 중첩을 획득하며 중첩 당 주는 회복 및 보호막 효과가 <color=white>{1}</color> 증가합니다. (최대 {2}중첩)
 Skill/Group/Coef/1073200┃샬럿이 지정한 위치에 {0}초 동안 유지되는 빛의 구체를 생성합니다. 빛의 구체는 범위 내 가장 가까운 적에게 날아가 부착되어 잠시 후에 폭발하며 <color=white>{2}</color><color=#DDA0DD>(+스킬 증폭의 {6})</color>의 스킬 피해를 입히고 {3}초 동안 이동 속도를 {4} 감소시킵니다. 감소된 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다.
 Skill/Group/Coef/1073300┃샬럿이 치유의 빛으로 체력 비율이 가장 낮은 아군과 자신의 체력을 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {1})</color>만큼 회복시킵니다.
-Skill/Group/Coef/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 {0}초 동안 <color=white>{1}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 보호막을 부여합니다.
+Skill/Group/Coef/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 {0}초 동안 <color=white>{1}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 보호막을 부여합니다.\n자신에게 사용 시에는 이동 없이 즉시 보호막을 획득합니다.
 Skill/Group/Coef/1073500┃샬럿이 기적을 실현합니다. {0}초 후에 주변 아군은 {1}초 동안 무적 상태가 됩니다.
 Skill/LobbyDesc/1073100┃샬럿 주변 아군의 체력이 적의 공격에 의해 감소할 때마다 <color=white>고결한 마음</color> 중첩을 획득하며, 중첩 당 주는 회복 및 보호막 효과가 증가합니다.
 Skill/LobbyDesc/1073200┃샬럿이 지정한 위치에 일정 시간 유지되는 빛의 구체를 생성합니다. 빛의 구체는 범위 내 가장 가까운 적에게 날아가 부착되어 잠시 후에 폭발하며 스킬 피해를 입히고 일정 시간동안 이동 속도를 감소시킵니다. 감소된 이동 속도는 서서히 원래대로 돌아옵니다.
 Skill/LobbyDesc/1073300┃샬럿이 치유의 빛으로 체력 비율이 가장 낮은 아군과 자신의 체력을 회복시킵니다.
-Skill/LobbyDesc/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 보호막을 부여합니다.
+Skill/LobbyDesc/1073400┃샬럿이 대상 지정 불가 상태로 지정한 아군에게 이동하며 보호막을 부여합니다.\n자신에게 사용 시에는 이동 없이 즉시 보호막을 획득합니다.
 Skill/LobbyDesc/1073500┃샬럿이 기적을 실현합니다. 일정 시간 후에 주변 아군은 잠시 동안 무적 상태가 됩니다.
 CharacterState/Group/Name/1073100┃고결한 마음 - 주는 회복 및 보호막 효과 증가
 CharacterState/Group/Desc/1073100┃고결한 마음 효과로 주는 회복 및 보호막 효과가 증가하였습니다.
@@ -11022,7 +11141,7 @@ Skill/LobbyDesc/1057100┃마르티나의 4K UHD 카메라는 기본 공격을 �
 Skill/LobbyDesc/1057200┃<color=#ffffff>[취재 중]</color>\n마르티나가 지정한 방향을 촬영하여 스킬 피해를 입힙니다. 스킬 적중 시 쿨다운이 감소하고, 표식을 소모시키면 마르티나의 이동 속도가 증가합니다.\n\n<color=#ffd775>[방송 중]</color>\n스킬 사거리와 피해량이 증가하며 표식을 소모시키면 이동 속도와 공격 속도가 증가합니다.
 Skill/LobbyDesc/1057300┃<color=#ffffff>[취재 중]</color>\n마르티나가 일정 시간 동안 유지되는 소형 카메라를 설치하여 주변 시야를 확보합니다. <color=white>빨리감기</color> 스킬로 소형 카메라를 적중 시 소형 카메라가 마르티나가 있는 방향을 촬영하여 적에게 스킬 피해를 입히고 이동 속도를 느려지게 합니다.\n\n<color=#ffd775>[방송 중]</color>\n소형 카메라 촬영이 적을 속박 시키며 최대 보유 및 설치 가능 수가 증가합니다.
 Skill/LobbyDesc/1057400┃<color=#ffffff>[취재 중]</color>\n마르티나가 현재 위치에 비디오테이프를 남기고 지정한 방향으로 도약합니다. 이후 스킬 지속 시간 동안 되감기 상태를 유지합니다. 되감기 상태 동안 마르티나의 이동 속도가 소폭 증가합니다.\n\n되감기 상태가 종료되면 모든 방해 면역 상태로 비디오테이프로 빠르게 돌아오며 마르티나에 닿은 적은 이동 속도가 감소합니다.\n\n재사용 시: 비디오테이프로 더 일찍 돌아옵니다.\n\n<color=#ffd775>[방송 중]</color>\n비디오테이프로 돌아올 때 마르티나에 닿은 적이 기절하게 되며 되감기 상태 동안 실험체로부터 받은 피해량의 일부만큼 체력을 회복합니다.
-Skill/LobbyDesc/1057500┃<color=#ffffff>[취재 중]</color>\n마르티나가 일정 시간 동안 지정한 방향을 촬영합니다. 촬영하는 동안 범위 내 촬영 대상이 들어올 경우 녹화 지속 시간 동안 이동 속도가 증가합니다. 촬영에 성공하면 대상에 따라 <color=white>녹화 중첩</color>을 획득하고 이동 속도가 증가합니다.\n\n<color=white>녹화 중첩</color>을 일정 수준 이상 쌓으면 마르티나가 취재를 마치고 <color=#ffd775>방송</color>을 시작하며 스킬 위력이 강화됩니다.\n\n<color=#2ECCFA>촬영 조건</color>: <color=#819FF7>촬영 대상</color> 중 2개의 대상을 일정 시간 이상 촬영 시 녹화 중첩 2와 무기 숙련도 획득.\n<color=#2ECCFA>시체 촬영 조건</color>: <color=#819FF7>촬영 대상</color> 중 1개의 시체를 일정 시간 이상 촬영 시 녹화 중첩 1과 무기 숙련도 획득.  (최대 중첩 획득 제한, 동일한 시체 중복 촬영 불가)\n<color=#819FF7>촬영 대상</color>: 적 실험체, 생명의 나무, 운석, 알파, 오메가, 위클라인, 감마\n\n촬영 대상 중 생명의 나무와 운석을 제외한 대상은 촬영을 한 이후 일정 시간 동안 재촬영이 불가능합니다.\n\n<color=#ffd775>[방송 중]</color>\n마르티나가 지정한 방향을 촬영하여 적에게 피해를 입힙니다. 스킬이 종료될 때 더 큰 피해를 입히며 가운데에 있는 적들을 기절시킵니다. 기절 지속 시간은 스킬 지속 시간 동안 대상이 피해를 받은 횟수에 비례해 증가합니다.
+Skill/LobbyDesc/1057500┃<color=#ffffff>[취재 중]</color>\n마르티나가 일정 시간 동안 지정한 방향을 촬영합니다. 촬영하는 동안 범위 내 촬영 대상이 들어올 경우 녹화 지속 시간 동안 이동 속도가 증가합니다. 촬영에 성공하면 대상에 따라 <color=white>녹화 중첩</color>을 획득하고 이동 속도가 증가합니다.\n\n<color=white>녹화 중첩</color>을 일정 수준 이상 쌓으면 마르티나가 취재를 마치고 <color=#ffd775>방송</color>을 시작하며 스킬 위력이 강화됩니다.\n\n<color=#2ECCFA>촬영 조건</color>: <color=#819FF7>촬영 대상</color> 중 2개의 대상을 일정 시간 이상 촬영 시 녹화 중첩 2와 무기 숙련도 획득.\n<color=#2ECCFA>시체 촬영 조건</color>: <color=#819FF7>촬영 대상</color> 중 1개의 시체를 일정 시간 이상 촬영 시 녹화 중첩 1과 무기 숙련도 획득.  (최대 중첩 획득 제한, 동일한 시체 중복 촬영 불가)\n<color=#819FF7>촬영 대상</color>: 적 실험체, 생명의 나무, 운석, 알파, 오메가, 위클라인, 감마\n\n촬영 대상 중 생명의 나무와 운석을 제외한 대상은 촬영을 한 이후 일정 시간 동안 재촬영이 불가능합니다.\n\n<color=#ffd775>[방송 중]</color>\n마르티나가 지정한 방향을 촬영하여 적에게 피해를 입힙니다. 스킬이 종료될 때 더 큰 피해를 입히며 가운데에 있는 적들을 기절시킵니다.
 Skill/LobbyDesc/1058100┃<color=white>죽음의 상인</color>: 헤이즈는 장전을 하는 대신 웨폰 케이스에서 탄창이 꽉찬 새 돌격 소총을 꺼냅니다. 꺼내는 동안 기본 공격을 할 수 없지만, 이후 첫 기본 공격은 추가 스킬 피해를 입히며, 실험체에게 적중하면 이동 속도가 증가합니다. <color=white>죽음의 상인</color> 효과는 돌격 소총 폼에서만 적용됩니다.\n\n<color=white>웨폰 케이스</color>: 헤이즈는 각 스킬마다 다른 종류의 총기를 활용하며, 사용이 끝나면 웨폰 케이스에서 새로운 돌격 소총을 꺼내고 <color=white>죽음의 상인</color> 효과를 시작합니다.\n\n헤이즈는 수동 장전과 비전투 자동 장전을 할 수 없으며, 무기를 교체해도 탄환 수를 유지합니다.
 Skill/LobbyDesc/1058200┃<color=white>돌격 소총 폼</color>: 유탄 발사기를 격발하여 적중한 적에게 스킬 피해를 입힙니다. 중심에 맞은 적에게는 더 큰 피해를 입힙니다. 유탄 탄환은 최대 2개까지 충전됩니다.\n\n<color=white>기관단총 폼</color>: 짧은 시간 정신을 집중하여 전방에 기관단총을 연사하여 스킬 피해를 입히고, 기관단총 폼을 종료합니다. 남아 있던 탄환 수만큼 피해가 더해집니다.\n\n<color=white>로켓 런처 폼</color>: 적을 관통하는 가속 로켓을 발사합니다. 적중한 적에게 스킬 피해를 입히고 느려지게 하며, 절반만큼의 피해는 대상의 후방으로 퍼집니다. 로켓은 시간이 지나면 가속되며, 범위가 넓어지고 피해가 증가합니다. 이 스킬은 기본 공격과 쿨다운을 공유하며, 쿨다운 감소 스탯의 영향을 받지 않습니다.
 Skill/LobbyDesc/1058300┃뒤로 한 걸음 물러서서 전방에 산탄총을 발사하여 적중한 적에게 스킬 피해를 입히고, 짧은 시간 기절시킵니다.\n\n<color=white>기관단총 폼</color> 혹은 <color=white>로켓 런처 폼</color>에서 사용한 경우, 폼을 해제하며 해당 스킬의 쿨다운을 추가로 감소시킵니다.
@@ -11038,7 +11157,7 @@ Skill/LobbyDesc/1061200┃<color=#ffd775>이렘:</color>\n이렘이 바닥에 �
 Skill/LobbyDesc/1061300┃<color=#ffd775>이렘:</color>\n이렘이 매력을 발산하여 범위 안의 적들의 이동 속도를 느려지게 하고, 잠시 뒤에 범위 안의 대상들에게 스킬 피해를 입히며, 매혹에 빠지게 합니다.\n이동 속도 감소 효과는 범위 바깥으로 나가도 잠시 동안 유지됩니다.\n\n<color=#ffd775>고양이:</color>\n이렘이 공중에서 회전하며 강하게 꼬리로 내리쳐 범위 안의 적들에게 스킬 피해를 입히고 공중에 띄웁니다.\n이 스킬이 적에게 적중하면<color=white>사뿐~</color>과 <color=white>폴짝!</color>의 쿨다운이 감소합니다.
 Skill/LobbyDesc/1061400┃<color=#ffd775>이렘:</color>\n이렘이 지정한 방향으로 짧게 이동하며, 원래 있던 자리에 물고기 표식을 생성합니다.\n\n<color=#ffd775>고양이:</color>\n이렘이 도약하여 착지할 때 범위 안의 적들에게 스킬 피해를 입힙니다.\n물고기 표식을 향해 도약하면 더 먼 거리를 이동할 수 있습니다.
 Skill/LobbyDesc/1061500┃<color=#ffd775>이렘:</color>\n이렘이 고양이로 변신합니다.\n이렘이 <color=white>바운싱 볼</color>이나<color=white> 사뿐~</color>으로 물고기 표식을 생성하면 다음 기본 공격은 사거리가 증가하며 스킬 피해를 입히고, 잠시 동안 지속되는 고양이 방울 표식을 남깁니다.\n고양이 방울 표식의 대상은 이렘에게 시야를 공유합니다.\n\n<color=#ffd775>고양이:</color>\n고양이가 이렘으로 변신합니다.\n고양이로 변신한 이렘이 물고기 표식으로 이동하면 피해를 흡수하는 보호막을 획득합니다.
-Skill/LobbyDesc/1062100┃테오도르가 부쉬에서 벗어날 때 은신 상태가 되며 그동안 이동 속도가 증가합니다. 이때, 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 크게 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 조금 감소합니다.\n실험체가 아닌 대상에게 기본 공격 적중 시 쿨다운 감소 효과가 절반만 적용됩니다.
+Skill/LobbyDesc/1062100┃테오도르가 부쉬에서 벗어날 때 은신 상태가 되며 그동안 이동 속도가 증가합니다. 이때, 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 크게 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 조금 감소합니다.
 Skill/LobbyDesc/1062200┃충전: 테오도르가 일정 시간에 걸쳐 자신의 레일건에 에너지를 충전하며 이동 속도가 서서히 감소합니다.\n\n발사: 다시 사용하면 지정한 방향으로 광선을 발사하여 적에게는 스킬 피해를 입히고 아군의 체력을 회복시킵니다. 충전 시간에 비례해 사거리가 증가합니다.\n\n<color=white>에너지 포</color>가 <color=white>증폭 스크린</color>에 적중하면 잠시 뒤 스크린 정면으로 광선을 발사해 적에게는 스킬 피해를 입히고 아군의 체력을 회복시킵니다.
 Skill/LobbyDesc/1062300┃테오도르가 지정한 위치에 일정 시간 동안 유지되는 증폭 스크린을 생성합니다.\n\n증폭 스크린을 통과한 테오도르의 <color=white>기본 공격</color> 탄환과 <color=white>스파크탄</color>은 적중한 적 주변으로 확산됩니다. 스크린을 통과한 기본 공격은 추가 스킬 피해를 입히고, 스파크탄은 투사체 속도와 사거리가 증가합니다.
 Skill/LobbyDesc/1062400┃<color=green>지속 효과</color>: <color=white>에너지 포</color> 또는 <color=white>스파크탄</color> 적중 시 다음 기본 공격 사거리가 증가합니다.\n\n테오도르가 스파크탄을 던져 적중한 적의 이동 속도를 감소시키며 <color=white>목표물</color>로 지정합니다. 테오도르는 목표물이 된 대상으로부터 시야를 제공받으며, 기본 공격 또는 스킬로 공격하면 스킬 피해를 입히고 속박합니다.
@@ -11724,20 +11843,20 @@ Item/Skills/6019006/Body┃스킬로 적에게 피해를 입히면 {4}초간 이
 Item/Skills/6019006/Desc┃스킬로 적에게 피해를 입히면 {4}초간 이동 속도를 {1}%만큼 감소시킵니다. (쿨다운 {5}초)
 CharacterState/Group/Name/6019000┃한파
 CharacterState/Group/Desc/6019000┃움직임이 둔해집니다.
-Item/Skills/6020000┃토납
-Item/Skills/6020001/Name┃<color=yellow>토납</color>
-Item/Skills/6020001/Body┃비전투 상태에 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-Item/Skills/6020001/Desc┃비전투 상태 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-Item/Skills/6020002/Name┃<color=yellow>토납</color>
-Item/Skills/6020002/Body┃비전투 상태에 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-Item/Skills/6020002/Desc┃비전투 상태에 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-Item/Skills/6020003/Name┃<color=yellow>토납</color>
-Item/Skills/6020003/Body┃비전투 상태에 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-Item/Skills/6020003/Desc┃비전투 상태에 진입한 뒤 5초 후, 매 초마다 30+(캐릭터 레벨*5) 만큼 보호막을 획득합니다. 보호막의 최대치는 50+(캐릭터 레벨*15)+(공격력의 20%)+(스킬 증폭의 20%)+(최대 체력의 20%)입니다.
-CharacterState/Group/Name/6020000┃토납 - 준비중
-CharacterState/Group/Desc/6020000┃체내의 기운을 호흡을 통해 정제하고 있습니다
-CharacterState/Group/Name/6020100┃토납
-CharacterState/Group/Desc/6020100┃정제된 호흡을 통해 보호막이 생성되었습니다
+Item/Skills/6020000┃명경지수
+Item/Skills/6020001/Name┃<color=yellow>명경지수</color>
+Item/Skills/6020001/Body┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 {1}의 보호막을 획득합니다. 보호막의 최대치는 {2}입니다.
+Item/Skills/6020001/Desc┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 (근거리 : {1}<color=#008000>(+캐릭터 레벨 * {3})</color>｜원거리 : {2}<color=#008000>(+캐릭터 레벨 * {4})</color>)의 보호막 을 획득합니다. 보호막의 최대치는 (근거리 : {5}<color=#008000>(+캐릭터 레벨 * {7})</color><color=#DDA0DD>(+스킬 증폭의 {13}%)</color>｜원거리 : {6}+<color=#008000>(캐릭터 레벨 * {8})</color><color=#DDA0DD>(+스킬 증폭의 {14}%)</color>) 입니다.
+Item/Skills/6020002/Name┃<color=yellow>명경지수</color>
+Item/Skills/6020002/Body┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 {1}의 보호막을 획득합니다. 보호막의 최대치는 {2}입니다.
+Item/Skills/6020002/Desc┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 (근거리 : {1}<color=#008000>(+캐릭터 레벨 * {3})</color>｜원거리 : {2}<color=#008000>(+캐릭터 레벨 * {4})</color>)의 보호막 을 획득합니다. 보호막의 최대치는 (근거리 : {5}<color=#008000>(+캐릭터 레벨 * {7})</color><color=#DDA0DD>(+스킬 증폭의 {13}%)</color>｜원거리 : {6}+<color=#008000>(캐릭터 레벨 * {8})</color><color=#DDA0DD>(+스킬 증폭의 {14}%)</color>) 입니다.
+Item/Skills/6020003/Name┃<color=yellow>명경지수</color>
+Item/Skills/6020003/Body┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 {1}의 보호막을 획득합니다. 보호막의 최대치는 {2}입니다.
+Item/Skills/6020003/Desc┃피해를 입지 않은 상태에서 {0}초 후, 매 초마다 (근거리 : {1}<color=#008000>(+캐릭터 레벨 * {3})</color>｜원거리 : {2}<color=#008000>(+캐릭터 레벨 * {4})</color>)의 보호막 을 획득합니다. 보호막의 최대치는 (근거리 : {5}<color=#008000>(+캐릭터 레벨 * {7})</color><color=#DDA0DD>(+스킬 증폭의 {13}%)</color>｜원거리 : {6}+<color=#008000>(캐릭터 레벨 * {8})</color><color=#DDA0DD>(+스킬 증폭의 {14}%)</color>) 입니다.
+CharacterState/Group/Name/6020000┃명경지수 - 준비중
+CharacterState/Group/Desc/6020000┃혼탁해진 마음을 다스리고 있습니다.
+CharacterState/Group/Name/6020100┃명경지수 - 활성화
+CharacterState/Group/Desc/6020100┃맑아진 마음에 의해 보호막이 생성됩니다.
 Item/Skills/6023001┃연날리기
 Item/Skills/6023001/Name┃<color=yellow>연날리기</color>
 Item/Skills/6023001/Body┃{0}초마다 [연날리기 충전]을 1개씩 최대 {3}개까지 획득합니다.\n이동 기술을 사용하면 충전을 1개 소모하여 [연날리기]를 획득합니다.\n[연날리기]는 다음 기본 공격까지 고유 기본 공격 사거리를 {2} 증가시킵니다.
@@ -12215,194 +12334,6 @@ Item/Skills/6032001/Body┃아군에게 치유 또는 보호막 스킬을 적용
 Item/Skills/6032001/Desc┃아군에게 치유 또는 보호막 스킬을 적용했을 경우, 자신을 제외한 적용 대상의 맞춤형 능력치를 {0}초 동안 {1}<color=green>(+캐릭터 레벨*{2})</color>만큼, 공격 속도를 {3}%만큼 증가시킵니다.
 CharacterState/Group/Name/6032000┃격려
 CharacterState/Group/Desc/6032000┃아군의 격려 효과를 인해 맞춤형 능력치와 공격 속도가 증가한 상태입니다.
-Skill/Group/Desc/1009100┃아이솔이 설치한 트랩이 적에게 적중 시, {0}초 동안 <color=#FFD775>공격력 {1}</color> 또는 <color=#DDA0DD>스킬 증폭 {2}</color>만큼 증가합니다.
-Skill/Group/Desc2/1044100┃에키온은 무기를 장착하거나 해제할 수 없으며, 카드모스의 부름 레벨이 상승하면 {0}초 동안 조작 불가능 상태가 되고 자신의 무기를 강화합니다.
-Skill/Group/Evolution/Desc2/1044101┃에키온이 스킬로 적에게 피해를 입히면 {1}초 동안 공격 속도가 {2} 증가하는 전투광 중첩을 1 얻습니다. VF폭주 상태에서 기본 공격이 <color=white>{0}</color>의 기본 공격 피해를 연속으로 입히고, 독사의 진노(R)를 사용하면서 이동할 수 있습니다.\n\n데스애더 계열의 무기는 VF폭주 상태에서 <color=yellow>의념</color> 효과가 발동합니다.
-Skill/Group/Evolution/Desc2/1044111┃에키온이 스킬로 입힌 피해의 {2}만큼 체력을 회복하고, 독사의 칼날(Q), 메마른 송곳니(E)가 VF 게이지를 {0}만큼 추가로 증가시킵니다.\nVF폭주의 지속 시간이 {1}초만큼 증가하며, 독사의 진노(R)가 한 번 더 발생해 추가 피해를 입히고 대상을 공중으로 띄웁니다.
-Skill/Group/Evolution/Desc2/1044121┃스킬 적중 시, 대상에게 입힌 피해의 {1}만큼 추가 스킬 피해를 입힙니다. 뒤집힌 비늘(W)의 쿨다운이 영구적으로 {0}만큼 감소합니다.\n\n사이드와인더 계열의 무기는 VF폭주 상태에서 <color=yellow>가벼운 발걸음</color> 효과가 발동합니다.
-Skill/Group/Evolution/Desc2/1044102┃에키온이 스킬로 적에게 피해를 입히면 {1}초 동안 공격 속도가 {2} 증가하는 전투광 중첩을 1 얻습니다. VF폭주 상태에서 기본 공격이 <color=white>{0}</color>의 기본 공격 피해를 연속으로 입히고, 독사의 진노(R)를 사용하면서 이동할 수 있습니다.\n\n데스애더 계열의 무기는 VF폭주 상태에서 <color=yellow>의념</color> 효과가 발동합니다.
-Skill/Group/Evolution/Desc2/1044112┃에키온이 스킬로 입힌 피해의 {2}만큼 체력을 회복하고, 독사의 칼날(Q), 메마른 송곳니(E)가 VF 게이지를 {0}만큼 추가로 증가시킵니다.\nVF폭주의 지속 시간이 {1}초만큼 증가하며, 독사의 진노(R)가 한 번 더 발생해 추가 피해를 입히고 대상을 공중으로 띄웁니다.
-Skill/Group/Evolution/Desc2/1044122┃스킬 적중 시, 대상에게 입힌 피해의 {1}만큼 추가 스킬 피해를 입힙니다. 뒤집힌 비늘(W)의 쿨다운이 영구적으로 {0}만큼 감소합니다.\n\n사이드와인더 계열의 무기는 VF폭주 상태에서 <color=yellow>가벼운 발걸음</color> 효과가 발동합니다.
-Skill/Group/Desc2/1044200┃에키온이 좁은 범위의 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적 대상에게 피해를 입히면 다음 {2}초 안에 스킬을 재사용할 수 있습니다.\n\n재사용 시: 넓은 범위의 VF를 방출해 <color=white>{3}</color>의 스킬 피해를 입히고, 대상의 이동 속도를 {4}초 동안 {5} 감소시킵니다.\n\n과부하 상태가 되면 VF가 방출되지 않습니다.\n\nVF게이지 증가량: {6}\n사용 시 피해 증폭량: {7}
-Skill/Group/Desc2/1044210┃에키온이 좁은 범위의 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 적 대상에게 피해를 입히면 다음 {2}초 안에 스킬을 재사용할 수 있습니다.\n\n재사용 시: 넓은 범위의 VF를 방출해 <color=white>{3}</color>의 스킬 피해를 입히고, 대상의 이동 속도를 {4}초 동안 {5} 감소시킵니다.\n\n과부하 상태가 되면 VF가 방출되지 않습니다.\n\nVF게이지 증가량: {6}\n사용 시 피해 증폭량: {7}
-Skill/Group/Desc2/1044300┃에키온이 최대 {0}의 VF게이지를 소모해 자신의 몸을 보호하는 보호막을 <color=white>{1}</color> 생성합니다. 소모한 VF의 {2}만큼 보호막의 흡수량이 증가합니다.\n생성된 보호막의 {3} 이상 피해를 흡수하면 소모한 VF게이지의 {4}를 돌려받습니다.
-Skill/Group/Desc2/1044400┃지정한 방향으로 돌진하며 경로상의 적들에게 <color=white>{0}</color>의 스킬 피해를 입히고, 표식이 없는 대상에게 피해를 입혔다면 쿨다운을 초기화합니다. 가장 처음 적중한 대상에게 {1}초 동안 유지되는 표식을 남깁니다.\n\n과부하 상태가 되면 돌진의 거리가 감소합니다.\n\nVF게이지 증가량: {2}\n사용 시 피해 증폭량: {3}
-Skill/Group/Desc2/1044500┃<color=green>지속 효과:</color> 에키온이 공격 스킬을 사용할 때 VF게이지가 증가하고, VF게이지 1당 {0} 스킬의 피해량이 증가합니다.\n\n<color=white>VF폭주:</color> 게이지가 가득차면 {2}초 동안 폭주 상태가 되어 독사의 칼날(Q), 뒤집힌 비늘(W)을 사용할 수 없는 대신, 이동 속도가 {3} 증가하고, 에키온 주변 적에게 {4}초마다 <color=white>{5}</color>의 고정 피해를 입히며 독사의 진노(R)를 사용할 수 있게 됩니다. 또한 메마른 송곳니(E)의 쿨다운이 초기화됩니다.\nVF폭주 상태에서 적을 처치하면 폭주의 지속 시간이 {6}초 연장됩니다.\n\n<color=white>과부하:</color> 폭주가 끝나면 {7}초 동안 과부하 상태가 되어 기본 공격 사거리가 {9} 감소하고 게이지가 증가하지 않게 됩니다.\n\n<color=white>독사의 진노(R):</color> 지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{10}</color>의 스킬 피해를 입힙니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간이 {12}초 연장됩니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {13}초 감소시킵니다.
-Skill/Group/Desc2/1044501┃<color=green>지속 효과:</color> 에키온이 공격 스킬을 사용할 때 VF게이지가 증가하고, VF게이지 1당 {0} 스킬의 피해량이 증가합니다.\n\n<color=white>VF폭주:</color> 게이지가 가득차면 {2}초 동안 폭주 상태가 되어 독사의 칼날(Q), 뒤집힌 비늘(W)을 사용할 수 없는 대신, 이동 속도가 {3} 증가하고, 에키온 주변 적에게 {4}초마다 <color=white>{5}</color>의 고정 피해를 입히며 독사의 진노(R)를 사용할 수 있게 됩니다. 또한 메마른 송곳니(E)의 쿨다운이 초기화됩니다.\nVF폭주 상태에서 적을 처치하면 폭주의 지속 시간이 {6}초 연장됩니다.\n\n<color=white>과부하:</color> 폭주가 끝나면 {7}초 동안 과부하 상태가 되어 기본 공격 사거리가 {9} 감소하고 게이지가 증가하지 않게 됩니다.\n\n<color=white>독사의 진노(R):</color> 지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{10}</color>의 스킬 피해를 입힙니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간이 {12}초 연장됩니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {13}초 감소시킵니다.
-Skill/Group/Desc2/1044502┃<color=green>지속 효과:</color> 에키온이 공격 스킬을 사용할 때 VF게이지가 증가하고, VF게이지 1당 {0} 스킬의 피해량이 증가합니다.\n\n<color=white>VF폭주:</color> 게이지가 가득차면 {2}초 동안 폭주 상태가 되어 독사의 칼날(Q), 뒤집힌 비늘(W)을 사용할 수 없는 대신, 이동 속도가 {3} 증가하고, 에키온 주변 적에게 {4}초마다 <color=white>{5}</color>의 고정 피해를 입히며 독사의 진노(R)를 사용할 수 있게 됩니다. 또한 메마른 송곳니(E)의 쿨다운이 초기화됩니다.\nVF폭주 상태에서 적을 처치하면 폭주의 지속 시간이 {6}초 연장됩니다.\n\n<color=white>과부하:</color> 폭주 상태가 끝나면 {7}초 동안 과부하 상태가 되며 기본 공격 사거리가 {9} 감소하고 게이지가 증가하지 않습니다.\n\n<color=white>독사의 진노(R):</color> 지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{10}</color>의 스킬 피해를 입힙니다. {12}초 뒤 한 번 더 독사의 진노가 발생하여 피해량의 {13}만큼 피해를 입히고 대상을 {14}초 동안 공중에 띄웁니다.\n독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간을 {16}초 연장시킵니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {17}초 감소시킵니다.
-Skill/Group/Desc2/1044503┃<color=green>지속 효과:</color> 에키온이 공격 스킬을 사용할 때 VF게이지가 증가하고, VF게이지 1당 {0} 스킬의 피해량이 증가합니다.\n\n<color=white>VF폭주:</color> 게이지가 가득차면 {2}초 동안 폭주 상태가 되어 독사의 칼날(Q), 뒤집힌 비늘(W)을 사용할 수 없는 대신, 이동 속도가 {3} 증가하고, 에키온 주변 적에게 {4}초마다 <color=white>{5}</color>의 고정 피해를 입히며 독사의 진노(R)를 사용할 수 있게 됩니다. 또한 메마른 송곳니(E)의 쿨다운이 초기화됩니다.\nVF폭주 상태에서 적을 처치하면 폭주의 지속 시간이 {6}초 연장됩니다.\n\n<color=white>과부하:</color> 폭주 상태가 끝나면 {7}초 동안 과부하 상태가 되며 기본 공격 사거리가 {9} 감소하고 게이지가 증가하지 않습니다.\n\n<color=white>독사의 진노(R):</color> 지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{10}</color>의 스킬 피해를 입히고, {15}초에 걸쳐 이동 속도를 {12} 감소시킵니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간을 {13}초 연장시킵니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {14}초 감소시킵니다.
-Skill/Group/Desc2/1044510┃지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간이 {2}초 연장됩니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {3}초 감소시킵니다.
-Skill/Group/Desc2/1044520┃지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입힙니다. {2}초 뒤 한 번 더 독사의 진노가 발생하여 기존 피해량의 {3}만큼 피해를 입히고 대상을 {4}초 동안 공중에 띄웁니다.\n독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간을 {6}초 연장시킵니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {7}초 감소시킵니다.
-Skill/Group/Desc2/1044530┃지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입힙니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간이 {2}초 연장됩니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {3}초 감소시킵니다.
-Skill/Group/Desc2/1044540┃지정한 방향으로 제어 불가능한 VF를 방출해 <color=white>{0}</color>의 스킬 피해를 입히고, {5}초에 걸쳐 이동 속도를 {2} 감소시킵니다. 독사의 진노가 적 실험체에게 피해를 입히면 폭주의 지속 시간을 {3}초 연장시킵니다.\n기본 공격으로 피해를 입힐 때마다 독사의 진노 쿨다운을 {4}초 감소시킵니다.
-Skill/Group/Desc2/1045100┃마이는 기본 공격을 할 때마다 방어력의 {0}만큼의 추가 스킬 피해를 입힙니다.\n\n마이는 <color=#FFC62E>미스릴 크롭</color>, <color=#FFC62E>아오자이</color>, <color=#FFC62E>팬텀 자켓</color>, <color=#FFC62E>쿠튀리에</color>를 제작할 수 있습니다.
-Skill/Group/Desc2/1045200┃마이가 양 손의 숄을 크게 펼쳐 범위 안의 적들에게 {20}의 스킬 피해를 입히고 {5}초 동안 패턴을 부여합니다.\n\n패턴의 대상이 다시 <color=white>드레이프</color>에 적중당하면 {6}초 동안 이동 속도가 {7} 감소됩니다.
-Skill/Group/Desc2/1045300┃마이가 숄로 몸을 감싸 장막을 형성하여, {2}초 동안, 기본 공격의 피해를 {3}만 받는 상태가 되며 이동 속도가 최대 {4}까지 서서히 증가하고, 방어력이 {10} 증가합니다. 지속 시간이 끝날 때 범위 안의 적들에게 {20}의 스킬 피해를 입힙니다.\n최대 {5}회까지 충전되며, 기본 공격을 할 때마다 충전 시간이 {7}초 감소됩니다.
-Skill/Group/Desc2/1045400┃마이가 지정한 적 실험체, 아군, 야생동물, 카메라로 빠르게 이동하며 자신에게 {2}초 동안 지속되는 보호막을 생성합니다. 대상이 아군이면 아군에게도 동일한 보호막을 생성합니다.\n적 실험체에게 이동 : {22} \n아군, 야생동물, 카메라에게 이동 : {20}\n\n<color=white>스킬 재사용</color>: 방향을 지정하여 스킬을 사용하면 마이가 빠르게 이동하며, 경로상의 적들에게 {21}의 스킬 피해를 입히고 {8}초 동안 도발에 걸리게 합니다. {9}초 이내에 다시 사용해야 합니다.
-Skill/Group/Desc2/1045400┃마이가 지정한 적 실험체, 아군, 야생동물, 카메라로 빠르게 이동하며 자신에게 {2}초 동안 지속되는 보호막을 생성합니다. 대상이 아군이면 아군에게도 동일한 보호막을 생성합니다.\n적 실험체에게 이동 : {22} \n아군, 야생동물, 카메라에게 이동 : {20}\n\n<color=white>스킬 재사용</color>: 방향을 지정하여 스킬을 사용하면 마이가 빠르게 이동하며, 경로상의 적들에게 {21}의 스킬 피해를 입히고 {8}초 동안 도발에 걸리게 합니다. {9}초 이내에 다시 사용해야 합니다.
-Skill/Group/Desc2/1045500┃지정한 아군 또는 자신을 숄로 묶어 {6}초 동안 어떠한 피해도 받지 않는 제압 상태로 만들고, 풀릴 때 {21}만큼 체력을 회복시키고, <color=white>숄 장막</color>의 효과를 발동시킵니다.\n아군에게 사용하면 대상을 자신의 앞으로 끌어옵니다.
-Skill/Group/Desc2/1046100┃에이든이 스킬로 적을 적중하면 <color=white>전하</color>를 획득합니다.\n\n<color=white>전하</color>가 모두 충전됐을 때, 주변에 적이 없거나 <color=#FFB62F>백스텝</color>을 사용하면 {4}초 동안 <color=white>과전하</color> 상태가 됩니다. 이때 전하가 <color=white>탄환</color>으로 변경되고 기본 공격이 원거리로 변경됩니다.\n\n<color=white>과전하</color> 상태에서는 기본 공격 속도가 {1}, 치명타 피해가 {2} 감소하지만 기본 공격이 치명타로 적용되며, 기존 치명타 확률 1% 마다 {3}의 치명타 피해로 전환됩니다.<color=white>과전하</color> 상태가 종료되면, 이동 속도가 {5}초 동안 {6} 증가합니다.
-Skill/Group/Desc2/1046200┃<color=#FFB62F>뇌격</color>: 전류가 흐르는 검을 내질러 1명에게 {0}의 기본 공격 피해를 입히고, <color=white>전하</color>를 {2}개 추가 획득합니다. 기본 공격 시 쿨다운이 {3}초 감소합니다.\n\n<i><color=white>과전하</color> 상태에서는 <color=#FFB62F>전자포</color>로 변경됩니다.</i>\n\n<color=#FFB62F>전자포</color>: 지정한 방향으로 1개의 탄환을 발사하여, 적중한 적 1명에게 {1}의 기본 공격 피해를 입히고 이동 속도를 {6}초 동안 {7} 느려지게 합니다. 이 스킬을 적중하면 쿨다운이 {9} 감소합니다.\n\n이 스킬은 쿨다운 감소 스탯의 영향을 받지 않습니다.
-Skill/Group/Desc2/1046300┃에이든이 무기에 전류를 모아 다음 공격을 준비하며, 이동 속도가 약간 느려집니다.\n다시 사용하면, 주변 적들에게 충전 시간에 비례해 {0} ~ {1}의 스킬 피해를 입히고, 이동 속도를 {4}초 동안 {5} 느려지게 합니다. 최대 충전 시, 범위 끝에 {6}초 동안 유지되는 <color=white>전기장</color>을 남깁니다. \n\n<color=white>전기장</color>: 전기장에 닿는 적은 {2}의 스킬 피해를 입고, {9}초 동안 속박됩니다.
-Skill/Group/Desc2/1046400┃<color=green>지속 효과</color>: <color=white>전하</color>를 모두 충전하면, 이 스킬의 쿨다운이 초기화됩니다.\n\n<color=#FFB62F>백스텝</color>: 뒤로 도약하며 전류가 담긴 총알을 발사합니다. 맞은 적에게 {0}의 스킬 피해를 입히고 시야를 공유하는 표식을 남겨 <color=#FFB62F>볼트 러시</color>를 사용할 수 있습니다. 사용 후, {2}초 동안 이동 속도가 {3} 증가합니다.\n\n<color=#FFB62F>볼트 러시</color>: 표식이 있는 적을 관통하며 {1}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1046500┃지정한 위치에 낙뢰를 떨어뜨려 {0}의 스킬 피해를 입히고, 이동 속도를 {2}초 동안 {3} 느려지게 합니다. 낙뢰의 중심에 맞은 적은 {1}의 스킬 피해를 받고 {6}초 동안 기절됩니다.\n이후, 두 번째 낙뢰가 떨어져 {4}의 스킬 피해를 입히고 이동 속도를 {9}초 동안 {10} 느려지게 합니다.\n\n두 번째 낙뢰가 떨어지기 전에 스킬을 다시 사용하여 낙뢰가 떨어진 위치로 이동할 수 있습니다. 이때, 두 번째 낙뢰는 즉시 떨어집니다. 첫 번째 낙뢰가 적 실험체에게 적중 후 이동 시, 에이든은 <color=white>전하</color>를 모두 충전합니다.
-Skill/Group/Desc2/1047100┃라우라
-Skill/Group/Desc2/1048100┃띠아
-Skill/Group/Desc2/1049100┃펠릭스
-Skill/Group/Desc2/1050100┃엘레나가 기본 공격이나 스킬로 적을 공격하면 <color=white>얼음 지대</color>를 생성하고, 그 위의 적에게 <color=white>냉기</color> 효과를 부여합니다. 엘레나가 스킬로 피해를 입히면 대상의 <color=white>냉기</color>가 {6} 증가합니다.<color=white>냉기</color>가 점점 차오르는 동안 적은 이동 속도가 {0} 감소하며, <color=white>냉기</color>가 {1}까지 차오르면 적은 {2}초 동안 기절하며 <color=white>빙결</color> 상태가 됩니다.\n\n<color=white>빙결</color>: 엘레나 또는 엘레나의 아군에게 공격을 받으면 {3}의 추가 스킬 피해를 입고 <color=white>빙결</color> 상태가 해제됩니다.
-Skill/Group/Desc2/1050200┃엘레나가 전방의 적에게 {0}의 스킬 피해를 입힙니다. 일정 시간 뒤 얼음이 터지며, 동일한 범위에 {1}의 스킬 피해를 한 번 더 입히고, <color=white>겨울여왕의 영지</color> 쿨다운이 {6} 감소합니다.
-Skill/Group/Desc2/1050300┃엘레나가 지정한 방향으로 회전하며 경로상의 적에게 {0}의 스킬 피해를 입히고, <color=white>크리스탈 엘레강스</color> 쿨다운을 {6} 감소시키며 자신의 방어력을 {3} 증가시킵니다.\n\n<color=white>얼음 지대</color>위에서 사용하면 <color=white>더블 악셀</color>의 이동 거리가 증가하며 <color=white>더블 악셀</color> 쿨다운의 {7}를 돌려받습니다.
-Skill/Group/Desc2/1050310┃엘레나가 지정한 방향으로 회전하며 경로상의 적에게 {0}의 스킬 피해를 입히고, <color=white>크리스탈 엘레강스</color> 쿨다운을 {6} 감소시키며 자신의 방어력을 {3} 증가시킵니다.\n\n<color=white>얼음 지대</color>위에서 사용하면 <color=white>더블 악셀</color>의 이동 거리가 증가하며 <color=white>더블 악셀</color> 쿨다운의 {7}를 돌려받습니다.
-Skill/Group/Desc2/1050400┃<color=green>지속 효과</color>: 엘레나는 1초마다 {4}의 <color=white>스텝 시퀀스</color>를 회복합니다. <color=white>얼음 지대</color> 위에서는 1초마다 {5}의 <color=white>스텝 시퀀스</color>를 회복합니다.\n\n엘레나가 1초마다 {3}의 <color=white>스텝 시퀀스</color>를 소모하여 지정한 방향으로 스케이트를 타고 이동하며 경로상의 적에게 {0}의 스킬 피해를 입힙니다. 이 효과는 한 번만 적용됩니다.\n엘레나의 이동 경로엔 짧은 시간 동안 <color=white>얼음 지대</color>의 효과가 적용되며 이동 중에 약간의 방향을 변경할 수 있습니다.
-Skill/Group/Desc2/1050500┃엘레나가 지정한 범위에 <color=white>얼음 지대</color>를 형성합니다. 안쪽의 범위로 적을 적중시키면 {1}의 스킬 피해를 입히며, 솟아난 얼음에 의해 즉시 기절하며 <color=white>빙결</color> 상태가 됩니다. <color=white>얼음 지대</color>에 닿은 적은 {0}의 스킬 피해를 입습니다.
-Skill/Group/Desc2/1051100┃프리야는 머리 방어구를 장착하거나 해제할 수 없으며, <color=white>자연의 응답</color> 레벨이 증가하면 머리 방어구가 강화됩니다.\n\n프리야는 <color=white>개화의 선율</color>과 <color=white>포르타멘토</color>로 사라스바티의 꽃을 생성하며, {0}초 후 사라스바티의 꽃은 만개 상태가 됩니다. 만개된 사라스바티의 꽃에 <color=white>개화의 선율</color>이나 <color=white>포르타멘토</color>를 적중시키면 효과가 발동되며 사라스바티의 꽃이 사라집니다.\n\n사라스바티의 꽃은 {1}초 동안 지속되고, 프리야와 일정거리 이상 멀어지면 즉시 사라집니다. 부쉬에 생성한 사라스바티의 꽃은 즉시 만개 상태가 됩니다.
-Skill/Group/Desc2/1051200┃프리야가 사라스바티의 꽃을 위한 연주를 하여 범위 안의 적들에게 {20}의 스킬 피해를 입히며 사라스바티의 꽃을 생성합니다. 효과 범위 안에 이미 사라스바티의 꽃이 있었다면 생성되지 않고, 만개 효과를 발동시키며 충전시간이 {5} 감소합니다.\n\n<color=white>만개 효과</color>: 만개된 사라스바티의 꽃을 스킬로 적중하면, 꽃잎이 흩날리며 범위 안의 적들에게 {21}의 스킬 피해를 입히고 밀어냅니다.
-Skill/Group/Desc2/1051300┃<color=green>기본 효과</color>: 프리야는 자신이 생성한 사라스바티의 꽃 위에 있으면 이동 속도가 {4}초 동안 {5} 증가하며, 아군도 꽃 위에 있으면 {11} 증가합니다.\n\n프리야가 관통하는 음파를 전방으로 발사하여 적들에게 {20}의 스킬 피해를 입히고, 이동 속도를 {6}초 동안 {7}만큼 느려지게 합니다.스킬을 사용한 후 {9}초 안에 기본 공격을 하면 적의 발 밑에 사라스바티의 꽃을 생성합니다.\n\n<color=white>만개 효과</color>: 만개된 사라스바티의 꽃을 스킬로 적중하면, 범위 안의 프리야와 모든 아군 실험체에게 {8}초 동안 지속되며 {21}의 피해를 흡수하는 보호막을 생성합니다.
-Skill/Group/Desc2/1051400┃프리야가 연속으로 3번 연주를 하며 연주 범위 안의 적들에게 각각 {20}의 스킬 피해를 입힙니다. 피해를 2번 입은 대상은 이동 속도가 {2}초 동안 {5} 감소되고, 3번 입은 대상은 {3}초 동안 속박됩니다.\n\n연주하는 동안 이동 속도가 {6} 증가하며, <color=white>대지의 메아리</color> 스킬을 제외한 모든 스킬을 사용할 수 있습니다.
-Skill/Group/Desc2/1051500┃프리야가 자연을 깨우는 연주를 하여 대지의 메아리를 자신의 위치에 남기고, {4}초 동안 저지불가 및 스킬과 기본 공격을 사용할 수 없는 상태가 되며, 받는 피해량이 {7} 감소합니다.\n대지의 메아리는 프리야가 있던 위치에서 퍼져나가며 {20}의 스킬 피해를 입히고, 바깥 쪽 범위 부터 순차적으로 범위 안의 적들에게 {21}의 스킬 피해를 입히며 {6}초 동안 춤을 추게 합니다.\n\n범위 안의 사라스바티의 꽃들은 모두 열매를 맺고, 프리야나 아군이 열매를 획득하면 최대 체력의 {5}만큼 즉시 회복합니다.
-Skill/Group/Desc2/1052100┃아디나는 스킬을 사용할 때, 수정구 칸(체력바 아래 2번째 칸)에 담긴 천체를 사용합니다.\n\n천체를 모두 소모하면 {0}초 동안 천체를 채우는 <color=white>별읽기</color> 상태가 되어 이동 속도가 {1} 증가합니다.
-Skill/Group/Desc2/1052200┃지정한 방향으로 천체를 발사하고, 적중한 적들에게 {5}의 스킬 피해를 입힙니다.\n\n<color=white>천체 추가 효과</color>\n<color=#80B9FF>해 </color>: 피해량이 {7} 증가합니다.\n<color=#6B71FF>달 </color>: 1명에게만 적중하며, {2}초 동안 기절시킵니다.\n<color=#A97EEF>별 </color>: 혜성이 빠르게 날아가고, 지나간 자리에 {3}초 동안 꼬리를 남겨 아군의 이동 속도를 {4} 증가시킵니다.\n\n<color=#80B9FF>해 컨정션 효과</color>: 해가 연속되면, 거대한 해를 발사하여 {6}의 스킬 피해를 입히고, {9}초 동안 {10}의 지속 피해로 불태웁니다.
-Skill/Group/Desc2/1052300┃지정한 위치에 천체를 잇는 삼각형을 그립니다. 적중한 적들에게 {10}의 스킬 피해를 입히고, 이동 속도를 {2}초 동안 {3} 느려지게 합니다.\n\n<color=white>천체 추가 효과</color>\n<color=#80B9FF>해 </color>: 피해량이 {12} 증가합니다.\n<color=#6B71FF>달 </color>: 적중한 적을 {4}초 동안 기절시킵니다.\n<color=#A97EEF>별 </color>: 삼각형이 빠르게 그려지며, 범위 내 아군에게 {5}초 동안 {13}의 보호막을 줍니다.\n\n<color=#6B71FF>달 컨정션 효과</color>: 달이 연속되면, 삼각형이 두 번 그려져 각각 {11}의 스킬 피해를 입히며, 첫 번째 삼각형은 대상을 {4}초 동안 기절시키고, 두 번째 삼각형은 대상의 이동 속도를 {6}초 동안 {7} 느려지게 합니다.
-Skill/Group/Desc2/1052400┃적 또는 아군에게 천체를 붙여, 적에게는 {5}의 스킬 피해를 입힙니다. 천체는 잠시 후 낙하하며 원형 범위의 적에게 {5}의 스킬 피해를 입힙니다.\n\n<color=white>천체 추가 효과</color>\n<color=#80B9FF>해 </color>: 각 피해량이 {6} 증가합니다.\n<color=#6B71FF>달 </color>: 범위 내 적을 {4}초 동안 기절시킵니다.\n<color=#A97EEF>별 </color>: 빠르게 낙하하며, 각 피해가 아군의 체력을 {7} 회복시킵니다.\n\n<color=#A97EEF>별 컨정션 효과</color>: 별이 연속되면, 낙하한 별이 {10}초 동안 성운을 남겨 매초 아군의 체력을 {8}, 스태미나를 {9}만큼 회복시킵니다.
-Skill/Group/Desc2/1052500┃<color=green>사용 효과</color>: <color=white>수정구에 비친 운명</color>\n수정구 칸(HP바 아래 2번째 칸)에 담긴 천체를 저장한 천체와 맞바꾸고, 예견된 운명을 바꿉니다.\n\n<color=green>지속 효과</color>: <color=white>컨정션</color>\n2번째 칸과 3번째 칸이 같은 천체로 연속하면 강력한 컨정션 스킬을 사용할 수 있습니다. 컨정션 스킬의 일부 효과는 이 스킬의 레벨로 강화됩니다.\n<color=#80B9FF>해x2</color>: <color=#FFB62F>루미너리(Q)</color> 스킬이 강화되며, 피해량이 증가합니다.\n<color=#6B71FF>달x2</color>: <color=#FFB62F>트라인 에스펙트(W)</color> 스킬이 강화되며, 피해량이 증가합니다.\n<color=#A97EEF>별x2</color>: <color=#FFB62F>폴 디그니티(E)</color> 스킬이 강화되며, 지속 회복량이 증가합니다.\n\n컨정션 스킬은 <color=#FFB62F>별읽기(P)</color> 마다 한 번만 사용할 수 있습니다.
-Skill/Group/Desc2/1053100┃<color=#FFB62F>충격</color>: 마커스가 밀어낸 적이 벽에 충돌하면 대상은 {4}초 동안 기절하며 {2}초 동안 이동 속도가 {3} 감소하고 {1}의 스킬 피해를 입으며 {0}초 동안 <color=white>충격</color> 상태가 됩니다.\n마커스가 밀어낸 적이 다른 야생동물 및 실험체에 충돌하면 충돌한 모든 대상에게 같은 효과를 부여하며 밀어냅니다.\n\n<color=#FFB62F>일격</color>: <color=white>충격</color> 상태의 적을 기본 공격 대상으로 지정 하면 저지 불가 상태로 돌진하며 {6}의 추가 스킬 피해를 입히고 마커스가 부여한 모든 <color=white>충격</color> 상태를 제거합니다.
-Skill/Group/Desc2/1053200┃마커스의 다음 기본 공격 {0}회 동안 공격 속도가 {1} 증가하고 기본 공격으로 {6}의 추가 스킬 피해를 입히고 추가 스킬 피해량의 {7}만큼 체력을 회복합니다. {4}초 동안 기본 공격을 하지 않으면 효과가 사라집니다.\n\n<color=#FFB62F>전투 교범</color> 스킬을 사용한 후 마커스는 {5}초 동안 적 실험체를 향해 이동할 때 이동 속도가 {2} 증가합니다.
-Skill/Group/Desc2/1053300┃마커스가 지정한 방향을 내려 찍어 적에게 {0}의 스킬 피해를 주고 {1}초 동안 공중에 띄웁니다.\n\n<color=white>균열</color> 영역 내에 있는 적에게 적중한다면 적중시킨 모든 적을 마커스의 등 뒤로 넘깁니다.
-Skill/Group/Desc2/1053400┃마커스가 지정한 방향으로 돌진하며, 처음 충돌한 적에게 {0}의 스킬 피해를 입히고 밀어냅니다.
-Skill/Group/Desc2/1053500┃마커스가 지정한 위치로 도약해 지면을 내려 찍습니다. 해당 지역을 {4}초 동안 <color=white>균열</color> 상태로 만들고 피격 당한 적들은 {0}의 스킬 피해를 입고 {2}초 동안 이동 속도가 {3} 느려졌다가 빠르게 회복됩니다.\n<color=white>균열</color> 지역에서 에어본이나 넉백의 영향을 받으면 <color=white>충격</color> 피해를 입고 <color=white>충격</color> 상태가 됩니다. 이 효과는 한 <color=white>균열</color> 지역에서는 한 번만 받습니다.\n\n적에게 <color=white>충격</color> 상태를 부여하면 <color=#FFB62F>지각변동</color>의 쿨다운이 {5}초 감소합니다.
-Skill/Group/Desc/1054100┃칼라는 공격 속도가 <color=#ADA478>{0}</color>로 제한되며, 초과한 공격 속도 <color=#ADA478>{1}</color>마다 스킬 증폭이 <color=#DDA0DD>{2}</color>증가합니다.\n\n칼라는 {3}초 동안 장전 게이지가 충전되며, 충전되지 않은 기본 공격은 장전 게이지를 일부 소모하여 {6}의 스킬 피해를 입힙니다. 완전히 충전된 기본 공격은 충전된 장전 게이지를 전부 소모하여 {4}의 스킬 피해를 입히며 {7}초 동안 이동 속도를 {8} 감소시키고, 연결이 안 된 작살을 지면에 설치합니다.
-Skill/Group/Desc/1054200┃작살을 발사하여 경로상의 적에게 {1}의 기본 공격 피해를 입히고, 도착 지점에 작살을 설치합니다. 설치된 작살은 칼라와 최대 {2}개까지 연결되며, {3}m 이상 멀어지면 연결이 끊어지고 {4}초 동안 지면에 유지됩니다. 두 번째 대상부터는 {6}의 피해를 입힙니다.\n\n<color=white>관통 작살</color>의 쿨다운과 시전 시간은 <color=#ADA478>공격 속도(최대 공격 속도{5})</color>에 따라 감소합니다.
-Skill/Group/Desc/1054300┃칼라와 연결된 작살을 회수하여 경로상의 적에게 {0}의 스킬 피해를 입히고, {1}초 동안 이동 속도를 {2} 감소시킵니다. 피해를 입혔다면 장전 게이지를 {3} 획득하고, 적중한 수에 따라 작살 기동의 쿨다운이 {4}초 감소합니다.\n\n회수는 쿨다운 감소 효과의 영향을 받지 않습니다.
-Skill/Group/Desc/1054400┃지면에 설치된 작살을 중심으로 지정한 방향으로 점프하여, {0}의 스킬 피해를 입힙니다. 연결이 끊어진 작살에 사용하면 다시 연결됩니다.
-Skill/Group/Desc/1054500┃지정한 지점에 거대한 작살을 설치하여 {0}m 범위 안의 적들을 사슬로 묶어 {1}의 스킬 피해를 입히고 이동 속도를 {2} 감소시킵니다. {3}초가 지난 후 사슬을 벗어나지 못한 적들은 거대한 작살 쪽으로 당겨지며 {4}의 스킬 피해를 입고 {5}초 동안 기절합니다.
-Skill/Group/Desc2/1055100┃에스텔
-Skill/Group/Desc/1056100┃피올로는 비전투 상태가 되면 [단련의 성과] 스택을 {1}개 획득합니다. 휴식을 {2}초 이상 지속 후 종료 시 추가로 {3}개 획득합니다. [단련의 성과]를 보유하고 있을 시, [응징자] 스킬 사용 후 다음 기본 공격에 {4}의 스킬 피해를 추가로 입힙니다.
-Skill/Group/Desc/1056200┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 {1}의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 {2}의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 {3}의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5}% 감소시킵니다. 바깥 범위의 적에겐 {6}의 스킬 피해를 입힙니다.
-Skill/Group/Desc/1056210┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 {1}의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 {2}의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 {3}의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5}% 감소시킵니다. 바깥 범위의 적에겐 {6}의 스킬 피해를 입힙니다.
-Skill/Group/Desc/1056300┃<color=#ffffC2>튕겨내기 :</color> 피올로가 자신 중심으로 쌍절곤을 빠르게 휘둘러, 0.8초 동안 저지불가 상태가 되며 적의 투사체를 튕겨내 소멸시킵니다. 스킬 종료 후, <color=#ffffff>휘두르기</color>가 활성화됩니다.\n\n<color=#ffffC2>휘두르기 :</color> 피올로가 뛰어올라 쌍절곤을 크게 휘두르며 주변의 적들에게 {8}의 스킬 피해를 입힙니다. 피올로는 휘두르는 동안 이동 속도가 {7}% 증가합니다.
-Skill/Group/Desc/1056310┃<color=#ffffC2>튕겨내기 :</color> 피올로가 자신 중심으로 쌍절곤을 빠르게 휘둘러, 0.8초 동안 저지불가 상태가 되며 적의 투사체를 튕겨내 소멸시킵니다. 스킬 종료 후, <color=#ffffff>휘두르기</color>가 활성화됩니다.\n\n<color=#ffffC2>휘두르기 :</color> 피올로가 뛰어올라 쌍절곤을 크게 휘두르며 주변의 적들에게 {8}의 스킬 피해를 입힙니다. 피올로는 휘두르는 동안 이동 속도가 {7}% 증가합니다.
-Skill/Group/Desc/1056400┃<color=#ffffC2>사슬묶기 :</color> 피올로가 쌍절곤을 돌리며 던질 준비를 합니다. 준비 시간에 따라 사거리와 피해량이 증가합니다. 다시 사용하면 지정한 방향으로 쌍절곤을 던집니다. 적중 시 {1} ~ {2}의 스킬 피해를 주고 대상에게 날아가 {3} ~ {4}의 스킬 피해를 주며 밀쳐내고 <color=#ffffff>올려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>올려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 올려쳐 대상에게 {5}의 스킬 피해를 입히고 {6}초 동안 공중에 띄웁니다.
-Skill/Group/Desc/1056410┃<color=#ffffC2>사슬묶기 :</color> 피올로가 쌍절곤을 돌리며 던질 준비를 합니다. 준비 시간에 따라 사거리와 피해량이 증가합니다. 다시 사용하면 지정한 방향으로 쌍절곤을 던집니다. 적중 시 {1} ~ {2}의 스킬 피해를 주고 대상에게 날아가 {3} ~ {4}의 스킬 피해를 주며 밀쳐내고 <color=#ffffff>올려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>올려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 올려쳐 대상에게 {5}의 스킬 피해를 입히고 {6}초 동안 공중에 띄웁니다.
-Skill/Group/Desc/1056500┃<color=green>지속 효과:</color> <color=#ffffff>내려치기</color>, <color=#ffffff>휘두르기</color>, <color=#ffffff>올려치기</color>가 활성화 될 때마다 [기합]을 1개 획득합니다. [기합]은 비전투 상태에서 3초마다 1개씩 사라집니다.\n\n[기합]을 1개 사용하여 시전 방향으로 돌진합니다. 관통한 대상에게는 {3}의 스킬 피해를 입힙니다. 실험체 적중 시, 피올로는 {0}만큼 피해를 흡수하는 보호막을 {4}초 동안 획득합니다.\n스킬 사용 후, 기본 공격을 하면 무기 스킬과 응징자를 제외한 스킬들의 쿨다운이 {1}초 감소합니다. [단련의 성과] 보유 시에는 공격 속도가 {2} 증가합니다.
-Skill/Group/Desc/1056510┃<color=green>지속 효과:</color> <color=#ffffff>내려치기</color>, <color=#ffffff>휘두르기</color>, <color=#ffffff>올려치기</color>가 활성화 될 때마다 [기합]을 1개 획득합니다. [기합]은 비전투 상태에서 3초마다 1개씩 사라집니다.\n\n[기합]을 1개 사용하여 시전 방향으로 돌진합니다. 관통한 대상에게는 {3}의 스킬 피해를 입힙니다. 실험체 적중 시, 피올로는 {0}만큼 피해를 흡수하는 보호막을 {4}초 동안 획득합니다.\n스킬 사용 후, 기본 공격을 하면 무기 스킬과 응징자를 제외한 스킬들의 쿨다운이 {1}초 감소합니다. [단련의 성과] 보유 시에는 공격 속도가 {2} 증가합니다.
-Skill/Group/Desc2/1057100┃<color=#D6D6D6>감시 카메라</color>와 <color=#D6D6D6>나뭇가지</color>를 조합하여 잠입 효과를 가진 <color=#35CB38>위장 카메라</color>를 제작할 수 있습니다.\n\n마르티나의 4K UHD 카메라는 기본 공격을 할 때마다 <color=#ffd775>{11}</color>의 피해를 입히며 전력을 소모하고 충전이 완료될 때까지 기본 공격을 할 수 없습니다. 충전 시간은 <color=white>녹화</color> 스킬 레벨이 높아질수록 감소합니다.\n충전에 걸리는 시간: {0}초\n\n마르티나의 기본 공격은 대상자의 시야를 제공 받으며, 공격 속도가 50% 증가할 때마다 공격력이 {3}씩 증가합니다.\n\n<color=#ffffff>[취재 중]</color>\n종군 기자인 마르티나는 취재 중일 때 직감적으로 교전이 일어나는 지역을 파악할 수 있습니다. {1}m 범위 내에서 적 실험체 간 교전이 발생한 지점에 특수핑이 표시됩니다.\n마르티나가 적에게 기본 공격을 {4}회 연속해서 피해를 입히면 표식을 부여합니다. 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 {13}의 스킬 피해를 입힙니다.\n\n<color=#ffd775>[방송 중]</color>\n기본 공격이 <color=#ffd775>{12}</color>의 피해를 입히며, 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 {14}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1057110┃<color=#D6D6D6>감시 카메라</color>와 <color=#D6D6D6>나뭇가지</color>를 조합하여 잠입 효과를 가진 <color=#35CB38>위장 카메라</color>를 제작할 수 있습니다.\n\n마르티나의 4K UHD 카메라는 기본 공격을 할 때마다 <color=#ffd775>{11}</color>의 피해를 입히며 전력을 소모하고 충전이 완료될 때까지 기본 공격을 할 수 없습니다. 충전 시간은 <color=white>녹화</color> 스킬 레벨이 높아질수록 감소합니다.\n충전에 걸리는 시간: {0}초\n\n마르티나의 기본 공격은 대상자의 시야를 제공 받으며, 공격 속도가 50% 증가할 때마다 공격력이 {3}씩 증가합니다.\n\n<color=#ffffff>[취재 중]</color>\n종군 기자인 마르티나는 취재 중일 때 직감적으로 교전이 일어나는 지역을 파악할 수 있습니다. {1}m 범위 내에서 적 실험체 간 교전이 발생한 지점에 특수핑이 표시됩니다.\n마르티나가 적에게 기본 공격을 {4}회 연속해서 피해를 입히면 표식을 부여합니다. 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 {13}의 스킬 피해를 입힙니다.\n\n<color=#ffd775>[방송 중]</color>\n기본 공격이 <color=#ffd775>{12}</color>의 피해를 입히며, 표식이 부여된 적에게 스킬 적중 시 표식이 소모되며 {14}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1057200┃<color=#ffffff>[취재 중]</color>\n마르티나가 지정한 방향을 촬영하여 {6}의 스킬 피해를 입힙니다. 스킬 적중 시 쿨다운이 {2} 감소하고, 표식을 소모시키면 마르티나의 이동 속도가 {3}초 동안 {4} 증가합니다.\n\n<color=#ffd775>[방송 중]</color>\n스킬 사거리와 피해량이 증가하며 표식을 소모시키면 이동 속도와 공격 속도가 증가합니다.
-Skill/Group/Desc2/1057210┃마르티나가 지정한 방향을 촬영하여 {8}의 스킬 피해를 입힙니다. 스킬 적중 시 쿨다운이 {2} 감소하고, 표식을 소모시키면 마르티나의 이동 속도가 {3}초 동안 {4} 증가하며 공격 속도가 {5}초 동안 {6} 증가합니다.
-Skill/Group/Desc2/1057300┃<color=#ffffff>[취재 중]</color>\n마르티나가 {0}초 동안 유지되는 소형 카메라를 설치하여 주변 시야를 확보합니다. <color=white>빨리감기</color> 스킬로 소형 카메라를 적중 시 소형 카메라가 마르티나가 있는 방향을 촬영하여 적에게 {14}의 스킬 피해를 입히고 이동 속도를 {3}초 동안 {4} 느려지게 합니다. 소형 카메라는 최대 {5}개까지 보유할 수 있으며, 한 번에 {5}개까지 설치할 수 있습니다.\n\n<color=#ffd775>[방송 중]</color>\n소형 카메라 촬영이 적을 속박시키며 최대 보유 및 설치 가능 수가 증가합니다.
-Skill/Group/Desc2/1057310┃마르티나가 {0}초 동안 유지되는 소형 카메라를 설치하여 주변 시야를 확보합니다. <color=white>빨리감기</color> 스킬로 소형 카메라를 적중 시 소형 카메라가 마르티나가 있는 방향을 촬영하여 적에게 {15}의 스킬 피해를 입히고 {9}초 동안 속박 시킵니다. 소형 카메라는 최대 {10}개까지 보유할 수 있으며, 한 번에 {10}개까지 설치할 수 있습니다.
-Skill/Group/Desc2/1057400┃<color=#ffffff>[취재 중]</color>\n마르티나가 현재 위치에 비디오테이프를 남기고 지정한 방향으로 도약합니다. 이후 최대 7초 동안 되감기 상태를 유지합니다. 되감기 상태 동안 마르티나의 이동 속도가 {0} 증가합니다.\n\n되감기 상태가 종료되면 모든 방해 면역 상태로 비디오테이프로 빠르게 돌아오며 마르티나에 닿은 적은 이동 속도가 {3}초 동안 {4} 느려집니다.\n\n재사용 시: 비디오테이프로 더 일찍 돌아옵니다.\n\n<color=#ffd775>[방송 중]</color>\n비디오테이프로 돌아올 때 마르티나에 닿은 적이 기절하게 되며 되감기 상태 동안 실험체로부터 받은 피해량의 일부만큼 체력을 회복합니다.
-Skill/Group/Desc2/1057410┃마르티나가 비디오테이프로 돌아옵니다.
-Skill/Group/Desc2/1057430┃마르티나가 현재 위치에 비디오테이프를 남기고 지정한 방향으로 도약합니다. 이후 최대 5초 동안 되감기 상태를 유지합니다. 되감기 상태 동안 마르티나의 이동 속도가 {0} 증가합니다.\n\n되감기 상태가 종료되면 모든 방해 면역 상태로 비디오테이프로 빠르게 돌아오며 마르티나에 닿은 적은 {6}의 스킬 피해를 입고, {3}초 동안 기절합니다. 마르티나는 비디오테이프로 돌아온 뒤 되감기 상태 동안 실험체로부터 받은 피해의 {4}만큼 체력을 회복합니다.\n\n재사용 시: 비디오테이프로 더 일찍 돌아옵니다.
-Skill/Group/Desc2/1057440┃마르티나가 비디오테이프로 돌아옵니다.
-Skill/Group/Desc2/1057500┃<color=#ffffff>[취재 중]</color>\n마르티나가 최대 4초 동안 지정한 방향을 촬영합니다. 촬영하는 동안 범위 내 촬영 대상이 들어올 경우 녹화 지속 시간 동안 이동 속도가 {11} 증가합니다. 촬영에 성공하면 대상에 따라 <color=white>녹화 중첩</color>을 획득하고 {0}초 동안 이동 속도가 {1} 증가합니다.\n\n<color=white>녹화 중첩</color>을 {3}개 이상 쌓으면 마르티나가 취재를 마치고 <color=#ffd775>방송</color>을 시작하며 스킬 위력이 강화됩니다.\n\n<color=#819FF7>촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 2개의 대상을 {4}초 이상 촬영 시 녹화 중첩 {5}와 무기 숙련도 {6} 획득.\n<color=#819FF7>시체 촬영 조건</color>: <color=#2ECCFA>촬영 대상</color> 중 1개의 시체를 {10}초 이상 촬영 시 녹화 중첩 {7}과 무기 숙련도 {8} 획득. (최대: {9}중첩 획득 가능, 동일한 시체 중복 촬영 불가)\n<color=#2ECCFA>촬영 대상</color>: 적 실험체, 생명의 나무, 운석, 알파, 오메가, 위클라인, 감마\n\n촬영 대상 중 생명의 나무와 운석을 제외한 대상은 촬영을 한 이후 {24}초 동안 재촬영이 불가능합니다.\n\n<color=#ffd775>[방송 중]</color>\n마르티나가 지정한 방향을 촬영하여 적에게 피해를 입힙니다. 스킬이 종료될 때 더 큰 피해를 주며 가운데에 있는 적들을 기절시킵니다.
-Skill/Group/Desc2/1057510┃마르티나가 지정한 방향을 촬영하여 적중한 적의 방어력을 {4}만큼 감소시키며 1.5초에 걸쳐 스킬 가장자리의 적들에게 {20}의 스킬 피해를 입히고 가운데에 있는 적들에게 {21}의 스킬 피해를 입힙니다.\n\n녹화 지속 시간이 종료될 때 스킬 가장자리의 적들에게 {22}의 스킬 피해를 입히고. 가운데에 있는 적들에게 {23}의 스킬 피해를 입히고, {9}초 동안 기절시킵니다.
-Skill/Group/Desc2/1058100┃<color=white>죽음의 상인</color>: 헤이즈는 장전을 하는 대신, {0}초 동안 웨폰 케이스에서 탄창이 꽉찬 새 돌격 소총을 꺼냅니다. 꺼내는 동안 기본 공격을 할 수 없지만, 이후 첫 기본 공격은 {1}의 추가 스킬 피해를 입히며, 실험체에게 적중하면 이동 속도가 {2}초 동안 {3} 증가합니다. <color=white>죽음의 상인</color> 효과는 돌격 소총 폼에서만 적용됩니다.\n\n<color=white>웨폰 케이스</color>: 헤이즈는 각 스킬마다 다른 종류의 총기를 활용하며, 사용이 끝나면 웨폰 케이스에서 새로운 돌격 소총을 꺼내고 <color=white>죽음의 상인</color> 효과를 시작합니다.
-Skill/Group/Desc2/1058200┃<color=white>돌격 소총 폼</color>: 유탄 발사기를 격발하여 적중한 적에게 {0}의 스킬 피해를 입힙니다. 중심에 맞은 적에게는 {1}의 스킬 피해를 입힙니다.\n\n유탄 탄환은 최대 {2}개까지 충전됩니다.
-Skill/Group/Desc2/1058210┃<color=white>기관단총 폼</color>: {0}초 동안 정신을 집중하여 전방에 기관단총을 연사하며, {1}의 스킬 피해를 입히고, 기관단총 폼을 종료합니다.
-Skill/Group/Desc2/1058220┃<color=white>로켓 런처 폼</color>: 적을 관통하는 가속 로켓을 발사합니다. 적중한 적에게 {0}의 스킬 피해를 입히고 {2}초 동안 {3} 느려지게 하며, 절반만큼의 피해는 대상의 후방으로 퍼집니다. 로켓은 잠시 후 가속되며, 범위가 넓어지고 피해가 {1} 증가합니다.\n\n이 스킬은 기본 공격과 쿨다운을 공유하며, 쿨다운 감소 스탯의 영향을 받지 않습니다.
-Skill/Group/Desc2/1058300┃뒤로 한 걸음 물러서서 전방에 산탄총을 발사하여 적중한 적에게 {0}의 스킬 피해를 입히고, {1}초 동안 기절시킵니다.\n\n<color=white>기관단총 폼</color> 혹은 <color=white>로켓 런처 폼</color>에서 사용한 경우, 폼을 해제하며 해당 스킬의 쿨다운을 {2} 추가로 감소시킵니다.
-Skill/Group/Desc2/1058400┃<color=white>기관단총 폼으로 전환</color>: 전방으로 짧게 돌진하고, {2}초 동안 {0}발 탄창의 기관단총 폼으로 전환합니다.\n\n기관단총 폼에서는 이동하면서 대상을 공격할 수 있으며, 공격 명령으로 대상을 변경할 수 있습니다. 각 공격은 {1}의 스킬 피해를 입히고, {3}번째 탄환마다 기본 공격 적중 시 효과가 적용됩니다. 폼을 유지하는 동안 오브젝트와 상호작용할 수 없으며, <color=white>40mm 유탄</color> 스킬이 <color=white>기관단총 연사</color> 스킬로 변경됩니다.\n\n기관단총 폼이 종료되면 남은 탄환 수에 비례해 최대 {4}의 쿨다운이 감소됩니다.
-Skill/Group/Desc2/1058410┃기관단총을 버리고, 웨폰 케이스에서 돌격 소총을 꺼냅니다.\n\n현재 타격 당 피해량: {1}
-Skill/Group/Desc2/1058500┃<color=white>로켓 런처 폼으로 전환</color>: 웨폰 케이스를 휘둘러 적의 이동 속도를 {3}초 동안 {4} 느려지게 하며 {2}의 스킬 피해를 입히고, {0}초 동안 {1}발 탄창의 로켓 런처 폼으로 전환합니다.\n\n로켓 런처 폼에서는 사거리와 공격 속도가 고정되고, 이동 속도가 {7} 감소합니다. 또한 기본 공격에 치명타가 적용되지 않으며, 피격된 대상 후방으로 퍼지는 {5}의 스킬 피해를 추가로 입힙니다. 폼을 유지하는 동안 <color=white>40mm 유탄</color> 스킬이 <color=white>엑셀러레이션 로켓</color> 스킬로 변경됩니다.\n\n로켓 런처 폼이 종료되면 남은 탄환 수에 비례해 최대 {6}의 쿨다운이 감소됩니다.
-Skill/Group/Desc2/1058510┃로켓 런처를 해제하고, 웨폰 케이스에서 돌격 소총을 꺼냅니다.\n\n현재 추가 스킬 피해량: {5}
-Skill/Group/Desc/1059100┃같은 적에게 {0}번째 공격을 할 때마다 {1}의 스킬 피해를 입히고, 이동 속도가 {3} 증가한 뒤 {4}초에 걸쳐 원래대로 돌아옵니다. 입힌 착취 피해량의 {5}만큼 아이작의 체력을 회복시킵니다. 야생 동물 상대로는 회복 효과가 {6}로 감소합니다.
-Skill/Group/Desc/1059200┃아이작이 적에게 돌진 후, 강하게 타격하여 {0}의 스킬 피해를 입힙니다.
-Skill/Group/Desc/1059300┃아이작이 무기의 경도를 높여 다음 기본 공격이나 기본 스킬을 강화해 {0}의 스킬 피해를 추가로 입힙니다. 이 스킬로 강화된 기본 공격 또는 기본 스킬이 착취를 발동시키면 기본 스킬의 쿨다운이 {1} 감소합니다.
-Skill/Group/Desc/1059400┃아이작이 재빠르게 돌진하고, {0}초 동안 다음 스킬을 준비합니다.\n\n재사용 시: 전방의 적들을 끌어당겨 보호막을 파괴하며 {1}의 스킬 피해를 입히고, {2}초 동안 기절시킵니다.
-Skill/Group/Desc/1059410┃아이작이 재빠르게 돌진하고, {0}초 동안 다음 스킬을 준비합니다.\n\n재사용 시: 전방의 적들을 끌어당겨 보호막을 파괴하며 {1}의 스킬 피해를 입히고, {2}초 동안 기절시킵니다.
-Skill/Group/Desc/1059500┃아이작이 지정한 지점을 강하게 내려치며 {0}의 스킬 피해를 입히고, 착취 표식이 없는 적들을 범위 밖으로 밀어버립니다. 대상의 착취 표식 중첩에 비례해 <color=white>대상의 잃은 체력 {1} ~ {3}</color>에 해당하는 추가 스킬 피해를 입히고, 잠시 동안 이동 속도를 {2} 감소시킵니다.
-Skill/Group/Desc2/1060100┃타지아
-Skill/Group/Desc2/1061100┃이렘은 다른 지역에 진입하면 경계하며 시야가 {0}만큼 증가합니다. 같은 지역에서 {1}초 동안 머물면 적응하며 시야 증가 대신 다른 능력이 강화됩니다.\n이렘일 때: 공격 속도 증가 {2}\n고양이일 때: 방어력 증가 {3}\n\n생선으로 만든 음식을 먹으면 음식 최대 회복량의 {4}만큼 체력을 즉시 회복합니다.
-Skill/Group/Desc2/1061200┃이렘이 바닥에 튕길 때마다 강해지는 공을 던져 범위 안의 적들에게 {0}에서 최대 {1}의 스킬 피해를 입힙니다.\n공은 적에게 피해를 입히면 더 이상 튕기지 않고, 물고기 표식을 생성합니다.
-Skill/Group/Desc2/1061210┃스킬을 사용하면 다음 기본 공격으로 대상에게 돌진하여 {0}의 추가 스킬 피해를 입힙니다. 고양이 방울 표식이 있는 대상을 공격하면 {5}초 동안 속박시킵니다.\n\n이후 {3}초 동안 {4}초마다 빠르게 연속 공격을 하여 범위 안의 적들에게 각각 {1}의 스킬 피해를 입힙니다.\n연속 공격을 받는 대상이 방해 효과를 받고 있다면 {6}의 추가 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1061300┃이렘이 매력을 발산하여 범위 안의 적들의 이동 속도를 {1} 느려지게 하고, {2}초 뒤에 범위 안의 대상들에게 {0}의 스킬 피해를 입히며, {3}초 동안 매혹에 빠지게 합니다.\n이동 속도 감소 효과는 범위 바깥으로 나가도 {4}초 동안 유지됩니다.
-Skill/Group/Desc2/1061310┃이렘이 공중에서 회전하며 강하게 꼬리로 내리쳐 범위 안의 적들에게 {0}의 스킬 피해를 입히고 {1}초 동안 공중에 띄웁니다.\n이 스킬이 적에게 적중하면 <color=white>사뿐~</color>과 <color=white>폴짝!</color>의 쿨다운이 {2}초 감소합니다.
-Skill/Group/Desc2/1061400┃이렘이 지정한 방향으로 짧게 이동하며, 원래 있던 자리에 물고기 표식을 생성합니다.
-Skill/Group/Desc2/1061410┃이렘이 도약하여 착지할 때 범위 안의 적들에게 {0}의 스킬 피해를 입힙니다.\n물고기 표식을 향해 도약하면 더 먼 거리를 이동할 수 있습니다.
-Skill/Group/Desc2/1061500┃이렘이 고양이로 변신합니다.\n\n이렘이 <color=white>바운싱 볼</color>이나<color=white> 사뿐~</color>으로 물고기 표식을 생성하면 다음 기본 공격은 사거리가 증가하며 {0}의 스킬 피해를 입히고, {1}초 동안 지속되는 고양이 방울 표식을 남깁니다.\n고양이 방울 표식의 대상은 이렘에게 시야를 공유 합니다.\n물고기 표식은 {2}초 동안 지속되며, 최대 {3}개까지 생성될 수 있습니다.
-Skill/Group/Desc2/1061510┃고양이가 이렘으로 변신합니다.\n\n고양이로 변신한 이렘이 물고기 표식으로 이동하면 보호막을 획득합니다. 보호막은 {1}초 동안 유지되며 {0}의 피해를 흡수합니다.
-Skill/Group/Desc2/1062100┃테오도르가 부쉬에서 벗어날 때 {0}초 동안 은신 상태가 되며 그동안 이동 속도가 {1} 증가합니다. 이때, {2}초 동안 최대 체력의 {3}만큼 피해를 흡수하는 보호막을 획득합니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.\n\n테오도르가 적 실험체에게 기본 공격을 적중시키면 <color=white>에너지 포</color>의 쿨다운이 {4} 감소하고 <color=white>다른 기본 스킬</color>의 쿨다운이 {8} 감소합니다.\n실험체가 아닌 대상에게 기본 공격 적중 시 쿨다운 감소 효과가 절반만 적용됩니다.
-Skill/Group/Desc2/1062200┃충전: 테오도르가 1.5초에 걸쳐 자신의 레일건에 에너지를 충전하며 이동 속도가 {0}까지 서서히 감소합니다.\n\n발사: 다시 사용하면 지정한 방향으로 광선을 발사하여 적에게는 {1}의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 {3}의 체력을 회복시킵니다. 충전 시간에 비례해 사거리가 증가합니다.\n\n<color=white>에너지 포</color>가 <color=white>증폭 스크린</color>에 적중하면 잠시 뒤 스크린 정면으로 광선을 발사해 적에게는 {4}의 스킬 피해를 입히고 아군은 {2}초에 걸쳐 {5}의 체력을 회복시킵니다.
-Skill/Group/Desc2/1062300┃테오도르가 지정한 위치에 {0}초 동안 유지되는 증폭 스크린을 생성합니다.\n\n증폭 스크린을 통과한 테오도르의 <color=white>기본 공격</color> 탄환과 <color=white>스파크탄</color>은 적중한 적 주변으로 확산됩니다. 스크린을 통과한 기본 공격은 {1}의 추가 스킬 피해를 입히고, 스파크탄은 투사체 속도와 사거리가 증가합니다.
-Skill/Group/Desc2/1062400┃<color=green>지속 효과</color>: <color=white>에너지 포</color> 또는 <color=white>스파크탄</color> 적중 시 다음 기본 공격 사거리가 {5} 증가합니다.\n\n테오도르가 스파크탄을 던져 적중한 적의 이동 속도를 {0}초 동안 {1} 감소시키며 {2}초 동안 <color=white>목표물</color>로 지정합니다. 테오도르는 목표물이 된 대상으로부터 시야를 제공받으며, 기본 공격 또는 스킬로 공격하면 {3}의 스킬 피해를 입히고 {4}초 동안 속박합니다.
-Skill/Group/Desc2/1062500┃테오도르가 에너지를 최대로 끌어올려 지정한 방향으로 {1}초 동안 유지되는 <color=white>에너지 필드</color>를 생성해 같은 방향으로 이동하는 아군의 이동 속도를 {2} 증가시키고, 강력한 에너지 파동을 발사하여 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n\n발사 이후, 테오도르는 <color=white>과충전 상태</color>가 되어, 공격 속도가 {3}초 동안 {4} 증가하며, <color=white>에너지 포</color> 최대 충전 시간이 {5}초로 감소합니다.
-Skill/Group/Desc2/1063100┃<color=white>잠식 :</color> 이안은 기본 공격, 스킬 사용 시 잠식이 진행됩니다. 잠식이 100까지 진행되면 빙의 상태가 됩니다. 비전투 상태일 경우 초당 {7}씩 감소합니다.\n\n이안은 귀신에게 몸을 빼앗기지 않기 위해 계속 저항하고 있습니다. 이안은 각 상태에 따라 기본 공격의 피해량이 달라집니다.\n인간 상태 : <color=#ffd775>공격력의 {1}</color>\n빙의 상태 : <color=#ffd775>공격력의 {2}</color>\n귀신 상태 : <color=#ffd775>공격력의 {3}</color>\n\n이안의 내면에 있는 귀신에 의해 무의식적으로 잔혹성이 깨어납니다. 빙의, 귀신 상태에서 스킬 피해에 {0}만큼 추가 고정 피해를 입힙니다. 빙의 상태에서는 고정 피해의 {8}, 귀신 상태에서는 {9} 만큼 체력을 회복합니다.
-Skill/Group/Desc2/1063200┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 단검을 찌르게 해, 대상에게 {0}의 스킬 피해를 입힙니다. 적중 시 쿨다운이 1초로 줄어듭니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 지정한 영역 내 대상에게 {1}의 스킬 피해를 입히고 {2}초 동안 속박 시킵니다.
-Skill/Group/Desc2/1063300┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 전방으로 단검을 휘두르게 해 {0}의 스킬 피해를 입힙니다. 적중당한 대상은 이동 속도가 {1} 감소합니다. 감소된 이동 속도는 {2}초에 걸쳐 원래대로 돌아옵니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 전방으로 귀수를 휘둘러 {3}의 스킬 피해를 입힙니다. 스킬 적중 시 <color=white>[갉아먹기]</color> 중첩을 획득하고, 이동 속도가 {4} 증가합니다. 증가한 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다. 중첩량에 따라 해당 스킬 사용 시 소모 되는 체력량이 증가하며, 적중 시 <color=white>옥죄는 손아귀</color>와 <color=white>갈퀴손</color>의 쿨다운이 중첩 당 {6}초 감소합니다. 최대 {7}개까지 중첩됩니다.
-Skill/Group/Desc2/1063400┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 {0}의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 {1}의 스킬 피해를 입히고 대상을 끌어오면서 {2}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1063410┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 {0}의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 {1}의 스킬 피해를 입히고 대상을 끌어오면서 {2}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1063500┃<color=green>사용 조건 :</color> 빙의 상태일 때, 잠식 중첩이 100 이상일 때만 사용 가능합니다. 귀신 상태에서는 매 초마다 잠식 중첩량이 {7} 씩 감소합니다. 스킬 시전 위치를 기준으로 {8}m에서만 귀신 상태가 유지됩니다.\n\n이안이 귀신에게 완전히 잠식 당합니다. 지정한 방향으로 귀신이 튀어나오며 {0}의 스킬 피해를 입히고 시전 위치에 이안이 남게 됩니다. 귀신 상태에서는 최대 체력이 {1} 증가하고 이동 속도가 {2} 증가합니다. 기본 공격 시 {3}의 스킬 피해를 입히며 이안에게 [살육본능]이 중첩됩니다. 중첩 1개당 공격 속도가 {4}씩 증가합니다. 최대 {5}개까지 중첩 됩니다.\n5번째 기본 공격은 대상을 {10}초 동안 공포 상태에 빠지게 합니다. 대상 주변 {6}m 범위 내 적들도 같이 공포에 빠집니다.\n\n스킬 종료 시 귀신이 살아있을 경우 해당 위치에서 인간 상태가 됩니다. 귀신이 사망한 경우 스킬 사용 시 분리되었던 이안 쪽에서 체력을 {9} 보유한 채로 인간 상태가 됩니다.\n\n<color=white>스킬 종료 시점 :</color> 이안을 중심으로 지정 범위를 벗어날 경우, 스킬을 재사용 했을 경우, 귀신이 사망 하였을 경우, 잠식 중첩량이 0이 되었을 경우
-Skill/Group/Desc2/1063210┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 단검을 찌르게 해, 대상에게 {0}의 스킬 피해를 입힙니다. 적중 시 쿨다운이 1초로 줄어듭니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 지정한 영역 내 대상에게 {1}의 스킬 피해를 입히고 {2}초 동안 속박 시킵니다.
-Skill/Group/Desc2/1063310┃<color=#ffffC2>인간 상태 :</color> 귀신이 이안을 조종하여 전방으로 단검을 휘두르게 해 {0}의 스킬 피해를 입힙니다. 적중당한 대상은 이동 속도가 {1} 감소합니다. 감소된 이동 속도는 {2}초에 걸쳐 원래대로 돌아옵니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 전방으로 귀수를 휘둘러 {3}의 스킬 피해를 입힙니다. 스킬 적중 시 <color=white>[갉아먹기]</color> 중첩을 획득하고, 이동 속도가 {4} 증가합니다. 증가한 이동 속도는 {5}초에 걸쳐 원래대로 돌아옵니다. 중첩량에 따라 해당 스킬 사용 시 소모 되는 체력량이 증가하며, 적중 시 <color=white>옥죄는 손아귀</color>와 <color=white>갈퀴손</color>의 쿨다운이 중첩당 {6}초 감소합니다. 최대 {7}개까지 중첩됩니다.
-Skill/Group/Desc2/1063420┃<color=#ffffC2>인간 상태 :</color> 이안이 단검에게 끌려가며 경로상의 적들에게 {0}의 스킬 피해를 입힙니다. 적중 시, 한 번 더 사용할 수 있습니다.\n\n<color=#ffffC2>빙의 상태 :</color> 빙의 된 이안이 귀수를 내려쳐 {1}의 스킬 피해를 입히고 대상을 끌어오면서 {2}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1063510┃<color=white>"네 멋대로 설치게 두지 않겠어!!"</color>\n\n이안이 귀신에게 저항하여 인간 상태로 돌아갑니다. 잠식 중첩량이 전부 소모됩니다.
-Skill/Group/Desc2/1064100┃<color=#FFB62F>공상: </color>일정 시간마다 기본 공격에 {0}의 스킬 피해가 추가됩니다.\n\n<color=#FFB62F>몽환 나비: </color>바냐의 스킬을 적에게 적중하면 <color=white>몽환 나비</color> 중첩을 1개 부여합니다. 4개가 중첩되면 환상 속 나비가 나타나 {1}초 동안 {2}의 지속 스킬 피해를 입히고, 바냐에게는 {3}의 피해를 흡수하는 보호막을 줍니다.\n\n보호막은 매 초 {4}씩 감소하며, 최대 {5}를 넘지 않습니다.
-Skill/Group/Desc2/1064200┃꿈 길잡이 나비를 보내 {0}의 스킬 피해를 입힙니다. 나비가 적중하거나 끝까지 날아가면, 처음 출발한 방향으로 되돌아오며 다시 피해를 입힙니다.\n\n되돌아오는 나비를 회수하면 쿨다운을 {1} 돌려받고, 적에게 적중했던 나비라면 바냐에게 <color=#FFB62F>몽환 나비</color>의 보호막을 줍니다.
-Skill/Group/Desc2/1064300┃<color=#FFB62F>쪽빛 바람:</color> 바냐가 공중에 떠서 {1}초 동안 {3}회에 걸쳐 각각 {0}의 스킬 피해를 입히고, 이동 속도가 {2} 증가했다가 서서히 감소됩니다. 스킬이 종료되기 전에 <color=#FFB62F>구름 장막</color>을 사용할 수 있습니다.\n\n<color=#FFB62F>구름 장막:</color> 제자리에서 높이 날아 {5}초 동안 대상 지정 불가 상태가 되고, 착지하면서 {4}의 스킬 피해를 입힙니다. 사용 시 스킬 쿨다운이 {6}초 증가합니다.
-Skill/Group/Desc2/1064310┃<color=#FFB62F>구름 장막:</color> 제자리에서 높이 날아 {5}초 동안 대상 지정 불가 상태가 되고, 착지하면서 {4}의 스킬 피해를 입힙니다. 사용 시 스킬 쿨다운이 {6}초 증가합니다.
-Skill/Group/Desc2/1064400┃바냐가 저지불가 상태로 대상 지점까지 비행하며, 적에게 {0}의 스킬 피해를 입힙니다. 날개가 펼쳐진 바깥쪽 범위에는 {1}의 스킬 피해를 입히면서 {2}초 동안 이동 속도를 {3} 느려지게 합니다.
-Skill/Group/Desc2/1064500┃꿈나비 환상이 넓은 영역에 비늘 가루를 흩뿌리며 {0}의 스킬 피해를 입힙니다. 공격받은 대상은 {1}초 동안 졸음이 몰려와 이동 속도가 서서히 감소되다가, {2}초 동안 수면에 빠집니다.\n\n잠든 상태에서 공격받으면 {3}의 스킬 피해를 입고 깨어납니다.
-Skill/Group/Desc2/1065100┃<color=green>지속 효과: </color>데비 상태에서는 방어력이 {11}만큼 증가하고, 마를렌 상태에서는 기본 공격 사거리가 {12}로 변경됩니다. 데비&마를렌의 기본 공격은 {5}에 해당하는 피해를 입힙니다.\n\n데비&마를렌의 기본 공격과 스킬이 대상에게 각각 <color=white>블루&레드</color>를 새깁니다. 이 효과는 최대 {2}번까지 중첩됩니다. \n<color=white>블루&레드</color>는 서로 다른 색상이 새겨질 때 기존 색상이 사라지며 대상에게 {3}의 스킬 피해를 입히고, {4}초 동안 데비&마를렌의 이동 속도가 {6} 증가합니다. (최대 {7} 중첩)\n또한 색상이 새겨질 때 <color=white>엄호해줘, 마를렌!</color> 또는 <color=white>지금이야, 데비!</color>의 쿨다운이 {8}초 감소하고, <color=white>블루&레드</color>가 피해를 입힐 때에는 쿨다운이 {9}초 추가로 감소합니다.
-Skill/Group/Desc2/1065200┃데비가 전방으로 검을 내려쳐 {0}의 스킬 피해를 입힙니다. 적에게 적중하면 {2}초 동안 공격 속도가 {1} 증가합니다. (최대 {3} 중첩) 
-Skill/Group/Desc2/1065210┃마를렌이 에너지를 방출하여 {0}의 스킬 피해를 입힙니다. 적에게 적중하면 {2}초 동안 공격 속도가 {1} 증가합니다. (최대 {3} 중첩) 
-Skill/Group/Desc2/1065300┃데비가 검을 크게 휘둘러 {0}의 스킬 피해를 입히고 범위 내의 적 투사체 및 기본 공격을 막아냅니다.
-Skill/Group/Desc2/1065310┃마를렌이 빠르게 회전하며 근처의 적들을 향해 날아가는 에너지를 {0}개 방출해 적중한 적에게 각각 {1}의 스킬 피해를 입히고 {2}번째 적중 시마다 <color=white>블루&레드</color>의 <color=white>레드</color>를 새깁니다. 이미 에너지에 적중한 적에게는 {3}의 피해를 입힙니다.
-Skill/Group/Desc2/1065400┃<color=green>지속 효과: </color>데비&마를렌은 서로 교대할 때 이동 속도가 {6} 증가하고, {7}초에 걸쳐 원래대로 돌아옵니다.\n\n마를렌을 불러 교대합니다. 교대할 때 마를렌이 뒤로 이동하며 에너지를 방출해 첫 번째로 적중한 적에게 {0}의 스킬 피해를 입힙니다. 또한 {1}초 후 해당 적과 주변의 모든 적들은 {2}초 동안 이동 속도가 {8} 감소합니다.\n\n데비는 {3}초 동안 교대한 위치에 대기하며 <color=white>크레센트 슬래시</color>를 사용하면 데비가 전방으로 돌진해 경로상의 적에게 {4}의 스킬 피해를 입히고 {5}초 동안 공중에 띄웁니다.
-Skill/Group/Desc2/1065410┃<color=green>지속 효과: </color>데비&마를렌은 서로 교대할 때 이동 속도가 {6} 증가하고, {7}초에 걸쳐 원래대로 돌아옵니다.\n\n데비를 불러 교대합니다. 교대할 때 데비가 전방으로 돌진해 경로상의 적에게 {0}의 스킬 피해를 입히고 {1}초 동안 공중에 띄웁니다.\n\n마를렌은 {2}초 동안 교대한 위치에 대기하며 <color=white>하드 슬래시</color>를 사용하면 마를렌이 뒤로 이동하며 에너지를 방출해 첫 번째로 적중한 적에게 {3}의 스킬 피해를 입힙니다. 또한 {4}초 후 해당 적과 주변의 모든 적들은 {5}초 동안 이동 속도가 {8} 감소합니다.
-Skill/Group/Desc2/1065500┃데비와 마를렌이 함께 돌진하여 경로에 있는 모든 적에게 {0}의 스킬 피해를 입힌 후 자신 쪽으로 끌어당겨 잠시 동안 기절시키고, {1}의 고정 피해를 {2}회 추가로 입히며 <color=white>블루&레드</color>를 새깁니다.
-Skill/Group/Desc2/1066100┃<color=white>발굴 통제</color>: 아르다가 생명의 나무, 운석 채집을 시작하면 자신의 주변에 영역 위의 적을 침묵시키는 영역을 생성합니다. 해당 영역은 채집이 진행되는 동안 지속됩니다.\n\n<color=white>고고학적 분석</color>: 아르다가 사용하는 유물이 적에게 피해를 입히면 아르다는 <color=white>고대의 정수</color>를 얻습니다. <color=white>고대의 정수</color>가 {2}회 중첩되면 랜턴이 신비로운 힘을 방출하여 아르다와 주변의 아군의 체력을 <color=white>{1}</color> 회복시킵니다.
-Skill/Group/Desc2/1066200┃지정한 방향으로 샤마쉬의 두루마리를 전개합니다. 샤마쉬의 두루마리에 충돌한 적은 <color=white>{0}</color>의 스킬 피해를 입습니다.
-Skill/Group/Desc2/1066210┃지정한 방향으로 샤마쉬의 법전을 전개합니다. 샤마쉬의 법전은 충돌한 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 주문 영역을 남겨, {1}초 후 지나간 경로의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.\n\n<color=white>샤마쉬의 법전</color> 사용 시 <color=white>잠들어있는 힘</color>의 쿨다운의 {3}를 돌려받습니다.
-Skill/Group/Desc2/1066300┃지정한 지점에 바빌론의 입방체를 소환합니다. 바빌론의 입방체는 영역 내의 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 {1}초 동안 이동 속도를 {2} 느려지게 합니다. \n{3}초 뒤 바빌론의 입방체는 사라지며 영역 내의 적에게 <color=white>{4}</color>의 스킬 피해를 입히고 {5}초 동안 기절시킵니다.
-Skill/Group/Desc2/1066310┃지정한 지점에 바빌론의 주사위를 소환해 경계선에 장벽을 펼치고, 닿는 적을 {5}초 동안 속박합니다. \n장벽은 {7}초 동안 시계 방향 순서대로 파괴되면서 적에게 <color=white>{3}</color>의 스킬 피해를 입히고, 주사위 영역 내의 적에게는 <color=white>{0}</color>의 스킬 피해를 입히고 이동 속도를 {1}초 동안 {2} 느려지게 합니다. \n모든 장벽이 파괴되면 바빌론의 주사위는 사라지며 영역 내의 적에게 <color=white>{4}</color>의 스킬 피해를 입히고 {6}초 동안 기절시킵니다.
-Skill/Group/Desc2/1066400┃지정한 위치에 님루드의 비석을 떨어뜨려 범위 내의 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 밀어냅니다.
-Skill/Group/Desc2/1066410┃사거리가 {3}m 증가하며 지정한 위치와 자신의 위치에 님루드의 비석을 떨어뜨려 범위 내 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 밀어냅니다. \n그 후 두 비석은 신비로운 힘으로 연결되어 아군이 {2}회 이동할 수 있는 차원문이 {1}초 동안 유지됩니다. 
-Skill/Group/Desc2/1066420┃사거리가 {3}m 증가하며 지정한 위치와 자신의 위치에 님루드의 비석을 떨어뜨려 범위 내 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 밀어냅니다. \n그 후 두 비석은 신비로운 힘으로 연결되어 아군이 {2}회 이동할 수 있는 차원문이 {1}초 동안 유지됩니다. 
-Skill/Group/Desc2/1066430┃사거리가 {3}m 증가하며 지정한 위치와 자신의 위치에 님루드의 비석을 떨어뜨려 범위 내 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 밀어냅니다. \n그 후 두 비석은 신비로운 힘으로 연결되어 아군이 {2}회 이동할 수 있는 차원문이 {1}초 동안 유지됩니다. 
-Skill/Group/Desc2/1066500┃아르다가 유물에 잠들어 있는 기원을 해독해 원래의 능력을 복원합니다. {0}초 동안 다음으로 사용하는 일반 스킬을 강화합니다.\n\n<color=white>샤마쉬의 법전</color>: 지정한 방향으로 샤마쉬의 법전을 전개합니다. 샤마쉬의 법전은 충돌한 적에게 <color=white>{2}</color>의 스킬 피해를 입히고 주문 영역을 남겨, {3}초 후 지나간 경로의 적에게 <color=white>{4}</color>의 스킬 피해를 입힙니다.\n\n<color=white>샤마쉬의 법전</color> 사용 시 <color=white>잠들어있는 힘</color>의 쿨다운의 {1}를 돌려받습니다.\n\n<color=white>바빌론의 주사위</color>: 지정한 지점에 바빌론의 주사위를 소환해 경계선에 장벽을 펼치고, 닿는 적을 {10}초 동안 속박합니다. 장벽은 {15}초 동안 시계 방향 순서대로 파괴되면서 적에게 <color=white>{8}</color>의 스킬 피해를 입히고, 주사위 영역 내의 적에게는 <color=white>{5}</color>의 스킬 피해를 입히고 이동 속도를 {6}초 동안 {7} 느려지게 합니다. 모든 장벽이 파괴되면 바빌론의 주사위는 사라지며 영역 내의 적에게 <color=white>{9}</color>의 스킬 피해를 입히고 {16}초 동안 기절시킵니다.\n\n<color=white>님루드의 문</color>: 사거리가 {14}m 증가하며 지정한 위치와 자신의 위치에 님루드의 비석을 떨어뜨려 범위 내 적에게 <color=white>{11}</color>의 스킬 피해를 입히고 밀어냅니다. 그 후 두 비석은 신비로운 힘으로 연결되어 아군이 {13}회 이동할 수 있는 차원문이 {12}초 동안 유지됩니다. 
-Skill/Group/Desc2/1067100┃아비게일의 다음 기본 공격이 {20}의 추가 스킬 피해를 입히고, 대상의 방어력을 {3}초 동안 {4} 감소시킵니다.\n스킬이 적중할 때마다 <color=white>티어링 블레이드</color>의 쿨다운이 {0}초 감소합니다.\n\n이 기본 공격은 스킬 공격으로도 취급됩니다.
-Skill/Group/Desc2/1067200┃아비게일이 낫을 휘두릅니다. 첫 번째 회전은 {20}의 스킬 피해를 입히고, 두 번째 회전은 {21}의 스킬 피해를 입힙니다.\n바이너리 스핀 시전 시, 이동 속도가 {0}초 동안 {1} 증가합니다.
-Skill/Group/Desc2/1067300┃아비게일이 부채꼴 모양으로 공간을 베어내 {20}의 스킬 피해를 입히고,\n적중 시 {1}초 동안 {22}의 피해를 흡수하는 보호막을 획득합니다.\n여러 적에게 적중할 경우, 추가로 적중한 적 하나당 보호막량이 {0} 증가합니다. (최대 {7})\n\n스킬에 적중한 대상에게 <color=white>좌표</color>를 남깁니다.\n좌표는 {8}초 동안 지속되며 대상자의 시야를 제공받습니다.
-Skill/Group/Desc2/1067400┃아비게일이 차원의 틈새를 지나 적 주변 지정한 위치로 순간 이동을 해 {20}의 스킬 피해를 입힙니다.\n\n<color=white>좌표</color>가 남은 대상에게 사용 시 <color=white>워프 슬래시</color>의 쿨다운이 초기화 됩니다.
-Skill/Group/Desc2/1067500┃아비게일이 차원 속으로 몸을 숨겨 {0}초 동안 대상 지정 불가 상태가 됩니다.\n이후 착지하며 {20}의 스킬 피해를 입히고, 이동 속도를 {1}초 동안 {2} 감소시킵니다.\n\n스킬에 적중한 대상에게 <color=white>좌표</color>를 남깁니다.\n좌표는 {8}초 동안 지속되며 대상자의 시야를 제공받습니다.
-Skill/Group/Desc2/1068100┃알론소가 이동 불가 효과를 받으면, {0}초 동안 이동 불가 효과에 면역 상태가 됩니다. 이 효과는 {1}초 동안 피해를 받지 않으면 다시 활성화됩니다.\n\n알론소의 스킬로 적 실험체를 이동 불가 상태로 만들면, 1명 당 체력을 {2} 회복합니다.
-Skill/Group/Desc2/1068200┃전방에 자력이 담긴 펀치를 내질러 {0}의 스킬 피해를 입히고, 적중한 적과 자력으로 <color=white>연결</color>됩니다.\n\n알론소가 <color=white>연결</color>된 대상을 향할 때, 이동 속도가 {1} 증가합니다. 거리가 가까울수록 최대 {2}까지 증가합니다.\n\n<color=white>연결</color>된 적을 기본 공격하면 연결을 해제하면서 {4}의 스킬 피해를 입히고, {3}초 동안 기절시킵니다.
-Skill/Group/Desc2/1068300┃{0}초 동안 공격을 막아내는 자기장 방패를 펼쳐, 전방의 적으로부터 받는 피해량이 {1} 감소합니다.\n\n방패는 총 {2}회에 걸쳐 파동을 발사하여 각각 {3}의 스킬 피해를 입힙니다. 투사체는 점점 빠른 간격으로 발사됩니다.\n\n재사용하거나 지속 시간이 종료되면 {4}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1068400┃알론소가 대상을 지목하며 금속 고리를 씌웁니다.\n\n잠시 후, 대상을 향해 돌진하여 {0}의 스킬 피해를 입히고 {1}초 동안 속박합니다.
-Skill/Group/Desc2/1068500┃알론소가 주변 적들을 짧게 당겨오면서 {0}의 스킬 피해를 입힙니다.\n\n이후 대지에서 끌어모은 금속 파편으로 {1}초 마다 알론소의 체력을 {2} 만큼 회복하고, 적에게는 {3}의 지속 스킬 피해를 입히며, 영역 바깥을 향하는 적의 이동 속도가 {4} 느려집니다.\n\n재사용하거나 지속 시간이 종료되면, 유지 시간에 비례해 {5} ~ {6}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/1069100┃레니의 스킬이 아군 실험체에게 적중 시 대상에게 곰돌이가 생성됩니다. 곰돌이는 {0}초 동안 유지됩니다.\n\n아군의 공격이 적에게 적중하면 곰돌이가 날아가 {1}의 추가 스킬 피해를 입힙니다.\n곰돌이로 피해를 입히면 레니 기본 스킬의 쿨다운이 {2}초 감소합니다.
-Skill/Group/Desc2/1069200┃레니가 당근 바주카를 발사하며 뒤로 살짝 밀려납니다. 당근은 사거리 끝까지 날아가거나, 적 또는 아군에게 적중 시 폭발합니다. 폭발 범위 내 적, 아군에게 각각 다른 효과가 발동됩니다.\n\n적 : {0}의 스킬 피해를 입힙니다. \n아군 : {1}만큼 체력을 회복시킵니다.
-Skill/Group/Desc2/1069300┃레니가 당근 바주카를 발사하며 뒤로 살짝 밀려납니다. 당근은 사거리 끝까지 날아가거나, 적 또는 아군에게 적중 시 폭발합니다. 폭발 범위 내 적, 아군에게 각각 다른 효과가 발동됩니다.\n\n적 : {0}의 스킬 피해를 입힙니다. \n아군 : {1}만큼 체력을 회복시킵니다.
-Skill/Group/Desc2/1069400┃레니가 에어 호른 건을 발사합니다. 적, 아군에게 각각 다른 효과가 발동됩니다.\n\n적 :  {0}의 스킬 피해를 입히며 {1}초 동안 기절시킵니다. \n아군 : {2}의 보호막을 {3}초 동안 부여합니다.
-Skill/Group/Desc2/1069500┃레니가 스프링 트랩을 설치하여 적중한 적에게 {0}의 스킬 피해를 입히며 지정한 방향으로 날려보냅니다. 날려진 적이 벽에 부딪히면 {1}초 동안 이동 속도가 {2} 감소합니다.\n\n<i>레니도 같이 슝~ 날아갑니다!</i>
-Skill/Group/Desc2/1070100┃츠바메
-Skill/Group/Desc2/1071100┃케네스
-Skill/Group/Desc2/1072100┃카티야
-Skill/Group/Desc2/1073100┃샬럿
-Skill/Group/Desc2/3001000┃지정한 대상에게 다가가서 {6}의 기본 공격 피해를 입히고, 최종 피해의 {3}에 해당하는 피해와 {4}의 고정 피해를 추가로 입힙니다. 어퍼컷 스킬로 입히는 피해는 치명타가 발생하지 않습니다.
-Skill/Group/Desc2/3002000┃톤파를 빠르게 휘둘러 {0}초 동안 무적 상태가 되고, 공격한 대상에게 피해의 {1}를 고정 피해로 되돌려 줍니다.
-Skill/Group/Desc2/3003000┃전방의 모든 적에게 {0}의 스킬 피해를 입히고 {2}m 넉백시킵니다. 넉백된 적이 벽에 부딪히게 되면 {1}초간 기절하게 됩니다.
-Skill/Group/Desc2/3004000┃채찍을 두 번 휘둘러 타격마다 {0}의 스킬 피해를 입히고 이동 속도를 {1}초 동안 {2} 감소시킵니다.
-Skill/Group/Desc2/3005000┃지정한 위치에 연막탄을 던져서 터트립니다. {0}초 동안 연막은 유지되며, 연막 안에 있는 적은 시야가 감소합니다.
-Skill/Group/Desc2/3006000┃일정 범위에 {0}초 동안 유지되는 마름쇠를 뿌려 마름쇠를 밟은 적에게 {20}의 스킬 피해를 입히고 {4}초 동안 {2}의 이동 속도를 감소시킵니다. (마름쇠를 밟을 때마다 {3}씩 피해가 감소됩니다.)
-Skill/Group/Desc2/3007000┃지정한 지점으로 화살 다발을 발사하여 화살비가 내리게 합니다.\n발사된 화살은 {0}초 후에 목표 지점에 떨어지며, 화살비를 맞은 대상에게 {1}의 스킬 피해를 입히고, {4}초 동안 이동 속도를 {2} 감소시킵니다. 화살비의 중심에 있을 경우 {3}의 스킬 피해를 입게 됩니다.
-Skill/Group/Desc2/3008000┃지정한 방향으로 석궁을 쏩니다. 맞은 대상은 {0}의 스킬 피해를 입고 밀려나게 됩니다. 대상이 벽에 부딪히면 {1}초 동안 기절하고 {0}의 스킬 피해를 추가로 입게 됩니다.
-Skill/Group/Desc2/3009000┃{0}초 동안 {3} 빠르게 이동하며 탄환을 장전합니다. 장전이 끝난 후에는 다음 {1}회의 기본 공격 속도가 {2} 증가합니다.
-Skill/Group/Desc2/3010000┃<color=green>지속 효과</color>: 기본 공격으로 적을 타격할 때마다 총알 1발당 {0}의 과열 중첩을 획득합니다. (최대 {1} 중첩) {4}초간 기본 공격을 하지 않으면 {2}초마다 과열 중첩이 {3}씩 감소됩니다.\n\n<color=green>사용 효과</color>: 탄환을 즉시 장전하고, 과열 중첩에 비례해 최대 {5}초 동안, 최대 {6}의 기본 공격 추가 피해를 얻고 공격속도가 {7} 증가합니다. 효과 지속 중에는 공격 속도 상한을 무시합니다.
-Skill/Group/Desc2/3011000┃지정한 방향으로 {20}초 동안 <color=white>저격 모드</color>를 활성화 합니다.\n<color=white>저격 모드</color>가 되면 시야가 {0} 증가하고 바라 보고 있는 방향으로 시야 각도가 좁아 집니다.\n시야 내의 지정한 방향으로 스킬을 사용하여 <color=white>저지 사격</color>과 <color=white>데드아이</color>를 사용할 수 있습니다.\n\n<color=white>저지 사격</color>\n{1}의 시야를 가지고 있으며 맞은 대상에게 {2}의 스킬 피해를 입히고 {3}초간 대상의 시야를 획득할 수 있습니다. 피해를 입은 대상은 {6}초 동안 이동 속도가 {7} 감소합니다.\n\n<color=white>데드아이</color>\n{4}의 시야를 가지고 있으며 맞은 대상에게 {5}의 스킬 피해를 입힙니다. <color=white>데드아이</color>는 맞은 대상의 잃은 체력에 비례해 피해량이 증가합니다.
-Skill/Group/Desc2/3013000┃지정한 방향으로 망치를 내려쳐  {0}의 스킬 피해를 입히고 {2}초간 방어력을 {1} 감소시킵니다.
-Skill/Group/Desc2/3014000┃지정한 방향으로 이동하며 도끼를 휘둘러서 범위 내의 모든 적들에게 {2}의 스킬 피해를 입히며, 입힌 피해의 {4}에 해당하는 체력을 회복합니다.
-Skill/Group/Desc2/3015000┃<color=#FFB62F>망토</color>: {0}초 동안 은신 상태가 되고, 이동 속도가 {1} 증가한 후 서서히 감소합니다. 은신 중 <color=#FFB62F>단검</color>을 사용할 수 있습니다.\n\n<color=#FFB62F>단검</color>: 지정한 대상의 뒤로 이동하여 {3}의 스킬 피해와 {4}의 고정 피해를 입히고 이동 속도를 {5}초 동안 {6} 감소시킵니다.
-Skill/Group/Desc2/3016000┃{0}초 동안 방어 자세를 취하여 모든 피해와 방해 효과에 면역됩니다. 이후 {2}m 돌진하며 적에게 {20}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/3018000┃스킬을 사용하면 지정한 방향으로 돌진하며 경로상에 있는 모든 적들에게 {6}의 스킬 피해를 6회 입힙니다.\n돌진하면서 적에게 공격을 {2}회 성공하면 {1}초 이내에 스킬을 한 번 더 사용할 수 있습니다.\n스킬을 다시 사용하면 지정한 방향으로 돌진하며 경로상에 있는 모든 적들에게 {7}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/3019000┃지정한 방향으로 창을 강하게 내질러서 {2}m 내의 대상에게  {7}의 스킬 피해를 입히며, {0}m 내의 적에게는 같은 피해를 한 번 더 입히고, 기본 공격 사거리에 비례하여 뒤로 밀어냅니다.\n공격에 맞은 대상은 {3}초 동안 이동 속도가 {4} 감소됩니다.
-Skill/Group/Desc2/3020000┃쌍절곤을 빠르게 휘둘러 바람을 모으며 이동 속도가 {8}% 감소합니다. 다시 사용하면 지정한 방향으로 날립니다. 바람의 구체는 쌍절곤을 휘두른 시간에 따라 {9} ~ {10}의 스킬 피해를 입히며, {4}초 이상 휘두르면 맞은 대상을 {5}초간 기절시킵니다.
-Skill/Group/Desc2/3021000┃지정한 적에게 돌진해서 {0}의 스킬 피해를 입힙니다.
-Skill/Group/Desc2/3022000┃Love&...
-Skill/Group/Desc2/3023000┃플래시를 터뜨려 {0}의 스킬 피해를 입힙니다. 자신을 바라보던 적들은 {2}의 추가 스킬 피해를 입고 {1}초 동안 시야가 감소합니다.
-Skill/Group/Desc2/3024000┃자신 주변을 회전하는 VF 에너지 구체 {0}개를 생성합니다. 생성된 구체는 근처의 적을 향해 날아가며, 대상과 주변에 {2}의 스킬 피해를 입힙니다.\n\n야생 동물에게는 피해량이 {1} 증가합니다.
-Skill/Group/Desc2/3025000┃에키온이 1초 동안 정신 집중을 하며, 각각의 상태에 따른 효과가 적용됩니다.\n\n<color=white>VF게이지 {0}미만:</color> {1}의 게이지를 충전합니다.\n\n<color=white>VF게이지 {0}이상:</color> 게이지 {2}을 소모하고, 무기 스킬을 제외한 스킬의 쿨다운을 {3} 감소시키며 이동 속도가 {4}초 동안 {5} 증가합니다.\n\n<color=white>VF폭주 상태:</color> 폭주 지속 시간을 {6}초 연장하고, 스킬의 쿨다운을 {7} 감소시키며 이동 속도가 {8}초 동안 {9} 증가합니다.\n\n<color=white>과부하 상태:</color> 과부하 상태를 {10}초 감소시킵니다.
 오늘의 도전┃오늘의 도전
 오늘의 도전과제를 모두 완수하였습니다.┃오늘의 도전과제를 모두 완수하였습니다.
 도전과제 변경 가능┃도전과제는 1일 1회 변경가능합니다.\n새로운 도전과제로 변경하시겠습니까?
@@ -12945,7 +12876,7 @@ VF혈액샘플 아이템 획득┃VF는 바이탈 포스의 약자로, 물리적
 코발트 모드 크레딧 사용하기┃합성기에서 크레딧을 사용해, 인퓨전과 아이템을 구입해보세요!\n\n코발트 모드에만 존재하는 인퓨전을 구매하고, 마음에 들지 않는 장비를 교체하고, 특수한 스킬을 사용해 보세요!
 코발트 모드 크레딧 획득하기┃코발트 모드에서는 여러가지 방법으로 크레딧을 얻을 수 있습니다.\n\n야생동물을 사냥하거나, 상대방을 처치하거나, 심지어 그저 가만히 있기만 해도 조금의 크레딧을 줍니다!\n또한 팀이 라이프 포인트가 뒤쳐지고 있는 상황이면, 모든 상황에서 일정량의 보너스 크레딧을 추가로 획득합니다.
 코발트 모드 특정 메인 특성 사용하기┃코발트 프로토콜에서는 특성 페이지 없이, 캐릭터 선택 화면에서 핵심 특성만을 선택해서 플레이 할 수 있습니다! \n이 핵심 특성은 어떤 능력일까? 궁금한 특성이 있다면 코발트 프로토콜에서 플레이 해보는 것은 어떨까요?
-코발트 모드 사전 팀 구성으로 플레이┃친구, 지인, 또는 어쩌다 그냥 친추한 사람과 함께 코발트 모드를 즐겨보세요! \n\n4명이 모여도 이터널 리턴을 함께 할 수 있는 유일한 방법! 바로 코발트 프로토콜입니다!
+코발트 모드 사전 팀 구성으로 플레이 ┃친구, 지인, 또는 어쩌다 그냥 친추한 사람과 함께 코발트 모드를 즐겨보세요! \n\n4명이 모여도 이터널 리턴을 함께 할 수 있는 유일한 방법! 바로 코발트 프로토콜입니다!
 코발트 모드 플레이하기┃이터널 리턴의 두 번째 모드, 코발트 프로토콜을 플레이해보세요!\n\n머리를 식힐 수 있는 전투 중심의 가벼운 모드! 파밍과 루트에서 잠시 벗어나 전투 능력을 기르고, 탈락의 두려움 없이 꿈꾸던 플레이를 펼쳐보세요
 코발트 모드 특정 레벨 인퓨전 구매하기┃코발트 프로토콜의 합성기에서 구매할 수 있는, 인퓨전 중, 일부는 2, 3단계로 업그레이드가 가능합니다.\n\n더 높은 단계의 인퓨전은, 더 강력한 효과를 지니고 있습니다!
 코발트 모드 모든 증폭 장치를 점령하고 유지하기┃코발트 전장 중앙의 증폭 장치는 강력한 버프를 제공하고, 적의 라이프 포인트를 일정 시간마다 빼앗습니다!\n모든 증폭 장치를 점령하고, 코발트 프로토콜 전장의 주인이 되어보세요!
@@ -13051,42 +12982,55 @@ AI 대전 플레이 가능┃<color=#FFB62F>AI 상대 대전</color>이 오픈�
 연습 모드 플레이 가능┃<color=#FFB62F>연습 모드</color>가 오픈되었습니다.
 PurchaseWithdrawalType/Text/Asset7Days┃구매일로부터 7일이 경과하거나, 구매 시 지급된 NP와 마일리지를 일부 사용한 경우 청약철회가 제한됩니다.
 PurchaseWithdrawalType/TEXT/Asset7Days_KAKAO┃청약철회는 구매일로부터 7일 이내 가능합니다. 단, 상품의 제공이 개시되거나 사용한 경우 청약철회가 제한됩니다. 법정대리인 동의 없이 미성년자 명의의 결제 수단을 통해 결제한 경우 취소할 수 있습니다.
+PurchaseWithdrawalType/Text/Asset7Days_KAKAO┃청약철회는 구매일로부터 7일 이내 가능합니다. 단, 상품의 제공이 개시되거나 사용한 경우 청약철회가 제한됩니다. 법정대리인 동의 없이 미성년자 명의의 결제 수단을 통해 결제한 경우 취소할 수 있습니다.
 PurchaseWithdrawalType/LinkText/Asset7Days┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/Asset7Days_KAKAO┃자세히 보기
 PurchaseWithdrawalType/Link/Asset7Days┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/Asset7Days_KAKAO┃https://t1.kakaocdn.net/gamepub/policy/service.html#contSec29
+PurchaseWithdrawalType/Text/Acoin7Days┃구매일로부터 7일이 경과하거나, 구매 시 지급된 A-Coin을 일부 사용한 경우 청약철회가 제한됩니다.
+PurchaseWithdrawalType/Text/Acoin7Days_KAKAO┃청약철회는 구매일로부터 7일 이내 가능합니다. 단, 상품의 제공이 개시되거나 사용한 경우 청약철회가 제한됩니다. 법정대리인 동의 없이 미성년자 명의의 결제 수단을 통해 결제한 경우 취소할 수 있습니다.
+PurchaseWithdrawalType/LinkText/Acoin7Days┃청약철회 필수 고지사항
+PurchaseWithdrawalType/LinkText/Acoin7Days_KAKAO┃자세히 보기
+PurchaseWithdrawalType/Link/Acoin7Days┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
+PurchaseWithdrawalType/Link/Acoin7Days_KAKAO┃https://t1.kakaocdn.net/gamepub/policy/service.html#contSec29
 PurchaseWithdrawalType/Text/Item7Days┃구매일로부터 7일이 경과하거나, 사용/착용한 경우 청약철회가 제한됩니다.
 PurchaseWithdrawalType/TEXT/Item7Days_KAKAO┃구매일로부터 7일이 경과하거나, 사용/착용한 경우 청약철회가 제한됩니다.
+PurchaseWithdrawalType/Text/Item7Days_KAKAO┃구매일로부터 7일이 경과하거나, 사용/착용한 경우 청약철회가 제한됩니다.
 PurchaseWithdrawalType/LinkText/Item7Days┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/Item7Days_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/Item7Days┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/Item7Days_KAKAO┃https://er.game.daum.net/policy/service
 PurchaseWithdrawalType/Text/BoxKey7Days┃구매일로부터 7일이 경과하거나, 구성품이 일부 사용된 경우 청약철회가 제한됩니다.
 PurchaseWithdrawalType/TEXT/BoxKey7Days_KAKAO┃구매일로부터 7일이 경과하거나, 구성품이 일부 사용된 경우 청약철회가 제한됩니다.
+PurchaseWithdrawalType/Text/BoxKey7Days_KAKAO┃구매일로부터 7일이 경과하거나, 구성품이 일부 사용된 경우 청약철회가 제한됩니다.
 PurchaseWithdrawalType/LinkText/BoxKey7Days┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/BoxKey7Days_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/BoxKey7Days┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/BoxKey7Days_KAKAO┃https://er.game.daum.net/policy/service
 PurchaseWithdrawalType/Text/Within7Days┃구매일로부터 7일이 경과하거나, 수령 시 청약철회가 제한됩니다.
 PurchaseWithdrawalType/TEXT/Within7Days_KAKAO┃구매일로부터 7일이 경과하거나, 수령 시 청약철회가 제한됩니다.
+PurchaseWithdrawalType/Text/Within7Days_KAKAO┃구매일로부터 7일이 경과하거나, 수령 시 청약철회가 제한됩니다.
 PurchaseWithdrawalType/LinkText/Within7Days┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/Within7Days_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/Within7Days┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/Within7Days_KAKAO┃https://er.game.daum.net/policy/service
 PurchaseWithdrawalType/Text/TokenNoWithdrawal┃토큰, 마일리지는 보너스(무료) 재화로 구매한 상품은 구매취소가 제한됩니다.
 PurchaseWithdrawalType/TEXT/TokenNoWithdrawal_KAKAO┃토큰, 마일리지는 보너스(무료) 재화로 구매한 상품은 구매취소가 제한됩니다.
+PurchaseWithdrawalType/Text/TokenNoWithdrawal_KAKAO┃토큰, 마일리지는 보너스(무료) 재화로 구매한 상품은 구매취소가 제한됩니다.
 PurchaseWithdrawalType/LinkText/TokenNoWithdrawal┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/TokenNoWithdrawal_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/TokenNoWithdrawal┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/TokenNoWithdrawal_KAKAO┃https://er.game.daum.net/policy/service
 PurchaseWithdrawalType/Text/PackageNoWithdrawal┃구매 즉시 사용되는 부스트가 포함된 상품으로 구매취소가 제한됩니다.
 PurchaseWithdrawalType/TEXT/PackageNoWithdrawal_KAKAO┃구매 즉시 사용되는 부스트가 포함된 상품으로 구매취소가 제한됩니다.
+PurchaseWithdrawalType/Text/PackageNoWithdrawal_KAKAO┃구매 즉시 사용되는 부스트가 포함된 상품으로 구매취소가 제한됩니다.
 PurchaseWithdrawalType/LinkText/PackageNoWithdrawal┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/PackageNoWithdrawal_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/PackageNoWithdrawal┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
 PurchaseWithdrawalType/Link/PackageNoWithdrawal_KAKAO┃https://er.game.daum.net/policy/service
 PurchaseWithdrawalType/Text/ImmediateUseNoWithdrawal┃구매 즉시 사용되는 상품으로 청약철회가 제한됩니다. 
 PurchaseWithdrawalType/TEXT/ImmediateUseNoWithdrawal_KAKAO┃구매 즉시 사용되는 상품으로 청약철회가 제한됩니다. 
+PurchaseWithdrawalType/Text/ImmediateUseNoWithdrawal_KAKAO┃구매 즉시 사용되는 상품으로 청약철회가 제한됩니다. 
 PurchaseWithdrawalType/LinkText/ImmediateUseNoWithdrawal┃청약철회 필수 고지사항
 PurchaseWithdrawalType/LinkText/ImmediateUseNoWithdrawal_KAKAO┃운영정책 바로가기
 PurchaseWithdrawalType/Link/ImmediateUseNoWithdrawal┃https://support.playeternalreturn.com/hc/ko/articles/29524955386905-%EC%9D%B4%ED%84%B0%EB%84%90-%EB%A6%AC%ED%84%B4-%EC%B2%AD%EC%95%BD%EC%B2%A0%ED%9A%8C-%EC%A0%95%EC%B1%85-2024-03-11
@@ -13457,6 +13401,7 @@ UID┃UID
 UID 보기┃UID 보기
 인트로 영상┃인트로 영상
 인트로 영상 보기┃인트로 영상 보기
+트위치 계정 연동 해제 팝업 이동 버튼┃이동
 리그 정보┃리그 정보
 전투 통계┃전투 통계
 평균 순위┃평균 순위
@@ -13612,7 +13557,7 @@ BattleZoneDown_explanation┃전장에서 적을 처치할 때 획득하는 점�
 유예포인트┃유예 포인트: {0}
 데미갓,이터니티 유예설명┃유예 포인트는 게임 당 3포인트 씩 적립됩니다.(최대 15포인트)\n 1일 이상 플레이하지 않은 경우 매일 1포인트씩 차감됩니다.\n유예 포인트가 0이 되면, 그 다음 날부터 매일 RP가 100 포인트씩 차감됩니다.
 DecayWarning/PopupContents┃유예 포인트가 곧 소멸하거나 이미 소멸한 상태입니다.\n휴면 강등이 시작되면, RP가 감소하며 티어가 강등될 수 있습니다.
-DeferPointDemotion/PopupContents┃유예 포인트 소멸로 {0}티어로 휴면 강등되었습니다. \n랭크 게임을 플레이 하면 유예 포인트를 획득 하며 휴면 상태가 해제 됩니다.
+DeferPointDemotion/PopupContents┃유예 포인트 소멸로 {0} 티어로 휴면 강등되었습니다. \n랭크 게임을 플레이하면 유예 포인트를 획득하며 휴면 상태가 해제됩니다.
 실험이 종료되었습니다.┃실험이 종료되었습니다.
 연습 모드┃연습 모드
 연습모드/아이템아이콘┃아이템 획득
@@ -13759,7 +13704,7 @@ GameSetting/MouseReverse┃마우스 좌우 반전 기능을 on/off 할 수 있�
 마우스 좌우 반전(이동, 선택)┃마우스 좌우 반전(이동, 선택)
 GameSetting/HideNameFromEnemy┃상대방에게 자신의 닉네임이 보이지 않도록 합니다.
 방향 지정 스킬 궤적 표시┃방향 지정 스킬 궤적 표시
-GameSetting/DirectionalndicatorActiveType┃방향을 지정하는 스킬의 궤적을 표시합니다. \n옵션이 꺼진 경우, 방향 지정 스킬의 사거리를 원으로 표기합니다.
+GameSetting/DirectionalndicatorActive┃방향을 지정하는 스킬의 궤적을 표시합니다. \n옵션이 꺼진 경우, 방향 지정 스킬의 사거리를 원으로 표기합니다.
 적 플레이어에게 닉네임 숨기기┃적 플레이어에게 닉네임 숨기기
 GameSetting/IgnoreEmotionFromEnemy┃대전에서 적의 감정표현이 나에게 보이지 않습니다.
 적 감정표현 무시┃적 감정표현 무시
@@ -14527,9 +14472,9 @@ DNA 팔찌가 없습니다.┃사용가능한 재생 팔찌가 없습니다.
 부활 허용┃부활 허용
 CreditResurrection┃크레딧 부활
 CreditResurrectionEnable┃부활 가능
-CreditResurrectionButtonTooptip_Title┃<color=#FFFFFF>부활 시전자</color> | <color=#9D9D9D>부활 대상자</color>
-CreditResurrectionButtonTooptip_DescTypeA┃사망한 아군 부활 시, 부활 대상자의 보유 크레딧을 우선 사용 후 차액을 시전자가 부담한다.
-CreditResurrectionButtonTooptip_DescTypeB┃사망한 아군 부활 시, 부활 시전자의 보유 크레딧을 우선 사용 후 차액을 대상자가 부담한다.
+CreditResurrectionButtonTooltip_Title┃<color=#FFFFFF>부활 시전자</color> | <color=#9D9D9D>부활 대상자</color>
+CreditResurrectionButtonTooltip_DescTypeA┃사망한 아군 부활 시, 부활 대상자의 보유 크레딧을 우선 사용 후 차액을 시전자가 부담한다.
+CreditResurrectionButtonTooltip_DescTypeB┃사망한 아군 부활 시, 부활 시전자의 보유 크레딧을 우선 사용 후 차액을 대상자가 부담한다.
 마크지정┃{0}({1})님이 {2}에 목표를 지정
 마크특수지정┃{0}({1})님이 {2}의 {3}(을)를 목표로 지정
 핑대상지정┃{0}({1})님이 {2}의 {3}({4}) 지목
@@ -14853,6 +14798,10 @@ ServerRegion/Frankfurt┃유럽
 ServerRegion/Singapore┃싱가포르(동남아시아)
 ServerRegion/SaoPaulo┃남미
 ServerRegion/HongKong┃아시아 2
+ServerRegion/Asia┃아시아
+ServerRegion/NorthAmerica┃북미
+ServerRegion/Europe┃유럽
+ServerRegion/SouthAmerica┃남미
 ServerRegion/Asia2┃Asia2 (Beta)
 홍콩리전으로 변경되었습니다┃서울 서버로의 가속 네트워크가 중단되어, 원활한 플레이를 위해 홍콩 서버로 변경되었습니다.
 접속 가능 지역 없음┃접속가능한 지역을 찾을 수 없습니다. 인터넷 환경을 확인해주세요
@@ -15242,7 +15191,7 @@ ID로 가져오기┃ID로 가져오기
 공유 루트 삭제 확인┃해당 루트를 삭제하면 공유 상태도 함께 해제됩니다. \n 해당 루트를 삭제하시겠습니까?
 루트 삭제 확인┃해당 루트를 삭제하시겠습니까?
 루트 복수 삭제 확인┃선택된 모든 루트를 삭제하시겠습니까? \n 공유된 루트는 공유 상태도 함께 해제됩니다.
-루트목표아이템확인팝업┃시작 아이템 5종의 등록이 필요합니다.\n (무기/옷/머리/팔/다리)\n아이템을 확인해주세요.
+루트목표아이템확인팝업┃시작 아이템 5종의 등록이 필요합니다.\n (무기/옷/머리/팔(장식)/다리)\n아이템을 확인해주세요.
 루트목표전술스킬확인팝업┃전술스킬이 아직 등록되지 않았습니다.\n저장하려면 전술스킬을 등록해 주세요.
 루트 불러오기┃루트 검색하기
 최신등록순┃최신 등록순
@@ -16909,6 +16858,7 @@ Option/ColorWeaknessMode/MyTeam1Noise┃아군1 소음 색상
 Option/ColorWeaknessMode/MyTeam2Noise┃아군2 소음 색상
 Option/ColorWeaknessMode/MyTeam3Noise┃아군3 소음 색상
 Option/ColorWeaknessMode/EnemyNoise┃적군 소음 색상
+Option/ColorWeaknessMode/InstallationObjectColor┃환경오브젝트 색상
 닉네임을 가진 유저를 찾을 수 없습니다┃닉네임을 가진 유저를 찾을 수 없습니다.
 받은 친구 요청이 없습니다┃받은 친구 요청이 없습니다.
 검색할 유저의 닉네임을 입력하세요┃검색할 유저의 닉네임을 입력하세요.
