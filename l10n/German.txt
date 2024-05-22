@@ -1375,6 +1375,8 @@ Item/Effects/302311┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302312┃Erhalte dauerhaft 2 Angriffskraft und 4 Fähigkeitsverstärkung. Kann bis zu 3 Mal gestapelt werden.
 Item/Effects/302313┃Stellt AP über 15 Sekunden her.
 Item/Effects/302314┃Stellt LP über 15 Sekunden her.
+Item/Effects/302315┃Stellt LP über 15 Sekunden her.
+Item/Effects/302316┃Stellt LP über 15 Sekunden her.
 Item/Effects/301102┃Stellt LP über 15 Sekunden her.
 Item/Effects/301104┃Stellt LP über 15 Sekunden her.
 Item/Effects/301105┃Stellt LP über 15 Sekunden her.
@@ -1995,7 +1997,6 @@ Item/Name/705615┃Vermächtnis des Helden Mk2
 Item/Name/705616┃E.M.O.T.E Mk2
 Item/Name/705618┃Wunderlampe
 Item/Name/705619┃Sternfragment
-Item/Name/705620┃Zorn des Drachen
 Infusion/Item/705504┃Totem Mk2
 Infusion/Item/705601┃Solarsystem-Miniatur
 Infusion/Item/705602┃Kobaltblau
@@ -2344,6 +2345,9 @@ GameResult/Character/Name/67┃Abigail
 GameResult/Character/Name/68┃Alonso
 GameResult/Character/Name/69┃Leni
 GameResult/Character/Name/70┃Tsubame
+GameResult/Character/Name/71┃Kenneth
+GameResult/Character/Name/72┃Katja
+GameResult/Character/Name/73┃Charlotte
 Monster/Name/1┃Huhn
 Monster/Name/2┃Fledermaus
 Monster/Name/3┃Wildschwein
@@ -6342,6 +6346,8 @@ CharacterState/Group/Name/1006300┃Eichhörnchenfalle
 CharacterState/Group/Desc/1006300┃Lauf- und Angriffstempo reduziert.
 CharacterState/Group/Name/1006400┃Affendraht
 CharacterState/Group/Desc/1006400┃Angriffstempo erhöht.
+CharacterState/Group/Name/1006410┃Affendraht
+CharacterState/Group/Desc/1006410┃Angriffstempo erhöht.
 CharacterState/Group/Name/1006500┃Wolfansturm
 CharacterState/Group/Desc/1006500┃Ein Wolf stürmt mit dem nächsten Angriff auf den Gegner zu.
 CharacterState/Group/Name/1006510┃Wolfansturm
@@ -7277,14 +7283,14 @@ Skill/Group/Desc/1053300┃Markus zerschmettert den Boden in die anvisierte Rich
 Skill/Group/Desc/1053310┃Markus zerschmettert den Boden in die anvisierte Richtung, verursacht <color=white>{0}</color> Fertigkeitsschaden und schleudert getroffene Gegner {3}m nach hinten.
 Skill/Group/Desc/1053400┃Markus stürmt {0}m in die anvisierte Richtung. Markus bleibt stehen, wenn er mit einem Ziel kollidiert, verursacht <color=white>{1}</color> Fertigkeitsschaden und wirft es um {3}m zurück.
 Skill/Group/Desc/1053410┃Markus stürmt {0}m in die anvisierte Richtung. Markus bleibt stehen, wenn er mit einem Ziel kollidiert, verursacht <color=white>{1}</color> Fertigkeitsschaden und betäubt es für {4} Sekunden.\n
-Skill/Group/Desc/1053500┃Маркус бьет своим топором в направлении курсора, создавая <color=white>Тектонический разлом</color> в области на {4} сек. Враги, попавшие под удар получают <color=white>{0}</color> урона от навыков и замедляются на {3}, эффект постепенно рассеивается течении {2} сек.\nЦели, которые подброшены или отброшены назад в пределах <color=white>Тектонического разлома</color>, сразу же получают урон от эффекта <color=white>Напуган</color> и становятся <color=white>Напуганными</color>. Этот эффект может сработать только один раз внутри <color=white>Тектонического разлома</color>./n/nПомечая врагов <color=white>Напуган</color> уменьшает перезарядку <color=white>Земелтрясения</color> на {5} сек.
+Skill/Group/Desc/1053500┃Markus schmettert seine Axt in die anvisierte Richtung und erzeugt für {4} Sekunden einen <color=white>Tektonischen Riss</color> in diesem Gebiet. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden, und erleiden <color=white>{0}</color> Fertigkeitsschaden.\nMarkus erhält {5}<color=white>Tapferkeit</color> zurück, wenn er Gegnern im <color=white>Tektonischen Riss</color> Schaden anrichtet.\n\nZiele, die innerhalb eines <color=white>Tektonischen Risses</color> in die Luft geschleudert oder zurückgestoßen werden, erleiden Schaden und werden <color=white>Erschrocken</color>. Dieser Effekt kann nur einmal innerhalb eines <color=white>Tektonischen Risses</color> ausgelöst werden
 Skill/Group/Coef/1053100┃<color=white>Erschrocken</color>: Feinde, die von Markus oder seinen Fertigkeiten gegen eine Wand gestoßen werden, werden <color=white>Erschrocken</color>, erleiden <color=white>{1}</color><color=#688A08>(+{3} der maximalen LP des Ziels)</color> Fertigkeitsschaden und werden {9} Sekunden lang um {10} verlangsamt. \nFeinde, die mit dem zurückgeschlagenen Ziel in Kontakt kommen, werden ebenfalls erschrocken und erhalten denselben Effekt.\n\n<color=white>Vernichtender Schlag</color>: Wenn Markus einen <color=white>Erschrockenen</color> Feind innerhalb von {5}m mit einem normalen Angriff trifft, wird er unaufhaltsam, richtet <color=white>{6}</color><color=#ffd775>(+{7} Angriffskraft)</color><color=#DDA0DD>(+{12} Fähigkeitsverstärkung)</color> zusätzlichen Fertigkeitsschaden an und entfernt den <color=white>Erschrocken</color> Debuff von allen Feinden.\n
 Skill/Group/Coef/1053200┃Für seine nächsten {0} normalen Angriffe wird Markus' Angriffstempo um {1} erhöht und jeder Angriff gewährt {3} zusätzliche <color=white>Tapferkeit</color>. Der Buff läuft in {4} Sekunden ab, wenn Markus keinen normalen Angriff ausführt.\n\n Das Wirken von <color=white>Kriegskunst</color> erhöht außerdem Markus' Bewegungstempo für {5} Sekunden um {2}, wenn er sich auf ein gegnerisches Testobjekt zubewegt.\n
 Skill/Group/Coef/1053300┃Markus zerschmettert den Boden in die anvisierte Richtung, verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> Fertigkeitsschaden und stößt Feinde für {2} Sekunden in die Luft.\n\nWenn Markus {3} oder mehr <color=white>Tapferkeit</color> hat, werden Feinde stattdessen {4}m nach hinten geschleudert.
 Skill/Group/Coef/1053310┃Markus zerschmettert den Boden in die anvisierte Richtung, verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{4} Fähigkeitsverstärkung)</color> Fertigkeitsschaden und schleudert getroffene Gegner {3}m nach hinten.
 Skill/Group/Coef/1053400┃Markus stürmt {0}m in die anvisierte Richtung. Markus bleibt stehen, wenn er mit einem Ziel kollidiert, verursacht <color=white>{1}</color><color=#ffd775>(+{2} Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Fertigkeitsschaden und wirft es um {3}m zurück.\n\nWenn Markus über {4} oder mehr <color=white>Tapferkeit</color> verfügt, erhalten getroffene Gegner stattdessen <color=white>{5}</color><color=#ffd775>(+{6} Angriffskraft)</color><color=#DDA0DD>(+{10} Fähigkeitsverstärkung)</color> Fertigkeitsschaden, werden um {7}m zurückgeworfen und für {8} Sekunden betäubt.\n
 Skill/Group/Coef/1053410┃Markus stürmt {0}m in die anvisierte Richtung. Markus bleibt stehen, wenn er mit einem Ziel kollidiert, verursacht <color=white>{1}</color><color=#ffd775>(+{2} Angriffskraft)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> Fertigkeitsschaden und betäubt es für {4} Sekunden.\n
-Skill/Group/Coef/1053500┃Маркус бьет своим топором в направлении курсора, создавая <color=white>Тектонический разлом</color> в области на {4} сек. Враги, попавшие под удар получают <color=white>{0}</color><color=#ffd775>(+{1} Силы атаки)</color> урона от навыков и замедляются на {3}, эффект постепенно рассеивается течении {2} сек.\nЦели, которые подброшены или отброшены назад в пределах <color=white>Тектонического разлома</color>, сразу же получают урон от эффекта <color=white>Напуган</color> и становятся <color=white>Напуганными</color>. Этот эффект может сработать только один раз внутри <color=white>Тектонического разлома</color>./n/nПомечая врагов <color=white>Напуган</color> уменьшает перезарядку <color=white>Земелтрясения</color> на {7} сек.
+Skill/Group/Coef/1053500┃Markus schmettert seine Axt in die anvisierte Richtung und erzeugt für {4} Sekunden einen <color=white>Tektonischen Riss</color> in diesem Gebiet. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden, und erleiden <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Fertigkeitsschaden.\nMarkus erhält {5}<color=white>Tapferkeit</color> zurück, wenn er Gegnern im <color=white>Tektonischen Riss</color> Schaden anrichtet.\n\nZiele, die innerhalb eines <color=white>Tektonischen Risses</color> in die Luft geschleudert oder zurückgestoßen werden, erleiden Schaden und werden <color=white>Erschrocken</color>. Dieser Effekt kann nur einmal innerhalb eines <color=white>Tektonischen Risses</color> ausgelöst werden
 Skill/Group/ExpansionTip/1053400┃<i>Não pode atravessar paredes.</i>
 Skill/Group/ExpansionTip/1053410┃<i>Não pode atravessar paredes.</i>
 CharacterState/Group/Name/1053120┃Erschrocken: Verlangsamt
@@ -7965,7 +7971,7 @@ Skill/LobbyDesc/1053100┃Jedes Mal, wenn Markus einen normalen Angriff ausführ
 Skill/LobbyDesc/1053200┃Für seine nächsten 3 normalen Angriffe wird Markus' Angriffstempo erhöht und jeder Angriff gewährt zusätzliche <color=white>Tapferkeit</color>. Der Buff läuft ab, wenn Markus keinen normalen Angriff ausführt.\n\n Das Wirken von <color=white>Kriegskunst</color> erhöht außerdem Markus' Bewegungstempo für kurze Zeit, wenn er sich auf ein gegnerisches Testobjekt zubewegt.
 Skill/LobbyDesc/1053300┃Markus zerschmettert den Boden in die anvisierte Richtung, verursacht Fertigkeitsschaden und stößt Feinde in die Luft.\n\nWenn Markus 50 oder mehr <color=white>Tapferkeit</color> hat, werden Feinde stattdessen nach hinten geschleudert.
 Skill/LobbyDesc/1053400┃Markus stürmt in die anvisierte Richtung. Markus bleibt stehen, wenn er mit einem Ziel kollidiert, verursacht Fertigkeitsschaden und wirft es zurück.\n\nWenn Markus über 50 oder mehr <color=white>Tapferkeit</color> verfügt, erhalten getroffene Gegner Fertigkeitsschaden, werden noch weiter zurückgeworfen und betäubt.\n
-Skill/LobbyDesc/1053500┃Маркус бьет своим топором в направлении курсора, создавая <color=white>Тектонический разлом</color> в области. Враги, попавшие под удар получают урон от навыков и замедляются, эффект постепенно рассеивается.\n\nЦели, которые подброшены или отброшены назад в пределах <color=white>Тектонического разлома</color>, сразу же получают урон от эффекта <color=white>Напуган</color> и становятся <color=white>Напуганными</color>. Этот эффект может сработать только один раз внутри <color=white>Тектонического разлома</color>./n/nПомечая врагов <color=white>Напуган</color> уменьшает перезарядку <color=white>Земелтрясения</color>.
+Skill/LobbyDesc/1053500┃Markus schmettert seine Axt in die anvisierte Richtung und erzeugt für einen <color=white>Tektonischen Riss</color>. Getroffene Feinde werden verlangsamt, abnehmend über Zeit, und erleiden Fertigkeitsschaden.\nMarkus erhält <color=white>Tapferkeit</color> zurück, wenn er Gegnern im <color=white>Tektonischen Riss</color> Schaden anrichtet.\n\nZiele, die innerhalb eines <color=white>Tektonischen Risses</color> in die Luft geschleudert oder zurückgestoßen werden, erleiden Schaden und werden <color=white>Erschrocken</color>. Dieser Effekt kann nur einmal innerhalb eines <color=white>Tektonischen Risses</color> ausgelöst werden
 Skill/LobbyDesc/1054100┃ความเร็วการโจมตีของคลาร่าจะลิมิตที่ แต่ส่วนขยายสกิลของเธอจะเพิ่มขึ้นตามความเร็วการโจมตีที่เพิ่มขึ้นของเธอ\n\nคลาร่าจะขาร์จระยะหนึ่ง โจมตีปกติที่ปล่อยออกไปจะใช้ส่วนที่ชาร์จไปส่วนหนึ่งและทำความเสียหายสกิลใส่ศัตรู การโจมตีที่ชาร์จจนเต็มทำความเสียหายสกิลและใช้การชาร์จทั้งหมดของเธอ ฉมวกทั้งหมดที่ไม่ได้เชื่อมต่อจะติดบนพื้น
 Skill/LobbyDesc/1054200┃Karla feuert ihre Harpune in die Zielrichtung und verursacht normalen Angriffsschaden. Die gestartete Harpune bleibt am Ende ihrer Reichweite. Karla kann sich mit Harpunen verbinden und unterbricht die Verbindung, wenn sie sich von den Harpunen entfernt.\n\nDie Abklingzeit von <color=white>Durchdringende Kette</color> wird basierend auf Karlas <color=#ADA478>Angriffsgeschwindigkeit</color> reduziert.
 Skill/LobbyDesc/1054300┃Karla rettet alle ihre verbundenen Harpunen, fügt getroffenen Gegnern Fertigkeitsschaden zu und verlangsamt sie. Wenn die Harpunen Schaden zugefügt haben, erhält sie eine zusätzliche Nachladeanzeige und ihre Abklingzeit für Piratenlandung wird verringert.
@@ -8906,9 +8912,6 @@ Item/Skills/6008202/Body┃Wenn du einem Ziel Schaden zufügst, wird dessen Heil
 Item/Skills/6008202/Desc┃Wenn du einem Ziel Schaden zufügst, wird dessen Heilung 4 Sekunden lang um 60 % verringert.
 CharacterState/Group/Name/6008010┃Heilungsreduzierung
 CharacterState/Group/Desc/6008010┃Jegliche Heilung auf dir ist viel weniger effektiv.
-Item/Skills/6008202/Desc┃Wenn du einem Ziel Schaden zufügst, wird dessen Heilung 4 Sekunden lang um 60 % verringert.
-CharacterState/Group/Name/6008010┃Heilungsreduzierung
-CharacterState/Group/Desc/6008010┃Jegliche Heilung auf dir ist viel weniger effektiv.
 보유하지 않은 캐릭터입니다.┃Diesen Charakter hast du noch nicht freigeschaltet.\nSchalte ihn im Laden frei, um diesen Charakter zu spielen.
 매칭 중 캐릭 변경 금지┃Während der Matchsuche kannst du deinen Charakter nicht wechseln.
 로딩 중┃Lädt\n<Mit der X-Taste kannst du dich hinsetzen und ausruhen.>
@@ -9012,6 +9015,8 @@ NP_청약철회 필수 고지사항┃Rückerstattungsrichtlinie für Käufe im 
 패키지 청약철회 공용사용문구┃Weitere Informationen findest du in unserer [Erstattungsrichtlinie].
 패키지 청약철회 공용사용문구_KAKAO┃Weitere Informationen findest du in unserer [Erstattungsrichtlinie].
 해당 아이템을 사용하는 경우 구매취소 불가┃Dieser Inhalt wird sofort nach dem Kauf aktiviert und ist nicht erstattungsfähig.
+개인상점 상품구성확률 링크┃https://playeternalreturn.com/stats/8
+개인상점 상품구성확률 링크_KAKAO┃https://playeternalreturn.com/stats/8
 시퀀스 상품 안내문구1┃{0} {1} Käufe werden {2} freischalten.
 시퀀스 상품 안내문구2┃{0} Anzahl der Käufe ({1}/{2})
 시퀀스 상품 안내문구3┃Wenn das Produkt einen Artikel enthält, den du bereits besitzt, erhältst du ein Duplikat desselben.
@@ -10646,6 +10651,7 @@ ResistanceHpHealedDecrease┃Resistenz gegen Heilungsreduktion
 Stasis┃In Stase
 Uninteractionable┃Kann nicht interagieren
 Frozen┃Eingefroren
+Drowse┃Schläfrig
 Suspension┃Betäubt
 무기 숙련도┃(Höchste) Waffenmeisterung
 무기 숙련도 설명┃Ein Wert, der durch Waffenhandwerk und -nutzung erhöht wird.\nJe nach Charakter und Waffe werden dadurch verschiedene Werte erhöht.
@@ -11091,8 +11097,8 @@ Blank┃Kein Ergebnis
 튜토리얼 보상으로 획득가능합니다.┃Verfügbar als Trainingsabschlussbelohnung.
 해당 실험체를 영입하시겠습니까?┃Möchtest du den Charakter freischalten?
 구매관련 필수 고지사항┃Rückgabe dieses Produkts ist ausgeschlossen.
-구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/8924563306905
-NP_구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/8924563306905
+구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/32696171159705
+NP_구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/32696171159705
 구매관련 필수 고지사항 링크_KAKAO┃https://er.game.daum.net/policy/service
 구매관련 필수 고지사항 링크_MS┃https://support.playeternalreturn.com/hc/en-us/articles/4408010200601
 {0} 개를 구입하겠습니까?┃{0} kaufen?
@@ -11563,6 +11569,7 @@ BoosterTooltip/Result/Booster/Acoin┃A-Coin Boost
 BoosterTooltip/Result/Booster/Acoin1┃A-Coin Boost (1 Tag)
 BoosterTooltip/Result/Booster/Acoin3┃A-Coin Boost (3 Tag)
 BoosterTooltip/Result/Booster/Acoin7┃A-Coin Boost (7 Tag)
+BoosterTooltip/Result/Booster/Acoin14┃A-Coin Boost (14 Tag)
 BoosterTooltip/Result/PC방/XP┃LAN-Café EXP Boost
 BoosterTooltip/Result/Event/XP┃Doppelte EXP Boost
 BoosterTooltip/Result/Booster/XP┃EXP Boost
@@ -11570,6 +11577,7 @@ BoosterTooltip/Result/Booster/XP1┃EXP Boost (1 Tag)
 BoosterTooltip/Result/Booster/XP3┃EXP Boost (3 Tag)
 BoosterTooltip/Result/Booster/XP7┃EXP Boost (7 Tag)
 BoosterTooltip/Result/Booster/XP15┃EXP Boost (15 Tag)
+BoosterTooltip/Result/Booster/XP14┃EXP Boost (14 Tag)
 BoosterTooltip/Result/PC방/ERPoint┃PC Café ER Point Boost
 BoosterTooltip/Result/Event/ERPoint┃Doppelter ER-Punkte Boost
 BoosterTooltip/Result/Booster/ERPoint┃ER-Punkte Boost
@@ -13513,11 +13521,7 @@ Trait/StatTooltip/7000401┃Wenn du einem Testobjekt mit einer Fähigkeit Schade
 CharacterState/Group/Name/7000400┃Vampirerbe
 CharacterState/Group/Desc/7000400┃Gegen Gegner getroffene Fähigkeiten verleihen eine Steigerung von Omnisyphon. Bei maximalen Steigerungen erhältst du zusätzliche Werte. Die Dauer setzt sich mit erneuten Treffern zurück.
 CharacterState/Group/Name/7000410┃Vampirische Blutlinie
-CharacterState/Group/Desc/7000410┃Klingt ab.
-CharacterState/Group/Name/7000420┃Vampirische Blutlinie
-CharacterState/Group/Desc/7000420┃Omnisyphon erhöht.
-CharacterState/Group/Name/7000430┃Vampirische Blutlinie
-CharacterState/Group/Desc/7000430┃Werte durch Vampirische Blutlinie erhöht
+CharacterState/Group/Desc/7000410┃Werte durch Vampirische Blutlinie erhöht
 Trait/Name/7000501┃Rote Fee
 Trait/Tooltip/7000501┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, beschwörst du eine Fee, die sich an mehrere gegnerische Testobjekte kettet und Fertigkeitsschaden anrichtet. Wenn nur ein einziges Testobjekt getroffen wird, richtet die Fee zusätzlichen Schaden an.
 Trait/DetailTooltip/7000501┃Wenn du einem Gegner mit einer Fähigkeit Schaden zufügst, richtest du {1}+Level*{2}(+Angriffskraft*{3})(+Fähigkeitsverstärkung*{4}) Fähigkeitsschaden an, der an Gegner in der Nähe überspringen kann. Ist ein weiteres Testobjekt in {7}m Reichweite, wird um {8}% Schaden angerichtet, der dafür aber beide Gegner trifft.\nWenn nur ein einziges Testobjekt getroffen wird, richtet Rote Fee {6}% zusätzlichen Schaden an.\nJede gegen einen Gegner getroffene Fähigkeit reduziert die verbleibende Abklingzeit der Roten Fee um {9} Sekunden. (Abklingzeit: {5} Sekunden)\n
@@ -13531,13 +13535,9 @@ Trait/Tooltip/7000601┃Für jeden normalen Angriff gegen Testobjekte oder alle 
 Trait/DetailTooltip/7000601┃Für jeden normalen Angriff gegen Testobjekte oder pro {0}s im Kampf erhältst du eine Steigerung von Adrenalin, bis zu {1} insgesamt.\n({11}) Erhalte ({2}+Level*{3})% Angriffstempo pro Steigerung.\nBei maximalen Steigerungen erhältst du zusätzliche ({4}+Level*{5})% normale Angriffsverstärkung.\n\n({12}) Erhalte ({7}+Level*{8})% Angriffstempo pro Steigerung.\nBei maximalen Steigerungen erhältst du zusätzliche ({9}+Level*{10})% normale Angriffsverstärkung.\n\nAdrenalinsteigerungen verfallen außerhalb des Kampfes. (Abklingzeit: {13}s)
 Trait/StatTooltip/7000601┃Jedes mal wenn du einem gegnerischen Testobjekt, durch normale Angriffe, Schaden zufügst oder {0} Sekunden im Kampf bist, wird dir eine von bis zu max. {1} Steigerungen Adrenalin gewährt. \n({7})Erhalte {21}% Angriffstempo pro Steigerung. Bei Erreichen der maximalen Steigerungen erhältst du außerdem {22}% normale Angriffsverstärkung.\n\nSteigerungen verfallen beim Verlassen des Kampfes.\n\nAbklingzeit: {13}s\nNormale Angriffsverstärkung: {6}
 CharacterState/Group/Name/7000600┃Adrenalin
-CharacterState/Group/Desc/7000600┃Für jeden normalen Angriff gegen Testobjekte oder alle paar Sekunden im Kampf erhältst du eine Steigerung von Adrenalin, der dir Angriffstempo gewährt. \nBei max Steigerungen erhältst du außerdem zusätzliche normale Angriffsverstärkung.\n\nAdrenalinsteigerungen verfallen außerhalb des Kampfes.
+CharacterState/Group/Desc/7000600┃Angriffstempo erhöht
 CharacterState/Group/Name/7000610┃Adrenalin
-CharacterState/Group/Desc/7000610┃Klingt gerade ab!
-CharacterState/Group/Name/7000620┃Adrenalin
-CharacterState/Group/Desc/7000620┃Angriffstempo erhöht
-CharacterState/Group/Name/7000630┃Adrenalin
-CharacterState/Group/Desc/7000630┃Normale Angriffsverstärkung erhöht
+CharacterState/Group/Desc/7000610┃Normale Angriffsverstärkung erhöht
 Trait/Name/7010101┃Durchstoßen
 Trait/Tooltip/7010101┃Erhalte Rüstungsdurchdringung
 Trait/DetailTooltip/7010101┃Erhalte {0}% Rüstungsdurchdringung.
@@ -13625,7 +13625,7 @@ CharacterState/Group/Name/7100540┃Bittere Vergeltung
 CharacterState/Group/Desc/7100540┃Schaden an gegnerischen Testobjekten gewährt Steigerungen von Bittere Vergeltung, die dir Bonusschaden für normale Angriffe gewähren
 Trait/Name/7110101┃Befestigen
 Trait/Tooltip/7110101┃Erhöhe deine Verteidigung, wenn du einen Schild oder Heilung von einer Fertigkeit erhältst.
-Trait/DetailTooltip/7110101┃Erhöhe deine Verteidigung um ({1}+Level*{2}) für {0}, wenn du einen Schild oder Heilung von einer Fähigkeit erhältst.(Abklingzeit: {3}s)
+Trait/DetailTooltip/7110101┃Erhöhe deine Verteidigung um ({1}+Level*{2}) für {0}, wenn du einen Schild oder Heilung von einer Fähigkeit erhältst. (Abklingzeit: {3}s)
 Trait/StatTooltip/7110101┃Erhöhe deine Verteidigung um ({1}+Level*{2}) für {0}, wenn du einen Schild oder Heilung von einer Fähigkeit erhältst. (Abklingzeit: {3}s)\n\nGesamte Bonusinstanzen: {4}\nGesamte Bonusverteidigung: {5}
 CharacterState/Group/Name/7110100┃Befestigen
 CharacterState/Group/Desc/7110100┃Verteidigung erhöht.
@@ -13749,14 +13749,6 @@ Trait/Name/7210501┃Urbane Kriegsführung
 Trait/Tooltip/7210501┃Du erhältst Angriffskraft, wenn ein Gegner eine deiner Fallen auslöst. Erhalte zusätzliche Verteidigung, wenn du in eine Falle tappst.\n
 Trait/DetailTooltip/7210501┃Du erhältst {1}% Angriffskraft für {0} Sekunden, wenn ein Gegner eine deiner Fallen auslöst. Erhalte {3}% zusätzliche Verteidigung, wenn du eine Falle auslöst.\n(Abklingtzeit: {4}s)
 Trait/StatTooltip/7210501┃Du erhältst {1}% Angriffskraft für {0} Sekunden wenn ein Gegner eine deiner Fallen auslöst. Erhalte {3}% Verteidigung, wenn du eine Falle auslöst. (Abklingtzeit: {4}s)\n\nAngriffskraft-Instanzen: {6}\nVerteidigungs-Instanzen: {7}
-CharacterState/Group/Name/7210500┃Urbane Kriegsführung
-CharacterState/Group/Desc/7210500┃Angriffskraft erhöht.
-CharacterState/Group/Name/7210510┃Urbane Kriegsführung
-CharacterState/Group/Desc/7210510┃Verteidigung erhöht.
-CharacterState/Group/Name/7210520┃Urbane Kriegsführung - Angriffskraft erhöht
-CharacterState/Group/Desc/7210520┃Klingt ab.
-CharacterState/Group/Name/7210530┃Urbane Kriegsführung - Verteidiung erhöht.
-CharacterState/Group/Desc/7210530┃Klingt ab.
 Trait/Name/7210601┃Vorsprung
 Trait/Tooltip/7210601┃Starte das Spiel mit ausgerüsteten Holzschuhen. Außerhalb des Kampfes erhältst du zusätzliches Lauftempo, wenn du Epische oder Legendäre Beinrüstung trägst.
 Trait/DetailTooltip/7210601┃Starte das Spiel mit ausgerüsteten Holzschuhen. Außerhalb des Kampfes erhältst du {0} zusätzliches Lauftempo, wenn du Epische oder Legendäre Beinrüstung trägst.
@@ -13767,9 +13759,6 @@ Trait/Name/7210801┃Geizkragen
 Trait/Tooltip/7210801┃Bestellungen an Transferkonsolen sind billiger.
 Trait/DetailTooltip/7210801┃Die Kosten von Konsolen werden um {0} heruntergesetzt.
 Trait/StatTooltip/7210801┃Das Benutzen der Transferkonsole wird um {0} heruntergesetzt. \n\nGesamtersparnis: {2}
-Trait/Tooltip/7000301┃Das Benutzen deiner Waffenfertigkeit gewährt dir Angriffstempo.
-Trait/DetailTooltip/7000301┃Das Benutzen deiner Waffenfertigkeit gewährt dir mehr Schaden und Angriffstempo.\n(Nahkampf) Erhalte ({4} + Level*{5}%) Angriffstempo für {1} Sekunden.\n(Fernkampf) Erhalte ({10} + Level*{11}%) Angriffstempo für {7} Sekunden. \n(Abklingzeit: {0}s)
-Trait/StatTooltip/7000301┃Das Benutzen deiner Waffenfähigkeit gewährt dir mehr Angriffstempo. (Abklingzeit: {0}s)\n({21}) Erhalte {22}% Angriffstempo für {23} Sekunden.\n\nGesamte Angriffstempoerhöhung: {15}
 로딩팁 튜토리얼1┃Ein Gegenstand, welcher oben links mit einem gelben Dreieck versehen ist, gehört zu deinem ausgewählten Bauplan.\nSammel immer zuerst die Gegenstände deines Bauplans ein!
 로딩팁 튜토리얼2┃Gesuchte Gegenstände, die du in deinem derzeitigen Gebiet finden kannst, werden über der Minikarte angezeigt.
 로딩팁 튜토리얼3┃Verbessere immer zuerst deine Waffe!\n Eine voll ausgebaute Waffe entscheidet früh im Spiel oft den Unterschied zwischen töten und getötet werden.
