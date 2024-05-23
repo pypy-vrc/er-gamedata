@@ -1376,6 +1376,8 @@ Item/Effects/302311┃recupera Energia durante 15 segundos.
 Item/Effects/302312┃Permanentemente ganhe 2 de Poder de Ataque e 4 de Amplificação de Habilidade. Pode ser acumulado até 3 vezes.
 Item/Effects/302313┃Recupera Energia durante 15 segundos.
 Item/Effects/302314┃Recupera Energia durante 15 segundos.
+Item/Effects/302315┃Recupera Energia durante 15 segundos.
+Item/Effects/302316┃Recupera Energia durante 15 segundos.
 Item/Effects/301102┃recupera Vida durante 15 segundos.
 Item/Effects/301104┃recupera Vida durante 15 segundos.
 Item/Effects/301105┃recupera Vida durante 15 segundos.
@@ -1994,7 +1996,6 @@ Item/Name/705615┃Registro do Herói Mk2
 Item/Name/705616┃E.M.O.T.E Mk2
 Item/Name/705618┃Lâmpada Mágica
 Item/Name/705619┃Fragmento de Estrela
-Item/Name/705620┃Fúria do Dragão
 Infusion/Item/705504┃Totem Mk2
 Infusion/Item/705601┃Miniatura de Sistema Solar
 Infusion/Item/705602┃Cobalt Azul
@@ -2341,6 +2342,9 @@ GameResult/Character/Name/67┃Abigail
 GameResult/Character/Name/68┃Alonso
 GameResult/Character/Name/69┃Leni
 GameResult/Character/Name/70┃Tsubame
+GameResult/Character/Name/71┃Kenneth
+GameResult/Character/Name/72┃Katja
+GameResult/Character/Name/73┃Charlotte
 Monster/Name/1┃Galinha
 Monster/Name/2┃Morcego
 Monster/Name/3┃Javali
@@ -6398,6 +6402,8 @@ CharacterState/Group/Name/1006300┃Armadilha de Esquilo
 CharacterState/Group/Desc/1006300┃Movimento e velocidade de ataque reduzidos.
 CharacterState/Group/Name/1006400┃Cabo do Macaco
 CharacterState/Group/Desc/1006400┃Velocidade de Movimento aumentada.
+CharacterState/Group/Name/1006410┃Cabo do Macaco
+CharacterState/Group/Desc/1006410┃Velocidade de Movimento aumentada.
 CharacterState/Group/Name/1006500┃Investida do Lobo
 CharacterState/Group/Desc/1006500┃Um Lobo aparece quando realiza um Ataque Básico.
 CharacterState/Group/Name/1006510┃Investida do Lobo
@@ -7027,6 +7033,7 @@ Skill/Group/Coef/1024300┃Adela move seu Cavalo até a localização selecionad
 Skill/Group/Coef/1024400┃Adela desliza sua Torre na direção selecionada, causando <color=white>{0}</color><color=#dda0dd>(+{7} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos atingidos. Atingir um peão, dama ou cavalo no caminho faz com que essas peças causem dano.\nPeão e Dama: causa {6} do dano de Promoção.\nCavalo: causa {6} do dano de Garfo de Cavalo, aplicando lentidão de {3} por {2} segundos.\nReative esta habilidade dentro de {4} segundos para trocar de lugar com a Torre.\n\nAs Torres duram {5} segundos. Invocar outra torre fará com que a anterior desapareça.
 Skill/Group/Coef/1024410┃Adela desliza sua Torre na direção selecionada, causando <color=white>{0}</color><color=#dda0dd>(+{7} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos atingidos. Atingir um peão, dama ou cavalo no caminho faz com que essas peças causem dano.\nPeão e Dama: causa {6} do dano de Promoção.\nCavalo: causa {6} do dano de Garfo de Cavalo, aplicando lentidão de {3} por {2} segundos.\nReative esta habilidade dentro de {4} segundos para trocar de lugar com a Torre.\n\nAs Torres duram {5} segundos. Invocar outra torre fará com que a anterior desapareça.
 Skill/Group/Coef/1024500┃Adela sobe ao céu por {2} segundos, tornando-se incapaz de receber dano. Ao aterrissar, ela causa <color=white>{0}</color><color=#dda0dd>(+{5} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos dentro do alcance e um adicional de {3} da Vida Máxima do alvo como Dano Verdadeiro por peça de xadrez ativa. Cada peça de xadrez ativa também ataca, causando {4} do dano de ativação delas e desaparecendo em seguida.
+Skill/Group/ExpansionTip/1024200┃<i>Não afetado por Redução de Tempo de Recarga.</i>
 CharacterState/Group/Name/1024100┃Controle do Centro
 CharacterState/Group/Name/1024120┃Controle do Centro - Velocidade de Movimento aumentada
 CharacterState/Group/Name/1024200┃Promoção
@@ -7280,6 +7287,8 @@ CharacterState/Group/Name/1030120┃Carne Moída
 CharacterState/Group/Desc/1030120┃4 Ataques Básicos produzirão um lanche.
 CharacterState/Group/Name/1030130┃Carne Moída - Lanche da Eleven
 CharacterState/Group/Desc/1030130┃Vida recuperada pelo lanche da Eleven
+CharacterState/Group/Name/1030200┃Rainha dos Lanches - Retardado
+CharacterState/Group/Desc/1030200┃Desacelerado ao ser atingido por um hambúrguer gigante.
 CharacterState/Group/Name/1030210┃Rainha dos Lanches - Retardado
 CharacterState/Group/Desc/1030210┃Desacelerado ao ser atingido por um hambúrguer gigante.
 CharacterState/Group/Name/1030220┃CO-MI-DA! - Reduz o dano recebido
@@ -7606,8 +7615,6 @@ Skill/Group/Coef/1038710┃Jenny desenrola o tapete vermelho na direção escolh
 Skill/Group/Coef/1038800┃<color=green>Passiva</color>: O tempo de recarga de habilidade é reduzido em {3} sempre que Jenny performar um ataque básico. Jenny causa um adicional de <color=white>{0}</color><color=#DDA0DD>(+{1} Amplificação de Habilidade)</color> de Dano de Habilidade a cada {2} Ataques Básicos ou após ativar Persona.\n\n<color=green>Efeito</color>: Jenny avança na direção selecionada e assume um novo papel ativando dano de habilidade adicional.\n\nEssa habilidade não é afetada por efeitos de Redução de Tempo de Recarga.
 Skill/Group/ExpansionTip/1038400┃<i>Esse ataque básico também é considerado uma habilidade.</i>
 Skill/Group/ExpansionTip/1038800┃<i>Esse ataque básico também é considerado uma habilidade.</i>
-Skill/Group/ExpansionTip/1038400┃<i>Holofotes e Tapetes Vermelhos já existentes não são afetados.</i>
-Skill/Group/ExpansionTip/1038800┃<i>Holofotes e Tapetes Vermelhos já existentes não são afetados.</i>
 CharacterState/Group/Name/1038110┃Fingir de Morta
 CharacterState/Group/Desc/1038110┃Jenny está se fingindo de morta. Que atuação excelente!
 CharacterState/Group/Name/1038140┃Fingir de Morta
@@ -8210,7 +8217,20 @@ CharacterState/Group/Desc/1049410┃Onda Crescente! - Desviando de Ataques Bási
 CharacterState/Group/Desc/1049500┃Imune a Controle de Grupo!
 CharacterState/Group/Desc/1049510┃Atordoado pela Tempestade da Hidra
 Skill/Group/ExpansionTip/1049200┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049210┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049220┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049230┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049240┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049300┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049310┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049320┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049330┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049340┃<i>Pode atravessar paredes em seu ultimo uso.</i>
 Skill/Group/ExpansionTip/1049400┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049410┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049420┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049430┃<i>Pode atravessar paredes em seu ultimo uso.</i>
+Skill/Group/ExpansionTip/1049440┃<i>Pode atravessar paredes em seu ultimo uso.</i>
 Skill/Group/ExpansionTip/1049500┃<i>Não pode atravessar paredes.</i>
 Skill/Group/Name/1050100┃Domínio da Rainha do Inverno
 Skill/Group/Name/1050200┃Elegância Cristalina
@@ -8574,7 +8594,7 @@ Skill/Group/Desc/1057440┃Martina desliza de volta a sua fita de vídeo.
 Skill/Group/Desc/1057500┃<color=#ffffff>[Entrevista]</color>  \nMartina grava na direção selecionada por 4 segundos. Se o alvo entrar no alcance enquanto ela grava, sua Velocidade de Movimento aumenta em {11}. Se ela capturar um alvo no filme, Martina ganha um <color=white>Acúmulo de Gravação</color> e sua velocidade de movimento é aumentada em {1} por {0} segundos.  \n \nSempre que Martina ter {3} ou mais <color=white>Acúmulos de Gravação</color>, ela completa sua entrevista e entra no modo de <color=#ffd775>Transmissão</color>, melhorando suas habilidades.  \n \n<color=#819FF7>Condições de Filmagem Padrão</color>: Filme 2 <color=#2ECCFA>Alvos de Manchete</color> por {4} ou mais segundos para ganhar {5} Acúmulos de Gravação e {6} de Maestria de Arma.  \n<color=#819FF7>Condições de Gravação de Cadáver</color>: Filme o cadáver de 1 <color=#2ECCFA>Alvo de Manchete</color> por {10} ou mais segundos para ganhar {7} Acúmulos de Gravação e {8} de Maestria de Arma. (Máximo de {9} Acúmulos, não pode filmar o mesmo cadáver duas vezes)  \n<color=#2ECCFA>Alvos de Manchete</color>: Cobaias inimigas, Árvore da Vida, Meteorito, Alpha, Ômega, Wickeline, Gamma  \n\nDepois de gravar um objetivo que não seja a Árvore da Vida ou o Meteorito, ela não pode gravar o mesmo alvo por {24} segundos. \n \n<color=#ffd775>[Transmissão]</color>  \nMartina causa dano a inimigos na seleção direcionada, causando dano explosivo a inimigos acertados e atordoando inimigos no centro da habilidade quando ela acabar. 
 Skill/Group/Desc/1057510┃Martina grava um vídeo da Ilha de Lumia na direção selecionada, reduzindo a defesa do alvo em {4} e causando <color=white>{20}</color> de dano de habilidade a inimigos na borda por 1.5 segundos e <color=white>{21}</color> de dano de habilidade a inimigos no centro. \n \nQuando a habilidade acabar, inimigos na borda recebem <color=white>{22}</color> de dano, e inimigos no centro recebem <color=white>{23}</color><color=#ffd775>(+{8}</color> de dano. Inimigos no centro são atordoados por uma duração que aumenta por {9} cada vez que eles receberem dano de Gravação.
 Skill/Group/Coef/1057100┃Combine uma <color=#D6D6D6>Câmera de Segurança</color> e um <color=#D6D6D6>Galho</color> para criar uma <color=#35CB38>Câmera de Trilha</color> com Infiltração.  \n \nA Câmera 4K UHD da Martina gasta força da sua bateria para performar ataques básicos, causando <color=#ffd775>({11})</color> de dano. Enquanto a bateria estiver recarregando, Martina não pode dar ataques básicos. A duração de sua carga diminui com cada ponto de habilidade colocado em <color=white>Gravação</color>.  \nDuração de Carga Atual : {0} segundos  \n \nOs ataques básicos de Martina revelam seu alvo atual e causa dano extra a animais selvagens equivalente a {2}% de sua Vida Máxima. O Poder de Ataque de Martina também é aumentado em {3} para cada 50% de Velocidade de Ataque obtida.  \n \n<color=#ffffff>[Entrevista]</color>  \nA experiência de Martina em cobrir guerras a permite a intuitivamente sentir o perigo próximo enquanto estiver entrevistando. Combate entre coibaias num alcance de {1}m irá mostrar um ping especial no Minimapa. \nSempre que Martina performar {4} ataques básicos consecutivos contra um inimigo, ela aplica uma marca neles. Acertar o inimigo com uma habilidade consome a marca, causando <color=white>{5}</color><color=#ffd775>(+{6}% Poder de Ataque)</color><color=#DDA0DD>(+{9}% Amplificação de Habilidade)</color> de dano de habilidade.  \n \n<color=#ffd775>[Transmissão]</color>  \nAtaques básicos causam <color=#ffd775>({12})</color> de dano. Acertar um inimigo marcado com uma habilidade consome a marca, causando <color=white>{7}</color><color=#ffd775>(+{8}% Poder de Ataque)</color><color=#DDA0DD>(+{10}% Amplificação de Habilidade)</color> de dano de habilidade. 
-Skill/Group/Coef/1057110┃Combine uma <color=#D6D6D6>Câmera de Segurança</color> e um <color=#D6D6D6>Galho</color> para criar uma <color=#35CB38>Câmera de Trilha</color> com Infiltração.  \n \nA Câmera 4K UHD da Martina gasta força da sua bateria para performar ataques básicos, causando <color=#ffd775>({11})</color> de dano. Enquanto a bateria estiver recarregando, Martina não pode dar ataques básicos. A duração de sua carga diminui com cada ponto de habilidade colocado em <color=white>Gravação</color>.  \nDuração de Carga Atual : {0} segundos  \n \nA experiência de Martina em cobrir guerras a permite a intuitivamente sentir o perigo próximo. Combate entre coibaias num alcance de {1}m irá mostrar um ping especial no Minimapa.  \n \nOs ataques básicos de Martina revelam seu alvo atual e causa dano extra a animais selvagens equivalente a {2}% de sua Vida Máxima. O Poder de Ataque de Martina também é aumentado em {3} para cada 50% de Velocidade de Ataque obtida.  \n \n<color=#ffffff>[Entrevista]</color>  \nSempre que Martina performar {4} ataques básicos consecutivos contra um inimigo, ela aplica uma marca neles. Acertar o inimigo com uma habilidade consome a marca, causando <color=white>{5}</color><color=#ffd775>(+{6}% Poder de Ataque)</color><color=#DDA0DD>(+{9}% Amplificação de Habilidade)</color> de dano de habilidade.  \n \n<color=#ffd775>[Transmissão]</color>  \nAtaques básicos causam <color=#ffd775>({12})</color> de dano. Acertar um inimigo marcado com uma habilidade consome a marca, causando <color=white>{7}</color><color=#ffd775>(+{8}% Poder de Ataque)</color><color=#DDA0DD>(+{10}% Amplificação de Habilidade)</color> de dano de habilidade.
+Skill/Group/Coef/1057110┃Combine uma <color=#D6D6D6>Câmera de Segurança</color> e um <color=#D6D6D6>Galho</color> para criar uma <color=#35CB38>Câmera de Trilha</color> com Infiltração.  \n \nA Câmera 4K UHD da Martina gasta força da sua bateria para performar ataques básicos, causando <color=#ffd775>({11})</color> de dano. Enquanto a bateria estiver recarregando, Martina não pode dar ataques básicos. A duração de sua carga diminui com cada ponto de habilidade colocado em <color=white>Gravação</color>.  \nDuração de Carga Atual : {0} segundos  \n \nOs ataques básicos de Martina revelam seu alvo atual e causa dano extra a animais selvagens equivalente a {2}% de sua Vida Máxima. O Poder de Ataque de Martina também é aumentado em {3} para cada 50% de Velocidade de Ataque obtida.  \n \n<color=#ffffff>[Entrevista]</color>  \nA experiência de Martina em cobrir guerras a permite a intuitivamente sentir o perigo próximo enquanto estiver entrevistando. Combate entre coibaias num alcance de {1}m irá mostrar um ping especial no Minimapa. \nSempre que Martina performar {4} ataques básicos consecutivos contra um inimigo, ela aplica uma marca neles. Acertar o inimigo com uma habilidade consome a marca, causando <color=white>{5}</color><color=#ffd775>(+{6}% Poder de Ataque)</color><color=#DDA0DD>(+{9}% Amplificação de Habilidade)</color> de dano de habilidade.  \n \n<color=#ffd775>[Transmissão]</color>  \nAtaques básicos causam <color=#ffd775>({12})</color> de dano. Acertar um inimigo marcado com uma habilidade consome a marca, causando <color=white>{7}</color><color=#ffd775>(+{8}% Poder de Ataque)</color><color=#DDA0DD>(+{10}% Amplificação de Habilidade)</color> de dano de habilidade. 
 Skill/Group/Coef/1057200┃<color=#ffffff>[Entrevista]</color>  \nMartina tira uma foto instantânea na direção selecionada, causando <color=white>{0}</color><color=#ffd775>(+{1}% Poder de Ataque)</color><color=#DDA0DD>(+{5}% Amplificação de Habilidade)</color> de dano de habilidade. Se essa habilidade acertar um inimigo, seu tempo de recarga é reduzido em {2}. Consumir uma marca com essa habilidade garante a Martina {4} de Velocidade de Movimento por {3} segundos.  \n \n<color=#ffd775>[Transmissão]</color>  \nDano e alcance são aumentados. Consumir uma marca garante Velocidade de Movimento e Velocidade de Ataque extra. 
 Skill/Group/Coef/1057210┃Martina tira uma foto instantânea na direção selecionada, causando <color=white>{0}</color><color=#ffd775>(+{1}% Poder de Ataque)</color><color=#DDA0DD>(+{7}% Amplificação de Habilidade)</color> de dano de habilidade. Se essa habilidade acertar um inimigo, seu tempo de recarga é reduzido em {2}. Consumir uma marca com essa habilidade garante a Martina {4} de Velocidade de Movimento por {3} segundos e {6} de Velocidade de Ataque por {5} segundos.
 Skill/Group/Coef/1057300┃<color=#ffffff>[Entrevista]</color>  \nMartina instala uma câmera em miniatura, ganhando visão ao redor de sua área por {0} segundos. Acertar a câmera com <color=white>Avanço Rápido</color> faz com que a câmera tire uma foto instantânea apontando para a Martina, causando <color=white>{1}</color><color=#ffd775>(+{2}% Poder de Ataque)</color><color=#DDA0DD>(+{12}% Amplificação de Habilidade)</color> de dano de habilidade e lentidão de {4} por {3} segundos. Martina pode ter até {5} câmeras e instalar até {5} câmeras.  \n \n<color=#ffd775>[Transmissão]</color>  \nA foto instantânea da câmera em miniatura agora enraíza inimigos acertados. A quantidade de câmeras que a Martina pode ter e instalar é aumentada.
@@ -9157,28 +9177,18 @@ CharacterState/Group/Name/1069500┃Trampolim! - Jogado ao ar
 CharacterState/Group/Desc/1069500┃Jogado ao ar pelo Trampolim!
 CharacterState/Group/Name/1069520┃Trampolim! - Lentidão
 CharacterState/Group/Desc/1069520┃Velocidade de movimento reduzida por ser lançado na parede.
-Skill/Group/Name/1070100┃Eliminação de Higuruma
+Skill/Group/Name/1070100┃Selo de Vida e Morte
 Skill/Group/Name/1070200┃Lançamento de Shuriken
 Skill/Group/Name/1070300┃Redemoinho
 Skill/Group/Name/1070400┃A Arte da Camuflagem
-Skill/Group/Name/1070500┃Selo de Vida e Morte
-Skill/Group/Desc/1070100┃Tsubame tem um alcance de ataque básico fixo de <color=white>{0}</color> e não pode causar acertos críticos. Em vez disso, seu poder de ataque aumenta em <color=white>{1}</color> com base na chance de acerto crítico e no aumento de dano crítico.\n\n<color=white>Técnica de troca</color>: Quando Tsubame usa <color=white>A Arte da Camuflagem</color> e <color=white>Selo de Vida e Morte</color>, ela deixa uma <color=white >Tora de madeira</color> no local dela. O <color=white>tronco de madeira</color> dura {2} segundos."
-Skill/Group/Coef/1070100┃Tsubame tem um alcance de ataque básico fixo de <color=white>{0}</color> e não pode causar acertos críticos. Em vez disso, seu poder de ataque aumenta em <color=white>{1}</color> com base na chance de acerto crítico e no aumento de dano crítico.\n\n<color=white>Técnica de troca</color>: Quando Tsubame usa <color=white>A Arte da Camuflagem</color> e <color=white>Selo de Vida e Morte</color>, ela deixa uma <color=white >Tora de madeira</color> no local dela. O <color=white>tronco de madeira</color> dura {2} segundos.
-Skill/LobbyDesc/1070100┃Tsubame tem um alcance de ataque básico fixo e não pode causar acertos críticos. Em vez disso, seu dano aumenta com base na chance de ataque crítico e no aumento de dano crítico.\n\n<color=white>Técnica de troca</color>: Quando Tsubame usa <color=white>A Arte da Camuflagem</color> e <color=white>Selo de Vida e Morte</color>, ela deixa um <color=white >Tora de madeira</color> no local dela.
+Skill/Group/Name/1070410┃A Arte da Camuflagem
+Skill/Group/Name/1070500┃Eliminação de Higuruma
 Skill/Group/Desc/1070200┃Tsubame lança 3 shurikens no local selecionado. As shurikens giram quando chegam ao fim do caminho, causando <color=white>{0}</color> dano de habilidade aos inimigos atingidos e reduzindo a velocidade de movimento de inimigos em {2} por {1 } segundos.\n\nAlvos inimigos marcados recebem 1 acúmulo adicional da marca.
 Skill/Group/Coef/1070200┃Tsubame lança 3 shurikens no local selecionado. As shurikens giram quando chegam ao fim do caminho, causando <color=white>{0}</color><color=#ffd775>(+{3} Poder de Ataque)</color> dano de habilidade aos inimigos atingidos e reduzindo a velocidade de movimento de inimigos em {2} por {1 } segundos.\n\nAlvos inimigos marcados recebem 1 acúmulo adicional da marca.
 Skill/LobbyDesc/1070200┃Tsubame lança 3 shurikens no local selecionado. As shurikens giram quando chegam ao fim do caminho, causando dano de habilidade aos inimigos atingidos e reduzindo a velocidade de movimento de inimigos que acertam.\n\nAlvos inimigos marcados recebem 1 acúmulo adicional da marca.
 Skill/Group/Desc/1070300┃Tsubame se move mais rápido com um passo simples, aumentando sua velocidade de movimento em {1} e diminuindo gradualmente por {0} segundos. A velocidade de ataque dos próximos {4} ataques básicos aumenta em {3} por {2} segundos.
 Skill/Group/Coef/1070300┃Tsubame se move mais rápido com um passo simples, aumentando sua velocidade de movimento em {1} e diminuindo gradualmente por {0} segundos. A velocidade de ataque dos próximos {4} ataques básicos aumenta em {3} por {2} segundos.
-Skill/LobbyDesc/1070300┃Tsubame se move mais rápido com um passo simples, aumentando sua velocidade de movimento e depois â diminuindo gradualmente. A velocidade de ataque dos próximos 2 ataques básicos aumenta.
-Skill/Group/Desc/1070400┃<color=green>Passivo</color>: O tempo de recarga da <color=white>Técnica de Troca</color> é reduzido em {0} segundos.\n\nTsubame rola no local alvo e fica invisível. A invisibilidade dura {1} segundos e ela não pode ser atingida enquanto rola.\n\nUsar <color=white>Redemoinho</color> enquanto estiver invisível devido a <color=white>A Arte da Camuflagem</color> irá ativar a habilidade sem quebrar a invisibilidade."
-Skill/Group/Coef/1070400┃<color=green>Passivo</color>: O tempo de recarga da <color=white>Técnica de Troca</color> é reduzido em {0} segundos.\n\nTsubame rola no local alvo e fica invisível. A invisibilidade dura {1} segundos e ela não pode ser atingida enquanto rola.\n\nUsar <color=white>Redemoinho</color> enquanto estiver invisível devido a <color=white>A Arte da Camuflagem</color> irá ativar a habilidade sem quebrar a invisibilidade.
-Skill/LobbyDesc/1070400┃<color=green>Passivo</color>: O tempo de recarga da <color=white>Técnica de Troca</color> é reduzido.\n\nTsubame rola no local alvo e fica invisível. Ela não pode ser atingida enquanto rola.\n\nUsar <color=white>Redemoinho</color> enquanto estiver invisível devido a <color=white>A Arte da Camuflagem</color> irá ativar a habilidade sem quebrar a invisibilidade.
-Skill/Group/Desc/1070500┃<color=green>Passivo</color>: Tsubame marca os inimigos atingidos por seu ataque básico com uma marca que dura {8} segundos. A marca acumula até {0} vezes, e alvos totalmente acúmulados compartilham a visão com Tsubame.\n\nPode ser usado quando um alvo inimigo totalmente acúmulados estiver ao alcance. Tsubame se move rapidamente em direção ao inimigo alvo e corta suas marcas, causando <color=white>{1}</color><color=#688A08>(+{2} do HP Máximo do alvo)</color> dano de habilidade e recuperando {3} do dano causado.\n\nCausar dano a uma cobaia inimiga reduz a recarga de <color=white>Redemoinho</color> em {7}, a recarga de <color=white>Técnica de Troca</color> em {4} e seu desperta <color= branco>Sentido de Batalha Gravado</color> por {9} segundos.\n<color=white>Sentido de Batalha Gravado</color> acúmula até {5} vezes, aumentando o dano do <color=white>Selo de Vida e Morte</color> em {6} por acúmulo.\n\n\nAo mirar em <color=white>Trocas de Madeira</color>, Tsubame se move rapidamente para seu local e troca de lugar.
-Skill/Group/Coef/1070500┃<color=green>Passivo</color>: Tsubame marca os inimigos atingidos por seu ataque básico com uma marca que dura {8} segundos. A marca acumula até {0} vezes, e alvos totalmente acúmulados compartilham a visão com Tsubame.\n\nPode ser usado quando um alvo inimigo totalmente acúmulados estiver ao alcance. Tsubame se move rapidamente em direção ao inimigo alvo e corta suas marcas, causando <color=white>{1}</color><color=#688A08>(+{2} do HP Máximo do alvo)<color=#ffd775>(+{11} cada 1 Poder de Ataque)</color>)</color> dano de habilidade e recuperando {3} do dano causado.\n\nCausar dano a uma cobaia inimiga reduz a recarga de <color=white>Redemoinho</color> em {7}, a recarga de <color=white>Técnica de Troca</color> em {4} e seu desperta <color= branco>Sentido de Batalha Gravado</color> por {9} segundos.\n<color=white>Sentido de Batalha Gravado</color> acúmula até {5} vezes, aumentando o dano do <color=white>Selo de Vida e Morte</color> em {6} por acúmulo.\n\n\nAo mirar em <color=white>Trocas de Madeira</color>, Tsubame se move rapidamente para seu local e troca de lugar.
-Skill/LobbyDesc/1070500┃<color=green>Passivo</color>: Tsubame marca os inimigos atingidos por seu ataque básico com uma marca. A marca acumula até 3 vezes, e alvos totalmente acúmulados compartilham a visão com Tsubame.\n\nPode ser usado quando um alvo inimigo totalmente acúmulados estiver ao alcance. Tsubame se move rapidamente em direção ao inimigo alvo e corta suas marcas, causando dano de habilidade e recuperando um pouco do dano causado.\n\nCausar dano a uma cobaia inimiga reduz o tempo de recarga de <color=white>Redemoinho</color>, e <color=white>Técnica de Troca</color> e desperta seu <color= branco>Sentido de Batalha Gravado</color>.\n<color=white>Sentido de Batalha Gravado</color> acúmula até 3 vezes, aumentando o dano do <color=white>Selo de Vida e Morte</color> por cada acúmulo.\n\n\nAo mirar em <color=white>Trocas de Madeira</color>, Tsubame se move rapidamente para seu local e troca de lugar.
-Skill/Group/ExpansionTip/1070400┃<i>A Arte da Camuflagem não pode ultrapassar paredes.</i>
-Skill/Group/ExpansionTip/1070500┃<i>Selo de Vida e Morte não é afetado pelas estatísticas de redução de tempo de recarga.\nVocê só pode marcar no máximo 1 alvo inimigo. Ao marcar um novo alvo, a marca existente é removida.\nA marca é removida assim que o alvo estiver a mais de {0} metros de distância de Tsubame.\nAlvos com o Selo de Vida e Morte não receberão uma nova marca por {1} segundos.</i>
+Skill/LobbyDesc/1070300┃Tsubame se move mais rápido com um passo simples, aumentando sua velocidade de movimento em {1} e diminuindo gradualmente por {0} segundos. A velocidade de ataque dos próximos {4} ataques básicos aumenta em {3} por {2} segundos.
 CharacterState/Group/Name/1070200┃Lançamento de Shuriken - Lentidão
 CharacterState/Group/Desc/1070200┃Velocidade de Movimento Reduzida pelo Lançamento de Shuriken.
 CharacterState/Group/Name/1070300┃Redemoinho - Aumento da velocidade de movimento
@@ -9187,12 +9197,6 @@ CharacterState/Group/Name/1070310┃Redemoinho – Velocidade de Ataque Aumentad
 CharacterState/Group/Desc/1070310┃A velocidade de ataque aumenta devido ao Redemoinho
 CharacterState/Group/Name/1070400┃A Arte da Camuflagem - Invisível
 CharacterState/Group/Desc/1070400┃Invisível devido à Arte da Camuflagem.
-CharacterState/Group/Name/1070500┃Selo de Vida e Morte - Marcado
-CharacterState/Group/Desc/1070500┃Marcado por Tsubame. Com 3 acúmulos, a visão é compartilhada com Tsubame.
-CharacterState/Group/Name/1070520┃Selo de Vida e Morte - Tempo de Espera da Marca
-CharacterState/Group/Desc/1070520┃Os restos da marca de Tsubame permanecem. Nenhuma marcação adicional está gravada.
-CharacterState/Group/Name/1070540┃Sentido de Batalha Gravado
-CharacterState/Group/Desc/1070540┃O Sentido de Batalha Gravado de Tsubame desperta, aumentando o dano do Selo de Vida e Morte.
 Skill/Group/Name/3015000┃Disfarçar e Esfaquear
 Skill/Group/Name/3015100┃Disfarçar e Esfaquear
 Skill/Group/Name/3016000┃Aparar
@@ -9726,7 +9730,7 @@ Skill/LobbyDesc/1053100┃ \n<color=white>Abalados</color>: Inimigos empurrados 
 Skill/LobbyDesc/1053200┃Para seus próximos 3 ataques básicos, a velocidade de ataque de Markus é aumentada e seus ataques básicos causam dano de habilidade adicional, recuperando Vida baseada no dano de habilidade adicional. O buff expira se Markus não realizar um ataque básico dentro do tempo especificado.\n\n Usar <color=white>Arte da Guerra</color> também aumenta a velocidade de movimento de Markus por um tempo enquanto ele se move em direção a uma cobaia inimiga.
 Skill/LobbyDesc/1053300┃Markus quebra o chão na direção selecionada, causando dano de habilidade e arremessando inimigos ao ar.\n\nSe ele acertar um inimigo dentro da <color=white>Fenda Tectônica</color>, todos os inimigos atingidos são lançados para trás dele.
 Skill/LobbyDesc/1053400┃Markus realiza uma investida na direção alvo. Markus para quando ele colidir com um alvo, dando dano de habilidade e os arremessando para trás, atordoando-os.\n\nSe Markus tiver 50 ou mais <color=white>Ousadia</color>, inimigos acertados recebem dano de habilidade e arremessados pra trás ainda mais longe e atordoados.
-Skill/LobbyDesc/1053500┃Markus bate seu machado na direção selecionada, criando uma <color=white>Fenda Tectônica</color> na área. Inimigos acertados tem sua velocidade de movimento reduzida decaindo por um tempo e recebem dano de habilidade. Alvos que são arremessados ao ar ou para trás dentro da <color=white>Fenda Tectônica</color> recebem o dano de <color=white>Abalados</color> e são <color=white>Abalados</color>. Esse efeito só pode ocorrer uma vez dentro de uma <color=white>Fenda Tectônica</color>.\n\nMarcar inimigos com <color=white>Abalado</color> reduz o tempo de recarga de <color=white>Quebrar aos Pedaços</color>.
+Skill/LobbyDesc/1053500┃Markus bate seu machado na direção selecionada, criando uma <color=white>Fenda Tectônica</color> na área. Inimigos acertados tem sua velocidade de movimento reduzida decaindo por um tempo e recebem dano de habilidade. \n\nAlvos que são arremessados ao ar ou para trás dentro da <color=white>Fenda Tectônica</color> recebem o dano de <color=white>Abalados</color> e são <color=white>Abalados</color>. Esse efeito só pode ocorrer uma vez dentro de uma <color=white>Fenda Tectônica</color>.\n\nMarcar inimigos com <color=white>Abalado</color> reduz o tempo de recarga de <color=white>Quebrar aos Pedaços</color>.
 Skill/LobbyDesc/1054100┃A Velocidade de Ataque de Karla é limitada, e sua Amplificação de Habilidade aumenta cada vez que a sua Velocidade de Ataque exceder o limite.  \n \nKarla carrega Prontidão por um certo período de tempo. Ataques básicos não carregados consomem um pouco da sua Prontidão e causam dano de Habilidade. Ataques básicos totalmente carregados consomem a sua Prontidão por inteira, causando dano de habilidade e reduzindo a Velocidade de Movimento. Todos os arpões não conectados são instalados no chão. \n \nOs ataques básicos de Karla não disparam automaticamente. 
 Skill/LobbyDesc/1054200┃Karla atira um arpão na direção alvo, dando dano de ataque básico. Arpões atirados ficam presos no chão. Karla pode se acorrentar os arpões dela ao mesmo tempo. Correntes quebram quando Karla se move para longe de seus arpões. \n\nO tempo de recarga de Corrente Perfurante é reduzido baseado na Velocidade de Ataque da Karla.
 Skill/LobbyDesc/1054300┃Karla recupera todos seus arpões acorrentados, dando dano de habilidade á inimigos acertados e reduzindo a velocidade de movimento deles. Se essa habilidade acertar um inimigo, Karla recebe  Preparo e o tempo de recarga de Manobra de Agarro é reduzido baseado nos números de inimigos acertados.\n\nSalvamento não é afetado pela Redução de Tempo de Recarga.
@@ -10306,17 +10310,17 @@ CharacterState/Group/Name/6015020┃Aerodinâmica - Escudo.
 CharacterState/Group/Desc/6015020┃Protegido por um escudo.
 Item/Skills/6016000┃Última Defesa
 Item/Skills/6016001/Name┃<color=yellow>Última Defesa: Pacto de Sangue</color>
-Item/Skills/6016001/Body┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, elimina todos os efeitos negativos e de controle de grupo, recebe um escudo de <color=green>{11}</color> e 50% de Tenacidade por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e uma eficiência {9}% maior na Recuperação de Vida por {5} segundos. (Tempo de Recarga: 80 s)
-Item/Skills/6016001/Desc┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, elimina todos os efeitos negativos e de controle de grupo, recebe um escudo de {2} + <color=green>Nível do Personagem x {3}</color> e {4}% de Tenacidade por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e uma eficiência {9}% maior na Recuperação de Vida por {5} segundos. (Tempo de Recarga: 80 s)
+Item/Skills/6016001/Body┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, elimina todos os efeitos negativos e de controle de grupo, recebe um escudo de <color=white>{11}</color> e 50% de Tenacidade por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e uma eficiência {9}% maior na Recuperação de Vida por {5} segundos. (Tempo de Recarga: 80 s)
+Item/Skills/6016001/Desc┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, elimina todos os efeitos negativos e de controle de grupo, recebe um escudo de {2} + <color=#008000>Nível do Personagem x {3}</color> e {4}% de Tenacidade por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e uma eficiência {9}% maior na Recuperação de Vida por {5} segundos. (Tempo de Recarga: 80 s)
 Item/Skills/6016002/Name┃<color=yellow>Última Defesa: Bastião</color>
-Item/Skills/6016002/Body┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de <color=green>{11}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam {12}% mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
-Item/Skills/6016002/Desc┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de {2} + <color=green>Nível do Personagem x {3}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam (Corpo-a-Corpo: {9}%, À distância: {10}%) mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
+Item/Skills/6016002/Body┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de <color=white>{11}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam {12}% mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
+Item/Skills/6016002/Desc┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de {2} + <color=#008000>Nível do Personagem x {3}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam (Corpo-a-Corpo: {9}%, À distância: {10}%) mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
 Item/Skills/6016003/Name┃<color=yellow>Segundo Vento: Crusada</color>
-Item/Skills/6016003/Body┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha <color=green>{11}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {14} por {5} segundos. (Tempo de Recarga: {13}s)
-Item/Skills/6016003/Desc┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha {2} + <color=green>Level*{3}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {12} por {5} segundos. (Tempo de Recarga: {11}s)
+Item/Skills/6016003/Body┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha <color=white>{11}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {14} por {5} segundos. (Tempo de Recarga: {13}s)
+Item/Skills/6016003/Desc┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha {2} + <color=#008000>Level*{3}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {12} por {5} segundos. (Tempo de Recarga: {11}s)
 Item/Skills/6016004/Name┃<color=yellow>Segundo Vento: Guarda Rápida</color>
-Item/Skills/6016004/Body┃Quando receber dano de um jogador inimigo, recebes um <color=green>{11}</color> escudo de Vida por {1} segundo. (tempo de recarga {13} segundos.)
-Item/Skills/6016004/Desc┃Quando receber dano de um jogador inimigo, recebes um 2 + <color=green>Level do personagem *{3}</color> escudo de Vida por {1} segundo. (tempo de recarga {11} segundos.)
+Item/Skills/6016004/Body┃Quando receber dano de um jogador inimigo, recebes um <color=white>{11}</color> escudo de Vida por {1} segundo. (tempo de recarga {13} segundos.)
+Item/Skills/6016004/Desc┃Quando receber dano de um jogador inimigo, recebes um 2 + <color=#008000>Level do personagem *{3}</color> escudo de Vida por {1} segundo. (tempo de recarga {11} segundos.)
 CharacterState/Group/Name/6016000┃Última Defesa - Escudo
 CharacterState/Group/Desc/6016000┃Tenaz e Protegido
 CharacterState/Group/Name/6016010┃Última Defesa
@@ -10782,9 +10786,6 @@ Item/Skills/6008202/Body┃Causar dano a um alvo reduz sua cura em 60% por 4 seg
 Item/Skills/6008202/Desc┃Causar dano a um alvo reduz sua cura em 60% por 4 segundos.
 CharacterState/Group/Name/6008010┃Redução de Cura
 CharacterState/Group/Desc/6008010┃Toda cura sobre você é menos eficiente.
-Item/Skills/6008202/Desc┃Causar dano a um alvo reduz sua cura em 60% por 4 segundos.
-CharacterState/Group/Name/6008010┃Redução de Cura
-CharacterState/Group/Desc/6008010┃Toda cura sobre você é menos eficiente.
 보유하지 않은 캐릭터입니다.┃Você não possui este personagem.\nPor favor, desbloqueie-o na loja para poder jogar com ele. 
 매칭 중 캐릭 변경 금지┃Você não pode trocar de personagem enquanto procura por partida.
 로딩 중┃Carregando\n< Aperte o botão X para sentar e descansar. >
@@ -10889,6 +10890,8 @@ NP_청약철회 필수 고지사항┃Política de Reembolso para compras dentro
 패키지 청약철회 공용사용문구┃Consulte nossa [Política de Reembolso] para obter mais informações.
 패키지 청약철회 공용사용문구_KAKAO┃Consulte nossa [Política de Reembolso] para obter mais informações.
 해당 아이템을 사용하는 경우 구매취소 불가┃Esse conteúdo é ativado imediatamente após a compra, e inelegível para reembolso.
+개인상점 상품구성확률 링크┃https://playeternalreturn.com/stats/8
+개인상점 상품구성확률 링크_KAKAO┃https://playeternalreturn.com/stats/8
 시퀀스 상품 안내문구1┃{0} {1} compras serão desbloqueadas {2}.
 시퀀스 상품 안내문구2┃{0} numero de compras ({1}/{2})
 시퀀스 상품 안내문구3┃*Se o produto contiver um item que você já possui, você receberá uma duplicata do mesmo.
@@ -13247,8 +13250,8 @@ Blank┃A busca não retornou nenhum resultado.
 튜토리얼 보상으로 획득가능합니다.┃Disponível como recompensa por completar o treinamento.
 해당 실험체를 영입하시겠습니까?┃Você gostaria de comprar este personagem?
 구매관련 필수 고지사항┃Este produto não pode ser reembolsado após a compra.
-구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/8924563306905
-NP_구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/8924563306905
+구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/32696171159705
+NP_구매관련 필수 고지사항 링크┃https://support.playeternalreturn.com/hc/en-us/articles/32696171159705
 구매관련 필수 고지사항 링크_KAKAO┃https://er.game.daum.net/policy/service
 구매관련 필수 고지사항 링크_MS┃https://support.playeternalreturn.com/hc/en-us/articles/4408010200601
 {0} 개를 구입하겠습니까?┃Comprar {0}?
@@ -13658,6 +13661,7 @@ BoosterTooltip/Result/Booster/Acoin┃Boost de A-Coins
 BoosterTooltip/Result/Booster/Acoin1┃Boost de A-Coins(1 Dia)
 BoosterTooltip/Result/Booster/Acoin3┃Boost de A-Coins(3 Dia)
 BoosterTooltip/Result/Booster/Acoin7┃Boost de A-Coins(7 Dia)
+BoosterTooltip/Result/Booster/Acoin14┃Boost de A-Coins(14 Dia)
 BoosterTooltip/Result/PC방/XP┃Boost de EXP do PC Cafe
 BoosterTooltip/Result/Event/XP┃Boost de EXP dobrado
 BoosterTooltip/Result/Booster/XP┃Boost de EXP
@@ -13665,6 +13669,7 @@ BoosterTooltip/Result/Booster/XP1┃Boost de EXP (1 Dia)
 BoosterTooltip/Result/Booster/XP3┃Boost de EXP (3 Dia)
 BoosterTooltip/Result/Booster/XP7┃Boost de EXP (7 Dia)
 BoosterTooltip/Result/Booster/XP15┃Boost de EXP (15 Dia)
+BoosterTooltip/Result/Booster/XP14┃Boost de EXP (14 Dia)
 BoosterTooltip/Result/PC방/ERPoint┃PC Cafe ER Boost de Pontos
 BoosterTooltip/Result/Event/ERPoint┃ER Boost de Pontos em dobro
 BoosterTooltip/Result/Booster/ERPoint┃ER Point Boost
@@ -15326,11 +15331,7 @@ Trait/StatTooltip/7000401┃Causar dano com uma Habilidade a uma Cobaia concede 
 CharacterState/Group/Name/7000400┃Linhagem Vampírica
 CharacterState/Group/Desc/7000400┃Causar dano a um inimigo com uma Habilidade garante acúmulos de Omnisyphon. Com o máximo de acúmulos, recebe Amplificação de Habilidade. O Omnisyphon recebido é renovado sempre que causar dano com uma Habilidade.
 CharacterState/Group/Name/7000410┃Linhagem Vampírica
-CharacterState/Group/Desc/7000410┃Em Recarga
-CharacterState/Group/Name/7000420┃Linhagem Vampírica
-CharacterState/Group/Desc/7000420┃Omnisyphon Aumentado.
-CharacterState/Group/Name/7000430┃Linhagem Vampírica
-CharacterState/Group/Desc/7000430┃Amplificação de Habilidade aumentada
+CharacterState/Group/Desc/7000410┃Amplificação de Habilidade aumentada
 Trait/Name/7000501┃Espírito Vermelho
 Trait/Tooltip/7000501┃Causando dano a um inimigo com uma habilidade causa dano de habilidade.O raio também conecta com o inimigo mais perto, causando dano celular. Se somente um inimgo foi eletrocutado, o raio causará dano celular adicional.
 Trait/DetailTooltip/7000501┃Alvejar um inimigo com uma habilidade causa {1}+Level*{2} dano de habilidade.\nO espírito também se liga ao inimigo mais proximo dentro de {5}m, causando {6}% de dano celular reduzido.\nSe somente uma cobaia é eletrocutada, o espírito causa um adicional de {4}% de dano celular.\nCausar dano a uma cobaia inimiga com uma habilidade reduz o tempo de recarga de Espírito Vermelho em {7} segundos. (Tempo de Recarga : {3} segundos)\n
@@ -15341,7 +15342,7 @@ CharacterState/Group/Name/7000510┃Espírito Vermelho
 CharacterState/Group/Desc/7000510┃Em Recarga
 Trait/Name/7000601┃Adrenalina
 Trait/Tooltip/7000601┃Para cada Ataque Básico a um inimigo, ou a cada segundo em combate, ganha um acumulo de Adrenalina, garantindo Velocidade de Ataque Adicional \n\nCom acumulos máximos, também ganha dano adicional nos Ataques Básicos..\n\nAcumulos de Adrenalina acabam quando sair de combate.
-Trait/DetailTooltip/7000601┃Para cada ataque básico em uma cobaia inimiga ou a cada {0} segundos gaston em combate, ganhe um acúmulo de adrenalina, até um máximo de  {1} acúmulo. \nGanhe ({2}+Nível*{3})% de velocidade de ataque por acúmulo de adrenalina.\nQuando atingir o máximo de acúmulos, ganhe um adicionar de ({4}+level*{5}%) amplificação de ataque básico.\n\nAcúmos de adrenalina expiram quando sair de combate.
+Trait/DetailTooltip/7000601┃Para cada ataque básico em uma cobaia inimiga ou a cada {0} segundos gaston em combate, ganhe um acúmulo de adrenalina, até um máximo de  {1} acúmulo. \nGanhe ({2}+Nível*{3})% de velocidade de ataque por acúmulo de adrenalina.\nQuando atingir o máximo de acúmulos, ganhe um adicionar de ({4}+Level*{5}%) amplificação de ataque básico.\n\nAcúmos de adrenalina expiram quando sair de combate.
 Trait/Name/7010101┃Poder de Parada
 Trait/Tooltip/7010101┃Ganha penetração de armadura.
 Trait/DetailTooltip/7010101┃Recebe {0}% de Penetração de Armadura.
@@ -15412,7 +15413,7 @@ CharacterState/Group/Name/7100420┃Joelheiras Pesadas
 CharacterState/Group/Desc/7100420┃Velocidade de movimento aumentada.
 Trait/Name/7100501┃Retrubuição Amarga
 Trait/Tooltip/7100501┃A cada certa quantidade de HP perdida em lutas contra cobaias inimigas, ganha um acumulo de Retribuição Amarga. Com o máximo de acumulos, seu próximo ataque básico, consome todos os acumulos, causa dano adicional e causa lentidão se for usada por uma cobaia corpo a corpo. . \n\nPor cada acumulo que expira, recupera vida. 
-Trait/DetailTooltip/7100501┃Ganha 1 stack por {0}% de Vida perdida por cobaias inimigas.(Maximo {2} stacks) (Melee). No máximo de stacks, seu próximo ataque básico consume os Stacks e da lentidão ao inimigo de {3}% por {6} segundos e da (level*{4}) de dano de habilidade adicional. (tempo de recaga {8} segundos)\n(Ranged) No máximo de stacks, seu próximo ataque básico consume os Stacks e dá (level*{5}) de dano de habilidade adicional. (tempo de recaga {8} segundos).\nSe os stacks expirarem, você retorna a um estado Calmo e recupera {7}% da vida máximo por stack perdido.
+Trait/DetailTooltip/7100501┃Ganha 1 stack por {0}% de Vida perdida por cobaias inimigas. (Maximo {2} stacks) (Melee). No máximo de stacks, seu próximo ataque básico consume os Stacks e da lentidão ao inimigo de {3}% por {6} segundos e da (level*{4}) de dano de habilidade adicional. (tempo de recaga {8} segundos)\n(Ranged) No máximo de stacks, seu próximo ataque básico consume os Stacks e dá (level*{5}) de dano de habilidade adicional. (tempo de recaga {8} segundos).\nSe os stacks expirarem, você retorna a um estado Calmo e recupera {7}% da vida máximo por stack perdido.
 CharacterState/Group/Name/7100500┃Retribuição Amarga
 CharacterState/Group/Desc/7100500┃Em recarga
 CharacterState/Group/Name/7100510┃Retribuição Amarga
@@ -15530,14 +15531,6 @@ Trait/Name/7210501┃Guerra Urbana
 Trait/Tooltip/7210501┃Ganha Poder de Ataque se um inimigo ativa uma das suas armadilhas. Ganha defesa se você ativa uma armadilha inimiga.
 Trait/DetailTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
 Trait/StatTooltip/7210501┃Recebe {1}% de Poder de Ataque por {0} segundos se um inimigo ativar uma de suas armadilhas. Recebe {3}% de Defesa por {2} segundos se você ativar a armadilha de um inimigo. (Tempo de Recarga: {4}s)
-CharacterState/Group/Name/7210500┃Guerra Urbana
-CharacterState/Group/Desc/7210500┃Poder de Ataque aumentado
-CharacterState/Group/Name/7210510┃Guerra Urbana
-CharacterState/Group/Desc/7210510┃Defesa aumentada.
-CharacterState/Group/Name/7210520┃Guerra Urbana - Poder de Ataque Aumentado
-CharacterState/Group/Desc/7210520┃Em Recarga
-CharacterState/Group/Name/7210530┃Guerra Urbana - Defesa Aumentada
-CharacterState/Group/Desc/7210530┃Em Recarga
 Trait/Name/7210601┃Vantagem
 Trait/Tooltip/7210601┃Começa o jogo com 'tamancos' equipados. Velocidade de movimento fora de combate é aumentada quando equipado com um item de perna Epico ou Lendário.
 Trait/DetailTooltip/7210601┃Começa o jogo com um 'Tamanco' equipado. Velocidade de movimento fora do combate é aumentada por {0} quando equipada com um equipamento de pernas Épico ou Legendário.
@@ -15546,9 +15539,6 @@ CharacterState/Group/Name/7210600┃Vantagem - Velocidade de movimento fora do c
 CharacterState/Group/Desc/7210600┃Velocidade de Movimento fora do combate é aumentado quando equipada um equipamento de pernas Épico ou Legendário
 Trait/Name/7210801┃Mão de Vaca
 Trait/Tooltip/7210801┃Pode comprar itens do console com um desconto
-Trait/Tooltip/7000301┃Usando sua Habilidade de Arma lhe concede mais velocidade de ataque.
-Trait/DetailTooltip/7000301┃Usar sua Habilidade de Arma aumenta sua Velocidade de Ataque. Corpo-a-Corpo: Recebe  ({4} + Nível x {5}%) de Velocidade de Ataque por {1} segundos. À distância: Recebe  ({10} + Nível x {11}%) de Velocidade de Ataque por {7} segundos. (Tempo de Recarga: {0} s)
-Trait/StatTooltip/7000301┃Usar sua Habilidade de Arma concede mais velocidade de ataque. Corpo-a-Corpo: Recebe ({4}+Nível x {5}%) de Velocidade de Ataque por {1} segundos.  À Distância: Recebe  ({10}+Nível x {11}%) de Velocidade de Ataque por {7} segundos.  (Tempo de Recarga: {0} s) \n\nAumento Total de Velocidade de Ataque: {15}
 CharacterState/Group/Desc/7922420┃Recuperação de Energia aumentada por 100%
 로딩팁 튜토리얼1┃O triângulo amarelo marcado sobre um item indica que ele é um item-alvo para o seu Plano atual. \nColete seus itens-alvo primeiro!
 로딩팁 튜토리얼2┃Itens-alvo que você pode encontrar na sua localização atual estão marcados logo acima do seu minimapa.
