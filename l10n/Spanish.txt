@@ -1462,6 +1462,7 @@ Item/Effects/301338┃Recupera PV durante 15 segundos.
 Item/Effects/301339┃Recupera PV durante 15 segundos.
 Item/Effects/301340┃Recupera PV durante 15 segundos.
 Item/Effects/301346┃Recupera PV durante 15 segundos.
+Item/Effects/301348┃Recupera PV durante 15 segundos.
 Item/Effects/301403┃Recupera PV y PE durante 15 segundos.
 Item/Effects/301405┃Recupera PV durante 15 segundos.
 Item/Effects/301406┃Recupera PV durante 15 segundos.
@@ -2890,7 +2891,6 @@ ToolTipType/MaxHpRegen┃Regeneración de PV Máxima
 ToolTipType/MaxSkill┃Amplificación de Habilidades Máxima
 ToolTipType/MoveSpeedUpRatio┃Aumento de Velocidad de Movimiento (%)
 ToolTipType/MoveSpeedUpTime┃Duración del aumento de velocidad de movimiento
-ToolTipType/AttackSpeedUpRatio┃Aumento de velocidad de ataque (%)
 ToolTipType/DotDamage┃Daño durante tiempo transcurrido
 ToolTipType/JudgmentDamage┃Daño de Juicio
 ToolTipType/MaxHpUp┃Relación de aumento de PV máx.
@@ -6046,6 +6046,7 @@ ItemTag/Ex_Regen┃Regen. de PV
 ItemTag/Ex_Sight┃Visión
 ItemTag/Unique_Range┃Alcance de Ataque Básico Incrementado
 ItemTag/Ex_None┃-
+ItemTag/Ex_Slow┃Ralentización
 ItemTag/Ex_ItemSkill┃Habilidad Activa de Objeto
 ItemTag/Ex_Dummy1┃Reducción de Curación
 ItemTag/Ex_Dummy2┃Utilidad
@@ -6238,7 +6239,9 @@ CharacterState/Group/Name/1003400┃Marche & Rompre
 CharacterState/Group/Desc/1003400┃Ralentizado
 CharacterState/Group/Name/1003510┃Garde
 CharacterState/Group/Desc/1003510┃Los enemigos son Ralentizados.
+CharacterState/Group/Name/1003520┃Garde
 CharacterState/Group/Desc/1003520┃Ralentizado
+CharacterState/Group/Name/1003530┃Garde
 Skill/Group/ExpansionTip/1003500┃<i>No puedes atravesar las paredes.</i>
 Skill/Group/ExpansionTip/1003510┃<i>No puedes atravesar las paredes.</i>
 Skill/Group/ExpansionTip/1003520┃<i>No puedes atravesar las paredes.</i>
@@ -6355,7 +6358,7 @@ CharacterState/Group/Desc/1008210┃Velocidad de Movimiento reducida.
 CharacterState/Group/Name/1008300┃Sobrecarga - Poder de ataque y Alcance de ataque básico aumentado
 CharacterState/Group/Desc/1008300┃Poder de ataque y Alcance de ataque básico aumentado
 CharacterState/Group/Name/1008310┃Sobrecarga - Evolución
-CharacterState/Group/Desc/1008310┃El siguiente daño de habilidades infligirá daño de habilidades adicional.
+CharacterState/Group/Desc/1008310┃Poder de ataque y Alcance de ataque básico aumentado
 CharacterState/Group/Name/1008400┃Incremento de Amplificación de habilidades
 CharacterState/Group/Desc/1008400┃Amplificación de habilidades incrementado
 CharacterState/Group/Name/1008410┃Incremento de Amplificación de habilidades
@@ -6979,30 +6982,30 @@ Skill/Group/Name/1026430┃Tormenta de Partículas
 Skill/Group/Name/1026500┃Aceleración
 Skill/Group/Name/1026510┃Aceleración
 Skill/Group/Desc/1026100┃La torreta Centinela de Barbara obtiene {0} de Poder de Ataque y {1} Defensa según su nivel.\nCada vez que una torreta Centinela es alcanzada por un Láser de Electrones Libres, o crea un Ciclón Magnético o una Tormenta de Partículas, su Velocidad de ataque aumenta en {2}, hasta {3} acumulaciones.
+Skill/Group/Coef/1026100┃La torreta Centinela de Barbara obtiene {0} de Poder de Ataque y {1} Defensa según su nivel.\nCada vez que una torreta Centinela es alcanzada por un Láser de Electrones Libres, o crea un Ciclón Magnético o una Tormenta de Partículas, su Velocidad de ataque aumenta en {2}, hasta {3} acumulaciones.
+Skill/Group/ExpansionTip/1026100┃<i>Una torreta no mejorada tiene {0} poder de ataque y {1} defensa.</i>
 Skill/Group/Desc/1026200┃Barbara instala una torreta Centinela con {1} PV en una ubicación seleccionada, infligiendo <color=white>{3}</color> de daño a los enemigos golpeados.\nEl Centinela permanece durante {0} segundos, infligiendo <color=white>{2}</color> de daño a los enemigos disparados.\nCuando se coloca un nuevo Centinela, el anterior es desmantelado. Si un enemigo destruye el Centinela, el tiempo de reutilización aumenta en {9}. Si Barbara está lejos del Centinela, lo recoge, reduciendo el tiempo de reutilización en {7}. Los PV del Centinela son proporcionales a los PV máximos de Barbara.
+Skill/Group/Coef/1026200┃Barbara instala una torreta Centinela con {8} PV en una ubicación seleccionada, infligiendo <color=white>{3}</color><color=#ffd775>(+{4} Poder de ataque)</color><color=#DDA0DD>(+{10} Amp. Habilidades.)</color> de daño a los enemigos golpeados.\nEl Centinela permanece durante {0} segundos, infligiendo <color=#ffd775>(+{2} Poder de ataque Centinela)</color> de daño a los enemigos disparados.\nCuando se coloca un nuevo Centinela, el anterior es desmantelado. Si un enemigo destruye el Centinela, el tiempo de reutilización aumenta en {9}. Si Barbara está lejos del Centinela, lo recoge, reduciendo el tiempo de reutilización en {7}. Los PV del Centinela son proporcionales a los PV máximos de Barbara.
 Skill/Group/Desc/1026210┃Barbara desmantela su Centinela actual, lo que reduce el tiempo de reutilización de BT Centinela Mk.II en {0}.
+Skill/Group/Coef/1026210┃Barbara desmantela su Centinela actual, lo que reduce el tiempo de reutilización de BT Centinela Mk.II en {0}.
 Skill/Group/Desc/1026220┃Barbara instala una centinela y se teletransporta a su ubicación, lo que inflige daño de habilidad <color=white>{2}</color> a los enemigos dentro del alcance. Una centinela ya instalada se autodestruirá inmediatamente e infligirá daño de habilidad <color=white>{0}</color>.\nLa velocidad de ataque de la centinela aumenta en {5} durante {4} segundos dependiendo del número de enemigos alcanzados por daños en la instalación.
 Skill/Group/Desc/1026300┃Barbara dispara un Láser de Electrones Libres de dos partes, infligiendo <color=white>{0}</color> de daño a cada enemigo golpeado. Los enemigos alcanzados se Ralentizan en {6} durante {5} segundos. Golpear a un enemigo con ambas partes del Láser inflige {2} menos de daño y reduce el tiempo de reutilización de Aceleración en {7} segundos. \nLas torretas Centinela se mejoran cuando son golpeadas por el láser, lo que hace que el Centinela use un Láser de Electrones Libres, infligiendo <color=white>{3}</color> de daño a los enemigos golpeados.
+Skill/Group/Coef/1026300┃Barbara dispara un Láser de Electrones Libres de dos partes, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{8} Amp. Habilidades.)</color> de daño a cada enemigo golpeado. Los enemigos alcanzados se Ralentizan en {6} durante {5} segundos. Golpear a un enemigo con ambas partes del Láser inflige {2} menos de daño y reduce el tiempo de reutilización de Aceleración en {7} segundos. \nLas torretas Centinela se mejoran cuando son golpeadas por el láser, lo que hace que el Centinela use un Láser de Electrones Libres, infligiendo <color=white>{3}</color><color=#ffd775>(+{4} Poder de ataque Centinela)</color><color=#DDA0DD>(+{9} Amp. Habilidades.)</color> de daño a los enemigos golpeados.
 Skill/Group/Desc/1026310┃Barbara y su arma Centinela se mejoran durante {0} segundos. Durante este tiempo, su arma Centinela se carga y dispara automáticamente el Láser de Electrones Libres. Se elimina el coste de PE del Láser de Electrones Libres y su tiempo de reutilización es reducido a {1}. El daño del Láser de Electrones Libres aumenta a <color=white>{2}</color> y el daño del arma centinela aumenta a <color=white>{4}</color>.
+Skill/Group/Coef/1026310┃Barbara y su arma Centinela se mejoran durante {0} segundos. Durante este tiempo, su arma Centinela se carga y dispara automáticamente el Láser de Electrones Libres. Se elimina el coste de PE del Láser de Electrones Libres y su tiempo de reutilización es reducido a {1}. El daño del Láser de Electrones Libres aumenta a <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{6} Amp. Habilidades.)</color> y el daño del arma centinela aumenta a <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque Centinela)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color>.
 Skill/Group/Desc/1026400┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
+Skill/Group/Coef/1026400┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{12} Amp. Habilidades.)</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque)</color><color=#DDA0DD>(+{13} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
 Skill/Group/Desc/1026410┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
+Skill/Group/Coef/1026410┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{12} Amp. Habilidades.)</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque)</color><color=#DDA0DD>(+{13} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
 Skill/Group/Desc/1026420┃El Ciclón Magnético de Barbara se mejora y se convierte en una Tormenta de Partículas. El radio de alcance de la Tormenta de Partículas aumenta con el tiempo y el radio de absorción del escudo aumenta en {0}. Reactivar la habilidad o esperar hasta la duración máxima hace que la Tormenta de Partículas explote, infligiendo <color=white>{2}</color> de daño a los enemigos dentro del alcance y los Ralentiza un {5} durante {4} segundos.
 Skill/Group/Desc/1026430┃El Ciclón Magnético de Barbara se mejora y se convierte en una Tormenta de Partículas. El radio de alcance de la Tormenta de Partículas aumenta con el tiempo y el radio de absorción del escudo aumenta en {0}. Reactivar la habilidad o esperar hasta la duración máxima hace que la Tormenta de Partículas explote, infligiendo <color=white>{2}</color> de daño a los enemigos dentro del alcance y los Ralentiza un {5} durante {4} segundos.
 Skill/Group/Desc/1026500┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color> de daño a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
+Skill/Group/Coef/1026500┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{17} Amp. Habilidades.)</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{0} Amp. Habilidades.)</color> de daño 16a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color><color=#ffd775>(+{10} Poder de ataque)</color><color=#DDA0DD>(+{18} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
 Skill/Group/Desc/1026510┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo {0}<color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color> de daño a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
-Skill/Group/Coef/1026100┃La torreta Centinela de Barbara obtiene {0} de Poder de Ataque y {1} Defensa según su nivel.\nCada vez que una torreta Centinela es alcanzada por un Láser de Electrones Libres, o crea un Ciclón Magnético o una Tormenta de Partículas, su Velocidad de ataque aumenta en {2}, hasta {3} acumulaciones.
-Skill/Group/Coef/1026200┃Barbara instala una torreta Centinela con {8} PV en una ubicación seleccionada, infligiendo <color=white>{3}</color><color=#ffd775>(+{4} Poder de ataque)</color><color=#DDA0DD>(+{10} Amp. Habilidades.)</color> de daño a los enemigos golpeados.\nEl Centinela permanece durante {0} segundos, infligiendo <color=#ffd775>(+{2} Poder de ataque Centinela)</color> de daño a los enemigos disparados.\nCuando se coloca un nuevo Centinela, el anterior es desmantelado. Si un enemigo destruye el Centinela, el tiempo de reutilización aumenta en {9}. Si Barbara está lejos del Centinela, lo recoge, reduciendo el tiempo de reutilización en {7}. Los PV del Centinela son proporcionales a los PV máximos de Barbara.
-Skill/Group/Coef/1026210┃Barbara desmantela su Centinela actual, lo que reduce el tiempo de reutilización de BT Centinela Mk.II en {0}.
+Skill/Group/Coef/1026510┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{17} Amp. Habilidades.)</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{0} Amp. Habilidades.)</color> de daño 16a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color><color=#ffd775>(+{10} Poder de ataque)</color><color=#DDA0DD>(+{18} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
 Skill/Group/Coef/1026220┃Barbara instala un Centinela y se teletransporta a su ubicación. Una torreta centinela ya instalada se autodestruirá de inmediato, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color> de daño.\nLa nueva torreta Centinela inflige <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{6} Amp. Habilidades.)</color> de daño a los enemigos en el área. La Velocidad de Ataque del arma Centinela aumenta en {5} durante {4} segundos, dependiendo de la cantidad de enemigos alcanzados durante la teletransportación.
-Skill/Group/Coef/1026300┃Barbara dispara un Láser de Electrones Libres de dos partes, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{8} Amp. Habilidades.)</color> de daño a cada enemigo golpeado. Los enemigos alcanzados se Ralentizan en {6} durante {5} segundos. Golpear a un enemigo con ambas partes del Láser inflige {2} menos de daño y reduce el tiempo de reutilización de Aceleración en {7} segundos. \nLas torretas Centinela se mejoran cuando son golpeadas por el láser, lo que hace que el Centinela use un Láser de Electrones Libres, infligiendo <color=white>{3}</color><color=#ffd775>(+{4} Poder de ataque Centinela)</color><color=#DDA0DD>(+{9} Amp. Habilidades.)</color> de daño a los enemigos golpeados.
-Skill/Group/Coef/1026310┃Barbara y su arma Centinela se mejoran durante {0} segundos. Durante este tiempo, su arma Centinela se carga y dispara automáticamente el Láser de Electrones Libres. Se elimina el coste de PE del Láser de Electrones Libres y su tiempo de reutilización es reducido a {1}. El daño del Láser de Electrones Libres aumenta a <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{6} Amp. Habilidades.)</color> y el daño del arma centinela aumenta a <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque Centinela)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color>.
-Skill/Group/Coef/1026400┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{12} Amp. Habilidades.)</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque)</color><color=#DDA0DD>(+{13} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
-Skill/Group/Coef/1026410┃Barbara crea un Ciclón Magnético con su torreta Centinela que dura hasta {3} segundos, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{12} Amp. Habilidades.)</color><color=#688A08>(+{6} PV máximos del enemigo)</color> de daño verdadero cada 0.5 segundos a los enemigos dentro de su alcance y aumenta su Velocidad de Movimiento en {7}.\nReactivar la habilidad o esperar hasta la duración máxima hace que el Ciclón Magnético explote, causando <color=white>{4}</color><color=#ffd775>(+{5} Poder de ataque)</color><color=#DDA0DD>(+{13} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y otorgarle un escudo basado en {2} del daño infligido por el Ciclón Magnético, hasta un máximo de {8} PV.\nAl mismo tiempo, los enemigos reciben el daño ambas explosiones quedan Ralentizados por {10} durante {9} segundo(s).
 Skill/Group/Coef/1026420┃El Ciclón Magnético de Barbara se mejora y se convierte en una Tormenta de Partículas. El radio de alcance de la Tormenta de Partículas aumenta con el tiempo y el radio de absorción del escudo aumenta en {0}. Reactivar la habilidad o esperar hasta la duración máxima hace que la Tormenta de Partículas explote, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {5} durante {4} segundos.
 Skill/Group/Coef/1026430┃El Ciclón Magnético de Barbara se mejora y se convierte en una Tormenta de Partículas. El radio de alcance de la Tormenta de Partículas aumenta con el tiempo y el radio de absorción del escudo aumenta en {0}. Reactivar la habilidad o esperar hasta la duración máxima hace que la Tormenta de Partículas explote, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{7} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {5} durante {4} segundos.
-Skill/Group/Coef/1026500┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{17} Amp. Habilidades.)</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{0} Amp. Habilidades.)</color> de daño 16a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color><color=#ffd775>(+{10} Poder de ataque)</color><color=#DDA0DD>(+{18} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
-Skill/Group/Coef/1026510┃Barbara realiza Aceleración, dándole efectos extra a sus habilidades básicas.\n\nCorto Circuito: Barbara coloca una torreta Centinela y se teletransporta a su ubicación. Una torreta Centinela ya instalada se autodestruirá de inmediato, infligiendo <color=white>{0}</color><color=#ffd775>(+{1} Poder de ataque)</color><color=#DDA0DD>(+{17} Amp. Habilidades.)</color> de daño. Barbara se teletransporta, infligiendo <color=white>{2}</color><color=#ffd775>(+{3} Poder de ataque)</color><color=#DDA0DD>(+{0} Amp. Habilidades.)</color> de daño 16a los enemigos cercanos, aumentando la Velocidad de Ataque del Centinela por cada enemigo golpeado en {5} durante {4} segundos. Después de utilizar la habilidad, el enfriamiento de Aceleración se reduce en {14}.\n\nResonancia de Fotones: Durante los siguientes {6} segundos, el daño del Láser de Electrones Libres y la torreta Centinela aumenta en {13} y el Láser de Electrones Libres no tiene coste de PE y su tiempo de reutilización es reducido a {7}. Los ataques del Centinela se convierten en Láseres de Electrones Libres mientras la Resonancia de Fotones está activa.\n\nTormenta de Partículas: el radio del Ciclón Magnético aumenta con el tiempo. Reactivar la habilidad o después de {8} segundos hace que la Tormenta explote, infligiendo <color=white>{9}</color><color=#ffd775>(+{10} Poder de ataque)</color><color=#DDA0DD>(+{18} Amp. Habilidades.)</color> de daño a los enemigos dentro del alcance y los Ralentiza un {15} durante {11} segundos.\n\nReactivar la habilidad una vez más cancela la Tormenta de Partículas, permitiendo a Barbara volver a usarla después de {12} segundos.
-Skill/Group/ExpansionTip/1026100┃<i>Una torreta no mejorada tiene {0} poder de ataque y {1} defensa.</i>
 CharacterState/Group/Name/1026110┃Retroalimentación
 CharacterState/Group/Desc/1026110┃Poder de Ataque y Defensa del Centinela aumentados.
 CharacterState/Group/Name/1026120┃Maestria Ingeniera
@@ -9652,11 +9655,11 @@ Skill/LobbyDesc/1046200┃<color=white>Relámpago</color>: Aiden arremete con su
 Skill/LobbyDesc/1046300┃Aiden se ralentiza a sí mismo mientras canaliza alto voltaje en su sable-pistola.\nCuando se vuelve a lanzar, o con la duración máxima, Aiden inflige daño de habilidad a los enemigos cercanos según el tiempo de carga y los ralentiza. Aiden puede lanzar <color=white>Chispazo</color> o <color=white>Sobretensión Electrostática</color> para moverse mientras lanza la habilidad.\nSi está completamente cargado, Aiden deja atrás un <color=blanco>Campo Estático</color>, infligiendo daño de habilidades a los enemigos que lo tocan y enraizándolos.
 Skill/LobbyDesc/1046400┃<color=green>Pasiva</color>: El tiempo de reutilización de esta habilidad se restablece al alcanzar los <color=white>Amperios</color> máximos.\n\n<color=white>Paso Atrás</color>: Aiden retrocede y dispara una bala eléctrica, infligiendo daño de habilidad al primer enemigo golpeado y marcándolo. La marca proporciona visión a Aiden y le permite usar <color=white>Chispazo</color>. La velocidad de movimiento de Aiden aumenta después de usar <color=white>Paso Atrás</color>.\n\n<color=white>Chispazo</color>: Aiden se lanza hacia el enemigo marcado e inflige daño de habilidad.
 Skill/LobbyDesc/1046500┃Aiden descarga un rayo en la ubicación seleccionada, lo que inflige daño de habilidad y ralentiza a los enemigos. Los enemigos golpeados en el medio reciben daño de habilidad y quedan aturdidos.\nAiden luego descarga un segundo rayo en el mismo lugar, infligiendo daño de habilidad y ralentizando a los enemigos golpeados.\n\nSi el primer rayo golpea a un enemigo, Aiden puede lanzar otra <color=blanco>Sobretensión Electrostática</color>para teletransportarse a la ubicación del rayo, activando inmediatamente el segundo rayo y cargando completamente los <color=white>Amperios</color> de Aiden.
-Skill/LobbyDesc/1047100┃Laura gana Emoción cuando se mueve.\n\n<color=white>Enseñanzas de Nerea</color>: Con Emoción máxima, el siguiente ataque básico de Laura inflige daño adicional a su objetivo y a los enemigos cercanos. El movimiento con habilidades le otorga Enseñanzas de Nerea.\n<color=white>Enseñanzas de Nerea</color> no se activa si su objetivo está demasiado cerca de ella.
-Skill/LobbyDesc/1047200┃Laura chasquea su látigo una vez en la dirección objetivo, lo que inflige daño de habilidad a los enemigos y gana <color=white>Emoción</color>. Si daña a un enemigo, puedes volver a activar la habilidad dentro de un tiempo para mejorarla.\n\n1ª Mejora: Laura chasquea su látigo una vez en la dirección objetivo, inflige daño de habilidad y gana <color=white>Emoción</color>.\n2ª Mejora: Laura chasquea su látigo dos veces en la dirección objetivo, infligiendo daño de habilidad dos veces y ganando <color=white>Emoción</color>.
-Skill/LobbyDesc/1047300┃Laura lanza su tarjeta de presentación de la firma en la dirección objetivo. La carta de presentación se despliega si choca con un enemigo y ralentiza a todos los enemigos en el rango. Los enemigos golpeados reciben daño de habilidad y se marcan como su <color=white>Víctima</color> después de una cierta cantidad de tiempo. Los enemigos marcados por <color=white>Víctima</color> reciben daño de habilidad, se ralentizan y reducen su defensa. Consumir la marca le otorga a Laura su <color=white>Víctima</color> de defensa perdida como Defensa y le otorga Emoción.
-Skill/LobbyDesc/1047400┃Laura usa su <color=white>Emoción</color> para lanzarse en la dirección deseada con la gracia de un gato. Laura puede usar Paso astuto durante <color=white>Atraco Crepuscular</color>, lo que aumenta su alcance y le permite cambiar de dirección.\n\n<color=white>Paso astuto</color> no se ve afectado por los efectos de reducción de enfriamiento.
-Skill/LobbyDesc/1047500┃Laura lanza su látigo en la dirección del objetivo y se vuelve imparable. Si el látigo choca con una pared o una <color=blanca>Víctima</color> de su tarjeta de visita, Laura se ata hacia él e inflige daño de habilidad a los enemigos en el Mientras avanza, el primer enemigo con el que Laura choca es arrastrado con ella.\nCuando Laura llega a la pared, Laura voltea con gracia hacia atrás, infligiendo daño de habilidad a los enemigos y tirándolos por los aires.\n\nSi un enemigo marcado como una <color=blanca>Víctima</color> de su tarjeta de visita es golpeado con su látigo, es empujado ligeramente hacia adelante.
+Skill/LobbyDesc/1047100┃Laura gagne des charges de Frisson tous les 1m parcourus.\n\n<color=white>Enseignements de Nerea</color>: À 100 charges de Frisson, la prochaine attaque de base de Laura inflige des dégâts supplémentaires de compétence à sa cible et autour de sa cible. Ses déplacements via une compétence octroient  davantage de charges de Frisson.\n<color=white>Enseignements de Nerea</color> ne s'active pas si sa cible est trop proche.
+Skill/LobbyDesc/1047200┃Laura claque son fouet dans la direction ciblée, infligeant des dégâts aux ennemis et octroyant des charges de <color=white>Frisson</color>.Si la compétence a touché un ennemi, elle peut être réutilisée dans les quelques secondes secondes et bénéficie alors d'un effet amélioré.\n\n1ère Amélioration : Laura claque son fouet dans la direction ciblée, infligeant des dégâts et octroyant des charges de <color=white>Frisson</color>.\n2ème Amélioration : Laura claque son fouet deux fois dans la direction ciblée, infligeant des dégâts deux fois et octroyant des charges de <color=white>Frisson</color>.
+Skill/LobbyDesc/1047300┃Laura lance sa carte signature dans la direction ciblée, infligeantdes dégâts au premier Cobaye touché et le marquant en tant que <color=white>Victime</color>. Après quelques secondes, la prochaine compétence de Laura consomme la marque et inflige des dégâts supplémentaires, ralentissant et réduisant leur défense. Consommer la marque octroie à Laura un montant de Puissance d'Attaque équivalant à 100% de la défense volée à la <color=white>Victime</color>, des charges de Frisson, et réduit le temps de recharge de <color=white>Vol du Crépuscule</color>.
+Skill/LobbyDesc/1047400┃Laura utilise des charges de <color=white>Frisson</color> pour s'élancer dans la direction ciblée avec la grâce d'un chat. Laura peut effectuer Pas Sournois pendant <color=white>Vol du Crépuscule</color> pour augmenter la portée du sort et changer sa direction.\n\n<color=white>Pas Sournois</color> n'est pas affecté par la Réduction du Temps de Recharge..
+Skill/LobbyDesc/1047500┃Lara projette son fouet dans la direction ciblée, devenant innarêtable. Si le fouet touche un obstacle, Laura s'y lance,  infligeant des dégâts aux ennemis touchés sur le chemin. Toucher une <color=white>Victime</color> marquée, ou sujette à la réduction de défense provoquée par la marque.\nÀ l'arrivée, Laura effectue un backflip, infligeant des dégâts aux ennemis et les projetant en l'air.
 Skill/LobbyDesc/1048100┃Si Tia colorea a su enemigo con dos colores diferentes usando <color=#ffffff>Trazo de Pinzel</color> o <color=#ffffff>Una pizca de color</color>, <color=#FFFFC2>Efecto de ardilla</color > está activado. Sus habilidades básicas no se ven afectadas por los efectos de reducción del tiempo de reutilización. En cambio, su Amplificación de habilidad aumenta en función de su reducción de tiempo de reutilización.\n\n[Ardilla enfadada]\nPintar a un enemigo con  <color=red>Rojo</color> y <color=yellow>Amarillo</color> activa Ardilla enfadada, lo silencia y le inflige daño de habilidades.\n\n[Ardilla bendita]\nPintar a un enemigo con <color=red>Rojo</color> y <color=#2AC0FF>Azul</color> activa Ardilla bendita, que inflige daño de habilidades, cura a Tia y aumenta su velocidad de movimiento.\n\n[Ardilla mágica]\nPintar a un enemigo con <color=#2AC0FF>Azul</color> y <color=yellow>Amarillo</color> activa Ardilla mágica, infligiendo daño de habilidadesy enraizándolo.
 Skill/LobbyDesc/1048400┃Tia puede usar diferentes habilidades según el color de su pincel actual.\n\n<color=yellow>Amarillo</color>: Tia lanza su tubo de pintura amarilla en la dirección seleccionada, que explota, inflige daño de habilidad a los enemigos y los pinta de <color=yellow>Amarillo</color>. Los enemigos pintados de amarillo se ralentizan.\n<color=red>Rojo</color>: Tia balancea su pincel, inflige daño de habilidad y pinta a los enemigos golpeados por las cerdas de <color=red>Rojo</color>. Los enemigos pintados de rojo ven reducida su visión.\n<color=#2AC0FF>Azul</color>: Tia golpea el suelo con su pincel, inflige daño de habilidad y pinta a los enemigos dentro del rango de <color=#2AC0FF>Azul</color>. Los enemigos golpeados por el rango interior reciben daño de habilidad adicional y son ralentizados.
 Skill/LobbyDesc/1048500┃Tia cambia el color de la pintura en su pincel. Los colores siempre se cambian en orden: <color=yellow>Amarillo</color> - <color=red>Rojo</color> - <color=#2AC0FF>Azul</color>.
@@ -10306,6 +10309,9 @@ Item/Skills/6015003/Desc┃Golpear un solo enemigo con un ataque o habilidad bá
 Item/Skills/6015004/Name┃<color=yellow>Aerodinámico: Encarnado de Rudra</color>
 Item/Skills/6015004/Body┃Golpear un solo enemigo con un ataque básico o habilidad {1} veces en {0} segundos aumenta tu velocidad de movimiento en {11}% y tu poder de ataque en {13}%.\nExcluye múltiples efectos de impacto.\n(Tiempo de reutilización: {2} segundos)
 Item/Skills/6015004/Desc┃Golpear un solo enemigo con un ataque básico o habilidad {1} veces en {0} segundos aumenta tu velocidad de movimiento en {4}% y tu poder de ataque en {11}%.\nExcluye múltiples efectos de impacto.\n(Tiempo de reutilización: {2} segundos)
+Item/Skills/6015005/Name┃<color=yellow>Estabilizado: Portador de Carga</color>
+Item/Skills/6015005/Body┃Golpear un solo enemigo con un ataque o habilidad básica {1} veces en {0} segundos te otorga un escudo de {10} y aumenta tu velocidad de movimiento un {5}% durante {3} segundos.\nExcluye múltiples efectos de impacto.\n(Enfriamiento: {2} segundos)
+Item/Skills/6015005/Desc┃Golpear un solo enemigo con un ataque o habilidad básica {1} veces en {0} segundos te otorga un escudo de {10} y aumenta tu velocidad de movimiento un <color=green>Nivel de personaje*1</color>% durante {3} segundos.\nExcluye múltiples efectos de impacto.\n(Enfriamiento: {2} segundos)
 Item/Skills/6015007/Name┃<color=yellow>Aerodinámico</color>
 Item/Skills/6015008/Name┃<color=yellow>Aerodinámico</color>
 CharacterState/Group/Name/6015010┃Aerodinámico
@@ -10319,9 +10325,6 @@ Item/Skills/6016001/Desc┃Si los PV caen por debajo del {0}% y recibes daño de
 Item/Skills/6016002/Name┃<color=yellow>Segundo Aliento: Botón del Pánico</color>
 Item/Skills/6016002/Body┃Si los PV caen por debajo del {0}% y recibes daño de un enemigo, obtienes un escudo de <color=white>{11}</color> PV durante {1} segundos. {15} incrementa en {16} durante {5} segundos, y la Recuperación de PV es un {9}% más eficaz en ti durante {5} segundos. (Enfriamiento: {13}s)
 Item/Skills/6016002/Desc┃Si los PV caen por debajo del {0}% y recibes daño de un enemigo, obtienes un escudo de {2} <color=#008000>(+Nivel de personaje * {3})</color> PV durante {1} segundos. Adicionalmente, ya sea el <color=#FFD775>Poder de Ataque incrementa en {13}</color> O la <color=#DDA0DD>Amp. de Habilidad incrementa en {14}</color> durante {5} segundos. La Recuperación de PV es un {9}% más eficaz en ti durante {5} segundos. (Enfriamiento: {11}s)
-Item/Skills/6016003/Name┃<color=yellow>Segundo Aliento - Cruzado</color>
-Item/Skills/6016003/Body┃Si los PV caen por debajo del {0}% y recibes daño de un enemigo, obtienes un escudo de <color=white>{11}</color> PV durante {1} segundos. {15} incrementa en {16} durante {5} segundos. (Enfriamiento: {13}s)
-Item/Skills/6016003/Desc┃Si los PV caen por debajo del {0}% y recibes daño de un enemigo, obtienes un escudo de {2} <color=#008000>(+Nivel de personaje*{3})</color> PV durante {1} segundos. Adicionalmente, ya sea el <color=#FFD775>Poder de Ataque incrementa en {13}</color> O la <color=#DDA0DD>Amp. de Habilidad incrementa en {14}</color> durante {5} segundos. (Enfriamiento: {11}s)
 Item/Skills/6016004/Name┃<color=yellow>Segundo Viento: Guardia Rápida</color>
 Item/Skills/6016004/Body┃Cuando recibes daño de un jugador enemigo, obtienes un escudo de <color=white>{11}</color> PV durante {1} segundos. (Enfriamiento: {13}s)
 Item/Skills/6016004/Desc┃Cuando recibes daño de un jugador enemigo, obtienes un escudo de {2}+<color=#008000>(+Nivel de Personaje*{3})</color> PV durante {1} segundos. (Enfriamiento: {11}s)
@@ -10720,6 +10723,7 @@ Skill/Code/Name/4516001┃Campo de Fuerza
 Skill/Code/Name/4517001┃Tótem
 Skill/Code/Name/4518001┃Anulación
 Skill/Code/Name/4519001┃Ladron de almas
+Skill/Code/Name/4523001┃Perseguidor tenaz
 Skill/Code/Name/4521001┃Espada de la verdad
 Skill/Code/Name/4522001┃Juramento Falso
 Skill/Code/Name/4520001┃Viento Curativo
@@ -10731,6 +10735,7 @@ Skill/Code/Name/4516002┃Campo de Fuerza
 Skill/Code/Name/4517002┃Tótem
 Skill/Code/Name/4518002┃Anulación
 Skill/Code/Name/4519002┃Ladron de almas
+Skill/Code/Name/4523002┃Perseguidor tenaz
 Skill/Code/Name/4521002┃Espada de la verdad
 Skill/Code/Name/4522002┃Juramento Falso
 Skill/Code/Name/4520002┃Viento Curativo
@@ -10742,6 +10747,7 @@ Skill/Code/Name/4516003┃Campo de Fuerza
 Skill/Code/Name/4517003┃Tótem
 Skill/Code/Name/4518003┃Anulación
 Skill/Code/Name/4519003┃Ladron de almas
+Skill/Code/Name/4523003┃Perseguidor tenaz
 Skill/Code/Name/4521003┃Espada de la verdad
 Skill/Code/Name/4522003┃Juramento Falso
 Skill/Code/Name/4520003┃Viento Curativo
@@ -10753,6 +10759,7 @@ Skill/Group/Name/4516000┃Campo de Fuerza
 Skill/Group/Name/4517000┃Tótem
 Skill/Group/Name/4518000┃Anulación
 Skill/Group/Name/4519000┃Ladron de almas
+Skill/Group/Name/4523000┃Perseguidor tenaz
 Skill/Group/Name/4521000┃Espada de la verdad
 Skill/Group/Name/4522000┃Juramento Falso
 Skill/Group/Name/4520000┃Viento Curativo
@@ -10780,6 +10787,9 @@ TacticalSkillSet/Code/Name/500183┃Anulación
 TacticalSkillSet/Code/Name/500191┃Ladron de almas
 TacticalSkillSet/Code/Name/500192┃Ladron de almas
 TacticalSkillSet/Code/Name/500193┃Ladron de almas
+TacticalSkillSet/Code/Name/500201┃Perseguidor tenaz
+TacticalSkillSet/Code/Name/500202┃Perseguidor tenaz
+TacticalSkillSet/Code/Name/500203┃Perseguidor tenaz
 TacticalSkillSet/Code/Name/500211┃Espada de la verdad
 TacticalSkillSet/Code/Name/500212┃Espada de la verdad
 TacticalSkillSet/Code/Name/500213┃Espada de la verdad
@@ -11298,15 +11308,15 @@ ER패스 미해금 미션┃{0} hasta desbloquear
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃Hierro
-BRONZE_SUBJECT┃Bronce
-SILVER_SUBJECT┃Plata
-GOLD_SUBJECT┃Oro
-PLATINUM_SUBJECT┃Platino
-DIAMOND_SUBJECT┃Diamante
+IRON┃Hierro
+BRONZE┃Bronce
+SILVER┃Plata
+GOLD┃Oro
+PLATINUM┃Platino
+DIAMOND┃Diamante
 MITHRIL┃Mythril
 DEMIGOD┃Titán
-THE_ETERNITY┃Inmortal
+ETERNITY┃Inmortal
 UNRANK┃Sin Rango
 일반┃Normal
 NORMAL┃Normal
@@ -11389,24 +11399,24 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃Duplica el costo de entrada por aband
 배치고사 중┃Asignación de nivel/Ubicación de nivel
 강등┃Degradación
 승급!┃Promoción
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>Rango Actual</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>Rango Actual</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>Rango Actual</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>Rango Actual</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>Rango Actual</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>Rango Actual</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>Rango Actual</color>
+MyTierRP/BRONZE┃<color=#E9964C>Rango Actual</color>
+MyTierRP/SILVER┃<color=#C7CCE6>Rango Actual</color>
+MyTierRP/GOLD┃<color=#FBD787>Rango Actual</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>Rango Actual</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>Rango Actual</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>Rango Actual</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>Rango Actual</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>Rango Actual</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>Rango Actual</color>
 RankRP_explanation┃Puntos otorgados según la clasificación alcanzada.
 Elimination_explanation┃Puntos otorgados por eliminar a un equipo enemigo mientras está derribado y no puede revivir automáticamente.
 Down_explanation┃Puntos otorgados por eliminar a un enemigo.
@@ -16755,162 +16765,6 @@ gameTip_Title_10070_3┃Plataforma de lanzamiento
 gameTip_Desc_10070_3┃¡La plataforma de lanzamiento te permite moverte fácil y rápidamente a áreas distantes!\nPueden ser cruciales en enfrentamientos con enemigos, ¡así que practica usarlos estratégicamente!
 gameTip_Title_10050_3┃Visualización del grupo de cuadros
 gameTip_Desc_10050_3┃Muestra las casillas más cercanas a cada punto de inicio en color azul.\nAl abrir todas las casillas del mismo grupo, podrás obtener el objeto de esta área.\nEsta es información importante a la hora de decidir tu ruta al inicio del juego, ¡así que primero marca las casillas con el indicador de grupo de casillas!
-ServerError/1000┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1001┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1002┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1003┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1004┃Necesitas volver a entrar. El juego va a reiniciarse.
-ServerError/1005┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1006┃El servidor se encuentra en mantenimiento.
-ServerError/1007┃Las versiones del cliente no concuerdan.
-ServerError/1100┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1101┃Ha ocurrido un error. Por favor, reinicia el juego.
-ServerError/1102┃Necesitas volver a entrar. El juego va a reiniciarse.
-ServerError/1110┃No es posible conectarse al servidor. Por favor verifique el estado de su cuenta.
-ServerError/1111┃El nombre de usuario no está disponible.
-ServerError/1112┃No es posible conectarse al servidor. Por favor verifique el estado de su cuenta.
-ServerError/1115┃Error al conectarse a Steam.
-ServerError/1116┃Esta cuenta está restringida
-ServerError/1118┃El nombre ya existe.
-ServerError/1124┃No puedes crear una nueva cuenta de MS.
-ServerError/1200┃No se pueden encontrar los resultados de la partida.
-ServerError/1201┃Información del juego no válida. (1201)
-ServerError/1202┃Información de repetición no válida. (1202)
-ServerError/1203┃Ya tienes el Pase ER. (1203)
-ServerError/1204┃No tienes acceso a este Replay.(1204)
-ServerError/1300┃No se ha podido encontrar una partida. Por favor, verifica tu servidor en la esquina superior derecha.
-ServerError/1301┃Error de conexión a la partida.
-ServerError/1302┃Un miembro no cumple con los requisitos de nivel o personaje.
-ServerError/1303┃El juego anterior no terminó todavia.
-ServerError/1305┃Un miembro no cumple con los criterios de nivel.
-ServerError/1306┃La búsqueda no está disponible actualmente.(1306)
-ServerError/2000┃Error de solicitud de compra.
-ServerError/2001┃Error de información de Steam.
-ServerError/2002┃Información de producto inválida.
-ServerError/2003┃Información de personaje no encontrada.
-ServerError/2100┃Insuficientes fondos.
-ServerError/2101┃Insuficiente NP
-ServerError/2102┃Insuficiente A-COIN
-ServerError/2120┃Información de producto no encontrada.
-ServerError/2121┃Información de producto incorrecta
-ServerError/2122┃Número de compras excedido
-ServerError/2123┃Límite de compra diaria excedido.
-ServerError/2124┃Límite de compra semanal excedido.
-ServerError/2125┃Límite de compra mensual excedido.
-ServerError/2126┃Los descuentos para esta compra ya expiraron.
-ServerError/3100┃No se ha podido encontrar información de la misión
-ServerError/3101┃Error de cambio de misión
-ServerError/3102┃No puedes recibir la recompensa sin haber completado la misión
-ServerError/4100┃Información erronea
-ServerError/4101┃Expirado. No puedes recibir la recompensa.
-ServerError/4102┃No se puede encontrar la recompensa canjeable.
-ServerError/5100┃No puedes compartir un Plan Guardado importado.
-ServerError/5101┃No puedes borrar un Plan Guardado que no ha sido compartido.
-ServerError/5102┃No hay Plan Guardado para editar.
-ServerError/5103┃Plan Guardado no existente.
-ServerError/5104┃Plan Guardado no existente.
-ServerError/5105┃No puedes importar tu propio Plan Guardado.
-ServerError/5106┃El personaje seleccionado no puede usar este Plan Guardado.
-ServerError/5107┃Ya no está disponible para comprar.
-ServerError/5120┃Acceso denegado.
-ServerError/5121┃En este momento no hay páginas vacías.
-ServerError/5122┃Ya no está disponible para comprar.
-ServerError/5200┃No se puede encontrar la información del Nivel Clasificado.
-ServerError/5201┃No se puede encontrar la recompensa canjeable de la partida.
-ServerError/5202┃No se puede iniciar el emparejamiento. La diferencia entre los niveles del equipo es demasiado amplia.
-ServerError/5203┃El nivel Diamante o superior no es posible para el emparejamiento con equipos pre-hechos.
-ServerError/6100┃Información de aspecto no encontrada.
-ServerError/6101┃Ya tienes este personaje.
-ServerError/7100┃La lista de solicitudes de amistad de este jugador está llena.
-ServerError/7101┃Puedes agregar hasta 200 amigos.
-ServerError/7102┃La lista de amigos de este jugador está llena.
-ServerError/7103┃No puedes agregarte a ti mismo como amigo.
-ServerError/7104┃Ya sois amigos.
-ServerError/7105┃La solicitud de amistad ya ha sido enviada.
-ServerError/7106┃Solicitud inválida.
-ServerError/7107┃Aún no sois amigos.
-ServerError/7108┃La verificación de usuario ha fallado.
-ServerError/7109┃Límite de invitaciones diarias alcanzado
-ServerError/7200┃Este cupón ya ha sido canjeado.
-ServerError/7201┃Cupón inválido, por favor revisa el código.
-ServerError/7202┃Cupón caducado.
-ServerError/7203┃Cupón disponible solo en cibercafés de Kakao Games.
-ServerError/7204┃El mismo tipo de cupón ya ha sido canjeado.
-ServerError/7205┃Este cupón no puede utilizarse en esta plataforma.
-ServerError/7206┃La cantidad limitada se ha agotado.
-ServerError/7207┃Este cupón no puede utilizarse todavía. Por favor consulta el período de uso del cupón.
-ServerError/7303┃Código no encontrado.
-ServerError/7304┃¡No puedes remitirte a ti mismo!
-ServerError/7400┃No se puede encontrar la información del Pase ER. (7400)
-ServerError/7401┃No se puede encontrar el nivel del Pase ER. (7401)
-ServerError/7402┃No se puede encontrar la información de la cuenta del Pase ER. (7402)
-ServerError/7403┃Información de nivel del Pase ER no válida. (7403)
-ServerError/7404┃En este momento no posees el Pase ER. (7404)
-ServerError/7405┃La información actual de la misión del Pase ER no es válida. (7405)
-ServerError/7406┃Recompensas del Pase ER no encontradas. (7406)
-ServerError/7407┃No se han encontrado las recompensas de nivel de temporada del Pase ER. (7406)
-ServerError/7408┃Has alcanzado el nivel máximo de la temporada. (7408)
-ServerError/7409┃Información de compra del Pase ER no válida. (7409)
-ServerError/7410┃No se encontró el nivel de temporada de la cuenta actual. (7410)
-ServerError/7413┃ER plus ya ha sido comprado esta temporada.(7413)
-ServerError/7414┃El ER Pass Upgrade ya ha sido comprado esta temporada.(7414)
-ServerError/7415┃Temporada ya activada.(7415)
-ServerError/7416┃La activación de ER Pass no existe esta temporada.(7416)
-ServerError/7500┃No se encontró información sobre el paquete de temporada. (7500)
-ServerError/7501┃No se encontró información sobre el paquete de temporada en esta cuenta.(7501)
-ServerError/7502┃No se encontraron recompensas redimibles del paquete de temporada.(7502)
-ServerError/7503┃El paquete de temporada solo puede comprarse una vez.(7503)
-ServerError/7504┃Información del paquete de temporada inválida.(7504)
-ServerError/7601┃Artículos no encontrados.
-ServerError/7602┃DLC ya reclamado.
-ServerError/9080┃Ya tienes este aspecto.
-ServerError/9081┃No puedes usar este personaje
-ServerError/9082┃No puedes comprar este aspecto.
-ServerError/9083┃No se puede encontrar el emoticono
-ServerError/9084┃No se puede comprar este emoticono
-ServerError/9085┃No se encuentra disponible actualmente.
-ServerError/9086┃Has equipado un artículo que no posees.
-ServerError/9087┃Información de artículo no válida. (9092)
-ServerError/9089┃No se pueden usar artículos no obtenidos. (9093)
-ServerError/9090┃No se pueden usar artículos no obtenidos. (9093)
-ServerError/9091┃0
-ServerError/9092┃Información de compra no válida. (9094)
-ServerError/9093┃No eres propietario de este artículo.
-ServerError/9094┃La información sobre el tipo de artículo no es válida. (9096)
-ServerError/9095┃Se excedió el tiempo de pago de Steam. (CÓDIGO 9100) \nComprueba tu configuración de Steam y habilita "Habilitar Steam Overlay mientras estás en el juego".
-ServerError/9096┃Error al procesar el pago. (9101)
-ServerError/9100┃Error al procesar el pago. (9102)
-ServerError/9101┃Error al procesar el pago. (9103)
-ServerError/9102┃Error al procesar el pago. (9104)
-ServerError/9103┃Error al procesar el pago. (9105)
-ServerError/9104┃Error al procesar el pago. (9106)
-ServerError/9105┃Error al procesar el pago. (9107)
-ServerError/9106┃Error de conexión al servidor.
-ServerError/9107┃Solicitud inválida. (9200)
-ServerError/9200┃Este jugador ya está en un equipo.
-ServerError/9201┃Ha ocurrido un error durante la creación del equipo. (9204)
-ServerError/9203┃Ha ocurrido un error al unirse al equipo. (9205)
-ServerError/9204┃No puede dejar el equipo.
-ServerError/9205┃El jugador no puede ser invitado.
-ServerError/9206┃Esto solo puede ser hecho por la líder del equipo.
-ServerError/9207┃Incapaz de cambiar de equipo.
-ServerError/9208┃No eres parte de un equipo. (9210)
-ServerError/9209┃Incapaz de unirse al equipo.
-ServerError/9210┃No puede iniciarse búsqueda de compañeros de equipo. (9212)
-ServerError/9211┃No se puede encontrar el equipo.
-ServerError/9212┃No se puede cambiar el modo de emparejamiento.
-ServerError/9213┃No se puede cambiar de líder del equipo.
-ServerError/9214┃No se puede expulsar al jugador. (9216)
-ServerError/9215┃No se puede encontrar al jugador. (9217)
-ServerError/9216┃Este equipo ya está completo.
-ServerError/9217┃No se puede unir al emparejamiento. (9219)
-ServerError/9218┃No se puede cancelar el emparejamiento. (9220)
-ServerError/9219┃No se puede cancelar la acción. (9221)
-ServerError/9220┃Se ha establecido conexión con una versión incompatible.
-ServerError/9221┃No se puede cancelar la acción. (9221)
-ServerError/9233┃Incapaz de cambiar de equipo. (9233)
-ServerError/99999┃Se ha establecido conexión con una versión incompatible.
-ServerError/HttpException┃No se pudo comunicar con el servidor. (9201)
 CharacterStoryName┃Nombre
 CharacterStoryAge┃Edad
 CharacterStoryHeight┃Estatura
@@ -17405,6 +17259,162 @@ CharacterPlayTip/67┃Abigail desafía el concepto de espacio y se teletransport
 CharacterPlayTip/68┃Alonso es un líder de acción que se especializa en controlar enemigos con sus poderes magnéticos y mantener las líneas del frente.
 CharacterPlayTip/69┃A Leni le encanta gastar bromas a todo el mundo, burlárse de sus enemigos y ayudar a sus aliados con sus juguetes.
 CharacterPlayTip/70┃Tsubame es un agente de combate rigurosamente entrenada. Ella marca marcas en sus objetivos con su kunai y las corta para causar un gran daño.
+ServerError/1000┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1001┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1002┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1003┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1004┃Necesitas volver a entrar. El juego va a reiniciarse.
+ServerError/1005┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1006┃El servidor se encuentra en mantenimiento.
+ServerError/1007┃Las versiones del cliente no concuerdan.
+ServerError/1100┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1101┃Ha ocurrido un error. Por favor, reinicia el juego.
+ServerError/1102┃Necesitas volver a entrar. El juego va a reiniciarse.
+ServerError/1110┃No es posible conectarse al servidor. Por favor verifique el estado de su cuenta.
+ServerError/1111┃El nombre de usuario no está disponible.
+ServerError/1112┃No es posible conectarse al servidor. Por favor verifique el estado de su cuenta.
+ServerError/1115┃Error al conectarse a Steam.
+ServerError/1116┃Esta cuenta está restringida
+ServerError/1118┃El nombre ya existe.
+ServerError/1124┃No puedes crear una nueva cuenta de MS.
+ServerError/1200┃No se pueden encontrar los resultados de la partida.
+ServerError/1201┃Información del juego no válida. (1201)
+ServerError/1202┃Información de repetición no válida. (1202)
+ServerError/1203┃Ya tienes el Pase ER. (1203)
+ServerError/1204┃No tienes acceso a este Replay.(1204)
+ServerError/1300┃No se ha podido encontrar una partida. Por favor, verifica tu servidor en la esquina superior derecha.
+ServerError/1301┃Error de conexión a la partida.
+ServerError/1302┃Un miembro no cumple con los requisitos de nivel o personaje.
+ServerError/1303┃El juego anterior no terminó todavia.
+ServerError/1305┃Un miembro no cumple con los criterios de nivel.
+ServerError/1306┃La búsqueda no está disponible actualmente.(1306)
+ServerError/2000┃Error de solicitud de compra.
+ServerError/2001┃Error de información de Steam.
+ServerError/2002┃Información de producto inválida.
+ServerError/2003┃Información de personaje no encontrada.
+ServerError/2100┃Insuficientes fondos.
+ServerError/2101┃Insuficiente NP
+ServerError/2102┃Insuficiente A-COIN
+ServerError/2120┃Información de producto no encontrada.
+ServerError/2121┃Información de producto incorrecta
+ServerError/2122┃Número de compras excedido
+ServerError/2123┃Límite de compra diaria excedido.
+ServerError/2124┃Límite de compra semanal excedido.
+ServerError/2125┃Límite de compra mensual excedido.
+ServerError/2126┃Los descuentos para esta compra ya expiraron.
+ServerError/3100┃No se ha podido encontrar información de la misión
+ServerError/3101┃Error de cambio de misión
+ServerError/3102┃No puedes recibir la recompensa sin haber completado la misión
+ServerError/4100┃Información erronea
+ServerError/4101┃Expirado. No puedes recibir la recompensa.
+ServerError/4102┃No se puede encontrar la recompensa canjeable.
+ServerError/5100┃No puedes compartir un Plan Guardado importado.
+ServerError/5101┃No puedes borrar un Plan Guardado que no ha sido compartido.
+ServerError/5102┃No hay Plan Guardado para editar.
+ServerError/5103┃Plan Guardado no existente.
+ServerError/5104┃Plan Guardado no existente.
+ServerError/5105┃No puedes importar tu propio Plan Guardado.
+ServerError/5106┃El personaje seleccionado no puede usar este Plan Guardado.
+ServerError/5107┃Ya no está disponible para comprar.
+ServerError/5120┃Acceso denegado.
+ServerError/5121┃En este momento no hay páginas vacías.
+ServerError/5122┃Ya no está disponible para comprar.
+ServerError/5200┃No se puede encontrar la información del Nivel Clasificado.
+ServerError/5201┃No se puede encontrar la recompensa canjeable de la partida.
+ServerError/5202┃No se puede iniciar el emparejamiento. La diferencia entre los niveles del equipo es demasiado amplia.
+ServerError/5203┃El nivel Diamante o superior no es posible para el emparejamiento con equipos pre-hechos.
+ServerError/6100┃Información de aspecto no encontrada.
+ServerError/6101┃Ya tienes este personaje.
+ServerError/7100┃La lista de solicitudes de amistad de este jugador está llena.
+ServerError/7101┃Puedes agregar hasta 200 amigos.
+ServerError/7102┃La lista de amigos de este jugador está llena.
+ServerError/7103┃No puedes agregarte a ti mismo como amigo.
+ServerError/7104┃Ya sois amigos.
+ServerError/7105┃La solicitud de amistad ya ha sido enviada.
+ServerError/7106┃Solicitud inválida.
+ServerError/7107┃Aún no sois amigos.
+ServerError/7108┃La verificación de usuario ha fallado.
+ServerError/7109┃Límite de invitaciones diarias alcanzado
+ServerError/7200┃Este cupón ya ha sido canjeado.
+ServerError/7201┃Cupón inválido, por favor revisa el código.
+ServerError/7202┃Cupón caducado.
+ServerError/7203┃Cupón disponible solo en cibercafés de Kakao Games.
+ServerError/7204┃El mismo tipo de cupón ya ha sido canjeado.
+ServerError/7205┃Este cupón no puede utilizarse en esta plataforma.
+ServerError/7206┃La cantidad limitada se ha agotado.
+ServerError/7207┃Este cupón no puede utilizarse todavía. Por favor consulta el período de uso del cupón.
+ServerError/7303┃Código no encontrado.
+ServerError/7304┃¡No puedes remitirte a ti mismo!
+ServerError/7400┃No se puede encontrar la información del Pase ER. (7400)
+ServerError/7401┃No se puede encontrar el nivel del Pase ER. (7401)
+ServerError/7402┃No se puede encontrar la información de la cuenta del Pase ER. (7402)
+ServerError/7403┃Información de nivel del Pase ER no válida. (7403)
+ServerError/7404┃En este momento no posees el Pase ER. (7404)
+ServerError/7405┃La información actual de la misión del Pase ER no es válida. (7405)
+ServerError/7406┃Recompensas del Pase ER no encontradas. (7406)
+ServerError/7407┃No se han encontrado las recompensas de nivel de temporada del Pase ER. (7406)
+ServerError/7408┃Has alcanzado el nivel máximo de la temporada. (7408)
+ServerError/7409┃Información de compra del Pase ER no válida. (7409)
+ServerError/7410┃No se encontró el nivel de temporada de la cuenta actual. (7410)
+ServerError/7413┃ER plus ya ha sido comprado esta temporada.(7413)
+ServerError/7414┃El ER Pass Upgrade ya ha sido comprado esta temporada.(7414)
+ServerError/7415┃Temporada ya activada.(7415)
+ServerError/7416┃La activación de ER Pass no existe esta temporada.(7416)
+ServerError/7500┃No se encontró información sobre el paquete de temporada. (7500)
+ServerError/7501┃No se encontró información sobre el paquete de temporada en esta cuenta.(7501)
+ServerError/7502┃No se encontraron recompensas redimibles del paquete de temporada.(7502)
+ServerError/7503┃El paquete de temporada solo puede comprarse una vez.(7503)
+ServerError/7504┃Información del paquete de temporada inválida.(7504)
+ServerError/7601┃Artículos no encontrados.
+ServerError/7602┃DLC ya reclamado.
+ServerError/9080┃Ya tienes este aspecto.
+ServerError/9081┃No puedes usar este personaje
+ServerError/9082┃No puedes comprar este aspecto.
+ServerError/9083┃No se puede encontrar el emoticono
+ServerError/9084┃No se puede comprar este emoticono
+ServerError/9085┃No se encuentra disponible actualmente.
+ServerError/9086┃Has equipado un artículo que no posees.
+ServerError/9087┃Información de artículo no válida. (9092)
+ServerError/9089┃No se pueden usar artículos no obtenidos. (9093)
+ServerError/9090┃No se pueden usar artículos no obtenidos. (9093)
+ServerError/9091┃0
+ServerError/9092┃Información de compra no válida. (9094)
+ServerError/9093┃No eres propietario de este artículo.
+ServerError/9094┃La información sobre el tipo de artículo no es válida. (9096)
+ServerError/9095┃Se excedió el tiempo de pago de Steam. (CÓDIGO 9100) \nComprueba tu configuración de Steam y habilita "Habilitar Steam Overlay mientras estás en el juego".
+ServerError/9096┃Error al procesar el pago. (9101)
+ServerError/9100┃Error al procesar el pago. (9102)
+ServerError/9101┃Error al procesar el pago. (9103)
+ServerError/9102┃Error al procesar el pago. (9104)
+ServerError/9103┃Error al procesar el pago. (9105)
+ServerError/9104┃Error al procesar el pago. (9106)
+ServerError/9105┃Error al procesar el pago. (9107)
+ServerError/9106┃Error de conexión al servidor.
+ServerError/9107┃Solicitud inválida. (9200)
+ServerError/9200┃Este jugador ya está en un equipo.
+ServerError/9201┃Ha ocurrido un error durante la creación del equipo. (9204)
+ServerError/9203┃Ha ocurrido un error al unirse al equipo. (9205)
+ServerError/9204┃No puede dejar el equipo.
+ServerError/9205┃El jugador no puede ser invitado.
+ServerError/9206┃Esto solo puede ser hecho por la líder del equipo.
+ServerError/9207┃Incapaz de cambiar de equipo.
+ServerError/9208┃No eres parte de un equipo. (9210)
+ServerError/9209┃Incapaz de unirse al equipo.
+ServerError/9210┃No puede iniciarse búsqueda de compañeros de equipo. (9212)
+ServerError/9211┃No se puede encontrar el equipo.
+ServerError/9212┃No se puede cambiar el modo de emparejamiento.
+ServerError/9213┃No se puede cambiar de líder del equipo.
+ServerError/9214┃No se puede expulsar al jugador. (9216)
+ServerError/9215┃No se puede encontrar al jugador. (9217)
+ServerError/9216┃Este equipo ya está completo.
+ServerError/9217┃No se puede unir al emparejamiento. (9219)
+ServerError/9218┃No se puede cancelar el emparejamiento. (9220)
+ServerError/9219┃No se puede cancelar la acción. (9221)
+ServerError/9220┃Se ha establecido conexión con una versión incompatible.
+ServerError/9221┃No se puede cancelar la acción. (9221)
+ServerError/9233┃Incapaz de cambiar de equipo. (9233)
+ServerError/99999┃Se ha establecido conexión con una versión incompatible.
+ServerError/HttpException┃No se pudo comunicar con el servidor. (9201)
 
 
 --xxxxxxxxxx--
