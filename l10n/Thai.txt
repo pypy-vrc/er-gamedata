@@ -1457,6 +1457,7 @@ Item/Effects/301338┃ฟื้นฟู HP ในระยะ 15 วินา�
 Item/Effects/301339┃ฟื้นฟู HP ในระยะ 15 วินาที
 Item/Effects/301340┃ฟื้นฟู HP ในระยะ 15 วินาที
 Item/Effects/301346┃ฟื้นฟู HP ในระยะ 15 วินาที
+Item/Effects/301348┃ฟื้นฟู HP ในระยะ 15 วินาที
 Item/Effects/301403┃ฟื้นฟู HP และ SP ในระยะ 15 วินาที
 Item/Effects/301405┃ฟื้นฟู HP ในระยะ 15 วินาที
 Item/Effects/301406┃ฟื้นฟู HP ในระยะ 15 วินาที
@@ -2807,7 +2808,6 @@ ToolTipType/MaxHpRegen┃ฟื้นฟู HP สูงสุด
 ToolTipType/MaxSkill┃ขยายสกิลขั้นสูงสุด
 ToolTipType/MoveSpeedUpRatio┃เพิ่มความเร็วในการเคลื่อนที่ (%)
 ToolTipType/MoveSpeedUpTime┃ระยะเพิ่มความเร็วการเคลื่อนที่
-ToolTipType/AttackSpeedUpRatio┃ความเร็วในการโจมตีเพิ่มขึ้น (%)
 ToolTipType/DotDamage┃ดาเมจตามเวลา
 ToolTipType/JudgmentDamage┃ดาเมจคำพิพากษา
 ToolTipType/MaxHpUp┃อัตราส่วนHPเต็ม
@@ -5906,6 +5906,7 @@ ItemTag/Ex_Regen┃การฟื้นฟู HP
 ItemTag/Ex_Sight┃ทัศนวิสัย
 ItemTag/Unique_Range┃เพิ่มระยะการโจมตี
 ItemTag/Ex_None┃-
+ItemTag/Ex_Slow┃ช้า
 ItemTag/Ex_ItemSkill┃ใช้งานสกิลของไอเทม
 ItemTag/Ex_Dummy1┃ลดการฟื้นฟู
 ItemTag/Ex_Dummy2┃คุณประโยชน์
@@ -6098,7 +6099,9 @@ CharacterState/Group/Name/1003400┃Marche & Rompre
 CharacterState/Group/Desc/1003400┃ช้าลง
 CharacterState/Group/Name/1003510┃Flèche
 CharacterState/Group/Desc/1003510┃ศัตรูช้าลง
+CharacterState/Group/Name/1003520┃Flèche
 CharacterState/Group/Desc/1003520┃ช้าลง
+CharacterState/Group/Name/1003530┃Flèche
 Skill/Group/ExpansionTip/1003500┃<i>ไม่สามารถข้ามกำแพงได้</i>
 Skill/Group/ExpansionTip/1003510┃<i>ไม่สามารถข้ามกำแพงได้</i>
 Skill/Group/ExpansionTip/1003520┃<i>ไม่สามารถข้ามกำแพงได้</i>
@@ -6215,7 +6218,7 @@ CharacterState/Group/Desc/1008210┃ลดความเร็วในกา�
 CharacterState/Group/Name/1008300┃โอเวอร์ไดร์ฟ - พลังโจมตีและระยะการโจมตีเพิ่มขึ้น
 CharacterState/Group/Desc/1008300┃พลังโจมตีและระยะโจมตีเพิ่มขึ้น
 CharacterState/Group/Name/1008310┃โอเวอร์ไดร์ฟ - วิวัฒนาการ
-CharacterState/Group/Desc/1008310┃ความเสียหายสกิลจะทำความเสียหายสกิลเพิ่มเติม
+CharacterState/Group/Desc/1008310┃พลังโจมตีและระยะโจมตีเพิ่มขึ้น
 CharacterState/Group/Name/1008400┃ขยายความเสียหายสกิล
 CharacterState/Group/Desc/1008400┃อัตราขยายความเสียหายสกิลเพิ่มขึ้น
 CharacterState/Group/Name/1008410┃ขยายความเสียหายสกิล
@@ -6838,30 +6841,30 @@ Skill/Group/Name/1026430┃Bão Từ Trường
 Skill/Group/Name/1026500┃Ép Xung
 Skill/Group/Name/1026510┃Ép Xung
 Skill/Group/Desc/1026100┃Trụ Súng của Barbara nhận {0} Sức Tấn Công và {1} Phòng Thủ, dựa trên cấp độ của cô ấy.\nKhi Trụ Súng nhận xung điện của Tia Điện Từ hoặc khi Barbara tạo ra Từ Trường, bản thân nó sẽ nhận thêm {2} Tốc Độ Đánh, tối đa {3} cộng dồn.
+Skill/Group/Coef/1026100┃Trụ Súng của Barbara nhận <color=green>Cấp Độ</color><color=#DDA0DD>( * {0} Cường Hóa Kỹ Năng)</color> Sức Tấn Công và <color=green>Cấp Độ</color><color=#DDA0DD>( * {1} Cường Hóa Kỹ Năng)</color> Phòng Thủ, dựa trên cấp độ của cô ấy.\nKhi Trụ Súng nhận xung điện của Tia Điện Từ hoặc khi Barbara tạo ra Từ Trường, bản thân nó sẽ nhận thêm {2} Tốc Độ Đánh, tối đa {3} cộng dồn.
+Skill/Group/ExpansionTip/1026100┃<i>Trụ Súng không được nâng cấp có {0} Sức Tấn Công và {1} Phòng Thủ.</i>
 Skill/Group/Desc/1026200┃Barbara đặt một Trụ Súng với {1} Máu tại vị trí chỉ định, gây <color=white>{3}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu.\nTrụ Súng sẽ tồn tại trong {0} giây, gây <color=white>{2}</color> Sát Thương Kỹ Năng lên những kẻ địch bị nó bắn.\nMỗi khi một Trụ Súng mới được triển khai, chiếc cũ sẽ được gỡ bỏ. Nếu Trụ Súng bị phá hủy bởi kẻ địch, thời gian hồi chiêu của kỹ năng này sẽ tăng thêm {9}. Di chuyển ra xa khỏi Trụ Súng hoặc tái kích hoạt kỹ năng để thu hồi nó và giảm hồi chiêu của kỹ năng này đi {7}.
+Skill/Group/Coef/1026200┃Barbara đặt một Trụ Súng với <color=white>{8}</color><color=green>(+Cấp Độ * {11})</color> Máu tại vị trí chỉ định, gây <color=white>{3}</color><color=#DDA0DD>(+{10} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu.\nTrụ Súng sẽ tồn tại trong {0} giây, gây <color=#ffd775>(+{2} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng lên những kẻ địch bị nó bắn.\nMỗi khi một Trụ Súng mới được triển khai, chiếc cũ sẽ được gỡ bỏ. Nếu Trụ Súng bị phá hủy bởi kẻ địch, thời gian hồi chiêu của kỹ năng này sẽ tăng thêm {9}. Di chuyển ra xa khỏi Trụ Súng hoặc tái kích hoạt kỹ năng để thu hồi nó và giảm hồi chiêu của kỹ năng này đi {7}.
 Skill/Group/Desc/1026210┃Barbara gỡ bỏ Trụ Súng hiện tại, giảm thời gian hồi của Trụ Súng BT Mk.II đi {0}.
+Skill/Group/Coef/1026210┃Barbara gỡ bỏ Trụ Súng hiện tại, giảm thời gian hồi của Trụ Súng BT Mk.II đi {0}.
 Skill/Group/Desc/1026220┃Barbara đặt một Trụ Súng và dịch chuyển tới vị trí của nó, gây <color=white>{2}</color> Sát Thương Kỹ Năng cho mọi kẻ địch trong phạm vi. Trụ Súng cũ sẽ ngay lập tức tự hủy và gây <color=white>{0}</color> Sát Thương Kỹ Năng.\nTốc Độ Đánh của Trụ Súng sẽ được tăng {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển.
 Skill/Group/Desc/1026300┃Barbara phóng ra hai Tia Điện Từ, gây <color=white>{0}</color> Sát Thương Kỹ Năng lên những kẻ địch dính phải. Kẻ địch trúng chiêu sẽ bị Làm Chậm đi {6} trong {5} giây. Đánh trúng một mục tiêu với cả hai tia sẽ gây ít hơn {2} sát thương và giảm thời gian hồi chiêu của Ép Xung đi {7} giây.\nTrụ Súng sẽ được Tích Điện khi nhận xung điện, giúp nó có thể phóng laze, gây <color=white>{3}</color> Sát Thương Kỹ Năng lên những kẻ địch trúng phải.
+Skill/Group/Coef/1026300┃Barbara phóng ra hai Tia Điện Từ, gây <color=white>{0}</color><color=#DDA0DD>(+{8} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch dính phải. Kẻ địch trúng chiêu sẽ bị Làm Chậm đi {6} trong {5} giây. Đánh trúng một mục tiêu với cả hai tia sẽ gây ít hơn {2} sát thương và giảm thời gian hồi chiêu của Ép Xung đi {7} giây.\nTrụ Súng sẽ được Tích Điện khi nhận xung điện, giúp nó có thể phóng laze, gây <color=white>{3}</color><color=#ffd775>(+{4} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng lên những kẻ địch trúng phải.
 Skill/Group/Desc/1026310┃Barbara và Trụ Súng của cô sẽ được cường hóa trong {0} giây. Trong thời gian này, Trụ Súng sẽ tự động sạc và phóng laze. Tia Điện Từ sẽ không tiêu tốn Thể Lực khi sử dụng và hồi chiêu của kỹ năng này sẽ được giảm xuống còn {1} giây. Tia Điện Từ Cường Hóa sẽ gây <color=white>{2}</color> Sát Thương Kỹ Năng và đòn đánh của Trụ Súng sẽ gây <color=white>{4}</color> Sát Thương Kỹ Năng khi Cộng Hưởng Photon được kích hoạt.
+Skill/Group/Coef/1026310┃Barbara và Trụ Súng của cô sẽ được cường hóa trong {0} giây. Trong thời gian này, Trụ Súng sẽ tự động sạc và phóng laze. Tia Điện Từ sẽ không tiêu tốn Thể Lực khi sử dụng và hồi chiêu của kỹ năng này sẽ được giảm xuống còn {1} giây. Tia Điện Từ Cường Hóa sẽ gây <color=white>{2}</color><color=#DDA0DD>(+{6} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng và đòn đánh của Trụ Súng sẽ gây <color=white>{4}</color><color=#ffd775>(+{5} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng khi Cộng Hưởng Photon được kích hoạt.
 Skill/Group/Desc/1026400┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
+Skill/Group/Coef/1026400┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#DDA0DD>(+{12} Cường Hóa Kỹ Năng)</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color><color=#DDA0DD>(+{13} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
 Skill/Group/Desc/1026410┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
+Skill/Group/Coef/1026410┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#DDA0DD>(+{12} Cường Hóa Kỹ Năng)</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color><color=#DDA0DD>(+{13} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
 Skill/Group/Desc/1026420┃Lốc Từ Trường của Barbara được cường hóa và trở thành Bão Từ Trường. Kích thước Bão Từ Trường tăng theo thời gian và tỉ lệ sát thương chuyển hóa thành khiên ảo được tăng thêm {0} và giảm sát thương gánh chịu đi {6}. Tái kích hoạt hoặc khi cơn bão đạt cực đại sẽ khiến Bão Từ Trường phát nổ, gây <color=white>{2}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và Làm Chậm chúng đi {5} trong {4} giây.
 Skill/Group/Desc/1026430┃Lốc Từ Trường của Barbara được cường hóa và trở thành Bão Từ Trường. Kích thước Bão Từ Trường tăng theo thời gian và tỉ lệ sát thương chuyển hóa thành khiên ảo được tăng thêm {0} và giảm sát thương gánh chịu đi {6}. Tái kích hoạt hoặc khi cơn bão đạt cực đại sẽ khiến Bão Từ Trường phát nổ, gây <color=white>{2}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và Làm Chậm chúng đi {5} trong {4} giây.
 Skill/Group/Desc/1026500┃Barbara kích hoạt Ép Xung, cho phép cô ấy cường hóa một trong các kỹ năng cơ bản.\n\nDịch Chuyển: Barbara đặt một trụ súng và dịch chuyển tới vị trí của nó. Trụ Súng cũ sẽ ngay lập tức tự hủy, gây <color=white>{0}</color> Sát Thương Kỹ Năng. Barbara sẽ gây <color=white>{2}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi khi dịch chuyển hoàn tất. Tốc Độ Đánh của Trụ Súng được tăng thêm {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển. Sau khi kích hoạt kỹ năng, thời gian hồi chiêu của Ép Xung sẽ giảm đi {14}\n\nCộng Hưởng Photon: Trong {6} giây tiếp theo, sát thương của Tia Điện Từ và Trụ Súng sẽ tăng {13} và Tia Điện Từ sẽ không tốn Thể Lực khi sử dụng cũng như giảm hồi chiêu xuống còn {7} giây. Trụ súng sẽ liên tục bắn laze khi Cộng Hưởng Photon đang kích hoạt.\n\nBão Từ Trường: Bão Từ Trường sẽ mở rộng phạm vi theo thời gian, tăng tỉ lệ chuyển hóa thành khiên thêm {17} và giảm sát thương gánh chịu đi {16}. Tái kích hoạt hoặc sau {8} giây khiến cơn bão phát nổ, gây <color=white>{9}</color> Sát Thương Kỹ Năng lên những kẻ địch trong tầm và Làm Chậm chúng đi {15} trong {11} giây.\n\nTái kích hoạt Ép Xung mà không cường hóa kỹ năng nào sẽ hủy chiêu, cho phép Barbara có thể sử dụng lại nó sau {12} giây.
+Skill/Group/Coef/1026500┃Barbara làm mới thời gian hồi tất cả các kỹ năng cơ bản và cường hóa một kỹ năng tiếp theo của cô ấy. Barbara kích hoạt Ép Xung, cho phép cô ấy cường hóa một trong các kỹ năng cơ bản.\n\nDịch Chuyển: Barbara đặt một trụ súng và dịch chuyển tới vị trí của nó. Trụ Súng cũ sẽ ngay lập tức tự hủy, gây <color=white>{0}</color><color=#DDA0DD>(+{17} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng. Barbara sẽ gây <color=white>{2}</color><color=#DDA0DD>(+{16} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi khi dịch chuyển hoàn tất. Tốc Độ Đánh của Trụ Súng được tăng thêm {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển. Sau khi kích hoạt kỹ năng, thời gian hồi chiêu của Ép Xung sẽ giảm đi {14}\n\nCộng Hưởng Photon: Trong {6} giây tiếp theo, sát thương của Tia Điện Từ và Trụ Súng sẽ tăng {13} và Tia Điện Từ sẽ không tốn Thể Lực khi sử dụng cũng như giảm hồi chiêu xuống còn {7} giây. Trụ súng sẽ liên tục bắn laze khi Cộng Hưởng Photon đang kích hoạt.\n\nBão Từ Trường: Bão Từ Trường sẽ mở rộng phạm vi theo thời gian, tăng tỉ lệ chuyển hóa thành khiên thêm {20} và giảm sát thương gánh chịu đi {19}. Tái kích hoạt hoặc sau {8} giây khiến cơn bão phát nổ, gây <color=white>{9}</color><color=#DDA0DD>(+{18} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong tầm và Làm Chậm chúng đi {15} trong {11} giây.\n\nTái kích hoạt Ép Xung mà không cường hóa kỹ năng nào sẽ hủy chiêu, cho phép Barbara có thể sử dụng lại nó sau {12} giây.
 Skill/Group/Desc/1026510┃Barbara kích hoạt Ép Xung, cho phép cô ấy cường hóa một trong các kỹ năng cơ bản.\n\nDịch Chuyển: Barbara đặt một trụ súng và dịch chuyển tới vị trí của nó. Trụ Súng cũ sẽ ngay lập tức tự hủy, gây <color=white>{0}</color> Sát Thương Kỹ Năng. Barbara sẽ gây <color=white>{2}</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi khi dịch chuyển hoàn tất. Tốc Độ Đánh của Trụ Súng được tăng thêm {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển. Sau khi kích hoạt kỹ năng, thời gian hồi chiêu của Ép Xung sẽ giảm đi {14}\n\nCộng Hưởng Photon: Trong {6} giây tiếp theo, sát thương của Tia Điện Từ và Trụ Súng sẽ tăng {13} và Tia Điện Từ sẽ không tốn Thể Lực khi sử dụng cũng như giảm hồi chiêu xuống còn {7} giây. Trụ súng sẽ liên tục bắn laze khi Cộng Hưởng Photon đang kích hoạt.\n\nBão Từ Trường: Bão Từ Trường sẽ mở rộng phạm vi theo thời gian, tăng tỉ lệ chuyển hóa thành khiên thêm {17} và giảm sát thương gánh chịu đi {16}. Tái kích hoạt hoặc sau {8} giây khiến cơn bão phát nổ, gây <color=white>{9}</color> Sát Thương Kỹ Năng lên những kẻ địch trong tầm và Làm Chậm chúng đi {15} trong {11} giây.\n\nTái kích hoạt Ép Xung mà không cường hóa kỹ năng nào sẽ hủy chiêu, cho phép Barbara có thể sử dụng lại nó sau {12} giây.
-Skill/Group/Coef/1026100┃Trụ Súng của Barbara nhận <color=green>Cấp Độ</color><color=#DDA0DD>( * {0} Cường Hóa Kỹ Năng)</color> Sức Tấn Công và <color=green>Cấp Độ</color><color=#DDA0DD>( * {1} Cường Hóa Kỹ Năng)</color> Phòng Thủ, dựa trên cấp độ của cô ấy.\nKhi Trụ Súng nhận xung điện của Tia Điện Từ hoặc khi Barbara tạo ra Từ Trường, bản thân nó sẽ nhận thêm {2} Tốc Độ Đánh, tối đa {3} cộng dồn.
-Skill/Group/Coef/1026200┃Barbara đặt một Trụ Súng với <color=white>{8}</color><color=green>(+Cấp Độ * {11})</color> Máu tại vị trí chỉ định, gây <color=white>{3}</color><color=#DDA0DD>(+{10} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trúng chiêu.\nTrụ Súng sẽ tồn tại trong {0} giây, gây <color=#ffd775>(+{2} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng lên những kẻ địch bị nó bắn.\nMỗi khi một Trụ Súng mới được triển khai, chiếc cũ sẽ được gỡ bỏ. Nếu Trụ Súng bị phá hủy bởi kẻ địch, thời gian hồi chiêu của kỹ năng này sẽ tăng thêm {9}. Di chuyển ra xa khỏi Trụ Súng hoặc tái kích hoạt kỹ năng để thu hồi nó và giảm hồi chiêu của kỹ năng này đi {7}.
-Skill/Group/Coef/1026210┃Barbara gỡ bỏ Trụ Súng hiện tại, giảm thời gian hồi của Trụ Súng BT Mk.II đi {0}.
+Skill/Group/Coef/1026510┃บาร์บาร่าจะรีเซ็ทคูลดาวน์ของสกิลทั้งหมดของเธอ ทำให้การโจมตีด้วยสกิลปกติครั้งต่อไปของเธอได้รับผลเพิ่มเติม\n\nไฟฟ้าลัดวงจร: บาบาร่าตั้งป้อมเซนทรี่และขเคลื่อนย้ายพริบตาไปยังตำแหน่งนั้น เซนทรี่กันที่วางก่อนหน้าจะระเบิดตัวเอง สร้างความเสียหาย<color=white>{0}</color><color=#ffd775>(+{1} พลังโจมตี)</color><color=#DDA0DD>(+{17} ขยายสกิล)</color>หน่วย\nบาบาร่าที่เคลื่อนย้ายพริบตาไปจะสร้างความเสียหาย<color=white>{2}</color><color=#ffd775>(+{3} พลังโจมตี)</color><color=#DDA0DD>(+{16} ขยายสกิล)</color>หน่วยแก่ศัตรูที่อยู่ใกล้และเพิ่มความเร็วในการโจมตีจองเซนทรี่กัน{5} เป็นเวลา {4} วินาที เมื่อใช้งานสกิล จะลดคูลดาวน์ของโอเวอร์คล็อคลง {14}\n\nโฟตอน เรโซเนนซ์: ใน {6} วินาทีถัดไป, ความเสียหายที่มาจากเลเซอร์อิเล็คตรอนอิสระและเซนทรี่กันจะเพิ่มขึ้น {13} และสกิลเลเซอร์อิเล็คตรอนอิสระจะยิงโดยไม่ใช้ค่า SP และลดคูลดาวน์ลงเหลือ {7} วินาที\nการโจมตีจองเซนทรี่กันจะกลายเป็นการยิงเลเซอร์อิเล็คตรอนอิสระ ในขณะที่โฟตอนเรโซเนนส์กำลังทางานอยู่\n\nพายุอนุภาค: พายุสนามแม่เหล็กขยายตัวขึ้นเรื่อยๆ เพิ่มโล่ตามความเสียหายที่ทำได้ {20} และลดความเสียหายที่ได้รับลง {19} เมื่อสั่งใช้งานสกิลอีกครั้งหรือรอให้เวลาผ่านไป {8} วินาทีจะทำให้พายุระเบิดออกและสร้างความเสียหาย <color=white>{9}</color><color=#ffd775>(+{10} พลังโจมตี)</color><color=#DDA0DD>(+{18} ขยายสกิล)</color>หน่วยแก่ศัตรูที่อยู่ในระยะและทำให้อีกฝ่ายช้าลงไป {15} เป็นเวลา {11} วินาที\n\nสั่งใช้งานสกิลอีกครั้งจะเป็นการยกเลิกพายุอนุภาคและบาบาร่าจะใช้งานหลังผ่านไปแล้ว {12} วินาที
 Skill/Group/Coef/1026220┃Barbara đặt một Trụ Súng và dịch chuyển tới vị trí của nó, gây <color=white>{2}</color><color=#DDA0DD>(+{6} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng cho mọi kẻ địch trong phạm vi. Trụ Súng cũ sẽ ngay lập tức tự hủy và gây <color=white>{0}</color><color=#DDA0DD>(+{7} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng.\nTốc Độ Đánh của Trụ Súng sẽ được tăng {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển.
-Skill/Group/Coef/1026300┃Barbara phóng ra hai Tia Điện Từ, gây <color=white>{0}</color><color=#DDA0DD>(+{8} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch dính phải. Kẻ địch trúng chiêu sẽ bị Làm Chậm đi {6} trong {5} giây. Đánh trúng một mục tiêu với cả hai tia sẽ gây ít hơn {2} sát thương và giảm thời gian hồi chiêu của Ép Xung đi {7} giây.\nTrụ Súng sẽ được Tích Điện khi nhận xung điện, giúp nó có thể phóng laze, gây <color=white>{3}</color><color=#ffd775>(+{4} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng lên những kẻ địch trúng phải.
-Skill/Group/Coef/1026310┃Barbara và Trụ Súng của cô sẽ được cường hóa trong {0} giây. Trong thời gian này, Trụ Súng sẽ tự động sạc và phóng laze. Tia Điện Từ sẽ không tiêu tốn Thể Lực khi sử dụng và hồi chiêu của kỹ năng này sẽ được giảm xuống còn {1} giây. Tia Điện Từ Cường Hóa sẽ gây <color=white>{2}</color><color=#DDA0DD>(+{6} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng và đòn đánh của Trụ Súng sẽ gây <color=white>{4}</color><color=#ffd775>(+{5} Sức Tấn Công Của Trụ Súng)</color> Sát Thương Kỹ Năng khi Cộng Hưởng Photon được kích hoạt.
-Skill/Group/Coef/1026400┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#DDA0DD>(+{12} Cường Hóa Kỹ Năng)</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color><color=#DDA0DD>(+{13} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
-Skill/Group/Coef/1026410┃Barbara tạo ra một cơn Lốc Từ Trường lên bản thân với Trụ Súng trong {3} giây, gây <color=white>{0}</color><color=#DDA0DD>(+{12} Cường Hóa Kỹ Năng)</color><color=#688A08>(+ {6} Máu Tối Đa của kẻ địch)</color> Sát Thương Kỹ Năng mỗi {11} giây lên những kẻ địch trong phạm vi và tăng Tốc Độ Di Chuyển của cô ấy thêm {7}.\nTái kích hoạt kỹ năng sẽ khiến cơn bão phát nổ, gây <color=white>{4}</color><color=#DDA0DD>(+{13} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và tạo cho Barbara một lớp khiên dựa trên {2} lượng sát thương gây ra bởi Lốc Từ Trường, tối đa bằng {8} Máu.\nCùng lúc đó, những kẻ xấu số phải chịu sát thương từ cả hai cơn lốc sẽ bị Làm Chậm đi {10} trong {9} giây.
 Skill/Group/Coef/1026420┃Lốc Từ Trường của Barbara được cường hóa và trở thành Bão Từ Trường. Kích thước Bão Từ Trường tăng theo thời gian và tỉ lệ sát thương chuyển hóa thành khiên ảo được tăng thêm {0} và giảm sát thương gánh chịu đi {8}. Tái kích hoạt hoặc khi cơn bão đạt cực đại sẽ khiến Bão Từ Trường phát nổ, gây <color=white>{2}</color><color=#DDA0DD>(+{7} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và Làm Chậm chúng đi {5} trong {4} giây.
 Skill/Group/Coef/1026430┃Lốc Từ Trường của Barbara được cường hóa và trở thành Bão Từ Trường. Kích thước Bão Từ Trường tăng theo thời gian và tỉ lệ sát thương chuyển hóa thành khiên ảo được tăng thêm {0} và giảm sát thương gánh chịu đi {8}. Tái kích hoạt hoặc khi cơn bão đạt cực đại sẽ khiến Bão Từ Trường phát nổ, gây <color=white>{2}</color><color=#DDA0DD>(+{7} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi và Làm Chậm chúng đi {5} trong {4} giây.
-Skill/Group/Coef/1026500┃Barbara làm mới thời gian hồi tất cả các kỹ năng cơ bản và cường hóa một kỹ năng tiếp theo của cô ấy. Barbara kích hoạt Ép Xung, cho phép cô ấy cường hóa một trong các kỹ năng cơ bản.\n\nDịch Chuyển: Barbara đặt một trụ súng và dịch chuyển tới vị trí của nó. Trụ Súng cũ sẽ ngay lập tức tự hủy, gây <color=white>{0}</color><color=#DDA0DD>(+{17} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng. Barbara sẽ gây <color=white>{2}</color><color=#DDA0DD>(+{16} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong phạm vi khi dịch chuyển hoàn tất. Tốc Độ Đánh của Trụ Súng được tăng thêm {5} trong {4} giây dựa trên số kẻ địch trúng chiêu khi dịch chuyển. Sau khi kích hoạt kỹ năng, thời gian hồi chiêu của Ép Xung sẽ giảm đi {14}\n\nCộng Hưởng Photon: Trong {6} giây tiếp theo, sát thương của Tia Điện Từ và Trụ Súng sẽ tăng {13} và Tia Điện Từ sẽ không tốn Thể Lực khi sử dụng cũng như giảm hồi chiêu xuống còn {7} giây. Trụ súng sẽ liên tục bắn laze khi Cộng Hưởng Photon đang kích hoạt.\n\nBão Từ Trường: Bão Từ Trường sẽ mở rộng phạm vi theo thời gian, tăng tỉ lệ chuyển hóa thành khiên thêm {20} và giảm sát thương gánh chịu đi {19}. Tái kích hoạt hoặc sau {8} giây khiến cơn bão phát nổ, gây <color=white>{9}</color><color=#DDA0DD>(+{18} Cường Hóa Kỹ Năng)</color> Sát Thương Kỹ Năng lên những kẻ địch trong tầm và Làm Chậm chúng đi {15} trong {11} giây.\n\nTái kích hoạt Ép Xung mà không cường hóa kỹ năng nào sẽ hủy chiêu, cho phép Barbara có thể sử dụng lại nó sau {12} giây.
-Skill/Group/Coef/1026510┃บาร์บาร่าจะรีเซ็ทคูลดาวน์ของสกิลทั้งหมดของเธอ ทำให้การโจมตีด้วยสกิลปกติครั้งต่อไปของเธอได้รับผลเพิ่มเติม\n\nไฟฟ้าลัดวงจร: บาบาร่าตั้งป้อมเซนทรี่และขเคลื่อนย้ายพริบตาไปยังตำแหน่งนั้น เซนทรี่กันที่วางก่อนหน้าจะระเบิดตัวเอง สร้างความเสียหาย<color=white>{0}</color><color=#ffd775>(+{1} พลังโจมตี)</color><color=#DDA0DD>(+{17} ขยายสกิล)</color>หน่วย\nบาบาร่าที่เคลื่อนย้ายพริบตาไปจะสร้างความเสียหาย<color=white>{2}</color><color=#ffd775>(+{3} พลังโจมตี)</color><color=#DDA0DD>(+{16} ขยายสกิล)</color>หน่วยแก่ศัตรูที่อยู่ใกล้และเพิ่มความเร็วในการโจมตีจองเซนทรี่กัน{5} เป็นเวลา {4} วินาที เมื่อใช้งานสกิล จะลดคูลดาวน์ของโอเวอร์คล็อคลง {14}\n\nโฟตอน เรโซเนนซ์: ใน {6} วินาทีถัดไป, ความเสียหายที่มาจากเลเซอร์อิเล็คตรอนอิสระและเซนทรี่กันจะเพิ่มขึ้น {13} และสกิลเลเซอร์อิเล็คตรอนอิสระจะยิงโดยไม่ใช้ค่า SP และลดคูลดาวน์ลงเหลือ {7} วินาที\nการโจมตีจองเซนทรี่กันจะกลายเป็นการยิงเลเซอร์อิเล็คตรอนอิสระ ในขณะที่โฟตอนเรโซเนนส์กำลังทางานอยู่\n\nพายุอนุภาค: พายุสนามแม่เหล็กขยายตัวขึ้นเรื่อยๆ เพิ่มโล่ตามความเสียหายที่ทำได้ {20} และลดความเสียหายที่ได้รับลง {19} เมื่อสั่งใช้งานสกิลอีกครั้งหรือรอให้เวลาผ่านไป {8} วินาทีจะทำให้พายุระเบิดออกและสร้างความเสียหาย <color=white>{9}</color><color=#ffd775>(+{10} พลังโจมตี)</color><color=#DDA0DD>(+{18} ขยายสกิล)</color>หน่วยแก่ศัตรูที่อยู่ในระยะและทำให้อีกฝ่ายช้าลงไป {15} เป็นเวลา {11} วินาที\n\nสั่งใช้งานสกิลอีกครั้งจะเป็นการยกเลิกพายุอนุภาคและบาบาร่าจะใช้งานหลังผ่านไปแล้ว {12} วินาที
-Skill/Group/ExpansionTip/1026100┃<i>Trụ Súng không được nâng cấp có {0} Sức Tấn Công và {1} Phòng Thủ.</i>
 CharacterState/Group/Name/1026110┃Nâng Cấp
 CharacterState/Group/Desc/1026110┃Trụ súng tăng sát thương và phòng thủ.
 CharacterState/Group/Name/1026120┃Bậc Thầy Thợ Máy
@@ -9506,11 +9509,11 @@ Skill/LobbyDesc/1046200┃<color=white>สายฟ้าฟาด</color>: ไ�
 Skill/LobbyDesc/1046300┃ไอเด็นจะทำให้ตัวเองช้าลงขณะที่กำลังรวบรวมไฟฟ้าแรงสูงเข้าไปในอาวุธของเขา\nเมื่อเข้าใช้งานสกิลอีกครั้งหรือชาร์จจนสุดระยะ ไอเด็นจะทำความเสียหายสกิลใส่ศัตรูที่ใกล้ที่สุด ความแรงจะแรงขึ้นตามเวลาที่ชาร์จ และจะทำให้ศัตรูที่โดนช้าลง เขาสามารถร่ายสกิลโบลท์รัชและคลื่นไฟฟ้าสถิตระหว่างร่ายได้\nหากชาร์จจนเต็ม ไอเด็นจะทิ้ง <color=white>ประกายไฟ</color> เอาไว้เบื้องหลังซึ่งจะทำความเสียหายสกิลใส่ศัตรูที่แตะโดนและตรึงพวกเขาเอาไว้
 Skill/LobbyDesc/1046400┃ไอเด็นจะทำให้ตัวเองช้าลงขณะที่กำลังรวบรวมไฟฟ้าแรงสูงเข้าไปในอาวุธของเขา\nเมื่อเข้าใช้งานสกิลอีกครั้งหรือชาร์จจนสุดระยะ ไอเด็นจะทำความเสียหายสกิลใส่ศัตรูที่ใกล้ที่สุด ความแรงจะแรงขึ้นตามเวลาที่ชาร์จ และจะทำให้ศัตรูที่โดนช้าลง เขาสามารถร่ายสกิลโบลท์รัชและคลื่นไฟฟ้าสถิตระหว่างร่ายได้\nหากชาร์จจนเต็ม ไอเด็นจะทิ้ง <color=white>ประกายไฟ</color> เอาไว้เบื้องหลังซึ่งจะทำความเสียหายสกิลใส่ศัตรูที่แตะโดนและตรึงพวกเขาเอาไว้
 Skill/LobbyDesc/1046500┃ไอเด็นปล่อยสายฟ้าออกไปยังตำแหน่งที่เลือก ทำความเสียหายสกิลและทำให้ศัตรูช้าลง ศัตรูที่โดนตรงกลางจะได้รับความเสียหายสกิลและจะถูกทำให้ชะงัก\nจากนั้นไอเด็นจะปล่อยสายฟ้าออกไปฟาดลงตำแหน่งเดิมได้ ทำความเสียหายสกิลและทำให้ศัตรูช้าลง \n\nหากสายฟ้ารอบแรกโจมตีโดนศัตรู ไอเด็นสามารถใช้สกิล<color=white>คลื่นไฟฟ้าสถิต</color> เพื่อไปยังเขตที่สายฟ้าฟาดลงมาได้ หลังจากนั้นจะสั่งให้สายฟ้าฟาดลงมาตามมาทันทีและจะทำให้ไอเด็นชาร์จสแตก <color=white>แอมแปร์</color> จนเต็ม
-Skill/LobbyDesc/1047100┃ลอร่าได้รับสแต็ค เร้าใจเมื่อเธอเคลื่อนที่\n\n<color=white>คำสอนของเนเรีย</color>: เมื่อสแต็ค เร้าใจเต็ม การโจมตีปกติครั้งต่อไปของลอร่าจะทำความเสียหายเพิ่มเติมใส่เป้าหมายและศัตรูรอบๆตัว การเคลื่อนที่ด้วยสกิลจะทำให้เธอได้รับสแต็คเร้าใจมากขึ้น\n<color=white>คำสอนของเนเรีย</color> จะไม่ทำงานหากเป้าหมายของเธออยู่ในระยะใกล้เกินไป
-Skill/LobbyDesc/1047200┃ลอร่าฟาดแส้ไปยังทิศทางที่เลือกหนึ่งครั้ง ทำความเสียหายสกิลใส่ศัตรูที่โดนและรับสแต็ค <color=white>เร้าใจ</color> {9} ขั้น\nหากทำความเสียหายใส่ศัตรูได้ด้วยสกิล การใช้งานสกิลอีกครั้งภายในระยะเวลาที่กำหนดจะเป็นการเสริมพลังให้กับสกิล\n\nเสริมครั้งที่ 1: ลอร่าฟาดแส้ออกไปยังทิศทางที่เลือก สร้างความเสียหายสกิลใส่ศัตรูและได้รับสแต็ค <color=white>เร้าใจ</color>\nเสริมครั้งที่ 2: ลอร่าฟาดแส้ของเธอออกไปสองครั้งที่เป้าหมายทำความเสียหายสกิลสองรอบและได้รับสแต็ค <color=white>เร้าใจ</color> {9} ขั้น
-Skill/LobbyDesc/1047300┃ลอร่าทำการขว้างจดหมายเตือนออกไปยังทิศทางที่เลือก เมื่อชนกับสิ่งกีดขวาง มันจะคลี่ออก และทำให้ศัตรูในระยะ ศัตรูภายในระยะ จะโดนความเสียหายสกิลและทำสัญลักษณ์ใส่พวกเขาว่าเป็น <color=white>เหยื่อ</color>\nศัตรูที่มีตรา <color=white>เหยื่อ</color> อยู่จะได้รับความเสียหายสกิล ถูกทำให้ช้าลง และพลังป้องกันจะลดลง\nเมื่อสัญลักษณ์บนหัวแตกออก จะเพิ่มพลังป้องกันของลอร่าตามพลังป้องกันที่ <color=white>เหยื่อ</color> เสียไป และทำให้เธอได้รับสแตก เร้าใจ
-Skill/LobbyDesc/1047400┃ลอร่าพุ่งออกไปยังทิศทางที่เลือกด้วยท่าทางเหมือนแมวโดยใช้ สแต็ค<color=white>เร้าใจ</color> ลอร่าสามารถใช้ก้าวย่างอันงดงามระหว่างที่  <color=white>บุกปล้นยามเที่ยงคืน</color> ทำงานได้เพื่อเปลี่ยนทิศและเพิ่มระยะของสกิลขึ้น\n\n<color=white>ก้าวย่างอันงดงาม</color> จะไม่รับผลคูลดาวน์ใดๆ
-Skill/LobbyDesc/1047500┃ลอร่าเหวี่ยงแส้ออกไปยังทิศทางที่เลือกและทำให้เธออยู่ในสถานะ ไม่อาจหยุดยั้ง หากแส้โดนสิ่งกีดขวาง หรือ ศัตรูที่มีตรา <color=white>เหยื่อ</color> ลอร่าจึงดึงตัวเองไปหาสิ่งนั้น สกิลนี้จะทำความเสียหายใส่ศัตรูเป็นความเสียหายสกิล และลากไปด้วยกันกับเธอ\nเมื่อมาถึงกำแพง ลอร่าจะหมุนตัวกลับ ทำความเสียหายสกิล\n\nหากศัตรูมีตรา <color=white>เหยื่อ</color> แล้วโดนโจมตีด้วยสกิลนี้ จะโดนดึงเข้าหาเธอเล็กน้อย 
+Skill/LobbyDesc/1047100┃Лаура накапливает заряды Трепета во время перемещения.\n\n<color=white>Учение Нереи</color>: После прохождения Лаурой определённого расстояния, её следующая обычная атака нанесёт доп.урона цели и ближайшим врагам. Движение с помощью умений моментально активирует Учение Нереи.\n<color=white>Учение Нереи</color> не активируется, если ее цель находится слишком близко.
+Skill/LobbyDesc/1047200┃Лаура бьет своим хлыстом в выбранном направлении, нанося урон от навыков врагам и получая заряды <color=white>Трепета</color>. Если она попадает по врагу навыком, то навык можно использовать повторно, чтобы усилить его.\n\n1-е усиление: Лаура бьет хлыстом один раз в направлении цели, нанося урона от навыков и получая заряды <color=white>Трепета</color>.\n2-е усиление: Лаура дважды бьет хлыстом в направлении цели, нанося урона от навыков дважды и получая заряды <color=white>Трепета</color>.
+Skill/LobbyDesc/1047300┃Лаура бросает в цель свою фирменную визитную карточку в выбранном направлении. Визитка раскрывается, если попадает по врагу и замедляет всех врагов в радиусе. Враг попавший под визитку получает урон от навыков и помечается как <color=white>Жертва</color> спустя несколько секунд. Враг помеченный как получает урон от навыков, замедляется, и его защита понижается. Лаура получает защиту от потерянной <color=white>Жертвой</color> защиты и получает <color=white>Трепет</color>.
+Skill/LobbyDesc/1047400┃Лаура совершает рывок в выбранном направлении, тратя Трепет. Лаура может использовать Коварный шаг во время <color=white>Сумеречной кражи</color>, увеличивая его радиус и добавляя возможность изменить направление.\n\n<color=white>Коварный шаг</color> не подвержен эффектам сокращения перезарядки.
+Skill/LobbyDesc/1047500┃Лаура бросает свой хлыст в указанном направлении и становится Неудержимой. Если хлыст попадает в стену или <color=white>Жертву</color>, Лаура притягивается к ней, нанося урон от навыков всем врагам на пути. \n\nВо время того как она притягивается, первый враг, с которым она столкнётся, притягивается вместе с ней.\nЕсли хлыст попадет в стену или Лаура достигнет выбранной цели, она грациозно совершает обратное сальто, нанося урон от навыков врагам и подбрасывая их.\n\nЕсли враг, помеченный как <color=white>Жертва</color> её визиткой, будет поражён кнутом, он немного притянется вперед.
 Skill/LobbyDesc/1048100┃เทียสามารถระบายสีศัตรูด้วยสองสีที่แตกต่างกันได้ด้วย <color=white>ตวัดแปรง</color> หรือ <color=white>สีแดช</color> เพื่อใช้งานผลต่างๆของ<color=#FFFFC2>ภาพกระรอก</color>ได้ สกิลปกติของเทียจะไม่ได้รับผลการลดคูลดาวน์ใดๆ แต่เทียจะได้รับการขยายสกิลตามการลดคูลดาวน์ที่เธอได้รับ\n\n[กระรอกป่วน]\nทำงานเมื่อแต้ม<color=#688A08>สีแดง</color> และ <color=yellow>สีเหลือง</color> จะทำให้ศัตรูติดสภาวะใบ้และทำความเสียหายสกิล\n\n[พรกระรอก]\nทำงานเมื่อแต้ม <color=#688A08>สีแดง</color> และ <color=#2AC0FF>สีฟ้า</color>  จะทำความเสียหายสกิลใส่ศัตรูและทำการฟื้นฟูเทีย จากนั้นทำให้ความเร็วในการเคลื่อนที่ของเธอเพิ่มขึ้น\n\n[กระรอกโอมเพี้ยง] \nทำงานเมื่อแต้ม<color=#2AC0FF>สีฟ้า</color>และ<color=yellow>สีเหลือง</color> จะทำความเสียหายสกิลใส่ศัตรู และตรึงพวกเขาเอาไว้\n
 Skill/LobbyDesc/1048400┃เทียสามารถใช้สกิลแตกต่างกันได้ตามสีปัจจุบันที่เธอใช้ \n<color=yellow>สีเหลือง</color>: เทียจะโยนหลอดสีออกไปยังทิศทางที่เลือก จากนั้นมันจะระเบิดออกและทำความเสียหายเป็นความเสียหายสกิลใส่ศัตรู และจากนั้นป้าย <color=yellow>สีเหลือง</color> ใส่พวกเขา ศัตรูที่โดนสีเหลืองจะช้าลง\n<color=red>แดง</color>: เทียกวัดแกว่งพู่กันในมือ ทำความเสียหายสกิล ศัตรูที่โดนปลายแปรงจะโดนป้าย <color=red>สีแดง</color> สีแดงจะทำให้ศัตรูมีความเร็วการเคลื่อนที่ที่ลดลง\n<color=#2AC0FF>ฟ้า</color>: เทียฟาดพู่กันใส่พื้น ทำความเสียหายสกิลใส่ศัตรูในระยะและป้าย <color=#2AC0FF>สีฟ้า</color> ใส่ ศัตรูในระยะวงในจะได้รับความเสียหายสกิลที่มากขึ้นและช้าลง
 Skill/LobbyDesc/1048500┃เทียเปลี่ยนสีบนแปรงของเธอ สีนั้นจะเปลี่ยนไปตามลำดับ เหลือง แดง ฟ้า
@@ -10156,6 +10159,9 @@ Item/Skills/6015003/Desc┃การโจมตีใส่ศัตรูค�
 Item/Skills/6015004/Name┃<color=yellow>เส้นทางรถจักรไอน้ำ: พระรุทรปรากฏตัว</color>
 Item/Skills/6015004/Body┃โจมตีศัตรูเป้าเดียวด้วยการโจมตีปกติหรือสกิล {1} ครั้งในระยะเวลา {0} วินาทีจะทำให้ความเร็วในการเคลื่อนที่เพิ่มขึ้น {11}% และเพิ่มโจมตี {13}% ไม่รับผลที่โจมตีหลายๆครั้ง (คูลดาวน์ {2} วินาที)
 Item/Skills/6015004/Desc┃โจมตีศัตรูเป้าเดียวด้วยการโจมตีปกติหรือสกิล {1} ครั้งในระยะเวลา {0} วินาทีจะทำให้ความเร็วในการเคลื่อนที่เพิ่มขึ้น {4}% และเพิ่มโจมตี {13}% ไม่รับผลที่โจมตีหลายๆครั้ง (คูลดาวน์ {2} วินาที)
+Item/Skills/6015005/Name┃<color=yellow>เส้นทางรถจักรไอน้ำ: บรรทุกชน</color>
+Item/Skills/6015005/Body┃การโจมตีใส่ศัตรูคนเดียวด้วยการโจมตีปกติหรือสกิล {1} ครั้งภายใน {0} วินาทีจะทำให้คุณได้รับโล่ป้องกัน {10} และเพิ่มความเร็วในการเคลื่อนที่ของคุณ {5}% เป็นเวลา {3} วินาที ไม่รับผลของการโจมตีหลายครั้ง (คูลดาวน์: {2} วินาที)
+Item/Skills/6015005/Desc┃การโจมตีใส่ศัตรูคนเดียวด้วยการโจมตีปกติหรือสกิล {1} ครั้งภายใน {0} วินาทีจะทำให้คุณได้รับโล่ป้องกัน {10} และเพิ่มความเร็วในการเคลื่อนที่ของคุณ <color=green>เลเวลตัวละคร * 1</color>% เป็นเวลา {3} วินาที ไม่รับผลของการโจมตีหลายครั้ง (คูลดาวน์: {2} วินาที)
 Item/Skills/6015007/Name┃<color=yellow>เส้นทางรถจักรไอน้ำ</color>
 Item/Skills/6015008/Name┃<color=yellow>เส้นทางรถจักรไอน้ำ</color>
 CharacterState/Group/Name/6015010┃เส้นทางรถจักรไอน้ำ
@@ -10169,9 +10175,6 @@ Item/Skills/6016001/Desc┃เมื่อ HP ตกต่ำลงกว่า 
 Item/Skills/6016002/Name┃<color=yellow>ลมหนุน: จุดเริ่มอันวุ่นวาย</color>
 Item/Skills/6016002/Body┃เมื่อ HP ตกต่ำลงกว่า {0}% หลังได้รับความเสียหายจากผู้เล่นที่เป็นศัตรูจะทำให้เราทำการล้างสถานะดีบัฟและคุมคนหมู่มาก (CC) ทั้งหมดและได้รับโล่ HP <color=green>{11}</color> เป็นเวลา {1} วินาที {15} จะเพิ่ม {16} เป็นเวลา  {5} วินาที และผลการฟื้นฟูทำงานมากขึ้น {12}% เป็นเวลา {5} วินาที (คูลดาวน์: 80 วินาที)
 Item/Skills/6016002/Desc┃เมื่อ HP ตกต่ำลงกว่า {0}% หลังได้รับความเสียหายจากผู้เล่นที่เป็นศัตรูจะทำให้เราทำการล้างสถานะดีบัฟและคุมคนหมู่มาก (CC) ทั้งหมดและได้รับโล่ {2} + <color=green>เลเวลตัวละคร*{3}</color> เป็นเวลา {1} วินาที <color=#FFD775>พลังโจมตีเพิ่มขึ้น {13}</color> หรือ <color=#DDA0DD>ส่วนขยายสกิลเพิ่มขึ้น {14}</color> และผลการฟื้นฟูทำงานมากขึ้น (ระยะประชิด : {9}%, ระยะไกล : {10}%)  เป็นเวลา {5} วินาที (คูลดาวน์: 80 วินาที)
-Item/Skills/6016003/Name┃<color=yellow>ลมหนุน: พันธะอัศวิน</color>
-Item/Skills/6016003/Body┃เมื่อ HP ตกลงจนต่ำกว่า {0}% หลังจากได้รับความเสียหายจากศัตรูที่เป็นผู้เล่น คุณจะได้รับโล่ HP <color=green>{11}</color> หน่วย เป็นเวลา {1} วินาทีและ{15} จะเพิ่ม {16} เป็นเวลา  {5} วินาที (คูลดาวน์: {13} วินาที)
-Item/Skills/6016003/Desc┃เมื่อ HP ตกลงจนต่ำกว่า {0}% หลังจากได้รับความเสียหายจากศัตรูที่เป็นผู้เล่น คุณจะได้รับโล่ HP {2} + <color=green>Level*{3}</color>  หน่วย เป็นเวลา {1} วินาทีและ <color=#FFD775>พลังโจมตีเพิ่มขึ้น {13}</color> หรือ <color=#DDA0DD>ส่วนขยายสกิลเพิ่มขึ้น {14}</color> (คูลดาวน์: {11} วินาที)
 Item/Skills/6016004/Name┃<color=yellow>ลมหนุน: ปัดป้องว่องไว</color>
 Item/Skills/6016004/Body┃เมื่อได้รับความเสียหายจากผู้เล่นคนอื่น คุณจะได้รับโล่ HP ขนาด<color=green>{11}</color> เป็นเวลา {1} วินาที (คูลดาวน์ : {13} วินาที)
 Item/Skills/6016004/Desc┃เมื่อได้รับความเสียหายจากผู้เล่นคนอื่น คุณจะได้รับโล่ HP ขนาด {2} + <color=green>เลเวลตัวละคร * {3}</color> เป็นเวลา {1} วินาที (คูลดาวน์ : {11} วินาที)
@@ -10569,6 +10572,7 @@ Skill/Code/Name/4516001┃สนามพลังงาน
 Skill/Code/Name/4517001┃โทเทม
 Skill/Code/Name/4518001┃ขจัดล้าง
 Skill/Code/Name/4519001┃สูบวิญญาณ
+Skill/Code/Name/4523001┃นักรบผู้กล้า
 Skill/Code/Name/4521001┃คมดาบสัจจะ
 Skill/Code/Name/4522001┃ผิดสาบาน
 Skill/Code/Name/4520001┃สายลมเยียวยา
@@ -10580,6 +10584,7 @@ Skill/Code/Name/4516002┃สนามพลังงาน
 Skill/Code/Name/4517002┃โทเทม
 Skill/Code/Name/4518002┃ขจัดล้าง
 Skill/Code/Name/4519002┃สูบวิญญาณ
+Skill/Code/Name/4523002┃นักรบผู้กล้า
 Skill/Code/Name/4521002┃คมดาบสัจจะ
 Skill/Code/Name/4522002┃ผิดสาบาน
 Skill/Code/Name/4520002┃สายลมเยียวยา
@@ -10591,9 +10596,14 @@ Skill/Code/Name/4516003┃สนามพลังงาน
 Skill/Code/Name/4517003┃โทเทม
 Skill/Code/Name/4518003┃ขจัดล้าง
 Skill/Code/Name/4519003┃สูบวิญญาณ
+Skill/Code/Name/4523003┃นักรบผู้กล้า
 Skill/Code/Name/4521003┃คมดาบสัจจะ
 Skill/Code/Name/4522003┃ผิดสาบาน
 Skill/Code/Name/4520003┃สายลมเยียวยา
+Skill/Group/Name/4523000┃นักรบผู้กล้า
+TacticalSkillSet/Code/Name/500201┃นักรบผู้กล้า
+TacticalSkillSet/Code/Name/500202┃นักรบผู้กล้า
+TacticalSkillSet/Code/Name/500203┃นักรบผู้กล้า
 CharacterState/Group/Name/6027130┃ตื่นรู้ - หัวหมู่บุกทะลวง
 CharacterState/Group/Desc/6027130┃ค่าสถานะบางอย่างต้องถึง และหัวหมู่บุกทะลวงต้องเปิดใช้งาน
 CharacterState/Group/Name/6022100┃ตื่นรู้ - เคียวแห่งความตาย
@@ -11102,15 +11112,15 @@ ER패스 미해금 미션┃อีก {0} กว่าจะปลดล็อ�
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃เหล็ก
-BRONZE_SUBJECT┃ทองแดง
-SILVER_SUBJECT┃เงิน
-GOLD_SUBJECT┃ทอง
-PLATINUM_SUBJECT┃แพลตินั่ม
-DIAMOND_SUBJECT┃เพชร
+IRON┃เหล็ก
+BRONZE┃ทองแดง
+SILVER┃เงิน
+GOLD┃ทอง
+PLATINUM┃แพลตินั่ม
+DIAMOND┃เพชร
 MITHRIL┃มิธริล
 DEMIGOD┃ไททัน
-THE_ETERNITY┃นิรันดร์
+ETERNITY┃นิรันดร์
 UNRANK┃ไม่มีแรงค์
 일반┃ทั่วไป
 NORMAL┃ทั่วไป
@@ -11194,24 +11204,24 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃ใช้ค่าใช้จ่า�
 배치고사 중┃การจัดอันดับ/อันดับที่ถึง
 강등┃ลดระดับ
 승급!┃เลื่อนระดับ
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>อันดับปัจจุบัน</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>อันดับปัจจุบัน</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>อันดับปัจจุบัน</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>อันดับปัจจุบัน</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>อันดับปัจจุบัน</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>อันดับปัจจุบัน</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>อันดับปัจจุบัน</color>
+MyTierRP/BRONZE┃<color=#E9964C>อันดับปัจจุบัน</color>
+MyTierRP/SILVER┃<color=#C7CCE6>อันดับปัจจุบัน</color>
+MyTierRP/GOLD┃<color=#FBD787>อันดับปัจจุบัน</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>อันดับปัจจุบัน</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>อันดับปัจจุบัน</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>อันดับปัจจุบัน</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>อันดับปัจจุบัน</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>อันดับปัจจุบัน</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>อันดับปัจจุบัน</color>
 RankRP_explanation┃แต้มได้ตามอันดับที่ได้
 Elimination_explanation┃แต้มได้รับจากการสังหารศัตรูหลังพวกเขาล้มและไม่สามารถลุกกลับมาได้อีก
 Down_explanation┃แต้มที่ได้จากการสังหารศัตรู
@@ -16414,161 +16424,6 @@ InGameGuide/Nadja/Group/Name/10200000┃สองทีมสุดท้าย�
 InGameGuide/Nadja/Group/Desc/10200000┃มีเพียง 2 ทีมที่เหลือในตอนนี้\nสามารถตรวจสอบข้อมูลของอีกฝ่ายได้ที่กระดานคะแนน ({0})
 InGameGuide/Nadja/Group/Name/10210000┃จ่ายชุบ เป้าหมาย
 InGameGuide/Nadja/Group/Desc/10210000┃เพื่อนของคุณสามารถใช้เครดิตที่ Kiosk เพื่อนำคุณกลับมาเข้าร่วมการทดลองอีกครั้งได้
-ServerError/1000┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1001┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1002┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1003┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1004┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
-ServerError/1005┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1006┃เซิร์ฟเวอร์อยู่ระหว่างการปรับปรุงนะคะ
-ServerError/1007┃เวอร์ชั่นของลูกค้าไม่ตรง
-ServerError/1100┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1101┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/1102┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
-ServerError/1110┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
-ServerError/1111┃ไม่พบชื่อนี้
-ServerError/1112┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
-ServerError/1115┃เกิดข้อผิดพลาดในการล็อคอินในสตีม
-ServerError/1116┃บัญชีนี้ถูกสั่งระงับ
-ServerError/1118┃ชื่อเล่นนี้มีคนใช้แล้ว
-ServerError/1124┃คุณไม่สามารถสร้างบัญชี MS ใหม่ได้
-ServerError/1200┃ไม่พบห้อง
-ServerError/1201┃ข้อมูลเกมไม่ถูกต้อง (1201)
-ServerError/1202┃ข้อมูลรีเพลย์ไม่ถูกต้อง (1202)
-ServerError/1203┃คุณมี ER Pass อยู่แล้ว (1203)
-ServerError/1204┃No tienes acceso a esta reproducción.(1204)
-ServerError/1300┃ไม่สามารถหาห้องได้ กรุณาตรวจสอบเซิร์ฟเวอร์ของคุณที่มุมขวาบน
-ServerError/1301┃เกิดข้อผิดพลาดในการจับคู่
-ServerError/1302┃ระดับของสมาชิกหรือจำนวนตัวละคนไม่ถึงเกณฑ์
-ServerError/1303┃เกมที่แล้วยังไม่สิ้นสุด
-ServerError/1305┃0
-ServerError/1306┃0
-ServerError/2000┃คำขอการซื้อ ขัดข้อง
-ServerError/2001┃ข้อมูลสตีม ขัดข้อง
-ServerError/2002┃รหัสข้อมูลสินค้าไม่ถูกต้อง
-ServerError/2003┃ไม่พบข้อมูลของตัวละคร
-ServerError/2100┃เงินไม่พอ
-ServerError/2101┃NP ไม่เพียงพอ
-ServerError/2102┃A-COIN ไม่เพียงพอ
-ServerError/2120┃ไม่พบข้อมูลของผลิตภัณฑ์
-ServerError/2121┃ข้อมูลของผลิตภัณฑ์ไม่ถูกต้อง
-ServerError/2122┃จำนวนการซื้อถึงขีดสุดแล้ว
-ServerError/2123┃การซื้อรายวันถึงขีดสุดแล้ว
-ServerError/2124┃การซื้อรายสัปดาห์ถึงขีดสุดแล้ว
-ServerError/2125┃การซื้อรายเดือนถึงขีดสุดแล้ว
-ServerError/2126┃การลดราคาสำหรับของชิ้นนี้หมดอายุแล้ว
-ServerError/3100┃ไม่พบข้อมูลของภารกิจ
-ServerError/3101┃เกิดข้อผิดพลาดในการเปลี่ยนภารกิจ
-ServerError/3102┃คุณไม่สามารถรับรางวัลได้ถ้ายังไม่เคลียร์ภารกิจ
-ServerError/4100┃ข้อมูลไม่ถูกต้อง
-ServerError/4101┃หมดอายุ ไม่สามารถรับรางวัลได้
-ServerError/4102┃ไม่พบรางวัลที่กดรับได้
-ServerError/5100┃ไม่สามารถแชร์แผนการที่นำเข้ามาได้
-ServerError/5101┃ไม่สามารถกดลบแผนที่ไม่ได้รับการแบ่งปันได้
-ServerError/5102┃ไม่มีแผนท่ี่บันทึกเพื่อที่จะแก้
-ServerError/5103┃แผนที่บันทึกหายไปแล้ว
-ServerError/5104┃แผนที่บันทึกหายไปแล้ว
-ServerError/5105┃ไม่สามารถนำเข้าแผนของตัวคุณเองได้
-ServerError/5106┃ตัวละครที่เลือกไม่สามารถใช้แผนที่บันทึกนีัได้
-ServerError/5107┃ไม่สามารถซื้อได้อีกต่อไป
-ServerError/5120┃การเข้าถึงไม่ถูกต้อง
-ServerError/5121┃ไม่มีหน้าว่าง
-ServerError/5122┃ไม่สามารถซื้อได้อีกต่อไป
-ServerError/5200┃ไม่พบข้อมูลระดับแรงค์
-ServerError/5201┃ไม่พบของรางวัล
-ServerError/5202┃ไม่สามารถค้นหาห้องได้ เนื่องจากระยะห่างของแรงค์ของคนในทีม
-ServerError/6100┃ไม่พบข้อมูลของสกิน
-ServerError/6101┃มีตัวละครนี้แล้ว
-ServerError/7100┃คำขอเป็นเพื่อนเต็มแล้ว
-ServerError/7101┃คุณสามารถแอดเพื่อนได้มากสุด 200 คน
-ServerError/7102┃รายชื่อเพื่อนเต็มแล้ว
-ServerError/7103┃คุณจะมาแอดตัวเองเป็นเพื่อนไม่ได้นะ!
-ServerError/7104┃เป็นเพื่อนอยู่แล้ว
-ServerError/7105┃ส่งคำขอเป็นเพื่อนไปแล้ว
-ServerError/7106┃คำขอผิดพลาด
-ServerError/7107┃ไม่ได้เป็นเพื่อนกับผู้เล่นคนนี้
-ServerError/7108┃การยืนยันตัวตนผู้เล่นล้มเหลว
-ServerError/7109┃จำนวนครั้งในการเชิญถึงจุดจำกัดแล้ว
-ServerError/7200┃คูปองถูกใช้ไปแล้ว
-ServerError/7201┃คูปองไม่ถูกต้อง กรุณาตรวจสอบรหัส
-ServerError/7202┃คูปองหมดอายุ
-ServerError/7203┃คูปองใช้ได้แค่ใน Kakao Games PC rooms เท่านั้น
-ServerError/7204┃คูปองเดียวกันนี้ได้ถูกใช้งานแล้ว
-ServerError/7205┃คูปองนี้ไม่สามารถใช้ในแพลทฟอร์มนี้ได้
-ServerError/7206┃จำนวนของที่มีจำกัดถูกใช้หมดแล้ว
-ServerError/7207┃คูปองนี้ยังไม่สามารถใช้งานได้ กรุณาตรวจสอบระยะการทำงานของคูปอง
-ServerError/7303┃ไม่พบรหัส
-ServerError/7304┃ชวนตัวเองไม่ได้นะ!
-ServerError/7400┃ไม่สามารถค้นหาข้อมูล ER Pass ได้ (7400)
-ServerError/7401┃ไม่สามารถค้นหาระดับของ ER Pass ได้ (7401)
-ServerError/7402┃ไม่เจอข้อมูลบัญชี ER Pass (7402)
-ServerError/7403┃ระดับของ ER Pass ไม่ถูกต้อง (7403)
-ServerError/7404┃คุณยังไม่มี ER Pass (7404)
-ServerError/7405┃ข้อมูลภารกิจของ ER Pass ไม่ถูกต้อง (7405)
-ServerError/7406┃ไม่พบรางวัล ER Pass (7406)
-ServerError/7407┃ไม่พบระดับ ER Pass Season (7407)
-ServerError/7408┃คุณถึงระดับสูงสุดแล้ว (7408)
-ServerError/7409┃การสั่งซื้อ ER Pass ผิดพลาด (7409)
-ServerError/7410┃ไม่พบระดับปัจจุบันของบัญชี (7410)
-ServerError/7413┃ER Plus สำหรับซีซันนี้ถูกซื้อไปแล้ว (7413)
-ServerError/7414┃ER Pass รุ่นอัพเกรดได้ถูกซิ้อไปแล้วในซีซันนี้ (7414)
-ServerError/7415┃ซีซันได้เปิดอยู่แล้ว (7415)
-ServerError/7416┃การใช้งาน ER Pass ไม่มีในซีซันนี้ (7416)
-ServerError/7500┃ไม่พบข้อมูลของชุดซีซัน (7500)
-ServerError/7501┃ไม่พบข้อมูลของชุดซีซันในบัญชีนี้ (7501)
-ServerError/7502┃ไม่สามารถรับชุดซีซันได้ (7502)
-ServerError/7503┃ชุดซีซันสามารถซื้อได้แค่ครั้งเดียว (7503)
-ServerError/7504┃ข้อมูลชุดซีซันไม่ถูกต้อง (7504)
-ServerError/7601┃ไม่พบไอเทม
-ServerError/7602┃DLC ได้ถูกใช้งานแล้ว
-ServerError/9080┃มีสกินนี้แล้ว
-ServerError/9081┃ไม่สามารถใช้ตัวละครนี้ได้
-ServerError/9082┃ไม่สามารถซื้อสกินนี้ได้
-ServerError/9083┃ค้นหาอิโมติคอนไม่เจอ
-ServerError/9084┃ไม่สามารถซื้ออิโมติคอนนี้ได้
-ServerError/9085┃ไม่มีอยู่ในขณะนี้
-ServerError/9086┃คุณใช้งานของที่คุณไม่มี
-ServerError/9087┃ไม่พบข้อมูลของไอเทม (9092)
-ServerError/9089┃ไม่ได้เป็นเจ้าของของชิ้นนี้ (9093)
-ServerError/9090┃ไม่ได้เป็นเจ้าของของชิ้นนี้ (9093)
-ServerError/9091┃0
-ServerError/9092┃การสั่งซื้อไม่ถูกต้อง (9094)
-ServerError/9093┃คุณไม่มีของชิ้นนี้
-ServerError/9094┃ข้อมูลประเภทสินค้าไม่ถูกต้อง (9096)
-ServerError/9095┃พบปัญหาในการจ่าย (9100)\nกรุณาตรวจสอบการตั้งค่าสตีมของคุณและกด "Enable the Steam Overlay while in-game".
-ServerError/9096┃พบปัญหาในการจ่าย (9101)
-ServerError/9100┃พบปัญหาในการจ่าย (9102)
-ServerError/9101┃พบปัญหาในการจ่าย (9103)
-ServerError/9102┃พบปัญหาในการจ่าย (9104)
-ServerError/9103┃พบปัญหาในการจ่าย (9105)
-ServerError/9104┃พบปัญหาในการจ่าย (9106)
-ServerError/9105┃พบปัญหาในการจ่าย (9107)
-ServerError/9106┃พบข้อผิดพลาดในการเชื่อมต่อกับเซิร์ฟเวอร์
-ServerError/9107┃การร้องขอผิดผลาด (9200)
-ServerError/9200┃ผู้เล่นคนนี้อยู่ในทีมอยู่แล้ว
-ServerError/9201┃ข้อผิดพลาดเกิดขึ้นระหว่างสร้างทีม (9204)
-ServerError/9203┃ข้อผิดพลาดเกิดขึ้นระหว่างร่วมทีม (9205)
-ServerError/9204┃ไม่สามารถออกจากทีมได้
-ServerError/9205┃ผู้เล่นไม่สามารถถูกเชิญชวนได้
-ServerError/9206┃หน้าที่ของหัวห้องเท่านั้น
-ServerError/9207┃ไม่สามารถเปลี่ยนทีมได้
-ServerError/9208┃คุณไม่ได้เป็นส่วนหนึ่งของทีม (9210)
-ServerError/9209┃ไม่สามารถเปลี่ยนทีมได้
-ServerError/9210┃ไม่สามารถเริ่มการค้นหาเพื่อนร่วมทีมได้ (9212)
-ServerError/9211┃ไม่สามารถหาทีมได้
-ServerError/9212┃ไม่สามารถเปลี่ยนโหมดได้
-ServerError/9213┃ไม่สามารถเปลี่ยนตัวหัวห้องได้
-ServerError/9214┃ไม่สามารถเตะผู้เล่นออกได้ (9216)
-ServerError/9215┃ไม่สามารถหาผู้เล่นได้ (9217)
-ServerError/9216┃ทีมเต็มแล้ว
-ServerError/9217┃ไม่สามารถเข้าร่วมการจับคู่ได้ (9219)
-ServerError/9218┃ไม่สามารถยกเลิกการจับคู่ได้ (9220)
-ServerError/9219┃ไม่สามารถยกเลิกคำสั่งได้ (9221)
-ServerError/9220┃การเชื่อมต่อเกิดขึ้นกับเวอร์ชั่นที่เข้ากันไม่ได้
-ServerError/9221┃ไม่สามารถยกเลิกคำสั่งได้ (9221)
-ServerError/9233┃ไม่สามารถเปลี่ยนทีมได้ (9233)
-ServerError/99999┃การเชื่อมต่อเกิดขึ้นกับเวอร์ชั่นที่เข้ากันไม่ได้
-ServerError/HttpException┃การเชื่อมต่อกับเซิร์ฟเวอร์ล้มเหลว (9201)
 CharacterStoryName┃ชื่อ
 CharacterStoryAge┃อายุ
 CharacterStoryHeight┃ส่วนสูง
@@ -17040,6 +16895,161 @@ CharacterPlayTip/62┃ธีโอดอร์เป็นมือแม่น�
 CharacterPlayTip/63┃เมื่อถูกผีสิง ลี่ อันห์จะทำให้ศัตรูกลัวจนต้องถอยไป สกิลของเธอจะยิ่งแรงขึ้นเมื่อโดนสิงโดยสมบูรณ์ และนั่นทำให้เธอมีทักษะในการดูดเลือด
 CharacterPlayTip/64┃วานยา บินอย่างอิสระไปกับผีเสื้อ ทำความเสียหายต่อเนื่องด้วยความสามารถในการเคลื่อนที่ที่สูง เธอสามารถทำให้ศัตรูหลับได้และทำให้ศัตรูหมดหนทางป้องกันและโจมตีใส่ได้
 CharacterPlayTip/65┃สองแฝด เดบิและมาร์ลีน แข็งแกร่งกว่าใครทั้งนั้นเมื่อสู้ด้วยกัน ต้องขอบคุณพลังของเธอนี่แหละนะ \nพลังของพวกเธอสองคนรวมกัน มากเพียงพอที่จะมีชัยในการต่อสู้ได้เลย
+ServerError/1000┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1001┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1002┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1003┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1004┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
+ServerError/1005┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1006┃เซิร์ฟเวอร์อยู่ระหว่างการปรับปรุงนะคะ
+ServerError/1007┃เวอร์ชั่นของลูกค้าไม่ตรง
+ServerError/1100┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1101┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/1102┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
+ServerError/1110┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
+ServerError/1111┃ไม่พบชื่อนี้
+ServerError/1112┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
+ServerError/1115┃เกิดข้อผิดพลาดในการล็อคอินในสตีม
+ServerError/1116┃บัญชีนี้ถูกสั่งระงับ
+ServerError/1118┃ชื่อเล่นนี้มีคนใช้แล้ว
+ServerError/1124┃คุณไม่สามารถสร้างบัญชี MS ใหม่ได้
+ServerError/1200┃ไม่พบห้อง
+ServerError/1201┃ข้อมูลเกมไม่ถูกต้อง (1201)
+ServerError/1202┃ข้อมูลรีเพลย์ไม่ถูกต้อง (1202)
+ServerError/1203┃คุณมี ER Pass อยู่แล้ว (1203)
+ServerError/1204┃No tienes acceso a esta reproducción.(1204)
+ServerError/1300┃ไม่สามารถหาห้องได้ กรุณาตรวจสอบเซิร์ฟเวอร์ของคุณที่มุมขวาบน
+ServerError/1301┃เกิดข้อผิดพลาดในการจับคู่
+ServerError/1302┃ระดับของสมาชิกหรือจำนวนตัวละคนไม่ถึงเกณฑ์
+ServerError/1303┃เกมที่แล้วยังไม่สิ้นสุด
+ServerError/1305┃0
+ServerError/1306┃0
+ServerError/2000┃คำขอการซื้อ ขัดข้อง
+ServerError/2001┃ข้อมูลสตีม ขัดข้อง
+ServerError/2002┃รหัสข้อมูลสินค้าไม่ถูกต้อง
+ServerError/2003┃ไม่พบข้อมูลของตัวละคร
+ServerError/2100┃เงินไม่พอ
+ServerError/2101┃NP ไม่เพียงพอ
+ServerError/2102┃A-COIN ไม่เพียงพอ
+ServerError/2120┃ไม่พบข้อมูลของผลิตภัณฑ์
+ServerError/2121┃ข้อมูลของผลิตภัณฑ์ไม่ถูกต้อง
+ServerError/2122┃จำนวนการซื้อถึงขีดสุดแล้ว
+ServerError/2123┃การซื้อรายวันถึงขีดสุดแล้ว
+ServerError/2124┃การซื้อรายสัปดาห์ถึงขีดสุดแล้ว
+ServerError/2125┃การซื้อรายเดือนถึงขีดสุดแล้ว
+ServerError/2126┃การลดราคาสำหรับของชิ้นนี้หมดอายุแล้ว
+ServerError/3100┃ไม่พบข้อมูลของภารกิจ
+ServerError/3101┃เกิดข้อผิดพลาดในการเปลี่ยนภารกิจ
+ServerError/3102┃คุณไม่สามารถรับรางวัลได้ถ้ายังไม่เคลียร์ภารกิจ
+ServerError/4100┃ข้อมูลไม่ถูกต้อง
+ServerError/4101┃หมดอายุ ไม่สามารถรับรางวัลได้
+ServerError/4102┃ไม่พบรางวัลที่กดรับได้
+ServerError/5100┃ไม่สามารถแชร์แผนการที่นำเข้ามาได้
+ServerError/5101┃ไม่สามารถกดลบแผนที่ไม่ได้รับการแบ่งปันได้
+ServerError/5102┃ไม่มีแผนท่ี่บันทึกเพื่อที่จะแก้
+ServerError/5103┃แผนที่บันทึกหายไปแล้ว
+ServerError/5104┃แผนที่บันทึกหายไปแล้ว
+ServerError/5105┃ไม่สามารถนำเข้าแผนของตัวคุณเองได้
+ServerError/5106┃ตัวละครที่เลือกไม่สามารถใช้แผนที่บันทึกนีัได้
+ServerError/5107┃ไม่สามารถซื้อได้อีกต่อไป
+ServerError/5120┃การเข้าถึงไม่ถูกต้อง
+ServerError/5121┃ไม่มีหน้าว่าง
+ServerError/5122┃ไม่สามารถซื้อได้อีกต่อไป
+ServerError/5200┃ไม่พบข้อมูลระดับแรงค์
+ServerError/5201┃ไม่พบของรางวัล
+ServerError/5202┃ไม่สามารถค้นหาห้องได้ เนื่องจากระยะห่างของแรงค์ของคนในทีม
+ServerError/6100┃ไม่พบข้อมูลของสกิน
+ServerError/6101┃มีตัวละครนี้แล้ว
+ServerError/7100┃คำขอเป็นเพื่อนเต็มแล้ว
+ServerError/7101┃คุณสามารถแอดเพื่อนได้มากสุด 200 คน
+ServerError/7102┃รายชื่อเพื่อนเต็มแล้ว
+ServerError/7103┃คุณจะมาแอดตัวเองเป็นเพื่อนไม่ได้นะ!
+ServerError/7104┃เป็นเพื่อนอยู่แล้ว
+ServerError/7105┃ส่งคำขอเป็นเพื่อนไปแล้ว
+ServerError/7106┃คำขอผิดพลาด
+ServerError/7107┃ไม่ได้เป็นเพื่อนกับผู้เล่นคนนี้
+ServerError/7108┃การยืนยันตัวตนผู้เล่นล้มเหลว
+ServerError/7109┃จำนวนครั้งในการเชิญถึงจุดจำกัดแล้ว
+ServerError/7200┃คูปองถูกใช้ไปแล้ว
+ServerError/7201┃คูปองไม่ถูกต้อง กรุณาตรวจสอบรหัส
+ServerError/7202┃คูปองหมดอายุ
+ServerError/7203┃คูปองใช้ได้แค่ใน Kakao Games PC rooms เท่านั้น
+ServerError/7204┃คูปองเดียวกันนี้ได้ถูกใช้งานแล้ว
+ServerError/7205┃คูปองนี้ไม่สามารถใช้ในแพลทฟอร์มนี้ได้
+ServerError/7206┃จำนวนของที่มีจำกัดถูกใช้หมดแล้ว
+ServerError/7207┃คูปองนี้ยังไม่สามารถใช้งานได้ กรุณาตรวจสอบระยะการทำงานของคูปอง
+ServerError/7303┃ไม่พบรหัส
+ServerError/7304┃ชวนตัวเองไม่ได้นะ!
+ServerError/7400┃ไม่สามารถค้นหาข้อมูล ER Pass ได้ (7400)
+ServerError/7401┃ไม่สามารถค้นหาระดับของ ER Pass ได้ (7401)
+ServerError/7402┃ไม่เจอข้อมูลบัญชี ER Pass (7402)
+ServerError/7403┃ระดับของ ER Pass ไม่ถูกต้อง (7403)
+ServerError/7404┃คุณยังไม่มี ER Pass (7404)
+ServerError/7405┃ข้อมูลภารกิจของ ER Pass ไม่ถูกต้อง (7405)
+ServerError/7406┃ไม่พบรางวัล ER Pass (7406)
+ServerError/7407┃ไม่พบระดับ ER Pass Season (7407)
+ServerError/7408┃คุณถึงระดับสูงสุดแล้ว (7408)
+ServerError/7409┃การสั่งซื้อ ER Pass ผิดพลาด (7409)
+ServerError/7410┃ไม่พบระดับปัจจุบันของบัญชี (7410)
+ServerError/7413┃ER Plus สำหรับซีซันนี้ถูกซื้อไปแล้ว (7413)
+ServerError/7414┃ER Pass รุ่นอัพเกรดได้ถูกซิ้อไปแล้วในซีซันนี้ (7414)
+ServerError/7415┃ซีซันได้เปิดอยู่แล้ว (7415)
+ServerError/7416┃การใช้งาน ER Pass ไม่มีในซีซันนี้ (7416)
+ServerError/7500┃ไม่พบข้อมูลของชุดซีซัน (7500)
+ServerError/7501┃ไม่พบข้อมูลของชุดซีซันในบัญชีนี้ (7501)
+ServerError/7502┃ไม่สามารถรับชุดซีซันได้ (7502)
+ServerError/7503┃ชุดซีซันสามารถซื้อได้แค่ครั้งเดียว (7503)
+ServerError/7504┃ข้อมูลชุดซีซันไม่ถูกต้อง (7504)
+ServerError/7601┃ไม่พบไอเทม
+ServerError/7602┃DLC ได้ถูกใช้งานแล้ว
+ServerError/9080┃มีสกินนี้แล้ว
+ServerError/9081┃ไม่สามารถใช้ตัวละครนี้ได้
+ServerError/9082┃ไม่สามารถซื้อสกินนี้ได้
+ServerError/9083┃ค้นหาอิโมติคอนไม่เจอ
+ServerError/9084┃ไม่สามารถซื้ออิโมติคอนนี้ได้
+ServerError/9085┃ไม่มีอยู่ในขณะนี้
+ServerError/9086┃คุณใช้งานของที่คุณไม่มี
+ServerError/9087┃ไม่พบข้อมูลของไอเทม (9092)
+ServerError/9089┃ไม่ได้เป็นเจ้าของของชิ้นนี้ (9093)
+ServerError/9090┃ไม่ได้เป็นเจ้าของของชิ้นนี้ (9093)
+ServerError/9091┃0
+ServerError/9092┃การสั่งซื้อไม่ถูกต้อง (9094)
+ServerError/9093┃คุณไม่มีของชิ้นนี้
+ServerError/9094┃ข้อมูลประเภทสินค้าไม่ถูกต้อง (9096)
+ServerError/9095┃พบปัญหาในการจ่าย (9100)\nกรุณาตรวจสอบการตั้งค่าสตีมของคุณและกด "Enable the Steam Overlay while in-game".
+ServerError/9096┃พบปัญหาในการจ่าย (9101)
+ServerError/9100┃พบปัญหาในการจ่าย (9102)
+ServerError/9101┃พบปัญหาในการจ่าย (9103)
+ServerError/9102┃พบปัญหาในการจ่าย (9104)
+ServerError/9103┃พบปัญหาในการจ่าย (9105)
+ServerError/9104┃พบปัญหาในการจ่าย (9106)
+ServerError/9105┃พบปัญหาในการจ่าย (9107)
+ServerError/9106┃พบข้อผิดพลาดในการเชื่อมต่อกับเซิร์ฟเวอร์
+ServerError/9107┃การร้องขอผิดผลาด (9200)
+ServerError/9200┃ผู้เล่นคนนี้อยู่ในทีมอยู่แล้ว
+ServerError/9201┃ข้อผิดพลาดเกิดขึ้นระหว่างสร้างทีม (9204)
+ServerError/9203┃ข้อผิดพลาดเกิดขึ้นระหว่างร่วมทีม (9205)
+ServerError/9204┃ไม่สามารถออกจากทีมได้
+ServerError/9205┃ผู้เล่นไม่สามารถถูกเชิญชวนได้
+ServerError/9206┃หน้าที่ของหัวห้องเท่านั้น
+ServerError/9207┃ไม่สามารถเปลี่ยนทีมได้
+ServerError/9208┃คุณไม่ได้เป็นส่วนหนึ่งของทีม (9210)
+ServerError/9209┃ไม่สามารถเปลี่ยนทีมได้
+ServerError/9210┃ไม่สามารถเริ่มการค้นหาเพื่อนร่วมทีมได้ (9212)
+ServerError/9211┃ไม่สามารถหาทีมได้
+ServerError/9212┃ไม่สามารถเปลี่ยนโหมดได้
+ServerError/9213┃ไม่สามารถเปลี่ยนตัวหัวห้องได้
+ServerError/9214┃ไม่สามารถเตะผู้เล่นออกได้ (9216)
+ServerError/9215┃ไม่สามารถหาผู้เล่นได้ (9217)
+ServerError/9216┃ทีมเต็มแล้ว
+ServerError/9217┃ไม่สามารถเข้าร่วมการจับคู่ได้ (9219)
+ServerError/9218┃ไม่สามารถยกเลิกการจับคู่ได้ (9220)
+ServerError/9219┃ไม่สามารถยกเลิกคำสั่งได้ (9221)
+ServerError/9220┃การเชื่อมต่อเกิดขึ้นกับเวอร์ชั่นที่เข้ากันไม่ได้
+ServerError/9221┃ไม่สามารถยกเลิกคำสั่งได้ (9221)
+ServerError/9233┃ไม่สามารถเปลี่ยนทีมได้ (9233)
+ServerError/99999┃การเชื่อมต่อเกิดขึ้นกับเวอร์ชั่นที่เข้ากันไม่ได้
+ServerError/HttpException┃การเชื่อมต่อกับเซิร์ฟเวอร์ล้มเหลว (9201)
 
 
 --xxxxxxxxxx--
