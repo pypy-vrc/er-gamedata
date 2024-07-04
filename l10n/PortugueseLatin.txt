@@ -1463,6 +1463,7 @@ Item/Effects/301338┃recupera Vida durante 15 segundos.
 Item/Effects/301339┃recupera Vida durante 15 segundos.
 Item/Effects/301340┃recupera Vida durante 15 segundos.
 Item/Effects/301346┃recupera Vida durante 15 segundos.
+Item/Effects/301348┃recupera Vida durante 15 segundos.
 Item/Effects/301403┃Recupera Vida e Energia durante 15 segundos.
 Item/Effects/301405┃recupera Vida durante 15 segundos.
 Item/Effects/301406┃recupera Vida durante 15 segundos.
@@ -2866,7 +2867,6 @@ ToolTipType/MaxHpRegen┃Regeneração de Vida Máxima
 ToolTipType/MaxSkill┃Amplificação de Habilidade Máxima
 ToolTipType/MoveSpeedUpRatio┃Aumento da Velocidade de Movimento (%)
 ToolTipType/MoveSpeedUpTime┃Duração de aumento de velocidade de movimento.
-ToolTipType/AttackSpeedUpRatio┃Aumento de Velocidade de Ataque (%)
 ToolTipType/DotDamage┃Dano ao longo do tempo
 ToolTipType/JudgmentDamage┃Dano de Julgamento
 ToolTipType/MaxHpUp┃Aumento da taxa de Vida Máxima
@@ -5999,6 +5999,7 @@ ItemTag/Ex_Regen┃Recuperação de Vida
 ItemTag/Ex_Sight┃Visão
 ItemTag/Unique_Range┃Alcance de Ataque Básico Aumentado
 ItemTag/Ex_None┃-
+ItemTag/Ex_Slow┃Lentidão
 ItemTag/Ex_ItemSkill┃Habilidade de Item Ativo
 ItemTag/Ex_Dummy1┃Redução de Cura
 ItemTag/Ex_Dummy2┃Utilidade
@@ -6191,7 +6192,9 @@ CharacterState/Group/Name/1003400┃Marche & Rompre
 CharacterState/Group/Desc/1003400┃Desacelerado
 CharacterState/Group/Name/1003510┃Flèche
 CharacterState/Group/Desc/1003510┃Inimigos são desacelerados.
+CharacterState/Group/Name/1003520┃Flèche
 CharacterState/Group/Desc/1003520┃Desacelerado
+CharacterState/Group/Name/1003530┃Flèche
 Skill/Group/ExpansionTip/1003500┃<i>Não pode passar paredes.</i>
 Skill/Group/ExpansionTip/1003510┃<i>Não pode passar paredes.</i>
 Skill/Group/ExpansionTip/1003520┃<i>Não pode passar paredes.</i>
@@ -6308,7 +6311,7 @@ CharacterState/Group/Desc/1008210┃Velocidade de movimento reduzida.
 CharacterState/Group/Name/1008300┃Overdrive - Aumento do Poder de Ataque e do Alcance de Ataque Básico
 CharacterState/Group/Desc/1008300┃O Poder de Ataque e Alcance de Ataque Básico aumentou.
 CharacterState/Group/Name/1008310┃Overdrive - Evolução
-CharacterState/Group/Desc/1008310┃Próximo dano de habilidade causará dano de habilidade adicional.
+CharacterState/Group/Desc/1008310┃O Poder de Ataque e Alcance de Ataque Básico aumentou.
 CharacterState/Group/Name/1008400┃Amplificação de Danos de Habilidade
 CharacterState/Group/Desc/1008400┃A taxa de Amplificação de Danos por Habilidade aumentou.
 CharacterState/Group/Name/1008410┃Amplificação de Danos de Habilidade
@@ -6920,29 +6923,29 @@ Skill/Group/Name/1026430┃Particle Storm
 Skill/Group/Name/1026500┃Overclock
 Skill/Group/Name/1026510┃Overclock
 Skill/Group/Desc/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
+Skill/Group/Coef/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
 Skill/Group/Desc/1026200┃Barbara memasang Sentry Gun dengan {8} HP di target lokasi, memberikan  <color=white>{3}</color> damage ke musuh yang di hit.\nSentry Gun ada selama {0} detik, memberikan <color=white>{2}</color> damage ke musuh yang ditembak.\nKetika Sentry Gun baru di letakkan, yang lama akan hancur. Ketika Musuh menghancurkan Sentry Gun, Cooldownnya bertambah sebanyak {9} detik. Jika barbara jauh dari Sentry Gun, dia mengambil kembali Sentry Gun nya, mengurangi cooldown sebanyak {7}. HP Sentry Gun disesuaikan dengan Maximum HP Barbara.
+Skill/Group/Coef/1026200┃Barbara instala uma Sentinela com <color=white>{8}</color><color=green>(+Nível de Personagem * {11})</color> de Vida no local alvo, causando <color=white>{3}</color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> a inimigos atingidos.\nA Sentinela permanece no local por {0} segundos, disparando em inimigos e causando <color=#ffd775>{2} Poder de Ataque da Sentinela</color> de dano de habilidade.\nQuando uma nova Sentinela for posicionada, a anterior é desmontada. Se a sentinela posicionada for destruída por um inimigo, o Tempo de Recarga da habilidade é aumentado em {9}. Se Bárbara estiver muito longe da Sentinela, ela coleta a Sentinela, reduzindo o tempo de recarga desta habilidade em {7}.
 Skill/Group/Desc/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
+Skill/Group/Coef/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
 Skill/Group/Desc/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
 Skill/Group/Desc/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color> damage ke musuh yang terkena\.
+Skill/Group/Coef/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{8})</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#DDA0DD>(+{9})</color> damage ke musuh yang terkena\.
 Skill/Group/Desc/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color> dan damage Sentry Gun diperkuat <color=white>{4}</color>.
+Skill/Group/Coef/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> dan damage Sentry Gun diperkuat <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{7})</color>.
 Skill/Group/Desc/1026400┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color> de dano aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano de habilidade das duas detonações são Retardados em {10} por {9} segundo(s).
+Skill/Group/Coef/1026400┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{12})</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{13})</color> de dano aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano das duas detonações são Retardados em {10} por {9} segundo(s).
 Skill/Group/Desc/1026410┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color> de dano de habilidade aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano das duas detonações são Retardados em {10} por {9} segundo(s).
+Skill/Group/Coef/1026410┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{12})</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{13})</color> de dano aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano das duas detonações são Retardados em {10} por {9} segundo(s).
 Skill/Group/Desc/1026420┃O Ciclone Magnético de Bárbara é aprimorado e se torna uma Tempestade de Partículas, aumentando seu raio de ação ao longo do tempo e fortalecendo o escudo gerado em {0} e o dano recebido é reduzido em {6}. Ao final da duração desta habilidade, a Tempestade de Partículas explode, causando <color=white>{2}</color> de dano aos inimigos dentro do alcance e retardando-os em {5} por {4} segundos.\nReative esta habilidade para encerrá-la mais cedo.
 Skill/Group/Desc/1026430┃O Ciclone Magnético de Bárbara é aprimorado e se torna uma Tempestade de Partículas, aumentando seu raio de ação ao longo do tempo e fortalecendo o escudo gerado em {0} e dano recebido é reduzido em {6}. Ao final da duração desta habilidade, a Tempestade de Partículas explode, causando <color=white>{2}</color> de dano aos inimigos dentro do alcance e retardando-os em {5} por {4} segundos.\nReative esta habilidade para encerrá-la mais cedo.
 Skill/Group/Desc/1026500┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo, aumentando a geração de escudo baseado em dano em {17} e reduzindo dano recebido em {16}. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
+Skill/Group/Coef/1026500┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{16})</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color><color=#ffd775>(+{10})</color><color=#DDA0DD>(+{18})</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
 Skill/Group/Desc/1026510┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo, aumentando a geração de escudo baseado em dano em {17} e reduzindo dano recebido em {16}. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
-Skill/Group/Coef/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
-Skill/Group/Coef/1026200┃Barbara instala uma Sentinela com <color=white>{8}</color><color=green>(+Nível de Personagem * {11})</color> de Vida no local alvo, causando <color=white>{3}</color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> a inimigos atingidos.\nA Sentinela permanece no local por {0} segundos, disparando em inimigos e causando <color=#ffd775>{2} Poder de Ataque da Sentinela</color> de dano de habilidade.\nQuando uma nova Sentinela for posicionada, a anterior é desmontada. Se a sentinela posicionada for destruída por um inimigo, o Tempo de Recarga da habilidade é aumentado em {9}. Se Bárbara estiver muito longe da Sentinela, ela coleta a Sentinela, reduzindo o tempo de recarga desta habilidade em {7}.
-Skill/Group/Coef/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
+Skill/Group/Coef/1026510┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{16})</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color><color=#ffd775>(+{10})</color><color=#DDA0DD>(+{18})</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
 Skill/Group/Coef/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{7})</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
-Skill/Group/Coef/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{8})</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color><color=#ffd775>(+{4})</color><color=#DDA0DD>(+{9})</color> damage ke musuh yang terkena\.
-Skill/Group/Coef/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> dan damage Sentry Gun diperkuat <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{7})</color>.
-Skill/Group/Coef/1026400┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{12})</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{13})</color> de dano aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano das duas detonações são Retardados em {10} por {9} segundo(s).
-Skill/Group/Coef/1026410┃Bárbara cria um Ciclone Magnético com sua Sentinela que dura até {3} segundos, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{12})</color><color=#688A08>(+{6} da Vida Máxima do inimigo)</color> de Dano Verdadeiro a cada 0,5 segundo aos inimigos dentro do alcance, além de aumentar a velocidade de movimento de Bárbara em {7}.\nAo final da duração desta habilidade, o Ciclone Magnético explode, causando <color=white>{4}</color><color=#ffd775>(+{5})</color><color=#DDA0DD>(+{13})</color> de dano aos inimigos dentro do alcance e garantindo a Bárbara um escudo baseado em {2} do dano causado, até um máximo de {8}. Reative esta habilidade para encerrá-la mais cedo.\nAo mesmo tempo, inimigos que receberem dano das duas detonações são Retardados em {10} por {9} segundo(s).
 Skill/Group/Coef/1026420┃O Ciclone Magnético de Bárbara é aprimorado e se torna uma Tempestade de Partículas, aumentando seu raio de ação ao longo do tempo e fortalecendo o escudo gerado em {0}. Ao final da duração desta habilidade, a Tempestade de Partículas explode, causando <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{7})</color> de dano aos inimigos dentro do alcance e retardando-os em {5} por {4} segundos.\nReative esta habilidade para encerrá-la mais cedo.
 Skill/Group/Coef/1026430┃O Ciclone Magnético de Bárbara é aprimorado e se torna uma Tempestade de Partículas, aumentando seu raio de ação ao longo do tempo e fortalecendo o escudo gerado em {0}. Ao final da duração desta habilidade, a Tempestade de Partículas explode, causando <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{7})</color> de dano aos inimigos dentro do alcance e retardando-os em {5} por {4} segundos.\nReative esta habilidade para encerrá-la mais cedo.
-Skill/Group/Coef/1026500┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{16})</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color><color=#ffd775>(+{10})</color><color=#DDA0DD>(+{18})</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
-Skill/Group/Coef/1026510┃Bárbara se sobrecarrega, recebendo efeitos especiais nas suas habilidades.\n\nCurto-Circuito: Bárbara teleporta para a Sentinela posicionada. Sentinelas já instaladas se autodestroem, causando <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{17})</color> de dano. Ao teleportar, Bárbara causa <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{16})</color> de dano aos inimigos próximos, aumentando a velocidade de ataque da Sentinela em {5} por {4} segundos para cada inimigo atingido. Após usar esta habilidade, o Tempo de Recarga de Sobrecarga é reduzido em {14}.\n\nRessonância de Fótons: Pelos próximos {6} segundos, o dano de Laser de Elétrons Livres e da Sentinela é aumentado em {13} e o FEL tem seu custo de Energia zerado, além de seu Tempo de Recarga ser reduzido para {7}. Os ataques da Sentinela passam a ser FELs enquanto a Ressonância de Fótons estiver ativa.\n\nTempestade de Partículas: O raio de Ciclone Magnético aumenta ao longo do tempo. Após {8} segundos ou ao reativar a habilidade, a tempestade explode, causando <color=white>{9}</color><color=#ffd775>(+{10})</color><color=#DDA0DD>(+{18})</color> de dano aos inimigos dentro do alcance e retardando-os em {15} por {11} segundos.\n\nReativar a habilidade novamente encerra Tempestade de Partículas, permitindo que Bárbara possa usá-la novamente após {12} segundos.
 CharacterState/Group/Name/1026110┃Aprimoramento
 CharacterState/Group/Desc/1026110┃Poder de Ataque e Defesa da Sentinela aumentados.
 CharacterState/Group/Name/1026120┃Engenheira Engenhosa
@@ -9520,11 +9523,6 @@ Skill/LobbyDesc/1046200┃<color=white>Relâmpago</color>: Aiden golpeia sua esp
 Skill/LobbyDesc/1046300┃Aiden desacelera a si mesmo enquanto canalisa uma alta voltagem na sua espada.\nQuando reativado, ou na duração máxima, Aiden causa dano de habilidade a inimigos próximos baseado no tempo de canalização e desacelerando-os. Aiden pode usar <color=white>Corrida de Choque </color> ou <color=white>Surto Eletrostático</color> para se mover enquanto lança sua habilidade\nSe completamente carregado, Aiden deixa para trás uma <color=white>Estática</color>. causando dano de habilidade a inimigos que tocarem, e enraizando-os.
 Skill/LobbyDesc/1046400┃<color=green>Passiva</color>: O tempo de recarga das habilidades é zerado quando se atinge o máximo de <color=white>Amperes</color>.\n\n<color=white>Retrocesso</color>: Aiden pula para trás e atira um projétil elétrico, causando dano de habilidade ao primeiro inimigo atingido, e marcando-o. <color=white>Corrida de Choque</color>. A velocidade de movimento de Aiden é aumentada depois de usar <color=white>Retrocesso</color>.\n\n<color=white>Corrida de Choque</color>: Aiden avança no inimigo marcado, causando dano de habilidade.
 Skill/LobbyDesc/1046500┃Aiden descarrega um trovão no local escolhido, causando dano de habilidade e desacelerando os inimigos. Inimigos atingidos no centro recebem dano de habilidade e são atordoados.\nAiden pode descarregar um segundo trovão no mesmo local, causando dano de habilidade e desacelerando os inimigos atingidos.\n\nSe o primeiro trovão atingir um inimigo, Aiden pode usar novamente <color=white>Surto Eletrostático</color> para teleportar a localização do Trovão, ativando imediatamente o segundo trovão e carregando completamente os <color=white>Amperes</color> de Aiden.
-Skill/LobbyDesc/1047100┃Laura ganha Empolgação quando ela se move.\n\n<color=white> Ensinamentos de Nerea</color>: No máximo de Empolgação, o próximo ataque básico causa dano extra no seu alvo e nos inimigos próximos. Habilidades de movimento garantem a ela mais Empolgação.\n<color=white>Ensinamentos os Nerea</color> não ativa se o alvo está muito próximo dela.
-Skill/LobbyDesc/1047200┃Laura estrala seu chicote uma vez na direção alvo, causando dano de habilidade em inimigos e ganha<color=white>Empolgação</color>. Ative a habilidade novamente para aprimorar a habilidade.\n\n1ª Aprimoramento: Laura estrala seu chicote uma vez na direção alvo, causando dano de habilidade e ganhando <color=white>Empolgação</color>.\n 2o Aprimoramento: Laura estrala seu chicote duas vezes na direção alvo, causando dano de habilidade duas vezes e ganhando <color=white>Empolgação</color>.
-Skill/LobbyDesc/1047300┃Laura arremessa sua Assinatura de Crime na direção alvo, causando dano de habilidade na primeira cobaia inimiga atingida e a marcando como sua próxima <color=white>Vítima</color>. Depois de alguns segundos, a próxima habilidade de Laura consome a marca, causando dano extra de habilidade, reduzindo sua velocidade e reduzindo sua defesa. Consumir a marca garante Laura a defesa perdida de sua <color=white>Vítima</color> como poder de ataque, garante a ela Empolgação e reduz o tempo de recarga de<color=white>Assalto Crepuscular </color>.
-Skill/LobbyDesc/1047400┃Laura avança na direção alvo com a destreza de um gato. Laura pode dar o Passo Malandro durante <color=white>Assalto Crepúscular</color>, aumentando seu alcance em {0}metros e á deixando mudar de direção.\n\n<color=white>Passo Malandro</color> não é afetado por efeitos de redução de tempo de recarga.
-Skill/LobbyDesc/1047500┃Laura arremessa seu chicote na direção alvo e se torna Imparável. Se o chicote acertar um terreno, Laura se puxa na direção alvo, dando dano de habilidade nos inimigos em seu caminho. Atingir uma <color=white>Vítima</color>marcada, ou uma alguém com a defesa reduzida pela marca fará com que eles sejam empurrados com Laura.\nDepois de chegar ao alvo, Laura graciosamente salta para trás, causando dano de habilidade nos inimigos e arremessando eles ao ar.
 Skill/LobbyDesc/1048100┃Tia pode pintar seus inimigos com 2 cores diferentes com <color=#ffffff>Golpe de Pincél</color> e <color=#ffffff>Uma Pitada de Cor</color> para ativar efeitos do Esquilo. Habilidades basicas da Tia não são afetadas por redução de carga de habilidade, no entanto, ela ganha 6 de poder de ataque para cada 10% de sua redução de recarga de habilidade. \n[Esquilo Furioso]\nPintar um inimigo com <color=red>Vermelho</color> e <color=yellow>Amarelo</color> Ativa o Esquilo Furioso, silenciando e causando Dano Verdadeiro.\n\n[Esquilo Abençoado]\nPintar um inimigo com <color=red>Vermelho</color> e <color=#2AC0FF>Azul</color> ativa o Esquilo Abençoado, causando Dano Verdadeiro, curando Tia e aumentando sua velocidade de movimento. \n\n[Esquilo Mágico] \nPintar um inimigo com <color=#2AC0FF>Azul</color> e <color=yellow>Amarelo</color> ativa o Esquilo Mágico, causando Dano Verdadeiro e o enraizando. 
 Skill/LobbyDesc/1048400┃Tia pode usar habilidades diferentes baseadas na cor atual do seu pincél.\n\n<color=yellow>Amarelo</color>: Tia joga seu tubo de tinta amarela na direção escolhida, que explode, dando dano de habilidade a seus inimigos e os pintando eles de <color=yellow>Amarelo</color>. Inimigos pintados de Amarelo tem sua velocidade de movimento reduzida.\n<color=red>Vermelho</color>: Tia balança seu pincél, dando dano de habilidade e pintando inimigos atingidos pelas cerdas de <color=red>Vermelho</color>. Inimigos Pintados de Vermelho tem seu campo de visão reduzidado.\n<color=#2AC0FF>Azul</color>: Tia bate seu pincél no chão, dando dano de habilidade e pintando os inimigos em volta de <color=#2AC0FF>Azul</color>. Inimigos atingidos no meio levam dano extra de habilidade e são levantados no ar.
 Skill/LobbyDesc/1048500┃Tia muda a cor da tinta no seu pincél. As cores são sempre mudadas na ordem Amarelo, Vermelho, Azul.
@@ -10129,6 +10127,9 @@ Item/Skills/6015003/Desc┃Atingir um único alvo com um Ataque Básico ou Habil
 Item/Skills/6015004/Name┃<color=yellow>Aerodinâmica: Encarnação de Rudra</color>
 Item/Skills/6015004/Body┃Atingir um único inimigo com um Ataque Básico ou Habilidade {1} vezes dentro de {0} segundos aumenta sua Velocidade de Movimento em {11}% e seu Poder de Ataque em {13}%. Ignora efeitos de multiplicação de ataques. (Tempo de Recarga: {2} segundos)
 Item/Skills/6015004/Desc┃Atingir um único inimigo com um Ataque Básico ou Habilidade {1} vezes dentro de {0} segundos aumenta sua Velocidade de Movimento em {4}% e seu Poder de Ataque em {11}%. Ignora efeitos de multiplicação de ataques. (Tempo de Recarga: {2} segundos)
+Item/Skills/6015005/Name┃<color=yellow>Aerodinâmica: Movimento de Cargas</color>
+Item/Skills/6015005/Body┃Atingir um único alvo com um Ataque Básico ou Habilidade {1} vezes dentro de {0} segundos concede um escudo de {10} e aumenta a Velocidade de Movimento em {5}% por {3} segundos. Exclui efeitos de múltiplos acertos. (Tempo de Recarga: {2} segundos)
+Item/Skills/6015005/Desc┃Atingir um único alvo com um Ataque Básico ou Habilidade {1} vezes dentro de {0} segundos concede um escudo de {10} e aumenta a Velocidade de Movimento em <color=green>Nível do Personagem x 1</color>% por {3} segundos. Exclui efeitos de múltiplos acertos. (Tempo de Recarga: {2} segundos)
 Item/Skills/6015007/Name┃<color=yellow>Aerodinâmica</color>
 Item/Skills/6015008/Name┃<color=yellow>Aerodinâmica</color>
 CharacterState/Group/Name/6015010┃Aerodinâmica
@@ -10142,9 +10143,6 @@ Item/Skills/6016001/Desc┃Quando ficar com menos de {0}% de Vida após receber 
 Item/Skills/6016002/Name┃<color=yellow>Última Defesa: Bastião</color>
 Item/Skills/6016002/Body┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de <color=white>{11}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam {12}% mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
 Item/Skills/6016002/Desc┃Quando ficar com menos de {0}% de Vida após receber dano de uma cobaia inimiga, recebe um escudo de {2} + <color=#008000>Nível do Personagem x {3}</color> por {1} segundos, um aumento de {6} no Poder de Ataque por {5} segundos e efeitos de Recuperação de Vida se tornam (Corpo-a-Corpo: {9}%, À distância: {10}%) mais efetivos por {5} segundos.(Tempo de Recarga: 80 s)
-Item/Skills/6016003/Name┃<color=yellow>Segundo Vento: Crusada</color>
-Item/Skills/6016003/Body┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha <color=white>{11}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {14} por {5} segundos. (Tempo de Recarga: {13}s)
-Item/Skills/6016003/Desc┃Quando sua vida descer abaixo de {0}% após sofrer dano de um jogador inimigo, você ganha {2} + <color=#008000>Level*{3}</color> de escudo de vida por {1} segundo, e sua amplificação de habilidade é aumentada em {12} por {5} segundos. (Tempo de Recarga: {11}s)
 Item/Skills/6016004/Name┃<color=yellow>Segundo Vento: Guarda Rápida</color>
 Item/Skills/6016004/Body┃Quando receber dano de um jogador inimigo, recebes um <color=white>{11}</color> escudo de Vida por {1} segundo. (tempo de recarga {13} segundos.)
 Item/Skills/6016004/Desc┃Quando receber dano de um jogador inimigo, recebes um 2 + <color=#008000>Level do personagem *{3}</color> escudo de Vida por {1} segundo. (tempo de recarga {11} segundos.)
@@ -11072,15 +11070,15 @@ ER패스 미해금 미션┃{0} até desbloquear.
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃Ferro
-BRONZE_SUBJECT┃Bronze
-SILVER_SUBJECT┃Prata
-GOLD_SUBJECT┃Ouro
-PLATINUM_SUBJECT┃Platina
-DIAMOND_SUBJECT┃Diamante
+IRON┃Ferro
+BRONZE┃Bronze
+SILVER┃Prata
+GOLD┃Ouro
+PLATINUM┃Platina
+DIAMOND┃Diamante
 MITHRIL┃Mythril
 DEMIGOD┃Titã
-THE_ETERNITY┃Imortal
+ETERNITY┃Imortal
 UNRANK┃Sem classificação
 일반┃Normal
 NORMAL┃Normal
@@ -11164,24 +11162,24 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃Dobro do custo de entrada por abandon
 배치고사 중┃Atribuindo Nível/Colocação de nível
 강등┃Rebaixamento
 승급!┃Promoção
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>Tier Atual</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>Tier Atual</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>Tier Atual</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>Tier Atual</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>Tier Atual</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>Tier Atual</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>Tier Atual</color>
+MyTierRP/BRONZE┃<color=#E9964C>Tier Atual</color>
+MyTierRP/SILVER┃<color=#C7CCE6>Tier Atual</color>
+MyTierRP/GOLD┃<color=#FBD787>Tier Atual</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>Tier Atual</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>Tier Atual</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>Tier Atual</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>Tier Atual</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>Tier Atual</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>Tier Atual</color>
 RankRP_explanation┃Pontos recebidos por classificação.
 Elimination_explanation┃Pontos recebidos por eliminar um time inimigo enquanto eles estão incapacitados e incapazes de reviver automaticamente.
 Down_explanation┃Pontos recebidos por eliminar um inimigo.
@@ -16172,161 +16170,6 @@ InGameGuide/Nadja/Group/Desc/10123000┃Vejo que você é o vencedor da Zona de 
 오퍼레이터 기존유저 보상 내용┃Tenho certeza que você já sabia de tudo, mas ouviu mesmo assim. \nVocê estava tentando ser gentil ou você é apenas muito paciente? \nDe qualquer forma, obrigada por isso. Eu me diverti muito. \nEu não sei se devo chamar isso de presente ou recompensa, mas aqui... divirta-se! 
 신규유저 오퍼레이터 비활성화 안내 내용┃Eu acho que você está um pouco acostumado com o experimento agora. \nEntão acho que não preciso supervisionar você o tempo todo.  \nEstou ansiosa para encontrá-lo novamente!
 기존유저 오퍼레이터 비활성화 안내 내용┃Você não precisa mais de mim para ficar de olho em você.  \nEntão acho que não preciso supervisionar você o tempo todo. \nMantenha o bom trabalho. Você está indo bem!
-ServerError/1000┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1001┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1002┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1003┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1004┃Você precisa fazer login novamente. O jogo vai reiniciar.
-ServerError/1005┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1006┃O servidor está atualmente em manutenção.
-ServerError/1007┃Versão do Cliente Incompatível
-ServerError/1100┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1101┃Um erro ocorreu. Por favor, reinicie seu jogo.
-ServerError/1102┃Você precisa fazer login novamente. O jogo vai reiniciar.
-ServerError/1110┃Você não pode fazer login no servidor. Verifique o estado da sua conta.
-ServerError/1111┃Este apelido não está disponível.
-ServerError/1112┃Você não pode fazer login no servidor. Verifique o estado da sua conta.
-ServerError/1115┃Erro ao fazer login na Steam.
-ServerError/1116┃Esta conta é restrita.
-ServerError/1118┃Este apelido já existe.
-ServerError/1124┃0
-ServerError/1200┃Não foi possível encontrar os resultados da correspondência.
-ServerError/1201┃Informação de Jogo Inválida. (1201)
-ServerError/1202┃Informação de Replay Inválida. (1202)
-ServerError/1203┃Você já possui o Passe ER. (1203)
-ServerError/1204┃0
-ServerError/1300┃Não foi possível encontrar partida. Por favor verifique o servidor selecionado no canto superior direito.
-ServerError/1301┃Erro de conexão com a partida.
-ServerError/1302┃Um membro da equipe não atende ao critério de nível ou de personagem.
-ServerError/1303┃A partida anterior ainda não terminou.
-ServerError/1305┃0
-ServerError/1306┃0
-ServerError/2000┃Erro no pedido de compra.
-ServerError/2001┃Erro de informação da Steam.
-ServerError/2002┃Informação de produto inválido.
-ServerError/2003┃Informação do personagem não encontrada.
-ServerError/2100┃Fundos insuficientes.
-ServerError/2101┃NP insuficientes.
-ServerError/2102┃A-COIN insuficientes.
-ServerError/2120┃Informação de produto não encontrada.
-ServerError/2121┃Informação incorreta do produto.
-ServerError/2122┃Número de compras excedido.
-ServerError/2123┃Limite diário de compras excedido.
-ServerError/2124┃Limite de compra semanal excedido.
-ServerError/2125┃Limite de compra mensal excedido.
-ServerError/2126┃Os descontos para essa compra já expiraram.
-ServerError/3100┃Não foi possível encontrar as informações da missão.
-ServerError/3101┃Erro ao trocar de missão.
-ServerError/3102┃Você não pode receber a recompensa sem completar a missão.
-ServerError/4100┃Informações inválidas.
-ServerError/4101┃Expirado. Não pode resgatar a recompensa.
-ServerError/4102┃Não foi possível encontrar recompensa resgatável
-ServerError/5100┃Não é possível compartilhar um Plano Salvo importado
-ServerError/5101┃Não é possível apagar um Plano Salvo que não foi compartilhado
-ServerError/5102┃Nenhum Plano Salvo para editar
-ServerError/5103┃Plano Salvo não existe.
-ServerError/5104┃Plano Salvo não existe.
-ServerError/5105┃Não é possível importar o seu próprio Plano Salvo
-ServerError/5106┃O personagem selecionado não pode usar este Plano Salvo.
-ServerError/5107┃Não está mais disponível para compra.
-ServerError/5120┃Acesso Inválido.
-ServerError/5121┃Não há páginas vazias no momento.
-ServerError/5122┃Não está mais disponível para compra.
-ServerError/5200┃Não foi possível encontrar informações sobre o Nível de Classificação.
-ServerError/5201┃Não foi possível resgatar a recompensa de partida.
-ServerError/5202┃Não foi possível iniciar a procura de partida. A diferença entre as colocações dos membros da equipe é muito alta.
-ServerError/6100┃Informação da Skin não encontrada.
-ServerError/6101┃Personagem já possuído.
-ServerError/7100┃A lista de pedidos de amizade do jogador está cheia.
-ServerError/7101┃Você pode adicionar até 200 amigos.
-ServerError/7102┃A lista de amigos do jogador está cheia.
-ServerError/7103┃Você não pode adicionar a si mesmo como amigo!
-ServerError/7104┃Vocês já são amigos.
-ServerError/7105┃Pedido de amizade enviado.
-ServerError/7106┃Pedido Inválido
-ServerError/7107┃Você não é amigo deste jogador.
-ServerError/7108┃Não foi possível verificar o usuário
-ServerError/7109┃0
-ServerError/7200┃Cupom já resgatado.
-ServerError/7201┃Cupom inválido. Favor conferir o código.
-ServerError/7202┃Cupom expirado.
-ServerError/7203┃Cupom disponível apenas nas salas de jogo da Kakao Games.
-ServerError/7204┃Um cupom do mesmo tipo já foi resgatado.
-ServerError/7205┃Este cupom não pode ser usado nesta plataforma.
-ServerError/7206┃A quantidade limitada foi esgotada.
-ServerError/7207┃0
-ServerError/7303┃Código não encontrado.
-ServerError/7304┃Você não pode SE indicar!
-ServerError/7400┃Não foi possível obter informações do Passe ER. (7400)
-ServerError/7401┃Não foi possível obter nível do Passe ER. (7401)
-ServerError/7402┃Não foi possível obter informações da conta com Passe ER. (7402)
-ServerError/7403┃Informações sobre nível do Passe ER inválidas. (7403)
-ServerError/7404┃Você não possui o Passe ER. (7404)
-ServerError/7405┃A missão do Passe ER atual é inválida. (7405)
-ServerError/7406┃Recompensas do Passe ER não encontradas. (7406)
-ServerError/7407┃Recompensas do Nível de Temporada do Passe ER não encontradas. (7406)
-ServerError/7408┃Você atingiu o nível máximo para a temporada. (7408)
-ServerError/7409┃Informações da compra do Passe ER inválidas. (7409)
-ServerError/7410┃Nível de Temporada da conta atual não encontrado. (7410)
-ServerError/7413┃ER Plus já foi comprado para a temporada atual.(7413)
-ServerError/7414┃ER Pass Upgrade já foi comprado para temporada atual.(7414)
-ServerError/7415┃Esta Temporada já está ativa.(7415)
-ServerError/7416┃Ativação do ER Pass não existe para essa temporada.(7416)
-ServerError/7500┃Informação para temporada de passe não encontrada.(7500)
-ServerError/7501┃Informação para temporada de passe não encontrada nesta conta.(7501)
-ServerError/7502┃Não foi possível encontrar recompensa resgatável do pacote da temporada. (7502)
-ServerError/7503┃A compra do pacote da temporada só pode ser efetuada uma vez. (7503)
-ServerError/7504┃Informação de pacote de temporada Inválida. (7504)
-ServerError/7601┃0
-ServerError/7602┃DLC já resgatada.
-ServerError/9080┃Skin já possuída.
-ServerError/9081┃Não é possível utilizar este personagem.
-ServerError/9082┃Não é possível comprar esta skin.
-ServerError/9083┃Não foi possível encontrar emoticon.
-ServerError/9084┃Não é possível comprar este emoticon.
-ServerError/9085┃Não disponível atualmente.
-ServerError/9086┃Você equipou um item que você não possui.
-ServerError/9087┃Informações de Item inválidas. (9092)
-ServerError/9089┃Itens não possuídos não podem ser usados. (9093)
-ServerError/9090┃Itens não possuídos não podem ser usados. (9093)
-ServerError/9091┃0
-ServerError/9092┃Informação de Compra inválida. (9094)
-ServerError/9093┃Você não possui este item.
-ServerError/9094┃Informação sobre tipo de item inválida. (9096)
-ServerError/9095┃Tempo de pagamento pela Steam excedido. (Código: 9100)\nPor favor, cheque suas configurações na Steam e ative a sobreposição Steam enquanto estiver em jogo.
-ServerError/9096┃Erro ao processar o pagamento.(9101)
-ServerError/9100┃Erro ao processar o pagamento.(9102)
-ServerError/9101┃Erro ao processar o pagamento.(9103)
-ServerError/9102┃Erro ao processar o pagamento.(9104)
-ServerError/9103┃Erro ao processar o pagamento.(9105)
-ServerError/9104┃Erro ao processar o pagamento.(9106)
-ServerError/9105┃Erro ao processar o pagamento.(9107)
-ServerError/9106┃Erro ao conectar ao servidor.
-ServerError/9107┃Requisição Inválida. (9200)
-ServerError/9200┃Este jogador já está em uma equipe.
-ServerError/9201┃Ocorreu um erro durante a criação de equipe. (9204)
-ServerError/9203┃Ocorreu um erro enquanto se juntava à equipe. (9205)
-ServerError/9204┃Não foi possível sair da equipe.
-ServerError/9205┃Esse jogador não pode ser convidado.
-ServerError/9206┃Isso só pode ser feito pelo líder da equipe.
-ServerError/9207┃Incapaz de mudar de equipe.
-ServerError/9208┃Você não faz parte de uma equipe. (9210)
-ServerError/9209┃Incapaz de se juntar a equipe.
-ServerError/9210┃Não foi possível buscar colegas de equipe. (9212)
-ServerError/9211┃Não foi possível encontrar a equipe.
-ServerError/9212┃Incapaz de mudar modo de pareamento.
-ServerError/9213┃Não foi possível mudar o líder da equipe.
-ServerError/9214┃Incapaz de expulsar jogador. (9216)
-ServerError/9215┃Incapaz de encontrar jogador. (9217)
-ServerError/9216┃Essa equipe já está cheia.
-ServerError/9217┃Não foi possível se juntar ao pareamento. (9219)
-ServerError/9218┃Não foi possível cancelar o pareamento. (9220)
-ServerError/9219┃Não foi possível cancelar a ação. (9221)
-ServerError/9220┃A conexão foi estabelecida com uma versão incompatível.
-ServerError/9221┃Não foi possível cancelar a ação. (9221)
-ServerError/9233┃Incapaz de mudar de equipe. (9233)
-ServerError/99999┃A conexão foi estabelecida com uma versão incompatível.
-ServerError/HttpException┃Falha ao comunicar com o servidor. (9201)
 CharacterStoryName┃Nome
 CharacterStoryAge┃Idade
 CharacterStoryHeight┃Altura
@@ -16821,6 +16664,161 @@ CharacterPlayTip/67┃Abigail desafia o conceito de espaço e se teletransporta 
 CharacterPlayTip/68┃Alonso é um líder de ação especializado em controlar os inimigos com seus poderes magnéticos e manter a linha de frente.
 CharacterPlayTip/69┃Leni adora pregar brincadeiras em todo mundo, provocando seus inimigos e ajudando seus aliados com seus brinquedos.
 CharacterPlayTip/70┃Tsubame é uma agente de combate rigorosamente treinada. Ela esculpe marcas em seus alvos com sua kunai e os corta para causar grande dano.
+ServerError/1000┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1001┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1002┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1003┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1004┃Você precisa fazer login novamente. O jogo vai reiniciar.
+ServerError/1005┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1006┃O servidor está atualmente em manutenção.
+ServerError/1007┃Versão do Cliente Incompatível
+ServerError/1100┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1101┃Um erro ocorreu. Por favor, reinicie seu jogo.
+ServerError/1102┃Você precisa fazer login novamente. O jogo vai reiniciar.
+ServerError/1110┃Você não pode fazer login no servidor. Verifique o estado da sua conta.
+ServerError/1111┃Este apelido não está disponível.
+ServerError/1112┃Você não pode fazer login no servidor. Verifique o estado da sua conta.
+ServerError/1115┃Erro ao fazer login na Steam.
+ServerError/1116┃Esta conta é restrita.
+ServerError/1118┃Este apelido já existe.
+ServerError/1124┃0
+ServerError/1200┃Não foi possível encontrar os resultados da correspondência.
+ServerError/1201┃Informação de Jogo Inválida. (1201)
+ServerError/1202┃Informação de Replay Inválida. (1202)
+ServerError/1203┃Você já possui o Passe ER. (1203)
+ServerError/1204┃0
+ServerError/1300┃Não foi possível encontrar partida. Por favor verifique o servidor selecionado no canto superior direito.
+ServerError/1301┃Erro de conexão com a partida.
+ServerError/1302┃Um membro da equipe não atende ao critério de nível ou de personagem.
+ServerError/1303┃A partida anterior ainda não terminou.
+ServerError/1305┃0
+ServerError/1306┃0
+ServerError/2000┃Erro no pedido de compra.
+ServerError/2001┃Erro de informação da Steam.
+ServerError/2002┃Informação de produto inválido.
+ServerError/2003┃Informação do personagem não encontrada.
+ServerError/2100┃Fundos insuficientes.
+ServerError/2101┃NP insuficientes.
+ServerError/2102┃A-COIN insuficientes.
+ServerError/2120┃Informação de produto não encontrada.
+ServerError/2121┃Informação incorreta do produto.
+ServerError/2122┃Número de compras excedido.
+ServerError/2123┃Limite diário de compras excedido.
+ServerError/2124┃Limite de compra semanal excedido.
+ServerError/2125┃Limite de compra mensal excedido.
+ServerError/2126┃Os descontos para essa compra já expiraram.
+ServerError/3100┃Não foi possível encontrar as informações da missão.
+ServerError/3101┃Erro ao trocar de missão.
+ServerError/3102┃Você não pode receber a recompensa sem completar a missão.
+ServerError/4100┃Informações inválidas.
+ServerError/4101┃Expirado. Não pode resgatar a recompensa.
+ServerError/4102┃Não foi possível encontrar recompensa resgatável
+ServerError/5100┃Não é possível compartilhar um Plano Salvo importado
+ServerError/5101┃Não é possível apagar um Plano Salvo que não foi compartilhado
+ServerError/5102┃Nenhum Plano Salvo para editar
+ServerError/5103┃Plano Salvo não existe.
+ServerError/5104┃Plano Salvo não existe.
+ServerError/5105┃Não é possível importar o seu próprio Plano Salvo
+ServerError/5106┃O personagem selecionado não pode usar este Plano Salvo.
+ServerError/5107┃Não está mais disponível para compra.
+ServerError/5120┃Acesso Inválido.
+ServerError/5121┃Não há páginas vazias no momento.
+ServerError/5122┃Não está mais disponível para compra.
+ServerError/5200┃Não foi possível encontrar informações sobre o Nível de Classificação.
+ServerError/5201┃Não foi possível resgatar a recompensa de partida.
+ServerError/5202┃Não foi possível iniciar a procura de partida. A diferença entre as colocações dos membros da equipe é muito alta.
+ServerError/6100┃Informação da Skin não encontrada.
+ServerError/6101┃Personagem já possuído.
+ServerError/7100┃A lista de pedidos de amizade do jogador está cheia.
+ServerError/7101┃Você pode adicionar até 200 amigos.
+ServerError/7102┃A lista de amigos do jogador está cheia.
+ServerError/7103┃Você não pode adicionar a si mesmo como amigo!
+ServerError/7104┃Vocês já são amigos.
+ServerError/7105┃Pedido de amizade enviado.
+ServerError/7106┃Pedido Inválido
+ServerError/7107┃Você não é amigo deste jogador.
+ServerError/7108┃Não foi possível verificar o usuário
+ServerError/7109┃0
+ServerError/7200┃Cupom já resgatado.
+ServerError/7201┃Cupom inválido. Favor conferir o código.
+ServerError/7202┃Cupom expirado.
+ServerError/7203┃Cupom disponível apenas nas salas de jogo da Kakao Games.
+ServerError/7204┃Um cupom do mesmo tipo já foi resgatado.
+ServerError/7205┃Este cupom não pode ser usado nesta plataforma.
+ServerError/7206┃A quantidade limitada foi esgotada.
+ServerError/7207┃0
+ServerError/7303┃Código não encontrado.
+ServerError/7304┃Você não pode SE indicar!
+ServerError/7400┃Não foi possível obter informações do Passe ER. (7400)
+ServerError/7401┃Não foi possível obter nível do Passe ER. (7401)
+ServerError/7402┃Não foi possível obter informações da conta com Passe ER. (7402)
+ServerError/7403┃Informações sobre nível do Passe ER inválidas. (7403)
+ServerError/7404┃Você não possui o Passe ER. (7404)
+ServerError/7405┃A missão do Passe ER atual é inválida. (7405)
+ServerError/7406┃Recompensas do Passe ER não encontradas. (7406)
+ServerError/7407┃Recompensas do Nível de Temporada do Passe ER não encontradas. (7406)
+ServerError/7408┃Você atingiu o nível máximo para a temporada. (7408)
+ServerError/7409┃Informações da compra do Passe ER inválidas. (7409)
+ServerError/7410┃Nível de Temporada da conta atual não encontrado. (7410)
+ServerError/7413┃ER Plus já foi comprado para a temporada atual.(7413)
+ServerError/7414┃ER Pass Upgrade já foi comprado para temporada atual.(7414)
+ServerError/7415┃Esta Temporada já está ativa.(7415)
+ServerError/7416┃Ativação do ER Pass não existe para essa temporada.(7416)
+ServerError/7500┃Informação para temporada de passe não encontrada.(7500)
+ServerError/7501┃Informação para temporada de passe não encontrada nesta conta.(7501)
+ServerError/7502┃Não foi possível encontrar recompensa resgatável do pacote da temporada. (7502)
+ServerError/7503┃A compra do pacote da temporada só pode ser efetuada uma vez. (7503)
+ServerError/7504┃Informação de pacote de temporada Inválida. (7504)
+ServerError/7601┃0
+ServerError/7602┃DLC já resgatada.
+ServerError/9080┃Skin já possuída.
+ServerError/9081┃Não é possível utilizar este personagem.
+ServerError/9082┃Não é possível comprar esta skin.
+ServerError/9083┃Não foi possível encontrar emoticon.
+ServerError/9084┃Não é possível comprar este emoticon.
+ServerError/9085┃Não disponível atualmente.
+ServerError/9086┃Você equipou um item que você não possui.
+ServerError/9087┃Informações de Item inválidas. (9092)
+ServerError/9089┃Itens não possuídos não podem ser usados. (9093)
+ServerError/9090┃Itens não possuídos não podem ser usados. (9093)
+ServerError/9091┃0
+ServerError/9092┃Informação de Compra inválida. (9094)
+ServerError/9093┃Você não possui este item.
+ServerError/9094┃Informação sobre tipo de item inválida. (9096)
+ServerError/9095┃Tempo de pagamento pela Steam excedido. (Código: 9100)\nPor favor, cheque suas configurações na Steam e ative a sobreposição Steam enquanto estiver em jogo.
+ServerError/9096┃Erro ao processar o pagamento.(9101)
+ServerError/9100┃Erro ao processar o pagamento.(9102)
+ServerError/9101┃Erro ao processar o pagamento.(9103)
+ServerError/9102┃Erro ao processar o pagamento.(9104)
+ServerError/9103┃Erro ao processar o pagamento.(9105)
+ServerError/9104┃Erro ao processar o pagamento.(9106)
+ServerError/9105┃Erro ao processar o pagamento.(9107)
+ServerError/9106┃Erro ao conectar ao servidor.
+ServerError/9107┃Requisição Inválida. (9200)
+ServerError/9200┃Este jogador já está em uma equipe.
+ServerError/9201┃Ocorreu um erro durante a criação de equipe. (9204)
+ServerError/9203┃Ocorreu um erro enquanto se juntava à equipe. (9205)
+ServerError/9204┃Não foi possível sair da equipe.
+ServerError/9205┃Esse jogador não pode ser convidado.
+ServerError/9206┃Isso só pode ser feito pelo líder da equipe.
+ServerError/9207┃Incapaz de mudar de equipe.
+ServerError/9208┃Você não faz parte de uma equipe. (9210)
+ServerError/9209┃Incapaz de se juntar a equipe.
+ServerError/9210┃Não foi possível buscar colegas de equipe. (9212)
+ServerError/9211┃Não foi possível encontrar a equipe.
+ServerError/9212┃Incapaz de mudar modo de pareamento.
+ServerError/9213┃Não foi possível mudar o líder da equipe.
+ServerError/9214┃Incapaz de expulsar jogador. (9216)
+ServerError/9215┃Incapaz de encontrar jogador. (9217)
+ServerError/9216┃Essa equipe já está cheia.
+ServerError/9217┃Não foi possível se juntar ao pareamento. (9219)
+ServerError/9218┃Não foi possível cancelar o pareamento. (9220)
+ServerError/9219┃Não foi possível cancelar a ação. (9221)
+ServerError/9220┃A conexão foi estabelecida com uma versão incompatível.
+ServerError/9221┃Não foi possível cancelar a ação. (9221)
+ServerError/9233┃Incapaz de mudar de equipe. (9233)
+ServerError/99999┃A conexão foi estabelecida com uma versão incompatível.
+ServerError/HttpException┃Falha ao comunicar com o servidor. (9201)
 
 
 --xxxxxxxxxx--
