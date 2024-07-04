@@ -1461,6 +1461,7 @@ Item/Effects/301338┃Stellt LP über 15 Sekunden her.
 Item/Effects/301339┃Stellt LP über 15 Sekunden her.
 Item/Effects/301340┃Stellt LP über 15 Sekunden her.
 Item/Effects/301346┃Stellt LP über 15 Sekunden her.
+Item/Effects/301348┃Stellt LP über 15 Sekunden her.
 Item/Effects/301403┃Stellt LP und AP über 15 Sekunden her.
 Item/Effects/301405┃Stellt LP über 15 Sekunden her.
 Item/Effects/301406┃Stellt LP über 15 Sekunden her.
@@ -2869,7 +2870,6 @@ ToolTipType/MaxHpRegen┃Max. LP-Regeneration
 ToolTipType/MaxSkill┃Max. Fähigkeitsverstärkung
 ToolTipType/MoveSpeedUpRatio┃Lauftempo-Erhöhung (%)
 ToolTipType/MoveSpeedUpTime┃Lauftempo-Erhöhung Dauer
-ToolTipType/AttackSpeedUpRatio┃Angriffstempo-Erhöhung (%)
 ToolTipType/DotDamage┃Schaden über Zeit
 ToolTipType/JudgmentDamage┃Urteil-Schaden
 ToolTipType/MaxHpUp┃Max. LP-Erhöhung
@@ -5954,6 +5954,7 @@ ItemTag/Ex_Regen┃LP-Regeneration
 ItemTag/Ex_Sight┃Sicht
 ItemTag/Unique_Range┃Erhöhte Basisangriffsreichweite
 ItemTag/Ex_None┃-
+ItemTag/Ex_Slow┃Verlangsamung
 ItemTag/Ex_ItemSkill┃Aktive Gegenstandsfähigkeit
 ItemTag/Ex_Dummy1┃Heilungsreduzierung
 ItemTag/Ex_Dummy2┃Utility
@@ -6132,7 +6133,9 @@ CharacterState/Group/Name/1003400┃Marche & Rompre
 CharacterState/Group/Desc/1003400┃Verlangsamt
 CharacterState/Group/Name/1003510┃Flèche
 CharacterState/Group/Desc/1003510┃Gegner verlangsamt
+CharacterState/Group/Name/1003520┃Flèche
 CharacterState/Group/Desc/1003520┃Verlangsamt
+CharacterState/Group/Name/1003530┃Flèche
 Skill/Group/ExpansionTip/1003500┃<i>Kann nicht über Wände gehen.</i>
 Skill/Group/ExpansionTip/1003510┃<i>Kann nicht über Wände gehen.</i>
 Skill/Group/ExpansionTip/1003520┃<i>Kann nicht über Wände gehen.</i>
@@ -6246,6 +6249,7 @@ CharacterState/Group/Desc/1008210┃Lauftempo verringert.
 CharacterState/Group/Name/1008300┃Angriffskraft erhöht
 CharacterState/Group/Desc/1008300┃Angriffskraft erhöht.
 CharacterState/Group/Name/1008310┃Fortgeschritten - Übersteuern
+CharacterState/Group/Desc/1008310┃Angriffskraft erhöht.
 CharacterState/Group/Name/1008400┃Fertigkeitsschaden erhöht
 CharacterState/Group/Desc/1008400┃Fertigkeitsschaden erhöht.
 CharacterState/Group/Name/1008410┃Fertigkeitsschaden erhöht
@@ -6695,30 +6699,30 @@ Skill/Group/Name/1026430┃Шторм частиц
 Skill/Group/Name/1026500┃Разгон
 Skill/Group/Name/1026510┃Разгон
 Skill/Group/Desc/1026100┃Турель Барбары получает {0} силы атаки и {1} защиты.\nКогда Турель задета Лазером на свободных электронах, Магнитной бурей или Штормом частиц, скорость атаки Турели увеличивается на {2}, складываясь максимум до {3} раз.
+Skill/Group/Coef/1026100┃Турель Барбары получает <color=green>Уровень персонажа</color><color=#dda0dd>(* {0} Усил.навыков)</color> силы атаки и <color=green>Уровень персонажа</color><color=#dda0dd>(* {1} Усил.навыков)</color> защиты.\nКогда Турель задета Лазером на свободных электронах, Магнитной бурей или Штормом частиц, скорость атаки Турели увеличивается на {2}, складываясь максимум до {3} раз.
+Skill/Group/ExpansionTip/1026100┃<i>Неусиленная Турель имеет {0} Силы атаки и {1} защиты.</i>
 Skill/Group/Desc/1026200┃Барбара устанавливает Турель с {1} ОЗ в выбранном месте, нанося <color=white>{3}</color> урона задетым противникам.\nТурель остаётся на месте в течение {0} сек, нанося <color=white>{2}</color> урона противникам, по которым она стреляет.\nПри установке новой Турели старая исчезает. Если враг уничтожает Турель, то время перезарядки увеличивается на {9} сек. Если отойти слишком далеко или отозвать Турель, перезарядка снижается на {7}.
+Skill/Group/Coef/1026200┃Барбара устанавливает Турель с <color=white>{8}</color><color=green>(+Уровень персонажа * {11})</color> ОЗ в выбранном месте, нанося <color=white>{3}</color><color=#dda0dd>(+{10} Усил.навыков)</color> урона задетым противникам.\nТурель остаётся на месте в течение {0} сек, нанося <color=#ffd775>{2} Силы атаки турели</color> урона противникам, по которым она стреляет.\nПри установке новой Турели старая исчезает. Если враг уничтожает Турель, то время перезарядки увеличивается на {9} сек. Если отойти слишком далеко или отозвать Турель, перезарядка снижается на {7}.
 Skill/Group/Desc/1026210┃Барбара отзывает Турель, сокращая перезарядку на {0}.
+Skill/Group/Coef/1026210┃Барбара отзывает Турель, сокращая перезарядку на {0}.
 Skill/Group/Desc/1026220┃Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации.
 Skill/Group/Desc/1026300┃Барбара стреляет двухимпульсным Лазером на свободных электронах, нанося <color=white>{0}</color> урона от навыков каждому задетому врагу. Задетые противники замедляются на {6} на {5} сек. Попадание по врагу обоими импульсами наносит на {2} меньше урона за лазер и снижает перезарядку Разгона на {7} сек.\nТурели, задетые лазером, усиляются, также стреляя Лазером на свободных электронах и нанося <color=white>{3}</color> урона от навыков задетым противникам.
+Skill/Group/Coef/1026300┃Барбара стреляет двухимпульсным Лазером на свободных электронах, нанося <color=white>{0}</color><color=#dda0dd>(+{8} Усил.навыков)</color> урона от навыков каждому задетому врагу. Задетые противники замедляются на {6} на {5} сек. Попадание по врагу обоими импульсами наносит на {2} меньше урона за лазер и снижает перезарядку Разгона на {7} сек.\nТурели, задетые лазером, усиляются, также стреляя Лазером на свободных электронах и нанося <color=white>{3}</color><color=#ffd775>(+{1} Силы атаки турели)</color> урона от навыков задетым противникам.
 Skill/Group/Desc/1026310┃Барбара и её Турель усиляются на {0} сек. В это время Турель заряжена и автоматически стреляет Лазером на свободных электронах. Стоимость ОВ Лазера на свободных электронах равняется нулю, а перезарядка снижается до {1}. Урон Лазера на свободных электронах увеличивается до <color=white>{2}</color>, а урон Турели увеличивается до <color=white>{4}</color>.
+Skill/Group/Coef/1026310┃Барбара и её Турель усиляются на {0} сек. В это время Турель заряжена и автоматически стреляет Лазером на свободных электронах. Стоимость ОВ Лазера на свободных электронах равняется нулю, а перезарядка снижается до {1}. Урон Лазера на свободных электронах увеличивается до <color=white>{2}</color><color=#dda0dd>(+{6} Усил.навыков)</color>, а урон Турели увеличивается до <color=white>{4}</color><color=#ffd775>(+{5} Силы атаки турели)</color>.
 Skill/Group/Desc/1026400┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
+Skill/Group/Coef/1026400┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#dda0dd>(+{12} Усил.навыков)</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color><color=#dda0dd>(+{13} Усил.навыков)</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
 Skill/Group/Desc/1026410┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
+Skill/Group/Coef/1026410┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#dda0dd>(+{12} Усил.навыков)</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color><color=#dda0dd>(+{13} Усил.навыков)</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
 Skill/Group/Desc/1026420┃Магнитная буря Барбары усиливается и становится Штормом частиц. Радиус Шторма частиц увеличивается со времением. Поглощение щита усиливается на {0} и получаемый урон снижен на {6}. Повторная активация или окончание действия вызывают взрыв Шторма частиц, наносящий <color=white>{2}</color> урона от навыков задетым врагам и замедляющий их на {5} на {4} сек.
 Skill/Group/Desc/1026430┃Магнитная буря Барбары усиливается и становится Штормом частиц. Радиус Шторма частиц увеличивается со времением. Поглощение щита усиливается на {0} и получаемый урон снижен на {6}. Повторная активация или окончание действия вызывают взрыв Шторма частиц, наносящий <color=white>{2}</color> урона от навыков задетым врагам и замедляющий их на {5} на {4} сек.
 Skill/Group/Desc/1026500┃Барбара сбрасывает перезарядку всех базовых умений, предавая особые эффекты следующему использованному умению.\n\nКороткое замыкание: Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации. После использования этого навыка, перезарядка Разгона сократится на {14}.\n\nФотонный резонанс: Следующие {6} сек. урон Лазера на свободных электронах и Турели увеличен на {13}, при этом Лазер на свободных электронах не требует затрат ОВ и получает снижение перезарядки до {7} сек. Турель атакует Лазером на свободных электронах, пока активен Фотонный резонанс.\n\nШторм частиц: Радиус Магнитной бури растёт со временем, увеличивая генерируемый щит в зависимости от урона на {17} и уменьшая получаемый урон на {16}. Повторная активация или окончание действия через {8} сек. вызывает взрыв шторма, нанося <color=white>{9}</color> урона от навыков врагам в зоне действия и замедляя их на {15} на {11} сек.\n\nПовторная активация Разгона без использования усиленных умений, позволяет Барбаре снова его использовать через {12} сек.
+Skill/Group/Coef/1026500┃Барбара сбрасывает перезарядку всех базовых умений, предавая особые эффекты следующему использованному умению.\n\n\n\nКороткое замыкание: Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color><color=#dda0dd>(+{16} Усил.навыков)</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color><color=#dda0dd>(+{17} Усил.навыков)</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации. После использования этого навыка, перезарядка Разгона сократится на {14}.\n\n\n\nФотонный резонанс: Следующие {6} сек. урон Лазера на свободных электронах и Турели увеличен на {13}, при этом Лазер на свободных электронах не требует затрат ОВ и получает снижение перезарядки до {7} сек. Турель атакует Лазером на свободных электронах, пока активен Фотонный резонанс.\n\n\n\nШторм частиц: Радиус Магнитной бури растёт со временем, увеличивая генерируемый щит в зависимости от урона на {20} и уменьшая получаемый урон на {19}. Повторная активация или окончание действия через {8} сек. вызывает взрыв шторма, нанося <color=white>{9}</color><color=#dda0dd>(+{19} Усил.навыков)</color> урона от навыков врагам в зоне действия и замедляя их на {15} на {11} сек.\n\nПовторная активация Разгона без использования усиленных умений, позволяет Барбаре снова его использовать через {12} сек.
 Skill/Group/Desc/1026510┃Барбара сбрасывает перезарядку всех базовых умений, предавая особые эффекты следующему использованному умению.\n\nКороткое замыкание: Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации. После использования этого навыка, перезарядка Разгона сократится на {14}.\n\nФотонный резонанс: Следующие {6} сек. урон Лазера на свободных электронах и Турели увеличен на {13}, при этом Лазер на свободных электронах не требует затрат ОВ и получает снижение перезарядки до {7} сек. Турель атакует Лазером на свободных электронах, пока активен Фотонный резонанс.\n\nШторм частиц: Радиус Магнитной бури растёт со временем, увеличивая генерируемый щит в зависимости от урона на {17} и уменьшая получаемый урон на {16}. Повторная активация или окончание действия через {8} сек. вызывает взрыв шторма, нанося <color=white>{9}</color> урона от навыков врагам в зоне действия и замедляя их на {15} на {11} сек.\n\nПовторная активация Разгона без использования усиленных умений, позволяет Барбаре снова его использовать через {12} сек.
-Skill/Group/Coef/1026100┃Турель Барбары получает <color=green>Уровень персонажа</color><color=#dda0dd>(* {0} Усил.навыков)</color> силы атаки и <color=green>Уровень персонажа</color><color=#dda0dd>(* {1} Усил.навыков)</color> защиты.\nКогда Турель задета Лазером на свободных электронах, Магнитной бурей или Штормом частиц, скорость атаки Турели увеличивается на {2}, складываясь максимум до {3} раз.
-Skill/Group/Coef/1026200┃Барбара устанавливает Турель с <color=white>{8}</color><color=green>(+Уровень персонажа * {11})</color> ОЗ в выбранном месте, нанося <color=white>{3}</color><color=#dda0dd>(+{10} Усил.навыков)</color> урона задетым противникам.\nТурель остаётся на месте в течение {0} сек, нанося <color=#ffd775>{2} Силы атаки турели</color> урона противникам, по которым она стреляет.\nПри установке новой Турели старая исчезает. Если враг уничтожает Турель, то время перезарядки увеличивается на {9} сек. Если отойти слишком далеко или отозвать Турель, перезарядка снижается на {7}.
-Skill/Group/Coef/1026210┃Барбара отзывает Турель, сокращая перезарядку на {0}.
+Skill/Group/Coef/1026510┃Barbara übertaktet und ihre Fähigkeiten erhalten dadurch Bonuseffekte.\n\nKurzschluss: Barbara errichtet ihren Geschützturm und teleportiert sich zu ihm. Ein bereis errichteter Turm zerstört sich selbst und richtet damit <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{17} Fähigkeitsverstärkung)</color> Schaden an. Barbara teleport sich, richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{16} Fähigkeitsverstärkung)</color> an Gegnern um sie herum an und erhöht das Angriffstempo ihres Geschützturms für {4} Sekunden um {5} pro getroffenen Gegner. Nachdem sie die Fertigkeit benutzt, reduziert sich die Abklingzeit von Übertakten um {14}.\n\nPhotonenresonanz: Während den nächsten {6} Sekunden erhöhen sich der Schaden von Frei-Elektronen Laser und Geschützturm um {13} und Frei-Elektronen Laser kostet keine AP mehr und hat eine auf {7} Sekunden reduzierte Abklingzeit. Angriffe des Geschützturms werden zu Frei-Elektronen Lasern während Photonenresonanz aktiv ist.\n\nPartikelsturm: Der Radius von Magnetischer Zyklon wird über zeit größer. Nach Reaktivierung der Fertigkeit oder nach {8} Sekunden explodiert der Sturm und richtet <color=white>{9}</color><color=#ffd775>(+{10} Angriffskraft)</color><color=#DDA0DD>(+{18} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und verlangsamt diese für {11} Sekunden um {15}.\n\nDas Reaktivieren von Übertakten, bevor eine verstärkte Fertigkeit benutzt wurde, bricht die Fertigkeit ab und lässt Barbara sie nach {12} wieder einsetzen.
 Skill/Group/Coef/1026220┃Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color><color=#dda0dd>(+{6} Усил.навыков)</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color><color=#dda0dd>(+{7} Усил.навыков)</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации.
-Skill/Group/Coef/1026300┃Барбара стреляет двухимпульсным Лазером на свободных электронах, нанося <color=white>{0}</color><color=#dda0dd>(+{8} Усил.навыков)</color> урона от навыков каждому задетому врагу. Задетые противники замедляются на {6} на {5} сек. Попадание по врагу обоими импульсами наносит на {2} меньше урона за лазер и снижает перезарядку Разгона на {7} сек.\nТурели, задетые лазером, усиляются, также стреляя Лазером на свободных электронах и нанося <color=white>{3}</color><color=#ffd775>(+{1} Силы атаки турели)</color> урона от навыков задетым противникам.
-Skill/Group/Coef/1026310┃Барбара и её Турель усиляются на {0} сек. В это время Турель заряжена и автоматически стреляет Лазером на свободных электронах. Стоимость ОВ Лазера на свободных электронах равняется нулю, а перезарядка снижается до {1}. Урон Лазера на свободных электронах увеличивается до <color=white>{2}</color><color=#dda0dd>(+{6} Усил.навыков)</color>, а урон Турели увеличивается до <color=white>{4}</color><color=#ffd775>(+{5} Силы атаки турели)</color>.
-Skill/Group/Coef/1026400┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#dda0dd>(+{12} Усил.навыков)</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color><color=#dda0dd>(+{13} Усил.навыков)</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
-Skill/Group/Coef/1026410┃Барбара вместе с Турелью создает Магнитную бурю на {3} сек, которая наносит <color=white>{0}</color><color=#dda0dd>(+{12} Усил.навыков)</color><color=#688A08>(+{6} от макс.ОЗ врага)</color> урона от навыков каждые {11} сек. врагам в зоне действия и увеличивает скорость передвижения Барбары на {7}.\nПовторная активация способности или окончание действия вызывают взрыв Магнитной бури, который наносит <color=white>{4}</color><color=#dda0dd>(+{13} Усил.навыков)</color> урона от навыков задетым противникам и даёт Барбаре щит равный {2} от нанесённого урона, вплоть до {8} ОЗ.\nВраги, задетые обоими бурями при взрыве, замедляются на {10} на {9} сек.
 Skill/Group/Coef/1026420┃Магнитная буря Барбары усиливается и становится Штормом частиц. Радиус Шторма частиц увеличивается со времением. Поглощение щита усиливается на {0} и получаемый урон снижен на {8}. Повторная активация или окончание действия вызывают взрыв Шторма частиц, наносящий <color=white>{2}</color><color=#dda0dd>(+{7} Усил.навыков)</color> урона от навыков задетым врагам и замедляющий их на {5} на {4} сек.
 Skill/Group/Coef/1026430┃Магнитная буря Барбары усиливается и становится Штормом частиц. Радиус Шторма частиц увеличивается со времением. Поглощение щита усиливается на {0} и получаемый урон снижен на {8}. Повторная активация или окончание действия вызывают взрыв Шторма частиц, наносящий <color=white>{2}</color><color=#dda0dd>(+{7} Усил.навыков)</color> урона от навыков задетым врагам и замедляющий их на {5} на {4} сек.
-Skill/Group/Coef/1026500┃Барбара сбрасывает перезарядку всех базовых умений, предавая особые эффекты следующему использованному умению.\n\n\n\nКороткое замыкание: Барбара устанавливает Турель и телепортируется к её местоположению, нанося <color=white>{2}</color><color=#dda0dd>(+{16} Усил.навыков)</color> урона от навыков врагам в радиусе. Уже установленная Турель мгновенно взорвётся, нанося <color=white>{0}</color><color=#dda0dd>(+{17} Усил.навыков)</color> урона от навыков.\nСкорость атаки Турели увеличивается на {5} на {4} сек. в зависимости от числа врагов, задетых уроном от телепортации. После использования этого навыка, перезарядка Разгона сократится на {14}.\n\n\n\nФотонный резонанс: Следующие {6} сек. урон Лазера на свободных электронах и Турели увеличен на {13}, при этом Лазер на свободных электронах не требует затрат ОВ и получает снижение перезарядки до {7} сек. Турель атакует Лазером на свободных электронах, пока активен Фотонный резонанс.\n\n\n\nШторм частиц: Радиус Магнитной бури растёт со временем, увеличивая генерируемый щит в зависимости от урона на {20} и уменьшая получаемый урон на {19}. Повторная активация или окончание действия через {8} сек. вызывает взрыв шторма, нанося <color=white>{9}</color><color=#dda0dd>(+{19} Усил.навыков)</color> урона от навыков врагам в зоне действия и замедляя их на {15} на {11} сек.\n\nПовторная активация Разгона без использования усиленных умений, позволяет Барбаре снова его использовать через {12} сек.
-Skill/Group/Coef/1026510┃Barbara übertaktet und ihre Fähigkeiten erhalten dadurch Bonuseffekte.\n\nKurzschluss: Barbara errichtet ihren Geschützturm und teleportiert sich zu ihm. Ein bereis errichteter Turm zerstört sich selbst und richtet damit <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{17} Fähigkeitsverstärkung)</color> Schaden an. Barbara teleport sich, richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{16} Fähigkeitsverstärkung)</color> an Gegnern um sie herum an und erhöht das Angriffstempo ihres Geschützturms für {4} Sekunden um {5} pro getroffenen Gegner. Nachdem sie die Fertigkeit benutzt, reduziert sich die Abklingzeit von Übertakten um {14}.\n\nPhotonenresonanz: Während den nächsten {6} Sekunden erhöhen sich der Schaden von Frei-Elektronen Laser und Geschützturm um {13} und Frei-Elektronen Laser kostet keine AP mehr und hat eine auf {7} Sekunden reduzierte Abklingzeit. Angriffe des Geschützturms werden zu Frei-Elektronen Lasern während Photonenresonanz aktiv ist.\n\nPartikelsturm: Der Radius von Magnetischer Zyklon wird über zeit größer. Nach Reaktivierung der Fertigkeit oder nach {8} Sekunden explodiert der Sturm und richtet <color=white>{9}</color><color=#ffd775>(+{10} Angriffskraft)</color><color=#DDA0DD>(+{18} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und verlangsamt diese für {11} Sekunden um {15}.\n\nDas Reaktivieren von Übertakten, bevor eine verstärkte Fertigkeit benutzt wurde, bricht die Fertigkeit ab und lässt Barbara sie nach {12} wieder einsetzen.
-Skill/Group/ExpansionTip/1026100┃<i>Неусиленная Турель имеет {0} Силы атаки и {1} защиты.</i>
 CharacterState/Group/Name/1026110┃Модернизация
 CharacterState/Group/Desc/1026110┃Сила атаки и броня Турели увеличены.
 CharacterState/Group/Name/1026120┃Гениальный инженер
@@ -8348,6 +8352,9 @@ Item/Skills/6015003/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekund
 Item/Skills/6015004/Name┃<color=yellow>Windschnittig: Inkarnation von Rudra</color>
 Item/Skills/6015004/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015004/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015005/Name┃<color=yellow>Windschnittig: Ladungsträger</color>
+Item/Skills/6015005/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um {5}% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015005/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um <color=green>Charakterstufe * 1</color>% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015007/Name┃<color=yellow>Windschnittig</color>
 Item/Skills/6015008/Name┃<color=yellow>Windschnittig</color>
 CharacterState/Group/Name/6015010┃Windschnittig
@@ -8361,9 +8368,6 @@ Item/Skills/6016001/Desc┃Wenn du durch Schaden eines gegnerischen Spielers unt
 Item/Skills/6016002/Name┃<color=yellow>Letzte Chance: Notfallknopf</color>
 Item/Skills/6016002/Body┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, wirst du von allen Debuffs und Massenkontrolleffekten befreit, erhältst einen <color=green>{11}</color> LP Schild für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
 Item/Skills/6016002/Desc┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, wirst du von allen Debuffs und Massenkontrolleffekten befreit, erhältst einen {2} + <color=green>Charakerstufe*{3}</color> LP Schild für {1} Sekunden, {6} Angriffskraft für {5} Sekunden und LP Regeneration auf dir ist {9}% effektiver für {5} Sekunden. (Abklingzeit: 80s)
-Item/Skills/6016003/Name┃<color=yellow>Letzte Chance: Kreuzzug</color>
-Item/Skills/6016003/Body┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, erhältst du einen <color=green>{11}</color> LP Schild für {1} Sekunden und deine Angriffskraft wird für {5} Sekunden um {14} erhöht. (Abklingzeit: {13}s)
-Item/Skills/6016003/Desc┃Wenn du durch Schaden eines gegnerischen Spielers unter {0}% LP fällst, erhältst du einen {2} + <color=green>Charakerstufe*{3}</color> LP Schild für {1} Sekunden und deine Angriffskraft wird für {5} Sekunden um {12} erhöht. (Abklingzeit: {11}s)
 Item/Skills/6016004/Name┃<color=yellow>Letzte Chance: Schneller Block</color>
 Item/Skills/6016004/Body┃Wenn du Schaden durch einen gegnerischen Spieler nimmst, erhältst du einen <color=green>{11}</color> LP Schild für {1} Sekunden. (Abklingzeit: {13}s)
 Item/Skills/6016004/Desc┃Wenn du Schaden durch einen gegnerischen Spieler nimmst, erhältst du einen {2} + <color=green>Charakterstufe * {3}</color> LP Schild für {1} Sekunden. (Abklingzeit: {11}s)
@@ -9188,15 +9192,15 @@ ER패스 미해금 미션┃{0} bis zur Freischaltung
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃Eisen
-BRONZE_SUBJECT┃Bronze
-SILVER_SUBJECT┃Silber
-GOLD_SUBJECT┃Gold
-PLATINUM_SUBJECT┃Platin
-DIAMOND_SUBJECT┃Diamant
+IRON┃Eisen
+BRONZE┃Bronze
+SILVER┃Silber
+GOLD┃Gold
+PLATINUM┃Platin
+DIAMOND┃Diamant
 MITHRIL┃Mythril
 DEMIGOD┃Titan
-THE_ETERNITY┃Unsterblich
+ETERNITY┃Unsterblich
 UNRANK┃Nicht kalibriert
 일반┃Normal
 NORMAL┃Normal
@@ -9279,24 +9283,24 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃Verdoppelung der Einstiegskosten für
 배치고사 중┃Kalibierungsphase
 강등┃Abstieg
 승급!┃Aufstieg
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/GOLD_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#C6C6C6>Momentane Stufe</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/BRONZE┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/SILVER┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/GOLD┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/PLATINUM┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/DIAMOND┃<color=#C6C6C6>Momentane Stufe</color>
 MyTierRP/MITHRIL┃<color=#C6C6C6>Momentane Stufe</color>
 MyTierRP/DEMIGOD┃<color=#C6C6C6>Momentane Stufe</color>
-MyTierRP/THE_ETERNITY┃<color=#C6C6C6>Momentane Stufe</color>
+MyTierRP/ETERNITY┃<color=#C6C6C6>Momentane Stufe</color>
 RankRP_explanation┃Punkte die basierend auf der erreichten Platzierung vergeben werden.
 Elimination_explanation┃Punkte die basierend auf dem Töten von Gegnern vergeben werden, die am Boden liegen und sich nicht automatisch wiederbeleben können.
 Down_explanation┃Punkte die basierend auf dem Töten von Gegnern vergeben werden.
@@ -14322,162 +14326,6 @@ InGameGuide/Nadja/Group/Desc/10123000┃Wie ich sehe, bist du der Gewinner der K
 오퍼레이터 기존유저 보상 내용┃Ich bin sicher, du wusstest schon alles, aber du hast trotzdem zugehört.\nWolltest du nett sein oder warst du einfach nur sehr geduldig?\nWie auch immer, danke dafür. Es hat mir sehr viel Spaß gemacht.\nIch bin mir nicht sicher, ob ich das als Geschenk oder als Belohnung bezeichnen soll, aber hier... genieße es!
 신규유저 오퍼레이터 비활성화 안내 내용┃Ich denke, du hast dich inzwischen an das Experiment gewöhnt.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen. \nIch freue mich auf ein Wiedersehen mit dir!
 기존유저 오퍼레이터 비활성화 안내 내용┃Du brauchst mich nicht mehr, um auf dich aufzupassen.\nIch brauche dich also nicht mehr ständig zu beaufsichtigen.\nArbeite weiter so hart. Du machst das gut!
-ServerError/1000┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1001┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1002┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1003┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1004┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
-ServerError/1005┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1006┃Der Server ist momentan in Wartung.
-ServerError/1007┃Falsche Client Version
-ServerError/1100┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1101┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/1102┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
-ServerError/1110┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
-ServerError/1111┃Der Name ist bereits vergeben.
-ServerError/1112┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
-ServerError/1115┃Fehler mit der Verbindung zu Steam.
-ServerError/1116┃Dieses Konto ist eingeschränkt.
-ServerError/1118┃Nickname existiert bereits.
-ServerError/1124┃Du kannst keinen neuen MS Account erstellen.
-ServerError/1200┃Kann nicht entsprechenes Ergebnis finden.
-ServerError/1201┃Fehlerhafte Spielinformation. (1201)
-ServerError/1202┃Fehlerhafte Wiederholungsinformation. (1202)
-ServerError/1203┃Du besitzt den ER-Pass bereits. (1203)
-ServerError/1204┃Du hast keinen Zugriff auf diese Wiederholung.(1204)
-ServerError/1300┃Match kann nicht gefunden werden. Bitte prüfe deinen ausgewählten Server.
-ServerError/1301┃Fehler bei übereinstimmender Anfrage.
-ServerError/1302┃Ein Spieler erfüllt die Stufen- oder Charakteranforderungen nicht.
-ServerError/1303┃Das letzte Spiel wurde noch nicht beendet.
-ServerError/1305┃Ein Mitspieler hat noch nicht den Mindestlevel erreicht.
-ServerError/1306┃Spielsuche gerade nicht verfügbar. (1306)
-ServerError/2000┃Fehler bei dem Kauf.
-ServerError/2001┃Steam-Informationsfehler.
-ServerError/2002┃Ungültige Produkt Informationen
-ServerError/2003┃Held Information nicht gefunden.
-ServerError/2100┃Nicht ausreichend Währung.
-ServerError/2101┃Nicht ausreichend NP
-ServerError/2102┃Nicht ausreichend A-COIN.
-ServerError/2120┃Produktinformationen nicht gefunden.
-ServerError/2121┃Produktinformationen nicht richtig.
-ServerError/2122┃Anzahl der Käufe überschritten.
-ServerError/2123┃Tägliches Kauflimit überschritten.
-ServerError/2124┃Wöchentliche Kauflimit überschritten.
-ServerError/2125┃Monatliches Kauflimit überschritten.
-ServerError/2126┃Rabatte für diesen Kauf sind bereits ausgelaufen.
-ServerError/3100┃Missions Information kann nicht gefunden werde.
-ServerError/3101┃Missions wechsel Error.
-ServerError/3102┃Du kannst die Belohnung nicht erhalten solang die Mission nicht beendet wurde.
-ServerError/4100┃Ungültige Informationen.
-ServerError/4101┃Abgelaufen. Belohnung kann nicht eingelöst werden.
-ServerError/4102┃Es konnte keine einlösbare Belohnung gefunden werden.
-ServerError/5100┃Ein importierter Plan kann nicht geteilt werden.
-ServerError/5101┃Ein Plan, der noch nicht freigegeben wurde, kann nicht gelöscht werden.
-ServerError/5102┃Kein Plan zum verändern.
-ServerError/5103┃Plan existiert nicht.
-ServerError/5104┃Plan existiert nicht.
-ServerError/5105┃Du kannst nicht deine eigenen Pläne importieren.
-ServerError/5106┃Der gewählte Charakter kann nicht diesen Plan benutzen.
-ServerError/5107┃Kann nicht mehr gekauft werden.
-ServerError/5120┃Fehlerhafter Zugriff.
-ServerError/5121┃Es sind keine leeren Seiten vorhanden.
-ServerError/5122┃Kann nicht mehr gekauft werden.
-ServerError/5200┃Kann nicht die Ranginformationen finden.
-ServerError/5201┃Kann nicht die Rundenbelohnungen finden.
-ServerError/5202┃Kann Spielersuche nicht starten, weil zu große Rangunterschiede zwischen den Spielern ist.
-ServerError/5203┃Diamant oder höher eingestufte Spieler können nicht mehr als Team der Spielsuche beitreten
-ServerError/6100┃Skin Information nicht gefunden.
-ServerError/6101┃Held bereits erworben.
-ServerError/7100┃Freundschaftsanfragen sind Voll
-ServerError/7101┃bis zu 200 Freunde kann man hinzufügen.
-ServerError/7102┃Freundesliste ist voll.
-ServerError/7103┃Du kannst dich selber nicht als Freund einfügen.
-ServerError/7104┃Ihr seit schon befreundet
-ServerError/7105┃Freundschaftsanfrage ist schon gesendet.
-ServerError/7106┃Ungültige Anfrage
-ServerError/7107┃Keine Freunde mit diesem Spieler.
-ServerError/7108┃Benutzer kann nicht Verifiziert werden.
-ServerError/7109┃Tägliches Einladelimit erreicht
-ServerError/7200┃Coupon ist schon benutzt worden.
-ServerError/7201┃Ungültiger Coupon. Bitte prüfe den Code.
-ServerError/7202┃Coupon ist Abgelaufen.
-ServerError/7203┃Der Coupon ist nur in den PC-Räumen von Kakao Games erhältlich.
-ServerError/7204┃Dieser Coupon wurde bereits Verwendet
-ServerError/7205┃Dieser Coupon kann auf dieser Plattform nicht verwendet werden.
-ServerError/7206┃Die begrenzten Coupons wurden bereits eingelöst.
-ServerError/7207┃Dieser Coupon kann noch nicht verwendet werden. Bitte überprüfe die Gültigkeitsdauer des Gutscheins.
-ServerError/7303┃Code wurde nicht gefunden!
-ServerError/7304┃Du kannst dich selber nicht empfehlen!
-ServerError/7400┃Kann ER-Pass Informationen nicht ermitteln. (7400)
-ServerError/7401┃Kann ER-Pass Level nicht ermitteln. (7401)
-ServerError/7402┃Kann ER-Pass Account Informationen nicht ermitteln. (7402)
-ServerError/7403┃Ungültige ER-Pass Level Information
-ServerError/7404┃Du besitzt den ER-Pass gerade nicht. (7404)
-ServerError/7405┃Die aktuelle ER-Pass Missionsinformation ist ungültig. (7405)
-ServerError/7406┃ER-Pass Belohnungen nicht gefunden. (7405)
-ServerError/7407┃ER-Pass Saisonlevel Belohnungen nicht gefunden. (7407)
-ServerError/7408┃Du hast den maximalen Level für diese Saison erreicht. (7408)
-ServerError/7409┃Ungültige ER-Pass Kaufinformation. (7409)
-ServerError/7410┃Aktueller Account-Saisonlevel nicht gefunden. (7410)
-ServerError/7413┃ER Plus wurde bereits für diese Saison gekauft. (7413)
-ServerError/7414┃ER Pass Upgrade wurde bereits für diese Saison gekauft.(7414)
-ServerError/7415┃Saison bereits aktiviert.(7415)
-ServerError/7416┃ER Pass Aktivierung existiert nicht für diese Saison.(7416)
-ServerError/7500┃Information zum Saisonpaket kann nicht gefunden werden. (7500)
-ServerError/7501┃Information zum Saisonpaket kann auf diesesm Konto nicht gefunden werden. (7500)
-ServerError/7502┃Einlösbare Saisonpaketbelohnungen können nicht gefunden werden. (7502)
-ServerError/7503┃Saisonpaket kann nur einmal gekauft werden. (7503)
-ServerError/7504┃Ungültige Saisonpaketsinformation.(7504)
-ServerError/7601┃Gegenstände können nicht gefunden werden.
-ServerError/7602┃DLC bereits eingelöst.
-ServerError/9080┃Skin bereits erworben.
-ServerError/9081┃Dieser Held kann nicht verwendet werden.
-ServerError/9082┃Dieser Skin kann nicht gekauft werden.
-ServerError/9083┃Emote konnte nicht gefunden werden
-ServerError/9084┃Dieses Emoticon kann nicht gekauft werden
-ServerError/9085┃Aktuell nicht verfügbar.
-ServerError/9086┃Sie haben einen Gegenstand ausgerüstet, den Sie nicht besitzen.
-ServerError/9087┃Ungültige Gegenstandsinformation. (9092)
-ServerError/9089┃Noch nicht bereits erworbene Gegenstände können nicht benutzt werden. (9093)
-ServerError/9090┃Noch nicht bereits erworbene Gegenstände können nicht benutzt werden. (9093)
-ServerError/9091┃0
-ServerError/9092┃Ungültige Kaufinformation. (9094)
-ServerError/9093┃Du besitzt diesen Gegenstand nicht.
-ServerError/9094┃Gegenstandstyp-Information ungültig. (9096)
-ServerError/9095┃Steam-Zahlungszeit überschritten. (CODE 9100)\nBitte überprüfe deine Steam-Einstellungen und ob "Steam Overlay im Spiel aktivieren" aktiv ist.
-ServerError/9096┃Fehler bei der Zahlung. (9101)
-ServerError/9100┃Fehler bei der Zahlung. (9102)
-ServerError/9101┃Fehler bei der Zahlung. (9103)
-ServerError/9102┃Fehler bei der Zahlung. (9104)
-ServerError/9103┃Fehler bei der Zahlung. (9105)
-ServerError/9104┃Fehler bei der Zahlung. (9106)
-ServerError/9105┃Fehler bei der Zahlung. (9107)
-ServerError/9106┃Fehler bei der Verbindung zum Server.
-ServerError/9107┃Ungültige Anfrage. (9200)
-ServerError/9200┃Dieser Spieler ist bereits in einem Team
-ServerError/9201┃Ein Error ist beim Teamerstellen aufgetreten. (9204)
-ServerError/9203┃Ein Error ist beim Teambeitreten aufgetreten. (9205)
-ServerError/9204┃Kann das Team nicht verlassen.
-ServerError/9205┃Spieler kann nicht eingeladen werden.
-ServerError/9206┃Das kann nur vom Teamleiter ausgeführt werden.
-ServerError/9207┃Kann Teams nicht wechseln.
-ServerError/9208┃Du bist nicht Teil eines Teams. (9210)
-ServerError/9209┃Kann Team nicht beitreten.
-ServerError/9210┃Kann Mitspielersuche nicht starten. (9212)
-ServerError/9211┃Kann Team nicht finden.
-ServerError/9212┃Kann Modus der Spielsuche nicht ändern
-ServerError/9213┃Kann Teamleiter nicht wechseln.
-ServerError/9214┃Kann Spieler nicht aus der Gruppe entfernen. (9216)
-ServerError/9215┃Kann Spieler nicht finden. (9217)
-ServerError/9216┃Dieses Team ist bereits voll.
-ServerError/9217┃Kann Spielsuche nicht beitreten. (9219)
-ServerError/9218┃Kann Spielsuche nicht abbrechen. (9220)
-ServerError/9219┃Kann Aktion nicht abbrechen. (9221)
-ServerError/9220┃Es wurde sich mit einer inkompatiblen Version verbunden.
-ServerError/9221┃Kann Aktion nicht abbrechen. (9221)
-ServerError/9233┃Kann Teams nicht wechseln. (9233)
-ServerError/99999┃Es wurde sich mit einer inkompatiblen Version verbunden.
-ServerError/HttpException┃Keine Antwort vom Server. (9201)
 CharacterStoryName┃Name
 CharacterStoryAge┃Alter
 CharacterStoryHeight┃Größe
@@ -14972,6 +14820,162 @@ CharacterPlayTip/67┃Abigail setzt sich über das Konzept des Raums hinweg und 
 CharacterPlayTip/68┃Alonso ist immer als erster im Gefecht. Er ist darauf spezialisiert, Feinde mit seinen magnetischen Kräften zu kontrollieren und die Frontlinien zu halten.
 CharacterPlayTip/69┃Leni liebt es, Streiche zu spielen, ihre Feinde zu verspotten und ihren Verbündeten mit ihrem Spielzeug zu helfen.
 CharacterPlayTip/70┃Tsubame ist eine rigoros ausgebildete Kampfagentin. Sie ritzt mit ihrem Kunai Markierungen in ihre Ziele und zerschneidet sie, um großen Schaden anzurichten.
+ServerError/1000┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1001┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1002┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1003┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1004┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
+ServerError/1005┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1006┃Der Server ist momentan in Wartung.
+ServerError/1007┃Falsche Client Version
+ServerError/1100┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1101┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/1102┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
+ServerError/1110┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
+ServerError/1111┃Der Name ist bereits vergeben.
+ServerError/1112┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
+ServerError/1115┃Fehler mit der Verbindung zu Steam.
+ServerError/1116┃Dieses Konto ist eingeschränkt.
+ServerError/1118┃Nickname existiert bereits.
+ServerError/1124┃Du kannst keinen neuen MS Account erstellen.
+ServerError/1200┃Kann nicht entsprechenes Ergebnis finden.
+ServerError/1201┃Fehlerhafte Spielinformation. (1201)
+ServerError/1202┃Fehlerhafte Wiederholungsinformation. (1202)
+ServerError/1203┃Du besitzt den ER-Pass bereits. (1203)
+ServerError/1204┃Du hast keinen Zugriff auf diese Wiederholung.(1204)
+ServerError/1300┃Match kann nicht gefunden werden. Bitte prüfe deinen ausgewählten Server.
+ServerError/1301┃Fehler bei übereinstimmender Anfrage.
+ServerError/1302┃Ein Spieler erfüllt die Stufen- oder Charakteranforderungen nicht.
+ServerError/1303┃Das letzte Spiel wurde noch nicht beendet.
+ServerError/1305┃Ein Mitspieler hat noch nicht den Mindestlevel erreicht.
+ServerError/1306┃Spielsuche gerade nicht verfügbar. (1306)
+ServerError/2000┃Fehler bei dem Kauf.
+ServerError/2001┃Steam-Informationsfehler.
+ServerError/2002┃Ungültige Produkt Informationen
+ServerError/2003┃Held Information nicht gefunden.
+ServerError/2100┃Nicht ausreichend Währung.
+ServerError/2101┃Nicht ausreichend NP
+ServerError/2102┃Nicht ausreichend A-COIN.
+ServerError/2120┃Produktinformationen nicht gefunden.
+ServerError/2121┃Produktinformationen nicht richtig.
+ServerError/2122┃Anzahl der Käufe überschritten.
+ServerError/2123┃Tägliches Kauflimit überschritten.
+ServerError/2124┃Wöchentliche Kauflimit überschritten.
+ServerError/2125┃Monatliches Kauflimit überschritten.
+ServerError/2126┃Rabatte für diesen Kauf sind bereits ausgelaufen.
+ServerError/3100┃Missions Information kann nicht gefunden werde.
+ServerError/3101┃Missions wechsel Error.
+ServerError/3102┃Du kannst die Belohnung nicht erhalten solang die Mission nicht beendet wurde.
+ServerError/4100┃Ungültige Informationen.
+ServerError/4101┃Abgelaufen. Belohnung kann nicht eingelöst werden.
+ServerError/4102┃Es konnte keine einlösbare Belohnung gefunden werden.
+ServerError/5100┃Ein importierter Plan kann nicht geteilt werden.
+ServerError/5101┃Ein Plan, der noch nicht freigegeben wurde, kann nicht gelöscht werden.
+ServerError/5102┃Kein Plan zum verändern.
+ServerError/5103┃Plan existiert nicht.
+ServerError/5104┃Plan existiert nicht.
+ServerError/5105┃Du kannst nicht deine eigenen Pläne importieren.
+ServerError/5106┃Der gewählte Charakter kann nicht diesen Plan benutzen.
+ServerError/5107┃Kann nicht mehr gekauft werden.
+ServerError/5120┃Fehlerhafter Zugriff.
+ServerError/5121┃Es sind keine leeren Seiten vorhanden.
+ServerError/5122┃Kann nicht mehr gekauft werden.
+ServerError/5200┃Kann nicht die Ranginformationen finden.
+ServerError/5201┃Kann nicht die Rundenbelohnungen finden.
+ServerError/5202┃Kann Spielersuche nicht starten, weil zu große Rangunterschiede zwischen den Spielern ist.
+ServerError/5203┃Diamant oder höher eingestufte Spieler können nicht mehr als Team der Spielsuche beitreten
+ServerError/6100┃Skin Information nicht gefunden.
+ServerError/6101┃Held bereits erworben.
+ServerError/7100┃Freundschaftsanfragen sind Voll
+ServerError/7101┃bis zu 200 Freunde kann man hinzufügen.
+ServerError/7102┃Freundesliste ist voll.
+ServerError/7103┃Du kannst dich selber nicht als Freund einfügen.
+ServerError/7104┃Ihr seit schon befreundet
+ServerError/7105┃Freundschaftsanfrage ist schon gesendet.
+ServerError/7106┃Ungültige Anfrage
+ServerError/7107┃Keine Freunde mit diesem Spieler.
+ServerError/7108┃Benutzer kann nicht Verifiziert werden.
+ServerError/7109┃Tägliches Einladelimit erreicht
+ServerError/7200┃Coupon ist schon benutzt worden.
+ServerError/7201┃Ungültiger Coupon. Bitte prüfe den Code.
+ServerError/7202┃Coupon ist Abgelaufen.
+ServerError/7203┃Der Coupon ist nur in den PC-Räumen von Kakao Games erhältlich.
+ServerError/7204┃Dieser Coupon wurde bereits Verwendet
+ServerError/7205┃Dieser Coupon kann auf dieser Plattform nicht verwendet werden.
+ServerError/7206┃Die begrenzten Coupons wurden bereits eingelöst.
+ServerError/7207┃Dieser Coupon kann noch nicht verwendet werden. Bitte überprüfe die Gültigkeitsdauer des Gutscheins.
+ServerError/7303┃Code wurde nicht gefunden!
+ServerError/7304┃Du kannst dich selber nicht empfehlen!
+ServerError/7400┃Kann ER-Pass Informationen nicht ermitteln. (7400)
+ServerError/7401┃Kann ER-Pass Level nicht ermitteln. (7401)
+ServerError/7402┃Kann ER-Pass Account Informationen nicht ermitteln. (7402)
+ServerError/7403┃Ungültige ER-Pass Level Information
+ServerError/7404┃Du besitzt den ER-Pass gerade nicht. (7404)
+ServerError/7405┃Die aktuelle ER-Pass Missionsinformation ist ungültig. (7405)
+ServerError/7406┃ER-Pass Belohnungen nicht gefunden. (7405)
+ServerError/7407┃ER-Pass Saisonlevel Belohnungen nicht gefunden. (7407)
+ServerError/7408┃Du hast den maximalen Level für diese Saison erreicht. (7408)
+ServerError/7409┃Ungültige ER-Pass Kaufinformation. (7409)
+ServerError/7410┃Aktueller Account-Saisonlevel nicht gefunden. (7410)
+ServerError/7413┃ER Plus wurde bereits für diese Saison gekauft. (7413)
+ServerError/7414┃ER Pass Upgrade wurde bereits für diese Saison gekauft.(7414)
+ServerError/7415┃Saison bereits aktiviert.(7415)
+ServerError/7416┃ER Pass Aktivierung existiert nicht für diese Saison.(7416)
+ServerError/7500┃Information zum Saisonpaket kann nicht gefunden werden. (7500)
+ServerError/7501┃Information zum Saisonpaket kann auf diesesm Konto nicht gefunden werden. (7500)
+ServerError/7502┃Einlösbare Saisonpaketbelohnungen können nicht gefunden werden. (7502)
+ServerError/7503┃Saisonpaket kann nur einmal gekauft werden. (7503)
+ServerError/7504┃Ungültige Saisonpaketsinformation.(7504)
+ServerError/7601┃Gegenstände können nicht gefunden werden.
+ServerError/7602┃DLC bereits eingelöst.
+ServerError/9080┃Skin bereits erworben.
+ServerError/9081┃Dieser Held kann nicht verwendet werden.
+ServerError/9082┃Dieser Skin kann nicht gekauft werden.
+ServerError/9083┃Emote konnte nicht gefunden werden
+ServerError/9084┃Dieses Emoticon kann nicht gekauft werden
+ServerError/9085┃Aktuell nicht verfügbar.
+ServerError/9086┃Sie haben einen Gegenstand ausgerüstet, den Sie nicht besitzen.
+ServerError/9087┃Ungültige Gegenstandsinformation. (9092)
+ServerError/9089┃Noch nicht bereits erworbene Gegenstände können nicht benutzt werden. (9093)
+ServerError/9090┃Noch nicht bereits erworbene Gegenstände können nicht benutzt werden. (9093)
+ServerError/9091┃0
+ServerError/9092┃Ungültige Kaufinformation. (9094)
+ServerError/9093┃Du besitzt diesen Gegenstand nicht.
+ServerError/9094┃Gegenstandstyp-Information ungültig. (9096)
+ServerError/9095┃Steam-Zahlungszeit überschritten. (CODE 9100)\nBitte überprüfe deine Steam-Einstellungen und ob "Steam Overlay im Spiel aktivieren" aktiv ist.
+ServerError/9096┃Fehler bei der Zahlung. (9101)
+ServerError/9100┃Fehler bei der Zahlung. (9102)
+ServerError/9101┃Fehler bei der Zahlung. (9103)
+ServerError/9102┃Fehler bei der Zahlung. (9104)
+ServerError/9103┃Fehler bei der Zahlung. (9105)
+ServerError/9104┃Fehler bei der Zahlung. (9106)
+ServerError/9105┃Fehler bei der Zahlung. (9107)
+ServerError/9106┃Fehler bei der Verbindung zum Server.
+ServerError/9107┃Ungültige Anfrage. (9200)
+ServerError/9200┃Dieser Spieler ist bereits in einem Team
+ServerError/9201┃Ein Error ist beim Teamerstellen aufgetreten. (9204)
+ServerError/9203┃Ein Error ist beim Teambeitreten aufgetreten. (9205)
+ServerError/9204┃Kann das Team nicht verlassen.
+ServerError/9205┃Spieler kann nicht eingeladen werden.
+ServerError/9206┃Das kann nur vom Teamleiter ausgeführt werden.
+ServerError/9207┃Kann Teams nicht wechseln.
+ServerError/9208┃Du bist nicht Teil eines Teams. (9210)
+ServerError/9209┃Kann Team nicht beitreten.
+ServerError/9210┃Kann Mitspielersuche nicht starten. (9212)
+ServerError/9211┃Kann Team nicht finden.
+ServerError/9212┃Kann Modus der Spielsuche nicht ändern
+ServerError/9213┃Kann Teamleiter nicht wechseln.
+ServerError/9214┃Kann Spieler nicht aus der Gruppe entfernen. (9216)
+ServerError/9215┃Kann Spieler nicht finden. (9217)
+ServerError/9216┃Dieses Team ist bereits voll.
+ServerError/9217┃Kann Spielsuche nicht beitreten. (9219)
+ServerError/9218┃Kann Spielsuche nicht abbrechen. (9220)
+ServerError/9219┃Kann Aktion nicht abbrechen. (9221)
+ServerError/9220┃Es wurde sich mit einer inkompatiblen Version verbunden.
+ServerError/9221┃Kann Aktion nicht abbrechen. (9221)
+ServerError/9233┃Kann Teams nicht wechseln. (9233)
+ServerError/99999┃Es wurde sich mit einer inkompatiblen Version verbunden.
+ServerError/HttpException┃Keine Antwort vom Server. (9201)
 
 
 --xxxxxxxxxx--
