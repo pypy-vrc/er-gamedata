@@ -786,6 +786,7 @@ Item/Name/301338┃巧克力酱
 Item/Name/301339┃烤大蒜
 Item/Name/301340┃培根吐司
 Item/Name/301346┃铁板牛排
+Item/Name/301348┃一周年纪念蛋糕
 Item/Name/301401┃炸鱼薯条
 Item/Name/301331┃蒜香拉面
 Item/Name/301332┃愚人爆米花
@@ -798,6 +799,7 @@ Item/Name/301408┃薄荷巧克力
 Item/Name/301501┃三文鱼排
 Item/Name/301502┃夏威夷披萨
 Item/Name/301503┃烤地瓜
+Item/Name/301598┃CCC炸鸡
 Item/Name/303501┃悬赏金
 Item/Name/401101┃钉子
 Item/Name/401103┃皮革
@@ -890,6 +892,8 @@ Item/Name/502406┃阔刀地雷
 Item/Name/502407┃铁处女陷阱
 Item/Name/502501┃遥控地雷
 Item/Name/502502┃智能炸弹
+Item/Name/503101┃便携工具 - 信号枪
+Item/Name/503102┃便携工具 - Kiosk呼叫机
 Item/Name/999999┃战术强化组件
 Item/Name/201518┃夜视头盔
 Item/Name/201519┃瘟疫使者
@@ -907,6 +911,9 @@ Item/Name/702602┃异端审判官
 Item/Name/201419┃熔火面甲
 Item/Name/201523┃火花护盾
 Item/Name/202523┃吉利服
+Item/Name/121503┃天堂之门
+Item/Name/108505┃秃鹫之眼
+Item/Name/105503┃蓝狮
 Item/Help/101101┃一副普通的剪刀
 Item/Help/101102┃用来书写的笔。笔囊里的墨水从笔尖流出，因此可以用很久。\n用笔方\n法不对的话很容易弄得满手都是墨水
 Item/Help/101104┃厨房用的刀具，在刀术大师手上也能成为大杀器
@@ -1403,7 +1410,9 @@ Item/Help/301327┃吃拉面有很多不同的方法么？ 那么没有汤的美
 Item/Help/301329┃武侠界中的三大灵丹妙药，总少不了少林寺的大还丹\n另两个嘛，就随作者心意了。
 Item/Help/301331┃如此精心烹制的拉面，有人可以拒绝它的诱惑吗？
 Item/Help/301347┃我明明说了不要黄瓜...
+Item/Help/301348┃充满诚意的蛋糕，让我们一同纪念这特别的时刻。
 Item/Help/301403┃Eleven制作的11号套餐。
+Item/Help/301598┃酥脆炸鸡，尽享美味每一刻！
 Item/Help/401103┃这周围有野怪吗？皮革的用途很多，最好是拿上它…
 Item/Help/401104┃煮熟来吃会更好，或者可以用硬壳来做一些东西。
 Item/Help/401105┃一种始终具有弹性的材料。 不像你的脸颊，它们日复一日地失去弹性。
@@ -1516,7 +1525,9 @@ Item/Effects/502406┃点击安装<color=lightblue>阔刀地雷</color>。\n<col
 Item/Effects/502407┃点击安装<color=lightblue>铁处女陷阱</color>。\n<color=yellow>陷阱效果:</color>在{0}秒内减缓敌人移动速度40%。 
 Item/Effects/502501┃点击安装<color=lightblue>遥控地雷</color>。\n<color=yellow>陷阱效果 :</color> {1}秒后会进行大范围爆炸。
 Item/Effects/502502┃点击安装<color=lightblue>智能炸弹</color>。\n<color=yellow>陷阱效果 :</color>{1}秒后进行大范围爆炸。
-Item/Effects/502310┃点击安装 <color=lightblue>指压板陷阱</color>。\n<color=yellow>陷阱效果 : </color>使目标在{0}秒间移动速度减少50%。
+Item/Effects/502310┃点击安装<color=lightblue>指压板陷阱</color>。\n<color=yellow>陷阱效果 : </color>使目标在{0}秒间移动速度减少50%。
+Item/Effects/503101┃点击使用 : 呼叫<color=lightblue>超凡航空补给箱</color>。\n呼叫后{0}秒到达。
+Item/Effects/503102┃点击使用 : 呼叫 <color=lightblue>便携Kiosk</color>。\n呼叫后可以使用{0}秒。
 Item/Effects/302101┃在15秒内恢复耐力值。
 Item/Effects/302102┃在15秒内恢复耐力值。
 Item/Effects/302103┃在15秒内恢复耐力值。
@@ -1647,6 +1658,7 @@ Item/Effects/301338┃在15秒内恢复体力
 Item/Effects/301339┃在15秒内恢复体力
 Item/Effects/301340┃在15秒内恢复体力
 Item/Effects/301346┃在15秒内恢复体力
+Item/Effects/301348┃在15秒内恢复体力
 Item/Effects/301403┃在15秒内恢复体力和耐力
 Item/Effects/301405┃在15秒内恢复体力。
 Item/Effects/301406┃在15秒内恢复体力。
@@ -2745,6 +2757,7 @@ SpecialItemType/None┃无
 SpecialItemType/Special┃特殊
 SpecialItemType/Summon┃设置
 SpecialItemType/GhostItem┃特殊
+SpecialItemType/Gadget┃便携工具
 MiscItemType/None┃无
 MiscItemType/Material┃材料
 ItemConsumableType/None┃无
@@ -2990,7 +3003,7 @@ StatType/FullDecreaseRecoveryToSkillRange┃减少治愈-技能(远程)
 StatType/HalfDecreaseRecoveryToSkillRange┃减少治愈-技能(远程)
 StatType/ItemBonusRatio┃装备效果
 StatType/Tenacity┃负面效果抵御
-StatType/Tenacity/Desc┃减少负面效果持续时间(压制、悬空、攫取、凝滞除外)
+StatType/Tenacity/Desc┃减少负面效果持续时间(压制、悬空、击退、攫取、凝滞除外)
 StatType/UniqueAttackRange┃<color=#FFFF00>(独有)</color>攻击射程
 StatType/UniqueHpHealedIncreaseRatio┃<color=#FFFF00>(独有)</color>所受恢复增加
 StatType/UniqueCooldownLimit┃<color=#FFFF00>(独有)</color>冷却上限减少
@@ -3106,7 +3119,6 @@ ToolTipType/MaxHpRegen┃体力恢复上限
 ToolTipType/MaxSkill┃技能增幅上限
 ToolTipType/MoveSpeedUpRatio┃移动速度增加(%)
 ToolTipType/MoveSpeedUpTime┃移动速度增加持续时间
-ToolTipType/AttackSpeedUpRatio┃攻击速度增加(%)
 ToolTipType/DotDamage┃持续伤害
 ToolTipType/JudgmentDamage┃最后的审判伤害
 ToolTipType/MaxHpUp┃体力上限增幅
@@ -3175,6 +3187,8 @@ ToolTipType/HammerFinalRatioDamage1ByLevel┃[强化]锤子额外伤害
 ToolTipType/AirboneTime┃空中时间
 ToolTipType/TauntTime┃挑衅时间
 ToolTipType/TauntTime2┃[强化]挑衅时间
+ToolTipType/ElevenTauntTime1┃挑衅时间 - 最短
+ToolTipType/ElevenTauntTime2┃挑衅时间 - 最长
 ToolTipType/IncreaseDefenceRatio┃防御增加(%)
 ToolTipType/DefenceDuration┃防御增加持续时间
 ToolTipType/DotDamagePerSecond┃每秒伤害
@@ -3339,6 +3353,7 @@ ToolTipType/EstelleSkill2_1_MoveSpeedDown┃[临危应对] 移动速度减少
 ToolTipType/EstelleSkillDamage2_2┃[盾牌冲锋] 伤害量
 ToolTipType/EstelleDefenceReduce┃[盾牌防御] 每次命中减少防御效果
 ToolTipType/EstelleDefenceFriendly┃[盾牌防御] 队友承受伤害减少
+ToolTipType/EstelleDamageReduction┃[盾牌防御] 承受伤害减少量(%)
 ToolTipType/EstelleSkillDamage3_2┃[紧急灭火] 伤害量
 ToolTipType/EstelleSightRange3_2┃[紧急灭火] 累积视野减少
 ToolTipType/EstelleSkillDamage4_1┃[单人] 伤害量
@@ -3456,7 +3471,7 @@ ToolTipType/BaseHealingWind┃最小体力恢复量
 ToolTipType/HealingWindByLv┃实验体每级别额外体力恢复
 ToolTipType/AddedHpShield┃额外体力比例增加护盾
 ToolTipType/FinalDamage┃所有伤害增加量
-ToolTipType/Consumehp┃体力消耗
+ToolTipType/Consumehp┃体力消耗量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(每剩1个弹匣*技能增幅的{0}%)</color>
 DayNight/Day┃白天
 DayNight/Night┃夜晚
@@ -3933,6 +3948,7 @@ Skin/Name/1072001┃夜鸦 卡缇娅
 Skin/Name/1073000┃夏洛特
 Skin/Name/1073001┃转校生 夏洛特
 Skin/Name/1074000┃达尔科
+Skin/Name/1075000┃莉诺尔
 Skin/OnSelectVO/1001003┃规则就是用来打破的，不是吗？
 Skin/OnSelectVO/1002002┃烟花庆典要开始了！
 Skin/OnSelectVO/1007005┃让我们来做点有趣的事吧！
@@ -4173,6 +4189,8 @@ Skin/Desc/1028005┃我们携手走过的时光，又写成了一本书。
 Skin/Desc/1028006┃未来，让我们继续书写我们的故事吧！
 Skin/Desc/1058004┃要一起喝一杯吗？在这个特别的日子里。
 Skin/Desc/1058005┃不追忆往昔，让我们为未来举杯！
+Skin/Desc/1007006┃有什么好看的？你也想去海里凉快一下吗？
+Skin/Desc/1073001┃这件衣服适合我吗？
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生气
 Emotion_Name_002┃笑
@@ -4320,6 +4338,10 @@ Emotion_Hyunwoo01_NP┃玄佑 最棒
 Emotion_Hyunwoo02_NP┃玄佑 K.O
 Emotion_Hyunwoo03_NP┃玄佑 挑衅
 Emotion_Hyunwoo04_NP┃玄佑 生气
+Emotion_Hyunwoo05_NP┃玄佑 没问题
+Emotion_Hyunwoo06_NP┃玄佑 不
+Emotion_Hyunwoo07_NP┃玄佑 出发！
+Emotion_Hyunwoo08_NP┃玄佑 停！
 Emotion_Hyejin01_NP┃慧珍 最棒
 Emotion_Hyejin02_NP┃慧珍 无语
 Emotion_Hyejin03_NP┃慧珍 挑衅
@@ -4935,6 +4957,22 @@ Emotion_Aya07_NP┃阿雅 好！
 Emotion_Aya08_NP┃阿雅 GO!
 Emotion_SparklingTwins_DebiMarlene_2065005┃幻境双生 黛比&玛莲 GOOD!
 Emotion_SparklingTwins_DebiMarlene_2065006┃幻境双生 黛比&玛莲 不许看！
+Emotion_Kiosk_Pack_2005┃生命树枝
+Emotion_Kiosk_Pack_2006┃陨石
+Emotion_Kiosk_Pack_2007┃秘银
+Emotion_Kiosk_Pack_2008┃能源晶石
+Emotion_Kiosk_Pack_2009┃VF血液样本
+Emotion_Kiosk_Pack_2010┃战术强化组件
+Emotion_Kiosk_Pack_2011┃逃生手环
+Emotion_Tactic_Pack_2012┃Kiosk?
+Emotion_Tactic_Pack_2013┃维克莱恩GO
+Emotion_Tactic_Pack_2014┃阿尔法GO
+Emotion_Tactic_Pack_2015┃奥米加GO
+Emotion_Tactic_Pack_2016┃伽玛GO
+Emotion_Tactic_Pack_2017┃英雄补给箱GO
+Emotion_Tactic_Pack_2018┃超凡补给箱GO
+Emotion_Tactic_Pack_2019┃生命树枝GO
+Emotion_Tactic_Pack_2020┃陨石GO
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
 Collection/Name/11003┃拯救迷失的灵魂
@@ -5191,6 +5229,8 @@ EMBLEM_MARK_SHOP_102024┃伦诺克斯头像
 EMBLEM_MARK_SHOP_102025┃幻境双生 黛比&玛莲头像
 EMBLEM_MARK_SHOP_102026┃彰一头像
 EMBLEM_MARK_SHOP_102027┃伯尼斯头像
+EMBLEM_MARK_SHOP_102028┃Eleven头像
+EMBLEM_MARK_SHOP_102029┃威廉头像
 EMBLEM_MARK_SHOP_102030┃克洛伊头像
 EMBLEM_MARK_SHOP_102031┃席琳头像
 EMBLEM_MARK_S3_IRON_SOLO┃赛季S3铁阎标志(单人)
@@ -5684,6 +5724,8 @@ EMBLEM_BG_SHOP_202023┃伦诺克斯背景
 EMBLEM_BG_SHOP_202024┃幻境双生 黛比&玛莲背景
 EMBLEM_BG_SHOP_202025┃彰一背景
 EMBLEM_BG_SHOP_202026┃伯尼斯背景
+EMBLEM_BG_SHOP_202027┃Eleven背景
+EMBLEM_BG_SHOP_202028┃威廉背景
 EMBLEM_BG_SHOP_202029┃克洛伊背景
 EMBLEM_BG_SHOP_202030┃席琳背景
 EMBLEM_BG_S3_IRON_SOLO┃赛季S3铁阎背景(单人)
@@ -5983,6 +6025,8 @@ EMBLEM_OUTLINE_SHOP_302023┃伦诺克斯边框
 EMBLEM_OUTLINE_SHOP_302024┃幻境双生 黛比&玛莲边框
 EMBLEM_OUTLINE_SHOP_302025┃彰一边框
 EMBLEM_OUTLINE_SHOP_302026┃伯尼斯边框
+EMBLEM_OUTLINE_SHOP_302027┃Eleven边框
+EMBLEM_OUTLINE_SHOP_302028┃威廉边框
 EMBLEM_OUTLINE_SHOP_302029┃克洛伊边框
 EMBLEM_OUTLINE_SHOP_302030┃席琳边框
 EMBLEM_OUTLINE_S3_IRON_SOLO┃赛季S3铁阎框(单人)
@@ -6489,6 +6533,7 @@ Goods/Name/1404153┃卡米洛 (日语)
 Goods/Name/1406001┃解说Sia (韩语)
 Goods/Name/1406011┃解说Shin Il (韩语)
 Goods/Name/1406021┃解说Evis&Gold Blin (韩语)
+Goods/Name/1406031┃解说Kim In Yeong&NongRoute (韩语)
 Goods/Name/1404161┃约翰 (韩语)
 Goods/Name/1404162┃约翰 (英语)
 Goods/Name/1404163┃约翰 (日语)
@@ -6517,6 +6562,7 @@ GoodsGroup/Name/1404171┃比安卡
 GoodsGroup/Name/1406001┃解说Sia
 GoodsGroup/Name/1406011┃解说Shin Il
 GoodsGroup/Name/1406021┃解说Evis&Gold Blin
+GoodsGroup/Name/1406031┃解说Kim In Yeong & NongRoute
 GroupItemAttribute/Inst┃伴奏版
 GroupItemAttribute/Vocal┃人声版
 ItemType/BGM/Name┃BGM
@@ -6742,6 +6788,8 @@ Product/Name/Nadine_Emblem_Pack_01┃娜町特别组合包
 Product/Name/Lenox_Emblem_Pack_01┃伦诺克斯特别组合包
 Product/Name/Shoichi_Emblem_Pack_01┃彰一特别组合包
 Product/Name/Bernice_Emblem_Pack_01┃伯尼斯特别组合包
+Product/Name/Eleven_Emblem_Pack_01┃Eleven特别组合包
+Product/Name/William_Emblem_Pack_01┃威廉特别组合包
 Product/Name/Chloe_Emblem_Pack_01┃克洛伊特别组合包
 Product/Name/Celine_Emblem_Pack_01┃席琳特别组合包
 Product/Name/SkinDataChip_RandomBox_01┃不明皮肤数据
@@ -6825,6 +6873,8 @@ Product/Name/2024_DebiMarlene_Card_Pack_08┃拌嘴姐妹组合包Ⅷ
 Product/Name/2024_DebiMarlene_Card_Pack_09┃拌嘴姐妹组合包Ⅸ
 Product/Name/2024_DebiMarlene_Card_Box_01┃黛比&玛莲卡盒
 Product/Name/2024_DebiMarlene_Card_Box_02┃黛比&玛莲卡盒
+Product/Name/Kiosk_Emotion_Pack_01┃Kiosk表情组合包
+Product/Name/Tactic_Emotion_Pack_01┃战术表情组合包
 Product/Name/EVENT_NPASS_1stAnniversary_1000┃一周年纪念通行证
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
@@ -6855,7 +6905,7 @@ Shop/Desc/Tia_4Emote_Pack_01┃组合包内容\n\n购买的组合商品将发送
 Shop/Desc/Sua_4Emote_Pack_01┃组合包内容\n\n购买的组合商品将发送至<color=#ffb62f>礼物箱</color>并含以下内容。\n\n-秀雅 4款表情\n-秀雅 角色\n-新年说书人秀雅 皮肤\n\n购买前已拥有的商品根据售价(单品)返还60%至游戏内信箱。(角色适用A-Coin退款)
 Shop/Desc/Bianca_4Emote_Pack_01┃组合包内容\n\n购买的组合商品将发送至<color=#ffb62f>礼物箱</color>并含以下内容。\n\n-比安卡 4款表情\n-比安卡 角色\n-睡衣 比安卡 皮肤\n\n购买前已拥有的商品根据售价(单品)返还60%至游戏内信箱。(角色适用A-Coin退款)
 Shop/Desc/Adina_4Emote_Pack_01┃组合包内容\n\n购买的组合商品将发送至<color=#ffb62f>礼物箱</color>并含以下内容。\n\n-阿迪娜 4款表情\n-阿迪娜 角色\n-命运之翡 阿迪娜 皮肤\n\n购买前已拥有的商品根据售价(单品)返还60%至游戏内信箱。(角色适用A-Coin退款)
-Shop/Desc/Elena_4Emote_Pack_01┃￥
+Shop/Desc/Elena_4Emote_Pack_01┃组合包内容\n\n购买的组合商品将发送至<color=#ffb62f>礼物箱</color>并含以下内容。\n \n-埃琳娜 4款表情 \n-埃琳娜 角色 \n-黑天鹅 埃琳娜 皮肤 \n\n购买前已拥有的商品根据售价(单品)返还60%至游戏内信箱。(角色适用A-Coin退款)
 Shop/Desc/Markus_4Emote_Pack_01┃组合包内容\n\n-马库斯 4款表情\n-马库斯 角色\n-天启 马库斯 皮肤\n- A-coin Boost 3天\n- ER积分Boost 3天\n\n* 以上商品不适用重复退款，而是适用折扣。\n* 购买价会根据已解锁的商品有所变动。\n* 商品将直接发放至藏品，而不是礼物箱。
 Shop/Desc/Halloween2022_Skin_RandomBox_01┃有1/N 机会获取1款尚未解锁的高级/稀有皮肤。\n\n- 共71款 高级/稀有皮肤\n\n*共有11次购买机会。(首次购买仅需100 NP，剩余10次490NP/次)\n*获取高级/稀有皮肤的概率为目前未解锁皮肤的1/N。\n*无论购买次数剩多少，如已解锁商品目录中的所有皮肤，则无法再进行购买。\n
 Shop/Desc/Estelle_4Emote_Pack_01┃组合包内容\n\n- 艾丝蒂尔 4款表情包\n- 艾丝蒂尔 角色\n- 消防队员 艾丝蒂尔 皮肤\n- A-coin Boost 3天\n- ER积分 Boost 3天\n\n* 以上商品不适用重复退款，而是适用折扣。\n* 购买价会根据已解锁的商品有所变动。\n* 商品将直接发放至藏品，而不是礼物箱
@@ -6876,8 +6926,8 @@ Shop/Desc/LiDailin_Emblem_Pack_01┃组合包内容\n\n- 李黛琳 角色\n- 叛
 Shop/Desc/Jackie_Emblem_Pack_01┃组合包内容\n\n- 杰琪 角色\n- 绞杀者 杰琪 皮肤\n- 血宴礼服 杰琪 皮肤\n- 杰琪  4款表情\n- 杰琪  头像\n- 杰琪  个人边框\n- 杰琪  个人背景\n- A-Coin Boost 3日\n- ER 积分 Boost 3日\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Rio_Emblem_Pack_01┃组合包内容\n\n- 莉央 角色\n- 巫女 莉央 皮肤\n- 正义的魔法少女 莉央 皮肤\n- 莉央 4款表情\n- 莉央 头像\n- 莉央 个人边框\n- 莉央 个人背景\n- A-Coin Boost 3日\n- ER 积分 Boost 3日\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/UR_Grade_Skin_Voucher_01┃※ 可以从商品列表中获得一款未持有的高级/稀有皮肤。\n※ 含有未通过商店出售的活动皮肤。\n※ 请通过箱子概率公告确认详细商品列表。\n※ 当商品列表中的皮肤已经全部持有时，进行购买时将重复获得已持有的皮肤。\n※ 根据商品列表中未持有皮肤的计算获得皮肤的概率。\n※ 购买时将立即发放。
-Shop/Desc/VampireShoichi_CollectPack_01┃组合包内容\n\n- 吸血鬼 彰一 2款表情\n- 吸血鬼 彰一 头像\n- 吸血鬼 彰一 个人边框\n- 吸血鬼 彰一 个人背景\n- A-Coin Boost (3日)\n- ER 积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
-Shop/Desc/GhostHunterYuki_CollectPack_01┃组合包内容\n\n- 幽灵猎人 雪 2款表情\n- 幽灵猎人 雪 头像\n- 幽灵猎人 雪 个人边框\n- 吸幽灵猎人 雪 个人背景\n- 转变代币 10个\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/VampireShoichi_CollectPack_01┃组合包内容\n\n- 吸血鬼 彰一 2款表情\n- 吸血鬼 彰一头像\n- 吸血鬼 彰一边框\n- 吸血鬼 彰一背景\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/GhostHunterYuki_CollectPack_01┃组合包内容\n\n- 幽灵猎人 雪 2款表情\n- 幽灵猎人 雪头像\n- 幽灵猎人 雪边框\n- 吸幽灵猎人 雪背景\n- 转变代币 10个\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/SparklingTwinsDebiMarlene_Pack_01┃组合包内容\n\n- 幻境双生 黛比&玛莲 2款表情\n- 幻境双生 黛比&玛莲头像\n- 幻境双生 黛比&玛莲背景\n- 幻境双生 黛比&玛莲边框\n- 晚霞代币 10个\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Aya_Emblem_Pack_01┃组合包内容\n\n- 阿雅 角色\n- 警察 阿雅 皮肤\n- 烟花盛宴 阿雅 皮肤\n- 阿雅 4款表情\n- 阿雅 头像\n- 阿雅 个人边框\n- 阿雅 个人背景\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Fiora_Emblem_Pack_01┃组合包内容\n\n- 菲欧娜 角色\n- 军官 菲欧娜 皮肤\n- 剑客 菲欧娜 皮肤\n- 菲欧娜 4款表情\n- 菲欧娜 头像\n- 菲欧娜 个人边框\n- 菲欧娜 个人背景\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
@@ -6896,13 +6946,15 @@ Shop/Desc/Nadine_Emblem_Pack_01┃组合包内容\n\n- 娜町 角色\n- 小红�
 Shop/Desc/Lenox_Emblem_Pack_01┃组合包内容\n\n- 伦诺克斯 角色\n- 白色圣诞 伦诺克斯皮肤\n- 副首领 伦诺克斯皮肤\n- 伦诺克斯 4款表情\n- 伦诺克斯头像\n- 伦诺克斯背景\n- 伦诺克斯边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Shoichi_Emblem_Pack_01┃组合包内容\n\n- 彰一 角色\n- 极致服务 彰一皮肤\n- 职业杀手 彰一皮肤\n- 彰一 4款表情\n- 彰一头像\n- 彰一背景\n- 彰一边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Bernice_Emblem_Pack_01┃组合包内容\n\n- 伯尼斯 角色\n- 恶魔猎手 伯尼斯皮肤\n- 天启 伯尼斯皮肤\n- 伯尼斯 4款表情\n- 伯尼斯头像\n- 伯尼斯背景\n- 伯尼斯边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/Eleven_Emblem_Pack_01┃组合包内容\n\n- Eleven 角色\n- 甜心外卖员 Eleven皮肤\n- 下午茶兔子 Eleven皮肤\n- Eleven 5款表情\n- Eleven头像\n- Eleven背景\n- Eleven边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/William_Emblem_Pack_01┃组合包内容\n\n- 威廉角色\n- 圣诞嘉年华 威廉皮肤\n- 暗巷里 威廉皮肤\n- 威廉 4款表情\n- 威廉头像\n- 威廉背景\n- 威廉边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Chloe_Emblem_Pack_01┃组合包内容\n\n\n- 克洛伊角色\n- 女仆 克洛伊皮肤\n- 瑞兔迎春 克洛伊皮肤\n- 克洛伊 4款表情\n- 克洛伊头像\n- 克洛伊背景\n- 克洛伊边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Celine_Emblem_Pack_01┃组合包内容\n\n- 席琳角色\n- 万圣节南瓜 席琳皮肤\n- 拆弹小队 席琳皮肤\n- 席琳 4款表情\n- 席琳头像\n- 席琳背景\n- 席琳边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/ThanksGiving_Special_2023_Pack_01┃组合包内容\n\n- 夏日&狩猎箱 5个\n- 皮肤DATA箱 5个\n- 开箱钥匙 10个\n- 度假代币 35个
 Shop/Desc/ThanksGiving_Special_2023_Pack_02┃组合包内容\n\n- 英雄皮肤碎片箱 1个\n- 开箱钥匙 1个\n- 度假代币 20个
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃组合包内容\n\n- 夏日&狩猎箱 2个\n- 开箱钥匙 2个\n- A-Coin 5,000\n- 度假代币 10个
 Shop/Desc/BlackFriday2023_ComboPack_01┃组合包内容\n\n- 皮肤DATA箱 2个\n- 研究中心DATA箱 2个\n- 开箱钥匙 2个\n- 战斗女仆代币 10个
-Shop/Desc/PixelArtTia_CollectPack_01┃组合包内容\n\n- 像素画家 蒂娅 2款表情\n- 像素画家 蒂娅 头像\n- 像素画家 蒂娅 个人边框\n- 像素画家 蒂娅 个人背景\n- A-Coin Boost (3日)\n- ER 积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/PixelArtTia_CollectPack_01┃组合包内容\n\n- 像素画家 蒂娅 2款表情\n- 像素画家 蒂娅头像\n- 像素画家 蒂娅边框\n- 像素画家 蒂娅背景\n- A-Coin Boost (3日)\n- ER 积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Xmas2023Pack_SINGLE_01┃组合包内容\n\n- 节日DATA箱 1个\n\n可以在制作所内使用开箱钥匙开启已购买的箱子。
 Shop/Desc/Xmas2023Pack_SET_01┃组合包内容\n\n- 节日DATA箱 1个\n- 开箱钥匙 1个\n\n可以在制作所内使用开箱钥匙开启已购买的箱子。
 Shop/Desc/Xmas2023Pack_SET_05┃组合包内容\n\n- 节日DATA箱 5个\n- 开箱钥匙 5个\n\n可以在制作所内使用开箱钥匙开启已购买的箱子。
@@ -6954,6 +7006,8 @@ Shop/Desc/2024_DebiMarlene_Card_Pack_08┃<b><color=#FFBB00>[内容物]</color><
 Shop/Desc/2024_DebiMarlene_Card_Pack_09┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 晚霞代币 x 60\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 请通过交换所确认购买获得的晚霞代币。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/2024_DebiMarlene_Card_Box_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 黛比&玛莲卡盒 x 1\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启已购买的商品。
 Shop/Desc/2024_DebiMarlene_Card_Box_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 黛比&玛莲卡盒 x 1\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启已购买的商品。\n※ 每日仅能购买一次此产品。
+Shop/Desc/Kiosk_Emotion_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- Kiosk表情 7款\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 购买后可以通过藏品确认购入的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/Tactic_Emotion_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 战术表情 9款\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 购买后可以通过藏品确认购入的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/EVENT_NPASS_1stAnniversary_1000┃感谢幸存者们一直以来的支持！值此<color=#E5D85C>永恒轮回一周年</color>之际，特别推出了活动通行证！\n其中包括<color=#B2EBF4>一周年大厅大厅界面和一周年秀雅&海因茨皮肤</color>等奖励，进行游戏领取奖励吧！\n\n购买商品即可激活<color=#B2EBF4>任务</color>。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
@@ -7408,7 +7462,7 @@ CharacterState/Group/Desc/1008210┃移动速度变缓了。
 CharacterState/Group/Name/1008300┃破音 - 增加攻击力及普攻射程
 CharacterState/Group/Desc/1008300┃攻击力及普攻射程增加了。
 CharacterState/Group/Name/1008310┃破音 - 升级
-CharacterState/Group/Desc/1008310┃下次发起技能攻击时，将造成额外的技能伤害。
+CharacterState/Group/Desc/1008310┃攻击力及普攻射程增加了。
 CharacterState/Group/Name/1008400┃增加技能增幅
 CharacterState/Group/Desc/1008400┃技能增幅增加了。
 CharacterState/Group/Name/1008410┃增加技能增幅
@@ -7739,7 +7793,7 @@ Skill/Group/Name/1018210┃笑里藏刀
 Skill/Group/Name/1018300┃提案
 Skill/Group/Name/1018400┃协商
 Skill/Group/Name/1018500┃无情杀戮
-Skill/Group/Desc/1018100┃彰一使用技能击中敌人{4}秒间获得骗局叠层。(叠层上限 : {1})\n达到叠层上限时，下次普攻造成<color=white>{2}</color><color=red>(+目标体力上限的{5})</color>的额外技能伤害，并在敌人后方生成短剑。\n\n彰一再次拾起短剑，{0}m内有敌人时，投掷短剑造成<color=white>{3}</color>的技能伤害。短剑将优先向距离内的敌人协商标识的目标投掷。
+Skill/Group/Desc/1018100┃彰一使用技能击中敌人{4}秒间获得骗局叠层。(叠层上限 : {1})\n达到叠层上限时，下次普攻造成<color=white>{2}</color><color=red>(+目标体力上限{5})</color>的额外技能伤害，并在敌人后方生成短剑。\n\n彰一再次拾起短剑，{0}m内有敌人时，投掷短剑造成<color=white>{3}</color>的技能伤害。短剑将优先投掷向距离内带有协商标识的目标。
 Skill/Group/Desc/1018200┃彰一向指定方向进行戳刺攻击，给敌人造成<color=white>{0}</color>的技能伤害。\n如果戳刺成功，双面人的冷却时间减少{1}秒，并会触发笑里藏刀技能，可扩大攻击范围，并在彰一正前方设置短剑。\n\n{2}秒后笑里藏刀技能将会消失。
 Skill/Group/Desc/1018210┃彰一向指定方向进行戳刺攻击，给敌人造成<color=white>{0}</color>的技能伤害。\n如果戳刺成功，双面人的冷却时间减少{1}秒，并会触发笑里藏刀技能，可扩大攻击范围，并在彰一正前方设置短剑。\n\n{2}秒后笑里藏刀技能将会消失。
 Skill/Group/Desc/1018300┃彰一快速冲向敌人或至短剑投放位置，对路径中的敌人造成 <color=white>{0}</color>技能伤害。短剑回收后，重置提案的冷却时间。
@@ -8034,30 +8088,30 @@ Skill/Group/Name/1026430┃光磁暴
 Skill/Group/Name/1026500┃超时实验
 Skill/Group/Name/1026510┃超时实验
 Skill/Group/Desc/1026100┃远程无人机攻击力增加{0}，防御力增加{1}。\n每当远程无人机被离子激光炮或磁力风暴产生时击中，攻速增加{2}，最多重叠{3}次。
+Skill/Group/Coef/1026100┃远程无人机攻击力增加<color=green>实验体级别</color><color=#DDA0DD>(* 技能增幅的{0})</color>，防御力增加<color=green>实验体级别</color><color=#DDA0DD>( * 技能增幅的{1})</color>。\n每当远程无人机被离子激光炮或磁力风暴产生时击中，攻速上升{2}，最多重叠{3}次。
+Skill/Group/ExpansionTip/1026100┃<i>未强化的远程无人机攻击力为{0}，防御力为{1}。</i>
 Skill/Group/Desc/1026200┃芭芭拉在指定的位置设置体力为{1}的远程无人机，给射程范围内的敌人造成<color=white>{3}</color>的技能伤害。远程无人机可维持{0}秒，并向周围敌人发射子弹，造成<color=white>{2}</color>的技能伤害。\n设置好远程无人机后，之前安装的无人机会被销毁，无人机被销毁时冷却时间增加{9}。如果芭芭拉回收或远离安装的远程无人机，冷却减少{7}。
+Skill/Group/Coef/1026200┃芭芭拉在指定的位置设置体力为<color=white>{8}</color><color=green>(+实验体级别 * {11})</color>的远程无人机，给射程范围内的敌人造成<color=white>{3}</color><color=#DDA0DD>(+技能增幅的{10})</color>技能伤害。远程无人机可维持{0}秒，并向周围敌人发射子弹，造成<color=#ffd775>远程无人机攻击力的{2}</color>技能伤害。\n远程无人机设置好后，先前安装的无人机会被销毁，无人机被摧毁会增加冷却时间{9}。如果芭芭拉回收或远离安装的远程无人机或，冷却减少{7}。
 Skill/Group/Desc/1026210┃芭芭拉拆除当前设置的无人机，BT-Mk II 远程无人机冷却减少{0}。
+Skill/Group/Coef/1026210┃芭芭拉拆除当前设置的无人机，BT-Mk II 远程无人机的冷却减少{0}。
 Skill/Group/Desc/1026220┃芭芭拉在指定的位置安装远程无人机，对范围内的敌人造成<color=white>{2}</color>的技能伤害，并瞬间传送到该位置。已安装的远程无人机将立即自爆，对范围内的敌人造成<color=white>{0}</color>技能伤害。\n和安装远程无人机承受伤害的敌人数成比例，{4}秒间攻击速度增加{5}。
 Skill/Group/Desc/1026300┃芭芭拉用高功率炮筒发射离子激光炮，对路径上的敌人造成<color=white>{0}</color>技能伤害，{5}秒间使其移动速度降低{6}。<color=white>离子激光炮</color>将赋予首位命中的敌人实验体持续{2}秒的远程无人机<color=white>记号</color>。\n芭芭拉使用<color=white>离子激光炮</color>时将为远程无人机充电，对敌人发射激光炮造成<color=white>{3}</color>的技能伤害。激光炮最多可以充电至{7}发。
+Skill/Group/Coef/1026300┃芭芭拉用高功率炮筒发射离子激光炮，对路径上的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{8})</color>技能伤害，{5}秒间使其移动速度降低{6}。<color=white>离子激光炮</color>将赋予首位命中的敌人实验体持续{2}秒的远程无人机<color=white>记号</color>。\n芭芭拉使用<color=white>离子激光炮</color>时将为远程无人机充电，对敌人发射激光炮造成<color=white>{3}</color><color=#ffd775>(+远程无人机攻击力{4})</color>的技能伤害。激光炮最多可以充电至{7}发。
 Skill/Group/Desc/1026310┃芭芭拉{0}秒间强化高功率炮筒及远程无人机。强化期间无人机保持充电状态并自动发射激光炮，离子激光炮的耐力消失，冷却减少至{1}秒。离子激光炮伤害量增加<color=white>{2}</color>，远程无人机伤害量增加<color=white>{4}</color>。
+Skill/Group/Coef/1026310┃芭芭拉{0}秒间强化高功率炮筒及远程无人机。强化期间无人机保持充电状态并自动发射激光炮，离子激光炮的耐力消失，冷却减少至{1}秒。离子激光炮伤害量增加<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{6})</color>，远程无人机伤害量增加<color=white>{4}</color><color=#ffd775>(+远程无人机攻击力的{5})</color>。
 Skill/Group/Desc/1026400┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color>技能伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得芭芭拉体力上限的{8}护盾。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
+Skill/Group/Coef/1026400┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{12})</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>技能伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得的最大护盾为芭芭拉体力上限的{8}。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
 Skill/Group/Desc/1026410┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color>伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得芭芭拉体力上限的{8}护盾。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
+Skill/Group/Coef/1026410┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{12})</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>技能伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得的最大护盾为芭芭拉体力上限的{8}。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
 Skill/Group/Desc/1026420┃芭芭拉的磁力风暴强化成为光磁暴。光磁暴期间射程范围逐渐增加，护盾伤害吸收量增加{0}，持续期间内承受伤害减少{6}。重新使用技能或持续时间结束后，范围内的敌人承受<color=white>{2}</color>技能伤害，{4}秒间移动速度减少{5}。
 Skill/Group/Desc/1026430┃芭芭拉的磁力风暴强化成为光磁暴。光磁暴期间射程范围逐渐增加，护盾伤害吸收量增加{0}，持续期间内承受伤害减少{6}。重新使用技能或持续时间结束后，范围内的敌人承受<color=white>{2}</color>技能伤害，{4}秒间移动速度减少{5}。
 Skill/Group/Desc/1026500┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{17}，持续期间内承受伤害减少{16}。再次使用技能或是在{8}秒后，对范围内的敌人造成<color=white>{9}</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用技能将取消强化状态，并且在{12}秒后可以重新施法。
+Skill/Group/Coef/1026500┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{17})</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{16})</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{20}，持续期间内承受伤害减少{19}。再次使用技能或是在{8}秒后，范围内的敌人承受<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{18})</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用时将取消强化状态，并且在{12}秒后可以重新施法。
 Skill/Group/Desc/1026510┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{17}，持续期间内承受伤害减少{16}。再次使用技能或是在{8}秒后，对范围内的敌人造成<color=white>{9}</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用技能将取消强化状态，并且在{12}秒后可以重新施法。
-Skill/Group/Coef/1026100┃远程无人机攻击力增加<color=green>实验体级别</color><color=#DDA0DD>(* 技能增幅的{0})</color>，防御力增加<color=green>实验体级别</color><color=#DDA0DD>( * 技能增幅的{1})</color>。\n每当远程无人机被离子激光炮或磁力风暴产生时击中，攻速上升{2}，最多重叠{3}次。
-Skill/Group/Coef/1026200┃芭芭拉在指定的位置设置体力为<color=white>{8}</color><color=green>(+实验体级别 * {11})</color>的远程无人机，给射程范围内的敌人造成<color=white>{3}</color><color=#DDA0DD>(+技能增幅的{10})</color>技能伤害。远程无人机可维持{0}秒，并向周围敌人发射子弹，造成<color=#ffd775>远程无人机攻击力的{2}</color>技能伤害。\n远程无人机设置好后，先前安装的无人机会被销毁，无人机被摧毁会增加冷却时间{9}。如果芭芭拉回收或远离安装的远程无人机或，冷却减少{7}。
-Skill/Group/Coef/1026210┃芭芭拉拆除当前设置的无人机，BT-Mk II 远程无人机的冷却减少{0}。
+Skill/Group/Coef/1026510┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{17})</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{16})</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{20}，持续期间内承受伤害减少{19}。再次使用技能或是在{8}秒后，范围内的敌人承受<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{18})</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用时将取消强化状态，并且在{12}秒后可以重新施法。
 Skill/Group/Coef/1026220┃芭芭拉在指定的位置安装远程无人机，对范围内的敌人造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{6})</color>的技能伤害，并瞬间传送到该位置。已安装的远程无人机将立即自爆，对范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{7})</color>技能伤害。\n和安装远程无人机承受伤害的敌人数成比例，{4}秒间攻击速度增加{5}。
-Skill/Group/Coef/1026300┃芭芭拉用高功率炮筒发射离子激光炮，对路径上的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{8})</color>技能伤害，{5}秒间使其移动速度降低{6}。<color=white>离子激光炮</color>将赋予首位命中的敌人实验体持续{2}秒的远程无人机<color=white>记号</color>。\n芭芭拉使用<color=white>离子激光炮</color>时将为远程无人机充电，对敌人发射激光炮造成<color=white>{3}</color><color=#ffd775>(+远程无人机攻击力{4})</color>的技能伤害。激光炮最多可以充电至{7}发。
-Skill/Group/Coef/1026310┃芭芭拉{0}秒间强化高功率炮筒及远程无人机。强化期间无人机保持充电状态并自动发射激光炮，离子激光炮的耐力消失，冷却减少至{1}秒。离子激光炮伤害量增加<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{6})</color>，远程无人机伤害量增加<color=white>{4}</color><color=#ffd775>(+远程无人机攻击力的{5})</color>。
-Skill/Group/Coef/1026400┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{12})</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>技能伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得的最大护盾为芭芭拉体力上限的{8}。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
-Skill/Group/Coef/1026410┃芭芭拉最多{3}秒内将远程无人机与自己一起生成磁力风暴，每{11}秒给范围内的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{12})</color><color=#688A08>(+敌人体力上限{6})</color>的技能伤害，自身移动速度增加{7}。\n再次使用该技能，或持续时间结束后磁力风暴会爆发，对范围内的敌人造成<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>技能伤害，并获得磁力风暴持续时间内造成的全部伤害量的{2}的护盾。可获得的最大护盾为芭芭拉体力上限的{8}。\n承受两次爆发伤害的敌人移动速度{9}秒间减少{10}。
 Skill/Group/Coef/1026420┃芭芭拉的磁力风暴强化成为光磁暴。光磁暴期间射程范围逐渐增加，护盾伤害吸收量增加{0}，持续期间内承受伤害减少{8}。重新使用技能或持续时间结束后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{7})</color>技能伤害，{4}秒间移动速度减少{5}。
 Skill/Group/Coef/1026430┃芭芭拉的磁力风暴强化成为光磁暴。光磁暴期间射程范围逐渐增加，护盾伤害吸收量增加{0}，持续期间内承受伤害减少{8}。重新使用技能或持续时间结束后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{7})</color>技能伤害，{4}秒间移动速度减少{5}。
-Skill/Group/Coef/1026500┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{17})</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{16})</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{20}，持续期间内承受伤害减少{19}。再次使用技能或是在{8}秒后，范围内的敌人承受<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{18})</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用时将取消强化状态，并且在{12}秒后可以重新施法。
-Skill/Group/Coef/1026510┃芭芭拉重置所有基本技能的冷却时间，并赋予下一个使用的基本技能额外效果。\n\n闪络 : 芭芭拉设置自动远程无人机，瞬间移动到相应位置。原先安装的无人机将自爆，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{17})</color>技能伤害。芭芭拉传送后，范围内的敌人承受<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{16})</color>技能伤害，每击中一个敌人将使远程无人机的攻速增加{5}，持续{4}秒。使用后超时实验冷却缩减{14}。\n\n光子共振 : {6}秒间进行光子共振，期间离子激光炮和远程无人机的伤害量增加{13}，耐力消耗消失时冷却减少至{7}秒。在光子共振期间，远程无人机的普攻可转换为离子激光炮。\n\n光磁暴 : 磁力风暴在持续期间逐渐增大，根据造成伤害的比例，生成的护盾量增加{20}，持续期间内承受伤害减少{19}。再次使用技能或是在{8}秒后，范围内的敌人承受<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{18})</color>技能伤害并在{11}秒间减少移动速度{15}。\n\n再次使用时将取消强化状态，并且在{12}秒后可以重新施法。
-Skill/Group/ExpansionTip/1026100┃<i>未强化的远程无人机攻击力为{0}，防御力为{1}。</i>
 CharacterState/Group/Name/1026110┃改造
 CharacterState/Group/Desc/1026110┃远程无人机的攻击力，防御力上升。
 CharacterState/Group/Name/1026120┃机械工程学
@@ -8435,7 +8489,7 @@ Skill/Group/Desc/1035200┃<color=#ffffC2>膝踢 : </color> 扬使用膝盖对�
 Skill/Group/Name/1035210┃飞膝踢
 Skill/Group/Desc/1035210┃<color=#ffffC2>膝踢 : </color>扬使用膝盖对范围内的敌人造成<color=white>{11}</color><color=#688A08>(+敌人体力上限{13})</color>的技能伤害，并使敌人的移动速度在{2}秒间减少{3}。再次施法可以使用飞膝踢。 \n<color=white>强化效果 :</color> 承受伤害的敌人{4}秒间防御力减少{5}。\n\n<color=#ffffC2>飞膝踢 : </color>扬使用膝盖与敌人发生冲撞时对敌人造成<color=white>{12}</color><color=#688A08>(+敌人体力上限{14})</color>的技能伤害并将敌人悬空{10}秒。\n<color=white>强化效果 : </color>飞膝踢命中敌人造成伤害时，重置技能闪烁的冷却时间。
 Skill/Group/Name/1035300┃战斧飞踼
-Skill/Group/Desc/1035300┃扬使用飞踼对敌人造成<color=white>{8}</color>的技能伤害。被范围外围命中的敌人将被击退。击退的敌人撞墙晕厥{5}秒。\n<color=#ffffC2>强化效果 : </color>伤害量增加<color=white>{9}</color><color=#688A08>(+敌人体力上限{11})</color>，同时所有战斧飞踼范围内的敌人将被击退，\n被击退的敌人如果撞到墙，晕厥{4}秒。 
+Skill/Group/Desc/1035300┃扬使用飞踼对敌人造成<color=white>{8}</color>的技能伤害。被范围外围命中的敌人将被击退。击退的敌人撞墙晕厥{5}秒。\n<color=#ffffC2>强化效果 : </color>伤害量增加<color=white>{9}</color>，同时所有战斧飞踼范围内的敌人将被击退，\n被击退的敌人如果撞到墙，晕厥{4}秒。 
 Skill/Group/Name/1035400┃闪烁
 Skill/Group/Desc/1035400┃扬向前突进，下一个普攻强化造成<color=white>{6}</color><color=#688A08>(+敌人体力上限{7})</color>技能额外伤害。下一个膝踢，战斧飞踼命中时，根据已失体力恢复该技能伤害 {2} ~ {3} 的体力。(当体力降低到40%时适用体力恢复上限)战斧飞踢可以在施法时使用。\n<color=#ffffC2>强化效果 : </color>缩减<color=white>闪烁</color>冷却 {4} 。
 Skill/Group/Name/1035500┃擂台之魂
@@ -8926,10 +8980,10 @@ Item/Skills/6007011/Desc┃<color=red>VF暴走</color>状态下每移动{1}m，�
 Item/Skills/6001010┃炽焰[帝王黑曼巴蛇 TL]
 Item/Skills/6001011/Name┃<color=yellow>炽焰</color>
 Item/Skills/6001012/Name┃<color=yellow>炽焰</color>
-Item/Skills/6001011/Body┃<color=red>VF暴走</color>状态下进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。\n\n<color=red>VF暴走</color>状态下只启动帝王黑曼巴蛇TL的 <color=yellow>炽焰</color>效果。
-Item/Skills/6001011/Desc┃<color=red>VF暴走</color>状态下进入战斗状态时，每{9}秒给周围{0}m内的敌人造成技能伤害。 给敌人造成<color=#688A08>体力上限{3}</color>的技能伤害。\n\n<color=red>VF暴走</color>状态下只启动帝王黑曼巴蛇TL的<color=yellow>炽焰</color>效果。
-Item/Skills/6021010┃VF支配 强化[超级响尾蛇 ML]
-Item/Skills/6021011/Name┃<color=yellow>VF支配 强化</color>
+Item/Skills/6001011/Body┃<color=red>VF暴走</color>状态下进入战斗状态时，每秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。\n\n<color=red>VF暴走</color>状态下只启动帝王黑曼巴蛇TL的 <color=yellow>炽焰</color>效果。
+Item/Skills/6001011/Desc┃<color=red>VF暴走</color>状态下进入战斗状态时，每秒给周围{0}m内的敌人造成技能伤害。 给敌人造成<color=#688A08>体力上限{3}</color>的技能伤害。\n\n<color=red>VF暴走</color>状态下只启动帝王黑曼巴蛇TL的<color=yellow>炽焰</color>效果。
+Item/Skills/6021010┃VF支配强化[超级响尾蛇 ML]
+Item/Skills/6021011/Name┃<color=yellow>VF支配强化</color>
 Item/Skills/6021011/Body┃厄喀翁的超负荷状态持续时间根据VF暴走(R)级别永久性减少{0}/{1}/{2}/{3}。
 Item/Skills/6021011/Desc┃厄喀翁的超负荷状态持续时间根据VF暴走(R)级别永久性减少{0}/{1}/{2}/{3}。
 Item/Skills/6021000┃减少防御[女王蛇 MT]
@@ -10931,11 +10985,11 @@ Skill/LobbyDesc/1046200┃<color=white>雷击</color> : 艾登释放一把电流
 Skill/LobbyDesc/1046300┃艾登集聚电流于武器上，准备下一个攻击，此时移动速度将有所减缓。再次施法时，周围的敌人根据蓄能时间承受技能伤害，并减少移动速度。蓄能至上限时，将生成<color=white>电磁场</color>。\n\n<color=white>电磁场</color> : 接触到电磁场的敌人承受技能伤害并陷入束缚。
 Skill/LobbyDesc/1046400┃<color=green>被动</color> : <color=white>电荷</color>充满时，重置此技能的冷却。\n\n<color=white>后闪</color> : 向后闪退并发射一枚电流子弹。给命中的敌人造成技能伤害，留下可共享视野的标识并使用<color=white>伏特闪移</color>。使用后暂时增加移动速度。\n\n<color=white>伏特闪移</color> : 穿透被赋予标识的敌人造成技能伤害。
 Skill/LobbyDesc/1046500┃在指定的位置释放1枚落雷造成技能伤害，并减少敌人的移动速度。 处于落雷中心的敌人承受额外伤害并晕厥。\n此后释放的第2枚落雷在造成技能伤害的同时减少敌人的移动速度。\n\n艾登可以在第2枚落雷落地前重新使用技能并传送至落雷击落的位置。此时，第2枚落雷将立即掉落。艾登在第一枚落雷命中敌人实验体后移动时，将充满<color=white>电荷</color>。
-Skill/LobbyDesc/1047100┃劳拉移动时可以恢复<color=white>战栗</color>叠层。\n\n<color=white>尼利亚的教诲</color>: 劳拉每移动一定距离后下一个普攻会造成额外范围技能伤害。使用技能移动时立即激活。\n攻击目标距离太近时不会激活。 
-Skill/LobbyDesc/1047200┃劳拉朝指定的方向挥鞭1次，造成技能伤害并恢复<color=white>战栗</color>叠层。造成技能伤害后的一定时间内再次使用技能可以强化攻击。\n\n第1次强化 : 劳拉朝指定的方向挥鞭1次，造成更大的技能伤害并恢复<color=white>战栗</color>叠层。\n第2次强化 : 劳拉朝指定的方向挥鞭2次，造成技能伤害并恢复<color=white>战栗</color>叠层。
-Skill/LobbyDesc/1047300┃劳拉朝指定的方向投掷预告函。\n预告函在和敌人实验体发生碰撞时会散开，并使范围内敌人的移动速度减少。对碰撞的敌人造成技能伤害并在一定时间后将其标记为劳拉的<color=white>偷取目标</color>。成为<color=white>偷取目标</color>的敌人承受技能伤害，同时减少移动速度和防御力 。此时，劳拉根据目标减少的防御力增加攻击力。另外恢复<color=white>战栗</color>叠层。
-Skill/LobbyDesc/1047400┃劳拉消耗<color=white>战栗</color>朝指定的方向突进。<color=white>优雅的步伐</color>不受冷却缩减属性的影响。\n\n在<color=white>幻影神偷</color>期间使用可以稍微改变突进方向并增加突进距离。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/LobbyDesc/1047500┃劳拉进入无法阻止状态朝指定的方向伸长鞭子。\n如果鞭子触墙或碰撞到预告函的<color=white>偷取目标</color>，劳拉会滑向该方向给路径上的敌人造成技能伤害。\n鞭子未触墙或突进结束时解除无法阻止状态。劳拉将突进时冲撞到的第一个敌人拖拽至目的地。\n劳拉向后转一个大圈后落地。\n此时给周围的敌人造成技能伤害并使敌人悬空。\n\n当鞭子命中成为预告函<color=white>偷取目标</color>的敌人实验体时，将轻拉目标。
+Skill/LobbyDesc/1047100┃ラウラは移動するたびに<color=white>スリル</color>を回復します。\n\n<color=white>ネレアの教え：</color>ラウラは一定距離を移動するたびに次の基本攻撃が追加範囲スキルダメージを与えます。\nスキルで移動するとすぐに活性化します。\n攻撃対象が近すぎると発動しません。
+Skill/LobbyDesc/1047200┃ラウラが指定した方向に鞭を一回振り下ろしてスキルダメージを与え、<color=white>スリル</color>を回復します。\nスキルでダメージを与え、一定時間内にスキルを再使用すると、強化された攻撃をすることができます。\n\n1回強化：ラウラが指定した方向に鞭を一回振り下ろして、より大きなスキルダメージを与え、<color=white>スリル</color>を回復します。\n\n2回強化：ラウラが指定した方向に鞭を2回振り下ろして、スキルダメージを与え、<color=white>スリル</color>を回復します。
+Skill/LobbyDesc/1047300┃ラウラが指定した方向に予告状を投げます。\n予告状は敵実験体と衝突すると開かれ、範囲内の敵の移動速度を減少させます。衝突した対象にはスキルダメージを与え、その対象は一定時間後ラウラの<color=white>ターゲット</color>になります。<color=white>ターゲット</color>になった対象はスキルダメージを受けて移動速度と防御力が減少します。\nこの時、対象の減少した防御力の分、ラウラの防御力が増加します。また、<color=white>スリル</color>を回復します。
+Skill/LobbyDesc/1047400┃ラウラが<color=white>スリル</color>を消耗して指定した方向に短く突進します。<color=white>優雅な足取り</color>はクールダウン減少能力値の影響を受けません。\n\n<color=white>黄昏の泥棒</color>使用中に使用すると、突進する方向をしばらく変更でき、突進距離が増加します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/LobbyDesc/1047500┃ラウラが阻止不可状態になり、鞭を指定した方向に伸ばします。\n鞭が壁または予告状の<color=white>ターゲット</color>に衝突するとその位置に突進して、衝突した敵にスキルダメージを与えます。突進中に初めて衝突した敵はラウラによって到着地点まで引きずられていきます。\n阻止不可状態は鞭が壁に衝突しなかったり、ラウラの突進が終わると解除されます。\n\n\nラウラは突進中壁にぶつかると到着地点で後ろに大きく回って着地します。\nこの時、周りにスキルダメージを与えて空中に浮かせます。\n\n予告状の<color=white>ターゲット</color>に指定された敵実験体に鞭が的中されると、その対象を少し引き寄せます。
 Skill/LobbyDesc/1048100┃蒂娅使用<color=#ffffff>笔触(Q)</color>或<color=#ffffff>着色(E)</color>给敌人涂上2种颜色时启动松鼠效果。蒂娅的基本技能不受冷却缩减影响，根据冷却缩减数值增加成比例的技能增幅。\n\n[松鼠发威]\n给敌人涂上<color=#ffffff>黄色和红色</color>颜料时，启动松鼠发威效果暂时给敌人造成技能伤害并使敌人陷入沉默。\n\n[幸运松鼠]\n给敌人涂上<color=#ffffff>红色和蓝色</color>颜料时，启动幸运松鼠效果给敌人造成技能伤害的同时恢复体力并暂时提高移动速度。\n\n[魔法松鼠]\n给敌人涂上<color=#ffffff>蓝色和黄色</color>颜料时，启动魔法松鼠效果给敌人造成技能伤害并使敌人暂时陷入束缚。
 Skill/LobbyDesc/1048400┃蒂娅不同颜色的颜料适用不同的技能。\n\n<color=yellow>黄色</color> : 蒂娅朝前方投掷黄色颜料，造成技能伤害并涂上黄色颜料。\n染上黄色颜料的敌人移动速度有所减少。\n<color=red>红色</color> : 蒂娅横扫画笔，给命中的敌人造成技能伤害并涂上红色颜料。\n染上红色颜料的敌人移动速度有所减少。\n<color=#2AC0FF>蓝色</color> : 蒂娅使用画笔给敌人一记重锤，造成技能伤害并在圆形范围内涂上蓝色颜料。\n染上蓝色颜料的敌人移动速度减少。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
 Skill/LobbyDesc/1048500┃蒂娅切换画笔颜色。画笔的颜色按照黄色、红色和蓝色的顺序进行切换。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
@@ -10994,7 +11048,7 @@ Skill/LobbyDesc/1058500┃<color=white>转换火箭发射器模式</color>:海�
 Skill/LobbyDesc/1059100┃对同一敌人每发起3次攻击时，造成额外技能伤害，增加移动速度。同时根据造成管制伤害量恢复伊萨克的体力。
 Skill/LobbyDesc/1059200┃伊萨克向敌人突进后，猛击造成技能伤害。
 Skill/LobbyDesc/1059300┃伊萨克加强武器并强化下一个普攻或者基本技能，造成额外的技能伤害。因该技能强化的普攻或者基本技能触发管制时，减少基本技能的冷却时间。
-Skill/LobbyDesc/1059400┃伊萨克迅速突进，准备下一个技能。\n\n再次使用时 : 将前方的敌人拉向自己、摧毁其护盾并造成技能伤害，使敌人暂时晕厥。
+Skill/LobbyDesc/1059400┃伊萨克迅速突进，准备下一个技能。\n\n再次使用时 : 将前方的敌人拉向自己、摧毁其护盾并造成技能伤害，使敌人暂时晕厥。被拉过来的敌人防御力减少。
 Skill/LobbyDesc/1059500┃伊萨克朝指定的方向猛击地面并造成技能伤害，没有管制标识的敌人会被推出范围外。和管制标识的叠层量成比例，根据目标已失体力造成一定量的额外技能伤害，并暂时大幅减少移动速度。
 Skill/LobbyDesc/1061100┃爱琳进入其他区域时变得警惕处于高度警惕状态，此状态下增加视野。在同一区域逗留一段时间后，取消视野增效并强化其他能力。\n\n爱琳 : 攻击速度增加\n猫咪 : 增加防御力\n\n吃掉用鱼制作的食物时，立即恢复一定比例食物恢复上限的体力。
 Skill/LobbyDesc/1061200┃<color=#ffd775>爱琳 : </color>\n爱琳丢出的球每弹跳一次都会加强，给范围内的敌人造成技能伤害。\n球给敌人造成伤害时停止弹跳，同时生成小鱼标识。\n\n<color=#ffd775>猫咪 : </color>\n使用技能后，下次普攻时向对方突进并造成额外的技能伤害。攻击带有猫咪铃铛标识的对象时，使其处于束缚。\n\n此后快速发起连续攻击，分别对范围内的敌人造成技能伤害。\n承受连续攻击的对象受到负面效果影响时，承受额外的技能伤害。\n
@@ -11407,17 +11461,17 @@ Item/Skills/6002008/Name┃<color=yellow>意念</color>
 Item/Skills/6002009/Name┃<color=yellow>意念</color>
 Item/Skills/6001000┃炽焰
 Item/Skills/6001001/Name┃<color=yellow>炽焰</color>
-Item/Skills/6001001/Body┃({0})进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
-Item/Skills/6001001/Desc┃每{9}秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
+Item/Skills/6001001/Body┃({0})进入战斗状态时，每秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
+Item/Skills/6001001/Desc┃每秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
 Item/Skills/6001002/Name┃<color=yellow>炽焰</color>
-Item/Skills/6001002/Body┃({0})进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
-Item/Skills/6001002/Desc┃每{9}秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
+Item/Skills/6001002/Body┃({0})进入战斗状态时，每秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
+Item/Skills/6001002/Desc┃每秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
 Item/Skills/6001003/Name┃<color=yellow>炽焰</color>
-Item/Skills/6001003/Body┃({0})进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
-Item/Skills/6001003/Desc┃每{9}秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
+Item/Skills/6001003/Body┃({0})进入战斗状态时，每秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
+Item/Skills/6001003/Desc┃每秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
 Item/Skills/6001004/Name┃<color=yellow>炽焰</color>
-Item/Skills/6001004/Body┃({0})进入战斗状态时，每{6}秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
-Item/Skills/6001004/Desc┃每{9}秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
+Item/Skills/6001004/Body┃({0})进入战斗状态时，每秒给{1}m范围内的敌人造成<color=#688A08>{4}</color>技能伤害。 
+Item/Skills/6001004/Desc┃每秒给周围{0}m内的敌人造成(<color=#688A08>近战 : 体力上限{3}</color>｜<color=#688A08>远程 : 体力上限{7}</color>)的技能伤害。
 Item/Skills/6003000┃负面效果抵御
 Item/Skills/6003001/Name┃<color=yellow>负面效果抵御</color>
 Item/Skills/6003001/Body┃负面效果持续时间减少{0}%(压制、悬空、震退和攫取除外)
@@ -11531,16 +11585,16 @@ Item/Skills/6012002/Body┃最后一发弹丸的普攻造成<color=#DDA0DD>{2}</
 Item/Skills/6012002/Desc┃最后一发弹丸的普攻造成<color=green>实验体级别 * {5}</color> <color=#DDA0DD>(+技能增幅的 {1})</color><color=#688A08>(+目标体力上限{6}%)</color>的额外技能伤害。
 Item/Skills/6013000┃充能
 Item/Skills/6013001/Name┃<color=yellow>充能 - 闪光</color>
-Item/Skills/6013001/Body┃下一个普攻造成<color=white>{0}</color>额外技能伤害，{1}秒间移动速度减少{2}%。(冷却 : {9}秒)
-Item/Skills/6013001/Desc┃下一个普攻造成<color=white>{0}</color>额外技能伤害，{1}秒间移动速度减少{2}%。(冷却 : {6}秒)
+Item/Skills/6013001/Body┃下一个普攻造成<color=white>{0}</color>额外技能伤害，使其移动速度在{1}秒间减少{2}%。(冷却 : {9}秒)
+Item/Skills/6013001/Desc┃下一个普攻造成<color=white>{0}</color>额外技能伤害，使其移动速度在{1}秒间减少{2}%。(冷却 : {6}秒)
 Item/Skills/6013002/Name┃<color=yellow>充能 - 铁环</color>
-Item/Skills/6013002/Body┃下一个普攻造成<color=white>{0}</color>额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {9}秒)
-Item/Skills/6013002/Desc┃下一个普攻造成<color=white>{0}</color>额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {6}秒)
+Item/Skills/6013002/Body┃下一个普攻造成<color=white>{0}</color>额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {9}秒)
+Item/Skills/6013002/Desc┃下一个普攻造成<color=white>{0}</color>额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {6}秒)
 Item/Skills/6013003/Name┃<color=yellow>充能 - 闪光</color>
-Item/Skills/6013003/Body┃下一个普攻造成<color=green>{8}</color><color=#DDA0DD>(+{6})</color>额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {9}秒)
-Item/Skills/6013003/Desc┃下一个普攻造成<color=green>实验体级别*{8}</color><color=#DDA0DD>(+技能增幅{7})</color>的额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {6}秒)
-Item/Skills/6013006/Body┃下一个普攻造成<color=green>{8}</color>额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {9}秒)
-Item/Skills/6013006/Desc┃下一个普攻造成<color=green>实验体级别*{8}</color>的额外技能伤害，{4}秒间移动速度减少{2}%。(冷却 : {6}秒)
+Item/Skills/6013003/Body┃下一个普攻造成<color=green>{8}</color><color=#DDA0DD>(+{6})</color>额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {9}秒)
+Item/Skills/6013003/Desc┃下一个普攻造成<color=green>实验体级别*{8}</color><color=#DDA0DD>(+技能增幅{7})</color>的额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {6}秒)
+Item/Skills/6013006/Body┃下一个普攻造成<color=green>{8}</color>额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {9}秒)
+Item/Skills/6013006/Desc┃下一个普攻造成<color=green>实验体级别*{8}</color>的额外技能伤害，使其移动速度在{4}秒间减少{2}%。(冷却 : {6}秒)
 Item/Skills/6013004/Name┃<color=yellow>充能 - 闪光</color>
 Item/Skills/6013004/Body┃下一个普攻在{1}秒间使敌人的移动速度减少{2}%。(冷却 : {9}秒)
 Item/Skills/6013004/Desc┃下一个普攻在{1}秒间使敌人的移动速度减少{2}%。(冷却 : {6}秒)
@@ -11587,6 +11641,9 @@ Item/Skills/6015003/Desc┃{0}秒内造成{1}次个别伤害时，{3}秒间移�
 Item/Skills/6015004/Name┃<color=yellow>神速 - 鲁德拉的短剑</color>
 Item/Skills/6015004/Body┃{0}秒内造成{1}次个别伤害时，{3}秒间移动速度增加{11}%，攻击力增加{13}% 。\n\n(冷却 {2}秒)
 Item/Skills/6015004/Desc┃{0}秒内造成{1}次个别伤害时，{3}秒间移动速度增加{4}%，攻击力增加{11}% 。\n\n(冷却 {2}秒)
+Item/Skills/6015005/Name┃<color=yellow>神速 - 等离子</color>
+Item/Skills/6015005/Body┃{0}秒内造成{1}次个别伤害时，{3}秒间移动速度增加<color=green>{5}%</color>，获得{10}护盾 。\n\n(冷却 {2}秒)
+Item/Skills/6015005/Desc┃{0}秒内造成{1}次个别伤害时，{3}秒间移动速度增加<color=green>实验体级别 * 1%</color>，同时获得{10}护盾。 \n(冷却 {2}秒)
 Item/Skills/6015007/Name┃<color=yellow>神速</color>
 Item/Skills/6015008/Name┃<color=yellow>神速</color>
 Item/Skills/6015007/Body┃{0}秒内造成{1}次个别伤害时，{3}秒间移动速度增加{4}%。\n(冷却 {2}秒)
@@ -11602,9 +11659,6 @@ Item/Skills/6016001/Desc┃当体力低于{0}%的情况下承受来自敌方实�
 Item/Skills/6016002/Name┃<color=yellow>逆流 - 渴血症</color>
 Item/Skills/6016002/Body┃当体力低于{0}%承受敌人实验体伤害时，{1}秒间获得<color=white>{11}</color>护盾 。同时{5}秒间{15}增加{16}，所受恢复量增加{12}%。(冷却 : {13}秒)
 Item/Skills/6016002/Desc┃当体力低于{0}%的情况下承受来自敌方实验体的伤害时，{1}秒间获得{2}<color=#008000>(+实验体级别 * {3})</color>的护盾。同时{5}秒间增加<color=#FFD775>{13}攻击力</color>或<color=#DDA0DD>{14}技能增幅</color>。所受恢复量增加(近战 :  {9}% ｜ 远程 : {10}%)。\n(冷却 : {11}秒)\n
-Item/Skills/6016003/Name┃<color=yellow>逆流 - 圣战</color>
-Item/Skills/6016003/Body┃当体力低于{0}%承受敌方伤害时，{1}秒间获得<color=white>{11}</color>护盾 。同时{5}秒间{15}增加{16}。(冷却 : {13}秒)
-Item/Skills/6016003/Desc┃当体力低于{0}%的情况下承受来自敌方实验体的伤害时，{1}秒间获得{2}<color=#008000>(+实验体级别 * {3})</color>护盾。同时在{5}秒间增加<color=#FFD775>{13}攻击力</color>或<color=#DDA0DD>{14}技能增幅</color>。(冷却 : {11}秒)
 Item/Skills/6016004/Name┃<color=yellow>逆流 - 攻防一体</color>
 Item/Skills/6016004/Body┃承受敌方实验体的伤害时，{1}秒间获得<color=white>{11}</color>护盾。(冷却 : {13}秒)
 Item/Skills/6016004/Desc┃承受敌方实验体的伤害时，{1}秒间获得{2}<color=#008000>+ 实验体级别 * {3}</color>的护盾。(冷却 : {11}秒)
@@ -12654,8 +12708,9 @@ subMenu/Attendance/NRU┃特别奖励
 subMenu/Attendance/RU┃回归玩家
 subMenu/Attendance/Event┃活动
 Shopmenu/Package/ALL┃全部
-Shopmenu/Package/SeasonPack_box┃赛季包&通行证
+Shopmenu/Package/SeasonPack_box┃赛季包&箱子
 Shopmenu/Package/Character┃实验体特别组合包
+Shopmenu/Package/ESports┃电竞组合包
 Shopmenu/Package/ETC┃其他
 ShopMenu/Etc/RANDOM_BOX┃箱子
 ShopMenu/Etc/EMOTION┃表情
@@ -12814,15 +12869,15 @@ ER패스 미해금 미션┃解锁还剩 {0}
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃铁阎
-BRONZE_SUBJECT┃铜魂
-SILVER_SUBJECT┃银烙
-GOLD_SUBJECT┃金魄
-PLATINUM_SUBJECT┃修罗
-DIAMOND_SUBJECT┃灭钻
+IRON┃铁阎
+BRONZE┃铜魂
+SILVER┃银烙
+GOLD┃金魄
+PLATINUM┃修罗
+DIAMOND┃灭钻
 MITHRIL┃无瑕
 DEMIGOD┃半神
-THE_ETERNITY┃永恒
+ETERNITY┃永恒
 UNRANK┃段位未鉴定
 일반┃一般
 NORMAL┃一般
@@ -12909,24 +12964,24 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃因放弃游戏扣除两倍入场费�
 배치고사 중┃分段赛
 강등┃降级
 승급!┃升级
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>当前段位</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>当前段位</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>当前段位</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>当前段位</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>当前段位</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>当前段位</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>当前段位</color>
+MyTierRP/BRONZE┃<color=#E9964C>当前段位</color>
+MyTierRP/SILVER┃<color=#C7CCE6>当前段位</color>
+MyTierRP/GOLD┃<color=#FBD787>当前段位</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>当前段位</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>当前段位</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>当前段位</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>当前段位</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>当前段位</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>当前段位</color>
 RankRP_explanation┃根据对局排名获得的分数。
 Elimination_explanation┃当敌人队伍全灭且无法自动复活时，\n击杀处于濒死状态的敌人时获得的分数。
 Down_explanation┃将敌人置于濒死状态时获得的分数。
@@ -12948,13 +13003,13 @@ DeferPointDemotion/PopupContents┃宽限点数已耗尽，降级至{0}段位。
 메인날씨_비_설명┃卢米亚岛草丛的整体面积增加。\n雨声使听力距离减少，野生动物的攻击力降低。
 메인날씨_모래바람┃沙尘暴
 메인날씨_모래바람_개요┃限制
-메인날씨_모래바람_설명┃肆虐风沙对所有战斗中的实验体施加减少治愈 - 弱效果，视野减少。\n同时将生成一个龙卷风，接触龙卷风的对象将陷入无法指定目标状态。
+메인날씨_모래바람_설명┃克服肆虐风沙的实验体可以获得负面效果抵御。\n同时将生成一个龙卷风，接触龙卷风的对象将陷入无法指定目标状态。
 서브날씨_무풍┃无风
 서브날씨_무풍_개요┃无效果
 서브날씨_무풍_설명┃卢米亚岛的基本环境，没有适用任何效果。
 서브날씨_안개┃雾
 서브날씨_안개_개요┃信息有限
-서브날씨_안개_설명┃由于雾的影响，可获得的信息有限。\n迷你地图和扩展地图将不显示噪音标识。\n也不会显示航空补给箱的位置。
+서브날씨_안개_설명┃由于雾的影响，可获得的信息有限。\n不会显示航空补给箱的位置。
 서브날씨_강풍┃强风
 서브날씨_강풍_개요┃高速移动
 서브날씨_강풍_설명┃实验体的基础移动速度增加。\n在特定区域生成一个增加单向移动速度的强风地带。
@@ -13192,6 +13247,25 @@ StreamingModeSetting/CloseInvitePanel┃关闭邀请画面创建队伍。\n委�
 StreamingModeSetting/NormalMatchingSquad┃在不显示匹配状态的情况下开始一般模式。\n*需要在设置＞直播模式选项中确认是否开启了[使用快捷键匹配]功能。
 StreamingModeSetting/RankMatchingSquad┃在不显示匹配状态的情况下开始排位模式。\n* 需要在设置 → 直播模式选项中开启[使用快捷键匹配]。
 StreamingModeSetting/DisableChattingService┃关闭大厅聊天功能。(无法使用队伍邀请等部分功能)
+IconCustomization/확장맵 미니맵 표시┃扩展・迷你地图图标显示
+IconCustomization/미니맵┃迷你地图
+IconCustomization/확장맵┃扩展地图
+IconCustomization/SecurityConsole┃安全监控台
+IconCustomization/Kiosk┃Kiosk
+IconCustomization/TreeOfLife┃生命树枝
+IconCustomization/Meteorite┃陨石
+IconCustomization/AlphaOmega┃阿尔法/奥米加
+IconCustomization/Wickline┃维克莱恩
+IconCustomization/CampFire┃篝火
+IconCustomization/AirSupplies┃航空补给
+GameSetting/SecurityConsole┃设置是否显示安全监控台图标
+GameSetting/Kiosk┃设置是否显示Kiosk图标
+GameSetting/TreeOfLife┃设置是否显示生命树枝图标
+GameSetting/Meteorite┃设置是否显示陨石图标
+GameSetting/AlphaOmega┃设置是否显示阿尔法/奥米加图标
+GameSetting/Wickline┃设置是否显示维克莱恩图标
+GameSetting/CampFire┃设置是否显示篝火图标
+GameSetting/AirSupplies┃设置是否显示航空补给图标
 사운드┃声音
 마스터 볼륨┃总音量
 배경음악┃背景音乐
@@ -13411,7 +13485,7 @@ BattleZoneRewardGaugeTooltip_Desc┃请前往安全监控领取奖励。
 방해 효과 저항┃负面效果抵御
 방해 효과 저항 설명┃负面效果持续时间减少{0}%(压制、悬空、击退、攫取、凝滞除外)
 강인함┃负面效果抵御
-강인함 설명┃负面效果持续时间减少{0}%(压制、悬空、震退、攫取除外)
+강인함 설명┃负面效果持续时间减少{0}%(压制、悬空、击退、攫取除外)
 방어 관통┃防御穿透
 방어 관통 설명┃给敌人造成伤害时，暂时无视对方一定的防御力。
 모든 아이템┃所有物品
@@ -14445,6 +14519,7 @@ Invulnerability┃无法指定目标
 Protectability┃无敌
 Suspension┃<sprite name=Stun> 晕厥
 Attach┃<sprite name=Suppressed> 压制
+Insanity┃<sprite name=Taunt>精神失常
 무기 숙련도┃武器熟练度
 무기 숙련도 설명┃武器的制作和使用增加的能力值。\n根据实验体和武器装备的不同，增加数值会稍有差异。
 숙련도 레벨 선택┃选择熟练度等级
@@ -15466,6 +15541,9 @@ RAF/버튼툴팁┃邀请新好友活动！
 방장위임안내팝업┃确认委任{0}为队长吗？
 Xbox개인정보온라인안전정보에러팝업┃由于 Xbox 隐私和在线安全设置，无法执行此操作。
 자리비움 유저 툴팁┃该玩家已经离开超过2分钟。
+Friend/FriendMessageEditSave┃确定要保存更改吗？
+Friend/InappropriateMessage┃内容中包含无法使用的词语，请您再次确认。
+Friend/StateMessagePlaceHolder┃您可以随时更改状态签名。
 LumiaIsland┃必修教程
 InTutorialGame┃教程训练中
 InLobby┃大厅
@@ -16569,7 +16647,6 @@ UI-ItemCatalogIcon/Name/CampFire┃篝火
 UI-ItemCatalogIcon/Help/CampFire┃卢米亚岛上所有的一般食物经过篝火烤制后，都能制作成等级更高的食物。
 UI-ItemCatalogIcon/Name/???┃逃生区
 UI-ItemCatalogIcon/Help/???┃需要逃生手环才能前往逃生区，可以在Kiosk购买逃生手环。
-보상┃奖励
 ItemType/CHARACTER/Name┃实验体
 ItemType/EVENT_NP/Name┃活动NP
 ItemType/RANDOM_BOX/Name┃箱子
@@ -16581,7 +16658,7 @@ ItemType/LOOT_TOKEN/Name┃代币
 Forge/Category/Recent┃近期获得
 Forge/Category/All┃全部
 Forge/Category/CharacterSkin┃皮肤
-캐릭터 보유중┃持有中
+캐릭터 보유중┃已持有实验体
 미보유 아이템┃未持有的物品
 보유 도안 제외┃不显示持有碎片
 보유 스킨 제외┃不显示持有皮肤
@@ -16792,6 +16869,8 @@ Goods/Name/3102013┃秘密DATA箱
 Goods/Desc/3102013┃可以根据概率获得多种物品中的一种。\n购买后将立即使用，请通过奖励列表确认内容物。
 Goods/Name/3102014┃赛季代币随机箱
 Goods/Desc/3102014┃可以获得当前赛季的1~3个赛季代币。\n概率决定可以获得的数量。\n购买后将立即使用，请通过奖励列表确认内容物。
+Goods/Name/3102081┃S4纪念活动皮肤箱
+Goods/Desc/3102081┃可以获得一款皮肤DATA箱中新增皮肤的箱子。\n请通过奖励列表查看内容物。
 Goods/Name/3103004┃白色花朵箱子
 Goods/Desc/3103004┃可以获得白色花朵箱子、绿色花朵箱子或A-Coin其中一种，有一定概率获得白色花朵收藏物品。
 Goods/Name/3103005┃绿色花朵箱子
@@ -18529,13 +18608,13 @@ Trait/Tooltip/7211101┃每次参与击杀实验体时，可以额外获得荣�
 Trait/DetailTooltip/7211101┃每次参与击杀实验体时，可以额外获得{1}或{2}荣誉值，概率各为50%。
 Trait/StatTooltip/7211101┃每次参与击杀实验体时，可以额外获得{1}或{2}荣誉值，概率各为50%。\n\n总获得荣誉值 : {0}
 Trait/Name/7310101┃凝力
-Trait/Tooltip/7310101┃随着时间的推移，获得适性值。
-Trait/DetailTooltip/7310101┃在白天/夜晚交替时，获得<color=#ffffff>{1}~{2}</color>适性值。随着时间推移可以获得更多适性值。
+Trait/Tooltip/7310101┃随着时间的推移，获得增加攻击力或技能增幅的适性值。
+Trait/DetailTooltip/7310101┃在白天/夜晚交替时，获得<color=#FFD775>{1}~{2}</color>攻击力或<color=#DDA0DD>{3}~{4}</color>技能增幅。随着时间推移可以增加更多。
 Trait/StatTooltip/7310101┃在白天/夜晚交替时，增加<color=#ffffff>{1}</color>。随着时间推移可以增加更多。\n\n增加的{1} : {0}
 Trait/Name/7310301┃超频
-Trait/Tooltip/7310301┃获得冷却缩减。当冷却缩减达到最大值时，将根据超出的冷却缩减数值获得一定比例的适性值。
-Trait/DetailTooltip/7310301┃获得<color=#ffffff>{1}%</color>冷却缩减。当冷却缩减达到最大值时，每超出{3}%冷却缩减将获得<color=#ffffff>{2}</color>适性值。（最多适用10%）
-Trait/StatTooltip/7310301┃获得<color=#ffffff>{1}%</color>冷却缩减。当冷却缩减达到最大值时，每超出{3}%冷却缩减将获得<color=#ffffff>{2}</color>适性值。（最多适用10%）\n\n增加的适性值 : {0}
+Trait/Tooltip/7310301┃增加冷却缩减。当冷却缩减达到最大值时，将根据超出的冷却缩减数值获得一定比例的攻击力或技能增幅。
+Trait/DetailTooltip/7310301┃冷却缩减增加<color=#ffffff>{1}%</color>。当冷却缩减达到最大值时，每超出{3}%冷却缩减将获得<color=#FFD775>{2}攻击力</color>或<color=#DDA0DD>{4}技能增幅</color>  。（最多适用{5}%）
+Trait/StatTooltip/7310301┃冷却缩减增加<color=#ffffff>{1}%</color>。当冷却缩减达到最大值时，每超出{3}%冷却缩减将使{4}增加<color=#ffffff>{2}</color>。（最多适用{5}%）\n\n增加的{4} : {2}
 Trait/Name/7310401┃制动力
 Trait/Tooltip/7310401┃对敌人实验体造成伤害时，将在短时间增加防御穿透。
 Trait/DetailTooltip/7310401┃对敌人实验体造成伤害时，防御穿透将在<color=#ffffff>{1}</color>秒间增加<color=#ffffff>{2}%</color>。（冷却 : {3}秒）\n增加的防御穿透也适用于最初伤害。
@@ -18544,6 +18623,7 @@ CharacterState/Group/Name/7310400┃制动力
 CharacterState/Group/Desc/7310400┃对敌人实验造成伤害时，将在短时间增加防御穿透。
 CharacterState/Group/Name/7310410┃制动力
 CharacterState/Group/Desc/7310410┃冷却中
+CharacterState/Group/Name/7310420┃制动力
 Trait/Name/7310501┃R_echarger
 Trait/Tooltip/7310501┃缩减终极技能冷却时间。
 Trait/DetailTooltip/7310501┃使用终极技能时，终极技能剩余冷却时间缩减<color=#ffffff>{1}</color>%。\n\n不会对冷却固定技能造成影响。
@@ -18553,15 +18633,15 @@ Trait/Tooltip/7111001┃随着当前体力降低增强防御力。
 Trait/DetailTooltip/7111001┃随着体力降低增加防御力。当体力低于{2}%以下时，防御力将逐渐达到最大值<color=#ffffff>{1}%</color>。
 Trait/StatTooltip/7111001┃随着体力降低增加防御力。当体力低于{2}%以下时，防御力将逐渐达到最大值<color=#ffffff>{1}%</color>。\n\n当前增加的防御力 : {0}
 Trait/Name/7300201┃鬼火
-Trait/Tooltip/7300201┃在短时间内对敌人造成巨大伤害时，鬼火将攻击敌人，造成持续伤害并赋予减少治愈效果。
-Trait/DetailTooltip/7300201┃在{6}秒内造成敌人实验体体力上限{7}%的伤害时，将出现鬼火，在{8}秒间造成<color=#ffffff>{1}~{2}</color><color=#FFD775>(+额外攻击力{3}%)</color><color=#DDA0DD>(+技能增幅{4}%)</color>的真实伤害，并赋予减少治愈效果。{11}秒内未对敌人实验体造成伤害时，将快速缩减2倍冷却。（冷却 : {5}秒）\n\n伤害量随级别的增加而增加。
-Trait/StatTooltip/7300201┃在{6}秒内造成敌人实验体体力上限{7}%的伤害时，将出现鬼火，在{8}秒间造成<color=#ffffff>{1}</color>的真实伤害，并赋予减少治愈效果。{11}秒内未对敌人实验体造成伤害时，将快速缩减2倍冷却。（冷却 : {5}秒）\n\n伤害量随级别的增加而增加。\n\n鬼火对敌人造成的伤害 : {0}
+Trait/Tooltip/7300201┃在短时间内对敌人造成巨大伤害时，鬼火将攻击敌人，造成持续伤害并赋予减少治愈 - 强效果。
+Trait/DetailTooltip/7300201┃在{6}秒内造成敌人实验体体力上限{7}%的伤害时，将出现鬼火，在{8}秒间造成<color=#ffffff>{1}~{2}</color><color=#FFD775>(+额外攻击力{3}%)</color><color=#DDA0DD>(+技能增幅{4}%)</color>的真实伤害，并赋予{12}%减少治愈效果。{11}秒内未对敌人实验体造成伤害时，将快速缩减2倍冷却。（冷却 : {5}秒）\n\n伤害量随级别的增加而增加。
+Trait/StatTooltip/7300201┃在{6}秒内造成敌人实验体体力上限{7}%的伤害时，将出现鬼火，在{8}秒间造成<color=#ffffff>{1}</color>的真实伤害，并赋予{12}%减少治愈效果。{11}秒内未对敌人实验体造成伤害时，将快速缩减2倍冷却。（冷却 : {5}秒）\n\n伤害量随级别的增加而增加。\n\n鬼火对敌人造成的伤害 : {0}
 CharacterState/Group/Name/7300200┃鬼火
 CharacterState/Group/Desc/7300200┃在短时间内对敌人实验造成巨大伤害时，鬼火将攻击敌人，造成持续伤害。
 CharacterState/Group/Name/7300210┃鬼火
 CharacterState/Group/Desc/7300210┃冷却中
 CharacterState/Group/Name/7300230┃鬼火
-CharacterState/Group/Desc/7300230┃鬼火持续造成伤害，并对敌人施加减少治愈效果。
+CharacterState/Group/Desc/7300230┃鬼火持续造成伤害，并对敌人施加减少治愈 - 强效果。
 Trait/Name/7300101┃星尘蓄势
 Trait/Tooltip/7300101┃在一定时间内，激活{2}次不同的技能时，下一次普攻将造成额外伤害，并缩减自身基本技能冷却时间。
 Trait/DetailTooltip/7300101┃激活不同的技能时，将获得[星尘蓄势]叠层，叠层持续{1}秒。叠加{2}次时，接下来{3}秒内发起的普攻将根据目标类型激活不同的效果。\n\n对敌人实验体及敌人实验体的召唤物 : 造成<color=#ffffff>{4}~{5}</color>额外真实伤害，基本技能冷却缩减<color=#ffffff>{6}%</color>（冷却{7}秒）\n野生动物 : 造成<color=#ffffff>{8}~{9}</color>额外真实伤害，基本技能冷却缩减<color=#ffffff>{10}%</color>（冷却{13}秒）\n\n伤害量随级别的增加而增加。\n同一槽位的技能视为同一个技能。\n不会对冷却固定技能造成影响。
@@ -19118,17 +19198,17 @@ gameTip_Desc_10070_3┃跳台是一种可以实现快速移动、轻松跨越远
 gameTip_Title_10401_1┃天气系统
 gameTip_Desc_10401_1┃卢米亚岛的天气系统由主要天气和次要天气组成，不同的天气将带来不同的效果。\n完成匹配后，可以通过效果、战略图以及游戏内UI进行查看。
 gameTip_Title_10402_1┃主要天气
-gameTip_Desc_10402_1┃主要天气由阴天・晴天・雨天・沙尘暴组成，各有以下特点。\n阴天 : 卢米亚岛的基本环境，没有适用任何效果。\n晴天 : 环境资源丰富。便于制作食物和获取视野。\n雨天 : 便于隐身的环境。草丛整体面积增加，声音传播距离减少。\n沙尘暴 : 限制性较强的环境。视野减少。战斗中将适用减少治愈效果。
+gameTip_Desc_10402_1┃主要天气由阴天・晴天・雨天・沙尘暴组成，各有以下特点。\n阴天 : 卢米亚岛的基本环境，没有适用任何效果。\n晴天 : 环境资源丰富。便于制作食物和获取视野。\n雨天 : 便于隐身的环境。草丛整体面积增加，声音传播距离减少。\n沙尘暴 : 限制性较强的环境。提供负面效果抵御，生成龙卷风。
 gameTip_Title_10402_2┃主要天气 - 晴天
 gameTip_Desc_10402_2┃卢米亚岛草丛整体减少，视野范围变得开阔。\n制作食物/饮料的恢复量增加。\n增加采集土豆或钓鱼时获得稀有材料的概率。
 gameTip_Title_10402_3┃主要天气 - 雨天
 gameTip_Desc_10402_3┃卢米亚岛草丛的整体面积增加。\n雨声使听力距离减少，野生动物的攻击力降低。
 gameTip_Title_10402_4┃主要天气 - 沙尘暴
-gameTip_Desc_10402_4┃肆虐风沙对所有战斗中的实验体施加减少治愈 - 弱效果，视野减少。\n同时将生成一个龙卷风，接触龙卷风的对象在一段时间后可以通过操作翻越墙壁移动。
+gameTip_Desc_10402_4┃克服肆虐风沙的实验体可以获得负面效果抵御。\n同时将生成一个龙卷风，接触龙卷风的对象在一段时间后可以通过操作翻越墙壁。
 gameTip_Title_10403_1┃次要天气
-gameTip_Desc_10403_1┃次要天气由无风・雾・强风・雷电组成，各有以下特点。\n无风 : 卢米亚岛的基本环境，没有适用任何效果。\n雾 : 信息被阻断的环境。不会显示噪音标识和航空补给箱的位置。\n强风 : 能够快速移动的特定环境。基础移动速度增加，部分位置将生成增加移动速度的强风地带。\n雷电 : 相对较为危险的环境。将在除禁区外的室外区域发生雷电并造成伤害。
+gameTip_Desc_10403_1┃次要天气由无风・雾・强风・雷电组成，各有以下特点。\n无风 : 卢米亚岛的基本环境，没有适用任何效果。\n雾 : 信息被阻断的环境。不会显示航空补给箱的位置。\n强风 : 能够快速移动的特定环境。基础移动速度增加，部分位置将生成增加移动速度的强风地带。\n雷电 : 相对较为危险的环境。将在除禁区外的室外区域发生雷电并造成伤害。
 gameTip_Title_10403_2┃次要天气 - 雾
-gameTip_Desc_10403_2┃由于雾的影响，可获得的信息有限。\n迷你地图和扩展地图将不显示噪音标识。\n也不会显示航空补给箱的位置。
+gameTip_Desc_10403_2┃由于雾的影响，可获得的信息有限。\n不会显示航空补给箱的位置。
 gameTip_Title_10403_3┃次要天气 - 强风
 gameTip_Desc_10403_3┃实验体的基础移动速度增加。\n在特定区域生成一个增加单向移动速度的强风地带。
 gameTip_Title_10403_4┃次要天气 - 雷电
@@ -19287,172 +19367,6 @@ InGameGuide/Nadja/Group/Desc/10123000┃恭喜赢得了战场的胜利。\n记�
 오퍼레이터 기존유저 보상 내용┃虽然都是你已经知道的东西，但你又耐心地听了一遍。\n越想越好奇...这是你个人的品质吗，还是你只是很有耐心？\n总之，谢谢你！我很感动！\n随信附上我们的感谢，希望你可以喜欢！
 신규유저 오퍼레이터 비활성화 안내 내용┃现在好像已经比较熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n以后也多多加油，继续努力吧！
 기존유저 오퍼레이터 비활성화 안내 내용┃现在好像已经熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n你已经做的很好了，继续保持！
-ServerError/1000┃发生未知错误，请重新开始游戏。
-ServerError/1001┃发生未知错误，请重新开始游戏。
-ServerError/1002┃发生未知错误，请重新开始游戏。
-ServerError/1003┃发生未知错误，请重新开始游戏。
-ServerError/1004┃请重新登录，并重启游戏。
-ServerError/1005┃发生未知错误，请重新开始游戏。
-ServerError/1006┃服务器在维修中。
-ServerError/1007┃客户端版本不正确。
-ServerError/1100┃发生未知错误，请重新开始游戏。
-ServerError/1101┃发生未知错误，请重新开始游戏。
-ServerError/1102┃请重新登录，并重启游戏。
-ServerError/1110┃无法登录服务器，请检查账号信息。
-ServerError/1111┃该昵称无法使用。
-ServerError/1112┃无法登录服务器，请检查账号信息。
-ServerError/1115┃Steam登录失败。
-ServerError/1116┃限制使用的账户。
-ServerError/1118┃昵称已存在。
-ServerError/1124┃无法创建MS账户。
-ServerError/1200┃找不到战斗结果。
-ServerError/1201┃未知游戏信息。(1201)
-ServerError/1202┃未知回放信息。(1202)
-ServerError/1203┃已拥有ER通行证。(1203)
-ServerError/1204┃该重播限制观看。(1204)
-ServerError/1300┃无法进行匹配。请在大厅画面右上角确认所选服务器。
-ServerError/1301┃匹配时产生错误。
-ServerError/1302┃预先组队中存在等级或实验体拥有数不足的队员。
-ServerError/1303┃上一场比赛还没有结束。
-ServerError/1305┃预先组队中存在不满足等级要求的队员。
-ServerError/1306┃当前无法进行匹配 (1306)
-ServerError/2000┃购买产生错误。
-ServerError/2001┃Steam的信息产生错误。
-ServerError/2002┃0
-ServerError/2003┃0
-ServerError/2100┃资金不足。
-ServerError/2101┃NP数量不足。
-ServerError/2102┃A-币不足。
-ServerError/2120┃产品信息没有找到。
-ServerError/2121┃产品信息不正确。
-ServerError/2122┃超过购买的数量。
-ServerError/2123┃日常购买数量超过上限。
-ServerError/2124┃每周购买超过上限。
-ServerError/2125┃每月购买数量超过上限。
-ServerError/2126┃购买失败，折扣已过期。
-ServerError/2127┃超过每日购买次数。(2127)
-ServerError/2128┃超过每周购买次数。(2128)
-ServerError/2129┃超过每月购买次数。(2129)
-ServerError/2130┃超过购买次数。(2130)
-ServerError/2131┃无效的价格信息。(2131)
-ServerError/2132┃当前所在地区无法购买此商品。(2132)
-ServerError/2135┃该商品已购买 (2135)
-ServerError/2136┃不满足购买条件，无法购买
-ServerError/3100┃错误的任务信息。
-ServerError/3101┃任务变更失败。
-ServerError/3102┃任务未完成，无法获得奖励。
-ServerError/4100┃无效的信息。
-ServerError/4101┃期限已过，无法获得。
-ServerError/4102┃无可获得的奖励。
-ServerError/5100┃导入的路径无法共享
-ServerError/5101┃无法删除未分享路径
-ServerError/5102┃没有可编辑的路径
-ServerError/5103┃不存在路径
-ServerError/5104┃不存在路径
-ServerError/5105┃无法导入自己的路径
-ServerError/5106┃所选实验体无法使用此路径。
-ServerError/5107┃不能再购买了。
-ServerError/5120┃无效访问。
-ServerError/5121┃目前没有空页。
-ServerError/5122┃不能再购买了。
-ServerError/5200┃无法加载排名赛段位信息。
-ServerError/5201┃无可获得的排位赛奖励。
-ServerError/5202┃预先组队的玩家间存在段位差异，无法进行匹配。
-ServerError/5203┃灭钻及以上段位无法以预组队的形式进行匹配。
-ServerError/6100┃已获取的DLC商品
-ServerError/6101┃无效的商品信息
-ServerError/7100┃对方好友请求列表已满。
-ServerError/7101┃最多添加200位好友。
-ServerError/7102┃对方的好友列表已满。
-ServerError/7103┃无法将自己添加为朋友！
-ServerError/7104┃已经是好友了。
-ServerError/7105┃已发出好友请求。
-ServerError/7106┃无效的请求
-ServerError/7107┃还未与对方成为好友
-ServerError/7108┃用户信息认证失败。
-ServerError/7109┃每日邀请次数已达上限。
-ServerError/7200┃此兑换券已被使用。
-ServerError/7201┃无效兑换券。请重新确认。
-ServerError/7202┃兑换券已过期。
-ServerError/7203┃此为Kakao游戏网吧专用兑换券。
-ServerError/7204┃已使用了相同类型的兑换券。
-ServerError/7205┃此优惠券不能在本平台使用。
-ServerError/7206┃限定数量已消耗至尽。
-ServerError/7207┃非兑换券有效期。 请确认兑换券使用期限。
-ServerError/7208┃当前等级无法使用此兑换券。
-ServerError/7209┃当前所处区域无法使用此兑换券。
-ServerError/7303┃无效代码。
-ServerError/7304┃无法输入自己的邀请码。
-ServerError/7400┃没有 ER 通行证信息。(7400)
-ServerError/7401┃没有 ER 通行证赛季级别信息。(7401)
-ServerError/7402┃此账户没有 ER 通行证信息。(7402)
-ServerError/7403┃此账户的 ER 通行证赛季级别信息不正确。(7403)
-ServerError/7404┃未拥有ER通行证。(7404)
-ServerError/7405┃ER 通行证任务信息无效。(7405)
-ServerError/7406┃ER 通行证奖励不存在。(7406)
-ServerError/7407┃没有 ER通行证赛季级别奖励。 (7407)
-ServerError/7408┃达到最高赛季级别。(7408)
-ServerError/7409┃ER 通行证购买信息无效。(7409)
-ServerError/7410┃此账户的赛季级别信息不存在。(7410)
-ServerError/7413┃此赛季已购买ER Plus。(7413)
-ServerError/7414┃此赛季已购买ER通行证升级券。(7413)
-ServerError/7415┃此赛季已激活。(7415)
-ServerError/7416┃此赛季不存在已激活的ER通行证商品。(7416)
-ServerError/7500┃赛季包信息不存在。(7500)
-ServerError/7501┃此账户的赛季包信息不存在。(7501)
-ServerError/7502┃赛季包奖励不存在。(7502)
-ServerError/7503┃赛季包商品仅限购买一次。(7503)
-ServerError/7504┃赛季包的赛季信息无效。(7504)
-ServerError/7601┃不存在该物品。
-ServerError/7602┃产品信息不正确。
-ServerError/9080┃人物信息没有找到。
-ServerError/9081┃皮肤信息没有找到。
-ServerError/9082┃您已经拥有这实验体。
-ServerError/9083┃您已经拥有这皮肤。
-ServerError/9084┃无法使用此实验体。
-ServerError/9085┃无法购买此皮肤。
-ServerError/9086┃表情不存在。
-ServerError/9087┃无法购买次表情。
-ServerError/9089┃不在可使用期间。
-ServerError/9090┃还未拥有所装备物品。
-ServerError/9091┃0
-ServerError/9092┃物品信息无效。(9092)
-ServerError/9093┃无法使用未拥有的物品。(9093)
-ServerError/9094┃无效的购买信息。(9094)
-ServerError/9095┃还未拥有此物品。
-ServerError/9096┃物品类型信息无效。(9096)
-ServerError/9100┃已超出Steam支付请求次数。(CODE 9100) \n请检查是否有启动“在游戏中启用Steam界面”的设置。
-ServerError/9101┃支付失败(9100)
-ServerError/9102┃支付失败(9100)
-ServerError/9103┃支付失败(9100)
-ServerError/9104┃支付失败(9100)
-ServerError/9105┃支付失败(9100)
-ServerError/9106┃支付失败(9100)
-ServerError/9107┃支付失败(9100)
-ServerError/9200┃无效请求 (9200)
-ServerError/9201┃与服务器连接失败 (9201)
-ServerError/9203┃已经加入队伍。
-ServerError/9204┃创建队伍过程中发生错误 (9204)
-ServerError/9205┃加入队伍过程中发生了错误 (9205)
-ServerError/9206┃无法退出。
-ServerError/9207┃无法邀请的玩家。
-ServerError/9208┃只有队长才可执行。
-ServerError/9209┃无法接收新队友。
-ServerError/9210┃不属于此队伍 (9210)
-ServerError/9211┃搜寻不到此玩家 (9211)
-ServerError/9212┃无法搜索队友 。 (9212)
-ServerError/9213┃搜寻不到队伍 。
-ServerError/9214┃无法更改匹配模式。
-ServerError/9215┃不能委任组长。
-ServerError/9216┃不能驱逐队员 (9216)
-ServerError/9217┃搜寻不到此玩家 (9217)
-ServerError/9218┃此队伍已满。
-ServerError/9219┃无法加入匹配 (9219)
-ServerError/9220┃无法取消匹配 (9220)
-ServerError/9221┃无法取消 (9221)
-ServerError/9233┃无法邀请的玩家。(9233)
-ServerError/99999┃正在连接不兼容的版本。
-ServerError/HttpException┃无法连接服务器。
 CharacterStoryName┃姓名
 CharacterStoryAge┃年龄
 CharacterStoryHeight┃身高
@@ -19975,6 +19889,172 @@ CharacterPlayTip/71┃肯尼斯能够将压抑的愤怒化作火焰，焚烧一�
 CharacterPlayTip/72┃卡缇娅能够使用无人机探测敌人所在位置，擅长远距离控制敌人。
 CharacterPlayTip/73┃夏洛特内心善良，擅长使用光的力量帮助队友并化解伤害。
 CharacterPlayTip/74┃达尔科将毫不留情地压制对手并掠夺资源，直至达成自己的目标。
+ServerError/1000┃发生未知错误，请重新开始游戏。
+ServerError/1001┃发生未知错误，请重新开始游戏。
+ServerError/1002┃发生未知错误，请重新开始游戏。
+ServerError/1003┃发生未知错误，请重新开始游戏。
+ServerError/1004┃请重新登录，并重启游戏。
+ServerError/1005┃发生未知错误，请重新开始游戏。
+ServerError/1006┃服务器在维修中。
+ServerError/1007┃客户端版本不正确。
+ServerError/1100┃发生未知错误，请重新开始游戏。
+ServerError/1101┃发生未知错误，请重新开始游戏。
+ServerError/1102┃请重新登录，并重启游戏。
+ServerError/1110┃无法登录服务器，请检查账号信息。
+ServerError/1111┃该昵称无法使用。
+ServerError/1112┃无法登录服务器，请检查账号信息。
+ServerError/1115┃Steam登录失败。
+ServerError/1116┃限制使用的账户。
+ServerError/1118┃昵称已存在。
+ServerError/1124┃无法创建MS账户。
+ServerError/1200┃找不到战斗结果。
+ServerError/1201┃未知游戏信息。(1201)
+ServerError/1202┃未知回放信息。(1202)
+ServerError/1203┃已拥有ER通行证。(1203)
+ServerError/1204┃该重播限制观看。(1204)
+ServerError/1300┃无法进行匹配。请在大厅画面右上角确认所选服务器。
+ServerError/1301┃匹配时产生错误。
+ServerError/1302┃预先组队中存在等级或实验体拥有数不足的队员。
+ServerError/1303┃上一场比赛还没有结束。
+ServerError/1305┃预先组队中存在不满足等级要求的队员。
+ServerError/1306┃当前无法进行匹配 (1306)
+ServerError/2000┃购买产生错误。
+ServerError/2001┃Steam的信息产生错误。
+ServerError/2002┃0
+ServerError/2003┃0
+ServerError/2100┃资金不足。
+ServerError/2101┃NP数量不足。
+ServerError/2102┃A-币不足。
+ServerError/2120┃产品信息没有找到。
+ServerError/2121┃产品信息不正确。
+ServerError/2122┃超过购买的数量。
+ServerError/2123┃日常购买数量超过上限。
+ServerError/2124┃每周购买超过上限。
+ServerError/2125┃每月购买数量超过上限。
+ServerError/2126┃购买失败，折扣已过期。
+ServerError/2127┃超过每日购买次数。(2127)
+ServerError/2128┃超过每周购买次数。(2128)
+ServerError/2129┃超过每月购买次数。(2129)
+ServerError/2130┃超过购买次数。(2130)
+ServerError/2131┃无效的价格信息。(2131)
+ServerError/2132┃当前所在地区无法购买此商品。(2132)
+ServerError/2135┃该商品已购买 (2135)
+ServerError/2136┃不满足购买条件，无法购买
+ServerError/3100┃错误的任务信息。
+ServerError/3101┃任务变更失败。
+ServerError/3102┃任务未完成，无法获得奖励。
+ServerError/4100┃无效的信息。
+ServerError/4101┃期限已过，无法获得。
+ServerError/4102┃无可获得的奖励。
+ServerError/5100┃导入的路径无法共享
+ServerError/5101┃无法删除未分享路径
+ServerError/5102┃没有可编辑的路径
+ServerError/5103┃不存在路径
+ServerError/5104┃不存在路径
+ServerError/5105┃无法导入自己的路径
+ServerError/5106┃所选实验体无法使用此路径。
+ServerError/5107┃不能再购买了。
+ServerError/5120┃无效访问。
+ServerError/5121┃目前没有空页。
+ServerError/5122┃不能再购买了。
+ServerError/5200┃无法加载排名赛段位信息。
+ServerError/5201┃无可获得的排位赛奖励。
+ServerError/5202┃预先组队的玩家间存在段位差异，无法进行匹配。
+ServerError/5203┃灭钻及以上段位无法以预组队的形式进行匹配。
+ServerError/6100┃已获取的DLC商品
+ServerError/6101┃无效的商品信息
+ServerError/7100┃对方好友请求列表已满。
+ServerError/7101┃最多添加200位好友。
+ServerError/7102┃对方的好友列表已满。
+ServerError/7103┃无法将自己添加为朋友！
+ServerError/7104┃已经是好友了。
+ServerError/7105┃已发出好友请求。
+ServerError/7106┃无效的请求
+ServerError/7107┃还未与对方成为好友
+ServerError/7108┃用户信息认证失败。
+ServerError/7109┃每日邀请次数已达上限。
+ServerError/7200┃此兑换券已被使用。
+ServerError/7201┃无效兑换券。请重新确认。
+ServerError/7202┃兑换券已过期。
+ServerError/7203┃此为Kakao游戏网吧专用兑换券。
+ServerError/7204┃已使用了相同类型的兑换券。
+ServerError/7205┃此优惠券不能在本平台使用。
+ServerError/7206┃限定数量已消耗至尽。
+ServerError/7207┃非兑换券有效期。 请确认兑换券使用期限。
+ServerError/7208┃当前等级无法使用此兑换券。
+ServerError/7209┃当前所处区域无法使用此兑换券。
+ServerError/7303┃无效代码。
+ServerError/7304┃无法输入自己的邀请码。
+ServerError/7400┃没有 ER 通行证信息。(7400)
+ServerError/7401┃没有 ER 通行证赛季级别信息。(7401)
+ServerError/7402┃此账户没有 ER 通行证信息。(7402)
+ServerError/7403┃此账户的 ER 通行证赛季级别信息不正确。(7403)
+ServerError/7404┃未拥有ER通行证。(7404)
+ServerError/7405┃ER 通行证任务信息无效。(7405)
+ServerError/7406┃ER 通行证奖励不存在。(7406)
+ServerError/7407┃没有 ER通行证赛季级别奖励。 (7407)
+ServerError/7408┃达到最高赛季级别。(7408)
+ServerError/7409┃ER 通行证购买信息无效。(7409)
+ServerError/7410┃此账户的赛季级别信息不存在。(7410)
+ServerError/7413┃此赛季已购买ER Plus。(7413)
+ServerError/7414┃此赛季已购买ER通行证升级券。(7413)
+ServerError/7415┃此赛季已激活。(7415)
+ServerError/7416┃此赛季不存在已激活的ER通行证商品。(7416)
+ServerError/7500┃赛季包信息不存在。(7500)
+ServerError/7501┃此账户的赛季包信息不存在。(7501)
+ServerError/7502┃赛季包奖励不存在。(7502)
+ServerError/7503┃赛季包商品仅限购买一次。(7503)
+ServerError/7504┃赛季包的赛季信息无效。(7504)
+ServerError/7601┃不存在该物品。
+ServerError/7602┃产品信息不正确。
+ServerError/9080┃人物信息没有找到。
+ServerError/9081┃皮肤信息没有找到。
+ServerError/9082┃您已经拥有这实验体。
+ServerError/9083┃您已经拥有这皮肤。
+ServerError/9084┃无法使用此实验体。
+ServerError/9085┃无法购买此皮肤。
+ServerError/9086┃表情不存在。
+ServerError/9087┃无法购买次表情。
+ServerError/9089┃不在可使用期间。
+ServerError/9090┃还未拥有所装备物品。
+ServerError/9091┃0
+ServerError/9092┃物品信息无效。(9092)
+ServerError/9093┃无法使用未拥有的物品。(9093)
+ServerError/9094┃无效的购买信息。(9094)
+ServerError/9095┃还未拥有此物品。
+ServerError/9096┃物品类型信息无效。(9096)
+ServerError/9100┃已超出Steam支付请求次数。(CODE 9100) \n请检查是否有启动“在游戏中启用Steam界面”的设置。
+ServerError/9101┃支付失败(9100)
+ServerError/9102┃支付失败(9100)
+ServerError/9103┃支付失败(9100)
+ServerError/9104┃支付失败(9100)
+ServerError/9105┃支付失败(9100)
+ServerError/9106┃支付失败(9100)
+ServerError/9107┃支付失败(9100)
+ServerError/9200┃无效请求 (9200)
+ServerError/9201┃与服务器连接失败 (9201)
+ServerError/9203┃已经加入队伍。
+ServerError/9204┃创建队伍过程中发生错误 (9204)
+ServerError/9205┃加入队伍过程中发生了错误 (9205)
+ServerError/9206┃无法退出。
+ServerError/9207┃无法邀请的玩家。
+ServerError/9208┃只有队长才可执行。
+ServerError/9209┃无法接收新队友。
+ServerError/9210┃不属于此队伍 (9210)
+ServerError/9211┃搜寻不到此玩家 (9211)
+ServerError/9212┃无法搜索队友 。 (9212)
+ServerError/9213┃搜寻不到队伍 。
+ServerError/9214┃无法更改匹配模式。
+ServerError/9215┃不能委任组长。
+ServerError/9216┃不能驱逐队员 (9216)
+ServerError/9217┃搜寻不到此玩家 (9217)
+ServerError/9218┃此队伍已满。
+ServerError/9219┃无法加入匹配 (9219)
+ServerError/9220┃无法取消匹配 (9220)
+ServerError/9221┃无法取消 (9221)
+ServerError/9233┃无法邀请的玩家。(9233)
+ServerError/99999┃正在连接不兼容的版本。
+ServerError/HttpException┃无法连接服务器。
 
 
 --xxxxxxxxxx--
