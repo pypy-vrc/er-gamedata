@@ -892,9 +892,9 @@ Item/Name/502406┃クレイモア
 Item/Name/502407┃隠しメイデン
 Item/Name/502501┃リモートマイン
 Item/Name/502502┃スマート爆弾
-Item/Name/503101┃ガジェット - Kiosk呼び出し機
-Item/Name/503102┃ガジェット - フレアガン
-Item/Name/503103┃ガジェット - フレアガン
+Item/Name/503101┃Kiosk呼び出し機
+Item/Name/503102┃フレアガンB
+Item/Name/503103┃フレアガンR
 Item/Name/999999┃戦術強化モジュール
 Item/Name/201518┃クワッドアイ
 Item/Name/201519┃漆黒の死
@@ -1640,7 +1640,8 @@ Item/Effects/502501┃クリックで使用: <color=lightblue>リモートマイ
 Item/Effects/502502┃クリックで使用: <color=lightblue>スマート爆弾</color>を設置します。\n<color=yellow>トラップ発動:</color> {1}秒後広い範囲で爆発します。
 Item/Effects/502310┃クリックで使用: <color=lightblue>足つぼマット</color>を設置します。\n<color=yellow>トラップ発動:</color> 対象の移動速度が{0}秒間50%減少します。
 Item/Effects/503101┃クリックで使用: <color=lightblue>携帯用Kiosk</color>を呼び出します。\n呼び出した後、{0}秒間使用できます。\nガジェットは一人あたり1種類のみ保有できます。
-Item/Effects/503102┃クリックで使用: <color=lightblue>神話航空補給箱</color>を呼び出します。\n呼び出した後、{0}秒後に箱が到着します。\nガジェットは一人あたり1種類のみ保有できます。
+Item/Effects/503102┃クリックで使用: <color=lightblue>航空補給地点</color>を設定し、設定した地点に<color=lightblue>神話航空補給箱</color>を呼び出します。\n呼び出してから{0}秒後に箱が到着します。\nガジェットは一人あたり1種類のみ保有できます。
+Item/Effects/503103┃クリックで使用: 使用者本人を航空補給地点に設定します。(使用者が死亡した場合、死亡した位置に設定)\n{0}秒後、使用者の位置に<color=lightblue>神話航空補給箱</color>が到着し、到着するまで騒音ピングが発生します。\nガジェットは一人あたり1種類のみ保有できます。
 Item/Effects/302101┃15秒間スタミナを回復します。
 Item/Effects/302102┃15秒間スタミナを回復します。
 Item/Effects/302103┃15秒間スタミナを回復します。
@@ -2927,10 +2928,11 @@ DropFrequency/Random┃確率的
 DropFrequency/Probability┃確率的
 GradeColor/None┃無色
 GradeColor/Common┃灰色
-GradeColor/Uncommon┃緑
-GradeColor/Rare┃青
+GradeColor/Uncommon┃緑色
+GradeColor/Rare┃青色
 GradeColor/Epic┃紫色
 GradeColor/Legend┃黄色
+GradeColor/Mythic┃赤色
 SummonData/Name/1┃監視カメラ
 SummonData/Name/2┃投げ罠
 SummonData/Name/3┃ネズミ捕り
@@ -3038,6 +3040,7 @@ Skin/Name/1002000┃アヤ
 Skin/Name/1002001┃警官アヤ
 Skin/Name/1002002┃お祭りアヤ
 Skin/Name/1002003┃武装メイドアヤ
+Skin/Name/1002004┃士官候補生アヤ
 Skin/Name/1003000┃フィオラ
 Skin/Name/1003001┃将校フィオラ
 Skin/Name/1003002┃銃士フィオラ
@@ -3319,6 +3322,7 @@ Skin/Name/1073000┃シャーロット
 Skin/Name/1073001┃転校生シャーロット
 Skin/Name/1074000┃ダルコ
 Skin/Name/1075000┃レノア
+Skin/Name/1076000┃ガーネット
 Skin/OnSelectVO/1001003┃システムは壊す時がいつもしびれるよね、でしょ？
 Skin/OnSelectVO/1002002┃バンバーン！花火の始まりですよ！
 Skin/OnSelectVO/1007005┃んじゃ、やってみるか。
@@ -3560,7 +3564,8 @@ Skin/Desc/1028006┃これからも一緒に書いて行きましょう。私た
 Skin/Desc/1058004┃一緒に乾杯でもするか？今日は特別な日だからな。
 Skin/Desc/1058005┃過去ではない、未来のために。乾杯。
 Skin/Desc/1007006┃何見てんだよ。お前も海んところにぶっ飛ばされてえのか？
-Skin/Desc/1073001┃似合ってますか？フフフ。では、行ってきまーす！
+Skin/Desc/1073001┃似合っていますか？フフフ。では、行ってきまーす！
+Skin/Desc/1002004┃心配いりません。いつもよりはっきり見えていますから！
 ItemType/EMOTION/Name┃エモート
 Emotion_Name_001┃怒
 Emotion_Name_002┃笑
@@ -4311,6 +4316,7 @@ Emotion_2024FestivalAdela_2024008┃キラーン！メイドアデラ
 Emotion_Season12_Reward_5029┃ウィドリアナ嘲笑い
 Emotion_Season12_Reward_5030┃あら、かわいいですね...士官候補生エレナ
 Emotion_Season12_Reward_5031┃正式シーズン3 - エターニティ
+Emotion_Season13_Reward_5034┃正式シーズン4 - エターニティ
 Emotion_S4_Attend_Lidailin_2010008┃夏の酔いしれダイリン 暑い...
 Emotion_S4_Attend_Eva_2036006┃夏の思い出エヴァ ごめんね...
 Event_SSR_Creator_3098┃CJiang サムズアップ
@@ -4358,6 +4364,14 @@ Emotion_1st_Anniv_Sua_2028007┃1周年記念スア HI~
 Emotion_1st_Anniv_Sua_2028008┃1周年記念スア おめでとう
 Emotion_1st_Anniv_Haze_2058005┃1周年記念ヘイズ BYE~
 Emotion_1st_Anniv_Haze_2058006┃1周年記念ヘイズ おめでとう
+Emotion_Magnus05_NP┃何だ？マグヌス
+Emotion_Magnus06_NP┃俺様！マグヌス
+Emotion_Magnus07_NP┃よし！マグヌス
+Emotion_Magnus08_NP┃貴様ァ！マグヌス
+Emotion_S4_EsportsPack_2501┃S4 All ways Incheon エモート
+Emotion_S4_EsportsPack_2502┃S4 Gyeonggi Innate エモート
+Emotion_S4_EsportsPack_2503┃S4 GJ Slasher エモート
+Emotion_S4_EsportsPack_2504┃S4 DH.CNJ エモート
 Collection/Name/11001┃すべては娘のため…
 Collection/Name/11002┃ピクセルアートは…好き…？
 Collection/Name/11003┃彷徨う魂に救済を
@@ -4382,6 +4396,7 @@ Collection/Name/22001┃ツインズ·ファイトⅠ
 Collection/Name/22002┃ツインズ·ファイトⅡ
 Collection/Name/22003┃ツインズ·ファイトⅢ
 Collection/Name/22004┃ツインズ·ファイトⅣ
+Collection/Name/22005┃S4 eスポーツサポーターⅠ
 Collection/Name/24001┃2024年 金の福袋！
 Collection/Name/24002┃花咲かし大作戦Ⅰ
 Collection/Name/24003┃花咲かし大作戦Ⅱ
@@ -4618,6 +4633,11 @@ EMBLEM_MARK_SHOP_102028┃Elevenアイコン
 EMBLEM_MARK_SHOP_102029┃ウィリアムアイコン
 EMBLEM_MARK_SHOP_102030┃クロエアイコン
 EMBLEM_MARK_SHOP_102031┃セリーヌアイコン
+EMBLEM_MARK_SHOP_102032┃マーカスアイコン
+EMBLEM_MARK_SHOP_102501┃S4 All ways Incheon アイコン
+EMBLEM_MARK_SHOP_102502┃S4 Gyeonggi Innate アイコン
+EMBLEM_MARK_SHOP_102503┃S4 GJ Slasher アイコン
+EMBLEM_MARK_SHOP_102504┃S4 DH.CNJ アイコン
 EMBLEM_MARK_S3_IRON_SOLO┃シーズン3アイアン(ソロ)アイコン
 EMBLEM_MARK_S3_IRON_DUO┃シーズン3アイアン(デュオ)アイコン
 EMBLEM_MARK_S3_IRON_SQUAD┃シーズン3アイアン(スクワッド)アイコン
@@ -4837,6 +4857,16 @@ EMBLEM_MARK_S12_MITHRIL_SQUAD┃シーズン3ミスリルアイコン
 EMBLEM_MARK_S12_TITAN_SQUAD┃シーズン3デミゴッドアイコン
 EMBLEM_MARK_S12_IMMORTAL_SQUAD┃シーズン3エターニティアイコン
 EMBLEM_MARK_S12_IMMORTAL_SQUAD_105227┃シーズン3エターニティ栄誉アイコン
+EMBLEM_MARK_S13_IRON_SQUAD┃シーズン4アイアンアイコン
+EMBLEM_MARK_S13_BRONZE_SQUAD┃シーズン4ブロンズアイコン
+EMBLEM_MARK_S13_SILVER_SQUAD┃シーズン4シルバーアイコン
+EMBLEM_MARK_S13_GOLD_SQUAD┃シーズン4ゴールドアイコン
+EMBLEM_MARK_S13_PLATINUM_SQUAD┃シーズン4プラチナムアイコン
+EMBLEM_MARK_S13_DIAMOND_SQUAD┃シーズン4ダイアモンドアイコン
+EMBLEM_MARK_S13_MITHRIL_SQUAD┃シーズン4ミスリルアイコン
+EMBLEM_MARK_S13_TITAN_SQUAD┃シーズン4デミゴッドアイコン
+EMBLEM_MARK_S13_IMMORTAL_SQUAD┃シーズン4エターニティアイコン
+EMBLEM_MARK_S13_IMMORTAL_SQUAD_105237┃シーズン4エターニティ栄誉アイコン
 EMBLEM_MARK_EVENT_102001┃魔法少女莉央
 EMBLEM_MARK_EVENT1┃べーアイコン
 EMBLEM_MARK_EVENT2┃サムズアップアイコン
@@ -5091,6 +5121,7 @@ EMBLEM_MARK_COLLECTION_119001┃彰一の宝物
 EMBLEM_MARK_COLLECTION_119002┃ドット絵ティア
 EMBLEM_MARK_COLLECTION_119003┃雪封印解除
 EMBLEM_MARK_COLLECTION_119004┃問題児双子。ただし最強。
+EMBLEM_MARK_COLLECTION_119501┃S4 eスポーツサポーターアイコン
 ItemType/EMBLEM_BG/Name┃プロフィール背景
 EMBLEM_BG_FREE1┃基本背景
 EMBLEM_BG_SHOP_202001┃ヒョヌ背景
@@ -5123,6 +5154,11 @@ EMBLEM_BG_SHOP_202027┃Eleven背景
 EMBLEM_BG_SHOP_202028┃ウィリアム背景
 EMBLEM_BG_SHOP_202029┃クロエ背景
 EMBLEM_BG_SHOP_202030┃セリーヌ背景
+EMBLEM_BG_SHOP_202031┃マーカス背景
+EMBLEM_BG_SHOP_202501┃S4 All ways Incheon 背景
+EMBLEM_BG_SHOP_202502┃S4 Gyeonggi Innate 背景
+EMBLEM_BG_SHOP_202503┃S4 GJ Slasher 背景
+EMBLEM_BG_SHOP_202504┃S4 DH.CNJ 背景
 EMBLEM_BG_S3_IRON_SOLO┃シーズン3アイアン(ソロ)背景
 EMBLEM_BG_S3_IRON_DUO┃シーズン3アイアン(デュオ)背景
 EMBLEM_BG_S3_IRON_SQUAD┃シーズン3アイアン(スクワッド)背景
@@ -5342,6 +5378,16 @@ EMBLEM_BG_S12_MITHRIL_SQUAD┃シーズン3ミスリル背景
 EMBLEM_BG_S12_TITAN_SQUAD┃シーズン3デミゴッド背景
 EMBLEM_BG_S12_IMMORTAL_SQUAD┃シーズン3エターニティ背景
 EMBLEM_BG_S12_IMMORTAL_SQUAD_205227┃シーズン3エターニティ栄誉背景
+EMBLEM_BG_S13_IRON_SQUAD┃シーズン4アイアン背景
+EMBLEM_BG_S13_BRONZE_SQUAD┃シーズン4ブロンズ背景
+EMBLEM_BG_S13_SILVER_SQUAD┃シーズン4シルバー背景
+EMBLEM_BG_S13_GOLD_SQUAD┃シーズン4ゴールド背景
+EMBLEM_BG_S13_PLATINUM_SQUAD┃シーズン4プラチナム背景
+EMBLEM_BG_S13_DIAMOND_SQUAD┃シーズン4ダイアモンド背景
+EMBLEM_BG_S13_MITHRIL_SQUAD┃シーズン4ミスリル背景
+EMBLEM_BG_S13_TITAN_SQUAD┃シーズン4デミゴッド背景
+EMBLEM_BG_S13_IMMORTAL_SQUAD┃シーズン4エターニティ背景
+EMBLEM_BG_S13_IMMORTAL_SQUAD_205237┃シーズン4エターニティ栄誉背景
 EMBLEM_BG_ERPASS_204001┃Aglaia模様背景
 EMBLEM_BG_EVENT_203001┃2022ホワイトデー記念背景
 EMBLEM_BG_EVENT_203002┃冷た～いカクテル背景
@@ -5424,6 +5470,11 @@ EMBLEM_OUTLINE_SHOP_302027┃Elevenフレーム
 EMBLEM_OUTLINE_SHOP_302028┃ウィリアムフレーム
 EMBLEM_OUTLINE_SHOP_302029┃クロエフレーム
 EMBLEM_OUTLINE_SHOP_302030┃セリーヌフレーム
+EMBLEM_OUTLINE_SHOP_302031┃マーカスフレーム
+EMBLEM_OUTLINE_SHOP_302501┃S4 All ways Incheon フレーム
+EMBLEM_OUTLINE_SHOP_302502┃S4 Gyeonggi Innate フレーム
+EMBLEM_OUTLINE_SHOP_302503┃S4 GJ Slasher フレーム
+EMBLEM_OUTLINE_SHOP_302504┃S4 DH.CNJ フレーム
 EMBLEM_OUTLINE_S3_IRON_SOLO┃シーズン3アイアン(ソロ)フレーム
 EMBLEM_OUTLINE_S3_IRON_DUO┃シーズン3アイアン(デュオ)フレーム
 EMBLEM_OUTLINE_S3_IRON_SQUAD┃シーズン3アイアン(スクワッド)フレーム
@@ -5643,6 +5694,16 @@ EMBLEM_OUTLINE_S12_MITHRIL_SQUAD┃シーズン3ミスリルフレーム
 EMBLEM_OUTLINE_S12_TITAN_SQUAD┃シーズン3デミゴッドフレーム
 EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD┃シーズン3エターニティフレーム
 EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD_305227┃シーズン3 - エターニティ栄誉フレーム
+EMBLEM_OUTLINE_S13_IRON_SQUAD┃シーズン4アイアンフレーム
+EMBLEM_OUTLINE_S13_BRONZE_SQUAD┃シーズン4ブロンズフレーム
+EMBLEM_OUTLINE_S13_SILVER_SQUAD┃シーズン4シルバーフレーム
+EMBLEM_OUTLINE_S13_GOLD_SQUAD┃シーズン4ゴールドフレーム
+EMBLEM_OUTLINE_S13_PLATINUM_SQUAD┃シーズン4プラチナムフレーム
+EMBLEM_OUTLINE_S13_DIAMOND_SQUAD┃シーズン4ダイアモンドフレーム
+EMBLEM_OUTLINE_S13_MITHRIL_SQUAD┃シーズン4ミスリルフレーム
+EMBLEM_OUTLINE_S13_TITAN_SQUAD┃シーズン4デミゴッドフレーム
+EMBLEM_OUTLINE_S13_IMMORTAL_SQUAD┃シーズン4エターニティフレーム
+EMBLEM_OUTLINE_S13_IMMORTAL_SQUAD_305237┃シーズン4 - エターニティ栄誉フレーム
 EMBLEM_OUTLINE_EVENT_303001┃2022ホワイトデー記念フレーム
 EMBLEM_OUTLINE_EVENT_303002┃冷た～いカクテルフレーム
 EMBLEM_OUTLINE_EVENT_303003┃サクラ飾り
@@ -5967,12 +6028,14 @@ Goods/Name/1701001┃基本
 Goods/Name/1701002┃Eternal World(Kor ver.)
 Goods/Name/1701003┃Eternal World (Inst ver.)
 Goods/Name/1703001┃Intro BGM
+Goods/Name/1703002┃Caprice N 24
 Goods/Name/1704001┃Emma Character Song(Kor ver.)
 Goods/Name/1704002┃Emma Character Song(Inst ver.)
 Goods/Name/1799999┃なし
 GoodsGroup/Name/1701001┃基本
 GoodsGroup/Name/1701002┃Eternal World
 GoodsGroup/Name/1703001┃Intro BGM
+GoodsGroup/Name/1703002┃Caprice N 24
 GoodsGroup/Name/1704001┃Emma Character Song
 GoodsGroup/Name/1799999┃なし
 ItemType/DRONE/Name┃ドローンスキン
@@ -6079,6 +6142,10 @@ Goods/Name/2804031┃ヴァーニャの蝶々
 ItemType/TEAMSLOT_BG/Name┃チームスロット背景
 Goods/Name/3401001┃基本チームスロット背景
 Goods/Name/3402001┃ホリデーベア
+Goods/Name/3402501┃S4 All ways Incheon チームスロット背景
+Goods/Name/3402502┃S4 Gyeonggi Innate チームスロット背景
+Goods/Name/3402503┃S4 GJ Slasher チームスロット背景
+Goods/Name/3402504┃S4 DH.CNJ チームスロット背景
 Goods/Name/3403001┃機械回路
 Goods/Name/3403002┃星空の夜
 Goods/Name/3403003┃秋の紅葉
@@ -6189,6 +6256,7 @@ Product/Name/Eleven_Emblem_Pack_01┃Elevenスペシャルセット
 Product/Name/William_Emblem_Pack_01┃ウィリアムスペシャルセット
 Product/Name/Chloe_Emblem_Pack_01┃クロエスペシャルセット
 Product/Name/Celine_Emblem_Pack_01┃セリーヌスペシャルセット
+Product/Name/Markus_Emblem_Pack_01┃マーカススペシャルセット
 Product/Name/SkinDataChip_RandomBox_01┃スキンデータチップ
 Product/Name/UR_Grade_Skin_Voucher_01┃高級/レアスキン補給券
 Product/Name/UR_Grade_Skin_Voucher_02┃高級/レアスキン補給券
@@ -6257,6 +6325,14 @@ Product/Name/2024_Summer_Special_01┃スペシャルサマーパッケージ
 Product/Name/2024_Summer_Special_02┃サマースキンデータボックスパッケージ
 Product/Name/2024_S04_Esports_Pack_01┃S4 eスポーツサポートパッケージ
 Product/Name/2024_S04_Esports_Pack_01_KAKAO┃S4 eスポーツサポートパッケージ
+Product/Name/S04_AllWaysIncheon_Pack_01┃S4 All ways Incheon パッケージ
+Product/Name/S04_AllWaysIncheon_Pack_01_KAKAO┃S4 All ways Incheon パッケージ
+Product/Name/S04_GyeonggiInnate_Pack_01┃S4 Gyeonggi Innate パッケージ
+Product/Name/S04_GyeonggiInnate_Pack_01_KAKAO┃S4 Gyeonggi Innate パッケージ
+Product/Name/S04_GJSlasher_Pack_01┃S4 GJ Slasher パッケージ
+Product/Name/S04_GJSlasher_Pack_01_KAKAO┃S4 GJ Slasher パッケージ
+Product/Name/S04_DHCNJ_Pack_01┃S4 DH.CNJ パッケージ
+Product/Name/S04_DHCNJ_Pack_01_KAKAO┃S4 DH.CNJ パッケージ
 Product/Name/Starter_Support_Pack_01┃初心者実験サポートパッケージ
 Product/Name/Starter_Support_Pack_01_KAKAO┃初心者実験サポートパッケージ
 Product/Name/Popular_Emotion_Pack_01┃人気エモートパッケージ
@@ -6275,6 +6351,11 @@ Product/Name/2024_DebiMarlene_Card_Box_02┃デビー&マーリンカードボ�
 Product/Name/Kiosk_Emotion_Pack_01┃Kioskアイテムエモートパッケージ
 Product/Name/Tactic_Emotion_Pack_01┃戦術エモートパッケージ
 Product/Name/EVENT_NPASS_1stAnniversary_1000┃1周年記念PASS
+Product/Name/BATTLE_PASS/2000┃1周年記念A-Coin PASS
+Product/Name/2024_Select_Voucher_Pack┃選択券パッケージ
+Product/Name/2024_Select_Voucher_Pack_01┃選択券パッケージⅠ
+Product/Name/2024_Select_Voucher_Pack_02┃選択券パッケージⅡ
+Product/Name/2024_Select_Voucher_Pack_03┃選択券パッケージⅢ
 Shop/Desc/Aya_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Hyunwoo_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の56%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Adriana_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
@@ -6349,6 +6430,7 @@ Shop/Desc/Eleven_Emblem_Pack_01┃内容\n\n- Elevenキャラクター\n- スウ
 Shop/Desc/William_Emblem_Pack_01┃内容\n\n- ウィリアムキャラクター\n- 聖夜の紳士ウィリアムスキン\n- 路地裏ウィリアムスキン\n- ウィリアムエモート4種\n- ウィリアムアイコン\n- ウィリアム背景\n- ウィリアムフレーム\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Chloe_Emblem_Pack_01┃内容\n\n- クロエキャラクター\n- メイドクロエスキン\n- 新年うさぎクロエスキン\n- クロエエモート4種\n- クロエアイコン\n- クロエ背景\n- クロエフレーム\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Celine_Emblem_Pack_01┃内容\n\n- セリーヌキャラクター\n- ハロウィンカボチャセリーヌスキン\n- 爆弾処理班セリーヌスキン\n- セリーヌエモート4種\n- セリーヌアイコン\n- セリーヌ背景\n- セリーヌフレーム\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/Markus_Emblem_Pack_01┃内容\n\n- マーカスキャラクター\n- 悪魔狩りマーカススキン\n- アポカリプスマーカススキン\n- マーカスエモート4種\n- マーカスアイコン\n- マーカス背景\n- マーカスフレーム\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/ThanksGiving_Special_2023_Pack_01┃内容\n\n- サマー＆ハンターボックス(5個)\n- スキンデータボックス(5個)\n- データキー(10個)\n- バカンストークン(35個)
 Shop/Desc/ThanksGiving_Special_2023_Pack_02┃内容\n\n- 英雄スキンピースボックス(1個)\n- データキー(1個)\n- バカンストークン(20個)
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃内容\n\n- サマー＆ハンターボックス(2個)\n- データキー(2個)\n- A-Coin 5,000\n- バカンストークン(10個)
@@ -6393,6 +6475,14 @@ Shop/Desc/2024_Summer_Special_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- �
 Shop/Desc/2024_Summer_Special_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- スキンデータボックス：サマー 2個\n- データキー 2個\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b> \n※ 購入した商品は製作所より開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/2024_S04_Esports_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 夏の思い出エヴァ 痛っ...！エモート\n- スキンデータボックス 1個\n- データキー 1個\n- 研究所データボックス 1個\n- 400 NP\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ S4 eスポーツサポートパッケージはSteamウォレットのクレジットで購入できます。\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツの賞金に活用されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。\n※ シーズン4のeスポーツサポートパッケージに含まれた400NP商品は無料獲得NPで構成されています。
 Shop/Desc/2024_S04_Esports_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- 夏の思い出エヴァ 痛っ...！エモート\n- スキンデータボックス 1個\n- データキー 1個\n- 研究所データボックス 1個\n- 400 NP\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツの賞金に活用されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。\n※ S4 eスポーツサポートパッケージに含まれた400NP商品は無料獲得NPで構成されています。
+Shop/Desc/S04_AllWaysIncheon_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 All ways Incheon エモート\n- S4 All ways Incheon アイコン\n- S4 All ways Incheon 背景\n- S4 All ways Incheon フレーム\n- S4 All ways Incheon チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 「S4 All ways Incheon パッケージ」はSteamウォレットのクレジットで購入できます。\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_AllWaysIncheon_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 All ways Incheon エモート\n- S4 All ways Incheon アイコン\n- S4 All ways Incheon 背景\n- S4 All ways Incheon フレーム\n- S4 All ways Incheon チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_GyeonggiInnate_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 Gyeonggi Innate エモート\n- S4 Gyeonggi Innate アイコン\n- S4 Gyeonggi Innate 背景\n- S4 Gyeonggi Innate フレーム\n- S4 Gyeonggi Innate チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 「S4 Gyeonggi Innate パッケージ」はSteamウォレットのクレジットで購入できます。\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_GyeonggiInnate_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 Gyeonggi Innate エモート\n- S4 Gyeonggi Innate アイコン\n- S4 Gyeonggi Innate 背景\n- S4 Gyeonggi Innate フレーム\n- S4 Gyeonggi Innate チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_GJSlasher_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 GJ Slasher エモート\n- S4 GJ Slasher アイコン\n- S4 GJ Slasher 背景\n- S4 GJ Slasher フレーム\n- S4 GJ Slasher チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 「S4 GJ Slasher パッケージ」はSteamウォレットのクレジットで購入できます。\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_GJSlasher_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 GJ Slasher エモート\n- S4 GJ Slasher アイコン\n- S4 GJ Slasher 背景\n- S4 GJ Slasher フレーム\n- S4 GJ Slasher チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_DHCNJ_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 DH.CNJ エモート\n- S4 DH.CNJ アイコン\n- S4 DH.CNJ 背景\n- S4 DH.CNJ フレーム\n- S4 DH.CNJ チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 「S4 DH.CNJ パッケージ」はSteamウォレットのクレジットで購入できます。\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S04_DHCNJ_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- S4 DH.CNJ エモート\n- S4 DH.CNJ アイコン\n- S4 DH.CNJ 背景\n- S4 DH.CNJ フレーム\n- S4 DH.CNJ チームスロット背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 各種の手数料を除いたパッケージの販売収益はeスポーツチームに支援されます。\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Starter_Support_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 20,000 A-Coin\n- 2,200 NP\n- 高級/レアスキン補給券 1個\n- 高級スキン選択券 1個\n- 実験体選択券(初心者) 2個\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b> \n※ 初心者実験サポートパッケージはSteamウォレットのクレジットで購入できます。\n※ 高級/レアスキン補給券は所持していないスキンの内1つを獲得できます。\n※ 高級/レアスキン補給券にはショップで販売されていないイベントスキンが含まれています。\n※ 商品リストの詳細についてはデータボックスの確率表示リンクをご参考ください。\n※ 高級/レアスキン補給券で登場するすべてのスキンを所持している場合、商品はご購入いただけますが、すべての登場アイテムリストの中で1つのスキンが支給されます。\n※ スキン獲得確率は登場アイテムリストで所持していないスキンの個別確率が適用されます。\n※ 高級/レアスキン補給券は購入と同時に使用・獲得する商品です。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。\n※ 初心者実験サポートパッケージに含まれたNPは無料2,200 NPで構成されています。
 Shop/Desc/Starter_Support_Pack_01_KAKAO┃<b><color=#FFBB00>[内容]</color></b>\n\n- 20,000 A-Coin\n- 2,200 NP\n- 高級/レアスキン補給券 1個\n- 高級スキン選択券 1個\n- 実験体選択券(初心者) 2個\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b> \n※ 高級/レアスキン補給券は所持していないスキンの内1つを獲得できます。\n※ 高級/レアスキン補給券にはショップで販売されていないイベントスキンが含まれています。\n※ 商品リストの詳細についてはデータボックスの確率表示リンクをご参考ください。\n※ 高級/レアスキン補給券で登場するすべてのスキンを所持している場合、商品はご購入いただけますが、すべての登場アイテムリストの中で1つのスキンが支給されます。\n※ スキン獲得確率は登場アイテムリストで所持していないスキンの個別確率が適用されます。\n※ 高級/レアスキン補給券は購入と同時に使用・獲得する商品です。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。\n※ 初心者実験サポートパッケージに含まれたNPは無料2,200 NPで構成されています。
 Shop/Desc/Popular_Emotion_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 人気販売エモート 20種\n- A-Coin Boost(1日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
@@ -6409,6 +6499,9 @@ Shop/Desc/2024_DebiMarlene_Card_Box_01┃<b><color=#FFBB00>[内容]</color></b>\
 Shop/Desc/2024_DebiMarlene_Card_Box_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- デビー&マーリンカードボックス 1個\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」から開けることができます。\n※ この商品は1日1回のみ購入できます。
 Shop/Desc/Kiosk_Emotion_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- Kioskアイテムエモート 7種\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Tactic_Emotion_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 戦術エモート 9種\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「コレクション」から確認できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2024_Select_Voucher_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 実験体選択券 1個\n- 高級スキン選択券 1個\n- 夕焼けトークン 10個\n- XP Boost(3日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2024_Select_Voucher_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- 高級スキン選択券 1個\n- レアスキン選択券 1個\n- 夕焼けトークン 20個\n- A-Coin Boost(3日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2024_Select_Voucher_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- スペシャル高級/レアスキン選択券 1個\n- 英雄スキンピース選択券 1個\n- 夕焼けトークン 50個\n- 1周年記念A-Coin PASS\n- ER Point Boost(3日)\n\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/EVENT_NPASS_1stAnniversary_1000┃<color=#E5D85C>エターナルリターン1周年</color>を記念して、ルミア島の生存者様のために特別なPASSが登場！\n <color=#B2EBF4>1周年記念ロビー画面や＜1st Anniversary Dawn スア＆Blanc ヘイズ＞スキン</color>など、エターナルリターンをプレイして、報酬を獲得してみましょう！\n\n1周年記念PASSを購入すると、<color=#B2EBF4>ミッション</color>が解禁されます。
 Product/Name/SEASON_PASS_S5┃シーズン5パック
 Shop/Desc/SEASON_PASS_S5┃シーズン5にリリースされる商品をお得な価格で事前購入してみてください!
@@ -6452,10 +6545,10 @@ MONTHLY_PURCHASE_SET_02┃データキー·マンスリーパッケージ
 Shop/Desc/MONTHLY_PURCHASE_SET_02┃データキーが3個含まれている商品です。\nすべてのボックスを開封するためにはデータキーが必要です。\n\nこの商品は毎月1日午前00時(JST)に購入可能回数が初期化されます。\n購入したデータキーは製作所からボックスを開ける時に使用できます。
 Shop/Desc/DAILY_PURCHASE_SET_01┃研究所データボックス·データキー·NP·データピース·トークンの内、1つを獲得できます。\n\nこの商品は毎日午前00時(JST)に購入可能回数が初期化されます。\n<color=orange>購入と同時に開封します。</color>
 Shop/Desc/S10_KEY_LIMITED┃すべてのボックスを開封するためにはデータキーが必要です。\n\nアカウントあたりの交換回数はリセットされません。
-Shop/Desc/Vacance Token┃製作所の交換所に登録された商品を交換できるバカンストークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
-Shop/Desc/BatlleMaids Token┃製作所の交換所に登録された商品を交換できる武装メイドトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
-Shop/Desc/Change Token┃製作所の交換所に登録された商品を交換できるチェンジトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
-Shop/Desc/Sunset Token┃製作所の交換所に登録された商品を交換できる夕焼けトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
+Shop/Desc/Vacance Token┃製作所の交換所に登録された商品と交換できるバカンストークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
+Shop/Desc/BatlleMaids Token┃製作所の交換所に登録された商品と交換できる武装メイドトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
+Shop/Desc/Change Token┃製作所の交換所に登録された商品と交換できるチェンジトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
+Shop/Desc/Sunset Token┃製作所の交換所に登録された商品と交換できる夕焼けトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10,000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5,000
 Shop/Desc/ACCOUNT_A-Coin┃エターナルリターンで様々なアイテムを購入する時に使います。
@@ -6576,6 +6669,26 @@ ShopMenu/Etc/RANDOM_BOX┃箱
 ShopMenu/Etc/EMOTION┃エモート
 ShopMenu/Etc/EP┃EPトークン
 ShopMenu/Etc/Account┃アカウント
+BanReasonType/VERBAL_DISCRIMINATION┃嫌悪・差別発言
+BanReasonType/ABUSE_RATING┃アビューズ行為
+BanReasonType/ACCOUNT_SHARING┃アカウント共有・代理プレイ
+BanReasonType/REFUND_ABUSING┃非正常的な払い戻し・チャージバック
+BanReasonType/FALSE_ACCUSATION┃サービス妨害及び虚偽通報
+BanReasonType/EMPLOYER_HARASSMENT┃サービス担当者の人権侵害
+BanReasonType/DOXXING┃他人の個人情報流出
+BanReasonType/TEMPORARY_RESTRICTION┃一時的な制裁措置
+BanReasonType/GAME_EXPERIENCE_DISRUPTION┃ゲーム経験を害する行為
+BanReasonType/ASSIST_OPPOSING_TEAM┃公正なゲーム進行の妨害
+BanReasonType/AWAY_FROM_KEYBOARD┃離脱
+BanReasonType/BUGS_AND_GLITCHES_ABUSE┃バグ及びシステム悪用
+BanReasonType/ILLEGAL_PROGRAMS┃非認可プログラムの使用
+BanReasonType/INAPPROPRIATE_NICKNAME┃不適切なニックネーム使用
+BanReasonType/INTENTIONAL_IDLE┃意図的なAFK
+BanReasonType/KILLED_BY_ENEMY┃意図的な死亡行為
+BanReasonType/MISCELLANEOUS┃その他
+BanReasonType/SNIPER┃スナイピング行為
+BanReasonType/TEAMING┃チーミング
+BanReasonType/VERBAL_HARASSMENT┃言語暴力
 Skill/Group/Name/1001100┃血祭り
 Skill/Group/Name/1001200┃連斬
 Skill/Group/Name/1001210┃連斬
@@ -6795,12 +6908,12 @@ Skill/Group/Name/1005200┃ナーラーヤナーストラ
 Skill/Group/Name/1005300┃ガンディバ
 Skill/Group/Name/1005400┃ヴァイヴァヤーストラ
 Skill/Group/Name/1005500┃バールガヴァーストラ
-Skill/Group/Desc/1005100┃敵にスキルが的中すると{5}秒間持続する死神の目刻印を付与し、対象の視界を獲得します。また、ザヒルは{0}の移動速度が増加し、{6}秒間徐々に減少します。\n\n死神の目刻印がある敵にスキルを的中させると敵の刻印を消耗して<color=white>{8}</color>のスキルダメージを与え、使用したスキルの死神の目効果が適用されます。
+Skill/Group/Desc/1005100┃敵にスキルが的中すると{5}秒間持続する死神の目刻印を付与し、対象の視界を獲得します。また、ザヒルの移動速度が{0}増加し、{6}秒にわたって元に戻ります。\n\n死神の目刻印がある敵にスキルを的中させると敵の刻印を消耗して<color=white>{8}</color>のスキルダメージを与え、使用したスキルの死神の目効果が適用されます。
 Skill/Group/Desc/1005200┃ザヒルが神の力を借りて一定範囲に<color=white>{9}</color>のスキルダメージを与えます。 \n<color=#ffffC2>死神の目の効果：</color><color=white>{10}</color>の強化されたダメージを与えます。
 Skill/Group/Desc/1005300┃<color=green>持続効果：</color>ガンディバ以外のスキルを的中した場合、ザヒルの後ろに{2}つのチャクラムを獲得します。(最大{3}つ)チャクラムは{4}秒間維持され、チャクラムを獲得する度に維持時間が初期化されます。\n\nチャクラムを1つ消耗して指定した方向へチャクラムを発射し、的中した敵に<color=white>{9}</color>のスキルダメージを与えます。\n\n<color=#ffffC2>死神の目効果：</color>的中した場合、ナーラーヤナーストラとヴァイヴァヤーストラのスキルクールダウンが{7}減少します。
 Skill/Group/Desc/1005400┃風を飛ばして<color=white>{6}</color>のスキルダメージを与えます。的中した対象は{2}秒間空中に浮かびます。\n\n<color=#ffffC2>死神の目効果：</color>的中した対象を{4}秒間空中に浮かべます。
 Skill/Group/Desc/1005500┃ザヒルが指定した方向へチャクラムを降り注ぎます。最初は<color=white>{6}</color>のスキルダメージを与え、0.45秒毎に<color=white>{7}</color>のスキルダメージを与えます。\n\n敵に死神の目刻印がない場合は死神の目を付与します。
-Skill/Group/Coef/1005100┃敵にスキルが的中すると{5}秒間持続する死神の目刻印を付与し、対象の視界を獲得します。また、ザヒルは{0}の移動速度が増加し、{6}秒間次第に減少します。\n\n死神の目刻印がある敵にスキルを的中させると敵の刻印を消耗して <color=white>{1}</color><color=#DDA0DD>(+スキル増幅の{7})</color>のスキルダメージを与え、使用したスキルの死神の目効果が適用されます。
+Skill/Group/Coef/1005100┃敵にスキルが的中すると{5}秒間持続する死神の目刻印を付与し、対象の視界を獲得します。また、ザヒルの移動速度が{0}増加し、{6}秒にわたって元に戻ります。\n\n死神の目刻印がある敵にスキルを的中させると敵の刻印を消耗して <color=white>{1}</color><color=#DDA0DD>(+スキル増幅の{7})</color>のスキルダメージを与え、使用したスキルの死神の目効果が適用されます。
 Skill/Group/Coef/1005200┃ザヒルが神の力を借りて一定範囲に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{7})</color>のスキルダメージを与えます。\n\n<color=#ffffC2>死神の目の効果：</color> <color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{8})</color>の強化されたスキルダメージを与えます。
 Skill/Group/Coef/1005300┃<color=green>持続効果：</color>ガンディバ以外のスキルを的中した場合、ザヒルの後ろに{2}つのチャクラムを獲得します。(最大{3}つ)チャクラムは{4}秒間維持され、チャクラムを獲得する度に維持時間が初期化されます。\n\nチャクラムを1つ消耗して指定した方向へチャクラムを発射し、的中した敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{8})</color>のスキルダメージを与えます。\n\n<color=#ffffC2>死神の目効果：</color>的中した場合、ナーラーヤナーストラとヴァイヴァヤーストラのスキルクールダウンが{7}減少します。
 Skill/Group/Coef/1005400┃風を飛ばして<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えます。的中した対象は{2}秒間空中に浮かびます。\n\n<color=#ffffC2>死神の目効果：</color>的中した対象を{4}秒間空中に浮かべます。
@@ -6839,8 +6952,8 @@ Skill/Group/Coef/1008200┃ハートがギターを弾くと音符が生成さ�
 Skill/Group/Coef/1008210┃ハートがギターを弾くと音符が生成されます。以降スキルを再使用することができます。\n\n再使用：指定した方向に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color>のスキルダメージを与えます。{0}秒以上待機した後に使用するとダメージ量が最大ダメージ量に到達します。\n\n<color=yellow>進化効果：</color>スキルの再使用回数が増加します。音符に2回的中した敵は移動速度が{10}秒間{6}減少します。
 Skill/Group/Coef/1008300┃ハートはギターを弾くと{0}秒間攻撃力が{1}増加し、基本攻撃の射程距離が{8}増加します。\n\n<color=#FFFFC2>進化効果：</color>ギターを弾く時、範囲内にいた味方の次のスキルダメージに<color=#ffd775>(攻撃力の{6})</color>のスキルダメージを追加で与えます。
 Skill/Group/Coef/1008400┃ハートが指定した方向に短く移動し、周りの敵に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。このスキルはもう1度使用することができます。\n\n<color=#FFFFC2>進化効果：</color>スキルの再使用回数が増加します。
-Skill/Group/Coef/1008410┃ハートが指定した方向に短く移動し、周りの敵に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。このスキルはもう1度使用することができます。\n\n<color=#FFFFC2>進化効果：</color>スキルの再使用回数が増加します。
-Skill/Group/Coef/1008420┃ハートが指定した方向に短く移動し、周りの敵に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。このスキルはもう1度使用することができます。\n\n<color=#FFFFC2>進化効果：</color>スキルの再使用回数が増加します。
+Skill/Group/Coef/1008410┃ハートが指定した方向に短く移動し、周りの敵に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。\nこのスキルはもう1度使用することができます。
+Skill/Group/Coef/1008420┃ハートが指定した方向に短く移動し、周りの敵に音符を飛ばして<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。\nこのスキルはもう1度使用することができます。
 Skill/Group/Coef/1008500┃ハートが{0}秒間ギターを演奏し、範囲内のすべての対象を踊らせます。\nギターを演奏している間、{5}秒ごとに自分の体力を<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>回復します。\n\n<color=#FFFFC2>進化効果：</color> ギターを演奏している間、範囲内の味方の体力が回復します。
 Skill/Group/ExpansionTip/1008400┃<i>スキルを進化させた後、3回目の移動は壁を超えることができます。</i>
 Skill/Group/ExpansionTip/1008500┃<i>踊っている間、移動速度が2.5に固定され、基本攻撃またはスキルを使用できません</i>
@@ -8538,7 +8651,7 @@ Skill/Group/Name/1048620┃カラーリング - 青色
 Skill/Group/Name/1048630┃カラーリング - 無色
 Skill/Group/Name/1048700┃レインボードローイング
 Skill/Group/Desc/1048100┃ティアが<color=#ffffff>ブラシストローク(Q)</color>または<color=#ffffff>カラーリング(E)</color>で敵に2色を塗るとリス効果が発動します。ティアの基本スキルはクールダウン減少オプションに影響されず、クールダウン減少オプション10%あたりスキル増幅が12増加します。\n\n<color=#FFFFC2>怒りのリス：</color>敵に<color=#ffffff>黄色と赤色</color>を塗ると怒りのリス効果が発動して、敵に<color=#ffffff>{18}</color>のスキルダメージを{0}秒間{1}回に分けて与え、敵を沈黙状態にさせます。\n\n<color=#FFFFC2>祝福のリス：</color>敵に<color=#ffffff> 赤色と青色</color>を塗ると祝福のリス効果が発動して、ティアが与えたダメージ量の{27}の体力を回復し、{9}秒間移動速度が{10}増加した後、徐々に減少します。敵に<color=#ffffff>{19}</color>のスキルダメージを与えます。\n\n<color=#FFFFC2>魔法のリス：</color>敵に<color=#ffffff>青色と黄色</color>を塗ると魔法のリス効果が発動して、敵に<color=#ffffff>{20}</color>のスキルダメージを与えて{15}秒間敵を束縛させます。
-Skill/Group/Desc/1048400┃ティアが<color=yellow>黄色</color>絵の具を前方に投げ、爆発した位置から半径1.5m範囲に<color=#ffffff>{5}</color>のスキルダメージを与え、黄色の絵の具を塗ります。黄色の絵の具がついたら{4}秒間敵の移動速度を{3}減少させます。
+Skill/Group/Desc/1048400┃ティアが前方に<color=yellow>黄色</color>の絵の具を投げます。敵に的中する場合、的中した敵の周りに<color=#ffffff>{5}</color>のスキルダメージを与えて黄色の絵の具を塗ります。絵の具は射程距離の端まで飛んで行ったり、敵に的中すると、絵の具が飛び散って扇形の範囲内の敵に黄色の絵の具をつけます。黄色の絵の具がついた場合、敵の移動速度が{4}秒間{3}減少します。
 Skill/Group/Desc/1048410┃ティアが筆を振り回して当たった敵に<color=#ffffff>{5}</color> のスキルダメージを与え、筆の頭に当たった敵に<color=red>赤色</color>絵の具を塗ります。赤色の絵の具がついたら{4}秒間敵の移動速度を{3}減少させます。
 Skill/Group/Desc/1048420┃ティアが筆を振り下ろして敵に<color=#ffffff>{5}</color>のスキルダメージを与え、筆先に的中された対象に<color=#2AC0FF>青色</color>の絵の具を塗って{8}秒間移動速度を{9}減少させます。攻撃範囲の一番内側の領域に当たった敵には<color=#ffffff>{2}</color>のスキルダメージを追加で与えて{6}秒間移動速度を{7}減少させます。
 Skill/Group/Desc/1048430┃絵の具を用意しています。少々お待ちください。
@@ -8552,7 +8665,7 @@ Skill/Group/Desc/1048620┃ティアが地面を<color=#2AC0FF>青色</color>の
 Skill/Group/Desc/1048630┃絵の具を用意しています。少々お待ちください。
 Skill/Group/Desc/1048700┃ティアが呪文を唱えると、指定した位置に巨大な筆が現れてレインボーを描き、敵に<color=#ffffff>{5}</color>のスキルダメージを与え、{2}秒間敵を気絶させます。敵に絵の具の色がついたら、気絶持続時間が{3}秒増加します。
 Skill/Group/Coef/1048100┃ティアが<color=#ffffff>ブラシストローク(Q)</color>または<color=#ffffff>カラーリング(E)</color>で敵に2色を塗るとリス効果が発動します。ティアの基本スキルはクールダウン減少オプションに影響されず、クールダウン減少オプション10%あたりスキル増幅が12増加します。\n\n<color=#FFFFC2>怒りのリス：</color>敵に<color=#ffffff>黄色と赤色</color>を塗ると怒りのリス効果が発動して、敵に<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{22})</color>のスキルダメージを{0}秒間{1}回に分けて与え、敵を沈黙状態にさせます。\n\n<color=#FFFFC2>祝福のリス：</color>敵に<color=#ffffff> 赤色と青色</color>を塗ると祝福のリス効果が発動して、ティアが与えたダメージ量の{27}の体力を回復し、{9}秒間移動速度が{10}増加した後、徐々に減少します。敵に<color=white>{6}</color><color=#DDA0DD>(+スキル増幅の{24})</color>のスキルダメージを与えます。\n\n<color=#FFFFC2>魔法のリス：</color>敵に<color=#ffffff>青色と黄色</color>を塗ると魔法のリス効果が発動して、敵に<color=white>{12}</color><color=#DDA0DD>(+スキル増幅の{26})</color> のスキルダメージを与えて{15}秒間敵を束縛させます。
-Skill/Group/Coef/1048400┃ティアが<color=yellow>黄色</color>絵の具を前方に投げ、爆発した位置から半径1.5m範囲に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与え、黄色の絵の具を塗ります。黄色の絵の具がついたら{4}秒間敵の移動速度を{3}減少させます。
+Skill/Group/Coef/1048400┃ティアが前方に<color=yellow>黄色</color>の絵の具を投げます。敵に的中する場合、的中した敵の周りに<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えて黄色の絵の具をつけます。絵の具は射程距離の端まで飛んで行ったり、敵に的中すると、絵の具が飛び散って扇形の範囲内の敵に黄色の絵の具をつけます。黄色の絵の具がついた場合、敵の移動速度が{4}秒間{3}減少します。
 Skill/Group/Coef/1048410┃ティアが筆を振り回して当たった敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与え、筆の頭に当たった敵に<color=red>赤色</color>の絵の具を塗ります。赤色の絵の具がついたら{4}秒間敵の移動速度を{3}減少させます。
 Skill/Group/Coef/1048420┃ティアが筆を振り下ろして敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{3})</color>のスキルダメージを与え、筆先に的中された対象に<color=#2AC0FF>青色</color>の絵の具を塗って{8}秒間移動速度を{9}減少させます。攻撃範囲の一番内側の領域に当たった敵には<color=#ffffff>{2}</color>のスキルダメージを追加で与えて{6}秒間移動速度を{7}減少させます。
 Skill/Group/Coef/1048430┃絵の具を用意しています。少々お待ちください。
@@ -9703,10 +9816,10 @@ Skill/LobbyDesc/1070100┃つばめの基本攻撃は<color=white>秘技 - 生�
 Skill/Group/Desc/1070200┃つばめが手裏剣3つを指定した位置に投げます。手裏剣は経路の最後まで飛んで行くと回転しながら的中した敵に<color=white>{0}</color>のスキルダメージを与え、{1}秒間移動速度を{2}減少させます。\n\n<color=white>秘技 - 生死の刻印</color>スタックが残された敵対象にはスタックが{3}追加されます。
 Skill/Group/Coef/1070200┃つばめが手裏剣3つを指定した位置に投げます。手裏剣は経路の最後まで飛んで行くと回転しながら的中した敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与え、{1}秒間移動速度を{2}減少させます。\n\n<color=white>秘技 - 生死の刻印</color>スタックが残された敵対象にはスタックが{4}追加されます。
 Skill/LobbyDesc/1070200┃つばめが手裏剣3つを指定した位置に投げます。手裏剣は経路の最後まで飛んで行くと回転しながら的中した敵にスキルダメージを与え、移動速度を減少させます。\n\n<color=white>秘技 - 生死の刻印</color>スタックが残された敵対象にはスタックが追加されます。
-Skill/Group/Desc/1070300┃つばめが忍び足でより素早く動き、移動速度が{1}増加しては{0}秒間徐々に減少します。{2}秒間攻撃速度が{3}増加します。
-Skill/Group/Coef/1070300┃つばめが忍び足でより素早く動き、移動速度が{1}増加しては{0}秒間徐々に減少します。{2}秒間攻撃速度が{3}増加します。
+Skill/Group/Desc/1070300┃つばめが忍び足でより素早く動き、移動速度が{1}増加しては{0}秒にわたって元に戻ります。{2}秒間攻撃速度が{3}増加します。
+Skill/Group/Coef/1070300┃つばめが忍び足でより素早く動き、移動速度が{1}増加しては{0}秒にわたって元に戻ります。{2}秒間攻撃速度が{3}増加します。
 Skill/Group/ExpansionTip/1070300┃つばめが基本攻撃すると、忍び足のクールダウンが{0}秒ずつ減少します。
-Skill/LobbyDesc/1070300┃つばめが忍び足でより素早く動き、移動速度が増加しては徐々に減少します。一定時間の間攻撃速度が増加します。\n\nつばめが基本攻撃すると、忍び足のクールダウンが減少します。
+Skill/LobbyDesc/1070300┃つばめが忍び足でより素早く動き、移動速度が増加しては徐々に元に戻ります。一定時間の間攻撃速度が増加します。\n\nつばめが基本攻撃すると、忍び足のクールダウンが減少します。
 Skill/Group/Desc/1070400┃つばめが自分の位置に<color=white>身代わり</color>を残し、指定した方向に空中回転しながら{1}秒間隠密状態になります。空中回転後、{2}秒間スキルを再度使用することができます。\n\n<color=white>再使用：</color>つばめが<color=white>身代わり</color>の位置と入れ替わります。
 Skill/Group/Coef/1070400┃つばめが自分の位置に<color=white>身代わり</color>を残し、指定した方向に空中回転しながら{1}秒間隠密状態になります。空中回転後、{2}秒間スキルを再度使用することができます。\n\n<color=white>再使用：</color>つばめが<color=white>身代わり</color>の位置と入れ替わります。
 Skill/LobbyDesc/1070400┃つばめが自分の位置に<color=white>身代わり</color>を残し、指定した方向に空中回転しながら隠密状態になります。空中回転後、スキルを再度使用することができます。\n\n<color=white>再使用：</color>つばめが<color=white>身代わり</color>の位置と入れ替わります。
@@ -10555,182 +10668,32 @@ Skill/LobbyDesc/3024000┃自分の周りを回るVFエネルギー球体を生�
 Skill/LobbyDesc/3025000┃エキオンが1秒間スキルをキャストして、それぞれのVFゲージの状態に応じて効果が適用されます。\n\n<color=white>VFゲージ50未満：</color>ー定量のゲージをチャージします。\n\n<color=white>VFゲージ50以上：</color>ー定量のゲージを消耗して、武器スキルを除いたスキルのクールダウンを減少させて移動速度が増加します。\n\n<color=white>VF暴走状態：</color>暴走持続時間を延長して、スキルのクールダウンを減少させて移動速度が増加します。\n\n<color=white>オーバーロード状態：</color>オーバーロード状態をー定量時間減少させます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/Name/9999999┃基本攻撃
 Skill/LobbyDesc/9999999┃敵に与えた基本攻撃ダメージです。
-Skill/Group/Name/4000000┃ブリンク
-Skill/Group/LobbyDesc/4000000┃使用すると指定した位置の方に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
-Skill/Code/Desc/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が増加します。</color>
-Skill/Code/Coef/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が{3}%増加し、衝突を無視します。</color>
-Skill/Code/ExpansionTip/4000001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4000002┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が増加します。</color>
-Skill/Code/Coef/4000002┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が{3}%増加し、衝突を無視します。</color>
-Skill/Code/ExpansionTip/4000002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4000003┃使用すると指定した位置に瞬間移動します。\n\n<color=#FFFFC2>モジュール強化：</color>{2}秒間移動速度が増加します。
 Skill/Code/Coef/4000003┃使用すると指定した位置に瞬間移動します。\n\n<color=#FFFFC2>モジュール強化：</color>{2}秒間移動速度が{3}％増加し、衝突を無視します。
-CharacterState/Group/Name/4000000┃加速
-CharacterState/Group/Desc/4000000┃衝突を無視して移動速度が増加します。
-Skill/Group/Name/4001000┃クエイク
-Skill/Group/LobbyDesc/4001000┃使用すると周りの敵の移動速度を減少させて妨害します。\n\n<color=#ff3399>強化：</color>一定時間の間周りの敵にダメージを与えます。
-Skill/Code/Desc/4001001┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に{2}のスキルダメージを与えます。</color>
-Skill/Code/Coef/4001001┃使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に({2}+キャラクターレベル*{7})のスキルダメージを与えます。</color>
-Skill/Code/ExpansionTip/4001001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4001002┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に{2}のスキルダメージを与えます。</color>
-Skill/Code/Coef/4001002┃使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に({2}+キャラクターレベル*{7})のスキルダメージを与えます。</color>
-Skill/Code/ExpansionTip/4001002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4001003┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>モジュール強化：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
 Skill/Code/Coef/4001003┃スキルを使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>モジュール強化：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に(<color=white>{2}</color>+<color=green>キャラクターレベル*{7}</color>)のスキルダメージを与えます。
-CharacterState/Group/Name/4001010┃クエイク
-CharacterState/Group/Desc/4001010┃大きな衝撃派によって移動速度が減少されました。
-CharacterState/Group/Name/4001000┃ジャイアント
-CharacterState/Group/Desc/4001000┃持続的に地震を起こして相手にダメージを与えます。
-Skill/Group/Name/4101000┃プロトコル違反
-Skill/Group/LobbyDesc/4101000┃改造されたE.M.O.T.Eが爆発して味方には体力増加効果を、敵には受けるダメージ増加効果を与えます。\n\n<color=#ff3399>強化：</color>より強い効果を与えます。
-Skill/Code/Desc/4101001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
-Skill/Code/Coef/4101001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
-Skill/Code/ExpansionTip/4101001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4101002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
-Skill/Code/Coef/4101002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
-Skill/Code/ExpansionTip/4101002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4101003┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>モジュール強化：</color>効果がより大きく増加します。
 Skill/Code/Coef/4101003┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>モジュール強化：</color>効果がより大きく増加します。
-CharacterState/Group/Name/4101000┃有用物質
-CharacterState/Group/Desc/4101000┃最大体力が増加しました。
-CharacterState/Group/Name/4101010┃有害物質
-CharacterState/Group/Desc/4101010┃受けるダメージが増加しました。
-Skill/Group/Name/4102000┃赤嵐
-Skill/Group/LobbyDesc/4102000┃使用すると短い距離を移動して一定時間の間基本攻撃の射程距離が増加します。\n\n<color=#ff3399>強化：</color>射程距離増加効果が増加します。
-Skill/Code/Desc/4102001┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が増加します。</color>
-Skill/Code/Coef/4102001┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が{4}に増加します。</color>
-Skill/Code/ExpansionTip/4102001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4102002┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が増加します。</color>
-Skill/Code/Coef/4102002┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が{4}に増加します。</color>
-Skill/Code/ExpansionTip/4102002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4102003┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#FFFFC2>モジュール強化：</color>射程距離増加効果が増加します。
 Skill/Code/Coef/4102003┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#FFFFC2>モジュール強化：</color>射程距離増加効果が{4}に増加します。
-CharacterState/Group/Name/4102000┃静電気
-CharacterState/Group/Desc/4102000┃基本攻撃の射程距離が増加します。
-Skill/Group/Name/4103000┃超越
-Skill/Group/LobbyDesc/4103000┃爆発的なダメージ量を吸収できるシールドを獲得します。\n\n<color=#ff3399>強化：</color>シールドが存在する間、追加移動速度を獲得します。
-Skill/Code/Desc/4103001┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
-Skill/Code/Coef/4103001┃使用すると{0}秒間(<color=white>{1}</color>+<color=#BB72FF>追加体力*{4}</color>)のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
-Skill/Code/ExpansionTip/4103001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4103002┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
-Skill/Code/Coef/4103002┃使用すると{0}秒間(<color=white>{1}</color>+<color=#BB72FF>追加体力*{4}</color>)のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
-Skill/Code/ExpansionTip/4103002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4103003┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#FFFFC2>モジュール強化：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
 Skill/Code/Coef/4103003┃使用すると{0}秒間(<color=white>{1}</color>+<color=#688a08>追加体力の*{4}</color>)のシールドを獲得します。\n\n<color=#FFFFC2>モジュール強化：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
 Skill/Code/ExpansionTip/4103003┃<i>獲得したシールド量に比例して移動速度が増加します。</i>
-CharacterState/Group/Name/4103000┃超越 - ダメージ無力化
-CharacterState/Group/Desc/4103000┃超越的な力で追加体力の量に比例するシールドを生成しました。
-CharacterState/Group/Name/4103010┃超越 - 血気
-CharacterState/Group/Desc/4103010┃超越的な力によって獲得したシールドに比例して移動速度が増加します。
-Skill/Group/Name/4104000┃アーティファクト
-Skill/Group/LobbyDesc/4104000┃しばらくの間硬直状態になって何の干渉を受けなくなります。\n\n<color=#ff3399>強化：</color>硬直状態の時、自分のスキルクールダウンがより早く減少します。
-Skill/Code/Desc/4104001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
-Skill/Code/Coef/4104001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
-Skill/Code/ExpansionTip/4104001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4104002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
-Skill/Code/Coef/4104002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
-Skill/Code/ExpansionTip/4104002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4104003┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>モジュール強化：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
 Skill/Code/Coef/4104003┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>モジュール強化：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
-CharacterState/Group/Name/4104000┃硬直
-CharacterState/Group/Desc/4104000┃アーティファクトによって硬直状態になりました。
-Skill/Group/Name/4105000┃無効化
-Skill/Group/LobbyDesc/4105000┃デバフ効果をすぐに解除し、移動速度が増加します。\n\n<color=#ff3399>強化：</color>一定時間の間すべての妨害効果免疫状態になります。
-Skill/Code/Desc/4105001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
-Skill/Code/Coef/4105001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
-Skill/Code/ExpansionTip/4105001┃<i>増加した移動速度は持続時間の間、徐々に減少します。</i>\n<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4105002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
-Skill/Code/Coef/4105002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
-Skill/Code/ExpansionTip/4105002┃<i>増加した移動速度は持続時間の間、徐々に減少します。</i>\n<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4105003┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>モジュール強化：</color>{1}秒間すべての妨害効果免疫状態になります。
 Skill/Code/Coef/4105003┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>モジュール強化：</color>{1}秒間すべての妨害効果免疫状態になります。
-CharacterState/Group/Name/4105000┃全ての妨害効果免疫
-CharacterState/Group/Desc/4105000┃全ての妨害効果を無視します。
-CharacterState/Group/Name/4105010┃移動速度増加 - 無効化
-CharacterState/Group/Desc/4105010┃無効化によって移動速度が増加します。
-Skill/Group/Name/4107000┃強い絆
-Skill/Group/LobbyDesc/4107000┃周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して周りの味方に移動速度とダメージ吸血効果を与えます。\n\n<color=#ff3399>強化：</color>より多くのエネルギーを獲得できます。
-Skill/Code/Desc/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
-Skill/Code/Coef/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
-Skill/Code/ExpansionTip/4107001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
-Skill/Code/Coef/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
-Skill/Code/ExpansionTip/4107002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4107003┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>モジュール強化：</color>エネルギーの最大保有量と獲得率が増加します。
 Skill/Code/Coef/4107003┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>モジュール強化：</color>エネルギーの最大保有量と獲得率が増加します。
-CharacterState/Group/Name/4107000┃強い絆 - 怒り
-CharacterState/Group/Desc/4107000┃自分または一定距離内の実験体が他の実験体にダメージを受けた場合、エネルギーをチャージします。
-CharacterState/Group/Name/4107010┃強い絆 - 守り
-CharacterState/Group/Desc/4107010┃ダメージ吸血と移動速度が増加されました。
-CharacterState/Group/Name/4107020┃強い絆 - 不可
-CharacterState/Group/Desc/4107020┃絆の効果を受け、一定時間の間絆の効果が適用されません。
-Skill/Group/Name/4110000┃ブラスター弾丸
-Skill/Group/LobbyDesc/4110000┃使用すると一定時間の間基本攻撃が範囲ダメージを与えるようになります。\n\n<color=#ff3399>強化：</color>基本攻撃をする時、実験体の現在体力に比例するスキルダメージを与えます。
-Skill/Code/Desc/4110001┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>基本攻撃をする時、実験体の現在体力の{4}%のスキルダメージを与えます。</color>
-Skill/Code/Coef/4110001┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>基本攻撃をする時、実験体の現在体力の{4}%のスキルダメージを与えます。</color>
-Skill/Code/ExpansionTip/4110001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4110002┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>基本攻撃をする時、実験体の現在体力の{4}%のスキルダメージを与えます。</color>
-Skill/Code/Coef/4110002┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>基本攻撃をする時、実験体の現在体力の{4}%のスキルダメージを与えます。</color>
-Skill/Code/ExpansionTip/4110002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4110003┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#FFFFC2>モジュール強化：</color>基本攻撃をする時、実験体の現在体力の<color=#688A08>{4}%</color>のスキルダメージを与えます。
-Skill/Code/Coef/4110003┃使用すると{0}秒間基本攻撃が範囲ダメージを与えるようになり、周りの敵に(近距離{1}%/遠距離{2}%)のスキルダメージを与えます。\n\n<color=#FFFFC2>モジュール強化：</color>基本攻撃をする時、実験体の現在体力の<color=#688A08>{4}%</color>のスキルダメージを与えます。
-CharacterState/Group/Name/4110000┃ブラスター弾丸
-CharacterState/Group/Desc/4110000┃準備完了
-Skill/Group/Name/4114000┃ストライダー - A13
-Skill/Group/LobbyDesc/4114000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間敵にダメージを与えた場合には追加スキルダメージを与えて効果が終了します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
-Skill/Code/Desc/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
-Skill/Code/Coef/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
-Skill/Code/ExpansionTip/4114001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
-Skill/Code/Coef/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
-Skill/Code/ExpansionTip/4114002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4114003┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
 Skill/Code/Coef/4114003┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
-CharacterState/Group/Name/4114000┃ストライダー - A13
-CharacterState/Group/Desc/4114000┃移動速度が増加します。
-CharacterState/Group/Name/4114020┃ストライダー - A13(打撃)
-CharacterState/Group/Desc/4114020┃移動速度が減少します。
-Skill/Group/Name/4112000┃真実の刃
-Skill/Group/LobbyDesc/4112000┃使用すると周りの敵にダメージを与えます。また、ダメージを与えた敵の数に比例して移動速度が増加します。\n\n<color=#ff3399>強化：</color>ダメージを受けた対象に与えるダメージが増加します。
-Skill/Code/Desc/4112001┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
-Skill/Code/Coef/4112001┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
-Skill/Code/ExpansionTip/4112001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4112002┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。\n\nまた、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
-Skill/Code/Coef/4112002┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
-Skill/Code/ExpansionTip/4112002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4112003┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>モジュール強化：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
 Skill/Code/Coef/4112003┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>モジュール強化：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
-CharacterState/Group/Name/4112000┃真実の刃 - 投影
-CharacterState/Group/Desc/4112000┃敵にダメージを与えた真実により実験体の移動速度が増加されました。
-CharacterState/Group/Name/4112010┃真実の刃 - 喪失
-CharacterState/Group/Desc/4112010┃真実を見透かされ、受けるダメージが増加します。
-Skill/Group/Name/4113000┃偽りの誓約
-Skill/Group/LobbyDesc/4113000┃使用者の体力を消耗する代わりにすべてのダメージが増加します。消耗された体力は徐々に回復されます。\n\n<color=#ff3399>強化：</color>敵実験体のキルに関与した場合には効果が更新されます。
-Skill/Code/Desc/4113001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を回復し、すべてのダメージが{3}%増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
-Skill/Code/Coef/4113001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
-Skill/Code/ExpansionTip/4113001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>\n\n<i>偽りの誓約を使用する時、最大体力の{0}%以下に減少されることはありません。</i>
-Skill/Code/Desc/4113002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
-Skill/Code/Coef/4113002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
-Skill/Code/ExpansionTip/4113002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>\n\n<i>偽りの誓約を使用する時、最大体力の{0}%以下に減少されることはありません。</i>
 Skill/Code/Desc/4113003┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>モジュール強化：</color>敵実験体をキルまたはアシストした場合には効果が更新されます。
 Skill/Code/Coef/4113003┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>モジュール強化：</color>敵実験体をキルまたはアシストした場合には効果が更新されます。
 Skill/Code/ExpansionTip/4113003┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
-CharacterState/Group/Name/4113000┃偽りの誓約 - 誓約
-CharacterState/Group/Desc/4113000┃偽りの誓約によってダメージを受け、体力再生とダメージ増加を獲得しました。
-Skill/Group/Name/4108000┃治癒の風
-Skill/Group/LobbyDesc/4108000┃範囲内の味方の実験体の体力を回復させます。\n\n<color=#ff3399>強化：</color>風に当たった味方の防御力を増加させます。
-Skill/Code/Desc/4108001┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
-Skill/Code/Coef/4108001┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
-Skill/Code/ExpansionTip/4108001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4108002┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
-Skill/Code/Coef/4108002┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
-Skill/Code/ExpansionTip/4108002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4108003┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>モジュール強化：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
 Skill/Code/Coef/4108003┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>モジュール強化：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。\n
-CharacterState/Group/Name/4108000┃治癒の風 - 保護
-CharacterState/Group/Desc/4108000┃治癒の風によって防御力が増加します。
-CharacterState/Group/Name/4108010┃治癒の風 - 干渉
-CharacterState/Group/Desc/4108010┃異なる風によって治癒効果が減少されます。
 CharacterState/Group/Name/2100201┃戦場－加速
 CharacterState/Group/Desc/2100201┃戦場－加速では実験体の移動速度が{0}%増加し、クールダウンが{1}%減少します。この場合、最大クールダウンの数値を超えることはできません。
 CharacterState/Group/Name/2100202┃戦場 - 狂暴
@@ -11236,6 +11199,10 @@ Item/Skills/6034001┃バレル延長
 Item/Skills/6034001/Name┃<color=yellow>バレル延長</color>
 Item/Skills/6034001/Body┃{0}秒ごとに次の基本攻撃が強化されて射程距離が{1}%増加し、<color=#008000>{2}</color>の追加スキルダメージを与えます。(最大{3}ｍまで)\n基本攻撃するたびにバレル延長スキルのクールダウンが1秒ずつ減少します。
 Item/Skills/6034001/Desc┃{0}秒ごとに次の基本攻撃が強化されて射程距離が{1}%増加し、<color=#008000>(キャラクターレベル * {2})</color>の追加スキルダメージを与えます。(最大{3}ｍまで)\n基本攻撃するたびにバレル延長スキルのクールダウンが1秒ずつ減少します。
+Item/Skills/6034002┃バレル延長
+Item/Skills/6034002/Name┃<color=yellow>バレル延長</color>
+Item/Skills/6034002/Body┃{0}秒ごとに次の基本攻撃が強化されて射程距離が{1}%増加し、<color=#008000>{2}</color>の追加スキルダメージを与えます。(最大{3}ｍまで)\n基本攻撃するたびにバレル延長スキルのクールダウンが1秒ずつ減少します。
+Item/Skills/6034002/Desc┃{0}秒ごとに次の基本攻撃が強化されて射程距離が{1}%増加し、<color=#008000>(キャラクターレベル * {2})</color>の追加スキルダメージを与えます。(最大{3}ｍまで)\n基本攻撃するたびにバレル延長スキルのクールダウンが1秒ずつ減少します。
 CharacterState/Group/Name/6034000┃バレル延長
 CharacterState/Group/Desc/6034000┃次の基本攻撃の射程距離が増加し、追加ダメージを与えます。
 CharacterState/Group/Name/6034010┃バレル延長
@@ -11431,58 +11398,6 @@ Skill/Group/LobbyDesc/4507000┃前方範囲の地面に亀裂を入れ、ダメ
 Skill/Group/4507000/Name┃<color=yellow>亀裂</color>
 Skill/Code/Desc/4507001┃前方範囲の地面に亀裂を入れ、{0}秒後{1} + <color=#688A08>敵の現在体力の{2}%</color>のダメージを与えて{3}秒間気絶させ、移動速度を{5}秒間{6}%減少させます。
 Skill/Code/Coef/4507001┃前方範囲の地面に亀裂を入れ、{0}秒後{1} + 敵の<color=#688A08>現在体力の{2}%</color>のダメージを与えて{3}秒間気絶させ、移動速度を{5}秒間{6}%減少させます。
-Skill/Code/Desc/4512001┃使用すると指定した位置に瞬間移動します。
-Skill/Code/Coef/4512001┃使用すると指定した位置に瞬間移動します。
-Skill/Code/Desc/4513001┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
-Skill/Code/Coef/4513001┃スキルを使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に(<color=white>{2}</color>+<color=green>キャラクターレベル*{7}</color>)のスキルダメージを与えます。
-Skill/Code/Desc/4514001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
-Skill/Code/Coef/4514001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
-Skill/Code/Desc/4515001┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が増加します。
-Skill/Code/Coef/4515001┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が{4}に増加します。
-Skill/Code/Desc/4516001┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
-Skill/Code/Coef/4516001┃使用すると{0}秒間(<color=white>{1}</color>+<color=#688a08>追加体力の*{4}</color>)のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
-Skill/Code/ExpansionTip/4516001┃<i>獲得したシールド量に比例して移動速度が増加します。</i>
-Skill/Code/Desc/4517001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
-Skill/Code/Coef/4517001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
-Skill/Code/Desc/4518001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
-Skill/Code/Coef/4518001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
-Skill/Code/Desc/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
-Skill/Code/Coef/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
-Skill/Code/Desc/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
-Skill/Code/Coef/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
-Skill/Code/Desc/4521001┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
-Skill/Code/Coef/4521001┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
-Skill/Code/Desc/4522001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
-Skill/Code/Coef/4522001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
-Skill/Code/ExpansionTip/4522001┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
-Skill/Code/Desc/4520001┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
-Skill/Code/Coef/4520001┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
-Skill/Code/Desc/4512002┃使用すると指定した位置に瞬間移動します。
-Skill/Code/Coef/4512002┃使用すると指定した位置に瞬間移動します。
-Skill/Code/Desc/4513002┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
-Skill/Code/Coef/4513002┃スキルを使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に(<color=white>{2}</color>+<color=green>キャラクターレベル*{7}</color>)のスキルダメージを与えます。
-Skill/Code/Desc/4514002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
-Skill/Code/Coef/4514002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
-Skill/Code/Desc/4515002┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が増加します。
-Skill/Code/Coef/4515002┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が{4}に増加します。
-Skill/Code/Desc/4516002┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
-Skill/Code/Coef/4516002┃使用すると{0}秒間(<color=white>{1}</color>+<color=#688a08>追加体力の*{4}</color>)のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
-Skill/Code/ExpansionTip/4516002┃<i>獲得したシールド量に比例して移動速度が増加します。</i>
-Skill/Code/Desc/4517002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
-Skill/Code/Coef/4517002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
-Skill/Code/Desc/4518002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
-Skill/Code/Coef/4518002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
-Skill/Code/Desc/4519002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
-Skill/Code/Coef/4519002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
-Skill/Code/Desc/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
-Skill/Code/Coef/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
-Skill/Code/Desc/4521002┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
-Skill/Code/Coef/4521002┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
-Skill/Code/Desc/4522002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
-Skill/Code/Coef/4522002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
-Skill/Code/ExpansionTip/4522002┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
-Skill/Code/Desc/4520002┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
-Skill/Code/Coef/4520002┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
 Skill/Code/Desc/4512003┃使用すると指定した位置に瞬間移動します。
 Skill/Code/Coef/4512003┃使用すると指定した位置に瞬間移動します。
 Skill/Code/Desc/4513003┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
@@ -11509,30 +11424,6 @@ Skill/Code/Coef/4522003┃使用すると{0}の体力を消耗して{4}秒間誓
 Skill/Code/ExpansionTip/4522003┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
 Skill/Code/Desc/4520003┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
 Skill/Code/Coef/4520003┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
-Skill/Code/Name/4512001┃ブリンク
-Skill/Code/Name/4513001┃クエイク
-Skill/Code/Name/4514001┃プロトコル違反
-Skill/Code/Name/4515001┃赤嵐
-Skill/Code/Name/4516001┃超越
-Skill/Code/Name/4517001┃アーティファクト
-Skill/Code/Name/4518001┃無効化
-Skill/Code/Name/4519001┃強い絆
-Skill/Code/Name/4523001┃ストライダー - A13
-Skill/Code/Name/4521001┃真実の刃
-Skill/Code/Name/4522001┃偽りの誓約
-Skill/Code/Name/4520001┃治癒の風
-Skill/Code/Name/4512002┃ブリンク
-Skill/Code/Name/4513002┃クエイク
-Skill/Code/Name/4514002┃プロトコル違反
-Skill/Code/Name/4515002┃赤嵐
-Skill/Code/Name/4516002┃超越
-Skill/Code/Name/4517002┃アーティファクト
-Skill/Code/Name/4518002┃無効化
-Skill/Code/Name/4519002┃強い絆
-Skill/Code/Name/4523002┃ストライダー - A13
-Skill/Code/Name/4521002┃真実の刃
-Skill/Code/Name/4522002┃偽りの誓約
-Skill/Code/Name/4520002┃治癒の風
 Skill/Code/Name/4512003┃ブリンク
 Skill/Code/Name/4513003┃クエイク
 Skill/Code/Name/4514003┃プロトコル違反
@@ -11557,41 +11448,17 @@ Skill/Group/Name/4523000┃ストライダー - A13
 Skill/Group/Name/4521000┃真実の刃
 Skill/Group/Name/4522000┃偽りの誓約
 Skill/Group/Name/4520000┃治癒の風
-TacticalSkillSet/Code/Name/500121┃ブリンク
-TacticalSkillSet/Code/Name/500122┃ブリンク
 TacticalSkillSet/Code/Name/500123┃ブリンク
-TacticalSkillSet/Code/Name/500131┃クエイク
-TacticalSkillSet/Code/Name/500132┃クエイク
 TacticalSkillSet/Code/Name/500133┃クエイク
-TacticalSkillSet/Code/Name/500141┃プロトコル違反
-TacticalSkillSet/Code/Name/500142┃プロトコル違反
 TacticalSkillSet/Code/Name/500143┃プロトコル違反
-TacticalSkillSet/Code/Name/500151┃赤嵐
-TacticalSkillSet/Code/Name/500152┃赤嵐
 TacticalSkillSet/Code/Name/500153┃赤嵐
-TacticalSkillSet/Code/Name/500161┃超越
-TacticalSkillSet/Code/Name/500162┃超越
 TacticalSkillSet/Code/Name/500163┃超越
-TacticalSkillSet/Code/Name/500171┃アーティファクト
-TacticalSkillSet/Code/Name/500172┃アーティファクト
 TacticalSkillSet/Code/Name/500173┃アーティファクト
-TacticalSkillSet/Code/Name/500181┃無効化
-TacticalSkillSet/Code/Name/500182┃無効化
 TacticalSkillSet/Code/Name/500183┃無効化
-TacticalSkillSet/Code/Name/500191┃強い絆
-TacticalSkillSet/Code/Name/500192┃強い絆
 TacticalSkillSet/Code/Name/500193┃強い絆
-TacticalSkillSet/Code/Name/500201┃ストライダー - A13
-TacticalSkillSet/Code/Name/500202┃ストライダー - A13
 TacticalSkillSet/Code/Name/500203┃ストライダー - A13
-TacticalSkillSet/Code/Name/500211┃真実の刃
-TacticalSkillSet/Code/Name/500212┃真実の刃
 TacticalSkillSet/Code/Name/500213┃真実の刃
-TacticalSkillSet/Code/Name/500221┃偽りの誓約
-TacticalSkillSet/Code/Name/500222┃偽りの誓約
 TacticalSkillSet/Code/Name/500223┃偽りの誓約
-TacticalSkillSet/Code/Name/500231┃治癒の風
-TacticalSkillSet/Code/Name/500232┃治癒の風
 TacticalSkillSet/Code/Name/500233┃治癒の風
 CharacterState/Group/Name/6027130┃悟り - 先鋒
 CharacterState/Group/Desc/6027130┃発動条件を満たし、先鋒効果が発動します。
@@ -11659,23 +11526,23 @@ Skill/Group/ExpansionTip/8000200┃瀕死状態で回復に失敗した場合、
 Skill/Group/ExpansionTip/8000300┃スキル使用中に瀕死状態の体力が0になると、実験体はすぐに死亡し、分裂爆発ダメージを与えられません。
 Item/Skills/6033001┃フォトンランチャー
 Item/Skills/6033001/Name┃<color=yellow>フォトンランチャー</color>
-Item/Skills/6033001/Body┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#FFD775>(+{2})</color><color=green>(+{3})</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
-Item/Skills/6033001/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#FFD775>(+攻撃力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
+Item/Skills/6033001/Body┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#FFD775>{1}</color><color=#FFD775>(+{2})</color><color=green>(+{3})</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
+Item/Skills/6033001/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#FFD775>{1}</color><color=#FFD775>(+攻撃力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
 Item/Skills/6033002/Name┃<color=yellow>フォトンランチャー</color>
 Item/Skills/6033002/Body┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#DDA0DD>{5}</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
-Item/Skills/6033002/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#DDA0DD>(+スキル増幅の{5}%)</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
+Item/Skills/6033002/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックの時に相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#FFD775>{1}</color><color=#DDA0DD>(+スキル増幅の{5}%)</color>の追加スキルダメージを与えて追加ダメージの{4}%を回復します。
 Item/Skills/6033003/Name┃<color=yellow>フォトンランチャー</color>
 Item/Skills/6033003/Body┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#DDA0DD>{5}</color>の追加スキルダメージを与えます。
-Item/Skills/6033003/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#DDA0DD>(+スキル増幅の{5}%)</color>の追加スキルダメージを与えます。
+Item/Skills/6033003/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#FFD775>{1}</color><color=#DDA0DD>(+スキル増幅の{5}%)</color>の追加スキルダメージを与えます。
 Item/Skills/6033004/Name┃<color=yellow>フォトンランチャー</color>
 Item/Skills/6033004/Body┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#FFD775>(+{2})</color><color=green>(+{3})</color>の追加スキルダメージを与えます。
-Item/Skills/6033004/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して{1}<color=#FFD775>(+攻撃力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えます。
+Item/Skills/6033004/Desc┃敵に基本攻撃を的中させるたびにスタックを獲得します。{0}スタックを保有している状態で相手に基本攻撃を的中させると、スタックをすべて消耗して<color=#FFD775>{1}</color><color=#FFD775>(+攻撃力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えます。
 CharacterState/Group/Name/6033000┃フォトンランチャー - スタック
 CharacterState/Group/Desc/6033000┃基本攻撃を的中させ、フォトンランチャースタックを獲得しました。
 Item/Skills/6032001┃激励
 Item/Skills/6032001/Name┃<color=yellow>激励</color>
 Item/Skills/6032001/Body┃味方に治癒またはシールドスキルを適用させた場合、自分以外に適用させた対象の適合能力値を{0}秒間<color=green>{1}</color>、攻撃速度を{2}%増加させます。
-Item/Skills/6032001/Desc┃味方に治癒またはシールドスキルを適用させた場合、自分以外に適用させた対象の適合能力値を{0}秒間{1}<color=green>(+キャラクターレベル*{2})</color>、攻撃速度を{3}%増加させます。
+Item/Skills/6032001/Desc┃味方に治癒またはシールドスキルを適用させた場合、自分以外に適用させた対象の適合能力値を{0}秒間<color=#FFD775>{1}</color><color=green>(+キャラクターレベル*{2})</color>、攻撃速度を{3}%増加させます。
 CharacterState/Group/Name/6032000┃激励
 CharacterState/Group/Desc/6032000┃味方の激励効果によって適合能力値と攻撃速度が増加しました。
 Item/Skills/6035001┃乱舞
@@ -11687,13 +11554,13 @@ CharacterState/Group/Desc/6035000┃個別ダメージが敵に的中し、移�
 Item/Skills/6036001┃突風
 Item/Skills/6036001/Name┃<color=yellow>突風</color>
 Item/Skills/6036001/Body┃{0}秒以内に敵実験体に個別ダメージを3回的中させた場合、{6}秒ごとに<color=#DDA0DD>{2}</color><color=#688A08>(+対象の最大体力の{3}%)</color>のスキルダメージを与える突風が発生し、{4}秒間維持されます。(クールダウン：{5}秒)
-Item/Skills/6036001/Desc┃{0}秒以内に敵実験体に個別ダメージを3回的中させた場合、{8}秒ごとに{2}<color=#DDA0DD>(+スキル増幅の{3}%)</color><color=#688A08>(+対象の最大体力の{5}%)</color>のスキルダメージを与える突風が発生し、{6}秒間維持されます。(クールダウン：{7}秒)
+Item/Skills/6036001/Desc┃{0}秒以内に敵実験体に個別ダメージを3回的中させた場合、{8}秒ごとに<color=#FFD775>{2}</color><color=#DDA0DD>(+スキル増幅の{3}%)</color><color=#688A08>(+対象の最大体力の{5}%)</color>のスキルダメージを与える突風が発生し、{6}秒間維持されます。(クールダウン：{7}秒)
 CharacterState/Group/Name/6036000┃突風
 CharacterState/Group/Desc/6036000┃条件を達成したため、突風効果が発動しています。
 Item/Skills/6037001┃照準ポッド
 Item/Skills/6037001/Name┃<color=yellow>照準ポッド</color>
 Item/Skills/6037001/Body┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に基本攻撃をすると、<color=green>{1}</color>の追加スキルダメージを与え、攻撃した味方は<color=green>{2}</color>の体力を回復します。(クールダウン：{3}秒)
-Item/Skills/6037001/Desc┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に基本攻撃をすると、{1}<color=green>(+キャラクターレベル*{2})</color>の追加スキルダメージを与え、攻撃した味方は{3}<color=green>(+キャラクターレベル*{4})</color>の体力を回復します。(クールダウン：{5}秒)
+Item/Skills/6037001/Desc┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に基本攻撃をすると、<color=#FFD775>{1}</color><color=green>(+キャラクターレベル*{2})</color>の追加スキルダメージを与え、攻撃した味方は<color=#FFD775>{3}</color><color=green>(+キャラクターレベル*{4})</color>の体力を回復します。(クールダウン：{5}秒)
 CharacterState/Group/Name/6037010┃照準ポッド - 準備中
 CharacterState/Group/Desc/6037010┃照準ポッドが発動していません。
 CharacterState/Group/Name/6037000┃照準ポッド - 刻印
@@ -11701,7 +11568,7 @@ CharacterState/Group/Desc/6037000┃敵実験体から基本攻撃を受ける�
 Item/Skills/6038001┃シャッターストライク
 Item/Skills/6038001/Name┃<color=yellow>シャッターストライク</color>
 Item/Skills/6038001/Body┃戦闘状態になった後、{0}秒ごとに強化基本攻撃をチャージします。強化基本攻撃は<color=#688A08>{1}</color>の追加スキルダメージを与えて<color=#688A08>{2}</color>の体力を回復します。
-Item/Skills/6038001/Desc┃戦闘状態になった後、{0}秒ごとに強化基本攻撃をチャージします。強化基本攻撃は{1}<color=#688A08>(+追加体力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えて{4}<color=#688A08>(+追加体力の{5}%)</color>の体力を回復します。
+Item/Skills/6038001/Desc┃戦闘状態になった後、{0}秒ごとに強化基本攻撃をチャージします。強化基本攻撃は<color=#FFD775>{1}</color><color=#688A08>(+追加体力の{2}%)</color><color=green>(+キャラクターレベル*{3})</color>の追加スキルダメージを与えて<color=#FFD775>{4}</color><color=#688A08>(+追加体力の{5}%)</color>の体力を回復します。
 CharacterState/Group/Name/6038000┃シャッターストライク - 準備完了
 CharacterState/Group/Desc/6038000┃条件を達成したため、次の基本攻撃にシャッターストライク効果が発動します。
 CharacterState/Group/Name/6038010┃シャッターストライク - チャージ中
@@ -11712,8 +11579,8 @@ Item/Skills/6039001/Body┃敵の現在体力が<color=#688A08>敵の最大体�
 Item/Skills/6039001/Desc┃敵の現在体力が<color=#688A08>敵の最大体力の{0}%</color>以下の場合、自分が対象に与える<color=#ffd775>スキルのダメージ量が{1}%</color>増加します。
 Item/Skills/6040001┃テーザー銃
 Item/Skills/6040001/Name┃<color=yellow>テーザー銃</color>
-Item/Skills/6040001/Body┃3秒以上自分の周り8m以内にいた敵実験体には、基本攻撃が強化され、<color=#DDA0DD>{2}</color>の追加スキルダメージを与えます。強化された基本攻撃が敵に的中した場合、的中した対象に与える自分のスキルダメージ量が{3}秒間{4}%増加します。(クールダウン：{5}秒)
-Item/Skills/6040001/Desc┃3秒以上自分の周り8m以内にいた敵実験体には、基本攻撃が強化され、{2}<color=#DDA0DD>(+スキル増幅の{4}%)</color>の追加スキルダメージを与えます。強化された基本攻撃が敵に的中した場合、的中した対象に与える自分のスキルダメージ量が{5}秒間{6}%増加します。(クールダウン：{7}秒)
+Item/Skills/6040001/Body┃3秒以上自分の周り8m以内にいた敵実験体には、基本攻撃が強化され、<color=#DDA0DD>{2}</color>の追加スキルダメージを与えます。強化された基本攻撃が敵に的中した場合、的中した対象に与える自分のスキルのダメージ量が{3}秒間{4}%増加します。(クールダウン：{5}秒)
+Item/Skills/6040001/Desc┃3秒以上自分の周り8m以内にいた敵実験体には、基本攻撃が強化され、<color=#FFD775>{2}</color><color=#DDA0DD>(+スキル増幅の{4}%)</color>の追加スキルダメージを与えます。強化された基本攻撃が敵に的中した場合、的中した対象に与える自分のスキルのダメージ量が{5}秒間{6}%増加します。(クールダウン：{7}秒)
 CharacterState/Group/Name/6040000┃テーザー銃
 CharacterState/Group/Desc/6040000┃刻印が完成された対象に基本攻撃する場合、テーザー銃が発動します。
 CharacterState/Group/Name/6040030┃テーザー銃 - 充電中
@@ -11723,7 +11590,7 @@ CharacterState/Group/Desc/6040020┃テーザー銃によって使用者のス�
 Item/Skills/6041001┃衰弱の霧
 Item/Skills/6041001/Name┃<color=yellow>衰弱の霧</color>
 Item/Skills/6041001/Body┃敵実験体に移動不可効果を適用させた場合には、敵実験体が攻撃された場所に{0}秒間維持されるエリアを生成します。エリア内の敵は防御力が{1}%減少し、毎秒<color=#688A08>{2}</color>のスキルダメージを受けます。(クールダウン：{4}秒)
-Item/Skills/6041001/Desc┃敵実験体に移動不可効果を適用させた場合には、敵実験体が攻撃された場所に{0}秒間維持されるエリアを生成します。エリア内の敵は防御力が{1}%減少し、毎秒{2}<color=#688A08>(+追加体力の{3}%)</color>のスキルダメージを受けます。(クールダウン：{4}秒)
+Item/Skills/6041001/Desc┃敵実験体に移動不可効果を適用させた場合には、敵実験体が攻撃された場所に{0}秒間維持されるエリアを生成します。エリア内の敵は防御力が{1}%減少し、毎秒<color=#FFD775>{2}</color><color=#688A08>(+追加体力の{3}%)</color>のスキルダメージを受けます。(クールダウン：{4}秒)
 CharacterState/Group/Name/6043000┃衰弱の霧 - デバフ効果
 CharacterState/Group/Desc/6043000┃衰弱の霧によって一定時間ごとにダメージを受け、防御力減少効果が適用されます。
 Item/Skills/6042001┃ブラスター弾丸
@@ -11734,8 +11601,8 @@ CharacterState/Group/Name/6042000┃ブラスター弾丸
 CharacterState/Group/Desc/6042000┃次の基本攻撃にブラスター弾丸が発動します。
 Item/Skills/6044001┃魂の収穫
 Item/Skills/6044001/Name┃<color=yellow>魂の収穫</color>
-Item/Skills/6044001/Body┃敵実験体にスキルダメージを与えると、<color=#DDA0DD>{0}</color>のスキルダメージを追加で与えて刻印を残します。刻印が残されてから4秒後にスキルでもう一度ダメージを与えると、<color=#DDA0DD>{2}</color>のスキルダメージを追加で与えます。(クールダウン：{3}秒)
-Item/Skills/6044001/Desc┃敵実験体にスキルダメージを与えると、{0}<color=#DDA0DD>(+スキル増幅の{1}%)</color>のスキルダメージを追加で与えて刻印を残します。刻印が残されてから4秒後にスキルでもう一度ダメージを与えると、{3}<color=#DDA0DD>(+スキル増幅の{4}%)</color>のスキルダメージを追加で与えます。(クールダウン：{5}秒)
+Item/Skills/6044001/Body┃敵実験体にスキルダメージを与えると、<color=#DDA0DD>{0}</color>のスキルダメージを追加で与えて刻印を残します。刻印が残されてから3秒後にスキルでもう一度ダメージを与えると、<color=#DDA0DD>{2}</color>のスキルダメージを追加で与えます。(クールダウン：{3}秒)
+Item/Skills/6044001/Desc┃敵実験体にスキルダメージを与えると、<color=#FFD775>{0}</color><color=#DDA0DD>(+スキル増幅の{1}%)</color>のスキルダメージを追加で与えて刻印を残します。刻印が残されてから3秒後にスキルでもう一度ダメージを与えると、<color=#FFD775>{3}</color><color=#DDA0DD>(+スキル増幅の{4}%)</color>のスキルダメージを追加で与えます。(クールダウン：{5}秒)
 CharacterState/Group/Name/6044000┃魂の収穫 - 収穫対象
 CharacterState/Group/Desc/6044000┃魂の収穫対象になり、使用者の次のスキル攻撃に強力なダメージを受けます。
 CharacterState/Group/Name/6044010┃魂の収穫 - 収穫対象
@@ -11758,6 +11625,256 @@ CharacterState/Group/Name/2410000┃Clutch - 回復
 CharacterState/Group/Desc/2410000┃一定時間が経った後に体力が2回回復します。
 CharacterState/Group/Name/2410100┃Clutch - 移動速度増加
 CharacterState/Group/Desc/2410100┃移動速度が増加します。
+Skill/Group/Name/4000000┃ブリンク
+Skill/Group/LobbyDesc/4000000┃使用すると指定した位置の方に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
+Skill/Code/Desc/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が増加します。</color>
+Skill/Code/Coef/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が{3}%増加し、衝突を無視します。</color>
+Skill/Code/ExpansionTip/4000001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4000002┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が増加します。</color>
+Skill/Code/Coef/4000002┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が{3}%増加し、衝突を無視します。</color>
+Skill/Code/ExpansionTip/4000002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4512001┃使用すると指定した位置に瞬間移動します。
+Skill/Code/Coef/4512001┃使用すると指定した位置に瞬間移動します。
+Skill/Code/Desc/4512002┃使用すると指定した位置に瞬間移動します。
+Skill/Code/Coef/4512002┃使用すると指定した位置に瞬間移動します。
+CharacterState/Group/Name/4000000┃加速
+CharacterState/Group/Desc/4000000┃衝突を無視して移動速度が増加します。
+Skill/Group/Name/4001000┃クエイク
+Skill/Group/LobbyDesc/4001000┃使用すると周りの敵の移動速度を減少させて妨害します。\n\n<color=#ff3399>強化：</color>一定時間の間周りの敵にダメージを与えます。
+Skill/Code/Desc/4001001┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に{2}のスキルダメージを与えます。</color>
+Skill/Code/Coef/4001001┃使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に({2}+キャラクターレベル*{7})のスキルダメージを与えます。</color>
+Skill/Code/ExpansionTip/4001001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4001002┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に{2}のスキルダメージを与えます。</color>
+Skill/Code/Coef/4001002┃使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に({2}+キャラクターレベル*{7})のスキルダメージを与えます。</color>
+Skill/Code/ExpansionTip/4001002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4513001┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Code/Coef/4513001┃スキルを使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に(<color=white>{2}</color>+<color=green>キャラクターレベル*{7}</color>)のスキルダメージを与えます。
+Skill/Code/Desc/4513002┃使用すると周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Code/Coef/4513002┃スキルを使用すると自分の周りに地震を起こして周りの敵の移動速度を{5}秒間{3}%減少させます。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間{4}秒ごとに周り{6}m範囲内の敵に(<color=white>{2}</color>+<color=green>キャラクターレベル*{7}</color>)のスキルダメージを与えます。
+CharacterState/Group/Name/4001010┃クエイク
+CharacterState/Group/Desc/4001010┃大きな衝撃派によって移動速度が減少されました。
+CharacterState/Group/Name/4001000┃ジャイアント
+CharacterState/Group/Desc/4001000┃持続的に地震を起こして相手にダメージを与えます。
+Skill/Group/Name/4101000┃プロトコル違反
+Skill/Group/LobbyDesc/4101000┃改造されたE.M.O.T.Eが爆発して味方には体力増加効果を、敵には受けるダメージ増加効果を与えます。\n\n<color=#ff3399>強化：</color>より強い効果を与えます。
+Skill/Code/Desc/4101001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
+Skill/Code/Coef/4101001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
+Skill/Code/ExpansionTip/4101001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4101002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
+Skill/Code/Coef/4101002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚されたE.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>効果がより大きく増加します。
+Skill/Code/ExpansionTip/4101002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4514001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
+Skill/Code/Coef/4514001┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
+Skill/Code/Desc/4514002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eはしばらくしてから爆発し、{4}秒間周りの味方の体力を<color=white>{1}</color>増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
+Skill/Code/Coef/4514002┃指定した位置に改造されたE.M.O.T.Eを召喚します。\n召喚された改造E.M.O.T.Eは{4}秒後に爆発し、{6}秒間周りの味方の体力を(<color=white>{5}</color>+<color=green>キャラクターレベル*{1}</color>)増加させ、敵の受けるダメージを<color=white>{2}</color>増加させます。\n\n<color=#FFFFC2>強化完了済み：</color>効果がより大きく増加します。
+CharacterState/Group/Name/4101000┃有用物質
+CharacterState/Group/Desc/4101000┃最大体力が増加しました。
+CharacterState/Group/Name/4101010┃有害物質
+CharacterState/Group/Desc/4101010┃受けるダメージが増加しました。
+Skill/Group/Name/4102000┃赤嵐
+Skill/Group/LobbyDesc/4102000┃使用すると短い距離を移動して一定時間の間基本攻撃の射程距離が増加します。\n\n<color=#ff3399>強化：</color>射程距離増加効果が増加します。
+Skill/Code/Desc/4102001┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が増加します。</color>
+Skill/Code/Coef/4102001┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が{4}に増加します。</color>
+Skill/Code/ExpansionTip/4102001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4102002┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が増加します。</color>
+Skill/Code/Coef/4102002┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>射程距離増加効果が{4}に増加します。</color>
+Skill/Code/ExpansionTip/4102002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4515001┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が増加します。
+Skill/Code/Coef/4515001┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が{4}に増加します。
+Skill/Code/Desc/4515002┃使用すると指定した方向に<color=white>{1}m</color>移動してしばらくの間基本攻撃の射程距離が{2}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が増加します。
+Skill/Code/Coef/4515002┃使用すると指定した方向に<color=white>{1}m</color>移動して{3}秒間静電気状態になり、基本攻撃の射程距離が{2}%増加します。\n持続時間が終了すると静電気状態が解除されます。\n\n<color=#FFFFC2>強化完了済み：</color>射程距離増加効果が{4}に増加します。
+CharacterState/Group/Name/4102000┃静電気
+CharacterState/Group/Desc/4102000┃基本攻撃の射程距離が増加します。
+Skill/Group/Name/4103000┃超越
+Skill/Group/LobbyDesc/4103000┃爆発的なダメージ量を吸収できるシールドを獲得します。\n\n<color=#ff3399>強化：</color>シールドが存在する間、追加移動速度を獲得します。
+Skill/Code/Desc/4103001┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
+Skill/Code/Coef/4103001┃使用すると{0}秒間(<color=white>{1}</color>+<color=#BB72FF>追加体力*{4}</color>)のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
+Skill/Code/ExpansionTip/4103001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4103002┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
+Skill/Code/Coef/4103002┃使用すると{0}秒間(<color=white>{1}</color>+<color=#BB72FF>追加体力*{4}</color>)のシールドを獲得します。\n\n<color=#565730>モジュール強化：</color><color=#595959>シールドが存在する間、移動速度が{2}~{3}%増加します。</color>
+Skill/Code/ExpansionTip/4103002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4516001┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
+Skill/Code/Coef/4516001┃使用すると{0}秒間(<color=white>{1}</color>+<color=#688a08>追加体力の*{4}</color>)のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
+Skill/Code/ExpansionTip/4516001┃<i>獲得したシールド量に比例して移動速度が増加します。</i>
+Skill/Code/Desc/4516002┃使用すると{0}秒間<color=white>{1}</color>のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
+Skill/Code/Coef/4516002┃使用すると{0}秒間(<color=white>{1}</color>+<color=#688a08>追加体力の*{4}</color>)のシールドを獲得します。\n\n<color=#FFFFC2>強化完了済み：</color>シールドが存在する間、移動速度が{2}~{3}%増加します。
+Skill/Code/ExpansionTip/4516002┃<i>獲得したシールド量に比例して移動速度が増加します。</i>
+CharacterState/Group/Name/4103000┃超越 - ダメージ無力化
+CharacterState/Group/Desc/4103000┃超越的な力で追加体力の量に比例するシールドを生成しました。
+CharacterState/Group/Name/4103010┃超越 - 血気
+CharacterState/Group/Desc/4103010┃超越的な力によって獲得したシールドに比例して移動速度が増加します。
+Skill/Group/Name/4104000┃アーティファクト
+Skill/Group/LobbyDesc/4104000┃しばらくの間硬直状態になって何の干渉を受けなくなります。\n\n<color=#ff3399>強化：</color>硬直状態の時、自分のスキルクールダウンがより早く減少します。
+Skill/Code/Desc/4104001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
+Skill/Code/Coef/4104001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
+Skill/Code/ExpansionTip/4104001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4104002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
+Skill/Code/Coef/4104002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。</color>
+Skill/Code/ExpansionTip/4104002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4517001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
+Skill/Code/Coef/4517001┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
+Skill/Code/Desc/4517002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
+Skill/Code/Coef/4517002┃使用すると{0}秒間硬直状態になって行動できなくなります。\n\n<color=#FFFFC2>強化完了済み：</color>アーティファクトによる硬直状態ではクールダウンが{1}早く回復します。
+CharacterState/Group/Name/4104000┃硬直
+CharacterState/Group/Desc/4104000┃アーティファクトによって硬直状態になりました。
+Skill/Group/Name/4105000┃無効化
+Skill/Group/LobbyDesc/4105000┃デバフ効果をすぐに解除し、移動速度が増加します。\n\n<color=#ff3399>強化：</color>一定時間の間すべての妨害効果免疫状態になります。
+Skill/Code/Desc/4105001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
+Skill/Code/Coef/4105001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
+Skill/Code/ExpansionTip/4105001┃<i>増加した移動速度は持続時間の間、徐々に減少します。</i>\n<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4105002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
+Skill/Code/Coef/4105002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#565730>モジュール強化：</color><color=#595959>{1}秒間すべての妨害効果免疫状態になります。</color>
+Skill/Code/ExpansionTip/4105002┃<i>増加した移動速度は持続時間の間、徐々に減少します。</i>\n<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4518001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
+Skill/Code/Coef/4518001┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
+Skill/Code/Desc/4518002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
+Skill/Code/Coef/4518002┃使用すると自分にかかっているデバフ効果をすぐに解除し、移動速度が{2}秒間{3}%増加します。\nエアボーン、ノックバック、捕まり、硬直状態は解除されません。\n\n<color=#FFFFC2>強化完了済み：</color>{1}秒間すべての妨害効果免疫状態になります。
+CharacterState/Group/Name/4105000┃全ての妨害効果免疫
+CharacterState/Group/Desc/4105000┃全ての妨害効果を無視します。
+CharacterState/Group/Name/4105010┃移動速度増加 - 無効化
+CharacterState/Group/Desc/4105010┃無効化によって移動速度が増加します。
+Skill/Group/Name/4107000┃強い絆
+Skill/Group/LobbyDesc/4107000┃周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して周りの味方に移動速度とダメージ吸血効果を与えます。\n\n<color=#ff3399>強化：</color>より多くのエネルギーを獲得できます。
+Skill/Code/Desc/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
+Skill/Code/Coef/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
+Skill/Code/ExpansionTip/4107001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
+Skill/Code/Coef/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
+Skill/Code/ExpansionTip/4107002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
+Skill/Code/Coef/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
+Skill/Code/Desc/4519002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
+Skill/Code/Coef/4519002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
+CharacterState/Group/Name/4107000┃強い絆 - 怒り
+CharacterState/Group/Desc/4107000┃自分または一定距離内の実験体が他の実験体にダメージを受けた場合、エネルギーをチャージします。
+CharacterState/Group/Name/4107010┃強い絆 - 守り
+CharacterState/Group/Desc/4107010┃ダメージ吸血と移動速度が増加されました。
+CharacterState/Group/Name/4107020┃強い絆 - 不可
+CharacterState/Group/Desc/4107020┃絆の効果を受け、一定時間の間絆の効果が適用されません。
+Skill/Group/Name/4114000┃ストライダー - A13
+Skill/Group/LobbyDesc/4114000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間敵にダメージを与えた場合には追加スキルダメージを与えて効果が終了します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
+Skill/Code/Desc/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
+Skill/Code/Coef/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
+Skill/Code/ExpansionTip/4114001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
+Skill/Code/Coef/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
+Skill/Code/ExpansionTip/4114002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+CharacterState/Group/Name/4114000┃ストライダー - A13
+CharacterState/Group/Desc/4114000┃移動速度が増加します。
+CharacterState/Group/Name/4114020┃ストライダー - A13(打撃)
+CharacterState/Group/Desc/4114020┃移動速度が減少します。
+Skill/Code/Desc/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
+Skill/Code/Coef/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
+Skill/Code/Desc/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
+Skill/Code/Coef/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて効果が終了します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
+Skill/Group/Name/4112000┃真実の刃
+Skill/Group/LobbyDesc/4112000┃使用すると周りの敵にダメージを与えます。また、ダメージを与えた敵の数に比例して移動速度が増加します。\n\n<color=#ff3399>強化：</color>ダメージを受けた対象に与えるダメージが増加します。
+Skill/Code/Desc/4112001┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
+Skill/Code/Coef/4112001┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
+Skill/Code/ExpansionTip/4112001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4112002┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。\n\nまた、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
+Skill/Code/Coef/4112002┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。\nまた、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>ダメージを受けた対象に与えるダメージが{3}%増加します。</color>
+Skill/Code/ExpansionTip/4112002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4521001┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
+Skill/Code/Coef/4521001┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
+Skill/Code/Desc/4521002┃使用すると周りの敵に<color=white>{0}</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に比例して{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
+Skill/Code/Coef/4521002┃使用すると周りの敵に<color=white>{0}</color><color=green>(+キャラクターレベル*{8})</color>のスキルダメージを与えます。また、ダメージを与えた敵の数に応じて{6}秒間移動速度が{4}~{5}%増加します。\n\n<color=#FFFFC2>強化完了済み：</color>ダメージを受けた対象に与えるダメージが{3}%増加します。
+CharacterState/Group/Name/4112000┃真実の刃 - 投影
+CharacterState/Group/Desc/4112000┃敵にダメージを与えた真実により実験体の移動速度が増加されました。
+CharacterState/Group/Name/4112010┃真実の刃 - 喪失
+CharacterState/Group/Desc/4112010┃真実を見透かされ、受けるダメージが増加します。
+Skill/Group/Name/4113000┃偽りの誓約
+Skill/Group/LobbyDesc/4113000┃使用者の体力を消耗する代わりにすべてのダメージが増加します。消耗された体力は徐々に回復されます。\n\n<color=#ff3399>強化：</color>敵実験体のキルに関与した場合には効果が更新されます。
+Skill/Code/Desc/4113001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を回復し、すべてのダメージが{3}%増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
+Skill/Code/Coef/4113001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
+Skill/Code/ExpansionTip/4113001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>\n\n<i>偽りの誓約を使用する時、最大体力の{0}%以下に減少されることはありません。</i>
+Skill/Code/Desc/4113002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
+Skill/Code/Coef/4113002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#565730>モジュール強化：</color><color=#595959>敵実験体をキルまたはアシストした場合には効果が更新されます。</color>
+Skill/Code/ExpansionTip/4113002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>\n\n<i>偽りの誓約を使用する時、最大体力の{0}%以下に減少されることはありません。</i>
+Skill/Code/Desc/4522001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
+Skill/Code/Coef/4522001┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
+Skill/Code/ExpansionTip/4522001┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
+Skill/Code/Desc/4522002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒{2}の体力を徐々に回復し、すべてのダメージが{3}%増加します。\n誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
+Skill/Code/Coef/4522002┃使用すると{0}の体力を消耗して{4}秒間誓約状態になります。\n誓約状態では毎秒<color=#8ef165>({11}近距離 {2}~{5}{13} ｜ {12}遠距離 {7}~{9}{14})</color>の体力を徐々に回復し、すべてのダメージが<color=#ffd775>({11}近距離 {3}~{6}%{13} ｜ {12}遠距離 {8}~{10}%{14})</color>増加します。誓約状態が持続される時間に応じて効果が強くなります。\n\n<color=#FFFFC2>強化完了済み：</color>敵実験体をキルしたり、アシストした場合、効果が更新されます。
+Skill/Code/ExpansionTip/4522002┃<i>偽りの誓約を使用する時、最大体力の{0}以下に減少されることはありません。</i>
+CharacterState/Group/Name/4113000┃偽りの誓約 - 誓約
+CharacterState/Group/Desc/4113000┃偽りの誓約によってダメージを受け、体力再生とダメージ増加を獲得しました。
+Skill/Group/Name/4108000┃治癒の風
+Skill/Group/LobbyDesc/4108000┃範囲内の味方の実験体の体力を回復させます。\n\n<color=#ff3399>強化：</color>風に当たった味方の防御力を増加させます。
+Skill/Code/Desc/4108001┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
+Skill/Code/Coef/4108001┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
+Skill/Code/ExpansionTip/4108001┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4108002┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
+Skill/Code/Coef/4108002┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#565730>モジュール強化：</color><color=#595959>風に当たった対象は{5}秒間防御力が{4}増加します。</color>
+Skill/Code/ExpansionTip/4108002┃<i>3レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
+Skill/Code/Desc/4520001┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
+Skill/Code/Coef/4520001┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
+Skill/Code/Desc/4520002┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
+Skill/Code/Coef/4520002┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
+CharacterState/Group/Name/4108000┃治癒の風 - 保護
+CharacterState/Group/Desc/4108000┃治癒の風によって防御力が増加します。
+CharacterState/Group/Name/4108010┃治癒の風 - 干渉
+CharacterState/Group/Desc/4108010┃異なる風によって治癒効果が減少されます。
+Skill/Code/Name/4512001┃ブリンク
+Skill/Code/Name/4513001┃クエイク
+Skill/Code/Name/4514001┃プロトコル違反
+Skill/Code/Name/4515001┃赤嵐
+Skill/Code/Name/4516001┃超越
+Skill/Code/Name/4517001┃アーティファクト
+Skill/Code/Name/4518001┃無効化
+Skill/Code/Name/4519001┃強い絆
+Skill/Code/Name/4523001┃ストライダー - A13
+Skill/Code/Name/4521001┃真実の刃
+Skill/Code/Name/4522001┃偽りの誓約
+Skill/Code/Name/4520001┃治癒の風
+Skill/Code/Name/4512002┃ブリンク
+Skill/Code/Name/4513002┃クエイク
+Skill/Code/Name/4514002┃プロトコル違反
+Skill/Code/Name/4515002┃赤嵐
+Skill/Code/Name/4516002┃超越
+Skill/Code/Name/4517002┃アーティファクト
+Skill/Code/Name/4518002┃無効化
+Skill/Code/Name/4519002┃強い絆
+Skill/Code/Name/4523002┃ストライダー - A13
+Skill/Code/Name/4521002┃真実の刃
+Skill/Code/Name/4522002┃偽りの誓約
+Skill/Code/Name/4520002┃治癒の風
+Skill/Group/Name/4512000┃ブリンク
+Skill/Group/Name/4513000┃クエイク
+Skill/Group/Name/4514000┃プロトコル違反
+Skill/Group/Name/4515000┃赤嵐
+Skill/Group/Name/4516000┃超越
+Skill/Group/Name/4517000┃アーティファクト
+Skill/Group/Name/4518000┃無効化
+Skill/Group/Name/4519000┃強い絆
+Skill/Group/Name/4523000┃ストライダー - A13
+Skill/Group/Name/4521000┃真実の刃
+Skill/Group/Name/4522000┃偽りの誓約
+Skill/Group/Name/4520000┃治癒の風
+TacticalSkillSet/Code/Name/500121┃ブリンク
+TacticalSkillSet/Code/Name/500122┃ブリンク
+TacticalSkillSet/Code/Name/500131┃クエイク
+TacticalSkillSet/Code/Name/500132┃クエイク
+TacticalSkillSet/Code/Name/500141┃プロトコル違反
+TacticalSkillSet/Code/Name/500142┃プロトコル違反
+TacticalSkillSet/Code/Name/500151┃赤嵐
+TacticalSkillSet/Code/Name/500152┃赤嵐
+TacticalSkillSet/Code/Name/500161┃超越
+TacticalSkillSet/Code/Name/500162┃超越
+TacticalSkillSet/Code/Name/500171┃アーティファクト
+TacticalSkillSet/Code/Name/500172┃アーティファクト
+TacticalSkillSet/Code/Name/500181┃無効化
+TacticalSkillSet/Code/Name/500182┃無効化
+TacticalSkillSet/Code/Name/500191┃強い絆
+TacticalSkillSet/Code/Name/500192┃強い絆
+TacticalSkillSet/Code/Name/500201┃ストライダー - A13
+TacticalSkillSet/Code/Name/500202┃ストライダー - A13
+TacticalSkillSet/Code/Name/500211┃真実の刃
+TacticalSkillSet/Code/Name/500212┃真実の刃
+TacticalSkillSet/Code/Name/500221┃偽りの誓約
+TacticalSkillSet/Code/Name/500222┃偽りの誓約
+TacticalSkillSet/Code/Name/500231┃治癒の風
+TacticalSkillSet/Code/Name/500232┃治癒の風
 보유하지 않은 캐릭터입니다.┃未所持キャラクターです。\nショップで購入後使用できます。
 매칭 중 캐릭 변경 금지┃マッチング中にはキャラクターを変更できません。
 로딩 중┃ロード中\n< X キーを押すと座って休憩します。 >
@@ -12119,6 +12236,7 @@ mainMenu/Store┃ショップ
 mainMenu/Loot┃製作所
 mainMenu/Collection┃収集品
 mainMenu/Guide┃ガイド
+mainMenu/Tutorial┃チュートリアル
 mainMenu/Challenge┃実績
 mainMenu/Infomation┃情報
 subMenu/Inventory/Character┃キャラクター
@@ -12172,6 +12290,7 @@ Esc/MatchCancel┃マッチングキャンセル
 Esc/Exit┃出る
 Esc/Close┃閉じる
 Esc/Minimize┃最小化
+년월일┃{0}/{1}/{2}
 분┃分
 초┃秒
 로비┃ロビー
@@ -12318,15 +12437,16 @@ ER패스 미해금 미션┃解除まで{0}
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃アイアン
-BRONZE_SUBJECT┃ブロンズ
-SILVER_SUBJECT┃シルバー
-GOLD_SUBJECT┃ゴールド
-PLATINUM_SUBJECT┃プラチナム
-DIAMOND_SUBJECT┃ダイヤモンド
+IRON┃アイアン
+BRONZE┃ブロンズ
+SILVER┃シルバー
+GOLD┃ゴールド
+PLATINUM┃プラチナム
+DIAMOND┃ダイヤモンド
+METEORITE┃メテオライト
 MITHRIL┃ミスリル
 DEMIGOD┃デミゴッド
-THE_ETERNITY┃エターニティ
+ETERNITY┃エターニティ
 UNRANK┃アンランク
 일반┃一般
 NORMAL┃一般
@@ -12365,8 +12485,6 @@ Rank_Introduce02┃マッチごとランクポイント(RP)を獲得して、順
 Rank_Introduce03┃事前に結成されたチームの場合、ランクが最も高いチーム員を基準にマッチングが行われます。
 Rank_Introduce04┃マッチング前に構成されたチームの人数に従って入場料が変更されます。
 Rank_Introduce05┃ゲーム放棄または離脱の場合、ゲームで獲得したRPをすべて失い、入場料を2倍支払うことになります。
-Rank_SeeMore┃詳細
-RankDetailedManagementSystem┃ランクシステム詳細
 RankKillRP┃順位 / キルポイント
 Rank┃順位
 RankRP┃生存
@@ -12374,8 +12492,6 @@ Kill_AssistRP/Elimination┃キル(完全排除)
 Kill_AssistRP/Down┃瀕死キル
 Kill_AssistRP/RepeatDown┃連続瀕死キル除外
 Kill_AssistRP/BattleZoneDown┃戦場キル
-SeeEntryCostRP┃入場料確認
-EntryCostRP/FromMithril┃100RPごと2ずつ増加
 RankEnd_MatchSummary┃マッチリザルト
 RankEnd_ScoreSum┃ポイント合計
 RankEnd_EntryFee┃入場料 : {0}{1}
@@ -12412,30 +12528,31 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃ゲームを放棄したため、入�
 배치고사 중┃配置戦中
 강등┃降格
 승급!┃昇格
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
+TierRP/METEORITE┃<color=#89c5ff>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>上位700位以内</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>上位200位以内</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>現在のティア</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>現在のティア</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>現在のティア</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>現在のティア</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>現在のティア</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>現在のティア</color>
+TierRP/ETERNITY┃<color=#FD5F81>上位200位以内</color>
+MyTierRP/IRON┃<color=#C6C6C6>現在のティア</color>
+MyTierRP/BRONZE┃<color=#E9964C>現在のティア</color>
+MyTierRP/SILVER┃<color=#C7CCE6>現在のティア</color>
+MyTierRP/GOLD┃<color=#FBD787>現在のティア</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>現在のティア</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>現在のティア</color>
+MyTierRP/METEORITE┃<color=#89c5ff>現在のティア</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>現在のティア</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>現在のティア</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>現在のティア</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>現在のティア</color>
 RankRP_explanation┃達成した順位に応じて支給されるポイントです。
 Elimination_explanation┃敵チームを全滅させた場合や自動復活が不可能な時に瀕死状態の敵を倒した場合に獲得するポイントです。
 Down_explanation┃敵を瀕死状態にさせた時に獲得するポイントです。
 BattleZoneDown_explanation┃戦場で敵を倒した時に獲得するポイントです。
 유예포인트┃猶予ポイント : {0}
-데미갓,이터니티 유예설명┃猶予ポイントはゲームにつき3ポイントずつ積み立てられます。(最大15ポイント)\n1日以上ゲームをプレイしなかった場合は毎日1ポイントずつ削減します。\n猶予ポイントが0になると、その翌日から毎日RPが100ポイントずつ削減します。
 휴면강등적용티어의유예포인트설명┃猶予ポイントはゲームにつき{0}ポイントずつ積み立てられます。(最大{1}ポイント)\n{2}日以上ゲームをプレイしなかった場合は{3}日ごとに{4}ポイントずつ削減します。\n猶予ポイントが0になると、その翌日から毎日RPが{5}ポイントずつ削減します。
 DecayWarning/PopupContents┃もうすぐ猶予ポイントが消滅またはすでに消滅した状態です。\n休眠降格が始まると、RPが減少してティアが降格されることがあります。
 DeferPointDemotion/PopupContents┃猶予ポイントが消滅し、{0}ティアに休眠降格されました。\nランク対戦をプレイすると猶予ポイントを獲得し、休眠状態が解除されます。
@@ -13018,7 +13135,7 @@ SP 재생┃スタミナ再生
 비전투중 스태미너회복┃非戦闘中スタミナ回復
 모드사용가능여부┃使用可能モード
 모드사용불가┃現在モードで使用できないアイテムがあります。
-부활시아이템소멸┃<color=#B90005>急速再生すると消える</color>アイテムです。
+부활시아이템소멸┃<color=#B90005>急速再生後には消える</color>アイテムです。
 드론 전송 필요 크레딧┃遠隔ドローン呼び出しクレジット : <color=#F4FF63>{0}</color> (+{1})
 전송 콘솔 필요 크레딧┃Kiosk必要クレジット : <color=#F4FF63>{0}</color>
 {0}팀┃{0}チーム
@@ -13036,6 +13153,7 @@ SP 재생┃スタミナ再生
 채집┃採取
 항공 보급┃航空補給
 항공 보급 상자┃航空補給箱
+초월 보급 상자┃神話補給箱
 전설 보급 상자┃伝説補給箱
 영웅 보급 상자┃英雄補給箱
 음식 보급 상자┃食品補給箱
@@ -13269,6 +13387,7 @@ NOTICE┃NOTICE
 감마┃ガンマ
 게임포기안내┃ゲームを諦めました。
 마지막금지구역안내┃禁止区域が指定されました。航空補給が届きます。
+System/FlaregunUsed┃誰かがフレアガンを使用しました！
 WickelineUI_WaitTooltip┃ウィクライン登場までの残り時間です。
 WickelineUI_ReadyTooltip┃ウィクラインが活動中です。
 오브젝트생성지역┃地域: {0}
@@ -13299,6 +13418,9 @@ WickelineUI_ReadyTooltip┃ウィクラインが活動中です。
 전장생성노티┃戦場開始
 전장생성┃{0}に戦場が活性化されます。
 크루즈가동노티┃脱出用潜水艦起動1分前
+플레어건사용노티┃フレアガン発射！
+플레어건R기능┃誰かが神話補給地点に設定されました。
+플레어건B기능┃{0}地域に神話補給地点が設定されました。
 더미알파생성┃1分後、アルファが{0}に出現します。
 더미오메가생성┃1分後、オメガが{0}に出現します。
 더미알파생성완료┃アルファが{0}に出現しました。
@@ -14466,6 +14588,7 @@ Shortcut/Popup/ExistKey┃<color=#FFB62F>[{0}]</color>使用中のショート�
 새로고침 횟수제한 안내┃リロード回数が残っていないため、リロードできません。
 새로고침 쿨타임 표기┃{0}秒後に使用できます。
 개인 상점 진입 불가 안내┃今はパーソナルストアを利用できません。
+개인 상점 기간 만료 안내┃現在ストア更新中です。更新中には利用できません。
 보유 중┃<color=#C67D3C>保有中</color>
 구매 제한 초과┃購入上限超過
 공개 예정┃後日公開予定
@@ -14795,6 +14918,7 @@ SeasonPassIcon/10┃Img_SeasonPack10_box_02
 SeasonPassIcon/11┃Img_SeasonPack11_box_02
 SeasonPassIcon/12┃Img_SeasonPack12_Box
 SeasonPassIcon/13┃Img_SeasonPack13_Box
+SeasonPassIcon/14┃Img_SeasonPack14_Box
 다시보지 않기┃今後表示しない
 오늘 다시 보지 않기┃今日は表示しない
 한정판 스킨┃限定スキン
@@ -14907,7 +15031,7 @@ ToastMessage/Escape1018┃三日目以降死亡した味方から再生腕輪を
 ToastMessage/Escape1019┃最後の1チームになると潜水艦コンソールを使用できます。
 ToastMessage/Escape1020┃ルートキットを獲得し、脱出投票が行われた後に移動できます。
 ToastMessage/Escape1021┃戦場に参加しているチーム員がいるため、移動できません。
-ToastMessage/Escape1022┃ルートキットは3日目から注文できます。
+ToastMessage/Escape1022┃ルートキットは4日目から注文できます。
 ToastMessage/Escape1023┃ルミア島の生存人数が少ないため、購入できません。
 ToastMessage/Escape1024┃死亡した味方がいる場合のみ購入できます。
 ToastMessage/Escape1025┃誰かが脱出に成功したため、購入できません。
@@ -15137,6 +15261,7 @@ EP 토큰 구매┃EPトークン購入
 일주일 무료 캐릭터 툴팁┃無料でプレイできるキャラクターを確認できます。
 초보자용 추천 캐릭터┃初心者おすすめキャラクター
 보유하지 않은 기간 무료 실험체입니다.┃現在所持していない期間無料実験体です。
+초보자 추천 캐릭터┃初心者おすすめ
 재접속┃再接続
 로비로 이동┃ロビーへ移動
 재접속 팝업 내용┃進行中のゲームがあります。再接続してください。
@@ -15161,6 +15286,7 @@ EP 토큰 상점에서 구매 가능┃EPトークンショップで購入可能
 스킨을 시즌10 보상으로 획득 가능┃購入できないスキンです。（正式シーズン1リワード）
 스킨을 시즌11 보상으로 획득 가능┃購入できないスキンです。（正式シーズン2リワード）
 스킨을 시즌12 보상으로 획득 가능┃購入できないスキンです。（正式シーズン3リワード）
+스킨을 시즌13 보상으로 획득 가능┃購入できないスキンです。（正式シーズン4リワード）
 스킨을 DROPS 보상으로 획득 가능┃Drops報酬から獲得できるスキンです。
 스킨을 GEFORCE NOW 보상으로 획득 가능┃このスキンはGeForce Nowイベントから獲得できます。
 이모티콘을 시즌1 보상으로 획득 가능┃購入できないエモートです。\n（早期アクセスS1リワード）
@@ -15175,6 +15301,7 @@ EP 토큰 상점에서 구매 가능┃EPトークンショップで購入可能
 이모티콘을 시즌10 보상으로 획득 가능┃購入できないエモートです。\n（正式シーズン1リワード）
 이모티콘을 시즌11 보상으로 획득 가능┃購入できないエモートです。\n（正式シーズン2リワード）
 이모티콘을 시즌12 보상으로 획득 가능┃購入できないエモートです。\n（正式シーズン3リワード）
+이모티콘을 시즌13 보상으로 획득 가능┃購入できないエモートです。\n（正式シーズン4リワード）
 이모티콘을 DROPS 보상으로 획득 가능┃Drops報酬から獲得できるエモートです。
 이모티콘을 GEFORCE NOW 보상으로 획득 가능┃このエモートはGeForce Nowイベントから獲得できます。
 이모티콘을 이벤트로 획득 가능┃イベントから獲得できるエモートです。
@@ -15193,6 +15320,7 @@ EP 토큰 상점에서 구매 가능┃EPトークンショップで購入可能
 엠블럼을 시즌10 보상으로 획득 가능┃購入できないアイテムです。（シーズン1リワード）
 엠블럼을 시즌11 보상으로 획득 가능┃購入できないアイテムです。（シーズン2リワード）
 엠블럼을 시즌12 보상으로 획득 가능┃購入できないアイテムです。（シーズン3リワード）
+엠블럼을 시즌13 보상으로 획득 가능┃購入できないアイテムです。（シーズン4リワード）
 엠블럼을 이벤트로 획득 가능┃イベントを通じて獲得できるアイテムです。
 엠블럼을 배틀패스 구매 가능┃ER PASS {0}レベル{1}を達成すると獲得できます。
 엠블럼을 시즌패스 구매 가능┃シーズンパックから購入できます。
@@ -15995,6 +16123,7 @@ SeasonToBeAdded/Name┃新シーズン \n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})がセッションを終了しました。
 100001_Title┃S3 ログインボーナス
 100002_Title┃S4 ログインボーナス
+100003_Title┃S5 ログインボーナス
 10000101_7_Title┃＜ウィドリアナチュワプ＞SET
 10000101_7_Desc┃- ＜ウィドリアナチュワプ＞アイコン\n- ＜ウィドリアナチュワプ＞エモート
 10000101_14_Title┃スキンデータセット
@@ -16113,7 +16242,18 @@ EVENT 포인트 증가 불가┃これ以上ポイントを購入できません
 이벤트 패스 포인트┃ポイント
 진행중인 이벤트 패스가 없습니다.┃現在解禁できるイベントPASSがありません。
 Season1000/Name┃1周年記念PASS
+Season1001/Name┃クムドリ&クムスニ PASS
+Season2000/Name┃1周年記念A-Coin PASS
+HiddenPassPath/2000┃<color=#FFBB00>[選択券パッケージⅢ]</color>をご購入いただいた場合、ご利用できます。
 Entry┃補給品はこちらです。
+Signature┃特別なアイテムです。( ^ ▽ ^ )
+MonsterGroupDrop/1┃変異体の群れ - ニワトリ
+MonsterGroupDrop/101┃変異体の群れ - イノシシ
+MonsterGroupDrop/201┃変異体の群れ - ハウンド
+MonsterGroupDrop/301┃変異体の群れ - オオカミ
+MonsterGroupDrop/302┃群れ - オオカミ
+MonsterGroupDrop/401┃変異体の群れ - クマ
+MonsterGroupDrop/10001┃変異体の群れ - コバルト
 ItemType/CHARACTER/Name┃キャラクター
 ItemType/EVENT_NP/Name┃イベントNP
 ItemType/RANDOM_BOX/Name┃データボックス
@@ -16181,6 +16321,7 @@ LootRandomBoxWindow/Btn_Once┃1回
 LootRandomBoxWindow/Btn_All┃10回
 전체보상 정보보기┃全体リスト
 LootRandomBoxWindow/RefundAgreement┃使用したデータボックスとデータキーは払い戻しできません。
+LootRandomBoxWindow/UnOpenedBox┃まだ受領していない報酬があります。
 상자 구성품 확인 툴팁┃クリックすると獲得できるアイテムを確認できます。
 구매할 상품을 선택하세요.┃購入する商品を選択してください。
 잠금 상태 알림┃Lock状態
@@ -16387,9 +16528,9 @@ Goods/Name/9999998┃未所持スキン補給チケット<#00ffee>No.02</color>
 Goods/Name/3119001┃未所持スキン補給チケット<#00ffee>No.01</color>
 Goods/Name/3119002┃未所持スキン補給チケット<#00ffee>No.02</color>
 Goods/Name/3119003┃未所持スキン補給チケット<#00ffee>No.03</color>
-Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品リスト]</color></b> \n\n<b><color=#D05EFF>英雄スキン</color></b>：シーサイドスア、転校生ビアンカ、イノヒョヌ、システムショックジャッキー、ウィルソンベーカリーシセラ\n---- \n<color=#2AC0FF>レアスキン</color>：ゴーストハンターヘジン、サマーパーティーレオン、サイコシスザヒル、夏休み莉央、 問題児マグヌス、不良生徒ニッキー、見習い魔女ティア、エージェントエイデン、シンガーソングライタープリヤ\n---- \n<color=#35FF94>高級スキン</color>：特殊部隊レオン\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
-Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品リスト]</color></b>\n\n<b><color=#D05EFF>英雄スキン</color></b>：ゴーストハンターキアラ、生徒会長エレナ、サイキメディックキャッシー、ドリーマーアデラ\n---- \n<color=#2AC0FF>レアスキン</color>：サイバーエニアックレノックス、ガオーダイリン、しば雪、問題児マグヌス、不良生徒ニッキー、見習い魔女ティア、エージェントエイデン、シンガーソングライタープリヤ\n---- \n<color=#35FF94>高級スキン</color>：ゴーストハンターアイソル, 特殊部隊レオン\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
-Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品リスト]</color></b>\n\n\n<b><color=#D05EFF>英雄スキン</color></b>：生徒会長エレナ、疫病ドクターダニエル、夏祭りのマジシャンエマ、ウィンターカーニバルハート、転校生ビアンカ\n----\n<color=#2AC0FF> レアスキン</color>：ウィンターカーニバルシセラ、ミッドナイトオーロラ莉央、不吉な夢の主ヴァーニャ、アイドルカミロ、チャレンジャーハンターヤン、探検家ナタポン、校内消防部エステル、海賊レノックス、サンシャイン船員Eleven\n----\n<color=#35FF94>高級スキン</color>：ウィンターカーニバル彰一、OP.GG フェリックス、GeForce Nowシルヴィア\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品リスト]</color></b> \n\n<b><color=#D05EFF>英雄スキン</color></b>：シーサイドスア、転校生ビアンカ、イノヒョヌ、システムショックジャッキー、ウィルソンベーカリーシセラ\n---- \n<color=#2AC0FF>レアスキン</color>：ゴーストハンターヘジン、サマーパーティーレオン、サイコシスザヒル、夏休み莉央、 見習い魔女ティア、エージェントエイデン、シンガーソングライタープリヤ\n---- \n<color=#35FF94>高級スキン</color>：特殊部隊レオン\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品リスト]</color></b>\n\n<b><color=#D05EFF>英雄スキン</color></b>：ゴーストハンターキアラ、生徒会長エレナ、サイキメディックキャッシー、ドリーマーアデラ\n---- \n<color=#2AC0FF>レアスキン</color>：サイバーエニアックレノックス、ガオーダイリン、しば雪、見習い魔女ティア、エージェントエイデン、シンガーソングライタープリヤ\n---- \n<color=#35FF94>高級スキン</color>：ゴーストハンターアイソル, 特殊部隊レオン\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品リスト]</color></b>\n\n\n<b><color=#D05EFF>英雄スキン</color></b>：生徒会長エレナ、疫病ドクターダニエル、夏祭りのマジシャンエマ、ウィンターカーニバルハート、転校生ビアンカ\n----\n<color=#2AC0FF> レアスキン</color>：ウィンターカーニバルシセラ、ミッドナイトオーロラ莉央、アイドルカミロ、チャレンジャーハンターヤン、探検家ナタポン、校内消防部エステル、海賊レノックス、サンシャイン船員Eleven\n----\n<color=#35FF94>高級スキン</color>：ウィンターカーニバル彰一、OP.GG フェリックス、GeForce Nowシルヴィア\n\n<b><color=#F15F5F>[購入前の注意事項]</color></b>\n※ この商品は商品リストの中で所持していないスキンを獲得できる商品です。\n※ この商品は購入と同時にアイテムが支給される商品です。\n※ リスト内の商品をすべて所持している場合、全体リストの中で1つが支給されます。\n※ 商品ごとの確率は確率表示のリンク先からご確認できます。
 Product/Name/S10_RARE_MATTER┃データピース(レア) X 1
 Product/Name/S10_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/S10_S11TOKEN_EXCHANGE┃武装メイドトークン X 2
@@ -16958,7 +17099,7 @@ VF혈액샘플 아이템 획득┃VFはヴァイタルフォースの略称で�
 코발트 모드 힐팩 획득하기┃いろんな場所にあるヒールパックを獲得すれば、自分と味方の体力やスタミナはもちろん、暗器、投げ武器の装弾数まで回復できます！\n\n交戦を覆すことができる強力な変数。ヒールパックの効果をコバルトプロトコルで体験してみてください！
 발렌타인 이벤트 미션 보상┃<color=#10adff>報酬：バレンタインタジアスキン
 Mission/10000001/1┃一般／ランク対戦2回プレイ
-Mission/10000002/1┃実験体5キル達成
+Mission/10000002/1┃TK7回以上する
 Mission/10000003/1┃野生動物20回処置
 Mission/10000004/1┃3位以上を記録
 Mission/10000005/1┃「枝」2個以上獲得
@@ -17758,7 +17899,7 @@ Trait/Name/7100000┃抵抗系
 Trait/Name/7200000┃サポート系
 Trait/Name/7300000┃カオス系
 Trait/Name/7000201┃絶対武力
-Trait/Tooltip/7000201┃同じ実験体に基本攻撃または複数の打数でダメージを与えるスキル(武器、アイテムスキルを除く)が3回的中した場合、固定ダメージを追加で与えて、対象の防御力を減少させます。
+Trait/Tooltip/7000201┃同じ実験体に基本攻撃またはスキル攻撃が3回的中した場合、固定ダメージを追加で与えて、対象の防御力を減少させます。
 Trait/DetailTooltip/7000201┃同じ実験体に{0}秒以内に基本攻撃またはスキル攻撃が{1}回的中した場合、\n<color=#ffffff>{9}</color><color=#008000>(+レベル*{2})</color>の固定ダメージを追加で与えて、{3}秒間対象の防御力を<color=#ffffff>{8}</color><color=#008000>(+レベル*{4})%</color>減少させます。(クールダウン {5}秒)\n\n基本攻撃が連打で適用される武器、スキルとDOTスキルは与える連続ダメージを一度のダメージとして扱います。
 Trait/StatTooltip/7000201┃同じ実験体に{0}秒以内に基本攻撃またはスキル攻撃が{1}回的中した場合、\n<color=#ffffff>{2}</color>の固定ダメージを追加で与えて、{3}秒間対象の防御力を<color=#ffffff>{4}%</color>減少させます。(クールダウン {5}秒)\n\n合計追加ダメージ適用回数：{6}\n合計追加ダメージ量：{7}
 CharacterState/Group/Name/7000210┃絶対武力
@@ -17770,7 +17911,7 @@ CharacterState/Group/Desc/7000200┃防御力が減少します。
 Trait/Name/7000401┃吸血鬼
 Trait/Tooltip/7000401┃基本攻撃またはスキル攻撃で実験体にダメージを与えるたびにダメージ吸血と攻撃力またはスキル増幅が増加します。最大スタックになると、攻撃力またはスキル増幅が追加で増加します。
 Trait/DetailTooltip/7000401┃基本攻撃またはスキル攻撃で敵実験体にダメージを与えるたびに{3}秒間攻撃力<color=#ffffff>{10}</color>またはスキル増幅<color=#ffffff>{11}</color>、ダメージ吸血が<color=#ffffff>(近距離){8}% / (遠距離){9}%</color>ずつ増加して最大{1}回スタックを獲得します。\n最大スタックになると、攻撃力<color=#ffffff>{5}(+レベル*{2})</color>またはスキル増幅<color=#ffffff>{6}(+レベル*{7})</color>増加します。\n\nスキル攻撃で複数の対象にダメージを与えた場合、ダメージを与えた対象の数の分、スタックを獲得します。
-Trait/StatTooltip/7000401┃個別スキルで敵実験体にダメージを与えるたびに{3}秒間{10}が<color=#ffffff>{11}</color>、ダメージ吸血が<color=#ffffff>(近距離){12}% / (遠距離){13}%</color>ずつ増加して最大{1}回スタックを獲得します。\n最大スタックになると、{10}が{9}増加します。\n\n個別スキルで複数の対象にダメージを与えた場合、ダメージを与えた対象の数の分スタックを獲得して効果が増加します。\n\n合計体力回復量：{6}
+Trait/StatTooltip/7000401┃基本攻撃またはスキル攻撃で敵実験体にダメージを与えるたびに<color=white>{3}</color>秒間{10}が<color=#ffffff>{11}</color>、ダメージ吸血が<color=#ffffff>{12}%</color>ずつ増加して最大<color=white>{1}</color>スタックを獲得します。\n最大スタックになると、{10}が<color=white>{9}</color>増加します。\n\nスキル攻撃で複数の対象にダメージを与えた場合、ダメージを与えた対象の数の分、スタックを獲得します。\n\n合計体力回復量：{6}
 CharacterState/Group/Name/7000400┃吸血鬼
 CharacterState/Group/Desc/7000400┃能力値が増加します。
 CharacterState/Group/Name/7000410┃吸血鬼 - 最大スタック
@@ -18315,6 +18456,7 @@ NotInteract┃今は使用できません。
 LackOfCredit┃クレジットが足りません。
 LackOfTacSkillModule┃戦術強化モジュールが足りません。
 MaxOfCredit┃これ以上クレジットを獲得できません。
+MaxOfGadget┃これ以上ガジェットを保有できません。
 CannotReconstructToDeadTeammate┃死亡したチーム員の位置で復活できません。
 NoProgressItemsRegisteredInThisRoute┃現在ルートに登録された後半アイテムリストがありません。
 ToastMessage/DisableHyperloop┃今は使用できません。
@@ -19432,6 +19574,16 @@ gameTip_Title_10404_5┃環境オブジェクト - 砂吹きキノコ
 gameTip_Desc_10404_5┃攻撃すると一定の範囲に隠密状態効果を提供する砂の煙幕を吹き出します。
 gameTip_Title_10404_6┃環境オブジェクト - 爆弾の実
 gameTip_Desc_10404_6┃攻撃する方向に扇形のダメージを与える爆弾の実を発射します。\n爆弾の実のダメージは味方には適用されず、最大体力に比例するダメージを与えます。\n爆弾の実によるダメージは野生動物には追加ダメージを与えます。
+gameTip_Title_10501_1┃ガジェット
+gameTip_Desc_10501_1┃ガジェットは実験で有効な効果を提供する消耗品アイテムです。\nガジェットは変異野生動物・航空補給箱など、様々な方法で獲得できます。\nガジェットは一人あたり1つのみ所持することができます。
+gameTip_Title_10502_1┃Kiosk呼び出し機
+gameTip_Desc_10502_1┃Kioskのある地域が敵に占領され、クレジットを使えなかったことはありませんか？\n変異野生動物から得られるガジェット、＜Kiosk呼び出し機＞を使用してみましょう！\nどんな位置でも携帯用Kioskドローンを呼び出してクレジットを使用できます！
+gameTip_Title_10503_1┃フレアガン
+gameTip_Desc_10503_1┃フレアガンは「ピンチはチャンス」という言葉通り、危険とチャンスが伴うガジェットです。\n英雄補給箱からランダムに登場するフレアガンRとフレアガンB、\nこの2種類のガジェットを使って危機をチャンスに変えてみましょう！
+gameTip_Title_10503_2┃フレアガンB
+gameTip_Desc_10503_2┃フレアガンBを使用すると、広い範囲の地域の中で特定の地点を選択し、神話補給箱を呼び出すことができます。\n呼び出される位置はすべての実験体に知らされるため、危険が迫る恐れがありますが、\n強力な神話等級アイテムを獲得できるチャンスを手に入れることができます！
+gameTip_Title_10503_3┃フレアガンR
+gameTip_Desc_10503_3┃フレアガンRを使用すると、使用した実験体本人が航空補給地点になります。\n(使用者が死亡する場合、死亡した位置に設定されます。)\n一定範囲内のすべての実験体に位置が知らされますが、これを乗り越えれば、強力な神話等級アイテムを獲得することができます。
 gameTip_Title_10050_3┃箱グループ表示
 gameTip_Desc_10050_3┃地域ごとのスタート地点から最も近いところに位置した箱たちを青色で表示する機能です。\n同じグループの箱を全部開けてアイテムを獲得すると、少なくともその地域の目標アイテムはすべて獲得することができます。\n序盤での動線を決める時に重要な情報となるため、<color=#8FDBF8>箱グループが表示された箱</color>から確認してみましょう！
 gameTip_category_CraftItems┃アイテム製作
