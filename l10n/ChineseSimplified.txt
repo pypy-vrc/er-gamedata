@@ -892,9 +892,9 @@ Item/Name/502406┃阔刀地雷
 Item/Name/502407┃铁处女陷阱
 Item/Name/502501┃遥控地雷
 Item/Name/502502┃智能炸弹
-Item/Name/503101┃便携工具 - Kiosk呼叫机
-Item/Name/503102┃便携工具 - 信号枪
-Item/Name/503103┃便携工具 - 信号枪
+Item/Name/503101┃Kiosk呼叫机
+Item/Name/503102┃信号枪B
+Item/Name/503103┃信号枪R
 Item/Name/999999┃战术强化组件
 Item/Name/201518┃夜视头盔
 Item/Name/201519┃瘟疫使者
@@ -1528,7 +1528,8 @@ Item/Effects/502501┃点击安装<color=lightblue>遥控地雷</color>。\n<col
 Item/Effects/502502┃点击安装<color=lightblue>智能炸弹</color>。\n<color=yellow>陷阱效果 :</color>{1}秒后进行大范围爆炸。
 Item/Effects/502310┃点击安装<color=lightblue>指压板陷阱</color>。\n<color=yellow>陷阱效果 : </color>使目标在{0}秒间移动速度减少50%。
 Item/Effects/503101┃点击使用 : 呼叫<color=lightblue>便携Kiosk</color>。\n呼叫后{0}秒，即可使用。\n每人只能持有一种便携工具。
-Item/Effects/503102┃点击使用 : 呼叫<color=lightblue>超凡航空补给箱</color>。\n呼叫{0}秒后到达。\n每人只能持有一种便携工具。
+Item/Effects/503102┃点击使用 : 设置航空补给箱目的地，并将向该位置投放<color=lightblue>超凡补给箱</color>。\n呼叫{0}秒后到达。\n每人只能持有一种便携工具。
+Item/Effects/503103┃点击使用 : 使用者所在位置将被设为航空补给箱目的地。（使用者死亡时，死亡位置将成为目的地。）\n{0}秒后，将在使用者所在位置投放<color=lightblue>超凡补给箱</color>，箱子降落前将持续显示标记。\n每人只能持有一种便携工具。
 Item/Effects/302101┃在15秒内恢复耐力值。
 Item/Effects/302102┃在15秒内恢复耐力值。
 Item/Effects/302103┃在15秒内恢复耐力值。
@@ -2819,6 +2820,7 @@ GradeColor/Uncommon┃绿色
 GradeColor/Rare┃蓝色
 GradeColor/Epic┃紫色
 GradeColor/Legend┃黄色
+GradeColor/Mythic┃红色
 SummonData/Name/1┃监视器
 SummonData/Name/2┃套索
 SummonData/Name/3┃捕鼠夹
@@ -2926,6 +2928,7 @@ Skin/Name/1002000┃阿雅
 Skin/Name/1002001┃警察 阿雅
 Skin/Name/1002002┃烟花盛宴 阿雅
 Skin/Name/1002003┃战斗女仆 阿雅
+Skin/Name/1002004┃军官候补生 阿雅
 Skin/Name/1003000┃菲欧娜
 Skin/Name/1003001┃军官 菲欧娜
 Skin/Name/1003002┃剑客 菲欧娜
@@ -3207,6 +3210,7 @@ Skin/Name/1073000┃夏洛特
 Skin/Name/1073001┃转校生 夏洛特
 Skin/Name/1074000┃达尔科
 Skin/Name/1075000┃莉诺尔
+Skin/Name/1076000┃盖瑞特
 Skin/OnSelectVO/1001003┃规则就是用来打破的，不是吗？
 Skin/OnSelectVO/1002002┃烟花庆典要开始了！
 Skin/OnSelectVO/1007005┃让我们来做点有趣的事吧！
@@ -3449,6 +3453,7 @@ Skin/Desc/1058004┃要一起喝一杯吗？在这个特别的日子里。
 Skin/Desc/1058005┃不追忆往昔，让我们为未来举杯！
 Skin/Desc/1007006┃有什么好看的？你也想去海里凉快一下吗？
 Skin/Desc/1073001┃这件衣服适合我吗？
+Skin/Desc/1002004┃别担心，我现在看得比任何时候都清楚！
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生气
 Emotion_Name_002┃笑
@@ -4199,6 +4204,7 @@ Emotion_2024FestivalAdela_2024008┃女仆 阿德拉 CHECK
 Emotion_Season12_Reward_5029┃维德瑞娜 嘲笑
 Emotion_Season12_Reward_5030┃军官候补生 埃琳娜 你很可爱
 Emotion_Season12_Reward_5031┃赛季S3 - 永恒
+Emotion_Season13_Reward_5034┃赛季S4 - 永恒
 Emotion_S4_Attend_Lidailin_2010008┃仲夏微醺 李黛琳 好热！
 Emotion_S4_Attend_Eva_2036006┃仲夏回忆 伊娃 对不起…
 Event_SSR_Creator_3098┃C酱 你真行
@@ -4246,6 +4252,14 @@ Emotion_1st_Anniv_Sua_2028007┃一周年纪念 秀雅 Hi~
 Emotion_1st_Anniv_Sua_2028008┃一周年纪念 秀雅 恭喜
 Emotion_1st_Anniv_Haze_2058005┃一周年纪念 海因茨 再见
 Emotion_1st_Anniv_Haze_2058006┃一周年纪念 海因茨 恭喜
+Emotion_Magnus05_NP┃马格努斯 ？
+Emotion_Magnus06_NP┃这就是马格努斯！
+Emotion_Magnus07_NP┃马格努斯 OK
+Emotion_Magnus08_NP┃马格努斯 你这家伙！
+Emotion_S4_EsportsPack_2501┃赛季S4・All ways Incheon表情
+Emotion_S4_EsportsPack_2502┃赛季S4・Gyeonggi Innate表情
+Emotion_S4_EsportsPack_2503┃赛季S4・GJ Slasher表情
+Emotion_S4_EsportsPack_2504┃赛季S4・DH.CNJ表情
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
 Collection/Name/11003┃拯救迷失的灵魂
@@ -4270,6 +4284,7 @@ Collection/Name/22001┃拌嘴姐妹Ⅰ
 Collection/Name/22002┃拌嘴姐妹Ⅱ
 Collection/Name/22003┃拌嘴姐妹Ⅲ
 Collection/Name/22004┃拌嘴姐妹Ⅳ
+Collection/Name/22005┃赛季S4・电竞助力者Ⅰ
 Collection/Name/24001┃2024黄金福袋！
 Collection/Name/24002┃春日花海大作战 Ⅰ
 Collection/Name/24003┃春日花海大作战 Ⅱ
@@ -4506,6 +4521,11 @@ EMBLEM_MARK_SHOP_102028┃Eleven头像
 EMBLEM_MARK_SHOP_102029┃威廉头像
 EMBLEM_MARK_SHOP_102030┃克洛伊头像
 EMBLEM_MARK_SHOP_102031┃席琳头像
+EMBLEM_MARK_SHOP_102032┃马库斯头像
+EMBLEM_MARK_SHOP_102501┃赛季S4・All ways Incheon头像
+EMBLEM_MARK_SHOP_102502┃赛季S4・Gyeonggi Innate头像
+EMBLEM_MARK_SHOP_102503┃赛季S4・GJ Slasher头像
+EMBLEM_MARK_SHOP_102504┃赛季S4・DH.CNJ头像
 EMBLEM_MARK_S3_IRON_SOLO┃赛季S3铁阎标志(单人)
 EMBLEM_MARK_S3_IRON_DUO┃赛季S3铁阎标志(双人)
 EMBLEM_MARK_S3_IRON_SQUAD┃赛季S3铁阎标志(三人)
@@ -4725,6 +4745,16 @@ EMBLEM_MARK_S12_MITHRIL_SQUAD┃赛季S3无瑕标志
 EMBLEM_MARK_S12_TITAN_SQUAD┃赛季S3半神标志
 EMBLEM_MARK_S12_IMMORTAL_SQUAD┃赛季S3永恒标志
 EMBLEM_MARK_S12_IMMORTAL_SQUAD_105227┃赛季S3 - 永恒荣誉标志
+EMBLEM_MARK_S13_IRON_SQUAD┃赛季S4铁阎标志
+EMBLEM_MARK_S13_BRONZE_SQUAD┃赛季S4铜魂标志
+EMBLEM_MARK_S13_SILVER_SQUAD┃赛季S4银烙标志
+EMBLEM_MARK_S13_GOLD_SQUAD┃赛季S4金魄标志
+EMBLEM_MARK_S13_PLATINUM_SQUAD┃赛季S4修罗标志
+EMBLEM_MARK_S13_DIAMOND_SQUAD┃赛季S4灭钻标志
+EMBLEM_MARK_S13_MITHRIL_SQUAD┃赛季S4无瑕标志
+EMBLEM_MARK_S13_TITAN_SQUAD┃赛季S4半神标志
+EMBLEM_MARK_S13_IMMORTAL_SQUAD┃赛季S4永恒标志
+EMBLEM_MARK_S13_IMMORTAL_SQUAD_105237┃赛季S4 - 永恒荣誉标志
 EMBLEM_MARK_EVENT_102001┃魔法少女 莉央
 EMBLEM_MARK_EVENT1┃鬼脸 
 EMBLEM_MARK_EVENT2┃最棒 
@@ -4979,6 +5009,7 @@ EMBLEM_MARK_COLLECTION_119001┃彰一的宝贝
 EMBLEM_MARK_COLLECTION_119002┃像素画家 蒂娅
 EMBLEM_MARK_COLLECTION_119003┃幽灵猎人 雪 解除封印
 EMBLEM_MARK_COLLECTION_119004┃日常拌嘴，感情不减
+EMBLEM_MARK_COLLECTION_119501┃赛季S4・电竞助力者
 ItemType/EMBLEM_BG/Name┃个人背景
 EMBLEM_BG_FREE1┃默认背景
 EMBLEM_BG_SHOP_202001┃玄佑 背景
@@ -5011,6 +5042,11 @@ EMBLEM_BG_SHOP_202027┃Eleven背景
 EMBLEM_BG_SHOP_202028┃威廉背景
 EMBLEM_BG_SHOP_202029┃克洛伊背景
 EMBLEM_BG_SHOP_202030┃席琳背景
+EMBLEM_BG_SHOP_202031┃马库斯背景
+EMBLEM_BG_SHOP_202501┃赛季S4・All ways Incheon背景
+EMBLEM_BG_SHOP_202502┃赛季S4・Gyeonggi Innate背景
+EMBLEM_BG_SHOP_202503┃赛季S4・GJ Slasher背景
+EMBLEM_BG_SHOP_202504┃赛季S4・DH.CNJ背景
 EMBLEM_BG_S3_IRON_SOLO┃赛季S3铁阎背景(单人)
 EMBLEM_BG_S3_IRON_DUO┃赛季S3铁阎背景(双人)
 EMBLEM_BG_S3_IRON_SQUAD┃赛季S3铁阎背景(三人)
@@ -5230,6 +5266,16 @@ EMBLEM_BG_S12_MITHRIL_SQUAD┃赛季S3无瑕背景
 EMBLEM_BG_S12_TITAN_SQUAD┃赛季S3半神背景
 EMBLEM_BG_S12_IMMORTAL_SQUAD┃赛季S3永恒背景
 EMBLEM_BG_S12_IMMORTAL_SQUAD_205227┃赛季S3 - 永恒荣誉背景
+EMBLEM_BG_S13_IRON_SQUAD┃赛季S4铁阎背景
+EMBLEM_BG_S13_BRONZE_SQUAD┃赛季S4铜魂背景
+EMBLEM_BG_S13_SILVER_SQUAD┃赛季S4银烙背景
+EMBLEM_BG_S13_GOLD_SQUAD┃赛季S4金魄背景
+EMBLEM_BG_S13_PLATINUM_SQUAD┃赛季S4修罗背景
+EMBLEM_BG_S13_DIAMOND_SQUAD┃赛季S4灭钻背景
+EMBLEM_BG_S13_MITHRIL_SQUAD┃赛季S4无瑕背景
+EMBLEM_BG_S13_TITAN_SQUAD┃赛季S4半神背景
+EMBLEM_BG_S13_IMMORTAL_SQUAD┃赛季S4永恒背景
+EMBLEM_BG_S13_IMMORTAL_SQUAD_205237┃赛季S4 - 永恒荣誉背景
 EMBLEM_BG_ERPASS_204001┃Aglaia文字背景
 EMBLEM_BG_EVENT_203001┃2022白色情人节 纪念背景
 EMBLEM_BG_EVENT_203002┃来一杯鸡尾酒
@@ -5312,6 +5358,11 @@ EMBLEM_OUTLINE_SHOP_302027┃Eleven边框
 EMBLEM_OUTLINE_SHOP_302028┃威廉边框
 EMBLEM_OUTLINE_SHOP_302029┃克洛伊边框
 EMBLEM_OUTLINE_SHOP_302030┃席琳边框
+EMBLEM_OUTLINE_SHOP_302031┃马库斯边框
+EMBLEM_OUTLINE_SHOP_302501┃赛季S4・All ways Incheon边框
+EMBLEM_OUTLINE_SHOP_302502┃赛季S4・Gyeonggi Innate边框
+EMBLEM_OUTLINE_SHOP_302503┃赛季S4・GJ Slasher边框
+EMBLEM_OUTLINE_SHOP_302504┃赛季S4・DH.CNJ边框
 EMBLEM_OUTLINE_S3_IRON_SOLO┃赛季S3铁阎框(单人)
 EMBLEM_OUTLINE_S3_IRON_DUO┃赛季S3铁阎框(双人)
 EMBLEM_OUTLINE_S3_IRON_SQUAD┃赛季S3铁阎框(三人)
@@ -5531,6 +5582,16 @@ EMBLEM_OUTLINE_S12_MITHRIL_SQUAD┃赛季S3无瑕框
 EMBLEM_OUTLINE_S12_TITAN_SQUAD┃赛季S3半神框
 EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD┃赛季S3永恒框
 EMBLEM_OUTLINE_S12_IMMORTAL_SQUAD_305227┃赛季S3 - 永恒荣誉框
+EMBLEM_OUTLINE_S13_IRON_SQUAD┃赛季S4铁阎框
+EMBLEM_OUTLINE_S13_BRONZE_SQUAD┃赛季S4铜魂框
+EMBLEM_OUTLINE_S13_SILVER_SQUAD┃赛季S4银烙框
+EMBLEM_OUTLINE_S13_GOLD_SQUAD┃赛季S4金魄框
+EMBLEM_OUTLINE_S13_PLATINUM_SQUAD┃赛季S4修罗框
+EMBLEM_OUTLINE_S13_DIAMOND_SQUAD┃赛季S4灭钻框
+EMBLEM_OUTLINE_S13_MITHRIL_SQUAD┃赛季S4无瑕框
+EMBLEM_OUTLINE_S13_TITAN_SQUAD┃赛季S4半神框
+EMBLEM_OUTLINE_S13_IMMORTAL_SQUAD┃赛季S4永恒框
+EMBLEM_OUTLINE_S13_IMMORTAL_SQUAD_305237┃赛季S4 - 永恒荣誉框
 EMBLEM_OUTLINE_EVENT_303001┃2022白色情人节 纪念框
 EMBLEM_OUTLINE_EVENT_303002┃来一杯鸡尾酒
 EMBLEM_OUTLINE_EVENT_303003┃樱花装饰框
@@ -5855,12 +5916,14 @@ Goods/Name/1701001┃默认
 Goods/Name/1701002┃Eternal World (韩语版)
 Goods/Name/1701003┃Eternal World (伴奏版)
 Goods/Name/1703001┃Intro BGM
+Goods/Name/1703002┃Caprice N 24
 Goods/Name/1704001┃Emma Character Song(韩语版)
 Goods/Name/1704002┃Emma Character Song(伴奏版)
 Goods/Name/1799999┃无
 GoodsGroup/Name/1701001┃默认 
 GoodsGroup/Name/1701002┃Eternal World
 GoodsGroup/Name/1703001┃Intro BGM
+GoodsGroup/Name/1703002┃Caprice N 24
 GoodsGroup/Name/1704001┃Emma Character Song
 GoodsGroup/Name/1799999┃无
 ItemType/DRONE/Name┃探测仪皮肤
@@ -5967,6 +6030,10 @@ Goods/Name/2804031┃万尼亚的蝴蝶
 ItemType/TEAMSLOT_BG/Name┃队伍格背景
 Goods/Name/3401001┃默认队伍格背景
 Goods/Name/3402001┃节日小熊
+Goods/Name/3402501┃赛季S4・All ways Incheon队伍格背景
+Goods/Name/3402502┃赛季S4・Gyeonggi Innate队伍格背景
+Goods/Name/3402503┃赛季S4・GJ Slasher队伍格背景
+Goods/Name/3402504┃赛季S4・DH.CNJ队伍格背景
 Goods/Name/3403001┃机械电路
 Goods/Name/3403002┃星光之夜
 Goods/Name/3403003┃秋日红叶
@@ -6077,6 +6144,7 @@ Product/Name/Eleven_Emblem_Pack_01┃Eleven特别组合包
 Product/Name/William_Emblem_Pack_01┃威廉特别组合包
 Product/Name/Chloe_Emblem_Pack_01┃克洛伊特别组合包
 Product/Name/Celine_Emblem_Pack_01┃席琳特别组合包
+Product/Name/Markus_Emblem_Pack_01┃马库斯特别组合包
 Product/Name/SkinDataChip_RandomBox_01┃不明皮肤数据
 Product/Name/UR_Grade_Skin_Voucher_01┃高级/稀有皮肤补给券
 Product/Name/UR_Grade_Skin_Voucher_02┃高级/稀有皮肤补给券
@@ -6143,8 +6211,16 @@ Product/Name/2024_Festival_Seq_Pack_02┃神秘美食组合包
 Product/Name/2024_Festival_Seq_Pack_03┃英雄皮肤碎片选择券组合包
 Product/Name/2024_Summer_Special_01┃夏日特别组合包
 Product/Name/2024_Summer_Special_02┃夏日皮肤DATA箱组合包
-Product/Name/2024_S04_Esports_Pack_01┃赛季S4电竞支援组合包
-Product/Name/2024_S04_Esports_Pack_01_KAKAO┃赛季S4电竞支援组合包
+Product/Name/2024_S04_Esports_Pack_01┃赛季S4・电竞支援组合包
+Product/Name/2024_S04_Esports_Pack_01_KAKAO┃赛季S4・电竞支援组合包
+Product/Name/S04_AllWaysIncheon_Pack_01┃赛季S4・All ways Incheon组合包
+Product/Name/S04_AllWaysIncheon_Pack_01_KAKAO┃赛季S4・All ways Incheon组合包
+Product/Name/S04_GyeonggiInnate_Pack_01┃赛季S4・Gyeonggi Innate组合包
+Product/Name/S04_GyeonggiInnate_Pack_01_KAKAO┃赛季S4・Gyeonggi Innate组合包
+Product/Name/S04_GJSlasher_Pack_01┃赛季S4・GJ Slasher组合包
+Product/Name/S04_GJSlasher_Pack_01_KAKAO┃赛季S4・GJ Slasher组合包
+Product/Name/S04_DHCNJ_Pack_01┃赛季S4・DH.CNJ组合包
+Product/Name/S04_DHCNJ_Pack_01_KAKAO┃赛季S4・DH.CNJ组合包
 Product/Name/Starter_Support_Pack_01┃新手进阶组合包
 Product/Name/Starter_Support_Pack_01_KAKAO┃新手进阶组合包
 Product/Name/Popular_Emotion_Pack_01┃人气表情组合包
@@ -6163,6 +6239,11 @@ Product/Name/2024_DebiMarlene_Card_Box_02┃黛比&玛莲卡盒
 Product/Name/Kiosk_Emotion_Pack_01┃Kiosk表情组合包
 Product/Name/Tactic_Emotion_Pack_01┃战术表情组合包
 Product/Name/EVENT_NPASS_1stAnniversary_1000┃一周年纪念通行证
+Product/Name/BATTLE_PASS/2000┃一周年A-Coin通行证
+Product/Name/2024_Select_Voucher_Pack┃选择券组合包
+Product/Name/2024_Select_Voucher_Pack_01┃选择券组合包Ⅰ
+Product/Name/2024_Select_Voucher_Pack_02┃选择券组合包Ⅱ
+Product/Name/2024_Select_Voucher_Pack_03┃选择券组合包Ⅲ
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
@@ -6237,6 +6318,7 @@ Shop/Desc/Eleven_Emblem_Pack_01┃组合包内容\n\n- Eleven 角色\n- 甜心�
 Shop/Desc/William_Emblem_Pack_01┃组合包内容\n\n- 威廉角色\n- 圣诞嘉年华 威廉皮肤\n- 暗巷里 威廉皮肤\n- 威廉 4款表情\n- 威廉头像\n- 威廉背景\n- 威廉边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Chloe_Emblem_Pack_01┃组合包内容\n\n\n- 克洛伊角色\n- 女仆 克洛伊皮肤\n- 瑞兔迎春 克洛伊皮肤\n- 克洛伊 4款表情\n- 克洛伊头像\n- 克洛伊背景\n- 克洛伊边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Celine_Emblem_Pack_01┃组合包内容\n\n- 席琳角色\n- 万圣节南瓜 席琳皮肤\n- 拆弹小队 席琳皮肤\n- 席琳 4款表情\n- 席琳头像\n- 席琳背景\n- 席琳边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/Markus_Emblem_Pack_01┃组合包内容\n\n- 马库斯角色\n- 恶魔猎手 马库斯皮肤\n- 天启 马库斯皮肤\n- 马库斯 4款表情\n- 马库斯头像\n- 马库斯背景\n- 马库斯边框\n- A-Coin Boost (3日)\n- ER积分 Boost (3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 售价将根据已解锁的物品发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/ThanksGiving_Special_2023_Pack_01┃组合包内容\n\n- 夏日&狩猎箱 5个\n- 皮肤DATA箱 5个\n- 开箱钥匙 10个\n- 度假代币 35个
 Shop/Desc/ThanksGiving_Special_2023_Pack_02┃组合包内容\n\n- 英雄皮肤碎片箱 1个\n- 开箱钥匙 1个\n- 度假代币 20个
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃组合包内容\n\n- 夏日&狩猎箱 2个\n- 开箱钥匙 2个\n- A-Coin 5,000\n- 度假代币 10个
@@ -6279,8 +6361,16 @@ Shop/Desc/2024_Festival_Box_02┃艾玛的烘焙藤篮，可以获得<女仆阿�
 Shop/Desc/2024_Festival_Box_03┃希瑟拉的面包袋，可以获得<女仆阿德拉的烘焙咖啡坊>活动的物品。\n请通过奖励列表确认内容物。\n\n※ 购买后将立即开启。\n※ 每日仅限购买一次。
 Shop/Desc/2024_Summer_Special_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 夏日皮肤DATA箱 x5\n- 夏日研究中心DATA箱 x 5\n- 开箱钥匙 x 5\n- XP Boost (1日)\n- A-Coin Boost (1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/2024_Summer_Special_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 夏日皮肤DATA箱 x2\n- 开箱钥匙 x 2\n- XP Boost (1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
-Shop/Desc/2024_S04_Esports_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 仲夏回忆 伊娃 好痛！表情\n- 皮肤DATA箱 x 1\n- 开箱钥匙 x 1\n- 研究中心DATA箱 x 1\n- 400 NP\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以使用Steam钱包购买赛季赛季S4电竞支援组合包。\n※ 组合包除各种手续费外的所有收入都将用作电竞活动奖金。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。\n※ 赛季S4电竞支援组合包中包含的400NP为免费NP。
+Shop/Desc/2024_S04_Esports_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 仲夏回忆 伊娃 好痛！表情\n- 皮肤DATA箱 x 1\n- 开箱钥匙 x 1\n- 研究中心DATA箱 x 1\n- 400 NP\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以使用Steam钱包购买「赛季S4・电竞支援组合包」。\n※ 组合包除各种手续费外的所有收入都将用作电竞活动奖金。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。\n※ 赛季S4电竞支援组合包中包含的400NP为免费NP。
 Shop/Desc/2024_S04_Esports_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 仲夏回忆 伊娃 好痛！表情\n- 皮肤DATA箱 x 1\n- 开箱钥匙 x 1\n- 研究中心DATA箱 x 1\n- 400 NP\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 组合包除各种手续费外的所有收入都将用作电竞活动奖金。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。\n※ 赛季S4电竞支援组合包中包含的400NP为免费NP。
+Shop/Desc/S04_AllWaysIncheon_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・All ways Incheon表情\n- 赛季S4・All ways Incheon头像\n- 赛季S4・All ways Incheon背景\n- 赛季S4・All ways Incheon边框\n- 赛季S4・All ways Incheon队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 赛季S4・All ways Incheon组合包可以使用Steam钱包购买。\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_AllWaysIncheon_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・All ways Incheon表情\n- 赛季S4・All ways Incheon头像\n- 赛季S4・All ways Incheon背景\n- 赛季S4・All ways Incheon边框\n- 赛季S4・All ways Incheon队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_GyeonggiInnate_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・Gyeonggi Innate表情\n- 赛季S4・Gyeonggi Innate头像\n- 赛季S4・Gyeonggi Innate背景\n- 赛季S4・Gyeonggi Innate边框\n- 赛季S4・Gyeonggi Innate队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 赛季S4・Gyeonggi Innate组合包可以使用Steam钱包购买。\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_GyeonggiInnate_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・Gyeonggi Innate表情\n- 赛季S4・Gyeonggi Innate头像\n- 赛季S4・Gyeonggi Innate背景\n- 赛季S4・Gyeonggi Innate边框\n- 赛季S4・Gyeonggi Innate队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_GJSlasher_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・GJ Slasher表情\n- 赛季S4・GJ Slasher头像\n- 赛季S4・GJ Slasher背景\n- 赛季S4・GJ Slasher边框\n- 赛季S4・GJ Slasher队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 赛季S4・GJ Slasher组合包可以使用Steam钱包购买。\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_GJSlasher_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・GJ Slasher表情\n- 赛季S4・GJ Slasher头像\n- 赛季S4・GJ Slasher背景\n- 赛季S4・GJ Slasher边框\n- 赛季S4・GJ Slasher队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_DHCNJ_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・DH.CNJ表情\n- 赛季S4・DH.CNJ头像\n- 赛季S4・DH.CNJ背景\n- 赛季S4・DH.CNJ边框\n- 赛季S4・DH.CNJ队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 赛季S4・DH.CNJ组合包可以使用Steam钱包购买。\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S04_DHCNJ_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 赛季S4・DH.CNJ表情\n- 赛季S4・DH.CNJ头像\n- 赛季S4・DH.CNJ背景\n- 赛季S4・DH.CNJ边框\n- 赛季S4・DH.CNJ队伍格背景\n- XP Boost(3日)\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[购买前注意事项]</color></b>\n※ 组合包除各种手续费外的所有收入都将用作支持电竞队伍。\n※ 可以通过藏品确认已购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Starter_Support_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 20,000 A-Coin\n- 2,200 NP\n- 高级/稀有皮肤补给券 x 1\n- 高级皮肤选择券 x 1\n- 新手实验体选择券 x 2 \n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b> \n※ 新手进阶组合包可以使用Steam钱包购买。\n※ 通过高级/稀有皮肤补给券，可以获得列表中一款未持有的高级/稀有皮肤。\n※ 高级/稀有皮肤补给券中包含商店中不出售的活动皮肤。\n※ 请查看箱子概率链接确认详细商品列表。\n※ 当高级/稀有皮肤补给券列表中的皮肤已经全部解锁时，购买时将获得商品中包含的一款皮肤。\n※ 获得皮肤的概率取决于商品列表中未解锁皮肤的个体概率。\n※ 高级/稀有皮肤补给券是购买后立即开启并获得的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。\n※ 购买新手进阶组合包获得的2,200 NP为免费NP。
 Shop/Desc/Starter_Support_Pack_01_KAKAO┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 20,000 A-Coin\n- 2,200 NP\n- 高级/稀有皮肤补给券 x 1\n- 高级皮肤选择券 x 1\n- 新手实验体选择券 x 2 \n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b> \n※ 通过高级/稀有皮肤补给券，可以获得列表中一款未持有的高级/稀有皮肤。\n※ 高级/稀有皮肤补给券中包含商店中不出售的活动皮肤。\n※ 请查看箱子概率链接确认详细商品列表。\n※ 当高级/稀有皮肤补给券中的皮肤已经全部解锁时，购买时将获得商品中包含的一款皮肤。\n※ 获得皮肤的概率取决于商品列表中未解锁皮肤的个体概率。\n※ 高级/稀有皮肤补给券是购买后立即开启并获得的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。\n※ 购买新手进阶组合包获得的2,200 NP为免费NP。
 Shop/Desc/Popular_Emotion_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 人气表情 20种\n- A-Coin Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以通过藏品确认已购买的商品。\n※ 根据已持有的物品，商品售价可能会发生变动。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
@@ -6297,6 +6387,9 @@ Shop/Desc/2024_DebiMarlene_Card_Box_01┃<b><color=#FFBB00>[内容物]</color></
 Shop/Desc/2024_DebiMarlene_Card_Box_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 黛比&玛莲卡盒 x 1\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启已购买的商品。\n※ 每日仅能购买一次此产品。
 Shop/Desc/Kiosk_Emotion_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- Kiosk表情 7款\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 购买后可以通过藏品确认购入的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Tactic_Emotion_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 战术表情 9款\n- XP Boost(1日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 购买后可以通过藏品确认购入的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/2024_Select_Voucher_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 实验体选择券 x 1\n- 高级皮肤选择券 x 1\n- 晚霞代币 x 10\n- XP Boost (3日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启购买的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/2024_Select_Voucher_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- 高级皮肤选择券 x 1\n- 稀有皮肤选择券 x 1\n- 晚霞代币 x 20\n- A-Coin Boost (3日)\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启购买的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/2024_Select_Voucher_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- 特别高级/稀有皮肤选择券 x 1\n- 英雄皮肤碎片选择券 x 1\n- 晚霞代币 x 50\n- 一周年A-Coin通行证\n- ER积分 Boost (3日)\n\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n※ 可以在制作所开启购买的物品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/EVENT_NPASS_1stAnniversary_1000┃值此<color=#E5D85C>永恒轮回一周年</color>之际，特别推出活动通行证！\n其中包括<color=#B2EBF4>一周年大厅大厅界面和<1st Anniversary Dawn 秀雅 & Blanc 海因茨>皮肤</color>等奖励，进行游戏领取奖励吧！\n\n购买商品即可激活<color=#B2EBF4>任务</color>。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
@@ -6464,6 +6557,26 @@ ShopMenu/Etc/RANDOM_BOX┃箱子
 ShopMenu/Etc/EMOTION┃表情
 ShopMenu/Etc/EP┃EP代币
 ShopMenu/Etc/Account┃账号
+BanReasonType/VERBAL_DISCRIMINATION┃仇恨及歧视言论
+BanReasonType/ABUSE_RATING┃滥用行为
+BanReasonType/ACCOUNT_SHARING┃共享账号或代练
+BanReasonType/REFUND_ABUSING┃异常退款或拒付
+BanReasonType/FALSE_ACCUSATION┃干扰服务及虚假举报
+BanReasonType/EMPLOYER_HARASSMENT┃侵犯客服权益
+BanReasonType/DOXXING┃泄露他人信息
+BanReasonType/TEMPORARY_RESTRICTION┃临时制裁
+BanReasonType/GAME_EXPERIENCE_DISRUPTION┃影响游戏体验的行为
+BanReasonType/ASSIST_OPPOSING_TEAM┃干扰公平游戏进行
+BanReasonType/AWAY_FROM_KEYBOARD┃逃跑
+BanReasonType/BUGS_AND_GLITCHES_ABUSE┃恶意利用bug和系统
+BanReasonType/ILLEGAL_PROGRAMS┃使用未经许可的软件
+BanReasonType/INAPPROPRIATE_NICKNAME┃使用不当名称
+BanReasonType/INTENTIONAL_IDLE┃故意挂机
+BanReasonType/KILLED_BY_ENEMY┃故意死亡
+BanReasonType/MISCELLANEOUS┃其他
+BanReasonType/SNIPER┃游戏内狙击行为
+BanReasonType/TEAMING┃组队
+BanReasonType/VERBAL_HARASSMENT┃语言暴力
 Skill/Group/Name/1001100┃鲜血盛宴
 Skill/Group/Name/1001200┃连斩
 Skill/Group/Name/1001210┃连斩
@@ -6727,8 +6840,8 @@ Skill/Group/Coef/1008200┃哈特弹奏着吉他同时为声波充电。之后�
 Skill/Group/Coef/1008210┃哈特弹奏着吉他同时为声波充电。之后可以再次使用技能。\n\n再次使用时 : 向指定方向释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻击力的{5})</color>技能伤害。在{0}秒或更长时间后使用时将达到最大伤害。\n\n<color=#FFFFC2>升级效果</color> : 增加技能再次使用次数，被声波命中2次的敌人{10}秒间移动速度减少{6}。
 Skill/Group/Coef/1008300┃哈特弹奏吉他时，{0}秒间攻击力增加{1}，普攻射程增加{8}。\n\n<color=#FFFFC2>升级效果</color>: 弹奏吉他时，范围内的队友在下次发起技能攻击时，将造成<color=#ffd775>(攻击力的{6})</color>额外技能伤害。
 Skill/Group/Coef/1008400┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>的技能伤害。此技能可以再次使用一次。\n\n<color=#FFFFC2>升级效果</color> : 增加可以再次使用技能的次数。
-Skill/Group/Coef/1008410┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>的技能伤害。此技能可以再次使用一次。\n\n<color=#FFFFC2>升级效果</color> : 增加可以再次使用技能的次数。
-Skill/Group/Coef/1008420┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>的技能伤害。此技能可以再次使用一次。\n\n<color=#FFFFC2>升级效果</color> : 增加可以再次使用技能的次数。
+Skill/Group/Coef/1008410┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的技能伤害。此技能可以再次使用1次。
+Skill/Group/Coef/1008420┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的技能伤害。此技能可以再次使用1次。
 Skill/Group/Coef/1008500┃哈特弹奏吉他{0}秒，范围内的所有人都忍不住跳起舞来。\n哈特弹奏吉他期间，每{5}秒将恢复自身<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>体力。\n\n<color=#FFFFC2>升级效果</color> : 弹奏吉他期间恢复范围内队友的体力。
 Skill/Group/ExpansionTip/1008400┃<i>此技能升级后，第三次移动时可以穿越墙壁。</i>
 Skill/Group/ExpansionTip/1008500┃<i>哈特跳舞移动速度固定为2.5，无法使用普攻或技能。</i>
@@ -8426,7 +8539,7 @@ Skill/Group/Name/1048620┃着色 - 蓝色
 Skill/Group/Name/1048630┃着色 - 无色
 Skill/Group/Name/1048700┃彩虹魔咒
 Skill/Group/Desc/1048100┃蒂娅使用<color=#ffffff>笔触(Q)</color>或者<color=#ffffff>着色(E)</color>，使敌人染上两种颜色，启动<color=#FFFFC2>松鼠效果</color>。\n蒂娅的基本技能不受冷却缩减影响，每10%冷却缩减增加12技能增幅。\n\n<color=#FFFFC2>松鼠发威 : </color>给敌人涂上<color=#ffffff>黄色和红色</color>颜料时启动松鼠发威效果，{0}秒间使敌人陷入沉默并给敌人造成<color=#ffffff>{18}</color>技能伤害，伤害分{1}次应用。\n\n<color=#FFFFC2>幸运松鼠 : </color>给敌人涂上<color=#ffffff>红色和蓝色</color>颜料时启动幸运松鼠效果，恢复造成伤害量{27}的体力并在{9}秒间增加{10}移动速度后缓缓减少。给敌人造成相当于<color=#ffffff>{19}</color>的技能伤害。\n\n<color=#FFFFC2>魔法松鼠 : </color>给敌人涂上<color=#ffffff>蓝色和黄色</color>颜料时启动魔法松鼠效果，给敌人造成<color=#ffffff>{20}</color>的技能伤害并使敌人陷入束缚{15}秒。
-Skill/Group/Desc/1048400┃蒂娅朝前方投掷<color=yellow>黄色</color>颜料，在撒染位置的1.5m半径处造成<color=#ffffff>{5}</color>技能伤害并涂上黄色颜料。染上黄色颜料的敌人在{4}秒间减少移动速度{3}。
+Skill/Group/Desc/1048400┃蒂娅朝前方投掷<color=yellow>黄色</color>颜料，命中时对周围敌人造成<color=#ffffff>{5}</color>技能伤害并涂上黄色颜料。颜料飞到射程末端或命中时呈扇形扩散，使敌人沾上黄色颜料。沾上黄色颜料时，{4}秒内敌人的移动速度减少{3}。
 Skill/Group/Desc/1048410┃蒂娅横扫画笔给命中的敌人造成<color=#ffffff>{5}</color>技能伤害，被笔头挥中的敌人将染上<color=red>红色</color>颜料。染上红色颜料的敌人在{4}秒间移动速度减少{3}。
 Skill/Group/Desc/1048420┃蒂娅使用画笔给敌人一记重锤，造成<color=#ffffff>{5}</color>技能伤害，画笔击中敌人头部时涂上<color=#2AC0FF>蓝色</color>颜料，{8}秒间移动速度减少{9}。在内围被命中的敌人承受<color=#ffffff>{2}</color>额外技能伤害，{6}秒间移动速度减少{7}。
 Skill/Group/Desc/1048430┃颜料填充中，请稍等。
@@ -8440,7 +8553,7 @@ Skill/Group/Desc/1048620┃蒂娅以大地为画板，拖着染上<color=#2AC0FF
 Skill/Group/Desc/1048630┃颜料填充中，请稍等。
 Skill/Group/Desc/1048700┃蒂娅念咒施法，召唤出巨大的画笔在指定的位置画出一道圆形彩虹，给敌人造成<color=#ffffff>{5}</color>技能伤害并使敌人晕厥{2}秒。如果敌人染上任意一种颜色，则晕厥的持续时间会增加{3}秒。
 Skill/Group/Coef/1048100┃蒂娅使用<color=#ffffff>笔触(Q)</color>或者<color=#ffffff>着色(E)</color>，使敌人染上两种颜色，启动<color=#FFFFC2>松鼠效果</color>。\n蒂娅的基本技能不受冷却缩减影响，每10%冷却缩减增加12技能增幅。\n\n<color=#FFFFC2>松鼠发威 : </color>给敌人涂上<color=#ffffff>黄色和红色</color>颜料时启动松鼠发威效果，{0}秒间使敌人陷入沉默并给敌人造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅的 {22})</color>技能伤害，伤害分{1}次应用。\n\n<color=#FFFFC2>幸运松鼠 : </color>给敌人涂上<color=#ffffff>红色和蓝色</color>颜料时启动幸运松鼠效果，恢复造成伤害量{27}的体力并在{9}秒间增加{10}移动速度后缓缓减少。给敌人造成相当于<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{24})</color>的技能伤害。\n\n<color=#FFFFC2>魔法松鼠 : </color>给敌人涂上<color=#ffffff>蓝色和黄色</color>颜料时启动魔法松鼠效果，给敌人造成<color=white>{12}</color><color=#DDA0DD>(+技能增幅的{26})</color>的技能伤害并使敌人陷入束缚{15}秒。
-Skill/Group/Coef/1048400┃蒂娅朝前方投掷<color=yellow>黄色</color>颜料，在撒染位置的1.5m半径处造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{2})</color>技能伤害并涂上黄色颜料。染上黄色颜料的敌人在{4}秒间减少移动速度{3}。
+Skill/Group/Coef/1048400┃蒂娅朝前方投掷<color=yellow>黄色</color>颜料，命中时对周围敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{2})</color>的技能伤害并涂上黄色颜料。颜料飞到射程末端或命中时呈扇形扩散，使敌人沾上黄色颜料。沾上黄色颜料时，{4}秒内敌人的移动速度减少{3}。
 Skill/Group/Coef/1048410┃蒂娅横扫画笔给命中的敌人造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{2})</color>技能伤害，被笔头挥中的敌人将染上<color=red>红色</color>颜料。染上红色颜料的敌人在{4}秒间移动速度减少{3}。
 Skill/Group/Coef/1048420┃蒂娅使用画笔给敌人一记重锤，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{3})</color>技能伤害，画笔击中敌人头部时涂上<color=#2AC0FF>蓝色</color>颜料，{8}秒间移动速度减少{9}。在内围被命中的敌人承受<color=#ffffff>{2}</color>额外技能，{6}秒间移动速度减少{7}。
 Skill/Group/Coef/1048430┃颜料填充中，请稍等。
@@ -10443,182 +10556,32 @@ Skill/LobbyDesc/3024000┃在自身周围生成旋转的VF能量球体。生成�
 Skill/LobbyDesc/3025000┃厄喀翁1秒间施法技能，并根据状态适用不同效果。\n\n<color=white>VF值小于50 : </color> 消耗一定VF值，缩减武器技能以外的技能冷却时间，并增加移动速度。\n\n<color=white>VF暴走状态 : </color> 延长暴走持续时间，缩减技能冷却时间并增加移动速度。\n\n<color=white>超负荷状态 : </color> 超负荷状态减少一定时间。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
 Skill/Group/Name/9999999┃普通攻击
 Skill/LobbyDesc/9999999┃对敌人造成普攻伤害。
-Skill/Group/Name/4000000┃闪灵
-Skill/Group/LobbyDesc/4000000┃使用后向指定位置移动一段距离。\n\n<color=#ff3399>强化 : </color>使用后，暂时增加移动速度且无视碰撞。
-Skill/Code/Desc/4000001┃使用后向指定位置瞬间移动。\n\n<color=#787808>战术强化组件 : </color><color=#646464>{2}秒间移动速度增加。</color>
-Skill/Code/Coef/4000001┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加{3}%，无视碰撞。</color>
-Skill/Code/ExpansionTip/4000001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4000002┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加。</color>
-Skill/Code/Coef/4000002┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加{3}%，无视碰撞。</color>
-Skill/Code/ExpansionTip/4000002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4000003┃使用后向指定位置瞬间移动。\n\n<color=#FFFFC2>战术强化组件 : </color>{2}秒间移动速度增加。
 Skill/Code/Coef/4000003┃使用后向指定位置瞬间移动。\n\n<color=#FFFFC2>战术强化组件 : </color>{2}秒间移动速度增加{3}%，无视碰撞。</color>
-CharacterState/Group/Name/4000000┃加速
-CharacterState/Group/Desc/4000000┃无视碰撞，移动速度增加。
-Skill/Group/Name/4001000┃震裂
-Skill/Group/LobbyDesc/4001000┃使用后降低附近敌人的移动速度。\n\n<color=#ff3399>强化 : </color>在一定时间内对周围的敌人造成伤害。
-Skill/Code/Desc/4001001┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成{2}的技能伤害。</color>
-Skill/Code/Coef/4001001┃使用时可以在自身周围引起地震，使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成({2}+实验体等级*{7})的技能伤害。</color>
-Skill/Code/ExpansionTip/4001001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4001002┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成{2}的技能伤害。</color>
-Skill/Code/Coef/4001002┃使用时可以在自身周围引起地震，使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成({2}实验体等级*{7})的技能伤害。</color>
-Skill/Code/ExpansionTip/4001002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4001003┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
 Skill/Code/Coef/4001003┃使用时可以在自身周围引起地震，使周围敌人{5}秒间的移动速度减少{3}%。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成(<color=white>{2}</color>+<color=green>实验体等级*{7}</color>)的技能伤害。</color>
-CharacterState/Group/Name/4001010┃震裂
-CharacterState/Group/Desc/4001010┃受到巨大冲击，移动速度减少。
-CharacterState/Group/Name/4001000┃巨震
-CharacterState/Group/Desc/4001000┃持续地震对敌人造成伤害。
-Skill/Group/Name/4101000┃违规者
-Skill/Group/LobbyDesc/4101000┃改装E.M.O.T.E爆炸时，能够增加盟友体力并增加敌人承受伤害。\n\n<color=#ff3399>强化 : </color> 赋予更强的效果。
-Skill/Code/Desc/4101001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后将会发生爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
-Skill/Code/Coef/4101001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)的同时，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
-Skill/Code/ExpansionTip/4101001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4101002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后将会发生爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
-Skill/Code/Coef/4101002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
-Skill/Code/ExpansionTip/4101002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4101003┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后会爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#FFFFC2>战术强化组件 : </color>大幅增加效果。
 Skill/Code/Coef/4101003┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#FFFFC2>战术强化组件 : </color>大幅增加效果。
-CharacterState/Group/Name/4101000┃有益物
-CharacterState/Group/Desc/4101000┃增加了体力上限。
-CharacterState/Group/Name/4101010┃有害物
-CharacterState/Group/Desc/4101010┃承受伤害增加了。
-Skill/Group/Name/4102000┃赤色风暴
-Skill/Group/LobbyDesc/4102000┃使用时短距离移动，暂时增加普攻射程。\n\n<color=#ff3399>强化 : </color>强化射程增加效果。
-Skill/Code/Desc/4102001┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>强化射程增加效果。</color>
-Skill/Code/Coef/4102001┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#565730>战术强化组件 : </color><color=#595959>射程增加效果强化{4}。</color>
-Skill/Code/ExpansionTip/4102001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4102002┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>强化射程增加效果。</color>
-Skill/Code/Coef/4102002┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#565730>战术强化组件 :  </color><color=#595959>射程增加效果强化{4}。</color>
-Skill/Code/ExpansionTip/4102002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4102003┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#FFFFC2>战术强化组件 : </color>强化射程增加效果。
 Skill/Code/Coef/4102003┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#FFFFC2>战术强化组件 : </color>射程增加效果强化{4}。
-CharacterState/Group/Name/4102000┃静电
-CharacterState/Group/Desc/4102000┃增加普攻射程。
-Skill/Group/Name/4103000┃超越
-Skill/Group/LobbyDesc/4103000┃能够提供强大的护盾并吸收爆发性的伤害。\n\n<color=#ff3399>强化 : </color>持有护盾时，获得额外的移动速度。
-Skill/Code/Desc/4103001┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 :</color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%</color>
-Skill/Code/Coef/4103001┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
-Skill/Code/ExpansionTip/4103001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4103002┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
-Skill/Code/Coef/4103002┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
-Skill/Code/ExpansionTip/4103002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4103003┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#FFFFC2>战术强化组件 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
 Skill/Code/Coef/4103003┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#FFFFC2>战术强化组件 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
 Skill/Code/ExpansionTip/4103003┃<i>根据持有护盾量，成比例增加移动速度。</i>
-CharacterState/Group/Name/4103000┃超越 - 伤害无力
-CharacterState/Group/Desc/4103000┃生成和额外体力值成比例的护盾。
-CharacterState/Group/Name/4103010┃超越 - 血力
-CharacterState/Group/Desc/4103010┃和所持护盾成比例，增加移动速度。
-Skill/Group/Name/4104000┃极光陀螺
-Skill/Group/LobbyDesc/4104000┃暂时陷入凝滞状态，不会受到任何干扰。\n\n<color=#ff3399>强化 : </color>凝滞状态下，快速缩减自身技能冷却。
-Skill/Code/Desc/4104001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
-Skill/Code/Coef/4104001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
-Skill/Code/ExpansionTip/4104001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4104002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
-Skill/Code/Coef/4104002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
-Skill/Code/ExpansionTip/4104002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4104003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>战术强化组件 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
 Skill/Code/Coef/4104003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>战术强化组件 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-CharacterState/Group/Name/4104000┃凝滞
-CharacterState/Group/Desc/4104000┃因极光陀螺处于凝滞状态。
-Skill/Group/Name/4105000┃净化
-Skill/Group/LobbyDesc/4105000┃立即解除负面效果，增加移动速度。\n\n<color=#ff3399>强化 : </color>使用后暂时处于免疫所有负面效果状态。
-Skill/Code/Desc/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
-Skill/Code/Coef/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
-Skill/Code/ExpansionTip/4105001┃<i>增加的移动速度在持续一段时间后逐渐恢复。</i>\n\n<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
-Skill/Code/Coef/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
-Skill/Code/ExpansionTip/4105002┃<i>增加的移动速度在持续一段时间后逐渐恢复。</i>\n\n<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4105003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
 Skill/Code/Coef/4105003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
-CharacterState/Group/Name/4105000┃免疫所有负面效果
-CharacterState/Group/Desc/4105000┃免疫所有负面效果。
-CharacterState/Group/Name/4105010┃移动速度增加 - 净化
-CharacterState/Group/Desc/4105010┃因净化移动速度增加。
-Skill/Group/Name/4107000┃羁绊者
-Skill/Group/LobbyDesc/4107000┃当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，赋予周围盟友移动速度和吸血-所有伤害效果。\n\n<color=#ff3399>强化 : </color> 获得更多能量。
-Skill/Code/Desc/4107001┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
-Skill/Code/Coef/4107001┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用时消耗所有能量，{4}秒周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，赋予(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
-Skill/Code/ExpansionTip/4107001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4107002┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
-Skill/Code/Coef/4107002┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
-Skill/Code/ExpansionTip/4107002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4107003┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>战术强化组件 : </color>增加蓄能上限及能量的获得率。
 Skill/Code/Coef/4107003┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>战术强化组件 : </color>增加蓄能上限及能量的获得率。
-CharacterState/Group/Name/4107000┃羁绊者 - 愤怒
-CharacterState/Group/Desc/4107000┃当自身或一定距离内实验体因其他实验体承受伤害时蓄能。
-CharacterState/Group/Name/4107010┃羁绊者 - 守护
-CharacterState/Group/Desc/4107010┃增加了吸血-所有伤害和移动速度。
-CharacterState/Group/Name/4107020┃羁绊者 - 不受影响
-CharacterState/Group/Desc/4107020┃受羁绊效果影响，一段时间内不会适用羁绊效果。
-Skill/Group/Name/4110000┃爆能弹
-Skill/Group/LobbyDesc/4110000┃使用后的一段时间内普攻将转为范围伤害。\n\n<color=#ff3399>强化 : </color>普攻将造成和实验体当前体力成比例的技能伤害。
-Skill/Code/Desc/4110001┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)技能伤害。\n\n<color=#565730>战术强化组件 : </color><color=#595959>普攻造成实验体当前体力{4}%的技能伤害。</color>
-Skill/Code/Coef/4110001┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)的技能伤害。\n\n<color=#565730>战术强化组件 : </color><color=#595959>普攻造成实验体当前体力{4}%的技能伤害。</color>
-Skill/Code/ExpansionTip/4110001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4110002┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)的技能伤害。\n\n<color=#565730>战术强化组件 : </color><color=#595959>普攻造成实验体当前体力{4}%的技能伤害。</color>
-Skill/Code/Coef/4110002┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)的技能伤害。\n\n<color=#565730>战术强化组件 : </color><color=#595959>普攻造成实验体当前体力{4}%的技能伤害。</color>
-Skill/Code/ExpansionTip/4110002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4110003┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)的技能伤害。\n\n<color=#FFFFC2>战术强化组件 : </color>普攻造成实验体当前体力<color=#688A08>{4}%</color>的技能伤害。
-Skill/Code/Coef/4110003┃使用后{0}秒内普攻将转为范围伤害，给周围敌人造成(近战{1}% / 远程{2}%)的技能伤害。\n\n<color=#FFFFC2>战术强化组件 : </color>普攻造成实验体当前体力<color=#688A08>{4}%</color>的技能伤害。
-CharacterState/Group/Name/4110000┃爆能弹
-CharacterState/Group/Desc/4110000┃准备结束！
-Skill/Group/Name/4114000┃阔步者
-Skill/Group/LobbyDesc/4114000┃使用后，增加移向敌人实验体时的移动速度，在持续时间内对敌人造成伤害时，将造成额外技能伤害并结束效果。\n\n<color=#ff3399>强化 : </color> 减少承受阔步者伤害目标的移动速度。
-Skill/Code/Desc/4114001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。</color>
-Skill/Code/Coef/4114001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。</color>
-Skill/Code/ExpansionTip/4114001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4114002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。</color>
-Skill/Code/Coef/4114002┃使用后，移向敌人时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。</color>。</color>
-Skill/Code/ExpansionTip/4114002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4114003┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>战术强化组件 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
 Skill/Code/Coef/4114003┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#FFFFC2>战术强化组件 : </color> 承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。
-CharacterState/Group/Name/4114000┃阔步者
-CharacterState/Group/Desc/4114000┃增加移动速度。
-CharacterState/Group/Name/4114020┃阔步者 - 击打
-CharacterState/Group/Desc/4114020┃移动速度减少。
-Skill/Group/Name/4112000┃实刃
-Skill/Group/LobbyDesc/4112000┃使用后对周围敌人造成伤害，并根据承受伤害的敌人数增加一定比例的移动速度。\n\n<color=#ff3399>强化 : </color>增加对目标造成的伤害。
-Skill/Code/Desc/4112001┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n并根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
-Skill/Code/Coef/4112001┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
-Skill/Code/ExpansionTip/4112001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4112002┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
-Skill/Code/Coef/4112002┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
-Skill/Code/ExpansionTip/4112002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4112003┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>战术强化组件 : </color>对目标造成的伤害增加{3}%。
 Skill/Code/Coef/4112003┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>战术强化组件 : </color>对目标造成的伤害增加{3}%。
-CharacterState/Group/Name/4112000┃实刃 - 投射
-CharacterState/Group/Desc/4112000┃真理对敌人造成伤害，实验体的移动速度增加了。
-CharacterState/Group/Name/4112010┃实刃 - 丧失
-CharacterState/Group/Desc/4112010┃被真理刺穿，承受伤害增加。
-Skill/Group/Name/4113000┃虚言
-Skill/Group/LobbyDesc/4113000┃消耗体力并增加所有伤害。消耗的体力会慢慢恢复。\n\n<color=#ff3399>强化 : </color>参与击杀敌人时，更新效果。
-Skill/Code/Desc/4113001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时，将会更新效果。</color>
-Skill/Code/Coef/4113001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
-Skill/Code/ExpansionTip/4113001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>\n\n<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
-Skill/Code/Desc/4113002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
-Skill/Code/Coef/4113002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
-Skill/Code/ExpansionTip/4113002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>\n\n<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
 Skill/Code/Desc/4113003┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>战术强化组件 : </color>击杀实验体或助攻时，将会更新效果。
 Skill/Code/Coef/4113003┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>战术强化组件 : </color>击杀实验体或助攻时更新效果。
 Skill/Code/ExpansionTip/4113003┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
-CharacterState/Group/Name/4113000┃虚言 - 誓言
-CharacterState/Group/Desc/4113000┃因虚言承受伤害，获得了体力再生、伤害量增加。
-Skill/Group/Name/4108000┃治愈之风
-Skill/Group/LobbyDesc/4108000┃恢复范围内盟友的体力。\n\n<color=#ff3399>强化 : </color>增加被风扫过盟友的防御力。
-Skill/Code/Desc/4108001┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
-Skill/Code/Coef/4108001┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
-Skill/Code/ExpansionTip/4108001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4108002┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
-Skill/Code/Coef/4108002┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
-Skill/Code/ExpansionTip/4108002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
 Skill/Code/Desc/4108003┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>战术强化组件 : </color>被风扫过的实验体{5}秒内防御力增加{4}。
 Skill/Code/Coef/4108003┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>战术强化组件 : </color>被风扫过的实验体{5}秒内防御力增加{4}。
-CharacterState/Group/Name/4108000┃治愈之风 - 守护
-CharacterState/Group/Desc/4108000┃因治愈之风增加了防御力。
-CharacterState/Group/Name/4108010┃治愈之风 - 介入
-CharacterState/Group/Desc/4108010┃因不同的风导致治愈效果减少了。
 CharacterState/Group/Name/2100201┃战场 - 加速
 CharacterState/Group/Desc/2100201┃在该战场中实验体移动速度增加{0}%、冷却减少{1}%。不会超过冷却上限值。
 CharacterState/Group/Name/2100202┃战场 - 狂暴
@@ -11020,7 +10983,7 @@ Item/Skills/6017005/Name┃<color=yellow>热情</color>
 Item/Skills/6017006/Name┃<color=yellow>热情 - 循环</color>
 Item/Skills/6017005/Body┃普攻命中敌人实验体时，造成<color=#DDA0DD>{11}</color>的技能伤害，{8}秒间获得热情叠层和{3}%的攻击速度。
 Item/Skills/6017005/Desc┃普攻命中敌人实验体时，造成(<color=#DDA0DD>近战 : {10} (+技能增幅{11})</color>｜<color=#DDA0DD>远程 : {10} (+技能增幅{12})</color>)的技能伤害，{8}秒间获得热情叠层和{3}%攻击速度。
-Item/Skills/6017007/Name┃<color=yellow>热情-循环</color>
+Item/Skills/6017007/Name┃<color=yellow>热情 - 循环</color>
 Item/Skills/6017008/Name┃<color=yellow>热情</color>
 Item/Skills/6017008/Body┃普攻命中敌人实验体时，造成敌人实验体<color=#688A08>当前体力{1}%</color>的技能伤害，{8}秒间获得热情叠层，每个热情叠层获得{3}%的攻击速度。达到{9}叠层上限时，额外增加攻击力{5}。
 Item/Skills/6017008/Desc┃普攻命中敌人实验体时，造成敌人实验体<color=#688A08>当前体力{1}%</color>的技能伤害，{8}秒间获得热情叠层，每个热情叠层获得{3}%的攻击速度。达到{9}叠层上限时，额外增加攻击力{5}。
@@ -11124,6 +11087,10 @@ Item/Skills/6034001┃火力延伸
 Item/Skills/6034001/Name┃<color=yellow>火力延伸</color>
 Item/Skills/6034001/Body┃每{0}秒，下一个普攻得到强化射程增加{1}%，造成(<color=#008000>{2}</color>)额外技能伤害。（射程上限{3}m）\n每次普攻时火力延伸的技能冷却时间缩减1秒。
 Item/Skills/6034001/Desc┃每{0}秒，下一个普攻得到强化射程增加{1}%，造成<color=#008000>(实验体等级 * {2})</color>的额外技能伤害。（射程上限{3}m）\n每次普攻时火力延伸的技能冷却时间缩减1秒。
+Item/Skills/6034002┃火力延伸
+Item/Skills/6034002/Name┃<color=yellow>火力延伸</color>
+Item/Skills/6034002/Body┃每{0}秒，下一个普攻得到强化射程增加{1}%，造成(<color=#008000>{2}</color>)额外技能伤害。（射程上限{3}m）\n每次普攻时火力延伸的技能冷却时间缩减1秒。
+Item/Skills/6034002/Desc┃每{0}秒，下一个普攻得到强化射程增加{1}%，造成<color=#008000>(实验体等级 * {2})</color>的额外技能伤害。（射程上限{3}m）\n每次普攻时火力延伸的技能冷却时间缩减1秒。
 CharacterState/Group/Name/6034000┃火力延伸
 CharacterState/Group/Desc/6034000┃下一个普攻射程增加，造成额外伤害。
 CharacterState/Group/Name/6034010┃火力延伸
@@ -11319,58 +11286,6 @@ Skill/Group/LobbyDesc/4507000┃在前方地面生成裂痕并造成伤害，使
 Skill/Group/4507000/Name┃<color=yellow>裂痕</color>
 Skill/Code/Desc/4507001┃在前方地面上生成裂痕，{0}秒后造成{1} + <color=#688A08>敌人当前体力的{2}%</color>的伤害并使敌人在{3}秒间陷入晕厥，移动速度在{5}秒间减少{6}%。
 Skill/Code/Coef/4507001┃在前方地面上生成裂痕，{0}秒后造成{1} + 敌人<color=#688A08>当前体力的{2}%</color>的伤害并使敌人在{3}秒间陷入晕厥，移动速度在{5}秒间减少{6}%。
-Skill/Code/Desc/4512001┃使用后向指定位置瞬间移动。
-Skill/Code/Coef/4512001┃使用后向指定位置瞬间移动。
-Skill/Code/Desc/4513001┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
-Skill/Code/Coef/4513001┃使用时可以在自身周围引起地震，使周围敌人{5}秒间的移动速度减少{3}%。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成(<color=white>{2}</color>+<color=green>实验体等级*{7}</color>)的技能伤害。</color>
-Skill/Code/Desc/4514001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后会爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
-Skill/Code/Coef/4514001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
-Skill/Code/Desc/4515001┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#FFFFC2>强化后 : </color>强化射程增加效果。
-Skill/Code/Coef/4515001┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#FFFFC2>强化后 : </color>射程增加效果强化{4}。
-Skill/Code/Desc/4516001┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
-Skill/Code/Coef/4516001┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
-Skill/Code/ExpansionTip/4516001┃<i>根据持有护盾量，成比例增加移动速度。</i>
-Skill/Code/Desc/4517001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Coef/4517001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Desc/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Desc/4519001┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
-Skill/Code/Coef/4519001┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
-Skill/Code/Desc/4523001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
-Skill/Code/Coef/4523001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color> 承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。
-Skill/Code/Desc/4521001┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
-Skill/Code/Coef/4521001┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
-Skill/Code/Desc/4522001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时，将会更新效果。
-Skill/Code/Coef/4522001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时更新效果。
-Skill/Code/ExpansionTip/4522001┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
-Skill/Code/Desc/4520001┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
-Skill/Code/Coef/4520001┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
-Skill/Code/Desc/4512002┃使用后向指定位置瞬间移动。
-Skill/Code/Coef/4512002┃使用后向指定位置瞬间移动。
-Skill/Code/Desc/4513002┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
-Skill/Code/Coef/4513002┃使用时可以在自身周围引起地震，使周围敌人{5}秒间的移动速度减少{3}%。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成(<color=white>{2}</color>+<color=green>实验体等级*{7}</color>)的技能伤害。</color>
-Skill/Code/Desc/4514002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后会爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
-Skill/Code/Coef/4514002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
-Skill/Code/Desc/4515002┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#FFFFC2>强化后 : </color>强化射程增加效果。
-Skill/Code/Coef/4515002┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#FFFFC2>强化后 : </color>射程增加效果强化{4}。
-Skill/Code/Desc/4516002┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
-Skill/Code/Coef/4516002┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
-Skill/Code/ExpansionTip/4516002┃<i>根据持有护盾量，成比例增加移动速度。</i>
-Skill/Code/Desc/4517002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Coef/4517002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Desc/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Desc/4519002┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
-Skill/Code/Coef/4519002┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
-Skill/Code/Desc/4523002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
-Skill/Code/Coef/4523002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color> 承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。
-Skill/Code/Desc/4521002┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
-Skill/Code/Coef/4521002┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
-Skill/Code/Desc/4522002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时，将会更新效果。
-Skill/Code/Coef/4522002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时更新效果。
-Skill/Code/ExpansionTip/4522002┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
-Skill/Code/Desc/4520002┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
-Skill/Code/Coef/4520002┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
 Skill/Code/Desc/4512003┃使用后向指定位置瞬间移动。
 Skill/Code/Coef/4512003┃使用后向指定位置瞬间移动。
 Skill/Code/Desc/4513003┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
@@ -11397,30 +11312,6 @@ Skill/Code/Coef/4522003┃使用时消耗{0}体力，{4}秒间处于誓言状态
 Skill/Code/ExpansionTip/4522003┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
 Skill/Code/Desc/4520003┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
 Skill/Code/Coef/4520003┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
-Skill/Code/Name/4512001┃闪灵
-Skill/Code/Name/4513001┃震裂
-Skill/Code/Name/4514001┃违规者
-Skill/Code/Name/4515001┃赤色风暴
-Skill/Code/Name/4516001┃超越
-Skill/Code/Name/4517001┃极光陀螺
-Skill/Code/Name/4518001┃净化
-Skill/Code/Name/4519001┃羁绊者
-Skill/Code/Name/4523001┃阔步者
-Skill/Code/Name/4521001┃实刃
-Skill/Code/Name/4522001┃虚言
-Skill/Code/Name/4520001┃治愈之风
-Skill/Code/Name/4512002┃闪灵
-Skill/Code/Name/4513002┃震裂
-Skill/Code/Name/4514002┃违规者
-Skill/Code/Name/4515002┃赤色风暴
-Skill/Code/Name/4516002┃超越
-Skill/Code/Name/4517002┃极光陀螺
-Skill/Code/Name/4518002┃净化
-Skill/Code/Name/4519002┃羁绊者
-Skill/Code/Name/4523002┃阔步者
-Skill/Code/Name/4521002┃实刃
-Skill/Code/Name/4522002┃虚言
-Skill/Code/Name/4520002┃治愈之风
 Skill/Code/Name/4512003┃闪灵
 Skill/Code/Name/4513003┃震裂
 Skill/Code/Name/4514003┃违规者
@@ -11445,41 +11336,17 @@ Skill/Group/Name/4523000┃阔步者
 Skill/Group/Name/4521000┃实刃
 Skill/Group/Name/4522000┃虚言
 Skill/Group/Name/4520000┃治愈之风
-TacticalSkillSet/Code/Name/500121┃闪灵
-TacticalSkillSet/Code/Name/500122┃闪灵
 TacticalSkillSet/Code/Name/500123┃闪灵
-TacticalSkillSet/Code/Name/500131┃震裂
-TacticalSkillSet/Code/Name/500132┃震裂
 TacticalSkillSet/Code/Name/500133┃震裂
-TacticalSkillSet/Code/Name/500141┃违规者
-TacticalSkillSet/Code/Name/500142┃违规者
 TacticalSkillSet/Code/Name/500143┃违规者
-TacticalSkillSet/Code/Name/500151┃赤色风暴
-TacticalSkillSet/Code/Name/500152┃赤色风暴
 TacticalSkillSet/Code/Name/500153┃赤色风暴
-TacticalSkillSet/Code/Name/500161┃超越
-TacticalSkillSet/Code/Name/500162┃超越
 TacticalSkillSet/Code/Name/500163┃超越
-TacticalSkillSet/Code/Name/500171┃极光陀螺
-TacticalSkillSet/Code/Name/500172┃极光陀螺
 TacticalSkillSet/Code/Name/500173┃极光陀螺
-TacticalSkillSet/Code/Name/500181┃净化
-TacticalSkillSet/Code/Name/500182┃净化
 TacticalSkillSet/Code/Name/500183┃净化
-TacticalSkillSet/Code/Name/500191┃羁绊者
-TacticalSkillSet/Code/Name/500192┃羁绊者
 TacticalSkillSet/Code/Name/500193┃羁绊者
-TacticalSkillSet/Code/Name/500201┃阔步者
-TacticalSkillSet/Code/Name/500202┃阔步者
 TacticalSkillSet/Code/Name/500203┃阔步者
-TacticalSkillSet/Code/Name/500211┃实刃
-TacticalSkillSet/Code/Name/500212┃实刃
 TacticalSkillSet/Code/Name/500213┃实刃
-TacticalSkillSet/Code/Name/500221┃虚言
-TacticalSkillSet/Code/Name/500222┃虚言
 TacticalSkillSet/Code/Name/500223┃虚言
-TacticalSkillSet/Code/Name/500231┃治愈之风
-TacticalSkillSet/Code/Name/500232┃治愈之风
 TacticalSkillSet/Code/Name/500233┃治愈之风
 CharacterState/Group/Name/6027130┃领悟 - 先锋
 CharacterState/Group/Desc/6027130┃满足属性值条件，已激活先锋。
@@ -11547,23 +11414,23 @@ Skill/Group/ExpansionTip/8000200┃濒死状态恢复失败时，将返还{0}冷
 Skill/Group/ExpansionTip/8000300┃使用技能过程中濒死体力为0时，实验体将立即死亡、无法施加生命崩解伤害。
 Item/Skills/6033001┃光子发射器
 Item/Skills/6033001/Name┃<color=yellow>光子发射器</color>
-Item/Skills/6033001/Body┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#FFD775>(+{2})</color><color=green>(+{3})</color>的额外技能伤害，恢复额外伤害{4}%的体力。
-Item/Skills/6033001/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#FFD775>(+攻击力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害，恢复额外伤害{4}%的体力。
+Item/Skills/6033001/Body┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#FFD775>{1}</color><color=#FFD775>(+{2})</color><color=green>(+{3})</color>的额外技能伤害，恢复额外伤害{4}%的体力。
+Item/Skills/6033001/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#FFD775>{1}</color><color=#FFD775>(+攻击力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害，恢复额外伤害{4}%的体力。
 Item/Skills/6033002/Name┃<color=yellow>光子发射器</color>
 Item/Skills/6033002/Body┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#DDA0DD>{5}</color>的额外技能伤害，恢复额外伤害{4}%的体力。
-Item/Skills/6033002/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#DDA0DD>(+技能增幅的{5}%)</color>的额外技能伤害，恢复额外伤害{4}%的体力。
+Item/Skills/6033002/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#FFD775>{1}</color><color=#DDA0DD>(+技能增幅的{5}%)</color>的额外技能伤害，恢复额外伤害{4}%的体力。
 Item/Skills/6033003/Name┃<color=yellow>光子发射器</color>
 Item/Skills/6033003/Body┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#DDA0DD>{5}</color>的额外技能伤害。
-Item/Skills/6033003/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#DDA0DD>(+技能增幅{5}%)</color>的额外技能伤害。
+Item/Skills/6033003/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#FFD775>{1}</color><color=#DDA0DD>(+技能增幅{5}%)</color>的额外技能伤害。
 Item/Skills/6033004/Name┃<color=yellow>光子发射器</color>
 Item/Skills/6033004/Body┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#FFD775>(+{2})</color><color=green>(+{3})</color>的额外技能伤害。
-Item/Skills/6033004/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成{1}<color=#FFD775>(+攻击力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害。
+Item/Skills/6033004/Desc┃每次普攻命中敌人时可以获得叠层，在持有{0}个叠层的情况下普攻命中敌人时，将消耗全部的叠层，造成<color=#FFD775>{1}</color><color=#FFD775>(+攻击力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害。
 CharacterState/Group/Name/6033000┃光子发射器 - 叠层
 CharacterState/Group/Desc/6033000┃普攻命中，获得了光子发射器叠层。
 Item/Skills/6032001┃激励
 Item/Skills/6032001/Name┃<color=yellow>激励</color>
 Item/Skills/6032001/Body┃对队友适用治愈或护盾技能时，除自身外适用对象的适性值将在{0}秒内增加<color=green>{1}</color>，攻击速度增加{2}%。
-Item/Skills/6032001/Desc┃对队友适用治愈或护盾技能时，除自身外适用对象的适性值将在{0}秒内增加{1}<color=green>(+实验体等级*{2})</color>，攻击速度增加{3}%。
+Item/Skills/6032001/Desc┃对队友适用治愈或护盾技能时，除自身外适用对象的适性值将在{0}秒内增加<color=#FFD775>{1}</color><color=green>(+实验体等级*{2})</color>，攻击速度增加{3}%。
 CharacterState/Group/Name/6032000┃激励
 CharacterState/Group/Desc/6032000┃因队友的激励效果，增加了适性值及攻击速度。
 Item/Skills/6035001┃迅捷
@@ -11575,13 +11442,13 @@ CharacterState/Group/Desc/6035000┃使用个别伤害命中，获得了增加�
 Item/Skills/6036001┃疾风
 Item/Skills/6036001/Name┃<color=yellow>疾风</color>
 Item/Skills/6036001/Body┃{0}秒内使用个别伤害命中敌人实验体3次时，每{6}秒造成相当于<color=#DDA0DD>{2}</color><color=#688A08>(+目标体力上限{3}%)</color>的技能伤害，并生成一个持续{4}秒的龙卷风。\n冷却时间 : {5}秒
-Item/Skills/6036001/Desc┃{0}秒内使用个别伤害命中敌人实验体3次时，每{8}秒造成相当于{2}<color=#DDA0DD>(+技能增幅{3}%)</color><color=#688A08>(+目标体力上限{5}%)</color>的技能伤害，并生成一个持续{6}秒的龙卷风。\n冷却时间 : {7}秒
+Item/Skills/6036001/Desc┃{0}秒内使用个别伤害命中敌人实验体3次时，每{8}秒造成相当于<color=#FFD775>{2}</color><color=#DDA0DD>(+技能增幅{3}%)</color><color=#688A08>(+目标体力上限{5}%)</color>的技能伤害，并生成一个持续{6}秒的龙卷风。\n冷却时间 : {7}秒
 CharacterState/Group/Name/6036000┃疾风
 CharacterState/Group/Desc/6036000┃满足条件，正在激活疾风。
 Item/Skills/6037001┃精准锁定
 Item/Skills/6037001/Name┃<color=yellow>精准锁定</color>
 Item/Skills/6037001/Body┃使敌人实验体陷入移动受损效果时，将赋予敌人持续{0}秒的[标识]。盟友普攻命中被赋予[标识]的目标时，造成<color=green>{1}</color>的额外技能伤害，使盟友恢复<color=green>{2}</color>体力。\n冷却 : {3}秒
-Item/Skills/6037001/Desc┃使敌人实验体陷入移动受损效果时，将赋予敌人持续{0}秒的[标识]。盟友普攻命中被赋予[标识]的目标时，造成{1}<color=green>(+实验体等级*{2})</color>的额外技能伤害，使盟友恢复{3}<color=green>(+实验体等级*{4})</color>体力。\n冷却 : {5}秒
+Item/Skills/6037001/Desc┃使敌人实验体陷入移动受损效果时，将赋予敌人持续{0}秒的[标识]。盟友普攻命中被赋予[标识]的目标时，造成<color=#FFD775>{1}</color><color=green>(+实验体等级*{2})</color>的额外技能伤害，使盟友恢复<color=#FFD775>{3}</color><color=green>(+实验体等级*{4})</color>体力。\n冷却 : {5}秒
 CharacterState/Group/Name/6037010┃精准锁定 - 准备中
 CharacterState/Group/Desc/6037010┃未能激活精准锁定。
 CharacterState/Group/Name/6037000┃精准锁定 - 标识
@@ -11589,7 +11456,7 @@ CharacterState/Group/Desc/6037000┃普攻命中敌人实验体时，将造成�
 Item/Skills/6038001┃碎裂冲击
 Item/Skills/6038001/Name┃<color=yellow>碎裂冲击</color>
 Item/Skills/6038001/Body┃进入战斗状态后，每{0}秒可以为强化普攻蓄能。强化后的普攻将造成<color=#688A08>{1}</color>的额外技能伤害并恢复<color=#688A08>{2}</color>体力。
-Item/Skills/6038001/Desc┃进入战斗状态后，每{0}秒可以为强化普攻蓄能。强化后的普攻将造成{1}<color=#688A08>(+额外体力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害并恢复{4}<color=#688A08>(+额外体力{5}%)</color>体力。
+Item/Skills/6038001/Desc┃进入战斗状态后，每{0}秒可以为强化普攻蓄能。强化后的普攻将造成<color=#FFD775>{1}</color><color=#688A08>(+额外体力{2}%)</color><color=green>(+实验体等级*{3})</color>的额外技能伤害并恢复<color=#FFD775>{4}</color><color=#688A08>(+额外体力{5}%)</color>体力。
 CharacterState/Group/Name/6038000┃碎裂冲击 - 准备结束
 CharacterState/Group/Desc/6038000┃下次普攻将激活碎裂冲击效果。
 CharacterState/Group/Name/6038010┃碎裂冲击 - 蓄力中
@@ -11600,8 +11467,8 @@ Item/Skills/6039001/Body┃当敌人当前体力低于<color=#688A08>敌人体�
 Item/Skills/6039001/Desc┃当敌人当前体力低于<color=#688A08>敌人体力上限{0}%</color>时，自身对目标造成的伤害将增加<color=#ffd775>技能伤害{1}%</color>。
 Item/Skills/6040001┃泰瑟电击
 Item/Skills/6040001/Name┃<color=yellow>泰瑟电击</color>
-Item/Skills/6040001/Body┃当敌人实验体在距离自身8m范围内停留3秒以上时，将强化普攻造成<color=#DDA0DD>{2}</color>的额外技能伤害。被强化普攻命中时，{3}秒内装备者对命中目标造成的技能伤害将增加{4}%。\n冷却 : {5}秒
-Item/Skills/6040001/Desc┃当敌人实验体在距离自身8m范围内停留3秒以上时，将强化普攻造成{2}<color=#DDA0DD>(+技能增幅{4}%)</color>的额外技能伤害。被强化普攻命中时，{5}秒内装备者对命中目标造成的技能伤害将增加{6}%。\n冷却 : {7}秒
+Item/Skills/6040001/Body┃当敌人实验体在距离自身8m范围内停留3秒以上时，将强化普攻造成<color=#DDA0DD>{2}</color>的额外技能伤害。被强化普攻命中时，{3}秒内装备者对命中目标造成的技能伤害量将增加{4}%。\n冷却 : {5}秒
+Item/Skills/6040001/Desc┃当敌人实验体在距离自身8m范围内停留3秒以上时，将强化普攻造成<color=#FFD775>{2}</color><color=#DDA0DD>(+技能增幅{4}%)</color>的额外技能伤害。被强化普攻命中时，{5}秒内装备者对命中目标造成的技能伤害量将增加{6}%。\n冷却 : {7}秒
 CharacterState/Group/Name/6040000┃泰瑟电击
 CharacterState/Group/Desc/6040000┃对完成标记的目标使用普攻时，将激活泰瑟电击效果。
 CharacterState/Group/Name/6040030┃泰瑟电击 - 蓄能中
@@ -11611,7 +11478,7 @@ CharacterState/Group/Desc/6040020┃被泰瑟电击命中，将放大施法者�
 Item/Skills/6041001┃邪恶之雾
 Item/Skills/6041001/Name┃<color=yellow>邪恶之雾</color>
 Item/Skills/6041001/Body┃对敌人实验体施加无法移动效果后，将在敌人实验体被击中的位置生成一个持续{0}秒的区域。位于该区域的敌人防御力减少{1}%，并且每秒对其造成<color=#688A08>{2}</color>的技能伤害。\n冷却 : {4}秒
-Item/Skills/6041001/Desc┃对敌人实验体施加无法移动效果后，将在敌人实验体被击中的位置生成一个持续{0}秒的区域。位于该区域的敌人防御力减少{1}%，并且每秒对其造成{2}<color=#688A08>(+额外体力{3}%)</color>的技能伤害。\n冷却 : {4}秒
+Item/Skills/6041001/Desc┃对敌人实验体施加无法移动效果后，将在敌人实验体被击中的位置生成一个持续{0}秒的区域。位于该区域的敌人防御力减少{1}%，并且每秒对其造成<color=#FFD775>{2}</color><color=#688A08>(+额外体力{3}%)</color>的技能伤害。\n冷却 : {4}秒
 CharacterState/Group/Name/6043000┃邪恶之雾 - 减益
 CharacterState/Group/Desc/6043000┃被作用邪恶之雾效果后，每隔一段时间将承受伤害及防御力减少效果。
 Item/Skills/6042001┃爆能弹
@@ -11622,12 +11489,20 @@ CharacterState/Group/Name/6042000┃爆能弹
 CharacterState/Group/Desc/6042000┃下一次普攻激活爆能弹。
 Item/Skills/6044001┃灵魂收割者
 Item/Skills/6044001/Name┃<color=yellow>灵魂收割者</color>
-Item/Skills/6044001/Body┃使用技能对敌人实验体造成伤害时，将对目标造成<color=#DDA0DD>{0}</color>的额外技能伤害，并留下标识。等待标识持续4秒后再次对其造成技能伤害时，将造成<color=#DDA0DD>{2}</color>的额外技能伤害。\n冷却 : {3}秒
-Item/Skills/6044001/Desc┃使用技能对敌人实验体造成伤害时，将对目标造成{0}<color=#DDA0DD>(+技能增幅{1}%)</color>的额外技能伤害，并留下标识。等待标识持续4秒后再次对其造成技能伤害时，将造成{3}<color=#DDA0DD>(+技能增幅{4}%)</color>的额外技能伤害。\n冷却 : {5}秒
+Item/Skills/6044001/Body┃使用技能对敌人实验体造成伤害时，将对目标造成<color=#DDA0DD>{0}</color>的额外技能伤害，并留下标识。等待标识持续3秒后再次对其造成技能伤害时，将造成<color=#DDA0DD>{2}</color>的额外技能伤害。\n冷却 : {3}秒
+Item/Skills/6044001/Desc┃使用技能对敌人实验体造成伤害时，将对目标造成<color=#FFD775>{0}</color><color=#DDA0DD>(+技能增幅{1}%)</color>的额外技能伤害，并留下标识。等待标识持续3秒后再次对其造成技能伤害时，将造成<color=#FFD775>{3}</color><color=#DDA0DD>(+技能增幅{4}%)</color>的额外技能伤害。\n冷却 : {5}秒
 CharacterState/Group/Name/6044000┃灵魂收割者 - 收割目标
 CharacterState/Group/Desc/6044000┃成为灵魂收割的目标，当承受来自施法者的下一次技能攻击时，将承受更高的伤害。
 CharacterState/Group/Name/6044010┃灵魂收割者 - 收割目标
 CharacterState/Group/Desc/6044010┃完成灵魂收割者标记，下一次来自施法者的技能攻击将带来更高的伤害。
+CharacterState/Group/Name/6045000┃破裂 - 目标
+CharacterState/Group/Desc/6045000┃成为了破裂的目标，将在一定时间后触发爆炸，对自身及周围区域造成伤害。
+CharacterState/Group/Name/6046000┃致命一击 - 就绪
+CharacterState/Group/Desc/6046000┃下一次普攻触发致命一击。
+CharacterState/Group/Name/6046010┃致命一击 - 增加体力上限
+CharacterState/Group/Desc/6046010┃恢复量超过体力上限，暂时增加体力上限。
+CharacterState/Group/Name/6047000┃守护者 - 护盾
+CharacterState/Group/Desc/6047000┃触发守护者获得了护盾。
 CharacterState/Group/Name/2310100┃勇者搭档
 CharacterState/Group/Desc/2310100┃失去同伴后，两人之间的深厚感情使他们在非战斗状态下的体力再生和移动速度都得到了提高。
 CharacterState/Group/Name/2310200┃孤独的狼
@@ -11638,6 +11513,256 @@ CharacterState/Group/Name/2410000┃关键时刻 - 恢复
 CharacterState/Group/Desc/2410000┃一段时间后体力恢复2次。
 CharacterState/Group/Name/2410100┃关键时刻 - 增加移动速度
 CharacterState/Group/Desc/2410100┃增加移动速度
+Skill/Group/Name/4000000┃闪灵
+Skill/Group/LobbyDesc/4000000┃使用后向指定位置移动一段距离。\n\n<color=#ff3399>强化 : </color>使用后，暂时增加移动速度且无视碰撞。
+Skill/Code/Desc/4000001┃使用后向指定位置瞬间移动。\n\n<color=#787808>战术强化组件 : </color><color=#646464>{2}秒间移动速度增加。</color>
+Skill/Code/Coef/4000001┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加{3}%，无视碰撞。</color>
+Skill/Code/ExpansionTip/4000001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4000002┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加。</color>
+Skill/Code/Coef/4000002┃使用后向指定位置瞬间移动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{2}秒间移动速度增加{3}%，无视碰撞。</color>
+Skill/Code/ExpansionTip/4000002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4512001┃使用后向指定位置瞬间移动。
+Skill/Code/Coef/4512001┃使用后向指定位置瞬间移动。
+Skill/Code/Desc/4512002┃使用后向指定位置瞬间移动。
+Skill/Code/Coef/4512002┃使用后向指定位置瞬间移动。
+CharacterState/Group/Name/4000000┃加速
+CharacterState/Group/Desc/4000000┃无视碰撞，移动速度增加。
+Skill/Group/Name/4001000┃震裂
+Skill/Group/LobbyDesc/4001000┃使用后降低附近敌人的移动速度。\n\n<color=#ff3399>强化 : </color>在一定时间内对周围的敌人造成伤害。
+Skill/Code/Desc/4001001┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成{2}的技能伤害。</color>
+Skill/Code/Coef/4001001┃使用时可以在自身周围引起地震，使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成({2}+实验体等级*{7})的技能伤害。</color>
+Skill/Code/ExpansionTip/4001001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4001002┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成{2}的技能伤害。</color>
+Skill/Code/Coef/4001002┃使用时可以在自身周围引起地震，使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒内，每{4}秒对周围{6}m内的敌人造成({2}实验体等级*{7})的技能伤害。</color>
+Skill/Code/ExpansionTip/4001002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4513001┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
+Skill/Code/Coef/4513001┃使用时可以在自身周围引起地震，使周围敌人{5}秒间的移动速度减少{3}%。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成(<color=white>{2}</color>+<color=green>实验体等级*{7}</color>)的技能伤害。</color>
+Skill/Code/Desc/4513002┃使用后使周围敌人移动速度减少{3}%，持续{5}秒。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成<color=white>{2}</color>的技能伤害。</color>
+Skill/Code/Coef/4513002┃使用时可以在自身周围引起地震，使周围敌人{5}秒间的移动速度减少{3}%。\n\n<color=#FFFFC2>强化后 : </color>{1}秒内，每{4}秒对周围{6}m内的敌人造成(<color=white>{2}</color>+<color=green>实验体等级*{7}</color>)的技能伤害。</color>
+CharacterState/Group/Name/4001010┃震裂
+CharacterState/Group/Desc/4001010┃受到巨大冲击，移动速度减少。
+CharacterState/Group/Name/4001000┃巨震
+CharacterState/Group/Desc/4001000┃持续地震对敌人造成伤害。
+Skill/Group/Name/4101000┃违规者
+Skill/Group/LobbyDesc/4101000┃改装E.M.O.T.E爆炸时，能够增加盟友体力并增加敌人承受伤害。\n\n<color=#ff3399>强化 : </color> 赋予更强的效果。
+Skill/Code/Desc/4101001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后将会发生爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
+Skill/Code/Coef/4101001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)的同时，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
+Skill/Code/ExpansionTip/4101001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4101002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后将会发生爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
+Skill/Code/Coef/4101002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，敌人承受伤害增加<color=white>{2}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>大幅增加效果。</color>
+Skill/Code/ExpansionTip/4101002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4514001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后会爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
+Skill/Code/Coef/4514001┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
+Skill/Code/Desc/4514002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在一段时间后会爆炸，{4}秒间使周围盟友体力增加<color=white>{1}</color>，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
+Skill/Code/Coef/4514002┃在指定位置召唤改装E.M.O.T.E。\n召唤的E.M.O.T.E在{4}秒后会爆炸，{6}秒间使周围盟友体力增加(<color=white>{5}</color>+<color=green>实验体级别*{1}</color>)，减少敌人<color=white>{2}</color>防御力。\n\n<color=#FFFFC2>强化后 : </color>大幅增加效果。
+CharacterState/Group/Name/4101000┃有益物
+CharacterState/Group/Desc/4101000┃增加了体力上限。
+CharacterState/Group/Name/4101010┃有害物
+CharacterState/Group/Desc/4101010┃承受伤害增加了。
+Skill/Group/Name/4102000┃赤色风暴
+Skill/Group/LobbyDesc/4102000┃使用时短距离移动，暂时增加普攻射程。\n\n<color=#ff3399>强化 : </color>强化射程增加效果。
+Skill/Code/Desc/4102001┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>强化射程增加效果。</color>
+Skill/Code/Coef/4102001┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#565730>战术强化组件 : </color><color=#595959>射程增加效果强化{4}。</color>
+Skill/Code/ExpansionTip/4102001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4102002┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>强化射程增加效果。</color>
+Skill/Code/Coef/4102002┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#565730>战术强化组件 :  </color><color=#595959>射程增加效果强化{4}。</color>
+Skill/Code/ExpansionTip/4102002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4515001┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#FFFFC2>强化后 : </color>强化射程增加效果。
+Skill/Code/Coef/4515001┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#FFFFC2>强化后 : </color>射程增加效果强化{4}。
+Skill/Code/Desc/4515002┃使用后按照鼠标方向移动<color=white>{1}m</color>，普攻射程暂时增加{2}%。\n\n<color=#FFFFC2>强化后 : </color>强化射程增加效果。
+Skill/Code/Coef/4515002┃使用后按照鼠标方向移动<color=white>{1}m</color>，{3}秒间处于静电状态，普攻射程增加{2}%。\n持续时间结束时解除静电状态。\n\n<color=#FFFFC2>强化后 : </color>射程增加效果强化{4}。
+CharacterState/Group/Name/4102000┃静电
+CharacterState/Group/Desc/4102000┃增加普攻射程。
+Skill/Group/Name/4103000┃超越
+Skill/Group/LobbyDesc/4103000┃能够提供强大的护盾并吸收爆发性的伤害。\n\n<color=#ff3399>强化 : </color>持有护盾时，获得额外的移动速度。
+Skill/Code/Desc/4103001┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 :</color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%</color>
+Skill/Code/Coef/4103001┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
+Skill/Code/ExpansionTip/4103001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4103002┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
+Skill/Code/Coef/4103002┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)护盾，持续{0}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>持有护盾时的情况下，移动速度增加{2}~{3}%。</color>
+Skill/Code/ExpansionTip/4103002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4516001┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
+Skill/Code/Coef/4516001┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
+Skill/Code/ExpansionTip/4516001┃<i>根据持有护盾量，成比例增加移动速度。</i>
+Skill/Code/Desc/4516002┃使用后获得<color=white>{1}</color>护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
+Skill/Code/Coef/4516002┃使用后获得(<color=white>{1}</color>+<color=#688a08>额外体力{4}</color>)的护盾，持续{0}秒。\n\n<color=#FFFFC2>强化后 : </color>持有护盾时的情况下，移动速度增加{2}~{3}%。
+Skill/Code/ExpansionTip/4516002┃<i>根据持有护盾量，成比例增加移动速度。</i>
+CharacterState/Group/Name/4103000┃超越 - 伤害无力
+CharacterState/Group/Desc/4103000┃生成和额外体力值成比例的护盾。
+CharacterState/Group/Name/4103010┃超越 - 血力
+CharacterState/Group/Desc/4103010┃和所持护盾成比例，增加移动速度。
+Skill/Group/Name/4104000┃极光陀螺
+Skill/Group/LobbyDesc/4104000┃暂时陷入凝滞状态，不会受到任何干扰。\n\n<color=#ff3399>强化 : </color>凝滞状态下，快速缩减自身技能冷却。
+Skill/Code/Desc/4104001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
+Skill/Code/Coef/4104001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
+Skill/Code/ExpansionTip/4104001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4104002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
+Skill/Code/Coef/4104002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#565730>战术强化组件 : </color><color=#595959>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。</color>
+Skill/Code/ExpansionTip/4104002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4517001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
+Skill/Code/Coef/4517001┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
+Skill/Code/Desc/4517002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
+Skill/Code/Coef/4517002┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
+CharacterState/Group/Name/4104000┃凝滞
+CharacterState/Group/Desc/4104000┃因极光陀螺处于凝滞状态。
+Skill/Group/Name/4105000┃净化
+Skill/Group/LobbyDesc/4105000┃立即解除负面效果，增加移动速度。\n\n<color=#ff3399>强化 : </color>使用后暂时处于免疫所有负面效果状态。
+Skill/Code/Desc/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Code/Coef/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Code/ExpansionTip/4105001┃<i>增加的移动速度在持续一段时间后逐渐恢复。</i>\n\n<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Code/Coef/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Code/ExpansionTip/4105002┃<i>增加的移动速度在持续一段时间后逐渐恢复。</i>\n\n<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+CharacterState/Group/Name/4105000┃免疫所有负面效果
+CharacterState/Group/Desc/4105000┃免疫所有负面效果。
+CharacterState/Group/Name/4105010┃移动速度增加 - 净化
+CharacterState/Group/Desc/4105010┃因净化移动速度增加。
+Skill/Group/Name/4107000┃羁绊者
+Skill/Group/LobbyDesc/4107000┃当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，赋予周围盟友移动速度和吸血-所有伤害效果。\n\n<color=#ff3399>强化 : </color> 获得更多能量。
+Skill/Code/Desc/4107001┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
+Skill/Code/Coef/4107001┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用时消耗所有能量，{4}秒周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，赋予(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
+Skill/Code/ExpansionTip/4107001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4107002┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
+Skill/Code/Coef/4107002┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>增加蓄能上限及能量的获得率。</color>
+Skill/Code/ExpansionTip/4107002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4519001┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
+Skill/Code/Coef/4519001┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
+Skill/Code/Desc/4519002┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
+Skill/Code/Coef/4519002┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
+CharacterState/Group/Name/4107000┃羁绊者 - 愤怒
+CharacterState/Group/Desc/4107000┃当自身或一定距离内实验体因其他实验体承受伤害时蓄能。
+CharacterState/Group/Name/4107010┃羁绊者 - 守护
+CharacterState/Group/Desc/4107010┃增加了吸血-所有伤害和移动速度。
+CharacterState/Group/Name/4107020┃羁绊者 - 不受影响
+CharacterState/Group/Desc/4107020┃受羁绊效果影响，一段时间内不会适用羁绊效果。
+Skill/Group/Name/4114000┃阔步者
+Skill/Group/LobbyDesc/4114000┃使用后，增加移向敌人实验体时的移动速度，在持续时间内对敌人造成伤害时，将造成额外技能伤害并结束效果。\n\n<color=#ff3399>强化 : </color> 减少承受阔步者伤害目标的移动速度。
+Skill/Code/Desc/4114001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。</color>
+Skill/Code/Coef/4114001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。</color>
+Skill/Code/ExpansionTip/4114001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4114002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。</color>
+Skill/Code/Coef/4114002┃使用后，移向敌人时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#565730>战术强化组件 : </color><color=#595959>承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。</color>。</color>
+Skill/Code/ExpansionTip/4114002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+CharacterState/Group/Name/4114000┃阔步者
+CharacterState/Group/Desc/4114000┃增加移动速度。
+CharacterState/Group/Name/4114020┃阔步者 - 击打
+CharacterState/Group/Desc/4114020┃移动速度减少。
+Skill/Code/Desc/4523001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
+Skill/Code/Coef/4523001┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color> 承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。
+Skill/Code/Desc/4523002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
+Skill/Code/Coef/4523002┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成(<color=white>{6}</color>+<color=green>实验体级别*{7}</color>)额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color> 承受阔步者伤害目标的移动速度减少{4}秒({11}近战 {8}%{13} | {12}远程 {9}%{14})。
+Skill/Group/Name/4112000┃实刃
+Skill/Group/LobbyDesc/4112000┃使用后对周围敌人造成伤害，并根据承受伤害的敌人数增加一定比例的移动速度。\n\n<color=#ff3399>强化 : </color>增加对目标造成的伤害。
+Skill/Code/Desc/4112001┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n并根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
+Skill/Code/Coef/4112001┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
+Skill/Code/ExpansionTip/4112001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4112002┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
+Skill/Code/Coef/4112002┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#565730>战术强化组件 : </color><color=#595959>对目标造成的伤害增加{3}%。</color>
+Skill/Code/ExpansionTip/4112002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4521001┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
+Skill/Code/Coef/4521001┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
+Skill/Code/Desc/4521002┃使用时对周围敌人造成<color=white>{0}</color>技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
+Skill/Code/Coef/4521002┃使用时对周围敌人造成<color=white>{0}</color><color=green>(+实验体级别*{8})</color>的技能伤害。\n根据承受伤害的敌人数量，移动速度增加{4}~{5}%，持续{6}秒。\n\n<color=#FFFFC2>强化后 : </color>对目标造成的伤害增加{3}%。
+CharacterState/Group/Name/4112000┃实刃 - 投射
+CharacterState/Group/Desc/4112000┃真理对敌人造成伤害，实验体的移动速度增加了。
+CharacterState/Group/Name/4112010┃实刃 - 丧失
+CharacterState/Group/Desc/4112010┃被真理刺穿，承受伤害增加。
+Skill/Group/Name/4113000┃虚言
+Skill/Group/LobbyDesc/4113000┃消耗体力并增加所有伤害。消耗的体力会慢慢恢复。\n\n<color=#ff3399>强化 : </color>参与击杀敌人时，更新效果。
+Skill/Code/Desc/4113001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时，将会更新效果。</color>
+Skill/Code/Coef/4113001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
+Skill/Code/ExpansionTip/4113001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>\n\n<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
+Skill/Code/Desc/4113002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
+Skill/Code/Coef/4113002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#565730>战术强化组件 : </color><color=#595959>击杀实验体或助攻时更新效果。</color>
+Skill/Code/ExpansionTip/4113002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>\n\n<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
+Skill/Code/Desc/4522001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时，将会更新效果。
+Skill/Code/Coef/4522001┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时更新效果。
+Skill/Code/ExpansionTip/4522001┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
+Skill/Code/Desc/4522002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒逐渐恢复{2}的体力，所有伤害增加{3}%。\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时，将会更新效果。
+Skill/Code/Coef/4522002┃使用时消耗{0}体力，{4}秒间处于誓言状态。\n誓言状态下，每秒恢复<color=#8ef165>({11}近战 {2}~{5}{13} ｜ {12}远程 {7}~{9}{14})</color>体力，所有伤害增加<color=#ffd775>({11}近战 {3}~{6}%{13} ｜ {12}远程 {8}~{10}%{14})</color>\n誓言持续期间内，效果逐渐增强。\n\n<color=#FFFFC2>强化后 : </color>击杀实验体或助攻时更新效果。
+Skill/Code/ExpansionTip/4522002┃<i>使用誓言期间，体力不会减少至体力上限的{0}%。</i>
+CharacterState/Group/Name/4113000┃虚言 - 誓言
+CharacterState/Group/Desc/4113000┃因虚言承受伤害，获得了体力再生、伤害量增加。
+Skill/Group/Name/4108000┃治愈之风
+Skill/Group/LobbyDesc/4108000┃恢复范围内盟友的体力。\n\n<color=#ff3399>强化 : </color>增加被风扫过盟友的防御力。
+Skill/Code/Desc/4108001┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
+Skill/Code/Coef/4108001┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
+Skill/Code/ExpansionTip/4108001┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4108002┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
+Skill/Code/Coef/4108002┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#565730>战术强化组件 : </color><color=#595959>被风扫过的实验体{5}秒内防御力增加{4}。</color>
+Skill/Code/ExpansionTip/4108002┃<i>强化至3级需要使用<color=#b245ff>战术强化组件</color>。</i>
+Skill/Code/Desc/4520001┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
+Skill/Code/Coef/4520001┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
+Skill/Code/Desc/4520002┃范围内盟友的体力恢复<color=white>{1}</color>。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
+Skill/Code/Coef/4520002┃范围内盟友的体力恢复(<color=white>{1}</color>+<color=green>实验体级别*{6}</color>)。\n恢复后，{2}秒内仅适用治愈之风恢复效果的{3}%。\n\n<color=#FFFFC2>强化后 : </color>被风扫过的实验体{5}秒内防御力增加<color=white>{4}</color>。
+CharacterState/Group/Name/4108000┃治愈之风 - 守护
+CharacterState/Group/Desc/4108000┃因治愈之风增加了防御力。
+CharacterState/Group/Name/4108010┃治愈之风 - 介入
+CharacterState/Group/Desc/4108010┃因不同的风导致治愈效果减少了。
+Skill/Code/Name/4512001┃闪灵
+Skill/Code/Name/4513001┃震裂
+Skill/Code/Name/4514001┃违规者
+Skill/Code/Name/4515001┃赤色风暴
+Skill/Code/Name/4516001┃超越
+Skill/Code/Name/4517001┃极光陀螺
+Skill/Code/Name/4518001┃净化
+Skill/Code/Name/4519001┃羁绊者
+Skill/Code/Name/4523001┃阔步者
+Skill/Code/Name/4521001┃实刃
+Skill/Code/Name/4522001┃虚言
+Skill/Code/Name/4520001┃治愈之风
+Skill/Code/Name/4512002┃闪灵
+Skill/Code/Name/4513002┃震裂
+Skill/Code/Name/4514002┃违规者
+Skill/Code/Name/4515002┃赤色风暴
+Skill/Code/Name/4516002┃超越
+Skill/Code/Name/4517002┃极光陀螺
+Skill/Code/Name/4518002┃净化
+Skill/Code/Name/4519002┃羁绊者
+Skill/Code/Name/4523002┃阔步者
+Skill/Code/Name/4521002┃实刃
+Skill/Code/Name/4522002┃虚言
+Skill/Code/Name/4520002┃治愈之风
+Skill/Group/Name/4512000┃闪灵
+Skill/Group/Name/4513000┃震裂
+Skill/Group/Name/4514000┃违规者
+Skill/Group/Name/4515000┃赤色风暴
+Skill/Group/Name/4516000┃超越
+Skill/Group/Name/4517000┃极光陀螺
+Skill/Group/Name/4518000┃净化
+Skill/Group/Name/4519000┃羁绊者
+Skill/Group/Name/4523000┃阔步者
+Skill/Group/Name/4521000┃实刃
+Skill/Group/Name/4522000┃虚言
+Skill/Group/Name/4520000┃治愈之风
+TacticalSkillSet/Code/Name/500121┃闪灵
+TacticalSkillSet/Code/Name/500122┃闪灵
+TacticalSkillSet/Code/Name/500131┃震裂
+TacticalSkillSet/Code/Name/500132┃震裂
+TacticalSkillSet/Code/Name/500141┃违规者
+TacticalSkillSet/Code/Name/500142┃违规者
+TacticalSkillSet/Code/Name/500151┃赤色风暴
+TacticalSkillSet/Code/Name/500152┃赤色风暴
+TacticalSkillSet/Code/Name/500161┃超越
+TacticalSkillSet/Code/Name/500162┃超越
+TacticalSkillSet/Code/Name/500171┃极光陀螺
+TacticalSkillSet/Code/Name/500172┃极光陀螺
+TacticalSkillSet/Code/Name/500181┃净化
+TacticalSkillSet/Code/Name/500182┃净化
+TacticalSkillSet/Code/Name/500191┃羁绊者
+TacticalSkillSet/Code/Name/500192┃羁绊者
+TacticalSkillSet/Code/Name/500201┃阔步者
+TacticalSkillSet/Code/Name/500202┃阔步者
+TacticalSkillSet/Code/Name/500211┃实刃
+TacticalSkillSet/Code/Name/500212┃实刃
+TacticalSkillSet/Code/Name/500221┃虚言
+TacticalSkillSet/Code/Name/500222┃虚言
+TacticalSkillSet/Code/Name/500231┃治愈之风
+TacticalSkillSet/Code/Name/500232┃治愈之风
 보유하지 않은 캐릭터입니다.┃此实验体尚未解锁。\n请在商店中购买后以进行使用。
 매칭 중 캐릭 변경 금지┃在匹配过程中无法更换实验体。
 로딩 중┃正在加载中\n<按X键休息>
@@ -11999,6 +12124,7 @@ mainMenu/Store┃商店
 mainMenu/Loot┃制作所
 mainMenu/Collection┃收藏库
 mainMenu/Guide┃指南
+mainMenu/Tutorial┃教程
 mainMenu/Challenge┃挑战
 mainMenu/Infomation┃情报
 subMenu/Inventory/Character┃实验体
@@ -12052,6 +12178,7 @@ Esc/MatchCancel┃取消匹配
 Esc/Exit┃离开
 Esc/Close┃关闭
 Esc/Minimize┃最小化
+년월일┃{0}/{1}/{2}
 분┃分
 초┃秒
 로비┃大厅
@@ -12198,15 +12325,16 @@ ER패스 미해금 미션┃解锁还剩 {0}
 단계 2┃II
 단계 3┃III
 단계 4┃IV
-IRON_SUBJECT┃铁阎
-BRONZE_SUBJECT┃铜魂
-SILVER_SUBJECT┃银烙
-GOLD_SUBJECT┃金魄
-PLATINUM_SUBJECT┃修罗
-DIAMOND_SUBJECT┃灭钻
+IRON┃铁阎
+BRONZE┃铜魂
+SILVER┃银烙
+GOLD┃金魄
+PLATINUM┃修罗
+DIAMOND┃灭钻
+METEORITE┃星陨
 MITHRIL┃无瑕
 DEMIGOD┃半神
-THE_ETERNITY┃永恒
+ETERNITY┃永恒
 UNRANK┃段位未鉴定
 일반┃一般
 NORMAL┃一般
@@ -12245,8 +12373,6 @@ Rank_Introduce02┃在每场对局中获得排位分(RP)提升排名。
 Rank_Introduce03┃以预先组队排名最高的队友为准进行对局。
 Rank_Introduce04┃根据匹配前形成的队伍人数调整入场费。
 Rank_Introduce05┃放弃游戏或逃跑时，将失去对局中获得的RP并扣取2倍入场费。
-Rank_SeeMore┃查看详情
-RankDetailedManagementSystem┃排位详细运行方式
 RankKillRP┃排名 / 击杀分数
 Rank┃排名
 RankRP┃生存
@@ -12254,8 +12380,6 @@ Kill_AssistRP/Elimination┃完全击杀
 Kill_AssistRP/Down┃濒死
 Kill_AssistRP/RepeatDown┃不包括重复濒死
 Kill_AssistRP/BattleZoneDown┃战场
-SeeEntryCostRP┃查看入场费
-EntryCostRP/FromMithril┃每100 RP增加2
 RankEnd_MatchSummary┃对局概要
 RankEnd_ScoreSum┃换算分数
 RankEnd_EntryFee┃入场费 : {0}{1}
@@ -12292,30 +12416,29 @@ RankEnd_EntryFeeAdditionalDeduction_Desc┃因放弃游戏扣除两倍入场费�
 배치고사 중┃分段赛
 강등┃降级
 승급!┃升级
-TierRP/IRON_SUBJECT┃<color=#807D7D>{0}RP</color>
-TierRP/BRONZE_SUBJECT┃<color=#9B5F3F>{0}RP</color>
-TierRP/SILVER_SUBJECT┃<color=#99AEC7>{0}RP</color>
-TierRP/GOLD_SUBJECT┃<color=#BE8A44>{0}RP</color>
-TierRP/PLATINUM_SUBJECT┃<color=#33A3AA>{0}RP</color>
-TierRP/DIAMOND_SUBJECT┃<color=#CFBCD7>{0}RP</color>
+TierRP/IRON┃<color=#807D7D>{0}RP</color>
+TierRP/BRONZE┃<color=#9B5F3F>{0}RP</color>
+TierRP/SILVER┃<color=#99AEC7>{0}RP</color>
+TierRP/GOLD┃<color=#BE8A44>{0}RP</color>
+TierRP/PLATINUM┃<color=#33A3AA>{0}RP</color>
+TierRP/DIAMOND┃<color=#CFBCD7>{0}RP</color>
 TierRP/MITHRIL┃<color=#6CE6E5>{0}RP</color>
 TierRP/DEMIGOD┃<color=#CBE5C7>Top 700</color>
-TierRP/THE_ETERNITY┃<color=#FD5F81>Top 200</color>
-MyTierRP/IRON_SUBJECT┃<color=#C6C6C6>当前段位</color>
-MyTierRP/BRONZE_SUBJECT┃<color=#E9964C>当前段位</color>
-MyTierRP/SILVER_SUBJECT┃<color=#C7CCE6>当前段位</color>
-MyTierRP/GOLD_SUBJECT┃<color=#FBD787>当前段位</color>
-MyTierRP/PLATINUM_SUBJECT┃<color=#8AE3A8>当前段位</color>
-MyTierRP/DIAMOND_SUBJECT┃<color=#F4F2FC>当前段位</color>
+TierRP/ETERNITY┃<color=#FD5F81>Top 200</color>
+MyTierRP/IRON┃<color=#C6C6C6>当前段位</color>
+MyTierRP/BRONZE┃<color=#E9964C>当前段位</color>
+MyTierRP/SILVER┃<color=#C7CCE6>当前段位</color>
+MyTierRP/GOLD┃<color=#FBD787>当前段位</color>
+MyTierRP/PLATINUM┃<color=#8AE3A8>当前段位</color>
+MyTierRP/DIAMOND┃<color=#F4F2FC>当前段位</color>
 MyTierRP/MITHRIL┃<color=#D4FFFF>当前段位</color>
 MyTierRP/DEMIGOD┃<color=#FFFFF3>当前段位</color>
-MyTierRP/THE_ETERNITY┃<color=#FDFBEF>当前段位</color>
+MyTierRP/ETERNITY┃<color=#FDFBEF>当前段位</color>
 RankRP_explanation┃根据对局排名获得的分数。
 Elimination_explanation┃当敌人队伍全灭且无法自动复活时，\n击杀处于濒死状态的敌人时获得的分数。
 Down_explanation┃将敌人置于濒死状态时获得的分数。
 BattleZoneDown_explanation┃战场击杀敌人获得的分数。
 유예포인트┃宽限点数 : {0}
-데미갓,이터니티 유예설명┃每场对局可以获得3个宽限点数(上限 : 15点数)。\n1天以上不玩游戏时，每天扣除1个点数。\n当宽限点数变为0时，从次日起每天扣除100RP。
 휴면강등적용티어의유예포인트설명┃每场对局可以获得{0}个宽限点数。（上限 : {1}点）\n{2}天以上不玩游戏时，每{3}天扣除{4}点。\n当宽限点数变为0时，从次日起每日扣除{5}RP。
 DecayWarning/PopupContents┃宽限点数即将到期或已到期。\n开始休眠降级时，RP将会下降并有段位降级可能。
 DeferPointDemotion/PopupContents┃宽限点数已耗尽，降级至{0}段位。\n进行排位游戏后即可获得宽限点数，解除休眠状态。
@@ -12916,6 +13039,7 @@ SP 재생┃耐力值再生
 채집┃采集
 항공 보급┃航空补给
 항공 보급 상자┃航空补给箱
+초월 보급 상자┃超凡补给箱
 전설 보급 상자┃传说补给箱
 영웅 보급 상자┃英雄补给箱
 음식 보급 상자┃食物补给箱
@@ -13149,6 +13273,7 @@ NOTICE┃通知
 감마┃伽玛
 게임포기안내┃已退出游戏。
 마지막금지구역안내┃禁止区域已选定。航空补给到达。
+System/FlaregunUsed┃有人使用了信号枪！
 WickelineUI_WaitTooltip┃距离维克莱恩博士出现所剩时间。
 WickelineUI_ReadyTooltip┃维克莱恩博士开始出动。
 오브젝트생성지역┃地区 : {0}
@@ -13179,6 +13304,9 @@ WickelineUI_ReadyTooltip┃维克莱恩博士开始出动。
 전장생성노티┃战场开始
 전장생성┃{0}战场已激活。
 크루즈가동노티┃距离启动逃生潜艇还剩一分钟
+플레어건사용노티┃发射信号枪！
+플레어건R기능┃有人设置了超凡补给箱的降落位置
+플레어건B기능┃{0}区域被设为超凡补给箱降落位置
 더미알파생성┃1分钟后，阿尔法将在{0}出现。
 더미오메가생성┃1分钟后，奥米加将在{0}出现。
 더미알파생성완료┃阿尔法出现在{0}区域。
@@ -14346,6 +14474,7 @@ Shortcut/Popup/ExistKey┃<color=#FFB62F>[{0}]</color>当前快捷键已在使�
 새로고침 횟수제한 안내┃更新次数已用尽，无法继续更新了。
 새로고침 쿨타임 표기┃{0}秒后可以再次使用。
 개인 상점 진입 불가 안내┃现在无法使用我的专属商店。
+개인 상점 기간 만료 안내┃专属商店每日更新期间无法进行操作。
 보유 중┃<color=#C67D3C>拥有</color>
 구매 제한 초과┃超过购买上限
 공개 예정┃预计后续发布
@@ -14675,6 +14804,7 @@ SeasonPassIcon/10┃Img_SeasonPack10_box_02
 SeasonPassIcon/11┃Img_SeasonPack11_box_02
 SeasonPassIcon/12┃Img_SeasonPack12_Box
 SeasonPassIcon/13┃Img_SeasonPack13_Box
+SeasonPassIcon/14┃Img_SeasonPack14_Box
 다시보지 않기┃不再显示
 오늘 다시 보지 않기┃今日不再显示
 한정판 스킨┃限定版皮肤
@@ -14787,7 +14917,7 @@ ToastMessage/Escape1018┃第3天后可以从死亡的队友身上获得再生�
 ToastMessage/Escape1019┃只有最后1支队伍幸存的情况下才能启动潜水艇控制台。
 ToastMessage/Escape1020┃首次制作逃生手环并进行逃生投票后可以移动。
 ToastMessage/Escape1021┃因有队员正在参与战场而无法移动。
-ToastMessage/Escape1022┃从第三天起可以呼叫逃生手环。
+ToastMessage/Escape1022┃从第四天起可以呼叫逃生手环。
 ToastMessage/Escape1023┃当前幸存者数较少，无法购买逃生手环。
 ToastMessage/Escape1024┃仅在有队友死亡时才能购买。
 ToastMessage/Escape1025┃有人成功逃生，无法购买逃生手环。
@@ -15017,6 +15147,7 @@ EP 토큰 구매┃购买EP代币
 일주일 무료 캐릭터 툴팁┃查看期间内可以免费体验的角色。
 초보자용 추천 캐릭터┃新手推荐角色
 보유하지 않은 기간 무료 실험체입니다.┃非当前期间免费角色。
+초보자 추천 캐릭터┃新手推荐
 재접속┃重新连接
 로비로 이동┃移动至大厅
 재접속 팝업 내용┃游戏仍在进行中。请重新连接。
@@ -15041,6 +15172,7 @@ EP 토큰 상점에서 구매 가능┃可在EP代币商店中购买。
 스킨을 시즌10 보상으로 획득 가능┃该皮肤为非卖品 (赛季S1奖励)
 스킨을 시즌11 보상으로 획득 가능┃该皮肤为非卖品 (赛季S2奖励)
 스킨을 시즌12 보상으로 획득 가능┃该皮肤为非卖品 (赛季S3奖励)
+스킨을 시즌13 보상으로 획득 가능┃该皮肤为非卖品 (赛季S4奖励)
 스킨을 DROPS 보상으로 획득 가능┃此皮肤可通过掉宝奖励获得。
 스킨을 GEFORCE NOW 보상으로 획득 가능┃此皮肤可通过GeForce Now活动获得。
 이모티콘을 시즌1 보상으로 획득 가능┃该表情为非卖品 (EA赛季S1奖励)
@@ -15055,6 +15187,7 @@ EP 토큰 상점에서 구매 가능┃可在EP代币商店中购买。
 이모티콘을 시즌10 보상으로 획득 가능┃该表情为非卖品 (赛季S1奖励)
 이모티콘을 시즌11 보상으로 획득 가능┃该表情为非卖品 (赛季S2奖励)
 이모티콘을 시즌12 보상으로 획득 가능┃该表情为非卖品 (赛季S3奖励)
+이모티콘을 시즌13 보상으로 획득 가능┃该表情为非卖品 (赛季S4奖励)
 이모티콘을 DROPS 보상으로 획득 가능┃该表情可通过掉宝奖励获得。
 이모티콘을 GEFORCE NOW 보상으로 획득 가능┃该表情可通过GeForce Now活动获得。
 이모티콘을 이벤트로 획득 가능┃该表情可通过作为活动奖励获得。
@@ -15073,6 +15206,7 @@ EP 토큰 상점에서 구매 가능┃可在EP代币商店中购买。
 엠블럼을 시즌10 보상으로 획득 가능┃非卖品 (赛季S1奖励)
 엠블럼을 시즌11 보상으로 획득 가능┃非卖品 (赛季S2奖励)
 엠블럼을 시즌12 보상으로 획득 가능┃非卖品 (赛季S3奖励)
+엠블럼을 시즌13 보상으로 획득 가능┃非卖品 (赛季S4奖励)
 엠블럼을 이벤트로 획득 가능┃该物品可以作为活动奖励获得。
 엠블럼을 배틀패스 구매 가능┃ER通行证{0}达到{1}等级时可以获得该物品。
 엠블럼을 시즌패스 구매 가능┃该物品可以通过赛季包获得。
@@ -15876,6 +16010,7 @@ SeasonToBeAdded/Name┃新赛季\n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})已终止对话。
 100001_Title┃赛季S3签到簿
 100002_Title┃赛季S4签到簿
+100003_Title┃赛季S5签到簿
 10000101_7_Title┃<维德瑞娜 喝饱饱>组合
 10000101_7_Desc┃- <维德瑞娜 喝饱饱>头像\n- <维德瑞娜 喝饱饱>表情
 10000101_14_Title┃皮肤DATA箱子组
@@ -15994,7 +16129,18 @@ EVENT 포인트 증가 불가┃购买积分数量不能再增加了
 이벤트 패스 포인트┃积分
 진행중인 이벤트 패스가 없습니다.┃目前没有正在进行的通行证
 Season1000/Name┃一周年纪念通行证
+Season1001/Name┃梦精灵通行证
+Season2000/Name┃一周年A-Coin通行证
+HiddenPassPath/2000┃<color=#FFBB00>购买[选择券组合包Ⅲ]</color>后激活。
 Entry┃补给品
+Signature┃这很特别ヾ(๑╹▽╹)ﾉ"
+MonsterGroupDrop/1┃变异体群 - 鸡
+MonsterGroupDrop/101┃变异体群 - 野猪
+MonsterGroupDrop/201┃变异体群 - 野狗
+MonsterGroupDrop/301┃变异体群 - 狼
+MonsterGroupDrop/302┃群体 - 狼
+MonsterGroupDrop/401┃变异体群 - 熊
+MonsterGroupDrop/10001┃变异体群 - 钴协议
 ItemType/CHARACTER/Name┃实验体
 ItemType/EVENT_NP/Name┃活动NP
 ItemType/RANDOM_BOX/Name┃箱子
@@ -16062,6 +16208,7 @@ LootRandomBoxWindow/Btn_Once┃开启
 LootRandomBoxWindow/Btn_All┃开启10次
 전체보상 정보보기┃全部奖励
 LootRandomBoxWindow/RefundAgreement┃开箱使用的DATA箱子和钥匙无法退款。
+LootRandomBoxWindow/UnOpenedBox┃您当前还有尚未领取的奖励。
 상자 구성품 확인 툴팁┃点击查看可以获得的奖励。
 구매할 상품을 선택하세요.┃请选择要购买的商品。
 잠금 상태 알림┃已锁定
@@ -16268,9 +16415,9 @@ Goods/Name/9999998┃未解锁皮肤补给券 <#00ffee>No.02</color>
 Goods/Name/3119001┃未解锁皮肤补给券 <#00ffee>No.01</color>
 Goods/Name/3119002┃未解锁皮肤补给券 <#00ffee>No.02</color>
 Goods/Name/3119003┃未解锁皮肤补给券 <#00ffee>No.03</color>
-Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 盛夏派对 秀雅，转校生 比安卡，哼哼玄佑，系统冲击 杰琪，小威烘焙坊 希瑟拉\n----\n<color=#2AC0FF> 稀有皮肤</color> : 幽灵猎人 慧珍，乘浪逐夏 里昂，钴进化 扎希尔，清凉一夏 莉央，叛逆 马格努斯，问题学生 妮琪，见习魔女 蒂娅，问题终结者 艾登，创作歌手 普里亚\n----\n<color=#35FF94>高级皮肤</color> : 海军突击队 里昂\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
-Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 幽灵猎人 奇娅拉，学生会长 埃琳娜，义体医生 凯希，梦德拉\n----\n<color=#2AC0FF>稀有皮肤</color> : 未来战士 伦诺克斯，吼吼黛琳，汪汪雪，叛逆 马格努斯，问题学生 妮琪，见习魔女 蒂娅，问题终结者 艾登，创作歌手 普里亚\n----\n<color=#35FF94>高级皮肤</color> : 幽灵猎人 埃索，海军突击队 里昂\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
-Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 学生会长 埃琳娜，瘟疫医生 丹尼尔，夏日魔术师 艾玛，冰雪庆典 哈特，转校生 比安卡\n----\n<color=#2AC0FF>稀有皮肤</color> : 冰雪庆典 希瑟拉，星夜极光 莉央，不祥之梦 万尼亚，偶像 卡米洛，拳击手的挑战 扬，探险家 纳塔朋，见习消防员 艾丝蒂尔，海盗 伦诺克斯，蜜糖水手 Eleven\n----\n<color=#35FF94>高级皮肤</color> : 冰雪庆典 彰一，OP.GG 费利克斯，GeForce Now 西尔维娅\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
+Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 盛夏派对 秀雅，转校生 比安卡，哼哼玄佑，系统冲击 杰琪，小威烘焙坊 希瑟拉\n----\n<color=#2AC0FF> 稀有皮肤</color> : 幽灵猎人 慧珍，乘浪逐夏 里昂，钴进化 扎希尔，清凉一夏 莉央，见习魔女 蒂娅，问题终结者 艾登，创作歌手 普里亚\n----\n<color=#35FF94>高级皮肤</color> : 海军突击队 里昂\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
+Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 幽灵猎人 奇娅拉，学生会长 埃琳娜，义体医生 凯希，梦德拉\n----\n<color=#2AC0FF>稀有皮肤</color> : 未来战士 伦诺克斯，吼吼黛琳，汪汪雪，见习魔女 蒂娅，问题终结者 艾登，创作歌手 普里亚\n----\n<color=#35FF94>高级皮肤</color> : 幽灵猎人 埃索，海军突击队 里昂\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[商品列表]</color></b>\n\n<b><color=#D05EFF>英雄皮肤</color></b> : 学生会长 埃琳娜，瘟疫医生 丹尼尔，夏日魔术师 艾玛，冰雪庆典 哈特，转校生 比安卡\n----\n<color=#2AC0FF>稀有皮肤</color> : 冰雪庆典 希瑟拉，星夜极光 莉央，偶像 卡米洛，拳击手的挑战 扬，探险家 纳塔朋，见习消防员 艾丝蒂尔，海盗 伦诺克斯，蜜糖水手 Eleven\n----\n<color=#35FF94>高级皮肤</color> : 冰雪庆典 彰一，OP.GG 费利克斯，GeForce Now 西尔维娅\n\n<b><color=#F15F5F>[购买前的注意事项]</color></b>\n※ 该商品可以获得商品列表中未解锁的皮肤。\n※ 该商品购买后将立即发放。\n※ 当商品列表中的皮肤已经全部解锁时，购买后将获得商品列表中一款。\n※ 可以通过箱子概率公告确认商品列表中个别商品的获得概率。
 Product/Name/S10_RARE_MATTER┃稀有DATA材料 X 1
 Product/Name/S10_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/S10_S11TOKEN_EXCHANGE┃战斗女仆代币 X 2
@@ -16839,7 +16986,7 @@ VF혈액샘플 아이템 획득┃VF是Vital Force的缩写，被指出是物理
 코발트 모드 힐팩 획득하기┃从地图的各个角落获取治愈包，不仅可以恢复自身和队友的体力和耐力，还可以恢复暗器、投掷武器的弹丸数。\n\n在钴协议中体验治愈包的效果，有可能助你扭转战局！
 발렌타인 이벤트 미션 보상┃<color=#10adff>奖励 : <红色情人节 塔齐娅>皮肤
 Mission/10000001/1┃进行2场一般/排位模式 
-Mission/10000002/1┃击杀实验体5次
+Mission/10000002/1┃达到TK 7次以上
 Mission/10000003/1┃猎杀野生动物 - 20次
 Mission/10000004/1┃进入前三名
 Mission/10000005/1┃获得树枝  - 2次
@@ -17641,9 +17788,9 @@ Trait/Name/7100000┃抵抗型
 Trait/Name/7200000┃支援型
 Trait/Name/7300000┃混沌型
 Trait/Name/7000201┃绝对武力
-Trait/Tooltip/7000201┃使用普攻或造成个别伤害的技能(武器和物品技能除外)命中同一目标3次时，额外造成真实伤害并降低目标的防御力。
-Trait/DetailTooltip/7000201┃{0}秒内造成普攻或个别技能命中同一个实验体{1}次时，额外造成<color=#ffffff>{9}</color><color=#008000>(+级别*{2})</color>的真实伤害，并降低目标防御力<color=#ffffff>{8}</color><color=#008000>(+级别*{4})%</color>，持续{3}秒。(冷却{5}秒)\n
-Trait/StatTooltip/7000201┃在{0}秒内造成普攻或个别技能命中同一个实验体{1}次时，额外造成真实伤害<color=#ffffff>{2}</color>，目标的防御力在{3}秒间减少<color=#ffffff>{4}%</color>。(冷却 {5}秒)\n\n造成额外伤害的总次数 : {6}\n额外伤害总量 : {7}
+Trait/Tooltip/7000201┃使用普攻或独立技能命中同一实验体3次时，将额外造成真实伤害并降低目标的防御力。
+Trait/DetailTooltip/7000201┃{0}秒内造成普攻或独立技能命中同一个实验体{1}次时，额外造成<color=#ffffff>{9}</color><color=#008000>(+级别*{2})</color>的真实伤害，并降低目标防御力<color=#ffffff>{8}</color><color=#008000>(+级别*{4})%</color>，持续{3}秒。(冷却{5}秒)\n
+Trait/StatTooltip/7000201┃在{0}秒内造成普攻或独立技能命中同一个实验体{1}次时，额外造成真实伤害<color=#ffffff>{2}</color>，目标的防御力在{3}秒间减少<color=#ffffff>{4}%</color>。(冷却 {5}秒)\n\n造成额外伤害的总次数 : {6}\n额外伤害总量 : {7}
 CharacterState/Group/Name/7000210┃绝对武力
 CharacterState/Group/Desc/7000210┃使用普攻或造成个别伤害的技能多次命中同一目标时\n对目标造成额外真实伤害并降低目标防御力。
 CharacterState/Group/Name/7000220┃绝对武力
@@ -17651,19 +17798,19 @@ CharacterState/Group/Desc/7000220┃冷却中。
 CharacterState/Group/Name/7000200┃绝对武力
 CharacterState/Group/Desc/7000200┃减少防御力。
 Trait/Name/7000401┃吸血鬼
-Trait/Tooltip/7000401┃每次普攻或个别技能对敌人实验体造成伤害时，增加[吸血 - 所有伤害]、攻击力或技能增幅 。\n达到叠层上限时，将额外获得攻击力或技能增幅。
-Trait/DetailTooltip/7000401┃每次普攻或个别技能对敌方实验体造成伤害时，{3}秒间攻击力增加<color=#ffffff>{10}</color>或技能增幅增加<color=#ffffff>{11}</color>，[吸血 - 所有伤害]每次增加<color=#ffffff>(近战){8}%/(远程){9}%</color>，最多可以适用{1}次。\n达到叠层上限时，攻击力增加<color=#ffffff>{5}(+级别*{2})</color>或技能增幅增加<color=#ffffff>{6}(+级别*{7})</color>。\n\n使用个别技能给多个目标造成伤害时，叠层数与造成伤害的目标数相同。
-Trait/StatTooltip/7000401┃每次普攻或个别技能对敌方实验体造成伤害时，{3}秒间{10}增加<color=#ffffff>{11}</color>，[吸血 - 所有伤害]每次增加<color=#ffffff>(近战){12}%/(远程){13}%</color>，最多可以适用{1}次。\n达到叠层上限时，{10}增加{9}。\n\n使用个别技能给多个目标造成伤害时，叠层数与造成伤害的目标数相同。\n\n体力恢复总量 : {6}
+Trait/Tooltip/7000401┃每次普攻或独立技能对敌人实验体造成伤害时，增加[吸血 - 所有伤害]、攻击力或技能增幅 。\n达到叠层上限时，将额外获得攻击力或技能增幅。
+Trait/DetailTooltip/7000401┃每次普攻或独立技能对敌方实验体造成伤害时，{3}秒间攻击力增加<color=#ffffff>{10}</color>或技能增幅增加<color=#ffffff>{11}</color>，[吸血 - 所有伤害]每次增加<color=#ffffff>(近战){8}%/(远程){9}%</color>，最多可以适用{1}次。\n达到叠层上限时，攻击力增加<color=#ffffff>{5}(+级别*{2})</color>或技能增幅增加<color=#ffffff>{6}(+级别*{7})</color>。\n\n使用独立技能给多个目标造成伤害时，叠层数与造成伤害的目标数相同。
+Trait/StatTooltip/7000401┃每次普攻或独立技能对敌方实验体造成伤害时，{10}增加<color=#ffffff>{11}</color>、[吸血 - 所有伤害]增加<color=#ffffff>{12}%</color>，持续<color=white>{3}</color>秒，且最多可以叠加<color=white>{1}</color>次。\n达到叠层上限时，{10}增加{9}。\n\n使用独立技能给多个目标造成伤害时，叠层数与造成伤害的目标数相同。\n\n体力恢复总量 : {6}
 CharacterState/Group/Name/7000400┃吸血鬼
 CharacterState/Group/Desc/7000400┃增加能力值。
 CharacterState/Group/Name/7000410┃吸血鬼 - 叠层上限
 CharacterState/Group/Desc/7000410┃额外增加能力值
 Trait/Name/7000501┃霹雳
 Trait/Tooltip/7000501┃使用技能命中敌方实验体造成技能伤害。\n可以对远距离的敌人造成更加强大的伤害。\n在技能命中实验体范围内存在距离最近的实验体时，电流会转移至最近的实验体，造成技能伤害。
-Trait/DetailTooltip/7000501┃使用技能命中实验体时，造成<color=#ffffff>{1}</color><color=#008000>(+级别*{2})</color><color=#FFD775>(+额外攻击力的{3}</color>或<color=#DDA0DD>技能增幅的{4})</color>技能伤害。(冷却: {5}秒)\n对{15}m外的实验体造成伤害量增加<color=#ffffff>{16}%</color>。\n在技能命中实验体{7}m范围内存在距离最近的实验体时，电流会转移至最近的实验体，造成缩减了{8}%的技能伤害。\n每次使用个别技能给敌人实验体造成伤害时，冷却缩减{9}秒。
-Trait/StatTooltip/7000501┃使用技能命中实验体时，造成<color=#ffffff>{1}</color>技能伤害。(冷却: {5}秒)\n对{15}m外的实验体造成伤害量增加<color=#ffffff>{16}%</color>。\n在技能命中实验体{7}m内有其他实验体时，电流会转移至最近的实验体，造成技能伤害{8}。\n每次使用个别技能给敌人实验体造成伤害时，冷却缩减{9}秒。\n\n总发动次数 : {10}\n累积伤害总量 : {13}
+Trait/DetailTooltip/7000501┃使用技能命中实验体时，造成<color=#ffffff>{1}</color><color=#008000>(+级别*{2})</color><color=#FFD775>(+额外攻击力的{3}</color>或<color=#DDA0DD>技能增幅的{4})</color>技能伤害。(冷却: {5}秒)\n对{15}m外的实验体造成伤害量增加<color=#ffffff>{16}%</color>。\n在技能命中实验体{7}m范围内存在距离最近的实验体时，电流会转移至最近的实验体，造成缩减了{8}%的技能伤害。\n每次使用独立技能给敌人实验体造成伤害时，冷却缩减{9}秒。
+Trait/StatTooltip/7000501┃使用技能命中实验体时，造成<color=#ffffff>{1}</color>技能伤害。(冷却: {5}秒)\n对{15}m外的实验体造成伤害量增加<color=#ffffff>{16}%</color>。\n在技能命中实验体{7}m内有其他实验体时，电流会转移至最近的实验体，造成技能伤害{8}。\n每次使用独立技能给敌人实验体造成伤害时，冷却缩减{9}秒。\n\n总发动次数 : {10}\n累积伤害总量 : {13}
 CharacterState/Group/Name/7000500┃霹雳
-CharacterState/Group/Desc/7000500┃使用技能命中敌方实验体时，会生成闪电造成技能伤害。\n可以对远距离的敌人造成更加强大的伤害。\n闪电造成伤害时，若附近有其他敌方实验体，闪电会转移一次造成技能伤害。\n每当使用个别技能对敌方实验体造成伤害时，缩减部分冷却时间。
+CharacterState/Group/Desc/7000500┃使用技能命中敌方实验体时，会生成闪电造成技能伤害。\n可以对远距离的敌人造成更加强大的伤害。\n闪电造成伤害时，若附近有其他敌方实验体，闪电会转移一次造成技能伤害。\n每当使用独立技能对敌方实验体造成伤害时，缩减部分冷却时间。
 CharacterState/Group/Name/7000510┃霹雳
 CharacterState/Group/Desc/7000510┃冷却中
 Trait/Name/7000601┃肾上腺素
@@ -17844,9 +17991,9 @@ CharacterState/Group/Desc/7200450┃冷却中。
 CharacterState/Group/Name/7200460┃追击者
 CharacterState/Group/Desc/7200460┃击杀敌人同时增加移向敌人实验体时的移动速度，根据击杀类型的不同可以恢复体力或者减少伤害。
 Trait/Name/7200501┃无私
-Trait/Tooltip/7200501┃使用个别技能给敌人实验体造成伤害时，赋予自身和周围队友护盾效果。
-Trait/DetailTooltip/7200501┃使用个别技能给敌人实验体造成伤害时，自身和周围<color=#ffffff>{0}m</color>范围内的队友获得持续<color=#ffffff>{1}</color>秒的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n三人 : 护盾{10}(+级别*{11})\n钴 : 护盾{12}(+级别*{13})
-Trait/StatTooltip/7200501┃使用个别技能给敌人实验体造成伤害时，自身和周围{0}m范围内的队友获得持续{1}秒的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n三人 : 护盾 {11}\n钴 : 护盾 {13}\n\n减少的伤害量 : {14}\n启动次数 : {15}
+Trait/Tooltip/7200501┃使用独立技能给敌人实验体造成伤害时，赋予自身和周围队友护盾效果。
+Trait/DetailTooltip/7200501┃使用独立技能给敌人实验体造成伤害时，自身和周围<color=#ffffff>{0}m</color>范围内的队友获得持续<color=#ffffff>{1}</color>秒的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n三人 : 护盾{10}(+级别*{11})\n钴 : 护盾{12}(+级别*{13})
+Trait/StatTooltip/7200501┃使用独立技能给敌人实验体造成伤害时，自身和周围{0}m范围内的队友获得持续{1}秒的护盾效果。(冷却: {2}秒)\n体力低于{3}%以下的目标获得{4}倍护盾，但无法超过体力上限的{5}%。\n\n三人 : 护盾 {11}\n钴 : 护盾 {13}\n\n减少的伤害量 : {14}\n启动次数 : {15}
 CharacterState/Group/Name/7200500┃无私
 CharacterState/Group/Desc/7200500┃获得护盾。
 CharacterState/Group/Name/7200510┃无私
@@ -18198,6 +18345,7 @@ NotInteract┃当前无法使用。
 LackOfCredit┃荣誉值不足
 LackOfTacSkillModule┃战术强化组件不足。
 MaxOfCredit┃无法再获得荣誉值了。
+MaxOfGadget┃持有的便携工具数量已达上限。
 CannotReconstructToDeadTeammate┃无法在已死亡的队友所在位置复活。
 NoProgressItemsRegisteredInThisRoute┃当前路径中没有已登记的后期物品列表。
 ToastMessage/DisableHyperloop┃现在无法使用。
@@ -19321,6 +19469,16 @@ gameTip_Title_10404_5┃环境物体 - 吹沙蘑菇
 gameTip_Desc_10404_5┃攻击吹沙蘑菇时，将在一定范围内生成吹沙烟雾，烟雾可以提供隐身效果。
 gameTip_Title_10404_6┃环境物体 - 炸弹果实
 gameTip_Desc_10404_6┃沿攻击方向发射对扇形范围内造成伤害的果实。\n果实造成的伤害不会影响盟友，根据体力上限造成一定比例的伤害。\n果实对野生动物造成额外伤害。
+gameTip_Title_10501_1┃便携工具功能介绍
+gameTip_Desc_10501_1┃便携工具可以有效帮助实验体实验的一种消耗品。\n可以通过变异野生动物、航空补给箱等途径获得不同种类的便携工具。\n每人仅能持有一种便携工具。
+gameTip_Title_10502_1┃Kiosk呼叫机
+gameTip_Desc_10502_1┃您是否有过因Kiosk所在区域被占领而无法使用荣誉值的经历？\n现在，使用通过变异野生动物获得的「Kiosk呼叫机」，您可以在任何位置呼叫便携Kiosk无人机购买荣誉值物品。
+gameTip_Title_10503_1┃信号枪
+gameTip_Desc_10503_1┃信号枪是实现「危机即是转机」这句名言的工具。\n打开英雄补给箱时，根据概率有机会获得信号枪R和信号枪B这两种便携工具。试试化危机为转机吧！
+gameTip_Title_10503_2┃信号枪B
+gameTip_Desc_10503_2┃使用信号枪B时，可以在广范围内选择一个特定地点，呼叫超凡补给箱。\n虽然所有实验体都会知道呼叫的位置，但可以借此机会，化危机为转机，获得强大的超凡物品。
+gameTip_Title_10503_3┃信号枪R
+gameTip_Desc_10503_3┃使用信号枪R时，使用者所在的位置将成为航空补给箱的目的地。\n（使用者死亡时，死亡位置将成为目的地。）\n虽然一定范围内所有的实验体都会知道使用者所在的位置，但若成功驾驭这场危机，将会获得强大的超凡物品。
 gameTip_Title_10050_3┃箱子组指示器
 gameTip_Desc_10050_3┃激活此功能后，各个区域距离起始点最近的箱子标识将显示为天蓝色。\n当已开启全部箱子组并获得物品时，可以获得该区域所需的目标物品。\n这对决定初期移动路线来说，是一个十分重要的信息，可以先从带有<color=#8FDBF8>箱子组标识</color>的箱子开始进行搜索！
 gameTip_category_CraftItems┃制作物品
