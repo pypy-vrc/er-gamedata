@@ -1596,6 +1596,7 @@ ToolTipType/Shield┃Rasio Penyerapan Perisai
 ToolTipType/MaxHpRegen┃Regenerasi HP Maks.
 ToolTipType/MaxSkill┃Amplifikasi Jurus Maks.
 ToolTipType/MoveSpeedUpRatio┃Kecepatan Gerak Ditambah (%)
+ToolTipType/AttackSpeedUpRatio┃Kecepatan Serangan Bertambah (%)
 ToolTipType/DotDamage┃Kerusakan Seiring Waktu
 ToolTipType/JudgmentDamage┃Kerusakan Judgement
 ToolTipType/MaxHpUp┃Rasio Peningkatan Maks. HP
@@ -2018,7 +2019,7 @@ Event_S11Champion_Dasoo_3097┃SEASON 2 CHAMPION DASOO
 Event_S12Champion_Bum_3102┃SEASON 3 CHAMPION BUM
 Event_S12Champion_SeoEunSeol_3103┃SEASON 3 CHAMPION SEOEUNSEOL
 Event_S12Champion_Rosner_3104┃SEASON 3 CHAMPION ROSNER
-Event_S12Champion_E8_3105┃SEASON 3 CHAMPION E11
+Event_S12Champion_E8_3105┃SEASON 3 CHAMPION E8
 Emotion_S4_EsportsPack_2501┃S4 All ways Incheon
 Emotion_S4_EsportsPack_2502┃S4 Gyeonggi Innate
 Emotion_S4_EsportsPack_2503┃S4 GJ Slasher
@@ -2270,6 +2271,7 @@ GoodsGroup/Name/1404141┃Irem
 GoodsGroup/Name/1404151┃Camilo
 GoodsGroup/Name/1404161┃Johann
 GoodsGroup/Name/1404171┃Bianca
+GoodsGroup/Name/1404191┃Sua
 Goods/Name/1703001┃Intro BGM
 Goods/Name/1703002┃Caprice N 24
 GoodsGroup/Name/1703001┃Intro BGM
@@ -2497,7 +2499,7 @@ CharacterState/Group/Name/1008210┃Pengurangan Kecepatan Gerak
 CharacterState/Group/Desc/1008210┃Kecepat Gerak Dikurangi.
 CharacterState/Group/Name/1008300┃Kekuatan Serang bertambah
 CharacterState/Group/Desc/1008300┃Kekuatan Serang ditambahkan.
-CharacterState/Group/Name/1008310┃Evolusi - Overdrive
+CharacterState/Group/Name/1008310┃Kekuatan Serang bertambah
 CharacterState/Group/Desc/1008310┃Kekuatan Serang ditambahkan.
 CharacterState/Group/Name/1008400┃Peningkatan Kerusakan Jurus
 CharacterState/Group/Desc/1008400┃Kerusakan Jurus Ditingkatkan
@@ -2756,66 +2758,26 @@ Skill/Group/Desc/1020200┃Lenox memecut di area bulat sekitarnya, memberikan <c
 Skill/Group/Coef/1020100┃<color=#ffffC2>Umpan :</color> Lenox mendapatkan item extra (tidak termasuk senjata) setiap kali dia memancing.\n<color=#ffffC2>Pukul :</color> Setiap {5} detik, Basic Attack Lenox memberikan Shield berdasarkan {0} Max HP Lenox. /nShield ini berlangsung selama {1} detik.
 Skill/Group/Coef/1020200┃Lenox memecut di area bulat sekitarnya, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color> Damage kepada musuh. Dia memberikan ekstra {2} damage ke musuh berdasarkan max HP kepada musuh yang ada di area luar pecutannnya. Jika Rekoil mengenai musuh, Lenox mendapatkan stack yang menurunkan cooldown skill Recoil sebanyak {3} detik per stack. Jika Recoil terkena 2 musuh atau lebih damage Recoil  menurun sebesar {4}
 Skill/Group/ExpansionTip/1020100┃<i>Common:{2} / Uncommon: {3} / Rare: {4}</i>
-Skill/Group/Name/1026100┃Nachrüsten
-Skill/Group/Name/1026200┃BT Geschützturm Mk. II
-Skill/Group/Name/1026210┃Wachturm zurückrufen
+Skill/Group/Name/1026100┃Retrofit
+Skill/Group/Name/1026200┃BT Sentry Gun Mk. II
+Skill/Group/Name/1026210┃Sentry Recall
 Skill/Group/Name/1026220┃Kurzschluss
-Skill/Group/Name/1026300┃Frei-Elektronen Laser
-Skill/Group/Name/1026310┃Photonenresonanz
-Skill/Group/Name/1026400┃Magnetischer Zyklon
-Skill/Group/Name/1026410┃Magnetischer Zyklon
-Skill/Group/Name/1026420┃Partikelsturm
-Skill/Group/Name/1026430┃Partikelsturm
-Skill/Group/Name/1026500┃Übertakten
-Skill/Group/Name/1026510┃Übertakten
-Skill/Group/Desc/1026100┃Barbaras Wachturm erhält basierend auf ihrem Level {0} Angriffskraft und {1} Verteidigung.\nWann immer ihr Geschützturm von einem Frei-Elektronen Laser getroffen wird, oder Barbara einen Magnetischen Zyklon oder Partikelsturm auslöst, erhöht sich die Angriffsreichweite des Geschützturms um {2}. Dies ist bis zu {3} mal steigerbar.
-Skill/Group/Coef/1026100┃Barbaras Wachturm erhält basierend auf ihrem Level {0} Angriffskraft und {1} Verteidigung.\nWann immer ihr Geschützturm von einem Frei-Elektronen Laser getroffen wird, oder Barbara einen Magnetischen Zyklon oder Partikelsturm auslöst, erhöht sich die Angriffsreichweite des Geschützturms um {2}. Dies ist bis zu {3} mal steigerbar.
-Skill/Group/Desc/1026200┃Barbara montiert einen Geschützturm mit {8} LP an der gezielten Position und richtet <color=white>{3}</color> Schaden an getroffenen Gegnern an.\nDer Geschützturm verbleibt für {0} Sekunden und richtet <color=white>{2}</color> Schaden pro Schuss an.\nWenn Barbara einen neuen Turm aufbaut, wird der alte automatisch abgebaut. Wird der Turm durch einen Gegner zerstört so erhöht sich die Abklingzeit um {9} Sekunden. Wenn Barbara sich zu weit von ihrem Turm entfernt, sammelt sie ihn automatisch auf und reduziert seine Abklingzeit um {7}. Die LP des Turms sind proportional zu Barbaras maximalen LP.
-Skill/Group/Coef/1026200┃Barbara montiert einen Geschützturm mit {8} LP an der gezielten Position und richtet <color=white>{3}</color><color=#ffd775>(+{4} Angriffskraft)</color><color=#DDA0DD>(+{10} Fähigkeitsverstärkung)</color> Schaden an getroffenen Gegnern an.\nDer Geschützturm verbleibt für {0} Sekunden und richtet <color=#ffd775>(+{2} Geschützturm Angriffskraft)</color> Schaden pro Schuss an.\nWenn Barbara einen neuen Turm aufbaut, wird der alte automatisch abgebaut. Wird der Turm durch einen Gegner zerstört so erhöht sich die Abklingzeit um {9} Sekunden. Wenn Barbara sich zu weit von ihrem Turm entfernt, sammelt sie ihn automatisch auf und reduziert seine Abklingzeit um {7}. Die LP des Turms sind proportional zu Barbaras maximalen LP.
-Skill/Group/Desc/1026210┃Barbara baut ihren platzierten Turm ab und reduziert die Abklingzeit von BT Geschützturm Mk. II um {0}.
-Skill/Group/Coef/1026210┃Barbara baut ihren platzierten Turm ab und reduziert die Abklingzeit von BT Geschützturm Mk. II um {0}.
-Skill/Group/Desc/1026220┃Barbara montiert einen Geschützturm und teleportiert sich zu dessen Position. Ein bereits errichteter Geschützturm zerstört sich direkt selbst und richtet <color=white>{0}</color> Schaden an.\nDer neue Geschützturm richtet <color=white>{2}</color> Schaden an Gegnern in der Nähe an. Der Angriffstempo des Turm erhöht sich für {4} Sekunden um {5}, je nachdem wie viele Gegner nach der Teleportation getroffen wurden.
-Skill/Group/Desc/1026300┃Barbara feuert einen aus zwei Teilen bestehenden Frei-Elektronen Laser, der getroffenen Gegnern <color=white>{0}</color> Schaden anrichtet. Getroffene Gegnern werden für {5} Sekunden um {6} verlangsamt. Trifft sie einen Gegnern mit beiden Lasern, so richtet sie {2} weniger Schaden an und reduziert die Abklingzeit von Übertakten um {7} Sekunden.\nGeschütztürme werden verstärkt, wenn sie vom Laser getroffen werden und feuern daraufhin selbst einen Frei-Elektronen Laser ab, der getroffenen Gegern <color=white>{3}</color> Schaden anrichtet.
-Skill/Group/Coef/1026300┃Barbara feuert einen aus zwei Teilen bestehenden Frei-Elektronen Laser, der getroffenen Gegnern <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{8} Fähigkeitsverstärkung)</color> Schaden anrichtet. Getroffene Gegnern werden für {5} Sekunden um {6} verlangsamt. Trifft sie einen Gegnern mit beiden Lasern, so richtet sie {2} weniger Schaden an und reduziert die Abklingzeit von Übertakten um {7} Sekunden.\nGeschütztürme werden verstärkt, wenn sie vom Laser getroffen werden und feuern daraufhin selbst einen Frei-Elektronen Laser ab, der getroffenen Gegern <color=white>{3}</color><color=#ffd775>(+{4} Geschützturm Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Schaden anrichtet.
-Skill/Group/Desc/1026310┃Barbara und ihr Geschützturm werden für {0} Sekunden verstärkt. Während dieser Zeit ist ihr Turm aufgeladen und feuert automatisch den Frei-Elektronen Laser ab. Frei-Elektronen Laser kostet in dieser Zeit keine AP mehr und die Abklingzeit wird auf {1} reduziert. Der Schaden von Frei-Elektronen Laser erhöht sich auf <color=white>{2}</color> und der Schaden des Geschützturms auf <color=white>{4}</color>.
-Skill/Group/Coef/1026310┃Barbara und ihr Geschützturm werden für {0} Sekunden verstärkt. Während dieser Zeit ist ihr Turm aufgeladen und feuert automatisch den Frei-Elektronen Laser ab. Frei-Elektronen Laser kostet in dieser Zeit keine AP mehr und die Abklingzeit wird auf {1} reduziert. Der Schaden von Frei-Elektronen Laser erhöht sich auf <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> und der Schaden des Geschützturms auf <color=white>{4}</color><color=#ffd775>(+{5} Geschützturm Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color>.
-Skill/Group/Desc/1026400┃Barbara erzeugt einen magnetischen Zyklon um sich und ihren Geschützturm, der für {3} Sekunden anhält und <color=white>{0}</color><color=#688A08>(+ {6} gegnerische maximale LP)</color> absoluten Schaden alle 0,5 Sekunden ab Gegnern um sie herum anrichtet und ihr Lauftempo um {7} erhöht.\nNach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Zyklon und richtet <color=white>{4}</color> Schaden an Gegnern in der Nähe an und gewährt Barbara ein Schild basierend auf {2} des durch die Fertigkeit angerichteten Schadens, bis zu maximal {8} LP.\nGegner, die von beiden Explosionen getroffen wurden, werden für {9} Sekunden um {10} verlangsamt.
-Skill/Group/Coef/1026400┃Barbara erzeugt einen magnetischen Zyklon um sich und ihren Geschützturm, der für {3} Sekunden anhält und <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{12} Fähigkeitsverstärkung)</color><color=#688A08>(+ {6} gegnerische maximale LP)</color> absoluten Schaden alle 0,5 Sekunden ab Gegnern um sie herum anrichtet und ihr Lauftempo um {7} erhöht.\nNach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Zyklon und richtet <color=white>{4}</color><color=#ffd775>(+{5} Angriffskraft)</color><color=#DDA0DD>(+{13} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und gewährt Barbara ein Schild basierend auf {2} des durch die Fertigkeit angerichteten Schadens, bis zu maximal {8} LP.\nGegner, die von beiden Explosionen getroffen wurden, werden für {9} Sekunden um {10} verlangsamt.
-Skill/Group/Desc/1026410┃Barbara erzeugt einen magnetischen Zyklon um sich und ihren Geschützturm, der für {3} Sekunden anhält und <color=white>{0}</color><color=#688A08>(+ {6} gegnerische maximale LP)</color> absoluten Schaden alle 0,5 Sekunden ab Gegnern um sie herum anrichtet und ihr Lauftempo um {7} erhöht.\nNach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Zyklon und richtet <color=white>{4}</color> Schaden an Gegnern in der Nähe an und gewährt Barbara ein Schild basierend auf {2} des durch die Fertigkeit angerichteten Schadens, bis zu maximal {8} LP.\nGegner, die von beiden Explosionen getroffen wurden, werden für {9} Sekunden um {10} verlangsamt.
-Skill/Group/Coef/1026410┃Barbara erzeugt einen magnetischen Zyklon um sich und ihren Geschützturm, der für {3} Sekunden anhält und <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{12} Fähigkeitsverstärkung)</color><color=#688A08>(+ {6} gegnerische maximale LP)</color> absoluten Schaden alle 0,5 Sekunden ab Gegnern um sie herum anrichtet und ihr Lauftempo um {7} erhöht.\nNach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Zyklon und richtet <color=white>{4}</color><color=#ffd775>(+{5} Angriffskraft)</color><color=#DDA0DD>(+{13} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und gewährt Barbara ein Schild basierend auf {2} des durch die Fertigkeit angerichteten Schadens, bis zu maximal {8} LP.\nGegner, die von beiden Explosionen getroffen wurden, werden für {9} Sekunden um {10} verlangsamt.
-Skill/Group/Desc/1026420┃Barbaras magnetischer Zyklon wird zu einem Partikelsturm verstärkt. Der Radius des Partikelsturms nimmt über Zeit zu und der Schild wird um {0} effektiver. Nach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Partikelsturm und richtet <color=white>{2}</color> Schaden an Gegnern in der Nähe an und verlangsamt getroffene Gegner für {4} Sekunden um {5}.
-Skill/Group/Desc/1026430┃Barbaras magnetischer Zyklon wird zu einem Partikelsturm verstärkt. Der Radius des Partikelsturms nimmt über Zeit zu und der Schild wird um {0} effektiver. Nach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Partikelsturm und richtet <color=white>{2}</color> Schaden an Gegnern in der Nähe an und verlangsamt getroffene Gegner für {4} Sekunden um {5}.
-Skill/Group/Desc/1026500┃Barbara übertaktet und ihre Fähigkeiten erhalten dadurch Bonuseffekte.\n\nKurzschluss: Barbara errichtet ihren Geschützturm und teleportiert sich zu ihm. Ein bereis errichteter Turm zerstört sich selbst und richtet damit <color=white>{0}</color> Schaden an. Barbara teleport sich, richtet <color=white>{2}</color> an Gegnern um sie herum an und erhöht das Angriffstempo ihres Geschützturms für {4} Sekunden um {5} pro getroffenen Gegner. Nachdem sie die Fertigkeit benutzt, reduziert sich die Abklingzeit von Übertakten um {14}.\n\nPhotonenresonanz: Während den nächsten {6} Sekunden erhöhen sich der Schaden von Frei-Elektronen Laser und Geschützturm um {13} und Frei-Elektronen Laser kostet keine AP mehr und hat eine auf {7} Sekunden reduzierte Abklingzeit. Angriffe des Geschützturms werden zu Frei-Elektronen Lasern während Photonenresonanz aktiv ist.\n\nPartikelsturm: Der Radius von Magnetischer Zyklon wird über zeit größer. Nach Reaktivierung der Fertigkeit oder nach {8} Sekunden explodiert der Sturm und richtet <color=white>{9}</color> Schaden an Gegnern in der Nähe an und verlangsamt diese für {11} Sekunden um {15}.\n\nDas Reaktivieren von Übertakten, bevor eine verstärkte Fertigkeit benutzt wurde, bricht die Fertigkeit ab und lässt Barbara sie nach {12} wieder einsetzen.
-Skill/Group/Coef/1026500┃Barbara übertaktet und ihre Fähigkeiten erhalten dadurch Bonuseffekte.\n\nKurzschluss: Barbara errichtet ihren Geschützturm und teleportiert sich zu ihm. Ein bereis errichteter Turm zerstört sich selbst und richtet damit <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{17} Fähigkeitsverstärkung)</color> Schaden an. Barbara teleport sich, richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{16} Fähigkeitsverstärkung)</color> an Gegnern um sie herum an und erhöht das Angriffstempo ihres Geschützturms für {4} Sekunden um {5} pro getroffenen Gegner. Nachdem sie die Fertigkeit benutzt, reduziert sich die Abklingzeit von Übertakten um {14}.\n\nPhotonenresonanz: Während den nächsten {6} Sekunden erhöhen sich der Schaden von Frei-Elektronen Laser und Geschützturm um {13} und Frei-Elektronen Laser kostet keine AP mehr und hat eine auf {7} Sekunden reduzierte Abklingzeit. Angriffe des Geschützturms werden zu Frei-Elektronen Lasern während Photonenresonanz aktiv ist.\n\nPartikelsturm: Der Radius von Magnetischer Zyklon wird über zeit größer. Nach Reaktivierung der Fertigkeit oder nach {8} Sekunden explodiert der Sturm und richtet <color=white>{9}</color><color=#ffd775>(+{10} Angriffskraft)</color><color=#DDA0DD>(+{18} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und verlangsamt diese für {11} Sekunden um {15}.\n\nDas Reaktivieren von Übertakten, bevor eine verstärkte Fertigkeit benutzt wurde, bricht die Fertigkeit ab und lässt Barbara sie nach {12} wieder einsetzen.
-Skill/Group/Desc/1026510┃Barbara übertaktet und ihre Fähigkeiten erhalten dadurch Bonuseffekte.\n\nKurzschluss: Barbara errichtet ihren Geschützturm und teleportiert sich zu ihm. Ein bereis errichteter Turm zerstört sich selbst und richtet damit <color=white>{0}</color> Schaden an. Barbara teleport sich, richtet <color=white>{2}</color> an Gegnern um sie herum an und erhöht das Angriffstempo ihres Geschützturms für {4} Sekunden um {5} pro getroffenen Gegner. Nachdem sie die Fertigkeit benutzt, reduziert sich die Abklingzeit von Übertakten um {14}.\n\nPhotonenresonanz: Während den nächsten {6} Sekunden erhöhen sich der Schaden von Frei-Elektronen Laser und Geschützturm um {13} und Frei-Elektronen Laser kostet keine AP mehr und hat eine auf {7} Sekunden reduzierte Abklingzeit. Angriffe des Geschützturms werden zu Frei-Elektronen Lasern während Photonenresonanz aktiv ist.\n\nPartikelsturm: Der Radius von Magnetischer Zyklon wird über zeit größer. Nach Reaktivierung der Fertigkeit oder nach {8} Sekunden explodiert der Sturm und richtet <color=white>{9}</color> Schaden an Gegnern in der Nähe an und verlangsamt diese für {11} Sekunden um {15}.\n\nDas Reaktivieren von Übertakten, bevor eine verstärkte Fertigkeit benutzt wurde, bricht die Fertigkeit ab und lässt Barbara sie nach {12} wieder einsetzen.
-Skill/Group/Coef/1026220┃Barbara montiert einen Geschützturm und teleportiert sich zu dessen Position. Ein bereits errichteter Geschützturm zerstört sich direkt selbst und richtet <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color> Schaden an.\nDer neue Geschützturm richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an. Der Angriffstempo des Turm erhöht sich für {4} Sekunden um {5}, je nachdem wie viele Gegner nach der Teleportation getroffen wurden.
-Skill/Group/Coef/1026420┃Barbaras magnetischer Zyklon wird zu einem Partikelsturm verstärkt. Der Radius des Partikelsturms nimmt über Zeit zu und der Schild wird um {0} effektiver. Nach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Partikelsturm und richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und verlangsamt getroffene Gegner für {4} Sekunden um {5}.
-Skill/Group/Coef/1026430┃Barbaras magnetischer Zyklon wird zu einem Partikelsturm verstärkt. Der Radius des Partikelsturms nimmt über Zeit zu und der Schild wird um {0} effektiver. Nach Reaktivieren der Fähigkeit oder nach deren maximalen explodiert der Partikelsturm und richtet <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color> Schaden an Gegnern in der Nähe an und verlangsamt getroffene Gegner für {4} Sekunden um {5}.
-CharacterState/Group/Name/1026110┃Nachrüsten
-CharacterState/Group/Desc/1026110┃Angriffskraft und Verteidigung des Geschützturms erhöht.
-CharacterState/Group/Name/1026120┃Genie-Ingenieurin
-CharacterState/Group/Desc/1026120┃Geschützturm Angriffstempo erhöht
-CharacterState/Group/Name/1026200┃Geschützturm aktiv
-CharacterState/Group/Desc/1026200┃Geschützturm feuert automatisch auf Gegner in Reichweite.
-CharacterState/Group/Name/1026220┃Kurzschluss
-CharacterState/Group/Desc/1026220┃Geschützturm Angriffstempo erhöht
-CharacterState/Group/Name/1026300┃Verlangsamt.
-CharacterState/Group/Desc/1026300┃Verlangsamt durch Frei-Elektronen Laser.
-CharacterState/Group/Name/1026310┃Geschützturm überladen.
-CharacterState/Group/Desc/1026310┃Nächster Angriff verstärkt.
-CharacterState/Group/Name/1026400┃Magnetischer Zyklon
-CharacterState/Group/Desc/1026400┃Lauftempo erhöht und ein Teil Barbaras ausgeteilten Schadens wird für eine Umwandlung in Schild gesammelt.
-CharacterState/Group/Desc/1026410┃Lauftempo erhöht und ein noch größerer Teil Barbaras ausgeteilten Schadens als zuvor wird für eine Umwandlung in Schild gesammelt!
-CharacterState/Group/Name/1026420┃Verlangsamt.
-CharacterState/Group/Desc/1026420┃Verlangsamt durch Magnetischer Zyklon.
-CharacterState/Group/Name/1026430┃Schild aktiviert durch Magnetischer Zyklon
-CharacterState/Group/Desc/1026430┃Maximal verbrauchbarer Schild
-CharacterState/Group/Name/1026440┃Verlangsamt.
-CharacterState/Group/Desc/1026440┃Verlangsamt durch einen wütenden Partikelsturm.
-CharacterState/Group/Name/1026500┃Übertakten
-CharacterState/Group/Desc/1026500┃Du kannst eine verstärkte Fertigkeit benutzen.
-CharacterState/Group/Name/1026510┃Photonenresonanz
-CharacterState/Group/Desc/1026510┃Nächster Angriff verstärkt.
+Skill/Group/Name/1026300┃Free-Electron Laser
+Skill/Group/Name/1026310┃Photon Resonance
+Skill/Group/Name/1026400┃Magnetic Cyclone
+Skill/Group/Name/1026410┃Magnetic Cyclone
+Skill/Group/Name/1026420┃Particle Storm
+Skill/Group/Name/1026430┃Particle Storm
+Skill/Group/Name/1026500┃Overclock
+Skill/Group/Name/1026510┃Overclock
+Skill/Group/Desc/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
+Skill/Group/Coef/1026100┃Barbara's Sentry Gun mendapatkan {0} Attack Power dan {1} defense, bergantung dari levelnya.\nKetika Sentry Gun terkena Free-Electron Laser, atau Barbara menciptakan Magnetic Cyclone atau Particle Storm, mendapatkan attack speed tambahan sebanyak {2}, sampai dengan {3} stack.
+Skill/Group/Desc/1026200┃Barbara memasang Sentry Gun dengan {8} HP di target lokasi, memberikan  <color=white>{3}</color> damage ke musuh yang di hit.\nSentry Gun ada selama {0} detik, memberikan <color=white>{2}</color> damage ke musuh yang ditembak.\nKetika Sentry Gun baru di letakkan, yang lama akan hancur. Ketika Musuh menghancurkan Sentry Gun, Cooldownnya bertambah sebanyak {9} detik. Jika barbara jauh dari Sentry Gun, dia mengambil kembali Sentry Gun nya, mengurangi cooldown sebanyak {7}. HP Sentry Gun disesuaikan dengan Maximum HP Barbara.
+Skill/Group/Desc/1026210┃Barbara menghancurkan Sentry Gun yang ada, Mengurangi cooldown dari BT Sentry Gun Mk.II by {0}.
+Skill/Group/Desc/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
+Skill/Group/Desc/1026300┃Barbara menembakkan dua part Free-Electron Laser, memberikan <color=white>{0}</color> damage ke setiap musuh yang terkena. Musuh yang kena akan di Slow sebanyak {6} selama {5} detik. Memberikan damage ke musuh yang terkena dua damage Free-Electron Laser memberikan {2} damage yang lebih kecil dan mengurangi cooldown Overclock sebanyak {7} detik.\nSentry Guns diperkuat ketika terkena Laser, membuat Sentry Gun mengeluarkan Free-Electron Laser, memberikan <color=white>{3}</color> damage ke musuh yang terkena\.
+Skill/Group/Desc/1026310┃Barbara dan Sentry Gun nya diperkuat selama {0} detik. Selama waktu ini Sentry Gun charged dan otomatis mengeluarkan Free-Electron Laser. Free-Electron Laser SP cost dihilangkan dan cooldown dikurangi menjadi {1}. Free-Electron Laser damage diperkuat sebanyak <color=white>{2}</color> dan damage Sentry Gun diperkuat <color=white>{4}</color>.
+Skill/Group/Coef/1026220┃Barbara memasang sentry gun dan teleport ke lokasi Sentry Gun. Sentry Gun yang telah terpasang akan self-destruct, memberikan <color=white>{0}</color><color=#ffd775>(+{1})</color><color=#DDA0DD>(+{7})</color> damage.\nSentry Gun yang baru memberikan <color=white>{2}</color><color=#ffd775>(+{3})</color><color=#DDA0DD>(+{6})</color> damage ke musuh di area. Attack Speed Sentry Gun bertambah sebanyak {5} selama {4} detik tergantung berapa musuh yang terkena.
 CharacterState/Group/Desc/1029120┃Basic Attack memberikan extra true damage saat berdiri di atas Pool.
 CharacterState/Group/Desc/1033500┃Unstoppable
 Skill/Group/Name/1034100┃Potret Lamban
@@ -3348,6 +3310,7 @@ Item/Skills/6007005/Name┃<color=yellow>Swift Strides</color>
 Item/Skills/6007006/Name┃<color=yellow>Swift Strides</color>
 Item/Skills/6007007/Name┃<color=yellow>Swift Strides</color>
 Item/Skills/6007008/Name┃<color=yellow>Swift Strides</color>
+Item/Skills/6007014/Name┃<color=yellow>Swift Strides</color>
 Item/Skills/6006000┃Thorns
 Item/Skills/6006001/Name┃<color=yellow>Thorns</color>
 Item/Skills/6006001/Body┃Ketika diserang dengan basic attack, mengembalikan <color=#688A08>{4}</color> true damage ke penyerang mengurangi healing nya sebanyak {3} selama {5} detik.
@@ -3382,6 +3345,547 @@ Item/Skills/6013005/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013006/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013007/Name┃<color=yellow>Magnetic Midnight</color>
 Item/Skills/6013008/Name┃<color=yellow>Magnetic Midnight</color>
+ItemType/CHARACTER/Name┃Karakter
+선택권 아이템 타입 캐릭터┃SUBJECT
+선택권 아이템 타입 스킨┃SKIN
+선택권 아이템 타입 도안┃DESIGN
+Loot┃LOOT
+Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
+Product/Name/Festival2024_ACoin_100┃A-Coin X 100
+Product/Name/Summer_LuckyMarble2024_ACoin_100┃A-Coin X 100
+오늘의 도전┃Tugas Harian
+오늘의 도전과제를 모두 완수하였습니다.┃Kamu sudah menyelesaikan semua Tugas Harian
+도전과제 변경 가능┃Kamu bisa mmengganti Tugas Harian satu kali adalam sehari. Apa kamu ingin mengganti ke Tuhas Harian baru?
+도전과제 변경 초과┃Jumlah penggantian Tugas Harian sudah terlampaui. (satu kali dalam satu hari)
+미션 갱신 에러┃Pembaharuan misi gagal
+매칭중에는 변경할 수 없습니다.┃Tidak bisa mengganti saat mencari permainan
+일일 보상!┃Ambil hadiah
+Mission/1/1┃Mainkan PvP biasa atau Rank
+Mission/2/1┃Mainkan PvP biasa atau Rank
+Mission/3/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
+Mission/4/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
+Mission/21/1┃Mainkan Rank
+Mission/11/1┃Mainkan PvP biasa
+Mission/31/1┃Bunuh musuh
+Mission/32/1┃Bunuh musuh
+Mission/33/1┃Bunuh musuh
+Mission/34/1┃Bunuh musuh
+Mission/35/1┃Bunuh musuh
+Mission/36/1┃Bunuh musuh
+Mission/41/1┃Bunuh hewan liar
+Mission/42/1┃Bunuh hewan liar
+Mission/43/1┃Bunuh hewan liar
+Mission/44/1┃Bunuh hewan liar
+Mission/45/1┃Bunuh hewan liar
+Mission/46/1┃Bunuh hewan liar
+Mission/47/1┃Bunuh hewan liar
+Mission/51/1┃Berada di peringkat 7 ke atas
+Mission/52/1┃Berada di peringkat 5 ke atas
+Mission/53/1┃Berada di peringkat 3 ke atas
+Mission/61/1┃Mendapatkan <color=white>Madu</color>
+Mission/64/1┃Mendapatkan <color=white>Kentang</color>
+Mission/65/1┃Mendapatkan <color=white>Ikan Kod</color>
+Mission/66/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/67/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/68/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/69/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/71/1┃Memberi kerusakan ke pemain
+Mission/72/1┃Memberi kerusakan ke pemain
+Mission/73/1┃Memberi kerusakan ke pemain
+Mission/74/1┃Memberi kerusakan ke pemain
+Mission/75/1┃Memberi kerusakan ke pemain
+Mission/76/1┃Memberi kerusakan ke pemain
+Mission/77/1┃Memberi kerusakan ke pemain
+Mission/81/1┃Memberi kerusakan ke hewan liar
+Mission/82/1┃Memberi kerusakan ke hewan liar
+Mission/83/1┃Memberi kerusakan ke hewan liar
+Mission/84/1┃Memberi kerusakan ke hewan liar
+Mission/85/1┃Memberi kerusakan ke hewan liar
+Mission/86/1┃Memberi kerusakan ke hewan liar
+Mission/87/1┃Memberi kerusakan ke hewan liar
+Mission/88/1┃Memberi kerusakan ke hewan liar
+Mission/89/1┃Memberi kerusakan ke hewan liar
+Mission/91/1┃Membunuh ayam
+Mission/92/1┃Membunuh ayam
+Mission/93/1┃Membunuh ayam
+Mission/94/1┃Membunuh ayam
+Mission/95/1┃Membunuh ayam
+Mission/96/1┃Membunuh ayam
+Mission/97/1┃Membunuh ayam
+Mission/101/1┃Membunuh kelelawar
+Mission/102/1┃Membunuh kelelawar
+Mission/103/1┃Membunuh kelelawar
+Mission/104/1┃Membunuh kelelawar
+Mission/105/1┃Membunuh kelelawar
+Mission/106/1┃Membunuh kelelawar
+Mission/107/1┃Membunuh kelelawar
+Mission/111/1┃Membunuh babi hutan
+Mission/112/1┃Membunuh babi hutan
+Mission/113/1┃Membunuh babi hutan
+Mission/114/1┃Membunuh babi hutan
+Mission/115/1┃Membunuh babi hutan
+Mission/116/1┃Membunuh babi hutan
+Mission/117/1┃Membunuh babi hutan
+Mission/121/1┃Membunuh anjing liar
+Mission/122/1┃Membunuh anjing liar
+Mission/123/1┃Membunuh anjing liar
+Mission/124/1┃Membunuh anjing liar
+Mission/125/1┃Membunuh anjing liar
+Mission/126/1┃Membunuh anjing liar
+Mission/127/1┃Membunuh anjing liar
+Mission/131/1┃Membunuh serigala
+Mission/132/1┃Membunuh serigala
+Mission/133/1┃Membunuh serigala
+Mission/134/1┃Membunuh serigala
+Mission/135/1┃Membunuh serigala
+Mission/136/1┃Membunuh serigala
+Mission/137/1┃Membunuh serigala
+Mission/141/1┃Membunuh beruang
+Mission/142/1┃Membunuh beruang
+Mission/143/1┃Membunuh beruang
+Mission/144/1┃Membunuh beruang
+Mission/145/1┃Membunuh beruang
+Mission/146/1┃Membunuh beruang
+Mission/147/1┃Membunuh beruang
+Mission/151/1┃Membunuh Wickeline
+Mission/1000102/1┃Mainkan PvP biasa
+Mission/1000103/1┃Mainkan PvP biasa atau Rank
+Mission/1000201/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000202/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000301/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000302/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1000303/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/1010101/1┃Bunuh musuh
+Mission/1010102/1┃Bunuh musuh
+Mission/1010103/1┃Bunuh musuh
+Mission/1010104/1┃Bunuh musuh
+Mission/1010105/1┃Bunuh musuh
+Mission/1010106/1┃Bunuh musuh
+Mission/1010107/1┃Bunuh musuh
+Mission/1010108/1┃Bunuh musuh
+Mission/1010109/1┃Bunuh musuh
+Mission/1020101/1┃Bunuh hewan liar
+Mission/1020102/1┃Bunuh hewan liar
+Mission/1020103/1┃Bunuh hewan liar
+Mission/1020104/1┃Bunuh hewan liar
+Mission/1020105/1┃Bunuh hewan liar
+Mission/1020106/1┃Bunuh hewan liar
+Mission/1020107/1┃Bunuh hewan liar
+Mission/1020108/1┃Bunuh hewan liar
+Mission/1020109/1┃Bunuh hewan liar
+Mission/1020110/1┃Bunuh hewan liar
+Mission/1020111/1┃Bunuh hewan liar
+Mission/1020112/1┃Bunuh hewan liar
+Mission/1020113/1┃Bunuh hewan liar
+Mission/1020114/1┃Bunuh hewan liar
+Mission/1020115/1┃Bunuh hewan liar
+Mission/1020116/1┃Bunuh hewan liar
+Mission/1020117/1┃Bunuh hewan liar
+Mission/1020118/1┃Bunuh hewan liar
+Mission/1030101/1┃Berada di peringkat 10 ke atas
+Mission/1030201/1┃Berada di peringkat 7 ke atas
+Mission/1030301/1┃Berada di peringkat 5 ke atas
+Mission/1030302/1┃Berada di peringkat 5 ke atas
+Mission/1030303/1┃Berada di peringkat 5 ke atas
+Mission/1030401/1┃Berada di peringkat 3 ke atas
+Mission/1030402/1┃Berada di peringkat 3 ke atas
+Mission/1030403/1┃Berada di peringkat 3 ke atas
+Mission/1040501/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
+Mission/1040502/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
+Mission/1040503/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
+Mission/1040504/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
+Mission/1040601/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/1040602/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/1040603/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
+Mission/1040701/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/1040702/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/1040801/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/1040802/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/1050101/1┃Memberi kerusakan ke pemain
+Mission/1050201/1┃Memberi kerusakan ke pemain
+Mission/1050301/1┃Memberi kerusakan ke pemain
+Mission/1050401/1┃Memberi kerusakan ke pemain
+Mission/1050402/1┃Memberi kerusakan ke pemain
+Mission/1050403/1┃Memberi kerusakan ke pemain
+Mission/1050404/1┃Memberi kerusakan ke pemain
+Mission/1050405/1┃Memberi kerusakan ke pemain
+Mission/1050406/1┃Memberi kerusakan ke pemain
+Mission/1050407/1┃Memberi kerusakan ke pemain
+Mission/1050408/1┃Memberi kerusakan ke pemain
+Mission/1060101/1┃Memberi kerusakan ke hewan liar
+Mission/1060201/1┃Memberi kerusakan ke hewan liar
+Mission/1060301/1┃Memberi kerusakan ke hewan liar
+Mission/1060401/1┃Memberi kerusakan ke hewan liar
+Mission/1060402/1┃Memberi kerusakan ke hewan liar
+Mission/1060501/1┃Memberi kerusakan ke hewan liar
+Mission/1060502/1┃Memberi kerusakan ke hewan liar
+Mission/1060503/1┃Memberi kerusakan ke hewan liar
+Mission/1060504/1┃Memberi kerusakan ke hewan liar
+Mission/1060505/1┃Memberi kerusakan ke hewan liar
+Mission/1060506/1┃Memberi kerusakan ke hewan liar
+Mission/1060507/1┃Memberi kerusakan ke hewan liar
+Mission/1060508/1┃Memberi kerusakan ke hewan liar
+Mission/1060601/1┃Memberi kerusakan ke hewan liar
+Mission/1070101/1┃Membunuh ayam
+Mission/1070102/1┃Membunuh ayam
+Mission/1070103/1┃Membunuh ayam
+Mission/1070104/1┃Membunuh ayam
+Mission/1070105/1┃Membunuh ayam
+Mission/1070106/1┃Membunuh ayam
+Mission/1070107/1┃Membunuh ayam
+Mission/1070108/1┃Membunuh ayam
+Mission/1070109/1┃Membunuh ayam
+Mission/1070201/1┃Membunuh kelelawar
+Mission/1070202/1┃Membunuh kelelawar
+Mission/1070203/1┃Membunuh kelelawar
+Mission/1070204/1┃Membunuh kelelawar
+Mission/1070205/1┃Membunuh kelelawar
+Mission/1070206/1┃Membunuh kelelawar
+Mission/1070207/1┃Membunuh kelelawar
+Mission/1070208/1┃Membunuh kelelawar
+Mission/1070209/1┃Membunuh kelelawar
+Mission/1070301/1┃Membunuh babi hutan
+Mission/1070302/1┃Membunuh babi hutan
+Mission/1070303/1┃Membunuh babi hutan
+Mission/1070304/1┃Membunuh babi hutan
+Mission/1070305/1┃Membunuh babi hutan
+Mission/1070306/1┃Membunuh babi hutan
+Mission/1070307/1┃Membunuh babi hutan
+Mission/1070308/1┃Membunuh babi hutan
+Mission/1070309/1┃Membunuh babi hutan
+Mission/1070401/1┃Membunuh anjing liar
+Mission/1070402/1┃Membunuh anjing liar
+Mission/1070403/1┃Membunuh anjing liar
+Mission/1070404/1┃Membunuh anjing liar
+Mission/1070405/1┃Membunuh anjing liar
+Mission/1070406/1┃Membunuh anjing liar
+Mission/1070407/1┃Membunuh anjing liar
+Mission/1070408/1┃Membunuh anjing liar
+Mission/1070409/1┃Membunuh anjing liar
+Mission/1070501/1┃Membunuh serigala
+Mission/1070502/1┃Membunuh serigala
+Mission/1070503/1┃Membunuh serigala
+Mission/1070504/1┃Membunuh serigala
+Mission/1070505/1┃Membunuh serigala
+Mission/1070506/1┃Membunuh serigala
+Mission/1070507/1┃Membunuh serigala
+Mission/1070508/1┃Membunuh serigala
+Mission/1070509/1┃Membunuh serigala
+Mission/1070601/1┃Membunuh beruang
+Mission/1070602/1┃Membunuh beruang
+Mission/1070603/1┃Membunuh beruang
+Mission/1070604/1┃Membunuh beruang
+Mission/1070605/1┃Membunuh beruang
+Mission/1070606/1┃Membunuh beruang
+Mission/1070607/1┃Membunuh beruang
+Mission/1070608/1┃Membunuh beruang
+Mission/1070609/1┃Membunuh beruang
+Mission/1070701/1┃Membunuh Wickeline
+Mission/1070702/1┃Membunuh Wickeline
+Mission/1070703/1┃Membunuh Wickeline
+Mission/1070704/1┃Membunuh Wickeline
+Mission/1070801/1┃Bunuh Alpha
+Mission/1070802/1┃Bunuh Alpha
+Mission/1070803/1┃Bunuh Alpha
+Mission/1070804/1┃Bunuh Alpha
+Mission/1070901/1┃Bunuh Omega
+Mission/1070902/1┃Bunuh Omega
+Mission/1070903/1┃Bunuh Omega
+Mission/1070904/1┃Bunuh Omega
+Mission/8001501/2┃Bunuh musuh
+Mission/8001601/2┃Bunuh musuh
+Mission/8002001/2┃Bunuh musuh
+Mission/8002101/3┃Bunuh musuh
+Mission/8002201/3┃Membunuh Wickeline
+Mission/8002301/3┃Memberi kerusakan ke pemain
+Mission/8002401/3┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
+Mission/8002501/3┃Berada di peringkat 5 ke atas
+Mission/8002601/3┃Bunuh hewan liar
+Mission/8002701/3┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
+Mission/8002801/3┃Bunuh Omega
+Mission/8002901/3┃Berada di peringkat 5 ke atas
+Mission/8003001/3┃Bunuh musuh
+Mission/8003101/3┃Membunuh beruang
+Mission/8003201/3┃Bunuh hewan liar
+Mission/8003301/3┃Membunuh babi hutan
+Mission/8003401/3┃Bunuh Omega
+Mission/8003501/3┃Berada di peringkat 5 ke atas
+Mission/8003601/3┃Memberi kerusakan ke pemain
+Mission/8003801/3┃Membunuh beruang
+Mission/8003901/3┃Membunuh ayam
+Mission/8004001/3┃Membunuh anjing liar
+Mission/8004101/3┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
+Mission/8004201/3┃Memberi kerusakan ke pemain
+Mission/8004301/3┃Memberi kerusakan ke hewan liar
+Mission/8004401/3┃Membunuh serigala
+Mission/8004501/3┃Membunuh anjing liar
+Mission/8004601/3┃Membunuh babi hutan
+Mission/8004701/3┃Berada di peringkat 7 ke atas
+Mission/8004801/3┃Memberi kerusakan ke hewan liar
+Mission/8005101/3┃Bunuh hewan liar
+Mission/8005201/3┃Membunuh serigala
+Mission/8005301/3┃Bunuh hewan liar
+Mission/81010101/1┃Bunuh musuh
+Mission/91010101/1┃Bunuh musuh
+Mission/81020108/1┃Bunuh hewan liar
+Mission/91020108/1┃Bunuh hewan liar
+Mission/81020111/1┃Bunuh hewan liar
+Mission/81020112/1┃Bunuh hewan liar
+Mission/81020113/1┃Bunuh hewan liar
+Mission/81020114/1┃Bunuh hewan liar
+Mission/91020111/1┃Bunuh hewan liar
+Mission/91020112/1┃Bunuh hewan liar
+Mission/91020113/1┃Bunuh hewan liar
+Mission/91020114/1┃Bunuh hewan liar
+Mission/81050401/1┃Memberi kerusakan ke pemain
+Mission/81050402/1┃Memberi kerusakan ke pemain
+Mission/81050403/1┃Memberi kerusakan ke pemain
+Mission/81050404/1┃Memberi kerusakan ke pemain
+Mission/91050401/1┃Memberi kerusakan ke pemain
+Mission/91050402/1┃Memberi kerusakan ke pemain
+Mission/91050403/1┃Memberi kerusakan ke pemain
+Mission/91050404/1┃Memberi kerusakan ke pemain
+Mission/81060501/1┃Memberi kerusakan ke hewan liar
+Mission/81060502/1┃Memberi kerusakan ke hewan liar
+Mission/81060503/1┃Memberi kerusakan ke hewan liar
+Mission/81060504/1┃Memberi kerusakan ke hewan liar
+Mission/91060501/1┃Memberi kerusakan ke hewan liar
+Mission/91060502/1┃Memberi kerusakan ke hewan liar
+Mission/91060503/1┃Memberi kerusakan ke hewan liar
+Mission/91060504/1┃Memberi kerusakan ke hewan liar
+Mission/10000004/1┃Berada di peringkat 3 ke atas
+Mission/10000010/1┃Memberi kerusakan ke pemain
+Mission/10000011/1┃Memberi kerusakan ke hewan liar
+Mission/10000018/1┃Membunuh Wickeline
+Mission/10000019/1┃Bunuh Alpha
+Mission/10000020/1┃Bunuh Omega
+서비스약관┃Terms of Service
+개인정보동의┃Privacy Policy
+CharacterState/Group/Name/7110601┃Makan
+CharacterState/Group/Desc/7110601┃Memulihkan HP dari makanan.
+CharacterState/Group/Name/7110611┃Minum
+CharacterState/Group/Desc/7110611┃Memulihkan SP dari minuman.
+로딩팁 튜토리얼12┃Tekan [A] dan Klik Kanan untuk menyerang!\nKaraktermu akan menyerang musuh disekitar ketika kamu berjalan ke arah yang dituju.
+로딩팁 튜토리얼13┃Klik kiri dan tarik Mouse sambil menahan [Alt] Untuk menggunakan Ping Wheel.\nKamu dapat berkomunikasi dengan teammu!!
+ButtonType/Confirm┃Konfirmasi
+ButtonType/Cancel┃Batal
+SupportLanguage/Korean┃한국어
+SupportLanguage/English┃English
+SupportLanguage/Japanese┃日本語
+SupportLanguage/ChineseSimplified┃简体中文
+SupportLanguage/ChineseTraditional┃繁體中文
+SupportLanguage/French┃Français (BETA)
+SupportLanguage/Spanish┃Español (España - BETA)
+SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
+SupportLanguage/Portuguese┃Português (BETA)
+SupportLanguage/Russian┃Русский (BETA)
+SupportLanguage/German┃Deutsch (BETA)
+SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
+SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
+SupportLanguage/Thai┃ภาษาไทย (BETA)
+SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
+SupportLanguage/Italian┃Italiano (BETA)
+SupportLanguage/Polish┃Polski (BETA)
+SupportCountryCharacterVoice/Korean┃한국어 (Korean)
+SupportCountryCharacterVoice/English┃English
+SupportCountryCharacterVoice/Japanese┃日本語
+중국지역가속안내┃Acceleration Option
+Graphic/Low┃Sangat Rendah
+Graphic/Medium┃Biasa
+Graphic/High┃Tinggi
+Graphic/Ultra┃Ultra
+FullScreenMode/ExclusiveFullScreen┃Layar Penuh
+FullScreenMode/FullScreenWindow┃Layar Penuh Tanpa Garis 
+FullScreenMode/MaximizedWindow┃Layar Penuh Tanpa Garis 
+FullScreenMode/Windowed┃Layar Kecil
+Internal┃Kesalahan yang tidak diketahui
+ObjectNotFound┃Target tidak ditemukan
+NotEnoughInventory┃Ruang inventaris penuh
+인벤토리 공간이 부족 합니다.┃Ruang inventaris penuh
+NotEnoughItem┃Barang tidak cukup
+NotEnoughItemBox┃Inventaris penuh
+InvalidItemCode┃Barang tidak diketahui
+ItemNotFound┃Barang tidak ditemukan
+InvalidAction┃Tindakan tidak valid
+CharacterNotAlive┃Tindakan tidak valid
+CannotPerformRightNow┃Tidak bisa dilakukan sekarang.
+NotAvailableYet┃Belum tersedia.
+CantConsumeItem┃Belum tersedia.
+NotEnoughSp┃SP tidak cukup
+NotExistUserId┃Pemain tidak ditemukan
+InvalidBattleToken┃Permainan tidak valid
+AlreadyExistUserId┃ID sudah ada
+GameStartedAlready┃Permainan sudah dimulai
+NoBattleHost┃Tuan rumah tidak ditemukan
+CantConsumItem┃Kamu tidak bisa makan lagi
+Evasion┃Menghindar
+NotInvalidTarget┃Target tidak Sah
+InvalidTarget┃Target tidak Sah
+ServerUnavailable┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
+OutOfService┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
+OutOfService_Temp┃Sedang dalam maintenance, silahkan kembali lagi nanti.\nWaktu tersisa: {0} {1} {2}
+InvalidMatchingMode┃Mode pencocokan tidak valid
+AlreadyJoinedMatching┃Pencocokan sudah dimulai
+EmptyMatchingToken┃Permainan tidak valid
+InvalidCommand┃Perintah tidak diketahui
+NotMatchingUser┃Permintaan tidak valid
+InvalidMatchingToken┃Permintaan tidak valid
+UnknownMatchingError┃Daerah yang dipilih tidak tersedia untuk pencocokan.
+MatchingServerNone┃Daerah yang dipilih tidak tersedia untuk pencocokan.
+UnavailableNickname┃Maaf, nama sudah dipakai
+매칭서버 타임아웃┃Silahkan cek koneksi internet anda.
+UserGameFinished┃Tidak dapat menemukan game.
+LoadingText/Connect┃Daftar barang yang bisa kamu buat terletak di sebelah atas inventaris.
+LoadingText/Handshake┃Karaktermu akan duduk dan istirahat ketika kamu menekan X
+LoadingText/Join┃Jika kamu bisa melihat musuhmu, kamu bisa menyerang mereka, tidak peduli dengan tempatnya.
+LoadingText/LoadCharacter┃Hitung mundur dimulai ketika kamu berada di area terlarang. Saat mencapai 0, karaktermu akan meledak.
+LoadingText/LoadLevel┃Kamu bisa mengubah pengaturan Pengaktifan Cepat di bagian Pengaturan.
+LoadingText/LoadEffect┃Tekan CTRL + 1 ~ 6 untuk mendengar lelucon, ejekan karaktermu, dan lain-lainnya.
+LoadingText/Done┃Kamu bisa menggunakan jurus senjata ketika kamu mencapai tingkatan 7 di Penguasaan
+LoadingText/SceneLoad┃Dengan membuka peta (M), kamu bisa menggerakan karaktermu dengan menahan CTRL dan klik kanan pada peta.
+설문조사 배너┃Silahkan jawab survey
+설문조사 링크┃https://steamcommunity.com/app/1049590/guides
+커뮤니티 이벤트 배너┃Menangkan Hadiah !
+커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
+기본 커뮤니티┃Troubleshooting.
+기본 커뮤니티 링크┃https://discord.gg/eternalreturn
+기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
+LINK┃LINK
+스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
+디스코드 링크┃https://discord.gg/eternalreturn
+트위터 링크┃https://twitter.com/_EternalReturn_/
+페이스북 링크┃https://www.facebook.com/eternalreturngame
+레딧 링크┃https://www.reddit.com/r/eternalreturn/
+QQ 그룹 팝업 메인 버튼┃QQ频道
+QQ 그룹 팝업 메인 버튼 링크┃https://pd.qq.com/s/euobpuz5w
+QQ 그룹1┃QQ 实验群1
+QQ 그룹2┃QQ 实验群2
+QQ 그룹3┃QQ 实验群3
+QQ 그룹4┃QQ实验群4
+QQ 그룹5┃QQ实验群5
+QQ 그룹 링크1┃https://qm.qq.com/q/yBWlV4Imlk
+QQ 그룹 링크2┃https://qm.qq.com/q/KX0mZL70GY
+QQ 그룹 링크3┃https://qm.qq.com/q/eNPqIhUltS
+QQ 그룹 링크4┃https://qm.qq.com/q/MJ0vgUe8SW
+QQ 그룹 링크5┃https://qm.qq.com/q/mxEnSmj076
+웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
+사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/
+플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
+하트지급 링크┃https://discord.gg/HkVHuAh
+빌리빌리 링크┃https://space.bilibili.com/413651489
+팬북 링크┃https://fanbook.mobi/PZgT8F9W
+공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
+공식 홈페이지 링크 카카오┃https://er.game.daum.net/
+디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
+트위터 링크 한국어┃https://twitter.com/EternalReturnKR
+KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
+유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
+공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
+QQ 링크1 중문간체┃https://qm.qq.com/q/yBWlV4Imlk
+QQ 링크2 중문간체┃https://qm.qq.com/q/KX0mZL70GY
+QQ 링크3 중문간체┃https://qm.qq.com/q/eNPqIhUltS
+QQ 링크4 중문간체┃https://qm.qq.com/q/MJ0vgUe8SW
+QQ 링크5 중문간체┃https://qm.qq.com/q/mxEnSmj076
+웨이보 링크 중문간체┃https://weibo.com/6511008423
+빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
+팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
+KOOK 링크 중문간체┃https://kook.vip/ZG55e1
+공지사항 중문 간체┃https://guide.sapstargames.com/eternal/
+공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
+디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
+유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
+페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
+인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
+공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
+트위터 링크 일본어┃https://twitter.com/EternalReturnJP
+유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
+디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
+공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
+공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
+디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
+트위터 링크 스페인어┃https://twitter.com/EternalReturnES
+페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
+공식 홈페이지 링크 영어┃https://playeternalreturn.com/
+디스코드 링크 영어┃https://discord.com/invite/eternalreturn
+트위터 링크 영어┃https://twitter.com/_EternalReturn_/
+페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
+레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
+신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
+신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
+신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
+고객지원 링크┃https://playeternalreturn.com/help
+고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
+고객지원 링크_MS┃https://playeternalreturn.com/help
+점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
+점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
+점검 중 링크_MS┃https://playeternalreturn.com/posts/news
+카카오 홈페이지 링크┃http://er.game.daum.net/
+카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
+OutLink/Desc/1┃Selamat datang di komunitas ER!
+OutLink/Desc/2┃Gabung dengan acara komunitas kami di Discord! Jangan lupa menaruh kami pada WISHLIST dan Follow kami di Steam untuk mendapatkan pemberitahuan tentang rilisnya permainan kami.
+OutLink/Desc/3┃Bagikan timbal balikmu bersama kami
+OutLink/Desc/4┃Panduan bermain
+OutLink/Desc/5┃Dukung permainan ini
+OutLink/Desc/6┃Jadilah penyokong Eternal Return
+플레이 가이드┃Panduan bermain
+{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
+{0}년-{1}월-{2}일┃{2}-{1}-{0}
+게임 데이터를 불러오는데 실패했습니다.┃Gagal melakukan kontak dengan server
+모드매칭불가안내┃Cek mode apa yang bisa dimainkan hari ini!\nMode hari ini: {0}, {1}
+접속이 제한된 계정입니다.┃Akun diberhentikan untuk sementara.\nWaktu tersisa: {0} {1} {2}\nReason for suspension: {3}
+영구 정지┃Akun diberhentikan secara permamen.
+클라이언트 버전 업데이트 이후 이용 가능합니다.┃Perbaharui game untuk dimainkan.\nKamu mungkin harus membuka ulang Steam.
+클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Perbaharui game untuk dimainkan.
+클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Perbaharui game untuk dimainkan.
+서버와연결할수없음┃Gagal menyambungkan ke server.
+팀원 중 누군가가 매칭 실패┃Member di dalam tim tidak bisa memulai permainan. Silahkan coba lagi.
+매칭 중 결제 불가┃Tidak bisa membeli saat mencari permainan.
+현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Jaringan tidak stabil. ErrorCode: {0}
+점검중┃Server sedang maintenance.\nMohon maaf atas ketidaknyamanannya.
+해결방법┃Troubleshooting.
+해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
+해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
+해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
+서버와 연결이 끊어졌습니다.┃Gagal menyambungkan ke server.
+FirstLoading1┃Loading Text
+FirstLoading2┃Verifying Account...
+FirstLoading3┃Loading ...
+게임문화개선캠페인┃<color=#FF0000>Eternal Return menghargai permainan yang adil. Pemain yang ditemukan melanggar aturan tim akan menghadapi pemberhentian akun.</color>
+게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
+접속시간경과안내┃Kamu telah bermain selama {0} jam.
+Item/Name/602409┃Laevateinn Mk2
+Item/Name/607406┃Lembing Api Mk2
+Item/Name/610501┃Mark of the Phoenix Mk2
+Item/Name/702503┃Holy Orders Mk2
+Item/Name/705504┃Totem Mk2
+Item/Name/705502┃Gunbai Berdarah Mk2
+Infusion/Item/705504┃Totem Mk2
+Infusion/Item/705502┃Gunbai Berdarah Mk2
+MasteryType/Glove/Desc┃Sarung tangan memiliki jarak yang sangat dekat, tetapi memiliki kecepatan paling tinggi untuk serangan beruntun.
+MasteryType/Tonfa/Desc┃Tonfa adalah satu-satunya senjata rakitan yang bisa dipakai untuk bertahan.
+MasteryType/Hammer/Desc┃Martil memiliki kecepatan yang sangat lambat, tapi pukulan kuatnya bisa menghambat gerakan lawan.
+MasteryType/Bat/Desc┃Pentungan adalah senjata fleksibel dan seimbang yang bisa dipakai untuk menghadapi berbagai macam jenis musuh dengan mudah.
+MasteryType/Whip/Desc┃Cambuk merupakan senjata yang cukup rumit karena bisa menghambat pergerakan lawan.
+MasteryType/HighAngleFire/Desc┃Senjata lempar seringkali memiliki kekuatan serangan yang tinggi. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
+MasteryType/DirectFire/Desc┃Shuriken memiliki berbagai macam jenis senjata dan sangat fleksibel. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
+MasteryType/Bow/Desc┃Busur adalah senjata jarak jauh yang bertambah kuat seiring bertambahnya penguasaanmu. Busur sangat efektif untuk digunakan pada hewan liar.
+MasteryType/CrossBow/Desc┃Crossbow memiliki keunggulan pada kemampuannya untuk  menghajar musuh sambil memfokuskan serangan ke satu arah.
+MasteryType/Pistol/Desc┃Pistol memudahkanmu untuk lebih sering menggunakan jurus. Senjata ini berkeahlian dalam kelincahan dan mobilitas.
+MasteryType/AssaultRifle/Desc┃Senapan serbu adalah senjata jarak jauh yang ahli dalam serangan yang konstan dan beruntun.
+MasteryType/SniperRifle/Desc┃Senapan sniper memliki Kekuatan Serang yang sangat tinggi diiringi dengan jarak yang sangat jauh. Senjata ini menempuh jarak serang melebihi jarak pandang, pastikan kamu memilih tempat dengan jarak pandang yang bagus.
+MasteryType/Axe/Desc┃Kapak mungkin sangat lambat, tapi kerusakannya adalah yang tertinggi. Senjata yang mudah dan cepat untuk dibuat akan memberikanmu keunggulan dalam pertarungan.
+MasteryType/OneHandSword/Desc┃Pisau adalah senjata yang berkeahlian dalam serangan kejutan. Senjata ini adalah salah satu yang terbaik dan terkuat untuk pertarungan yang singkat.
+MasteryType/TwoHandSword/Desc┃Pedang dua tangan adalah senjata yang cukup stabil. Semakin lama kamu menguasainya, semakin kamu memahaminya. Namun, pemain yang masih baru harus hati-hati ketika menggunakannya.
+MasteryType/Polearm/Desc┃Tongkat senjata adalah senjata dengan kekuatan serangan dan jarak yang seimbang - terutama ketika melawan musuh yang banyak dalam satu waktu.
+MasteryType/DualSword/Desc┃Pedang ganda berkeahlian dalam melepaskan dua serangan yang anggun dan berkelanjutan.
+MasteryType/Spear/Desc┃Tombak mungkin terlihat sebagai senjata yang memiliki jarak lumayan dengan kerusakan yang tinggi. Namun, senjata ini lemah ketika melawan musuh yang terlalu dekat. Penting bagimu untuk menjaga jarak ketika menggunakan tombak
+MasteryType/Nunchaku/Desc┃\nNunchaku sulit dipelajari, tetapi bisa menjadi senjata serbaguna dengan penggunaan kreatif jika dikuasai.
+MasteryType/Rapier/Desc┃Pedang tipis sanggup melakukan gerakan mencolok yang bisa menghindari serangan musuh, menyebabkan serangannya sendiri yang berhasil.
+MasteryType/Guitar/Desc┃Gitar adalah senjata jarak jauh yang menggunakan gelombang suara. Senjata ini sangat beragam dengan cara bermain dan strategimu yang akan berubah total bergantung pada jumlah Poin Evolusi yang kamu terapak ke tiap jurusnya
+MasteryType/Camera/Desc┃Kamera adalah senjata jarak jauh tanpa ada projektil. Juga bisa digunakan untuk membutakan musuh, yang membuat serangan mereka meleset karena cahaya yang terang.
 보유하지 않은 캐릭터입니다.┃Kamu tidak memiliki karakter ini.\nSilahkan buka karakter di Toko untuk memainkannya
 매칭 중 캐릭 변경 금지┃Kamu tidak bisa mengganti karakter saat mencari petandingan.
 로딩 중┃Loading\n< Tekan tombol X untuk duduk dan istirahat >
@@ -3623,6 +4127,7 @@ UID┃UID
 단계 2┃II
 단계 3┃III
 단계 4┃IV
+단계 5┃Ⅴ
 IRON┃Iron
 BRONZE┃Bronze
 SILVER┃Silver
@@ -4139,7 +4644,7 @@ ServerRegion/Europe┃Eropa
 ServerRegion/SouthAmerica┃Amerika Selatan
 ServerRegion/Asia2┃Asia2
 접속 가능 지역 없음┃Tidak bisa menemukan server. Silahkan periksa koneksi internet.
-ServerRegion/None┃Tidak diketahui
+ServerRegion/None┃-
 자동┃Otomatis
 자동 지역 선택┃Otomatis memilih server dengan koneksi yang bagus.
 개요┃Ringkasan
@@ -4827,547 +5332,6 @@ QuickStart/TeamFinding┃Sun Jan 02 2022 00:00:00 GMT+0900 (한국 표준시)
 QuickStart/Matching┃Wed Feb 02 2022 00:00:00 GMT+0900 (한국 표준시)
 Season7/Name┃<color=#FF7AFF>Neon Aftershock</color>
 알겠습니다┃Konfirmasi
-HiddenPassPath/2000┃ 
-ItemType/CHARACTER/Name┃Karakter
-선택권 아이템 타입 캐릭터┃SUBJECT
-선택권 아이템 타입 스킨┃SKIN
-선택권 아이템 타입 도안┃DESIGN
-Loot┃LOOT
-Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
-Product/Name/Festival2024_ACoin_100┃A-Coin X 100
-Product/Name/Summer_LuckyMarble2024_ACoin_100┃A-Coin X 100
-오늘의 도전┃Tugas Harian
-오늘의 도전과제를 모두 완수하였습니다.┃Kamu sudah menyelesaikan semua Tugas Harian
-도전과제 변경 가능┃Kamu bisa mmengganti Tugas Harian satu kali adalam sehari. Apa kamu ingin mengganti ke Tuhas Harian baru?
-도전과제 변경 초과┃Jumlah penggantian Tugas Harian sudah terlampaui. (satu kali dalam satu hari)
-미션 갱신 에러┃Pembaharuan misi gagal
-매칭중에는 변경할 수 없습니다.┃Tidak bisa mengganti saat mencari permainan
-일일 보상!┃Ambil hadiah
-Mission/1/1┃Mainkan PvP biasa atau Rank
-Mission/2/1┃Mainkan PvP biasa atau Rank
-Mission/3/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
-Mission/4/1┃Mainkan PvP biasa atau Rank<color=#FFBB00>(Event)</color>
-Mission/21/1┃Mainkan Rank
-Mission/11/1┃Mainkan PvP biasa
-Mission/31/1┃Bunuh musuh
-Mission/32/1┃Bunuh musuh
-Mission/33/1┃Bunuh musuh
-Mission/34/1┃Bunuh musuh
-Mission/35/1┃Bunuh musuh
-Mission/36/1┃Bunuh musuh
-Mission/41/1┃Bunuh hewan liar
-Mission/42/1┃Bunuh hewan liar
-Mission/43/1┃Bunuh hewan liar
-Mission/44/1┃Bunuh hewan liar
-Mission/45/1┃Bunuh hewan liar
-Mission/46/1┃Bunuh hewan liar
-Mission/47/1┃Bunuh hewan liar
-Mission/51/1┃Berada di peringkat 7 ke atas
-Mission/52/1┃Berada di peringkat 5 ke atas
-Mission/53/1┃Berada di peringkat 3 ke atas
-Mission/61/1┃Mendapatkan <color=white>Madu</color>
-Mission/64/1┃Mendapatkan <color=white>Kentang</color>
-Mission/65/1┃Mendapatkan <color=white>Ikan Kod</color>
-Mission/66/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/67/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/68/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/69/1┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/71/1┃Memberi kerusakan ke pemain
-Mission/72/1┃Memberi kerusakan ke pemain
-Mission/73/1┃Memberi kerusakan ke pemain
-Mission/74/1┃Memberi kerusakan ke pemain
-Mission/75/1┃Memberi kerusakan ke pemain
-Mission/76/1┃Memberi kerusakan ke pemain
-Mission/77/1┃Memberi kerusakan ke pemain
-Mission/81/1┃Memberi kerusakan ke hewan liar
-Mission/82/1┃Memberi kerusakan ke hewan liar
-Mission/83/1┃Memberi kerusakan ke hewan liar
-Mission/84/1┃Memberi kerusakan ke hewan liar
-Mission/85/1┃Memberi kerusakan ke hewan liar
-Mission/86/1┃Memberi kerusakan ke hewan liar
-Mission/87/1┃Memberi kerusakan ke hewan liar
-Mission/88/1┃Memberi kerusakan ke hewan liar
-Mission/89/1┃Memberi kerusakan ke hewan liar
-Mission/91/1┃Membunuh ayam
-Mission/92/1┃Membunuh ayam
-Mission/93/1┃Membunuh ayam
-Mission/94/1┃Membunuh ayam
-Mission/95/1┃Membunuh ayam
-Mission/96/1┃Membunuh ayam
-Mission/97/1┃Membunuh ayam
-Mission/101/1┃Membunuh kelelawar
-Mission/102/1┃Membunuh kelelawar
-Mission/103/1┃Membunuh kelelawar
-Mission/104/1┃Membunuh kelelawar
-Mission/105/1┃Membunuh kelelawar
-Mission/106/1┃Membunuh kelelawar
-Mission/107/1┃Membunuh kelelawar
-Mission/111/1┃Membunuh babi hutan
-Mission/112/1┃Membunuh babi hutan
-Mission/113/1┃Membunuh babi hutan
-Mission/114/1┃Membunuh babi hutan
-Mission/115/1┃Membunuh babi hutan
-Mission/116/1┃Membunuh babi hutan
-Mission/117/1┃Membunuh babi hutan
-Mission/121/1┃Membunuh anjing liar
-Mission/122/1┃Membunuh anjing liar
-Mission/123/1┃Membunuh anjing liar
-Mission/124/1┃Membunuh anjing liar
-Mission/125/1┃Membunuh anjing liar
-Mission/126/1┃Membunuh anjing liar
-Mission/127/1┃Membunuh anjing liar
-Mission/131/1┃Membunuh serigala
-Mission/132/1┃Membunuh serigala
-Mission/133/1┃Membunuh serigala
-Mission/134/1┃Membunuh serigala
-Mission/135/1┃Membunuh serigala
-Mission/136/1┃Membunuh serigala
-Mission/137/1┃Membunuh serigala
-Mission/141/1┃Membunuh beruang
-Mission/142/1┃Membunuh beruang
-Mission/143/1┃Membunuh beruang
-Mission/144/1┃Membunuh beruang
-Mission/145/1┃Membunuh beruang
-Mission/146/1┃Membunuh beruang
-Mission/147/1┃Membunuh beruang
-Mission/151/1┃Membunuh Wickeline
-Mission/1000102/1┃Mainkan PvP biasa
-Mission/1000103/1┃Mainkan PvP biasa atau Rank
-Mission/1000201/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000202/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000301/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000302/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1000303/2┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/1010101/1┃Bunuh musuh
-Mission/1010102/1┃Bunuh musuh
-Mission/1010103/1┃Bunuh musuh
-Mission/1010104/1┃Bunuh musuh
-Mission/1010105/1┃Bunuh musuh
-Mission/1010106/1┃Bunuh musuh
-Mission/1010107/1┃Bunuh musuh
-Mission/1010108/1┃Bunuh musuh
-Mission/1010109/1┃Bunuh musuh
-Mission/1020101/1┃Bunuh hewan liar
-Mission/1020102/1┃Bunuh hewan liar
-Mission/1020103/1┃Bunuh hewan liar
-Mission/1020104/1┃Bunuh hewan liar
-Mission/1020105/1┃Bunuh hewan liar
-Mission/1020106/1┃Bunuh hewan liar
-Mission/1020107/1┃Bunuh hewan liar
-Mission/1020108/1┃Bunuh hewan liar
-Mission/1020109/1┃Bunuh hewan liar
-Mission/1020110/1┃Bunuh hewan liar
-Mission/1020111/1┃Bunuh hewan liar
-Mission/1020112/1┃Bunuh hewan liar
-Mission/1020113/1┃Bunuh hewan liar
-Mission/1020114/1┃Bunuh hewan liar
-Mission/1020115/1┃Bunuh hewan liar
-Mission/1020116/1┃Bunuh hewan liar
-Mission/1020117/1┃Bunuh hewan liar
-Mission/1020118/1┃Bunuh hewan liar
-Mission/1030101/1┃Berada di peringkat 10 ke atas
-Mission/1030201/1┃Berada di peringkat 7 ke atas
-Mission/1030301/1┃Berada di peringkat 5 ke atas
-Mission/1030302/1┃Berada di peringkat 5 ke atas
-Mission/1030303/1┃Berada di peringkat 5 ke atas
-Mission/1030401/1┃Berada di peringkat 3 ke atas
-Mission/1030402/1┃Berada di peringkat 3 ke atas
-Mission/1030403/1┃Berada di peringkat 3 ke atas
-Mission/1040501/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
-Mission/1040502/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
-Mission/1040503/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
-Mission/1040504/1┃Mendapatkan <color=#D05EFF>Biduri Bulan</color>
-Mission/1040601/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/1040602/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/1040603/1┃Mendapatkan <color=#D05EFF>Meteorit</color>
-Mission/1040701/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/1040702/1┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/1040801/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/1040802/1┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/1050101/1┃Memberi kerusakan ke pemain
-Mission/1050201/1┃Memberi kerusakan ke pemain
-Mission/1050301/1┃Memberi kerusakan ke pemain
-Mission/1050401/1┃Memberi kerusakan ke pemain
-Mission/1050402/1┃Memberi kerusakan ke pemain
-Mission/1050403/1┃Memberi kerusakan ke pemain
-Mission/1050404/1┃Memberi kerusakan ke pemain
-Mission/1050405/1┃Memberi kerusakan ke pemain
-Mission/1050406/1┃Memberi kerusakan ke pemain
-Mission/1050407/1┃Memberi kerusakan ke pemain
-Mission/1050408/1┃Memberi kerusakan ke pemain
-Mission/1060101/1┃Memberi kerusakan ke hewan liar
-Mission/1060201/1┃Memberi kerusakan ke hewan liar
-Mission/1060301/1┃Memberi kerusakan ke hewan liar
-Mission/1060401/1┃Memberi kerusakan ke hewan liar
-Mission/1060402/1┃Memberi kerusakan ke hewan liar
-Mission/1060501/1┃Memberi kerusakan ke hewan liar
-Mission/1060502/1┃Memberi kerusakan ke hewan liar
-Mission/1060503/1┃Memberi kerusakan ke hewan liar
-Mission/1060504/1┃Memberi kerusakan ke hewan liar
-Mission/1060505/1┃Memberi kerusakan ke hewan liar
-Mission/1060506/1┃Memberi kerusakan ke hewan liar
-Mission/1060507/1┃Memberi kerusakan ke hewan liar
-Mission/1060508/1┃Memberi kerusakan ke hewan liar
-Mission/1060601/1┃Memberi kerusakan ke hewan liar
-Mission/1070101/1┃Membunuh ayam
-Mission/1070102/1┃Membunuh ayam
-Mission/1070103/1┃Membunuh ayam
-Mission/1070104/1┃Membunuh ayam
-Mission/1070105/1┃Membunuh ayam
-Mission/1070106/1┃Membunuh ayam
-Mission/1070107/1┃Membunuh ayam
-Mission/1070108/1┃Membunuh ayam
-Mission/1070109/1┃Membunuh ayam
-Mission/1070201/1┃Membunuh kelelawar
-Mission/1070202/1┃Membunuh kelelawar
-Mission/1070203/1┃Membunuh kelelawar
-Mission/1070204/1┃Membunuh kelelawar
-Mission/1070205/1┃Membunuh kelelawar
-Mission/1070206/1┃Membunuh kelelawar
-Mission/1070207/1┃Membunuh kelelawar
-Mission/1070208/1┃Membunuh kelelawar
-Mission/1070209/1┃Membunuh kelelawar
-Mission/1070301/1┃Membunuh babi hutan
-Mission/1070302/1┃Membunuh babi hutan
-Mission/1070303/1┃Membunuh babi hutan
-Mission/1070304/1┃Membunuh babi hutan
-Mission/1070305/1┃Membunuh babi hutan
-Mission/1070306/1┃Membunuh babi hutan
-Mission/1070307/1┃Membunuh babi hutan
-Mission/1070308/1┃Membunuh babi hutan
-Mission/1070309/1┃Membunuh babi hutan
-Mission/1070401/1┃Membunuh anjing liar
-Mission/1070402/1┃Membunuh anjing liar
-Mission/1070403/1┃Membunuh anjing liar
-Mission/1070404/1┃Membunuh anjing liar
-Mission/1070405/1┃Membunuh anjing liar
-Mission/1070406/1┃Membunuh anjing liar
-Mission/1070407/1┃Membunuh anjing liar
-Mission/1070408/1┃Membunuh anjing liar
-Mission/1070409/1┃Membunuh anjing liar
-Mission/1070501/1┃Membunuh serigala
-Mission/1070502/1┃Membunuh serigala
-Mission/1070503/1┃Membunuh serigala
-Mission/1070504/1┃Membunuh serigala
-Mission/1070505/1┃Membunuh serigala
-Mission/1070506/1┃Membunuh serigala
-Mission/1070507/1┃Membunuh serigala
-Mission/1070508/1┃Membunuh serigala
-Mission/1070509/1┃Membunuh serigala
-Mission/1070601/1┃Membunuh beruang
-Mission/1070602/1┃Membunuh beruang
-Mission/1070603/1┃Membunuh beruang
-Mission/1070604/1┃Membunuh beruang
-Mission/1070605/1┃Membunuh beruang
-Mission/1070606/1┃Membunuh beruang
-Mission/1070607/1┃Membunuh beruang
-Mission/1070608/1┃Membunuh beruang
-Mission/1070609/1┃Membunuh beruang
-Mission/1070701/1┃Membunuh Wickeline
-Mission/1070702/1┃Membunuh Wickeline
-Mission/1070703/1┃Membunuh Wickeline
-Mission/1070704/1┃Membunuh Wickeline
-Mission/1070801/1┃Bunuh Alpha
-Mission/1070802/1┃Bunuh Alpha
-Mission/1070803/1┃Bunuh Alpha
-Mission/1070804/1┃Bunuh Alpha
-Mission/1070901/1┃Bunuh Omega
-Mission/1070902/1┃Bunuh Omega
-Mission/1070903/1┃Bunuh Omega
-Mission/1070904/1┃Bunuh Omega
-Mission/8001501/2┃Bunuh musuh
-Mission/8001601/2┃Bunuh musuh
-Mission/8002001/2┃Bunuh musuh
-Mission/8002101/3┃Bunuh musuh
-Mission/8002201/3┃Membunuh Wickeline
-Mission/8002301/3┃Memberi kerusakan ke pemain
-Mission/8002401/3┃Mendapatkan <color=#D05EFF>Inti Kekuatan</color>
-Mission/8002501/3┃Berada di peringkat 5 ke atas
-Mission/8002601/3┃Bunuh hewan liar
-Mission/8002701/3┃Mendapatkan <color=#D05EFF>Pohon Kehidupan</color>
-Mission/8002801/3┃Bunuh Omega
-Mission/8002901/3┃Berada di peringkat 5 ke atas
-Mission/8003001/3┃Bunuh musuh
-Mission/8003101/3┃Membunuh beruang
-Mission/8003201/3┃Bunuh hewan liar
-Mission/8003301/3┃Membunuh babi hutan
-Mission/8003401/3┃Bunuh Omega
-Mission/8003501/3┃Berada di peringkat 5 ke atas
-Mission/8003601/3┃Memberi kerusakan ke pemain
-Mission/8003801/3┃Membunuh beruang
-Mission/8003901/3┃Membunuh ayam
-Mission/8004001/3┃Membunuh anjing liar
-Mission/8004101/3┃Mendapatkan <color=#D05EFF>Sampel Darah Vital</color>
-Mission/8004201/3┃Memberi kerusakan ke pemain
-Mission/8004301/3┃Memberi kerusakan ke hewan liar
-Mission/8004401/3┃Membunuh serigala
-Mission/8004501/3┃Membunuh anjing liar
-Mission/8004601/3┃Membunuh babi hutan
-Mission/8004701/3┃Berada di peringkat 7 ke atas
-Mission/8004801/3┃Memberi kerusakan ke hewan liar
-Mission/8005101/3┃Bunuh hewan liar
-Mission/8005201/3┃Membunuh serigala
-Mission/8005301/3┃Bunuh hewan liar
-Mission/81010101/1┃Bunuh musuh
-Mission/91010101/1┃Bunuh musuh
-Mission/81020108/1┃Bunuh hewan liar
-Mission/91020108/1┃Bunuh hewan liar
-Mission/81020111/1┃Bunuh hewan liar
-Mission/81020112/1┃Bunuh hewan liar
-Mission/81020113/1┃Bunuh hewan liar
-Mission/81020114/1┃Bunuh hewan liar
-Mission/91020111/1┃Bunuh hewan liar
-Mission/91020112/1┃Bunuh hewan liar
-Mission/91020113/1┃Bunuh hewan liar
-Mission/91020114/1┃Bunuh hewan liar
-Mission/81050401/1┃Memberi kerusakan ke pemain
-Mission/81050402/1┃Memberi kerusakan ke pemain
-Mission/81050403/1┃Memberi kerusakan ke pemain
-Mission/81050404/1┃Memberi kerusakan ke pemain
-Mission/91050401/1┃Memberi kerusakan ke pemain
-Mission/91050402/1┃Memberi kerusakan ke pemain
-Mission/91050403/1┃Memberi kerusakan ke pemain
-Mission/91050404/1┃Memberi kerusakan ke pemain
-Mission/81060501/1┃Memberi kerusakan ke hewan liar
-Mission/81060502/1┃Memberi kerusakan ke hewan liar
-Mission/81060503/1┃Memberi kerusakan ke hewan liar
-Mission/81060504/1┃Memberi kerusakan ke hewan liar
-Mission/91060501/1┃Memberi kerusakan ke hewan liar
-Mission/91060502/1┃Memberi kerusakan ke hewan liar
-Mission/91060503/1┃Memberi kerusakan ke hewan liar
-Mission/91060504/1┃Memberi kerusakan ke hewan liar
-Mission/10000004/1┃Berada di peringkat 3 ke atas
-Mission/10000010/1┃Memberi kerusakan ke pemain
-Mission/10000011/1┃Memberi kerusakan ke hewan liar
-Mission/10000018/1┃Membunuh Wickeline
-Mission/10000019/1┃Bunuh Alpha
-Mission/10000020/1┃Bunuh Omega
-서비스약관┃Terms of Service
-개인정보동의┃Privacy Policy
-CharacterState/Group/Name/7110601┃Makan
-CharacterState/Group/Desc/7110601┃Memulihkan HP dari makanan.
-CharacterState/Group/Name/7110611┃Minum
-CharacterState/Group/Desc/7110611┃Memulihkan SP dari minuman.
-로딩팁 튜토리얼12┃Tekan [A] dan Klik Kanan untuk menyerang!\nKaraktermu akan menyerang musuh disekitar ketika kamu berjalan ke arah yang dituju.
-로딩팁 튜토리얼13┃Klik kiri dan tarik Mouse sambil menahan [Alt] Untuk menggunakan Ping Wheel.\nKamu dapat berkomunikasi dengan teammu!!
-ButtonType/Confirm┃Konfirmasi
-ButtonType/Cancel┃Batal
-SupportLanguage/Korean┃한국어
-SupportLanguage/English┃English
-SupportLanguage/Japanese┃日本語
-SupportLanguage/ChineseSimplified┃简体中文
-SupportLanguage/ChineseTraditional┃繁體中文
-SupportLanguage/French┃Français (BETA)
-SupportLanguage/Spanish┃Español (España - BETA)
-SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
-SupportLanguage/Portuguese┃Português (BETA)
-SupportLanguage/Russian┃Русский (BETA)
-SupportLanguage/German┃Deutsch (BETA)
-SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
-SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
-SupportLanguage/Thai┃ภาษาไทย (BETA)
-SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
-SupportLanguage/Italian┃Italiano (BETA)
-SupportLanguage/Polish┃Polski (BETA)
-SupportCountryCharacterVoice/Korean┃한국어 (Korean)
-SupportCountryCharacterVoice/English┃English
-SupportCountryCharacterVoice/Japanese┃日本語
-중국지역가속안내┃Acceleration Option
-Graphic/Low┃Sangat Rendah
-Graphic/Medium┃Biasa
-Graphic/High┃Tinggi
-Graphic/Ultra┃Ultra
-FullScreenMode/ExclusiveFullScreen┃Layar Penuh
-FullScreenMode/FullScreenWindow┃Layar Penuh Tanpa Garis 
-FullScreenMode/MaximizedWindow┃Layar Penuh Tanpa Garis 
-FullScreenMode/Windowed┃Layar Kecil
-Internal┃Kesalahan yang tidak diketahui
-ObjectNotFound┃Target tidak ditemukan
-NotEnoughInventory┃Ruang inventaris penuh
-인벤토리 공간이 부족 합니다.┃Ruang inventaris penuh
-NotEnoughItem┃Barang tidak cukup
-NotEnoughItemBox┃Inventaris penuh
-InvalidItemCode┃Barang tidak diketahui
-ItemNotFound┃Barang tidak ditemukan
-InvalidAction┃Tindakan tidak valid
-CharacterNotAlive┃Tindakan tidak valid
-CannotPerformRightNow┃Tidak bisa dilakukan sekarang.
-NotAvailableYet┃Belum tersedia.
-CantConsumeItem┃Belum tersedia.
-NotEnoughSp┃SP tidak cukup
-NotExistUserId┃Pemain tidak ditemukan
-InvalidBattleToken┃Permainan tidak valid
-AlreadyExistUserId┃ID sudah ada
-GameStartedAlready┃Permainan sudah dimulai
-NoBattleHost┃Tuan rumah tidak ditemukan
-CantConsumItem┃Kamu tidak bisa makan lagi
-Evasion┃Menghindar
-NotInvalidTarget┃Target tidak Sah
-InvalidTarget┃Target tidak Sah
-ServerUnavailable┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
-OutOfService┃Game tidak bisa dijalankan. Silahkan cek jadwal tes.
-OutOfService_Temp┃Sedang dalam maintenance, silahkan kembali lagi nanti.\nWaktu tersisa: {0} {1} {2}
-InvalidMatchingMode┃Mode pencocokan tidak valid
-AlreadyJoinedMatching┃Pencocokan sudah dimulai
-EmptyMatchingToken┃Permainan tidak valid
-InvalidCommand┃Perintah tidak diketahui
-NotMatchingUser┃Permintaan tidak valid
-InvalidMatchingToken┃Permintaan tidak valid
-UnknownMatchingError┃Daerah yang dipilih tidak tersedia untuk pencocokan.
-MatchingServerNone┃Daerah yang dipilih tidak tersedia untuk pencocokan.
-UnavailableNickname┃Maaf, nama sudah dipakai
-매칭서버 타임아웃┃Silahkan cek koneksi internet anda.
-UserGameFinished┃Tidak dapat menemukan game.
-LoadingText/Connect┃Daftar barang yang bisa kamu buat terletak di sebelah atas inventaris.
-LoadingText/Handshake┃Karaktermu akan duduk dan istirahat ketika kamu menekan X
-LoadingText/Join┃Jika kamu bisa melihat musuhmu, kamu bisa menyerang mereka, tidak peduli dengan tempatnya.
-LoadingText/LoadCharacter┃Hitung mundur dimulai ketika kamu berada di area terlarang. Saat mencapai 0, karaktermu akan meledak.
-LoadingText/LoadLevel┃Kamu bisa mengubah pengaturan Pengaktifan Cepat di bagian Pengaturan.
-LoadingText/LoadEffect┃Tekan CTRL + 1 ~ 6 untuk mendengar lelucon, ejekan karaktermu, dan lain-lainnya.
-LoadingText/Done┃Kamu bisa menggunakan jurus senjata ketika kamu mencapai tingkatan 7 di Penguasaan
-LoadingText/SceneLoad┃Dengan membuka peta (M), kamu bisa menggerakan karaktermu dengan menahan CTRL dan klik kanan pada peta.
-설문조사 배너┃Silahkan jawab survey
-설문조사 링크┃https://steamcommunity.com/app/1049590/guides
-커뮤니티 이벤트 배너┃Menangkan Hadiah !
-커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
-기본 커뮤니티┃Troubleshooting.
-기본 커뮤니티 링크┃https://discord.gg/eternalreturn
-기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
-LINK┃LINK
-스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
-디스코드 링크┃https://discord.gg/eternalreturn
-트위터 링크┃https://twitter.com/_EternalReturn_/
-페이스북 링크┃https://www.facebook.com/eternalreturngame
-레딧 링크┃https://www.reddit.com/r/eternalreturn/
-QQ 그룹 팝업 메인 버튼┃QQ频道
-QQ 그룹 팝업 메인 버튼 링크┃https://pd.qq.com/s/euobpuz5w
-QQ 그룹1┃QQ 实验群1
-QQ 그룹2┃QQ 实验群2
-QQ 그룹3┃QQ 实验群3
-QQ 그룹4┃QQ实验群4
-QQ 그룹5┃QQ实验群5
-QQ 그룹 링크1┃https://qm.qq.com/q/yBWlV4Imlk
-QQ 그룹 링크2┃https://qm.qq.com/q/KX0mZL70GY
-QQ 그룹 링크3┃https://qm.qq.com/q/eNPqIhUltS
-QQ 그룹 링크4┃https://qm.qq.com/q/MJ0vgUe8SW
-QQ 그룹 링크5┃https://qm.qq.com/q/mxEnSmj076
-웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
-사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/
-플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
-하트지급 링크┃https://discord.gg/HkVHuAh
-빌리빌리 링크┃https://space.bilibili.com/413651489
-팬북 링크┃https://fanbook.mobi/PZgT8F9W
-공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
-공식 홈페이지 링크 카카오┃https://er.game.daum.net/
-디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
-트위터 링크 한국어┃https://twitter.com/EternalReturnKR
-KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
-유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
-공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
-QQ 링크1 중문간체┃https://qm.qq.com/q/yBWlV4Imlk
-QQ 링크2 중문간체┃https://qm.qq.com/q/KX0mZL70GY
-QQ 링크3 중문간체┃https://qm.qq.com/q/eNPqIhUltS
-QQ 링크4 중문간체┃https://qm.qq.com/q/MJ0vgUe8SW
-QQ 링크5 중문간체┃https://qm.qq.com/q/mxEnSmj076
-웨이보 링크 중문간체┃https://weibo.com/6511008423
-빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
-팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
-KOOK 링크 중문간체┃https://kook.vip/ZG55e1
-공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
-디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
-유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
-페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
-인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
-공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
-트위터 링크 일본어┃https://twitter.com/EternalReturnJP
-유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
-디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
-공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
-공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
-디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
-트위터 링크 스페인어┃https://twitter.com/EternalReturnES
-페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
-공식 홈페이지 링크 영어┃https://playeternalreturn.com/
-디스코드 링크 영어┃https://discord.com/invite/eternalreturn
-트위터 링크 영어┃https://twitter.com/_EternalReturn_/
-페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
-신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
-신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
-신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
-고객지원 링크┃https://playeternalreturn.com/help
-고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
-고객지원 링크_MS┃https://playeternalreturn.com/help
-점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
-점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
-점검 중 링크_MS┃https://playeternalreturn.com/posts/news
-카카오 홈페이지 링크┃http://er.game.daum.net/
-카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
-OutLink/Desc/1┃Selamat datang di komunitas ER!
-OutLink/Desc/2┃Gabung dengan acara komunitas kami di Discord! Jangan lupa menaruh kami pada WISHLIST dan Follow kami di Steam untuk mendapatkan pemberitahuan tentang rilisnya permainan kami.
-OutLink/Desc/3┃Bagikan timbal balikmu bersama kami
-OutLink/Desc/4┃Panduan bermain
-OutLink/Desc/5┃Dukung permainan ini
-OutLink/Desc/6┃Jadilah penyokong Eternal Return
-플레이 가이드┃Panduan bermain
-{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
-{0}년-{1}월-{2}일┃{2}-{1}-{0}
-게임 데이터를 불러오는데 실패했습니다.┃Gagal melakukan kontak dengan server
-모드매칭불가안내┃Cek mode apa yang bisa dimainkan hari ini!\nMode hari ini: {0}, {1}
-접속이 제한된 계정입니다.┃Akun diberhentikan untuk sementara.\nWaktu tersisa: {0} {1} {2}\nReason for suspension: {3}
-영구 정지┃Akun diberhentikan secara permamen.
-클라이언트 버전 업데이트 이후 이용 가능합니다.┃Perbaharui game untuk dimainkan.\nKamu mungkin harus membuka ulang Steam.
-클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Perbaharui game untuk dimainkan.
-클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Perbaharui game untuk dimainkan.
-서버와연결할수없음┃Gagal menyambungkan ke server.
-팀원 중 누군가가 매칭 실패┃Member di dalam tim tidak bisa memulai permainan. Silahkan coba lagi.
-매칭 중 결제 불가┃Tidak bisa membeli saat mencari permainan.
-현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Jaringan tidak stabil. ErrorCode: {0}
-점검중┃Server sedang maintenance.\nMohon maaf atas ketidaknyamanannya.
-해결방법┃Troubleshooting.
-해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
-해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
-해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
-서버와 연결이 끊어졌습니다.┃Gagal menyambungkan ke server.
-FirstLoading1┃Loading Text
-FirstLoading2┃Verifying Account...
-FirstLoading3┃Loading ...
-게임문화개선캠페인┃<color=#FF0000>Eternal Return menghargai permainan yang adil. Pemain yang ditemukan melanggar aturan tim akan menghadapi pemberhentian akun.</color>
-게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
-접속시간경과안내┃Kamu telah bermain selama {0} jam.
-Item/Name/602409┃Laevateinn Mk2
-Item/Name/607406┃Lembing Api Mk2
-Item/Name/610501┃Mark of the Phoenix Mk2
-Item/Name/702503┃Holy Orders Mk2
-Item/Name/705504┃Totem Mk2
-Item/Name/705502┃Gunbai Berdarah Mk2
-Infusion/Item/705504┃Totem Mk2
-Infusion/Item/705502┃Gunbai Berdarah Mk2
-MasteryType/Glove/Desc┃Sarung tangan memiliki jarak yang sangat dekat, tetapi memiliki kecepatan paling tinggi untuk serangan beruntun.
-MasteryType/Tonfa/Desc┃Tonfa adalah satu-satunya senjata rakitan yang bisa dipakai untuk bertahan.
-MasteryType/Hammer/Desc┃Martil memiliki kecepatan yang sangat lambat, tapi pukulan kuatnya bisa menghambat gerakan lawan.
-MasteryType/Bat/Desc┃Pentungan adalah senjata fleksibel dan seimbang yang bisa dipakai untuk menghadapi berbagai macam jenis musuh dengan mudah.
-MasteryType/Whip/Desc┃Cambuk merupakan senjata yang cukup rumit karena bisa menghambat pergerakan lawan.
-MasteryType/HighAngleFire/Desc┃Senjata lempar seringkali memiliki kekuatan serangan yang tinggi. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
-MasteryType/DirectFire/Desc┃Shuriken memiliki berbagai macam jenis senjata dan sangat fleksibel. Jumlah tumpukan yang bisa kamu pegang, serta berapa banyak yang dibuat, bervariasi untuk setiap senjata, jadi pastikan untuk mengecek berapa banyak yang kamu miliki dan bisa kamu buat.
-MasteryType/Bow/Desc┃Busur adalah senjata jarak jauh yang bertambah kuat seiring bertambahnya penguasaanmu. Busur sangat efektif untuk digunakan pada hewan liar.
-MasteryType/CrossBow/Desc┃Crossbow memiliki keunggulan pada kemampuannya untuk  menghajar musuh sambil memfokuskan serangan ke satu arah.
-MasteryType/Pistol/Desc┃Pistol memudahkanmu untuk lebih sering menggunakan jurus. Senjata ini berkeahlian dalam kelincahan dan mobilitas.
-MasteryType/AssaultRifle/Desc┃Senapan serbu adalah senjata jarak jauh yang ahli dalam serangan yang konstan dan beruntun.
-MasteryType/SniperRifle/Desc┃Senapan sniper memliki Kekuatan Serang yang sangat tinggi diiringi dengan jarak yang sangat jauh. Senjata ini menempuh jarak serang melebihi jarak pandang, pastikan kamu memilih tempat dengan jarak pandang yang bagus.
-MasteryType/Axe/Desc┃Kapak mungkin sangat lambat, tapi kerusakannya adalah yang tertinggi. Senjata yang mudah dan cepat untuk dibuat akan memberikanmu keunggulan dalam pertarungan.
-MasteryType/OneHandSword/Desc┃Pisau adalah senjata yang berkeahlian dalam serangan kejutan. Senjata ini adalah salah satu yang terbaik dan terkuat untuk pertarungan yang singkat.
-MasteryType/TwoHandSword/Desc┃Pedang dua tangan adalah senjata yang cukup stabil. Semakin lama kamu menguasainya, semakin kamu memahaminya. Namun, pemain yang masih baru harus hati-hati ketika menggunakannya.
-MasteryType/Polearm/Desc┃Tongkat senjata adalah senjata dengan kekuatan serangan dan jarak yang seimbang - terutama ketika melawan musuh yang banyak dalam satu waktu.
-MasteryType/DualSword/Desc┃Pedang ganda berkeahlian dalam melepaskan dua serangan yang anggun dan berkelanjutan.
-MasteryType/Spear/Desc┃Tombak mungkin terlihat sebagai senjata yang memiliki jarak lumayan dengan kerusakan yang tinggi. Namun, senjata ini lemah ketika melawan musuh yang terlalu dekat. Penting bagimu untuk menjaga jarak ketika menggunakan tombak
-MasteryType/Nunchaku/Desc┃\nNunchaku sulit dipelajari, tetapi bisa menjadi senjata serbaguna dengan penggunaan kreatif jika dikuasai.
-MasteryType/Rapier/Desc┃Pedang tipis sanggup melakukan gerakan mencolok yang bisa menghindari serangan musuh, menyebabkan serangannya sendiri yang berhasil.
-MasteryType/Guitar/Desc┃Gitar adalah senjata jarak jauh yang menggunakan gelombang suara. Senjata ini sangat beragam dengan cara bermain dan strategimu yang akan berubah total bergantung pada jumlah Poin Evolusi yang kamu terapak ke tiap jurusnya
-MasteryType/Camera/Desc┃Kamera adalah senjata jarak jauh tanpa ada projektil. Juga bisa digunakan untuk membutakan musuh, yang membuat serangan mereka meleset karena cahaya yang terang.
 ServerError/1000┃Terjadi kesalahan. Silahkan buka kembali permainannya.
 ServerError/1001┃Terjadi kesalahan. Silahkan buka kembali permainannya.
 ServerError/1002┃Terjadi kesalahan. Silahkan buka kembali permainannya.
