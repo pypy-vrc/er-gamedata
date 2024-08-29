@@ -47,7 +47,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
   },
   {
     "code": 100001,
@@ -97,7 +98,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100002,
@@ -137,7 +139,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -147,7 +149,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1,
@@ -197,7 +200,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 2,
@@ -247,7 +251,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 3,
@@ -261,7 +266,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 24,
-    "distance": 7.7,
+    "distance": 7.8,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -297,7 +302,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 4,
@@ -311,7 +317,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 21,
-    "distance": 9.5,
+    "distance": 9.3,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -347,7 +353,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 5,
@@ -397,7 +404,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6,
@@ -447,7 +455,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 11,
@@ -473,7 +482,7 @@
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
     "shotEffectAndSoundCode": 1002002,
-    "shotPoint": "ShotPoint",
+    "shotPoint": "ShotPoint_A",
     "serverInterpolationPosition": 0,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
@@ -497,10 +506,62 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
   },
   {
     "code": 12,
+    "prefabName": "Projectile_FX_BI_Aya_NormalAttack",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "ShotPoint_A",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1002012,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 13,
     "prefabName": "Projectile_FX_BI_Aya_NormalAttack",
     "type": "Target",
     "suffixItemCode": false,
@@ -547,7 +608,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 22,
@@ -597,7 +659,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 31,
@@ -611,7 +674,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 24,
-    "distance": 7.7,
+    "distance": 7.8,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -647,7 +710,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 32,
@@ -661,7 +725,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 24,
-    "distance": 7.7,
+    "distance": 7.8,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -697,7 +761,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 41,
@@ -747,7 +812,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 42,
@@ -797,7 +863,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 51,
@@ -847,7 +914,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 52,
@@ -897,7 +965,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 61,
@@ -947,7 +1016,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 62,
@@ -997,7 +1067,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 63,
@@ -1047,7 +1118,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 64,
@@ -1097,7 +1169,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 65,
@@ -1147,7 +1220,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 66,
@@ -1161,7 +1235,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 24,
-    "distance": 4.1,
+    "distance": 4.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -1197,7 +1271,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 71,
@@ -1237,7 +1312,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -1247,7 +1322,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 72,
@@ -1287,7 +1363,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -1297,7 +1373,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 73,
@@ -1347,7 +1424,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 74,
@@ -1361,7 +1439,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 14,
-    "distance": 8.5,
+    "distance": 8.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -1397,7 +1475,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 75,
@@ -1411,7 +1490,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 7.3,
-    "distance": 6,
+    "distance": 6.1,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -1447,7 +1526,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 76,
@@ -1497,7 +1577,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 78,
@@ -1547,7 +1628,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 79,
@@ -1597,7 +1679,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 80,
@@ -1647,7 +1730,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 81,
@@ -1697,7 +1781,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 82,
@@ -1747,7 +1832,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 90,
@@ -1797,7 +1883,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 91,
@@ -1847,7 +1934,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 10001,
@@ -1897,7 +1985,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100501,
@@ -1947,7 +2036,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100801,
@@ -1997,7 +2087,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100802,
@@ -2047,7 +2138,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100803,
@@ -2097,7 +2189,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100804,
@@ -2147,7 +2240,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100805,
@@ -2197,7 +2291,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100806,
@@ -2247,7 +2342,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100807,
@@ -2261,7 +2357,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2297,7 +2393,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100808,
@@ -2311,7 +2408,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2347,7 +2444,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100809,
@@ -2361,7 +2459,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2397,7 +2495,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100810,
@@ -2411,7 +2510,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2447,7 +2546,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100811,
@@ -2461,7 +2561,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2497,7 +2597,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100812,
@@ -2511,7 +2612,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2547,7 +2648,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100813,
@@ -2561,7 +2663,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2597,7 +2699,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100814,
@@ -2611,7 +2714,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.9,
+    "distance": 6.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -2647,7 +2750,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100815,
@@ -2697,7 +2801,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100816,
@@ -2747,7 +2852,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100817,
@@ -2797,7 +2903,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100818,
@@ -2847,7 +2954,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100819,
@@ -2897,7 +3005,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100820,
@@ -2947,7 +3056,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100821,
@@ -2997,7 +3107,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100822,
@@ -3047,7 +3158,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100823,
@@ -3097,7 +3209,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100824,
@@ -3147,7 +3260,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100825,
@@ -3197,7 +3311,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100826,
@@ -3247,7 +3362,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100827,
@@ -3261,7 +3377,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 11,
-    "distance": 7.7,
+    "distance": 7.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -3297,7 +3413,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100828,
@@ -3347,7 +3464,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100829,
@@ -3397,7 +3515,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100901,
@@ -3423,7 +3542,7 @@
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
     "shotEffectAndSoundCode": 1009005,
-    "shotPoint": "ShotPoint",
+    "shotPoint": "ShotPoint_A",
     "serverInterpolationPosition": 0,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
@@ -3447,7 +3566,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
   },
   {
     "code": 100902,
@@ -3497,7 +3617,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 100903,
@@ -3547,7 +3668,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 100904,
@@ -3573,7 +3695,7 @@
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
     "shotEffectAndSoundCode": 1009301,
-    "shotPoint": "ShotPoint",
+    "shotPoint": "ShotPoint_A",
     "serverInterpolationPosition": 0,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
@@ -3597,7 +3719,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
   },
   {
     "code": 100905,
@@ -3647,7 +3770,59 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
+  },
+  {
+    "code": 100906,
+    "prefabName": "Projectile_FX_BI_Isol_NormalAttack",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "ShotPoint_A",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1009102,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101201,
@@ -3661,7 +3836,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 15,
-    "distance": 7.5,
+    "distance": 7.3,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -3681,7 +3856,7 @@
     "explosionEffectAndSoundCode": 0,
     "collisionTargetEffectAndSoundCode": 1012101,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.75,
+    "collisionObjectRadius": 0.6,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -3697,7 +3872,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101204,
@@ -3711,7 +3887,7 @@
     "isUseCurve": true,
     "duration": 1.6,
     "speed": 0,
-    "distance": 7,
+    "distance": 6.7,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -3731,7 +3907,7 @@
     "explosionEffectAndSoundCode": 0,
     "collisionTargetEffectAndSoundCode": 1012301,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.9,
+    "collisionObjectRadius": 0.8,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -3747,7 +3923,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101205,
@@ -3797,7 +3974,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101206,
@@ -3847,7 +4025,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101207,
@@ -3897,7 +4076,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101208,
@@ -3937,7 +4117,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -3947,7 +4127,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101301,
@@ -3997,7 +4178,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101302,
@@ -4047,7 +4229,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101303,
@@ -4097,7 +4280,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101401,
@@ -4111,7 +4295,7 @@
     "isUseCurve": false,
     "duration": 0.32,
     "speed": 0,
-    "distance": 4.5,
+    "distance": 4.45,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -4147,7 +4331,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101411,
@@ -4197,7 +4382,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101451,
@@ -4237,7 +4423,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -4247,7 +4433,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101501,
@@ -4287,7 +4474,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -4297,7 +4484,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101502,
@@ -4337,7 +4525,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -4347,7 +4535,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101503,
@@ -4361,7 +4550,7 @@
     "isUseCurve": false,
     "duration": 0.38,
     "speed": 0,
-    "distance": 4,
+    "distance": 3.45,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -4397,7 +4586,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101601,
@@ -4411,7 +4601,7 @@
     "isUseCurve": true,
     "duration": 1.5,
     "speed": 0,
-    "distance": 14.2,
+    "distance": 14.05,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -4447,7 +4637,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101602,
@@ -4497,7 +4688,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101603,
@@ -4547,7 +4739,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101604,
@@ -4597,7 +4790,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 101701,
@@ -4637,7 +4831,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -4647,7 +4841,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101720,
@@ -4697,7 +4892,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101721,
@@ -4747,7 +4943,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101722,
@@ -4797,7 +4994,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101730,
@@ -4847,7 +5045,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101740,
@@ -4897,7 +5096,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101741,
@@ -4947,7 +5147,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101742,
@@ -4997,7 +5198,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101802,
@@ -5047,7 +5249,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101830,
@@ -5061,7 +5264,7 @@
     "isUseCurve": false,
     "duration": 0.16,
     "speed": 0,
-    "distance": 5,
+    "distance": 4.95,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -5097,7 +5300,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101840,
@@ -5147,7 +5351,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101850,
@@ -5197,7 +5402,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101901,
@@ -5237,7 +5443,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -5247,7 +5453,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101902,
@@ -5287,7 +5494,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -5297,7 +5504,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101921,
@@ -5311,7 +5519,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 13,
-    "distance": 9,
+    "distance": 9.05,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -5347,7 +5555,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101931,
@@ -5397,7 +5606,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101941,
@@ -5447,7 +5657,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101951,
@@ -5497,7 +5708,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 101952,
@@ -5547,7 +5759,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102020,
@@ -5561,7 +5774,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 19,
-    "distance": 7,
+    "distance": 7.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -5597,7 +5810,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102050,
@@ -5647,7 +5861,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102101,
@@ -5697,7 +5912,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 102102,
@@ -5747,7 +5963,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 102103,
@@ -5797,7 +6014,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102104,
@@ -5847,7 +6065,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 102110,
@@ -5861,7 +6080,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 15,
-    "distance": 8,
+    "distance": 4.7,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -5897,7 +6116,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102140,
@@ -5947,7 +6167,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102150,
@@ -5961,7 +6182,7 @@
     "isUseCurve": true,
     "duration": 0.3,
     "speed": 0,
-    "distance": 5.5,
+    "distance": 5.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -5997,7 +6218,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102210,
@@ -6011,7 +6233,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 18,
-    "distance": 9.3,
+    "distance": 9.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6047,7 +6269,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102211,
@@ -6061,7 +6284,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 18,
-    "distance": 9.3,
+    "distance": 9.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6097,7 +6320,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102251,
@@ -6111,7 +6335,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 20,
-    "distance": 12,
+    "distance": 11.75,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6147,7 +6371,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102252,
@@ -6161,7 +6386,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 20,
-    "distance": 12,
+    "distance": 11.75,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6197,7 +6422,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102340,
@@ -6247,7 +6473,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102341,
@@ -6297,7 +6524,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102342,
@@ -6311,7 +6539,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 24,
-    "distance": 4.3,
+    "distance": 4.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6347,57 +6575,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
-  },
-  {
-    "code": 102501,
-    "prefabName": "Projectile_FX_BI_Bernice_NormalAttack",
-    "type": "Direction",
-    "suffixItemCode": false,
-    "enableObjectCollisionCheck": true,
-    "enableObjectCollsionCheckAfterArrival": false,
-    "collisionTypeCanNotBeAttacked": "None",
-    "isPassWall": true,
-    "isUseCurve": false,
-    "duration": 0,
-    "speed": 40,
-    "distance": 6.5,
-    "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
-    "doHideWithParticleSystem": true,
-    "damageType": "Normal",
-    "attackSubType": "Normal",
-    "penetrationCount": 1,
-    "isExplosion": false,
-    "isExplosionWithoutCollision": false,
-    "explosionRadius": 0,
-    "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 1025001,
-    "shotPoint": "Fx_Center",
-    "serverInterpolationPosition": 0.1,
-    "hitPoint": "",
-    "collisionSelfEffectAndSoundCode": 0,
-    "arrivedEffectAndSoundCode": 0,
-    "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 1025002,
-    "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.35,
-    "collisionObjectAngle": 0,
-    "collisionObjectWidth": 0,
-    "collisionObjectDepth": 0,
-    "collisionHostileType": 2,
-    "isOnlyPlayerCollision": false,
-    "isBullet": false,
-    "ignoreLocalMoveXZ": false,
-    "localMoveType": "Direct",
-    "localHighAngleHeight": 0,
-    "localBaseHeight": 0,
-    "isInterpolationLocalGroundHeight": false,
-    "localDestroyDelay": 2,
-    "miniMapIconName": "",
-    "isDestroyWhenOutSideMap": false,
-    "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102502,
@@ -6447,7 +6626,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102503,
@@ -6461,7 +6641,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 18,
-    "distance": 11,
+    "distance": 11.15,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6497,7 +6677,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102504,
@@ -6511,7 +6692,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 16,
-    "distance": 12,
+    "distance": 12.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6547,7 +6728,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102505,
@@ -6597,7 +6779,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102506,
@@ -6647,57 +6830,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
-  },
-  {
-    "code": 102507,
-    "prefabName": "Projectile_FX_BI_Bernice_NormalAttack",
-    "type": "Direction",
-    "suffixItemCode": false,
-    "enableObjectCollisionCheck": true,
-    "enableObjectCollsionCheckAfterArrival": false,
-    "collisionTypeCanNotBeAttacked": "None",
-    "isPassWall": true,
-    "isUseCurve": false,
-    "duration": 0,
-    "speed": 40,
-    "distance": 8,
-    "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
-    "doHideWithParticleSystem": true,
-    "damageType": "Normal",
-    "attackSubType": "Normal",
-    "penetrationCount": 1,
-    "isExplosion": false,
-    "isExplosionWithoutCollision": false,
-    "explosionRadius": 0,
-    "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 1025001,
-    "shotPoint": "Fx_Center",
-    "serverInterpolationPosition": 0.1,
-    "hitPoint": "",
-    "collisionSelfEffectAndSoundCode": 0,
-    "arrivedEffectAndSoundCode": 0,
-    "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 1025002,
-    "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.35,
-    "collisionObjectAngle": 0,
-    "collisionObjectWidth": 0,
-    "collisionObjectDepth": 0,
-    "collisionHostileType": 2,
-    "isOnlyPlayerCollision": false,
-    "isBullet": false,
-    "ignoreLocalMoveXZ": false,
-    "localMoveType": "Direct",
-    "localHighAngleHeight": 0,
-    "localBaseHeight": 0,
-    "isInterpolationLocalGroundHeight": false,
-    "localDestroyDelay": 2,
-    "miniMapIconName": "",
-    "isDestroyWhenOutSideMap": false,
-    "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102508,
@@ -6747,7 +6881,110 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 102601,
+    "prefabName": "Projectile_FX_BI_Barbara_NormalAttack",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1026102,
+    "shotPoint": "ShotPoint_NormalAttack",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1026101,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": true,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
+  },
+  {
+    "code": 102602,
+    "prefabName": "Projectile_FX_BI_Barbara_NormalAttack_P",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1026107,
+    "shotPoint": "ShotPoint_NormalAttack",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1026106,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": true,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 102620,
@@ -6772,14 +7009,14 @@
     "isExplosionWithoutCollision": false,
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 1026102,
+    "shotEffectAndSoundCode": 1026103,
     "shotPoint": "Cannon_Front",
     "serverInterpolationPosition": 0,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
     "arrivedEffectAndSoundCode": 0,
     "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 1026103,
+    "collisionTargetEffectAndSoundCode": 1026104,
     "collisionObjectType": "Circle",
     "collisionObjectRadius": 0.3,
     "collisionObjectAngle": 0,
@@ -6797,7 +7034,161 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 102621,
+    "prefabName": "Projectile_FX_BI_Turret_NormalAttack_P",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1026103,
+    "shotPoint": "Cannon_Front",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1026104,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 102641,
+    "prefabName": "Projectile_FX_BI_Barbara_Skill03",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0.5,
+    "speed": 0,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Area",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1026403,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 1026404,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 0,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "HighAngle",
+    "localHighAngleHeight": 6,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 102642,
+    "prefabName": "Projectile_FX_BI_Barbara_Skill03_P",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0.5,
+    "speed": 0,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Area",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1026405,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 1026406,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 0,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "HighAngle",
+    "localHighAngleHeight": 6,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102701,
@@ -6847,7 +7238,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 102702,
@@ -6887,7 +7279,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -6897,7 +7289,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102721,
@@ -6911,7 +7304,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 34.61,
-    "distance": 9,
+    "distance": 8.9,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -6947,7 +7340,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102731,
@@ -6997,7 +7391,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102741,
@@ -7047,7 +7442,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102751,
@@ -7097,7 +7493,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102771,
@@ -7147,7 +7544,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1028201,
@@ -7197,7 +7595,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1028202,
@@ -7247,7 +7646,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1028301,
@@ -7297,7 +7697,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1028302,
@@ -7347,7 +7748,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 102950,
@@ -7361,7 +7763,7 @@
     "isUseCurve": false,
     "duration": 1.2,
     "speed": 0,
-    "distance": 9,
+    "distance": 10.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -7397,7 +7799,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103001,
@@ -7447,7 +7850,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103002,
@@ -7497,7 +7901,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103003,
@@ -7547,7 +7952,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103101,
@@ -7597,7 +8003,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103102,
@@ -7647,7 +8054,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103131,
@@ -7661,7 +8069,7 @@
     "isUseCurve": false,
     "duration": 0.35,
     "speed": 0,
-    "distance": 6.3,
+    "distance": 6.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -7697,7 +8105,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103132,
@@ -7711,7 +8120,7 @@
     "isUseCurve": false,
     "duration": 0.5,
     "speed": 0,
-    "distance": 9.3,
+    "distance": 9.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -7747,7 +8156,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103134,
@@ -7797,7 +8207,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103133,
@@ -7847,7 +8258,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103141,
@@ -7897,7 +8309,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103142,
@@ -7947,7 +8360,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103151,
@@ -7997,7 +8411,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103152,
@@ -8047,7 +8462,8 @@
     "miniMapIconName": "Ico_Map_Monster_Point",
     "isDestroyWhenOutSideMap": true,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103153,
@@ -8097,7 +8513,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103201,
@@ -8137,7 +8554,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -8147,7 +8564,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103202,
@@ -8187,7 +8605,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -8197,7 +8615,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1032031,
@@ -8237,7 +8656,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 0,
@@ -8247,7 +8666,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1032032,
@@ -8297,7 +8717,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1032041,
@@ -8337,7 +8758,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -8347,7 +8768,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1032042,
@@ -8397,7 +8819,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103211,
@@ -8447,7 +8870,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103231,
@@ -8455,21 +8879,21 @@
     "type": "Direction",
     "suffixItemCode": false,
     "enableObjectCollisionCheck": true,
-    "enableObjectCollsionCheckAfterArrival": false,
+    "enableObjectCollsionCheckAfterArrival": true,
     "collisionTypeCanNotBeAttacked": "None",
     "isPassWall": true,
     "isUseCurve": true,
-    "duration": 2,
-    "speed": 0,
-    "distance": 8,
-    "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
+    "duration": 0,
+    "speed": 23,
+    "distance": 7.9,
+    "lifeTimeAfterArrival": 0.65,
+    "lifeTimeAfterExplosion": 0.5,
     "doHideWithParticleSystem": true,
     "damageType": "Skill",
     "attackSubType": "Area",
     "penetrationCount": 999,
-    "isExplosion": false,
-    "isExplosionWithoutCollision": false,
+    "isExplosion": true,
+    "isExplosionWithoutCollision": true,
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
     "shotEffectAndSoundCode": 0,
@@ -8479,9 +8903,9 @@
     "collisionSelfEffectAndSoundCode": 0,
     "arrivedEffectAndSoundCode": 0,
     "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1032301,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.75,
+    "collisionObjectRadius": 0.6,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -8497,7 +8921,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103232,
@@ -8511,7 +8936,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 23,
-    "distance": 8,
+    "distance": 7.9,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -8531,7 +8956,7 @@
     "explosionEffectAndSoundCode": 0,
     "collisionTargetEffectAndSoundCode": 0,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 0.75,
+    "collisionObjectRadius": 0.6,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -8547,7 +8972,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103233,
@@ -8597,7 +9023,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103251,
@@ -8647,7 +9074,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103252,
@@ -8697,7 +9125,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 1033500,
@@ -8747,7 +9176,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103421,
@@ -8797,7 +9227,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103441,
@@ -8811,7 +9242,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 13.2,
-    "distance": 6.3,
+    "distance": 6.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -8847,7 +9278,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103451,
@@ -8897,7 +9329,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103501,
@@ -8947,7 +9380,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103601,
@@ -8997,7 +9431,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103602,
@@ -9037,7 +9472,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -9047,7 +9482,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103603,
@@ -9087,7 +9523,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -9097,7 +9533,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103604,
@@ -9110,8 +9547,8 @@
     "isPassWall": true,
     "isUseCurve": false,
     "duration": 0,
-    "speed": 9,
-    "distance": 9,
+    "speed": 12,
+    "distance": 8.75,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -9131,7 +9568,7 @@
     "explosionEffectAndSoundCode": 0,
     "collisionTargetEffectAndSoundCode": 1036201,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 1,
+    "collisionObjectRadius": 0.75,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -9147,7 +9584,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103701,
@@ -9197,7 +9635,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103702,
@@ -9247,7 +9686,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103801,
@@ -9297,7 +9737,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 103802,
@@ -9347,7 +9788,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 103820,
@@ -9397,7 +9839,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103821,
@@ -9447,7 +9890,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103822,
@@ -9497,7 +9941,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103850,
@@ -9547,7 +9992,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103861,
@@ -9597,7 +10043,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 103862,
@@ -9647,7 +10094,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104001,
@@ -9687,7 +10135,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -9697,7 +10145,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104031,
@@ -9747,7 +10196,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104032,
@@ -9797,7 +10247,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104101,
@@ -9847,7 +10298,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104111,
@@ -9861,7 +10313,7 @@
     "isUseCurve": false,
     "duration": 1.1,
     "speed": 7.6,
-    "distance": 8.36,
+    "distance": 8.3,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -9897,7 +10349,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104112,
@@ -9947,7 +10400,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104201,
@@ -9997,7 +10451,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104202,
@@ -10047,7 +10502,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104211,
@@ -10097,7 +10553,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104301,
@@ -10137,7 +10594,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -10147,7 +10604,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104302,
@@ -10187,7 +10645,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -10197,7 +10655,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104321,
@@ -10247,7 +10706,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104341,
@@ -10297,7 +10757,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104342,
@@ -10347,7 +10808,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104421,
@@ -10397,7 +10859,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104422,
@@ -10411,7 +10874,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.3,
+    "distance": 6.55,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -10447,7 +10910,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104423,
@@ -10497,7 +10961,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104424,
@@ -10511,7 +10976,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.3,
+    "distance": 6.55,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -10547,7 +11012,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104425,
@@ -10597,7 +11063,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104426,
@@ -10611,7 +11078,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.3,
+    "distance": 6.55,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -10647,7 +11114,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104427,
@@ -10697,7 +11165,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104428,
@@ -10711,7 +11180,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.3,
+    "distance": 6.55,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -10747,7 +11216,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104429,
@@ -10797,7 +11267,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104430,
@@ -10811,7 +11282,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 2,
+    "distance": 2.25,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -10847,7 +11318,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104601,
@@ -10897,7 +11369,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104621,
@@ -10947,7 +11420,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104631,
@@ -10997,7 +11471,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104641,
@@ -11011,7 +11486,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 14,
-    "distance": 5.15,
+    "distance": 5.225,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -11047,7 +11522,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104651,
@@ -11097,7 +11573,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104652,
@@ -11147,10 +11624,11 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
-    "code": 104701,
+    "code": 104731,
     "prefabName": "Projectile_FX_BI_Laura_Letter",
     "type": "Direction",
     "suffixItemCode": false,
@@ -11161,9 +11639,9 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 14,
-    "distance": 6,
+    "distance": 6.5,
     "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
+    "lifeTimeAfterExplosion": 0.05,
     "doHideWithParticleSystem": true,
     "damageType": "Skill",
     "attackSubType": "Normal",
@@ -11172,58 +11650,59 @@
     "isExplosionWithoutCollision": false,
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 0,
-    "shotPoint": "",
+    "shotEffectAndSoundCode": 1047307,
+    "shotPoint": "Fx_Center",
     "serverInterpolationPosition": 0.5,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
     "arrivedEffectAndSoundCode": 0,
     "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1047301,
     "collisionObjectType": "Circle",
     "collisionObjectRadius": 0.5,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
-    "isOnlyPlayerCollision": true,
+    "isOnlyPlayerCollision": false,
     "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
-    "localBaseHeight": 1,
+    "localBaseHeight": 0,
     "isInterpolationLocalGroundHeight": false,
     "localDestroyDelay": 0,
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
-    "code": 104702,
-    "prefabName": "Projectile_FX_Laura_Skill02_Flower_Start_Model",
-    "type": "Point",
+    "code": 104741,
+    "prefabName": "Projectile_FX_BI_Laura_WhipAnchor_LOD1",
+    "type": "Direction",
     "suffixItemCode": false,
-    "enableObjectCollisionCheck": false,
-    "enableObjectCollsionCheckAfterArrival": false,
+    "enableObjectCollisionCheck": true,
+    "enableObjectCollsionCheckAfterArrival": true,
     "collisionTypeCanNotBeAttacked": "None",
-    "isPassWall": true,
+    "isPassWall": false,
     "isUseCurve": false,
     "duration": 0,
-    "speed": 0,
-    "distance": 0,
-    "lifeTimeAfterArrival": 3,
+    "speed": 14,
+    "distance": 6.5,
+    "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
     "damageType": "Skill",
-    "attackSubType": "Area",
-    "penetrationCount": 0,
+    "attackSubType": "Normal",
+    "penetrationCount": 999,
     "isExplosion": false,
     "isExplosionWithoutCollision": false,
     "explosionRadius": 0,
     "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 0,
-    "shotPoint": "",
+    "shotEffectAndSoundCode": 1047403,
+    "shotPoint": "ShotPoint",
     "serverInterpolationPosition": 0,
     "hitPoint": "",
     "collisionSelfEffectAndSoundCode": 0,
@@ -11231,57 +11710,7 @@
     "explosionEffectAndSoundCode": 0,
     "collisionTargetEffectAndSoundCode": 0,
     "collisionObjectType": "Circle",
-    "collisionObjectRadius": 2,
-    "collisionObjectAngle": 0,
-    "collisionObjectWidth": 0,
-    "collisionObjectDepth": 0,
-    "collisionHostileType": 2,
-    "isOnlyPlayerCollision": false,
-    "isBullet": false,
-    "ignoreLocalMoveXZ": false,
-    "localMoveType": "Direct",
-    "localHighAngleHeight": 0,
-    "localBaseHeight": 0,
-    "isInterpolationLocalGroundHeight": false,
-    "localDestroyDelay": 1,
-    "miniMapIconName": "",
-    "isDestroyWhenOutSideMap": false,
-    "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
-  },
-  {
-    "code": 104751,
-    "prefabName": "Projectile_FX_BI_Laura_WhipAnchor_LOD1",
-    "type": "Direction",
-    "suffixItemCode": false,
-    "enableObjectCollisionCheck": true,
-    "enableObjectCollsionCheckAfterArrival": true,
-    "collisionTypeCanNotBeAttacked": "None",
-    "isPassWall": false,
-    "isUseCurve": false,
-    "duration": 0,
-    "speed": 18,
-    "distance": 10,
-    "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
-    "doHideWithParticleSystem": true,
-    "damageType": "Skill",
-    "attackSubType": "Normal",
-    "penetrationCount": 999,
-    "isExplosion": false,
-    "isExplosionWithoutCollision": false,
-    "explosionRadius": 0,
-    "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 0,
-    "shotPoint": "ShotPoint",
-    "serverInterpolationPosition": 0.5,
-    "hitPoint": "",
-    "collisionSelfEffectAndSoundCode": 0,
-    "arrivedEffectAndSoundCode": 0,
-    "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 0,
-    "collisionObjectType": "Circle",
-    "collisionObjectRadius": 1.8,
+    "collisionObjectRadius": 1.2,
     "collisionObjectAngle": 0,
     "collisionObjectWidth": 0,
     "collisionObjectDepth": 0,
@@ -11297,57 +11726,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
-  },
-  {
-    "code": 104752,
-    "prefabName": "Projectile_FX_BI_Laura_WhipAnchor_LOD1",
-    "type": "Direction",
-    "suffixItemCode": false,
-    "enableObjectCollisionCheck": true,
-    "enableObjectCollsionCheckAfterArrival": true,
-    "collisionTypeCanNotBeAttacked": "None",
-    "isPassWall": false,
-    "isUseCurve": false,
-    "duration": 0,
-    "speed": 18,
-    "distance": 10,
-    "lifeTimeAfterArrival": 0,
-    "lifeTimeAfterExplosion": 0,
-    "doHideWithParticleSystem": true,
-    "damageType": "Skill",
-    "attackSubType": "Normal",
-    "penetrationCount": 999,
-    "isExplosion": false,
-    "isExplosionWithoutCollision": false,
-    "explosionRadius": 0,
-    "attachEffectAndSoundCode": 0,
-    "shotEffectAndSoundCode": 0,
-    "shotPoint": "ShotPoint",
-    "serverInterpolationPosition": 0.5,
-    "hitPoint": "",
-    "collisionSelfEffectAndSoundCode": 0,
-    "arrivedEffectAndSoundCode": 0,
-    "explosionEffectAndSoundCode": 0,
-    "collisionTargetEffectAndSoundCode": 0,
-    "collisionObjectType": "Circle",
-    "collisionObjectRadius": 1.8,
-    "collisionObjectAngle": 0,
-    "collisionObjectWidth": 0,
-    "collisionObjectDepth": 0,
-    "collisionHostileType": 2,
-    "isOnlyPlayerCollision": false,
-    "isBullet": false,
-    "ignoreLocalMoveXZ": false,
-    "localMoveType": "Direct",
-    "localHighAngleHeight": 0,
-    "localBaseHeight": 0,
-    "isInterpolationLocalGroundHeight": false,
-    "localDestroyDelay": 0,
-    "miniMapIconName": "",
-    "isDestroyWhenOutSideMap": false,
-    "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104801,
@@ -11361,7 +11741,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 16,
-    "distance": 6.5,
+    "distance": 6.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -11397,7 +11777,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 104804,
@@ -11447,7 +11828,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105001,
@@ -11497,7 +11879,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105011,
@@ -11547,7 +11930,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105101,
@@ -11597,7 +11981,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105102,
@@ -11647,7 +12032,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105103,
@@ -11697,7 +12083,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105104,
@@ -11747,7 +12134,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105105,
@@ -11797,7 +12185,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105106,
@@ -11847,7 +12236,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105107,
@@ -11897,7 +12287,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105108,
@@ -11947,7 +12338,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105109,
@@ -11961,7 +12353,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 11,
-    "distance": 7.7,
+    "distance": 7.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -11997,7 +12389,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105110,
@@ -12047,7 +12440,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105201,
@@ -12097,7 +12491,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105202,
@@ -12147,7 +12542,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105221,
@@ -12161,7 +12557,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 11,
-    "distance": 8.25,
+    "distance": 8.15,
     "lifeTimeAfterArrival": 0.2,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -12197,7 +12593,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105222,
@@ -12211,7 +12608,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 11,
-    "distance": 8.25,
+    "distance": 8.15,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -12247,7 +12644,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105223,
@@ -12261,7 +12659,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17.21,
-    "distance": 8.28,
+    "distance": 8.15,
     "lifeTimeAfterArrival": 0.2,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -12297,7 +12695,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105224,
@@ -12347,7 +12746,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105225,
@@ -12361,7 +12761,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 7.5,
-    "distance": 8.25,
+    "distance": 8.05,
     "lifeTimeAfterArrival": 0.2,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -12397,7 +12797,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105231,
@@ -12447,7 +12848,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105232,
@@ -12497,7 +12899,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105233,
@@ -12547,7 +12950,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105234,
@@ -12597,7 +13001,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105241,
@@ -12647,7 +13052,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105242,
@@ -12697,7 +13103,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105243,
@@ -12747,7 +13154,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105244,
@@ -12797,7 +13205,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105245,
@@ -12847,7 +13256,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105246,
@@ -12897,7 +13307,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105247,
@@ -12947,7 +13358,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105248,
@@ -12997,7 +13409,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105249,
@@ -13047,7 +13460,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105250,
@@ -13097,7 +13511,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105251,
@@ -13147,7 +13562,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105252,
@@ -13197,7 +13613,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105401,
@@ -13247,7 +13664,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105402,
@@ -13297,7 +13715,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105403,
@@ -13347,7 +13766,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105421,
@@ -13397,7 +13817,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105422,
@@ -13447,7 +13868,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105451,
@@ -13497,7 +13919,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105601,
@@ -13547,7 +13970,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105701,
@@ -13597,7 +14021,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105702,
@@ -13647,7 +14072,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105721,
@@ -13697,7 +14123,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105722,
@@ -13747,7 +14174,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105801,
@@ -13797,7 +14225,59 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
+  },
+  {
+    "code": 105802,
+    "prefabName": "Projectile_FX_BI_Haze_NormalAttack",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "ShotPoint",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1058002,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105811,
@@ -13847,7 +14327,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105812,
@@ -13897,7 +14378,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105813,
@@ -13947,7 +14429,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105814,
@@ -13997,7 +14480,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105815,
@@ -14047,7 +14531,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105816,
@@ -14097,7 +14582,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
   },
   {
     "code": 105821,
@@ -14147,7 +14633,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105822,
@@ -14197,7 +14684,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105823,
@@ -14211,7 +14699,7 @@
     "isUseCurve": true,
     "duration": 0.66,
     "speed": 0,
-    "distance": 12.2,
+    "distance": 12.25,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -14247,7 +14735,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105831,
@@ -14297,7 +14786,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 105841,
@@ -14347,7 +14837,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 105842,
@@ -14397,7 +14888,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106001,
@@ -14437,7 +14929,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -14447,7 +14939,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106002,
@@ -14487,7 +14980,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -14497,7 +14990,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106011,
@@ -14547,7 +15041,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106021,
@@ -14597,7 +15092,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106022,
@@ -14647,7 +15143,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106031,
@@ -14697,7 +15194,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106051,
@@ -14747,7 +15245,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106052,
@@ -14797,7 +15296,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106053,
@@ -14847,7 +15347,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106054,
@@ -14897,7 +15398,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106101,
@@ -14937,7 +15439,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "HighAngle",
     "localHighAngleHeight": 1.5,
@@ -14947,7 +15449,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106111,
@@ -14997,7 +15500,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106112,
@@ -15047,7 +15551,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106113,
@@ -15097,7 +15602,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106114,
@@ -15147,7 +15653,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106115,
@@ -15197,7 +15704,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106116,
@@ -15247,7 +15755,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106117,
@@ -15297,7 +15806,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106118,
@@ -15347,7 +15857,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106121,
@@ -15397,7 +15908,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106201,
@@ -15447,7 +15959,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 106202,
@@ -15497,7 +16010,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106241,
@@ -15511,7 +16025,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 15,
-    "distance": 5.5,
+    "distance": 5.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -15547,7 +16061,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": true
+    "isWaitServerArrvial": true,
+    "consumeBullet": 0
   },
   {
     "code": 106242,
@@ -15597,7 +16112,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106251,
@@ -15647,7 +16163,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106252,
@@ -15697,7 +16214,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106401,
@@ -15747,7 +16265,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106402,
@@ -15797,7 +16316,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106403,
@@ -15847,7 +16367,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106404,
@@ -15897,7 +16418,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106411,
@@ -15947,7 +16469,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106421,
@@ -15997,7 +16520,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106422,
@@ -16047,7 +16571,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106423,
@@ -16097,7 +16622,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106405,
@@ -16111,7 +16637,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 18.5,
-    "distance": 7.2,
+    "distance": 7.15,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 1.5,
     "doHideWithParticleSystem": true,
@@ -16147,7 +16673,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106406,
@@ -16197,7 +16724,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106511,
@@ -16211,7 +16739,7 @@
     "isUseCurve": false,
     "duration": 0.3,
     "speed": 0,
-    "distance": 5.55,
+    "distance": 5.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -16247,7 +16775,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106512,
@@ -16297,7 +16826,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106521,
@@ -16347,7 +16877,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106531,
@@ -16397,7 +16928,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106532,
@@ -16447,7 +16979,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106601,
@@ -16497,7 +17030,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106611,
@@ -16547,7 +17081,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106612,
@@ -16597,7 +17132,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106621,
@@ -16647,7 +17183,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106622,
@@ -16697,7 +17234,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106821,
@@ -16747,7 +17285,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106822,
@@ -16797,7 +17336,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106901,
@@ -16847,7 +17387,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 106902,
@@ -16897,7 +17438,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106910,
@@ -16947,7 +17489,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106903,
@@ -16961,7 +17504,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 17,
-    "distance": 6.14,
+    "distance": 5.89,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -16997,7 +17540,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106904,
@@ -17047,7 +17591,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 106905,
@@ -17097,7 +17642,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107001,
@@ -17137,7 +17683,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -17147,7 +17693,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107021,
@@ -17197,7 +17744,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107022,
@@ -17247,7 +17795,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107201,
@@ -17297,7 +17846,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 107202,
@@ -17347,7 +17897,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 107221,
@@ -17361,7 +17912,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 26,
-    "distance": 9.7,
+    "distance": 9.6,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -17397,7 +17948,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107222,
@@ -17447,7 +17999,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107251,
@@ -17497,7 +18050,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107252,
@@ -17547,7 +18101,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107253,
@@ -17597,7 +18152,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107254,
@@ -17647,7 +18203,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107301,
@@ -17697,7 +18254,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107321,
@@ -17747,7 +18305,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107331,
@@ -17797,7 +18356,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107332,
@@ -17847,7 +18407,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107333,
@@ -17897,7 +18458,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107501,
@@ -17947,7 +18509,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107511,
@@ -17997,7 +18560,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107512,
@@ -18047,7 +18611,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107521,
@@ -18061,7 +18626,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 20,
-    "distance": 7,
+    "distance": 7.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -18097,7 +18662,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107522,
@@ -18111,7 +18677,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 20,
-    "distance": 7,
+    "distance": 7.2,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": false,
@@ -18147,7 +18713,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107541,
@@ -18197,7 +18764,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107542,
@@ -18247,7 +18815,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107551,
@@ -18297,7 +18866,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 107502,
@@ -18311,7 +18881,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 11,
-    "distance": 7.7,
+    "distance": 7.5,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -18347,7 +18917,314 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107611,
+    "prefabName": "Projectile_FX_BI_Garnet_Passive_Heal",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "Ally",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 19,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "Root",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.05,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 1,
+    "isOnlyPlayerCollision": true,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107651,
+    "prefabName": "Projectile_FX_BI_Garnet_Skill04",
+    "type": "Direction",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": true,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 15,
+    "distance": 8,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "ShotPoint",
+    "serverInterpolationPosition": 0.7,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.75,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": true,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0.5,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": true,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107701,
+    "prefabName": "Projectile_FX_BI_YuMin_Arcana",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 15,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1077001,
+    "shotPoint": "ShotPoint",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1077002,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0.15,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107721,
+    "prefabName": "Projectile_FX_BI_YuMin_Skill01_AngleLaunch",
+    "type": "Direction",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": true,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 12,
+    "distance": 7,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 999,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "Fx_Center",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.5,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0.4,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107722,
+    "prefabName": "Projectile_FX_BI_YuMin_Skill01_Bazooka",
+    "type": "Direction",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": true,
+    "enableObjectCollsionCheckAfterArrival": true,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 15,
+    "distance": 10,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 1,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 107751,
+    "prefabName": "Projectile_FX_BI_YuMin_Crane",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": true,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 0,
+    "distance": 10,
+    "lifeTimeAfterArrival": 1.35,
+    "lifeTimeAfterExplosion": 2,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Normal",
+    "penetrationCount": 999,
+    "isExplosion": true,
+    "isExplosionWithoutCollision": true,
+    "explosionRadius": 3,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 3,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Ground",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200001,
@@ -18397,7 +19274,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200002,
@@ -18447,7 +19325,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200003,
@@ -18497,7 +19376,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200004,
@@ -18547,7 +19427,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200005,
@@ -18597,7 +19478,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 200006,
@@ -18647,7 +19529,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 300001,
@@ -18697,7 +19580,59 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 3
+  },
+  {
+    "code": 300002,
+    "prefabName": "Projectile_FX_BI_AssaultRifle_NormalAttack",
+    "type": "Target",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 18.75,
+    "distance": 0,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Normal",
+    "attackSubType": "Normal",
+    "penetrationCount": 1,
+    "isExplosion": false,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 1000007,
+    "shotPoint": "ShotPoint",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 1000008,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 0.3,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": false,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Direct",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 1,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": true,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 301101,
@@ -18711,7 +19646,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 45,
-    "distance": 30,
+    "distance": 29.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -18747,7 +19682,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 301102,
@@ -18761,7 +19697,7 @@
     "isUseCurve": false,
     "duration": 0,
     "speed": 45,
-    "distance": 30,
+    "distance": 29.4,
     "lifeTimeAfterArrival": 0,
     "lifeTimeAfterExplosion": 0,
     "doHideWithParticleSystem": true,
@@ -18797,7 +19733,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 302001,
@@ -18847,7 +19784,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 302002,
@@ -18897,7 +19835,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303101,
@@ -18947,7 +19886,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303102,
@@ -18997,7 +19937,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303103,
@@ -19047,7 +19988,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303104,
@@ -19097,7 +20039,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303111,
@@ -19147,7 +20090,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303112,
@@ -19197,7 +20141,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303113,
@@ -19247,7 +20192,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 303114,
@@ -19297,7 +20243,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 400000,
@@ -19347,7 +20294,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 400001,
@@ -19397,7 +20345,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 1
   },
   {
     "code": 6026001,
@@ -19437,7 +20386,7 @@
     "collisionObjectDepth": 0,
     "collisionHostileType": 2,
     "isOnlyPlayerCollision": false,
-    "isBullet": true,
+    "isBullet": false,
     "ignoreLocalMoveXZ": false,
     "localMoveType": "Direct",
     "localHighAngleHeight": 0,
@@ -19447,7 +20396,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6033001,
@@ -19497,7 +20447,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6042001,
@@ -19547,7 +20498,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6043001,
@@ -19597,7 +20549,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6031001,
@@ -19647,7 +20600,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6510000,
@@ -19697,7 +20651,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6515001,
@@ -19747,7 +20702,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6515002,
@@ -19797,7 +20753,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6516001,
@@ -19847,7 +20804,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": true,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 6516002,
@@ -19897,7 +20855,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7200501,
@@ -19947,7 +20906,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7300201,
@@ -19997,7 +20957,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7920401,
@@ -20047,7 +21008,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7920801,
@@ -20097,7 +21059,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7922003,
@@ -20147,7 +21110,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 7922901,
@@ -20197,7 +21161,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8000501,
@@ -20247,7 +21212,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": true,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8000701,
@@ -20297,7 +21263,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8110301,
@@ -20347,7 +21314,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8110302,
@@ -20397,7 +21365,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8110311,
@@ -20447,7 +21416,8 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   },
   {
     "code": 8110312,
@@ -20497,6 +21467,160 @@
     "miniMapIconName": "",
     "isDestroyWhenOutSideMap": false,
     "isCollisionWithProjectileDeflector": false,
-    "isWaitServerArrvial": false
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 8500001,
+    "prefabName": "Projectile_FX_BI_GuideRobot_Attack",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0.3,
+    "speed": 0,
+    "distance": 3.5,
+    "lifeTimeAfterArrival": 0.6,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Area",
+    "penetrationCount": 999,
+    "isExplosion": true,
+    "isExplosionWithoutCollision": true,
+    "explosionRadius": 1.75,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 6060003,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 6060001,
+    "collisionTargetEffectAndSoundCode": 0,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 1,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": true,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "HighAngle",
+    "localHighAngleHeight": 4,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 8500002,
+    "prefabName": "Projectile_FX_BI_GuideRobot_Credit",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": false,
+    "collisionTypeCanNotBeAttacked": "None",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0.3,
+    "speed": 0,
+    "distance": 3.5,
+    "lifeTimeAfterArrival": 0,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Area",
+    "penetrationCount": 1,
+    "isExplosion": true,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 6060002,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 1,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": true,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "HighAngle",
+    "localHighAngleHeight": 4,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
+  },
+  {
+    "code": 8500003,
+    "prefabName": "Projectile_FX_BI_GuideRobot_Credit_Material",
+    "type": "Point",
+    "suffixItemCode": false,
+    "enableObjectCollisionCheck": false,
+    "enableObjectCollsionCheckAfterArrival": true,
+    "collisionTypeCanNotBeAttacked": "All",
+    "isPassWall": true,
+    "isUseCurve": false,
+    "duration": 0,
+    "speed": 0,
+    "distance": 0,
+    "lifeTimeAfterArrival": 10,
+    "lifeTimeAfterExplosion": 0,
+    "doHideWithParticleSystem": true,
+    "damageType": "Skill",
+    "attackSubType": "Area",
+    "penetrationCount": 1,
+    "isExplosion": true,
+    "isExplosionWithoutCollision": false,
+    "explosionRadius": 0,
+    "attachEffectAndSoundCode": 0,
+    "shotEffectAndSoundCode": 0,
+    "shotPoint": "",
+    "serverInterpolationPosition": 0,
+    "hitPoint": "",
+    "collisionSelfEffectAndSoundCode": 0,
+    "arrivedEffectAndSoundCode": 0,
+    "explosionEffectAndSoundCode": 0,
+    "collisionTargetEffectAndSoundCode": 6060002,
+    "collisionObjectType": "Circle",
+    "collisionObjectRadius": 1,
+    "collisionObjectAngle": 0,
+    "collisionObjectWidth": 0,
+    "collisionObjectDepth": 0,
+    "collisionHostileType": 2,
+    "isOnlyPlayerCollision": true,
+    "isBullet": false,
+    "ignoreLocalMoveXZ": false,
+    "localMoveType": "Ground",
+    "localHighAngleHeight": 0,
+    "localBaseHeight": 0,
+    "isInterpolationLocalGroundHeight": false,
+    "localDestroyDelay": 0,
+    "miniMapIconName": "",
+    "isDestroyWhenOutSideMap": false,
+    "isCollisionWithProjectileDeflector": false,
+    "isWaitServerArrvial": false,
+    "consumeBullet": 0
   }
 ]
