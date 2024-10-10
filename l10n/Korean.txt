@@ -895,6 +895,7 @@ Item/Name/502502┃스마트 폭탄
 Item/Name/503101┃키오스크 호출기
 Item/Name/503102┃플레어건 B
 Item/Name/503103┃플레어건 R
+Item/Name/503104┃휴대용 VLS
 Item/Name/999999┃전술 강화 모듈
 Item/Name/201518┃쿼드 아이
 Item/Name/201519┃검은 죽음
@@ -1678,6 +1679,7 @@ Item/Effects/502310┃클릭하여 사용: <color=lightblue>지압판 트랩</co
 Item/Effects/503101┃클릭하여 사용: <color=lightblue>휴대용 키오스크</color>를 호출합니다.\n호출 후 {0}초 간 사용할 수 있습니다.\n가젯은 개인 당 한 종류만 보유할 수 있습니다.
 Item/Effects/503102┃클릭하여 사용: 항공 보급 목적지를 설정하여, 해당 위치로 <color=lightblue>초월 항공보급상자</color>를 호출합니다.\n호출 후 {0}초 뒤 도착합니다.\n가젯은 개인 당 한 종류만 보유할 수 있습니다.
 Item/Effects/503103┃클릭하여 사용: 사용자 본인을 항공 보급 목적지로 설정합니다.(사용자가 사망 시, 사망 위치가 목적지로 설정됩니다.)\n{0}초 후 사용자 위치로 <color=lightblue>초월 항공보급상자</color>가 도착하며, 도착 전까지 소란 핑이 지속적으로 발생합니다.\n가젯은 개인 당 한 종류만 보유할 수 있습니다.
+Item/Effects/503104┃클릭하여 사용: <color=lightblue>휴대용 VLS</color>를 호출합니다.\n호출 후 {0}초 간 사용할 수 있습니다.\n상호 작용을 통해, 체공 상태에 돌입하여 이동할 수 있습니다.
 Item/Effects/302101┃15초에 걸쳐 스태미나를 회복합니다.
 Item/Effects/302102┃15초에 걸쳐 스태미나를 회복합니다.
 Item/Effects/302103┃15초에 걸쳐 스태미나를 회복합니다.
@@ -2172,10 +2174,10 @@ MiscItemType/Material┃재료
 ItemConsumableType/None┃없음
 ItemConsumableType/Food┃음식
 ItemConsumableType/Beverage┃음료
-ItemConsumableType/Special┃특수
-ItemConsumableType/SpecialFood┃특수
-ItemConsumableType/SpecialBeverage┃특수
-ItemConsumableType/Bounty┃특수
+ItemConsumableType/Special┃강화
+ItemConsumableType/SpecialFood┃강화
+ItemConsumableType/SpecialBeverage┃강화
+ItemConsumableType/Bounty┃현상금
 MasteryType/None┃없음
 MasteryType/Glove┃글러브
 MasteryType/Tonfa┃톤파
@@ -2889,6 +2891,7 @@ ToolTipType/MaxHpUpByLv┃레벨 비례 체력 증가량
 ToolTipType/BaseLifeStealUp┃최소 모든 피해 흡혈 증가량
 ToolTipType/BaseMoveSpeedUp┃최소 이동 속도 증가량
 ToolTipType/HitMoveSpeedUp┃추가 이동 속도 증가량
+ToolTipType/StrikeMoveSpeedUp┃적중 시 이동 속도 증가량
 ToolTipType/BaseHealingWind┃최소 체력 회복량
 ToolTipType/HealingWindByLv┃실험체 레벨 당 추가 체력 회복량
 ToolTipType/AddedHpShield┃추가 체력 비례 추가 보호막량
@@ -2953,7 +2956,8 @@ CastingActionType/CraftLegendFood┃제작 중
 CastingActionType/CraftCustom_1┃제작 중
 CastingActionType/Hyperloop┃하이퍼루프 가동 중: <color=#FFBB00>{0}</color>
 CastingActionType/HyperloopToTeammate┃하이퍼루프 가동 중: <color=#FFBB00>{0}</color>에게 이동
-CastingActionType/VerticalLauncher┃수직발사장치 가동 중
+CastingActionType/VerticalLauncher┃VLS 가동 중
+CastingActionType/MobileVerticalLauncher┃휴대용 VLS 가동 중
 CastingActionType/InstallTrap┃트랩 설치중
 CastingActionType/InstallCampFire┃모닥불 설치중
 CastingActionType/Resurrect┃소생 중
@@ -3668,8 +3672,9 @@ Skin/Desc/1033005┃어, 어쩔 수 없이 입는 거니까..! 이번 한 번뿐
 Skin/Desc/1074001┃다 잃으셨다고? 걱정 마, 나한테 다 계획이 있으니까.
 Skin/Desc/1030004┃영원히 잊지 못할 행복한 추억을 만들어줄게!
 Skin/Desc/1019005┃눈 떼지마! 토끼로 변할지도 모르니까!\n
-Skin/Desc/1043004┃스릴을 찾아온 거라면, 제대로 왔어.
+Skin/Desc/1043004┃스릴을 찾아온 거라면, 제대로 왔어.
 Skin/Desc/1042004┃흥, 이 몸의 감시에서 벗어날 수 있을 줄 알았더냐? 어리석긴!
+Skin/Desc/1001005┃죽는 게 끝이 아니라고, 내가 말했지?
 Skin/Desc/1075001┃이 밤에 어울리는 아름다운 선율을 연주해줄게.
 ItemType/EMOTION/Name┃이모티콘
 Emotion_Name_001┃화남
@@ -3688,6 +3693,10 @@ Emotion_Hart01_NP┃하트 웃음
 Emotion_Hart03_NP┃하트 풋
 Emotion_Hart02_NP┃하트 기대
 Emotion_Hart04_NP┃하트 당황
+Emotion_Hart05_NP┃하트 하트
+Emotion_Hart06_NP┃하트 싫어..
+Emotion_Hart07_NP┃하트 싸우지마..
+Emotion_Hart08_NP┃하트 내 노래를 들어!
 Emotion_Luke01_NP┃루크 안녕
 Emotion_Luke02_NP┃루크 최고!
 Emotion_Luke03_NP┃루크 슬픔
@@ -4467,6 +4476,8 @@ Emotion_EsportsClub_Bianca_2042008┃비앙카 캐리이니라
 Emotion_EsportsClub_Mai_2045006┃마이 졌어
 Emotion_EsportsClub_Adina_2052007┃아디나 이겼어요
 Emotion_EsportsClub_Charlotte_2073005┃샬럿 C에 당했어요..
+Emotion_Charlotte_2073007┃샬럿 이걸 왜 제 손에..
+Emotion_Charlotte_2073008┃샬럿 제..제가 해결할게요!
 Emotion_EsportsPack_Eva_2036007┃한여름의 추억 이바 아얏!
 Emotion_Aya05_NP┃아야 미안해요
 Emotion_Aya06_NP┃아야 싫어요
@@ -4810,6 +4821,7 @@ EMBLEM_MARK_SHOP_102033┃유키 아이콘
 EMBLEM_MARK_SHOP_102034┃캐시 아이콘
 EMBLEM_MARK_SHOP_102035┃러블리 세레나데 일레븐 아이콘
 EMBLEM_MARK_SHOP_102036┃이바 아이콘
+EMBLEM_MARK_SHOP_102037┃라우라 아이콘
 EMBLEM_MARK_SHOP_102501┃시즌4 올웨이즈 인천 아이콘
 EMBLEM_MARK_SHOP_102502┃시즌4 경기 이네이트 아이콘
 EMBLEM_MARK_SHOP_102503┃시즌4 광주 슬래셔 아이콘
@@ -5360,6 +5372,7 @@ EMBLEM_BG_SHOP_202032┃유키 배경
 EMBLEM_BG_SHOP_202033┃캐시 배경
 EMBLEM_BG_SHOP_202034┃러블리 세레나데 일레븐 배경
 EMBLEM_BG_SHOP_202035┃이바 배경
+EMBLEM_BG_SHOP_202036┃라우라 배경
 EMBLEM_BG_SHOP_202501┃시즌4 올웨이즈 인천 배경
 EMBLEM_BG_SHOP_202502┃시즌4 경기 이네이트 배경
 EMBLEM_BG_SHOP_202503┃시즌4 광주 슬래셔 배경
@@ -5696,6 +5709,7 @@ EMBLEM_OUTLINE_SHOP_302032┃유키 테두리
 EMBLEM_OUTLINE_SHOP_302033┃캐시 테두리
 EMBLEM_OUTLINE_SHOP_302034┃러블리 세레나데 일레븐 테두리
 EMBLEM_OUTLINE_SHOP_302035┃이바 테두리
+EMBLEM_OUTLINE_SHOP_302036┃라우라 테두리
 EMBLEM_OUTLINE_SHOP_302501┃시즌4 올웨이즈 인천 테두리
 EMBLEM_OUTLINE_SHOP_302502┃시즌4 경기 이네이트 테두리
 EMBLEM_OUTLINE_SHOP_302503┃시즌4 광주 슬래셔 테두리
@@ -6355,6 +6369,7 @@ Goods/Name/2703010┃도플갱어
 Goods/Name/2703011┃양의 탈을 쓴 늑대
 Goods/Name/2703012┃변수
 Goods/Name/2703013┃사냥꾼의 밤
+Goods/Name/2703014┃보물 고블린
 Goods/Name/2704005┃사냥
 Goods/Name/2704006┃썸머
 Goods/Name/2704007┃네온
@@ -6542,6 +6557,7 @@ Product/Name/Markus_Emblem_Pack_01┃마커스 스페셜 패키지
 Product/Name/Yuki_Emblem_Pack_01┃유키 스페셜 패키지
 Product/Name/Cathy_Emblem_Pack_01┃캐시 스페셜 패키지
 Product/Name/Eva_Emblem_Pack_01┃이바 스페셜 패키지
+Product/Name/Laura_Emblem_Pack_01┃라우라 스페셜 패키지
 Product/Name/SkinDataChip_RandomBox_01┃스킨 데이터 칩
 Product/Name/UR_Grade_Skin_Voucher_01┃고급/희귀 스킨 보급권
 Product/Name/UR_Grade_Skin_Voucher_02┃고급/희귀 스킨 보급권
@@ -6561,6 +6577,7 @@ Product/Name/LOOTBOX_SKINxKEY_SET_01┃스킨 데이터 세트
 Product/Name/LOOTBOX_SKINxKEY_SET_05┃스킨 데이터 세트 (5개)
 Product/Name/LOOTBOX_SKINxKEY_SET_10┃스킨 데이터 세트 (11개)
 Product/Name/LOOTBOX_SKINxKEY_SET_10_S4_BONUS┃스킨 데이터 세트 (11개)
+Product/Name/LOOTBOX_SKINxKEY_SET_10_S5_BONUS┃스킨 데이터 세트 (11개)
 Product/Name/LOOTBOX_SKIN_05┃스킨 데이터 박스 (5개)
 Product/Name/LOOTBOX_SKIN_10┃스킨 데이터 박스 (11개)
 Product/Name/MONTHLY_PURCHASE_SET_01┃월간 스킨 데이터 패키지
@@ -6760,6 +6777,7 @@ Shop/Desc/Markus_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 마커스\n- �
 Shop/Desc/Yuki_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 유키\n- 미드나잇 시노비 유키 스킨\n- 일도양단 유키 스킨\n- 유키 이모티콘 4종\n- 유키 아이콘\n- 유키 배경\n- 유키 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/Cathy_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 캐시\n- 선생님 캐시 스킨\n- 군의관 캐시 스킨\n- 캐시 이모티콘 4종\n- 캐시 아이콘\n- 캐시 배경\n- 캐시 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/Eva_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 이바\n- 별관찰자 이바 스킨\n- 발렌타인 이바 스킨\n- 이바 이모티콘 4종\n- 이바 아이콘\n- 이바 배경\n- 이바 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/Laura_Emblem_Pack_01┃구성품 안내\n\n- 캐릭터 라우라\n- 암흑가 라우라 스킨\n- 프리즌 브레이크 라우라 스킨\n- 라우라 이모티콘 4종\n- 라우라 아이콘\n- 라우라 배경\n- 라우라 테두리\n- A-Coin 부스트(3일)\n- ER Point 부스트(3일)\n\n※ 해당 상품 구매 시 보관함으로 이동됩니다.\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/ThanksGiving_Special_2023_Pack_01┃구성품 안내\n\n- 썸머&고스트 박스 5개\n- 스킨 데이터 박스 5개\n- 박스 키 10개\n- 바캉스 토큰 35개
 Shop/Desc/ThanksGiving_Special_2023_Pack_02┃구성품 안내\n\n- 영웅 스킨 도안 박스 1개\n- 박스 키 1개\n- 바캉스 토큰 20개
 Shop/Desc/ThanksGiving_Special_2023_Pack_03┃구성품 안내\n\n- 썸머&고스트 박스 2개\n- 박스 키 2개\n- A-Coin 5,000\n- 바캉스 토큰 10개
@@ -6891,6 +6909,7 @@ Shop/Desc/LOOTBOX_SKINxKEY_SET_05┃스킨 데이터 박스와 박스 키가 5�
 LOOTBOX_SKINxKEY_SET_10┃스킨 데이터 세트 (11개)
 Shop/Desc/LOOTBOX_SKINxKEY_SET_10┃스킨 데이터 박스와 박스 키가 11개씩 포함된 상품입니다.\n스킨 데이터 박스에서는 스킨 및 스킨 도안을 획득할 수 있습니다.\n<color=orange>랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.</color>\n\n구매한 박스는 제작소에서 박스 키를 사용하여 개봉할 수 있습니다.
 Shop/Desc/LOOTBOX_SKINxKEY_SET_10_S4_BONUS┃스킨 데이터 박스와 박스 키가 11개씩 포함된 상품입니다.\n스킨 데이터 박스에서는 스킨 및 스킨 도안을 획득할 수 있습니다.\n<color=orange>랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.</color>\n\n<color=#FFBB00>이벤트 진행 기간 동안 시즌 4 보너스 스킨 박스 1개를 획득할 수 있습니다.</color>\n자세한 내용은 공지사항을 통해 확인할 수 있습니다.\n\n구매한 박스는 제작소에서 박스 키를 사용하여 개봉할 수 있습니다.
+Shop/Desc/LOOTBOX_SKINxKEY_SET_10_S5_BONUS┃스킨 데이터 박스와 박스 키가 11개씩 포함된 상품입니다.\n스킨 데이터 박스에서는 스킨 및 스킨 도안을 획득할 수 있습니다.\n<color=orange>랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.</color>\n\n<color=#FFBB00>이벤트 진행 기간 동안 시즌 5 보너스 스킨 박스 1개를 획득할 수 있습니다.</color>\n자세한 내용은 공지사항을 통해 확인할 수 있습니다.\n\n구매한 박스는 제작소에서 박스 키를 사용하여 개봉할 수 있습니다.
 LOOTBOX_SKIN_05┃스킨 데이터 박스 (5개)
 Shop/Desc/LOOTBOX_SKIN_05┃스킨 데이터 박스가 5개 포함된 상품입니다.\n스킨 데이터 박스에서는 스킨 및 스킨 도안을 획득할 수 있습니다.\n<color=orange>랭크 보상 및 일부 특수하게 활용된 아이템은 포함되지 않습니다.</color>\n\n구매한 박스는 제작소에서 박스 키를 사용하여 개봉할 수 있습니다.
 LOOTBOX_SKIN_10┃스킨 데이터 박스 (11개)
@@ -7973,6 +7992,12 @@ GameSetting/WidemapNotationSystem┃인게임 중 확장맵의 표기 방식을 
 StreamingModeSetting/HideName┃게임 내 본인을 제외한 상대방 닉네임을 표시하지 않습니다.
 #MapNotationDropDownSatellite┃위성 지도
 #MapNotationDropDownNormal┃일반 지도
+옵션/제작 순서 세부 설정┃제작 순서 세부 설정
+제작 등급 순서 설정┃제작 등급 순서
+제작 등급 순서 오름차순┃오름차순
+GameSetting/CraftItemGradeOrderAscend┃낮은 등급 아이템을 우선 제작합니다.\n목표 아이템 여부와 카테고리는 후순위 정렬됩니다.
+제작 등급 순서 내림차순┃내림차순
+GameSetting/CraftItemGradeOrderDescend┃높은 등급 아이템을 우선 제작합니다.\n목표 아이템 여부와 카테고리는 후순위 정렬됩니다.
 AutoWeaponSkills┃무기 스킬 자동 습득
 GameSetting/EnableMinimapMove┃미니맵 우클릭 이동을 허용합니다.
 EnableMinimapMove┃미니맵 이동 허용
@@ -8742,7 +8767,7 @@ CreditResurrectionButtonTooltip_DescTypeB┃사망한 아군 부활 시, 부활 
 아이템지목┃{0}({1})님이 [{2}] 지목
 아군장착하지않음┃{0}({1})님이 {2}({3}) - <color=#C4C4C4>{4}</color> <color=#FF4848>장착하지 않음</color>
 장착하지않음┃{0}({1}) - <color=#C4C4C4>{4}</color> <color=#FF4848>장착하지 않음</color>
-아이템발견┃{0}({1})님이 [{2}]에서 {3} 발견
+아이템발견┃{0}({1})님이 {2}에서 [{3}] 발견
 아이템탐색┃{0}({1})님이 [{2}](을)를 탐색 중
 아이템제작가능┃{0}({1}): [{2}] 제작 가능
 아이템지역탐색┃{0}({1})님이 {2}지역에서 [{3}](을)를 탐색 중
@@ -9899,12 +9924,12 @@ Shop/Desc/NP2435┃NP는 이터널 리턴에서 여러 아이템을 구매하는
 Shop/Desc/NP4335┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>60 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
 Shop/Desc/NP6500┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>86 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
 Shop/Desc/NP13550┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>175 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
-Shop/Desc/NP800_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>8 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
-Shop/Desc/NP1205_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>16 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
-Shop/Desc/NP2435_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>34 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
-Shop/Desc/NP4335_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>60 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
-Shop/Desc/NP6500_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>86 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
-Shop/Desc/NP13550_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>175 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>\n\n* 추가로 지급되는 보너스 NP는 우편함으로 지급됩니다.
+Shop/Desc/NP800_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>8 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
+Shop/Desc/NP1205_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>16 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
+Shop/Desc/NP2435_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>34 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
+Shop/Desc/NP4335_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>60 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
+Shop/Desc/NP6500_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>86 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
+Shop/Desc/NP13550_Double┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>175 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.\n\n<color=orange>더블 이벤트 상품은 1회만 구매 가능합니다.</color>
 Shop/Desc/er_np800┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>8 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
 Shop/Desc/er_np1205┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>16 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
 Shop/Desc/er_np2435┃NP는 이터널 리턴에서 여러 아이템을 구매하는데 사용됩니다.\n\n<color=#ffF134>34 마일리지 포함</color>\n\n* 마일리지는 NP 구매 시 보너스로 지급되는 재화입니다.\n* 마일리지는 교환소에서 사용할 수 있습니다.
@@ -13978,8 +14003,8 @@ Skill/Group/Name/1056410┃사슬묶기&올려치기
 Skill/Group/Name/1056500┃응징자
 Skill/Group/Name/1056510┃응징자
 Skill/Group/Desc/1056100┃피올로는 비전투 상태가 되면 [단련의 성과] 스택을 {1}개 획득합니다. 휴식을 {2}초 이상 지속 후 종료 시 추가로 {3}개 획득합니다. [단련의 성과]를 보유하고 있을 시, [응징자] 스킬 사용 후 다음 기본 공격에 <color=white>{4}</color>의 스킬 피해를 추가로 입힙니다.
-Skill/Group/Desc/1056200┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 <color=white>{1}</color>의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 <color=white>{2}</color>의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 <color=white>{3}</color>의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5}% 감소시킵니다. 바깥 범위의 적에겐 <color=white>{6}</color>의 스킬 피해를 입힙니다.
-Skill/Group/Desc/1056210┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 <color=white>{1}</color>의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 <color=white>{2}</color>의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 <color=white>{3}</color>의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5}% 감소시킵니다. 바깥 범위의 적에겐 <color=white>{6}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Desc/1056200┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 <color=white>{1}</color>의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 <color=white>{2}</color>의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 <color=white>{3}</color>의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5} 감소시킵니다. 바깥 범위의 적에겐 <color=white>{6}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Desc/1056210┃<color=#ffffC2>쌍절난격 :</color> 피올로가 지정한 방향으로 쌍절곤을 빠르게 휘둘러 범위 안의 적들에게 0.12초마다 <color=white>{1}</color>의 스킬 피해를 입히고 1, 5, 10회 적중 당한 대상에게는 <color=white>{2}</color>의 강화 스킬 피해를 입힙니다. 지속 시간 끝까지 사용하거나 강화 스킬 피해를 2번 이상 적중 시켰을 때 <color=#ffffff>내려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>내려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 내려쳐 중앙 범위의 적에겐 <color=white>{3}</color>의 스킬 피해를 입히며 대상의 이동 속도를 {4}초 동안 {5} 감소시킵니다. 바깥 범위의 적에겐 <color=white>{6}</color>의 스킬 피해를 입힙니다.
 Skill/Group/Desc/1056300┃<color=#ffffC2>튕겨내기 :</color> 피올로가 자신 중심으로 쌍절곤을 빠르게 휘둘러, 0.8초 동안 모든 방해 면역 상태가 되며 적의 투사체를 튕겨내 소멸시킵니다. 스킬 종료 후, <color=#ffffff>휘두르기</color>가 활성화됩니다.\n\n<color=#ffffC2>휘두르기 :</color> 피올로가 뛰어올라 쌍절곤을 크게 휘두르며 주변의 적들에게 <color=white>{8}</color>의 스킬 피해를 입힙니다. 피올로는 휘두르는 동안 이동 속도가 {7}% 증가합니다.
 Skill/Group/Desc/1056310┃<color=#ffffC2>튕겨내기 :</color> 피올로가 자신 중심으로 쌍절곤을 빠르게 휘둘러, 0.8초 동안 모든 방해 면역 상태가 되며 적의 투사체를 튕겨내 소멸시킵니다. 스킬 종료 후, <color=#ffffff>휘두르기</color>가 활성화됩니다.\n\n<color=#ffffC2>휘두르기 :</color> 피올로가 뛰어올라 쌍절곤을 크게 휘두르며 주변의 적들에게 <color=white>{8}</color>의 스킬 피해를 입힙니다. 피올로는 휘두르는 동안 이동 속도가 {7}% 증가합니다.
 Skill/Group/Desc/1056400┃<color=#ffffC2>사슬묶기 :</color> 피올로가 쌍절곤을 돌리며 던질 준비를 합니다. 준비 시간에 따라 사거리와 피해량이 증가합니다. 다시 사용하면 지정한 방향으로 쌍절곤을 던집니다. 적중 시 <color=white>{1}</color> ~ <color=white>{2}</color>의 스킬 피해를 주고 대상에게 날아가 <color=white>{3}</color> ~ <color=white>{4}</color>의 스킬 피해를 주며 밀쳐내고 <color=#ffffff>올려치기</color>가 활성화됩니다. \n\n<color=#ffffC2>올려치기 :</color> 피올로가 지정한 방향에 쌍절곤을 강하게 올려쳐 대상에게 <color=white>{5}</color>의 스킬 피해를 입히고 {6}초 동안 공중에 띄웁니다.
@@ -13996,12 +14021,12 @@ Skill/Group/Coef/1056410┃<color=#ffffC2>사슬묶기 :</color> 피올로가 �
 Skill/Group/Coef/1056500┃<color=green>지속 효과:</color> <color=#ffffff>내려치기</color>, <color=#ffffff>휘두르기</color>, <color=#ffffff>올려치기</color>가 활성화 될 때마다 [기합]을 1개 획득합니다. [기합]은 비전투 상태에서 3초마다 1개씩 사라집니다.\n\n[기합]을 1개 사용하여 시전 방향으로 돌진합니다. 관통한 대상에게는 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 스킬 피해를 입힙니다. 실험체 적중 시, 피올로는 <color=white>{3}</color><color=#DDA0DD>(+스킬 증폭의 {4})</color>만큼 피해를 흡수하는 보호막을 {7}초 동안 획득합니다.\n스킬 사용 후, 기본 공격을 하면 무기 스킬과 응징자를 제외한 스킬들의 쿨다운이 {5}초 감소합니다. [단련의 성과] 보유 시에는 공격 속도가 {6} 증가합니다.
 Skill/Group/Coef/1056510┃<color=green>지속 효과:</color> <color=#ffffff>내려치기</color>, <color=#ffffff>휘두르기</color>, <color=#ffffff>올려치기</color>가 활성화 될 때마다 [기합]을 1개 획득합니다. [기합]은 비전투 상태에서 3초마다 1개씩 사라집니다.\n\n[기합]을 1개 사용하여 시전 방향으로 돌진합니다. 관통한 대상에게는 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {2})</color>의 스킬 피해를 입힙니다. 실험체 적중 시, 피올로는 <color=white>{3}</color><color=#DDA0DD>(+스킬 증폭의 {4})</color>만큼 피해를 흡수하는 보호막을 {7}초 동안 획득합니다.\n스킬 사용 후, 기본 공격을 하면 무기 스킬과 응징자를 제외한 스킬들의 쿨다운이 {5}초 감소합니다. [단련의 성과] 보유 시에는 공격 속도가 {6} 증가합니다.
 Skill/Group/ExpansionTip/1056100┃<i>[단련의 성과] 스택 보유량이 비전투 상태일 때 획득하는 스택 개수보다 높을 경우, 스택을 획득하지 않습니다.\n추가 스킬 피해는 최소 1의 피해를 입힙니다.</i>
-Skill/Group/ExpansionTip/1056200┃<i><color=white>쌍절난격</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
-Skill/Group/ExpansionTip/1056210┃<i><color=white>쌍절난격</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
-Skill/Group/ExpansionTip/1056300┃<i><color=white>튕겨내기</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
-Skill/Group/ExpansionTip/1056310┃<i><color=white>튕겨내기</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
-Skill/Group/ExpansionTip/1056400┃<i><color=white>사슬묶기</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
-Skill/Group/ExpansionTip/1056410┃<i><color=white>사슬묶기</color> 시전 중에는 이동 속도가 {0}% 감소합니다.</i>
+Skill/Group/ExpansionTip/1056200┃<i><color=white>쌍절난격</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
+Skill/Group/ExpansionTip/1056210┃<i><color=white>쌍절난격</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
+Skill/Group/ExpansionTip/1056300┃<i><color=white>튕겨내기</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
+Skill/Group/ExpansionTip/1056310┃<i><color=white>튕겨내기</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
+Skill/Group/ExpansionTip/1056400┃<i><color=white>사슬묶기</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
+Skill/Group/ExpansionTip/1056410┃<i><color=white>사슬묶기</color> 시전 중에는 이동 속도가 {0} 감소합니다.</i>
 Skill/Group/ExpansionTip/1056500┃<i>보호막이 유지되는 동안에 스킬 적중 시, 새로운 보호막을 획득하지 않으며 기존 보호막의 지속 시간만 갱신됩니다.</i>
 Skill/Group/ExpansionTip/1056510┃<i>보호막이 유지되는 동안에 스킬 적중 시, 새로운 보호막을 획득하지 않으며 기존 보호막의 지속 시간만 갱신됩니다.</i>
 CharacterState/Group/Name/1056100┃단련 중
@@ -16427,7 +16452,7 @@ Item/Skills/6030001/Body┃스킬로 피해를 입히면 적에게 매초 <color
 Item/Skills/6030001/Desc┃스킬로 피해를 입히면 적에게 매초 <color=#688A08>대상 최대 체력의 {0}</color><color=#DDA0DD>(+스킬 증폭의 {1}%)</color><color=#688A08>%</color> 스킬 피해를 입히는 부패 상태를 {2}초 동안 부여합니다. (최대 {3}스택)
 Item/Skills/6030002┃부패
 Item/Skills/6030002/Name┃<color=yellow>부패</color>
-Item/Skills/6030002/Body┃스킬로 피해를 입히면 적에게 매초 <color=#688A08>대상 최대 체력의 {0}</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color> 스킬 피해를 입히는 부패 상태를 {2}초 동안 부여합니다. (최대 {3}스택)
+Item/Skills/6030002/Body┃스킬로 피해를 입히면 적에게 매초 <color=#DDA0DD>대상 최대 체력의 {4}%</color> 스킬 피해를 입히는 부패 상태를 {2}초 동안 부여합니다. (최대 {3}스택)
 Item/Skills/6030002/Desc┃스킬로 피해를 입히면 적에게 매초 <color=#688A08>대상 최대 체력의 {0}</color><color=#DDA0DD>(+스킬 증폭의 {1}%)</color><color=#688A08>%</color> 스킬 피해를 입히는 부패 상태를 {2}초 동안 부여합니다. (최대 {3}스택)
 CharacterState/Group/Name/6030000┃부패
 CharacterState/Group/Desc/6030000┃매 초마다 자신의 체력에 비례하여 피해를 받습니다.
@@ -16599,7 +16624,9 @@ CharacterState/Group/Desc/9008050┃선혈 버프가 충전중입니다.
 CharacterState/Group/Name/9008100┃선혈 - 출혈
 CharacterState/Group/Desc/9008100┃선혈 버프에 의해 피해를 입고 있습니다.
 CharacterState/Group/Name/9009000┃우주
-CharacterState/Group/Desc/9009000┃쿨다운 감소 {0}, 쿨다운 감소 최대치 {1}, 스킬 증폭 {4}가 증가하며, {2}초마다 잃은 스태미나의 {3}를 회복합니다.
+CharacterState/Group/Desc/9009000┃쿨다운 감소 {0}, 쿨다운 감소 최대치 {1}, 스킬 증폭 {4}가 증가하며, {2}초마다 잃은 스태미나의 {3}를 회복하고, 스킬 공격 시 {5}의 추가 스킬 피해를 입히는 능력을 얻습니다. 
+CharacterState/Group/Name/9009100┃우주 - 쿨다운
+CharacterState/Group/Desc/9009100┃우주 버프가 충전중입니다.
 CharacterState/Group/Name/9010000┃풍요
 CharacterState/Group/Desc/9010000┃{0}의 크레딧을 획득합니다.
 CharacterState/Group/Name/9011000┃생명
@@ -16607,9 +16634,11 @@ CharacterState/Group/Desc/9011000┃체력이 최초로 최대 체력의 {0}보�
 CharacterState/Group/Name/9011100┃생명력 회복
 CharacterState/Group/Desc/9011100┃초당 최대 체력의 {0}를 회복중입니다.
 CharacterState/Group/Name/9012000┃바람
-CharacterState/Group/Desc/9012000┃이동 속도 {0}, 비 전투 이동 속도 {1}, 공격 속도 {2}가 증가합니다.
+CharacterState/Group/Desc/9012000┃이동 속도 {0}%, 비 전투 이동 속도 {1}, 공격 속도 {2}가 증가합니다. 전투 중 이동 속도는 매 초당 {0}% 씩 증가하여, 최대 {3}까지 증가합니다.
 CharacterState/Group/Name/9012100┃바람 - 획득
 CharacterState/Group/Desc/9012100┃이동 속도가 {0} 증가합니다.
+CharacterState/Group/Name/9012200┃바람 - 전투 중
+CharacterState/Group/Desc/9012200┃전투 상태가 되어 이동 속도, 공격 속도가 추가로 증가했습니다.
 CharacterState/Group/Name/8500100┃LUMI
 CharacterState/Group/Desc/8500100┃루미아 섬을 안내합니다.
 CharacterState/Group/Name/8500200┃LUMI - 다회차 버프
@@ -16628,16 +16657,16 @@ Skill/Code/Coef/4512002┃사용 시 지정한 위치로 순간이동합니다.
 CharacterState/Group/Name/4000000┃가속화
 CharacterState/Group/Desc/4000000┃충돌을 무시하고 이동 속도가 증가합니다.
 Skill/Group/Name/4001000┃퀘이크
-Skill/Group/LobbyDesc/4001000┃사용 시 주변의 적들의 이동 속도를 감소시켜 방해합니다.\n\n<color=#ff3399>강화 시:</color> 일정 시간 동안 주변의 적들에게 피해를 줍니다.
-Skill/Code/Desc/4001001┃사용 시 자신 주변 적의 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#565730>모듈 강화: </color><color=#595959> {1}초간 {4}초마다 주변 {6}m범위의 적에게 {2}의 스킬 피해를 입힙니다.</color>
-Skill/Code/Coef/4001001┃사용 시 자신 주변에 지진을 발생시켜, {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>{1}초간 {4}초마다 주변 {6}m범위의 적에게 ({2}+캐릭터 레벨*{7})의 스킬 피해를 입힙니다.</color>
+Skill/Group/LobbyDesc/4001000┃사용 시 주변의 적들에게 스킬 피해를 입히고, 이동 속도를 감소시켜 방해합니다.\n\n<color=#ff3399>강화 시:</color> 일정 시간 동안 주변의 적들에게 피해를 줍니다.
+Skill/Code/Desc/4001001┃사용 시 자신 주변 적에게 <color=white>{11}</color>의 스킬 피해를 입히고, 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#565730>모듈 강화: </color><color=#595959> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.</color>
+Skill/Code/Coef/4001001┃사용 시 자신 주변에 지진을 발생시켜, <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color><color=#688a08>(+추가 체력의 {14}%)</color>의 스킬 피해를 입히고 {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>{1}초간 {4}초마다 주변 {6}m범위의 적에게 {2}(+캐릭터 레벨*{7})(+추가 체력의 {15}%)의 스킬 피해를 입힙니다.</color>
 Skill/Code/ExpansionTip/4001001┃<i>2레벨 강화는 <color=#b245ff>전술 강화 모듈</color>을 소모합니다.</i>
-Skill/Code/Desc/4001002┃사용 시 자신 주변 적의 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>모듈 강화: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
-Skill/Code/Coef/4001002┃사용 시 자신 주변에 지진을 발생시켜, {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>모듈 강화: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 (<color=white>{2}</color>+<color=green>캐릭터 레벨*{7}</color>)의 스킬 피해를 입힙니다.
-Skill/Code/Desc/4513001┃사용 시 자신 주변 적의 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
-Skill/Code/Coef/4513001┃사용 시 자신 주변에 지진을 발생시켜, {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 (<color=white>{2}</color>+<color=green>캐릭터 레벨*{7}</color>)의 스킬 피해를 입힙니다.
-Skill/Code/Desc/4513002┃사용 시 자신 주변 적의 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
-Skill/Code/Coef/4513002┃사용 시 자신 주변에 지진을 발생시켜, {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 (<color=white>{2}</color>+<color=green>캐릭터 레벨*{7}</color>)의 스킬 피해를 입힙니다.
+Skill/Code/Desc/4001002┃사용 시 자신 주변 적에게 <color=white>{11}</color>의 스킬 피해를 입히고, 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>모듈 강화: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
+Skill/Code/Coef/4001002┃사용 시 자신 주변에 지진을 발생시켜, <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color><color=#688a08>(+추가 체력의 {14}%)</color>의 스킬 피해를 입히고 {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>모듈 강화: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color><color=green>(+캐릭터 레벨*{7})</color><color=#688a08>(+추가 체력의 {15}%)</color>의 스킬 피해를 입힙니다.
+Skill/Code/Desc/4513001┃사용 시 자신 주변 적에게 <color=white>{11}</color>의 스킬 피해를 입히고, 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
+Skill/Code/Coef/4513001┃사용 시 자신 주변에 지진을 발생시켜, <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color><color=#688a08>(+추가 체력의 {14}%)</color>의 스킬 피해를 입히고 {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color><color=green>(+캐릭터 레벨*{7})</color><color=#688a08>(+추가 체력의 {15}%)</color>의 스킬 피해를 입힙니다.
+Skill/Code/Desc/4513002┃사용 시 자신 주변 적에게 <color=white>{11}</color>의 스킬 피해를 입히고, 이동 속도를 {5}초간 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
+Skill/Code/Coef/4513002┃사용 시 자신 주변에 지진을 발생시켜, <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color><color=#688a08>(+추가 체력의 {14}%)</color>의 스킬 피해를 입히고 {5}초간 주변 적의 이동 속도를 {3}% 감소시킵니다.\n\n<color=#FFFFC2>강화 완료됨: </color> {1}초간 {4}초마다 주변 {6}m범위의 적에게 <color=white>{2}</color><color=green>(+캐릭터 레벨*{7})</color><color=#688a08>(+추가 체력의 {15}%)</color>의 스킬 피해를 입힙니다.
 CharacterState/Group/Name/4001010┃퀘이크
 CharacterState/Group/Desc/4001010┃큰 충격을 받아 이동 속도가 감소되었습니다.
 CharacterState/Group/Name/4001000┃자이언트
@@ -16671,23 +16700,20 @@ Skill/Code/Coef/4515002┃사용 시 커서방향으로 <color=white>{1}m</color
 CharacterState/Group/Name/4102000┃정전기
 CharacterState/Group/Desc/4102000┃기본 공격 사거리가 증가합니다.
 Skill/Group/Name/4103000┃초월
-Skill/Group/LobbyDesc/4103000┃높은 보호막을 제공하여 폭발적인 피해량을 흡수할 수 있도록 합니다. \n\n<color=#ff3399>강화 시:</color> 보호막을 보유할 때 추가 이동 속도를 획득합니다.
-Skill/Code/Desc/4103001┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.</color>
-Skill/Code/Coef/4103001┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.</color>
+Skill/Group/LobbyDesc/4103000┃높은 보호막을 제공하여 폭발적인 피해량을 흡수할 수 있도록 합니다. \n\n<color=#ff3399>강화 시:</color> 일정 시간 동안 방해 효과 저항이 증가합니다.
+Skill/Code/Desc/4103001┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>{11}초 동안 방해 효과 저항이 {12}% 증가합니다.</color>
+Skill/Code/Coef/4103001┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>{11}초 동안 방해 효과 저항이 {12}(+추가 체력의 {13}%) 증가합니다.</color>
 Skill/Code/ExpansionTip/4103001┃<i>2레벨 강화는 <color=#b245ff>전술 강화 모듈</color>을 소모합니다.</i>
-Skill/Code/Desc/4103002┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>모듈 강화: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.
-Skill/Code/Coef/4103002┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>모듈 강화: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.\n
-Skill/Code/ExpansionTip/4103002┃<i>보유한 보호막에 비례하여 이동 속도 증가량이 증가합니다.</i>
-Skill/Code/Desc/4516001┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.
-Skill/Code/Coef/4516001┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.\n
-Skill/Code/ExpansionTip/4516001┃<i>보유한 보호막에 비례하여 이동 속도 증가량이 증가합니다.</i>
-Skill/Code/Desc/4516002┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.
-Skill/Code/Coef/4516002┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>보호막을 보유하면 이동 속도가 {2}~{3}% 증가합니다.\n
-Skill/Code/ExpansionTip/4516002┃<i>보유한 보호막에 비례하여 이동 속도 증가량이 증가합니다.</i>
+Skill/Code/Desc/4103002┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>모듈 강화: </color>{11}초 동안 방해 효과 저항이 {12}% 증가합니다.
+Skill/Code/Coef/4103002┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>모듈 강화: </color>{11}초 동안 방해 효과 저항이 <color=white>{12}</color><color=#688a08>(+추가 체력의 {13}%)</color> 증가합니다.
+Skill/Code/Desc/4516001┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>{11}초 동안 방해 효과 저항이 {12}% 증가합니다.
+Skill/Code/Coef/4516001┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>{11}초 동안 방해 효과 저항이 <color=white>{12}</color><color=#688a08>(+추가 체력의 {13}%)</color> 증가합니다.
+Skill/Code/Desc/4516002┃사용 시 {0}초 동안 <color=white>{1}</color>의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>{11}초 동안 방해 효과 저항이 {12}% 증가합니다.
+Skill/Code/Coef/4516002┃사용 시 {0}초 동안 (<color=white>{1}</color>+<color=#688a08>추가 체력의 {4}</color>)의 보호막을 획득합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>{11}초 동안 방해 효과 저항이 <color=white>{12}</color><color=#688a08>(+추가 체력의 {13}%)</color> 증가합니다.\n
 CharacterState/Group/Name/4103000┃초월 - 피해 무력
 CharacterState/Group/Desc/4103000┃초월의 힘으로 추가 체력량에 비례하는 보호막이 생성되었습니다.
 CharacterState/Group/Name/4103010┃초월 - 혈기
-CharacterState/Group/Desc/4103010┃초월의 힘으로 보유한 보호막에 비례하여, 이동 속도가 증가합니다.
+CharacterState/Group/Desc/4103010┃초월의 힘으로 방해 효과 저항이 증가합니다.
 Skill/Group/Name/4104000┃아티팩트
 Skill/Group/LobbyDesc/4104000┃잠시동안 경직 상태가 되어 어떠한 간섭도 받지 않습니다.\n\n<color=#ff3399>강화 시:</color> 경직 상태일 때 자신의 스킬 쿨다운이 빠르게 감소합니다.
 Skill/Code/Desc/4104001┃사용 시 {0}초간 경직 상태가 되며 어떠한 행동도 할 수 없습니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>아티팩트에 의한 경직 상태에서는 쿨다운이 {1} 빠르게 회복됩니다.</color>
@@ -16751,16 +16777,16 @@ Skill/Code/Coef/4523001┃사용 시 {1}초간 적 실험체를 향해 이동하
 Skill/Code/Desc/4523002┃사용 시 {1}초간 적 실험체를 향해 이동하는 이동 속도가 {2}% 증가하며, 지속 시간 동안 적 실험체에게 피해를 입힐 경우 <color=white>{3}</color>의 추가 스킬 피해를 입히고 <color=white>{6}초</color> 동안 이동 속도가 <color=white>{7}%</color> 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>스트라이더 - A13 스킬로 피해를 입힌 대상의 이동 속도를 {4}초간 {5}% 감소시킵니다.
 Skill/Code/Coef/4523002┃사용 시 {1}초간 적 실험체를 향해 이동하는 이동 속도가 {2}% 증가하며, 지속 시간 동안 적 실험체에게 피해를 입힐 경우 (<color=white>{6}</color>+<color=green>캐릭터 레벨*{7}</color>)의 추가 스킬 피해를 입히고 <color=white>{15}초</color> 동안 이동 속도가 ({11}근거리 {16}%{13} | {12}원거리 {17}%{14}) 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>스트라이더 - A13 스킬로 피해를 입힌 대상의 이동 속도를 {4}초간 ({11}근거리 {8}%{13} | {12}원거리 {9}%{14}) 감소시킵니다.
 Skill/Group/Name/4112000┃진실의 칼날
-Skill/Group/LobbyDesc/4112000┃사용 시 주변 적에게 피해를 입히고 입힌 대상의 수에 비례하여 이동 속도가 증가합니다.\n\n<color=#ff3399>강화 시:</color> 피해를 준 대상에게 입히는 피해가 증가합니다
-Skill/Code/Desc/4112001┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.</color>
-Skill/Code/Coef/4112001┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.</color>
+Skill/Group/LobbyDesc/4112000┃사용 시 주변 적에게 피해를 입히고 입힌 대상의 수에 비례하여 이동 속도가 증가합니다.\n\n<color=#ff3399>강화 시:</color> 진실의 칼날이 하나 더 소환되어 추가 피해를 입힙니다.
+Skill/Code/Desc/4112001┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>진실의 칼날이 하나 더 소환되어 {11}의 추가 스킬 피해를 입힙니다.</color>
+Skill/Code/Coef/4112001┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#565730>모듈 강화: </color><color=#595959>진실의 칼날이 하나 더 소환되어 {12}(+캐릭터 레벨*{13})의 추가 스킬 피해를 입힙니다.</color>
 Skill/Code/ExpansionTip/4112001┃<i>2레벨 강화는 <color=#b245ff>전술 강화 모듈</color>을 소모합니다.</i>
-Skill/Code/Desc/4112002┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>모듈 강화: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
-Skill/Code/Coef/4112002┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>모듈 강화: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
-Skill/Code/Desc/4521001┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
-Skill/Code/Coef/4521001┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
-Skill/Code/Desc/4521002┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
-Skill/Code/Coef/4521002┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>피해를 준 대상에게 입히는 피해가 {3}% 증가합니다.
+Skill/Code/Desc/4112002┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>모듈 강화: </color>진실의 칼날이 하나 더 소환되어 {11}의 추가 스킬 피해를 입힙니다.
+Skill/Code/Coef/4112002┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>모듈 강화: </color>진실의 칼날이 하나 더 소환되어 <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color>의 추가 스킬 피해를 입힙니다.
+Skill/Code/Desc/4521001┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color><color=#595959>진실의 칼날이 하나 더 소환되어 {11}의 추가 스킬 피해를 입힙니다.</color>
+Skill/Code/Coef/4521001┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입힙니다.\n또한 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color><color=#595959>진실의 칼날이 하나 더 소환되어 <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color>의 추가 스킬 피해를 입힙니다.</color>
+Skill/Code/Desc/4521002┃사용 시 주변 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>진실의 칼날이 하나 더 소환되어 {11}의 추가 스킬 피해를 입힙니다.
+Skill/Code/Coef/4521002┃사용 시 주변 적에게 <color=white>{0}</color><color=green>(+캐릭터 레벨*{8})</color>의 스킬 피해를 입히고 피해를 입힌 대상의 수에 따라 {6}초간 이동 속도가 {4}~{5}% 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>진실의 칼날이 하나 더 소환되어 <color=white>{12}</color><color=green>(+캐릭터 레벨*{13})</color>의 추가 스킬 피해를 입힙니다.
 CharacterState/Group/Name/4112000┃진실의 칼날 - 투영
 CharacterState/Group/Desc/4112000┃적에게 피해를 입힌 진실로, 실험체의 이동 속도가 증가하였습니다.
 CharacterState/Group/Name/4112010┃진실의 칼날 - 상실
@@ -16896,6 +16922,7 @@ BoxRewardInfoWindow/Emoticon┃이모티콘
 BoxRewardInfoWindow/Emblem┃엠블럼
 BoxRewardInfoWindow/Etc┃기타
 Forge/CannotOpenBox┃오류가 발생하여 일부 보상을 획득할 수 없습니다.\n지속적으로 문제가 발생할 경우 고객 센터에 문의 바랍니다.
+BoxRewardInfoPopup/ShowUnowned┃미보유 아이템만 보기
 Loot┃LOOT
 보유중┃보유 중
 보유상태┃아이템 보유 상태
@@ -16909,6 +16936,8 @@ LootRandomBoxWindow/Reward┃보상 목록
 보상 목록 툴팁 설명┃박스를 통해 획득할 수 있는 보상 목록입니다.\n정보 아이콘을 클릭하여 전체 보상 목록을 확인할 수 있습니다.
 보유한 열쇠 툴팁 타이틀┃보유한 박스 키
 보유한 열쇠 툴팁 설명┃현재 보유한 박스 키의 수량입니다.
+보유한 상자 툴팁 타이틀┃보유한 박스
+보유한 상자 툴팁 설명┃현재 보유한 박스의 수량입니다.
 전체보상정보┃전체 보상
 상자 구매┃박스 구매
 LootRandomBoxWindow/Btn_BuyBox┃박스 구매
@@ -17099,6 +17128,8 @@ Goods/Name/3102014┃시즌 토큰 랜덤 박스
 Goods/Desc/3102014┃현재 진행 중인 시즌의 시즌 토큰을 1~3개 획득할 수 있는 상자입니다.\n확률에 따라 획득하는 시즌 토큰의 수량이 결정됩니다.\n구성품은 보상 리스트를 통해 확인할 수 있으며 구매 즉시 사용됩니다.
 Goods/Name/3102081┃시즌4 보너스 스킨 박스
 Goods/Desc/3102081┃스킨 데이터 박스에 추가된 신규 스킨을 획득할 수 있는 박스입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3102082┃시즌5 보너스 스킨 박스
+Goods/Desc/3102082┃스킨 데이터 박스에 추가된 신규 스킨을 획득할 수 있는 박스입니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
 Goods/Name/3103004┃흰색 꽃 박스
 Goods/Desc/3103004┃흰색 꽃 박스, 초록색 꽃 박스, A-Coin 중 하나를 획득하며, 확률적으로 흰색 꽃 컬렉션 아이템을 획득할 수 있습니다.
 Goods/Name/3103005┃초록색 꽃 박스
@@ -17163,7 +17194,7 @@ Goods/Name/3119002┃미보유 스킨 보급권 <#00ffee>No.02</color>
 Goods/Name/3119003┃미보유 스킨 보급권 <#00ffee>No.03</color>
 Shop/Desc/S10_UnownedSupply_01┃<b><color=#FFBB00>[구성품 안내]</color></b> \n\n<b><color=#D05EFF>영웅 스킨</color></b> : 해변가 수아, 전학생 비앙카, 멧현우, 시스템쇼크 재키, 윌슨 베이커리 시셀라\n---- \n<color=#2AC0FF> 희귀 스킨</color> : 고스트헌터 혜진, 썸머 파티 레온, 사이코시스 자히르, 여름방학 리오, 견습 마녀 띠아, 해결사 에이든, 싱어송라이터 프리야\n---- \n<color=#35FF94>고급 스킨</color> : 특수부대 레온\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b> \n※ 해당 상품은 구성품 중 보유하지 않은 스킨을 획득할 수 있는 상품입니다. \n※ 해당 상품은 구매 즉시 아이템이 지급되는 상품입니다. \n※ 구성품을 모두 보유 중인 경우 전체 구성품 중 1개를 지급합니다. \n※ 구성품 개별 확률은 박스 확률 공시를 통해 확인 가능합니다.
 Shop/Desc/S10_UnownedSupply_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n<b><color=#D05EFF>영웅 스킨</color></b> : 고스트헌터 키아라, 학생회장 엘레나, 사이키메딕 캐시, 꿈델라\n----\n<color=#2AC0FF> 희귀 스킨</color> : 사이버에니악 레녹스, 어흥 다이린, 유키멍, 견습 마녀 띠아, 해결사 에이든, 싱어송라이터 프리야\n----\n<color=#35FF94>고급 스킨</color> : 고스트헌터 아이솔, 특수부대 레온\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 해당 상품은 구성품 중 보유하지 않은 스킨을 획득할 수 있는 상품입니다.\n※ 해당 상품은 구매 즉시 아이템이 지급되는 상품입니다.\n※ 구성품을 모두 보유 중인 경우 전체 구성품 중 1개를  지급합니다.\n※ 구성품 개별 확률은 박스 확률 공시를 통해 확인 가능합니다.
-Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n<b><color=#D05EFF>영웅 스킨</color></b> : 학생회장 엘레나, 역병의사 다니엘, 썸머 파티 매지션 엠마, 눈꽃축제 하트, 전학생 비앙카\n----\n<color=#2AC0FF> 희귀 스킨</color> : 눈꽃축제 시셀라, 미드나잇 오로라 리오, 아이돌 카밀로, 챌린지 리퍼 얀, 탐험가 나타폰, 교내소방부 에스텔, 해적 레녹스, 선샤인 마린 일레븐\n----\n<color=#35FF94>고급 스킨</color> : 눈꽃축제 쇼이치, OP.GG 펠릭스, GeForce Now 실비아\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 해당 상품은 구성품 중 보유하지 않은 스킨을 획득할 수 있는 상품입니다.\n※ 해당 상품은 구매 즉시 아이템이 지급되는 상품입니다.\n※ 구성품을 모두 보유 중인 경우 전체 구성품 중 1개를 지급합니다.\n※ 구성품 개별 확률은 박스 확률 공시를 통해 확인 가능합니다.
+Shop/Desc/S10_UnownedSupply_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n<b><color=#D05EFF>영웅 스킨</color></b> : 학생회장 엘레나, 역병의사 다니엘, 썸머 파티 매지션 엠마, 눈꽃축제 하트, 전학생 비앙카\n----\n<color=#2AC0FF> 희귀 스킨</color> : 눈꽃축제 시셀라, 미드나잇 오로라 리오, 탐험가 나타폰, 해적 레녹스, 선샤인 마린 일레븐\n----\n<color=#35FF94>고급 스킨</color> : 눈꽃축제 쇼이치, OP.GG 펠릭스, GeForce Now 실비아\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 해당 상품은 구성품 중 보유하지 않은 스킨을 획득할 수 있는 상품입니다.\n※ 해당 상품은 구매 즉시 아이템이 지급되는 상품입니다.\n※ 구성품을 모두 보유 중인 경우 전체 구성품 중 1개를  지급합니다.\n※ 구성품 개별 확률은 박스 확률 공시를 통해 확인 가능합니다.
 Product/Name/S10_RARE_MATTER┃희귀 데이터 조각 X 1
 Product/Name/S10_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/S10_S11TOKEN_EXCHANGE┃전투 메이드 토큰 X 2
@@ -17214,10 +17245,10 @@ Shop/Desc/S5_Lucky_White_LootToken_01┃레드 토큰 3개를 확정적으로 �
 미션 갱신 에러┃미션 갱신 에러
 매칭중에는 변경할 수 없습니다.┃매칭 중에는 변경할 수 없습니다.
 일일 보상!┃보상 획득
-이벤트 미션┃럭키★한 인게임 이벤트
+이벤트 미션┃이벤트 미션
 또는┃또는
 그리고┃그리고
-카카오 PC방 미션┃카카오 PC방 이벤트 미션
+카카오 PC방 미션┃프리미엄 PC방 이벤트 미션
 미션 그룹 변경 불가┃진행 중인 이벤트 미션이 없어 이동할 수 없습니다.
 미션 보상 획득 완료┃이미 보상을 획득하였습니다.
 Mission/1/1┃일반/랭크대전 플레이하기
@@ -17788,6 +17819,39 @@ Mission/10000030/1┃전설 아이템 제작 3회
 Mission/10000031/1┃음식/음료 10회 사용 / 종류 무관
 Mission/10000032/1┃이모티콘 3회 사용 / 이모티콘 종류 무관
 Mission/10000033/1┃10분이상 생존
+Mission/10000101/1┃일반/랭크대전 2회 하기
+Mission/10000102/1┃TK 7회 이상 하기
+Mission/10000103/1┃야생동물 20회 처치
+Mission/10000104/1┃3위 이상하기
+Mission/10000105/1┃나뭇가지 2개 이상 획득하기
+Mission/10000106/1┃가죽 2개 이상 획득하기
+Mission/10000107/1┃감시 카메라 5개 이상 획득하기
+Mission/10000108/1┃운석 1개 이상 획득하기
+Mission/10000109/1┃생명의 나무 1개 이상 획득하기
+Mission/10000110/1┃실험체를 공격해 피해 주기
+Mission/10000111/1┃야생동물을 공격해 피해 주기
+Mission/10000112/1┃닭 20회 처치
+Mission/10000113/1┃박쥐 15회 처치
+Mission/10000114/1┃멧돼지 8회 처치
+Mission/10000115/1┃들개 7회 처치
+Mission/10000116/1┃늑대 7회 처치
+Mission/10000117/1┃곰 3회 처치
+Mission/10000118/1┃위클라인 박사 처치하기
+Mission/10000119/1┃알파 처치하기
+Mission/10000120/1┃오메가 처치하기
+Mission/10000121/1┃사냥 숙련도 10레벨 이상 달성
+Mission/10000122/1┃제작 숙련도 10 레벨 이상 달성
+Mission/10000123/1┃탐색 숙련도 10 레벨 이상 달성
+Mission/10000124/1┃이동 숙련도 10 레벨 이상 달성
+Mission/10000125/1┃방어 숙련도 10 레벨 이상 달성
+Mission/10000126/1┃크레딧 900 이상 획득
+Mission/10000127/1┃원격드론 3회 이상 호출하기
+Mission/10000128/1┃키오스크 3회 이상 호출하기
+Mission/10000129/1┃하이퍼루프 7회 이용
+Mission/10000130/1┃전설 아이템 제작 3회
+Mission/10000131/1┃음식/음료 10회 사용 / 종류 무관
+Mission/10000132/1┃이모티콘 3회 사용 / 이모티콘 종류 무관
+Mission/10000133/1┃10분이상 생존
 Mission/10001001/1┃일반/랭크대전 플레이하기
 서비스약관┃사용자 이용 약관
 서비스약관_KAKAO┃이터널 리턴 게임 이용 동의
@@ -19163,6 +19227,73 @@ CharacterState/Group/Desc/7300340┃최대 체력이 증가되었습니다.
 로딩팁 튜토리얼129┃변이체들은 야생동물보다 더 강력하지만, 처치 시 크레딧을 획득할 수 있습니다.
 로딩팁 튜토리얼130┃크레딧은 낮과 밤 변화 / 실험체 처치 / 변이체 처치로 획득할 수 있습니다.
 로딩팁 튜토리얼131┃반짝거리는 목표 재료 아이템은 다음 루트 지역들에서는 찾을 수 없는 아이템입니다.
+로딩팁 튜토리얼132┃라우라는 레몬, 민트 라임 등 산뜻한 음식을 좋아합니다.
+로딩팁 튜토리얼133┃라우라는 의외로 수영을 못한답니다.
+로딩팁 튜토리얼134┃호박색은 띠아가 가장 좋아하는 색 중 하나입니다.
+로딩팁 튜토리얼135┃띠아는 다람쥐 뿐만 아니라 햄스터같은 작은 설치류도 좋아합니다.
+로딩팁 튜토리얼136┃펠릭스는 동네에서 알아주는 농구 실력자였습니다. 
+로딩팁 튜토리얼137┃버터를 생으로 먹고 있는 사람이 있다면 아마도 펠릭스일겁니다. 그만큼 유제품을 좋아하거든요.
+로딩팁 튜토리얼138┃엘레나의 손은 생각과는 다르게 매우 따뜻합니다. 
+로딩팁 튜토리얼139┃기름진 음식을 좋아하는 엘레나에게 살이 찌지 않는 이유를 물어보세요. 분명 "먹은 만큼 움직이면 된다"고 할거에요.
+로딩팁 튜토리얼140┃프리야가 노래를 하면 근처에 있는 식물들이 반응하듯 움직이는 현상이 종종 목격되곤 합니다.
+로딩팁 튜토리얼141┃꽃과 대화하는 프리야를 본다면 못 본 척 해주세요. 엄청나게 부끄러워하거든요.
+로딩팁 튜토리얼142┃아디나가 점성술을 할 때 수정구와 대화를 한다고 놀라지 마세요.
+로딩팁 튜토리얼143┃아디나는 현실적인 면이 있어서 아파서 온 손님에게 "아프면 병원에 가세요."라고 말한 적도 있답니다. 
+로딩팁 튜토리얼144┃평소에는 온화한 아디나를 화나게 하는 방법은 영화나 소설 내용을 스포일러 하는 것입니다. 
+로딩팁 튜토리얼145┃마커스가 자신의 호적수라고 생각하는 실험체는 많이 없습니다.
+로딩팁 튜토리얼146┃강함을 목표로 하는 공통점이 있는 마커스와 피오라는 팀일 때 꽤 많은 이야기를 나눕니다. 주로 훈련에 관한 얘기지만요.
+로딩팁 튜토리얼147┃칼라에게는 도나텔로라는 이름을 가진 거북이 친구가 있습니다. 
+로딩팁 튜토리얼148┃칼라는 작살 낚시를 제외한 다른 낚시들은 의외로 서투릅니다. 
+로딩팁 튜토리얼149┃에스텔의 농담은 여러 실험체에게 나쁜 의미로 소문이 자자합니다. 
+로딩팁 튜토리얼150┃말보다는 행동이 먼저인 에스텔은 가끔 스스로를 함부로 대할 때가 있습니다. 
+로딩팁 튜토리얼151┃피올로는 빈민가의 버려진 아이들을 돌봐주고 있습니다. 그가 어릴 적 스승이 그랬듯이요.
+로딩팁 튜토리얼152┃피올로는 어릴 적 빈민가에서 태어나 어두운 한 때를 보낸 적이 있습니다. 
+로딩팁 튜토리얼153┃마르티나는 친구들 사이에서 엄청난 애연가, 애주가로 통합니다. 
+로딩팁 튜토리얼154┃마르티나는 달리는 것을 좋아합니다. 가끔씩 마라톤에 참가할 정도로요.
+로딩팁 튜토리얼155┃헤이즈와 친해지고 싶다면 총에 관심이 많은 척 해보세요. 들키지만 않으면 괜찮을 겁니다.
+로딩팁 튜토리얼156┃헤이즈는 명품을 좋아한다기보다 명품 이외의 것을 고려해 본 적이 없는 쪽에 가깝습니다. 
+로딩팁 튜토리얼157┃아이작은 높은 위치까지 올라갈 수 있었지만 그러지 않았습니다. "높이 올라가면 멀리서도 보이기 때문"이라네요.
+로딩팁 튜토리얼158┃아이작의 일상을 무너뜨리고 섬까지 오게 된 계기는 다름 아닌 동료 경찰이었습니다. 
+로딩팁 튜토리얼159┃타지아는 생각보다 여린 마음을 가지고 있습니다. 쉽게 상처받고, 사소한 것에 예민하죠. 유리처럼요.
+로딩팁 튜토리얼160┃사람에게 큰 상처를 입은 타지아지만 그럼에도 가슴 한편에는 신뢰할 수 있는 사람을 찾고 싶다고 생각합니다.
+로딩팁 튜토리얼161┃여러 사람에게 사랑받길 원하는 이렘은 사실 단 한 사람을 위해 실험에 참가했습니다. 
+로딩팁 튜토리얼162┃이렘이 자주 보곤 했던 잡지는 누군가가 이렘에게 선물한 책입니다.
+로딩팁 튜토리얼163┃테오도르는 이전에 받았던 윌리엄의 사인볼을 아직도 가지고 있습니다.
+로딩팁 튜토리얼164┃과거, 입대하기 전 테오도르는 지금과는 정 반대의 성격이었습니다. 
+로딩팁 튜토리얼165┃이안에 몸에 들어있는 귀신은 한 명이 아닙니다. 
+로딩팁 튜토리얼166┃병원,골동품,가족은 이안에게 물어서는 안 될 세 가지입니다.
+로딩팁 튜토리얼167┃바냐의 나비는 "자유롭게 돌아다니고 싶다"는 바냐의 염원입니다. 
+로딩팁 튜토리얼168┃바냐는 나비들에게 이름을 지어주려다 너무 많아서 포기한 적이 있습니다. 
+로딩팁 튜토리얼169┃데비와 마를렌은 의견차이로 자주 싸우곤 하지만 실은 서로를 무척 아끼고 있답니다.
+로딩팁 튜토리얼170┃데비와 마를렌은 섬에 오기 전 각자 전혀 다른 삶을 살고 있었습니다. 
+로딩팁 튜토리얼171┃아르다는 만년필, 그중에서도 오픈닙의 만년필을 좋아합니다. 
+로딩팁 튜토리얼172┃아르다는 자신만의 패션 철학이 있습니다. 남들과는 방향성이 다를 뿐이죠.
+로딩팁 튜토리얼173┃아비게일은 인상과는 달리 수줍음이 많은 소녀입니다. 
+로딩팁 튜토리얼174┃아비게일은 비가 오는 날 비를 맞는 것을 좋아합니다.
+로딩팁 튜토리얼175┃알론소는 예전에 해결사로 활동한 적이 있습니다. 
+로딩팁 튜토리얼176┃알론소가 마시는 맥주는 알론소에게 일종의 부적 같은 겁니다. 마시면 좋은 일이 일어난다고 하네요.
+로딩팁 튜토리얼177┃지금보다 훨씬 어릴 적 레니의 꿈은 장난감 회사 사장이었습니다.
+로딩팁 튜토리얼178┃레니가 장난을 친다면 웃어주세요. 화를 내거나 정색하면 더 안 좋은 일이 일어날 테니까요.
+로딩팁 튜토리얼179┃츠바메는 마요네즈가 들어간 음식을 매우 좋아합니다. 반대로 들어가지 않는 음식엔 마요네즈를 넣어 먹기도 합니다. 
+로딩팁 튜토리얼180┃츠바메가 어두운 밤과 높은 곳을 좋아하는 이유는 닌자라서가 아니라 별과 밤거리가 예쁘게 보이기 때문입니다. 
+로딩팁 튜토리얼181┃케네스가 한숨을 쉬거나 머리를 헝클어뜨린다면 화가 났다는 뜻입니다. 
+로딩팁 튜토리얼182┃케네스가 있던 고아원은 사실 아글라이아 소속입니다. 
+로딩팁 튜토리얼183┃케네스가 차고 있는 팔찌는 어릴 적 보육원에 맡겨질 때 걸려 있었던 목걸이입니다.
+로딩팁 튜토리얼184┃카티야는 72시간 동안 움직이지 않고 타겟이 접근할 때까지 기다린 적이 있습니다.
+로딩팁 튜토리얼185┃카티야가 자신의 몸집보다 큰 저격총을 사용하는 이유는 아주 어렸을 때부터 총을 들었던 감각이 익숙해져서라고 합니다.
+로딩팁 튜토리얼186┃카티야의 어릴 적 애칭은 "작은 별(Tähtönen)"이었습니다. 
+로딩팁 튜토리얼187┃샬럿은 어렸을 적 작은 시골 마을에서 살았습니다.
+로딩팁 튜토리얼188┃샬럿은 매일 5번 이상 꼭 기도합니다.
+로딩팁 튜토리얼189┃샬럿의 꿈은 의사입니다.
+로딩팁 튜토리얼190┃다르코는 비굴한 사람을 혐오합니다. 오히려 악에 받친 사람을 좋아하죠.
+로딩팁 튜토리얼191┃다르코가 무기로 골프채를 선호하는 이유는 '쉽게 죽지 않아서'입니다.
+로딩팁 튜토리얼192┃다르코는 보드카를 좋아합니다. 반대로 와인과 맥주는 입에 대지도 않을 만큼 싫어하죠.
+로딩팁 튜토리얼193┃르노어는 그림이나 조각에도 조예가 깊습니다.
+로딩팁 튜토리얼194┃르노어는 클래식뿐 만 아니라 다른 음악에도 관심이 많습니다.
+로딩팁 튜토리얼195┃르노어의 바이올린은 르노어만을 위해 만들어졌습니다.
+로딩팁 튜토리얼196┃가넷은 보육원에 있었던 시절, 형제들에게 요리해 주는 것을 좋아했습니다.
+로딩팁 튜토리얼197┃케네스의 능력이 폭주했을 때, 가넷이 진정시켜 준 적이 있습니다.
+로딩팁 튜토리얼198┃가넷은 VF능력으로 인해 몸에 상처가 나지 않습니다. 기억과 고통에 집착하는 이유기도 하죠.
 ButtonType/Confirm┃확인
 ButtonType/Cancel┃취소
 SupportLanguage/Korean┃한국어
@@ -20396,13 +20527,13 @@ gameTip_Desc_10521_1┃큐브는 종류에 따라 획득 한 실험체에게 특
 gameTip_Title_10522_1┃선혈 큐브
 gameTip_Desc_10522_1┃붉은색 선혈 큐브는 획득 한 실험체는 일정 시간마다 지속 피해를 입힐 수 있는 강력한 능력을 얻습니다.
 gameTip_Title_10523_1┃우주 큐브
-gameTip_Desc_10523_1┃보라색 우주 큐브는 획득 한 실험체는 쿨다운 감소 및 쿨다운 감소 최대치, 스킬 증폭이 증가하며, 일정 시간 마다 잃은 스태미너의 일부를 회복합니다.
+gameTip_Desc_10523_1┃보라색 우주 큐브는 획득 한 실험체는 쿨다운 감소 및 쿨다운 감소 최대치, 스킬 증폭이 증가합니다. 일정 시간 마다 잃은 스태미너의 일부를 회복하고, 스킬 증폭에 비례한 추가 피해를 주는 능력을 얻습니다.
 gameTip_Title_10524_1┃풍요 큐브
 gameTip_Desc_10524_1┃황금색 풍요 큐브를 획득 한 실험체는 짧은 시간 후 실험체 레벨에 비례한 크레딧을 획득합니다.
 gameTip_Title_10525_1┃생명 큐브
 gameTip_Desc_10525_1┃초록색 생명 큐브를 획득 한 실험체는 일정 체력 이하일 때 피해를 받으면 짧은 시간 동안 최대 체력에 비례하여 체력을 회복합니다.
 gameTip_Title_10526_1┃바람 큐브
-gameTip_Desc_10526_1┃하늘색 바람 큐브를 획득 한 실험체는 획득 후 잠시 동안 폭발적인 이동 속도 버프를 얻고, 이후에 버프 지속 시간 동안 이동 속도와 비 전투 이동 속도가 크게 증가하며 공격 속도를 얻습니다.
+gameTip_Desc_10526_1┃하늘색 바람 큐브를 획득 한 실험체는 획득 후 잠시 동안 폭발적인 이동 속도 버프를 얻고, 이후에 버프 지속 시간 동안 이동 속도와 비 전투 이동 속도가 크게 증가하며 공격 속도를 얻습니다. 이동 속도 증가량은 전투가 길어질 수록 증가합니다.
 gameTip_Title_10050_3┃상자 그룹 표시
 gameTip_Desc_10050_3┃지역별 각 스타팅 포인트에서 가장 가까운 위치에 있는 상자들을 파란색으로 표시하는 기능입니다.\n같은 그룹의 상자를 전부 열어 아이템을 획득하면 최소한 이 지역의 목표 아이템을 얻을 수 있습니다.\n초반 동선을 정할 때 중요한 정보이니, <color=#8FDBF8>상자 그룹 표시</color>가 있는 상자부터 확인해 보세요!
 gameTip_category_CraftItems┃아이템 제작
@@ -20606,12 +20737,22 @@ ServerError/1115┃스팀 로그인에 실패하였습니다.
 ServerError/1116┃이용이 제한된 계정입니다.
 ServerError/1117┃(1117)
 ServerError/1118┃이미 존재하는 닉네임입니다.
-ServerError/1119┃카카오 로그인에 실패하였습니다.(1119)
+ServerError/1119┃로그인에 실패하였습니다.(1119)
 ServerError/1120┃(1120)
 ServerError/1121┃(1121)
 ServerError/1122┃(1122)
 ServerError/1123┃(1123)
 ServerError/1124┃MS 계정을 신규로 생성할 수 없습니다.
+ServerError/1127┃넥슨 PC방 에러(1127)
+ServerError/1128┃넥슨 PC방 에러(1128)
+ServerError/1129┃잘못된 정보입니다.(1129)
+ServerError/1130┃중복 IP를 사용 중입니다.(1130)
+ServerError/1131┃접속량을 초과하여 이용할 수 없습니다.(1131)
+ServerError/1135┃유효하지 않은 정보입니다.(1135)
+ServerError/1136┃유효하지 않은 정보입니다.(1136)
+ServerError/1137┃넥슨 PC방 에러(1137)
+ServerError/1138┃넥슨 PC방 에러(1138)
+ServerError/1139┃PC방 포인트가 확인되지 않습니다. 이용 중인 PC방 담당자에게 문의해 주시기 바랍니다.
 ServerError/1200┃전투 결과를 찾을 수 없습니다.
 ServerError/1201┃게임 정보를 알 수 없습니다.(1201)
 ServerError/1202┃리플레이 정보를 알 수 없습니다.(1202)
@@ -20627,8 +20768,8 @@ ServerError/1305┃사전구성팀원 중 레벨 조건에 충족되지 않는 �
 ServerError/1306┃현재 매칭을 진행할 수 있는 상태가 아닙니다.(1306)
 ServerError/2000┃잘못된 결제 요청입니다.
 ServerError/2001┃스팀에서 정보를 받아오는데 실패했습니다.
-ServerError/2002┃카카오 서버 오류 (번역 필요 없음)
-ServerError/2003┃카카오 서버 오류 (번역 필요 없음)
+ServerError/2002┃서버 오류
+ServerError/2003┃서버 오류
 ServerError/2004┃(2004)
 ServerError/2100┃재화가 부족합니다.
 ServerError/2101┃NP가 부족합니다.
@@ -20680,7 +20821,7 @@ ServerError/5123┃유효하지 않은 특성 정보입니다.(5123)
 ServerError/5200┃랭크 대전 티어 정보를 불러 올 수 없습니다.
 ServerError/5201┃획득 가능한 랭크 대전 보상이 없습니다.
 ServerError/5202┃사전구성팀원 간의 티어(Tier) 차이로 매칭할 수 없습니다.
-ServerError/5203┃다이아몬드 티어 이상은 사전 구성팀 매칭이 불가합니다.
+ServerError/5203┃사전 구성팀 매칭이 불가한 티어가 포함되어 있습니다. 
 ServerError/6100┃이미 지급된 DLC 상품입니다.
 ServerError/6101┃상품 정보가 유효하지 않습니다.
 ServerError/6102┃존재하지 않는 상품입니다.(6102)
@@ -20698,7 +20839,7 @@ ServerError/7109┃일일 초대 횟수를 초과했습니다.
 ServerError/7200┃이미 사용된 쿠폰입니다.
 ServerError/7201┃존재하지 않는 쿠폰입니다. 다시 확인해주세요.
 ServerError/7202┃유효 기간이 만료된 쿠폰입니다.
-ServerError/7203┃카카오게임즈 PC방 전용 쿠폰입니다.
+ServerError/7203┃PC방 전용 쿠폰입니다.
 ServerError/7204┃이미 동일한 종류의 쿠폰을 사용하셨습니다.
 ServerError/7205┃해당 플랫폼에서는 사용할 수 없는 쿠폰입니다.
 ServerError/7206┃한정 수량이 모두 소진되었습니다.
