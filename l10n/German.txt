@@ -1465,7 +1465,6 @@ Item/Help/301209┃Überlegen genau, wo du deinen ersten Bissen nehmen solltest.
 Item/Help/301305┃Weihwasser. Gut für Körper und Geist.
 Item/Help/301216┃Lecker gefroren oder in der Mikrowelle. Du kannst sogar einfach den\nMarshmallow dazwischen essen.
 Item/Help/301217┃Es sticht .. aber nur ein bisschen.
-Item/Help/301235┃Ein schöner Genuss, um den 1. Jahrestag von Eternal Return zu feiern. Es schmeckt wie ein Schokoladenkeks.
 Item/Help/301302┃Dies ist zweifellos das ultimative Kartoffelgericht von Alpha bis\nOmega. Wenn du die Tatsache bestreitest, dann esse es nicht.
 Item/Help/301303┃Fügen einfach Butter und Salz für eine fantastische Beilage hinzu!
 Item/Help/301304┃Fisch ist tatsächlich eines der häufigsten Lebensmittel, an denen Menschen ersticken...
@@ -1823,6 +1822,7 @@ Character/Name/73┃Charlotte
 Character/Name/74┃Darko
 Character/Name/75┃Lenore
 Character/Name/76┃Garnet
+Character/Name/77┃Yumin
 Character/Name/9999┃Dr. Nadja
 GameResult/Character/Name/1┃Jackie
 GameResult/Character/Name/2┃Aya
@@ -1900,6 +1900,7 @@ GameResult/Character/Name/73┃Charlotte
 GameResult/Character/Name/74┃Darko
 GameResult/Character/Name/75┃Lenore
 GameResult/Character/Name/76┃Garnet
+GameResult/Character/Name/77┃Yumin
 Monster/Name/1┃Huhn
 Monster/Name/2┃Fledermaus
 Monster/Name/3┃Wildschwein
@@ -2759,6 +2760,7 @@ ToolTipType/FioraActive4FirstSecondDamage┃[Flèche] 1. und 2. Trefferschaden
 ToolTipType/FioraActive4ThirdDamage┃[Flèche] 3. Trefferschaden
 ToolTipType/KatjaBonusSecurityConsoleTime┃Verlängerte Überwachungssysten-Kontrollzeit
 ToolTipType/CharlottePassivestack┃Erhöhte Heilung und Schilde (%)
+ToolTipType/YuMinWindFieldSkillDamage┃[Wind Zone] Schaden
 ToolTipType/JohannTenacity┃Johann - Zähigkeit (%)
 ToolTipType/JohannAllyTenacity┃Verbündete - Zähigkeit (%)
 ToolTipType/FinalDamage┃Alle Schadenserhöhung
@@ -3147,6 +3149,7 @@ Skin/Name/1042000┃Bianca
 Skin/Name/1042001┃Pyjama Bianca
 Skin/Name/1042002┃Austauschschülerin Bianca
 Skin/Name/1042003┃Kadett Bianca
+Skin/Name/1042004┃Gefängniswärterin Bianca
 Skin/Name/1043000┃Celine
 Skin/Name/1043001┃Entschärfungsagentin Celine
 Skin/Name/1043002┃Elektrokürbis Celine
@@ -6188,10 +6191,6 @@ Product/Name/NewYearLuckyBox2024_Pack_01┃Glücksbeutel
 Product/Name/MarchingBandLeni_Pack_01┃Marschkapelle Leni Bundle
 Product/Name/LunarNewYear2024_Pack_01┃Mondneujahr Special Bundle
 Product/Name/LunarNewYear2024_Pack_02┃Mondneujahr Data Box Bundle
-Product/Name/TEST_SEQ_PRODUCTS┃시퀀스 패키지
-Product/Name/TEST_SEQ_PRODUCTS_01┃연구소 데이터 세트 (5개)
-Product/Name/TEST_SEQ_PRODUCTS_02┃연구소 데이터 세트 (3개)
-Product/Name/TEST_SEQ_PRODUCTS_03┃멧현우 스킨 세트
 Product/Name/GoldLuckyBox2024_Pack_01┃Goldener Glücksbeutel
 Product/Name/Blooming_Pack_01┃Weiße Blume Box
 Product/Name/Blooming_A-Coin_Pack_01┃Grüne Blume Box
@@ -6696,6 +6695,7 @@ PurchaseWithdrawalType/Link/ImmediateUseNoWithdrawal_KAKAO┃https://er.game.dau
 등록 또는 사용하는 경우 구매 취소 불가능┃Benutzte oder verbrauchte Artikel können nicht erstattet werden.
 구매 즉시 활성화되어 구매 취소 불가능┃Dieser Inhalt wird sofort nach dem Kauf aktiviert und ist nicht erstattungsfähig.
 선물하기 청약철회 구매일로부터 7일이내 가능┃Rückerstattungen können nur innerhalb von 7 Tagen nach dem Kauf beantragt werden. (Ausgenommen sind Gegenstände, die in deinem in-game Postfach abgeholt wurden)
+MILEAGE 구매 최종 확인┃Möchtest du es eintauschen?\nDanach sind keine Rückerstattungen möglich.
 청약철회 필수 고지사항┃Rückerstattungsrichtlinie für Käufe im Spiel
 NP_청약철회 필수 고지사항┃Rückerstattungsrichtlinie für Käufe im Spiel
 상자의 보상품 및 확률 공시는 링크를 확인해 주세요┃Box-Items und Wahrscheinlichkeiten können sich ändern. Bitte überprüfe die aktuellen Wahrscheinlichkeiten über den Link.
@@ -6933,6 +6933,8 @@ subMenu/Attendance/Season┃Saison
 subMenu/Attendance/NRU┃Neue Spieler
 subMenu/Attendance/RU┃Wiederkehrende Spieler
 subMenu/Attendance/Event┃Event
+subMenu/Mileage/Special┃Spezial
+subMenu/Mileage/Skin┃Skin
 Shopmenu/Package/ALL┃Alle
 Shopmenu/Package/SeasonPack_box┃Saisonpaket & Box
 Shopmenu/Package/Character┃Charakter Special Bundle
@@ -10176,6 +10178,7 @@ Tutorial/Announce/초급3/작은목표4-2┃Benutze Credits um einen Füller zu 
 Tutorial/Announce/초급3/작은목표4-3┃Stelle Dyadisches Prisma her
 Tutorial/Announce/초급3/작은목표5-1┃Bewege dich in die letzte Sicherheitszone
 Tutorial/Announce/초급3/작은목표5-2┃Eliminiere die Testobjekte
+Tutorial/Announce/초급3/작은목표5-3┃Bewege dich in die letzte Sicherheitszone
 Tutorial/Announce/초급3/작은목표6-1┃Eliminiere Rozzi
 Tutorial/Cutscene/초급1/유키1┃Rio!
 Tutorial/Cutscene/초급1/라우라2┃Oho, war ich zu grob?
@@ -11459,6 +11462,7 @@ CharacterState/Group/Name/1029530┃Auf die Welle, fertig, los! - Verlangsamt
 CharacterState/Group/Desc/1029530┃Verlangsamt durch Aufprall mit Gelände.
 Skill/Group/Name/1030100┃Hackfleisch
 Skill/Group/Name/1030200┃Burger Königin
+Skill/Group/Desc/1033300┃<color=#ffffff>ป้องกัน</color>: นิกกี้ป้องกันการโจมตีที่มาจากทิศทางที่เคอร์เซอร์เมาส์ชี้ไป ทำการลดความเสียหายลง {1} เป็นเวลา {0} วินาที ระยะนั้นเธอจะปลอดภัยจากผลดีบัฟและCC การป้องกันที่สำเร็จจะทำให้เธอใช้ <color=white>หมัดตรงแห่งความโกรธ!!</color> เป็นเวลา {2} วินาที และเมื่อสิ้นสุดระยะ <color=white>สวนกลับ</color> จะทำงาน\n\n<color=#ffffff>สวนกลับ</color>: นิกกี้พุ่งไปข้างหน้า ทำความเสียหายสกิล <color=white>{3}</color> หน่วยแก่ศัตรูและทำให้พวกเขาช้าลง {5} เป็นเวลา {4} วินาที\nผลนี้จะค่อยๆดีขึ้นตามเวลา
 Skill/Group/Desc/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, der ihm jede Sekunde, in der der Ring aktiv ist, {9} Steigerungen von "Unnachgiebig" gewährt. Feinde, die die Seile berühren, werden {3} Sekunden lang um {4} verlangsamt und erleiden <color=white>{11}</color> Fertigkeitsschaden. Feinde, die in die Seile geschleudert werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung. Das Töten eines Spielers innerhalb des Rings gewährt {6} Steigerungen von Unnachgiebigkeit und erhöht Jans Lauftempo für {7} Sekunden um {8}.
 Skill/Group/Coef/1035200┃<color=#ffffC2>Kniestoß :</color> Jan greift mit seinem Knie an und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Gegnern in Reichweite und verlangsamt sie für {2} Sekunden um {3}. Reaktivieren, um "Springendes Knie" zu verwenden.<color=white>Verstärkt :</color> Verringert die Verteidigung des Gegners für {4} Sekunden um {5}.\n\n<color=#ffffC2>Springendes Knie :</color> Jan greift mit seinem Knie an, verursacht <color=white>{7}</color><color=#ffd775>(+{8} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Fähigkeitsschaden und stößt ihn für {10} Sekunden in die Luft. \n<color=white>Verbessert :</color> Wenn du einen Gegner triffst, wird die Abklingzeit von Bob und Weave zurückgesetzt.
 Skill/Group/Coef/1035210┃<color=#ffffC2>Kniestoß :</color> Jan greift mit seinem Knie an und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Gegnern in Reichweite und verlangsamt sie für {2} Sekunden um {3}. Reaktivieren, um "Springendes Knie" zu verwenden.<color=white>Verstärkt :</color> Verringert die Verteidigung des Gegners für {4} Sekunden um {5}.\n\n<color=#ffffC2>Springendes Knie :</color> Jan greift mit seinem Knie an, verursacht <color=white>{7}</color><color=#ffd775>(+{8} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Fähigkeitsschaden und stößt ihn für {10} Sekunden in die Luft. \n<color=white>Verbessert :</color> Wenn du einen Gegner triffst, wird die Abklingzeit von Bob und Weave zurückgesetzt.
@@ -11678,25 +11682,24 @@ Skill/Group/Name/1050310┃Doppelaxel
 Skill/Group/Name/1050400┃Spirale
 Skill/Group/Name/1050410┃Spirale
 Skill/Group/Name/1050500┃Danse Macabre
-Skill/Group/Desc/1050200┃Elena formt einen Eiszapfen in die gewählte Richtung, richtet dabei <color=white>{0}</color>  Fertigkeitsschaden an und <color=white>Kühlt</color> Gegner ab. Kurz danach zerspringt der Eiszapfen, richtet <color=white>{1}</color>  Fertigkeitsschaden an, <color=white>Kühlt</color> Gegner ab und reduziert die Abklingzeit von <color=white>Herrschaft der Winterkönigin</color> um {6}.
-Skill/Group/Desc/1050300┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
-Skill/Group/Desc/1050400┃Elena gleitet in die gewählte Richtung, richtet an allen Gegnern in ihrem Weg <color=white>{0}</color> Schaden an und <color=white>Kühlt</color> sie ab. Spirale kann nur einmal pro Angwendung <color=white>Kühlen</color>. <color=white>Doppelaxel</color> kann während <color=white>Spirale</color> eingesetzt werden, um die Reichweite zu erhöhen und Elena über Wände gleiten zu lassen. <color=white>Spirale</color> erhöht mit jeder Nutzung von <color=white>Doppelaxel</color> ihre Dauer um {3} Sekunden.
-Skill/Group/Desc/1050500┃Elena formt eine enorme, sich ausbreitende <color=white>Eisfläche</color>, welche <color=white>{0}</color> Schaden an Gegnern anrichtet. Gegner im Zentrum werden sofort <color=white>Eingefroren</color> und nehmen zusätzlich <color=white>{1}</color> Schaden.
-Skill/Group/Coef/1050200┃Elena formt einen Eiszapfen in die gewählte Richtung, richtet dabei <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color>  Fertigkeitsschaden an und <color=white>Kühlt</color> Gegner ab. Kurz danach zerspringt der Eiszapfen, richtet <color=white>{3}</color><color=#ffd775>(+{4} Angriffskraft)</color><color=#DDA0DD>(+{8} Fähigkeitsverstärkung)</color>  Fertigkeitsschaden an, <color=white>Kühlt</color> Gegner ab und reduziert die Abklingzeit von <color=white>Herrschaft der Winterkönigin</color> um {6}.
-Skill/Group/Coef/1050300┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color><color=#ffd775>(+{8} Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
-Skill/Group/Coef/1050310┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color><color=#ffd775>(+{8} Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
-Skill/Group/Coef/1050400┃Elena gleitet in die gewählte Richtung, richtet an allen Gegnern in ihrem Weg <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{4} Fähigkeitsverstärkung)</color> Schaden an und <color=white>Kühlt</color> sie ab. Spirale kann nur einmal pro Angwendung <color=white>Kühlen</color>. <color=white>Doppelaxel</color> kann während <color=white>Spirale</color> eingesetzt werden, um die Reichweite zu erhöhen und Elena über Wände gleiten zu lassen. <color=white>Spirale</color> erhöht mit jeder Nutzung von <color=white>Doppelaxel</color> ihre Dauer um {3} Sekunden.
+Skill/Group/Coef/1050100┃Elena formt einen Eiszapfen in die gewählte Richtung, richtet dabei <color=white>{0}</color>  Fertigkeitsschaden an und <color=white>Kühlt</color> Gegner ab. Kurz danach zerspringt der Eiszapfen, richtet <color=white>{1}</color>  Fertigkeitsschaden an, <color=white>Kühlt</color> Gegner ab und reduziert die Abklingzeit von <color=white>Herrschaft der Winterkönigin</color> um {6}.
+Skill/Group/Desc/1050200┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
+Skill/Group/Desc/1050300┃Elena gleitet in die gewählte Richtung, richtet an allen Gegnern in ihrem Weg <color=white>{0}</color> Schaden an und <color=white>Kühlt</color> sie ab. Spirale kann nur einmal pro Angwendung <color=white>Kühlen</color>. <color=white>Doppelaxel</color> kann während <color=white>Spirale</color> eingesetzt werden, um die Reichweite zu erhöhen und Elena über Wände gleiten zu lassen. <color=white>Spirale</color> erhöht mit jeder Nutzung von <color=white>Doppelaxel</color> ihre Dauer um {3} Sekunden.
+Skill/Group/Coef/1050300┃Elena formt eine enorme, sich ausbreitende <color=white>Eisfläche</color>, welche <color=white>{0}</color> Schaden an Gegnern anrichtet. Gegner im Zentrum werden sofort <color=white>Eingefroren</color> und nehmen zusätzlich <color=white>{1}</color> Schaden.
+Skill/Group/Coef/1050310┃Elena formt einen Eiszapfen in die gewählte Richtung, richtet dabei <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color>  Fertigkeitsschaden an und <color=white>Kühlt</color> Gegner ab. Kurz danach zerspringt der Eiszapfen, richtet <color=white>{3}</color><color=#ffd775>(+{4} Angriffskraft)</color><color=#DDA0DD>(+{8} Fähigkeitsverstärkung)</color>  Fertigkeitsschaden an, <color=white>Kühlt</color> Gegner ab und reduziert die Abklingzeit von <color=white>Herrschaft der Winterkönigin</color> um {6}.
+Skill/Group/Desc/1050400┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color><color=#ffd775>(+{8} Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
+Skill/Group/Coef/1050400┃Elena springt in die gewählte Richtung, richtet <color=white>{0}</color><color=#ffd775>(+{8} Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Schaden an und kühlt Gegner um {2} ab. Doppelaxel reduziert die Abklingzeit von <color=white>Kristallene Eleganz</color> um {6} und erhöht Elena's Verteidigung um {3}. Elena kann bis 2 Aufladungen von Doppelaxel bereithalten.\nNimmt Elena während <color=white>Doppelaxel</color> Schaden, formt sie weitere <color=white>Eisflächen</color> unter ihrem Angreifer. Wenn Elena <color=white>Kristallene Eleganz</color> und <color=white>Spirale</color> einsetzt, kann sie <color=white>Doppelaxel</color> sofort beenden und reduziert die Abklingzeit der Fertigkeit, welche <color=white>Doppelaxel</color> beendet hat um {5}.
+Skill/Group/Desc/1050500┃Elena gleitet in die gewählte Richtung, richtet an allen Gegnern in ihrem Weg <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{4} Fähigkeitsverstärkung)</color> Schaden an und <color=white>Kühlt</color> sie ab. Spirale kann nur einmal pro Angwendung <color=white>Kühlen</color>. <color=white>Doppelaxel</color> kann während <color=white>Spirale</color> eingesetzt werden, um die Reichweite zu erhöhen und Elena über Wände gleiten zu lassen. <color=white>Spirale</color> erhöht mit jeder Nutzung von <color=white>Doppelaxel</color> ihre Dauer um {3} Sekunden.
 Skill/Group/Coef/1050500┃Elena formt eine enorme, sich ausbreitende <color=white>Eisfläche</color>, welche <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> Schaden an Gegnern anrichtet. Gegner im Zentrum werden sofort <color=white>Eingefroren</color> und nehmen zusätzlich <color=white>{3}</color><color=#ffd775>(+{4} Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Schaden.
 Skill/Group/ExpansionTip/1050100┃<i>Inimigos não poder receber Calafrios por {0} segundos depois de serem afetados pelo Congelamento.</i>
 Skill/Group/ExpansionTip/1050300┃<i>Wenn Elena Doppelaxel in einem Eisfeld ausführt,  kann sie über Wände springen und erhöht die Reichweite von Doppelaxel.</i>
-Skill/Group/ExpansionTip/1050400┃<i></i>
 CharacterState/Group/Name/1050110┃Kühlen
 CharacterState/Group/Desc/1050110┃Gegner werden eingefroren, sobald sie vollständig abkühlen.
 CharacterState/Group/Name/1050120┃Eingefroren
 CharacterState/Group/Desc/1050120┃Du fühlst dich eiskalt und friest ein.
 CharacterState/Group/Name/1050130┃Taut auf
 CharacterState/Group/Desc/1050130┃Taut aktuell auf und kann nicht abgekühlt werden.
-CharacterState/Group/Name/1050150┃Gletscherfeld
+CharacterState/Group/Name/1050150┃Eingefroren
 CharacterState/Group/Desc/1050150┃Angriffs- und Lauftempo reduziert.
 CharacterState/Group/Name/1050160┃Herrschaft der Winterkönigin
 CharacterState/Group/Desc/1050160┃Dein nächter normaler Angriff erschafft ein Eisfeld.
@@ -12104,6 +12107,41 @@ Skill/Group/Name/1074200┃Kredithai
 Skill/Group/Name/1074300┃Wo ist die Kohle?
 Skill/Group/Name/1074400┃Zahltag!
 Skill/Group/Name/1074500┃Einschüchterungstaktik
+Skill/Group/Name/1077100┃Die Kraft des Tao
+Skill/Group/Name/1077200┃Mystischer Orkan
+Skill/Group/Name/1077210┃Mystischer Orkan - Windzone
+Skill/Group/Name/1077300┃Böenstoß
+Skill/Group/Name/1077310┃Böenstoß - Windzone
+Skill/Group/Name/1077400┃Wolkenschritte
+Skill/Group/Name/1077500┃Fluss des Windes
+Skill/LobbyDesc/1077100┃Yumins Lauftempo erhöht sich, während er sich in einer Windzone befindet.\n\nWenn er <color=white>Mystischer Orkan</color> oder <color=white>Böenstoß</color> einsetzt, während er sich in einer Windzone befindet, verbraucht er den Wind und erhält einen Schild, der für kurze Zeit Schaden absorbiert.
+Skill/Group/Desc/1077100┃Yumins Lauftempo erhöht sich um {0}, während er sich in einer Windzone befindet.\n\nWenn er <color=white>Mystischer Orkan</color> oder <color=white>Böenstoß</color> einsetzt, während er sich in einer Windzone befindet, verbraucht er den Wind und erhält einen Schild, der für {1} Sekunden <color=white>{20}</color> Schaden absorbiert.
+Skill/Group/Coef/1077100┃Yumins Lauftempo erhöht sich um {0}, während er sich in einer Windzone befindet.\n\nWenn er <color=white>Mystischer Orkan</color> oder <color=white>Böenstoß</color> einsetzt, während er sich in einer Windzone befindet, verbraucht er den Wind und erhält einen Schild, der für {1} Sekunden <color=white>{2}</color><color=#DDA0DD>(+{3} Fähigkeitsverstärkung)</color> Schaden absorbiert.
+Skill/LobbyDesc/1077200┃Yumin entfesselt 3 Windstöße, die den Gegnern in seinem Weg Fähigkeitsschaden zufügen. Jeder Windstoß fügt dem zweiten und jedem weiteren getroffenen Ziel reduzierten Schaden zu.\n\nWenn diese Fähigkeit in einer Windzone eingesetzt wird, setzt Yumin eine größere Windböe frei. Wenn der Wind seine maximale Reichweite erreicht oder einen Gegner trifft, erzeugt er einen Wirbel, der Fähigkeitsschaden verursacht.
+Skill/Group/Desc/1077200┃Yumin entfesselt 3 Windstöße, die <color=white>{20}</color> Fähigkeitsschaden an Feinden in seinem Weg verursachen. Jeder Windstoß fügt dem zweiten und jedem weiteren getroffenen Ziel {0} Schaden zu.\n\nWenn diese Fähigkeit in einer Windzone eingesetzt wird, setzt Yumin eine größere Windböe frei. Wenn der Wind seine maximale Reichweite erreicht oder einen Gegner trifft, erzeugt er einen Wirbel, der alle {1} Sekunden <color=white>{21}</color> Fähigkeitsschaden verursacht.
+Skill/Group/Coef/1077200┃Yumin entfesselt 3 Windstöße, die <color=white>{2}</color><color=#DDA0DD>(+{3} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Feinden in seinem Weg verursachen. Jede Böe fügt dem zweiten und jedem weiteren getroffenen Ziel {0} Schaden zu.\n\nWenn diese Fähigkeit in einer Windzone eingesetzt wird, setzt Yumin eine größere Windböe frei. Wenn der Wind seine maximale Reichweite erreicht oder einen Gegner trifft, erzeugt er einen Wirbel, der alle {1} Sekunden <color=white>{4}</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> Fähigkeitsschaden verursacht.
+Skill/LobbyDesc/1077300┃Yumin beschwört einen Windstoß, der Fähigkeitsschaden an Feinden verursacht und sie verlangsamt.\n\nWenn diese Fähigkeit in einer Windzone eingesetzt wird, erzeugt sie einen starken Wind, der Gegnern Fähigkeitsschaden zufügt und sie zurückwirft.
+Skill/Group/Desc/1077300┃Yumin beschwört einen Windstoß, der <color=white>{20}</color> Fähigkeitsschaden an Feinden verursacht und sie für {0} Sekunden um {1} verlangsamt.\n\nWenn diese Fertigkeit in einer Windzone eingesetzt wird, erzeugt sie einen starken Wind, der <color=white>{21}</color> Fähigkeitsschaden an Feinden verursacht und sie zurückwirft.
+Skill/Group/Coef/1077300┃Yumin beschwört einen Windstoß, der <color=white>{2}</color><color=#DDA0DD>(+{3} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Feinden verursacht und sie für {0} Sekunden um {1} verlangsamt.\n\nWenn diese Fertigkeit in einer Windzone eingesetzt wird, erzeugt sie einen starken Wind, der <color=white>{4}</color><color=#DDA0DD>(+{5} Fähigkeits-Verstärkung)</color> Fähigkeitsschaden an Feinden verursacht und sie zurückwirft.
+Skill/LobbyDesc/1077400┃<color=green>Passiv:</color> Die Abklingzeit wird verringert, wenn ein Gegner mit einer Fähigkeit getroffen wird.\n\nYumin springt in die anvisierte Richtung und erzeugt eine Windzone, die für eine bestimmte Dauer anhält. Nach der Landung lässt er eine Böe auf Gegner in der Nähe los, die Fähigkeitsschaden verursacht.\n\n<i>Feste Abklingzeit: Diese Fähigkeit wird nicht von Abklingzeitverringerung beeinflusst.</i>
+Skill/Group/Desc/1077400┃<color=green>Passiv:</color> Die Abklingzeit wird um {0} Sekunden verringert, wenn ein Gegner mit einer Fähigkeit getroffen wird.\n\nYumin springt in die anvisierte Richtung und erzeugt eine Windzone, die {1} Sekunde lang anhält. Nach der Landung lässt er eine Böe auf {2} Gegner in der Nähe los, die <color=white>{20}</color> Fähigkeitsschaden verursacht.
+Skill/Group/Coef/1077400┃<color=green>Passiv:</color> Die Abklingzeit wird um {0} Sekunden verringert, wenn ein Gegner mit einer Fähigkeit getroffen wird.\n\nYumin springt in die anvisierte Richtung und erzeugt eine Windzone, die {1} Sekunde lang anhält. Nach der Landung lässt er eine Böe auf {2} Gegner in der Nähe los, die <color=white>{3}</color><color=#DDA0DD>(+{4} Fähigkeitsverstärkung)</color> Fähigkeitsschaden verursacht.
+Skill/Group/ExpansionTip/1077400┃<i>Feste Abklingzeit: Diese Fähigkeit wird nicht von Abklingzeitverringerung beeinflusst.</i>
+Skill/LobbyDesc/1077500┃Yumin beschwört einen Kranich vom Himmel, der Fähigkeitsschaden an Feinden verursacht und sie verlangsamt.\n\nNach 1 Sekunde erhebt sich der Kranich wieder in die Luft, verursacht Fähigkeitsschaden und stößt Feinde in die Luft.
+Skill/Group/Desc/1077500┃Yumin beschwört einen Kranich vom Himmel, der <color=white>{20}</color> Fähigkeitsschaden an Feinden verursacht und sie für {0} um {1} verlangsamt.\n\nNach 1 Sekunde erhebt sich der Kranich wieder in die Luft, verursacht <color=white>{21}</color><color=#688A08>(+{7} max HP des Ziels)</color> Fähigkeitsschaden und stößt Feinde für {2} Sekunden in die Luft.
+Skill/Group/Coef/1077500┃Yumin beschwört einen Kranich vom Himmel, der <color=white>{3}</color><color=#DDA0DD>(+{4} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an Feinden verursacht und sie für {0} um {1} verlangsamt.\n\nNach 1 Sekunde erhebt sich der Kranich wieder in die Luft, verursacht <color=white>{5}</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color><color=#688A08>(+{7} maximale HP des Ziels)</color> Fähigkeitsschaden und stößt Feinde für {2} Sekunden in die Luft.
+CharacterState/Group/Name/1077100┃Die Kraft des Tao
+CharacterState/Group/Desc/1077100┃Dein Lauftempo wird erhöht, wenn du dich in der Windzone befindest.
+CharacterState/Group/Name/1077110┃Die Kraft des Tao - Schild
+CharacterState/Group/Desc/1077110┃Du hast einen Schild erhalten, indem du eine Fähigkeit in der Windzone benutzt hast.
+CharacterState/Group/Name/1077300┃Böenstoß - Windzone
+CharacterState/Group/Desc/1077300┃Du wurdest von einer Windböe zurückgeworfen.
+CharacterState/Group/Name/1077310┃Böenstoß
+CharacterState/Group/Desc/1077310┃Du wurdest von einer Windböe verlangsamt.
+CharacterState/Group/Name/1077500┃Fluss des Windes
+CharacterState/Group/Desc/1077500┃Du wurdest vom Fluss des Windes verlangsamt.
+CharacterState/Group/Name/1077510┃Fluss des Windes
+CharacterState/Group/Desc/1077510┃Du wurdest vom Fluss des Windes in die Luft geschleudert.
 Skill/Group/Name/3015000┃Tarnumhang
 Skill/Group/Name/3015100┃Tarnumhang
 Skill/Group/Name/3016000┃Parieren
@@ -12768,6 +12806,7 @@ Item/Skills/6004006/Desc┃Basisangriffe fügen einen Brandeffekt für {8}s zu, 
 Item/Skills/6004007/Name┃<color=yellow>Schmelzen</color>
 Item/Skills/6004007/Body┃Basisangriffe fügen einen Brandeffekt für {6}s zu, der bis zu {4} Mal gesteigert werden kann.\n Jede Steigerung richtet <color=#688A08>{2} der gegnerischen Max LP</color> als absoluten Schaden jede {5}Sekunde an.
 Item/Skills/6004007/Desc┃Basisangriffe fügen einen Brandeffekt für {8}s zu, der bis zu {6} Mal gesteigert werden kann.\n Jede Steigerung richtet alle {7} Sekunden absoluten Schaden an.\Nahkampf: Richtet <color=#688A08>{2} Max LP</color> Schaden an.\nFernkampf: Richtet<color=#688A08>{3} Max HP</color> Schaden an.
+Item/Skills/6004008/Name┃<color=yellow>Schmelzen</color>
 Item/Skills/6005000┃Gezielter Schlag
 Item/Skills/6005001/Name┃<color=yellow>Gezielter Schlag</color>
 Item/Skills/6005001/Body┃Alle {0} Sekunden erhält dein nächster normaler Angriff {1} zusätzliche kritische Trefferrate.
@@ -12781,42 +12820,42 @@ Item/Skills/6005005/Name┃<color=yellow>Gezielter Schlag</color>
 Item/Skills/6005006/Name┃<color=yellow>Bleimantel</color>
 Item/Skills/6008000┃Heilungsreduzierung
 Item/Skills/6008001/Name┃<color=yellow>Heilungsreduzierung durch Fertigkeiten</color>
-Item/Skills/6008001/Body┃({0}) Fertigkeiten reduzieren die Heilungs des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008001/Desc┃Fertigkeiten reduzieren die Heilung des Ziels für {2} seconds. \nNahkampf: {0} Heilungsreduzierung.\nFernkampf: {1} Heilungsreduzierung.
+Item/Skills/6008001/Body┃({0}) Fertigkeiten reduzieren die Heilungs des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008001/Desc┃Fertigkeiten reduzieren die Heilung des Ziels für {2} seconds. \nNahkampf: <color=white>{0}</color> Heilungsreduzierung.\nFernkampf: <color=white>{1}</color> Heilungsreduzierung.
 Item/Skills/6008002/Name┃<color=yellow>Heilungsreduzierung durch Fertigkeiten</color>
-Item/Skills/6008002/Body┃Fertigkeiten reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008002/Desc┃Fertigkeiten reduzieren die Heilung des Ziels um {0} für {2} Sekunden.
+Item/Skills/6008002/Body┃Fertigkeiten reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008002/Desc┃Fertigkeiten reduzieren die Heilung des Ziels um <color=white>{0}</color> für {2} Sekunden.
 Item/Skills/6008003/Name┃<color=yellow>Heilungsreduzierung durch Fertigkeiten</color>
-Item/Skills/6008003/Body┃Fertigkeiten reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008003/Desc┃Fertigkeiten reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
+Item/Skills/6008003/Body┃Fertigkeiten reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008003/Desc┃Fertigkeiten reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
 Item/Skills/6008004/Name┃<color=yellow>Heilungsreduzierung durch Fertigkeiten</color>
 Item/Skills/6008005/Name┃<color=yellow>Heilungsreduzierung durch Fertigkeiten</color>
-Item/Skills/6008005/Body┃({0}) Fertigkeiten reduzieren die Heilungs des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008005/Desc┃Fertigkeiten reduzieren die Heilung des Ziels für {2} seconds. \nNahkampf: {0} Heilungsreduzierung.
+Item/Skills/6008005/Body┃(<color=white>{0}</color>) Fertigkeiten reduzieren die Heilungs des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008005/Desc┃Fertigkeiten reduzieren die Heilung des Ziels für {2} seconds. \nNahkampf: <color=white>{0}</color> Heilungsreduzierung.
 Item/Skills/6008101/Name┃<color=yellow>Heilungsreduzierung durch Normale Angriffe</color>
-Item/Skills/6008101/Body┃({0}) Normale Angriffe reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008101/Desc┃Normale Angriffe reduzieren die Heilung des Ziels für {2} Sekunden. \nNahkampf: {0} Heilungsreduzierung.\nFernkampf: {1} Heilungsreduzierung.
+Item/Skills/6008101/Body┃({0}) Normale Angriffe reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008101/Desc┃Normale Angriffe reduzieren die Heilung des Ziels für {2} Sekunden. \nNahkampf: <color=white>{0}</color> Heilungsreduzierung.\nFernkampf: <color=white>{1}</color> Heilungsreduzierung.
 Item/Skills/6008102/Name┃<color=yellow>Heilungsreduzierung durch Normale Angriffe</color>
-Item/Skills/6008102/Body┃Normale Angriffe reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008102/Desc┃Normale Angriffe reduzieren die Heilung des Ziels um {0} für {2} Sekunden.
+Item/Skills/6008102/Body┃Normale Angriffe reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008102/Desc┃Normale Angriffe reduzieren die Heilung des Ziels um <color=white>{0}</color> für {2} Sekunden.
 Item/Skills/6008103/Name┃<color=yellow>Heilungsreduzierung durch Normale Angriffe</color>
-Item/Skills/6008103/Body┃Normale Angriffe reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
-Item/Skills/6008103/Desc┃Normale Angriffe reduzieren die Heilung des Ziels um {1} für {2} Sekunden.
+Item/Skills/6008103/Body┃Normale Angriffe reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
+Item/Skills/6008103/Desc┃Normale Angriffe reduzieren die Heilung des Ziels um <color=white>{1}</color> für {2} Sekunden.
 Item/Skills/6008104/Name┃<color=yellow>Heilungsreduzierung durch Normale Angriffe</color>
 Item/Skills/6007000┃Schnelle Schritte
 Item/Skills/6007001/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
-Item/Skills/6007001/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {4} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
-Item/Skills/6007001/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {3} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNahkampf: Nach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um {10} für {11} Sekunden.
+Item/Skills/6007001/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{4}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
+Item/Skills/6007001/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{3}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNahkampf: Nach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um <color=white>{10}</color> für {11} Sekunden.
 Item/Skills/6007000/Melee┃\nNahkampf: Nach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um {10} für {11} Sekunden
 Item/Skills/6007002/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
-Item/Skills/6007002/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {4} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
-Item/Skills/6007002/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {3} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um {10} für {11} Sekunden.
+Item/Skills/6007002/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{4}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
+Item/Skills/6007002/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{3}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um <color=white>{10}</color> für {11} Sekunden.
 Item/Skills/6007003/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
-Item/Skills/6007003/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {4} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.
-Item/Skills/6007003/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {1}m die du zurücklegst, bis zu {0}.\nDein Basislauftempo erhöht sich um bis zu {3} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {6} Fähigkeitsschaden an.
+Item/Skills/6007003/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{4}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.
+Item/Skills/6007003/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {1}m die du zurücklegst, bis zu {0}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{3}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {6} Fähigkeitsschaden an.
 Item/Skills/6007004/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
-Item/Skills/6007004/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {4} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
-Item/Skills/6007004/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu {3} basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNahkampf: Nach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um {10} für {11} Sekunden.
+Item/Skills/6007004/Body┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{4}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.{9}
+Item/Skills/6007004/Desc┃Erhalte eine Steigerung von [Schnelle Schritte] für jede {2}m die du zurücklegst, bis zu {1}.\nDein Basislauftempo erhöht sich um bis zu <color=white>{3}</color> basierend auf deiner Anzahl an Steigerungen. Basisangriffe verbrauchen alle Steigerungen und richten dafür bis zu {7} Fähigkeitsschaden an.\nNahkampf: Nach {0} Steigerungen verlangsamt dein nächster Basisangriff Gegner um <color=white>{10}</color> für {11} Sekunden.
 Item/Skills/6007005/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
 Item/Skills/6007006/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
 Item/Skills/6007007/Name┃<color=yellow>[Einzigartige Passive] - Schnelle Schritte</color>
@@ -12900,20 +12939,20 @@ CharacterState/Group/Name/6014010┃Fluchimmunität
 CharacterState/Group/Desc/6014010┃Kann nicht Verflucht werden.
 Item/Skills/6015000┃Windschnittig
 Item/Skills/6015001/Name┃<color=yellow>Windschnittig: Inkarnation von Rudra</color>
-Item/Skills/6015001/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
-Item/Skills/6015001/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015001/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um <color=white>{11}%</color> erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015001/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um <color=white>{4}%</color> und deine Angriffskraft um <color=#FFD775>{11}%</color> erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015002/Name┃<color=yellow>Windschnittig: Zephyr</color>
 Item/Skills/6015002/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild, dein Lauftempo wird um {4}% und dein Angriffstempo um {12}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
-Item/Skills/6015002/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild, dein Lauftempo wird um {4}% und dein Angriffstempo um {12}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015002/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild, dein Lauftempo wird um <color=white>{4}%</color> und dein Angriffstempo um {12}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015003/Name┃<color=yellow>Windschnittig: Ladungsträger</color>
 Item/Skills/6015003/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um {5}% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015003/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um <color=green>Charakterstufe * 1</color>% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015004/Name┃<color=yellow>Windschnittig: Inkarnation von Rudra</color>
-Item/Skills/6015004/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
-Item/Skills/6015004/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um {4}% und deine Angriffskraft um {11}% erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015004/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um <color=white>{4}%</color> und deine Angriffskraft um <color=white>{11}%</color> erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015004/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, wird dein Lauftempo um <color=white>{4}%</color> und deine Angriffskraft um <color=#FFD775>{11}%</color> erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015005/Name┃<color=yellow>Windschnittig: Ladungsträger</color>
-Item/Skills/6015005/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um {5}% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
-Item/Skills/6015005/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen {10}-LP-Schild und dein Lauftempo wird um <color=green>Charakterstufe * 1</color>% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015005/Body┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen <color=white>{10}</color>-LP-Schild und dein Lauftempo wird um {5}% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
+Item/Skills/6015005/Desc┃Wenn du einen Gegner {1} mal innerhalb von {0} Sekunden mit einer Fertigkeit oder einem normalen Angriff triffst, erhältst du einen <color=white>{10}</color>-LP-Schild und dein Lauftempo wird um <color=green>Charakterstufe * 1</color>% für {3} Sekunden erhöht. Multitreffer-Effekte zählen als einzelner Angriff. (Abklingzeit: {2} Sekunden)
 Item/Skills/6015007/Name┃<color=yellow>Windschnittig</color>
 Item/Skills/6015008/Name┃<color=yellow>Windschnittig</color>
 CharacterState/Group/Name/6015010┃Windschnittig
@@ -12946,27 +12985,27 @@ CharacterState/Group/Name/6016060┃Letzte Chance - Schild
 CharacterState/Group/Desc/6016060┃Schild und Zähigkeit erhalten
 Item/Skills/6017000┃Tatkraft
 Item/Skills/6017001/Name┃<color=yellow>Tatkraft</color>
-Item/Skills/6017001/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {0}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft.
-Item/Skills/6017001/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {0}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft.
+Item/Skills/6017001/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {0}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft.
+Item/Skills/6017001/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {0}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft.
 Item/Skills/6017002/Name┃<color=yellow>[Einzigartige Passive] - Tatkraft</color>
 Item/Skills/6017010/Name┃<color=yellow>[Einzigartige Passive] - Tatkraft</color>
 Item/Skills/6017031/Name┃<color=yellow>[Einzigartige Passive] - Tatkraft</color>
-Item/Skills/6017002/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
-Item/Skills/6017002/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
+Item/Skills/6017002/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
+Item/Skills/6017002/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
 Item/Skills/6017003/Name┃<color=yellow>[Einzigartige Passive] - Tatkraft</color>
-Item/Skills/6017003/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
-Item/Skills/6017003/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
+Item/Skills/6017003/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
+Item/Skills/6017003/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
 Item/Skills/6017004/Name┃<color=yellow>[Einzigartige Passive] - Tatkraft</color>
-Item/Skills/6017004/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
-Item/Skills/6017004/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um {3}%. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft und {6} Lauftempo.
+Item/Skills/6017004/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
+Item/Skills/6017004/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
 Item/Skills/6017005/Name┃<color=yellow>Tatkraft</color>
 Item/Skills/6017006/Name┃<color=yellow>Tatkraft - Durchblutung</color>
-Item/Skills/6017005/Body┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für {3}% Angriffstempo für {8} Sekunden.
-Item/Skills/6017005/Desc┃Normale Angriffe gegen Testobjekte richten zusätzliche (Nahkampf) ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) / (Fernkampf) ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {12}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für {3}% Angriffstempo für {8} Sekunden.
+Item/Skills/6017005/Body┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für <color=white>{3}%</color> Angriffstempo für {8} Sekunden.
+Item/Skills/6017005/Desc┃Normale Angriffe gegen Testobjekte richten zusätzliche (Nahkampf) ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) / (Fernkampf) ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {12}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für <color=white>{3}%</color> Angriffstempo für {8} Sekunden.
 Item/Skills/6017007/Name┃<color=yellow>Tatkraft</color>
 Item/Skills/6017008/Name┃<color=yellow>Tatkraft - Durchblutung</color>
-Item/Skills/6017008/Body┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für je {3}% Angriffstempo, die für {8} Sekunden anhalten. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft.
-Item/Skills/6017008/Desc┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für je {3}% Angriffstempo, die für {8} Sekunden anhalten. Bei {9} Steigerungen erhältst du zusätzliche {5} Angriffskraft.
+Item/Skills/6017008/Body┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für je <color=white>{3}%</color> Angriffstempo, die für {8} Sekunden anhalten. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft.
+Item/Skills/6017008/Desc┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für je <color=white>{3}%</color> Angriffstempo, die für {8} Sekunden anhalten. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft.
 Item/Skills/6017009/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017010/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017021/Name┃<color=yellow>Tatkraft - Durchblutung</color>
@@ -12975,8 +13014,8 @@ Item/Skills/6017023/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017024/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017025/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017026/Name┃<color=yellow>Vigor - Ekstase</color>
-Item/Skills/6017026/Body┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um {3}%.
-Item/Skills/6017026/Desc┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um {3}%.
+Item/Skills/6017026/Body┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
+Item/Skills/6017026/Desc┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
 CharacterState/Group/Name/6017000┃Tatkraft
 CharacterState/Group/Desc/6017000┃Erhöhtes Angriffstempo
 CharacterState/Group/Name/6017010┃Tatkraft - Maximale Steigerungen
@@ -12997,23 +13036,23 @@ CharacterState/Group/Name/6018010┃Temporales Schutzschild - Klingt ab
 CharacterState/Group/Desc/6018010┃Das Temporale Schutzschild baut sich wieder auf.
 Item/Skills/6019000┃Griff des Lich
 Item/Skills/6019001/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019001/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% und reduzierst sein Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019001/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% und reduzierst sein Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019001/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> und reduzierst sein Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019001/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> und reduzierst sein Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 Item/Skills/6019002/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019002/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019002/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019002/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019002/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 Item/Skills/6019003/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019003/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019003/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019003/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019003/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 Item/Skills/6019004/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019004/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% und reduzierst sein Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019004/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% und reduzierst sein Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019004/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> und reduzierst sein Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019004/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> und reduzierst sein Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 Item/Skills/6019005/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019005/Body┃Wenn du Gegnern Schaden zufügst, reduzierst du ihr Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019005/Desc┃Wenn du Gegnern Schaden zufügst, reduzierst du ihr Angriffstempo um {3}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019005/Body┃Wenn du Gegnern Schaden zufügst, reduzierst du ihr Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019005/Desc┃Wenn du Gegnern Schaden zufügst, reduzierst du ihr Angriffstempo um <color=white>{3}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 Item/Skills/6019006/Name┃<color=yellow>Griff des Lich</color>
-Item/Skills/6019006/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
-Item/Skills/6019006/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um {1}% für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019006/Body┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
+Item/Skills/6019006/Desc┃Wenn du einem Gegner mit einer Fertigkeit Schaden anrichtest, verlangsamt du ihn um <color=white>{1}%</color> für {4} Sekunden.\n(Abklingzeit: {5} Sekunden)
 CharacterState/Group/Name/6019000┃Griff des Lich
 CharacterState/Group/Desc/6019000┃Ein Lich hält dich fest in seinem Griff und verlangsamt dich.
 Item/Skills/6020000┃Meditation
@@ -13054,8 +13093,8 @@ CharacterState/Group/Name/6025000┃Ätzende Mischung
 CharacterState/Group/Desc/6025000┃Verliert jede Sekunde Schild
 Item/Skills/6026001┃Blütenhagel
 Item/Skills/6026001/Name┃<color=yellow>In voller Blüte</color>
-Item/Skills/6026001/Body┃Wenn du vier aufeinanderfolgende Treffer bei einem gegnerischen Testobjekt landest, verursachst du zusätzlichen {0}<color=#008000>(+{1})</color> Fähigkeitsschaden.\n(Abklingzeit {4} Sekunden)
-Item/Skills/6026001/Desc┃Wenn du vier aufeinanderfolgende Treffer bei einem gegnerischen Testobjekt landest, verursachst du zusätzlicenh {0} +<color=#008000> Charakterstufe * {1}</color> Fähigkeitsschaden.\n(Abklingzeit {4} Sekunden)
+Item/Skills/6026001/Body┃Wenn du vier aufeinanderfolgende Treffer bei einem gegnerischen Testobjekt landest, verursachst du zusätzlichen {0}<color=green>(+{1})</color> Fähigkeitsschaden.\n(Abklingzeit {4} Sekunden)
+Item/Skills/6026001/Desc┃Wenn du vier aufeinanderfolgende Treffer bei einem gegnerischen Testobjekt landest, verursachst du zusätzlicenh {0} +<color=green> Charakterstufe * {1}</color> Fähigkeitsschaden.\n(Abklingzeit {4} Sekunden)
 CharacterState/Group/Name/6026000┃Gedeihende Blume
 CharacterState/Group/Desc/6026000┃Die Blume blüht.
 CharacterState/Group/Name/6026010┃In Voller Blüte - Lädt auf
@@ -13257,12 +13296,12 @@ CharacterState/Group/Name/6022100┃Erleuchtung - Sense des Schnitters
 CharacterState/Group/Desc/6022100┃Die Statusanforderungen sind erfüllt und Sense des Schnitters wurde aktiviert.
 Item/Skills/6027001┃Erleuchtung - Vorreiter
 Item/Skills/6027001/Name┃<color=yellow>Erleuchtung - Vorreiter</color>
-Item/Skills/6027001/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um {5}% verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
-Item/Skills/6027001/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um {5}% verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
+Item/Skills/6027001/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
+Item/Skills/6027001/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
 Item/Skills/6027101┃Erleuchtung - Vorreiter
 Item/Skills/6027101/Name┃<color=yellow>Erleuchtung - Vorreiter</color>
-Item/Skills/6027101/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um {5}% verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
-Item/Skills/6027101/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um {5}% verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
+Item/Skills/6027101/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
+Item/Skills/6027101/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
 CharacterState/Group/Name/6027000┃Vorreiter
 CharacterState/Group/Desc/6027000┃Du hast genug Schaden erlitten, um Vorreiter auszulösen.
 CharacterState/Group/Name/6027010┃Vorreiter - Verstärkungseffekte
@@ -13287,8 +13326,8 @@ Item/Skills/6030003┃Entkräftung
 Item/Skills/6030003/Name┃<color=yellow>Entkräftung</color>
 Item/Skills/6028001┃Pulverisierung
 Item/Skills/6028001/Name┃<color=yellow>Pulverisierung</color>
-Item/Skills/6028001/Body┃Jeder einzelne Angriff auf einen Feind verursacht einen [Pulverisierung]-Effekt, der bis zu {2} Mal für {0} Sekunden gesteigert werden kann. Der [Pulverisierung]-Effekt verringert die Verteidigung des Gegners um 5%. Wenn du einem Ziel mit [Pulverisierung] Schaden zufügst, erhöht sich dein Lauftempo {4} Sekunden lang um {3} Sekunden.
-Item/Skills/6028001/Desc┃Jeder einzelne Angriff auf einen Feind verursacht einen [Pulverisierung]-Effekt, der bis zu {2} Mal für {0} Sekunden gesteigert werden kann. Der [Pulverisierung]-Effekt verringert die Verteidigung des Gegners um 5%. Wenn du einem Ziel mit [Pulverisierung] Schaden zufügst, erhöht sich dein Lauftempo {4} Sekunden lang um {3} Sekunden.
+Item/Skills/6028001/Body┃Jeder einzelne Angriff auf einen Feind verursacht einen [Pulverisierung]-Effekt, der bis zu {2} Mal für {0} Sekunden gesteigert werden kann. Der [Pulverisierung]-Effekt verringert die Verteidigung des Gegners um 5%. Wenn du einem Ziel mit [Pulverisierung] Schaden zufügst, erhöht sich dein Lauftempo <color=white>{4}</color> Sekunden lang um {3} Sekunden.
+Item/Skills/6028001/Desc┃Jeder einzelne Angriff auf einen Feind verursacht einen [Pulverisierung]-Effekt, der bis zu {2} Mal für {0} Sekunden gesteigert werden kann. Der [Pulverisierung]-Effekt verringert die Verteidigung des Gegners um 5%. Wenn du einem Ziel mit [Pulverisierung] Schaden zufügst, erhöht sich dein Lauftempo <color=white>{4}</color> Sekunden lang um {3} Sekunden.
 CharacterState/Group/Name/6028000┃Pulverisierung
 CharacterState/Group/Desc/6028000┃Verteidigung wird um die Anzahl der Steigerungen reduziert.
 CharacterState/Group/Name/6028010┃Pulverisierung - Lauftempo
@@ -17159,6 +17198,12 @@ CharacterStoryHeight/75┃170cm
 CharacterStoryGender/75┃Weiblich
 CharacterStoryTitle/75┃"Komm! Lass mich deinen Sound hören."
 CharacterStoryDesc/75┃Lenore ist eine versierte Geigerin, die unermüdlich auf der Suche nach einem himmlischen Klang ist, den sie ihren „Schwanengesang“ nennt.\n\nNachdem sie als Kind einen schweren Unfall überlebt hatte, verbesserte sich ihr Geigenspiel dramatisch. Sie behauptet, dass sie damals, inmitten der Schreie der Sterbenden, zum ersten Mal das hörte, was sie den „Schwanengesang“ nennt.\n\nSie hat zahllose Menschen unerträglichen Schmerzen ausgesetzt und versucht, deren Schreie einzufangen und den „Schwanengesang“ wiederzugeben. \nDoch sie hat den Klang, nach dem sie sucht, nie ganz gefunden. \n\nDennoch hat sie nie aufgegeben, sondern ist stattdessen davon besessen, ihren „Schwanengesang“ zu finden. Endlich hat sie auf Lumia Island ihre neue Bühne gefunden.\n\nUnd hier wird sie weiter auftreten, ohne Unterbrechung.\nFür immer.
+CharacterStoryName/77┃Yumin
+CharacterStoryAge/77┃21 Jahre alt
+CharacterStoryHeight/77┃182 cm
+CharacterStoryGender/77┃Männlich
+CharacterStoryTitle/77┃"Lasst uns den Wind fangen und schauen wohin er uns trägt!"
+CharacterStoryDesc/77┃Ein junger Mann, der durch die Welt zieht und sich selbst als Taoist bezeichnet.\nGelegentlich hilft er Menschen in Not und erhält im Gegenzug Nahrung und Unterkunft.\n\nNachdem er seine Eltern verloren hatte, wurde er von seinem Großvater aufgezogen, der zurückgezogen in einem abgelegenen Bergdorf lebte und das Tao praktizierte.\nAls er jünger war, nutzte Yumin seine Fähigkeiten, um Menschen zu helfen, aber alles, was er dafür bekam, waren kalte Blicke. Er schwor sich, seine Kräfte nie wieder einzusetzen.\n\nEines Tages wurde das Dorf von einem gewaltigen Taifun heimgesucht. Aufgrund seines früheren Traumas war Yumin gelähmt und handlungsunfähig.\nDer heftige Sturm nahm ihm einen geliebten Menschen weg und verhöhnte fast seine Untätigkeit, woraufhin Yumin in Verzweiflung fiel und sich selbst die Schuld gab.\nVerloren und gequält, las er den letzten Brief seines Großvaters und fasste einen Entschluss:\nEr würde die wahre Bedeutung des Tao finden.\n\nSeitdem hat sich Yumin auf eine Reise begeben, um das Tao zu suchen.\nWie der klare Wind, der in seinem Herzen weht, reist er frei auf seiner Reise.
 CharacterPlayTip/1┃Jackie ist eine Serienmörderin, die ihre Opfer unerbittlich verfolgt und massakriert. Mit jedem Mord wird sie stärker und stärker.
 CharacterPlayTip/2┃Aya ist eine Fernkämpferin mit hoher Stabilität, die ihre Gegner mit Fähigkeiten auch leicht aus großer Entfernung treffen kann.
 CharacterPlayTip/3┃Fiora nutzt ihre Beweglichkeit als Fechterin, um die Distanz zu ihren Gegnern zu kontrollieren und mit jedem weiteren Treffer zusätzlichen Schaden zu verursachen.
@@ -17166,7 +17211,7 @@ CharacterPlayTip/4┃Magnus ist ein legendärer Biker, der nicht zögert, es mit
 CharacterPlayTip/5┃Zahir ist ein gläubiger Anhänger, der mit jedem Treffer schneller wird und mehr Schaden anrichtet, wodurch er seine explosive Kraft unter Beweis stellt.
 CharacterPlayTip/6┃Nadine ist eine Meisterin der Jagd und verfügt über Expertise mit Bögen und Fallen. Mit jedem Wilden Tier, das sie jagt, wird sie stärker.
 CharacterPlayTip/7┃Hyunwoo ist ein übermütiger Rebell, der mit seinen mächtigen Fähigkeiten in verschiedenen Arten von Gefechten erheblichen Schaden anrichten kann.
-CharacterPlayTip/8┃Hart nutzt Musik, um ihre Feinde in Schach zu halten, Verbündete zu unterstützen und sie mit Melodien der Liebe und des Friedens zum Tanzen zu bringen.
+CharacterPlayTip/8┃Hart nutzt Musik, um ihre Feinde in Schach zu halten, Verbündete zu unterstützen und sie mit Melodien der Liebe und des Friedens zu unterhalten.
 CharacterPlayTip/9┃Isol ist ein ehemaliger Kindersoldat, der sich auf Guerillakrieg spezialisiert hat. Er ist gut in strategischen Kämpfen, nutzt Fallen, um günstiges Terrain zu erhalten, kontrolliert den Kampf aus der Ferne und zerstört den Kampfeswillen des Feindes.
 CharacterPlayTip/10┃Li Dailin kann jedes gegnerische Testobjekt mit ihren ausgezeichneter Mobilität umtanzen und neutralisieren. In gefährlichen Momenten kann sie Angriffe mit ihrer Torkel-Fähigkeit abwehren.
 CharacterPlayTip/11┃Yuki nutzt seine geübten Kendo-Fähigkeiten, um mit weitreichenden Angriffen zuzuschlagen, die die Verteidigung ignorieren und selbst den Raum durchschneiden.
@@ -17234,6 +17279,7 @@ CharacterPlayTip/72┃Katja setzt ihre Drohne ein, um Feinde zu orten und sie au
 CharacterPlayTip/73┃Charlotte ist ein gutherziger Charakter und benutzt Licht, um ihre Verbündeten zu unterstützen und Schaden zu neutralisieren.
 CharacterPlayTip/74┃Darko tut alles, was nötig ist, um das zu bekommen, was er will. Er zögert nicht, seine Gegner zu kontrollieren und auszurauben.
 CharacterPlayTip/75┃Lenores Musik ist vom Echo des Schmerzes und der Schreie inspiriert und ihre Auftritte sind so kraftvoll, dass sie ihr Publikum in den Wahnsinn treiben können.
+CharacterPlayTip/77┃Yumin, der Taoist, bewegt sich mühelos wie der Wind durch seine Feinde und nutzt seine wachsende Kraft in den Windzonen, um den Verlauf des Kampfes zu kontrollieren.
 
 
 --xxxxxxxxxx--
