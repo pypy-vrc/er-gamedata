@@ -819,6 +819,9 @@ Item/Name/401118┃鐵礦石
 Item/Name/401120┃罐子
 Item/Name/401121┃火藥
 Item/Name/401122┃故障的筆電
+Item/Name/401123┃化學品
+Item/Name/401124┃石墨
+Item/Name/401219┃鑽石
 Item/Name/401201┃鋼鐵
 Item/Name/401202┃油布
 Item/Name/401203┃高溫油
@@ -894,7 +897,6 @@ Item/Name/502502┃智能炸彈
 Item/Name/503101┃Kiosk呼叫機
 Item/Name/503102┃信號槍B
 Item/Name/503103┃信號槍R
-Item/Name/503104┃隨身VLS
 Item/Name/540001┃高級訂製
 Item/Name/999999┃戰術強化組件
 Item/Name/201518┃夜視頭盔
@@ -941,6 +943,12 @@ Item/Name/115503┃狂瀾
 Item/Name/115504┃幻影之矢
 Item/Name/122503┃On Air
 Item/Name/122504┃三重聚焦相機
+Item/Name/201526┃En Garde
+Item/Name/201527┃玄見
+Item/Name/202626┃賽車服・戴維德
+Item/Name/202627┃幽靈新娘的嫁紗・戴維德
+Item/Name/202628┃幽冥戰甲・戴維德
+Item/Name/202629┃異端審判官・戴維德
 Item/Help/101101┃一把普通的剪刀。
 Item/Help/101102┃一種寫作用的筆。 筆筒內的墨水通過筆尖流出，允許長時間使用它。\n然而如果使用不當你的手會沾上墨水。
 Item/Help/101104┃廚房用的刀具，在專業人士手上也能成為致命武器。
@@ -1551,9 +1559,9 @@ Item/Effects/502407┃點擊安裝<color=lightblue>鐵處女陷阱</color>。\n<
 Item/Effects/502501┃點擊安裝<color=lightblue>遙控地雷</color>。\n<color=yellow>陷阱效果:</color> {1}秒後會進行大範圍爆炸。
 Item/Effects/502502┃點擊安裝<color=lightblue>智能炸彈</color>。\n<color=yellow>陷阱效果:</color>{1}秒後進行大範圍爆炸。
 Item/Effects/502310┃點擊安裝 <color=lightblue>指壓板陷阱</color>。\n<color=yellow>陷阱效果 :</color> 使目標在{0}秒間移動速度減少50%。
-Item/Effects/503101┃點擊使用 : 呼叫<color=lightblue>便攜Kiosk</color>。\n呼叫後可以使用{0}秒。\n每人只能攜帶一種便攜工具。
-Item/Effects/503102┃點擊使用 : 設置航空補給箱目的地後，將向該位置投放<color=lightblue>神話補給箱</color>。\n呼叫{0}秒後到達。\n每人只能持有一種便攜工具。
-Item/Effects/503103┃點擊使用 : 使用者所在位置將被設為航空補給箱目的地。（使用者死亡時，死亡位置將成為目的地。）\n{0}秒後，將在使用者所在位置投放<color=lightblue>神話補給箱</color>，箱子降落前將持續顯示聲音標記。\n每人只能持有一種便攜工具。
+Item/Effects/503101┃點擊使用 : 呼叫<color=lightblue>便攜Kiosk</color>。\n呼叫後可以使用{0}秒。\n每人只能攜帶一種隨身工具。
+Item/Effects/503102┃點擊使用 : 設置航空補給箱目的地後，將向該位置投放<color=lightblue>神話補給箱</color>。\n呼叫{0}秒後到達。\n每人只能持有一種隨身工具。
+Item/Effects/503103┃點擊使用 : 使用者所在位置將被設為航空補給箱目的地。（使用者死亡時，死亡位置將成為目的地。）\n{0}秒後，將在使用者所在位置投放<color=lightblue>神話補給箱</color>，箱子降落前將持續顯示聲音標記。\n每人只能持有一種隨身工具。
 Item/Effects/302101┃15秒內恢復耐力值。
 Item/Effects/302102┃15秒內恢復耐力值。
 Item/Effects/302103┃15秒內恢復耐力值。
@@ -1695,8 +1703,8 @@ Item/Effects/301502┃15秒內恢復體力值。
 Item/Effects/301503┃15秒內恢復體力值。
 Item/Effects/303501┃獲得{0}榮譽值。
 Item/Effects/802601┃永久獲得0.1移動速度。
-Item/BulletCapacity/Reload┃<color=yellow>彈藥數:</color> {0}
-Item/BulletCapacity/Charge┃<color=yellow>彈藥上限:</color> {0}發(充電: {1}秒)
+Item/BulletCapacity/Reload┃<color=yellow>彈藥數 : </color> {0}
+Item/BulletCapacity/Charge┃<color=yellow>彈藥上限 : </color> {0}發(充電: {1}秒)
 Item/Skills/NotEquip┃<color=red>僅在裝備物品時生效。</color>
 Item/Skills/UniqueSkill┃<color=red>已有相同效果，不再適用。</color>
 Item/Skills/OnlyCloseCombat┃<color=red>遠程武器不適用。</color>
@@ -1923,10 +1931,16 @@ Object/Name/SpawnScratchGroup┃野生動物群生成位置
 Object/Name/JumpPaddle┃跳台
 Object/Name/TransferConsole┃Kiosk
 Object/Name/MobileKiosk┃便攜Kiosk
+Object/Name/VerticalLauncher┃VLS
+Object/Name/MobileVerticalLauncher┃隨身VLS
 Object/Name/TransferSupplyBox┃傳送補給箱
 Object/Name/AmplificationTurbine_1┃增幅裝置 - L
 Object/Name/AmplificationTurbine_2┃增幅裝置 - R
 Object/Name/AmplificationTurbine_3┃增幅裝置 - C
+Object/Name/BarrierConsole┃門控台
+Object/Name/MobileHyperLoopBase┃隨身傳送門
+Object/Name/MobileHyperLoopBlue┃隨身傳送門 : γ
+Object/Name/MobileHyperLoopRed┃逃生傳送門
 Area/Name/Harbor┃碼頭
 Area/Name/Warehouse┃倉庫
 Area/Name/Pond┃池塘
@@ -2356,7 +2370,7 @@ ToolTipType/InstallTrapTime┃陷阱安裝時間減少
 ToolTipType/CreateVisibleTime┃陷阱透明化時間減少
 ToolTipType/SkillRange┃射程距離
 ToolTipType/AnimalGrade01┃雞
-ToolTipType/AnimalGrade02┃蝙蝠, 野豬
+ToolTipType/AnimalGrade02┃蝙蝠、野豬
 ToolTipType/AnimalGrade03┃野狗, 狼
 ToolTipType/AnimalGrade04┃熊
 ToolTipType/AnimalGrade05┃實驗體
@@ -2859,6 +2873,7 @@ DropFrequency/Always┃總是
 DropFrequency/Exclusive┃總是
 DropFrequency/Random┃機率性
 DropFrequency/Probability┃機率性
+DropFrequency/UniqueDropProbability┃機率性
 GradeColor/None┃無色
 GradeColor/Common┃灰色
 GradeColor/Uncommon┃綠色
@@ -2940,6 +2955,7 @@ MonsterDropRandom/15┃掉出<color=white>一般</color> 物品。
 MonsterDropRandom/16┃掉出<color=#35FF94>高級</color> ~ <color=#2AC0FF>稀有</color> 等級物品。
 MonsterDropRandom/17┃掉出<color=#35FF94>高級</color> ~ <color=#D05EFF>英雄</color>等級材料物品。
 MonsterDropRandom/18┃掉出<color=white>一般</color> 物品。
+MonsterDropRandom/19┃掉出<color=white>一般</color> 物品。
 GameResult/Tag/MatchingMode/Normal┃一般模式
 GameResult/Tag/MatchingMode/Cobalt┃鈷協議
 GameResult/Tag/MatchingMode/Rank┃排位模式
@@ -3270,6 +3286,7 @@ Skin/Name/1075000┃莉諾爾
 Skin/Name/1075001┃夜之韻 莉諾爾
 Skin/Name/1076000┃蓋瑞特
 Skin/Name/1077000┃俞岷
+Skin/Name/1078000┃翡翠
 Skin/OnSelectVO/1001003┃規則就是用來打破的，不是嗎？
 Skin/OnSelectVO/1002002┃煙火慶典要開始了！
 Skin/OnSelectVO/1007005┃讓我們來做點有趣的事吧！
@@ -3822,7 +3839,6 @@ Emotion_ERPASS_4111┃傑琪 不開心
 Emotion_ERPASS_4112┃艾瑪 看眼色
 Emotion_ERPASS_4113┃俞岷 走吧~
 Emotion_ERPASS_4114┃比安卡 超棒！
-Emotion_ERPASS_4122┃甜蜜情人 洛茲 愛心
 Emotion_LiDailin02_NP┃李黛琳 乾杯
 Emotion_LiDailin03_NP┃李黛琳 暈暈
 Emotion_LiDailin04_NP┃李黛琳 嘲諷
@@ -4395,7 +4411,7 @@ Emotion_S5_EsportsPack_2514┃賽季S5・All ways Incheon表情
 Emotion_S5_EsportsPack_2515┃賽季S5・GJ Slasher表情
 Emotion_S5_EsportsPack_2516┃賽季S5・DH.CNJ表情
 Emotion_2024_ThanksGiving_2000010┃明治 GO
-Emotion_2024_ThanksGiving_2000011┃娜佳 點讚
+Emotion_2024_ThanksGiving_2000011┃娜佳 讚
 Emotion_2024_ThanksGiving_2000012┃娜佳 HI
 Emotion_2024_ThanksGiving_2000013┃托馬斯 OK
 Emotion_Garnet01_NP┃蓋瑞特 討厭
@@ -4412,6 +4428,13 @@ Event_SSR_Creator_3111┃Yommyko 牛哇牛哇
 Event_Dessert39_3112┃Dessert39 艾比蓋爾
 Event_Dessert39_3113┃Dessert39 比安卡
 Event_Dessert39_3114┃Dessert39 艾比蓋爾 x 比安卡
+Emotion_LiDailin05_NP┃李黛琳 看眼色
+Emotion_LiDailin06_NP┃李黛琳 嘿嘿
+Emotion_LiDailin07_NP┃李黛琳 讚！
+Emotion_LiDailin08_NP┃李黛琳 給我
+Event_S13Champion_Danana_3115┃SEASON 4 CHAMPION DANANA
+Event_S13Champion_OneCircle_3116┃SEASON 4 CHAMPION ONECIRCLE
+Event_S13Champion_Romatic_3117┃SEASON 4 CHAMPION ROMATIC
 Collection/Name/11001┃一切都是爲了我的女兒...
 Collection/Name/11002┃你喜歡像素藝術嗎？
 Collection/Name/11003┃拯救迷失的靈魂
@@ -5112,9 +5135,12 @@ EMBLEM_MARK_EVENT_103171┃SEASON 3 CHAMPION E8
 EMBLEM_MARK_EVENT_103172┃害羞兔女郎 莉央 NO
 EMBLEM_MARK_EVENT_103173┃冷面兔女郎 艾比蓋爾 WIN
 EMBLEM_MARK_EVENT_103174┃娜佳 HI
-EMBLEM_MARK_EVENT_103175┃娜佳 點讚
+EMBLEM_MARK_EVENT_103175┃娜佳 讚
 EMBLEM_MARK_EVENT_103176┃蓋瑞特 嗯哼~
 EMBLEM_MARK_EVENT_103177┃俞岷 休息一下
+EMBLEM_MARK_EVENT_103178┃SEASON 4 CHAMPION DANANA
+EMBLEM_MARK_EVENT_103179┃SEASON 4 CHAMPION ONECIRCLE
+EMBLEM_MARK_EVENT_103180┃SEASON 4 CHAMPION ROMATIC
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃禮物樹
 EMBLEM_MARK_ERPASS_104003┃紅鼻子
@@ -5200,10 +5226,6 @@ EMBLEM_MARK_ERPASS_104082┃紅心兔女郎 珍妮
 EMBLEM_MARK_ERPASS_104083┃害羞兔女郎 莉央
 EMBLEM_MARK_ERPASS_104084┃S5俞岷
 EMBLEM_MARK_ERPASS_104085┃S5蓋瑞特
-EMBLEM_MARK_ERPASS_104086┃墮落天使 夏洛特
-EMBLEM_MARK_ERPASS_104087┃深淵魔王 倫諾克斯
-EMBLEM_MARK_ERPASS_104088┃夢幻惡魔 希瑟拉
-EMBLEM_MARK_ERPASS_104089┃地獄先鋒 阿隆索
 EMBLEM_MARK_COLLECTION_119001┃彰一的寶貝
 EMBLEM_MARK_COLLECTION_119002┃像素畫家 蒂亞
 EMBLEM_MARK_COLLECTION_119003┃幽靈獵人 雪 解除封印
@@ -5549,9 +5571,6 @@ EMBLEM_BG_ERPASS_204043┃仲夏之夢 萬尼亞背景
 EMBLEM_BG_ERPASS_204044┃格鬥兔女郎 妮琪背景
 EMBLEM_BG_ERPASS_204045┃紅心兔女郎 珍妮背景
 EMBLEM_BG_ERPASS_204046┃害羞兔女郎 莉央背景
-EMBLEM_BG_ERPASS_204047┃墮落天使 夏洛特
-EMBLEM_BG_ERPASS_204048┃深淵魔王 倫諾克斯
-EMBLEM_BG_ERPASS_204049┃夢幻惡魔 希瑟拉
 EMBLEM_BG_COLLECTION_219001┃傳送膠囊背景
 ItemType/EMBLEM_OUTLINE/Name┃邊框
 EMBLEM_OUTLINE_FREE1┃預設框
@@ -5890,9 +5909,6 @@ EMBLEM_OUTLINE_ERPASS_304042┃仲夏之夢 萬尼亞
 EMBLEM_OUTLINE_ERPASS_304043┃格鬥兔女郎 妮琪
 EMBLEM_OUTLINE_ERPASS_304044┃紅心兔女郎 珍妮
 EMBLEM_OUTLINE_ERPASS_304045┃害羞兔女郎 莉央
-EMBLEM_OUTLINE_ERPASS_304046┃墮落天使 夏洛特
-EMBLEM_OUTLINE_ERPASS_304047┃深淵魔王 倫諾克斯
-EMBLEM_OUTLINE_ERPASS_304048┃夢幻惡魔 希瑟拉
 EMBLEM_OUTLINE_COLLECTION_319001┃傳送膠囊
 Goods/Name/1304001┃ER積分
 ItemType/GRAVE/Name┃墓碑
@@ -5954,9 +5970,6 @@ Goods/Name/1604053┃沙浴
 Goods/Name/1604054┃金骰子
 Goods/Name/1604055┃順子失敗
 Goods/Name/1604056┃VIP
-Goods/Name/1604057┃地獄之門
-Goods/Name/1604058┃死神
-Goods/Name/1604059┃傑克南瓜燈
 Goods/Name/1612001┃瘟疫醫生之死
 Goods/Name/1612002┃夏日海灘 妮琪的貓
 Goods/Name/1612003┃系統衝擊 
@@ -6072,9 +6085,6 @@ Goods/Name/1504053┃萬尼亞的星星
 Goods/Name/1504054┃艾比蓋爾的羅盤
 Goods/Name/1504055┃莉央的貓咪人偶
 Goods/Name/1504056┃珍妮的愛心
-Goods/Name/1504057┃夏洛特 墮落的象徵
-Goods/Name/1504058┃阿隆索 地獄之味
-Goods/Name/1504059┃希瑟拉 惡魔小威
 Goods/Name/1503046┃艾登 問題解決
 Goods/Name/1503047┃納塔朋 慌張
 Goods/Name/1503048┃倫諾克斯 把錢交出來！
@@ -6157,12 +6167,6 @@ Goods/Name/1404183┃達爾科 (日語)
 Goods/Name/1404191┃秀雅 (韓語)
 Goods/Name/1404192┃秀雅 (英語)
 Goods/Name/1404193┃秀雅 (日語)
-Goods/Name/1404201┃蒂亞 (韓語)
-Goods/Name/1404202┃蒂亞 (英語)
-Goods/Name/1404203┃蒂亞 (日語)
-Goods/Name/1404211┃艾登 (韓語)
-Goods/Name/1404212┃艾登 (英語)
-Goods/Name/1404213┃艾登 (日語)
 GoodsGroup/Name/1401051┃預設
 GoodsGroup/Name/1401021┃倖存之聲
 GoodsGroup/Name/1404011┃賽事解說
@@ -6184,8 +6188,6 @@ GoodsGroup/Name/1404161┃約翰
 GoodsGroup/Name/1404171┃比安卡
 GoodsGroup/Name/1404181┃達爾科
 GoodsGroup/Name/1404191┃秀雅
-GoodsGroup/Name/1404201┃蒂亞
-GoodsGroup/Name/1404211┃艾登
 GoodsGroup/Name/1406001┃解說Sia
 GoodsGroup/Name/1406011┃解說Shin Il
 GoodsGroup/Name/1406021┃解說Evis&Gold Blin
@@ -6235,8 +6237,6 @@ Goods/Name/2504015┃珍珠貝
 Goods/Name/2504016┃電氣水母
 Goods/Name/2504017┃輪盤
 Goods/Name/2504018┃Disco球
-Goods/Name/2504019┃幽靈小威
-Goods/Name/2504020┃蝙蝠的眼
 ItemType/CAMERA/Name┃監視器造型
 ItemType/CAMERA/Desc┃可以選擇遊戲內監視器和望遠監視器的外觀。
 Goods/Name/2601001┃基礎監視器
@@ -6258,8 +6258,6 @@ Goods/Name/2604015┃海鷗
 Goods/Name/2604016┃章魚燈
 Goods/Name/2604017┃貓咪人偶
 Goods/Name/2604018┃沙包
-Goods/Name/2604019┃幽靈火焰
-Goods/Name/2604020┃夢幻燭台
 ItemType/LOBBY_SCREEN/Name┃大廳畫面
 ItemType/LOBBY_SCREEN/Desc┃可以選擇遊戲大廳畫面。
 Goods/Name/2701000┃隨機
@@ -6290,7 +6288,6 @@ Goods/Name/2704011┃戰鬥女僕
 Goods/Name/2704012┃轉變
 Goods/Name/2704013┃晚霞
 Goods/Name/2704014┃好運★
-Goods/Name/2704015┃煉獄
 Goods/Name/2705001┃一週年紀念
 ItemType/KILLANNOUNCE_ICONPACK/Name┃擊殺通知標誌
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃可以選擇在遊戲中擊殺時顯示的UI圖示。
@@ -6329,9 +6326,6 @@ Goods/Name/2804031┃萬尼亞的蝴蝶
 Goods/Name/2804032┃妮琪的重拳
 Goods/Name/2804033┃莉央的弓箭
 Goods/Name/2804034┃珍妮的手槍
-Goods/Name/2804035┃墮落天使的光環
-Goods/Name/2804036┃魔王的權威
-Goods/Name/2804037┃夢幻小威
 ItemType/TEAMSLOT_BG/Name┃隊伍格背景
 Goods/Name/3401001┃預設隊伍格背景
 Goods/Name/3402001┃節日小熊
@@ -6623,6 +6617,11 @@ Product/Name/S5_Bianca_Blessing_Pack_02┃血族女皇的祝福基礎組合包
 Product/Name/EVENT_NPASS_Dessert39_1002┃Dessert39任務書
 Product/Name/EVENT_NPASS_Lucky_Stamp_1003┃好運郵票任務書
 Product/Name/S5_Lucky_Stamp_Pack_01┃每日郵票箱
+Product/Name/BATTLE_PASS/2100┃S5賽季A-Coin任務書
+Product/Name/S5_Select_Voucher_Pack┃選擇券組合包
+Product/Name/S5_Select_Voucher_Pack_01┃選擇券組合包Ⅰ
+Product/Name/S5_Select_Voucher_Pack_02┃選擇券組合包Ⅱ
+Product/Name/S5_Select_Voucher_Pack_03┃選擇券組合包Ⅲ
 Shop/Desc/Aya_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回58%至遊戲內信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回56%至遊戲內信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回58%至遊戲內信箱。
@@ -6806,6 +6805,9 @@ Shop/Desc/S05_SeongnamROX_Pack_01┃<b><color=#FFBB00>[內容物]</color></b>\n\
 Shop/Desc/S5_Bianca_Blessing_Pack_01┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 血族女皇的祝福造型箱 x 10\n- 開箱鑰匙 x 10\n- 好運★代幣 x 15\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 可以在製作所開啟購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
 Shop/Desc/S5_Bianca_Blessing_Pack_02┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 血族女皇的祝福造型箱 x 1\n- 開箱鑰匙 x 1\n- 好運★代幣 x 1\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 可以在製作所開啟購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
 Shop/Desc/S5_Lucky_Stamp_Pack_01┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 每日郵票箱\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 每日郵票箱是購買時立即開啟的商品。\n※ 販售期間內每日可以購買一次。\n※ 由於是購買後立即開啟的商品，無法申請取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_01┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 實驗體選擇券 x 1\n- 高級造型選擇券 x 1\n- 好運★代幣 x 10\n- XP Boost(3日)\n\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 購買後可以前往製作所開啟購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_02┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 高級造型選擇券 x 1\n- 稀有造型選擇券 x 1\n- 好運★代幣 x 20\n- A-Coin Boost(3日)\n\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 購買後可以前往製作所開啟購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_03┃<b><color=#FFBB00>[內容物]</color></b>\n\n- 特別高級/稀有造型選擇券 x 1\n- 英雄造型碎片選擇券 x 1\n- 好運★代幣 x 50\n- S5賽季A-Coin任務書\n- ER積分 Boost(3日)\n\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 購買後可以前往製作所開啟購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
 Product/Name/SEASON_PASS_S5┃賽季S5組合包
 Shop/Desc/SEASON_PASS_S5┃以優惠價預購將在賽季S5推出的組合商品。
 Product/Name/SEASON_PASS_S6┃賽季S6組合包
@@ -6856,6 +6858,7 @@ Shop/Desc/BatlleMaids Token┃戰鬥女僕代幣可用於交換製作所中交�
 Shop/Desc/Change Token┃轉變代幣可用於交換製作所中交換所內的商品。<color=red>\n代幣有使用時間限制。到期後無法繼續使用，請務必確認有效期限。</color>
 Shop/Desc/Sunset Token┃晚霞代幣可用於交換製作所中交換所內的商品。<color=red>\n代幣有使用時間限制。到期後無法繼續使用，請務必確認有效期限。</color>
 Shop/Desc/Lucky Token┃好運★代幣可用於交換製作所中交換所內的商品。<color=red>\n代幣有使用時間限制。到期後無法繼續使用，請務必確認有效期限。</color>
+Shop/Desc/Legion Token┃煉獄代幣可用於交換製作所內交換所中的商品。<color=red>\n代幣有使用時間限制。到期後無法繼續使用，請務必確認有效期限。</color>
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃可用於在永恆輪迴購買多種物品。
@@ -7008,7 +7011,7 @@ RANKED GAME┃排位賽
 결과처리로딩┃正在讀取實驗結果...
 로그인 실패┃登入失敗。
 재시도┃重新嘗試
-전체 스킵┃跳過
+스킵┃Skip
 EVENT_NP┃活動 NP
 EVENT_NP 기간만료┃過期的活動NP無法使用。
 NP┃NP
@@ -7266,7 +7269,7 @@ CSV파일다운로드완료팝업┃完成下載。\n請檢查用戶端安裝文
 랜덤┃隨機
 랜덤/설명┃沒有固定標準，隨機分配隊伍。
 균등┃平均
-균등/설명┃以排位分數為標準，按照低到高的順序分配隊伍。
+균등/설명┃根據排位分數平均分配各個隊伍。
 구간랜덤┃區間隨機
 구간랜덤/설명┃按照各個隊伍1, 2, 3號的順序重新分配隊伍。
 랭크 포인트 지정┃指定排位分數
@@ -7752,12 +7755,12 @@ DeathRecapOnOff┃顯示實驗體死亡前在戰鬥中承受的傷害分析。
 스킬┃技能
 액티브아이템┃物品技能
 아이템┃物品
-Emotion1┃使用1號對白表達。
-Emotion2┃使用2號對白表達。
-Emotion3┃使用3號對白表達。
-Emotion4┃使用4號對白表達。
-Emotion5┃使用5號對白表達。
-Emotion6┃使用6號對白表達。
+Emotion1┃使用1號對白表達
+Emotion2┃使用2號對白表達
+Emotion3┃使用3號對白表達
+Emotion4┃使用4號對白表達
+Emotion5┃使用5號對白表達
+Emotion6┃使用6號對白表達
 EmotionPlate┃使用表情
 EmotionPlate1┃使用表情組1
 EmotionPlate2┃使用表情組2
@@ -7767,13 +7770,13 @@ MarkTarget┃打標記
 PingTargetKeyboard┃標記目標
 MarkTargetKeyboard┃打標記
 DeleteMarkTarget┃除去以打上的標記
-LearnActive1┃強化第一技能。
-LearnActive2┃強化第二技能。
-LearnActive3┃強化第三技能。
-LearnActive4┃強化第四技能。
-LearnPassive┃強化被動技能。
-LearnWeaponSkill┃強化武器技能。
-LearnTacticalSkill┃強化戰術技能。
+LearnActive1┃強化第一技能
+LearnActive2┃強化第二技能
+LearnActive3┃強化第三技能
+LearnActive4┃強化第四技能
+LearnPassive┃強化被動技能
+LearnWeaponSkill┃強化武器技能
+LearnTacticalSkill┃強化戰術技能
 Active1ToSelf┃向自己快速施法第1個技能\n(僅限使用於自身的技能)
 Active2ToSelf┃向自己快速施法第2個技能\n(僅限使用於自身的技能)
 Active3ToSelf┃向自己快速施法第3個技能\n(僅限使用於自身的技能)
@@ -8565,8 +8568,6 @@ WickelineUI_ReadyTooltip┃維克萊恩博士開始出動。
 플레어건사용노티┃發射信號槍！
 플레어건R기능┃有人設置了神話補給箱的降落位置。
 플레어건B기능┃{0}區域被設為神話補給箱降落位置。
-하이퍼루프VLS전환노티┃1分鐘後，傳送門將轉換為VLS。
-하이퍼루프VLS전환완료노티┃傳送門已轉換為VLS。
 더미알파생성┃1分鐘後，阿爾法將在{0}區域出現。
 더미오메가생성┃1分鐘後，奧米加將在{0}區域出現。
 더미알파생성완료┃阿爾法出現在{0}區域。
@@ -8739,8 +8740,10 @@ SP 알림┃{0}({1}): <color=#86E57F>耐力{2}%</color>
 시야스탯 알림┃{0}({1}): <color=#86E57F>視野{2}</color>
 스킬쿨다운알림┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬쿨다운알림_스택형┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 蓄力{4}秒</color> (充能 : {3})
+스킬쿨다운알림_전술스킬┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬준비완료알림┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 準備完畢</color>
 스킬준비완료알림_스택형┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 準備完畢</color> ({3})
+스킬준비완료알림_전술스킬┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬사용불가알림┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#FF4848> - 無法使用</color>
 스킬미습득알림┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#FF4848> - 未學習</color>
 스킬자원부족알림┃{0}({1}): <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color> - <color=#FF4848>{3} 不足</color>
@@ -8762,6 +8765,7 @@ SP 알림┃{0}({1}): <color=#86E57F>耐力{2}%</color>
 하이퍼루프재료알림┃{0}({1}): <color=#FFBB00>{2}</color> - 所需材料 <color=#86E57F>{3}個</color>
 하이퍼루프알림┃{0}({1}): 目標區域 - <color=#FFBB00>{2}</color>
 하이퍼루프알림생존자명시┃{0}({1}) : 目標區域<color=#FFBB00>{2}</color> - 敵人 : {3}名
+하이퍼루프알림생존자명시_비밀연구실┃{0}({1}) : 目標區域<color=#FFBB00>{2}</color> - 敵人 : {3}名
 ToastMessage/HyperloopNotLab┃無法使用傳送門至研究所。
 ToastMessage/HyperloopNotBattlezone┃在戰場結束前，無法指定爲傳送門目標。
 ToastMessage/HyperloopNotBattlezonePlayer┃正在參與戰場的隊友無法指定為傳送門目標。
@@ -8770,6 +8774,8 @@ ToastMessage/TransferConsoleErrorInBattlezone┃戰場內無法使用Kiosk。
 ToastMessage/HyperloopErrorInTemporarySafeZone┃臨時安全區階段無法使用傳送門。
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃臨時安全區階段無法使用Kiosk。
 ToastMessage/SecurityConsoleErrorInBattlezone┃戰場內無法使用安全監控台。
+ToastMessage/SecurityConsoleErrorInLastPhase┃最終安全區階段無法使用安全監控台。
+SecurityConsoleErrorInLastPhase┃最終安全區階段無法使用安全監控台。
 ToastMessage/AlreadyBoughtBattlezoneReward┃團隊已領取獎勵。
 ToastMessage/MarkPingWayPointMaxCount┃目标路径个数上限
 팀원상태알림┃{0}({1}): <color=#FFBB00>{2}({3})</color> <color=#86E57F>{4}</color>
@@ -9965,7 +9971,6 @@ ER 패스 기간 툴팁┃在此期間結束後，無法購買或使用ER通行�
 선택 레벨 구매┃選擇購買等級
 ER 포인트 감소 불가┃不能再減少ER積分的購買數量了。
 ER 포인트 증가 불가┃不能再增加ER積分的購買數量了。
-ER 패스 추후 공개 알림┃當前無法獲得該獎勵。\n推出後可獲得此獎勵。
 일괄 획득┃領取全部
 ER 포인트 구매┃購買ER積分
 ER 패스 업그레이드┃ER通行證升級
@@ -9993,7 +9998,6 @@ ERPassPurchaseWindow/SeasonContent/13┃盧米亞島的實驗體們一同來到�
 ERPassPurchaseWindow/SeasonTitle/14┃賽季 : 好運★
 ERPassPurchaseWindow/SeasonSubTitle/14┃「歡迎光臨！這裡是讓你夢想成真的地方！」
 ERPassPurchaseWindow/SeasonContent/14┃每個人都曾幻想過能獲得一夜暴富的機會吧。\n如果有一個地方，可以將幻想變為現實，那還有什麼理由不大膽一試呢？\n看，那些滿懷希望的兔子們正三五成群地聚在一起，他們眼中閃爍著對大獎的渴望！\n性格迥異、喜好萬千的他們各自有著怎樣的夢想呢？\n\n※ 注意 : 阿格萊亞對於因顧客疏忽而產生的結果不承擔任何責任 ※
-ERPassPurchaseWindow/SeasonTitle/15┃賽季 : 煉獄
 ERPassPurchaseWindow/SeasonSubTitle/15┃矚目吧，凡人們！異界軍勢降臨了！
 ERPassPurchaseWindow/SeasonContent/15┃深淵魔王睜開了雙眼，璀璨的星辰也為之隕落。\n地獄之火席捲大地，夢魘將天空染成漆黑。\n敬畏吧，在無盡絕望中的深淵軍勢。\n恐懼吧，這是一個唯有黑暗才能主宰的末世。
 비쥬얼┃視覺
@@ -10008,7 +10012,6 @@ Product/Name/BATTLE_PASS/11┃ER通行證 : 戰鬥女僕
 Product/Name/BATTLE_PASS/12┃ER通行證 : 轉變
 Product/Name/BATTLE_PASS/13┃ER通行證 : 晚霞
 Product/Name/BATTLE_PASS/14┃ER通行證 : 好運★
-Product/Name/BATTLE_PASS/15┃ER通行证 : 炼狱
 Product/Name/BATTLE_PASS_POINT┃購買ER積分
 Product/Name/BATTLE_PASS┃[賽季S4] ER通行證
 Product/Name/BATTLE_PASS_BUNDLE┃[賽季S4] ER Plus
@@ -10040,9 +10043,6 @@ Product/Name/BATTLE_PASS_UPGRADE_S13┃ER通行證升級 : 晚霞
 Product/Name/BATTLE_PASS_S14┃ER通行證 : 好運★
 Product/Name/BATTLE_PASS_BUNDLE_S14┃ER Plus : 好運★
 Product/Name/BATTLE_PASS_UPGRADE_S14┃ER通行證升級 : 好運★
-Product/Name/BATTLE_PASS_S15┃ER通行證 : 煉獄
-Product/Name/BATTLE_PASS_BUNDLE_S15┃ER Plus : 煉獄
-Product/Name/BATTLE_PASS_UPGRADE_S15┃ER通行證升級 : 煉獄
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>ER通行證</size></color>\n<size=14>[無法退款]</size>\n\n購買ER通行證，可以在玩遊戲的同時獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵</color>。\n只需玩遊戲即可輕鬆提升ER通行證的賽季等級。\n 如果想要加快成長的速度，可以通過購買ER積分來實現。
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[無法退款]</size>\n\nER Plus是包含ER通行證與增加<color=#ffdf72>19等級</color>的商品。\n可獲得<color=#B2EBF4>高達1,400 NP和造型、表情等100多種獎勵。</color>\n只需玩遊戲即可輕鬆提升ER通行證的賽季級別。\n通過ER Plus增加的等級 \n如果超過通行證最高等級，<color=#f72323>差額將不予退還。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
@@ -10073,6 +10073,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S13┃通過ER通行證升級增加的等級\n如�
 Shop/Desc/BATTLE_PASS_S14┃購買ER通行證，在玩遊戲的同時可以獲得\n<color=#B2EBF4>高達900NP、造型、表情和多種獎勵。</color>\n進行遊戲即可輕鬆提升ER通行證等級。\n此外還可以通過購買ER積分快速提升通行證等級。\n\nER通行證中的商品之後可能會以其他方式使用。
 Shop/Desc/BATTLE_PASS_BUNDLE_S14┃ER Plus是包含ER通行證並達成<color=#ffdf72>20等級</color>的商品。\n<color=#B2EBF4>其中包含高達900NP、造型、表情和多種獎勵。</color>\n進行遊戲即可輕鬆提升ER通行證等級。\n通過ER Plus升級增加的等級\n如果超過通行證最高等級，<color=#FF7575>差額將不予退還。</color>\n\nER通行證中的商品之後可能會以其他方式使用。
 Shop/Desc/BATTLE_PASS_UPGRADE_S14┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
+Shop/Desc/BATTLE_PASS_S15┃購買ER通行證，在玩遊戲的同時可以獲得\n<color=#B2EBF4>高達900NP、造型、表情和多種獎勵。</color>\n進行遊戲即可輕鬆提升ER通行證等級。\n此外還可以通過購買ER積分快速提升通行證等級。\n\nER通行證中的商品之後可能會以其他方式使用。
+Shop/Desc/BATTLE_PASS_BUNDLE_S15┃ER Plus是包含ER通行證並達成<color=#ffdf72>20等級</color>的商品。\n<color=#B2EBF4>其中包含高達900NP、造型、表情和多種獎勵。</color>\n進行遊戲即可輕鬆提升ER通行證等級。\n通過ER Plus升級增加的等級\n如果超過通行證最高等級，<color=#FF7575>差額將不予退還。</color>\n\nER通行證中的商品之後可能會以其他方式使用。
+Shop/Desc/BATTLE_PASS_UPGRADE_S15┃通過ER通行證升級增加的等級\n如果超過通行證最高等級，差額將不予退還。
 Shop/Desc/BATTLE_PASS_CHECK┃購買ER通行證可以啟動<color=#B2EBF4>Premium獎勵</color>和<color=#B2EBF4>特別任務</color>。\n此外，還可<color=#B2EBF4>購買ER積分</color>快速提升等級。\n\nER通行證可以使用兩個賽季，分別為推出賽季及推出賽季的下一賽季。\n僅能啟動一個通行證。\n可以自由選擇想要啟動的ER通行證，不限次數。
 Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃購買ER plus後，可以啟動<color=#B2EBF4>Premium獎勵</color>和<color=#B2EBF4>特別任務</color>。\n此外，還可 <color=#B2EBF4>購買ER積分</color>快速提升等級。\n\n通過ER Plus升級增加的等級\n如果超過通行證最高等級，<color=#FF7575>差額將不予退還。</color>\n\nER通行證可以使用兩個賽季，分別為推出賽季及推出賽季的下一賽季。\n僅能啟動一個通行證。\n可以自由選擇想要啟動的ER通行證，不限次數。
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃通過升級ER通行證增加ER通行證等級\n如果超過通行證最高等級，差額將不予退還。
@@ -10201,16 +10204,6 @@ SeasonPassIcon/15┃Img_SeasonPack15_Box
 시즌팩 5 출시 캐릭터┃賽季S5推出的2位實驗體
 시즌팩 5 출시 스킨┃賽季S5推出的6款造型
 시즌팩 5 특별 아이템┃賽季S5推出的4種特別物品
-시즌 15팩 주의사항 1┃在購買賽季包前已經持有<ER通行證 : 煉獄>時，僅對購買時使用的付費NP進行退款。
-시즌 15팩 주의사항 2┃除ER通行證之外，其他物品都可以重複持有，不支援退款。
-시즌 15팩 주의사항 3┃請參考相關公告確認賽季包商品的詳細內容，商品內容可能有所變動。
-시즌 15팩 주의사항 4┃賽季包中的商品將於推出後發送至信箱，未來可能會以其他方式販售。
-시즌 15팩 주의사항 5┃早鳥優惠結束後，賽季包的價格將調整為7,100NP。
-시즌 15팩 주의사항 5 얼리버드 혜택 종료┃賽季包可以在賽季期間購買。
-<ER PASS : Legion> 포함┃<ER通行證 : 煉獄>中包括
-시즌팩 6 출시 캐릭터┃賽季S6推出的2位實驗體
-시즌팩 6 출시 스킨┃賽季S6推出的6款造型
-시즌팩 6 특별 아이템┃賽季S6推出的4種特別物品
 WebViewPopup_Title┃活動內容
 GoodsMenu/InGame┃遊戲內裝飾
 GoodsMenu/Customize┃遊戲自訂
@@ -10793,7 +10786,7 @@ Tutorial/나쟈/Dialogue/12┃{0}? 我想到了一個適合你的外號！\n嘻�
 Tutorial/나쟈/Dialogue/13┃想要正式開始實驗的話，點擊快速開始就可以了！
 Tutorial/나쟈/Dialogue/14┃如果還不確定那是什麼，再繼續訓練也是不錯的喔！
 Tutorial/나쟈/Dialogue/15┃我能告訴你的就這麼多了！\n相信你也差不多聽膩了。\n祝你玩得開心，{0}！我會在研究中心等你！
-스킵┃Skip
+스킵┃跳過
 Tutorial/Announce/핵심1번/00┃這是經常會用到的控制設置，準備好了就點擊右側按鈕吧！
 Tutorial/Announce/핵심1번/01┃點擊滑鼠右鍵進行移動。
 Tutorial/Announce/핵심1번/02┃打開箱子。
@@ -11347,7 +11340,6 @@ Season11/Name┃<color=#FFF8E0>戰鬥女僕</color>
 Season12/Name┃<color=#FFD5B6>轉變</color>
 Season13/Name┃<color=#FF95A6>晚霞</color>
 Season14/Name┃<color=#FFBE70>好運★</color>
-Season15/Name┃<color=#937DFF>煉獄</color>
 SeasonToBeAdded/Name┃新賽季\n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})已終止對話。
 100001_Title┃賽季S3簽到簿
@@ -11484,11 +11476,13 @@ Season2002/Name┃戰鬥女僕A-Coin任務書
 Season2003/Name┃轉變A-Coin任務書
 Season2004/Name┃晚霞A-Coin任務書
 Season2005/Name┃好運★A-Coin任務書
+Season2100/Name┃S5賽季A-Coin任務書
 HiddenPassPath/2001┃可以在交換所中使用哩程購買後使用。
 HiddenPassPath/2002┃可以在交換所中使用哩程購買後使用。
 HiddenPassPath/2003┃可以在交換所中使用哩程購買後使用。
 HiddenPassPath/2004┃可以在交換所中使用哩程購買後使用。
 HiddenPassPath/2005┃可以在交換所中使用好運★代幣購買後使用。
+HiddenPassPath/2100┃可以在商店購買<選擇券組合包Ⅲ>後使用。
 칭찬하기┃點讚！
 극찬하기┃MVP!
 극찬 불가 알림┃每日可送出的「MVP」次數已耗盡。
@@ -12251,6 +12245,7 @@ Skill/Group/ExpansionTip/1021400┃<i>此技能無法穿越牆壁。</i>
 CharacterState/Group/Name/1021100┃雙殺
 CharacterState/Group/Name/1021110┃巧克力飲料
 CharacterState/Group/Name/1021120┃巧克力食物
+CharacterState/Group/Name/1021130┃巧克力食物
 CharacterState/Group/Name/1021200┃隨意射擊
 CharacterState/Group/Name/1021300┃全視角狙擊
 CharacterState/Group/Name/1021310┃全視角狙擊
@@ -12261,7 +12256,7 @@ CharacterState/Group/Name/1021520┃塞姆汀高爆彈 Mk-II
 CharacterState/Group/Name/1021530┃塞姆汀高爆彈 Mk-II
 CharacterState/Group/Desc/1021100┃強化下一個普通攻擊。
 CharacterState/Group/Desc/1021110┃飲用巧克力飲料，恢復體力值。
-CharacterState/Group/Desc/1021120┃食用巧克力食物，恢復耐力值。
+CharacterState/Group/Desc/1021120┃食用巧克力，恢復耐力值。
 CharacterState/Group/Desc/1021200┃下一個移動執行突進。
 CharacterState/Group/Desc/1021300┃增加移動速度。
 CharacterState/Group/Desc/1021310┃被全視角狙擊擊中減少防禦力和治癒效果。
@@ -12273,30 +12268,35 @@ CharacterState/Group/Desc/1021530┃塞姆汀高爆彈 Mk-Il立即爆炸，移�
 Skill/Group/Name/1022100┃完美管家
 Skill/Group/Name/1022200┃保潔服務
 Skill/Group/Name/1022210┃保潔服務
-Skill/Group/Evolution/Name/1022200┃保潔服務 升級
+Skill/Group/Evolution/Name/1022200┃保潔服務・升級
 Skill/Group/Name/1022300┃強迫症
-Skill/Group/Evolution/Name/1022300┃強迫症 升級
+Skill/Group/Evolution/Name/1022300┃強迫症・升級
 Skill/Group/Name/1022400┃無聲掃除機
-Skill/Group/Evolution/Name/1022400┃無聲掃除機 升級
+Skill/Group/Evolution/Name/1022400┃無聲掃除機・升級
 Skill/Group/Name/1022500┃售後服務
-Skill/Group/Evolution/Name/1022500┃售後服務 升級
+Skill/Group/Evolution/Name/1022500┃售後服務・升級
 Skill/Group/Desc/1022100┃滿意度 : 盧克參與擊殺實驗體時，恢復<color=white>{0}</color>失去體力，擊殺維克萊恩恢復<color=white>{2}</color>失去體力。\n\n完美管家 : 盧克每次擊殺實驗體、野生動物和獲得補給箱物品時都會獲得一個<color=yellow>完美管家</color>的疊層。\n每{3}/{4}/{5}疊層時都可獲得1個升級點，從{6}疊層開始，每{7}個疊層的滿意度都會提高{8}。\n\n雞，蝙蝠: {9}\n野豬，野狗，狼: {18}\n熊: {10}\n實驗體: {11}\n阿爾法/奧米加: {17}\n維克萊恩: {12}\n補給箱食物{14}/英雄{15}/傳奇以上{16}
-Skill/Group/Desc/1022200┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color>的技能傷害，並獲得該敵人的視野。接下來的{1}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{3}。(目標體力為{4}時適用)
-Skill/Group/Desc/1022210┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color>的技能傷害，並獲得該敵人的視野。接下來的{1}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{3}。(目標體力為{4}時適用)。
-Skill/Group/Desc/1022300┃<color=green>被動效果</color>: 強迫症技能擊中敵人或者使用強化普攻給敵方造成傷害時，{3}秒間攻擊速度增加{4}，最多可疊加至{5}次。\n\n使用效果: 盧克揮動清潔工具，造成<color=white>{0}</color>的技能傷害。命中敵人時，在{1}秒間強化普攻，額外造成<color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 強迫症使用效果每命中一個敵人時恢復{6}已失體力。最多可恢復至{7}。
-Skill/Group/Desc/1022400┃<color=green>被動效果</color>: 盧克在攻擊和擊殺敵人時，迷你地圖不會出現標記聲音。\n\n使用效果: 盧克立即閃到指定的敵人身後，用手槍給敵人造成<color=white>{0}</color>的技能傷害，妨礙集中精神，並使對方{1}秒間移動速度減少{2}。對隊友或自身設置的監視器使用技能時，增加射程範圍，使用後監視器被摧毀。\n\n<color=yellow>升級效果</color>: 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。
-Skill/Group/Desc/1022500┃盧克從改良的清潔工具發射出一枚穿透性的子彈，根據敵人失去體力的比例給敵人造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能傷害，並使其{2}秒間移動速度降低{3}。盧克獲得敵人的視野並退後。\n\n<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。
-Skill/Group/Evolution/Desc/1022200┃<color=yellow>升級效果</color>: 根據目標已失體力比例，增加再次使用時的傷害量。<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
-Skill/Group/Evolution/Desc/1022210┃<color=yellow>升級效果</color>: 根據目標已失體力比例，增加再次使用時的傷害量。<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
-Skill/Group/Evolution/Desc/1022300┃<color=yellow>升級效果</color>: 按照強迫症命中的敵人數恢復部分已失體力。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
-Skill/Group/Evolution/Desc/1022400┃<color=yellow>升級效果</color>: 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
-Skill/Group/Evolution/Desc/1022500┃<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
 Skill/Group/Coef/1022100┃滿意度 : 盧克參與擊殺實驗體時，恢復<color=white>{0}</color>失去體力，擊殺維克萊恩恢復<color=white>{2}</color>失去體力。\n\n完美管家 : 盧克每次擊殺實驗體、野生動物和獲得補給箱物品時都會獲得一個<color=yellow>完美管家</color>的疊層。\n每{3}/{4}/{5}疊層時都可獲得1個升級點，從{6}疊層開始，每{7}個疊層的滿意度都會提高{8}。\n\n雞，蝙蝠: {9}\n野豬，野狗，狼: {18}\n熊: {10}\n實驗體: {11}\n阿爾法/奧米加: {17}\n維克萊恩: {12}\n補給箱食物{14}/英雄{15}/傳奇以上{16}
+Skill/LobbyDesc/1022100┃盧克與擊擊殺一名實驗體或維克萊恩都會恢復失去的體力。\n\n盧克每次完成擊殺實驗體，野生動物等清理工作都會獲得完美管家的疊層。\n完美管家的疊加可以進一步升級盧克的技能。
+Skill/Group/Desc/1022200┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color>的技能傷害，並獲得該敵人的視野。接下來的{1}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{3}。(目標體力為{4}時適用)
 Skill/Group/Coef/1022200┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能\n傷害，並獲得該敵人的視野。接下來的{3}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{4}</color><color=#ffd775>(+攻擊力的{5})</color>的技能\n傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{7}。(目標體力為{8}時適用)
+Skill/Group/Evolution/Desc/1022200┃<color=yellow>升級效果</color>: 根據目標已失體力比例，增加再次使用時的傷害量。<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
+Skill/Group/Desc/1022210┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color>的技能傷害，並獲得該敵人的視野。接下來的{1}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{3}。(目標體力為{4}時適用)。
 Skill/Group/Coef/1022210┃盧克投擲清潔劑，對第一個擊中的敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能\n傷害，並獲得該敵人的視野。接下來的{3}秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成 <color=white>{4}</color><color=#ffd775>(+攻擊力的{5})</color>的技能\n傷害。\n\n<color=yellow>升級效果</color>: 和目標已失體力成比例，再次使用時，傷害量最大可以增加至{7}。(目標體力為{8}時適用)
+Skill/Group/Evolution/Desc/1022210┃<color=yellow>升級效果</color>: 根據目標已失體力比例，增加再次使用時的傷害量。<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
+Skill/LobbyDesc/1022200┃盧克投擲清潔劑，對第一個擊中的敵人造成傷害，並獲得該敵人的視野。接下來的3秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成傷害。\n\n<color=yellow>升級效果</color> : 和目標已失體力成比例，再次使用時增加傷害量。
+Skill/Group/Desc/1022300┃<color=green>被動效果</color>: 強迫症技能擊中敵人或者使用強化普攻給敵方造成傷害時，{3}秒間攻擊速度增加{4}，最多可疊加至{5}次。\n\n使用效果: 盧克揮動清潔工具，造成<color=white>{0}</color>的技能傷害。命中敵人時，在{1}秒間強化普攻，額外造成<color=white>{2}</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 強迫症使用效果每命中一個敵人時恢復{6}已失體力。最多可恢復至{7}。
 Skill/Group/Coef/1022300┃<color=green>被動效果</color>: 強迫症技能擊中敵人或者使用強化普攻給敵方造成傷害時，{7}秒間攻擊速度增加{8}，最多可疊加至{9}次。\n\n使用效果: 盧克揮動清潔工具，造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害。命中敵人時，在{3}秒間強化普攻，額外造成<color=white>{4}</color><color=#ffd775>(+攻擊力的{5})</color>的技能傷害。\n\n<color=yellow>升級效果</color>: 強迫症使用效果每命中一個敵人時恢復{10}已失體力。最多可恢復至{11}。
+Skill/Group/Evolution/Desc/1022300┃<color=yellow>升級效果</color>: 按照強迫症命中的敵人數恢復部分已失體力。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
+Skill/LobbyDesc/1022300┃<color=green>被動效果</color> : 強迫症技能擊中敵人或使用強化普攻給敵方造成傷害時，一定時間內攻擊速度增加。\n\n使用效果: 盧克揮動清潔工具，命中敵人時，在一段時間內強化普攻，額外造成技能傷害。\n\n<color=yellow>升級效果</color> : 強迫症的使用效果每命中一名敵人，盧克就會恢復一定比例的已失體力。
+Skill/Group/Desc/1022400┃<color=green>被動效果</color>: 盧克在攻擊和擊殺敵人時，迷你地圖不會出現標記聲音。\n\n使用效果: 盧克立即閃到指定的敵人身後，用手槍給敵人造成<color=white>{0}</color>的技能傷害，妨礙集中精神，並使對方{1}秒間移動速度減少{2}。對隊友或自身設置的監視器使用技能時，增加射程範圍，使用後監視器被摧毀。\n\n<color=yellow>升級效果</color>: 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。
 Skill/Group/Coef/1022400┃<color=green>被動效果</color>: 盧克在攻擊和擊殺敵人時，迷你地圖不會出現標記聲音。\n\n使用效果: 盧克立即閃到指定的敵人身後，用手槍給敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害，妨礙集中精神，並使對方{3}秒間移動速度減少{4}。對隊友或自身設置的監視器使用技能時，增加射程範圍，使用後監視器被摧毀。\n\n<color=yellow>升級效果</color>: 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。
+Skill/Group/Evolution/Desc/1022400┃<color=yellow>升級效果</color>: 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
+Skill/LobbyDesc/1022400┃<color=green>被動效果</color>\n盧克攻擊或擊殺敵人時，迷你地圖不會出現標記聲音。\n\n使用效果\n盧克立即移動至指定的敵人身後，並用手槍給敵人造成傷害，妨礙集中精神，減少對方移動速度。對隊友或自身設置的監視器使用技能時，射程範圍變廣，使用後監視器被摧毀。\n\n<color=yellow>升級效果</color> : 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。\n
+Skill/Group/Desc/1022500┃盧克從改良的清潔工具發射出一枚穿透性的子彈，根據敵人失去體力的比例給敵人造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能傷害，並使其{2}秒間移動速度降低{3}。盧克獲得敵人的視野並退後。\n\n<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。
 Skill/Group/Coef/1022500┃盧克從改良的清潔工具發射出一枚穿透性的子彈，根據敵人失去體力的比例給敵人造成<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻擊力的{5})</color>的技能傷害，並使其{0}秒間移動速度降低{1}。盧克獲得敵人的視野並退後。\n\n<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。
+Skill/Group/Evolution/Desc/1022500┃<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。\n\n<color=yellow>完美管家每達到一定疊層數時都可獲得升級點。</color>
+Skill/LobbyDesc/1022500┃盧克從改良的清潔工具發射出一枚穿透性的子彈，根據敵人失去體力的比例給敵人造成傷害，並使其移動速度降低。盧克獲得敵人的視野並退後。\n\n<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。
 CharacterState/Group/Name/1022100┃完美管家
 CharacterState/Group/Name/1022220┃保潔服務
 CharacterState/Group/Name/1022230┃盧克的顧客
@@ -12306,6 +12306,8 @@ CharacterState/Group/Name/1022320┃強迫症
 CharacterState/Group/Name/1022400┃無聲掃除機
 CharacterState/Group/Name/1022410┃無聲掃除機 - 減慢
 CharacterState/Group/Name/1022500┃售後服務 - 減慢
+CharacterState/Group/Name/1022530┃售後服務 - 降低移動速度
+CharacterState/Group/Name/1022540┃售後服務 - 降低移動速度
 CharacterState/Group/Desc/1022100┃清潔盧米亞島，即可獲得疊層。
 CharacterState/Group/Desc/1022220┃可重新使用保潔服務。
 CharacterState/Group/Desc/1022230┃已成為盧克的顧客。
@@ -12315,6 +12317,8 @@ CharacterState/Group/Desc/1022320┃盧克的攻擊速度以上升。
 CharacterState/Group/Desc/1022400┃盧克的攻擊沒有聲音。
 CharacterState/Group/Desc/1022410┃因無聲掃除機移動速度降低。
 CharacterState/Group/Desc/1022500┃因售後服務移動速度降低。
+CharacterState/Group/Desc/1022530┃因售後服務移動速度降低。
+CharacterState/Group/Desc/1022540┃因售後服務移動速度降低。
 Skill/Group/Name/1023100┃外科專家
 Skill/Group/Name/1023200┃動脈切開術
 Skill/Group/Name/1023300┃截斷
@@ -12736,7 +12740,9 @@ CharacterState/Group/Desc/1032120┃維持熱身疊層。
 CharacterState/Group/Desc/1032200┃變化球啟動中。
 CharacterState/Group/Desc/1032300┃被揮臂投球擊中，減少移動速度。
 CharacterState/Group/Desc/1032310┃被揮臂投球擊中，暈眩。
+CharacterState/Group/Desc/1032320┃增加防禦力。
 CharacterState/Group/Desc/1032410┃增加防禦力。
+CharacterState/Group/Desc/1032420┃增加移動速度
 CharacterState/Group/Desc/1032500┃被王牌投球擊中，減少移動速度。
 CharacterState/Group/Desc/1032510┃被王牌投球擊中，減少移動速度。
 Skill/Group/Name/1033100┃狂躁
@@ -12915,19 +12921,19 @@ Skill/Group/Name/1037100┃孤獨的藝術家
 Skill/Group/Name/1037200┃剪影
 Skill/Group/Name/1037300┃靈感
 Skill/Group/Name/1037400┃暗影刺客
-Skill/Group/Name/1037500┃完美傑作
+Skill/Group/Name/1037510┃完美傑作
 Skill/Group/Desc/1037100┃丹尼爾在夜晚變成孤獨的藝術家，相比其他實驗體夜間視野增加{0}，移動速度增加{1}。
 Skill/Group/Desc/1037200┃丹尼爾在指定位置召喚剪影，對敵人造成<color=white>{20}</color>的技能傷害，之後的3次普攻在3秒間增加攻擊速度{7}。 處於剪刀中心的敵人承受<color=white>{21}</color>的技能傷害並在{5}秒間減少移動速度{6}。
 Skill/Group/Desc/1037300┃丹尼爾對指定的敵人實驗體施加<color=#ffffff>靈感</color> 標識。\n丹尼爾可以獲得被標識目標周圍2m的視野，被標識的目標視野持續減少{8}秒，直到再次承受丹尼爾的攻擊，同時{0}秒間在標識上累積所造成傷害的{7}。\n維持靈感標識{0}秒狀態的敵人將成為丹尼爾的<color=#ffffff>靈感來源</color>。丹尼爾在{2}秒內攻擊靈感來源使標識爆炸，並造成等同於累計傷害量的真實傷害和<color=white>{20}</color>技能傷害，{1}秒間移動速度減少{12}。\n\n此技能可以用於終極野怪。
 Skill/Group/Desc/1037400┃丹尼爾朝目標方向突進，{1}秒間化身一道黑影。黑影狀態下普攻射程固定3m，{1}秒間下一個普攻會將丹尼爾瞬間傳送到目標身後，造成<color=white>{20}</color>的額外技能傷害。
-Skill/Group/Desc/1037500┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將目標造成<color=white>{20}</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{21}</color>的技能傷害。
-Skill/Group/Desc/1037510┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將對目標造成<color=white>{20}</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{21}</color>的技能傷害。
+Skill/Group/Desc/1037510┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將目標造成<color=white>{20}</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{21}</color>的技能傷害。
+Skill/Group/Desc/1037520┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將對目標造成<color=white>{20}</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{21}</color>的技能傷害。
 Skill/Group/Coef/1037100┃丹尼爾在夜晚變成孤獨的藝術家，相比其他實驗體夜間視野增加{0}，移動速度增加{1}。
 Skill/Group/Coef/1037200┃在指定位置召喚剪影，對敵人造成<color=white>{0}</color><color=#ffd775>(+攻擊力的{1})</color>的技能傷害，之後的3次普攻3秒間增加攻擊速度{7}。 處於剪刀中心的敵人承受<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color>的技能傷害，並在{5}秒間減少移動速度{6}。
 Skill/Group/Coef/1037300┃丹尼爾對指定的敵人實驗體施加<color=#ffffff>靈感</color> 標識。\n丹尼爾可以獲得被標識目標周圍2m的視野，被標識的目標視野持續減少{8}秒，直到再次承受丹尼爾的攻擊，同時{0}秒間在標識上累積所造成傷害的{7}。\n維持靈感標識{0}秒狀態的敵人將成為丹尼爾的<color=#ffffff>靈感來源</color>。丹尼爾在{2}秒內攻擊靈感來源使標識爆炸，並造成等同於累計傷害量的真實傷害和<color=white>{3}</color><color=#ffd775>(+攻擊力{4})</color>的技能傷害，{1}秒間移動速度減少{12}。\n\n此技能可以用於終極野怪。
 Skill/Group/Coef/1037400┃丹尼爾朝目標方向突進，{1}秒間化身一道黑影。黑影狀態下普攻射程固定3m，{1}秒間下一個普攻會將丹尼爾瞬間傳送到目標身後，造成{2}<color=white>{2}</color><color=#ffd775>(+攻擊力的{3})</color>額外技能傷害。
-Skill/Group/Coef/1037500┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將目標造成<color=white>{4}</color><color=#ffd775>(+攻擊力{5})</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{1}</color><color=#ffd775>(+攻擊力{2})</color>的技能傷害。
 Skill/Group/Coef/1037510┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將目標造成<color=white>{4}</color><color=#ffd775>(+攻擊力{5})</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{1}</color><color=#ffd775>(+攻擊力{2})</color>的技能傷害。
+Skill/Group/Coef/1037520┃丹尼爾對敵人造成傷害後的{9}秒內可以化身為敵人實驗體的影子。化身為影子時，敵人將陷入{6}秒沉默狀態，丹尼爾最多可以在影子中停留{0}秒，持續期間內將目標造成<color=white>{4}</color><color=#ffd775>(+攻擊力{5})</color>技能傷害，最多4次。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成<color=white>{1}</color><color=#ffd775>(+攻擊力{2})</color>的技能傷害。
 Skill/Group/ExpansionTip/1037400┃此普攻也被視為技能攻擊。
 CharacterState/Group/Name/1037100┃孤獨的藝術家
 CharacterState/Group/Desc/1037100┃夜間的丹尼爾，視野和移動速度有所增加。
@@ -13153,13 +13159,13 @@ Skill/Group/Name/1042400┃血循環
 Skill/Group/Name/1042500┃血族女皇的契約
 Skill/Group/Desc/1042100┃<color=white>緩血</color>\n比安卡每隔一段時間使用普攻造成 <color=white>{6}</color><color=#688A08>(+目標體力上限{8})</color>的技能傷害。承受比安卡技能傷害的目標在{0}秒間減少{1}移動速度。\n\n<color=white>血袋</color>\n比安卡通過技能造成的傷害{2}，體力消耗值和承受傷害的{3}來累積<color=white>血液</color>。<color=white>血液</color>可累積至自身體力上限的{4}。 非戰鬥狀態下，比安卡每{9}秒消耗<color=white>血液</color>上限的{5}來恢復所消耗量的{10}體力。
 Skill/Group/Desc/1042200┃比安卡朝指定地點投射血之槍，命中的敵人承受<color=white>{0}</color>的技能傷害。血之槍在目標點形成圓形血灘，對第一個命中的敵人造成<color=white>{1}</color><color=#688A08>(+目標體力上限的{4})</color>的技能傷害後消失。處於<color=white>緩血</color>狀態的目標被<color=white>血之槍</color>命中時，會被束縛{5}秒。
-Skill/Group/Desc/1042300┃比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。\n<color=white>血液</color>累積至上限值的{4}以上時，<color=white>安息</color>的冷卻時間將重置。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到{4}以上，可消耗所有<color=white>血液</color>並根據<color=white>血液</color>消耗值按比例增加體力恢復量，每{5}秒技能縮所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
+Skill/Group/Desc/1042300┃<color=green>被動</color> : <color=white>血液</color>累積上限達到{4}時，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到{4}以上，可消耗所有<color=white>血液</color>並根據<color=white>血液</color>消耗值按比例增加體力恢復量，每{5}秒技能縮所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
 Skill/Group/Desc/1042310┃比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。根據<color=white>血液</color> 消耗值按比例增加體力恢復量，每{5}秒縮減所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
 Skill/Group/Desc/1042400┃比安卡蓄力血環，並向前突進造成技能傷害。每蓄力{10}秒額外消耗當前體力的{11}，最多蓄力{0}秒，蓄力狀態最長維持{1}秒。根據蓄力時間增加突進距離和傷害範圍，傷害量增加至<color=white>{4}</color>~<color=white>{5}</color>。蓄力超過{0}秒時，恢復<color=white>{8}</color>體力。命中多個敵人時，每個敵人額外增加{12}恢復量。
 Skill/Group/Desc/1042500┃比安卡召喚血族的契約，施放血咒，在周圍形成星芒血陣。血咒結束後，星芒血陣固定於地面，範圍內的敵人承受<color=white>{0}</color><color=#688A08>(+目標體力上限的{2})</color>的技能傷害，{13}秒間移動速度減緩{3}。比安卡在星芒血陣上方時，吸血-所有傷害增加{4}。\n星芒血陣持續時間結束時，根據範圍內敵人的已失體力按比例造成<color=white>{5}</color>~<color=white>{6}</color>的技能傷害，並恢復<color=white>{9}</color>(+已失體力的{11})體力。命中多個敵人時，每個敵人額外增加{12}恢復量。
 Skill/Group/Coef/1042100┃<color=white>緩血</color>\n比安卡每隔一段時間使用普攻造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#688A08>(+目標體力上限{8})</color>的技能傷害。承受比安卡技能傷害的目標在{0}秒間減少{1}移動速度。\n\n<color=white>血袋</color>\n比安卡通過技能造成的傷害{2}，體力消耗值和承受傷害的{3}來累積<color=white>血液</color>。<color=white>血液</color>可累積至自身體力上限的{4}。非戰鬥狀態下，比安卡每{9}秒消耗<color=white>血液</color>上限的{5}來恢復所消耗量的{10}體力。
 Skill/Group/Coef/1042200┃比安卡朝指定地點投射血之槍，命中的敵人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{6})</color>的技能傷害。血之槍在目標點形成圓形血灘，對第一個命中的敵人造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{7})</color><color=#688A08>(+目標體力上限的{4})</color>的技能傷害後消失。處於<color=white>緩血</color>狀態的目標被<color=white>血之槍</color>命中時，會被束縛{5}秒。
-Skill/Group/Coef/1042300┃比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。\n<color=white>血液</color>累積至上限值的{4}以上時，<color=white>安息</color>的冷卻時間將重置。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到{4}以上，可消耗所有<color=white>血液</color>並根據<color=white>血液</color>消耗值按比例增加體力恢復量，每{5}秒縮減所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
+Skill/Group/Coef/1042300┃<color=green>被動</color> : <color=white>血液</color>累積上限達到{4}時，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到{4}以上，可消耗所有<color=white>血液</color>並根據<color=white>血液</color>消耗值按比例增加體力恢復量，每{5}秒縮減所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
 Skill/Group/Coef/1042310┃比安卡集中精力並暫時隱身於吸血鬼的棺材中，最多持續{0}秒。\n身處棺材中的比安卡，承受傷害減少{1}，並且每{2}秒恢復體力上限{3}的體力。根據<color=white>血液</color> 消耗值按比例增加體力恢復量，每{5}秒縮減所有技能(<color=white>安息</color>和武器技能除外)的冷卻時間{6}秒。
 Skill/Group/Coef/1042400┃比安卡蓄力血環，並向前突進造成技能傷害。每蓄力{10}秒額外消耗當前體力的{11}，最多蓄力{0}秒，蓄力狀態最長維持{1}秒。根據蓄力時間增加突進距離和傷害範圍，傷害量增加至<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>~<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{14})</color>。 蓄力超過{0}秒時，恢復<color=white>{8}</color><color=#DDA0DD>(+技能增幅的{15})</color>體力。命中多個敵人時，每個敵人額外增加{12}恢復量。
 Skill/Group/Coef/1042500┃比安卡召喚血族的契約，施放血咒，在周圍形成星芒血陣。血咒結束後，星芒血陣固定於地面，範圍內的敵人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{13})</color><color=#688A08>(+目標體力上限的{2})</color>的技能傷害，{17}秒間移動速度減緩{3}。比安卡在星芒血陣上方時，吸血-所有傷害增加{4}。\n星芒血陣持續時間結束時，根據範圍內敵人的已失體力按比例造成<color=white>{5}</color><color=#DDA0DD>(+技能增幅的{14})</color>~<color=white>{7}</color><color=#DDA0DD>(+技能增幅的{15})</color>的技能傷害，並恢復<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{16})</color>(+已失體力的{11})體力。命中多個敵人時，每個敵人額外增加{12}恢復量。
@@ -13352,13 +13358,13 @@ Skill/Group/Desc/1045200┃梅將披肩展開，對範圍內的敵人造成<colo
 Skill/Group/Desc/1045300┃梅用披肩包裹自己形成保護膜，{2}秒內被普攻命中，僅承受{3}的傷害，並且逐漸增加移動速度{4}，同時防禦力增加{10}。持續時間結束時，對範圍內的敵人造成<color=white>{20}</color>的技能傷害。\n充能上限為{5}次，每次普攻縮減充能時間{7}秒。
 Skill/Group/Desc/1045400┃梅在衝向敵人、隊友、野生動物或監視器的同時在{2}秒間持續獲得護盾效果。如果衝向隊友: 隊友可以獲得同等的護盾。\n衝向敵人實驗體: <color=white>{22}</color> \n衝向隊友、野生動物或監視器 : <color=white>{20}</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移動，給路徑上的敵人造成<color=white>{21}</color>的技能傷害並陷入嘲諷{8}秒。再次使用技能時間限制為{9}秒。
 Skill/Group/Desc/1045410┃梅在衝向敵人、隊友、野生動物或監視器的同時在{2}秒間持續獲得護盾效果。如果衝向隊友: 隊友可以獲得同等的護盾。\n衝向敵人實驗體: <color=white>{22}</color> \n衝向隊友、野生動物或監視器 : <color=white>{20}</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移動，路徑上的敵人造成<color=white>{21}</color>的技能傷害並陷入嘲諷{8}秒。再次使用技能時間限制為{9}秒。
-Skill/Group/Desc/1045500┃梅使用披肩綁住指定的隊友或自身，{6}秒間不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復<color=white>{21}</color>體力，啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
+Skill/Group/Desc/1045500┃梅使用披肩綁住指定的隊友或自身，{6}秒間不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復<color=white>{21}</color>體力，用於自身時啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
 Skill/Group/Coef/1045100┃梅在進行普攻時，造成防禦力{0}的額外技能傷害。\n\n梅可以製作<color=#FFC62E>秘銀吊帶</color>、<color=#FFC62E>奧黛</color>、<color=#FFC62E>幽靈戰衣</color>, <color=#FFC62E>訂製禮服</color>等物品。
 Skill/Group/Coef/1045200┃梅展開披肩，對範圍內的敵人造成<color=white>{0}</color><color=#93c9e7>(+防禦力的{10})</color><color=#dda0dd>(+技能增幅的{4})</color><color=#688a08>(+體力上限的{11})</color>的技能傷害，並賦予{5}秒圖案。\n\n圖案目標被<color=white>垂綴</color>再次命中時，{6}秒間移動速度減少{7}。
 Skill/Group/Coef/1045300┃梅用披肩包裹自己形成保護膜，{2}秒內被普攻命中，僅承受{3}的傷害，並且逐漸增加移動速度{4}，同時防禦力增加{10}。持續時間結束時，對範圍內的敵人造成<color=white>{0}</color><color=#dda0dd>(+技能增幅的{11})</color><color=#93c9e7>(+防禦力的{12})</color>的技能傷害。\n充能上限為{5}次，每次普攻縮減充能時間{7}秒。
 Skill/Group/Coef/1045400┃梅在衝向敵人、隊友、野生動物或監視器，{2}秒間持續獲得護盾效果。如果衝向隊友: 隊友可以獲得同等的護盾。\n衝向敵人: <color=white>{0}</color><color=#93C9E7>(+防禦力的{1})</color><color=#DDA0DD>(+技能增幅的{12})</color>\n衝向隊友、野生動物或監視器 : <color=white>{0}</color><color=#93C9E7>(+防禦力的{1})</color><color=#DDA0DD>(+技能增幅的{10})</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移動，給路徑上的敵人造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#93c9e7>(+防禦力的{13})</color>的技能傷害並陷入嘲諷{8}秒。再次使用技能時間限制為{9}秒。
 Skill/Group/Coef/1045410┃梅在衝向敵人、隊友、野生動物或監視器，{2}秒間持續獲得護盾效果。如果衝向隊友: 隊友可以獲得同等的護盾。\n衝向敵人: <color=white>{0}</color><color=#93C9E7>(+防禦力的{1})</color><color=#DDA0DD>(+技能增幅的{12})</color>\n衝向隊友、野生動物或監視器 : <color=white>{0}</color><color=#93C9E7>(+防禦力的{1})</color><color=#DDA0DD>(+技能增幅的{10})</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移動，給路徑上的敵人造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#93c9e7>(+防禦力的{13})</color>的技能傷害並陷入嘲諷{8}秒。再次使用技能時間限制為{9}秒。
-Skill/Group/Coef/1045500┃梅使用披肩綁住指定的隊友或自身，{6}秒間不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復<color=white>{7}</color><color=#dda0dd>(+技能增幅的{12})</color><color=#93c9e7>(+防禦力的{13})</color>體力，啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
+Skill/Group/Coef/1045500┃梅使用披肩綁住指定的隊友或自身，{6}秒間不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復<color=white>{7}</color><color=#dda0dd>(+技能增幅的{12})</color><color=#93c9e7>(+防禦力的{13})</color>體力，用於自身時啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
 CharacterState/Group/Name/1045200┃垂綴 - 圖案
 CharacterState/Group/Desc/1045200┃被賦予圖案。
 CharacterState/Group/Name/1045210┃垂綴
@@ -15339,11 +15345,6 @@ Skill/LobbyDesc/1021200┃洛茲朝指定的方向開槍，給路徑上的敵人
 Skill/LobbyDesc/1021300┃洛茲舉槍進行360度全視角狙擊，給周圍的敵人帶來技能傷害，減少防禦力與治癒效果。洛茲在狙擊期間移動速度會增加並重載子彈，命中敵人時減少冷卻。
 Skill/LobbyDesc/1021400┃洛茲翻越指定的目標，在目標所處位置發射一枚子彈，造成技能傷害並使目標陷入暈眩。洛茲在翻越的途中不能被指定為目標。
 Skill/LobbyDesc/1021500┃洛茲發射子彈，附著在敵人或地面，子彈會在幾秒後爆破，並在爆破時給敵人造成技能傷害。\n如果子彈附著在敵人身上，敵人的移動速度將降低。\n被子彈附著的目標將和洛茲共享視野。\n\n在子彈爆破前使用普攻命中敵人5回，子彈將馬上爆破給敵人造成體力上限一定比例的真實傷害，並減少其移動速度。\n使用技能命中敵人算作2次普通攻擊。\n\n子彈爆破使塞姆汀高爆彈 Mk-Il的技能冷卻時間減少，移動速度增加。
-Skill/LobbyDesc/1022100┃盧克與擊擊殺一名實驗體或維克萊恩都會恢復失去的體力。\n\n盧克每次完成擊殺實驗體，野生動物等清理工作都會獲得完美管家的疊層。\n完美管家的疊加可以進一步升級盧克的技能。
-Skill/LobbyDesc/1022200┃盧克投擲清潔劑，對第一個擊中的敵人造成傷害，並獲得該敵人的視野。接下來的3秒內可重新使用該技能。\n\n再次使用: 盧克衝向被擊中的敵人，摧毀敵人的護盾，並給敵人造成傷害。\n\n<color=yellow>升級效果</color> : 和目標已失體力成比例，再次使用時增加傷害量。
-Skill/LobbyDesc/1022300┃<color=green>被動效果</color> : 強迫症技能擊中敵人或使用強化普攻給敵方造成傷害時，一定時間內攻擊速度增加。\n\n使用效果: 盧克揮動清潔工具，命中敵人時，在一段時間內強化普攻，額外造成技能傷害。\n\n<color=yellow>升級效果</color> : 強迫症的使用效果每命中一名敵人，盧克就會恢復一定比例的已失體力。
-Skill/LobbyDesc/1022400┃<color=green>被動效果</color>\n盧克攻擊或擊殺敵人時，迷你地圖不會出現標記聲音。\n\n使用效果\n盧克立即移動至指定的敵人身後，並用手槍給敵人造成傷害，妨礙集中精神，減少對方移動速度。對隊友或自身設置的監視器使用技能時，射程範圍變廣，使用後監視器被摧毀。\n\n<color=yellow>升級效果</color> : 參與擊殺敵人實驗體時，重置無聲掃除機的冷卻時間。\n
-Skill/LobbyDesc/1022500┃盧克從改良的清潔工具發射出一枚穿透性的子彈，根據敵人失去體力的比例給敵人造成傷害，並使其移動速度降低。盧克獲得敵人的視野並退後。\n\n<color=yellow>升級效果</color>: 盧克發射的穿透性子彈如果擊中敵人，保潔服務的冷卻時間將重置。
 Skill/LobbyDesc/1023100┃凱茜對敵人造成技能傷害時，將賦予敵人持續一段時間傷害的外傷。\n當外傷累積至3疊層時，可在長時間形成致命外傷狀態，給敵人造成更大傷害。處於致命外傷狀態的敵人治癒效果減少。\n\n賦予敵人致命外傷時，一段時間內形成可抵禦傷害的護盾。在持有護盾的情況下，移向處於外傷或者致命外傷狀態的敵人時，會增加移動速度後逐漸減少。
 Skill/LobbyDesc/1023200┃<color=green>被動</color>: 使用技能後，凱茜的下一個普攻將造成技能傷害。\n\n凱茜快速衝向指定方向，所有被衝撞的敵人承受技能傷害。 \n當凱茜使敵人陷入致命外傷狀態時，減少動脈切開術的冷卻。
 Skill/LobbyDesc/1023300┃凱茜向前方揮動刀鋸。內圍命中時，對敵人造成技能傷害，且不會賦予外傷疊層。被外圍命中的敵人承受更大的技能傷害，移動速度減緩。
@@ -15421,7 +15422,7 @@ Skill/LobbyDesc/1037100┃丹尼爾在夜晚變成一位孤獨的藝術家，增
 Skill/LobbyDesc/1037200┃丹尼爾在指定位置召喚剪影，對敵人造成技能傷害，命中後的3次普攻增加攻擊速度。\n處於剪刀中心的敵人承受更大的技能傷害並減少移動速度。
 Skill/LobbyDesc/1037300┃丹尼爾賦予指定目標<color=#ffffff>靈感</color>標識，獲得目標周圍的視野，短暫思考作品，暫時減少自身的移動速度。被標識的目標視野減少直到再次承受丹尼爾的攻擊，同時在標識上累積所造成傷害的一定量。幾秒後成為丹尼爾的<color=#ffffff>靈感來源</color>。丹尼爾攻擊<color=#ffffff>靈感來源</color>時，標識將爆炸並造成累積的傷害和標識爆炸的傷害，減少移動速度。\n\n此技能可以用於終極野怪。
 Skill/LobbyDesc/1037400┃丹尼爾化身成一道黑影朝目標方向突進。黑影狀態下進行普攻增加射程並將丹尼爾瞬間傳送到目標身後，造成額外技能傷害。
-Skill/LobbyDesc/1037500┃當丹尼爾對敵人造成傷害時，他可以化身為目標的影子。在化身為影子期間，敵人將暫時陷入沉默狀態，丹尼爾可以在敵人的影子中停留一段時間，最多可造成4次技能傷害。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成技能傷害。
+Skill/LobbyDesc/1037510┃當丹尼爾對敵人造成傷害時，他可以化身為目標的影子。在化身為影子期間，敵人將暫時陷入沉默狀態，丹尼爾可以在敵人的影子中停留一段時間，最多可造成4次技能傷害。持續時間結束或再次使用技能時，丹尼爾將從影子中走出來並造成技能傷害。
 Skill/LobbyDesc/1038100┃<color=#ffffff>演技</color>: 珍妮普攻可以縮減<color=#ffffff>演員的修養(E)</color>的冷卻時間。使用 <color=#ffffff>演員的修養(E)</color> 技能轉換扮演角色獲得額外效果。 <color=yellow>紅酒系服裝</color>增加攻擊速度， <color=yellow>紅茶系服裝</color>增加移動速度。\n\n<color=#ffffff>死亡演技</color>: 體力值為0時，珍妮將進入死亡演技狀態，變為隱身、無敵，且無法被指定為目標的狀態，但是移動速度會大大降低。死亡演技狀態結束後復活並恢復體力。
 Skill/LobbyDesc/1038200┃珍妮用聚光燈照亮目標點3次造成傷害。\n照亮敵人時減少技能的冷卻時間，照亮自己獲得額外效果。\n <color=yellow>紅酒系服裝</color>增加攻擊速度。\n<color=yellow>紅茶系服裝</color>增加移動速度。
 Skill/LobbyDesc/1038300┃珍妮在指定方向鋪上紅毯，命中的敵人承受傷害並減少移動速度。\n\n再次使用技能，對紅毯上的敵人造成傷害, 紅毯根據珍妮扮演的角色適用額外效果。 <color=yellow>紅酒系服裝</color>將紅毯上的敵人拉向自己，<color=yellow>紅茶系服裝</color>將紅毯上的敵人推離。
@@ -15444,7 +15445,7 @@ Skill/LobbyDesc/1041400┃約翰賦予目標隊友<color=white>指引的光芒</
 Skill/LobbyDesc/1041500┃約翰擊退周圍的敵人造成傷害，而隊友根據目標已失體力按比例恢復體力值。\n\n約翰在周圍形成聖域，增加隊友的防禦力並恢復隊友的體力。\n\n技能使用期間，約翰的移動速度減緩。
 Skill/LobbyDesc/1042100┃<color=white>緩血</color>\n 比安卡每隔一段時間使用普攻造成技能傷害。承受比安卡技能傷害的目標減少移動速度。\n\n<color=white>血袋</color>\n比安卡通過技能造成的傷害和體力消耗值以及承受傷害來累積<color=white>血液</color>。<color=white>血液</color>的累積值與自身的體力上限成正比。比安卡在非戰鬥狀態下通過消耗累積的<color=white>血液</color>來恢復體力。
 Skill/LobbyDesc/1042200┃比安卡朝指定地點射出血之槍，命中的敵人承受技能傷害。血之槍在目標點形成圓形血灘，對第一個命中的敵人造成額外傷害後消失。 處於<color=white>緩血</color>的目標被<color=white>血之槍</color>命中時陷入束縛。
-Skill/LobbyDesc/1042300┃比安卡集中精神並暫時躲進棺材中。\n身處棺材中的比安卡減少承受傷害並持續恢復體力。\n<color=white>血液</color>累積至上限值的50%以上時，<color=white>安息</color>的冷卻時間將重置。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到50%以上，可消耗所有<color=white>血液</color>根據<color=white>血液</color>消耗值增加體力恢復，並每隔一段時間減少除 <color=white>安息</color>及武器技能以外的所有技能冷卻時間。\n\n在使用<color=white>安息</color>時，可使用技能 <color=white>血族女皇的契約</color>和<color=white>血循環</color>，並不被敵人看見準備動作。\n
+Skill/LobbyDesc/1042300┃<color=green>被動</color> : <color=white>血液</color>達到50%累積上限時，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精神並暫時躲進棺材中。\n身處棺材中的比安卡減少承受傷害並持續恢復體力。\n<color=white>血液</color>累積至上限值的50%以上時，<color=white>安息</color>的冷卻時間將重置。\n\n<color=white>安息</color>技能在使用時如果<color=white>血液</color>累積量達到50%以上，可消耗所有<color=white>血液</color>根據<color=white>血液</color>消耗值增加體力恢復，並每隔一段時間減少除 <color=white>安息</color>及武器技能以外的所有技能冷卻時間。\n\n在使用<color=white>安息</color>時，可使用技能 <color=white>血族女皇的契約</color>和<color=white>血循環</color>，並不被敵人看見準備動作。\n
 Skill/LobbyDesc/1042400┃比安卡蓄力血環，並向前突進造成技能傷害。蓄力越久消耗的體力越多，並根據蓄力時間增加突進距離和傷害範圍以及傷害量。蓄力達到上限的情況下，將根據命中目標數來恢復體力。
 Skill/LobbyDesc/1042500┃比安卡召喚吸血鬼中血族的契約，施放血咒，在周圍形成星芒血陣。血咒結束後，星芒血陣將固定於地面，對範圍內的敵人造成技能傷害，移動速度減緩。比安卡在星芒血陣上方時，增加吸血-所有傷害。\n星芒血陣持續時間結束時，根據範圍內敵人的已失體力按比例造成技能傷害，並恢復體力。\n\n<color=white>血族女皇的契約</color>在使用中可以使用技能<color=white>血循環</color>。
 Skill/LobbyDesc/1043100┃席琳使用3次技能時，下一個普攻造成額外技能傷害。\n\n席琳的技能不受冷卻縮減疊層的影響，並轉換為技能增幅。
@@ -15461,7 +15462,7 @@ Skill/LobbyDesc/1045100┃梅在進行普攻時，造成防禦力一定比例的
 Skill/LobbyDesc/1045200┃梅將披肩展開，對範圍內的敵人造成傷害並賦予圖案。使用<color=white>垂綴</color>再次命中圖案目標被時，被命中的目標移動速度減少。
 Skill/LobbyDesc/1045300┃梅用披肩包裹自己形成保護膜，短時間內被普攻命中幾乎不會造成什麼傷害，同時逐漸增加移動速度，並增加防禦力。持續時間結束時，對範圍內的敵人造成傷害。\n最多充能2次，每次普攻縮減充能時間。
 Skill/LobbyDesc/1045400┃梅在衝向敵人、隊友或監視器的同時獲得護盾，並形成可以暫時吸收傷害的護盾。如果衝向隊友，隊友可以獲得同等的護盾。\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移動，路徑上的敵人承受傷害並陷入嘲諷。
-Skill/LobbyDesc/1045500┃梅使用披肩綁住指定的隊友或自身，在一定時間內不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復體力，啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
+Skill/LobbyDesc/1045500┃梅使用披肩綁住指定的隊友或自身，在一定時間內不會承受任何的傷害，處於完全被壓制的狀態，解除束縛時恢復體力，用於自身時啟動<color=white>披肩面紗</color>效果。\n用於隊友時，將目標拉向自己。
 Skill/LobbyDesc/1046100┃艾登使用技能命中敵人時，將獲得<color=white>電荷</color>。\n\n在<color=white>電荷</color>完全蓄能的狀態下，如果周圍沒有敵人或者施法<color=white>後閃</color>時，艾登將處於<color=white>超電荷</color>狀態。此時電荷將轉為<color=white>子彈</color>，普攻轉為遠程。\n\n<color=white>超電荷</color>減少攻擊速度和暴擊傷害，但同時普攻可以應用為暴擊，並根據一定比例將暴擊率轉換為暴擊傷害。<color=white>超電荷</color>狀態結束時，暫時增加艾登的移動速度。
 Skill/LobbyDesc/1046200┃<color=white>雷擊</color>: 艾登釋放一把電流劍，對1名敵人造成普攻傷害，並額外獲得<color=white>電荷</color>。每當艾登使用普攻命中時，縮減<color=white>雷擊</color>的冷卻。\n\n<color=white>超電荷</color>狀態下可以使用<color=white>電磁炮</color>。\n\n<color=white>電磁炮</color> : 向指定方向發射一枚子彈，對命中的敵人造成普攻傷害，使其移動速度減緩。此技能命中時冷卻時間減少。\n\n<i>冷卻固定: 此技能不受冷卻縮減影響。</i>
 Skill/LobbyDesc/1046300┃艾登集聚電流於武器上，準備下一個攻擊，此時移動速度將有所減緩。再次施法時，周圍的敵人根據蓄力時間承受技能傷害，並減少移動速度。蓄力至上限時，將生成<color=white>電場</color>。\n\n<color=white>電場</color>: 接觸到電場的敵人承受技能傷害並陷入束縛。
@@ -16581,6 +16582,57 @@ Item/Skills/6048001/Body┃使用終極技能時，{0}秒內攻擊速度增加<c
 Item/Skills/6048001/Desc┃使用終極技能時，{0}秒內攻擊速度增加<color=white>{1}%</color>，移動速度增加<color=white>{2}%</color>，並且無視碰撞。\n冷卻 : {3}秒
 CharacterState/Group/Name/6048000┃覺醒
 CharacterState/Group/Desc/6048000┃進入覺醒狀態，移動速度和攻擊速度得到增加。
+Item/Skills/6049001┃迴響
+Item/Skills/6049001/Name┃<color=yellow>迴響</color>
+Item/Skills/6049001/Body┃受到敵方實驗體傷害時，會在{2}秒內逐漸承受所受傷害的<color=white>{0}%</color>。
+Item/Skills/6049001/Desc┃受到敵方實驗體傷害時，會在{2}秒內逐漸承受所受傷害的<color=white>(近戰 : {0}%)</color>｜<color=white>(遠程 : {1}%)</color>。
+Item/Skills/6050001┃抵抗
+Item/Skills/6050001/Name┃<color=yellow>抵抗</color>
+Item/Skills/6050001/Body┃和失去的體力成比例，最多可以增加<color=#FFD775>{0}%</color>攻擊力。當體力低於{1}%時將適用增加上限。
+Item/Skills/6050001/Desc┃和失去的體力成比例，最多可以增加<color=#FFD775>{0}%</color>攻擊力。當體力低於{1}%時將適用增加上限。
+Item/Skills/6051001┃泰瑟電擊 - 跳躍
+Item/Skills/6051001/Name┃<color=yellow>泰瑟電擊 - 跳躍</color>
+Item/Skills/6051001/Body┃使用移動技能時，下次普攻將造成<color=#FFD775>{0}</color>額外技能傷害，並使命中的目標防禦力在{1}秒內降低<color=white>{2}%</color>。（冷卻時間{3}秒）
+Item/Skills/6051001/Desc┃使用移動技能時，下次普攻將造成<color=white>{0}</color><color=#FFD775>(+攻擊力{1}%)</color><color=green>(+實驗體等級*{2})</color>額外技能傷害，並使命中的目標防禦力在{3}秒內降低<color=white>{4}%</color>。（冷卻時間{5}秒）
+Item/Skills/6052001┃熾燃 - 強化
+Item/Skills/6052001/Name┃<color=yellow>熾燃 - 強化</color>
+Item/Skills/6052001/Body┃每次普攻命中敵人實驗體時，將獲得{2}秒內攻擊力增加<color=#FFD775>{0}</color>的疊層。（疊層上限 : {1}）
+Item/Skills/6052001/Desc┃每次普攻命中敵人實驗體時，將獲得{2}秒內攻擊力增加<color=#FFD775>{0}</color>的疊層。（疊層上限 : {1}）
+Item/Skills/6052002┃熾燃
+Item/Skills/6052002/Name┃<color=yellow>熾燃</color>
+Item/Skills/6052002/Body┃每次普攻命中敵人實驗體時，將獲得{2}秒內攻擊速度增加<color=white>{0}%</color>的疊層。（疊層上限 : {1}）
+Item/Skills/6052002/Desc┃每次普攻命中敵人實驗體時，將獲得{2}秒內攻擊速度增加<color=white>{0}%</color>的疊層。（疊層上限 : {1}）
+Item/Skills/6053001┃熾燃 - 增幅
+Item/Skills/6053001/Name┃<color=yellow>熾燃 - 增幅</color>
+Item/Skills/6053001/Body┃個別技能命中敵方實驗體時，將疊加{3}秒的熾燃效果，每個疊層可以使技能傷害增加<color=#DDA0DD>{0}%</color>。達到疊層上限{2}時，額外獲得<color=white>{1}%</color>吸血 - 所有傷害效果。
+Item/Skills/6053001/Desc┃個別技能命中敵方實驗體時，將疊加{3}秒的熾燃效果，每個疊層可以使技能傷害增加<color=#DDA0DD>{0}%</color>。達到疊層上限{2}時，額外獲得<color=white>{1}%</color>吸血 - 所有傷害效果。
+Item/Skills/6053002/Name┃<color=yellow>熾燃 - 增幅</color>
+Item/Skills/6053002/Body┃個別技能命中敵方實驗體時，將疊加{3}秒的熾燃效果，每個疊層可以使技能傷害增加<color=#DDA0DD>{0}%</color>。達到疊層上限{2}時，額外獲得<color=white>{1}%</color>移動速度增加效果。
+Item/Skills/6053002/Desc┃個別技能命中敵方實驗體時，將疊加{3}秒的熾燃效果，每個疊層可以使技能傷害增加<color=#DDA0DD>{0}%</color>。達到疊層上限{2}時，額外獲得<color=white>{1}%</color>移動速度增加效果。
+Item/Skills/6054001┃熾燃 - 激燃
+Item/Skills/6054001/Name┃<color=yellow>熾燃 - 激燃</color>
+Item/Skills/6054001/Body┃每次普攻命中敵人實驗體時，將獲得{4}秒內攻擊力增加<color=#FFD775>{1}</color>、攻擊速度增加<color=white>{0}%</color>的疊層。（疊層上限 : {2}）\n達到疊層上限時，防禦穿透額外增加<color=white>{3}%</color>。
+Item/Skills/6054001/Desc┃每次普攻命中敵人實驗體時，將獲得{4}秒內攻擊力增加<color=#FFD775>{1}</color>、攻擊速度增加<color=white>{0}%</color> 的疊層。（疊層上限 : {2}）\n達到疊層上限時，防禦穿透額外增加<color=white>{3}%</color>。
+CharacterState/Group/Name/6051000┃泰瑟電擊 - 跳躍
+CharacterState/Group/Desc/6051000┃可啟動泰瑟電擊。
+CharacterState/Group/Name/6051010┃泰瑟電擊 - 跳躍
+CharacterState/Group/Desc/6051010┃普攻時將啟動泰瑟電擊。
+CharacterState/Group/Name/6051020┃泰瑟電擊 - 減益
+CharacterState/Group/Desc/6051020┃被泰瑟電擊命中，防禦力降低了。
+CharacterState/Group/Name/6051030┃泰瑟電擊 - 蓄力中
+CharacterState/Group/Desc/6051030┃正在蓄力泰瑟電擊。
+CharacterState/Group/Name/6052000┃熾燃
+CharacterState/Group/Desc/6052000┃屬性值增加了。
+CharacterState/Group/Name/6053000┃熾燃 - 增幅
+CharacterState/Group/Desc/6053000┃技能傷害量增加了。
+CharacterState/Group/Name/6053010┃熾燃 - 疊層上限
+CharacterState/Group/Desc/6053010┃疊層數量達到最大值，吸血 - 所有傷害增加了。
+CharacterState/Group/Name/6053020┃熾燃 - 疊層上限
+CharacterState/Group/Desc/6053020┃疊層數量達到最大值，移動速度增加了。
+CharacterState/Group/Name/6054000┃熾燃 - 激燃
+CharacterState/Group/Desc/6054000┃屬性值增加了。
+CharacterState/Group/Name/6054010┃熾燃 - 疊層上限
+CharacterState/Group/Desc/6054010┃疊層數量達到最大值，防禦穿透增加了。
 CharacterState/Group/Name/2310100┃勇者搭檔
 CharacterState/Group/Desc/2310100┃失去同伴後，兩人之間的深厚感情使他們在非戰鬥狀態下的體力再生和移動速度都得到了提高。
 CharacterState/Group/Name/2310200┃孤獨的狼
@@ -17199,11 +17251,11 @@ Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃渡假A-Coin任務書
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃戰鬥女僕A-Coin任務書
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃轉變A-Coin任務書
 Product/Name/MILEAGE_S13_A-Coin_QUEST_BOOK_9900004┃晚霞A-Coin任務書
-Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 渡假A-Coin任務書\n  (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動渡假A-Coin任務書。\n※ 可以通過任務書菜單查看渡假A-Coin任務書。
-Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 戰鬥女僕A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動戰鬥女僕A-Coin任務書。\n※ 可以通過任務書菜單查看戰鬥女僕A-Coin任務書。
-Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 轉變A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動轉變A-Coin任務書。\n※ 可以通過任務書菜單查看轉變A-Coin任務書。
-Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 晚霞A-Coin任務書\n    (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動晚霞A-Coin任務書。\n※ 可以通過任務書菜單查看晚霞A-Coin任務書。
-Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 好運★A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動好運★A-Coin任務書。\n※ 可以通過任務書菜單查看好運★A-Coin任務書。
+Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 渡假A-Coin任務書\n  (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動渡假A-Coin任務書。\n※ 該任務書沒有使用時間限制，可以隨時進行。\n※ 可以通過任務書菜單查看渡假A-Coin任務書。
+Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 戰鬥女僕A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動戰鬥女僕A-Coin任務書。\n※ 該任務書沒有使用時間限制，可以隨時進行。\n※ 可以通過任務書菜單查看戰鬥女僕A-Coin任務書。
+Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 轉變A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動轉變A-Coin任務書。\n※ 該任務書沒有使用時間限制，可以隨時進行。\n※ 可以通過任務書菜單查看轉變A-Coin任務書。
+Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 晚霞A-Coin任務書\n    (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動晚霞A-Coin任務書。\n※ 該任務書沒有使用時間限制，可以隨時進行。\n※ 可以通過任務書菜單查看晚霞A-Coin任務書。
+Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[內容]</color></b>\n\n- 好運★A-Coin任務書\n   (全部完成後，共可獲得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[購買注意事項]</color></b>\n\n※ 購買商品後將立即啟動好運★A-Coin任務書。\n※ 該任務書沒有使用時間限制，可以隨時進行。\n※ 可以通過任務書菜單查看好運★A-Coin任務書。
 Product/Name/S5_Lucky_White_LootToken_01┃紅色代幣 X 3
 Product/Name/S5_Lucky_White_ACoin_15┃A-Coin X 15
 Product/Name/S5_Lucky_Red_Lucky_Token_01┃好運★代幣 X 80
@@ -18634,86 +18686,6 @@ BattleMission/14008007/1┃擊殺維克萊恩 1次
 BattleMission/14008008/1┃獲得秘銀 2次
 BattleMission/14008009/1┃生存15分鐘以上 8次
 BattleMission/14008010/1┃獲得12,000以上榮譽值
-BattleMission/15001001/1┃進行一般/排位遊戲 5次
-BattleMission/15001002/1┃製作傳說等級物品 4次
-BattleMission/15001003/1┃擊殺敵人實驗體 3次
-BattleMission/15001004/1┃對野生動物造成25,000傷害
-BattleMission/15001005/1┃獲得8,000以上榮譽值
-BattleMission/15001006/1┃製作傳說等級物品 15次
-BattleMission/15001007/1┃擊殺維克萊恩 5次
-BattleMission/15001008/1┃獲得秘銀 2次
-BattleMission/15001009/1┃生存15分鐘以上 8次
-BattleMission/15001010/1┃獲得12,000以上榮譽值
-BattleMission/15002001/1┃攝取食物/飲料 30次
-BattleMission/15002002/1┃使用傳送門 15次
-BattleMission/15002003/1┃擊殺奧米加 3次
-BattleMission/15002004/1┃對野生動物造成30,000傷害
-BattleMission/15002005/1┃救起瀕死隊友 5次
-BattleMission/15002006/1┃武器熟練度達到18級以上
-BattleMission/15002007/1┃達成TK10 3次
-BattleMission/15002008/1┃對敵人實驗體造成19,000傷害
-BattleMission/15002009/1┃從傳說及以上等級補給箱中獲得物品 3次
-BattleMission/15002010/1┃擊殺敵人實驗體 10次
-BattleMission/15003001/1┃使用Kiosk 3次
-BattleMission/15003002/1┃擊殺蝙蝠 10次
-BattleMission/15003003/1┃達成TK5
-BattleMission/15003004/1┃使用望遠監視器 20次
-BattleMission/15003005/1┃對敵人實驗體造成50,000傷害
-BattleMission/15003006/1┃使用監視器 10次
-BattleMission/15003007/1┃進行一般/排位遊戲 15次
-BattleMission/15003008/1┃擊殺敵人實驗體 20次
-BattleMission/15003009/1┃使用無人機配送 30次
-BattleMission/15003010/1┃對敵人實驗體造成20,000傷害
-BattleMission/15004001/1┃在溪流擊殺敵人實驗體 7次
-BattleMission/15004002/1┃成功逃生 1次
-BattleMission/15004003/1┃救起瀕死隊友 3次
-BattleMission/15004004/1┃使用傳送門 20次
-BattleMission/15004005/1┃擊殺狼 40次
-BattleMission/15004006/1┃獲得10,000以上榮譽值
-BattleMission/15004007/1┃獲得VF血液樣本 5次
-BattleMission/15004008/1┃進行一般/排位遊戲 10次
-BattleMission/15004009/1┃生存15分鐘以上 8次
-BattleMission/15004010/1┃達成TK 7
-BattleMission/15005001/1┃生存10分鐘以上 10次
-BattleMission/15005002/1┃武器熟練度達到18級以上
-BattleMission/15005003/1┃使用EMP探測儀 10次
-BattleMission/15005004/1┃擊殺阿爾法 5次
-BattleMission/15005005/1┃在一般/排位模式中取得勝利 3次
-BattleMission/15005006/1┃擊殺敵人實驗體 3次
-BattleMission/15005007/1┃達成終結者(Terminate) 10次
-BattleMission/15005008/1┃製作傳說等級物品 30次
-BattleMission/15005009/1┃對敵人實驗體造成14,000傷害
-BattleMission/15005010/1┃獲得生命樹枝 5次
-BattleMission/15006001/1┃對敵人實驗體造成30,000傷害
-BattleMission/15006002/1┃使用Kiosk 15次
-BattleMission/15006003/1┃擊殺野狗 20次
-BattleMission/15006004/1┃製作傳說等級物品 4次
-BattleMission/15006005/1┃從傳說及以上等級補給箱中獲得物品 2次
-BattleMission/15006006/1┃進入前三名
-BattleMission/15006007/1┃武器熟練度達到18級以上
-BattleMission/15006008/1┃在旅館擊殺敵人實驗體 7次
-BattleMission/15006009/1┃獲得隕石 5次
-BattleMission/15006010/1┃製作熟練度達到10級以上
-BattleMission/15007001/1┃擊殺熊 3次
-BattleMission/15007002/1┃達成終結者(Terminate) 5次
-BattleMission/15007003/1┃武器熟練度達到18級以上
-BattleMission/15007004/1┃攝取食物/飲料 30次
-BattleMission/15007005/1┃進行一般/排位遊戲 15次
-BattleMission/15007006/1┃獲得500榮譽值
-BattleMission/15007007/1┃擊殺野豬 30次
-BattleMission/15007008/1┃擊殺敵人實驗體 4次
-BattleMission/15007009/1┃在加油站擊殺敵人實驗體 7次
-BattleMission/15007010/1┃進入前三名 3次
-BattleMission/15008001/1┃擊殺敵人實驗體 3次
-BattleMission/15008002/1┃進行一般/排位遊戲 5次
-BattleMission/15008003/1┃擊殺敵人實驗體 25次
-BattleMission/15008004/1┃從航空補給箱中獲得物品 5次
-BattleMission/15008005/1┃達成終結者(Terminate) 5次
-BattleMission/15008006/1┃擊殺雞 30次
-BattleMission/15008007/1┃使用傳送門 20次
-BattleMission/15008008/1┃對敵人實驗體造成35,000傷害
-BattleMission/15008009/1┃使用無人機配送 15次
-BattleMission/15008010/1┃擊殺敵人實驗體 10次
 특성┃潛能
 모든 특성┃所有潛能
 기본 슬롯 숨기기┃隱藏預設物品格
@@ -19574,6 +19546,61 @@ FirstLoading3┃Loading ...
 게임문화개선캠페인┃<color=#FF0000>永恆輪迴非常重視公平的遊戲價值。 \n發現惡意組隊將可能會受到帳戶制裁。</color>
 게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
 접속시간경과안내┃您已經進行實驗{0}小時。請適當休息。
+MasteryType/Glove/Desc┃雖然手套的攻擊距離有限，但可以實現連續且快速的攻擊。
+MasteryType/Tonfa/Desc┃雙拐是唯一能同時確保防禦力和攻擊力的武器。
+MasteryType/Hammer/Desc┃錘子雖然攻擊速度較慢，但可以通過強有力的攻擊來限制對方的動作。
+MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以靈活地應對各式各樣的對手。
+MasteryType/Whip/Desc┃鞭子會限制動作範圍，無論對使用者來說還是敵人來說，都是難對付的武器。
+MasteryType/HighAngleFire/Desc┃投擲武器具有強大的攻擊力。\n每種武器使用後，彈丸恢復速度有所不同，需要注意數量管理。
+MasteryType/DirectFire/Desc┃暗器的種類最多，是多才多藝的武器。 \n每種武器使用後，彈丸恢復的速度不同，需要注意數量管理。
+MasteryType/Bow/Desc┃弓是使用越熟練威力就越強的遠距離武器，\n在面對野生動物的時候尤其有利。
+MasteryType/CrossBow/Desc┃短弩高手可以一邊逼開接近的對手，一邊給予其單方面的傷害。
+MasteryType/Pistol/Desc┃手槍允許玩家頻繁地使用技能，特別適合靈活快速的玩法。
+MasteryType/AssaultRifle/Desc┃突擊步槍是以快速攻擊且具有持續攻擊性為特色的遠距離武器。
+MasteryType/SniperRifle/Desc┃狙擊槍具有最遠射程和強大攻擊力。\n因為射程比視野遠，所以選擇位置和確保視野清晰是非常重要的。
+MasteryType/Axe/Desc┃斧雖然慢但具有最強大的攻擊力。\n適合想要快速製作武器進行初期戰鬥的玩家。
+MasteryType/OneHandSword/Desc┃短劍是專門用於突襲的武器。\n在短時間交戰中，比其他武器更具殺傷力。
+MasteryType/TwoHandSword/Desc┃雙手劍是均衡的武器。\n越熟練越能發揮更大的殺傷力，但需注意，它在初期有些弱。
+MasteryType/Polearm/Desc┃長柄武器是兼具射程和殺傷力的近距離武器。 \n特別適合用於面對多數敵人時的情況。
+MasteryType/DualSword/Desc┃雙劍活用了二連擊的特色，不僅可以連續攻擊還很時髦。
+MasteryType/Spear/Desc┃槍是長兵器，在中距離攻擊中具有強大殺傷力。\n但是對處於近處的敵人來說比較弱，所以要適當把握距離。
+MasteryType/Nunchaku/Desc┃雙節棍是很難學會的武器，但熟練後，可以是變化萬千的危險武器。
+MasteryType/Rapier/Desc┃西洋劍的優點是在躲避敵人攻擊的同時還能發起進攻。
+MasteryType/Guitar/Desc┃吉他可以從遠距離發出聲波，這是一種多功能武器，\n隨著技能的發展及升級，每次演奏的方式和攻擊都會有所不同。
+MasteryType/Camera/Desc┃相機是一種沒有投射體的遠攻武器。 可以用來擋住目標的視線，也有利於頻繁交戰。
+MasteryType/Arcana/Desc┃聖器是一種具有 VF 能量的遠程武器。 可以不斷地使用技能來制服對手。
+MasteryType/VFArm/Desc┃VF機械臂是利用納米機器來控制VF的近戰武器。 裝備者可以通過調整VF流量，一次性造成嚴重的傷害。
+MasteryType/Glove/Stats┃裝備手套時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Tonfa/Stats┃裝備雙拐時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hammer/Stats┃裝備錘子時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Axe/Stats┃裝備斧時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bat/Stats┃裝備棍棒時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Whip/Stats┃裝備鞭子時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/OneHandSword/Stats┃裝備短劍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/TwoHandSword/Stats┃裝備雙手劍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DualSword/Stats┃裝備雙劍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Spear/Stats┃裝備槍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/HighAngleFire/Stats┃裝備投擲時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DirectFire/Stats┃裝備暗器時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bow/Stats┃裝備弓箭時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/CrossBow/Stats┃裝備短弩時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Pistol/Stats┃裝備手槍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/AssaultRifle/Stats┃裝備突擊步槍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/SniperRifle/Stats┃裝備狙擊槍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Nunchaku/Stats┃裝備雙節棍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Rapier/Stats┃裝備西洋劍時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Guitar/Stats┃裝備吉他時增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Camera/Stats┃裝備相機時增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Arcana/Stats┃裝備聖器時增加{1} {0}\n{3}{2}\n{5} {4}
+MasteryType/VFArm/Stats┃裝備VF機械臂時增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hunt/Stats┃增加 {1} {0}
+MasteryType/Craft/Stats┃增加 {1} {0}
+MasteryType/Search/Stats┃增加 {1} {0}
+MasteryType/Move/Stats┃增加 {1} {0}
+MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Meditation/Stats┃增加 {1} {0}
+MasteryType/Trap/Stats┃增加 {1} {0}
 Trait/Name/7900101┃攻擊力 I
 Trait/Name/7900102┃攻擊力 II
 Trait/Name/7900103┃攻擊力 III
@@ -20317,61 +20344,6 @@ Cobalt/부활남은시간┃按<color=#47D5FF>B鍵</color>，在合成器中強�
 장비의 부위를 선택하세요.┃請選擇裝備部位。
 코발트추천아이템툴팁┃適合實驗體能力值的物品。
 합성기 분쇄 불가 알림┃鈷協議模式中無法丟棄物品，可以使用合成器及銷毀裝置進行銷毀。
-MasteryType/Glove/Desc┃雖然手套的攻擊距離有限，但可以實現連續且快速的攻擊。
-MasteryType/Tonfa/Desc┃雙拐是唯一能同時確保防禦力和攻擊力的武器。
-MasteryType/Hammer/Desc┃錘子雖然攻擊速度較慢，但可以通過強有力的攻擊來限制對方的動作。
-MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以靈活地應對各式各樣的對手。
-MasteryType/Whip/Desc┃鞭子會限制動作範圍，無論對使用者來說還是敵人來說，都是難對付的武器。
-MasteryType/HighAngleFire/Desc┃投擲武器具有強大的攻擊力。\n每種武器使用後，彈丸恢復速度有所不同，需要注意數量管理。
-MasteryType/DirectFire/Desc┃暗器的種類最多，是多才多藝的武器。 \n每種武器使用後，彈丸恢復的速度不同，需要注意數量管理。
-MasteryType/Bow/Desc┃弓是使用越熟練威力就越強的遠距離武器，\n在面對野生動物的時候尤其有利。
-MasteryType/CrossBow/Desc┃短弩高手可以一邊逼開接近的對手，一邊給予其單方面的傷害。
-MasteryType/Pistol/Desc┃手槍允許玩家頻繁地使用技能，特別適合靈活快速的玩法。
-MasteryType/AssaultRifle/Desc┃突擊步槍是以快速攻擊且具有持續攻擊性為特色的遠距離武器。
-MasteryType/SniperRifle/Desc┃狙擊槍具有最遠射程和強大攻擊力。\n因為射程比視野遠，所以選擇位置和確保視野清晰是非常重要的。
-MasteryType/Axe/Desc┃斧雖然慢但具有最強大的攻擊力。\n適合想要快速製作武器進行初期戰鬥的玩家。
-MasteryType/OneHandSword/Desc┃短劍是專門用於突襲的武器。\n在短時間交戰中，比其他武器更具殺傷力。
-MasteryType/TwoHandSword/Desc┃雙手劍是均衡的武器。\n越熟練越能發揮更大的殺傷力，但需注意，它在初期有些弱。
-MasteryType/Polearm/Desc┃長柄武器是兼具射程和殺傷力的近距離武器。 \n特別適合用於面對多數敵人時的情況。
-MasteryType/DualSword/Desc┃雙劍活用了二連擊的特色，不僅可以連續攻擊還很時髦。
-MasteryType/Spear/Desc┃槍是長兵器，在中距離攻擊中具有強大殺傷力。\n但是對處於近處的敵人來說比較弱，所以要適當把握距離。
-MasteryType/Nunchaku/Desc┃雙節棍是很難學會的武器，但熟練後，可以是變化萬千的危險武器。
-MasteryType/Rapier/Desc┃西洋劍的優點是在躲避敵人攻擊的同時還能發起進攻。
-MasteryType/Guitar/Desc┃吉他可以從遠距離發出聲波，這是一種多功能武器，\n隨著技能的發展及升級，每次演奏的方式和攻擊都會有所不同。
-MasteryType/Camera/Desc┃相機是一種沒有投射體的遠攻武器。 可以用來擋住目標的視線，也有利於頻繁交戰。
-MasteryType/Arcana/Desc┃聖器是一種具有 VF 能量的遠程武器。 可以不斷地使用技能來制服對手。
-MasteryType/VFArm/Desc┃VF機械臂是利用納米機器來控制VF的近戰武器。 裝備者可以通過調整VF流量，一次性造成嚴重的傷害。
-MasteryType/Glove/Stats┃裝備手套時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Tonfa/Stats┃裝備雙拐時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hammer/Stats┃裝備錘子時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Axe/Stats┃裝備斧時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bat/Stats┃裝備棍棒時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Whip/Stats┃裝備鞭子時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/OneHandSword/Stats┃裝備短劍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/TwoHandSword/Stats┃裝備雙手劍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DualSword/Stats┃裝備雙劍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Spear/Stats┃裝備槍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/HighAngleFire/Stats┃裝備投擲時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DirectFire/Stats┃裝備暗器時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bow/Stats┃裝備弓箭時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/CrossBow/Stats┃裝備短弩時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Pistol/Stats┃裝備手槍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/AssaultRifle/Stats┃裝備突擊步槍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/SniperRifle/Stats┃裝備狙擊槍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Nunchaku/Stats┃裝備雙節棍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Rapier/Stats┃裝備西洋劍時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Guitar/Stats┃裝備吉他時增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Camera/Stats┃裝備相機時增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Arcana/Stats┃裝備聖器時增加{1} {0}\n{3}{2}\n{5} {4}
-MasteryType/VFArm/Stats┃裝備VF機械臂時增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hunt/Stats┃增加 {1} {0}
-MasteryType/Craft/Stats┃增加 {1} {0}
-MasteryType/Search/Stats┃增加 {1} {0}
-MasteryType/Move/Stats┃增加 {1} {0}
-MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Meditation/Stats┃增加 {1} {0}
-MasteryType/Trap/Stats┃增加 {1} {0}
 게임팁 링크┃移動連結
 gameTip_Title_10000_1┃路徑 / 製作指南
 gameTip_Desc_10000_1┃打開箱子卻不知道該撿什麼物品？\n注意有<color=#8FDBF8>黃色標識</color>的物品。這是必須要獲得的物品。\n \n不知道在當前區域內要獲得哪些物品？\n不要擔心！可以在<color=#8FDBF8>右側製作指南</color>中查看可獲得的物品。\n\n收集所需的材料製作強大的裝備！！
@@ -20399,8 +20371,11 @@ gameTip_Title_10060_1┃顯示情報
 gameTip_Desc_10060_1┃想要快速確認盧米亞島上的各種物件與野生動物情報時，請使用顯示情報[ALT]功能！\n\n使用<color=#8FDBF8>[快捷鍵F8]</color>來打開或關閉顯示情報，可在[遊戲設置]頁面設置情報顯示的選項。
 gameTip_Title_10070_1┃安全監控
 gameTip_Desc_10070_1┃開啟位於各個區域的安全監控，獲得最重要的視野資訊，掌握敵方的位置，確保戰略優勢！\n\n開啟安全監控時，所處區域內的CCTV也將一同開啟，並可獲得監視器周圍的視野，啟動未經隊友佔領的安全監控可以獲得少量榮譽值。\n\n反之，CCTV亮起紅燈並照向你時，說明也有人正在監視你喔！這時...需要快速逃跑！
-gameTip_Title_10080_1┃傳送門
-gameTip_Desc_10080_1┃可快速抵達的瞬.間.移.動！\n\n雖然外觀上看起來好像破舊的電話亭，但是盧米亞島的傳送門採用了最新技術，可以移動到盧米亞的任何地方，點擊<color=#8FDBF8>隊友的頭像</color>更可直接移動到隊友的所在地！\n\n※傳送門注意事項※\n瞬間移動到的場所可能會偶遇敵人，請小心！
+gameTip_Desc_10071_11┃傳送門將迎來重大的變化。\n第三天白天后，安全區域內可以使用新增的移動裝置VLS，而禁區內仍可使用傳送門。\n和傳送門不同，VLS是一種可以在一定半徑範圍內速降移動的裝置。
+gameTip_Title_10071_2┃傳送門
+gameTip_Desc_10071_2┃可快速抵達的瞬.間.移.動！\n\n雖然外觀上看起來好像破舊的電話亭，但是盧米亞島的傳送門採用了最新技術，可以移動到盧米亞的任何地方，點擊<color=#8FDBF8>隊友的頭像</color>更可直接移動到隊友的所在地！\n\n※傳送門注意事項※\n瞬間移動到的場所可能會偶遇敵人，請小心！
+gameTip_Title_10072_1┃跳台
+gameTip_Desc_10072_1┃跳台是一種可以實現快速移動、輕鬆跨越遠距離的裝置！\n它在與敵人對峙中至關重要，因此要戰略性地使用跳台！
 gameTip_Title_10090_1┃快速交流
 gameTip_Desc_10090_1┃來試試ALT + 長按滑鼠左鍵！\n\n即使沒時間聊天，可以通過PING傳達多種訊息。試試通過感嘆號向隊友傳達“去那邊很危險！”的訊息吧！\n\n需要更進一步的交流時，使用CTRL+拖拽滑鼠左鍵可以進行<color=#8FDBF8>快速交流</color>，CTRL+點擊滑鼠右鍵可以設定<color=#8FDBF8>隊伍目標</color>。
 gameTip_Title_10100_1┃爆炸計時器
@@ -20517,12 +20492,12 @@ gameTip_Title_10404_5┃環境物件 - 吹沙蘑菇
 gameTip_Desc_10404_5┃攻擊吹沙蘑菇時，將在一定範圍內生成吹沙煙霧，煙霧可以提供隱身效果。
 gameTip_Title_10404_6┃環境物體 - 炸彈果實
 gameTip_Desc_10404_6┃沿攻擊方向發射對扇形範圍內造成傷害的果實。\n果實造成的傷害不會影響盟友，根據體力上限造成一定比例的傷害。\n果實對野生動物造成額外傷害。
-gameTip_Title_10501_1┃便攜工具功能介紹
-gameTip_Desc_10501_1┃便攜工具是一種消耗品，可以有效幫助實驗體進行實驗。\n可以通過變異野生動物、航空補給箱等途徑獲得各種便攜工具。\n每人僅能攜帶一種便攜工具。
+gameTip_Title_10501_1┃隨身工具功能介紹
+gameTip_Desc_10501_1┃隨身工具是一種消耗品，可以有效幫助實驗體進行實驗。\n可以通過變異野生動物、航空補給箱等途徑獲得各種隨身工具。\n每人僅能攜帶一種隨身工具。
 gameTip_Title_10502_1┃Kiosk呼叫機
 gameTip_Desc_10502_1┃您是否有過因Kiosk所在區域被佔領而無法消費榮譽值的經歷？\n現在，使用通過變異野生動物獲得的「Kiosk呼叫機」，您可以在任何位置呼叫便攜Kiosk購買榮譽值物品。
 gameTip_Title_10503_1┃信號槍
-gameTip_Desc_10503_1┃信號槍是實現「危機即是轉機」這句名言的工具。\n打開英雄補給箱時，根據機率有機會獲得信號槍B和信號槍R這兩種便攜工具。試試化危機為轉機吧！
+gameTip_Desc_10503_1┃信號槍是實現「危機即是轉機」這句名言的工具。\n打開英雄補給箱時，根據機率有機會獲得信號槍B和信號槍R這兩種隨身工具。試試化危機為轉機吧！
 gameTip_Title_10503_2┃信號槍B
 gameTip_Desc_10503_2┃使用信號槍B時，可以在廣範圍內選擇一個特定地點，呼叫神話補給箱。\n雖然所有實驗體都會知道呼叫的位置，但可以藉此機會化危機為轉機，獲得強大的神話物品。
 gameTip_Title_10503_3┃信號槍R
@@ -20547,6 +20522,16 @@ gameTip_Title_10525_1┃魔方 - 生命
 gameTip_Desc_10525_1┃獲得綠色生命魔方的實驗體 - 在體力值低於一定值的情況下，承受傷害時將在短時間根據體力上限比例恢復體力。
 gameTip_Title_10526_1┃魔方 - 風
 gameTip_Desc_10526_1┃獲得藍色風魔方的實驗體 - 短時間內獲得爆發性的移動速度加成效果，隨後在增益效果持續期間，大幅增加移動速度和非戰鬥狀態下的移動速度、同時獲得攻擊速度。戰鬥時間越長，移動速度增加得越多。
+gameTip_Title_10621_1┃秘密研究室
+gameTip_Desc_10621_1┃秘密研究室是盧米亞島上的一個隱藏地點，玩家在這裡可以免受其他隊伍的干擾，獲得特別獎勵。 \n只有通過「密鑰卡」召喚隨身傳送門才能進入，並且可通過研究室內設置的傳送門返回盧米亞島。
+gameTip_Title_10622_1┃密鑰卡
+gameTip_Desc_10622_1┃「密鑰卡」是一種可以用來進入秘密研究室的新隨身工具，可以通過烏鴉獲得此物品。 \n有一定機率出現體型較大的烏鴉，烏鴉掉落的密鑰卡呈藍色，帶有一些特殊效果。
+gameTip_Title_10623_1┃隨身傳送門
+gameTip_Desc_10623_1┃使用密鑰卡啟動隨身傳送門後，便可進入秘密研究室。\n隨身傳送門僅在遊戲規定的時間內可用，並且每局只能進入一個秘密研究室。\n當所有研究室已滿、玩家已經訪問過一次研究室或超過入場時間時，傳送門將變為紅色，無法再使用。
+gameTip_Title_10624_1┃秘密研究室介紹
+gameTip_Desc_10624_1┃到達秘密研究室後，啟動門控台獲得榮譽值並開啟大門。\n玩家可以在其中逐步探索房間、獵殺野生動物、開啟箱子，全面探索研究室。在畫面上方顯示的時間全部耗盡後，研究室將被標記為禁區。請務必在有限的時間內使用傳送門離開研究室。
+gameTip_Title_10625_1┃秘密研究室種類
+gameTip_Desc_10625_1┃秘密研究室有多個種類，探索方式和獎勵各不相同。也許其中會有一些特別的研究室等待玩家去發現。
 gameTip_Title_10050_3┃箱子組顯示
 gameTip_Desc_10050_3┃啟動此功能後，各個區域距離起始點最近的箱子標識將顯示為藍色。\n當已開啟全部箱子組並獲得物品時，可以獲得該區域所需的目標物品。\n這對決定初期移動路線來說，是一個十分重要的訊息，可以先從帶有<color=#8FDBF8>箱子組標識</color>的箱子開始進行搜索！
 gameTip_category_CraftItems┃製作物品
@@ -20557,6 +20542,7 @@ gameTip_category_EnvironmentVariable┃環境變量
 gameTip_category_Gadget┃便攜工具
 gameTip_category_GuideRobot┃機器人嚮導 - LUMI
 gameTip_category_BuffCube┃魔方
+gameTip_category_SecretLab┃秘密研究室
 gameTip_category_VictoryAndDefeat┃勝利和敗北
 gameTip_category_UseCredits┃榮譽值的使用
 gameTip_category_BeginnerTips┃為新手準備的實用方法
@@ -20584,150 +20570,6 @@ ItemAcquireInfo/Name/33033041┃購買神奇好運★組合包獲得
 ItemAcquireInfo/Name/33033042┃購買好運★組合包獲得
 ItemAcquireInfo/Name/33033043┃購買白色代幣組合包獲得
 ItemAcquireInfo/Name/33033051┃通過交換所交換白色代幣獲得
-나쟈┃娜佳博士
-오퍼레이터 프리셋┃引導員設置
-Option/OperatorPreset/Beginner┃新手玩家
-Option/OperatorPreset/Master┃熟練玩家
-Option/OperatorPreset/Custom┃自訂設置
-오퍼레이터┃引導員
-오퍼레이터 세부 설정┃引導員詳細設置
-오퍼레이터 기능 사용┃使用引導員功能
-재료 탐색┃搜索材料
-OperatorSetting/ResourceSearch┃搜索路徑中登記的材料並移動區域。
-루트 완성┃完成路徑
-OperatorSetting/RouteDone┃完成製作路徑中所有物品後，嘗試了解營火的用法與地點。
-장비 제작┃製作裝備
-OperatorSetting/EquipmentCraft┃搜索路徑中剩餘的材料並移動區域。
-채집/사냥┃採集/狩獵
-OperatorSetting/CollectAndHunt┃收集特殊材料，並製作路徑中登記的物品。
-자동 부활┃自動復活
-OperatorSetting/AutoResurrection┃在可以復活的時間前死亡時，嘗試如何再次參與實驗。
-정예 몬스터┃終極野怪
-OperatorSetting/BossMonster┃關於阿爾法/奧米加/維克萊恩博士的引導。
-특수 채집 재료 생성┃生成特殊採集材料
-OperatorSetting/CreateNoticeSpecialCollectible┃關於生命樹枝與隕石的引導。
-상위 등급 장비 제작┃製作上位裝備
-OperatorSetting/GetSpecialCollectible┃獲得特殊材料時，了解如何製作推薦裝備的引導。
-전장┃戰場
-OperatorSetting/BattleZone┃戰場資訊的引導。
-탈출┃脫逃
-OperatorSetting/Escape┃除自身外的隊友全滅時，如何進行逃生的引導
-전송 콘솔┃Kiosk
-OperatorSetting/TransferConsole┃學習通過Kiosk購買物品。
-카트리지 업그레이드┃強化戰術技能
-OperatorSetting/TacticalSkillUpgrade┃學習強化戰術技能。
-아군 크레딧 부활┃付費復活隊友
-OperatorSetting/TeamPaidResurrection┃學習在Kiosk支付榮譽值復活隊友。
-몬스터 사냥┃狩獵野生動物
-OperatorSetting/HuntMonster┃學習通過狩獵野生動物獲得武器熟練度及榮譽值。
-최후의 2팀 생존┃最後2隊生存
-OperatorSetting/TheLastTwoTeams┃學習生存至最後2隊。
-유료 부활 대상자┃付費復活對象
-OperatorSetting/PaidResurrectionTarget┃學習可以付費復活隊友時。
-목표 아이템 변경┃更改目標物品
-OperatorSetting/AutoReplaceLateGameItems┃已更改目標物品的提示。
-루미아 섬 안내 로봇┃機器人嚮導 : LUMI - 戰鬥狀態
-OperatorSetting/GuidedRobotBattleModeNotice┃盧米亞島機器人嚮導LUMI對進入戰鬥狀態的引導
-임시, 최종 안전지대 안내┃臨時安全區通知
-OperatorSetting/TemporarySafeZoneNotice┃關於臨時安全區階段的提示
-빈사 스킬┃瀕死技能
-OperatorSetting/DyingConditionGuide┃對於自身處於瀕死狀態下可以使用的技能指南
-OperatorSetting/VerticalLauncher┃關於垂直發射裝置的提示
-루트 목표 추가 불가능 알림┃無法再登記目標物品了。
-인벤 포화 시 아이템 제작 안내┃有可進行製作的物品。
-오퍼레이터 프리셋 변경 안내┃引導員設置變更提醒
-목표 아이템 등록 불가 알림┃無法再登記目標物品了。
-오퍼레이터 시스템 정보 안내┃引導員 : 在遊戲時提供協助。
-프리셋 변경 정보 안내┃可以在引導員設置中選擇顯示的指南。
-프리셋 변경 버튼┃更改預設
-InGameGuide/Nadja/Group/Name/10010000┃搜索材料物品
-InGameGuide/Nadja/Group/Desc/10010000┃在<color=yellow>{0}</color>探索所需材料。
-InGameGuide/Nadja/Group/Name/10011000┃區域移動
-InGameGuide/Nadja/Group/Desc/10011000┃下一個目標區域是<color=yellow>{0}</color>。
-InGameGuide/Nadja/Group/Name/10020000┃營火
-InGameGuide/Nadja/Group/Desc/10020000┃前往營火製作食物。
-InGameGuide/Nadja/Group/Name/10022000┃營火
-InGameGuide/Nadja/Group/Desc/10022000┃前往營火製作食物。\n附近的營火就在這裡。
-InGameGuide/Nadja/Group/Name/10023000┃營火
-InGameGuide/Nadja/Group/Desc/10023000┃前往營火製作食物。距離最近的營火位於<color=yellow>{0}</color>。
-InGameGuide/Nadja/Group/Name/10024000┃營火 - 狩獵野生動物
-InGameGuide/Nadja/Group/Desc/10024000┃將狩獵得的肉拿到營火處進行烤製。
-InGameGuide/Nadja/Group/Name/10030000┃和隊友集合
-InGameGuide/Nadja/Group/Desc/10030000┃需要的都收集好了，是時候和隊友集合了。
-InGameGuide/Nadja/Group/Name/10040000┃呼叫無人機配送
-InGameGuide/Nadja/Group/Desc/10040000┃還剩一些目標材料，\n要試一下無人機配送嗎？
-InGameGuide/Nadja/Group/Name/10041000┃搜索材料 - 區域移動
-InGameGuide/Nadja/Group/Desc/10041000┃可在<color=yellow>{0}</color>搜索剩餘材料。
-InGameGuide/Nadja/Group/Name/10042000┃探索區域
-InGameGuide/Nadja/Group/Desc/10042000┃搜索目前區域剩餘的材料！
-InGameGuide/Nadja/Group/Name/10060000┃需要獲得採集/狩獵材料
-InGameGuide/Nadja/Group/Desc/10060000┃有合適採集物時可完成製作的物品。
-InGameGuide/Nadja/Group/Name/10070000┃自動復活
-InGameGuide/Nadja/Group/Desc/10070000┃經過復活等待時間後可以選擇復活地點。
-InGameGuide/Nadja/Group/Name/10080000┃阿爾法即將登場
-InGameGuide/Nadja/Group/Desc/10080000┃稍後，阿爾法將在<color=yellow>{0}</color>區域出現。
-InGameGuide/Nadja/Group/Name/10083000┃阿爾法登場
-InGameGuide/Nadja/Group/Desc/10083000┃阿爾法在<color=yellow>{0}</color>出現了。\n擊殺阿爾法可以獲得獎勵。
-InGameGuide/Nadja/Group/Name/10090000┃隕石即將墜落
-InGameGuide/Nadja/Group/Desc/10090000┃稍後，隕石即將墜落。\n使用隕石可以製作強大的裝備。
-InGameGuide/Nadja/Group/Name/10093000┃隕石墜落
-InGameGuide/Nadja/Group/Desc/10093000┃隕石墜落在<color=yellow>{0}</color>區域。\n快去看看吧！
-InGameGuide/Nadja/Group/Name/10100000┃即將生成生命樹枝
-InGameGuide/Nadja/Group/Desc/10100000┃稍後，即將生成生命樹枝。\n使用這種特殊材料可以製作強大的裝備。
-InGameGuide/Nadja/Group/Name/10103000┃生成生命樹枝
-InGameGuide/Nadja/Group/Desc/10103000┃<color=yellow>{0}</color>生成了生命樹枝。\n快去看看吧！
-InGameGuide/Nadja/Group/Name/10110000┃製作上位裝備
-InGameGuide/Nadja/Group/Desc/10110000┃獲得了特殊材料，\n要試一下製作這個嗎？\n點擊左鍵就可以登記目標物品了！
-InGameGuide/Nadja/Group/Name/10120000┃戰場
-InGameGuide/Nadja/Group/Desc/10120000┃即將啟動<color=yellow>{0}</color>戰場。\n取得戰場最終勝利時可以獲得獎勵。
-InGameGuide/Nadja/Group/Name/10130000┃奧米加即將出現
-InGameGuide/Nadja/Group/Desc/10130000┃稍後，奧米加將在<color=yellow>{0}</color>區域出現。
-InGameGuide/Nadja/Group/Name/10133000┃奧米加出現
-InGameGuide/Nadja/Group/Desc/10133000┃奧米加在<color=yellow>{0}</color>出現了。\n擊殺奧米加可以獲得獎勵。
-InGameGuide/Nadja/Group/Name/10140000┃維克萊恩博士即將出現
-InGameGuide/Nadja/Group/Desc/10140000┃稍後維克萊恩博士即將出現。\n小心博士的劇毒！
-InGameGuide/Nadja/Group/Name/10143000┃維克萊恩博士出現
-InGameGuide/Nadja/Group/Desc/10143000┃維克萊恩博士在<color=yellow>{0}</color>出現了。\n擊殺博士可以獲得物品。
-InGameGuide/Nadja/Group/Name/10150000┃脫逃
-InGameGuide/Nadja/Group/Desc/10150000┃需要<color=yellow>逃生手環</color>才能前往逃生區。\n在Kiosk購買逃生手環後使用傳送門進行移動！
-InGameGuide/Nadja/Group/Name/10160000┃Kiosk
-InGameGuide/Nadja/Group/Desc/10160000┃在Kiosk使用榮譽值可以購買多種物品。
-InGameGuide/Nadja/Group/Name/10170000┃升級戰術技能
-InGameGuide/Nadja/Group/Desc/10170000┃在V-Pad({0})升級戰術技能。
-InGameGuide/Nadja/Group/Name/10180000┃付費復活隊友
-InGameGuide/Nadja/Group/Desc/10180000┃使用Kiosk復活已死亡的隊友。\n打開地圖({0})查看Kiosk的位置。
-InGameGuide/Nadja/Group/Name/10190000┃狩獵野生動物
-InGameGuide/Nadja/Group/Desc/10190000┃試著狩獵區域內的野生動物吧。\n擊殺野生動物可以獲得<color=yellow>武器熟練度</color>及<color=yellow>榮譽值</color>。
-InGameGuide/Nadja/Group/Name/10200000┃最後2隊生存
-InGameGuide/Nadja/Group/Desc/10200000┃現在只剩下兩支隊伍了。\n通過({0})可以查看敵方隊伍現況。
-InGameGuide/Nadja/Group/Name/10210000┃付費復活對象
-InGameGuide/Nadja/Group/Desc/10210000┃在Kiosk使用榮譽值復活隊友，使隊友繼續參與實驗。
-InGameGuide/Nadja/Group/Name/10230000┃更改目標裝備
-InGameGuide/Nadja/Group/Desc/10230000┃接下來要介紹一些目標裝備。\n右鍵點擊目標裝備就可以看到製作所需的材料了！
-InGameGuide/Nadja/Group/Name/10240000┃瀕死技能
-InGameGuide/Nadja/Group/Desc/10240000┃使用瀕死技能處理當前狀況吧！
-InGameGuide/Nadja/Group/Name/10250000┃引導機器人 : LUMI - 戰鬥狀態
-InGameGuide/Nadja/Group/Desc/10250000┃處於戰鬥狀態的LUMI位於<color=yellow>{0}</color>區域。\n攻擊盧米可以獲得榮譽值。
-InGameGuide/Nadja/Group/Name/10260000┃臨時安全區 - 預選地
-InGameGuide/Nadja/Group/Desc/10260000┃將於<color=yellow>{0}</color>啟動臨時安全區預選地。\n快前往該區域吧。
-InGameGuide/Nadja/Group/Name/10261000┃臨時安全區 - 預選地
-InGameGuide/Nadja/Group/Desc/10261000┃稍後將啟動臨時安全區。\n開始準備戰鬥吧。
-InGameGuide/Nadja/Group/Name/10262000┃臨時安全區 - 啟動
-InGameGuide/Nadja/Group/Desc/10262000┃已啟動臨時安全區。\n決出最終勝者後才能離開該區域。
-InGameGuide/Nadja/Group/Name/10263000┃最終安全區 - 預選地
-InGameGuide/Nadja/Group/Desc/10263000┃將於<color=yellow>{0}</color>啟動最終安全區。\n快前去參與最後的戰鬥吧！
-InGameGuide/Nadja/Group/Name/10121000┃戰場預選地
-InGameGuide/Nadja/Group/Desc/10121000┃稍後即將開啟戰場。\n參加戰場的實驗體越多，獲得的獎勵就越豐富。
-InGameGuide/Nadja/Group/Name/10122000┃啟動戰場
-InGameGuide/Nadja/Group/Desc/10122000┃戰場已啟動。\n在分出勝負前，沒人可以離開。
-InGameGuide/Nadja/Group/Name/10123000┃領取戰場獎勵
-InGameGuide/Nadja/Group/Desc/10123000┃恭喜贏得了戰場的勝利。\n記得領取戰場獎勵！
-오퍼레이터 신규유저 보상 제목┃致盧米亞島的倖存者們。
-오퍼레이터 신규유저 보상 내용┃要適應盧米亞島真的不太容易，但已經有很大的進步了！\n很遺憾..現在不能叫你新手了！但我很高興。\n謝謝你！希望這是一段愉快的體驗。\n不知道該稱之為獎勵還是報酬的禮物，希望你可以收下！
-오퍼레이터 기존유저 보상 제목┃給耐心聆聽的倖存者
-오퍼레이터 기존유저 보상 내용┃雖然都是已經知道的東西還又耐心地聽了一遍。\n我很好奇這是你的個人特質還是你只是很有耐心呢?\n總之，謝謝你的認真。 我很感動。\n不知道該稱之為獎勵還是報酬的禮物，希望你可以收下！
-신규유저 오퍼레이터 비활성화 안내 내용┃現在好像已經比較熟悉實驗了？\n很好！那我就不多說廢話了！\n以後也請多多加油，繼續努力吧！
-기존유저 오퍼레이터 비활성화 안내 내용┃現在好像已經熟悉實驗了？\n很好！那我就不多說廢話了！\n請繼續保持吧！
 ServerError/1000┃發生未知錯誤，請重新開始遊戲。
 ServerError/1001┃發生未知錯誤，請重新開始遊戲。
 ServerError/1002┃發生未知錯誤，請重新開始遊戲。
@@ -20848,6 +20690,7 @@ ServerError/7503┃賽季包商品僅限購買一次。(7503)
 ServerError/7504┃賽季包的賽季訊息無效。(7504)
 ServerError/7601┃此物品不存在。
 ServerError/7602┃產品訊息不正確。
+ServerError/7606┃由於未提供開箱獎勵，取消開箱。(7606)
 ServerError/9080┃人物訊息沒有找到。
 ServerError/9081┃造型訊息沒有找到。
 ServerError/9082┃您已經擁有這實驗體。
@@ -20909,6 +20752,150 @@ ServerError/9235┃無法取消配對 (9235)
 ServerError/9239┃活動發生變化，請重新確認活動內容。
 ServerError/99999┃正在連接不相容的版本。
 ServerError/HttpException┃無法連接伺服器。
+나쟈┃娜佳博士
+오퍼레이터 프리셋┃引導員設置
+Option/OperatorPreset/Beginner┃新手玩家
+Option/OperatorPreset/Master┃熟練玩家
+Option/OperatorPreset/Custom┃自訂設置
+오퍼레이터┃引導員
+오퍼레이터 세부 설정┃引導員詳細設置
+오퍼레이터 기능 사용┃使用引導員功能
+재료 탐색┃搜索材料
+OperatorSetting/ResourceSearch┃搜索路徑中登記的材料並移動區域。
+루트 완성┃完成路徑
+OperatorSetting/RouteDone┃完成製作路徑中所有物品後，嘗試了解營火的用法與地點。
+장비 제작┃製作裝備
+OperatorSetting/EquipmentCraft┃搜索路徑中剩餘的材料並移動區域。
+채집/사냥┃採集/狩獵
+OperatorSetting/CollectAndHunt┃收集特殊材料，並製作路徑中登記的物品。
+자동 부활┃自動復活
+OperatorSetting/AutoResurrection┃在可以復活的時間前死亡時，嘗試如何再次參與實驗。
+정예 몬스터┃終極野怪
+OperatorSetting/BossMonster┃關於阿爾法/奧米加/維克萊恩博士的引導。
+특수 채집 재료 생성┃生成特殊採集材料
+OperatorSetting/CreateNoticeSpecialCollectible┃關於生命樹枝與隕石的引導。
+상위 등급 장비 제작┃製作上位裝備
+OperatorSetting/GetSpecialCollectible┃獲得特殊材料時，了解如何製作推薦裝備的引導。
+전장┃戰場
+OperatorSetting/BattleZone┃戰場資訊的引導。
+탈출┃脫逃
+OperatorSetting/Escape┃除自身外的隊友全滅時，如何進行逃生的引導
+전송 콘솔┃Kiosk
+OperatorSetting/TransferConsole┃學習通過Kiosk購買物品。
+카트리지 업그레이드┃強化戰術技能
+OperatorSetting/TacticalSkillUpgrade┃學習強化戰術技能。
+아군 크레딧 부활┃付費復活隊友
+OperatorSetting/TeamPaidResurrection┃學習在Kiosk支付榮譽值復活隊友。
+몬스터 사냥┃狩獵野生動物
+OperatorSetting/HuntMonster┃學習通過狩獵野生動物獲得武器熟練度及榮譽值。
+최후의 2팀 생존┃最後2隊生存
+OperatorSetting/TheLastTwoTeams┃學習生存至最後2隊。
+유료 부활 대상자┃付費復活對象
+OperatorSetting/PaidResurrectionTarget┃學習可以付費復活隊友時。
+목표 아이템 변경┃更改目標物品
+OperatorSetting/AutoReplaceLateGameItems┃已更改目標物品的提示。
+루미아 섬 안내 로봇┃機器人嚮導 : LUMI - 戰鬥狀態
+OperatorSetting/GuidedRobotBattleModeNotice┃盧米亞島機器人嚮導LUMI對進入戰鬥狀態的引導
+임시, 최종 안전지대 안내┃臨時安全區通知
+OperatorSetting/TemporarySafeZoneNotice┃關於臨時安全區階段的提示
+빈사 스킬┃瀕死技能
+OperatorSetting/DyingConditionGuide┃對於自身處於瀕死狀態下可以使用的技能指南
+루트 목표 추가 불가능 알림┃無法再登記目標物品了。
+인벤 포화 시 아이템 제작 안내┃有可進行製作的物品。
+오퍼레이터 프리셋 변경 안내┃引導員設置變更提醒
+목표 아이템 등록 불가 알림┃無法再登記目標物品了。
+오퍼레이터 시스템 정보 안내┃引導員 : 在遊戲時提供協助。
+프리셋 변경 정보 안내┃可以在引導員設置中選擇顯示的指南。
+프리셋 변경 버튼┃更改預設
+InGameGuide/Nadja/Group/Name/10010000┃搜索材料物品
+InGameGuide/Nadja/Group/Desc/10010000┃在<color=yellow>{0}</color>探索所需材料。
+InGameGuide/Nadja/Group/Name/10011000┃區域移動
+InGameGuide/Nadja/Group/Desc/10011000┃下一個目標區域是<color=yellow>{0}</color>。
+InGameGuide/Nadja/Group/Name/10020000┃營火
+InGameGuide/Nadja/Group/Desc/10020000┃前往營火製作食物。
+InGameGuide/Nadja/Group/Name/10022000┃營火
+InGameGuide/Nadja/Group/Desc/10022000┃前往營火製作食物。\n附近的營火就在這裡。
+InGameGuide/Nadja/Group/Name/10023000┃營火
+InGameGuide/Nadja/Group/Desc/10023000┃前往營火製作食物。距離最近的營火位於<color=yellow>{0}</color>。
+InGameGuide/Nadja/Group/Name/10024000┃營火 - 狩獵野生動物
+InGameGuide/Nadja/Group/Desc/10024000┃將狩獵得的肉拿到營火處進行烤製。
+InGameGuide/Nadja/Group/Name/10030000┃和隊友集合
+InGameGuide/Nadja/Group/Desc/10030000┃需要的都收集好了，是時候和隊友集合了。
+InGameGuide/Nadja/Group/Name/10040000┃呼叫無人機配送
+InGameGuide/Nadja/Group/Desc/10040000┃還剩一些目標材料，\n要試一下無人機配送嗎？
+InGameGuide/Nadja/Group/Name/10041000┃搜索材料 - 區域移動
+InGameGuide/Nadja/Group/Desc/10041000┃可在<color=yellow>{0}</color>搜索剩餘材料。
+InGameGuide/Nadja/Group/Name/10042000┃探索區域
+InGameGuide/Nadja/Group/Desc/10042000┃搜索目前區域剩餘的材料！
+InGameGuide/Nadja/Group/Name/10060000┃需要獲得採集/狩獵材料
+InGameGuide/Nadja/Group/Desc/10060000┃有合適採集物時可完成製作的物品。
+InGameGuide/Nadja/Group/Name/10070000┃自動復活
+InGameGuide/Nadja/Group/Desc/10070000┃經過復活等待時間後可以選擇復活地點。
+InGameGuide/Nadja/Group/Name/10080000┃阿爾法即將登場
+InGameGuide/Nadja/Group/Desc/10080000┃稍後，阿爾法將在<color=yellow>{0}</color>區域出現。
+InGameGuide/Nadja/Group/Name/10083000┃阿爾法登場
+InGameGuide/Nadja/Group/Desc/10083000┃阿爾法在<color=yellow>{0}</color>出現了。\n擊殺阿爾法可以獲得獎勵。
+InGameGuide/Nadja/Group/Name/10090000┃隕石即將墜落
+InGameGuide/Nadja/Group/Desc/10090000┃稍後，隕石即將墜落。\n使用隕石可以製作強大的裝備。
+InGameGuide/Nadja/Group/Name/10093000┃隕石墜落
+InGameGuide/Nadja/Group/Desc/10093000┃隕石墜落在<color=yellow>{0}</color>區域。\n快去看看吧！
+InGameGuide/Nadja/Group/Name/10100000┃即將生成生命樹枝
+InGameGuide/Nadja/Group/Desc/10100000┃稍後，即將生成生命樹枝。\n使用這種特殊材料可以製作強大的裝備。
+InGameGuide/Nadja/Group/Name/10103000┃生成生命樹枝
+InGameGuide/Nadja/Group/Desc/10103000┃<color=yellow>{0}</color>生成了生命樹枝。\n快去看看吧！
+InGameGuide/Nadja/Group/Name/10110000┃製作上位裝備
+InGameGuide/Nadja/Group/Desc/10110000┃獲得了特殊材料，\n要試一下製作這個嗎？\n點擊左鍵就可以登記目標物品了！
+InGameGuide/Nadja/Group/Name/10120000┃戰場
+InGameGuide/Nadja/Group/Desc/10120000┃即將啟動<color=yellow>{0}</color>戰場。\n取得戰場最終勝利時可以獲得獎勵。
+InGameGuide/Nadja/Group/Name/10130000┃奧米加即將出現
+InGameGuide/Nadja/Group/Desc/10130000┃稍後，奧米加將在<color=yellow>{0}</color>區域出現。
+InGameGuide/Nadja/Group/Name/10133000┃奧米加出現
+InGameGuide/Nadja/Group/Desc/10133000┃奧米加在<color=yellow>{0}</color>出現了。\n擊殺奧米加可以獲得獎勵。
+InGameGuide/Nadja/Group/Name/10140000┃維克萊恩博士即將出現
+InGameGuide/Nadja/Group/Desc/10140000┃稍後維克萊恩博士即將出現。\n小心博士的劇毒！
+InGameGuide/Nadja/Group/Name/10143000┃維克萊恩博士出現
+InGameGuide/Nadja/Group/Desc/10143000┃維克萊恩博士在<color=yellow>{0}</color>出現了。\n擊殺博士可以獲得物品。
+InGameGuide/Nadja/Group/Name/10150000┃脫逃
+InGameGuide/Nadja/Group/Desc/10150000┃需要<color=yellow>逃生手環</color>才能前往逃生區。\n在Kiosk購買逃生手環後使用傳送門進行移動！
+InGameGuide/Nadja/Group/Name/10160000┃Kiosk
+InGameGuide/Nadja/Group/Desc/10160000┃在Kiosk使用榮譽值可以購買多種物品。
+InGameGuide/Nadja/Group/Name/10170000┃升級戰術技能
+InGameGuide/Nadja/Group/Desc/10170000┃在V-Pad({0})升級戰術技能。
+InGameGuide/Nadja/Group/Name/10180000┃付費復活隊友
+InGameGuide/Nadja/Group/Desc/10180000┃使用Kiosk復活已死亡的隊友。\n打開地圖({0})查看Kiosk的位置。
+InGameGuide/Nadja/Group/Name/10190000┃狩獵野生動物
+InGameGuide/Nadja/Group/Desc/10190000┃試著狩獵區域內的野生動物吧。\n擊殺野生動物可以獲得<color=yellow>武器熟練度</color>及<color=yellow>榮譽值</color>。
+InGameGuide/Nadja/Group/Name/10200000┃最後2隊生存
+InGameGuide/Nadja/Group/Desc/10200000┃現在只剩下兩支隊伍了。\n通過({0})可以查看敵方隊伍現況。
+InGameGuide/Nadja/Group/Name/10210000┃付費復活對象
+InGameGuide/Nadja/Group/Desc/10210000┃在Kiosk使用榮譽值復活隊友，使隊友繼續參與實驗。
+InGameGuide/Nadja/Group/Name/10230000┃更改目標裝備
+InGameGuide/Nadja/Group/Desc/10230000┃接下來要介紹一些目標裝備。\n右鍵點擊目標裝備就可以看到製作所需的材料了！
+InGameGuide/Nadja/Group/Name/10240000┃瀕死技能
+InGameGuide/Nadja/Group/Desc/10240000┃使用瀕死技能處理當前狀況吧！
+InGameGuide/Nadja/Group/Name/10250000┃引導機器人 : LUMI - 戰鬥狀態
+InGameGuide/Nadja/Group/Desc/10250000┃處於戰鬥狀態的LUMI位於<color=yellow>{0}</color>區域。\n攻擊盧米可以獲得榮譽值。
+InGameGuide/Nadja/Group/Name/10260000┃臨時安全區 - 預選地
+InGameGuide/Nadja/Group/Desc/10260000┃將於<color=yellow>{0}</color>啟動臨時安全區預選地。\n快前往該區域吧。
+InGameGuide/Nadja/Group/Name/10261000┃臨時安全區 - 預選地
+InGameGuide/Nadja/Group/Desc/10261000┃稍後將啟動臨時安全區。\n開始準備戰鬥吧。
+InGameGuide/Nadja/Group/Name/10262000┃臨時安全區 - 啟動
+InGameGuide/Nadja/Group/Desc/10262000┃已啟動臨時安全區。\n決出最終勝者後才能離開該區域。
+InGameGuide/Nadja/Group/Name/10263000┃最終安全區 - 預選地
+InGameGuide/Nadja/Group/Desc/10263000┃將於<color=yellow>{0}</color>啟動最終安全區。\n快前去參與最後的戰鬥吧！
+InGameGuide/Nadja/Group/Desc/10272100┃現在可以離開研究室了。\n再確認下有沒有遺落的物品。
+InGameGuide/Nadja/Group/Name/10121000┃戰場預選地
+InGameGuide/Nadja/Group/Desc/10121000┃稍後即將開啟戰場。\n參加戰場的實驗體越多，獲得的獎勵就越豐富。
+InGameGuide/Nadja/Group/Name/10122000┃啟動戰場
+InGameGuide/Nadja/Group/Desc/10122000┃戰場已啟動。\n在分出勝負前，沒人可以離開。
+InGameGuide/Nadja/Group/Name/10123000┃領取戰場獎勵
+InGameGuide/Nadja/Group/Desc/10123000┃恭喜贏得了戰場的勝利。\n記得領取戰場獎勵！
+오퍼레이터 신규유저 보상 제목┃致盧米亞島的倖存者們。
+오퍼레이터 신규유저 보상 내용┃要適應盧米亞島真的不太容易，但已經有很大的進步了！\n很遺憾..現在不能叫你新手了！但我很高興。\n謝謝你！希望這是一段愉快的體驗。\n不知道該稱之為獎勵還是報酬的禮物，希望你可以收下！
+오퍼레이터 기존유저 보상 제목┃給耐心聆聽的倖存者
+오퍼레이터 기존유저 보상 내용┃雖然都是已經知道的東西還又耐心地聽了一遍。\n我很好奇這是你的個人特質還是你只是很有耐心呢?\n總之，謝謝你的認真。 我很感動。\n不知道該稱之為獎勵還是報酬的禮物，希望你可以收下！
+신규유저 오퍼레이터 비활성화 안내 내용┃現在好像已經比較熟悉實驗了？\n很好！那我就不多說廢話了！\n以後也請多多加油，繼續努力吧！
+기존유저 오퍼레이터 비활성화 안내 내용┃現在好像已經熟悉實驗了？\n很好！那我就不多說廢話了！\n請繼續保持吧！
 CharacterStoryName┃姓名
 CharacterStoryAge┃年齡
 CharacterStoryHeight┃身高
