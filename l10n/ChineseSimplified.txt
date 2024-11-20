@@ -819,6 +819,9 @@ Item/Name/401118┃铁矿石
 Item/Name/401120┃易拉罐
 Item/Name/401121┃火药
 Item/Name/401122┃故障笔电
+Item/Name/401123┃化学品
+Item/Name/401124┃石墨
+Item/Name/401219┃钻石
 Item/Name/401201┃钢铁
 Item/Name/401202┃油布
 Item/Name/401203┃高温油
@@ -894,7 +897,6 @@ Item/Name/502502┃智能炸弹
 Item/Name/503101┃Kiosk呼叫机
 Item/Name/503102┃信号枪B
 Item/Name/503103┃信号枪R
-Item/Name/503104┃便携VLS
 Item/Name/540001┃高级订制
 Item/Name/999999┃战术强化组件
 Item/Name/201518┃夜视头盔
@@ -941,10 +943,12 @@ Item/Name/115503┃狂澜
 Item/Name/115504┃幻影之矢
 Item/Name/122503┃On Air
 Item/Name/122504┃三重聚焦相机
-Item/Name/202626┃赛车服 [戴维德]
-Item/Name/202627┃幽灵新娘的嫁纱 [戴维德]
-Item/Name/202628┃幽冥战甲 [戴维德]
-Item/Name/202629┃异端审判官 [戴维德]
+Item/Name/201526┃En Garde
+Item/Name/201527┃玄见
+Item/Name/202626┃赛车服・戴维德
+Item/Name/202627┃幽灵新娘的嫁纱・戴维德
+Item/Name/202628┃幽冥战甲・戴维德
+Item/Name/202629┃异端审判官・戴维德
 Item/Help/101101┃一副普通的剪刀
 Item/Help/101102┃用来书写的笔。笔囊里的墨水从笔尖流出，因此可以用很久。\n用笔方\n法不对的话很容易弄得满手都是墨水
 Item/Help/101104┃厨房用的刀具，在刀术大师手上也能成为大杀器
@@ -1699,8 +1703,8 @@ Item/Effects/301502┃在15秒内恢复体力。
 Item/Effects/301503┃在15秒内恢复体力。
 Item/Effects/303501┃获得{0}荣誉值。
 Item/Effects/802601┃永久获得0.1移动速度。
-Item/BulletCapacity/Reload┃<color=yellow>弹药数:</color> {0}
-Item/BulletCapacity/Charge┃<color=yellow>弹药上限:</color> {0}发(充电: {1}秒)
+Item/BulletCapacity/Reload┃<color=yellow>弹药数 : </color> {0}
+Item/BulletCapacity/Charge┃<color=yellow>弹药上限 : </color> {0}发(充电 : {1}秒)
 Item/Skills/NotEquip┃<color=red>仅在装备物品时生效。</color>
 Item/Skills/UniqueSkill┃<color=red>已有相同效果，不再适用。</color>
 Item/Skills/OnlyCloseCombat┃<color=red>远程武器不适用。</color>
@@ -1927,10 +1931,16 @@ Object/Name/SpawnScratchGroup┃野生动物群生成位置
 Object/Name/JumpPaddle┃跳台
 Object/Name/TransferConsole┃Kiosk
 Object/Name/MobileKiosk┃便携Kiosk
+Object/Name/VerticalLauncher┃VLS
+Object/Name/MobileVerticalLauncher┃便携VLS
 Object/Name/TransferSupplyBox┃传送补给箱
 Object/Name/AmplificationTurbine_1┃增幅装置 - L
 Object/Name/AmplificationTurbine_2┃增幅装置 - R
 Object/Name/AmplificationTurbine_3┃增幅装置 - C
+Object/Name/BarrierConsole┃门控台
+Object/Name/MobileHyperLoopBase┃便携传送门
+Object/Name/MobileHyperLoopBlue┃便携传送门 : γ
+Object/Name/MobileHyperLoopRed┃逃生传送门
 Area/Name/Harbor┃码头
 Area/Name/Warehouse┃仓库
 Area/Name/Pond┃池塘
@@ -2359,7 +2369,7 @@ ToolTipType/InstallTrapTime┃陷阱安装时间减少
 ToolTipType/CreateVisibleTime┃陷阱透明化时间减少
 ToolTipType/SkillRange┃射程距离
 ToolTipType/AnimalGrade01┃鸡
-ToolTipType/AnimalGrade02┃蝙蝠, 野猪
+ToolTipType/AnimalGrade02┃蝙蝠、野猪
 ToolTipType/AnimalGrade03┃野狗, 狼
 ToolTipType/AnimalGrade04┃熊
 ToolTipType/AnimalGrade05┃实验体
@@ -2862,6 +2872,7 @@ DropFrequency/Always┃总是
 DropFrequency/Exclusive┃总是
 DropFrequency/Random┃概率性
 DropFrequency/Probability┃概率性
+DropFrequency/UniqueDropProbability┃概率性
 GradeColor/None┃无色
 GradeColor/Common┃灰色
 GradeColor/Uncommon┃绿色
@@ -2943,6 +2954,7 @@ MonsterDropRandom/15┃掉落<color=white>一般</color> 物品。
 MonsterDropRandom/16┃掉落<color=#35FF94>高级</color> ~ <color=#2AC0FF>稀有</color> 等级物品。
 MonsterDropRandom/17┃掉落<color=#35FF94>高级</color> ~ <color=#D05EFF>英雄</color>等级材料物品。
 MonsterDropRandom/18┃掉落<color=white>一般</color> 物品。
+MonsterDropRandom/19┃掉落<color=white>一般</color> 物品。
 GameResult/Tag/MatchingMode/Normal┃一般模式
 GameResult/Tag/MatchingMode/Cobalt┃钴协议
 GameResult/Tag/MatchingMode/Rank┃排位模式
@@ -3273,6 +3285,7 @@ Skin/Name/1075000┃莉诺尔
 Skin/Name/1075001┃夜之韵 莉诺尔
 Skin/Name/1076000┃盖瑞特
 Skin/Name/1077000┃俞岷
+Skin/Name/1078000┃翡翠
 Skin/OnSelectVO/1001003┃规则就是用来打破的，不是吗？
 Skin/OnSelectVO/1002002┃烟花庆典要开始了！
 Skin/OnSelectVO/1007005┃让我们来做点有趣的事吧！
@@ -3825,14 +3838,6 @@ Emotion_ERPASS_4111┃杰琪 不开心
 Emotion_ERPASS_4112┃艾玛 看眼色
 Emotion_ERPASS_4113┃俞岷 走吧~
 Emotion_ERPASS_4114┃比安卡 超棒！
-Emotion_ERPASS_4115┃深渊魔王 伦诺克斯 解决
-Emotion_ERPASS_4118┃梦幻恶魔 希瑟拉 点赞
-Emotion_ERPASS_4119┃甜蜜恶魔 雷妮 爱心
-Emotion_ERPASS_4120┃蒂娅 点赞
-Emotion_ERPASS_4121┃盖瑞特 呃…
-Emotion_ERPASS_4122┃红色情人节 洛兹 爱心
-Emotion_ERPASS_4123┃典狱长 凯希 逮捕
-Emotion_ERPASS_4124┃地狱先锋 阿隆索 好吃！
 Emotion_LiDailin02_NP┃李黛琳 干杯
 Emotion_LiDailin03_NP┃李黛琳 晕晕
 Emotion_LiDailin04_NP┃李黛琳 挑衅
@@ -3983,7 +3988,7 @@ Event_HulaWilson_3035┃草裙小威
 Event_Neon_3027┃惊讶霓虹灯
 Event_Neon_3028┃小猫霓虹灯
 Event_Neon_3029┃过冲霓虹灯
-Event_SandBox_3036┃POPO赞！
+Event_SandBox_3036┃POPO 赞！
 Emotion_Bianca01_NP┃比安卡 哭泣
 Emotion_Bianca02_NP┃比安卡 害羞
 Emotion_Bianca03_NP┃比安卡 生气
@@ -4422,6 +4427,13 @@ Event_SSR_Creator_3111┃Yommyko 牛哇牛哇
 Event_Dessert39_3112┃Dessert39 艾比盖尔
 Event_Dessert39_3113┃Dessert39 比安卡
 Event_Dessert39_3114┃Dessert39 艾比盖尔 x 比安卡
+Emotion_LiDailin05_NP┃李黛琳 看眼色
+Emotion_LiDailin06_NP┃李黛琳 嘿嘿
+Emotion_LiDailin07_NP┃李黛琳 赞！
+Emotion_LiDailin08_NP┃李黛琳 给我
+Event_S13Champion_Danana_3115┃SEASON 4 CHAMPION DANANA
+Event_S13Champion_OneCircle_3116┃SEASON 4 CHAMPION ONECIRCLE
+Event_S13Champion_Romatic_3117┃SEASON 4 CHAMPION ROMATIC
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
 Collection/Name/11003┃拯救迷失的灵魂
@@ -5125,6 +5137,9 @@ EMBLEM_MARK_EVENT_103174┃娜佳 HI
 EMBLEM_MARK_EVENT_103175┃娜佳 点赞
 EMBLEM_MARK_EVENT_103176┃盖瑞特 嗯哼~
 EMBLEM_MARK_EVENT_103177┃俞岷 休息一下
+EMBLEM_MARK_EVENT_103178┃SEASON 4 CHAMPION DANANA
+EMBLEM_MARK_EVENT_103179┃SEASON 4 CHAMPION ONECIRCLE
+EMBLEM_MARK_EVENT_103180┃SEASON 4 CHAMPION ROMATIC
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃礼物树
 EMBLEM_MARK_ERPASS_104003┃红鼻子
@@ -5210,10 +5225,6 @@ EMBLEM_MARK_ERPASS_104082┃红心兔女郎 珍妮
 EMBLEM_MARK_ERPASS_104083┃害羞兔女郎 莉央
 EMBLEM_MARK_ERPASS_104084┃S5俞岷
 EMBLEM_MARK_ERPASS_104085┃S5盖瑞特
-EMBLEM_MARK_ERPASS_104086┃堕落天使 夏洛特
-EMBLEM_MARK_ERPASS_104087┃深渊魔王 伦诺克斯
-EMBLEM_MARK_ERPASS_104088┃梦幻恶魔 希瑟拉
-EMBLEM_MARK_ERPASS_104089┃地狱先锋 阿隆索
 EMBLEM_MARK_COLLECTION_119001┃彰一的宝贝
 EMBLEM_MARK_COLLECTION_119002┃像素画家 蒂娅
 EMBLEM_MARK_COLLECTION_119003┃幽灵猎人 雪 解除封印
@@ -5559,9 +5570,6 @@ EMBLEM_BG_ERPASS_204043┃仲夏之梦 万尼亚
 EMBLEM_BG_ERPASS_204044┃格斗兔女郎 妮琪
 EMBLEM_BG_ERPASS_204045┃红心兔女郎 珍妮
 EMBLEM_BG_ERPASS_204046┃害羞兔女郎 莉央
-EMBLEM_BG_ERPASS_204047┃堕落天使 夏洛特
-EMBLEM_BG_ERPASS_204048┃深渊魔王 伦诺克斯
-EMBLEM_BG_ERPASS_204049┃梦幻恶魔 希瑟拉
 EMBLEM_BG_COLLECTION_219001┃传送胶囊
 ItemType/EMBLEM_OUTLINE/Name┃边框
 EMBLEM_OUTLINE_FREE1┃默认框
@@ -5900,9 +5908,6 @@ EMBLEM_OUTLINE_ERPASS_304042┃仲夏之梦 万尼亚
 EMBLEM_OUTLINE_ERPASS_304043┃格斗兔女郎 妮琪
 EMBLEM_OUTLINE_ERPASS_304044┃红心兔女郎 珍妮
 EMBLEM_OUTLINE_ERPASS_304045┃害羞兔女郎 莉央
-EMBLEM_OUTLINE_ERPASS_304046┃堕落天使 夏洛特
-EMBLEM_OUTLINE_ERPASS_304047┃深渊魔王 伦诺克斯
-EMBLEM_OUTLINE_ERPASS_304048┃梦幻恶魔 希瑟拉
 EMBLEM_OUTLINE_COLLECTION_319001┃传送胶囊
 Goods/Name/1304001┃ER积分
 ItemType/GRAVE/Name┃墓碑
@@ -5964,9 +5969,6 @@ Goods/Name/1604053┃沙浴
 Goods/Name/1604054┃金骰子
 Goods/Name/1604055┃顺子失败
 Goods/Name/1604056┃VIP
-Goods/Name/1604057┃地狱之门
-Goods/Name/1604058┃死神
-Goods/Name/1604059┃杰克南瓜灯
 Goods/Name/1612001┃瘟疫医生之死
 Goods/Name/1612002┃夏日海滩 妮琪的猫
 Goods/Name/1612003┃系统冲击
@@ -6082,9 +6084,6 @@ Goods/Name/1504053┃万尼亚的星星
 Goods/Name/1504054┃艾比盖尔的罗盘
 Goods/Name/1504055┃莉央的猫咪人偶
 Goods/Name/1504056┃珍妮的爱心
-Goods/Name/1504057┃夏洛特 堕落的象征
-Goods/Name/1504058┃阿隆索 地狱之味
-Goods/Name/1504059┃希瑟拉 恶魔小威
 Goods/Name/1503046┃艾登 问题解决
 Goods/Name/1503047┃纳塔朋 慌张
 Goods/Name/1503048┃伦诺克斯 把钱交出来！
@@ -6167,12 +6166,6 @@ Goods/Name/1404183┃达尔科 (日语)
 Goods/Name/1404191┃秀雅 (韩语)
 Goods/Name/1404192┃秀雅 (英语)
 Goods/Name/1404193┃秀雅 (日语)
-Goods/Name/1404201┃蒂娅 (韩语)
-Goods/Name/1404202┃蒂娅 (英语)
-Goods/Name/1404203┃蒂娅 (日语)
-Goods/Name/1404211┃艾登 (韩语)
-Goods/Name/1404212┃艾登 (英语)
-Goods/Name/1404213┃艾登 (日语)
 GoodsGroup/Name/1401051┃默认 
 GoodsGroup/Name/1401021┃幸存之声
 GoodsGroup/Name/1404011┃赛事解说
@@ -6194,8 +6187,6 @@ GoodsGroup/Name/1404161┃约翰
 GoodsGroup/Name/1404171┃比安卡
 GoodsGroup/Name/1404181┃达尔科
 GoodsGroup/Name/1404191┃秀雅
-GoodsGroup/Name/1404201┃蒂娅
-GoodsGroup/Name/1404211┃艾登
 GoodsGroup/Name/1406001┃解说Sia
 GoodsGroup/Name/1406011┃解说Shin Il
 GoodsGroup/Name/1406021┃解说Evis&Gold Blin
@@ -6245,8 +6236,6 @@ Goods/Name/2504015┃珍珠贝
 Goods/Name/2504016┃电气水母
 Goods/Name/2504017┃轮盘
 Goods/Name/2504018┃迪斯科灯球
-Goods/Name/2504019┃幽灵小威
-Goods/Name/2504020┃蝙蝠的眼
 ItemType/CAMERA/Name┃监视器皮肤
 ItemType/CAMERA/Desc┃可以选择游戏内监视器和望远监视器的外观。
 Goods/Name/2601001┃基础监视器
@@ -6268,8 +6257,6 @@ Goods/Name/2604015┃海鸥
 Goods/Name/2604016┃章鱼灯
 Goods/Name/2604017┃猫咪人偶
 Goods/Name/2604018┃沙包
-Goods/Name/2604019┃幽灵火焰
-Goods/Name/2604020┃梦幻烛台
 ItemType/LOBBY_SCREEN/Name┃大厅界面
 ItemType/LOBBY_SCREEN/Desc┃可以选择游戏外大厅界面。
 Goods/Name/2701000┃随机
@@ -6300,7 +6287,6 @@ Goods/Name/2704011┃战斗女仆
 Goods/Name/2704012┃转变
 Goods/Name/2704013┃晚霞
 Goods/Name/2704014┃好运★
-Goods/Name/2704015┃炼狱
 Goods/Name/2705001┃一周年纪念
 ItemType/KILLANNOUNCE_ICONPACK/Name┃击杀通知标志
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃可以选择在游戏中击杀时显示的UI图标。
@@ -6339,9 +6325,6 @@ Goods/Name/2804031┃万尼亚的蝴蝶
 Goods/Name/2804032┃妮琪的重拳
 Goods/Name/2804033┃莉央的弓箭
 Goods/Name/2804034┃珍妮的手枪
-Goods/Name/2804035┃堕落天使的光环
-Goods/Name/2804036┃魔王的权威
-Goods/Name/2804037┃梦幻小威
 ItemType/TEAMSLOT_BG/Name┃队伍格背景
 Goods/Name/3401001┃默认队伍格背景
 Goods/Name/3402001┃节日小熊
@@ -6633,6 +6616,11 @@ Product/Name/S5_Bianca_Blessing_Pack_02┃血族女皇的祝福基础组合包
 Product/Name/EVENT_NPASS_Dessert39_1002┃Dessert39任务书
 Product/Name/EVENT_NPASS_Lucky_Stamp_1003┃好运邮票任务书
 Product/Name/S5_Lucky_Stamp_Pack_01┃每日邮票箱
+Product/Name/BATTLE_PASS/2100┃S5赛季A-Coin任务书
+Product/Name/S5_Select_Voucher_Pack┃选择券组合包
+Product/Name/S5_Select_Voucher_Pack_01┃选择券组合包Ⅰ
+Product/Name/S5_Select_Voucher_Pack_02┃选择券组合包Ⅱ
+Product/Name/S5_Select_Voucher_Pack_03┃选择券组合包Ⅲ
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
@@ -6816,6 +6804,9 @@ Shop/Desc/S05_SeongnamROX_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\
 Shop/Desc/S5_Bianca_Blessing_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 血族女皇的祝福皮肤箱 x 10\n- 开箱钥匙 x 10\n- 好运★代币 x 15\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/S5_Bianca_Blessing_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 血族女皇的祝福皮肤箱 x 1\n- 开箱钥匙 x 1\n- 好运★代币 x 1\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/S5_Lucky_Stamp_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 每日邮票箱\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 每日邮票箱是购买时立即开启的商品。\n※ 销售期间内每日可以购买一次。\n※ 由于是购买后立即开启的商品，无法申请取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 实验体选择券 x 1\n- 高级皮肤选择券 x 1\n- 好运★代币 x 10\n- XP Boost(3日)\n\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 高级皮肤选择券 x 1\n- 稀有皮肤选择券 x 1\n- 好运★代币 x 20\n- A-Coin Boost(3日)\n\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S5_Select_Voucher_Pack_03┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 特别高级/稀有皮肤选择券 x 1\n- 英雄皮肤碎片选择券 x 1\n- 好运★代币 x 50\n- S5赛季A-Coin任务书\n- ER积分 Boost(3日)\n\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
 Product/Name/SEASON_PASS_S6┃S6赛季包
@@ -6866,6 +6857,7 @@ Shop/Desc/BatlleMaids Token┃战斗女仆代币可用于交换制作所中交�
 Shop/Desc/Change Token┃转变代币可用于交换制作所中交换所内的商品。<color=red>\n代币有使用时间限制。到期后无法继续使用，请务必确认有效期。</color>
 Shop/Desc/Sunset Token┃晚霞代币可用于交换制作所中交换所内的商品。<color=red>\n代币有使用时间限制。到期后无法继续使用，请务必确认有效期。</color>
 Shop/Desc/Lucky Token┃好运★代币可用于交换制作所中交换所内的商品。<color=red>\n代币有使用时间限制。到期后无法继续使用，请务必确认有效期。</color>
+Shop/Desc/Legion Token┃炼狱代币可用于交换制作所内交换所中的商品。<color=red>\n代币有使用时间限制。到期后无法继续使用，请务必确认有效期。</color>
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃可用于在永恒轮回购买多种物品。
@@ -7018,7 +7010,7 @@ RANKED GAME┃排位赛
 결과처리로딩┃正在读取实验结果...
 로그인 실패┃登录失败
 재시도┃重新尝试
-전체 스킵┃跳过
+스킵┃Skip
 EVENT_NP┃活动 NP
 EVENT_NP 기간만료┃过期的活动NP无法使用。
 NP┃NP
@@ -7276,7 +7268,7 @@ CSV파일다운로드완료팝업┃完成下载。\n请检查客户端安装文
 랜덤┃随机
 랜덤/설명┃没有固定标准，随机分配队伍。
 균등┃平均
-균등/설명┃以排位分数为标准，按照由低到高的顺序分配队伍。
+균등/설명┃根据排位分数平均分配各个队伍。
 구간랜덤┃区间随机
 구간랜덤/설명┃按照各个队伍1, 2, 3号的顺序重新分配队伍。
 랭크 포인트 지정┃指定排位分数
@@ -7761,12 +7753,12 @@ DeathRecapOnOff┃显示实验体死亡前在战斗中承受的伤害分析。
 스킬┃技能
 액티브아이템┃物品技能
 아이템┃物品
-Emotion1┃使用1号对白表达。
-Emotion2┃使用2号对白表达。
-Emotion3┃使用3号对白表达。
-Emotion4┃使用4号对白表达。
-Emotion5┃使用5号对白表达。
-Emotion6┃使用6号对白表达。
+Emotion1┃使用1号对白表达
+Emotion2┃使用2号对白表达
+Emotion3┃使用3号对白表达
+Emotion4┃使用4号对白表达
+Emotion5┃使用5号对白表达
+Emotion6┃使用6号对白表达
 EmotionPlate┃使用表情
 EmotionPlate1┃使用表情组1
 EmotionPlate2┃使用表情组2
@@ -7776,13 +7768,13 @@ MarkTarget┃打标记
 PingTargetKeyboard┃标记目标
 MarkTargetKeyboard┃打标记
 DeleteMarkTarget┃除去标记
-LearnActive1┃强化第一技能。
-LearnActive2┃强化第二技能。
-LearnActive3┃强化第三技能。
-LearnActive4┃强化第四技能。
-LearnPassive┃强化被动技能。
-LearnWeaponSkill┃强化武器技能。
-LearnTacticalSkill┃强化战术技能。
+LearnActive1┃强化第一技能
+LearnActive2┃强化第二技能
+LearnActive3┃强化第三技能
+LearnActive4┃强化第四技能
+LearnPassive┃强化被动技能
+LearnWeaponSkill┃强化武器技能
+LearnTacticalSkill┃强化战术技能
 Active1ToSelf┃向自己快速施法第1个技能\n(仅限使用于自身的技能。)
 Active2ToSelf┃向自己快速施法第2个技能\n(仅限使用于自身的技能。)
 Active3ToSelf┃向自己快速施法第3个技能\n(仅限使用于自身的技能。)
@@ -8574,8 +8566,6 @@ WickelineUI_ReadyTooltip┃维克莱恩博士开始出动。
 플레어건사용노티┃发射信号枪！
 플레어건R기능┃有人设置了超凡补给箱的降落位置。
 플레어건B기능┃{0}区域被设为超凡补给箱降落位置。
-하이퍼루프VLS전환노티┃1分钟后，传送门将转换为VLS。
-하이퍼루프VLS전환완료노티┃传送门已转换为VLS。
 더미알파생성┃1分钟后，阿尔法将在{0}出现。
 더미오메가생성┃1分钟后，奥米加将在{0}出现。
 더미알파생성완료┃阿尔法出现在{0}区域。
@@ -8748,8 +8738,10 @@ SP 알림┃{0}({1}) : <color=#86E57F>耐力{2}%</color>
 시야스탯 알림┃{0}({1}) : <color=#86E57F>视野{2}</color>
 스킬쿨다운알림┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬쿨다운알림_스택형┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 蓄能{4}秒</color> (充能 : {3})
+스킬쿨다운알림_전술스킬┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬준비완료알림┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 就绪</color>
 스킬준비완료알림_스택형┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - 就绪</color> ({3})
+스킬준비완료알림_전술스킬┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#86E57F> - {3}秒</color>
 스킬사용불가알림┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#FF4848> - 无法使用</color>
 스킬미습득알림┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color><color=#FF4848> - 未学习</color>
 스킬자원부족알림┃{0}({1}) : <color=#EDEDED>{2}</color> <color=#FFC62E>{5}</color> - <color=#FF4848>{3} 不足</color>
@@ -8771,6 +8763,7 @@ SP 알림┃{0}({1}) : <color=#86E57F>耐力{2}%</color>
 하이퍼루프재료알림┃{0}({1}) : <color=#FFBB00>{2}</color> - 所需材料 <color=#86E57F>{3}个</color>
 하이퍼루프알림┃{0}({1}) : 目标区域 - <color=#FFBB00>{2}</color>
 하이퍼루프알림생존자명시┃{0}({1}) : 目标区域<color=#FFBB00>{2}</color> - 敌人 : {3}名
+하이퍼루프알림생존자명시_비밀연구실┃{0}({1}) : 目标区域<color=#FFBB00>{2}</color> - 敌人 : {3}名
 ToastMessage/HyperloopNotLab┃无法使用传送门至研究所。
 ToastMessage/HyperloopNotBattlezone┃战场结束前无法指定为传送门目标。
 ToastMessage/HyperloopNotBattlezonePlayer┃正在参与战场的队友无法指定为传送门目标。
@@ -8779,6 +8772,8 @@ ToastMessage/TransferConsoleErrorInBattlezone┃战场内无法使用Kiosk。
 ToastMessage/HyperloopErrorInTemporarySafeZone┃临时安全区阶段无法使用传送门。
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃临时安全区阶段无法使用Kiosk。
 ToastMessage/SecurityConsoleErrorInBattlezone┃战场内无法使用安全监控台。
+ToastMessage/SecurityConsoleErrorInLastPhase┃最终安全区阶段无法使用安全监控台。
+SecurityConsoleErrorInLastPhase┃最终安全区阶段无法使用安全监控台。
 ToastMessage/AlreadyBoughtBattlezoneReward┃队伍已领取奖励。
 ToastMessage/MarkPingWayPointMaxCount┃目标路径个数上限
 팀원상태알림┃{0}({1}) : <color=#FFBB00>{2}({3})</color> <color=#86E57F>{4}</color>
@@ -9974,7 +9969,6 @@ ER 패스 기간 툴팁┃在此期间结束后，无法购买或使用ER通行�
 선택 레벨 구매┃选择购买等级
 ER 포인트 감소 불가┃不能再减少ER积分的购买数量了。
 ER 포인트 증가 불가┃不能再增加ER积分的购买数量了。
-ER 패스 추후 공개 알림┃当前含有无法获得的奖励。\n推出后可以获得此奖励。
 일괄 획득┃一键领取
 ER 포인트 구매┃购买ER积分
 ER 패스 업그레이드┃ER通行证升级
@@ -10002,7 +9996,6 @@ ERPassPurchaseWindow/SeasonContent/13┃卢米亚岛的实验体们一同来到�
 ERPassPurchaseWindow/SeasonTitle/14┃赛季 : 好运★
 ERPassPurchaseWindow/SeasonSubTitle/14┃「欢迎光临！这里是让你梦想成真的地方！」
 ERPassPurchaseWindow/SeasonContent/14┃每个人都曾幻想过能获得一夜暴富的机会吧。\n如果有一个地方，可以将幻想变为现实，那还有什么理由不大胆一试呢？\n看，那些满怀希望的兔子们正三五成群地聚在一起，他们眼中闪烁着对大奖的渴望！\n性格迥异、喜好万千的他们各自有着怎样的梦想呢？\n\n※ 注意 : 阿格莱亚对于因顾客疏忽而产生的结果不承担任何责任 ※
-ERPassPurchaseWindow/SeasonTitle/15┃赛季 : 炼狱
 ERPassPurchaseWindow/SeasonSubTitle/15┃瞩目吧，凡人们！异界军势降临了！
 ERPassPurchaseWindow/SeasonContent/15┃深渊魔王睁开了双眼，璀璨的星辰也为之陨落。\n地狱之火席卷大地，梦魇将天空染成漆黑。\n敬畏吧，在无尽绝望中的深渊军势。\n恐惧吧，这是一个唯有黑暗才能主宰的末世。
 비쥬얼┃视觉
@@ -10017,7 +10010,6 @@ Product/Name/BATTLE_PASS/11┃ER通行证 : 战斗女仆
 Product/Name/BATTLE_PASS/12┃ER通行证 : 转变
 Product/Name/BATTLE_PASS/13┃ER通行证 : 晚霞
 Product/Name/BATTLE_PASS/14┃ER通行证 : 好运★
-Product/Name/BATTLE_PASS/15┃ER通行证 : 炼狱
 Product/Name/BATTLE_PASS_POINT┃购买ER积分
 Product/Name/BATTLE_PASS┃[赛季S4] ER通行证
 Product/Name/BATTLE_PASS_BUNDLE┃[赛季S4] ER Plus
@@ -10049,9 +10041,6 @@ Product/Name/BATTLE_PASS_UPGRADE_S13┃ER通行证升级 : 晚霞
 Product/Name/BATTLE_PASS_S14┃ER通行证 : 好运★
 Product/Name/BATTLE_PASS_BUNDLE_S14┃ER Plus : 好运★
 Product/Name/BATTLE_PASS_UPGRADE_S14┃ER通行证升级 : 好运★
-Product/Name/BATTLE_PASS_S15┃ER通行证 : 炼狱
-Product/Name/BATTLE_PASS_BUNDLE_S15┃ER Plus : 炼狱
-Product/Name/BATTLE_PASS_UPGRADE_S15┃ER通行证升级 : 炼狱
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>ER通行证</size></color>\n<size=14>[不支持退款]</size>\n\n购买ER通行证，可以在玩游戏的同时获得<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n 如果想要加快成长的速度，可以通过购买ER积分来实现。
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[不支持退款]</size>\n\nER Plus是包含ER通行证与增加<color=#ffdf72>19等级</color>的商品。\n<color=#B2EBF4>高达1,400 NP和皮肤、表情等100多种奖励</color>。\n只需玩游戏即可轻松提升ER通行证的赛季级别。\n通过ER Plus升级增加的等级 \n如果超过通行证最高等级，<color=#f72323>差额将不予退还。</color> 
 Shop/Desc/BATTLE_PASS_UPGRADE┃通过ER通行证升级增加的等级\n如果超过通行证最高等级，差额将不予退还。
@@ -10082,6 +10071,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S13┃通过升级ER通行证可以增加ER通行�
 Shop/Desc/BATTLE_PASS_S14┃购买ER通行证，在玩游戏的同时可以获得\n<color=#B2EBF4>高达900NP、皮肤、表情和多种奖励。</color>\n进行游戏即可轻松提升ER通行证等级。\n此外还可以通过购买ER积分快速提升通行证等级。\n\nER通行证中的商品之后可能会以其他方式使用。
 Shop/Desc/BATTLE_PASS_BUNDLE_S14┃ER Plus是包含ER通行证并达成<color=#ffdf72>20等级</color>的商品。\n<color=#B2EBF4>其中包含高达900NP、皮肤、表情和多种奖励</color>\n进行游戏即可轻松提升ER通行证等级。\n通过ER Plus升级增加的等级\n超过通行证最高等级时，<color=#FF7575>差额将不予退还。</color>\n\nER通行证中的商品之后可能会以其他方式使用。
 Shop/Desc/BATTLE_PASS_UPGRADE_S14┃通过升级ER通行证可以增加ER通行证等级\n超过通行证最高等级时差额将不予退还。
+Shop/Desc/BATTLE_PASS_S15┃购买ER通行证，在玩游戏的同时可以获得\n<color=#B2EBF4>高达900NP、皮肤、表情和多种奖励。</color>\n进行游戏即可轻松提升ER通行证等级。\n此外还可以通过购买ER积分快速提升通行证等级。\n\nER通行证中的商品之后可能会以其他方式使用。
+Shop/Desc/BATTLE_PASS_BUNDLE_S15┃ER Plus是包含ER通行证并达成<color=#ffdf72>20等级</color>的商品。\n<color=#B2EBF4>其中包含高达900NP、皮肤、表情和多种奖励</color>\n进行游戏即可轻松提升ER通行证等级。\n通过ER Plus升级增加的等级\n超过通行证最高等级时，<color=#FF7575>差额将不予退还。</color>\n\nER通行证中的商品之后可能会以其他方式使用。
+Shop/Desc/BATTLE_PASS_UPGRADE_S15┃通过升级ER通行证可以增加ER通行证等级\n超过通行证最高等级时差额将不予退还。
 Shop/Desc/BATTLE_PASS_CHECK┃购买ER通行证可以激活<color=#B2EBF4>Premium奖励</color>及<color=#B2EBF4>特别任务</color>。\n此外，还可以使用<color=#B2EBF4>购买ER积分</color>快速升级。\n\nER通行证可以使用两个赛季，分别为推出赛季及推出赛季的下一赛季。\n仅能激活一个通行证。\n可以自由选择想要激活的ER通行证，不限次数。
 Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃购买ER plus后，可以激活<color=#B2EBF4>Premium奖励</color>和<color=#B2EBF4>特别任务</color>。\n此外，还可以使用 <color=#B2EBF4>购买ER积分功能</color>快速升级。\n\n通过ER Plus升级增加的等级\n如果超过通行证最高等级，<color=#FF7575>差额将不予退还。</color>\n\nER通行证可以使用两个赛季，分别为推出赛季及推出赛季的下一赛季。\n仅能激活一个通行证。\n可以自由选择想要激活的ER通行证，不限次数。
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃通过升级ER通行证增加ER通行证等级\n如果超过通行证最高等级，差额将不予退还。
@@ -10210,16 +10202,6 @@ SeasonPassIcon/15┃Img_SeasonPack15_Box
 시즌팩 5 출시 캐릭터┃赛季S5推出的2位实验体
 시즌팩 5 출시 스킨┃赛季S5推出的6款皮肤
 시즌팩 5 특별 아이템┃赛季S5推出的4种特别物品
-시즌 15팩 주의사항 1┃在购买赛季包前已经持有<ER通行证 : 炼狱>时，仅对购买时使用的付费NP进行退款。
-시즌 15팩 주의사항 2┃除ER通行证之外，其他物品都可以重复持有，不支持退款。
-시즌 15팩 주의사항 3┃请参考相关公告确认赛季包商品的详细内容，商品内容可能有所变动。
-시즌 15팩 주의사항 4┃赛季包中的商品将于推出后发送至信箱，未来可能会以其他方式销售。
-시즌 15팩 주의사항 5┃早鸟优惠结束后，赛季包的价格将调整为7,100NP。
-시즌 15팩 주의사항 5 얼리버드 혜택 종료┃赛季包可以在赛季期间购买。
-<ER PASS : Legion> 포함┃<ER通行证 : 炼狱>中包括
-시즌팩 6 출시 캐릭터┃赛季S6推出的2位实验体
-시즌팩 6 출시 스킨┃赛季S6推出的6款皮肤
-시즌팩 6 특별 아이템┃赛季S6推出的4种特别物品
 WebViewPopup_Title┃活动内容
 GoodsMenu/InGame┃游戏内装饰
 GoodsMenu/Customize┃游戏制定
@@ -10248,7 +10230,7 @@ ToastMessage/Escape1006┃已有队友移动至旧港口，无法移动。
 ToastMessage/Escape1007┃旧港口人员已满，无法移动。
 ToastMessage/Escape1008┃无法移动的旧港口。
 ToastMessage/Escape1009┃已有人进入旧港口，逃生物体使用已被取消。
-ToastMessage/Escape1010┃在旧港口无法使用无人机配送。
+ToastMessage/Escape1010┃无法在旧港口使用无人机配送。
 ToastMessage/Escape1011┃无法安装的位置。
 ToastMessage/Escape1012┃系统未激活。剩余时间 <color=#C2FFA0>{0}秒</color>
 ToastMessage/Escape1013┃<color=#C4C4C4>系统密码</color>已用尽，无法再呼叫。
@@ -10797,12 +10779,12 @@ Tutorial/나쟈/Dialogue/03┃按下开始游戏，立即开始实验！
 Tutorial/나쟈/Dialogue/04┃如果还不够自信，也可以再练练。
 Tutorial/나쟈/Dialogue/05┃能来到研究所的实验体一般实力都不会太差。\n那...就祝你好运了。
 Tutorial/나쟈/Dialogue/10┃辛苦了！恭喜完成首次训练！
-Tutorial/나쟈/Dialogue/11┃我是娜佳。负责管理幸存者的训练和管理。\n你的名字是？
-Tutorial/나쟈/Dialogue/12┃{0}? 我想到了一个昵称！\n等我们熟一点我再告诉你。
+Tutorial/나쟈/Dialogue/11┃我是娜佳。负责幸存者们的训练和管理。\n你的名字是？
+Tutorial/나쟈/Dialogue/12┃{0}? 我想到了一个适合你的外号！\n等过段时间我再告诉你~
 Tutorial/나쟈/Dialogue/13┃点击快速开始就可以参与实验了！
 Tutorial/나쟈/Dialogue/14┃如果还有不清楚的地方，可以再多进行一些训练。
 Tutorial/나쟈/Dialogue/15┃我能告诉你的就这么多了！\n相信你也差不多听腻了。\n祝你玩得开心，{0}！我会在研究中心等你！
-스킵┃Skip
+스킵┃跳过
 Tutorial/Announce/핵심1번/00┃这是经常会用到的控制设置，准备好了就单击右侧按钮吧！
 Tutorial/Announce/핵심1번/01┃单击鼠标右键进行移动。
 Tutorial/Announce/핵심1번/02┃打开箱子。
@@ -10993,13 +10975,13 @@ Tutorial/Announce/초급3/작은목표5-1┃移至最终安全区
 Tutorial/Announce/초급3/작은목표5-2┃击杀其他实验体
 Tutorial/Announce/초급3/작은목표6-1┃击杀洛兹
 Tutorial/Cutscene/초급1/유키1┃莉央...！
-Tutorial/Cutscene/초급1/라우라2┃天哪... 姐姐是不是有点太过分了？
-Tutorial/Cutscene/초급1/재키3┃已经晚了，就凭你一个人还能做什么？
+Tutorial/Cutscene/초급1/라우라2┃天哪... 姐姐是不是有点过头了？
+Tutorial/Cutscene/초급1/재키3┃已经来不及了，剩你一个人还能做什么？
 Tutorial/Cutscene/초급1/라우라4┃闲着也是闲着... 不如来点刺激的
-Tutorial/Cutscene/초급1/재키5┃不错，有两下子。这个怎么样！
-Tutorial/Cutscene/초급1/재키6┃看来是我高估你了，还以为你能再坚持一会儿呢。
-Tutorial/Cutscene/초급1/재키7┃不过，也没关系，反正以后多的是机会。
-Tutorial/Cutscene/초급1/재키8┃那么...我们后会有期。
+Tutorial/Cutscene/초급1/재키5┃不错，有两下子。那这个怎么样！
+Tutorial/Cutscene/초급1/재키6┃看来是我高估你了，还以为你能再坚持一会儿呢
+Tutorial/Cutscene/초급1/재키7┃不过也没关系，反正以后多的是机会
+Tutorial/Cutscene/초급1/재키8┃那么...我们后会有期
 Tutorial/Cutscene/초급2/매그1┃打得差不多了，是时候结束了！
 Tutorial/Cutscene/초급2/매그2┃我说过了...没用的！
 Tutorial/Cutscene/초급2/매그3┃该死…去哪儿了！
@@ -11356,7 +11338,6 @@ Season11/Name┃<color=#FFF8E0>战斗女仆</color>
 Season12/Name┃<color=#FFD5B6>转变</color>
 Season13/Name┃<color=#FF95A6>晚霞</color>
 Season14/Name┃<color=#FFBE70>好运★</color>
-Season15/Name┃<color=#937DFF>炼狱</color>
 SeasonToBeAdded/Name┃新赛季\n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})已终止对话。
 100001_Title┃赛季S3签到簿
@@ -11493,11 +11474,13 @@ Season2002/Name┃战斗女仆A-Coin任务书
 Season2003/Name┃转变A-Coin任务书
 Season2004/Name┃晚霞A-Coin任务书
 Season2005/Name┃好运★A-Coin任务书
+Season2100/Name┃S5赛季A-Coin任务书
 HiddenPassPath/2001┃可以在交换所中使用里程购买后使用。
 HiddenPassPath/2002┃可以在交换所中使用里程购买后使用。
 HiddenPassPath/2003┃可以在交换所中使用里程购买后使用。
 HiddenPassPath/2004┃可以在交换所中使用里程购买后使用。
 HiddenPassPath/2005┃可以在交换所中使用好运★代币购买后使用。
+HiddenPassPath/2100┃可以在商店购买<选择券组合包Ⅲ>后使用。
 칭찬하기┃点赞！
 극찬하기┃MVP!
 극찬 불가 알림┃每日可送出的「MVP」次数已耗尽。
@@ -12260,6 +12243,7 @@ Skill/Group/ExpansionTip/1021400┃<i>此技能无法穿越墙壁。</i>
 CharacterState/Group/Name/1021100┃双杀
 CharacterState/Group/Name/1021110┃巧克力饮料
 CharacterState/Group/Name/1021120┃巧克力食物
+CharacterState/Group/Name/1021130┃巧克力食物
 CharacterState/Group/Name/1021200┃随意射击
 CharacterState/Group/Name/1021300┃全视角狙击
 CharacterState/Group/Name/1021310┃全视角狙击
@@ -12270,7 +12254,7 @@ CharacterState/Group/Name/1021520┃塞姆汀高爆弹 Mk-II
 CharacterState/Group/Name/1021530┃塞姆汀高爆弹 Mk-II
 CharacterState/Group/Desc/1021100┃强化下一个普通攻击。
 CharacterState/Group/Desc/1021110┃饮用巧克力饮料，恢复体力值。
-CharacterState/Group/Desc/1021120┃食用巧克力食物，恢复耐力值。
+CharacterState/Group/Desc/1021120┃食用巧克力，恢复耐力值。
 CharacterState/Group/Desc/1021200┃下一个移动执行突进。
 CharacterState/Group/Desc/1021300┃增加移动速度。
 CharacterState/Group/Desc/1021310┃被全视角狙击击中减少防御力和治愈效果。
@@ -12282,30 +12266,35 @@ CharacterState/Group/Desc/1021530┃塞姆汀高爆弹 Mk-Il立即爆炸，移�
 Skill/Group/Name/1022100┃完美管家
 Skill/Group/Name/1022200┃保洁服务
 Skill/Group/Name/1022210┃保洁服务
-Skill/Group/Evolution/Name/1022200┃保洁服务 升级
+Skill/Group/Evolution/Name/1022200┃保洁服务・升级
 Skill/Group/Name/1022300┃强迫症
-Skill/Group/Evolution/Name/1022300┃强迫症 升级
+Skill/Group/Evolution/Name/1022300┃强迫症・升级
 Skill/Group/Name/1022400┃无声扫除机
-Skill/Group/Evolution/Name/1022400┃无声扫除机 升级
+Skill/Group/Evolution/Name/1022400┃无声扫除机・升级
 Skill/Group/Name/1022500┃售后服务
-Skill/Group/Evolution/Name/1022500┃售后服务 升级
+Skill/Group/Evolution/Name/1022500┃售后服务・升级
 Skill/Group/Desc/1022100┃满意度 : 卢克参与击杀实验体时，恢复<color=white>{0}</color>已失体力，击杀维克莱恩恢复 <color=white>{2}</color>已失体力。\n\n完美管家 : 卢克每次击杀实验体，野生动物和获取补给箱时都会获得一个<color=yellow>完美管家</color>的叠层。\n每{3}/{4}/{5}叠层时都可获得1个升级点，从{6}叠层开始，每{7}个叠层的满意度都会提高{8}。\n\n鸡，蝙蝠 {9}\n野猪，野狗，狼: {18}\n熊 {10}\n实验体: {11}\n阿尔法/奥米加{17}\n维克莱恩{12}\n补给箱食物{14}/英雄{15}/传奇以上{16}
-Skill/Group/Desc/1022200┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color>的技能伤害，获得该敌人的视野。接下来{1}秒内可再次使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成<color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{3}。(目标体力为{4}时适用)
-Skill/Group/Desc/1022210┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color>的技能伤害，并获得该敌人的视野。接下来的{1}秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成 <color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{3}。(目标体力为{4}时适用)
-Skill/Group/Desc/1022300┃<color=green>被动效果</color> : 强迫症技能击中敌人或者使用强化普攻给敌方造成伤害时，{3}秒间攻击速度增加{4}，最多可叠加至{5}次。\n\n使用效果 : 卢克挥动清洁工具，造成<color=white>{0}</color>的技能伤害。命中敌人时，在{1}秒间强化普攻，额外造成<color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 强迫症的使用效果每命中一个敌人时恢复{6}已失体力。最多可恢复至{7}。
-Skill/Group/Desc/1022400┃<color=green>被动效果</color>: 卢克在攻击和击杀敌人时，迷你地图不会出现标记声音。\n\n使用效果 : 卢克立即闪到指定的敌人身后，用手枪给敌人造成<color=white>{0}</color>的技能伤害，妨碍集中精神，并使对方在{1}秒间移动速度减少{2}。对队友或自身设置的监视器使用技能时，增加射程范围，使用后监视器被摧毁。\n\n<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。
-Skill/Group/Desc/1022500┃卢克从改良的清洁工具发射出一枚穿透性的子弹，根据敌人失去体力的比例给敌人造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能伤害，并使其{2}秒间移动速度降低{3}。卢克获得敌人的视野并退后。\n\n<color=yellow>升级效果</color>: 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。
-Skill/Group/Evolution/Desc/1022200┃<color=yellow>升级效果</color> : 根据目标已失体力比例，增加再次使用时的伤害量。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
-Skill/Group/Evolution/Desc/1022210┃<color=yellow>升级效果</color> : 根据目标已失体力比例，增加再次使用时的伤害量。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
-Skill/Group/Evolution/Desc/1022300┃<color=yellow>升级效果</color> : 根据强迫症命中的敌人数恢复部分已失体力。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
-Skill/Group/Evolution/Desc/1022400┃<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
-Skill/Group/Evolution/Desc/1022500┃<color=yellow>升级效果</color> : 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
 Skill/Group/Coef/1022100┃满意度 : 卢克参与击杀实验体时，恢复<color=white>{0}</color>已失体力，击杀维克莱恩恢复 <color=white>{2}</color>已失体力。\n\n完美管家 : 卢克每次击杀实验体，野生动物和获取补给箱时都会获得一个<color=yellow>完美管家</color>的叠层。\n每{3}/{4}/{5}叠层时都可获得1个升级点，从{6}叠层开始，每{7}个叠层的满意度都会提高{8}。\n\n鸡，蝙蝠 {9}\n野猪，野狗，狼: {18}\n熊 {10}\n实验体: {11}\n阿尔法/奥米加{17}\n维克莱恩{12}\n补给箱食物{14}/英雄{15}/传奇以上{16}
+Skill/LobbyDesc/1022100┃卢克参与击杀实验体或维克莱恩都会恢复已失体力。\n\n卢克每次完成击杀实验体，野生动物等清理工作都会获得完美管家的叠层。\n完美管家的叠加可以进一步升级卢克的技能。
+Skill/Group/Desc/1022200┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color>的技能伤害，获得该敌人的视野。接下来{1}秒内可再次使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成<color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{3}。(目标体力为{4}时适用)
 Skill/Group/Coef/1022200┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>的技能伤害，并获得该敌人的视野。接下来的{3}秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成 <color=white>{4}</color><color=#ffd775>(+攻击力的{5})</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{7}。(目标体力为{8}时适用)
+Skill/Group/Evolution/Desc/1022200┃<color=yellow>升级效果</color> : 根据目标已失体力比例，增加再次使用时的伤害量。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
+Skill/Group/Desc/1022210┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color>的技能伤害，并获得该敌人的视野。接下来的{1}秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成 <color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{3}。(目标体力为{4}时适用)
 Skill/Group/Coef/1022210┃卢克投掷清洁剂，对第一个击中的敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>的技能伤害，并获得该敌人的视野。接下来的{3}秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成 <color=white>{4}</color><color=#ffd775>(+攻击力的{5})</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时，伤害量最大可以增加至{7}。(目标体力为{8}时适用)
+Skill/Group/Evolution/Desc/1022210┃<color=yellow>升级效果</color> : 根据目标已失体力比例，增加再次使用时的伤害量。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
+Skill/LobbyDesc/1022200┃卢克投掷清洁剂，对第一个击中的敌人造成伤害，并获得该敌人的视野。接下来的3秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时增加伤害量。
+Skill/Group/Desc/1022300┃<color=green>被动效果</color> : 强迫症技能击中敌人或者使用强化普攻给敌方造成伤害时，{3}秒间攻击速度增加{4}，最多可叠加至{5}次。\n\n使用效果 : 卢克挥动清洁工具，造成<color=white>{0}</color>的技能伤害。命中敌人时，在{1}秒间强化普攻，额外造成<color=white>{2}</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 强迫症的使用效果每命中一个敌人时恢复{6}已失体力。最多可恢复至{7}。
 Skill/Group/Coef/1022300┃<color=green>被动效果</color> : 强迫症技能击中敌人或者使用强化普攻给敌方造成伤害时，{7}秒间攻击速度增加{8}，最多可叠加至{9}次。\n\n使用效果 : 卢克挥动清洁工具，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>的技能伤害。命中敌人时，在{3}秒间强化普攻，额外造成<color=white>{4}</color><color=#ffd775>(+攻击力的{5})</color>的技能伤害。\n\n<color=yellow>升级效果</color> : 强迫症的使用效果每命中一个敌人时恢复{10}已失体力。最多可恢复至{11}。
+Skill/Group/Evolution/Desc/1022300┃<color=yellow>升级效果</color> : 根据强迫症命中的敌人数恢复部分已失体力。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
+Skill/LobbyDesc/1022300┃<color=green>被动效果</color> : 强迫症技能击中敌人或使用强化普攻给敌方造成伤害时，一定时间内攻击速度增加。\n\n使用效果 : 卢克挥动清洁工具，命中敌人时，在一段时间内强化普攻，额外造成技能伤害。\n\n<color=yellow>升级效果</color> : 强迫症的使用效果每命中一名敌人，卢克就会恢复一定比例的已失体力。
+Skill/Group/Desc/1022400┃<color=green>被动效果</color>: 卢克在攻击和击杀敌人时，迷你地图不会出现标记声音。\n\n使用效果 : 卢克立即闪到指定的敌人身后，用手枪给敌人造成<color=white>{0}</color>的技能伤害，妨碍集中精神，并使对方在{1}秒间移动速度减少{2}。对队友或自身设置的监视器使用技能时，增加射程范围，使用后监视器被摧毁。\n\n<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。
 Skill/Group/Coef/1022400┃<color=green>被动效果</color>: 卢克在攻击和击杀敌人时，迷你地图不会出现标记声音。\n\n使用效果 : 卢克立即闪到指定的敌人身后，用手枪给敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>的技能伤害，妨碍集中精神，并使对方在{3}秒间移动速度减少{4}。对队友或自身设置的监视器使用技能时，增加射程范围，使用后监视器被摧毁。\n\n<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。
+Skill/Group/Evolution/Desc/1022400┃<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
+Skill/LobbyDesc/1022400┃<color=green>被动效果</color>\n卢克在攻击和击杀敌人时，迷你地图不会出现标记声音。\n\n使用效果\n卢克立即闪到指定的敌人身后，并用手枪给敌人造成伤害，妨碍集中精神，减少敌方移动速度。对队友或自身设置的监视器使用技能时，增加射程范围，使用后监视器被摧毁。\n\n<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。
+Skill/Group/Desc/1022500┃卢克从改良的清洁工具发射出一枚穿透性的子弹，根据敌人失去体力的比例给敌人造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能伤害，并使其{2}秒间移动速度降低{3}。卢克获得敌人的视野并退后。\n\n<color=yellow>升级效果</color>: 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。
 Skill/Group/Coef/1022500┃卢克从改良的清洁工具发射出一枚穿透性的子弹，根据敌人失去体力的比例给敌人造成<color=white>{2}</color><color=#ffd775>(+攻击力的{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻击力的{5})</color>的技能伤害，并使其{0}秒间移动速度降低{1}。卢克获得敌人的视野并退后。\n\n<color=yellow>升级效果</color>: 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。
+Skill/Group/Evolution/Desc/1022500┃<color=yellow>升级效果</color> : 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。\n\n<color=yellow>完美管家每达到一定叠层数时都可获得升级点。</color>
+Skill/LobbyDesc/1022500┃卢克从改良的清洁工具发射出一枚穿透性的子弹，根据敌人失去体力的比例给敌人造成伤害，并使其移动速度降低。卢克获得敌人的视野并退后。\n\n<color=yellow>升级效果</color>: 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。
 CharacterState/Group/Name/1022100┃完美管家
 CharacterState/Group/Name/1022220┃保洁服务
 CharacterState/Group/Name/1022230┃卢克的顾客
@@ -12315,6 +12304,8 @@ CharacterState/Group/Name/1022320┃强迫症
 CharacterState/Group/Name/1022400┃无声扫除机
 CharacterState/Group/Name/1022410┃无声扫除机 - 减慢
 CharacterState/Group/Name/1022500┃售后服务 - 减慢
+CharacterState/Group/Name/1022530┃售后服务 - 降低移动速度
+CharacterState/Group/Name/1022540┃售后服务 - 降低移动速度
 CharacterState/Group/Desc/1022100┃清洁卢米亚岛，即可获得叠层。
 CharacterState/Group/Desc/1022220┃可重新使用保洁服务。
 CharacterState/Group/Desc/1022230┃已成为卢克的顾客。
@@ -12324,6 +12315,8 @@ CharacterState/Group/Desc/1022320┃卢克的攻击速度以上升。
 CharacterState/Group/Desc/1022400┃卢克的攻击没有声音。
 CharacterState/Group/Desc/1022410┃因无声扫除机移动速度降低。
 CharacterState/Group/Desc/1022500┃因售后服务移动速度降低。
+CharacterState/Group/Desc/1022530┃因售后服务移动速度降低。
+CharacterState/Group/Desc/1022540┃因售后服务移动速度降低。
 Skill/Group/Name/1023100┃外科专家
 Skill/Group/Name/1023200┃动脉切开术
 Skill/Group/Name/1023300┃截断
@@ -12745,7 +12738,9 @@ CharacterState/Group/Desc/1032120┃维持热身叠层。
 CharacterState/Group/Desc/1032200┃变化球启动中。
 CharacterState/Group/Desc/1032300┃被挥臂投球击中，减少移动速度。
 CharacterState/Group/Desc/1032310┃被挥臂投球击中，晕厥。
+CharacterState/Group/Desc/1032320┃增加防御力。
 CharacterState/Group/Desc/1032410┃增加防御力。
+CharacterState/Group/Desc/1032420┃增加移动速度
 CharacterState/Group/Desc/1032500┃被王牌投球击中，减少移动速度。
 CharacterState/Group/Desc/1032510┃被王牌投球击中，减少移动速度。
 Skill/Group/Name/1033100┃狂躁
@@ -12924,19 +12919,19 @@ Skill/Group/Name/1037100┃孤独的艺术家
 Skill/Group/Name/1037200┃剪影
 Skill/Group/Name/1037300┃灵感
 Skill/Group/Name/1037400┃暗影刺客
-Skill/Group/Name/1037500┃完美杰作
+Skill/Group/Name/1037510┃完美杰作
 Skill/Group/Desc/1037100┃丹尼尔在夜晚变成孤独的艺术家，和其他实验体相比夜间视野增加{0}，移动速度增加{1}。
 Skill/Group/Desc/1037200┃丹尼尔在指定位置召唤剪影，对敌人造成<color=white>{20}</color>技能伤害，之后的3回普攻在3秒间攻击速度增加{7}。 处于剪刀中心的敌人承受<color=white>{21}</color>技能伤害并在{5}秒间移动速度减少{6}。
 Skill/Group/Desc/1037300┃丹尼尔对指定的敌人实验体施加<color=#ffffff>灵感</color> 标识。\n丹尼尔可以获得被标识目标周围2m的视野，被标识的目标视野持续减少{8}秒，直到再次承受丹尼尔的攻击，同时{0}秒间在标识上累积所造成伤害的{7}。\n维持灵感标识{0}秒状态的敌人将成为丹尼尔的<color=#ffffff>灵感来源</color>。丹尼尔在{2}秒内攻击灵感来源使标识爆炸，并造成等同于累计伤害量的真实伤害和<color=white>{20}</color>技能伤害，{1}秒间移动速度减少{12}。\n\n此技能可以用于终极野怪。
 Skill/Group/Desc/1037400┃丹尼尔朝目标方向突进，{1}秒间化身一道黑影。黑影状态下普攻射程固定3m，下一个普攻会将丹尼尔瞬间传送到目标身后，造成<color=white>{20}</color>额外技能伤害。
-Skill/Group/Desc/1037500┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将目标造成<color=white>{20}</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{21}</color>的技能伤害。
-Skill/Group/Desc/1037510┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将对目标造成<color=white>{20}</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{21}</color>的技能伤害。
+Skill/Group/Desc/1037510┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将目标造成<color=white>{20}</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{21}</color>的技能伤害。
+Skill/Group/Desc/1037520┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将对目标造成<color=white>{20}</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{21}</color>的技能伤害。
 Skill/Group/Coef/1037100┃丹尼尔在夜晚变成孤独的艺术家，和其他实验体相比夜间视野增加{0}，移动速度增加{1}。
 Skill/Group/Coef/1037200┃在指定位置召唤剪影，对敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力{1})</color>的技能伤害，之后的3回普攻3秒间攻击速度增加{7}。处于剪刀中心的敌人承受<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的技能伤害，并在{5}秒间减少移动速度{6}。
 Skill/Group/Coef/1037300┃丹尼尔对指定的敌人实验体施加<color=#ffffff>灵感</color> 标识。\n丹尼尔可以获得被标识目标周围2m的视野，被标识的目标视野持续减少{8}秒，直到再次承受丹尼尔的攻击，同时{0}秒间在标识上累积所造成伤害的{7}。\n维持灵感标识{0}秒状态的敌人将成为丹尼尔的<color=#ffffff>灵感来源</color>。丹尼尔在{2}秒内攻击灵感来源使标识爆炸，并造成等同于累计伤害量的真实伤害和<color=white>{3}</color><color=#ffd775>(+攻击力{4})</color>的技能伤害，{1}秒间移动速度减少{12}。\n\n此技能可以用于终极野怪。
 Skill/Group/Coef/1037400┃丹尼尔朝目标方向突进，{1}秒间化身一道黑影。黑影状态下普攻射程固定3m，{1}秒间下一个普攻会将丹尼尔瞬间传送到目标身后，造成<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的额外技能伤害。
-Skill/Group/Coef/1037500┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将目标造成<color=white>{4}</color><color=#ffd775>(+攻击力{5})</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{1}</color><color=#ffd775>(+攻击力{2})</color>的技能伤害。
 Skill/Group/Coef/1037510┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将目标造成<color=white>{4}</color><color=#ffd775>(+攻击力{5})</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{1}</color><color=#ffd775>(+攻击力{2})</color>的技能伤害。
+Skill/Group/Coef/1037520┃丹尼尔对敌人造成伤害后的{9}秒内可以化身为敌人实验体的影子。化身为影子时，敌人将陷入{6}秒沉默状态，丹尼尔最多可以在影子中停留{0}秒，持续期间内将目标造成<color=white>{4}</color><color=#ffd775>(+攻击力{5})</color>技能伤害，最多4次。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成<color=white>{1}</color><color=#ffd775>(+攻击力{2})</color>的技能伤害。
 Skill/Group/ExpansionTip/1037400┃此普攻也被视为技能攻击。
 CharacterState/Group/Name/1037100┃孤独的艺术家
 CharacterState/Group/Desc/1037100┃行走于夜间的丹尼尔，视野和移动速度有所增加。
@@ -13162,13 +13157,13 @@ Skill/Group/Name/1042400┃血循环
 Skill/Group/Name/1042500┃血族女皇的契约
 Skill/Group/Desc/1042100┃<color=white>缓血</color>\n比安卡每隔一段时间使用普攻造成 <color=white>{6}</color><color=#688A08>(+目标体力上限的{8})</color>技能伤害。承受比安卡技能伤害的目标在{0}秒间减少{1}移动速度。\n\n<color=white>血袋</color>\n比安卡通过技能造成的伤害{2}，体力消耗值和承受伤害的{3}来累积<color=white>血液</color>。<color=white>血液</color>可累积至自身体力上限的{4}。非战斗状态下，比安卡每{9}秒消耗<color=white>血液</color>上限的{5}来恢复所消耗量的{10}体力。
 Skill/Group/Desc/1042200┃比安卡朝指定地点投射血之枪，命中的敌人承受<color=white>{0}</color>技能伤害。血之枪在目标点形成圆形血滩，对第一个命中的敌人造成<color=white>{1}</color><color=#688A08>(+目标体力上限的{4})</color>技能伤害后消失。处于<color=white>缓血</color>状态的目标被<color=white>血之枪</color>命中时，会被束缚{5}秒。
-Skill/Group/Desc/1042300┃比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。\n<color=white>血液</color>累积至上限值的{4}以上时，重置<color=white>安息</color>的冷却时间。\n\n在使用<color=white>安息</color>技能时，如果<color=white>血液</color>累积量达到{4}以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值，按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
+Skill/Group/Desc/1042300┃<color=green>被动</color> : <color=white>血液</color>累积上限达到{4}时，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。\n\n在使用<color=white>安息</color>技能时，如果<color=white>血液</color>累积量达到{4}以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值，按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
 Skill/Group/Desc/1042310┃比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。根据<color=white>血液</color>消耗值按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
 Skill/Group/Desc/1042400┃比安卡蓄力血环，并向前突进造成技能伤害。每蓄力{10}秒额外消耗当前体力的{11}，最多蓄力{0}秒，蓄力状态最长维持{1}秒。根据蓄力时间增加突进距离和伤害范围，伤害量增加至<color=white>{4}</color>~<color=white>{5}</color>。蓄力超过{0}秒时，恢复<color=white>{8}</color>体力，命中多个敌人时，每个敌人额外增加{12}恢复量。
 Skill/Group/Desc/1042500┃比安卡召唤血族的契约，施放血咒，在周围形成星芒血阵。血咒结束后，星芒血阵固定于地面，范围内的敌人承受<color=white>{0}</color><color=#688A08>(+目标体力上限的{2})</color>技能伤害，{13}秒间移动速度减缓{3}。比安卡在星芒血阵上方时，吸血-所有伤害增加{4}。\n星芒血阵持续时间结束时，根据范围内敌人的已失体力按比例造成<color=white>{5}</color>~<color=white>{6}</color>技能伤害，并恢复<color=white>{9}</color>(+已失体力的{11})体力。命中多个敌人时，每个敌人额外增加{12}恢复量。
 Skill/Group/Coef/1042100┃<color=white>缓血</color>\n 比安卡每隔一段时间使用普攻造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#688A08>(+目标体力上限的{8})</color>技能伤害。承受比安卡技能伤害的目标在{0}秒间减少{1}移动速度。\n\n<color=white>血袋</color>\n比安卡通过技能造成的伤害{2}，体力消耗值和承受伤害的{3}来累积<color=white>血液</color>。<color=white>血液</color>可累积至自身体力上限的{4}。非战斗状态下，比安卡每{9}秒消耗<color=white>血液</color>上限的{5}来恢复所消耗量的{10}体力。
 Skill/Group/Coef/1042200┃比安卡朝指定地点投射血之枪，命中的敌人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{6})</color>技能伤害。血之枪在目标点形成圆形血滩，对第一个命中的敌人造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{7})</color><color=#688A08>(+目标体力上限的{4})</color>技能伤害后消失。处于<color=white>缓血</color>状态的目标被<color=white>血之枪</color>命中时，会被束缚{5}秒。
-Skill/Group/Coef/1042300┃比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。\n<color=white>血液</color>累积至上限值的{4}以上时，<color=white>安息</color>的冷却时间将重置。\n\n<color=white>安息</color>技能在使用时如果<color=white>血液</color>累积量达到{4}以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
+Skill/Group/Coef/1042300┃<color=green>被动</color> : <color=white>血液</color>累积上限达到{4}时，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。\n\n<color=white>安息</color>技能在使用时如果<color=white>血液</color>累积量达到{4}以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
 Skill/Group/Coef/1042310┃比安卡集中精力并暂时隐身于吸血鬼的棺材中，最多持续{0}秒。\n身处棺材中的比安卡，承受伤害减少{1}，并且每{2}秒恢复体力上限{3}的体力。根据<color=white>血液</color>消耗值按比例增加体力恢复量，每{5}秒所有技能冷却时间减少{6}秒(<color=white>安息</color>和武器技能除外)。
 Skill/Group/Coef/1042400┃比安卡蓄力血环，并向前突进造成技能伤害。每蓄力{10}秒额外消耗当前体力的{11}，最多蓄力{0}秒，蓄力状态最长维持{1}秒。根据蓄力时间增加突进距离和伤害范围，伤害量增加至<color=white>{4}</color><color=#DDA0DD>(+技能增幅的{13})</color>~<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{14})</color>。蓄力超过{0}秒时，恢复<color=white>{8}</color><color=#DDA0DD>(+技能增幅的{15})</color>体力，命中多个敌人时，每个敌人额外增加{12}恢复量。
 Skill/Group/Coef/1042500┃比安卡召唤血族的契约，施放血咒，在周围形成星芒血阵。血咒结束后，星芒血阵固定于地面，范围内的敌人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{13})</color><color=#688A08>(+目标体力上限的{2})</color>技能伤害，{17}秒间移动速度减缓{3}。比安卡在星芒血阵上方时，吸血-所有伤害增加{4}。\n星芒血阵持续时间结束时，根据范围内敌人的已失体力按比例造成<color=white>{5}</color><color=#DDA0DD>(+技能增幅的{14})</color>~<color=white>{7}</color><color=#DDA0DD>(+技能增幅的{15})</color>技能伤害，并恢复<color=white>{9}</color><color=#DDA0DD>(+技能增幅的{16})</color>(+已失体力的{11})体力。命中多个敌人时，每个敌人额外增加{12}恢复量。
@@ -13361,13 +13356,13 @@ Skill/Group/Desc/1045200┃梅展开披肩，对范围内的敌人造成<color=w
 Skill/Group/Desc/1045300┃梅用披肩包裹自己形成保护膜，{2}秒内被普攻命中时仅承受{3}伤害，并且移动速度逐渐增加{4}，同时防御力增加{10}。持续时间结束时，对范围内的敌人造成<color=white>{20}</color>技能伤害。\n充能上限为{5}次，每次普攻充能时间缩减{7}秒。
 Skill/Group/Desc/1045400┃梅在冲向敌人、队友、野生动物或监视器的同时在{2}秒间持续获得护盾效果。冲向队友时 : 队友可以获得同等的护盾。\n冲向敌人实验体时 : <color=white>{22}</color> \n冲向队友、野生动物或监视器时 : <color=white>{20}</color>\n\n<color=white>再次使用技能</color> : 指定方向并使用技能快速移动，给路径上的敌人造成<color=white>{21}</color>技能伤害并陷入挑衅{8}秒。再次使用技能的时间限制为{9}秒。
 Skill/Group/Desc/1045410┃梅在冲向敌人、队友、野生动物或监视器的同时在{2}秒间持续获得护盾效果。如果冲向队友 : 队友可以获得同等的护盾。\n冲向敌人实验体 : <color=white>{22}</color> \n冲向队友、野生动物或监视器 : <color=white>{20}</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移动，给路径上的敌人造成<color=white>{21}</color>技能伤害并陷入挑衅{8}秒。{9}秒内需要再次使用技能。
-Skill/Group/Desc/1045500┃梅使用披肩绑住指定的队友或自身，{6}秒间不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复<color=white>{21}</color>体力，激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
+Skill/Group/Desc/1045500┃梅使用披肩绑住指定的队友或自身，{6}秒间不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复<color=white>{21}</color>体力，用于自身时激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
 Skill/Group/Coef/1045100┃梅在进行普攻时，造成防御力{0}的额外技能伤害。\n\n梅可以制作<color=#FFC62E>秘銀吊带</color>, <color=#FFC62E>奥黛</color>, <color=#FFC62E>幽灵战衣</color>, <color=#FFC62E>私人定制</color>等物品。
 Skill/Group/Coef/1045200┃梅展开披肩，对范围内的敌人造成<color=white>{0}</color><color=#93c9e7>(+防御力的{10})</color><color=#dda0dd>(+技能增幅的{4})</color><color=#688a08>(+体力上限的{11})</color>技能伤害，并赋予{5}秒图案。\n\n图案目标被<color=white>垂缀</color>再次命中时，{6}秒间移动速度减少{7}。
 Skill/Group/Coef/1045300┃梅用披肩包裹自己形成保护膜，{2}秒内被普攻命中时仅承受{3}伤害，移动速度逐渐增加{4}，同时防御力增加{10}。持续时间结束时，对范围内的敌人造成<color=white>{0}</color><color=#dda0dd>(+技能增幅{11})</color><color=#93c9e7>(+防御力{12})</color>的技能伤害。\n充能上限为{5}次，每次普攻充能时间缩减{7}秒。
 Skill/Group/Coef/1045400┃梅在冲向敌人、队友、野生动物或监视器，{2}秒间持续获得护盾效果。冲向队友 : 队友可以获得同等的护盾。\n如果冲向敌人 : <color=white>{0}</color><color=#93C9E7>(+防御力的{1})</color><color=#DDA0DD>(+技能增幅的{12})</color>\n冲向队友、野生动物或监视器 : <color=white>{0}</color><color=#93C9E7>(+防御力的{1})</color><color=#DDA0DD>(+技能增幅的{10})</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移动，给路径上的敌人造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#93c9e7>(+防御力的{13})</color>技能伤害并陷入挑衅{8}秒。再次使用技能时间限制为{9}秒。
 Skill/Group/Coef/1045410┃梅在冲向敌人、队友、野生动物或监视器，{2}秒间持续获得护盾效果。冲向队友 : 队友可以获得同等的护盾。\n如果冲向敌人 : <color=white>{0}</color><color=#93C9E7>(+防御力的{1})</color><color=#DDA0DD>(+技能增幅的{12})</color>\n冲向队友、野生动物或监视器 : <color=white>{0}</color><color=#93C9E7>(+防御力的{1})</color><color=#DDA0DD>(+技能增幅的{10})</color>\n\n<color=white>再次使用技能</color> : 指定方向，使用技能快速移动，给路径上的敌人造成<color=white>{6}</color><color=#DDA0DD>(+技能增幅的{11})</color><color=#93c9e7>(+防御力的{12})</color>技能伤害并陷入挑衅{8}秒。再次使用技能时间限制为{9}秒。
-Skill/Group/Coef/1045500┃梅使用披肩绑住指定的队友或自身，{6}秒间不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复<color=white>{7}</color><color=#dda0dd>(+技能增幅的{12})</color><color=#93c9e7>(+防御力的{13})</color>体力，激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
+Skill/Group/Coef/1045500┃梅使用披肩绑住指定的队友或自身，{6}秒间不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复<color=white>{7}</color><color=#dda0dd>(+技能增幅的{12})</color><color=#93c9e7>(+防御力的{13})</color>体力，用于自身时激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
 CharacterState/Group/Name/1045200┃垂缀 - 图案
 CharacterState/Group/Desc/1045200┃被赋予图案。
 CharacterState/Group/Name/1045210┃垂缀
@@ -15348,11 +15343,6 @@ Skill/LobbyDesc/1021200┃洛兹朝指定的方向开枪，给路径上的敌人
 Skill/LobbyDesc/1021300┃洛兹举枪进行360度全视角狙击，给周围的敌人带来技能伤害，减少防御力及治愈效果。洛兹在狙击期间移动速度会增加并重载子弹，命中敌人时减少冷却。
 Skill/LobbyDesc/1021400┃洛兹翻越指定的目标，在目标所处位置发射一枚子弹，造成技能伤害并使目标陷入晕厥。洛兹在翻越的途中不能被指定为目标。
 Skill/LobbyDesc/1021500┃洛兹发射子弹，附着在敌人或地面，子弹会在几秒后爆破，并在爆破时给敌人造成技能伤害。\n如果子弹附着在敌人身上，敌人的移动速度将降低。\n被附着子弹的目标将和洛兹共享视野。\n\n在子弹爆破前使用普攻命中敌人5回，子弹将马上爆破给敌人造成体力上限一定比例的真实伤害，并减少其移动速度。\n使用技能击中敌人算作2回普通攻击。\n\n子弹爆破使塞姆汀高爆弹 Mk-Il的技能冷却时间减少，移动速度增加。
-Skill/LobbyDesc/1022100┃卢克参与击杀实验体或维克莱恩都会恢复已失体力。\n\n卢克每次完成击杀实验体，野生动物等清理工作都会获得完美管家的叠层。\n完美管家的叠加可以进一步升级卢克的技能。
-Skill/LobbyDesc/1022200┃卢克投掷清洁剂，对第一个击中的敌人造成伤害，并获得该敌人的视野。接下来的3秒内可重新使用该技能。\n\n再次使用 : 卢克冲向被击中的敌人，摧毁敌人的护盾，并给敌人造成伤害。\n\n<color=yellow>升级效果</color> : 和目标已失体力成比例，再次使用时增加伤害量。
-Skill/LobbyDesc/1022300┃<color=green>被动效果</color> : 强迫症技能击中敌人或使用强化普攻给敌方造成伤害时，一定时间内攻击速度增加。\n\n使用效果 : 卢克挥动清洁工具，命中敌人时，在一段时间内强化普攻，额外造成技能伤害。\n\n<color=yellow>升级效果</color> : 强迫症的使用效果每命中一名敌人，卢克就会恢复一定比例的已失体力。
-Skill/LobbyDesc/1022400┃<color=green>被动效果</color>\n卢克在攻击和击杀敌人时，迷你地图不会出现标记声音。\n\n使用效果\n卢克立即闪到指定的敌人身后，并用手枪给敌人造成伤害，妨碍集中精神，减少敌方移动速度。对队友或自身设置的监视器使用技能时，增加射程范围，使用后监视器被摧毁。\n\n<color=yellow>升级效果</color> : 参与击杀敌人实验体时，重置无声扫除机的冷却时间。
-Skill/LobbyDesc/1022500┃卢克从改良的清洁工具发射出一枚穿透性的子弹，根据敌人失去体力的比例给敌人造成伤害，并使其移动速度降低。卢克获得敌人的视野并退后。\n\n<color=yellow>升级效果</color>: 卢克发射的穿透性子弹如果击中敌人，保洁服务的冷却时间将重置。
 Skill/LobbyDesc/1023100┃凯希对敌人造成技能伤害时，将赋予敌人持续一段时间造成伤害的外伤。\n当外伤累积至3叠层时，可在长时间形成致命外伤状态，给敌人造成更大伤害。处于致命外伤状态的敌人所受的治愈效果减少。\n\n赋予敌人致命外伤时，一段时间内形成可抵御伤害的护盾。在持有护盾的情况下，移向处于外伤或者致命外伤状态的敌人时，会增加移动速度后逐渐减少。
 Skill/LobbyDesc/1023200┃<color=green>被动</color>: 使用技能后，凯希的下一个普攻将造成技能伤害。\n\n凯希快速冲向指定方向，所有被冲撞的敌人承受技能伤害。 \n当凯希使敌人陷入致命外伤状态时，减少动脉切开术的冷却。
 Skill/LobbyDesc/1023300┃凯希向前方挥动刀锯。内围命中时，对敌人造成技能伤害，且不会赋予外伤叠层。被外围命中的敌人承受更大的技能伤害，移动速度减缓。
@@ -15430,7 +15420,7 @@ Skill/LobbyDesc/1037100┃丹尼尔在夜晚变成一位孤独的艺术家，增
 Skill/LobbyDesc/1037200┃丹尼尔在指定位置召唤剪影，对敌人造成技能伤害，命中时，之后的3回普攻增加攻击速度。处于剪刀中心的敌人承受更大的技能伤害并减少移动速度。
 Skill/LobbyDesc/1037300┃丹尼尔对指定的敌人实验体施加<color=#ffffff>灵感</color>标识。\n丹尼尔可以获得被标识目标周围有限的视野，而被标识的敌人在再次承受丹尼尔攻击前的视野减少，同时累计丹尼尔造成的一部分伤害。\n持续灵感标识状态的敌人将成为丹尼尔的<color=#ffffff>灵感来源</color>。丹尼尔攻击<color=#ffffff>灵感来源</color>时，标识将爆炸并造成等同于累计伤害的真实伤害和技能伤害，移动速度变缓。\n\n此技能可以用于终极野怪。
 Skill/LobbyDesc/1037400┃丹尼尔化身成一道黑影朝目标方向突进。黑影状态下进行普攻增加射程并会将丹尼尔瞬间传送到目标身后，造成额外技能伤害。
-Skill/LobbyDesc/1037500┃当丹尼尔对敌人造成伤害时，他可以化身为目标的影子。在化身为影子期间，敌人将暂时陷入沉默状态，丹尼尔可以在敌人的影子中停留一段时间，最多可造成4次技能伤害。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成技能伤害。
+Skill/LobbyDesc/1037510┃当丹尼尔对敌人造成伤害时，他可以化身为目标的影子。在化身为影子期间，敌人将暂时陷入沉默状态，丹尼尔可以在敌人的影子中停留一段时间，最多可造成4次技能伤害。持续时间结束或再次使用技能时，丹尼尔将从影子中走出来并造成技能伤害。
 Skill/LobbyDesc/1038100┃<color=#ffffff>演技</color> : 珍妮普攻可以缩减<color=#ffffff>演员的修养(E)</color>的冷却时间。使用技能<color=#ffffff>演员的修养(E)</color>转换扮演角色获得额外效果。<color=yellow>红酒</color>增加攻击速度， <color=yellow>红茶</color>增加移动速度。\n\n<color=#ffffff>死亡演技</color> : 体力值为0时，珍妮将进入死亡演技状态，变为隐身、无敌，且无法被指定为目标的状态，但是移动速度会大大降低。死亡演技状态结束后复活并恢复体力。
 Skill/LobbyDesc/1038200┃珍妮用聚光灯照亮目标点3次造成伤害。\n照亮敌人时减少技能的冷却时间，照亮自己获得额外效果。\n<color=yellow>红酒</color>增加攻击速度。\n<color=yellow>红茶</color>增加移动速度。
 Skill/LobbyDesc/1038300┃珍妮在指定方向铺上红毯，命中的敌人承受伤害并减少移动速度。\n\n再次使用技能，对红毯上的敌人造成伤害，红毯根据珍妮扮演的角色适用额外效果。 <color=yellow>红酒</color>将红毯上的敌人拉向自己，<color=yellow>红茶</color>将红毯上的敌人推离。
@@ -15453,7 +15443,7 @@ Skill/LobbyDesc/1041400┃约翰赋予目标队友<color=white>指引的光芒</
 Skill/LobbyDesc/1041500┃约翰击退周围的敌人造成伤害，而队友根据目标已失体力按比例恢复体力值。\n\n约翰在周围形成圣域，增加队友的防御力并恢复队友的体力。\n\n技能使用期间，约翰的移动速度变得缓慢。
 Skill/LobbyDesc/1042100┃<color=white>缓血</color>\n 比安卡每隔一段时间使用普攻造成技能伤害。承受比安卡技能伤害的目标减少移动速度。\n\n<color=white>血袋</color>\n比安卡通过技能造成的伤害和体力消耗值以及承受伤害来累积<color=white>血液</color>。<color=white>血液</color>的累积值与自身的体力上限成正比。比安卡在非战斗状态下通过消耗累积的<color=white>血液</color>来恢复体力。
 Skill/LobbyDesc/1042200┃比安卡朝指定地点射出血之枪，命中的敌人承受技能伤害。血之枪在目标点形成圆形血滩，对第一个命中的敌人造成额外伤害后消失。处于<color=white>缓血</color>的目标被<color=white>血之枪</color>命中时陷入束缚。
-Skill/LobbyDesc/1042300┃比安卡集中精力并暂时躲进于吸血鬼的棺材中。\n身处棺材中的比安卡减少承受伤害并持续恢复体力。\n<color=white>血液</color>累积至上限值的50%以上时，<color=white>安息</color>的冷却时间将重置。\n\n<color=white>安息</color>技能在使用时如果<color=white>血液</color>累积量达到50%以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值增加体力恢复，并每隔一段时间减少除 <color=white>安息</color>及武器技能以外技能的冷却时间。\n\n<color=white>安息</color>在使用中可以使用技能 <color=white>血族女皇的契约</color>和<color=white>血循环</color>，并不被敌人看见准备动作。\n
+Skill/LobbyDesc/1042300┃<color=green>被动</color> : <color=white>血液</color>达到50%累积上限时，可以再次施法<color=white>安息</color>技能。\n\n比安卡集中精力并暂时躲进于吸血鬼的棺材中。\n身处棺材中的比安卡减少承受伤害并持续恢复体力。\n\n<color=white>安息</color>技能在使用时如果<color=white>血液</color>累积量达到50%以上，可消耗所有<color=white>血液</color>并根据<color=white>血液</color>消耗值增加体力恢复，并每隔一段时间减少除 <color=white>安息</color>及武器技能以外技能的冷却时间。\n\n<color=white>安息</color>在使用中可以使用技能 <color=white>血族女皇的契约</color>和<color=white>血循环</color>，并不被敌人看见准备动作。\n
 Skill/LobbyDesc/1042400┃比安卡蓄力血环，并向前突进造成技能伤害。蓄力越久消耗的体力越多，并根据蓄力时间增加突进距离和伤害范围以及伤害量。蓄力达到上限的情况下，将根据命中目标数来恢复体力。
 Skill/LobbyDesc/1042500┃比安卡召唤吸血鬼中血族的契约，施放血咒，在周围形成星芒血阵。血咒结束后，星芒血阵将固定于地面，对范围内的敌人造成技能伤害，移动速度减缓。比安卡在星芒血阵上方时，增加吸血-所有伤害。\n星芒血阵持续时间结束时，根据范围内敌人的已失体力按比例造成技能伤害，并恢复体力。\n\n<color=white>血族女皇的契约</color>在使用中可以使用技能<color=white>血循环</color>。
 Skill/LobbyDesc/1043100┃席琳使用3次技能时，下一个普攻造成额外技能伤害。\n\n席琳的技能不受冷却缩减叠层的影响，并转换为技能增幅。
@@ -15470,7 +15460,7 @@ Skill/LobbyDesc/1045100┃梅在进行普攻时，造成防御力一定比例的
 Skill/LobbyDesc/1045200┃梅展开披肩，对范围内的敌人造成伤害并赋予图案。使用<color=white>垂缀</color>再次命中图案目标被时，被命中的目标移动速度减少。
 Skill/LobbyDesc/1045300┃梅用披肩包裹自己形成保护膜，短时间内被普攻命中几乎不会造成什么伤害，同时逐渐增加移动速度，并增加防御力。持续时间结束时，对范围内的敌人造成伤害。\n最多充能2次，每次普攻缩减充能时间。
 Skill/LobbyDesc/1045400┃梅在冲向敌人、队友或监视器的同时获得护盾，并形成可以暂时吸收伤害的护盾。如果冲向队友，队友可以获得同等的护盾。\n\n<color=white>再次使用技能</color>  : 指定方向，使用技能快速移动，路径上的敌人承受伤害并陷入挑衅。
-Skill/LobbyDesc/1045500┃梅使用披肩绑住指定的队友或自身，在一段期间内不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复体力，激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
+Skill/LobbyDesc/1045500┃梅使用披肩绑住指定的队友或自身，在一段期间内不会承受任何的伤害，处于完全被压制的状态，解除束缚时恢复体力，用于自身时激活<color=white>披肩面纱</color>效果。\n用于队友时，将目标拉向自己。
 Skill/LobbyDesc/1046100┃艾登使用技能命中敌人时，将获得<color=white>电荷</color>。\n\n在<color=white>电荷</color>完全蓄能的状态下，如果周围没有敌人或者施法<color=white>后闪</color>时，艾登将处于<color=white>超电荷</color>状态。此时电荷将转为<color=white>子弹</color>，普攻转为远程。\n\n<color=white>超电荷</color>攻击速度和暴击伤害减少，但同时普攻也将转换为暴击，并根据一定比例将暴击率转换为暴击伤害。<color=white>超电荷</color>状态结束时，暂时增加艾登的移动速度。
 Skill/LobbyDesc/1046200┃<color=white>雷击</color> : 艾登释放一把电流剑，对1名敌人造成普攻伤害，并额外获得<color=white>电荷</color>。每当艾登使用普攻命中时，缩减<color=white>雷击</color>冷却。\n\n<color=white>超电荷</color>状态下可以使用<color=white>电子炮</color>。\n\n<color=white>电子炮</color> : 向指定方向发射一枚子弹，对命中的敌人造成普攻伤害，使其移动速度减缓。此技能命中时冷却时间减少。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
 Skill/LobbyDesc/1046300┃艾登集聚电流于武器上，准备下一个攻击，此时移动速度将有所减缓。再次施法时，周围的敌人根据蓄能时间承受技能伤害，并减少移动速度。蓄能至上限时，将生成<color=white>电磁场</color>。\n\n<color=white>电磁场</color> : 接触到电磁场的敌人承受技能伤害并陷入束缚。
@@ -16590,6 +16580,57 @@ Item/Skills/6048001/Body┃使用终极技能时，{0}秒内攻击速度增加<c
 Item/Skills/6048001/Desc┃使用终极技能时，{0}秒内攻击速度增加<color=white>{1}%</color>，移动速度增加<color=white>{2}%</color>，并且无视碰撞。\n冷却 : {3}秒
 CharacterState/Group/Name/6048000┃觉醒
 CharacterState/Group/Desc/6048000┃进入觉醒状态，移动速度和攻击速度得到增加。
+Item/Skills/6049001┃回响
+Item/Skills/6049001/Name┃<color=yellow>回响</color>
+Item/Skills/6049001/Body┃受到敌方实验体伤害时，会在{2}秒内逐渐承受所受伤害的<color=white>{0}%</color>。
+Item/Skills/6049001/Desc┃受到敌方实验体伤害时，会在{2}秒内逐渐承受所受伤害的<color=white>(近战 : {0}%)</color>｜<color=white>(远程 : {1}%)</color>。
+Item/Skills/6050001┃抵抗
+Item/Skills/6050001/Name┃<color=yellow>抵抗</color>
+Item/Skills/6050001/Body┃和失去的体力成比例，最多可以增加<color=#FFD775>{0}%</color>攻击力。当体力低于{1}%时将适用增加上限。
+Item/Skills/6050001/Desc┃和失去的体力成比例，最多可以增加<color=#FFD775>{0}%</color>攻击力。当体力低于{1}%时将适用增加上限。
+Item/Skills/6051001┃泰瑟电击 - 跳跃
+Item/Skills/6051001/Name┃<color=yellow>泰瑟电击 - 跳跃</color>
+Item/Skills/6051001/Body┃使用移动技能时，下次普攻将造成<color=#FFD775>{0}</color>额外技能伤害，并使命中的目标防御力在{1}秒内降低<color=white>{2}%</color>。（冷却时间{3}秒）
+Item/Skills/6051001/Desc┃使用移动技能时，下次普攻将造成<color=white>{0}</color><color=#FFD775>(+攻击力{1}%)</color><color=green>(+实验体等级*{2})</color>额外技能伤害，并使命中的目标防御力在{3}秒内降低<color=white>{4}%</color>。（冷却时间{5}秒）
+Item/Skills/6052001┃炽燃 - 强化
+Item/Skills/6052001/Name┃<color=yellow>炽燃 - 强化</color>
+Item/Skills/6052001/Body┃每次普攻命中敌人实验体时，将获得{2}秒内攻击力增加<color=#FFD775>{0}</color>的叠层。（叠层上限 : {1}）
+Item/Skills/6052001/Desc┃每次普攻命中敌人实验体时，将获得{2}秒内攻击力增加<color=#FFD775>{0}</color>的叠层。（叠层上限 : {1}）
+Item/Skills/6052002┃炽燃
+Item/Skills/6052002/Name┃<color=yellow>炽燃</color>
+Item/Skills/6052002/Body┃每次普攻命中敌人实验体时，将获得{2}秒内攻击速度增加<color=white>{0}%</color>的叠层。（叠层上限 : {1}）
+Item/Skills/6052002/Desc┃每次普攻命中敌人实验体时，将获得{2}秒内攻击速度增加<color=white>{0}%</color>的叠层。（叠层上限 : {1}）
+Item/Skills/6053001┃炽燃 - 增幅
+Item/Skills/6053001/Name┃<color=yellow>炽燃 - 增幅</color>
+Item/Skills/6053001/Body┃独立技能命中敌方实验体时，将叠加{3}秒的炽燃效果，每个叠层可以使技能伤害增加<color=#DDA0DD>{0}%</color>。达到叠层上限{2}时，额外获得<color=white>{1}%</color>吸血 - 所有伤害效果。
+Item/Skills/6053001/Desc┃独立技能命中敌方实验体时，将叠加{3}秒的炽燃效果，每个叠层可以使技能伤害增加<color=#DDA0DD>{0}%</color>。达到叠层上限{2}时，额外获得<color=white>{1}%</color>吸血 - 所有伤害效果。
+Item/Skills/6053002/Name┃<color=yellow>炽燃 - 增幅</color>
+Item/Skills/6053002/Body┃独立技能命中敌方实验体时，将叠加{3}秒的炽燃效果，每个叠层可以使技能伤害增加<color=#DDA0DD>{0}%</color>。达到叠层上限{2}时，额外获得<color=white>{1}%</color>移动速度增加效果。
+Item/Skills/6053002/Desc┃独立技能命中敌方实验体时，将叠加{3}秒的炽燃效果，每个叠层可以使技能伤害增加<color=#DDA0DD>{0}%</color>。达到叠层上限{2}时，额外获得<color=white>{1}%</color>移动速度增加效果。
+Item/Skills/6054001┃炽燃 - 激燃
+Item/Skills/6054001/Name┃<color=yellow>炽燃 - 激燃</color>
+Item/Skills/6054001/Body┃每次普攻命中敌人实验体时，将获得{4}秒内攻击力增加<color=#FFD775>{1}</color>、攻击速度增加<color=white>{0}%</color>的叠层。（叠层上限 : {2}）\n达到叠层上限时，防御穿透额外增加<color=white>{3}%</color>。
+Item/Skills/6054001/Desc┃每次普攻命中敌人实验体时，将获得{4}秒内攻击力增加<color=#FFD775>{1}</color>、攻击速度增加<color=white>{0}%</color> 的叠层。（叠层上限 : {2}）\n达到叠层上限时，防御穿透额外增加<color=white>{3}%</color>。
+CharacterState/Group/Name/6051000┃泰瑟电击 - 跳跃
+CharacterState/Group/Desc/6051000┃可激活泰瑟电击。
+CharacterState/Group/Name/6051010┃泰瑟电击 - 跳跃
+CharacterState/Group/Desc/6051010┃普攻时将激活泰瑟电击。
+CharacterState/Group/Name/6051020┃泰瑟电击 - 减益
+CharacterState/Group/Desc/6051020┃被泰瑟电击命中，防御力降低了。
+CharacterState/Group/Name/6051030┃泰瑟电击 - 蓄能中
+CharacterState/Group/Desc/6051030┃正在蓄能泰瑟电击。
+CharacterState/Group/Name/6052000┃炽燃
+CharacterState/Group/Desc/6052000┃属性值增加了。
+CharacterState/Group/Name/6053000┃炽燃 - 增幅
+CharacterState/Group/Desc/6053000┃技能伤害量增加了。
+CharacterState/Group/Name/6053010┃炽燃 - 叠层上限
+CharacterState/Group/Desc/6053010┃叠层数量达到最大值，吸血 - 所有伤害增加了。
+CharacterState/Group/Name/6053020┃炽燃 - 叠层上限
+CharacterState/Group/Desc/6053020┃叠层数量达到最大值，移动速度增加了。
+CharacterState/Group/Name/6054000┃炽燃 - 激燃
+CharacterState/Group/Desc/6054000┃属性值增加了。
+CharacterState/Group/Name/6054010┃炽燃 - 叠层上限
+CharacterState/Group/Desc/6054010┃叠层数量达到最大值，防御穿透增加了。
 CharacterState/Group/Name/2310100┃勇者搭档
 CharacterState/Group/Desc/2310100┃失去同伴后，两人之间的深厚感情使他们在非战斗状态下的体力再生和移动速度都得到了提高。
 CharacterState/Group/Name/2310200┃孤独的狼
@@ -17208,11 +17249,11 @@ Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃度假A-Coin任务书
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃战斗女仆A-Coin任务书
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃转变A-Coin任务书
 Product/Name/MILEAGE_S13_A-Coin_QUEST_BOOK_9900004┃晚霞A-Coin任务书
-Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 度假A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活度假A-Coin任务书。\n※ 可以通过任务书菜单查看度假A-Coin任务书。
-Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 战斗女仆A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活战斗女仆A-Coin任务书。\n※ 可以通过任务书菜单查看战斗女仆A-Coin任务书。
-Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 转变A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活转变A-Coin任务书。\n※ 可以通过任务书菜单查看转变A-Coin任务书。
-Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 晚霞A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活晚霞A-Coin任务书。\n※ 可以通过任务书菜单查看晚霞A-Coin任务书。
-Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 好运★A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活好运★A-Coin任务书。\n※ 可以通过任务书菜单查看好运★A-Coin任务书。
+Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 度假A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活度假A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看度假A-Coin任务书。
+Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 战斗女仆A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活战斗女仆A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看战斗女仆A-Coin任务书。
+Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 转变A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活转变A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看转变A-Coin任务书。
+Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 晚霞A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活晚霞A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看晚霞A-Coin任务书。
+Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 好运★A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活好运★A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看好运★A-Coin任务书。
 Product/Name/S5_Lucky_White_LootToken_01┃红色代币 X 3
 Product/Name/S5_Lucky_White_ACoin_15┃A-Coin X 15
 Product/Name/S5_Lucky_Red_Lucky_Token_01┃好运★代币 X 80
@@ -18642,86 +18683,6 @@ BattleMission/14008007/1┃击杀维克莱恩 - 1次
 BattleMission/14008008/1┃获得秘银 - 2次
 BattleMission/14008009/1┃生存15分钟以上 - 8次
 BattleMission/14008010/1┃获得12,000以上荣誉值
-BattleMission/15001001/1┃进行一般/排位游戏 - 5次
-BattleMission/15001002/1┃制作传说等级物品 - 4次
-BattleMission/15001003/1┃击杀敌人实验体 - 3次
-BattleMission/15001004/1┃对野生动物造成25,000伤害
-BattleMission/15001005/1┃获得8,000以上荣誉值
-BattleMission/15001006/1┃制作传说等级物品 - 15次
-BattleMission/15001007/1┃击杀维克莱恩 - 5次
-BattleMission/15001008/1┃获得秘银 - 2次
-BattleMission/15001009/1┃生存15分钟以上 - 8次
-BattleMission/15001010/1┃获得12,000以上荣誉值
-BattleMission/15002001/1┃摄取食物/饮料 - 30次 
-BattleMission/15002002/1┃使用传送门 - 15次
-BattleMission/15002003/1┃击杀奥米加 - 3次
-BattleMission/15002004/1┃对野生动物造成30,000伤害
-BattleMission/15002005/1┃救起濒死队友 - 5次
-BattleMission/15002006/1┃武器熟练度达到18级以上
-BattleMission/15002007/1┃达成TK10 - 3次
-BattleMission/15002008/1┃对敌人实验体造成19,000伤害
-BattleMission/15002009/1┃从传说及以上等级补给箱中获得物品 - 3次
-BattleMission/15002010/1┃击杀敌人实验体 - 10次
-BattleMission/15003001/1┃使用Kiosk - 3次
-BattleMission/15003002/1┃击杀蝙蝠 - 10次
-BattleMission/15003003/1┃达成TK5
-BattleMission/15003004/1┃使用望远监视器 - 20次
-BattleMission/15003005/1┃对敌人实验体造成50,000伤害
-BattleMission/15003006/1┃使用监视器 - 10次
-BattleMission/15003007/1┃进行一般/排位游戏 - 15次
-BattleMission/15003008/1┃击杀敌人实验体 - 20次
-BattleMission/15003009/1┃使用无人机配送 - 30次
-BattleMission/15003010/1┃对敌人实验体造成20,000伤害
-BattleMission/15004001/1┃在溪流击杀敌人实验体 - 7次
-BattleMission/15004002/1┃成功逃生 - 1次
-BattleMission/15004003/1┃救起濒死队友 - 3次
-BattleMission/15004004/1┃使用传送门 - 20次
-BattleMission/15004005/1┃击杀狼 - 40次
-BattleMission/15004006/1┃获得10,000以上荣誉值
-BattleMission/15004007/1┃获得VF血液样本 - 5次
-BattleMission/15004008/1┃进行一般/排位游戏 - 10次
-BattleMission/15004009/1┃生存15分钟以上 - 8次
-BattleMission/15004010/1┃达成TK 7
-BattleMission/15005001/1┃生存10分钟以上 - 10次
-BattleMission/15005002/1┃武器熟练度达到18级以上
-BattleMission/15005003/1┃使用EMP探测仪 - 10次
-BattleMission/15005004/1┃击杀阿尔法 - 5次
-BattleMission/15005005/1┃在一般/排位模式中取得胜利 - 3次
-BattleMission/15005006/1┃击杀敌人实验体 - 3次
-BattleMission/15005007/1┃达成终结者(Terminate) - 10次
-BattleMission/15005008/1┃制作传说等级物品 - 30次
-BattleMission/15005009/1┃对敌人实验体造成14,000伤害
-BattleMission/15005010/1┃获得生命树枝 - 5次
-BattleMission/15006001/1┃对敌人实验体造成30,000伤害
-BattleMission/15006002/1┃使用Kiosk - 15次
-BattleMission/15006003/1┃击杀野狗 - 20次
-BattleMission/15006004/1┃制作传说等级物品 - 4次
-BattleMission/15006005/1┃从传说及以上等级补给箱中获得物品 - 2次
-BattleMission/15006006/1┃进入前三名
-BattleMission/15006007/1┃武器熟练度达到18级以上
-BattleMission/15006008/1┃在旅馆击杀敌人实验体 - 7次
-BattleMission/15006009/1┃获得陨石 - 5次
-BattleMission/15006010/1┃制作熟练度达到10级以上
-BattleMission/15007001/1┃击杀熊 - 3次
-BattleMission/15007002/1┃达成终结者(Terminate) - 5次
-BattleMission/15007003/1┃武器熟练度达到18级以上
-BattleMission/15007004/1┃摄取食物/饮料 - 30次 
-BattleMission/15007005/1┃进行一般/排位游戏 - 15次
-BattleMission/15007006/1┃获得500荣誉值
-BattleMission/15007007/1┃击杀野猪 - 30次
-BattleMission/15007008/1┃击杀敌人实验体 - 4次
-BattleMission/15007009/1┃在加油站击杀敌人实验体 - 7次
-BattleMission/15007010/1┃进入前三名 - 3次
-BattleMission/15008001/1┃击杀敌人实验体 - 3次
-BattleMission/15008002/1┃进行一般/排位游戏 - 5次
-BattleMission/15008003/1┃击杀敌人实验体 - 25次
-BattleMission/15008004/1┃从航空补给箱中获得物品 - 5次
-BattleMission/15008005/1┃达成终结者(Terminate) - 5次
-BattleMission/15008006/1┃击杀鸡 - 30次
-BattleMission/15008007/1┃使用传送门 - 20次
-BattleMission/15008008/1┃对敌人实验体造成35,000伤害
-BattleMission/15008009/1┃使用无人机配送 - 15次
-BattleMission/15008010/1┃击杀敌人实验体 - 10次
 특성┃潜能
 모든 특성┃所有潜能
 기본 슬롯 숨기기┃隐藏默认物品格
@@ -19582,6 +19543,61 @@ FirstLoading3┃Loading ...
 게임문화개선캠페인┃<color=#FF0000>永恒轮回非常重视公平的游戏价值。 \n发现恶意组队将可能会受到账户制裁。 </color>
 게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
 접속시간경과안내┃您已经进行实验{0}小时。请适当休息。
+MasteryType/Glove/Desc┃虽然手套的攻击距离有限，但可以实现连续且快速的攻击。
+MasteryType/Tonfa/Desc┃旋棍是唯一能同时确保防御力和攻击力的武器。
+MasteryType/Hammer/Desc┃锤子虽然攻击速度较慢，但可以通过强有力的攻击来限制对方的动作。
+MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以灵活地应对各式各样的对手。
+MasteryType/Whip/Desc┃鞭子会限制动作范围，无论对使用者来说还是敌人来说，都是难对付的武器。
+MasteryType/HighAngleFire/Desc┃投掷武器具有强大的攻击力。 \n每种武器使用后，弹丸恢复速度有所不同，需要注意数量管理。
+MasteryType/DirectFire/Desc┃暗器的种类最多，是多才多艺的武器。 \n每种武器使用后，弹丸恢复的速度不同，需要注意数量管理。\n
+MasteryType/Bow/Desc┃弓是使用越熟练威力就越强的远距离武器，\n在面对野生动物的时候尤其有利。
+MasteryType/CrossBow/Desc┃短弩高手可以一边逼开接近的对手，一边给予其单方面的伤害。
+MasteryType/Pistol/Desc┃手枪允许玩家频繁地使用技能，特别适合灵活快速的玩法。
+MasteryType/AssaultRifle/Desc┃ 突击步枪是以快速攻击且具有持续攻击性为特色的远距离武器。
+MasteryType/SniperRifle/Desc┃狙击枪具有最远射程和强大攻击力。\n因为射程比视野远，所以选择位置和确保视野清晰是非常重要的。
+MasteryType/Axe/Desc┃斧子虽然慢但具有最强大的攻击力。\n适合想要快速製作武器进行初期战斗的玩家。
+MasteryType/OneHandSword/Desc┃短剑是专门用于突袭的武器。\n在短时间交战中，比其他武器更具杀伤力。
+MasteryType/TwoHandSword/Desc┃双手剑是均衡的武器。\n越熟练越能发挥更大的杀伤力，但需注意，它在初期有些弱。
+MasteryType/Polearm/Desc┃长柄武器是兼具射程和杀伤力的近距离武器。 \n特别适合用于面对多数敌人时的情况。
+MasteryType/DualSword/Desc┃双剑活用了二连击的特色，不仅可以连续攻击还很时髦。
+MasteryType/Spear/Desc┃枪是长兵器，在中距离攻击中具有强大杀伤力。\n但是对处于近处的敌人来说比较弱，所以要适当把握距离。
+MasteryType/Nunchaku/Desc┃双节棍是很难学会的武器，但熟练后，可以是变化万千的危险武器。
+MasteryType/Rapier/Desc┃西洋剑的优点是在躲避敌人攻击的同时还能发起进攻。
+MasteryType/Guitar/Desc┃吉他可以从远距离发出声波，这是一种多功能武器，\n随着技能的发展及升级，每次演奏的方式和攻击都会有所不同。
+MasteryType/Camera/Desc┃相机是一种没有投射体的远攻武器。 可以用来挡住目标的视线，也有利于频繁交战。
+MasteryType/Arcana/Desc┃圣器是一种具有 VF 能量的远程武器。 可以不断地使用技能来制服对手。
+MasteryType/VFArm/Desc┃VF机械臂是利用纳米机器来控制VF的近攻武器。 装备者可以通过调整VF流量，一次性造成严重的伤害。
+MasteryType/Glove/Stats┃装备手套时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Tonfa/Stats┃装备旋棍时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hammer/Stats┃装备锤子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Axe/Stats┃装备斧子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bat/Stats┃装备棍棒时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Whip/Stats┃装备鞭子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/OneHandSword/Stats┃装备短剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/TwoHandSword/Stats┃装备双手剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DualSword/Stats┃装备双剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Spear/Stats┃装备枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/HighAngleFire/Stats┃装备投掷时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DirectFire/Stats┃装备暗器时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bow/Stats┃装备弓箭时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/CrossBow/Stats┃装备短弩时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Pistol/Stats┃装备手枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/AssaultRifle/Stats┃装备突击步枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/SniperRifle/Stats┃装备狙击枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Nunchaku/Stats┃装备双节棍时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Rapier/Stats┃装备西洋剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Guitar/Stats┃装备吉他时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Camera/Stats┃装备相机时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Arcana/Stats┃装备圣器时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/VFArm/Stats┃装备VF机械臂时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hunt/Stats┃增加 {1} {0}
+MasteryType/Craft/Stats┃增加 {1} {0}
+MasteryType/Search/Stats┃增加 {1} {0}
+MasteryType/Move/Stats┃增加 {1} {0}
+MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Meditation/Stats┃增加 {1} {0}
+MasteryType/Trap/Stats┃增加 {1} {0}
 Trait/Name/7900101┃攻击力 I
 Trait/Name/7900102┃攻击力 II
 Trait/Name/7900103┃攻击力 III
@@ -20325,61 +20341,6 @@ Cobalt/부활남은시간┃按<color=#47D5FF>B键</color>，在合成器中强�
 장비의 부위를 선택하세요.┃请选择装备部位。
 코발트추천아이템툴팁┃适合实验体能力值的物品。
 합성기 분쇄 불가 알림┃钴协议模式中无法丢弃物品，可以使用合成器及销毁装置进行销毁。
-MasteryType/Glove/Desc┃虽然手套的攻击距离有限，但可以实现连续且快速的攻击。
-MasteryType/Tonfa/Desc┃旋棍是唯一能同时确保防御力和攻击力的武器。
-MasteryType/Hammer/Desc┃锤子虽然攻击速度较慢，但可以通过强有力的攻击来限制对方的动作。
-MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以灵活地应对各式各样的对手。
-MasteryType/Whip/Desc┃鞭子会限制动作范围，无论对使用者来说还是敌人来说，都是难对付的武器。
-MasteryType/HighAngleFire/Desc┃投掷武器具有强大的攻击力。 \n每种武器使用后，弹丸恢复速度有所不同，需要注意数量管理。
-MasteryType/DirectFire/Desc┃暗器的种类最多，是多才多艺的武器。 \n每种武器使用后，弹丸恢复的速度不同，需要注意数量管理。\n
-MasteryType/Bow/Desc┃弓是使用越熟练威力就越强的远距离武器，\n在面对野生动物的时候尤其有利。
-MasteryType/CrossBow/Desc┃短弩高手可以一边逼开接近的对手，一边给予其单方面的伤害。
-MasteryType/Pistol/Desc┃手枪允许玩家频繁地使用技能，特别适合灵活快速的玩法。
-MasteryType/AssaultRifle/Desc┃ 突击步枪是以快速攻击且具有持续攻击性为特色的远距离武器。
-MasteryType/SniperRifle/Desc┃狙击枪具有最远射程和强大攻击力。\n因为射程比视野远，所以选择位置和确保视野清晰是非常重要的。
-MasteryType/Axe/Desc┃斧子虽然慢但具有最强大的攻击力。\n适合想要快速製作武器进行初期战斗的玩家。
-MasteryType/OneHandSword/Desc┃短剑是专门用于突袭的武器。\n在短时间交战中，比其他武器更具杀伤力。
-MasteryType/TwoHandSword/Desc┃双手剑是均衡的武器。\n越熟练越能发挥更大的杀伤力，但需注意，它在初期有些弱。
-MasteryType/Polearm/Desc┃长柄武器是兼具射程和杀伤力的近距离武器。 \n特别适合用于面对多数敌人时的情况。
-MasteryType/DualSword/Desc┃双剑活用了二连击的特色，不仅可以连续攻击还很时髦。
-MasteryType/Spear/Desc┃枪是长兵器，在中距离攻击中具有强大杀伤力。\n但是对处于近处的敌人来说比较弱，所以要适当把握距离。
-MasteryType/Nunchaku/Desc┃双节棍是很难学会的武器，但熟练后，可以是变化万千的危险武器。
-MasteryType/Rapier/Desc┃西洋剑的优点是在躲避敌人攻击的同时还能发起进攻。
-MasteryType/Guitar/Desc┃吉他可以从远距离发出声波，这是一种多功能武器，\n随着技能的发展及升级，每次演奏的方式和攻击都会有所不同。
-MasteryType/Camera/Desc┃相机是一种没有投射体的远攻武器。 可以用来挡住目标的视线，也有利于频繁交战。
-MasteryType/Arcana/Desc┃圣器是一种具有 VF 能量的远程武器。 可以不断地使用技能来制服对手。
-MasteryType/VFArm/Desc┃VF机械臂是利用纳米机器来控制VF的近攻武器。 装备者可以通过调整VF流量，一次性造成严重的伤害。
-MasteryType/Glove/Stats┃装备手套时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Tonfa/Stats┃装备旋棍时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hammer/Stats┃装备锤子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Axe/Stats┃装备斧子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bat/Stats┃装备棍棒时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Whip/Stats┃装备鞭子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/OneHandSword/Stats┃装备短剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/TwoHandSword/Stats┃装备双手剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DualSword/Stats┃装备双剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Spear/Stats┃装备枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/HighAngleFire/Stats┃装备投掷时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DirectFire/Stats┃装备暗器时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bow/Stats┃装备弓箭时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/CrossBow/Stats┃装备短弩时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Pistol/Stats┃装备手枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/AssaultRifle/Stats┃装备突击步枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/SniperRifle/Stats┃装备狙击枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Nunchaku/Stats┃装备双节棍时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Rapier/Stats┃装备西洋剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Guitar/Stats┃装备吉他时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Camera/Stats┃装备相机时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Arcana/Stats┃装备圣器时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/VFArm/Stats┃装备VF机械臂时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hunt/Stats┃增加 {1} {0}
-MasteryType/Craft/Stats┃增加 {1} {0}
-MasteryType/Search/Stats┃增加 {1} {0}
-MasteryType/Move/Stats┃增加 {1} {0}
-MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Meditation/Stats┃增加 {1} {0}
-MasteryType/Trap/Stats┃增加 {1} {0}
 게임팁 링크┃移动链接
 gameTip_Title_10000_1┃路径 / 制作指南
 gameTip_Desc_10000_1┃打开箱子却不知道该拾起什么物品时？\n注意<color=#8FDBF8>黄色标识</color>的物品。这是必须要获得的物品。\n \n不知道在当前区域需要获得什么物品时？\n不必担心！<color=#8FDBF8>右侧制作指南即可确认需要在当前区域搜寻的物品。\n\n收集所需材料能够制作强大的装备！！
@@ -20407,8 +20368,11 @@ gameTip_Title_10060_1┃信息覆盖
 gameTip_Desc_10060_1┃想要快速查看卢米亚岛上的各种物体资源及野生动物情报时，请使用信息覆盖[ALT]功能！\n\n通过<color=#8FDBF8>[快捷键F8]</color>打开或关闭信息覆盖，可在[游戏设置]页面对信息覆盖中的内容进行设置。
 gameTip_Title_10070_1┃安全监控
 gameTip_Desc_10070_1┃开启位于各个区域的安全监控，获得最重要的视野信息，掌握敌方的位置，确保战略优势！\n\n开启安全监控时，所处区域内的CCTV也将一同开启，并可以获取监视器周围的视野，激活未经队友占领的安全监控可以获得少量荣誉值。\n\n反之，CCTV红灯亮起并逐渐靠近时，说明也有人正在监视你！这时...需要快速逃跑！
-gameTip_Title_10080_1┃传送门
-gameTip_Desc_10080_1┃转眼间即可抵达的瞬.间.移.动！\n\n虽然外观上看起来好像破旧的电话亭，但卢米亚岛的传送门采用了最新技术，可以移动到任何地方。点击<color=#8FDBF8>队友的头像</color>还可以直接移动到队友的所在地！\n\n※ 传送门注意事项 ※\n瞬间移动到的场所可能会偶遇敌人，要小心！
+gameTip_Desc_10071_11┃传送门将迎来重大的变化。\n第三天白天后，安全区域内可以使用新增的移动装置VLS，而禁区内仍可使用传送门。\n和传送门不同，VLS是一种可以在一定半径范围内速降移动的装置。
+gameTip_Title_10071_2┃传送门
+gameTip_Desc_10071_2┃转眼间即可抵达的瞬.间.移.动！\n\n虽然外观上看起来好像破旧的电话亭，但卢米亚岛的传送门采用了最新技术，可以移动到任何地方。点击<color=#8FDBF8>队友的头像</color>还可以直接移动到队友的所在地！\n\n※ 传送门注意事项 ※\n瞬间移动到的场所可能会偶遇敌人，要小心！
+gameTip_Title_10072_1┃跳台
+gameTip_Desc_10072_1┃跳台是一种可以实现快速移动、轻松跨越远距离的装置！\n它在与敌人对峙中至关重要，因此要战略性地使用跳台！
 gameTip_Title_10090_1┃快速交流
 gameTip_Desc_10090_1┃来试试ALT + 长按鼠标左键！\n\n即使没时间聊天，可以通过PING传达多种信息。试试通过感叹号向队友传达“那边很危险！”的信息吧！\n\n需要更进一步的交流时，使用CTRL+拖拽鼠标左键可以进行<color=#8FDBF8>快速交流</color>，CTRL+点击鼠标右键可以设定<color=#8FDBF8>队伍目标</color>。
 gameTip_Title_10100_1┃爆炸计时器
@@ -20555,6 +20519,16 @@ gameTip_Title_10525_1┃魔方 - 生命
 gameTip_Desc_10525_1┃获得绿色生命魔方的实验体 - 在体力值低于一定值的情况下，承受伤害时将在短时间根据体力上限比例恢复体力。
 gameTip_Title_10526_1┃魔方 - 风
 gameTip_Desc_10526_1┃获得蓝色风魔方的实验体 - 短时间内获得爆发性的移动速度加成效果，随后在增益效果持续期间，大幅增加移动速度和非战斗状态下的移动速度、同时获得攻击速度。战斗时间越长，移动速度增加得越多。
+gameTip_Title_10621_1┃秘密研究室
+gameTip_Desc_10621_1┃秘密研究室是卢米亚岛上的一个隐藏地点，玩家在这里可以免受其他队伍的干扰，获得特别奖励。 \n只有通过「密钥卡」召唤便携传送门才能进入，并且可通过研究室内设置的传送门返回卢米亚岛。
+gameTip_Title_10622_1┃密钥卡
+gameTip_Desc_10622_1┃「密钥卡」是一种可以用来进入秘密研究室的新便携工具，可以通过乌鸦获得此物品。 \n有一定概率出现体型较大的乌鸦，乌鸦掉落的密钥卡呈蓝色，带有一些特殊效果。
+gameTip_Title_10623_1┃便携传送门
+gameTip_Desc_10623_1┃使用密钥卡激活便携传送门后，便可进入秘密研究室。\n便携传送门仅在游戏规定的时间内可用，并且每局只能进入一个秘密研究室。\n当所有研究室已满、玩家已经访问过一次研究室或超过入场时间时，传送门将变为红色，无法再使用。
+gameTip_Title_10624_1┃秘密研究室介绍
+gameTip_Desc_10624_1┃到达秘密研究室后，启动门控台获得荣誉值并开启大门。\n玩家可以在其中逐步探索房间、猎杀野生动物、开启箱子，全面探索研究室。在画面上方显示的时间全部耗尽后，研究室将被标记为禁区。请务必在有限的时间内使用传送门离开研究室。
+gameTip_Title_10625_1┃秘密研究室种类
+gameTip_Desc_10625_1┃秘密研究室有多个种类，探索方式和奖励各不相同。也许其中会有一些特别的研究室等待玩家去发现。
 gameTip_Title_10050_3┃箱子组指示器
 gameTip_Desc_10050_3┃激活此功能后，各个区域距离起始点最近的箱子标识将显示为天蓝色。\n当已开启全部箱子组并获得物品时，可以获得该区域所需的目标物品。\n这对决定初期移动路线来说，是一个十分重要的信息，可以先从带有<color=#8FDBF8>箱子组标识</color>的箱子开始进行搜索！
 gameTip_category_CraftItems┃制作物品
@@ -20565,6 +20539,7 @@ gameTip_category_EnvironmentVariable┃环境变量
 gameTip_category_Gadget┃便携工具
 gameTip_category_GuideRobot┃机器人向导 - LUMI
 gameTip_category_BuffCube┃魔方
+gameTip_category_SecretLab┃秘密研究室
 gameTip_category_VictoryAndDefeat┃胜利和败北
 gameTip_category_UseCredits┃荣誉值的使用
 gameTip_category_BeginnerTips┃为新手准备的实用方法
@@ -20592,150 +20567,6 @@ ItemAcquireInfo/Name/33033041┃购买神奇好运★组合包获得
 ItemAcquireInfo/Name/33033042┃购买好运★组合包获得
 ItemAcquireInfo/Name/33033043┃购买白色代币组合包获得
 ItemAcquireInfo/Name/33033051┃通过交换所交换白色代币获得
-나쟈┃娜佳博士
-오퍼레이터 프리셋┃引导员设置
-Option/OperatorPreset/Beginner┃新手玩家
-Option/OperatorPreset/Master┃熟练玩家
-Option/OperatorPreset/Custom┃自定义设置
-오퍼레이터┃引导员
-오퍼레이터 세부 설정┃引导员详细设置
-오퍼레이터 기능 사용┃使用引导员功能
-재료 탐색┃搜索材料
-OperatorSetting/ResourceSearch┃完成探索路径中登记的物品及区域移动的引导
-루트 완성┃完成路径
-OperatorSetting/RouteDone┃完成路径中登记的全部物品后，对篝火及集合点的引导
-장비 제작┃制作装备
-OperatorSetting/EquipmentCraft┃完成探索路径中剩余材料及区域移动的引导
-채집/사냥┃采集/狩猎
-OperatorSetting/CollectAndHunt┃收集特定采集物完成路径中登记的物品的引导
-자동 부활┃自动复活
-OperatorSetting/AutoResurrection┃在可以复活的时段内死亡时，对于如何再次参与实验的引导
-정예 몬스터┃终极野怪
-OperatorSetting/BossMonster┃关于阿尔法/奥米加/维克莱恩博士的引导
-특수 채집 재료 생성┃特殊材料
-OperatorSetting/CreateNoticeSpecialCollectible┃关于生命树枝及陨石的引导
-상위 등급 장비 제작┃制作上位装备
-OperatorSetting/GetSpecialCollectible┃获得特殊材料时，对于可制作的装备引导
-전장┃战场
-OperatorSetting/BattleZone┃战场信息的引导
-탈출┃逃生
-OperatorSetting/Escape┃除自身外的队友全灭时，如何进行逃生的引导
-전송 콘솔┃Kiosk
-OperatorSetting/TransferConsole┃通过Kiosk购买物品的引导
-카트리지 업그레이드┃强化战术技能
-OperatorSetting/TacticalSkillUpgrade┃强化战术技能的引导
-아군 크레딧 부활┃付费复活队友
-OperatorSetting/TeamPaidResurrection┃在Kiosk支付荣誉值复活队友的引导
-몬스터 사냥┃狩猎野生动物
-OperatorSetting/HuntMonster┃通过狩猎野生动物获得武器熟练度及荣誉值的引导
-최후의 2팀 생존┃最终2队生存
-OperatorSetting/TheLastTwoTeams┃生存至最终最后两队的引导
-유료 부활 대상자┃付费复活对象
-OperatorSetting/PaidResurrectionTarget┃通过付费复活队友的引导
-목표 아이템 변경┃更改目标物品
-OperatorSetting/AutoReplaceLateGameItems┃已更改目标物品的提示。
-루미아 섬 안내 로봇┃机器人向导 : LUMI - 战斗状态
-OperatorSetting/GuidedRobotBattleModeNotice┃卢米亚岛机器人向导LUMI对进入战斗状态的引导
-임시, 최종 안전지대 안내┃临时安全区通知
-OperatorSetting/TemporarySafeZoneNotice┃关于临时安全区阶段的提示
-빈사 스킬┃濒死技能
-OperatorSetting/DyingConditionGuide┃对于自身处于濒死状态下可以使用的技能指南
-OperatorSetting/VerticalLauncher┃关于垂直发射装置的提示
-루트 목표 추가 불가능 알림┃无法再登记目标物品了。
-인벤 포화 시 아이템 제작 안내┃有可进行制作的物品。
-오퍼레이터 프리셋 변경 안내┃引导员预设变更提醒
-목표 아이템 등록 불가 알림┃无法再登记目标物品了。
-오퍼레이터 시스템 정보 안내┃引导员 : 在游戏时提供有帮助的指南。
-프리셋 변경 정보 안내┃可以在引导员预设中设置仅显示必要的指南。
-프리셋 변경 버튼┃更改预设
-InGameGuide/Nadja/Group/Name/10010000┃搜索材料物品
-InGameGuide/Nadja/Group/Desc/10010000┃在<color=yellow>{0}</color>探索所需材料吧。
-InGameGuide/Nadja/Group/Name/10011000┃区域移动
-InGameGuide/Nadja/Group/Desc/10011000┃下一个目标区域是<color=yellow>{0}</color>。
-InGameGuide/Nadja/Group/Name/10020000┃篝火
-InGameGuide/Nadja/Group/Desc/10020000┃前往篝火制作食物。
-InGameGuide/Nadja/Group/Name/10022000┃篝火
-InGameGuide/Nadja/Group/Desc/10022000┃前往篝火制作食物。\n附近的篝火就在这里。
-InGameGuide/Nadja/Group/Name/10023000┃篝火
-InGameGuide/Nadja/Group/Desc/10023000┃前往篝火制作食物。距离最近的篝火位于<color=yellow>{0}</color>。
-InGameGuide/Nadja/Group/Name/10024000┃篝火 - 狩猎野生动物
-InGameGuide/Nadja/Group/Desc/10024000┃将狩猎得到的肉拿到篝火处进行烤制。
-InGameGuide/Nadja/Group/Name/10030000┃和队友集合
-InGameGuide/Nadja/Group/Desc/10030000┃需要的都收集好了，是时候和队友集合了。
-InGameGuide/Nadja/Group/Name/10040000┃呼叫无人机配送
-InGameGuide/Nadja/Group/Desc/10040000┃还剩一些目标材料，\n要试一下无人机配送吗？
-InGameGuide/Nadja/Group/Name/10041000┃搜索材料 - 区域移动
-InGameGuide/Nadja/Group/Desc/10041000┃剩余材料位于<color=yellow>{0}</color>。
-InGameGuide/Nadja/Group/Name/10042000┃探索区域
-InGameGuide/Nadja/Group/Desc/10042000┃寻找当前区域剩余的材料！
-InGameGuide/Nadja/Group/Name/10060000┃需要获得采集/狩猎材料
-InGameGuide/Nadja/Group/Desc/10060000┃有合适采集物时可以完成制作物品。
-InGameGuide/Nadja/Group/Name/10070000┃自动复活
-InGameGuide/Nadja/Group/Desc/10070000┃经过复活等待时间后可以选择复活地点。
-InGameGuide/Nadja/Group/Name/10080000┃阿尔法即将登场
-InGameGuide/Nadja/Group/Desc/10080000┃稍后，阿尔法将在<color=yellow>{0}</color>区域出现。
-InGameGuide/Nadja/Group/Name/10083000┃阿尔法登场
-InGameGuide/Nadja/Group/Desc/10083000┃阿尔法在<color=yellow>{0}</color>出现了。\n击杀阿尔法可以获得奖励。
-InGameGuide/Nadja/Group/Name/10090000┃陨石即将坠落
-InGameGuide/Nadja/Group/Desc/10090000┃稍后，陨石即将坠落。\n使用陨石可以制作强大的装备。
-InGameGuide/Nadja/Group/Name/10093000┃陨石坠落
-InGameGuide/Nadja/Group/Desc/10093000┃陨石坠落在<color=yellow>{0}</color>区域。\n快去看看吧！
-InGameGuide/Nadja/Group/Name/10100000┃即将生成生命树枝
-InGameGuide/Nadja/Group/Desc/10100000┃稍后，即将生成生命树枝。\n使用这种特殊材料可以制作强大的装备。
-InGameGuide/Nadja/Group/Name/10103000┃生成生命树枝
-InGameGuide/Nadja/Group/Desc/10103000┃<color=yellow>{0}</color>生成了生命树枝。\n快去看看吧！
-InGameGuide/Nadja/Group/Name/10110000┃制作上位装备
-InGameGuide/Nadja/Group/Desc/10110000┃获得了特殊材料，\n要试一下制作这个吗？\n单击左键就可以登记目标物品了！
-InGameGuide/Nadja/Group/Name/10120000┃战场
-InGameGuide/Nadja/Group/Desc/10120000┃即将激活<color=yellow>{0}</color>战场。\n取得战场最终胜利时可以获得奖励。
-InGameGuide/Nadja/Group/Name/10130000┃奥米加即将出现
-InGameGuide/Nadja/Group/Desc/10130000┃稍后，奥米加将在<color=yellow>{0}</color>区域出现。
-InGameGuide/Nadja/Group/Name/10133000┃奥米加出现
-InGameGuide/Nadja/Group/Desc/10133000┃奥米加在<color=yellow>{0}</color>出现了。\n击杀奥米加可以获得奖励。
-InGameGuide/Nadja/Group/Name/10140000┃维克莱恩博士即将出现
-InGameGuide/Nadja/Group/Desc/10140000┃稍后维克莱恩博士即将出现。\n小心博士的剧毒！
-InGameGuide/Nadja/Group/Name/10143000┃维克莱恩博士出现
-InGameGuide/Nadja/Group/Desc/10143000┃维克莱恩博士在<color=yellow>{0}</color>出现了。\n击杀博士可以获得物品。
-InGameGuide/Nadja/Group/Name/10150000┃逃生
-InGameGuide/Nadja/Group/Desc/10150000┃需要<color=yellow>逃生手环</color>才能前往逃生区。\n在Kiosk购买逃生手环后使用传送门进行移动！
-InGameGuide/Nadja/Group/Name/10160000┃Kiosk
-InGameGuide/Nadja/Group/Desc/10160000┃在Kiosk使用荣誉值可以购买多种物品。
-InGameGuide/Nadja/Group/Name/10170000┃升级战术技能
-InGameGuide/Nadja/Group/Desc/10170000┃在V-pad({0})升级战术技能。
-InGameGuide/Nadja/Group/Name/10180000┃付费复活队友
-InGameGuide/Nadja/Group/Desc/10180000┃使用Kiosk复活已死亡的队友。\n打开地图({0})查看Kiosk的位置。
-InGameGuide/Nadja/Group/Name/10190000┃狩猎野生动物
-InGameGuide/Nadja/Group/Desc/10190000┃试着狩猎区域内的野生动物吧。\n击杀野生动物可以获得<color=yellow>武器熟练度</color>及<color=yellow>荣誉值</color>。
-InGameGuide/Nadja/Group/Name/10200000┃最终幸存2队
-InGameGuide/Nadja/Group/Desc/10200000┃现在只剩下两支队伍了。\n通过({0})可以查看敌方队伍现况。
-InGameGuide/Nadja/Group/Name/10210000┃付费复活对象
-InGameGuide/Nadja/Group/Desc/10210000┃在Kiosk使用荣誉值复活队友，使队友继续参与实验。
-InGameGuide/Nadja/Group/Name/10230000┃更改目标装备
-InGameGuide/Nadja/Group/Desc/10230000┃接下来要介绍一些目标装备。\n右键点击目标装备就可以看到制作所需的材料了！
-InGameGuide/Nadja/Group/Name/10240000┃濒死技能
-InGameGuide/Nadja/Group/Desc/10240000┃使用濒死技能处理当前状况吧！
-InGameGuide/Nadja/Group/Name/10250000┃引导机器人 : LUMI - 战斗状态
-InGameGuide/Nadja/Group/Desc/10250000┃处于战斗状态的LUMI位于<color=yellow>{0}</color>区域。\n攻击卢米可以获得荣誉值。
-InGameGuide/Nadja/Group/Name/10260000┃临时安全区 - 预选地
-InGameGuide/Nadja/Group/Desc/10260000┃将于<color=yellow>{0}</color>激活临时安全区预选地。\n快前往该区域吧。
-InGameGuide/Nadja/Group/Name/10261000┃临时安全区 - 预选地
-InGameGuide/Nadja/Group/Desc/10261000┃稍后将激活临时安全区。\n开始准备战斗吧。
-InGameGuide/Nadja/Group/Name/10262000┃临时安全区 - 激活
-InGameGuide/Nadja/Group/Desc/10262000┃已激活临时安全区。\n决出最终胜者后才能离开该区域。
-InGameGuide/Nadja/Group/Name/10263000┃最终安全区 - 预选地
-InGameGuide/Nadja/Group/Desc/10263000┃将于<color=yellow>{0}</color>激活最终安全区。\n快前去参与最后的战斗吧！
-InGameGuide/Nadja/Group/Name/10121000┃战场预选地
-InGameGuide/Nadja/Group/Desc/10121000┃稍后即将开放战场。\n战场的参与者越多，获得的奖励就越丰富。
-InGameGuide/Nadja/Group/Name/10122000┃激活战场
-InGameGuide/Nadja/Group/Desc/10122000┃战场已激活。\n决出胜负，方可离开战场！
-InGameGuide/Nadja/Group/Name/10123000┃领取战场奖励
-InGameGuide/Nadja/Group/Desc/10123000┃恭喜赢得了战场的胜利。\n记得领取战场奖励！
-오퍼레이터 신규유저 보상 제목┃致卢米亚岛的新玩家
-오퍼레이터 신규유저 보상 내용┃要适应卢米亚岛真的不简单，但你已经有很大的进步了！\n不能叫你新手了，还稍微有些遗憾呢...\n但我真的很高兴！\n谢谢你有耐心听我唠叨！希望这是一段愉快的体验。\n随信附上我们的感谢，希望你可以喜欢！
-오퍼레이터 기존유저 보상 제목┃致耐心听我唠叨的幸存者
-오퍼레이터 기존유저 보상 내용┃虽然都是你已经知道的东西，但你又耐心地听了一遍。\n越想越好奇...这是你个人的品质吗，还是你只是很有耐心？\n总之，谢谢你！我很感动！\n随信附上我们的感谢，希望你可以喜欢！
-신규유저 오퍼레이터 비활성화 안내 내용┃现在好像已经比较熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n以后也多多加油，继续努力吧！
-기존유저 오퍼레이터 비활성화 안내 내용┃现在好像已经熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n你已经做的很好了，继续保持！
 ServerError/1000┃发生未知错误，请重新开始游戏。
 ServerError/1001┃发生未知错误，请重新开始游戏。
 ServerError/1002┃发生未知错误，请重新开始游戏。
@@ -20856,6 +20687,7 @@ ServerError/7503┃赛季包商品仅限购买一次。(7503)
 ServerError/7504┃赛季包的赛季信息无效。(7504)
 ServerError/7601┃不存在该物品。
 ServerError/7602┃产品信息不正确。
+ServerError/7606┃由于未提供开箱奖励，取消开箱。(7606)
 ServerError/9080┃人物信息没有找到。
 ServerError/9081┃皮肤信息没有找到。
 ServerError/9082┃您已经拥有这实验体。
@@ -20917,6 +20749,150 @@ ServerError/9235┃无法取消匹配 (9235)
 ServerError/9239┃活动发生变化，请重新确认活动内容。
 ServerError/99999┃正在连接不兼容的版本。
 ServerError/HttpException┃无法连接服务器。
+나쟈┃娜佳博士
+오퍼레이터 프리셋┃引导员设置
+Option/OperatorPreset/Beginner┃新手玩家
+Option/OperatorPreset/Master┃熟练玩家
+Option/OperatorPreset/Custom┃自定义设置
+오퍼레이터┃引导员
+오퍼레이터 세부 설정┃引导员详细设置
+오퍼레이터 기능 사용┃使用引导员功能
+재료 탐색┃搜索材料
+OperatorSetting/ResourceSearch┃完成探索路径中登记的物品及区域移动的引导
+루트 완성┃完成路径
+OperatorSetting/RouteDone┃完成路径中登记的全部物品后，对篝火及集合点的引导
+장비 제작┃制作装备
+OperatorSetting/EquipmentCraft┃完成探索路径中剩余材料及区域移动的引导
+채집/사냥┃采集/狩猎
+OperatorSetting/CollectAndHunt┃收集特定采集物完成路径中登记的物品的引导
+자동 부활┃自动复活
+OperatorSetting/AutoResurrection┃在可以复活的时段内死亡时，对于如何再次参与实验的引导
+정예 몬스터┃终极野怪
+OperatorSetting/BossMonster┃关于阿尔法/奥米加/维克莱恩博士的引导
+특수 채집 재료 생성┃特殊材料
+OperatorSetting/CreateNoticeSpecialCollectible┃关于生命树枝及陨石的引导
+상위 등급 장비 제작┃制作上位装备
+OperatorSetting/GetSpecialCollectible┃获得特殊材料时，对于可制作的装备引导
+전장┃战场
+OperatorSetting/BattleZone┃战场信息的引导
+탈출┃逃生
+OperatorSetting/Escape┃除自身外的队友全灭时，如何进行逃生的引导
+전송 콘솔┃Kiosk
+OperatorSetting/TransferConsole┃通过Kiosk购买物品的引导
+카트리지 업그레이드┃强化战术技能
+OperatorSetting/TacticalSkillUpgrade┃强化战术技能的引导
+아군 크레딧 부활┃付费复活队友
+OperatorSetting/TeamPaidResurrection┃在Kiosk支付荣誉值复活队友的引导
+몬스터 사냥┃狩猎野生动物
+OperatorSetting/HuntMonster┃通过狩猎野生动物获得武器熟练度及荣誉值的引导
+최후의 2팀 생존┃最终2队生存
+OperatorSetting/TheLastTwoTeams┃生存至最终最后两队的引导
+유료 부활 대상자┃付费复活对象
+OperatorSetting/PaidResurrectionTarget┃通过付费复活队友的引导
+목표 아이템 변경┃更改目标物品
+OperatorSetting/AutoReplaceLateGameItems┃已更改目标物品的提示。
+루미아 섬 안내 로봇┃机器人向导 : LUMI - 战斗状态
+OperatorSetting/GuidedRobotBattleModeNotice┃卢米亚岛机器人向导LUMI对进入战斗状态的引导
+임시, 최종 안전지대 안내┃临时安全区通知
+OperatorSetting/TemporarySafeZoneNotice┃关于临时安全区阶段的提示
+빈사 스킬┃濒死技能
+OperatorSetting/DyingConditionGuide┃对于自身处于濒死状态下可以使用的技能指南
+루트 목표 추가 불가능 알림┃无法再登记目标物品了。
+인벤 포화 시 아이템 제작 안내┃有可进行制作的物品。
+오퍼레이터 프리셋 변경 안내┃引导员预设变更提醒
+목표 아이템 등록 불가 알림┃无法再登记目标物品了。
+오퍼레이터 시스템 정보 안내┃引导员 : 在游戏时提供有帮助的指南。
+프리셋 변경 정보 안내┃可以在引导员预设中设置仅显示必要的指南。
+프리셋 변경 버튼┃更改预设
+InGameGuide/Nadja/Group/Name/10010000┃搜索材料物品
+InGameGuide/Nadja/Group/Desc/10010000┃在<color=yellow>{0}</color>探索所需材料吧。
+InGameGuide/Nadja/Group/Name/10011000┃区域移动
+InGameGuide/Nadja/Group/Desc/10011000┃下一个目标区域是<color=yellow>{0}</color>。
+InGameGuide/Nadja/Group/Name/10020000┃篝火
+InGameGuide/Nadja/Group/Desc/10020000┃前往篝火制作食物。
+InGameGuide/Nadja/Group/Name/10022000┃篝火
+InGameGuide/Nadja/Group/Desc/10022000┃前往篝火制作食物。\n附近的篝火就在这里。
+InGameGuide/Nadja/Group/Name/10023000┃篝火
+InGameGuide/Nadja/Group/Desc/10023000┃前往篝火制作食物。距离最近的篝火位于<color=yellow>{0}</color>。
+InGameGuide/Nadja/Group/Name/10024000┃篝火 - 狩猎野生动物
+InGameGuide/Nadja/Group/Desc/10024000┃将狩猎得到的肉拿到篝火处进行烤制。
+InGameGuide/Nadja/Group/Name/10030000┃和队友集合
+InGameGuide/Nadja/Group/Desc/10030000┃需要的都收集好了，是时候和队友集合了。
+InGameGuide/Nadja/Group/Name/10040000┃呼叫无人机配送
+InGameGuide/Nadja/Group/Desc/10040000┃还剩一些目标材料，\n要试一下无人机配送吗？
+InGameGuide/Nadja/Group/Name/10041000┃搜索材料 - 区域移动
+InGameGuide/Nadja/Group/Desc/10041000┃剩余材料位于<color=yellow>{0}</color>。
+InGameGuide/Nadja/Group/Name/10042000┃探索区域
+InGameGuide/Nadja/Group/Desc/10042000┃寻找当前区域剩余的材料！
+InGameGuide/Nadja/Group/Name/10060000┃需要获得采集/狩猎材料
+InGameGuide/Nadja/Group/Desc/10060000┃有合适采集物时可以完成制作物品。
+InGameGuide/Nadja/Group/Name/10070000┃自动复活
+InGameGuide/Nadja/Group/Desc/10070000┃经过复活等待时间后可以选择复活地点。
+InGameGuide/Nadja/Group/Name/10080000┃阿尔法即将登场
+InGameGuide/Nadja/Group/Desc/10080000┃稍后，阿尔法将在<color=yellow>{0}</color>区域出现。
+InGameGuide/Nadja/Group/Name/10083000┃阿尔法登场
+InGameGuide/Nadja/Group/Desc/10083000┃阿尔法在<color=yellow>{0}</color>出现了。\n击杀阿尔法可以获得奖励。
+InGameGuide/Nadja/Group/Name/10090000┃陨石即将坠落
+InGameGuide/Nadja/Group/Desc/10090000┃稍后，陨石即将坠落。\n使用陨石可以制作强大的装备。
+InGameGuide/Nadja/Group/Name/10093000┃陨石坠落
+InGameGuide/Nadja/Group/Desc/10093000┃陨石坠落在<color=yellow>{0}</color>区域。\n快去看看吧！
+InGameGuide/Nadja/Group/Name/10100000┃即将生成生命树枝
+InGameGuide/Nadja/Group/Desc/10100000┃稍后，即将生成生命树枝。\n使用这种特殊材料可以制作强大的装备。
+InGameGuide/Nadja/Group/Name/10103000┃生成生命树枝
+InGameGuide/Nadja/Group/Desc/10103000┃<color=yellow>{0}</color>生成了生命树枝。\n快去看看吧！
+InGameGuide/Nadja/Group/Name/10110000┃制作上位装备
+InGameGuide/Nadja/Group/Desc/10110000┃获得了特殊材料，\n要试一下制作这个吗？\n单击左键就可以登记目标物品了！
+InGameGuide/Nadja/Group/Name/10120000┃战场
+InGameGuide/Nadja/Group/Desc/10120000┃即将激活<color=yellow>{0}</color>战场。\n取得战场最终胜利时可以获得奖励。
+InGameGuide/Nadja/Group/Name/10130000┃奥米加即将出现
+InGameGuide/Nadja/Group/Desc/10130000┃稍后，奥米加将在<color=yellow>{0}</color>区域出现。
+InGameGuide/Nadja/Group/Name/10133000┃奥米加出现
+InGameGuide/Nadja/Group/Desc/10133000┃奥米加在<color=yellow>{0}</color>出现了。\n击杀奥米加可以获得奖励。
+InGameGuide/Nadja/Group/Name/10140000┃维克莱恩博士即将出现
+InGameGuide/Nadja/Group/Desc/10140000┃稍后维克莱恩博士即将出现。\n小心博士的剧毒！
+InGameGuide/Nadja/Group/Name/10143000┃维克莱恩博士出现
+InGameGuide/Nadja/Group/Desc/10143000┃维克莱恩博士在<color=yellow>{0}</color>出现了。\n击杀博士可以获得物品。
+InGameGuide/Nadja/Group/Name/10150000┃逃生
+InGameGuide/Nadja/Group/Desc/10150000┃需要<color=yellow>逃生手环</color>才能前往逃生区。\n在Kiosk购买逃生手环后使用传送门进行移动！
+InGameGuide/Nadja/Group/Name/10160000┃Kiosk
+InGameGuide/Nadja/Group/Desc/10160000┃在Kiosk使用荣誉值可以购买多种物品。
+InGameGuide/Nadja/Group/Name/10170000┃升级战术技能
+InGameGuide/Nadja/Group/Desc/10170000┃在V-pad({0})升级战术技能。
+InGameGuide/Nadja/Group/Name/10180000┃付费复活队友
+InGameGuide/Nadja/Group/Desc/10180000┃使用Kiosk复活已死亡的队友。\n打开地图({0})查看Kiosk的位置。
+InGameGuide/Nadja/Group/Name/10190000┃狩猎野生动物
+InGameGuide/Nadja/Group/Desc/10190000┃试着狩猎区域内的野生动物吧。\n击杀野生动物可以获得<color=yellow>武器熟练度</color>及<color=yellow>荣誉值</color>。
+InGameGuide/Nadja/Group/Name/10200000┃最终幸存2队
+InGameGuide/Nadja/Group/Desc/10200000┃现在只剩下两支队伍了。\n通过({0})可以查看敌方队伍现况。
+InGameGuide/Nadja/Group/Name/10210000┃付费复活对象
+InGameGuide/Nadja/Group/Desc/10210000┃在Kiosk使用荣誉值复活队友，使队友继续参与实验。
+InGameGuide/Nadja/Group/Name/10230000┃更改目标装备
+InGameGuide/Nadja/Group/Desc/10230000┃接下来要介绍一些目标装备。\n右键点击目标装备就可以看到制作所需的材料了！
+InGameGuide/Nadja/Group/Name/10240000┃濒死技能
+InGameGuide/Nadja/Group/Desc/10240000┃使用濒死技能处理当前状况吧！
+InGameGuide/Nadja/Group/Name/10250000┃引导机器人 : LUMI - 战斗状态
+InGameGuide/Nadja/Group/Desc/10250000┃处于战斗状态的LUMI位于<color=yellow>{0}</color>区域。\n攻击卢米可以获得荣誉值。
+InGameGuide/Nadja/Group/Name/10260000┃临时安全区 - 预选地
+InGameGuide/Nadja/Group/Desc/10260000┃将于<color=yellow>{0}</color>激活临时安全区预选地。\n快前往该区域吧。
+InGameGuide/Nadja/Group/Name/10261000┃临时安全区 - 预选地
+InGameGuide/Nadja/Group/Desc/10261000┃稍后将激活临时安全区。\n开始准备战斗吧。
+InGameGuide/Nadja/Group/Name/10262000┃临时安全区 - 激活
+InGameGuide/Nadja/Group/Desc/10262000┃已激活临时安全区。\n决出最终胜者后才能离开该区域。
+InGameGuide/Nadja/Group/Name/10263000┃最终安全区 - 预选地
+InGameGuide/Nadja/Group/Desc/10263000┃将于<color=yellow>{0}</color>激活最终安全区。\n快前去参与最后的战斗吧！
+InGameGuide/Nadja/Group/Desc/10272100┃现在可以离开研究室了。\n再确认下有没有遗落的物品。
+InGameGuide/Nadja/Group/Name/10121000┃战场预选地
+InGameGuide/Nadja/Group/Desc/10121000┃稍后即将开放战场。\n战场的参与者越多，获得的奖励就越丰富。
+InGameGuide/Nadja/Group/Name/10122000┃激活战场
+InGameGuide/Nadja/Group/Desc/10122000┃战场已激活。\n决出胜负，方可离开战场！
+InGameGuide/Nadja/Group/Name/10123000┃领取战场奖励
+InGameGuide/Nadja/Group/Desc/10123000┃恭喜赢得了战场的胜利。\n记得领取战场奖励！
+오퍼레이터 신규유저 보상 제목┃致卢米亚岛的新玩家
+오퍼레이터 신규유저 보상 내용┃要适应卢米亚岛真的不简单，但你已经有很大的进步了！\n不能叫你新手了，还稍微有些遗憾呢...\n但我真的很高兴！\n谢谢你有耐心听我唠叨！希望这是一段愉快的体验。\n随信附上我们的感谢，希望你可以喜欢！
+오퍼레이터 기존유저 보상 제목┃致耐心听我唠叨的幸存者
+오퍼레이터 기존유저 보상 내용┃虽然都是你已经知道的东西，但你又耐心地听了一遍。\n越想越好奇...这是你个人的品质吗，还是你只是很有耐心？\n总之，谢谢你！我很感动！\n随信附上我们的感谢，希望你可以喜欢！
+신규유저 오퍼레이터 비활성화 안내 내용┃现在好像已经比较熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n以后也多多加油，继续努力吧！
+기존유저 오퍼레이터 비활성화 안내 내용┃现在好像已经熟悉实验的节奏了？\n很好！那我就少叨唠一些。\n你已经做的很好了，继续保持！
 CharacterStoryName┃姓名
 CharacterStoryAge┃年龄
 CharacterStoryHeight┃身高
