@@ -443,6 +443,9 @@ Installation/Name/4┃Weiße Lilie
 Installation/Name/5┃Kluftkrug
 Installation/Name/6┃Bombenfrucht
 Installation/Name/7┃Ölfass
+Installation/Name/21┃Laternenlicht
+Installation/Name/22┃Sandläufer
+Installation/Name/23┃Heilender Ring
 Object/Name/ItemBox┃Vorratskiste
 Object/Name/AirSupplyItemBox┃Luftversorgungskiste
 Object/Name/AirSupplyItemBoxSpawnScratch┃Luftversorgungskiste
@@ -473,6 +476,7 @@ Object/Name/BarrierConsole┃Türkonsole
 Object/Name/MobileHyperLoopBase┃Mobiler Hyperloop
 Object/Name/MobileHyperLoopBlue┃Mobiler Hyperloop: γ
 Object/Name/MobileHyperLoopRed┃Flucht Hyperloop
+Object/Name/HuntersPot┃Jägertopf
 Object/Name/CampFire┃Lagerfeuer
 Area/Name/Harbor┃Dock
 Area/Name/Warehouse┃Lagerhalle
@@ -598,6 +602,7 @@ SpecialItemType/Special┃Speziell
 SpecialItemType/Summon┃Falle
 SpecialItemType/GhostItem┃Spezial
 SpecialItemType/Gadget┃Gadget
+SpecialItemType/OnSelect┃Umtauschbar
 MiscItemType/None┃Nichts
 MiscItemType/Material┃Material
 ItemConsumableType/None┃Nichts
@@ -800,7 +805,7 @@ StatType/PreventBasicAttackDamagedRatio┃Schadensminderung gegen normale Angrif
 StatType/PreventBasicAttackDamagedRatioByLv┃Schadensminderung gegen normale Angriffe pro Level (%)
 StatType/IncreaseSkillDamage┃Zusätzlicher Fähigkeitsschaden
 StatType/IncreaseSkillDamageByLv┃Zusätzlicher Fähigkeitsschaden pro Level
-StatType/IncreaseSkillDamageRatio┃Erhöhter Fähigkeitsschaden
+StatType/IncreaseSkillDamageRatio┃Fähigkeitsverstärkung
 StatType/IncreaseSkillDamageRatio/Desc┃Fähigkeitsschaden erhöht.
 StatType/IncreaseSkillDamageRatioByLv┃Erhöhter Fähigkeitsschaden pro Level
 StatType/PreventSkillDamaged┃Schadensminderung gegen Fähigkeiten
@@ -937,6 +942,8 @@ ToolTipType/SkillDfCoef┃Bonus Verteidigung
 ToolTipType/SkillSkillAmpCoef┃Gesamte Fähigkeitsverstärkung
 ToolTipType/LegShotApCoef┃Lähmender Schuss Angriffskraftschaden
 ToolTipType/DeadEyeApCoef┃Gnadenstoß Angriffskraftschaden
+ToolTipType/LegShotDamage┃Lähmender Schuss Schaden
+ToolTipType/DeadEyeDamage┃Gnadenstoß Schaden
 ToolTipType/DamageAmpCoef┃Schaden Fähigkeitsverstärkung
 ToolTipType/ShieldSkillAmpCoef┃Schild Fähigkeitsverstärkung
 ToolTipType/LegShotSkillAmpCoef┃Lähmender Schuss Fähigkeitsverstärkungsschaden
@@ -1311,6 +1318,9 @@ ToolTipType/W3FinalDamage┃[3 Steigerungen - Nichirinschnitt] Letzter Treffer S
 ToolTipType/R1AdditionalAttackPower┃Zusätzlicher Schaden Angriffskraft
 ToolTipType/R2BaseDamage┃1er & 2ter Treffer Schaden
 ToolTipType/R2DirectDamageAttackPower┃3ter Treffer Schaden
+ToolTipType/JustynaEnergy┃Maximale Energie
+ToolTipType/MinHpHeal┃Minimale HP Wiederherstellung
+ToolTipType/MaxHpHeal┃Max HP Wiederherstellung
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+{0}% Fäh.verst. pro verbleibende Kugel)</color>
 DayNight/Day┃Tag
 DayNight/Night┃Nacht
@@ -1318,7 +1328,7 @@ CastingActionType/ToRest┃Bereite aufs Ausruhen vor
 CastingActionType/ToSearch┃Suche
 CastingActionType/ToBattle┃Beende Ausruhen
 CastingActionType/AirSupplyOpen┃Durchsuche Luftversorgung
-CastingActionType/TransferSupplyBoxOpen┃Öffne Transfervorratskiste
+CastingActionType/KioskSupplyBoxOpen┃Öffne Transfervorratskiste
 CastingActionType/CollectibleOpen┃Sammle Ressourcen
 CastingActionType/BoxOpen┃Durchsuche Luftversorgung
 CastingActionType/AreaSecurityCameraSight┃Prüfe Überwachungssystem
@@ -1331,6 +1341,7 @@ CastingActionType/CollectibleOpenSeaFish┃Angle Barsch
 CastingActionType/CollectibleOpenTreeOfLife┃Sammle Baum des Lebens
 CastingActionType/CollectibleOpenMeteorite┃Baue Meteorit ab
 CastingActionType/CollectibleOpenFlower┃Sammle Blumen
+CastingActionType/CollectibleOpenMushroom┃Pilze Sammeln
 CastingActionType/CollectibleHuntersPot1┃100 Jahre altes Stew vorbereiten
 CastingActionType/CollectibleHuntersPot2┃Ewigen Eintopf zubereiten
 CraftTextForm┃{1} {0} her
@@ -1349,8 +1360,9 @@ CastingActionType/CraftCustom_1┃Stelle
 CastingActionType/Hyperloop┃Operiere Hyperloop zu Verbündeten auf dem Schlachtfeld: <color=#FFBB00>{0}</color>
 CastingActionType/HyperloopToTeammate┃Operiere Hyperloop: Nach <color=#FFBB00>???</color>
 CastingActionType/VerticalLauncher┃Vorbereiten des VLS
-CastingActionType/MobileVerticalLauncher┃Warten auf VLS
-CastingActionType/VLS_Ready┃Warten auf VLS des Host
+CastingActionType/MobileVerticalLauncher┃Vorbereiten des VLS
+CastingActionType/VLS_Ready┃Warten auf VLS
+CastingActionType/VLS_Guest┃Warten auf VLS des Host
 CastingActionType/InstallTrap┃Stelle Falle auf
 CastingActionType/InstallCampFire┃Lagerfeuer machen
 CastingActionType/Resurrect┃Belebe wieder
@@ -1395,6 +1407,9 @@ Collectible/6┃Kartoffelwurzel
 Collectible/7┃Uralter Baum
 Collectible/8┃Krater
 Collectible/9┃Blume
+Collectible/10┃Jägertopf
+Collectible/11┃Jägertopf über dem Lagerfeuer
+Collectible/12┃Pilz
 DropFrequency/Never┃Nicht auffindbar
 DropFrequency/Rare┃Selten
 DropFrequency/Often┃Oft
@@ -1557,6 +1572,7 @@ Skin/Name/1008001┃Bandleader Hart
 Skin/Name/1008002┃Winter Wunderland Hart
 Skin/Name/1008003┃Wunderland Hart
 Skin/Name/1008004┃Marschkapelle Hart
+Skin/Name/1008005┃Kadett Hart
 Skin/Name/1009000┃Isol
 Skin/Name/1009001┃Ödland Isol
 Skin/Name/1009002┃Geisterjäger Isol
@@ -1633,6 +1649,7 @@ Skin/Name/1022002┃Straßenteufel Luke
 Skin/Name/1022003┃Kadett Luke
 Skin/Name/1022004┃Bademeister Luke
 Skin/Name/1022005┃Ludolph
+Skin/Name/1022006┃Sensenmann Luke
 Skin/Name/1023000┃Cathy
 Skin/Name/1023001┃Feldarzt Cathy
 Skin/Name/1023002┃Android-Sanitäterin Cathy
@@ -1741,6 +1758,7 @@ Skin/Name/1047000┃Laura
 Skin/Name/1047001┃Ausgebrochene Diebin Laura
 Skin/Name/1047002┃Unterweltorganisation Laura
 Skin/Name/1047003┃Prunkwinde Laura
+Skin/Name/1047004┃Taktik-Ausbilderin Laura
 Skin/Name/1048000┃Tia
 Skin/Name/1048001┃Straßenatelier Tia
 Skin/Name/1048002┃Hexenlehrling Tia
@@ -1771,6 +1789,7 @@ Skin/Name/1055000┃Estelle
 Skin/Name/1055001┃Spec Ops Estelle
 Skin/Name/1055002┃Brandschutzübung Estelle
 Skin/Name/1055003┃Bestelle
+Skin/Name/1055004┃Drill-Spezialist Estelle
 Skin/Name/1056000┃Piolo
 Skin/Name/1056001┃Challenger Piolo
 Skin/Name/1056002┃Straßenkämpfer Piolo
@@ -1794,6 +1813,7 @@ Skin/Name/1061002┃Irex
 Skin/Name/1062000┃Theodore
 Skin/Name/1062001┃Sonderkommando Theodore
 Skin/Name/1062002┃Kampfpriester Theodore
+Skin/Name/1062003┃Ballistik-Spezialist Theodore
 Skin/Name/1063000┃Ly Anh
 Skin/Name/1063001┃Gefangene Ly Anh
 Skin/Name/1063002┃Verfluchte Hingabe Ly Anh
@@ -1804,6 +1824,7 @@ Skin/Name/1064003┃Hologramm Fee Vanya
 Skin/Name/1065000┃Debi & Marlene
 Skin/Name/1065001┃Sicherheitspolizistin Debi & Marlene
 Skin/Name/1065002┃Zuckerwatte Debi & Marlene
+Skin/Name/1065003┃Nach der Schule Debi & Marlene
 Skin/Name/1066001┃Archäologe Arda
 Skin/Name/1067000┃Abigail
 Skin/Name/1067001┃Gefängniswärterin Abigail
@@ -1820,6 +1841,7 @@ Skin/Name/1071000┃Kenneth
 Skin/Name/1071001┃Kampfpriester Kenneth
 Skin/Name/1072000┃Katja
 Skin/Name/1072001┃Rabenflügel Katja
+Skin/Name/1072002┃Ausbildungsleiterin Katja
 Skin/Name/1073000┃Charlotte
 Skin/Name/1073001┃Austauschschülerin Charlotte
 Skin/Name/1073002┃Karmesinfluch Charlotte
@@ -1867,6 +1889,8 @@ Skin/OnSelectVO/1073002┃Trete mir bei zum ultimativen Spiel des Weltuntergangs
 Skin/OnSelectVO/1020005┃Ist es mein Zug? Schon?
 Skin/OnSelectVO/1064003┃Lass uns zusammen in eine neue Welt wegfliegen!
 Skin/OnSelectVO/1045004┃Auf zur nächsten Bühne!
+Skin/OnSelectVO/1047004┃Wo sind Sie? Jemand hat um meine Hilfe gebeten.
+Skin/OnSelectVO/1072002┃Achtung an alle. Ich bin hier.
 Skin/Desc/1001001┃Eine Kettensäge um Blut zu verspritzen und eine Schere um Fleisch zu reißen. \nWenn du sanftes, fröhliches Summen hörst, renn!
 Skin/Desc/1001002┃Nur weil sie schön wie eine Rose ist, solltest du nicht die Dornen vergessen.
 Skin/Desc/1001003┃Es gibt Menschen die Regeln aufstellen... und welche, die sie brechen.
@@ -2106,6 +2130,12 @@ Skin/Desc/1021004┃Hmm... nur für heute.
 Skin/Desc/1076001┃Ah, ah! Jetzt bin endlich ich dran, oder?
 Skin/Desc/1045004┃Bin ich gut im Tanzen und Singen? Na, was denkst du?
 Skin/Desc/1069002┃Das ist die süßeste Schokolade der Welt! Aber iss sie auf jeden Fall ganz allein, okay?
+Skin/Desc/1077001┃Diejenigen, die den Weg suchen, sollten niemals gebunden sein.
+Skin/Desc/1055004┃Das heutige Training: Wie man einen Notfall bewältigt!
+Skin/Desc/1062003┃Habt ihr euer Ziel? Gut, jetzt genau zielen und schießen!
+Skin/Desc/1047004┃Diese Ausbildung mag hart sein, aber du schaffst das schon, oder?
+Skin/Desc/1072002┃An alle, konzentriert euch! Ich zeige euch das nur einmal!
+Skin/Desc/1008005┃D-Danke dass ihr meine Musik unterstützt!
 ItemType/EMOTION/Name┃Emoticon
 Emotion_Name_001┃Wütend
 Emotion_Name_002┃Lachen
@@ -2415,6 +2445,16 @@ Emotion_ERPASS_4121┃Garnet liebestrunken
 Emotion_ERPASS_4122┃Rozzi begleite mich zum Valentinstag
 Emotion_ERPASS_4123┃Gefängniswärterin Cathy unter Arrest
 Emotion_ERPASS_4124┃Alonsos Fröhliches Inferno
+Emotion_ERPASS_4125┃Taktik-Ausbilderin Lauras Wut
+Emotion_ERPASS_4126┃Drill-Spezialist Estelle Salut
+Emotion_ERPASS_4127┃NiaH am Steuer
+Emotion_ERPASS_4128┃Ballistik-Spezialist Theodore braucht DICH!
+Emotion_ERPASS_4129┃Istvan Blackout
+Emotion_ERPASS_4130┃Ausbilderin Fiora
+Emotion_ERPASS_4131┃Wasteland William Spiel Start!
+Emotion_ERPASS_4132┃Forscherin Barbara Errorbildschirm
+Emotion_ERPASS_4133┃Justizpräfektin Justyna Autsch!
+Emotion_ERPASS_4134┃Straßenteufel Hisui Wirklich?
 Emotion_LiDailin02_NP┃Prost!
 Emotion_LiDailin03_NP┃Einer zu viel...
 Emotion_LiDailin04_NP┃Spöttische Dailin
@@ -2782,7 +2822,7 @@ Emotion_Tazia02_NP┃Zertrümmer sie in Stücke!
 Emotion_Tazia03_NP┃Heureka!
 Emotion_Tazia04_NP┃Alles ok Tazia?
 Emotion_Valentine2024_Tazia_2060005┃Die Zeit tickt!
-Emotion_Valentine2024_Tazia_2060006┃Ein süßes Geschenk 
+Emotion_Valentine2024_Tazia_2060006┃Ein süßes Geschenk
 Emotion_Event_Valentine2024_3092┃ein unzerbrechliches Herz
 Event_S10Champion_NA_3093┃SuperiorBonk
 Event_S10Champion_NA_3094┃FrankieDoodle Ups!
@@ -2791,8 +2831,14 @@ Emotion_Vanya02_NP┃Süß und Verdutzt
 Emotion_Vanya03_NP┃Vanyas Hundeblick
 Emotion_Vanya04_NP┃Schlafmütze
 Emotion_AdmiralLeon01_NP┃Unter Beschuss
+Emotion_BurningMaid_Adriana_NP┃Willst nen Biss?
 Emotion_S3_Attend_Adriana_2017007┃Wildriana lächeln und trinken
 Emotion_Adriana01_SeasonPass┃Es ist warm, Lily...
+Emotion_Echion01_NP┃Echions Zweig...?
+Emotion_Echion02_NP┃E-Positiv!
+Emotion_Echion03_NP┃Was zum...?
+Emotion_Echion04_NP┃GENUG!
+Emotion_SparkleBarbara01_NP┃Sag cheese!
 Emotion_Karla01_NP┃Das wirst Du bereuen!
 Emotion_Karla02_NP┃Feurige Rache
 Emotion_Karla03_NP┃Mission erfüllt 
@@ -2926,6 +2972,9 @@ Emotion_Season13_Reward_5034┃Saison 4 - Unsterblich
 Emotion_Season14_Reward_5035┃Poker Face Abigail Boing!
 Emotion_Season14_Reward_5036┃Kadett Magnus Jump Scare
 Emotion_Season14_Reward_5037┃Saison 5 - Unsterblich
+Emotion_Season15_Reward_5038┃Karmesinfluch Charlottes Geheimnis
+Emotion_Season15_Reward_5039┃Kadett Hart ist entsetzt!
+Emotion_Season15_Reward_5040┃Saison 6 - Unsterblich
 Emotion_S4_Attend_Lidailin_2010008┃Sommeroutfit Li Dailins Hitzeschlag
 Emotion_S4_Attend_Eva_2036006┃Sommerglück Eva's Sorry
 Event_SSR_Creator_3098┃CJiang Gut!
@@ -3044,7 +3093,7 @@ Emotion_Justyna01_NP┃Justyna Genau!
 Emotion_Justyna02_NP┃Justyna Nein Nein!
 Emotion_Justyna03_NP┃Justyna Super!
 Emotion_Justyna04_NP┃Tränen eines Helden
-Emotion_SNS_Justyna_2079005┃Justyna Peace Out!
+Emotion_SNS_Justyna_2079005┃Justyna Peace!
 Emotion_Sissela05_NP┃Sisselas Dilemma
 Emotion_Sissela06_NP┃Sissela Hi
 Emotion_Sissela07_NP┃Willst du Sissela austricksen?
@@ -3057,12 +3106,23 @@ Event_S14Champion_NCMB_3118┃SEASON 5 CHAMPION NCMB
 Event_S14Champion_boongwa_3119┃SEASON 5 CHAMPION BOONGWA
 Event_S14Champion_peng_3120┃SEASON 5 CHAMPION PENG
 Event_S14Champion_JJangE_3121┃SEASON 5 CHAMPION JJANGE
+Emotion_Chiara05_NP┃Smiley Chiara
+Emotion_Chiara06_NP┃Chiara Niemals!
+Emotion_Chiara07_NP┃Vergib meinen Sünden
+Emotion_Chiara08_NP┃Das letzte Gericht ist noch nicht bereit!
+Emotion_Adriana05_NP┃Hi-Driana!
+Emotion_Adriana06_NP┃Hasta la vista, baby!
+Emotion_Adriana07_NP┃Adriana Approved!
+Emotion_Adriana08_NP┃Adriana ist abgestoßen
+Emotion_Katja01_SeasonPass┃Ausbildungsleiterin Katja LOVE
+Emotion_S7_Attend_Katja_2072006┃Ausbildungsleiterin Katja Hi!
+Emotion_S7_Attend_Laura_2047005┃Taktik-Ausbilderin LauRUN!
 Collection/Name/11001┃Alles für meine Tochter.
 Collection/Name/11002┃Magst du... Pixel Art?
 Collection/Name/11003┃Ich werde allen verlorenen Seelen die Erlösung bringen.
 Collection/Name/11004┃Wir streiten uns oft, aber wir lieben uns trotzdem.
 Collection/Name/11005┃Einladung zur Hochzeit!
-Collection/Name/11006┃Lass uns zusammen in eine neue Welt hinfortfliegen!
+Collection/Name/11006┃Lass uns gemeinsam in eine neue Welt fliegen!
 Collection/Name/11007┃Auf zur nächsten Bühne!
 Collection/Name/13001┃Ja, aber warum?
 Collection/Name/13002┃Ein Eiskaffee, bitte!
@@ -3112,10 +3172,11 @@ Collection/Name/24016┃(2024) Silvester Collection Ⅲ
 Collection/Name/24017┃(2024) SilvesterCollection Ⅳ
 Collection/Name/24018┃(2024) Silvester Collection Ⅴ
 Collection/Name/24019┃(2024) Silvester Collection Ⅵ
-Collection/Name/24020┃Legion Tokens Questbuch
-Collection/Name/24021┃Legion Tokens Kollektion Ⅰ
-Collection/Name/24022┃Legion Tokens Kollektion Ⅱ
-Collection/Name/24023┃Legion Tokens Kollektion Ⅲ
+Collection/Name/24020┃Legion Tokens Kollektion Ⅰ
+Collection/Name/24021┃Legion Tokens Kollektion Ⅱ
+Collection/Name/24022┃Legion Tokens Kollektion Ⅲ
+Collection/Name/24023┃Schulrat Kollektion Ⅰ
+Collection/Name/24024┃Schulrat Kollektion Ⅱ
 Shop/Desc/Emotion_Hart01_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
 Shop/Desc/Emotion_Hart02_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
 Shop/Desc/Emotion_Hart03_NP┃Verwende Emotes, um im Spiel zu kommunizieren.
@@ -3319,12 +3380,14 @@ EMBLEM_MARK_SHOP_102002┃Hyunwoo Symbol
 EMBLEM_MARK_SHOP_102003┃Li Dailin Symbol
 EMBLEM_MARK_SHOP_102004┃Jackie Symbol
 EMBLEM_MARK_SHOP_102005┃Rio Symbol
+EMBLEM_MARK_SHOP_102006┃Aya Icon
+EMBLEM_MARK_SHOP_102007┃Fiora Icon
 EMBLEM_MARK_SHOP_102008┃Magnus Icon
 EMBLEM_MARK_SHOP_102009┃Xiukai Icon
-EMBLEM_MARK_SHOP_102010┃Scharlachroter Vampir Shoichi Icon
-EMBLEM_MARK_SHOP_102011┃Farbenrad Tia Icon
-EMBLEM_MARK_SHOP_102012┃Marschkapelle Leni Icon
-EMBLEM_MARK_SHOP_102013┃Geisterjäger Yuki Icon
+EMBLEM_MARK_SHOP_102010┃Scarlet Vampire Shoichi Icon
+EMBLEM_MARK_SHOP_102011┃Color Wheel Tia Icon
+EMBLEM_MARK_SHOP_102012┃Marching Band Leni Icon
+EMBLEM_MARK_SHOP_102013┃Spirit Hunter Yuki Icon
 EMBLEM_MARK_SHOP_102014┃Zahirich Icon
 EMBLEM_MARK_SHOP_102015┃Sissela Icon
 EMBLEM_MARK_SHOP_102016┃Silvia Icon
@@ -3336,7 +3399,7 @@ EMBLEM_MARK_SHOP_102021┃Emma Icon
 EMBLEM_MARK_SHOP_102022┃Luke Icon
 EMBLEM_MARK_SHOP_102023┃Nadine Icon
 EMBLEM_MARK_SHOP_102024┃Lenox Icon
-EMBLEM_MARK_SHOP_102025┃Zuckerwatte Debi & Marlene Icon
+EMBLEM_MARK_SHOP_102025┃Cotton Candy Debi & Marlene Icon
 EMBLEM_MARK_SHOP_102026┃Shoichi Icon
 EMBLEM_MARK_SHOP_102027┃Bernice Icon
 EMBLEM_MARK_SHOP_102028┃Eleven Icon
@@ -3346,37 +3409,37 @@ EMBLEM_MARK_SHOP_102031┃Celine Icon
 EMBLEM_MARK_SHOP_102032┃Markus Icon
 EMBLEM_MARK_SHOP_102033┃Yuki Icon
 EMBLEM_MARK_SHOP_102034┃Cathy Icon
-EMBLEM_MARK_SHOP_102035┃Liebes Serenade Eleven Icon
+EMBLEM_MARK_SHOP_102035┃Love Serenade Eleven Icon
 EMBLEM_MARK_SHOP_102036┃Eva Icon
 EMBLEM_MARK_SHOP_102037┃Laura Icon
 EMBLEM_MARK_SHOP_102038┃Nicky Icon
 EMBLEM_MARK_SHOP_102039┃Jenny Icon
-EMBLEM_MARK_SHOP_102040┃Jan Icon
-EMBLEM_MARK_SHOP_102041┃Holografische Fee Vanya Icon
-EMBLEM_MARK_SHOP_102042┃Süßer Teufel Leni Token
-EMBLEM_MARK_SHOP_102043┃Popstar Mai Token
-EMBLEM_MARK_SHOP_102501┃S4 All ways Incheon Icon
-EMBLEM_MARK_SHOP_102502┃S4 Gyeonggi Innate Icon
-EMBLEM_MARK_SHOP_102503┃S4 GJ Slasher Icon
-EMBLEM_MARK_SHOP_102504┃S4 DH.CNJ Icon
-EMBLEM_MARK_SHOP_102505┃S4 BNK FearX Icon
-EMBLEM_MARK_SHOP_102506┃S4 MIRAEN SEJONG Icon
-EMBLEM_MARK_SHOP_102507┃S4 DAEJEON CYBERS Icon
-EMBLEM_MARK_SHOP_102508┃S4 Seongnam ROX Icon
-EMBLEM_MARK_SHOP_102509┃S5 BNK FearX Icon
-EMBLEM_MARK_SHOP_102510┃S5 MIRAEN SEJONG Icon
-EMBLEM_MARK_SHOP_102511┃S5 Seongnam ROX Icon
-EMBLEM_MARK_SHOP_102512┃S5 Gyeonggi Innate Icon
-EMBLEM_MARK_SHOP_102513┃S5 DAEJEON CYBERS Icon
-EMBLEM_MARK_SHOP_102514┃S5 All ways Incheon Icon
-EMBLEM_MARK_SHOP_102515┃S5 GJ Slasher Icon
-EMBLEM_MARK_SHOP_102516┃S5 DH.CNJ Icon
-EMBLEM_MARK_SHOP_102517┃S6 BNK FearX Icon
-EMBLEM_MARK_SHOP_102518┃S6 MIRAEN SEJONG Icon
-EMBLEM_MARK_SHOP_102519┃S6 Seongnam ROX Icon
-EMBLEM_MARK_SHOP_102520┃S6 Gyeonggi Innate Icon
+EMBLEM_MARK_SHOP_102040┃Jan icon
+EMBLEM_MARK_SHOP_102041┃Holograph Fee Vanya Icon
+EMBLEM_MARK_SHOP_102042┃S4 All ways Incheon Icon
+EMBLEM_MARK_SHOP_102043┃S4 Gyeonggi Innate Icon
+EMBLEM_MARK_SHOP_102501┃S4 DH.CNJ Icon
+EMBLEM_MARK_SHOP_102502┃S4 BNK FearX Icon
+EMBLEM_MARK_SHOP_102503┃S4 MIRAEN SEJONG Icon
+EMBLEM_MARK_SHOP_102504┃S4 DAEJEON CYBERS Icon
+EMBLEM_MARK_SHOP_102505┃S4 Seongnam ROX Icon
+EMBLEM_MARK_SHOP_102506┃S5 BNK FearX Icon
+EMBLEM_MARK_SHOP_102507┃S5 MIRAEN SEJONG Icon
+EMBLEM_MARK_SHOP_102508┃S5 Seongnam ROX Icon
+EMBLEM_MARK_SHOP_102509┃S5 Gyeonggi Innate Icon
+EMBLEM_MARK_SHOP_102510┃S5 DAEJEON CYBERS Icon
+EMBLEM_MARK_SHOP_102511┃S5 All ways Incheon Icon
+EMBLEM_MARK_SHOP_102512┃S5 GJ Slasher Icon
+EMBLEM_MARK_SHOP_102513┃S5 DH.CNJ Icon
+EMBLEM_MARK_SHOP_102514┃S6 BNK FearX Icon
+EMBLEM_MARK_SHOP_102515┃S6 MIRAEN SEJONG Icon
+EMBLEM_MARK_SHOP_102516┃S6 Gyeongnam Sparkle Icon
+EMBLEM_MARK_SHOP_102517┃S6 Seongnam ROX Icon
+EMBLEM_MARK_SHOP_102518┃S6 Gyeonggi Innate Icon
+EMBLEM_MARK_SHOP_102519┃S6 DH.CNJ Icon
+EMBLEM_MARK_SHOP_102520┃S6 All ways Incheon Icon
 EMBLEM_MARK_SHOP_102521┃S6 DAEJEON CYBERS Icon
-EMBLEM_MARK_SHOP_102522┃S6 All ways Incheon Icon
+EMBLEM_MARK_SHOP_102522┃S6 GJ Slasher Icon
 EMBLEM_MARK_SHOP_102523┃S6 GJ Slasher Icon
 EMBLEM_MARK_SHOP_102524┃S6 DH.CNJ Icon
 EMBLEM_MARK_SHOP_102525┃S6 GJ Slasher Icon
@@ -3750,6 +3813,8 @@ EMBLEM_MARK_EVENT_103115┃Season 9 Lumia Marathoner
 EMBLEM_MARK_EVENT_103116┃GULP!
 EMBLEM_MARK_EVENT_103117┃Brauche... Kaffee...
 EMBLEM_MARK_EVENT_103118┃Unter Beschuss
+EMBLEM_MARK_EVENT_103119┃Willst nen Biss?
+EMBLEM_MARK_EVENT_103120┃Sag cheese!
 EMBLEM_MARK_EVENT_103122┃EA SEASON 9 CHAMPION ONECIRCLE
 EMBLEM_MARK_EVENT_103123┃EA SEASON 9 CHAMPION GWORK
 EMBLEM_MARK_EVENT_103124┃EA SEASON 9 CHAMPION DANANA
@@ -3818,6 +3883,8 @@ EMBLEM_MARK_EVENT_103186┃SEASON 5 CHAMPION NCMB
 EMBLEM_MARK_EVENT_103187┃SEASON 5 CHAMPION BOONGWA
 EMBLEM_MARK_EVENT_103188┃SEASON 5 CHAMPION PENG
 EMBLEM_MARK_EVENT_103189┃SEASON 5 CHAMPION JJANGE
+EMBLEM_MARK_EVENT_103191┃Ausbildungsleiterin Katja Hi!
+EMBLEM_MARK_EVENT_103192┃Taktik-Ausbilderin LauRUN!
 EMBLEM_MARK_ERPASS_104001┃Kristallisiertes Eis
 EMBLEM_MARK_ERPASS_104002┃Baum der Geschenke!
 EMBLEM_MARK_ERPASS_104003┃Rote Nase
@@ -3897,25 +3964,37 @@ EMBLEM_MARK_ERPASS_104076┃Sommertraum Vanya
 EMBLEM_MARK_ERPASS_104077┃Summerglück Eva
 EMBLEM_MARK_ERPASS_104078┃S4 Darko
 EMBLEM_MARK_ERPASS_104079┃S4 Lenore
+EMBLEM_MARK_ERPASS_104080┃Poker Face Abigail
+EMBLEM_MARK_ERPASS_104081┃Bad Beat Nicky
+EMBLEM_MARK_ERPASS_104082┃Herzkönigin Jenny
+EMBLEM_MARK_ERPASS_104083┃Gewinnender Schuss Rio
 EMBLEM_MARK_ERPASS_104084┃S5 Yumin
+EMBLEM_MARK_ERPASS_104085┃S5 Garnet
 EMBLEM_MARK_ERPASS_104086┃Scharlachfluch Charlotte
 EMBLEM_MARK_ERPASS_104087┃Abgrundskaiserin Lenox
 EMBLEM_MARK_ERPASS_104088┃Teufelskin Sissela
 EMBLEM_MARK_ERPASS_104089┃Höllenwächter Alonso
 EMBLEM_MARK_ERPASS_104090┃S6 Hisui
 EMBLEM_MARK_ERPASS_104091┃S6 Justyna
+EMBLEM_MARK_ERPASS_104092┃Ausbildungsleiterin Katja
+EMBLEM_MARK_ERPASS_104093┃Taktik-Ausbilderin Laura
+EMBLEM_MARK_ERPASS_104094┃Ballistik-Spezialist Theodore
+EMBLEM_MARK_ERPASS_104095┃Drill-Spezialist Estelle
+EMBLEM_MARK_ERPASS_104096┃S7 NiaH
+EMBLEM_MARK_ERPASS_104097┃S7 Istvan
 EMBLEM_MARK_COLLECTION_119001┃Shoichis Schatz Icon
 EMBLEM_MARK_COLLECTION_119002┃Pixel Art Tia Icon
 EMBLEM_MARK_COLLECTION_119003┃Geisterjäger Yuki Verlasse diesen Körper! Icon
 EMBLEM_MARK_COLLECTION_119004┃Wir streiten, aber wir lieben uns Icon
 EMBLEM_MARK_COLLECTION_119006┃Holografische Fee Vanya Login Icon
-EMBLEM_MARK_COLLECTION_119007┃Popstar Mai Autogramm Icon
 ItemType/EMBLEM_BG/Name┃Profilhintergrund
 EMBLEM_BG_FREE1┃Standard Hintergrund
 EMBLEM_BG_SHOP_202001┃Hyunwoo Hintergrund
 EMBLEM_BG_SHOP_202002┃Li Dailin Hintergrund
 EMBLEM_BG_SHOP_202003┃Jackie Hintergrund
 EMBLEM_BG_SHOP_202004┃Rio Hintergrund
+EMBLEM_BG_SHOP_202005┃Aya Hintergrund
+EMBLEM_BG_SHOP_202006┃Fiora Hintergrund
 EMBLEM_BG_SHOP_202007┃Magnus Hintergrund
 EMBLEM_BG_SHOP_202008┃Xiukai Hintergrund
 EMBLEM_BG_SHOP_202009┃Scharlachroter Vampir Shoichi Hintergrund
@@ -3940,6 +4019,10 @@ EMBLEM_BG_SHOP_202027┃Eleven Hintergrund
 EMBLEM_BG_SHOP_202028┃William Hintergrund
 EMBLEM_BG_SHOP_202029┃Chloe Hintergrund
 EMBLEM_BG_SHOP_202030┃Celine Hintergrund
+EMBLEM_BG_SHOP_202031┃Markus Hintergrund
+EMBLEM_BG_SHOP_202032┃Yuki Hintergrund
+EMBLEM_BG_SHOP_202033┃Cathy Hintergrund
+EMBLEM_BG_SHOP_202034┃Love Serenade Eleven Hintergrund
 EMBLEM_BG_SHOP_202035┃Eva Hintergrund
 EMBLEM_BG_SHOP_202036┃Laura Hintergrund
 EMBLEM_BG_SHOP_202037┃Nicky Hintergrund
@@ -4273,9 +4356,15 @@ EMBLEM_BG_ERPASS_204040┃Davids Kleiderschrank Hintergrund
 EMBLEM_BG_ERPASS_204041┃Sommerglück Eva Hintergrund
 EMBLEM_BG_ERPASS_204042┃Sommeroutfit Li Dailin Hintergrund
 EMBLEM_BG_ERPASS_204043┃Sommertraum Vanya Hintergrund
+EMBLEM_BG_ERPASS_204044┃Bad Beat Nicky Hintergrund
+EMBLEM_BG_ERPASS_204045┃Herzkönigin Jenny Hintergrund
+EMBLEM_BG_ERPASS_204046┃Gewinnender Schuss Rio Hintergrund
 EMBLEM_BG_ERPASS_204047┃Scharlach Fluch Charlotte \nHintergrund
 EMBLEM_BG_ERPASS_204048┃Abgrundskaiserin Lenox \nHintergund
 EMBLEM_BG_ERPASS_204049┃Teufelskin Sissela \nHintergrund
+EMBLEM_BG_ERPASS_204050┃Ausbildungsleiterin Katja Hintergrund
+EMBLEM_BG_ERPASS_204051┃Drill-Spezialist Estelle Hintergrund
+EMBLEM_BG_ERPASS_204052┃Taktik-Ausbilderin Laura Hintergrund
 EMBLEM_BG_COLLECTION_219001┃Hypercapsule Hintergrund
 ItemType/EMBLEM_OUTLINE/Name┃Profilrahmen
 EMBLEM_OUTLINE_FREE1┃Standard Rahmen
@@ -4309,6 +4398,11 @@ EMBLEM_OUTLINE_SHOP_302027┃Eleven Rahmen
 EMBLEM_OUTLINE_SHOP_302028┃William Rahmen
 EMBLEM_OUTLINE_SHOP_302029┃Chloe Rahmen
 EMBLEM_OUTLINE_SHOP_302030┃Celine Rahmen
+EMBLEM_OUTLINE_SHOP_302031┃Markus Rahmen
+EMBLEM_OUTLINE_SHOP_302032┃Yuki Rahmen
+EMBLEM_OUTLINE_SHOP_302033┃Cathy Rahmen
+EMBLEM_OUTLINE_SHOP_302034┃Liebes Serenade Eleven Rahmen
+EMBLEM_OUTLINE_SHOP_302035┃Eva Rahmen
 EMBLEM_OUTLINE_SHOP_302036┃Laura Rahmen
 EMBLEM_OUTLINE_SHOP_302037┃Nicky Rahmen
 EMBLEM_OUTLINE_SHOP_302038┃Jenny Rahmen
@@ -4648,6 +4742,9 @@ EMBLEM_OUTLINE_ERPASS_304045┃Gewinnender Schuss Rio Rahmen
 EMBLEM_OUTLINE_ERPASS_304046┃Scharlach Fluch Charlotte Rahmen
 EMBLEM_OUTLINE_ERPASS_304047┃Abgrundskaiserin Lenox Rahmen
 EMBLEM_OUTLINE_ERPASS_304048┃Teufelskin Sissela Rahmen
+EMBLEM_OUTLINE_ERPASS_304049┃Ausbildungsleiterin Katja
+EMBLEM_OUTLINE_ERPASS_304050┃Drill-Spezialist Estelle
+EMBLEM_OUTLINE_ERPASS_304051┃Taktik-Ausbilderin Laura
 EMBLEM_OUTLINE_COLLECTION_319001┃Hypercapsule Rahmen
 Goods/Name/1304001┃ER Punkt
 ItemType/GRAVE/Name┃Grabstein
@@ -4713,6 +4810,9 @@ Goods/Name/1604056┃VIP
 Goods/Name/1604057┃Tore der Hölle
 Goods/Name/1604058┃Sensenmann
 Goods/Name/1604059┃Jack O' Lantern
+Goods/Name/1604060┃Kappe und Gewehr
+Goods/Name/1604061┃Auf geht's, Soldat!
+Goods/Name/1604062┃Flagge der Besetzung
 Goods/Name/1612001┃Pestdoktor
 Goods/Name/1612002┃Neugier ist der Katze Tod
 Goods/Name/1612003┃Überspannung
@@ -4723,6 +4823,7 @@ Goods/Name/1612007┃Wickelines Spritze
 Goods/Name/1612008┃Sonnenuntergangs-Kokosnuss
 Goods/Name/1612009┃Rios Dartscheibe
 Goods/Name/1612010┃Scharlach Fluch Halo
+Goods/Name/1612011┃Eigengewicht
 ItemType/SPRAY/Name┃Spray
 ItemType/SPRAY/Desc┃Hinterlasse dein Zeichen auf dem Boden!
 Goods/Name/1501001┃Nichts
@@ -4828,10 +4929,16 @@ Goods/Name/1504053┃Vanyas Stern
 Goods/Name/1504057┃Charlottes Fluch Mal
 Goods/Name/1504058┃El Campeón: Teufels Schnitt
 Goods/Name/1504059┃Teufelkin Wilson
+Goods/Name/1504060┃Lauras Gutschein
+Goods/Name/1504061┃Estelle gibt auf
+Goods/Name/1504062┃Katjas Abzeichen
 Goods/Name/1503046┃Aiden hat es gelöst!
 Goods/Name/1503047┃Nathaponglaublich!
 Goods/Name/1503048┃Bringt Lenox die Beute!
 Goods/Name/1503049┃Priyas Ständchen
+Goods/Name/1503050┃Unter Beschuss
+Goods/Name/1503051┃Willst nen Biss?
+Goods/Name/1503052┃Sag cheese!
 Goods/Name/1503053┃Adiós... Alonso
 Goods/Name/1503054┃Delicioso!
 Goods/Name/1503055┃Die Uhr tickt!
@@ -4902,6 +5009,12 @@ Goods/Name/1404163┃Johann Announcer (Japanisch)
 Goods/Name/1404171┃Bianca Announcer (Koreanisch)
 Goods/Name/1404172┃Bianca Announcer (Englisch)
 Goods/Name/1404173┃Bianca Announcer (Japanisch)
+Goods/Name/1404181┃Darko Kommentator (Korean)
+Goods/Name/1404182┃Darko Kommentator (English)
+Goods/Name/1404183┃Darko Kommentator(Japanese)
+Goods/Name/1404191┃Sua Kommentator (Korean)
+Goods/Name/1404192┃Sua Kommentator (English)
+Goods/Name/1404193┃Sua Kommentator (Japanese)
 Goods/Name/1404201┃Tia Ansagerin (Koreanisch)
 Goods/Name/1404202┃Tia Ansagerin  (Englissh)
 Goods/Name/1404203┃Tia Ansagerin  (Japanisch)
@@ -4983,6 +5096,8 @@ Goods/Name/2504013┃Gamma-Drohne
 Goods/Name/2504014┃Widriana-Drohne
 Goods/Name/2504015┃Muschel-Perlendrohne
 Goods/Name/2504016┃Elektrische Quallen-Drohne
+Goods/Name/2504017┃Casino Roulette
+Goods/Name/2504018┃Disco Ball
 Goods/Name/2504019┃Gespenst Wilson
 Goods/Name/2504020┃Fledermaus Auge
 ItemType/CAMERA/Name┃Tele-Kamera Skin
@@ -5077,6 +5192,9 @@ Goods/Name/2804028┃Nähwerkzeuge
 Goods/Name/2804029┃Evas Blume
 Goods/Name/2804030┃Li Dailins Schnaps
 Goods/Name/2804031┃Vanyas Schmetterling
+Goods/Name/2804032┃Nickys Uppercut
+Goods/Name/2804033┃Rios Pfeil
+Goods/Name/2804034┃Jennys Pistole
 Goods/Name/2804035┃Scharlachfluch Heiligenschein
 Goods/Name/2804036┃Verehrung der Kaiserin
 Goods/Name/2804037┃Teufelskin Wilson
@@ -5199,6 +5317,8 @@ Product/Name/Hyunwoo_Emblem_Pack_01┃Hyunwoo Spezialpaket
 Product/Name/LiDailin_Emblem_Pack_01┃Li Dailin Spezialpaket
 Product/Name/Jackie_Emblem_Pack_01┃Jackie Spezialpaket
 Product/Name/Rio_Emblem_Pack_01┃Rio Spezialpaket
+Product/Name/Aya_Emblem_Pack_01┃Aya Spezial Bundle
+Product/Name/Fiora_Emblem_Pack_01┃Fiora Spezial Bundle
 Product/Name/Magnus_Emblem_Pack_01┃Magnus Special Bundle
 Product/Name/Xiukai_Emblem_Pack_01┃Xiukai Special Bundle
 Product/Name/RichZahir_Pack_01┃Zahirich Bundle
@@ -5218,19 +5338,22 @@ Product/Name/Eleven_Emblem_Pack_01┃Eleven Special Bundle
 Product/Name/William_Emblem_Pack_01┃William Special Bundle
 Product/Name/Chloe_Emblem_Pack_01┃Chloe Special Bundle
 Product/Name/Celine_Emblem_Pack_01┃Celine Special Bundle
-Product/Name/Markus_Emblem_Pack_01┃Markus Spezialpaket
-Product/Name/Yuki_Emblem_Pack_01┃Yuki Spezialpaket
-Product/Name/Cathy_Emblem_Pack_01┃Cathy Spezialpaket
-Product/Name/Eva_Emblem_Pack_01┃Eva Spezialpaket
-Product/Name/Laura_Emblem_Pack_01┃Laura Spezialpaket
-Product/Name/Nicky_Emblem_Pack_01┃Nicky Spezialpaket
-Product/Name/Jenny_Emblem_Pack_01┃Jenny Spezialpaket
-Product/Name/Jan_Emblem_Pack_01┃Jan Spezialpaket
-Product/Name/VampireShoichi_CollectPack_01┃Scharlachroter Vampir Shoichi Kollektion Bundle
-Product/Name/GhostHunterYuki_CollectPack_01┃Geisterjäger Yuki Kollektion Bundle
-Product/Name/SparklingTwinsDebiMarlene_Pack_01┃Zuckerwatte Zwillinge Kollektion Bundle
-Product/Name/LoveSerenadeEleven_Pack_01┃Liebesserenade Eleven Kollektion Paket
-Product/Name/HolographFairyVanya_CollectPack_01┃Holografische Fee Vanya
+Product/Name/Markus_Emblem_Pack_01┃Markus Special Bundle
+Product/Name/Yuki_Emblem_Pack_01┃Yuki Special Bundle
+Product/Name/Cathy_Emblem_Pack_01┃Cathy Special Bundle
+Product/Name/Eva_Emblem_Pack_01┃Eva Special Bundle
+Product/Name/Laura_Emblem_Pack_01┃Laura Special Bundle
+Product/Name/Nicky_Emblem_Pack_01┃Nicky Special Bundle
+Product/Name/Jenny_Emblem_Pack_01┃Jenny Special Bundle
+Product/Name/Jan_Emblem_Pack_01┃Jan Special Bundle
+Product/Name/SkinDataChip_RandomBox_01┃Skin Daten Chip
+Product/Name/UR_Grade_Skin_Voucher_01┃Zufälliger Gelegentlicher/Seltener Skin Gutschein
+Product/Name/UR_Grade_Skin_Voucher_02┃Zufälliger Gelegentlicher/Seltener Skin Gutschein
+Product/Name/VampireShoichi_CollectPack_01┃Scarlet Vampire Shoichi Collection Bundle
+Product/Name/GhostHunterYuki_CollectPack_01┃Spirit Hunter Yuki Collection Bundle
+Product/Name/SparklingTwinsDebiMarlene_Pack_01┃Cotton Candy Twins Collection Bundle
+Product/Name/LoveSerenadeEleven_Pack_01┃Love Serenade Eleven Collection Bundle
+Product/Name/HolographFairyVanya_CollectPack_01┃Holograph Fee Vanya
 Product/Name/2024_Festival_Box_02┃Emmas Brotkorb
 Product/Name/2024_Festival_Box_03┃Wilsons Bäckertüte
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃Forschungsdaten-Box
@@ -5338,6 +5461,16 @@ Product/Name/BATTLE_PASS/2003┃Change A-Coin Questbuch
 Product/Name/BATTLE_PASS/2004┃Sunset A-Coin Questbuch
 Product/Name/BATTLE_PASS/2005┃Lucky★ A-Coin Questbuch
 Product/Name/BATTLE_PASS/2006┃Legion A-Coin Questbuch
+Product/Name/2024_Select_Voucher_Pack┃Gutschein Bundle
+Product/Name/2024_Select_Voucher_Pack_01┃Gutschein Bundle Ⅰ
+Product/Name/2024_Select_Voucher_Pack_02┃Gutschein Bundle Ⅱ
+Product/Name/2024_Select_Voucher_Pack_03┃Gutschein Bundle Ⅲ
+Product/Name/2024_ThanksGiving_Profile_Pack_01┃Mittherbstfest Profil Bundle
+Product/Name/2024_ThanksGiving_Box_Pack_01┃Mittherbstfest Skin Box Bundle (Groß)
+Product/Name/2024_ThanksGiving_Box_Pack_02┃Mittherbstfest Skin Box Bundle (Klein)
+Product/Name/S5_Lucky_777_Pack_01┃Spezial Lucky★ Bundle
+Product/Name/S5_Lucky_777_Pack_02┃Lucky★ Bundle
+Product/Name/S5_Lucky_777_Pack_03┃Weiße Tokens Bundle
 Product/Name/2024_S05_Esports_Pack_01┃S5 Esports Support Paket
 Product/Name/S05_BNKFearX_Pack_01┃S5 BNK FearX Paket
 Product/Name/S05_MiraeNSejong_Pack_01┃S5 MIRAEN SEJONG Paket
@@ -5635,8 +5768,7 @@ Shop/Desc/LOOTBOX_SKIN_05┃Dieses Produkt enthält 11 Skin Data Boxen.\nSkins u
 LOOTBOX_SKIN_10┃11 Skin Data Boxen
 Shop/Desc/LOOTBOX_SKIN_10┃Dieses Produkt enthält 11 Skin Data Boxen.\nSkins und Skin-Designs können aus der Skin Data Box bezogen werden.\n<color=orange>Ranglistenbelohnungen und einige speziell genutzte Gegenstände sind nicht enthalten. </color>\n\nGekaufte Kisten können in der Schmiede mit dem Datenschlüssel geöffnet werden.
 MONTHLY_PURCHASE_SET_01┃Weitere Informationen finden Sie in der Ankündigung der Veranstaltung.
-MONTHLY_PURCHASE_SET_02┃Gekaufte Kisten können in der Schmiede mit dem Datenschlüssel geöffnet werden. "
-Shop/Desc/MONTHLY_PURCHASE_SET_02┃Gekaufte Kisten können in der Schmiede mit dem Datenschlüssel geöffnet werden. "
+Shop/Desc/MONTHLY_PURCHASE_SET_01┃Dieses Produkt enthält 3 Skin Datenboxen und 3 Datenschlüssel.\nIn der Skin Daten Box können Skins und Skin-Designs enthalten sein.\n<color=orange>Ranglistenbelohnungen und einige besondere Gegenstände sind nicht enthalten.</color>\n\nDie Anzahl der Käufe für dieses Produkt wird monatlich um 20:00 Uhr (PT) zurückgesetzt.\nGekaufte Boxen können in Forging mit  Datenschlüsseln geöffnet werden.
 Shop/Desc/DAILY_PURCHASE_SET_01┃Du kannst 1 der folgenden erhalten: Forschungsdaten-Box, Datenschlüssel, NP, Gewöhnliches Material oder Token.\n\nDie Anzahl der Käufe für dieses Produkt wird täglich um 20:00 (PT) zurückgesetzt.\n<color=orange>Es wird sofort nach dem Kauf geöffnet.</color>
 Shop/Desc/S10_KEY_LIMITED┃Mit dem Datenschlüssel kannst du jede Art von Box öffnen.\n\nDie Anzahl der Umtauschvorgänge pro Konto wird nicht zurückgesetzt
 Shop/Desc/Vacance Token┃Dies ist ein Sommerevent-Token, der verwendet werden kann, um Gegenstände einzulösen, die im Schmiedemenü zum Umtausch hinzugefügt wurden.<color=red>\nDieser Token hat ein Ablaufdatum. Bitte achte auf das Verfallsdatum, da er später nicht mehr verfügbar ist.</color>
@@ -5768,6 +5900,26 @@ Product/ResetTime/Week┃{0} W
 Product/ResetTime/Day┃{0} T
 Product/ResetTime/Hour┃{0} S
 Product/ResetTime/Minute┃{0} M
+BanReasonType/VERBAL_DISCRIMINATION┃Hassrede
+BanReasonType/ABUSE_RATING┃Missbrauch
+BanReasonType/ACCOUNT_SHARING┃Account Teilen und Boosting
+BanReasonType/REFUND_ABUSING┃Unrechtsmäßige Erstattungen und Rückzahlungen
+BanReasonType/FALSE_ACCUSATION┃Service Unterrbrechung und Falsche Reports
+BanReasonType/EMPLOYER_HARASSMENT┃Support Misshandeln
+BanReasonType/DOXXING┃Private Information veröffentlichen
+BanReasonType/TEMPORARY_RESTRICTION┃\nVorübergehende Suspendierung
+BanReasonType/GAME_EXPERIENCE_DISRUPTION┃Unterbruchung des Spiels
+BanReasonType/ASSIST_OPPOSING_TEAM┃Fairplay verhindern
+BanReasonType/AWAY_FROM_KEYBOARD┃Verlassen der Charakter Auswahl
+BanReasonType/BUGS_AND_GLITCHES_ABUSE┃Bugs und Glitches Ausnutzen
+BanReasonType/ILLEGAL_PROGRAMS┃Nutzen von Unauthoriesierten Programmen
+BanReasonType/INAPPROPRIATE_NICKNAME┃Unangemessener Name\n
+BanReasonType/INTENTIONAL_IDLE┃Absichtlich AFK gehen
+BanReasonType/KILLED_BY_ENEMY┃Absichtlich Feeden
+BanReasonType/MISCELLANEOUS┃Verschiedenes
+BanReasonType/SNIPER┃In-Game Sniping
+BanReasonType/TEAMING┃Gegnern helfen
+BanReasonType/VERBAL_HARASSMENT┃Verbaler Missbrauch
 ItemType/CHARACTER/Name┃Charakter
 ItemType/EVENT_NP/Name┃Event-NP
 ItemType/RANDOM_BOX/Name┃Box
@@ -5987,6 +6139,8 @@ Goods/Name/3303004┃Lucky★ Tokens
 Goods/Desc/3303004┃Lucky★ Tokens können durch den Lucky★ ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
 Goods/Name/3303005┃Legion Tokens
 Goods/Desc/3303005┃Legion Tokens können durch den Legion ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
+Goods/Name/3303006┃Akademie Tokens
+Goods/Desc/3303006┃Akademie Tokens können durch den Akademie ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
 Goods/Name/3303301┃Weihnachts-Tokens
 Goods/Desc/3303301┃Weihnachts-Tokens können durch das Öffnen von Weihnachts-Datenboxen erhalten werden und verfallen zum Ende des Events.
 Goods/Name/3303302┃Joy Tokens
@@ -6033,6 +6187,10 @@ Goods/Name/3102019┃Goldener Glücksbeutel 2025!
 Goods/Desc/3102019┃Du kannst 4 verschiedene Items erhalten. \nDu kannst die Details der beinhalteten Items in der Itemliste nachsehen.
 Goods/Name/3102020┃Teufelstasche
 Goods/Desc/3102020┃Erhalte Sie 3 bis 100 Legion Tokens und 1 Legion Token Karte mit einer bestimmten Wahrscheinlichkeit.\nDu kannst die Details der Gegenstände in der Gegenstandsliste überprüfen.
+Goods/Name/3102021┃Schulrat-Skinbox
+Goods/Desc/3102021┃Erhalte 1 kompletten Skin oder Design und 1 Schulratkarte.\nSkins die du schon hast werden als Duplikat angezeigt.\nEinzelheiten zu dem Inhalt können in der Belohnungsliste gefunden werden.
+Goods/Name/3190011┃Schulrat-Skingutschein
+Goods/Desc/3190011┃Du kannst einen Gegenstand von der Liste wählen.\nEinzelheiten zu dem Inhalt können in der Belohnungsliste gefunden werden.
 특정 지역에서 구매할 수 없는 상품입니다.┃Dieses Produkt ist für den Verkauf in deiner Region nicht zugelassen.
 Goods/Name/3┃Zufälliger Charakter Box
 Goods/Desc/1┃Du kannst 300 Event-NP oder 1.500 A-Coin als Belohnung erhalten.
@@ -6070,6 +6228,9 @@ Product/Name/S15_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S15_RARE_MATTER┃1 Seltenes Datenfragment
 Product/Name/S15_S14TOKEN_EXCHANGE┃2 Lucky★ Tokens
 Product/Name/S15_A-Coin_QUEST_BOOK┃Legion A-Coin Questbuch
+Product/Name/S16_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S16_RARE_MATTER┃1 Seltenes Datenfragment
+Product/Name/S16_S15TOKEN_EXCHANGE┃2 Legion Tokens
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃Vacance A-Coin Questbuch
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃Battle Maids A-Coin Questbuch
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃Change A-Coin Questbuch
@@ -6081,6 +6242,7 @@ Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Ch
 Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Sunset A-Coin Questbuch\n(105.000 A-Coin nach Abschluss)\n- 30.000 A-Coin\n\n<b><color=#F15F5F>[Hinweise]</color></b>\n\n*Dieses A-Coin Questbuch wird sofort nach dem Kauf aktiviert. \n*Dieses Questbuch kann jederzeit abgeschlossen werden. \n*Überprüfen Sie Ihre A-Coin Questbücher im Questbuch-Menü.
 Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Lucky★ A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
 Shop/Desc/S15_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Legion A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
+Shop/Desc/S16_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Akademie A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
 Product/Name/S5_Lucky_White_LootToken_01┃3 Rote Tokens
 Product/Name/S5_Lucky_White_ACoin_15┃15 A-Coin
 Product/Name/S5_Lucky_Red_Lucky_Token_01┃80 Lucky★ Tokens
@@ -6466,26 +6628,25 @@ Skill/Group/Name/1011200┃Von Kopf bis Fuß
 Skill/Group/Name/1011300┃Zuknöpfen
 Skill/Group/Name/1011400┃Schneidiger Gentleman
 Skill/Group/Name/1011500┃Gnadenstoß
-Skill/Group/Desc/1011100┃Yuki richtet seine Manschetten als eine Ressource. Er verbraucht diese, wenn er einem Gegner Schaden zufügt, und richtet zusätzlich <color=white>{0}</color> wahren Schaden an.\nYuki richtet {4} Manschette alle {3} Sekunden, in denen er sich außerhalb des Kampfes befindet.\n\nAlle seine Manschetten werden wieder gerichtet, wenn sich Yuki außerhalb des Gefechts begibt oder Zuknöpfen benutzt.
+Skill/Group/Desc/1011100┃Yuki richtet seine Manschetten als eine Ressource. Er verbraucht diese, wenn er einem Gegner Schaden zufügt, und richte <color=white>{0}</color> zusätzlichen Fähigkeitsschaden an.\nAlle seine Manschetten werden wieder gerichtet, wenn sich Yuki außerhalb des Gefechts begibt oder Zuknöpfen benutzt.
 Skill/Group/Desc/1011200┃Yukis nächster normale Angriff richtet <color=white>{20}</color> Schaden an und verlangsamt den Gegner um {3} für {2} Sekunden.\n\nVerbraucht er mit diesem Angriff eine Manschette, so betäubt er sein Ziel für {4} Sekunden.
 Skill/Group/Desc/1011300┃<color=green>Passive:</color> Die Abklingzeit von Zuknöpfen wird jedes mal um {0} Sekunden reduziert, wenn Yuki Schaden anrichtet.\n\nYuki zupft sein Outfit für {1} Sekunde zurecht und reduziert die Abklingziet von Schneidiger Gentleman um {3}.Während Zuknöpfen wird sein erlittener Schaden um <color=white>{2}</color> reduziert. Am Ende dieser Zeit richtet er 4 Manschetten.
-Skill/Group/Desc/1011400┃Yuki sprintet {2}m in die gewählte Richtung, und fügt <color=white>{20}</color> dem ersten Gegner Fähigkeitsschaden zu. Der getroffene Gegner wird entwaffnet wodurch dieser für {3} Sekunden keine Basis-Angriffe Ausüben kann. Beim Treffer wird auch die Abklingzeit von Schneidiger Gentleman um {4} Sekunden reduziert.
+Skill/Group/Desc/1011400┃Yuki sprintet {2}m in die gewählte Richtung, und richtet dem ersten getroffenen Gegner <color=white>{20}</color> Fähigkeitsschaden an. Beim getroffenen Gegner wird das Angriffstempo für {3} um {5} reduziert. Beim Treffen wird auch die Abklingzeit von Schneidiger Gentleman um {4} Sekunden reduziert.
 Skill/Group/Desc/1011500┃Yuki zieht sein Schwert und durchschneidet Gegner in einem Bereich vor ihm, wodurch er vom start <color=white>{20}</color> Fähigkeitsschaden anrichtet und den Gegner Markiert + Verlangsamt um {3} für {2} Sekunden.\nDie Markierung Explodiert nachtem Yuki sein Schwert enthüllt und macht <color=white>{6}</color> Absoluten Schaden abhängig von den Lebenspunkten des Gegners.
-Skill/Group/Coef/1011100┃Yuki richtet seine Manschetten als eine Ressource. Er verbraucht diese, wenn er einem Gegner Schaden zufügt, und richtet zusätzlich <color=white>{0}</color> wahren Schaden an.\nYuki richtet {4} Manschette alle {3} Sekunden, in denen er sich außerhalb des Kampfes befindet.\n\nAlle seine Manschetten werden wieder gerichtet, wenn sich Yuki außerhalb des Gefechts begibt oder Zuknöpfen benutzt.
+Skill/Group/Coef/1011100┃Yuki richtet seine Manschetten als eine Ressource. Er verbraucht diese, wenn er einem Gegner Schaden zufügt, und richtet <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> zusätzlichen Fähigkeitsschaden an.\nAlle seine Manschetten werden wieder gerichtet, wenn sich Yuki außerhalb des Gefechts begibt oder Zuknöpfen benutzt.
 Skill/Group/Coef/1011200┃Yukis nächster normale Angriff richtet {0}<color=#ffd775>(+{1} Angriffskraft)</color> Schaden an und verlangsamt den Gegner um {3} für {2} Sekunden.\n\nVerbraucht er mit diesem Angriff eine Manschette, so betäubt er sein Ziel für {4} Sekunden.
-Skill/Group/Coef/1011300┃<color=green>Passive:</color> Die Abklingzeit von Zuknöpfen wird jedes mal um {0} Sekunden reduziert, wenn Yuki Schaden anrichtet.\n\nYuki zupft sein Outfit für {1} Sekunde zurecht und reduziert die Abklingziet von Schneidiger Gentleman um {3}.Wärend Zuknöpfen wird sein erhaltener Schaden um {2} reduziert. Am Ende dieser Zeit richtet er 4 Manschetten.
-Skill/Group/Coef/1011400┃Yuki sprintet {2}m in die gewählte Richtung, und fügt {0}<color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> dem ersten Gegner Fähigkeitsschaden zu. Der getroffene Gegner wird entwaffnet wodurch dieser für {3} Sekunden keine Basis-Angriffe Ausüben kann. Beim Treffer wird auch die Abklingzeit von Schneidiger Gentleman um {4} Sekunden reduziert.
-Skill/Group/Coef/1011500┃Yuki zieht sein Schwert und durchschneidet Gegner in einem Bereich vor ihm, wodurch er vom start {0}<color=#ffd775>(+{1} Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color> Fähigkeitsschaden anrichtet und den Gegner Markiert + Verlangsamt um {3} für {2} Sekunden.\nDie Markierung Explodiert nachtem Yuki sein Schwert enthüllt und macht {6} Absoluten Schaden abhängig von den Lebenspunkten des Gegners.
+Skill/Group/Coef/1011300┃<color=green>Passive:</color> Die Abklingzeit von Zuknöpfen wird jedes mal um {0} Sekunden reduziert, wenn Yuki Schaden anrichtet.\n\nYuki zupft sein Outfit für {1} Sekunde zurecht und reduziert die Abklingzeit von Schneidiger Gentleman um {3}. Während Zuknöpfen benutzt wird, ist erhaltener Schaden um <color=white>{2}</color><color=#ffd775>(+{5} Angriffskraft)</color><color=white>%</color> reduziert. Wenn Zuknöpfen fertig ist, erhält er {4} Manschetten
+Skill/Group/Coef/1011400┃Yuki sprintet {2}m in die gewählte Richtung, und richtet dem ersten getroffenen Gegner <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an. Beim getroffenen Gegner wird das Angriffstempo für {3} um {5} reduziert. Beim Treffen wird auch die Abklingzeit von Schneidiger Gentleman um {4} Sekunden reduziert.
+Skill/Group/Coef/1011500┃Yuki zieht sein Schwert und durchschneidet Gegner in einem Bereich vor ihm, wodurch er erst mal <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden anrichtet und den Gegner markiert welches Gegner für {2} Sekunden um {3} verlangsamt.\nDie Markierung explodiert nachdem Yuki sein Schwert einsteckt und richtet damit wahren Schaden in Höhe von <color=white>{6}</color><color=#ffd775>(+{7} Angriffskraft)</color><color=white>%</color> der maximalen HP des Gegner an.
 Skill/Group/ExpansionTip/1011200┃<i> Basisangrifs-Reichweite erhöht sich leicht während der Nutzung. <i>
-Skill/Group/ExpansionTip/1011400┃<i> Kann nicht über Wände. </i>
 CharacterState/Group/Name/1011200┃Von Kopf bis Fuß
 CharacterState/Group/Desc/1011200┃Der nächste normale Angriff richtet zusätzlichen Schaden an und verlangsamt das Ziel.
 CharacterState/Group/Name/1011210┃Verlangsamt
 CharacterState/Group/Desc/1011210┃Lauftempo reduziert.
 CharacterState/Group/Name/1011310┃Verteidungserhöhung
 CharacterState/Group/Desc/1011310┃Verteidigung erhöht.
-CharacterState/Group/Name/1011400┃Entwaffnen
-CharacterState/Group/Desc/1011400┃Kann keine normalen Angriffe ausführen.
+CharacterState/Group/Name/1011400┃Angriffstempoverringerung
+CharacterState/Group/Desc/1011400┃Dein Angriffstempo ist reduziert.
 CharacterState/Group/Name/1011500┃Markierung
 CharacterState/Group/Desc/1011500┃Richtet Schaden an, sobald Yuki sein Schwert zürücksteckt.
 CharacterState/Group/Name/1011510┃Markierung
@@ -7063,22 +7224,23 @@ Skill/Group/Name/1027500┃EMP Barrage
 Skill/Group/Name/1027600┃Übergriff
 Skill/Group/Name/1027700┃Dead Drop
 Skill/Group/Name/1027800┃Doppelagent
-Skill/Group/Desc/1027100┃Alex beginnt Infiltration für {0} Sekunden beginnend ab Level {6} nach einem Kill oder Assist. Gegner können Alex außerhalb seines Erfassungbereichs nicht sehen. \nWährend Infiltration ist sein Lauftempo um {3} für {2} Sekunden erhöht, falls ein Gegner innerhalb {1}m ist.\n\nSeine Waffenmeisterungs-Level erhöhen sich gleichmäßig.\nFalls eine Nahkampfwaffe ausgerüstet ist, erhöht sich seine Verteidigung um {5}.
+Skill/Group/Desc/1027100┃Waffenversorgung: Alex wird mit Waffen versorgt wenn er die Level {7}, {8} und {9} erreicht.\n\nEr infiltriert für {0} Sekunden wenn er eine Tötung oder eine Unterstützung bekommt. Gegner können Alex außerhalb seines Erfassungbereichs nicht sehen. \nWährend Infiltration ist sein Lauftempo um {3} für {2} Sekunden erhöht, falls sich ein Gegner innerhalb {1}m Reichweite befindet.\n\nSeine Waffenmeisterschaftslevel erhöhen sich gleichmäßig.\nFalls eine Nahkampfwaffe ausgerüstet ist, erhöht sich seine Verteidigung um {5}.
 Skill/Group/Desc/1027200┃Alex feuert seine Pistole ab und fügt dem erstem getroffenen Gegnern <color=white>{20}</color> Schaden zu.\nBei Treffer eines Feindes wird seine Angriffskraft für {2} Sekunden um {3} erhöht. Er kann bis zu {4} Steigerungen erhalten und erhält auch Steigerungen von Übergriff. Bei maximalen Steigerungen von Übergriff und Gaußpistole wird sein Angriffstempo um {5} erhöht.
 Skill/Group/Desc/1027300┃Alex stößt ein Signal zum Zielgebiet aus, das <color=white>{20}</color> Fähigkeitsschaden an Gegnern in Reichweite verursacht und ihm für {2} Sekunden Sicht gewährt. Trifft er einen Gegner, erhöht sich seine Basisangriffsreichweite für {3} Sekunden um {4}.
-Skill/Group/Desc/1027400┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {4} erhöht.\n\nAlex tritt zurück und wirft ein elektrisches Shuriken in die Zielrichtung, das <color=white>{20}</color> Fähigkeitsschaden an getroffenen Gegnern verursacht und er beginnt zu infiltrieren. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden.\nDas Aktivieren von Rückschlag ermöglicht es Alex, einmal in {6} Sekunden die Waffe zu wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.\nInfiltration kann erst ab Level {7} erfolgen.
+Skill/Group/Desc/1027400┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {4} erhöht.\n\nAlex tritt zurück und wirft ein elektrisches Shuriken in die Zielrichtung, das <color=white>{20}</color> Fähigkeitsschaden an getroffenen Gegnern verursacht und er beginnt zu infiltrieren. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden.\nDas Aktivieren von Rückschlag ermöglicht es Alex, einmal in {6} Sekunden die Waffe zu wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.
 Skill/Group/Desc/1027500┃Alex ruft einen Luftangriff an einem Zielort herbei, der <color=white>{20}</color> Fähigkeitsschaden an Feinden in Reichweite und <color=white>{21}</color> Fähigkeitsschaden an Feinden in der Mitte verursacht. Getroffene Feinde werden für {10} Sekunden um {11} verlangsamt.\nDer Einschlag pulsiert dann insgesamt {5} Mal, verursacht alle {4} Sekunden <color=white>{22}</color> Fähigkeitsschaden an Feinden in Reichweite und verlangsamt sie für {12} Sekunden um {13}. Feinde in der Mitte erleiden <color=white>{23}</color> Fähigkeitsschaden.
 Skill/Group/Desc/1027600┃Alex stürmt auf sein Ziel zu und verursacht <color=white>{20}</color> Fähigkeitsschaden. Wenn er Feinde trifft, erhöht sich seine Angriffskraft für {2} Sekunden um {3}. Alex kann bis zu {4} Steigerungen erhalten. Wenn er maximale Steigerungen von Übergriff und Gaußpistole hat, wird sein Angriffstempo um {5} erhöht.
 Skill/Group/Desc/1027700┃Alex wirft seinen Dead Drop an einen Zielort, der <color=white>{20}</color> Fähigkeitsschaden an Feinden in Reichweite verursacht und sie in die Mitte zieht.
-Skill/Group/Desc/1027800┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {1} erhöht. Während das Hologramm aktiv ist, wird diese passive Fähigkeit um das {3}-fache erhöht.\n\nAlex infiltriert und stürzt sich in die Zielrichtung, wobei er für {0} Sekunden ein Hologramm hinterlässt.\nDas Hologramm verspottet Gegner in Reichweite und zwingt sie für {2} Sekunden, es anzugreifen.\n\nNach dem Einsatz der Fähigkeit kann er innerhalb von {5} Sekunden seine Waffe wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.\nInfiltration kann erst ab Level {6} auftreten.
-Skill/Group/Coef/1027100┃Ab Level {6} beginnt Alex für {0} Sekunden mit der Infiltration, nachdem er einen Kill oder einen Assist erhalten hat. Feinde können Alex nicht sehen, wenn er sich außerhalb seines Erfassungsbereichs befindet.\nWährend der Infiltration wird sein Lauftempo für {2} Sekunden um {3} erhöht, wenn sich ein Feind innerhalb von {1}m befindet.\n\nSeine Waffenmeisterungs-Level erhöhen sich alle gleichmäßig.\nWenn er mit einer Nahkampfwaffe ausgerüstet ist, wird seine Verteidigung um {5} erhöht.
+Skill/Group/Desc/1027800┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {1} erhöht. Während das Hologramm aktiv ist, wird diese passive Fähigkeit um das {3}-fache erhöht.\n\nAlex infiltriert und stürzt sich in die Zielrichtung, wobei er für {0} Sekunden ein Hologramm hinterlässt.\nDas Hologramm verspottet Gegner in Reichweite und zwingt sie für {2} Sekunden, es anzugreifen.\n\nNach dem Einsatz der Fähigkeit kann er innerhalb von {5} Sekunden seine Waffe wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.
+Skill/Group/Coef/1027100┃Waffenversorgung: Alex wird mit Waffen versorgt wenn er die Level {7}, {8} und {9} erreicht.\n\nEr infiltriert für {0} Sekunden wenn er eine Tötung oder eine Unterstützung bekommt. Gegner können Alex außerhalb seines Erfassungbereichs nicht sehen. \nWährend Infiltration ist sein Lauftempo um {3} für {2} Sekunden erhöht, falls sich ein Gegner innerhalb {1}m Reichweite befindet.\n\nSeine Waffenmeisterschaftslevel erhöhen sich gleichmäßig.\nFalls eine Nahkampfwaffe ausgerüstet ist, erhöht sich seine Verteidigung um {5}.
 Skill/Group/Coef/1027200┃Alex feuert seine Gaußpistole ab und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an getroffenen Gegnern.\nTrefft ihr einen Gegner, erhöht sich Alex' Angriffskraft {3} für {2} Sekunden. Alex kann bis zu {4} Steigerungen erhalten. Wenn er maximale Steigerungen von Übergriff und Gaußpistole hat, wird sein Angriffstempo um {5} erhöht.
 Skill/Group/Coef/1027300┃Alex stößt im Zielgebiet ein Signal aus, das <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an Gegnern in Reichweite verursacht und ihm für {2} Sekunden Sicht gewährt.\nWenn er einen Gegner trifft, erhöht sich seine Basisangriffsreichweite für {3} Sekunden um {4}.
-Skill/Group/Coef/1027400┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {4} erhöht.\n\nAlex tritt zurück und wirft ein elektrisches Shuriken in die Zielrichtung, das <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an getroffenen Gegnern verursacht und er beginnt zu infiltrieren. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden.\nDas Aktivieren von Rückschlag ermöglicht es Alex, einmal in {6} Sekunden die Waffen zu wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.\nInfiltration kann erst ab Level {7} erfolgen.
+Skill/Group/Coef/1027400┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {4} erhöht.\n\nAlex tritt zurück und wirft ein elektrisches Shuriken in die Zielrichtung, das <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an getroffenen Gegnern verursacht und er beginnt zu infiltrieren. Getroffene Feinde werden um {3} verlangsamt, abnehmend über {2} Sekunden.\nDas Aktivieren von Rückschlag ermöglicht es Alex, einmal in {6} Sekunden die Waffen zu wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.
 Skill/Group/Coef/1027500┃Alex ruft einen Luftangriff an einem Zielort aus, der <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an Feinden in Reichweite und <color=white>{2}</color><color=#ffd775>(+{3} Angriffskraft)</color> Fähigkeitsschaden an Feinden in der Mitte verursacht. Getroffene Feinde werden für {10} Sekunden um {11} verlangsamt.\nDer Einschlag pulsiert dann insgesamt {5} Mal, verursacht alle {4} Sekunden <color=white>{6}</color><color=#ffd775>(+{7} Angriffskraft)</color> Fähigkeitsschaden an Feinden in Reichweite und verlangsamt sie für {12} Sekunden um {13}. Feinde in der Mitte erleiden <color=white>{8}</color><color=#ffd775>(+{9} Angriffskraft)</color> Fähigkeitsschaden.
 Skill/Group/Coef/1027600┃Alex stürmt auf sein Ziel zu und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden.\nFeinde zu treffen erhöht seine Angriffskraft für {2} Sekunden um {3}. Alex kann bis zu {4} Steigerungen erhalten. Wenn er maximale Steigerungen von Übergriff und Gaußpistole hat, wird sein Angriffstempo um {5} erhöht.
 Skill/Group/Coef/1027700┃Alex wirft seinen Dead Drop an einen Zielort und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Angriffskraft)</color> Fähigkeitsschaden an Feinden in Reichweite und zieht sie in die Mitte.
-Skill/Group/Coef/1027800┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {1} erhöht. Während das Hologramm aktiv ist, wird diese passive Fähigkeit um das {3}-fache erhöht.\n\nAlex infiltriert und stürzt sich in die Zielrichtung, wobei er für {0} Sekunden ein Hologramm hinterlässt.\nDas Hologramm verspottet Gegner in Reichweite und zwingt sie für {2} Sekunden, es anzugreifen.\n\nNach dem Einsatz der Fähigkeit kann er innerhalb von {5} Sekunden seine Waffe wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.\nInfiltration kann erst ab Level {6} auftreten.
+Skill/Group/Coef/1027800┃<color=green>Passiv</color>: Alex' Angriffstempo wird um {1} erhöht. Während das Hologramm aktiv ist, wird diese passive Fähigkeit um das {3}-fache erhöht.\n\nAlex infiltriert und stürzt sich in die Zielrichtung, wobei er für {0} Sekunden ein Hologramm hinterlässt.\nDas Hologramm verspottet Gegner in Reichweite und zwingt sie für {2} Sekunden, es anzugreifen.\n\nNach dem Einsatz der Fähigkeit kann er innerhalb von {5} Sekunden seine Waffe wechseln. Das Beenden der Infiltration oder der Waffenwechsel heben den Effekt auf.
+Skill/Group/ExpansionTip/1027100┃Alex kann sofort seine Waffe benutzen ohne nachzuladen, wenn er zur Pistole wechselt.
 Skill/Group/ExpansionTip/1027400┃<i>Kann nicht über Wände.<i>
 Skill/Group/ExpansionTip/1027800┃<i>Kann nicht über Wände.<i>
 CharacterState/Group/Name/1027110┃Infiltration
@@ -7109,6 +7271,14 @@ CharacterState/Group/Desc/1027420┃Verstummt von Rückschlag.
 CharacterState/Group/Desc/1027430┃Angriffstempo erhöht.
 CharacterState/Group/Desc/1027500┃Verlangsamt von der EMP Barrage.
 CharacterState/Group/Desc/1027810┃Angriffstempo erhöht.
+Skill/Group/Evolution/Name/1027200┃Tonfaversorgungskiste
+Skill/Group/Evolution/Desc/1027200┃Wähle eine Tonfawaffenversorgung.
+Skill/Group/Evolution/Name/1027300┃Zweihandschwertversorgungskiste
+Skill/Group/Evolution/Desc/1027300┃Wähle eine Zweihandschwertwaffenversorgung.
+Skill/Group/Evolution/Name/1027400┃Shurikenversorgungskiste
+Skill/Group/Evolution/Desc/1027400┃Wähle eine Shurikenwaffenversorgung.
+Skill/Group/Evolution/Name/1027500┃Pistolenversorgungskiste
+Skill/Group/Evolution/Desc/1027500┃Wähle eine Pistolenwaffenversorgung.
 Skill/Group/Name/1028100┃Bücherwurm
 Skill/Group/Name/1028200┃Odyssey
 Skill/Group/Name/1028300┃Der Seltsame Fall
@@ -7161,14 +7331,14 @@ Skill/Group/Name/1029300┃Schutzblase
 Skill/Group/Name/1029400┃Tauchgang
 Skill/Group/Name/1029500┃Wellenkönig
 Skill/Group/Desc/1029100┃Leon erzeugt alle {6} Sekunden eine Pfütze, wenn er einen Basisangriff ausführt. Leons Lauftempo wird um {0} und sein Angriffstempo um {1} erhöht, wenn er sich in einer seiner Pfützen befindet.\nPfützenhai: Leons Basisangriffe verursachen <color=white>{20}</color> zusätzlichen Fähigkeitsschaden, wenn er in einer seiner Pfützen steht.
-Skill/Group/Desc/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht <color=white>{20}</color> Fähigkeitsschaden und erzeugt Pfützen.
-Skill/Group/Desc/1029300┃Leon verleiht sich und Verbündeten in der Nähe einen Schild. Der Schild lässt Leon für {2} Sekunden <color=white>{20}</color> Schaden absorbieren, und lässt Verbündete in der Nähe <color=white>{22}</color> Schaden absorbieren. Wenn sich der Schild auflöst, wird ein Pfütze erzeugt.
-Skill/Group/Desc/1029400┃Leon erzeugt sofort eine Pfütze an seinem Standort und taucht unaufhaltsam hinein. Er taucht aus einer gezielten Pfütze auf, verursacht <color=white>{20}</color> Fähigkeitsschaden und stößt Feinde für {2} Sekunden in die Luft. Leon ist während des Tauchens nicht mehr angreifbar, und es entsteht eine Pfütze auf beiden Seiten von ihm, wenn er taucht.
+Skill/Group/Desc/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht <color=white>{20}</color> Fähigkeitsschaden und erzeugt eine Wasserspur. Wasserspuren haben den gleichen Effekt wie Pfützen.
+Skill/Group/Desc/1029300┃Leon verleiht sich und Verbündeten in der Nähe einen Schild. Der Schild lässt Leon für {2} Sekunden <color=white>{20}</color> Schaden absorbieren, und lässt Verbündete in der Nähe <color=white>{22}</color> Schaden absorbieren.
+Skill/Group/Desc/1029400┃Leon kanalisiert um sofort an der Zielposition zu tauchen. Er kommt aus seinem Tauchen hervor, richtet <color=white>{20}</color> Fähigkeitsschaden an Gegnern in der Nähe an und wirft sie in die Luft für {2} Sekunden. Er wird unantastbar während er taucht und eine Pfütze wird erstellt nachdem er tauchen war.
 Skill/Group/Desc/1029500┃Leon surft auf einer Welle und verursacht <color=white>{20}</color> Fähigkeitsschaden an Gegnern, die sich ihm in den Weg stellen, und wirft sie zurück, bis sich die Welle auflöst. Feinde, die ins Gelände gestoßen werden, erleiden <color=white>{21}</color> Fähigkeitsschaden und werden für {6} Sekunden in die Luft geworfen. Es entsteht ein Pfütze, bis sich die Welle auflöst.
 Skill/Group/Coef/1029100┃Leon erzeugt alle {6} Sekunden eine Pfütze, wenn er einen Basisangriff ausführt. Leons Lauftempo wird um {0} und sein Angriffstempo um {1} erhöht, wenn er in einer seiner Pfützen steht.\nPfützenhai: Leons Basisangriffe verursachen <color=white>{2}</color><color=#DDA0DD>(+{5} Fäh.verst)</color> zusätzlichen Fähigkeitsschaden, wenn er in einer seiner Pfützen steht.
-Skill/Group/Coef/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht <color=white>{0}</color><color=#DDA0DD>(+{2} Fäh.verst)</color> Fähigkeitsschaden und erzeugt Pfützen.
-Skill/Group/Coef/1029300┃Leon verleiht sich und Verbündeten in der Nähe einen Schild. Der Schild lässt Leon <color=white>{0}</color><color=#DDA0DD>(+{8} Fäh.verst)</color> Schaden für {2} Sekunden absorbieren und lässt Verbündete in der Nähe <color=white>{10}</color><color=#DDA0DD>(+{12} Fäh.verst)</color> Schaden absorbieren. Wenn sich der Schild auflöst, wird ein Pfütze erzeugt.
-Skill/Group/Coef/1029400┃Leon erzeugt sofort eine Pfütze an seinem Standort und taucht unaufhaltsam hinein. Er taucht aus einer gezielten Pfütze auf, verursacht <color=white>{0}</color><color=#DDA0DD>(+{5} Fäh.verst.)</color> Fähigkeitsschaden und stößt Gegner für {2} Sekunden in die Luft. Leon wird beim Tauchen unanvisierbar und es entsteht eine Pfütze auf beiden Seiten, wenn er taucht.
+Skill/Group/Coef/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht <color=white>{0}</color><color=#DDA0DD>(+{2} Fähigkeitsverstärkung)</color> Fähigkeitsschaden und erzeugt eine Wasserspur. Wasserspuren haben den gleichen Effekt wie Pfützen.
+Skill/Group/Coef/1029300┃Leon verleiht sich und Verbündeten in der Nähe einen Schild. Der Schild lässt Leon <color=white>{0}</color><color=#DDA0DD>(+{8} Fäh.verst)</color> Schaden für {2} Sekunden absorbieren und lässt Verbündete in der Nähe <color=white>{10}</color><color=#DDA0DD>(+{12} Fäh.verst)</color> Schaden absorbieren.
+Skill/Group/Coef/1029400┃Leon kanalisiert um sofort an der Zielposition zu tauchen. Er kommt aus seinem Tauchen hervor, richtet <color=white>{0}</color><color=#DDA0DD>(+{5} Fäh.verst.)</color> Fähigkeitsschaden an Gegnern in der Nähe an und wirft sie in die Luft für {2} Sekunden. Er wird unantastbar während er taucht und eine Pfütze wird erstellt nachdem er tauchen war.
 Skill/Group/Coef/1029500┃Leon surft auf einer Welle und verursacht <color=white>{0}</color><color=#DDA0DD>(+{5} Fäh.verst.)</color> Fähigkeitsschaden an Gegnern, die sich ihm in den Weg stellen, und wirft sie zurück, bis sich die Welle auflöst. Feinde, die ins Gelände gestoßen werden, erleiden <color=white>{7}</color><color=#DDA0DD>(+{9} Fäh.verst.)</color> Fähigkeitsschaden und werden für {6} Sekunden in die Luft geworfen. Es entsteht ein Pfütze, bis sich die Welle auflöst.
 CharacterState/Group/Name/1029110┃Menschlicher Torpedo
 CharacterState/Group/Desc/1029110┃Lauf- und Angriffstempo sind durch Menschlicher Torpedo erhöht.
@@ -7413,13 +7583,13 @@ Skill/Group/Desc/1035300┃Jan fegt mit einem Tritt über den Bereich vor ihm un
 Skill/Group/Name/1035400┃Abtauchen und Ausweichen
 Skill/Group/Desc/1035400┃Jan stürmt nach vorne und verursacht mit seinem nächsten Basisangriff <color=white>{6}</color><color=#688A08>(+{7} der gegnerischen Max HP)</color> zusätzlichen Fähigkeitsschaden. Kniestoß oder Tomahawk Drehkick nach dem Vorstürmen heilt ihn für {2} ~ {3} Prozent des zugefügten Schaden (Maximale Heilung ist bei weniger als 40% HP erreicht). Jan kann Abtauchen und Ausweichen benutzen, während er Tomahawk Drehkick einsetzt.\n<color=#ffffC2>Verbessert :</color> Die Abklingzeit von <color=white>Abtauchen und Ausweichen</color> wird um {4} verringert.
 Skill/Group/Name/1035500┃Das Tetragon
-Skill/Group/Desc/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm jede Sekunde {9} Steigerung von Unnachgiebig gewährt solange der Ring aktiv ist. Gegner welche die Seile berühren, werden um {4} für {3} Sekunden verlangsamt und nehmen <color=white>{11}</color> Fähigkeitsschaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung. Teilnahme an der Tötung eines Spielers innerhalb des Rings gewährt {6} Steigerungen von Unnachgiebig und erhöht Jans Lauftempo um {8} für {7} Sekunden.
+Skill/Group/Desc/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm {9} Steigerung von Unnachgiebig gewährt. Gegner welche die Seile berühren, werden um {4} für {3} Sekunden verlangsamt und nehmen <color=white>{11}</color> Fähigkeitsschaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung. Teilnahme an der Tötung eines Spielers innerhalb des Rings gewährt {6} Steigerungen von Unnachgiebig und erhöht Jans Lauftempo um {8} für {7} Sekunden.
 Skill/Group/Coef/1035100┃Jan erhält eine Steigerung von Unnachgiebig jedes Mal wenn er Schaden anrichtet. Wenn er mindestens {0} Steigerungen von Unnachgiebig hat, verbraucht seine nächste Basisfähigkeit Steigerungen um diese zu verbessern und die Abklingzeit seiner Basisfähigkeiten um {4} zu reduzieren.
 Skill/Group/Coef/1035200┃<color=#ffffC2>Kniestoß :</color> Jan greift mit seinem Knie an und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color><color=#688A08>(+{11} der gegnerischen Max HP)</color> Fähigkeitsschaden an Gegnern in Reichweite und verlangsamt sie um {3} für {2} Sekunden. Reaktivieren, um Springendes Knie zu verwenden.\n<color=white>Verbessert :</color> Verringert die Verteidigung des Gegners um {5} für {4} Sekunden.\n\n<color=#ffffC2>Springendes Knie :</color> Jan greift mit seinem Knie an, verursacht <color=white>{7}</color><color=#ffd775>(+{8} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color><color=#688A08>(+{12} der gegnerischen Max HP)</color> Fähigkeitsschaden und wirft sie für {10} Sekunden in die Luft.\n<color=white>Verbessert :</color> Wenn du einen Gegner triffst, wird die Abklingzeit von Abtauchen und Ausweichen zurückgesetzt.
 Skill/Group/Coef/1035210┃<color=#ffffC2>Kniestoß :</color> Jan greift mit seinem Knie an und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color><color=#688A08>(+{11} der gegnerischen Max HP)</color> Fähigkeitsschaden an Gegnern in Reichweite und verlangsamt sie um {3} für {2} Sekunden. Reaktivieren, um Springendes Knie zu verwenden.\n<color=white>Verbessert :</color> Verringert die Verteidigung des Gegners um {5} für {4} Sekunden.\n\n<color=#ffffC2>Springendes Knie :</color> Jan greift mit seinem Knie an, verursacht <color=white>{7}</color><color=#ffd775>(+{8} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color><color=#688A08>(+{12} der gegnerischen Max HP)</color> Fähigkeitsschaden und wirft sie für {10} Sekunden in die Luft.\n<color=white>Verbessert :</color> Wenn du einen Gegner triffst, wird die Abklingzeit von Abtauchen und Ausweichen zurückgesetzt.
 Skill/Group/Coef/1035300┃Jan fegt mit einem Tritt über den Bereich vor ihm und verursacht <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{6} Fähigkeitsverstärkung)</color> Fähigkeitsschaden bei Gegnern in Reichweite. Gegner im äußeren Kegel werden zurückgestoßen und Gegner, die ins Gelände gestoßen werden, werden für {5} Sekunden betäubt.\n<color=#ffffC2>Verbessert:</color> Verursacht <color=white>{2}</color><color=#ffd775>(+{3} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{7} Fähigkeitsverstärkung)</color> Fähigkeitsschaden und stößt alle Gegner in Reichweite zurück. Gegner, die ins Gelände gestoßen werden, sind für {4} Sekunden betäubt.\n
 Skill/Group/Coef/1035400┃Jan stürmt nach vorne und verursacht mit seinem nächsten Basisangriff <color=white>{0}</color><color=#ffd775>(+{1} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color><color=#688A08>(+{6} der gegnerischen Max HP)</color> zusätzlichen Fähigkeitsschaden. Kniestoß oder Tomahawk Drehkick nach dem Vorstürmen heilt ihn für {2} ~ {3} des zugefügten Schaden (Maximale Heilung ist bei weniger als 40% HP erreicht). Jan kann Abtauchen und Ausweichen benutzen, während er Tomahawk Drehkick einsetzt. \n<color=#ffffC2>Verbessert :</color> Die Abklingzeit von Abtauchen und Ausweichen wird um {4} verringert.
-Skill/Group/Coef/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm jede Sekunde {9} Steigerung von Unnachgiebig gewährt solange der Ring aktiv ist. Gegner welche die Seile berühren, werden um {4} für {3} Sekunden verlangsamt und nehmen <color=white>{1}</color><color=#ffd775>(+{2} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{10} Fähigkeitsverstärkung)</color> Fähigkeitsschaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung. Teilnahme an der Tötung eines Spielers innerhalb des Rings gewährt {6} Steigerungen von Unnachgiebig und erhöht Jans Lauftempo um {8} für {7} Sekunden.
+Skill/Group/Coef/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm {9} Steigerung von Unnachgiebig gewährt. Gegner welche die Seile berühren, werden um {4} für {3} Sekunden verlangsamt und nehmen <color=white>{1}</color><color=#ffd775>(+{2} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{10} Fähigkeitsverstärkung)</color> Fähigkeitsschaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung. Teilnahme an der Tötung eines Spielers innerhalb des Rings gewährt {6} Steigerungen von Unnachgiebig und erhöht Jans Lauftempo um {8} für {7} Sekunden.
 Skill/Group/ExpansionTip/1035100┃<i>Unnachgiebig kann nicht von Gegenständen, Rüstung oder Schaden der Tonfa Fähigkeit gesteigert werden.</i>
 Skill/Group/ExpansionTip/1035200┃<i>Falls ein verbesserter Kniestoß benutzt wird, ist das nächste Springende Knie auch verbesser.\nKann nicht über Wände gehen.</i>\n\n
 Skill/Group/ExpansionTip/1035210┃<i>Falls ein verbesserter Kniestoß benutzt wird, ist das nächste Springende Knie auch verbesser.\nKann nicht über Wände gehen.</i>\n\n
@@ -8596,8 +8766,8 @@ Skill/Group/ExpansionTip/3009000┃<i>Fähigkeits-Level-Up mit Meisterungsstufe 
 Skill/Group/Desc/3010000┃Du sammelst für jeden Normalen Angriff {0} Steigerungen von Überhitzen bis maximal {1}. Wenn du für {6} Sekunden nicht angreifst verlierst du {3} Steigerungen jede {2} Sekunden. Nach {1} Steigerungen kannst du Überhitzen aktivieren.\n\nDie Aktvierung lädt auf der Stelle deine Munition nach und Überhitzt dich für {4} Sekundedn. (maximal {8} Sekunden) Während dieser Zeit erhältst du {7} (maximal {9} zusätzlichen normalen Angriffsschaden und {5} Angriffstempo. Das Maximum für Angriffstempo kann dabei überschritten werden. Der Bonusschaden und die Dauer von Überhitzen werden durch deine Anzahl an Steigerungen bei Aktivierung erhöht.
 Skill/Group/Coef/3010000┃Du sammelst für jeden Normalen Angriff {0} Steigerungen von Überhitzen bis maximal {1}. Wenn du für {6} Sekunden nicht angreifst verlierst du {3} Steigerungen jede {2} Sekunden. Nach {1} Steigerungen kannst du Überhitzen aktivieren.\n\nDie Aktvierung lädt auf der Stelle deine Munition nach und Überhitzt dich für {4} Sekundedn. (maximal {8} Sekunden) Während dieser Zeit erhältst du {7} (maximal {9} zusätzlichen normalen Angriffsschaden und {5} Angriffstempo. Das Maximum für Angriffstempo kann dabei überschritten werden. Der Bonusschaden und die Dauer von Überhitzen werden durch deine Anzahl an Steigerungen bei Aktivierung erhöht.
 Skill/Group/ExpansionTip/3010000┃<i>Fähigkeits-Level-Up mit Meisterungsstufe <color=white>Lv5, Lv10, und Lv15</color></i>
-Skill/Group/Desc/3011000┃Aktiviere <color=white>Scharfschütze</color> in die gewählte Richtung.\nWährend Scharfschütze aktiv ist, erhältst du {0} zusätzliche Sichtweite in einem engeren Sichtwinkel.\nWährend Scharfschütze kannst du  <color=white>Lähmender Schuss</color> und  <color=white>Gnadenstoß</color> einsetzen.\n\n<color=white>Lähmender Schuss</color>\nGewährt dir {1} zusätzliche Sichtweite, richtet <color=white>{2}</color> Fähigkeitsschaden an und zeigt dir getroffene Gegner für {3} Sekunden an. Diese werden zusätzlich für {6} Sekunden verlangsamt. \n\n<color=white>Gnadenstoß</color>\nGewährt dir {4} zusätzliche Sichtweite und richtet <color=white>{5}</color> Fähigkeitsschaden an getroffenen Gegnern an. <color=white>Gnadenstoß</color> richtet mehr Schaden basierend auf den fehlenden LP des Gegners an.
-Skill/Group/Coef/3011000┃Aktiviere Scharfschütze in die gewählte Richtung.\nWährend Scharfschütze aktiv ist, erhältst du {0} zusätzliche Sichtweite in einem engeren Sichtwinkel.\nWährend Scharfschütze kannst du Lähmender Schuss und Gnadenstoß einsetzen.\n\nLähmender Schuss\nGewährt dir {1} zusätzliche Sichtweite, richtet <color=white>{10}</color><color=#ffd775>(+{2} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{8} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an und zeigt dir getroffene Gegner für {3} Sekunden an. Diese werden zusätzlich für {6} Sekunden verlangsamt. \n\n<color=white>Gnadenstoß</color>\nGewährt dir {4} zusätzliche Sichtweite und richtet <color=white>{11}</color><color=#ffd775>(+{5} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> an. Gnadenstoß richtet mehr Schaden basierend auf den fehlenden LP des Gegners an.
+Skill/Group/Desc/3011000┃Aktiviere für {20} Sekunden <color=white>Scharfschütze</color> in die gewählte Richtung.\nBenutze <color=white>Lähmender Schuss</color> und <color=white>Gnadenstoß</color> in deinem Sichtfeld. Du kannst {8} Kugeln abfeueren, während die letzte als <color=white>Gnadenstoß</color> angewandt wird.\n\n\n\n<color=white>Lähmender Schuss</color>\nGewährt dir {1} Sichtweite, richtet <color=white>{2}</color> Fähigkeitsschaden an und zeigt dir getroffene Gegner für {3} Sekunden an. Diese werden zusätzlich um {7} für {6} Sekunden verlangsamt.\n\n\n\n<color=white>Gnadenstoß</color>\nGewährt dir {4} Sichtweite und richtet <color=white>{5}</color> Fähigkeitsschaden an getroffenen Gegnern an. <color=white>Gnadenstoß</color> richtet mehr Schaden basierend auf der fehlenden HP des Gegners an.
+Skill/Group/Coef/3011000┃Aktiviere für {20} Sekunden <color=white>Scharfschütze</color> in die gewählte Richtung.\nBenutze <color=white>Lähmender Schuss</color> und <color=white>Gnadenstoß</color> in deinem Sichtfeld. Du kannst {8} Kugeln abfeueren, während die letzte als <color=white>Gnadenstoß</color> angewandt wird.\n\n\n\n<color=white>Lähmender Schuss</color>\nGewährt dir {1} Sichtweite, richtet <color=white>{10}</color><color=#ffd775>(+{2} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{8} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an und zeigt dir getroffene Gegner für {3} Sekunden an. Diese werden zusätzlich um {7} für {6} Sekunden verlangsamt.\n\n\n\n<color=white>Gnadenstoß</color>\nGewährt dir {4} Sichtweite und richtet <color=white>{11}</color><color=#ffd775>(+{5} Zusätzliche Angriffskraft)</color><color=#DDA0DD>(+{9} Fähigkeitsverstärkung)</color> Fähigkeitsschaden an getroffenen Gegnern an. <color=white>Gnadenstoß</color> richtet mehr Schaden basierend auf der fehlenden HP des Gegners an.
 Skill/Group/ExpansionTip/3011000┃<i>Scharfschütze Maximaler Schaden: {0}\n wird beendet, sobald du dich bewegst oder von CC getroffen wirst.\n\nFähigkeits-Level-Up mit Meisterungsstufe <color=white>Lv5, Lv10, und Lv15</i>
 Skill/Group/Desc/3001000┃Schlage dein Ziel und verursache <color=white>{6}</color> Basisangriffsschaden und zusätzliche {3} des finalen Schadens und {4} absoluten Schaden. Schaden, der mit Uppercut zugefügt wird, kann nicht kritisch treffen.
 Skill/Group/Coef/3001000┃Schlage dein Ziel und verursache <color=#ffd775>{2} Zusätzliche Angriffskraft * (Basisangriffsverstärkung)</color><color=#DDA0DD>(+{5} Fähigkeitsverstärkung)</color> Basisangriffsschaden und zusätzliche {3} des finalen Schadens und {4} absoluten Schaden. Schaden, der mit Uppercut zugefügt wird, kann nicht kritisch treffen.
@@ -8859,10 +9029,10 @@ Skill/LobbyDesc/1010200┃Li Dailin tritt nach vorne und verursacht Fähigkeitss
 Skill/LobbyDesc/1010300┃Li Dailin trinkt einen Schluck, wodurch sie Flüssigkeitsstärke erhält und ihre BAK steigt. Während sie trinkt, weicht sie Basisangriffen aus und der erlittene Fähigkeitsschaden wird reduziert.<color=white>Flüssigkeitsstärke:</color> Der Schaden, den ein getroffener Feind bei ihrem nächsten Basisangriff erleidet, und der Schaden von Konzentriert werden abhängig von ihrer BAK erhöht.
 Skill/LobbyDesc/1010400┃Li Dailin spuckt billigen Fusel in einem Kegel vor sich aus, der getroffene Feinde verlangsamt. \n\n<color=yellow>Torkeln:</color> Verbraucht BAK, um das Lauftempo getroffener Feinde stark zu verringern.
 Skill/LobbyDesc/1010500┃Li Dailin dasht vorwärts, wird immun gegen Crowd Control, unterdrückt den ersten getroffenen Gegner während sie kanalisiert und setzt mit aufeinanderfolgenden Tritten nach.\n\n<color=yellow>Tigerkralle:</color> Verbraucht beim Einsetzen die gesamte BAK. Der Schaden wird abhängig von der Menge der verbrauchten BAK erhöht.
-Skill/LobbyDesc/1011100┃Yuki richtet seine Manschetten als Ressource. Wenn er Schaden anrichtet, wird ein Manschettenknopf aufgebraucht, welcher zusätzlichen wahren Schaden verursacht.\nYuki richtet alle seine Manschetten wieder, wenn er sich lange genug außerhalb des Kampfes befindet.\n\nZuknöpfen lässt ihn ebenfalls all seine Manschetten richten.
+Skill/LobbyDesc/1011100┃Yuki richtet seine Manschetten als Ressource. Wenn er Schaden anrichtet, wird ein Manschettenknopf aufgebraucht, welcher zusätzlichen  Fähigkeitsschaden verursacht.\nYuki richtet alle seine Manschetten wieder, wenn er sich lange genug außerhalb des Kampfes befindet.\n\nZuknöpfen lässt ihn ebenfalls all seine Manschetten richten.
 Skill/LobbyDesc/1011200┃Yukis nächster Normaler Angriff richtet zusätzlichen Schaden an und reduziert das Lauftempo des Gegners.\nFalls ein Manschettenknopf benutzt wird, betäubt es stattdessen.
-Skill/LobbyDesc/1011300┃<color=green>Passiv:</color> reduziert die Abklingzeit von Zuknöpfen jedes Mal wenn Yuki Schaden nimmt.\n\nYuki rückt sein Outfit zurecht und reduziert die Abklingzeit von Schneidiger Gentleman. Während Zuknöpfen wird seine Verteidigung gestärkt. Nachdem Zuknöpfen fertig ist bekommt er seine Manschettenknöpfe.
-Skill/LobbyDesc/1011400┃Yuki sprinted in die Zielrichtung und erteilt Schaden zum ersten getroffenen Gegner. Getroffene Gegner sind entwaffnet und können für eine gewisse Zeit keine Normalen Angriffe ausführen.
+Skill/LobbyDesc/1011300┃<color=green>Passiv:</color> reduziert die Abklingzeit von Zuknöpfen jedes Mal wenn Yuki Schaden nimmt.\n\nYuki rückt sein Outfit zurecht und reduziert die Abklingzeit von Schneidiger Gentleman. Während Zuknöpfen wird genommener Schaden reduziert. Nachdem Zuknöpfen fertig ist bekommt er seine Manschettenknöpfe.
+Skill/LobbyDesc/1011400┃Yuki sprintet in die Zielrichtung und erteilt Schaden zum ersten getroffenen Gegner. Getroffene Gegner haben reduziertes Angriffstempo.
 Skill/LobbyDesc/1011500┃Yuki zieht sein Schwert und schneidet in einem Halbkreis vor ihm. Er richtet zuerst Schaden an Gegnern an und hinterlässt ein Zeichen, welches das Lauftempo der Gegner reduziert.\nDas Zeichen explodiert anschließend, nachdem Yuki sein Schwert wegsteckt und richtet absoluten Schaden basierend auf den maximalen LP des Gegners an.
 Skill/LobbyDesc/1012100┃Wenn Hyejin einen Gegner dreimal mit einer Fähigkeit trifft, werden drei Katastrophen aktiviert, die den Gegner verängstigen und zusätzlichen Fähigkeitsschaden verursachen. \n\nVerängstigte Gegner können eine bestimmte Zeit lang keine "Drei Katastrophen" mehr erhalten.
 Skill/LobbyDesc/1012200┃Hyejin wirft einen Talisman der Verzweiflung in die gewählte Richtung, der dem ersten getroffenen Gegner Schaden zufügt. Wird ein Gegner getroffen dann reduziert sich die Abklingzeit dieser Fähigkeit.
@@ -8904,7 +9074,7 @@ Skill/LobbyDesc/1018200┃Shoichi sticht mit seiner Klinge nach vorne und richte
 Skill/LobbyDesc/1018300┃Shoichi sprintet zu einem anvisierten Gegner oder Dolch und richtet allen Gegnern auf dem Weg Schaden an.\nJedes Mal, wenn Shoichi einen Dolch aufhebt, wird die Abklingzeit von Saldo zurückgesetzt.
 Skill/LobbyDesc/1018400┃Shoichi macht einen Schritt zurück und wirft einen Dolch nach vorne, der den getroffenen Feinden Fähigkeitsschaden zufügt und sie verlangsamt. Getroffene Feinde werden mit Riskantes Geschäft markiert und ein Dolch fällt hinter ihnen zu Boden. Wenn markierte Feinde von seinem Dolch getroffen werden, erhöht sich der erlittene Schaden. Jedes Mal, wenn ein mit Riskantes Geschäft markierter Feind getroffen wird, wird die Abklingzeit verringert. Wenn sie getötet werden, wird die Abklingzeit noch weiter reduziert.
 Skill/LobbyDesc/1018500┃Shoichi schwingt seinen tödlichen Aktenkoffer und richtet Schaden an Gegnern um sich herum an, verlangsamt sie und wirft 4 Dolche in einem Viereck um sich herum aus.\nDie Dolche durchdringen Gegner und richten Schaden an.
-Skill/LobbyDesc/1019100┃Alle paar Sekunden erhöht Emmas nächster normaler Angriff ihr Angriffstempo fügt zusätzlichen Fähigkeitsschaden zu und gewährt ihr einen Schild in Relation zu Emmas maximalen SP.
+Skill/LobbyDesc/1019100┃Alle paar Sekunden werden Emmas Basisangriff verstärkt, richten zusätzlichen Fähigkeitsschaden an und geben ihr ein Schild bei Treffern.
 Skill/LobbyDesc/1019200┃Emma schleudert ihre Karte in die Zielrichtung und fügt dem ersten getroffenen Gegner Schaden zu und enthüllt in ihrer Nähe ihre Taube.\nWenn ihre Taube beim werfen einer Karte aktiv ist verwandelt sich die Taube in eine weitere Karte und wird in die Ziellrichtung geworfen. \n\nDas Treffen eines Gegners mit 1 Karte verringert sich die Abklingzeit von Taubenhändler.\nGegner, die von beiden Karten getroffen werden verlangsamt.
 Skill/LobbyDesc/1019300┃Emma wirft ihren Hut in das Zielgebiet. Nach kurzer Zeit explodiert er und fügt Gegnern in der Umgebung Schaden zu.\nDer Hut verschwindet nach ein paar Sekunden.\nWird ein Gegner von Hut Trick getroffen reduziert sich die Abklingzeit.
 Skill/LobbyDesc/1019400┃<color=green>Passiv:</color> Jedes Mal, wenn Emma SP verbraucht, stellt sie HP in Relation zu den verbrauchten SP wieder her.\n\nEmma wirkt Magie auf einen anvisierten Feind, fügt diesem  Fähigkeitsschaden zu und verwandelt ihn in ein Kaninchen. \nIn Hasen verwandelte Feinde werden verlangsamt. \nDiese Fähigkeit kann nicht auf niedergeschlagene Gegner verwendet werden.
@@ -8939,15 +9109,16 @@ Skill/LobbyDesc/1026200┃Barbara installiert einen Geschützturm am Zielort. (M
 Skill/LobbyDesc/1026300┃Barbara feuert einen mächtigen Freie-Elektronen-Laser ab, der den Gegnern im Weg Fähigkeitsschaden zufügt. Wenn sie Feinde trifft, erhöht sich ihr Lauftempo für kurze Zeit.
 Skill/LobbyDesc/1026400┃Barbara erzeugt eine magnetische Explosion, die Fähigkeitsschaden verursacht. Feinde, die im inneren Bereich getroffen werden, werden für eine bestimmte Zeit betäubt. 
 Skill/LobbyDesc/1026500┃"Barbara verbessert eine ihrer Fähigkeiten. Durch Reaktivierung dieser Fähigkeit hebt sie die Verbesserung auf und kann sie erst nach 3 Sekunden wieder einsetzen.\n\n\n<color=white>Verbessert - BT Geschützturm Mk.III:</color> Barbara installiert einen verbesserten Geschützturm. Der verbesserte Geschützturm bleibt für ein paar Sekunden bestehen. Es gibt keine Begrenzung für die Anzahl der Installationen. Der verbesserte Geschützturm wendet den verbesserten Effekt auf das installierte Geschütz an: Er erhöht das Angriffstempo und feuert bei jedem 3. Basisangriff eine Railgun ab.\n\n\nP<color=white>Ultra Freie-Elektronen-Laser:</color> Barbara feuert einen Ultra Freie-Elektronen-Laser mit voller Kraft ab, der Fähigkeitsschaden an Feinden im Weg verursacht und Kameras und Fallen zerstört. Getroffene Feinde erleiden Fähigkeitsschaden über Zeit. Das Treffen von Feinden erhöht ihr Lauftempo für kurze Zeit.\n\n\n<color=white>Photonenexplosion:</color> Barbara erzeugt eine verstärkte magnetische Explosion, die Fähigkeitsschaden verursacht. Feinde, die im inneren Bereich getroffen werden, werden für kurze Zeit betäubt. Nach der Explosion bleibt ein Magnetfeld zurück, das Fähigkeitsschaden an Feinden innerhalb des Feldes verursacht und sie verlangsamt."
+Skill/LobbyDesc/1027100┃Waffenversorgung: Alex wird mit Waffen versorgt wenn er bestimmte Level.\n\nEr infiltriert wenn er eine Tötung oder eine Unterstützung bekommt. Gegner können Alex außerhalb seines Erfassungbereichs nicht sehen. \nWährend Infiltration ist sein Lauftempo erhöht, falls sich ein Gegner innerhalb einer bestimmten Reichweite befindet.\n\nSeine Waffenmeisterschaftslevel erhöhen sich gleichmäßig.\nFalls eine Nahkampfwaffe ausgerüstet ist, erhöht sich seine Verteidigung.
 Skill/LobbyDesc/1028100┃Nachdem Sua eine Fähigkeit eingesetzt hat, fügt ihr nächster Basisangriff zusätzlichen Schaden zu und schädigt auch Ziele im Umkreis des Angriffs.\nSie erholt sich von einem Teil des zugefügten Schadens als HP.\nHat sie eine Steigerung von „Bücherwurm“, so erhöht sich ihr Angriffstempo.\nEin Treffer gegen einen Feind reduziert die Abklingzeit ihrer Basisfähigkeiten.\nWenn mehrere Feinde getroffen werden, wird die Abklingzeit trotzdem nur einmal reduziert. Dieser Basisangriff wird auch als Fähigkeit betrachtet.
 Skill/LobbyDesc/1028200┃Sua manifestiert zwei Bücher in einer Zielrichtung, die in der Mitte zusammenstoßen und Gegnern in Reichweite Fähigkeitsschaden zufügen und ein Lesezeichen auf dem Feind hinterlassen.\nDas Erzeugen eines neuen Lesezeichens löst das alte aus, verursacht Fähigkeitsschaden und betäubt sie.\nGegner, die in der Mitte getroffen werden, erleiden erhöhten Schaden und ihr Lauftempo wird verringert.
 Skill/LobbyDesc/1028300┃Auf Verbündete: Sua verleiht ihrem Ziel ein Schild und macht es immun gegen Crowd-Control-Effekte.\n\nAuf Gegner: Suas Vogel greift einen anvisierten Feind an, verursacht Fähigkeitsschaden und blendet ihn.
 Skill/LobbyDesc/1028400┃Sua manifestiert eine Lanze und fliegt vorwärts, wobei sie dem getroffenen Gegner Fähigkeitsschaden zufügt und sie verlangsamt.\nFeinde, die ein Lesezeichen haben, erleiden Fähigkeitsschaden und werden in die Luft gestoßen.\nWenn Sua mit Don Quijote trifft, erhält sie einen Teil ihrer verlorenen HP zurück.\nSua ist immun gegen Crowd-Control-Effekte, während sich ihre Waffe verwandelt.
 Skill/LobbyDesc/1028500┃Sua erinnert sich an die zuletzt benutzte Fähigkeit und kann sie mit größerer Wirkung erneut einsetzen.\n<color=yellow>Odyssee</color>: Feinde, die von der Buchkollision getroffen werden, erleiden Fähigkeitsschaden und ein Lesezeichen wird an die getroffenen Feinde angeheftet.\nDie Herstellung eines neuen Lesezeichens löst das alte aus, verursacht Fähigkeitsschaden und betäubt Feinde.\n<color=yellow>Der Seltsame Fall</color>: Feinde am Ort der Buchkollision werden verlangsamt: Auf Verbündete: Sua verleiht ihrem Ziel einen Schild und macht es immun gegen Crowd-Control-Effekte.\nAuf Gegner: Verursacht Fähigkeitsschaden und blendet den Gegner für eine Weile.\n<color=yellow>Don Quixote</color>: Getroffene Feinde erleiden Fähigkeitsschaden und werden verlangsamt.\nFeinde, die ein Lesezeichen haben, erleiden Fähigkeitsschaden und werden in die Luft geworfen. Wenn Sua mit Don Quijote trifft, erhält sie eine bestimmte Menge an HP zurück.\nSua ist immun gegen Crowd-Control-Effekte, während sich ihre Waffe verwandelt.
 Skill/LobbyDesc/1029100┃Leon erzeugt eine Pfütze, wenn er einen Basisangriff ausführt. Leons Lauftempo und Angriffstempo werden erhöht, während er sich auf einer seiner Pfützen befindet.\nPfützenhai: Leons Basisangriffe verursachen zusätzlichen Fähigkeitsschaden, wenn er in einer seiner Pfützen steht.
-Skill/LobbyDesc/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht Fähigkeitsschaden und erzeugt Wasserpfützen.
-Skill/LobbyDesc/1029300┃Leon gibt sich selbst und Verbündeten in der Nähe einen Schild. Wenn sich der Schild auflöst, entsteht eine Pfütze.
-Skill/LobbyDesc/1029400┃Leon hinterlässt sofort eine Pfütze an seinem Standort und taucht unaufhaltsam hinein. Er erschafft eine Pfütze und taucht aus diesem wieder auf, wobei er Fähigkeitsschaden verursacht und Feinde in die Luft wirft. Leon wird beim Tauchen unanvisierbar, und wenn er taucht, wird auf beiden Seiten ein Becken erzeugt.
+Skill/LobbyDesc/1029200┃Leon spritzt Wasser in die Zielrichtung, verursacht Fähigkeitsschaden und erzeugt eine Wasserspur. Wasserspuren haben den gleichen Effekt wie Pfützen.
+Skill/LobbyDesc/1029300┃Leon gibt sich selbst und Verbündeten in der Nähe einen Schild.
+Skill/LobbyDesc/1029400┃Leon kanalisiert um sofort an der Zielposition zu tauchen. Er kommt aus seinem Tauchen hervor, richtet Fähigkeitsschaden an Gegnern in der Nähe an und wirft sie in die Luft. Er wird unantastbar während er taucht und eine Pfütze wird erstellt nachdem er tauchen war.
 Skill/LobbyDesc/1029500┃Leon surft auf einer Welle, verursacht Fähigkeitsschaden an Gegnern, die sich ihm in den Weg stellen, und wirft sie zurück, bis sich die Welle auflöst. Feinde, die ins Gelände gestoßen werden, erleiden Fähigkeitsschaden und werden in die Luft geschleudert.
 Skill/LobbyDesc/1030100┃Eleven kann ein #11 Combo Meal zubereiten, indem sie Pommes und Cola kombiniert. \n\nWenn eine Basisfähigkeit trifft, lässt Eleven Burger auf den Boden fallen, welche die HP des Ziels beim Einsammeln wiederherstellen. Gegner können auf die Burger treten, um sie zu zerstören.
 Skill/LobbyDesc/1030200┃Eleven schmettert ihren massiven Burger auf den Boden, verursacht Schaden und verlangsamt getroffene Gegner. Schaden und Lauftemporeduzierung skalieren mit der Aufladezeit.
@@ -8978,7 +9149,7 @@ Skill/LobbyDesc/1035100┃Jan erhält eine Steigerung von Unnachgiebig jedes Mal
 Skill/LobbyDesc/1035200┃Jan greift mit seinem Knie an und verursacht Schaden an Gegnern in Reichweite und verlangsamt sie. Reaktivieren, um Springendes Knie zu verwenden.\nVerbesserter Kniestoß: Verringert die Verteidigung des Gegners.\n\nJan greift mit seinem Knie an, verursacht Schaden und wirft sie in die Luft.\nVerbessertes Springendes Knie: Wenn du einen Gegner triffst, wird die Abklingzeit von Abtauchen und Ausweichen zurückgesetzt.
 Skill/LobbyDesc/1035300┃Jan fegt mit einem Tritt über den Bereich vor ihm und verursacht Schaden bei Gegnern in Reichweite. Gegner im äußeren Kegel werden zurückgestoßen und Feinde, die ins Gelände gestoßen werden, werden betäubt.\n\nVerbessert: Richtet mehr Schaden an und stößt alle Feinde in Reichweite zurück. Gegner, die ins Gelände gestoßen werden, sind länger betäubt.\n
 Skill/LobbyDesc/1035400┃Jan stürmt nach vorne und verursacht mit seinem nächsten Basisangriff zusätzlichen Fähigkeitsschaden.\nKniestoß oder Tomahawk Drehkick nach dem Vorstürmen heilt ihn für einen Prozentsatz des angerichteten Schaden, welcher mit fehlender HP erhöht wird.\nJan kann Abtauchen und Ausweichen benutzen, während er Tomahawk Drehkick einsetzt.\n\nVerbessert : Die Abklingzeit von Abtauchen und Ausweichen wird  zurückgesetzt.
-Skill/LobbyDesc/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm jede Sekunde Steigerungen von Unnachgiebig gewährt. Gegner welche die Seile berühren, werden verlangsamt und nehmen Schaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung.\nTeilnahme an der Tötung eines Spielers innerhalb des Rings gewährt eine Steigerung von Unnachgiebig und erhöht Jans Lauftempo.
+Skill/LobbyDesc/1035500┃Jan beschwört für {0} Sekunden einen quadratischen Ring, welcher ihm Steigerungen von Unnachgiebig gewährt. Gegner welche die Seile berühren, werden verlangsamt und nehmen Schaden. Gegner welche in die Seile gestoßen werden, werden dann in die Mitte des Rings zurückgeschleudert. Die Seile verschwinden bei Berührung.\nTeilnahme an der Tötung eines Spielers innerhalb des Rings gewährt eine Steigerung von Unnachgiebig und erhöht Jans Lauftempo.\n
 Skill/LobbyDesc/1036100┃Telekinese: Ab Stufe 6 kann Eva Item- und Luftvorratskisten öffnen, fischen, sammeln und zu Boden gegangene Verbündete in Reichweite retten. Während des Kampfes kann sie nur in Reichweite wiederbeleben, Leichen und Kadaver plündern oder Luftvorratskisten, Meteoriten und Baum des Lebens einsammeln.\n\nVF-Perle: Wenn Eva eine Fähigkeit einsetzt oder von einem Basisangriff getroffen wird, stößt sie eine Perle aus konzentrierter VF-Energie in Richtung des Gegners aus, die Schaden verursacht und getroffene Ziele verlangsamt.\n\nWenn Eva eine VF-Perle auf einem Gegner landet, verringert sich dessen Abklingzeit und sie erhält Lebenskraft (VF).\n\nEva erhält außerhalb des Kampfes ständig Lebenskraft und einen Bonus für Kills und Assists. Verbesserte Basisangriffe gewähren Lebenskraft.
 Skill/LobbyDesc/1036200┃Eva wirft eine Lichtkugel in die Zielrichtung und fügt den getroffenen Feinden Fähigkeitsschaden zu. Wenn die Kugel die maximale Reichweite erreicht oder die Fähigkeit reaktiviert wird, explodiert sie und fügt Fähigkeitsschaden zu.\n Wenn die Explosion einen Feind trifft, wird die Abklingzeit verringert.\n\nWenn ein Feind mit Lichttriade getroffen wird, erhält Eva Lebenskraft (VF).
 Skill/LobbyDesc/1036300┃Eva bildet am Zielort einen Phasenvortex, der Fähigkeitsschaden verursacht. Feinde innerhalb des Vortex werden verlangsamt.\nDer Vortex bricht nach einigen Sekunden zusammen, verursacht Fähigkeitsschaden und schleudert Feinde in der Mitte in die Luft.\n\nWenn Sie einen Feind mit dem Phasenvortex trifft, erhält Eva Lebenskraft (VF).
@@ -9031,7 +9202,7 @@ Skill/LobbyDesc/1054500┃Karla schießt eine riesige Harpune auf den Zielort, d
 Skill/LobbyDesc/1055100┃Estelles Feueraxt verursacht reduzierten Schaden bei normalen Angriffen, greift aber um einiges schneller an.\n\nDie Heilung von Estelle und ihren Verbündeten in der Nähe wird erhöht und Estelle ist immun gegen Massenkontrolle, während sie ihren gefallenen Verbündeten wieder auf die Beine hilft. Verbündete werden außerdem zusätzlich geheilt, wenn Estelle ihnen aufhilft.
 Skill/LobbyDesc/1055220┃Estelle kann [Unterdrückung Ⅰ ] & [Unterdrückung ⅠⅠ ] hintereinander benutzen.\n\n[Unterdrückung Ⅰ ]\nEstelle stärkt ihre Feueraxt, erhöht die Angriffsreichweite ihres nächsten normalen Angriffs und verursacht zusätzlichen Fertigkeitsschaden bei einem Treffer.\n\n[Unterdrückung Ⅱ ]\nWenn Estelle [Unterdrückung Ⅰ] getroffen hat, stärkt sie ihren Schild, erhöht die Angriffsreichweite ihres nächsten normalen Angriffs und verursacht  zusätzlichen Fertigkeitsschaden bei einem Treffer. Wenn [Unterdrückung Ⅱ ] nach [Unterdrückung Ⅰ ] gewirkt wurde, wird das Ziel betäubt.
 Skill/LobbyDesc/1055300┃[Ersthilfe]\nEstelle schlägt ihr Schild auf den Boden, fügt Gegnern in Reichweite Fertigkeitsschaden zu und verlangsamt sie.\n\n[Notlöschung]\nWenn Notlöschung während Gefahrenschild gewirkt wird, kann Estelle sich bewegen, während sie Feinde in Reichweite mit ihrem Feuerlöscher besprüht. Dabei verursacht sie Gegnern Fertigkeitsschaden pro Sekunde und verringert ihre Sichtweite. Die Sichtweite verringert sich jedes Mal weiter, wenn die Fertigkeit Schaden verursacht. Kann erneut gewirkt werden, um abgebrochen zu werden.\n
-Skill/LobbyDesc/1055400┃[Gefahrenschild]\nEstelle breitet ihren Gefahrenschild aus und kann sich dabei bewegen. Schaden von gegnerischen Angriffen wird anfangs negiert, und dann für einige Zeit reduziert. Verbündete in Estelles Nähe erleiden ebenfalls reduzierten Schaden, solange ihr Gefahrenschild aktiv ist.\n\n[Gewaltsamer Zugang]\nWenn diese Fertigkeit während Gefahrenschild gewirkt wird, stürmt Estelle vorwärts bis sie nach einem Aufprall stoppt. Sie fügt dem Ziel Fertigkeitsschaden zu und stößt es weg. Wenn Estelle weit vorstürmt, wird das Ziel betäubt. Während dem Sprint ist Estelle unaufhaltsam und zerstört Objekte wie gegnerische Überwachungskameras sofort. Kann erneut gewirkt werden, um abgebrochen zu werden.\n
+Skill/LobbyDesc/1055400┃[Gefahrenschild]\nEstelle breitet ihren Gefahrenschild aus und kann sich dabei bewegen. Sie kann gegnerische Attacken für kurze Zeit blockieren.\n\n[Gewaltsamer Zugang]\nWenn diese Fertigkeit während Gefahrenschild gewirkt wird, stürmt Estelle vorwärts bis sie nach einem Aufprall stoppt. Sie fügt dem Ziel Fähigkeitsschaden zu und stößt es weg. Während dem Sprint ist Estelle unaufhaltsam und zerstört Objekte wie gegnerische Überwachungskameras sofort. 
 Skill/LobbyDesc/1055500┃[Auf sich selbst wirken]\nEstelle schirmt sich ab und ruft einen Helikopter zur Unterstützung. Nach kurzer Zeit lokalisiert der Helikopter Estelles Koordinaten und wirft eine Wasserbombe auf den Ort, die Fertigkeitsschaden verursacht und getroffene Gegner verlangsamt.\n\n[Auf Verbündeten wirken]\nEstelle schirmt ihren Verbündeten ab und ruft einen Helikopter zur Unterstützung. Nach kurzer Zeit lässt sich Estelle von ihrem Helikopter fallen und teleportiert sich sofort zu ihrem Verbündeten. Dabei verursacht sie Fertigkeitsschaden und stößt Gegner in die Luft.\n
 Skill/LobbyDesc/1056100┃<color=green>Passive</color>: Piolo wird nicht von Abklingzeitreduzierung beeinflusst. Jegliche Menge von Abklingzeitreduzierung wird stattdessen in Angriffsgeschwindigkeit umgewandelt. /nJedes mal, wenn sich Piolo für mindestens 3 Sekunden lang ausruht, erhält Piolo den [Training]-Zustand und erhält eine Steigerung von [Durchtrainiert]. \n\nFalls Piolo [Der Bestrafer] einsetzt, während er eine Steigerung von [Durchtrainiert] hat, verursacht sein nächster normaler Angriff kritischen Schaden.
 Skill/LobbyDesc/1056200┃<color=#ffffff>Helikopter-Spin</color>: Piolo wirbelt seine Nunchakus in die anvisierte Richtung und verursacht Gegnern in Reichweite kontinuierlich Fertigkeitsschaden. Er verursacht dabei erhöhten Fertigkeitsschaden gegen Gegner bei einer bestimmten Anzahl von Treffern. Wenn Helikopter-Spin mit voller Dauer gewirkt wurde oder wenn er entsprechend oft erhöhten Fertigkeitsschaden verursacht hat, kann Piolo <color=#ffffff>Chokeslam</color> einsetzen. \n\n<color=#ffffff>Chokeslam</color>: Piolo schlägt in eine Zielrichtung und verursacht Fertigkeitsschaden an Feinden, je nachdem ob sie im inneren oder äußeren Indikator getroffen werden. Gegner, die durch den äußeren Indikator Schaden erleiden, werden außerdem verlangsamt.\n
@@ -9069,7 +9240,7 @@ Skill/LobbyDesc/3007000┃Feuert eine Menge Pfeile ab die nach einer weile auf d
 Skill/LobbyDesc/3008000┃Feuert die Armbrust in eine ausgewählte Richtung. Getroffene Gegner erleiden Schaden und werden weg geworfen. Gegner die eine Wand treffen erleiden zusätzlichen Schaden und werden betäubt.
 Skill/LobbyDesc/3009000┃Du erhältst zusätzliches Lauftempo und lädst deine Waffe neu. Die verbleibenden Abklingzeiten deiner Basisfertigkeiten werden verringert.
 Skill/LobbyDesc/3010000┃Du sammelst bei jedem Normalen Angriff Steigerungen von Überhitzen. Wenn du für eine bestimmte Zeit nicht angreifst, verlierst du Steigerungen.\nDie Aktvierung lädt auf der Stelle dein Magazin nach, gibt dir zusätzlichen Bonusschaden für Normale Angriffe, zusätzliches Angriffstempo und lässt dich dabei das maximale Angriffstempo überschreiten. Der Bonusschaden und die Dauer werden durch die Anzahl an Steigerungen erhöht.
-Skill/LobbyDesc/3011000┃Aktiviere Scharfschütze in die gewählte Richtung.\nWährend Scharfschütze aktiv ist, erhältst du zusätzliche Sichtweite in einem engeren Sichtwinkel.\nFeuere erst "Lähmender Schuss" und dann "Gnadenstoß" in die gewählte Richtung ab, um Schaden anzurichten.\nScharfschütze wird durch Bewegung abgebrochen, oder wenn du von Massenkontrolleffekten getroffen wirst.
+Skill/LobbyDesc/3011000┃Aktiviere Scharfschütze in die gewählte Richtung.\nFeuere Lähmender Schuss und Gnadenstoß in die gewählte Richtung innerhalb deiner Sichtweite ab, um Schaden anzurichten.\nScharfschütze wird durch Bewegung abgebrochen oder wenn du von Massenkontrolleffekten getroffen wirst.\n\n<i>Feste Abklingzeit: Diese Fähigkeit ist nicht von Abklingzeitverringerung betroffen.</i>
 Skill/LobbyDesc/3013000┃Schlägt mit dem Hammer in eine gewählte Richtung. Getroffene Gegner erleiden Schaden und ihre Verteidigung wird verringert.
 Skill/LobbyDesc/3014000┃Erhalte eine Steigerung von Helix für jeden normalen Angriff. Nach dem Erreichen maximaler Steigerungen kannst du die Blutrünstiger Helix aktivieren, um in die gewählte Richtung nach vorne zu schwingen. Dabei richtest du getroffenen Gegnern Schaden an und heilst dich basierend auf dem Schaden.
 Skill/LobbyDesc/3015000┃Du wirst unsichtbar und dein Lauftempo wird erhöht.\nReaktiviere die Fähigkeit, um dich hinter den gewählten Gegner zu teleportieren. Dieser wird dabei verlangsamt und nimmt Fähigkeitsschaden.
@@ -9517,8 +9688,8 @@ Item/Skills/6017004/Body┃Jeder Basisangriff gegen ein Testobjekt verursacht du
 Item/Skills/6017004/Desc┃Jeder Basisangriff gegen ein Testobjekt verursacht du Fähigkeitsschaden in Höhe von {1}% der aktuellen LP des Ziels und erhältst für {8} Sekunden eine Steigerung von Tatkraft. Jede Steigerung erhöht deine Angriffsgeschwindigkeit um <color=white>{3}%</color>. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft und <color=white>{6}</color> Lauftempo.
 Item/Skills/6017005/Name┃<color=yellow>Tatkraft</color>
 Item/Skills/6017006/Name┃<color=yellow>Tatkraft - Durchblutung</color>
-Item/Skills/6017005/Body┃Normale Angriffe gegen Testobjekte richten <color=#DDA0DD>{11}</color> Fähigkeitsschaden an und du erhältst Steigerungen von Tatkraft, die dir für {8} Sekunden <color=white>{3}%</color> Angriffstempo verleihen.
-Item/Skills/6017005/Desc┃Normale Angriffe gegen Testobjekte verursachen (Nahkampf: <color=white>{10}</color><color=#DDA0DD>(+{11} Fäh.verst.</color>) ｜Fernkampf: <color=white>{10}</color><color=#DDA0DD>(+{12} Fäh.verst</color>) Fähigkeitsschaden und gewähren dir Steigerungen von Tatkraft, die <color=white>{3}%</color> Angriffstempo für {8} Sekunden verleihen.
+Item/Skills/6017005/Body┃Basisangriffe an Gegnern richten <color=#DDA0DD>{11}</color> Fähigkeitsschaden an und du erhältst Steigerungen von Tatkraft, die dir für {8} Sekunden <color=white>{3}%</color> Angriffstempo verleihen.
+Item/Skills/6017005/Desc┃Basisangriffe an Gegnern verursachen (Nahkampf: <color=white>{10}</color><color=#DDA0DD>(+{11} Fäh.verst.</color>) ｜Fernkampf: <color=white>{10}</color><color=#DDA0DD>(+{12} Fäh.verst</color>) Fähigkeitsschaden und gewähren dir Steigerungen von Tatkraft, die <color=white>{3}%</color> Angriffstempo für {8} Sekunden verleihen.
 Item/Skills/6017007/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017008/Name┃<color=yellow>Tatkraft</color>
 Item/Skills/6017008/Body┃Normale Angriffe gegen Testobjekte richten zusätzliche ({10} + <color=#DDA0DD> Fähigkeitsverstärkung * {11}</color>) Fähigkeitsschaden an und gewähren dir Steigerungen für je <color=white>{3}%</color> Angriffstempo, die für {8} Sekunden anhalten. Bei {9} Steigerungen erhältst du zusätzliche <color=#FFD775>{5}</color> Angriffskraft.
@@ -9531,8 +9702,8 @@ Item/Skills/6017023/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017024/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017025/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 Item/Skills/6017026/Name┃<color=yellow>Vigor - Ekstase</color>
-Item/Skills/6017026/Body┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
-Item/Skills/6017026/Desc┃Wenn du ein Testobjekt mit einem Grundangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
+Item/Skills/6017026/Body┃Wenn du Gegnern mit einem Basisangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
+Item/Skills/6017026/Desc┃Wenn du Gegnern mit einem Basisangriff triffst, verursachst du Fähigkeitsschaden in Höhe von <color=#688A08>{1}% der aktuellen HP des Ziels</color> und steigerst Tatkraft für {8} Sekunden. Dein Angriffstempo erhöht sich um <color=white>{3}%</color>.
 Item/Skills/6017027/Name┃<color=yellow>Tatkraft - Durchblutung</color>
 CharacterState/Group/Name/6017000┃Tatkraft
 CharacterState/Group/Desc/6017000┃Erhöhtes Angriffstempo
@@ -9740,8 +9911,8 @@ Skill/Code/Name/4508001┃Fantastischer Hieb
 Skill/Group/4508000/Name┃<color=yellow>Fantastischer Hieb</color>
 Skill/LobbyDesc/4508000┃Beschwöre die illusorische Faust eines Flaschengeistes in die gewünschte Richtung.Die getroffenen Testobjekte werden n diese Richtung geschleudert.
 Skill/Group/LobbyDesc/4508000┃Beschwöre die illusorische Faust eines Flaschengeistes in die gewünschte Richtung.Die getroffenen Testobjekte werden n diese Richtung geschleudert.
-Skill/Code/Desc/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die anvisierte Richtung und führe einen schnellen Schlag aus.\nGetroffene Feinde erleiden {0}+<color=#688A08>{1}% ihrer maximalen LP</color> als Fähigkeitsschaden und fliegen {2} Sekunden lang in diese Richtung.\nDu und deine Verbündeten erleiden keinen Schaden.\n\nAbklingzeit: {4} Sekunden
-Skill/Code/Coef/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die anvisierte Richtung und führe einen schnellen Schlag aus.\nGetroffene Feinde erleiden {0}+<color=#688A08>{1}% ihrer maximalen LP</color> als Fähigkeitsschaden und fliegen {2} Sekunden lang in diese Richtung.\nDu und deine Verbündeten erleiden keinen Schaden.\n\nAbklingzeit: {4} Sekunden
+Skill/Code/Desc/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die  Zielrichtung und führe einen schnellen Schlag aus.\nGetroffene Gegner erleiden {0}+<color=#688A08>{1}% maximalen HP des Ziel</color> als Fähigkeitsschaden und werden in die Richtung weit weggestoßen.\nDu und deine Verbündeten erleiden keinen Schaden.
+Skill/Code/Coef/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die  Zielrichtung und führe einen schnellen Schlag aus.\nGetroffene Gegner erleiden {0}+<color=#688A08>{1}% maximalen HP des Ziel</color> als Fähigkeitsschaden und werden über <color=white>{2} Sekunden</color> in die Richtung weit weggestoßen.\nDu und deine Verbündeten erleiden keinen Schaden.
 CharacterState/Group/Name/4508000┃Der fantastische Hieb des Flaschengeistes
 CharacterState/Group/Desc/4508000┃Tut weh, oder?
 CharacterState/Group/Name/6516010┃Der fantastische Hieb des Flaschengeistes 2
@@ -9859,8 +10030,8 @@ Item/Skills/6027001/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP
 Item/Skills/6027001/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
 Item/Skills/6027101┃Erleuchtung - Vorreiter
 Item/Skills/6027101/Name┃<color=yellow>Erleuchtung - Vorreiter</color>
-Item/Skills/6027101/Body┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
-Item/Skills/6027101/Desc┃Wird aktiviert, wenn du {0} oder mehr zusätzliche LP erhältst.\nWenn du bei Aktivierung innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Feinden erleidest, werden Feinde im Umkreis von {4}m um dich herum {3} Sekunden lang um <color=white>{5}%</color> verlangsamt und deine Zähigkeit gegen CC um {6}% erhöht. (Abklingzeit: {7}s)
+Item/Skills/6027101/Body┃Falls du innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Gegnern erhältst, wird erlittener Schaden um <color=white>(Nahkampf: 15% I Fernkampf: 10%)</color> reduziert und das Angriffstempo von Gegnern innerhalb {4}m reduziert für {3} Sekunden um <color=white>{5}%</color> reduziert. (Abklingzeit: {7}s)
+Item/Skills/6027101/Desc┃Falls du innerhalb von {1} Sekunden {2} oder mehr Schaden von deinen Gegnern erhältst, wird erlittener Schaden um <color=white>(Nahkampf: 15% I Fernkampf: 10%)</color> reduziert und das Angriffstempo von Gegnern innerhalb {4}m reduziert für {3} Sekunden um <color=white>{5}%</color> reduziert. (Abklingzeit: {7}s)
 CharacterState/Group/Name/6027000┃Vorreiter
 CharacterState/Group/Desc/6027000┃Du hast genug Schaden erlitten, um Vorreiter auszulösen.
 CharacterState/Group/Name/6027010┃Vorreiter - Verstärkungseffekte
@@ -9869,8 +10040,8 @@ CharacterState/Group/Name/6027020┃Vorreiter - Schwächungseffekte
 CharacterState/Group/Desc/6027020┃Angriffstempo wird durch den Vorreiter des Gegners verringert.
 Item/Skills/6022101┃Erleuchtung - Sense des Schnitters
 Item/Skills/6022101/Name┃<color=yellow>Erleuchtung - Sense des Schnitters</color>
-Item/Skills/6022101/Body┃Wird aktiviert, wenn du 30 oder mehr Rüstungsdurchdringung erhältst.\nWährend der Aktivierung wird ein Gegner mit weniger als <color=#688A08>8%</color> LP sofort eliminiert, wenn du ihm Schaden zufügst. (Abklingzeit: {1}s)
-Item/Skills/6022101/Desc┃Wird aktiviert, wenn du 30 oder mehr Rüstungsdurchdringung erhältst.\nWährend der Aktivierung wird ein Gegner mit weniger als <color=#688A08>8%</color> LP sofort eliminiert, wenn du ihm Schaden zufügst. (Abklingzeit: {1}s)
+Item/Skills/6022101/Body┃Gegnerische Charaktere werden sofort eliminiert wenn sie Schaden nehmen und ihre HP unter <color=#688A08>(Nahkampf: 8% I Fernkampf: 5%)</color> fallen. (Abklingzeit: {1}s)
+Item/Skills/6022101/Desc┃Gegnerische Charaktere werden sofort eliminiert wenn sie Schaden nehmen und ihre HP unter <color=#688A08>(Nahkampf: 8% I Fernkampf: 5%)</color> fallen. (Abklingzeit: {1}s)
 Item/Skills/6030001┃Entkräftung
 Item/Skills/6030001/Name┃<color=yellow>Entkräftung</color>
 Item/Skills/6030001/Body┃Feine, die von einer Fähigkeit getroffen werden, werden geschwächt und erleiden <color=#688A08>{0} ihrer max. LP</color><color=#DDA0DD>(+{1})</color><color=#688A08>%</color> Fähigkeitsschaden jede Sekunde für {2} Sekunden durch die Fähigkeit. (Maximale Steigerungen: {3})
@@ -9948,14 +10119,14 @@ Item/Skills/6036001/Body┃Wenn du einen Gegner innerhalb von {0} Sekunden 3 Mal
 Item/Skills/6036001/Desc┃Wenn du einen Gegner innerhalb von {0} Sekunden 3 Mal triffst, wird ein Wirbelwind ausgelöst, der <color=#FFD775>{2}</color><color=#DDA0DD>(+{3}% der Fertigkeitsverstärkung)</color><color=#688A08>(+{5}% der maximalen HP des Ziels)</color> alle {8} Sekunden für {6} Sekunden Fähigkeitsschaden verursacht. (Abklingzeit: {7}s)
 Item/Skills/6036002┃Windstoß - Versammlung
 Item/Skills/6036002/Name┃<color=yellow>Windstoß - Versammlung</color>
-Item/Skills/6036002/Body┃Das Einsetzen einer Ultimate löst einen Wirbelwind aus, der alle {6} Sekunden für {4} Sekunden <color=#FFD775>{2}</color><color=#688A08>(+{3}% der maximalen LP des Ziels)</color> Fähigkeitsschaden verursacht. (Abklingzeit: {5}s)
-Item/Skills/6036002/Desc┃Das Einsetzen einer Ultimate löst einen Wirbelwind aus, der <color=white>{2}</color><color=#FFD775>(+{4}% Angriffskraft)</color><color=#688A08>(+{3}% der maximalen LP des Ziels)</color> alle {6} Sekunden für {4} Sekunden Fähigkeitsschaden verursacht. (Abklingzeit: {5}s)
+Item/Skills/6036002/Body┃Bewegungsunfähig machende Effekte an gegnerischen Charakteren zu benutzen löst einen Wirbelwind aus, der alle {6} Sekunden für {4} Sekunden <color=#FFD775>{2}</color><color=#688A08>(+{3}% der maximalen HP des Ziels)</color> Fähigkeitsschaden verursacht. (Abklingzeit: {5}s)
+Item/Skills/6036002/Desc┃Bewegungsunfähig machende Effekte an gegnerischen Charakteren zu benutzen löst einen Wirbelwind aus, der alle {8} Sekunden für {6} Sekunden <color=white>{2}</color><color=#FFD775>(+{4}% Angriffskraft)</color><color=#688A08>(+{5}% der maximalen HP des Ziels)</color> Fähigkeitsschaden verursacht. (Abklingzeit: {7}s)
 CharacterState/Group/Name/6036000┃Windstoß
 CharacterState/Group/Desc/6036000┃Du hast die Bedingungen erfüllt, einen Windstoß auszulösen.
 Item/Skills/6037001┃Zielerfassungssystem
 Item/Skills/6037001/Name┃<color=yellow>Zielerfassungssystem</color>
-Item/Skills/6037001/Body┃Gegnerische Testsubjekte mit einem bewegungseinschränkenden Effekt zu treffen hinterlässt eine Markierung die {0} Sekunden lang bleibt.\nWenn Verbündete das markierte Ziel mit einem Basisangriff attackieren, richtet dieser <color=green>{1}</color> zusätzlichen Fähigkeitsschaden an und heilen sich um <color=green>{2}</color>. (Abklingzeit: {3}s)
-Item/Skills/6037001/Desc┃Gegnerische Testsubjekte mit einem bewegungseinschränkenden Effekt zu treffen hinterlässt eine Markierung die {0} Sekunden lang bleibt.\nWenn Verbündete das markierte Ziel mit einem Basisangriff attackieren, richtet dieser <color=white>{1}</color><color=green>(+Charakterstufe*{2})</color> zusätzlichen Fähigkeitsschaden an und heilen sich um <color=white>{3}</color><color=green>(+Charakterstufe*{4})</color>(Abklingzeit: {3}s)
+Item/Skills/6037001/Body┃Gegnerische Testsubjekte mit einem bewegungseinschränkenden Effekt zu treffen hinterlässt eine Markierung die {0} Sekunden lang bleibt.\nWenn Verbündete seperat an dem Gegner Schaden anrichten, richten diese <color=green>{1}</color> zusätzlichen Fähigkeitsschaden an und heilen sich um <color=green>{2}</color>. (Abklingzeit: {3}s)
+Item/Skills/6037001/Desc┃Gegnerische Testsubjekte mit einem bewegungseinschränkenden Effekt zu treffen hinterlässt eine Markierung die {0} Sekunden lang bleibt.\nWenn Verbündete seperat an dem Gegner Schaden anrichten, richten diese <color=white>{1}</color><color=green>(+Charakterstufe*{2})</color> zusätzlichen Fähigkeitsschaden an und heilen sich um <color=white>{3}</color><color=green>(+Charakterstufe*{4})</color>. (Abklingzeit: {5}s)\n
 CharacterState/Group/Name/6037010┃Zielerfassungssystem - Auf Abklingzeit
 CharacterState/Group/Desc/6037010┃Das Zeilerfassungssystem ist nicht aktiviert.
 CharacterState/Group/Name/6037000┃Zielerfassungssystem - Markierung
@@ -10027,7 +10198,10 @@ Item/Skills/6048001/Name┃<color=yellow>Erwachen</color>
 Item/Skills/6048001/Body┃Eine ultimative Fähigkeit zu benutzen erhöht dein Angriffstempo um <color=white>{1}%</color> und dein Lauftempo <color=white>{2}%</color> für {0} Sekunden. Zusammenstoßen mit Einheiten wird ignoriert. (Abklingzeit: {3}s)
 Item/Skills/6048001/Desc┃Eine ultimative Fähigkeit zu benutzen erhöht dein Angriffstempo um <color=white>{1}%</color> und dein Lauftempo <color=white>{2}%</color> für {0} Sekunden. Zusammenstoßen mit Einheiten wird ignoriert. (Abklingzeit: {3}s)
 CharacterState/Group/Name/6048000┃Erwachen
-CharacterState/Group/Desc/6048000┃Du erwachst gerade. Dein Angriffs- und Lauftempo ist erhöht.
+CharacterState/Group/Desc/6048000┃Du erwachst gerade. Deine Werte sind erhöht.
+Item/Skills/6048011/Name┃<color=yellow>Erwachen</color>
+Item/Skills/6048011/Body┃Deine ultimative Fähigkeit zu benutzen erhöht deine Rüstungsdurchdringung um <color=white>12%</color> für 6 Sekunden. (Cooldown: 20s)
+Item/Skills/6048011/Desc┃Deine ultimative Fähigkeit zu benutzen erhöht deine Rüstungsdurchdringung um <color=white>12%</color> für 6 Sekunden. (Cooldown: 20s)
 Item/Skills/6049001┃Verzögerung
 Item/Skills/6049001/Name┃<color=yellow>Verzögerung</color>
 Item/Skills/6049001/Body┃<color=white>{0}%</color> des Schadens, den du von gegnerischen Charakteren erleidest, wird stattdessen schrittweise über {2} Sekunden angewendet.
@@ -10057,8 +10231,8 @@ Item/Skills/6053002/Body┃Schaden an gegnerischen Charakter mit seperaten Fähi
 Item/Skills/6053002/Desc┃Schaden an gegnerischen Charakter mit seperaten Fähigkeiten anzurichten, gibt dir Steigerungen von Aufflammen für {3} Sekunden, welche Fähigkeitsschaden um <color=#DDA0DD>{0}%</color> pro Steigerung erhöht. (Max Steigerungen: {2})\nErhalte <color=white>{1}%</color> Lauftempo bei maximalen Steigerungen.
 Item/Skills/6054001┃Aufflammen - Ausbruch
 Item/Skills/6054001/Name┃<color=yellow>Aufflammen - Ausbruch</color>
-Item/Skills/6054001/Body┃Jedes Mal wenn du einen Gegner mit einem Basisangriff triffst, erhältst du eine Steigerung die deine Angriffskraft um <color=#FFD775>{1}</color> und dein Angriffstempo um <color=white>{0}%</color> für {4} Sekunden erhöht. (Max Steigerungen: {2})\nErhalte <color=white>{3}%</color> Rüstungsdurchdringung bei maximalen Steigerungen.
-Item/Skills/6054001/Desc┃Jedes Mal wenn du einen Gegner mit einem Basisangriff triffst, erhältst du eine Steigerung die deine Angriffskraft um <color=#FFD775>{1}</color> und dein Angriffstempo um <color=white>{0}%</color> für {4} Sekunden erhöht. (Max Steigerungen: {2})\nErhalte <color=white>{3}%</color> Rüstungsdurchdringung bei maximalen Steigerungen.
+Item/Skills/6054001/Body┃Jedes Mal wenn du einen Gegner mit einem Basisangriff triffst, erhältst du eine Steigerung die deine Angriffskraft um <color=#FFD775>{1}</color> und dein Angriffstempo um <color=white>{0}%</color> für {4} Sekunden erhöht. (Max Steigerungen: {2})\nErhalte <color=white>{3}%</color> Lauftempo bei maximalen Steigerungen.
+Item/Skills/6054001/Desc┃Jedes Mal wenn du einen Gegner mit einem Basisangriff triffst, erhältst du eine Steigerung die deine Angriffskraft um <color=#FFD775>{1}</color> und dein Angriffstempo um <color=white>{0}%</color> für {4} Sekunden erhöht. (Max Steigerungen: {2})\nErhalte <color=white>{3}%</color> Lauftempo bei maximalen Steigerungen.
 CharacterState/Group/Name/6049000┃Verzögerung
 CharacterState/Group/Desc/6049000┃Dein erlittener Schaden wird verzögert.
 CharacterState/Group/Name/6051000┃Taserpistole - Anstieg
@@ -12330,6 +12504,7 @@ Item/Name/203511┃Dornenkette
 Item/Name/203512┃Albtraumnägel
 Item/Name/203513┃Helix
 Item/Name/203514┃Mythrilarmband
+Item/Name/203515┃Novaschild
 Item/Name/204101┃Hausschuhe
 Item/Name/204102┃Laufschuhe
 Item/Name/204103┃Strumpfhose
@@ -12368,6 +12543,8 @@ Item/Name/204506┃Wilde Wanderer
 Item/Name/204507┃Galaxie-Schritte
 Item/Name/204508┃Mirage-Schnürschuhe
 Item/Name/204509┃Rennstiefel
+Item/Name/204510┃Eldianstiefel
+Item/Name/204511┃Rosenschritte
 Item/Name/205101┃Feder
 Item/Name/205102┃Blume
 Item/Name/205103┃Schleife
@@ -12477,6 +12654,7 @@ Item/Name/301113┃Ramen
 Item/Name/301116┃Orientalisches Heilkraut
 Item/Name/301119┃Schokolade
 Item/Name/301120┃Currypulver
+Item/Name/301121┃Pilz
 Item/Name/301201┃Dorsch Steak mit Honig
 Item/Name/301204┃Dorschleber in Dosen
 Item/Name/301205┃Knoblauchbrot
@@ -12543,6 +12721,7 @@ Item/Name/301339┃Gerösteter Knoblauch
 Item/Name/301340┃Frühstücks-Sandwich
 Item/Name/301346┃Brutzelndes Steak
 Item/Name/301348┃1. Geburtstagstorte
+Item/Name/301349┃Gegrillte Pilzspieße
 Item/Name/301401┃Fish & Chips
 Item/Name/301331┃Knoblauchramen
 Item/Name/301332┃Popcorn
@@ -12552,13 +12731,23 @@ Item/Name/301405┃Lachs
 Item/Name/301406┃Gelbe Süßkartoffel
 Item/Name/301407┃Tiefkühlpizza
 Item/Name/301408┃Schoko-Pfefferminz-Eiscreme
+Item/Name/301409┃Trüffel
 Item/Name/301501┃Lachssteak
 Item/Name/301502┃Pizza Hawaii
 Item/Name/301503┃Süßkartoffel
+Item/Name/301504┃Trüffelnudeln
+Item/Name/301601┃100 Jahre alter Eintopf
+Item/Name/301602┃Ewiger Eintopf
 Item/Name/802601┃Kampfadrenalin
 Item/Name/303501┃Belohnung
 Item/Name/303502┃Credits+
 Item/Name/303503┃Credits++
+Item/Name/303504┃Credits
+Item/Name/303505┃Credits
+Item/Name/303506┃Credits
+Item/Name/303507┃Credits
+Item/Name/303508┃Credits
+Item/Name/303509┃Credits
 Item/Name/401101┃Nagel
 Item/Name/401103┃Leder
 Item/Name/401104┃Schildkrötenpanzer
@@ -12660,6 +12849,15 @@ Item/Name/503104┃Mobiles VLS
 Item/Name/503105┃Loop-Kartenschlüssel
 Item/Name/503106┃Loop-Kartenschlüssel - y
 Item/Name/503107┃Loop-Kartenschlüssel - Rot
+Item/Name/503108┃Jägertopf
+Item/Name/504401┃Tonfaversorgungskiste
+Item/Name/504402┃Zweihandschwertversorgungskiste
+Item/Name/504403┃Shurikenversorgungskiste
+Item/Name/504404┃Pistolenversorgungskiste
+Item/Name/504602┃Tragbarer Crafter - Kopf
+Item/Name/504601┃Tragbarer Crafter - Brust
+Item/Name/504603┃Tragbarer Crafter - Arm/Zubehör
+Item/Name/504604┃Tragbarer Crafter - Bein
 Item/Name/540001┃Haute Couture
 Item/Name/999999┃Takt. Fähigkeitsmodul
 Item/Name/201518┃GPNVG
@@ -12684,6 +12882,7 @@ Item/Name/105503┃Nephleon
 Item/Name/201524┃Häschenhut
 Item/Name/202524┃Geisterhafte Jacke
 Item/Name/202525┃Roben der Weisheit
+Item/Name/202527┃Schwarzflammendrache
 Item/Name/201701┃Blutkrone
 Item/Name/121504┃Freier Vogel
 Item/Name/114505┃Adlerauge
@@ -12708,6 +12907,38 @@ Item/Name/122503┃On Air
 Item/Name/122504┃Dreifachkamera
 Item/Name/201526┃Fecht-Maske
 Item/Name/201527┃Smart-Brille
+Item/Name/201528┃Wikinger Helm
+Item/Name/201529┃Augenschutz
+Item/Name/202415_D┃David: Kampfanzug
+Item/Name/202407_D┃David: Mythrilrüstung
+Item/Name/202416_D┃David: Flammenkleid
+Item/Name/202421_D┃David: Mythril Crop
+Item/Name/202501_D┃David: Kabana
+Item/Name/202503_D┃David: Heiliger Befehl
+Item/Name/202505_D┃David: Áo Dài
+Item/Name/202506_D┃David: Phantom Jacket
+Item/Name/202507_D┃David: Schutzanzug
+Item/Name/202508_D┃David: Elegantes Gewand
+Item/Name/202509_D┃David: Wunderschönes Gewand
+Item/Name/202510_D┃David: Specter
+Item/Name/202511_D┃David: Blutumhang
+Item/Name/202512_D┃David: Omertà
+Item/Name/202513_D┃David: Shootingstar-Jacke
+Item/Name/202514_D┃David: Couturier
+Item/Name/202515_D┃David: Taktische Rüstung
+Item/Name/202516_D┃David: Elfenkleid
+Item/Name/202517_D┃David: Titan Armor
+Item/Name/202523_D┃David: Ghillie-Anzug
+Item/Name/202524_D┃David: Geisterhafte Jacke
+Item/Name/202525_D┃David: Roben der Weisheit
+Item/Name/202209_D┃David: Bikini
+Item/Name/202504_D┃David: Burgundy 47
+Item/Name/202502_D┃David: Herzdame
+Item/Name/202521_D┃David: Rennanzug
+Item/Name/202522_D┃David: Kleid der Geisterbraut
+Item/Name/202518_D┃David: Der Wiedergänger
+Item/Name/202526_D┃David: Inquisitor
+Item/Name/202527_D┃David: Schwarzflammendrache
 Item/Help/101101┃Eine normale Schere. Schnipp Schnapp!
 Item/Help/101102┃Ein normaler Füller zum Schreiben. Die Tinte fließt durch das Innere und in die Spitze, dennoch können die Hände bei falscher Benutzung schmutzig werden.
 Item/Help/101104┃Ein Messer was normalerweise in einer Küche benutzt wird. Kann zur Waffe in den Händen eines Experten werden.
@@ -13251,6 +13482,7 @@ Item/Help/301113┃Legen es in eine Tüte, zerschlage es in Stücke, füge einig
 Item/Help/301116┃Ein Kraut, das in der traditionellen Medizin verwendet wird.
 Item/Help/301119┃Wenn du wenig Zucker hast, fühlst du dich beim Essen stark\nund glücklich.
 Item/Help/301120┃Würde gut schmecken, wenn es mit heißem Wasser gekocht würde.
+Item/Help/301121┃Ein gewöhnlicher, essbarer Pilz—stell nur sicher, dass du ihn nicht mit einem giftigem verwechselst!
 Item/Help/301205┃Eine der köstlichsten Substanzen, die der Mensch kennt.
 Item/Help/301207┃So effektiv wie bitter.
 Item/Help/301209┃Überlegen genau, wo du deinen ersten Bissen nehmen solltest. Den\nKopf oder den Schwanz?
@@ -13276,10 +13508,13 @@ Item/Help/301329┃Wenn Sie die drei wichtigsten Elixiere in der Welt der Kampfk
 Item/Help/301331┃Du kannst nicht mit fachmännisch gekochtem Ramen konkurrieren.
 Item/Help/301347┃Ich wollte ohne Gurken...
 Item/Help/301348┃Eine Torte voller Freude, um ein Jahr toller gemeinsamer Erinnerungen zu feiern!
+Item/Help/301349┃Eine leckere, vegane Leckerei!
 Item/Help/301403┃Das Lieblingskombigericht von Eleven selbst zubereitet.
 Item/Help/301407┃Nach wenigen Minuten bereit zum Servieren!
 Item/Help/301408┃Für die einen schmeckt es wie Zahnpasta, für die anderen ist es ein göttlicher Genuss.\nProbiere und finde es heraus!
+Item/Help/301409┃Eine ungewöhnliche Zutat mit einem kräftigen Aroma.
 Item/Help/301503┃Ein Thanksgiving-Klassiker
+Item/Help/301504┃Voll mit Trüffeln für maximalen Geschmack... obwohl eine kleine Scheibe es getan hätte.
 Item/Help/401103┃Gibt es irgendwelche Tiere in der Nähe? Leder ist vielseitig und kann\nauf vielfältige Weise verwendet werden.
 Item/Help/401104┃Erinnert mich an einen Sandkasten, den ich als Kind hatte.
 Item/Help/401105┃Ein Material, das immer elastisch ist. Im Gegensatz zu deinen Wangen,\ndie Tag für Tag an Elastizität verlieren.
@@ -13370,11 +13605,11 @@ Item/Effects/502203┃Klicke um ein <color=lightblue>Dynamite-Falle </color>zu i
 Item/Effects/502204┃Klicke um eine <color=lightblue>Bambus-Falle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr für 0.5 Sekunden.
 Item/Effects/502205┃Klicke um eine <color=lightblue>Sprengfalle</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr für 0.5 Sekunden.
 Item/Effects/502206┃Klicke um einen <color=lightblue>Krachmacher</color> zu installieren. Macht in einem 25m Radius Lärm beim Installieren und beim Ablaufen.
-Item/Effects/502207┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung. Zeigt dir versteckte Fallen und Gegner in deiner Nähe. \nMaximal gleichzeitig platzierbare Anzahl: 2
-Item/Effects/502208┃Klicke um die <color=lightblue>Aufklärdrone</color>zu starten im gewähltem gebiet.\nErzeugt Sicht im Zielgebiet für 7 sekunden.
-Item/Effects/502209┃Klicke, um eine <color=lightblue>Wildkamera</color> zu platzieren, die deine Umgebung aufdeckt.\nDeckt versteckte Fallen und Spieler in der Nähe auf,.\nNach 3 Sekunden,\ngeht die Kamera in den Infiltrationsmodus über.\nMaximal gleichzeitig platzierbare Anzahl: 2
-Item/Effects/502211┃Klicke, um eine <color=hellblau>Vergrößerungskamera</color> zu installieren, die dir eine Fernsicht in eine bestimmte Richtung ermöglicht.\nSie zeigt Fallen und Überlebende in der Nähe an.\nDu kannst bis zu 3 Kameras installieren.
-Item/Effects/502212┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung. Zeigt dir versteckte Fallen und Gegner in deiner Nähe. \nMaximal gleichzeitig platzierbare Anzahl: 3
+Item/Effects/502207┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung.(Dauer: {2}s)\nKameraplatzierungsbegrenzung: {3}
+Item/Effects/502208┃Klicke um die <color=lightblue>Aufklärdrone</color>zu starten im gewähltem gebiet.\nErzeugt Sicht im Zielgebiet für {2} Sekunden.
+Item/Effects/502209┃Klicke, um eine <color=lightblue>Wildkamera</color> zu platzieren, die deine Umgebung aufdeckt.\nDeckt versteckte Fallen und Spieler in der Nähe auf,.\nNach {1} Sekunden,\ngeht die Kamera in den Infiltrationsmodus über. (Dauer: {2}s)\nKameraplatzierungslimit: {3}
+Item/Effects/502211┃Klicke, um eine <color=hellblau>Vergrößerungskamera</color> zu installieren, die dir eine Fernsicht in eine bestimmte Richtung ermöglicht.\nZeigt Fallen und Überlebende in der Nähe an.(Dauer: {2}s)\nKameraplatzierungslimit: {3}
+Item/Effects/502212┃Klicke um eine <color=lightblue>Telephoto-Kamera<color>zu installieren, welche deine Umgebung aufdeckt\nin einer großen Umgebung. Zeigt dir versteckte Fallen und Gegner in deiner Nähe. (Dauer: {2}s)\nKameraplatzierungslimit: {3}
 Item/Effects/502301┃Klicke um eine <color=lightblue>Nagelperlen-Falle</color> zu installieren.
 Item/Effects/502302┃Klicke um eine <color=lightblue>Meiji's Roulette-Falle </color> zu installieren.
 Item/Effects/502303┃Klicke um eine <color=lightblue>Wald Guillotine</color> zu installieren.\n<color=yellow>Fallen Effekte:</color> Gegner sind starr\nfür 0.5 Sekunden.
@@ -13397,6 +13632,11 @@ Item/Effects/503104┃Klicke, um ein <color=lightblue>Mobiles VLS</color> zu ruf
 Item/Effects/503105┃Klicke, um einen Loop zu rufen, der dich zum Labor bringt.
 Item/Effects/503106┃Klicke, um einen Loop zu rufen, der dich zum Speziallabor bringt.
 Item/Effects/503107┃Klicke, um einen Loop zu rufen, der dich zum Verlassenen Dock bringt.
+Item/Effects/503108┃Klick um einen <color=lightblue>Jägertopf</color> zu installieren, der für {0} Sekunden bleibt.\nDu kannst bis zu 3 Mal Essen von dem Topf sammeln und in der Nähe konsumierbare Gegenstände vorbereiten, wie bei einem Lagerfeuer.\nInstalliere es in Reichweite eines Lagerfeuer um noch bessere Essensgegenstände zu sammeln.
+Item/Effects/504401┃Klick um für deine ausgewählte Tonfawaffe auszuwechseln.
+Item/Effects/504402┃Klick um für deine ausgewählte Zweihandschwertwaffe auszuwechseln.
+Item/Effects/504403┃Klick um für deine ausgewählte Shurikenwaffe auszuwechseln.
+Item/Effects/504404┃Klick um für deine ausgewählte Pistolenwaffe auszuwechseln.
 Item/Effects/302101┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302102┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302103┃stellt AP über 15 Sekunden wieder her.
@@ -13542,6 +13782,12 @@ Item/Effects/301602┃Stellt LP über 15 Sekunden her.
 Item/Effects/303501┃Erhalte {0} Credit(s).
 Item/Effects/303502┃(Du/Verbündeter) Erhält {0}/{1} Credit(s).
 Item/Effects/303503┃(Du/Verbündeter) Erhält {0}/{1} Credit(s).
+Item/Effects/303504┃Erhalte {0} Credit(s).
+Item/Effects/303505┃Erhalte {0} Credit(s).
+Item/Effects/303506┃Erhalte {0} Credit(s).
+Item/Effects/303507┃Erhalte {0} Credit(s).
+Item/Effects/303508┃Erhalte {0} Credit(s).
+Item/Effects/303509┃Erhalte {0} Credit(s).
 Item/Effects/802601┃Erhalte permanent 0.1 Lauftempo.
 Item/BulletCapacity/Reload┃<color=yellow>Maximale Munition:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Maximale Munition:</color> {0}
@@ -14210,6 +14456,61 @@ CharacterState/Group/Desc/7300340┃Max HP erhöht.
 로딩팁 튜토리얼196┃Piolo wurde in den Slums geboren und hatte eine schwere Kindheit.
 로딩팁 튜토리얼197┃Martina ist in ihrem Freundeskreis als starke Raucherin und Trinkerin bekannt.
 로딩팁 튜토리얼198┃Martina liebt das Laufen und nimmt manchmal sogar an Marathons teil.
+MasteryType/Glove/Desc┃Handschuhe haben eine kurze Reichweite, aber sie können rapide zuschlagen.
+MasteryType/Tonfa/Desc┃Tonfas sind die einizgen Kampfwaffen, die auch deine Verteidigung verstärken.
+MasteryType/Hammer/Desc┃Hammer haben sehr niedriges Angriffstempo, aber sie richten mit ihren heftigen Schlägen enormen Schaden an.
+MasteryType/Bat/Desc┃Schläger sind flexible und balancierte Waffen, welche mit verschiedensten Gegnern mühelos klarkommen.
+MasteryType/Whip/Desc┃Peitschen sind komplizierte Waffen. Mit ihrer langen Fertigkeit können sie Gegner zu sich ziehen.
+MasteryType/HighAngleFire/Desc┃Wurfwaffen haben oft hohe Angriffskraft. Wurfwaffen haben eine limitierte Anzahl an Munition, und die Anzahl der verfügbaren Munition variiert. Achte also darauf, zu verfolgen, wie viel du hast und herstellen kannst. Munition wird mit der Zeit wiederhergestellt.
+MasteryType/DirectFire/Desc┃Shuriken sind sehr flexibel und haben eine Vielzahl an Waffentypen. Shuriken haben eine limitierte Anzahl an Munition, und die Anzahl der verfügbaren Munition variiert. Achte also darauf, zu verfolgen, wie viel du hast und herstellen kannst. Munition wird mit der Zeit wiederhergestellt.
+MasteryType/Bow/Desc┃Bögen sind Waffen mit langer Reichweite, die effektiv gegen Wildtiere sind und besser als andere Waffen von Waffenkönnen profitieren.
+MasteryType/CrossBow/Desc┃Armbrüste haben vortrefflichen konstanten Schaden und können Gegner mit ein wenig Übung betäuben.
+MasteryType/Pistol/Desc┃Pistolen lassen dich Fertigkeiten öfter benutzen und lassen dich flink umherflitzen.
+MasteryType/AssaultRifle/Desc┃Sturmgewehre richten durch Normale Angriffe schnellen und konstanten Schaden auf langer Distanz an.
+MasteryType/SniperRifle/Desc┃Scharfschützengewehre haben hohe Angriffskraft und die längste Angriffsreichweite. Ihre Durchschlagskraft übersteigt deine Sichtweite beträchtlich, also sieh zu, dass du eine gute Position einnimmst, um deinen Vorteil optimal zu nutzen!
+MasteryType/Axe/Desc┃Äxte sind zwar langsam, aber verursachen eine Menge Schaden und sind schnell herstellbar.
+MasteryType/OneHandSword/Desc┃Dolche sind Waffen, die für Überraschungsangriffe spezialisiert wurden sind. Sie sind die besten und stärksten Waffen für schnelle Kämpfe.
+MasteryType/TwoHandSword/Desc┃Zweihandschwerter sind ausgeglichene Waffen. Je mehr du sie benutzt und dein Können mit ihnen steigerst, umso besser werden sie.
+MasteryType/Polearm/Desc┃Stangenwaffen sind gut ausgewogen und mit guter Angriffsreichweite und gutem Schaden ausgestattet. Mit dieser Waffe wirst du es mit mehreren Gegnern gleichzeitig aufnehmen können.
+MasteryType/DualSword/Desc┃Doppelschwerter sind in der Lage ein schönes Paar Schläge aufeinander zu kombinieren.
+MasteryType/Spear/Desc┃Speere sind am besten auf Distanz und nicht effektiv gegen nahe Gegner. Deswegen sollte man sich richtig positionieren.
+MasteryType/Nunchaku/Desc┃\nNunchaku sind schwer zu erlernen, können aber eine vielseitige Waffe mit kreativem Einsatz sein, wenn sie gemeistert werden.
+MasteryType/Rapier/Desc┃Rapiere sind Waffen für kurze Distanzen, die den Vorteil der Geschwindigkeit mitbringen, um die Überhand im Kampf zu haben.
+MasteryType/Guitar/Desc┃Gitarren sind Waffen für lange Distanzen, die Klangwellen benutzen, welche unterschiedlich spielbar sind und je nach Einsatz der Evolutionspunkte im Kampf ihre Spielstrategie ändern können.
+MasteryType/Camera/Desc┃Kameras sind Fernkampfwaffen ohne Projektil. Diese können auch benutzt werden um den Gegner zu Blenden, welche diese zu fehlschlägen verleitet durch das grelle Aufblitzen.
+MasteryType/Arcana/Desc┃Arkana sind Fernkampfwaffen, die dazu in der Lage sind pure VF-Energie zu manipulieren. Nutzer von arkaner Magie bezwingen ihre Gegner mit endlosen Fertigkeitsverkettungen.
+MasteryType/VFArm/Desc┃VF-Prothesen sind Nahkampfwaffen, die Nanomaschinen benutzen, um Vitalkraft (VF) zu kontrollieren. Ihre Nutzer können den Fluss der Kraft kontrollieren, um massiven Schaden auf einmal anzurichten.
+MasteryType/Glove/Stats┃Ausgerüstete Handschuhe erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Tonfa/Stats┃Ausgerüstete Tonfa erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Hammer/Stats┃Ausgerüstete Hammer erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Axe/Stats┃Ausgerüstete Äxte erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Bat/Stats┃Ausgerüstete Schläger erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Whip/Stats┃Ausgerüstete Peitschen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/OneHandSword/Stats┃Ausgerüstete Dolche erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/TwoHandSword/Stats┃Ausgerüstete Zweihandschwerter erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/DualSword/Stats┃Ausgerüstete Doppelschwerter erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Spear/Stats┃Ausgerüstete Speere erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/HighAngleFire/Stats┃Ausgerüstete Wurfwaffem erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/DirectFire/Stats┃Ausgerüstete Shuriken erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Bow/Stats┃Ausgerüstete Bögen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/CrossBow/Stats┃Ausgerüstete Armbrüste erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Pistol/Stats┃Ausgerüstete Pistolen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/AssaultRifle/Stats┃Ausgerüstete Maschinengewehre erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/SniperRifle/Stats┃Ausgerüstete Scharfschützengewehre erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Nunchaku/Stats┃Ausgerüstete Nunchaku erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Rapier/Stats┃Ausgerüstete Rapier erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Guitar/Stats┃Ausgerüstete Gitarren erhöhen {0} um {1}, {2} um {3}, {4} um {5}
+MasteryType/Camera/Stats┃Ausgerüstete Kameras erhöhen {0} um {1}\n{4} um {5}
+MasteryType/Arcana/Stats┃Ausgerüstete Arkana erhöhen {0} um {1}\n{2} um {3}\n{4} um {5}
+MasteryType/VFArm/Stats┃Ausgerüstete VF-Prothesen erhöhen {0} um {1}\n{2} um {3}\n{4} um {5}
+MasteryType/Hunt/Stats┃{0} {1} Erhöhung
+MasteryType/Craft/Stats┃{0} {1} Erhöhung
+MasteryType/Search/Stats┃{0} {1} Erhöhung
+MasteryType/Move/Stats┃{0} {1} Erhöhung
+MasteryType/Health/Stats┃{0} {1} Erhöhung, {2} {3} Erhöhung
+MasteryType/Defense/Stats┃{0} {1} Erhöhung, {2} {3} Erhöhung
+MasteryType/Meditation/Stats┃{0} {1} Erhöhung
+MasteryType/Trap/Stats┃{0} {1} Erhöhung
 ButtonType/Confirm┃Bestätigen
 ButtonType/Cancel┃Abbrechen
 SupportLanguage/Korean┃한국어
@@ -14436,61 +14737,6 @@ FirstLoading3┃Loading ...
 게임문화개선캠페인┃<color=#FF0000>Eternal Return schätzt Fairplay. Spieler, die gegen die Teamingregeln verstoßen, werden mit einer Accountsperre rechnen müssen.</Color>
 게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
 접속시간경과안내┃Du hast {0} Stunden lang gespielt. Vergiss nicht, eine Pause einzulegen!
-MasteryType/Glove/Desc┃Handschuhe haben eine kurze Reichweite, aber sie können rapide zuschlagen.
-MasteryType/Tonfa/Desc┃Tonfas sind die einizgen Kampfwaffen, die auch deine Verteidigung verstärken.
-MasteryType/Hammer/Desc┃Hammer haben sehr niedriges Angriffstempo, aber sie richten mit ihren heftigen Schlägen enormen Schaden an.
-MasteryType/Bat/Desc┃Schläger sind flexible und balancierte Waffen, welche mit verschiedensten Gegnern mühelos klarkommen.
-MasteryType/Whip/Desc┃Peitschen sind komplizierte Waffen. Mit ihrer langen Fertigkeit können sie Gegner zu sich ziehen.
-MasteryType/HighAngleFire/Desc┃Wurfwaffen haben oft hohe Angriffskraft. Wurfwaffen haben eine limitierte Anzahl an Munition, und die Anzahl der verfügbaren Munition variiert. Achte also darauf, zu verfolgen, wie viel du hast und herstellen kannst. Munition wird mit der Zeit wiederhergestellt.
-MasteryType/DirectFire/Desc┃Shuriken sind sehr flexibel und haben eine Vielzahl an Waffentypen. Shuriken haben eine limitierte Anzahl an Munition, und die Anzahl der verfügbaren Munition variiert. Achte also darauf, zu verfolgen, wie viel du hast und herstellen kannst. Munition wird mit der Zeit wiederhergestellt.
-MasteryType/Bow/Desc┃Bögen sind Waffen mit langer Reichweite, die effektiv gegen Wildtiere sind und besser als andere Waffen von Waffenkönnen profitieren.
-MasteryType/CrossBow/Desc┃Armbrüste haben vortrefflichen konstanten Schaden und können Gegner mit ein wenig Übung betäuben.
-MasteryType/Pistol/Desc┃Pistolen lassen dich Fertigkeiten öfter benutzen und lassen dich flink umherflitzen.
-MasteryType/AssaultRifle/Desc┃Sturmgewehre richten durch Normale Angriffe schnellen und konstanten Schaden auf langer Distanz an.
-MasteryType/SniperRifle/Desc┃Scharfschützengewehre haben hohe Angriffskraft und die längste Angriffsreichweite. Ihre Durchschlagskraft übersteigt deine Sichtweite beträchtlich, also sieh zu, dass du eine gute Position einnimmst, um deinen Vorteil optimal zu nutzen!
-MasteryType/Axe/Desc┃Äxte sind zwar langsam, aber verursachen eine Menge Schaden und sind schnell herstellbar.
-MasteryType/OneHandSword/Desc┃Dolche sind Waffen, die für Überraschungsangriffe spezialisiert wurden sind. Sie sind die besten und stärksten Waffen für schnelle Kämpfe.
-MasteryType/TwoHandSword/Desc┃Zweihandschwerter sind ausgeglichene Waffen. Je mehr du sie benutzt und dein Können mit ihnen steigerst, umso besser werden sie.
-MasteryType/Polearm/Desc┃Stangenwaffen sind gut ausgewogen und mit guter Angriffsreichweite und gutem Schaden ausgestattet. Mit dieser Waffe wirst du es mit mehreren Gegnern gleichzeitig aufnehmen können.
-MasteryType/DualSword/Desc┃Doppelschwerter sind in der Lage ein schönes Paar Schläge aufeinander zu kombinieren.
-MasteryType/Spear/Desc┃Speere sind am besten auf Distanz und nicht effektiv gegen nahe Gegner. Deswegen sollte man sich richtig positionieren.
-MasteryType/Nunchaku/Desc┃\nNunchaku sind schwer zu erlernen, können aber eine vielseitige Waffe mit kreativem Einsatz sein, wenn sie gemeistert werden.
-MasteryType/Rapier/Desc┃Rapiere sind Waffen für kurze Distanzen, die den Vorteil der Geschwindigkeit mitbringen, um die Überhand im Kampf zu haben.
-MasteryType/Guitar/Desc┃Gitarren sind Waffen für lange Distanzen, die Klangwellen benutzen, welche unterschiedlich spielbar sind und je nach Einsatz der Evolutionspunkte im Kampf ihre Spielstrategie ändern können.
-MasteryType/Camera/Desc┃Kameras sind Fernkampfwaffen ohne Projektil. Diese können auch benutzt werden um den Gegner zu Blenden, welche diese zu fehlschlägen verleitet durch das grelle Aufblitzen.
-MasteryType/Arcana/Desc┃Arkana sind Fernkampfwaffen, die dazu in der Lage sind pure VF-Energie zu manipulieren. Nutzer von arkaner Magie bezwingen ihre Gegner mit endlosen Fertigkeitsverkettungen.
-MasteryType/VFArm/Desc┃VF-Prothesen sind Nahkampfwaffen, die Nanomaschinen benutzen, um Vitalkraft (VF) zu kontrollieren. Ihre Nutzer können den Fluss der Kraft kontrollieren, um massiven Schaden auf einmal anzurichten.
-MasteryType/Glove/Stats┃Ausgerüstete Handschuhe erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Tonfa/Stats┃Ausgerüstete Tonfa erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Hammer/Stats┃Ausgerüstete Hammer erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Axe/Stats┃Ausgerüstete Äxte erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Bat/Stats┃Ausgerüstete Schläger erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Whip/Stats┃Ausgerüstete Peitschen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/OneHandSword/Stats┃Ausgerüstete Dolche erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/TwoHandSword/Stats┃Ausgerüstete Zweihandschwerter erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/DualSword/Stats┃Ausgerüstete Doppelschwerter erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Spear/Stats┃Ausgerüstete Speere erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/HighAngleFire/Stats┃Ausgerüstete Wurfwaffem erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/DirectFire/Stats┃Ausgerüstete Shuriken erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Bow/Stats┃Ausgerüstete Bögen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/CrossBow/Stats┃Ausgerüstete Armbrüste erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Pistol/Stats┃Ausgerüstete Pistolen erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/AssaultRifle/Stats┃Ausgerüstete Maschinengewehre erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/SniperRifle/Stats┃Ausgerüstete Scharfschützengewehre erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Nunchaku/Stats┃Ausgerüstete Nunchaku erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Rapier/Stats┃Ausgerüstete Rapier erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Guitar/Stats┃Ausgerüstete Gitarren erhöhen {0} um {1}, {2} um {3}, {4} um {5}
-MasteryType/Camera/Stats┃Ausgerüstete Kameras erhöhen {0} um {1}\n{4} um {5}
-MasteryType/Arcana/Stats┃Ausgerüstete Arkana erhöhen {0} um {1}\n{2} um {3}\n{4} um {5}
-MasteryType/VFArm/Stats┃Ausgerüstete VF-Prothesen erhöhen {0} um {1}\n{2} um {3}\n{4} um {5}
-MasteryType/Hunt/Stats┃{0} {1} Erhöhung
-MasteryType/Craft/Stats┃{0} {1} Erhöhung
-MasteryType/Search/Stats┃{0} {1} Erhöhung
-MasteryType/Move/Stats┃{0} {1} Erhöhung
-MasteryType/Health/Stats┃{0} {1} Erhöhung, {2} {3} Erhöhung
-MasteryType/Defense/Stats┃{0} {1} Erhöhung, {2} {3} Erhöhung
-MasteryType/Meditation/Stats┃{0} {1} Erhöhung
-MasteryType/Trap/Stats┃{0} {1} Erhöhung
 보유하지 않은 캐릭터입니다.┃Diesen Charakter hast du noch nicht freigeschaltet.\nSchalte ihn im Laden frei, um diesen Charakter zu spielen.
 매칭 중 캐릭 변경 금지┃Während der Matchsuche kannst du deinen Charakter nicht wechseln.
 로딩 중┃Lädt\n<Mit der X-Taste kannst du dich hinsetzen und ausruhen.>
@@ -14784,7 +15030,6 @@ TierRP┃Minimum Rangpunkte pro Rang
 랭크 솔로 명칭┃Solo-Modus
 코발트 프로토콜 명칭┃Cobalt Protocol
 일반 스쿼드 설명 문구┃Bilde ein Team von 3 Spielern und werde der letzte Überlebende auf Lumia Island.
-랭크 스쿼드 설명 문구┃Bilde ein 3er-Team und überlebe bis zum letzten Kampf, um einen höheren Rang zu erreichen.\nDie Ranglistenbelohnungen für Titan und Unsterblich werden nach dem Server vergeben, auf dem du mindestens 95 % deiner Ranglistenspiele bestritten hast.
 랭크 솔로 설명 문구┃Dieser Modus befindet sich derzeit in Vorbereitung. Bitte warte auf die Rückkehr des Solo-Modus.
 코발트 프로토콜 설명 문구┃Reduziere die Lebenspunkte des gegnerischen Teams auf 0 und gewinne das kampforientierte 4vs4-Spiel.
 훈련 설명 문구┃Bereite dich mit Training auf Spiele vor.
@@ -16342,8 +16587,6 @@ UTC┃UTC
 사용불가 캐릭터┃Charakter nicht spielbar.
 이용 시간┃Zeitplan
 구속 서버┃Server
-구속 서버 안내 툴팁┃Serverinformation für den meistgespielten Modus.
-구속 서버 상세 안내┃Dein gewerteter Server ist derjenige, auf dem du mehr als 95 % deiner Ranglisten-Matches gespielt hast. Wenn kein einzelner Server dieses Kriterium erfüllt, ist es derjenige, auf dem du den niedrigsten Rang hast.
 귀속서버불일치┃Der aktuell ausgewählte Server und dein gewerteter Server unterscheiden sich: (Gewerteter Server: {0})\nDu kannst nur Titan- und Unsterblich-Belohnungen entsprechend deinem gewerteten Server erhalten. 
 귀속서버명┃Gewerteter Server
 제한 해제┃Kein Limit
@@ -17516,6 +17759,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S14┃Wenn nach der Aufwertung des ER-Passes das e
 Shop/Desc/BATTLE_PASS_S15┃Kaufe den ER Pass, spiele ein paar Matches und verdiene dir einzigartige Belohnungen wie <color=#B2EBF4>Skins, Emotes, 900 NP und mehr!</color>\nErhalte Level für den ER Pass, indem du einfach Eternal Return spielst!\nWenn du deine Belohnungen noch SCHNELLER haben willst, kannst du jederzeit ER Punkte kaufen, um deinen Fortschritt zu beschleunigen!\n\nDie im ER Pass enthaltenen Gegenstände können später auf unterschiedliche Weise verwendet werden.
 Shop/Desc/BATTLE_PASS_BUNDLE_S15┃ER Plus beinhaltet den ER Pass und gewährt dir sofort 20 Level.\nErhalte einzigartige Belohnungen wie <color=#B2EBF4>Skins, Emotes, 900 NP und mehr!</color>\nErhalte Levels für den ER Pass einfach durch Spielen! \nWenn du deine Belohnungen noch SCHNELLER haben willst, kannst du jederzeit ER-Punkte kaufen, um deinen Fortschritt zu beschleunigen!\n<color=#FF7575>Du bekommst keine Rückerstattung</color>, wenn du das maximale Level des Passes überschreitest.\n\nDie im ER-Pass enthaltenen Gegenstände können zu einem späteren Zeitpunkt auf unterschiedliche Weise verwendet werden.
 Shop/Desc/BATTLE_PASS_UPGRADE_S15┃Wenn nach der Aufwertung des ER-Passes das erhöhte ER-Pass-Level das maximale Level übersteigt, wird die Differenz nicht erstattet."
+Shop/Desc/BATTLE_PASS_S16┃Kaufe den ER Pass, spiele ein paar Matches und verdiene dir einzigartige Belohnungen wie <color=#B2EBF4>Skins, Emotes, 900 NP und mehr!</color>\nErhalte Level für den ER Pass, indem du einfach Eternal Return spielst!\nWenn du deine Belohnungen noch SCHNELLER haben willst, kannst du jederzeit ER Punkte kaufen, um deinen Fortschritt zu beschleunigen!\n\nDie im ER Pass enthaltenen Gegenstände können später auf unterschiedliche Weise verwendet werden.
+Shop/Desc/BATTLE_PASS_BUNDLE_S16┃ER Plus beinhaltet den ER Pass und gewährt dir sofort 20 Level.\nErhalte einzigartige Belohnungen wie <color=#B2EBF4>Skins, Emotes, 900 NP und mehr!</color>\nErhalte Levels für den ER Pass einfach durch Spielen! \nWenn du deine Belohnungen noch SCHNELLER haben willst, kannst du jederzeit ER-Punkte kaufen, um deinen Fortschritt zu beschleunigen!\n<color=#FF7575>Du bekommst keine Rückerstattung</color>, wenn du das maximale Level des Passes überschreitest.\n\nDie im ER-Pass enthaltenen Gegenstände können zu einem späteren Zeitpunkt auf unterschiedliche Weise verwendet werden.
+Shop/Desc/BATTLE_PASS_UPGRADE_S16┃Wenn nach der Aufwertung des ER-Passes das erhöhte ER-Pass-Level das maximale Level übersteigt, wird die Differenz nicht erstattet."
 Shop/Desc/BATTLE_PASS_CHECK┃<color=#B2EBF4>Premium-Belohnungen</color> und <color=#B2EBF4>Bezahlte Missionen</color> werden beim Kauf von ER-Pass-Gegenständen aktiviert.\nDu kannst auch die <color=#B2EBF4>ER-Punkte-Kauf-Funktion</color> nutzen.\n\nDer ER-Pass ist für zwei Saisons verfügbar: die aktuelle und die folgende Saison.\nNur ein ER-Pass wird aktiviert.\nDu kannst den ER-Pass deiner Wahl frei aktivieren.
 Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃<color=#B2EBF4>Premium-Belohnungen</color> und <color=#B2EBF4>Bezahlte Missionen</color> werden beim Kauf von ER Plus-Gegenständen aktiviert.\nSie können auch die <color=#B2EBF4>ER Point Purchase-Funktion</color> nutzen. \n\nWenn dein ER Pass Level das maximale Level des ER Passes durch den ER Plus erhöht, <color=#FF7575>wird die Differenz nicht zurückerstattet.</color>\n\nDer ER Pass ist für zwei Saisons verfügbar: die aktuelle und die folgende Saison.\nEs wird nur ein ER Pass aktiviert.\nDu kannst den ER Pass deiner Wahl frei aktivieren.
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃Wenn nach der Aufwertung des ER-Passes das erhöhte ER-Pass-Level das maximale Level übersteigt, wird die Differenz nicht erstattet."
@@ -17541,16 +17787,14 @@ ER 패스 구매 불가 알림_시즌팩 보유┃Du kannst den ER Pass nicht me
 판매 종료까지 남은 시간 : {0}┃Angebot endet in: {0}
 특별 얼리버드까지 남은 시간 : {0}┃Frühbucherangebot endet in: {0}
 시즌팩 혜택 적용까지 남은 시간 : {0}┃Inhalte verfügbar in: {0}
-시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃Saison-Paket: Legion
 시즌 5팩┃1.0 Paket
 시즌 패스 우편 제목┃1.0 Paket - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER Pass: Legion> | Charaktere | Skins | Exklusive Gegenstände
 얼리버드 혜택 기간 알림┃Frühbucherangebot endet in: 
 시즌 패스 타이틀 설명┃<size=32>- Saison 5 Paket Vorteile -</size>
 시즌 패스 설명┃<size=20><color=#77bce0>Includes the ER Pass: Ghostly Presence</color></size>\nUnlock the all new ER Pass: Ghostly Presence now!\n\n<size=20><color=#77bce0>Includes 6 Characters, 11 Skins</color></size>\nGet all characters & skins coming in Season 5.\n\n<size=20><color=#77bce0>Exclusive Items</color></size>\nAn exclusive skin, emote, and tombstone will be provided only to users who have purchased the season 5 bundle.
 시즌 패스 주의 사항┃◆ Benutzer, die bereits den ER Pass: Geisterhafte Aura besitzen, erhalten 1190 NP zurück.\n\n◆ Exklusive Skins, Emoticons und Grabsteine werden nach den Wartungsarbeiten am 16.Februar bereitgestellt.\n\n◆ Eventskins während der Saison werden nicht im Saisonpaket enthalten sein.\n\n◆ Produkte des Season 5 Pakets werden direkt mit ihrer Veröffentlichung in deine Mailbox geschickt.
 약 55% 할인┃<size=24>55% Rabatt!</size>
-약 50% 할인┃<size=24>50% Rabatt!</size>
+약 50% 할인┃<size=24>48% Rabatt!</size>
 신규 캐릭터 6종 & 스킨 11종┃Enthält 6 Charaktere & 11 Skins
 SeasonPassIcon/5┃Img_SeasonPack5_Box_02
 SeasonPassIcon/6┃Img_SeasonPack6_Box_02
@@ -17635,6 +17879,10 @@ SeasonPassIcon/16┃Img_SeasonPack16_Box
 시즌팩 6 출시 캐릭터┃2 Saison 6 Charaktere
 시즌팩 6 출시 스킨┃6 Saison 6 Skins
 시즌팩 6 특별 아이템┃4 Saison 6 Items
+<ER PASS : 아카데미> 포함┃<ER Pass: Academy>
+시즌팩 7 출시 캐릭터┃2 Saison 7 Charaktere
+시즌팩 7 출시 스킨┃6 Saison 7 Skins
+시즌팩 7 특별 아이템┃4 Saison 7 Items
 WebViewPopup_Title┃Eventinfo
 GoodsMenu/InGame┃In-Game-Anpassung
 GoodsMenu/Customize┃Spielanpassung
@@ -18551,7 +18799,7 @@ GuideRobotCreditRichModeLnKey┃Guide Roboter: Lumi - Credits aufgeladen
 안내로봇크레딧부자모드노티타이틀┃Guide Roboter: Credits aufgeladen
 안내로봇전투모드채팅알림┃Jemand stiehlt Credits vom Guide-Roboter in {0}.
 안내로봇크레딧부자모드채팅알림┃Der Guide-Roboter ist voll von Credits in {0}.
-안내로봇특수상점상품안내┃Guide-Roboter-Lumi-Verkaufskatalog:\n<color=#b245ff>{6}</color>
+안내로봇특수상점상품안내┃Guide-Roboter-Lumi-Verkaufskatalog:\n<color=#b245ff>{0}</color>
 안내로봇구매희망안내┃{0}({1}) hat Lumis {2} Item anvisiert
 버프 큐브 핑┃Ein {1} Würfel wird in {0} in {2} Sekunden spawnen.
 버프 큐브 핑2┃{0}({1}) hat den {3}-Würfel in {2} anvisiert.
@@ -18838,6 +19086,7 @@ ServerError/9451┃Unionswettbewerb ist verfügbar für Spieler der Stufe 30 und
 ServerError/9452┃Spiel finden ist für die Stufe dieses Teams nicht verfügbar. Bitte überpüfe den Zeitplan für jede Stufe.
 ServerError/99999┃Es wurde sich mit einer inkompatiblen Version verbunden.
 ServerError/HttpException┃Keine Antwort vom Server. (9201)
+gameTip_Desc_10250_1┃Finde Lagerfeuer auf Lumia Island, um dort spezielles Essen herzustellen. Alle normalen Basismateralien können auf Lumia Island in leckere Speisen und Getränken verwandelt werden. \n\nMit einem Lagerfeuer kannst auch du ein Sternekoch werden!\n\nWenn ein Lagerfeuer aber zu weit entfernt ist, kannst du auch ein Lagerfeuer-Kit benutzen. Du findest sie, indem du <color=#8FDBF8>Wildtiere jagst</color>.
 gameTip_Title_10000_1┃Leitfaden für Planung/Herstellung
 gameTip_Desc_10000_1┃Du hast eine Box geöffnet und weißt nicht, welche Gegenstände du nehmen sollst? Achte auf die Gegenstände mit <color=#8FDBF8>gelben Markierungen</color>! Das sind Gegenstände, die du auf jeden Fall brauchen wirst.\n\nDu bist dir nicht sicher, welche Gegenstände du im aktuellen Gebiet holen sollst? Kein Problem! Die <color=#8FDBF8>Crafting Guide</color> zeigt dir, welche Gegenstände du bekommen kannst!\n\nDu kannst mächtige Ausrüstung herstellen, indem du alle notwendigen Materialien sammelst!
 gameTip_Title_10000_2┃Leitfaden für Planung/Herstellung
@@ -18912,7 +19161,6 @@ gameTip_Desc_10230_1┃Du weißt nicht, was du tun sollst?\n\nFolge einfach eine
 gameTip_Title_10240_1┃Credit-Wiederbelebung
 gameTip_Desc_10240_1┃Gib nicht auf, nur weil du tot bist!\n\nTeamkollegen können eine bestimmte Menge an Credits ausgeben, um einen toten Teamkollegen am Kiosk wiederzubeleben.\nAllerdings kannst du dir den Wiederbelebungspunkt nicht aussuchen, also ist es am besten, wenn du deinen Teamkollegen vorher Bescheid gibst.
 gameTip_Title_10250_1┃Lagerfeuer
-gameTip_Desc_10250_1┃Finde Lagerfeuer auf Lumia Island, um dort spezielles Essen herzustellen. Alle normalen Basismateralien können auf Lumia Island in leckere Speisen und Getränken verwandelt werden. \n\nMit einem Lagerfeuer kannst auch du ein Sternekoch werden!\n\nWenn ein Lagerfeuer aber zu weit entfernt ist, kannst du auch ein Lagerfeuer-Kit benutzen. Du findest sie, indem du <color=#8FDBF8>Wildtiere jagst</color>.
 gameTip_Title_10260_1┃V-Pad
 gameTip_Desc_10260_1┃Meisterung, Taktische Fähigkeiten, Item-Management... Das wird alles zu viel oder? Kein Problem, drück einfach V!\n\nMit dem neuen VPad hast du alle Informationen auf einen Blick. VPad ist deine Rettung in der Not!
 gameTip_Title_10270_1┃Flucht
@@ -20178,7 +20426,7 @@ Tutorial/Victory/2┃So etwas wie ein festes Schicksal gibt es nicht.
 Tutorial/Victory/3┃Sieht aus, als wärst du bereit. Gut gemacht.
 GuideBook/MainTheme/Title/PREFACE┃Vorwort
 GuideBook/SubTheme/Title/EternalReturn┃Eternal Return
-이터널 리턴은 실험체들이 서로 경쟁하여 최후의 생존자를 가리는 <color=white>배틀 로얄</color> 게임입니다.┃Eternal Return ist ein <color=white>Battle Royale</color> Spiel bei welchem Testsubjekte antreten um der letzte Überlebende zu werden.
+GuideBook/Page/Content/EternalReturn/1┃Eternal Return ist ein <color=white>Battle Royale</color> Spiel bei welchem Testsubjekte antreten um der letzte Überlebende zu werden.
 GuideBook/Page/Content/EternalReturn/2┃Diese Anleitung wird über die meist grundsätzlichen Tipps gehen, die du benötigst um das Spiel von vorne bis hinten zu meistern.
 GuideBook/MainTheme/Title/GROWTH┃Frühes Spiel
 GuideBook/SubTheme/Title/EpicReady┃Craft
