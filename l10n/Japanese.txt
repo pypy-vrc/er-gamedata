@@ -444,6 +444,9 @@ Installation/Name/4┃ヒメユリ
 Installation/Name/5┃深淵の壺
 Installation/Name/6┃爆弾の実
 Installation/Name/7┃爆発ドラム缶
+Installation/Name/21┃星光花
+Installation/Name/22┃砂嵐キノコ
+Installation/Name/23┃ヒーリングスプラッター
 Object/Name/ItemBox┃箱
 Object/Name/AirSupplyItemBox┃航空補給箱
 Object/Name/AirSupplyItemBoxSpawnScratch┃航空補給箱
@@ -474,6 +477,7 @@ Object/Name/BarrierConsole┃ドア制御装置
 Object/Name/MobileHyperLoopBase┃携帯用ハイパーループ
 Object/Name/MobileHyperLoopBlue┃携帯用ハイパーループ : γ
 Object/Name/MobileHyperLoopRed┃脱出用ハイパーループ
+Object/Name/HuntersPot┃狩人の大釜
 Object/Name/CampFire┃焚き火
 Area/Name/Harbor┃港
 Area/Name/Warehouse┃倉庫
@@ -689,7 +693,7 @@ MasteryConditionType/KillMonster┃モンスター処置
 MasteryConditionType/UseTrap┃トラップ設置
 MasteryConditionType/FixedBoxOpen┃アイテムボックス開放
 MasteryConditionType/AirSupplyOpen┃航空補給箱開放
-MasteryConditionType/CollectibleOpen┃資源採取
+MasteryConditionType/CollectibleOpen┃資源採集
 MasteryConditionType/AreaSecurityCameraSight┃保安コンソール作動
 MasteryConditionType/MoveRange┃移動距離50m
 MasteryConditionType/MoveNewArea┃移動地域
@@ -802,7 +806,7 @@ StatType/PreventBasicAttackDamagedRatio┃基本攻撃ダメージ減少
 StatType/PreventBasicAttackDamagedRatioByLv┃レベル比例基本攻撃ダメージ減少(％)
 StatType/IncreaseSkillDamage┃スキル攻撃追加ダメージ
 StatType/IncreaseSkillDamageByLv┃レベル比例スキル攻撃追加ダメージ
-StatType/IncreaseSkillDamageRatio┃スキルダメージ増加
+StatType/IncreaseSkillDamageRatio┃スキル増幅
 StatType/IncreaseSkillDamageRatio/Desc┃スキルダメージが増加します。
 StatType/IncreaseSkillDamageRatioByLv┃レベル比例スキルダメージ増加
 StatType/PreventSkillDamaged┃スキルダメージ減少
@@ -939,6 +943,8 @@ ToolTipType/SkillDfCoef┃合計防御力係数
 ToolTipType/SkillSkillAmpCoef┃合計スキル増幅係数
 ToolTipType/LegShotApCoef┃阻止射撃攻撃力係数
 ToolTipType/DeadEyeApCoef┃デッドアイ攻撃力係数
+ToolTipType/LegShotDamage┃阻止射撃ダメージ量
+ToolTipType/DeadEyeDamage┃デッドアイダメージ量
 ToolTipType/DamageAmpCoef┃ダメージ量スキル増幅係数
 ToolTipType/ShieldSkillAmpCoef┃シールドスキル増幅係数
 ToolTipType/LegShotSkillAmpCoef┃阻止射撃スキル増幅係数
@@ -1339,6 +1345,8 @@ ToolTipType/R1AdditionalAttackPower┃追加ダメージ攻撃力係数
 ToolTipType/R2BaseDamage┃1、2打目 ダメージ量
 ToolTipType/R2DirectDamageAttackPower┃3打目 ダメージ量係数
 ToolTipType/JustynaEnergy┃エネルギー最大値
+ToolTipType/MinHpHeal┃最小体力回復量
+ToolTipType/MaxHpHeal┃最大体力回復量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+余った弾1 * スキル増幅の{0}%)</color>
 DayNight/Day┃昼
 DayNight/Night┃夜
@@ -1346,7 +1354,7 @@ CastingActionType/ToRest┃休憩準備中
 CastingActionType/ToSearch┃探索中
 CastingActionType/ToBattle┃休憩解除中
 CastingActionType/AirSupplyOpen┃中身を確認中
-CastingActionType/TransferSupplyBoxOpen┃転送補給箱確認中
+CastingActionType/KioskSupplyBoxOpen┃転送補給箱確認中
 CastingActionType/CollectibleOpen┃資源収集中
 CastingActionType/BoxOpen┃中身を確認中
 CastingActionType/AreaSecurityCameraSight┃保安カメラ視界に接近中
@@ -1359,6 +1367,7 @@ CastingActionType/CollectibleOpenSeaFish┃タラ採集中
 CastingActionType/CollectibleOpenTreeOfLife┃生命の木採集中
 CastingActionType/CollectibleOpenMeteorite┃隕石採集中
 CastingActionType/CollectibleOpenFlower┃花採集中
+CastingActionType/CollectibleOpenMushroom┃キノコ採集中
 CastingActionType/CollectibleHuntersPot1┃百年スープ獲得中
 CastingActionType/CollectibleHuntersPot2┃万年スープ獲得中
 CraftTextForm┃{0} {1}
@@ -1423,6 +1432,9 @@ Collectible/6┃ジャガイモのつる
 Collectible/7┃古代の木
 Collectible/8┃隕石孔
 Collectible/9┃花
+Collectible/10┃狩人の大釜
+Collectible/11┃焚き火に置いた狩人の大釜
+Collectible/12┃キノコ
 DropFrequency/Never┃全然
 DropFrequency/Rare┃まれに
 DropFrequency/Often┃時々
@@ -1584,6 +1596,7 @@ Skin/Name/1008001┃バンドリーダーハート
 Skin/Name/1008002┃ウィンターカーニバルハート
 Skin/Name/1008003┃アメジストクイーンハート
 Skin/Name/1008004┃音楽隊ハート
+Skin/Name/1008005┃士官候補生ハート
 Skin/Name/1009000┃アイソル
 Skin/Name/1009001┃アポカリプスアイソル
 Skin/Name/1009002┃ゴーストハンターアイソル
@@ -1660,6 +1673,7 @@ Skin/Name/1022002┃路地裏ルク
 Skin/Name/1022003┃士官候補生ルク
 Skin/Name/1022004┃プールボーイルク
 Skin/Name/1022005┃トナカイルク
+Skin/Name/1022006┃死神ルク
 Skin/Name/1023000┃キャッシー
 Skin/Name/1023001┃軍医キャッシー
 Skin/Name/1023002┃サイキメディックキャッシー
@@ -1768,6 +1782,7 @@ Skin/Name/1047000┃ラウラ
 Skin/Name/1047001┃プリズン·ブレイクラウラ
 Skin/Name/1047002┃暗黒街ラウラ
 Skin/Name/1047003┃ビタースウィートラウラ
+Skin/Name/1047004┃戦術教官ラウラ
 Skin/Name/1048000┃ティア
 Skin/Name/1048001┃街の画家ティア
 Skin/Name/1048002┃見習い魔女ティア
@@ -1798,6 +1813,7 @@ Skin/Name/1055000┃エステル
 Skin/Name/1055001┃消防士エステル
 Skin/Name/1055002┃校内消防部エステル
 Skin/Name/1055003┃アンステル
+Skin/Name/1055004┃安全教官エステル
 Skin/Name/1056000┃ピオロ
 Skin/Name/1056001┃チャレンジャーピオロ
 Skin/Name/1056002┃ストリートファイターピオロ
@@ -1821,6 +1837,7 @@ Skin/Name/1061002┃アレム
 Skin/Name/1062000┃テオドール
 Skin/Name/1062001┃機動特任隊テオドール
 Skin/Name/1062002┃戦闘司祭テオドール
+Skin/Name/1062003┃射撃教官テオドール
 Skin/Name/1063000┃イアン
 Skin/Name/1063001┃拘束着イアン
 Skin/Name/1063002┃救われないイアン
@@ -1831,6 +1848,7 @@ Skin/Name/1064003┃ホログラムフェアリーヴァーニャ
 Skin/Name/1065000┃デビー&マーリン
 Skin/Name/1065001┃ボディーガードデビー&マーリン
 Skin/Name/1065002┃シャンパン·ツインズデビー&マーリン
+Skin/Name/1065003┃放課後デビー&マーリン
 Skin/Name/1066000┃アルダ
 Skin/Name/1066001┃考古学研究員アルダ
 Skin/Name/1067000┃アビゲイル
@@ -1848,6 +1866,7 @@ Skin/Name/1071000┃ケネス
 Skin/Name/1071001┃戦闘司祭ケネス
 Skin/Name/1072000┃カティア
 Skin/Name/1072001┃夜烏カティア
+Skin/Name/1072002┃訓練所所長カティア
 Skin/Name/1073000┃シャーロット
 Skin/Name/1073001┃転校生シャーロット
 Skin/Name/1073002┃堕天使シャーロット
@@ -1895,6 +1914,8 @@ Skin/OnSelectVO/1073002┃さあ、一緒に楽しみましょう。この世界
 Skin/OnSelectVO/1020005┃もうあたしの出番？
 Skin/OnSelectVO/1064003┃一緒に行きましょう、新たな世界へ。
 Skin/OnSelectVO/1045004┃では、次のステージに向かいましょう。
+Skin/OnSelectVO/1047004┃さて、私の指導が必要な子は...どこにいるのかしら？
+Skin/OnSelectVO/1072002┃はい、僕に注目してー。
 Skin/Desc/1001001┃血のついた電気のこぎり、\n人を食い千切る鋏と刀。\n小さくて楽しそうな鼻歌が聞こえたら\n即逃げること。
 Skin/Desc/1001002┃美しく切り刻んであげるね。バラの名に代わって。
 Skin/Desc/1001003┃ルールを作る人がいるなら、それを壊す人もいないと。ね？
@@ -2135,6 +2156,11 @@ Skin/Desc/1076001┃ああ...やっと私の番なのね…？
 Skin/Desc/1045004┃歌やダンスへの自信ですか？さあ、どうでしょうね。
 Skin/Desc/1069002┃世界で一番甘いチョコレートだよ！\n他の人にあげないで、ぜーったい一人で食べてね！
 Skin/Desc/1077001┃仙人たる者、些事にこだわるべからず。
+Skin/Desc/1055004┃今回の訓練では、安全を第一に考えます！
+Skin/Desc/1062003┃復唱します。目標確認、照準、発射！
+Skin/Desc/1047004┃厳しい訓練になると思うけど...準備はいいかしら？
+Skin/Desc/1072002┃はい、集中して。お手本を見せるのは1回だけだから。
+Skin/Desc/1008005┃こ、今回も、私の音楽を聴いてくれて、ありがとう...！
 ItemType/EMOTION/Name┃エモート
 Emotion_Name_001┃怒
 Emotion_Name_002┃笑
@@ -2444,6 +2470,16 @@ Emotion_ERPASS_4121┃拘束着ガーネット こっちにおいで...
 Emotion_ERPASS_4122┃バレンタインロッジ あげるわ
 Emotion_ERPASS_4123┃プリズン·ブレイクキャッシー 捕まった...
 Emotion_ERPASS_4124┃地獄の狂戦士アロンソ 死ぬほどウメェな！！
+Emotion_ERPASS_4125┃戦術教官ラウラ 憤怒
+Emotion_ERPASS_4126┃安全教官エステル こんにちは
+Emotion_ERPASS_4127┃ニア トラック
+Emotion_ERPASS_4128┃射撃教官テオドール I WANT YOU
+Emotion_ERPASS_4129┃イシュトヴァーン 研究...だと？
+Emotion_ERPASS_4130┃訓練教官フィオラ お見事
+Emotion_ERPASS_4131┃アポカリプスウィリアム 打てるもんなら打ってみろ...！
+Emotion_ERPASS_4132┃研究員バーバラ エラー
+Emotion_ERPASS_4133┃風紀委員長ユスティナ そんなぁ...
+Emotion_ERPASS_4134┃路地裏ヒスイ フフーン！
 Emotion_LiDailin02_NP┃乾杯するダイリン
 Emotion_LiDailin03_NP┃べろんべろんダイリン
 Emotion_LiDailin04_NP┃失笑するダイリン
@@ -2961,6 +2997,9 @@ Emotion_Season13_Reward_5034┃正式シーズン4 - エターニティ
 Emotion_Season14_Reward_5035┃クールバニーアビゲイル ぴょんぴょん
 Emotion_Season14_Reward_5036┃士官候補生マグヌス ...!!
 Emotion_Season14_Reward_5037┃正式シーズン5 - エターニティ
+Emotion_Season15_Reward_5038┃堕天使シャーロット しーっ
+Emotion_Season15_Reward_5039┃士官候補生ハート ま、待って...！
+Emotion_Season15_Reward_5040┃正式シーズン6 - エターニティ
 Emotion_S4_Attend_Lidailin_2010008┃夏の酔いしれダイリン 暑い...
 Emotion_S4_Attend_Eva_2036006┃夏の思い出エヴァ ごめんね...
 Event_SSR_Creator_3098┃CJiang サムズアップ
@@ -3096,6 +3135,13 @@ Emotion_Chiara05_NP┃にっこりキアラ
 Emotion_Chiara06_NP┃ダメ...！キアラ
 Emotion_Chiara07_NP┃救いを...キアラ
 Emotion_Chiara08_NP┃審判はまだよ...キアラ
+Emotion_Adriana05_NP┃挨拶するアドリアナ
+Emotion_Adriana06_NP┃じゃあね...アドリアナ
+Emotion_Adriana07_NP┃分かったわ...アドリアナ
+Emotion_Adriana08_NP┃嫌だ...アドリアナ
+Emotion_Katja01_SeasonPass┃訓練所所長カティア ハート
+Emotion_S7_Attend_Katja_2072006┃訓練所所長カティア やあ
+Emotion_S7_Attend_Laura_2047005┃戦術教官ラウラ 逃げるわよ～！
 Collection/Name/11001┃すべては娘のため…
 Collection/Name/11002┃ピクセルアートは…好き…？
 Collection/Name/11003┃彷徨う魂に救済を
@@ -3862,6 +3908,9 @@ EMBLEM_MARK_EVENT_103186┃SEASON 5 CHAMPION NCMB アイコン
 EMBLEM_MARK_EVENT_103187┃SEASON 5 CHAMPION BOONGWA アイコン
 EMBLEM_MARK_EVENT_103188┃SEASON 5 CHAMPION PENG アイコン
 EMBLEM_MARK_EVENT_103189┃SEASON 5 CHAMPION JJANGE アイコン
+EMBLEM_MARK_EVENT_103190┃JAPAN CUP 優勝者アイコン
+EMBLEM_MARK_EVENT_103191┃訓練所所長カティア やあ アイコン
+EMBLEM_MARK_EVENT_103192┃戦術教官ラウラ 逃げるわよ～！ アイコン
 EMBLEM_MARK_ERPASS_104001┃氷の結晶アイコン
 EMBLEM_MARK_ERPASS_104002┃プレゼントする木アイコン
 EMBLEM_MARK_ERPASS_104003┃赤い鼻アイコン
@@ -3953,13 +4002,19 @@ EMBLEM_MARK_ERPASS_104088┃夢幻の悪魔シセラアイコン
 EMBLEM_MARK_ERPASS_104089┃地獄の狂戦士アロンソアイコン
 EMBLEM_MARK_ERPASS_104090┃S6 ヒスイアイコン
 EMBLEM_MARK_ERPASS_104091┃S6 ユスティナアイコン
-EMBLEM_MARK_COLLECTION_119001┃彰一の宝物
-EMBLEM_MARK_COLLECTION_119002┃ドット絵ティア
-EMBLEM_MARK_COLLECTION_119003┃雪封印解除
-EMBLEM_MARK_COLLECTION_119004┃問題児双子。ただし最強。
-EMBLEM_MARK_COLLECTION_119005┃今日の花嫁は私！
-EMBLEM_MARK_COLLECTION_119006┃ヴァーニャ、ログイン！
-EMBLEM_MARK_COLLECTION_119007┃アイドルマイのファンサービス
+EMBLEM_MARK_ERPASS_104092┃訓練所所長カティア アイコン
+EMBLEM_MARK_ERPASS_104093┃戦術教官ラウラ アイコン
+EMBLEM_MARK_ERPASS_104094┃射撃教官テオドール アイコン
+EMBLEM_MARK_ERPASS_104095┃安全教官エステル アイコン
+EMBLEM_MARK_ERPASS_104096┃S7 ニアアイコン
+EMBLEM_MARK_ERPASS_104097┃S7 イシュトヴァーンアイコン
+EMBLEM_MARK_COLLECTION_119001┃彰一の宝物アイコン
+EMBLEM_MARK_COLLECTION_119002┃ドット絵ティアアイコン
+EMBLEM_MARK_COLLECTION_119003┃雪封印解除アイコン
+EMBLEM_MARK_COLLECTION_119004┃問題児双子。ただし最強。アイコン
+EMBLEM_MARK_COLLECTION_119005┃今日の花嫁は私！アイコン
+EMBLEM_MARK_COLLECTION_119006┃ヴァーニャ、ログイン！アイコン
+EMBLEM_MARK_COLLECTION_119008┃死神ルク掃除完了アイコン
 EMBLEM_MARK_COLLECTION_119501┃S4 eスポーツサポーターアイコン
 EMBLEM_MARK_COLLECTION_119502┃S5 eスポーツサポーターアイコン
 EMBLEM_MARK_COLLECTION_119503┃S6 eスポーツサポーターアイコン
@@ -4340,6 +4395,9 @@ EMBLEM_BG_ERPASS_204046┃シャイバニー莉央背景
 EMBLEM_BG_ERPASS_204047┃堕天使シャーロット背景
 EMBLEM_BG_ERPASS_204048┃深淵の魔王レノックス背景
 EMBLEM_BG_ERPASS_204049┃夢幻の悪魔シセラ背景
+EMBLEM_BG_ERPASS_204050┃訓練所所長カティア背景
+EMBLEM_BG_ERPASS_204051┃安全教官エステル背景
+EMBLEM_BG_ERPASS_204052┃戦術教官ラウラ背景
 EMBLEM_BG_COLLECTION_219001┃ハイパーカプセル背景
 ItemType/EMBLEM_OUTLINE/Name┃プロフィールフレーム
 EMBLEM_OUTLINE_FREE1┃基本フレーム
@@ -4717,6 +4775,9 @@ EMBLEM_OUTLINE_ERPASS_304045┃シャイバニー莉央フレーム
 EMBLEM_OUTLINE_ERPASS_304046┃堕天使シャーロットフレーム
 EMBLEM_OUTLINE_ERPASS_304047┃深淵の魔王レノックスフレーム
 EMBLEM_OUTLINE_ERPASS_304048┃夢幻の悪魔シセラフレーム
+EMBLEM_OUTLINE_ERPASS_304049┃訓練所所長カティアフレーム
+EMBLEM_OUTLINE_ERPASS_304050┃安全教官エステルフレーム
+EMBLEM_OUTLINE_ERPASS_304051┃戦術教官ラウラフレーム
 EMBLEM_OUTLINE_COLLECTION_319001┃ハイパーカプセルフレーム
 Goods/Name/1304001┃ERポイント
 ItemType/GRAVE/Name┃墓石
@@ -4782,6 +4843,9 @@ Goods/Name/1604056┃VIP看板
 Goods/Name/1604057┃地獄への扉
 Goods/Name/1604058┃死神
 Goods/Name/1604059┃ジャック・オー・ランタン
+Goods/Name/1604060┃終わりを告げる軍帽
+Goods/Name/1604061┃まだまだだ、立ち上がれ！
+Goods/Name/1604062┃征服の旗
 Goods/Name/1612001┃疫病ドクターの死
 Goods/Name/1612002┃ビーチバレーボールニッキーの猫
 Goods/Name/1612003┃システムショック
@@ -4792,6 +4856,7 @@ Goods/Name/1612007┃ウィドリアナの注射器
 Goods/Name/1612008┃夕暮れのココナッツ
 Goods/Name/1612009┃シャイバニー莉央のルーレット
 Goods/Name/1612010┃堕天使のヘイロー
+Goods/Name/1612011┃責任の重さ
 ItemType/SPRAY/Name┃スプレー
 ItemType/SPRAY/Desc┃地面に目印を残すことができます。
 Goods/Name/1501001┃なし
@@ -4900,6 +4965,9 @@ Goods/Name/1504056┃ジェニーのハート
 Goods/Name/1504057┃シャーロットの堕ちた証
 Goods/Name/1504058┃アロンソの地獄の味
 Goods/Name/1504059┃シセラの悪魔ウィルソン
+Goods/Name/1504060┃ラウラの予告状
+Goods/Name/1504061┃エステルの失望
+Goods/Name/1504062┃カティアの紋章
 Goods/Name/1503046┃問題解決エイデン
 Goods/Name/1503047┃驚いたナタポン
 Goods/Name/1503048┃金をよこせ！レノックス
@@ -4971,6 +5039,7 @@ Goods/Name/1406011┃キャスターShin Il(韓国語)
 Goods/Name/1406021┃キャスターEvis&Gold Blin(韓国語)
 Goods/Name/1406031┃キャスターKim In Yeong&NongRoute(韓国語)
 Goods/Name/1406041┃キャスターShuviSenpai & Superior(英語)
+Goods/Name/1406051┃キャスター局員 & 角煮 (日本語)
 Goods/Name/1404161┃ヨハン(韓国語)
 Goods/Name/1404162┃ヨハン(英語)
 Goods/Name/1404163┃ヨハン(日本語)
@@ -4989,6 +5058,11 @@ Goods/Name/1404203┃ティア(日本語)
 Goods/Name/1404211┃エイデン(韓国語)
 Goods/Name/1404212┃エイデン(英語)
 Goods/Name/1404213┃エイデン(日本語)
+Goods/Name/1404221┃アルダ(韓国語)
+Goods/Name/1404222┃アルダ(英語)
+Goods/Name/1404223┃アルダ(日本語)
+Goods/Name/1404231┃レニ(韓国語)
+Goods/Name/1404232┃レニ(英語)
 Goods/Name/1404233┃レニ(日本語)
 GoodsGroup/Name/1401051┃基本
 GoodsGroup/Name/1401021┃生存の声
@@ -5020,6 +5094,7 @@ GoodsGroup/Name/1406011┃キャスターShin Il
 GoodsGroup/Name/1406021┃キャスターEvis&Gold Blin
 GoodsGroup/Name/1406031┃キャスターKim In Yeong&NongRoute
 GoodsGroup/Name/1406041┃キャスターShuviSenpai & Superior
+GoodsGroup/Name/1406051┃キャスター局員 & 角煮
 GroupItemAttribute/Inst┃Inst.
 GroupItemAttribute/Piano┃Piano
 GroupItemAttribute/Vocal┃Vocal.
@@ -5069,6 +5144,8 @@ Goods/Name/2504017┃カジノルーレット
 Goods/Name/2504018┃ミラーボール
 Goods/Name/2504019┃幽霊ウィルソンベー
 Goods/Name/2504020┃目玉コウモリ
+Goods/Name/2504021┃トイソルジャー
+Goods/Name/2504022┃訓練所所長カティア風船
 ItemType/CAMERA/Name┃カメラスキン
 ItemType/CAMERA/Desc┃ゲーム内のカメラアイテムの外観を選択できます。
 Goods/Name/2601001┃基本カメラ
@@ -5093,6 +5170,8 @@ Goods/Name/2604017┃猫のぬいぐるみ
 Goods/Name/2604018┃サンドバッグ
 Goods/Name/2604019┃悪魔の炎
 Goods/Name/2604020┃夢幻のろうそく立て
+Goods/Name/2604021┃盗み食いをする猫
+Goods/Name/2604022┃射撃ターゲット
 ItemType/LOBBY_SCREEN/Name┃ロビー画面
 ItemType/LOBBY_SCREEN/Desc┃ロビー画面の外観を選択できます。
 Goods/Name/2701000┃ランダム
@@ -5125,6 +5204,7 @@ Goods/Name/2704012┃チェンジ
 Goods/Name/2704013┃夕焼け
 Goods/Name/2704014┃ラッキー★
 Goods/Name/2704015┃レギオン
+Goods/Name/2704016┃アカデミー
 Goods/Name/2705001┃1周年記念
 Goods/Name/2705002┃ヒスイ＆ユスティナ
 ItemType/KILLANNOUNCE_ICONPACK/Name┃アナウンスアイコン
@@ -5167,6 +5247,9 @@ Goods/Name/2804034┃ジェニーの拳銃
 Goods/Name/2804035┃堕天使のヘイロー
 Goods/Name/2804036┃魔王の威厳
 Goods/Name/2804037┃夢幻のウィルソン
+Goods/Name/2804038┃カティア照準
+Goods/Name/2804039┃ラウラの魅惑
+Goods/Name/2804040┃エステルの盾
 ItemType/TEAMSLOT_BG/Name┃チームスロット背景
 Goods/Name/3401001┃基本チームスロット背景
 Goods/Name/3402001┃ホリデーベア
@@ -5469,6 +5552,7 @@ Product/Name/BATTLE_PASS/2003┃チェンジ：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2004┃夕焼け：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2005┃ラッキー★：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2006┃レギオン：A-Coin クエストブック
+Product/Name/BATTLE_PASS/2007┃アカデミー：A-Coin クエストブック
 Product/Name/2024_Select_Voucher_Pack┃選択券パッケージ
 Product/Name/2024_Select_Voucher_Pack_01┃選択券パッケージⅠ
 Product/Name/2024_Select_Voucher_Pack_02┃選択券パッケージⅡ
@@ -5793,6 +5877,7 @@ Product/Name/SEASON_PASS_S12┃シーズンパック：チェンジ
 Product/Name/SEASON_PASS_S13┃シーズンパック：夕焼け
 Product/Name/SEASON_PASS_S14┃シーズンパック：ラッキー★
 Product/Name/SEASON_PASS_S15┃シーズンパック：レギオン
+Product/Name/SEASON_PASS_S16┃シーズンパック：アカデミー
 LOOTBOX_BASIC_SINGLE_01┃研究所データボックス
 Shop/Desc/LOOTBOX_BASIC_SINGLE_01┃様々なアイテムやピースを最大4つまで獲得できます。\n<color=orange>ランクリワード及び特殊な形で活用されたアイテムは含まれません。</color>\n\n購入したデータボックスは製作所から開けることができます。
 LOOTBOX_SKIN_SINGLE_01┃スキンデータボックス
@@ -5830,6 +5915,7 @@ Shop/Desc/Change Token┃製作所の交換所に登録された商品と交換�
 Shop/Desc/Sunset Token┃製作所の交換所に登録された商品と交換できる夕焼けトークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
 Shop/Desc/Lucky Token┃製作所の交換所に登録された商品と交換できるラッキー★トークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
 Shop/Desc/Legion Token┃製作所の交換所に登録された商品と交換できるレギオントークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
+Shop/Desc/Academy Token┃製作所の交換所に登録された商品と交換できるアカデミートークンです。<color=red>\n有効期間が定められているトークンです。有効期間終了後には使用できません。有効期間を必ず確認してください。</color>
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10,000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5,000
 Shop/Desc/ACCOUNT_A-Coin┃エターナルリターンで様々なアイテムを購入する時に使います。
@@ -5883,6 +5969,7 @@ Product/Name/EP_S12_Change Token┃チェンジトークン X10
 Product/Name/EP_S13_Sunset Token┃夕焼けトークン X10
 Product/Name/EP_S14_Lucky Token┃ラッキー★トークン X10
 Product/Name/EP_S15_Legion Token┃レギオントークン X10
+Product/Name/EP_S16_Academy Token┃アカデミートークン X10
 Shop/Desc/EP_TOKEN_1000┃EPトークン専用商品を購入できる財貨です。
 Shop/Desc/EP_TOKEN_200┃EPトークン専用商品を購入できる財貨です。
 Shop/Desc/EP_TOKEN_RANDOM_01┃確率的に以下の商品のうち1つを獲得することができます。\n\n【内容】\n-エマのマジックショー（ロビー画面）\n-EPトークン50~400
@@ -6048,6 +6135,7 @@ LootRandomBoxWindow/RefundAgreement┃使用したデータボックスとデー
 LootRandomBoxWindow/UnOpenedBox┃受領できなかった報酬があります。
 상자 구성품 확인 툴팁┃クリックすると獲得できるアイテムを確認できます。
 구매할 상품을 선택하세요.┃購入する商品を選択してください。
+LootRandomBoxWindow/NextEventTooltip┃次の登場予定アイテムリストを確認できます。
 잠금 상태 알림┃Lock状態
 선택된 아이템이 없습니다.┃選択したアイテムがありません。
 온전한 아이템 보기┃完全なアイテム
@@ -6191,6 +6279,8 @@ Goods/Name/3303004┃ラッキー★トークン
 Goods/Desc/3303004┃ラッキー★トークンは＜ER PASS：ラッキー★＞から獲得または交換所でトークンと交換できます。\nすべてのシーズントークンは、使用期間が満了すると消滅しますので、期間内にご使用ください。
 Goods/Name/3303005┃レギオントークン
 Goods/Desc/3303005┃レギオントークンは＜ER PASS：レギオン＞やシーズンパックの購入、交換所でのトークン交換、\nまたは製作所で完全なアイテムを分解する際に、一定の確率で獲得できます。\nすべてのシーズントークンは、使用期間が満了すると消滅しますので、期間内にご使用ください。
+Goods/Name/3303006┃アカデミートークン
+Goods/Desc/3303006┃アカデミートークンは＜ER PASS：アカデミー＞やシーズンパックの購入、交換所でのトークン交換、\nまたは製作所で完全なアイテムを分解する際に、一定の確率で獲得できます。\nすべてのシーズントークンは、使用期間が満了すると消滅しますので、期間内にご使用ください。
 Goods/Name/3303301┃ホリデートークン
 Goods/Desc/3303301┃ホリデーデータボックスを使用して獲得できます。イベント終了後、ホリデートークンはなくなります。
 Goods/Name/3303302┃ハッピートークン
@@ -6339,6 +6429,11 @@ Product/Name/S15_ACOIN_UNLIMITED┃A-Coin X 150
 Product/Name/S15_RARE_MATTER┃データピース(レア) X 1
 Product/Name/S15_S14TOKEN_EXCHANGE┃ラッキー★トークン X2
 Product/Name/S15_A-Coin_QUEST_BOOK┃レギオン：A-Coin クエストブック
+Product/Name/S15_S16TOKEN_EXCHANGE┃アカデミートークン X2
+Product/Name/S16_ACOIN_UNLIMITED┃A-Coin X 150
+Product/Name/S16_RARE_MATTER┃データピース(レア) X 1
+Product/Name/S16_S15TOKEN_EXCHANGE┃レギオントークン X2
+Product/Name/S16_A-Coin_QUEST_BOOK┃アカデミー A-Coinクエストブック
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃バカンス：A-Coin クエストブック
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃武装メイド：A-Coin クエストブック
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃チェンジ：A-Coin クエストブック
@@ -6350,6 +6445,7 @@ Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- �
 Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 夕焼け：A-Coin クエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「夕焼け：A-Coin クエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「夕焼け：A-Coin クエストブック」は「QUEST BOOK」からご確認いただけます。
 Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- ラッキー★：A-Coin クエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「ラッキー★：A-Coin クエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「ラッキー★：A-Coin クエストブック」は「QUEST BOOK」からご確認いただけます。
 Shop/Desc/S15_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n-レギオン：A-Coin クエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「レギオン：A-Coin クエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「レギオン：A-Coin クエストブック」は「QUEST BOOK」からご確認いただけます。
+Shop/Desc/S16_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n-アカデミー：A-Coin クエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「アカデミー：A-Coin クエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「アカデミー：A-Coin クエストブック」は「QUEST BOOK」からご確認いただけます。
 Product/Name/S5_Lucky_White_LootToken_01┃レッドトークン X 3
 Product/Name/S5_Lucky_White_ACoin_15┃A-Coin X 15
 Product/Name/S5_Lucky_Red_Lucky_Token_01┃ラッキー★トークン X 80
@@ -6735,26 +6831,25 @@ Skill/Group/Name/1011200┃面！
 Skill/Group/Name/1011300┃襟正し
 Skill/Group/Name/1011400┃打ち落とし！
 Skill/Group/Name/1011500┃花無十日紅
-Skill/Group/Desc/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して<color=white>{0}</color>の追加固定ダメージを与えます。ボタンが無い時には適用されません。\n\nボタンは非戦闘状になるか、\n\n襟正しを使用すると最大値まで回復します。
+Skill/Group/Desc/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して<color=white>{0}</color>の追加スキルダメージを与えます。ボタンが無い時には適用されません。\n\nボタンは非戦闘状になるか、\n\n襟正しを使用すると最大値まで回復します。
 Skill/Group/Desc/1011200┃雪の次の基本攻撃が<color=white>{20}</color>の基本攻撃ダメージを与えて{2}秒間敵の移動速度を{3}減少させます。\n\n端正な服装のボタンがある場合、{4}秒間気絶させます。
 Skill/Group/Desc/1011300┃<color=green>持続効果：</color>ダメージを与えるたびにクールダウンが{0}秒ずつ減少します。\n\n雪が{1}秒間服装を整えます。服装を整える間、受けるダメージが<color=white>{2}</color>減少し、打ち落としのクールダウンが{3}秒減少します。スキルを使用した後、端正な服装のボタンが{4}回復します。
-Skill/Group/Desc/1011400┃雪が指定した方向に突進し、最初に対峙した敵に<color=white>{20}</color>のスキルダメージを与え{2}m移動します。攻撃された対象は{3}秒間基本攻撃が封鎖され、ダメージを受けた対象がいる場合は打ち落としのクールダウンが{4}秒減少します。
+Skill/Group/Desc/1011400┃雪が指定した方向に突進し、最初に対峙した敵に<color=white>{20}</color>のスキルダメージを与え、{2}m移動します。攻撃された対象は{3}秒間攻撃速度が{5}減少し、ダメージを受けた対象がいる場合は打ち落としのクールダウンが{4}秒減少します。
 Skill/Group/Desc/1011500┃雪が剣を持って空間を斬ります。\n雪は自分が斬った敵に<color=white>{20}</color>のスキルダメージを与え、刻印を付与して{2}秒間敵の移動速度を{3}減少させます。雪が剣を鞘に入れる瞬間、刻印が爆発し、対象の最大体力の<color=white>{6}</color>の固定ダメージを与えます。
-Skill/Group/Coef/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して<color=white>{0}</color>の追加固定ダメージを与えます。ボタンが無い時には適用されません。\n\nボタンは非戦闘状になるか、襟正しを使用すると最大値まで回復します。
+Skill/Group/Coef/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>の追加スキルダメージを与えます。ボタンが無い時には適用されません。\n\nボタンは非戦闘状になるか、襟正しを使用すると最大値まで回復します。
 Skill/Group/Coef/1011200┃雪の次の基本攻撃が<color=white>{0}</color><color=#ffd775>(+攻撃力の{1}) * (基本攻撃増幅)</color>の基本攻撃ダメージを与えて{2}秒間敵の移動速度を{3}減少させます。\n\n端正な服装のボタンがある場合、{4}秒間気絶させます。
-Skill/Group/Coef/1011300┃<color=green>持続効果：</color>ダメージを与えるたびにクールダウンが{0}秒ずつ減少します。\n\n雪が{1}秒間服装を整えます。服装を整える間、受けるダメージが{2}減少し、打ち落としのクールダウンが{3}減少します。スキルを使用した後、端正な服装のボタンが{4}回復します。
-Skill/Group/Coef/1011400┃雪が指定した方向に突進し、最初に対峙した敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え{2}m移動します。攻撃された対象は{3}秒間基本攻撃が封鎖され、ダメージを受けた対象がいる場合は打ち落としのクールダウンが{4}秒減少します。
-Skill/Group/Coef/1011500┃雪が剣を持って空間を斬ります。\n雪は自分が斬った敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、刻印を付与して{2}秒間敵の移動速度を{3}減少させます。雪が剣を鞘に入れる瞬間、刻印が爆発し、対象の最大体力の{6}の固定ダメージを与えます。
+Skill/Group/Coef/1011300┃<color=green>持続効果：</color>ダメージを与えるたびにクールダウンが{0}秒ずつ減少します。\n\n雪が{1}秒間服装を整えます。服装を整える間、受けるダメージが<color=white>{2}</color><color=#ffd775>(+攻撃力の{5})</color><color=white>%</color>減少し、打ち落としのクールダウンが{3}秒減少します。スキルを使用した後、端正な服装のボタンが{4}回復します。
+Skill/Group/Coef/1011400┃雪が指定した方向に突進し、最初に対峙した敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、{2}m移動します。攻撃された対象は{3}秒間攻撃速度が{5}減少し、ダメージを受けた対象がいる場合は打ち落としのクールダウンが{4}秒減少します。
+Skill/Group/Coef/1011500┃雪が剣を持って空間を斬ります。\n雪は自分が斬った敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、刻印を付与して{2}秒間敵の移動速度を{3}減少させます。雪が剣を鞘に入れる瞬間、刻印が爆発し、対象の最大体力の<color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color><color=white>%</color>の固定ダメージを与えます。
 Skill/Group/ExpansionTip/1011200┃<i>使用中、基本攻撃の射程距離が少し増加します。</i>
-Skill/Group/ExpansionTip/1011400┃<i>このスキルは壁を越えられません。</i>
 CharacterState/Group/Name/1011200┃面！
 CharacterState/Group/Desc/1011200┃雪の次の基本攻撃が追加ダメージを与え、移動速度を減少させます。
 CharacterState/Group/Name/1011210┃移動速度減少
 CharacterState/Group/Desc/1011210┃移動速度が減少されました。
 CharacterState/Group/Name/1011310┃受けるダメージ減少
 CharacterState/Group/Desc/1011310┃受けるダメージが減少された状態です。
-CharacterState/Group/Name/1011400┃基本攻撃封鎖
-CharacterState/Group/Desc/1011400┃基本攻撃が封鎖されました
+CharacterState/Group/Name/1011400┃攻撃速度減少
+CharacterState/Group/Desc/1011400┃攻撃速度が減少します。
 CharacterState/Group/Name/1011500┃刻印
 CharacterState/Group/Desc/1011500┃雪が剣を鞘に入れる時、ダメージを受けます。
 CharacterState/Group/Name/1011510┃刻印
@@ -7335,22 +7430,23 @@ Skill/Group/Name/1027500┃精密爆撃
 Skill/Group/Name/1027600┃奇襲
 Skill/Group/Name/1027700┃プラズママイン
 Skill/Group/Name/1027800┃撹乱
-Skill/Group/Desc/1027100┃アレックスは{6}レベル以降、敵を倒したりアシストを記録すると{0}秒間潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、{1}m以内に敵がいると{2}秒間移動速度が{3}増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が{5}増加します。
+Skill/Group/Desc/1027100┃武器補給：アレックスは{7}、{8}、{9}レベルになるたびに武器補給箱が1つずつ支給されます。\n\n敵を倒したり、キルに関与すると{0}秒間潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、{1}m以内に敵がいると{2}秒間移動速度が{3}増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が{5}増加します。
 Skill/Group/Desc/1027200┃アレックスがコイルガンを発射し、的中した敵に<color=white>{20}</color>のスキルダメージを与えます。\nスキルが的中すると{2}秒間攻撃力が{3}増加します。(最大{4}回スタック)\n奇襲の効果と同時に最大スタックになると、攻撃速度が{5}増加します。
 Skill/Group/Desc/1027300┃アレックスが指定した地点にターゲットマーカーを発射して範囲内の敵に<color=white>{20}</color>のスキルダメージを与え、対象の視界を{2}秒間獲得します。\nスキルが的中すると、アレックスの基本攻撃の射程距離が{3}秒間{4}増加します。
-Skill/Group/Desc/1027400┃<color=green>持続効果：</color>アレックスの攻撃速度が{4}増加します。\n\nアレックスが指定した方向へパルススティングを発射して<color=white>{20}</color>のスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は{2}秒間移動速度が{3}減少された後、徐々に回復します。\nスキル使用後には{6}秒間武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。\n潜入効果は{7}レベル以降に適用されます。
+Skill/Group/Desc/1027400┃<color=green>持続効果：</color>アレックスの攻撃速度が{4}増加します。\n\nアレックスが指定した方向へパルススティングを発射して<color=white>{20}</color>のスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は{2}秒間移動速度が{3}減少された後、徐々に回復します。\nスキル使用後には{6}秒間武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。
 Skill/Group/Desc/1027500┃アレックスが指定した位置に衛生ミサイルを誘導して範囲内の敵に<color=white>{20}</color>のスキルダメージを与え、中心部の敵には<color=white>{21}</color>のスキルダメージを与えます。的中した対象の移動速度を{10}秒間{11}減少させます。\nその後、周期的にパルスを放出して{4}秒ごとに<color=white>{22}</color>のスキルダメージを{5}回与え、中心部の敵には<color=white>{23}</color>のスキルダメージを与えて{12}秒間移動速度を{13}減少させます。
 Skill/Group/Desc/1027600┃アレックスが対象に素早く突進して<color=white>{20}</color>のスキルダメージを与えます。\nスキルが的中すると{2}秒間攻撃力が{3}増加します。(最大{4}回スタック)\nコイルガンの効果と同時に最大スタックになると、攻撃速度が{5}増加します。
 Skill/Group/Desc/1027700┃アレックスが指定した地点にプラズママインを発射して範囲内の敵に<color=white>{20}</color>のスキルダメージを与え、敵を中心部に引き寄せます。
-Skill/Group/Desc/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が{1}増加し、ホログラムが持続する間は効果が{3}倍適用されます。\n\nアレックスが{0}秒間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして{2}秒間自分を攻撃するようにします。\n\nスキル使用後には{5}秒間武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更すると、すぐに消えます。\n潜入効果は{6}レベル以降に適用されます。
-Skill/Group/Coef/1027100┃アレックスは{6}レベル以降に敵を倒したりアシストを記録すると{0}秒間潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、{1}m以内に敵がいると{2}秒間移動速度が{3}増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が{5}増加します。
+Skill/Group/Desc/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が{1}増加し、ホログラムが持続する間は効果が{3}倍適用されます。\n\nアレックスが{0}秒間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして{2}秒間自分を攻撃するようにします。\n\nスキル使用後には{5}秒間武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更すると、すぐに消えます。
+Skill/Group/Coef/1027100┃武器補給：アレックスは{7}、{8}、{9}レベルになるたびに武器補給箱が1つずつ支給されます。\n\n敵を倒したり、キルに関与すると{0}秒間潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、{1}m以内に敵がいると{2}秒間移動速度が{3}増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が{5}増加します。
 Skill/Group/Coef/1027200┃アレックスがコイルガンを発射し、的中した敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。\nスキルが的中すると{2}秒間攻撃力が{3}増加します。(最大{4}回スタック)\n奇襲の効果と同時に最大スタックになると、攻撃速度が{5}増加します。
 Skill/Group/Coef/1027300┃アレックスが指定した地点にターゲットマーカーを発射して範囲内の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、対象の視界を{2}秒間獲得します。\nスキルが的中すると、アレックスの基本攻撃の射程距離が{3}秒間{4}増加します。
-Skill/Group/Coef/1027400┃<color=green>持続効果：</color>アレックスの攻撃速度が{4}増加します。\n\nアレックスが指定した方向へパルススティングを発射して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は{2}秒間移動速度が{3}減少された後、徐々に回復します。\nスキル使用後には{6}秒間武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更すると、すぐに消えます。\n潜入効果は{7}レベル以降に適用されます。
+Skill/Group/Coef/1027400┃<color=green>持続効果：</color>アレックスの攻撃速度が{4}増加します。\n\nアレックスが指定した方向へパルススティングを発射して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は{2}秒間移動速度が{3}減少された後、徐々に回復します。\nスキル使用後には{6}秒間武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更すると、すぐに消えます。
 Skill/Group/Coef/1027500┃アレックスが指定した位置に衛生ミサイルを誘導して範囲内の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、中心部の敵には<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。的中した対象の移動速度を{10}秒間{11}減少させます。\nその後、周期的にパルスを放出して{4}秒ごとに<color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color>のスキルダメージを{5}回与え、中心部の敵には<color=white>{8}</color><color=#ffd775>(+攻撃力の{9})</color>のスキルダメージを与えて{12}秒間移動速度を{13}減少させます。
 Skill/Group/Coef/1027600┃アレックスが対象に素早く突進して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。\nスキルが的中すると{2}秒間攻撃力が{3}増加します。(最大{4}回スタック)\nコイルガンの効果と同時に最大スタックになると、攻撃速度が{5}増加します。
 Skill/Group/Coef/1027700┃アレックスが指定した地点にプラズママインを発射して範囲内の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、敵を中心部に引き寄せます。
-Skill/Group/Coef/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が{1}増加し、ホログラムが持続する間は効果が{3}倍適用されます。\n\nアレックスが{0}秒間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして{2}秒間自分を攻撃するようにします。\n\nスキル使用後には{5}秒間武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。\n潜入効果は{6}レベル以降に適用されます。
+Skill/Group/Coef/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が{1}増加し、ホログラムが持続する間は効果が{3}倍適用されます。\n\nアレックスが{0}秒間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして{2}秒間自分を攻撃するようにします。\n\nスキル使用後には{5}秒間武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。
+Skill/Group/ExpansionTip/1027100┃<i>アレックスは武器を拳銃に切り替える時、装填せずに使用できます。</i>
 Skill/Group/ExpansionTip/1027400┃<i>このスキルは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1027800┃<i>このスキルは壁を越えられません。</i>
 CharacterState/Group/Name/1027110┃潜入
@@ -7381,6 +7477,14 @@ CharacterState/Group/Desc/1027420┃パルススティングにより沈黙状�
 CharacterState/Group/Desc/1027430┃攻撃速度が増加しました。
 CharacterState/Group/Desc/1027500┃精密爆撃により移動速度が減少しました。
 CharacterState/Group/Desc/1027810┃攻撃速度が増加しました。
+Skill/Group/Evolution/Name/1027200┃トンファー補給箱
+Skill/Group/Evolution/Desc/1027200┃トンファー武器を選択して獲得できます。
+Skill/Group/Evolution/Name/1027300┃両手剣補給箱
+Skill/Group/Evolution/Desc/1027300┃両手剣武器を選択して獲得できます。
+Skill/Group/Evolution/Name/1027400┃暗器補給箱
+Skill/Group/Evolution/Desc/1027400┃暗器武器を選択して獲得できます。
+Skill/Group/Evolution/Name/1027500┃拳銃補給箱
+Skill/Group/Evolution/Desc/1027500┃拳銃武器を選択して獲得できます。
 Skill/Group/Name/1028100┃心の糧
 Skill/Group/Name/1028200┃オデッセイ
 Skill/Group/Name/1028300┃青い鳥
@@ -7433,14 +7537,14 @@ Skill/Group/Name/1029300┃水沫
 Skill/Group/Name/1029400┃潜水泳法
 Skill/Group/Name/1029500┃波乗り
 Skill/Group/Desc/1029100┃基本攻撃をすると{6}秒ごとに水溜りを生成します。レオンが水溜りの上にいると移動速度が{0}、攻撃速度が{1}増加します。\n水中強打：レオンが水溜りの上にいると基本攻撃のダメージに<color=white>{20}</color>の追加スキルダメージを与えます。
-Skill/Group/Desc/1029200┃レオンが一直線の水溜りを設置し、敵に<color=white>{20}</color>のスキルダメージを与えながら水路を作ります。
-Skill/Group/Desc/1029300┃レオンが自分と周りの味方にシールドを付与します。シールドは{2}秒間レオンに<color=white>{20}</color>のダメージを吸収するシールドを付与し、周りの味方には<color=white>{22}</color>のダメージを吸収するシールドを付与します。シールドが消える時、その場に水溜りを生成します。
-Skill/Group/Desc/1029400┃レオンが阻止不可状態になってダイビングし、指定した水溜りから飛び出ます。水溜りから飛び出る時、周りの敵に<color=white>{20}</color>のスキルダメージを与えて敵を{2}秒間空中に浮かせます。レオンは水溜りの中に潜り込んでいる時には対象指定不可状態になり、ダイビングする時、両方に水溜りが生成されます。
+Skill/Group/Desc/1029200┃レオンが指定した方向に水路を生成し、的中した敵に<color=white>{20}</color>のスキルダメージを与えます。\n水路は水溜りと同じ効果を持ちます。
+Skill/Group/Desc/1029300┃レオンが自分と周りの味方にダメージを吸収するシールドを付与します。レオンは{2}秒間<color=white>{20}</color>のダメージを吸収するシールドを獲得し、周りの味方には<color=white>{22}</color>のダメージを吸収するシールドを付与します。
+Skill/Group/Desc/1029400┃レオンがキャストした後、その場で指定した地点に向かってダイビングします。ダイビングした後、飛び出る時、周りの敵に<color=white>{20}</color>のスキルダメージを与えて{2}秒間敵を空中に浮かせます。ダイビングする時、レオンは対象指定不可状態になり、飛び出る時には水溜りを生成します。
 Skill/Group/Desc/1029500┃レオンが波を召喚します。レオンは波に乗って一緒に前進し、経路上の敵に<color=white>{20}</color>のスキルダメージを与え、敵は波が消える瞬間まで押し出されます。波に押し出された敵が壁にぶつかると敵に<color=white>{21}</color>のスキルダメージを与えて{6}秒間空中に浮かせます。波が消える時、その場に水溜りが生成されます。
 Skill/Group/Coef/1029100┃基本攻撃をすると{6}秒ごとに水溜りを生成します。レオンが水溜りの上にいると移動速度が{0}、攻撃速度が{1}増加します。\n水中強打：レオンが水溜りの上にいると基本攻撃ダメージに<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{5})</color>の追加スキルダメージを与えます。
-Skill/Group/Coef/1029200┃レオンが一直線の水溜りを設置し、敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えながら水路を作ります。
-Skill/Group/Coef/1029300┃レオンが自分と周りの味方にシールドを付与します。シールドは{2}秒間レオンに<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{8})</color>のダメージを吸収するシールドを付与し、周りの味方には<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{12})</color>のダメージを吸収するシールドを付与します。シールドが消える時、その場に水溜りを生成します。
-Skill/Group/Coef/1029400┃レオンが阻止不可状態になってダイビングし、指定した水溜りから飛び出ます。水溜りから飛び出る時、周りの敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えて敵を{2}秒間空中に浮かせます。レオンは水溜りの中に潜り込んでいる時には対象指定不可状態になり、ダイビングする時、両方に水溜りが生成されます。
+Skill/Group/Coef/1029200┃レオンが指定した方向に水路を生成し、的中した敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えます。\n水路は水溜りと同じ効果を持ちます。
+Skill/Group/Coef/1029300┃レオンが自分と周りの味方にダメージを吸収するシールドを付与します。レオンは{2}秒間<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{8})</color>のダメージを吸収するシールドを獲得し、周りの味方には<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{12})</color>のダメージを吸収するシールドを付与します。
+Skill/Group/Coef/1029400┃レオンがキャストした後、その場で指定した地点に向かってダイビングします。ダイビングした後、飛び出る時、周りの敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えて{2}秒間敵を空中に浮かせます。ダイビングする時、レオンは対象指定不可状態になり、飛び出る時には水溜りを生成します。
 Skill/Group/Coef/1029500┃レオンが波を召喚します。レオンは波に乗って一緒に前進し、経路上の敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与え、敵は波が消える瞬間まで押し出されます。波に押し出された敵が壁にぶつかると敵に<color=white>{7}</color><color=#DDA0DD>(+スキル増幅の{9})</color>のスキルダメージを与えて{6}秒間空中に浮かせます。波が消える時、その場に水溜りが生成されます。
 CharacterState/Group/Name/1029110┃人間魚雷
 CharacterState/Group/Desc/1029110┃人間魚雷によって移動速度と攻撃速度が増加しました。
@@ -7685,13 +7789,13 @@ Skill/Group/Desc/1035300┃ヤンがキックで敵に<color=white>{8}</color>�
 Skill/Group/Name/1035400┃ウィービング
 Skill/Group/Desc/1035400┃ヤンが前に突進し、次の基本攻撃を強化して<color=white>{6}</color><color=#688A08>(+敵の最大体力の{7})</color>のスキルダメージを追加で与えます。次のニーストライクとトマホークスピンスキルダメージが的中すると、失った体力に比例して的中させたスキルダメージの{2} ~ {3}の体力を回復します(体力が40％以下の場合、最大回復量適用)。トマホークスピンキャスト中に使用できます。\n<color=#ffffC2>強化効果：</color><color=white>ウィービング</color>のクールダウンを{4}減少させます。
 Skill/Group/Name/1035500┃クワドラゴン
-Skill/Group/Desc/1035500┃ヤンが{0}秒間維持される四角リングを召喚して、毎秒熱血の意志スタックを{9}獲得します。四角のリングロープに衝突した敵は<color=white>{11}</color>のスキルダメージを受け、{3}秒間移動速度が{4}減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタック{6}をすぐに獲得し、{7}秒間移動速度が{8}増加します。
+Skill/Group/Desc/1035500┃ヤンが{0}秒間維持される四角リングを召喚して、熱血の意志スタックを{9}獲得します。四角のリングロープに衝突した敵は<color=white>{11}</color>のスキルダメージを受け、{3}秒間移動速度が{4}減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタック{6}をすぐに獲得し、{7}秒間移動速度が{8}増加します。
 Skill/Group/Coef/1035100┃ヤンが敵にダメージを与えるたびに熱血の意志スタック1を獲得します。熱血の意志がスタック{0}以上になると、次のスキルを使用する時、スタックを消耗してニーストライク、トマホークスピン、ウィービングスキルのクールダウンが{4}減少して、スキルを強化します。
 Skill/Group/Coef/1035200┃<color=#ffffC2>ニーストライク：</color>ヤンが膝で範囲内の敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#DDA0DD>(+スキル増幅の{6})</color><color=#688A08>(+敵の最大体力の{11})</color>のスキルダメージを与え、{2}秒間、移動速度を{3}減少させます。再使用すると、リッピング·ニーストライクを使用できます。 \n<color=white>強化効果：</color>ダメージを受けた敵に{4}秒間、防御力を{5}減少させます。\n\n<color=#ffffC2>リッピング·ニーストライク：</color>ヤンが膝打ちで敵に<color=white>{7}</color><color=#ffd775>(+追加攻撃力の{8})</color><color=#DDA0DD>(+スキル増幅の{9})</color><color=#688A08>(+敵の最大体力の{12})</color>のスキルダメージを与え、{10}秒間、敵を空中に浮かせます。\n<color=white>強化効果：</color>リッピング·ニーストライクで敵にダメージを与えると、<color=white>ウィービング</color>のクールダウンを初期化させます。
 Skill/Group/Coef/1035210┃<color=#ffffC2>ニーストライク：</color>ヤンが膝で範囲内の敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#DDA0DD>(+スキル増幅の{6})</color><color=#688A08>(+敵の最大体力の{11})</color>のスキルダメージを与え、{2}秒間、移動速度を{3}減少させます。再使用すると、リッピング·ニーストライクを使用できます。 \n<color=white>強化効果：</color>ダメージを受けた敵に{4}秒間、防御力を{5}減少させます。\n\n<color=#ffffC2>リッピング·ニーストライク：</color>ヤンが膝打ちで敵に<color=white>{7}</color><color=#ffd775>(+追加攻撃力の{8})</color><color=#DDA0DD>(+スキル増幅の{9})</color><color=#688A08>(+敵の最大体力の{12})</color>のスキルダメージを与え、{10}秒間、敵を空中に浮かせます。\n<color=white>強化効果：</color>リッピング·ニーストライクで敵にダメージを与えると、<color=white>ウィービング</color>のクールダウンを初期化させます。
 Skill/Group/Coef/1035300┃ヤンがキックで敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#DDA0DD>(+スキル増幅の{6})</color>のダメージを与えます。外側の範囲に当たった敵を突き飛ばし、突き飛ばされた敵が壁にぶつかると{5}秒間気絶させます。\n\n<color=#ffffC2>強化効果：</color>ダメージ量が<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=#DDA0DD>(+スキル増幅の{7})</color>に増加して、トマホークスピンの範囲内にいるすべての敵を突き飛ばし、突き飛ばされた敵が壁にぶつかると{4}秒間気絶させます。
 Skill/Group/Coef/1035400┃ヤンが前に突進し、次の基本攻撃を強化して<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#DDA0DD>(+スキル増幅の{5})</color><color=#688A08>(+敵の最大体力の{6})</color>のスキルダメージを追加で与えます。次のニーストライクとトマホークスピンスキルダメージが的中すると、失った体力に比例して的中させたスキルダメージの{2} ~ {3}の体力を回復します(体力が40％以下の場合、最大回復量適用)。トマホークスピンキャスト中に使用できます。\n<color=#ffffC2>強化効果：</color><color=white>ウィービング</color>のクールダウンを{4}減少させます。
-Skill/Group/Coef/1035500┃ヤンが{0}秒間維持される四角リングを召喚して、毎秒熱血の意志スタックを{9}獲得します。四角のリングロープに衝突した敵は<color=white>{1}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{10})</color>のスキルダメージを受け、{3}秒間移動速度が{4}減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタック{6}をすぐに獲得し、{7}秒間移動速度が{8}増加します。
+Skill/Group/Coef/1035500┃ヤンが{0}秒間維持される四角リングを召喚して、熱血の意志スタックを{9}獲得します。四角のリングロープに衝突した敵は<color=white>{1}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{10})</color>のスキルダメージを受け、{3}秒間移動速度が{4}減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタック{6}をすぐに獲得し、{7}秒間移動速度が{8}増加します。
 Skill/Group/ExpansionTip/1035100┃<i>アイテム・装備・トンファー武器スキルによるダメージは熱血の意志スタックを獲得しません。
 Skill/Group/ExpansionTip/1035200┃<i>強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1035210┃<i> 強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルは壁を越えられません。</i>
@@ -9955,8 +10059,8 @@ Skill/Group/ExpansionTip/3009000┃<i>武器熟練度<color=white>5Lv・10Lv・1
 Skill/Group/Desc/3010000┃基本攻撃で敵を攻撃するたびに銃弾1発あたり{0}の過熱スタックを獲得します。(最大{1}スタック)\n{6}秒間基本攻撃をしない場合、{2}秒ごとに過熱スタックが{3}ずつ減少します。\n\n過熱スキルを使用すると、弾丸を即時装填して0.1秒 ~ {8}秒間過熱効果を活性化します。\n過熱状態では基本攻撃追加ダメージが 0 ~ {9}、攻撃速度が{5}増加します。効果が持続される間には攻撃速度制限を無視します。\n過熱持続時間と基本攻撃追加ダメージは過熱スタックに比例します。
 Skill/Group/Coef/3010000┃基本攻撃で敵を攻撃するたびに銃弾1発あたり{0}の過熱スタックを獲得します。(最大{1}スタック)\n{6}秒間基本攻撃をしない場合、{2}秒ごとに過熱スタックが{3}ずつ減少します。\n\n過熱スキルを使用すると、弾丸を即時装填して0.1秒 ~ {8}秒間過熱効果を活性化します。\n過熱状態では基本攻撃追加ダメージが 0 ~ {9}、攻撃速度が{5}増加します。効果が持続される間には攻撃速度制限を無視します。\n過熱持続時間と基本攻撃追加ダメージは過熱スタックに比例します。
 Skill/Group/ExpansionTip/3010000┃<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/Desc/3011000┃指定した方向へ{20}秒間<color=white>狙撃モード</color>を活性化します。\n<color=white>狙撃モード</color>を活性化すると視界が{0}増加し、視界の角度が減少します。\n視界内の指定した方向へスキルを使用し、<color=white>阻止射撃</color>と<color=white>デッドアイ</color>を使用できます。\n\n<color=white>阻止射撃</color>\n{1}の視界を持っています。対象に<color=white>{2}</color>のスキルダメージを与え、{3}秒間対象の視界を獲得できます。ダメージを受けた対象は{6}秒間移動速度が{7}減少します。\n\n<color=white>デッドアイ</color>\n{4}の視界を持っています。対象に<color=white>{5}</color>のスキルダメージを与えます。<color=white>デッドアイ</color>は対象の失った体力に応じてダメージ量が増加します。
-Skill/Group/Coef/3011000┃指定した方向へ{20}秒間<color=white>狙撃モード</color>を活性化します。\n<color=white>狙撃モード</color>を活性化すると視界が{0}増加し、視界の角度が減少します。\n視界内の指定した方向へスキルを使用し、<color=white>阻止射撃</color>と<color=white>デッドアイ</color>を使用できます。\n\n<color=white>阻止射撃</color>\n{1}の視界を持っています。対象に<color=white>{10}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{8})</color>のスキルダメージを与え、{3}秒間対象の視界を獲得できます。ダメージを受けた対象は{6}秒間移動速度が{7}減少します。\n\n<color=white>デッドアイ</color>\n{4}の視界を持っています。対象に<color=white>{11}</color><color=#ffd775>(+追加攻撃力の{5})</color><color=#DDA0DD>(+スキル増幅の{9})</color>のスキルダメージを与えます。<color=white>デッドアイ</color>は対象の失った体力に応じてダメージ量が増加します。
+Skill/Group/Desc/3011000┃指定した方向へ{20}秒間<color=white>狙撃モード</color>を活性化します。\n視界内の指定した方向へスキルを使用し、<color=white>阻止射撃</color>と<color=white>デッドアイ</color>を使用できます。{8}発発射し、最後の弾は<color=white>デッドアイ</color>に変わります。\n\n<color=white>阻止射撃</color>\n{1}の視界を持ち、的中した対象に<color=white>{2}</color>のスキルダメージを与え、{3}秒間対象の視界を獲得できます。ダメージを受けた対象は{6}秒間移動速度が{7}減少します。\n\n<color=white>デッドアイ</color>\n{4}の視界を持ち、的中した対象に<color=white>{5}</color>のスキルダメージを与えます。<color=white>デッドアイ</color>は的中した対象の失った体力に比例してダメージ量が増加します。
+Skill/Group/Coef/3011000┃指定した方向へ{20}秒間<color=white>狙撃モード</color>を活性化します。\n視界内の指定した方向へスキルを使用し、<color=white>阻止射撃</color>と<color=white>デッドアイ</color>を使用できます。{12}発発射し、最後の弾は<color=white>デッドアイ</color>に変わります。\n\n<color=white>阻止射撃</color>\n{1}の視界を持ち、的中した対象に<color=white>{10}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{8})</color>のスキルダメージを与え、{3}秒間対象の視界を獲得できます。ダメージを受けた対象は{6}秒間移動速度が{7}減少します。\n\n<color=white>デッドアイ</color>\n{4}の視界を持ち、的中した対象に<color=white>{11}</color><color=#ffd775>(+追加攻撃力の{5})</color><color=#DDA0DD>(+スキル増幅の{9})</color>のスキルダメージを与えます。<color=white>デッドアイ</color>は的中した対象の失った体力に応じてダメージ量が増加します。
 Skill/Group/ExpansionTip/3011000┃<i>デッドアイ最大ダメージ量:{0}\n狙撃状態で移動したり、妨害効果を受けると狙撃モードが解除されます。\n\n武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>
 Skill/Group/Desc/3001000┃指定した対象に近づき、<color=white>{6}</color>の基本攻撃ダメージを与え、最終ダメージの{3}に値するダメージと{4}の固定ダメージを追加で与えます。アッパーカットは致命打が発生しません。
 Skill/Group/Coef/3001000┃指定した対象に近づき、<color=#ffd775>追加攻撃力の{2} * (基本攻撃増幅)</color><color=#DDA0DD>(+スキル増幅の{5})</color>の基本攻撃ダメージを与え、最終ダメージの{3}に値するダメージと{4}の固定ダメージを追加で与えます。アッパーカットは致命打が発生しません。
@@ -10221,10 +10325,10 @@ Skill/LobbyDesc/1010200┃ダイリンが前方に突進し、範囲内の敵に
 Skill/LobbyDesc/1010300┃ダイリンが酒を飲んで酔いを獲得し、すべての基本攻撃を回避し、受けるダメージが減少します。\n\n<color=white>大酒家 ：</color>酒飲みを完了した後、敵に与える基本攻撃ダメージ量が増加します。
 Skill/LobbyDesc/1010400┃ダイリンが酒を口に含んで、前方に向けて扇形に吹き出します。的中された敵はダメージを受け、移動速度が減少します。\n\n<color=yellow>酔拳：</color>酔いを消耗して的中された敵の移動速度をより大きく減少させます。
 Skill/LobbyDesc/1010500┃ダイリンが妨害効果免疫状態になって突進し、スキル発動中ぶつかった敵を制圧し、連続でダメージを与えます。\n\n<color=white>酔虎撃破山</color>を使用すると、酔いがすべて消耗され、消耗された酔いに比例してダメージ量が増加します。
-Skill/LobbyDesc/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して追加固定ダメージを与えます。ボタンが無い時には適用されません。\nボタンは非戦闘状態になるとすべて回復します。\n\n襟正しを使用するとボタンを最大値まで回復します。
+Skill/LobbyDesc/1011100┃雪が敵にダメージを与える時、ボタンを1個消費して追加スキルダメージを与えます。ボタンが無い時には適用されません。\nボタンは非戦闘状態になるとすべて回復します。\n\n襟正しを使用するとボタンを最大値まで回復します。
 Skill/LobbyDesc/1011200┃雪の次の基本攻撃が追加ダメージを与えて敵の移動速度を減少させます。\n端正な服装のボタンがある場合、気絶させます。
 Skill/LobbyDesc/1011300┃<color=green>持続効果：</color>ダメージを与えるたびにクールダウンが減少します。\n\n雪が服装を整えます。服装を整える間、受けるダメージが減少し、打ち落としのクールダウンが減少します。スキルを使用した後、端正な服装のボタンを回復します。
-Skill/LobbyDesc/1011400┃雪が指定した方向に突進し、最初に対峙した敵にダメージを与えます。攻撃された対象は一定時間の間基本攻撃が封鎖され、雪の打ち落とし！のクールダウンが減少します。
+Skill/LobbyDesc/1011400┃雪が指定した方向に突進し、最初に対峙した敵にダメージを与えます。攻撃された対象は一定時間の間攻撃速度が減少し、雪の打ち落とし！のクールダウンが減少します。
 Skill/LobbyDesc/1011500┃雪が剣を持って空間を斬ります。\n雪は自分が斬った敵にダメージを与え、刻印を付与して移動速度を減少させます。雪が剣を鞘に入れる瞬間、刻印が爆発し、対象の最大体力に比例する固定ダメージを与えます。
 Skill/LobbyDesc/1012100┃ヘジンは同じ対象にスキルを3回的中させると三災をかけて恐怖状態にさせ、追加スキルダメージを与えます。\n\n恐怖状態の対象は一定時間の間三災に免疫されます。
 Skill/LobbyDesc/1012200┃ヘジンが指定した方向に制圧符を投げ、的中した対象にダメージを与えます。的中した場合、クールダウンが減少します。
@@ -10266,7 +10370,7 @@ Skill/LobbyDesc/1018200┃彰一が突き攻撃をし、スキルダメージを
 Skill/LobbyDesc/1018300┃彰一が敵または自分が設置した短剣に素早く移動し、経路上の敵にスキルダメージを与えます。\n短剣を回収するとスキルのクールダウンが初期化されます。
 Skill/LobbyDesc/1018400┃彰一が後ろに下がりながら前方に短剣をなげ、的中した敵にスキルダメージを与えて移動速度を減少させます。的中した敵には協商刻印を付与し、敵の後ろ側に短剣が生成されます。刻印対象は投げた短剣で受けるダメージが増加し、短剣が的中するたびにクールダウンが減少します。刻印対象が死亡するとスキルのクールダウンが大きく減少します。
 Skill/LobbyDesc/1018500┃彰一が鞄を振り回して範囲内の敵にスキルダメージを与え、敵の移動速度を減少させながら四方に4つの短剣を設置します。\n短剣は飛んでいく間敵を貫通し、スキルダメージを与えます。
-Skill/LobbyDesc/1019100┃エマは一定時間ごとに基本攻撃する時、攻撃速度が増加し、最大スタミナの一定値の追加スキルダメージを与えてシールドを獲得します。
+Skill/LobbyDesc/1019100┃エマは一定時間ごとに基本攻撃が強化され、的中すると追加スキルダメージを与えてシールドを獲得します。\n強化された基本攻撃をする時は攻撃速度が増加します。
 Skill/LobbyDesc/1019200┃エマが指定した方向へカードを飛ばして敵にスキルダメージを与え、自分の位置に鳩を残します。\nエマがカードを飛ばす時、鳩が近くにいる場合には鳩がカードになって飛んでいき、エマのカードと同じダメージを与えます。\n\nエマが飛ばしたカードが敵に的中した場合、助手の鳩さんのクールダウンが減少します。\n\nエマと鳩のカードが一つの対象に両方的中すると、対象の移動速度が減少します。
 Skill/LobbyDesc/1019300┃エマが指定した位置へ帽子を投げると、爆発して範囲内の敵にスキルダメージを与えます。\n帽子は一定時間残ります。\nスキルを的中させるとマジックハットのクールダウンが減少します。
 Skill/LobbyDesc/1019400┃<color=green>持続効果：</color>エマはスタミナを消耗するたびに、消費したスタミナに応じて体力を回復します。\n\nエマが指定した敵にマジックビームを飛ばして敵を移動以外の他の行動ができない兔に変身させ、スキルダメージを与えます。\n兔になった対象は移動速度が減少します。\n瀕死状態の敵にはスキルを使用できません。
@@ -10296,15 +10400,15 @@ Skill/LobbyDesc/1025200┃バニスが貫通型弾を発射してスキルダメ
 Skill/LobbyDesc/1025300┃バニスが狩り罠を設置し、踏んだ敵にダメージを与え、一定時間の間束縛させます。\n狩り罠は一定時間維持され、隠密状態になりません。\n狩り罠は複数を所持することができ、狩り罠のレベルに応じて設置できる数が変化します。
 Skill/LobbyDesc/1025400┃<color=green>持続効果：</color>バニスは狩り罠にかかった敵に狩り刻印を付与します。刻印が付与された対象はバニスに位置が共有され、バニスが対象に向かう時、移動速度が増加します。\n狩り刻印対象者に基本攻撃を的中させると、レグショットと投げ縄弾のクールダウンが減少します。\n\n使用効果：バニスの鷹が上空を飛びながらバニスの視界を増加させ、周りの敵に狩り刻印を付与します。
 Skill/LobbyDesc/1025500┃バニスが指定した方向へ投げ縄弾を発射して的中した対象にダメージを与え、束縛させます。\n投げ縄弾の束縛が終わると爆発し、束縛対象にスキルダメージを与えて範囲内の一番近い敵に転移し、同じ効果を発動します。
-Skill/LobbyDesc/1026100┃<color=green>持続効果：</color>天才エンジニア、バーバラは装備をより早く製作します。\n\nバーバラは一定時間ごとに攻撃速度が増加し、次の基本攻撃が対象に的中した場合には追加スキルダメージを与えます。
+Skill/LobbyDesc/1026100┃<color=green>持続効果：</color>天才エンジニア、バーバラは装備をより早く製作します。\n\nバーバラは一定時間ごとに基本攻撃た強化され、的中した時には追加スキルダメージを与えます。強化された基本攻撃をする時は攻撃速度が増加します。
 Skill/LobbyDesc/1026200┃バーバラが指定した位置にセントリーガンを設置します。(最大2つ)\nセントリーガンは一定時間の間維持されます。\n\nバーバラの<color=white>イオンレーザー</color>や<color=white>磁力手榴弾</color>が敵に的中したり、セントリーガンが4回目の基本攻撃をするたびにレールガンを発射します。レールガンは最大3回までチャージできます。\n\nセントリーガンが敵にダメージを与えるたびに<color=white>イオンレーザー</color>のクールダウンが減少します。
 Skill/LobbyDesc/1026300┃バーバラが高出力砲でイオンレーザーを発射し、経路上の敵にスキルダメージを与えます。敵に的中すると、一定時間の間移動速度が増加します。
 Skill/LobbyDesc/1026400┃バーバラが磁力手榴弾を投げて敵にスキルダメージを与えます。\n中央の部分に的中した敵は一定時間の間気絶します。
 Skill/LobbyDesc/1026500┃バーバラの基本スキルが強化されます。もう一度使用すると強化状態をキャンセルし、3秒後に再び使用できます。\n\n<color=white>BT-Mk3 強化セントリーガン：</color>指定した位置に強化されたセントリーガンを設置します。強化セントリーガンは一定時間の間維持され、最大設置数の制限を無視することができます。強化セントリーガンは設置されたセントリーガンに強化効果を付与し、強化効果が付与されたセントリーガンは攻撃速度が増加し、3回目の基本攻撃ごとにレールガンを発射します。\n\n<color=white>超高出力イオンレーザー：</color>バーバラが高出力砲でイオンレーザーを最大出力で発射し、経路上の敵にスキルダメージを与え、カメラとトラップを破壊します。的中した敵は一定時間スキルダメージを受けます。\n\n<color=white>超磁力手榴弾：</color>バーバラが強化された超磁力手榴弾を投げて敵にスキルダメージを与えます。\n中央部分に的中した敵は一定時間の間気絶します。\n手榴弾が爆発した後、磁力暴風地帯が発生し、範囲内の敵は持続的にスキルダメージを受け、移動速度が減少します。
-Skill/LobbyDesc/1027100┃アレックスは6レベル以降、実験体を倒したり、アシストを記録すると潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、一定範囲内に敵がいると移動速度が増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が増加します。
+Skill/LobbyDesc/1027100┃武器補給：アレックスは一定のレベルになるたびに武器補給箱が1つずつ支給されます。\n\n実験体を倒したり、キルに関与すると、一定時間の間潜入状態になります。探知範囲外の敵は潜入状態のアレックスを見つけることができません。\n潜入状態になる時、一定範囲内に敵がいると移動速度が増加します。\n\nアレックスは装備できるすべての武器の熟練度が同時に増加します。\nトンファー、両手剣などの近接武器を装備すると防御力が増加します。
 Skill/LobbyDesc/1027200┃<color=#ffd775>遠距離武器：</color>\nアレックスがコイルガンを発射し、的中した敵にスキルダメージを与えます。\nスキルが的中すると、一定時間の間攻撃力が増加します。奇襲の効果と同時に最大スタックになると、攻撃速度が増加します。\n\n<color=#ffd775>近接武器：</color>\nアレックスが対象に素早く突進してスキルダメージを与えます。\nスキルが的中すると、一定時間の間攻撃力が増加します。コイルガンの効果と同時に最大スタックになると、攻撃速度が増加します。
 Skill/LobbyDesc/1027300┃<color=#ffd775>遠距離武器：</color>\nアレックスが指定した地点にターゲットマーカーを発射して範囲内の敵にスキルダメージを与え、対象の視界を獲得します。\nスキルが的中するとアレックスの基本攻撃の射程距離が増加します。\n\n<color=#ffd775>近接武器：</color>\nアレックスが指定した地点にプラズママインを発射して範囲内の敵にスキルダメージを与え、敵を中心部に引き寄せます。
-Skill/LobbyDesc/1027400┃<color=#ffd775>遠距離武器：</color>\n<color=green>持続効果：</color>アレックスの攻撃速度が増加します。\nアレックスが指定した方向へパルススティングを発射してスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は移動速度が減少された後、徐々に回復します。\nスキル使用には後潜入状態を維持すると、武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。\n潜入効果は6レベル以降に適用されます。\n\n<color=#ffd775>近接武器：</color>\n<color=green>持続効果：</color>アレックスの攻撃速度が増加します。アレックスが一定時間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして自分を攻撃するようにします。\nホログラムが持続する間、持続効果がより大きく適用されます。\nスキル使用後には潜入状態を維持すると、武器を交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。\n潜入効果は6レベル以降に適用されます。
+Skill/LobbyDesc/1027400┃<color=#ffd775>遠距離武器：</color>\n<color=green>持続効果：</color>アレックスの攻撃速度が増加します。\nアレックスが指定した方向へパルススティングを発射してスキルダメージを与え、反対側に素早く移動して即時潜入状態になります。的中された対象は移動速度が減少された後、徐々に回復します。\nスキル使用には後潜入状態を維持すると、武器を1回交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。\n\n<color=#ffd775>近接武器：</color>\n<color=green>持続効果：</color>アレックスの攻撃速度が増加します。アレックスが一定時間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして自分を攻撃するようにします。\nホログラムが持続する間、持続効果がより大きく適用されます。\nスキル使用後には潜入状態を維持すると、武器を交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。
 Skill/LobbyDesc/1027500┃アレックスが指定した位置に衛生ミサイルを誘導して範囲内の敵にスキルダメージを与え、中心部の敵には追加のダメージを与えて移動速度を減少させます。\nその後、持続的にパルスを放出し、中心部の敵には追加のスキルダメージを与え、移動速度をより減少させます。
 Skill/LobbyDesc/1027600┃アレックスが対象に素早く突進しダメージを与えます。\nスキルが的中すると一定時間の間攻撃力が増加します。コイルガンの効果と同時に最大スタックになると、攻撃速度が増加します。
 Skill/LobbyDesc/1027700┃アレックスが指定した地点にプラズママインを発射して範囲内の敵にダメージを与え、中心部に引っ張ります。
@@ -10315,9 +10419,9 @@ Skill/LobbyDesc/1028300┃味方や自分に使用すると青い鳥がスキル
 Skill/LobbyDesc/1028400┃スアが武器をランスに変えます。その後、前方に突進して始めて的中した敵にスキルダメージを与えて移動速度を減少させます。\n栞が残った状態の敵にはより大きなスキルダメージを与えて空中に浮かせます。\nスアはドン・キホーテを的中させた場合、失った体力の一部を回復します。\nスアが武器を変更する間には妨害効果免疫状態になります。
 Skill/LobbyDesc/1028500┃スアは最近読んだ本の内容を記憶し、最後に使用したスキルを覚えて再び使用します。\n\n<color=yellow>オデッセイ：</color>本が中央に集まる時に範囲内の敵にスキルダメージを与え、栞を残します。\n栞が残った対象に新しい栞を残すとスキルダメージ与えて気絶させます。\n本の衝突地点にいる敵はしばらくの間移動速度が減少されます。\n<color=yellow>青い鳥：</color>味方やスアにスキルダメージを吸収し、妨害効果免疫状態にするシールドを付けます。\n敵に使用するとスキルダメージを与えて対象を失明させます。\n<color=yellow>ドン・キホーテ：</color>最初に的中された敵にスキルダメージを与えて移動速度を減少させます。\n栞が残った状態の敵にはスキルダメージを与えて空中に浮かせます。スアはドン・キホーテを的中させた場合、失った体力の一部を回復します。\nスアが武器を変更する間には妨害効果免疫状態になります。
 Skill/LobbyDesc/1029100┃基本攻撃をすると一定時間ごとに水溜りを生成します。レオンが水溜りの上にいると移動速度と攻撃速度が増加します。\n水中強打：レオンが水溜りの上にいると基本攻撃ダメージに追加スキルダメージを与えます。
-Skill/LobbyDesc/1029200┃レオンが一直線の水溜りを設置し、敵にスキルダメージを与えながら水路を作ります。
-Skill/LobbyDesc/1029300┃レオンが自分と周りの味方にダメージを吸収するシールドを付与します。シールドが消える時、その場に水溜りを生成します。
-Skill/LobbyDesc/1029400┃レオンが阻止不可状態になってダイビングし、指定した水溜りから飛び出ます。水溜りから飛び出る時、周りの敵にスキルダメージを与えて敵を空中に浮かせます。レオンは水溜りの中に潜り込んでいる時には対象指定不可状態になり、ダイビングする時、両方に水溜りが生成されます。
+Skill/LobbyDesc/1029200┃レオンが指定した方向に水路を生成し、的中した敵にスキルダメージを与えます。\n水路は水溜りと同じ効果を持ちます。
+Skill/LobbyDesc/1029300┃レオンが自分と周りの味方にダメージを吸収するシールドを付与します。
+Skill/LobbyDesc/1029400┃レオンがキャストした後、その場で指定した地点に向かってダイビングします。ダイビングした後、飛び出る時、周りの敵にスキルダメージを与えて敵を空中に浮かせます。ダイビングする時、レオンは対象指定不可状態になり、飛び出る時には水溜りを生成します。
 Skill/LobbyDesc/1029500┃レオンが波を召喚します。レオンは波に乗って一緒に前進し、経路上の敵にスキルダメージを与え、敵は波が消える瞬間まで押し出されます。波に押し出された敵が壁にぶつかると敵にスキルダメージを与えて空中に浮かせます。
 Skill/LobbyDesc/1030100┃Elevenはポテトフライとコーラを調合してElevenセットを製作することができます。\n\nElevenの基本スキルが敵を的中するたびに体力を回復できるElevenバーガーを地面に生成します。Elevenバーガーは敵に踏まれると破壊されます。
 Skill/LobbyDesc/1030200┃Elevenがハンバーガーフォークを前方に振り下ろして敵にダメージを与え、移動速度を減少させます。チャージ時間に比例してダメージ量と移動速度減少量が増加します。
@@ -10348,7 +10452,7 @@ Skill/LobbyDesc/1035100┃ヤンが敵にダメージを与えるたびに、熱
 Skill/LobbyDesc/1035200┃ヤンがニーストライクで範囲内の敵にダメージを与え、移動速度を減少させます。再使用すると、リッピングニーストライクを使用できます。リッピングニーストライクはダメージを受けた敵を空中に浮かせます。\n\nニーストライク強化効果：移動速度と防御力を減少させます。\nリッピングニーストライク強化効果：リッピングニーストライクで敵にダメージを与えると、ウィービングスキルのクールダウンを初期化させます。
 Skill/LobbyDesc/1035300┃ヤンがトマホークスピンをして範囲内の敵にダメージを与えます。外側の範囲に当たった敵を突き飛ばし、突き飛ばされた敵が壁にぶつかると気絶させます。\n\n強化効果：ダメージ量が増加して、トマホークスピンの範囲内にいるすべての敵を突き飛ばし、突き飛ばされた敵が壁にぶつかると気絶時間が増加します。
 Skill/LobbyDesc/1035400┃ヤンが前に突進して、次の基本攻撃が強化してスキルダメージを追加で与えます。次のニーストライクとトマホークスピンのダメージ量の一部を回復して、失った体力に比例して回復量が追加されます。トマホークスピンの使用中に使用できます。\n\n強化効果：ウィービングのクールダウンを減少させます。
-Skill/LobbyDesc/1035500┃ヤンが四角リングを召喚して、毎秒熱血の意志スタックを獲得します。四角リングのロープに衝突した敵はダメージを受けて移動速度が減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。\n競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタックをすぐに獲得して移動速度が増加します。
+Skill/LobbyDesc/1035500┃ヤンが四角リングを召喚して、熱血の意志スタックを獲得します。四角リングのロープに衝突した敵はダメージを受けて移動速度が減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。\n競技場の範囲内で敵実験体キルに関与した場合、ヤンは熱血の意志スタックをすぐに獲得して移動速度が増加します。
 Skill/LobbyDesc/1036100┃テレキネシス：エヴァはレベル6から箱、釣り、採集、復活、航空補給箱などを遠距離で操作できます。戦闘中には航空補給箱、隕石、生命の木獲得または実験体や動物のみ遠距離で操作できます。\n\nエヴァはクールダウンごとに次の基本攻撃の射程距離が増加し、追加スキルダメージを与えます。\n\n非戦闘状態では一定時間ごとにバイタルフォースを獲得します。また、実験体を倒したり、アシストに関与するとバイタルフォースを獲得します。強化基本攻撃が的中する場合にもバイタルフォースを獲得します。
 Skill/LobbyDesc/1036200┃エヴァが貫通する光の球体を発射して、経路上の敵にスキルダメージを与えます。球体が射程距離の端まで飛ばされたり、スキルを再使用すると爆発して範囲内の敵にスキルダメージを与えます。\n爆発に敵が的中された場合、クールダウンが減少します。\n\nスキルを的中させるとバイタルフォースを獲得します。
 Skill/LobbyDesc/1036300┃エヴァが指定した地点に位相の渦を生成して範囲内の敵にスキルダメージを与えます。範囲内の敵は移動速度が減少します。\n位相の渦の持続時間が終了すると、範囲内の敵にスキルダメージを与え、中心部の敵を空中に浮かせます。\n\nスキルを的中させるとバイタルフォースを獲得します。
@@ -10518,7 +10622,7 @@ Skill/LobbyDesc/3007000┃指定した地点に矢を発射して矢の雨を降
 Skill/LobbyDesc/3008000┃指定した方向へ石弓を撃ちます。撃たれた対象はダメージを受けて押し出されます。対象が壁にぶつかったら気絶し、追加ダメージを受けます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3009000┃移動速度が増加し、素早く銃弾を装填します。\n装填を終えた後には、一定回数の基本攻撃速度が増加します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3010000┃基本攻撃で敵を攻撃するたびに銃弾1発毎に過熱スタックを獲得します。一定時間の間基本攻撃をしない場合、過熱スタックが減少します。\n過熱スキルを使用すると弾丸を即時装填して過熱効果が活性化します。加熱状態では攻撃速度が増加し、攻撃速度制限を無視します。過熱スタックに比例して持続時間や追加ダメージが増加します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/LobbyDesc/3011000┃狙撃モードを活性化し、指定した方向を狙撃します。\n狙撃モードでは視界が増加する代わりに視界角度が狭くなります。\n視界内の指定した方向へ阻止射撃とデッドアイを使用してダメージを与えます。\n移動したり妨害効果を受けた場合には狙撃モードが解除されます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/LobbyDesc/3011000┃狙撃モードを活性化し、指定した方向を狙撃します。\n視界内の指定した方向へ阻止射撃とデッドアイを使用してダメージを与えます。\n移動したり妨害効果を受けた場合には狙撃モードが解除されます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3013000┃指定した方向へ金鎚を叩きつけてダメージを与えて防御力を減少させます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵にダメージを与えます。与えたダメージの一部を体力に回復します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3015000┃マント効果により一定時間透明になって移動速度が増加します。増加した移動速度は一定時間に渡って減少します。\n\n指定した敵の後ろに移動してスキルダメージと対象の現在の体力に応じて追加ダメージを与え、移動速度を減少させます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
@@ -10968,8 +11072,8 @@ Item/Skills/6017004/Body┃基本攻撃が敵実験体に的中すると、敵�
 Item/Skills/6017004/Desc┃基本攻撃が敵実験体に的中すると、敵実験体の<color=#688A08>現在体力の{0}%</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得します。獲得した情熱スタック1あたり<color=white>{3}%</color>の攻撃速度を獲得し、最大{9}スタックになると、<color=#FFD775>{5}</color>の攻撃力と<color=white>{6}</color>の移動速度を追加で獲得します。
 Item/Skills/6017005/Name┃<color=yellow>情熱</color>
 Item/Skills/6017006/Name┃<color=yellow>情熱 - 循環</color>
-Item/Skills/6017005/Body┃基本攻撃が敵実験体に的中すると、<color=#DDA0DD>{11}</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得して、<color=white>{3}%</color>の攻撃速度を獲得します。
-Item/Skills/6017005/Desc┃基本攻撃が敵実験体に的中すると、<color=white>(近距離：<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{11})</color>｜遠距離：<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{12})</color>)</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得して、<color=white>{3}%</color>の攻撃速度を獲得します。
+Item/Skills/6017005/Body┃基本攻撃が敵に的中すると、<color=#DDA0DD>{11}</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得して、<color=white>{3}%</color>の攻撃速度を獲得します。
+Item/Skills/6017005/Desc┃基本攻撃が敵に的中すると、<color=white>(近距離：<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{11})</color>｜遠距離：<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{12})</color>)</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得して、<color=white>{3}%</color>の攻撃速度を獲得します。
 Item/Skills/6017007/Name┃<color=yellow>情熱 - 循環</color>
 Item/Skills/6017008/Name┃<color=yellow>情熱</color>
 Item/Skills/6017008/Body┃基本攻撃が敵実験体に的中すると、敵実験体の<color=#688A08>現在体力の{1}%</color>のスキルダメージを与え、{8}秒間情熱スタックを獲得します。獲得した情熱スタック1あたり<color=white>{3}%</color>の攻撃速度を獲得し、最大{9}スタックになると、<color=#FFD775>{5}</color>の攻撃力を追加で獲得します。
@@ -10982,8 +11086,8 @@ Item/Skills/6017023/Name┃<color=yellow>情熱</color>
 Item/Skills/6017024/Name┃<color=yellow>情熱</color>
 Item/Skills/6017025/Name┃<color=yellow>情熱</color>
 Item/Skills/6017026/Name┃<color=yellow>情熱 - 歓喜</color>
-Item/Skills/6017026/Body┃基本攻撃が敵実験体に的中すると、<color=#688A08>対象の現在体力の{1}%</color>の追加スキルダメージを与えて{8}秒間情熱スタックを獲得し、<color=white>{3}%</color>の攻撃速度を獲得します。
-Item/Skills/6017026/Desc┃基本攻撃が敵実験体に的中すると、<color=#688A08>対象の現在体力の{1}%</color>の追加スキルダメージを与えて{8}秒間情熱スタックを獲得し、<color=white>{3}%</color>の攻撃速度を獲得します。
+Item/Skills/6017026/Body┃基本攻撃が敵に的中すると、<color=#688A08>対象の現在体力の{1}%</color>の追加スキルダメージを与えて{8}秒間情熱スタックを獲得し、<color=white>{3}%</color>の攻撃速度を獲得します。
+Item/Skills/6017026/Desc┃基本攻撃が敵に的中すると、<color=#688A08>対象の現在体力の{1}%</color>の追加スキルダメージを与えて{8}秒間情熱スタックを獲得し、<color=white>{3}%</color>の攻撃速度を獲得します。
 Item/Skills/6017027/Name┃<color=yellow>情熱</color>
 CharacterState/Group/Name/6017000┃情熱
 CharacterState/Group/Desc/6017000┃攻撃速度が増加しました。
@@ -11301,17 +11405,17 @@ Skill/Code/ExpansionTip/4522003┃<i>偽りの誓約を使用する時、最大�
 Skill/Code/Desc/4520003┃範囲内の味方の実験体の体力を<color=white>{1}</color>回復させます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
 Skill/Code/Coef/4520003┃範囲内の味方の実験体の体力を(<color=white>{1}</color>+<color=green>キャラクターレベル*{6}</color>)回復させます。\n回復させた後、{2}秒間治癒の風による回復効果は{3}%のみ適用されます。\n\n<color=#FFFFC2>強化完了済み：</color>風に当たった対象は{5}秒間防御力が<color=white>{4}</color>増加します。
 CharacterState/Group/Name/6027130┃先鋒
-CharacterState/Group/Desc/6027130┃発動条件を満たし、先鋒効果が発動します。
+CharacterState/Group/Desc/6027130┃先鋒効果が発動します。
 CharacterState/Group/Name/6022100┃宣告
-CharacterState/Group/Desc/6022100┃発動条件を満たし、宣告効果が発動します。
+CharacterState/Group/Desc/6022100┃宣告効果が発動します。
 Item/Skills/6027001┃先鋒
 Item/Skills/6027001/Name┃<color=yellow>先鋒</color>
 Item/Skills/6027001/Body┃追加体力を{0}以上獲得した場合に発動します。\n発動中、{1}秒間敵実験体から受けたダメージが{2}以上になると、{3}秒間受けるダメージが<color=white>{8}%</color>減少し、周り{4}m以内の敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。 (クールダウン：{7}秒)
 Item/Skills/6027001/Desc┃追加体力を{0}以上獲得した場合に発動します。\n発動中、{1}秒間敵実験体から受けたダメージが{2}以上になると、{3}秒間受けるダメージが<color=white>{8}%</color>減少し、周り{4}m以内の敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。 (クールダウン：{7}秒)
 Item/Skills/6027101┃先鋒
 Item/Skills/6027101/Name┃<color=yellow>先鋒</color>
-Item/Skills/6027101/Body┃追加体力を{0}以上獲得した場合に発動します。\n発動中、{1}秒間敵実験体から受けたダメージが{2}以上になると、{3}秒間受けるダメージが<color=white>{8}%</color>減少し、周り{4}m以内の敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。 (クールダウン：{7}秒)
-Item/Skills/6027101/Desc┃追加体力を{0}以上獲得した場合に発動します。\n発動中、{1}秒間敵実験体から受けたダメージが{2}以上になると、{3}秒間受けるダメージが<color=white>{8}%</color>減少し、周り{4}m以内の敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。 (クールダウン：{7}秒)
+Item/Skills/6027101/Body┃敵実験体から{1}秒以内に累積{2}のダメージを受けると、{3}秒間受けるダメージが<color=white>(近距離：15% I 遠距離：10%)</color>減少し、周り{4}m以内にいる敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。(クールダウン：{7}秒)
+Item/Skills/6027101/Desc┃敵実験体から{1}秒以内に累積{2}のダメージを受けると、{3}秒間受けるダメージが<color=white>(近距離：15% I 遠距離：10%)</color>減少し、周り{4}m以内にいる敵実験体の攻撃速度を<color=white>{5}%</color>減少させます。(クールダウン：{7}秒)
 CharacterState/Group/Name/6027000┃先鋒
 CharacterState/Group/Desc/6027000┃充分なダメージを受け、先鋒が発動します。
 CharacterState/Group/Name/6027010┃先鋒 - バフ効果
@@ -11320,8 +11424,8 @@ CharacterState/Group/Name/6027020┃先鋒 - デバフ効果
 CharacterState/Group/Desc/6027020┃敵の先鋒効果によって攻撃速度が減少されます。
 Item/Skills/6022101┃宣告
 Item/Skills/6022101/Name┃<color=yellow>宣告</color>
-Item/Skills/6022101/Body┃防御貫通を{0}以上獲得した場合に発動します。 \n敵実験体にダメージを与えて対象の体力を<color=#688A08>{2}%</color>以下にさせた場合には対象がすぐに死亡します。(クールダウン：{1}秒)
-Item/Skills/6022101/Desc┃防御貫通を{0}以上獲得した場合に発動します。 \n敵実験体にダメージを与えて対象の体力を<color=#688A08>{2}%</color>以下にさせた場合には対象がすぐに死亡します。(クールダウン：{1}秒)
+Item/Skills/6022101/Body┃敵実験体にダメージを与えて対象の体力を<color=#688A08>(近距離：8% I 遠距離：5%)</color>以下にさせた場合には対象がすぐに死亡します。(クールダウン：{1}秒)
+Item/Skills/6022101/Desc┃敵実験体にダメージを与えて対象の体力を<color=#688A08>(近距離：8% I 遠距離：5%)</color>以下にさせた場合には対象がすぐに死亡します。(クールダウン：{1}秒)
 Item/Skills/6030001┃腐敗
 Item/Skills/6030001/Name┃<color=yellow>腐敗</color>
 Item/Skills/6030001/Body┃スキルを使用してダメージを与えた場合、敵に毎秒<color=#DDA0DD>対象の最大体力の{4}%</color>のスキルダメージを与える腐敗状態を{2}秒間付与します。(最大{3}スタック)
@@ -11399,14 +11503,14 @@ Item/Skills/6036001/Body┃{0}秒以内に敵実験体に個別ダメージを3�
 Item/Skills/6036001/Desc┃{0}秒以内に敵実験体に個別ダメージを3回的中させた場合、{8}秒ごとに<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{3}%)</color><color=#688A08>(+対象の最大体力の{5}%)</color>のスキルダメージを与える突風が発生し、{6}秒間維持されます。(クールダウン：{7}秒)
 Item/Skills/6036002┃突風 - 結集
 Item/Skills/6036002/Name┃<color=yellow>突風 - 結集</color>
-Item/Skills/6036002/Body┃究極技を使用すると、{6}秒ごとに<color=#FFD775>{2}</color><color=#688A08>(+対象の最大体力の{3}%)</color>のスキルダメージを与える竜巻を{4}秒間発生させます。(クールダウン：{5}秒)
-Item/Skills/6036002/Desc┃究極技を使用すると、{8}秒ごとに<color=white>{2}</color><color=#FFD775>(+攻撃力の{4}%)</color><color=#688A08>(+対象の最大体力の{5}%)</color>のスキルダメージを与える竜巻を{6}秒間発生させます。(クールダウン：{7}秒)
+Item/Skills/6036002/Body┃敵実験体に移動不可効果を与えた場合、{6}秒ごとに<color=#FFD775>{2}</color><color=#688A08>(+対象の最大体力の{3}%)</color>のスキルダメージを与える竜巻を{4}秒間発生させます。(クールダウン：{5}秒)
+Item/Skills/6036002/Desc┃敵実験体に移動不可効果を与えた場合、{8}秒ごとに<color=white>{2}</color><color=#FFD775>(+攻撃力の{4}%)</color><color=#688A08>(+対象の最大体力の{5}%)</color>のスキルダメージを与える竜巻を{6}秒間発生させます。(クールダウン：{7}秒)
 CharacterState/Group/Name/6036000┃突風
 CharacterState/Group/Desc/6036000┃条件を達成したため、突風効果が発動しています。
 Item/Skills/6037001┃照準ポッド
 Item/Skills/6037001/Name┃<color=yellow>照準ポッド</color>
-Item/Skills/6037001/Body┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に基本攻撃をすると、<color=green>{1}</color>の追加スキルダメージを与え、攻撃した味方は<color=green>{2}</color>の体力を回復します。(クールダウン：{3}秒)
-Item/Skills/6037001/Desc┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に基本攻撃をすると、<color=white>{1}</color><color=green>(+キャラクターレベル*{2})</color>の追加スキルダメージを与え、攻撃した味方は<color=white>{3}</color><color=green>(+キャラクターレベル*{4})</color>の体力を回復します。(クールダウン：{5}秒)
+Item/Skills/6037001/Body┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に個別ダメージを与えた場合には、<color=green>{1}</color>の追加スキルダメージを与え、攻撃した味方は<color=green>{2}</color>の体力を回復します。(クールダウン：{3}秒)
+Item/Skills/6037001/Desc┃敵実験体の移動を妨害した場合、{0}秒間維持される[刻印]を残します。味方が[刻印]が残された対象に個別ダメージを与えた場合には、<color=white>{1}</color><color=green>(+キャラクターレベル*{2})</color>の追加スキルダメージを与え、攻撃した味方は<color=white>{3}</color><color=green>(+キャラクターレベル*{4})</color>の体力を回復します。(クールダウン：{5}秒)
 CharacterState/Group/Name/6037010┃照準ポッド - 準備中
 CharacterState/Group/Desc/6037010┃照準ポッドが発動していません。
 CharacterState/Group/Name/6037000┃照準ポッド - 刻印
@@ -11479,6 +11583,9 @@ Item/Skills/6048001/Body┃究極技を使用すると、{0}秒間攻撃速度�
 Item/Skills/6048001/Desc┃究極技を使用すると、{0}秒間攻撃速度が<color=white>{1}%</color>、移動速度が<color=white>{2}%</color>増加し、衝突を無視します。(クールダウン：{3}秒)
 CharacterState/Group/Name/6048000┃覚醒
 CharacterState/Group/Desc/6048000┃覚醒状態になり、能力値が増加します。
+Item/Skills/6048011/Name┃<color=yellow>覚醒</color>
+Item/Skills/6048011/Body┃究極技を使用すると、6秒間防御貫通が<color=white>12%</color>増加します。(クールダウン：20秒)
+Item/Skills/6048011/Desc┃究極技を使用すると、6秒間防御貫通が<color=white>12%</color>増加します。(クールダウン：20秒)
 Item/Skills/6049001┃猶予
 Item/Skills/6049001/Name┃<color=yellow>猶予</color>
 Item/Skills/6049001/Body┃敵実験体からダメージを受けた場合、受けたダメージの<color=white>{0}%</color>を{2}秒間分けて受けます。
@@ -11508,8 +11615,8 @@ Item/Skills/6053002/Body┃敵実験体にスキルでダメージを与えた�
 Item/Skills/6053002/Desc┃敵実験体にスキルでダメージを与えた場合、{3}秒間予熱スタックを獲得し、1スタックごとにスキルのダメージ量が<color=#DDA0DD>{0}%</color>増加します。(最大{2}スタック)\n最大スタックになると、移動速度が追加で<color=white>{1}%</color>増加します。
 Item/Skills/6054001┃予熱 - 激昂
 Item/Skills/6054001/Name┃<color=yellow>予熱 - 激昂</color>
-Item/Skills/6054001/Body┃敵実験体に基本攻撃が的中するたびに、{4}秒間攻撃力が<color=#FFD775>{1}</color>、攻撃速度が<color=white>{0}%</color>増加するスタックを獲得します。(最大{2}スタック)\n最大スタックになると、防御貫通が追加で<color=white>{3}%</color>増加します。
-Item/Skills/6054001/Desc┃敵実験体に基本攻撃が的中するたびに、{4}秒間攻撃力が<color=#FFD775>{1}</color>、攻撃速度が<color=white>{0}%</color>増加するスタックを獲得します。(最大{2}スタック)\n最大スタックになると、防御貫通が追加で<color=white>{3}%</color>増加します。
+Item/Skills/6054001/Body┃敵実験体に基本攻撃が的中するたびに、{4}秒間攻撃力が<color=#FFD775>{1}</color>、攻撃速度が<color=white>{0}%</color>増加するスタックを獲得します。(最大{2}スタック)\n最大スタックになると、移動速度が追加で<color=white>{3}%</color>増加します。
+Item/Skills/6054001/Desc┃敵実験体に基本攻撃が的中するたびに、{4}秒間攻撃力が<color=#FFD775>{1}</color>、攻撃速度が<color=white>{0}%</color>増加するスタックを獲得します。(最大{2}スタック)\n最大スタックになると、移動速度が追加で<color=white>{3}%</color>増加します。
 CharacterState/Group/Name/6049000┃猶予
 CharacterState/Group/Desc/6049000┃猶予によってダメージを分散して受けています。
 CharacterState/Group/Name/6051000┃テーザー銃 - 跳躍
@@ -12693,7 +12800,7 @@ BattleMission/10005004/1┃実験体に15,000ダメージ
 BattleMission/10005005/1┃一般／ランク対戦3位以上を5回
 BattleMission/10005006/1┃港で実験体3キル達成
 BattleMission/10005007/1┃禁止区域で実験体1キル達成
-BattleMission/10005008/1┃設置型アイテム携帯用焚き火台使用3回
+BattleMission/10005008/1┃設置型アイテム「狩人の大釜」使用3回
 BattleMission/10005009/1┃First Kill1回
 BattleMission/10005010/1┃狩り熟練度14レベル以上達成
 BattleMission/10006001/1┃クレジット200以上獲得
@@ -12761,7 +12868,7 @@ BattleMission/11004002/1┃航空補給箱からアイテム10回獲得
 BattleMission/11004003/1┃クレジット800以上獲得
 BattleMission/11004004/1┃伝説等級アイテム製作15回
 BattleMission/11004005/1┃実験体キル12回以上
-BattleMission/11004006/1┃携帯用焚き火台使用3回
+BattleMission/11004006/1┃「狩人の大釜」使用3回
 BattleMission/11004007/1┃オオカミ狩り8回
 BattleMission/11004008/1┃Kiosk6回使用
 BattleMission/11004009/1┃製作熟練度12レベル以上達成
@@ -13782,6 +13889,7 @@ Item/Name/203511┃トゲトゲチェーン
 Item/Name/203512┃アフリマンの手
 Item/Name/203513┃ヘリックス
 Item/Name/203514┃ミスリル腕章
+Item/Name/203515┃ノヴァシールド
 Item/Name/204101┃スリッパ
 Item/Name/204102┃スニーカー
 Item/Name/204103┃タイツ
@@ -13820,6 +13928,8 @@ Item/Name/204506┃ワイルドウォーカー
 Item/Name/204507┃ギャラクシーステップ
 Item/Name/204508┃ミラージュウォーカー
 Item/Name/204509┃レーシングブーツ
+Item/Name/204510┃エルディアンブーツ
+Item/Name/204511┃ローズステップ
 Item/Name/205101┃羽
 Item/Name/205102┃花
 Item/Name/205103┃リボン
@@ -13929,6 +14039,7 @@ Item/Name/301113┃インスタントラーメン
 Item/Name/301116┃薬草
 Item/Name/301119┃チョコレート
 Item/Name/301120┃カレーパウダー
+Item/Name/301121┃マッシュルーム
 Item/Name/301201┃タラのはちみつ漬け
 Item/Name/301204┃タラレバー缶詰
 Item/Name/301205┃ガーリックブレッド
@@ -13995,6 +14106,7 @@ Item/Name/301339┃にんにく焼き
 Item/Name/301340┃ベーコントースト
 Item/Name/301346┃ステーキ
 Item/Name/301348┃1周年記念ケーキ
+Item/Name/301349┃キノコの串焼き
 Item/Name/301401┃フィッシュアンドチップス
 Item/Name/301331┃ガーリックラーメン
 Item/Name/301332┃ポンイヨ
@@ -14004,13 +14116,23 @@ Item/Name/301405┃鮭
 Item/Name/301406┃サツマイモ
 Item/Name/301407┃冷凍ピザ
 Item/Name/301408┃チョコミント
+Item/Name/301409┃黒トリュフ
 Item/Name/301501┃サーモンステーキ
 Item/Name/301502┃ハワイアンピザ
 Item/Name/301503┃焼き芋
+Item/Name/301504┃黒トリュフパスタ
+Item/Name/301601┃百年スープ
+Item/Name/301602┃万年スープ
 Item/Name/802601┃コンバット·エピネフリン
 Item/Name/303501┃懸賞金
 Item/Name/303502┃クレジット+
 Item/Name/303503┃クレジット++
+Item/Name/303504┃クレジット
+Item/Name/303505┃クレジット
+Item/Name/303506┃クレジット
+Item/Name/303507┃クレジット
+Item/Name/303508┃クレジット
+Item/Name/303509┃クレジット
 Item/Name/401101┃釘
 Item/Name/401103┃皮
 Item/Name/401104┃亀の甲羅
@@ -14112,6 +14234,15 @@ Item/Name/503104┃携帯用VLS
 Item/Name/503105┃カードキー
 Item/Name/503106┃カードキー - γ
 Item/Name/503107┃カードキー - RED
+Item/Name/503108┃狩人の大釜
+Item/Name/504401┃トンファー補給箱
+Item/Name/504402┃両手剣補給箱
+Item/Name/504403┃暗器補給箱
+Item/Name/504404┃拳銃補給箱
+Item/Name/504602┃携帯用装備生成機 - 頭
+Item/Name/504601┃携帯用装備生成機 - 服
+Item/Name/504603┃携帯用装備生成機 - 腕/装具
+Item/Name/504604┃携帯用装備生成機 - 脚
 Item/Name/540001┃オートクチュール
 Item/Name/999999┃戦術強化モジュール
 Item/Name/201518┃クワッドアイ
@@ -14136,6 +14267,7 @@ Item/Name/105503┃青獅子
 Item/Name/201524┃バニーハット
 Item/Name/202524┃スペクター
 Item/Name/202525┃賢者のローブ
+Item/Name/202527┃黒炎竜の鎧
 Item/Name/201701┃血色の王冠
 Item/Name/121504┃フリーバード
 Item/Name/114505┃イーグルアイ
@@ -14160,6 +14292,38 @@ Item/Name/122503┃On Air
 Item/Name/122504┃トリプルフォーカス
 Item/Name/201526┃アンガルド
 Item/Name/201527┃インサイト
+Item/Name/201528┃ヴァルハラヘルム
+Item/Name/201529┃アイシールド
+Item/Name/202415_D┃バトルスーツ - David
+Item/Name/202407_D┃ミスリル鎧 - David
+Item/Name/202416_D┃炎のドレス - David
+Item/Name/202421_D┃ミスリルクロップ - David
+Item/Name/202501_D┃カバナ - David
+Item/Name/202503_D┃聖法衣 - David
+Item/Name/202505_D┃アオザイ - David
+Item/Name/202506_D┃ファントムジャケット - David
+Item/Name/202507_D┃ガーディアンスーツ - David
+Item/Name/202508_D┃真銀ドレス - David
+Item/Name/202509_D┃仙女の降臨 - David
+Item/Name/202510_D┃ゴースト - David
+Item/Name/202511_D┃血色のマント - David
+Item/Name/202512_D┃血の掟 - David
+Item/Name/202513_D┃ロックスタージャケット - David
+Item/Name/202514_D┃クチュリエ - David
+Item/Name/202515_D┃タクティカル·アーマー - David
+Item/Name/202516_D┃エルフドレス - David
+Item/Name/202517_D┃タイタンアーマー - David
+Item/Name/202523_D┃ギリースーツ - David
+Item/Name/202524_D┃スペクター - David
+Item/Name/202525_D┃賢者のローブ - David
+Item/Name/202209_D┃ビキニ - David
+Item/Name/202504_D┃バーガンディー 47 - David
+Item/Name/202502_D┃クイーンオブハート - David
+Item/Name/202521_D┃レーシングスーツ - David
+Item/Name/202522_D┃幽霊花嫁のドレス - David
+Item/Name/202518_D┃レヴェナント - David
+Item/Name/202526_D┃異端審判官 - David
+Item/Name/202527_D┃黒炎竜の鎧 - David
 Item/Help/101101┃いいはさみを見つけた。床屋でも開くか？
 Item/Help/101102┃文房具の一種。国文学科の生徒の象徴でもあるが、プレゼントされても\nほとんど使わない。
 Item/Help/101104┃21世紀にもっとも簡単に手に入る刀物。調理用途以外にも現代を背景\nとする映画や小説、ドラマで武器として登場する。
@@ -14732,6 +14896,7 @@ Item/Help/301113┃麺を細かく砕いて粉末スープをかけて食べて�
 Item/Help/301116┃薬用効果のある原料が含まれている植物。
 Item/Help/301119┃高い熱量と疲労回復、覚醒効果、低体温症の防止機能があるため、非常\n食料として使われる。
 Item/Help/301120┃この粉の匂いをかぎ続けるとくしゃみが出る。
+Item/Help/301121┃ありふれた食用キノコ。これに似ている毒キノコもあるので、キノコを食べる時は気を付ける必要がある。
 Item/Help/301205┃にんにくの入ったバターやマーガリンを塗ってオーブンで焼きなおした\nパン。
 Item/Help/301207┃良薬は口に苦し。味は悪くても効果は抜群だ。
 Item/Help/301209┃たまに、体は食べずに尾びれだけを食べる人もいる。
@@ -14766,10 +14931,13 @@ Item/Help/301332┃Nimble Neuron選定、エターナルリターンをプレイ
 Item/Help/301333┃ルミア島が美しく、真っ白に染まる時...
 Item/Help/301347┃きゅうり抜きでって言ったのに...
 Item/Help/301348┃大切な日を記念するために、心のこもったケーキ。
+Item/Help/301349┃キノコを炒める時に出る水分は体にいいとかの噂もあるが、あれはただの水分に過ぎない。
 Item/Help/301403┃Elevenが製作できるElevenセット。
 Item/Help/301407┃どこにいても簡単に味わえるよう冷凍させたピザ。
 Item/Help/301408┃口の中を爽やかにしてくれるミントチョコ味のアイスクリーム。\nしかし、好き嫌いが激しすぎて世の中の論争の中心となっている...
+Item/Help/301409┃独特な香りを持つ高級食材。\nたとえ、0.0000005%含有と書かれていても、一応入っていると言えるだろう。
 Item/Help/301503┃骨まで凍り付きそうな真冬に手にして食べるホッカホカの焼き芋の味は...\nそれはもう、言葉では説明できない。
+Item/Help/301504┃大量のトリュフが入ったパスタ。実は少量だけ入れても十分である。
 Item/Help/401103┃動物の皮膚を剥き取ったもの。布が作れなかった時代には衣服の代わり\nとして使われていた。
 Item/Help/401104┃亀よ、亀よ、亀さんよ～、頭を出せ。頭を出さないと焼いて食ってやる\nぞ。
 Item/Help/401105┃電気に強く、弾力性の高い素材。\n別に、海賊王を目指しているわけではない。
@@ -14890,6 +15058,15 @@ Item/Effects/503104┃クリックで使用: <color=lightblue>携帯用VLS</colo
 Item/Effects/503105┃クリックで使用: 研究所に移動できるハイパーループを呼び出します。
 Item/Effects/503106┃クリックで使用: 特殊な研究所に移動できるハイパーループを呼び出します。
 Item/Effects/503107┃クリックで使用: 古い船着場(脱出地域)に移動できるハイパーループを呼び出します。
+Item/Effects/503108┃クリックで使用: <color=lightblue>狩人の大釜</color>を設置します。\nクリックした位置に設置され、{0}秒間維持されます。\n 大釜を設置すると、大釜から最大3回食べ物を獲得でき、焚き火と同じく周辺で食べ物や飲み物を料理することができます。\n焚き火の近くで使用すると、焚き火の上に大釜が設置され、より良い食べ物を得ることができます。
+Item/Effects/504401┃クリックで使用: 選択したトンファー武器を獲得します。
+Item/Effects/504402┃クリックで使用: 選択した両手剣武器を獲得します。
+Item/Effects/504403┃クリックで使用: 選択した暗器武器を獲得します。
+Item/Effects/504404┃クリックで使用: 選択した拳銃武器を獲得します。
+Item/Effects/504601┃クリックで使用: 選択した神話等級の服装備を獲得します。
+Item/Effects/504602┃クリックで使用: 選択した神話等級の頭装備を獲得します。
+Item/Effects/504603┃クリックで使用: 選択した神話等級の腕装備/装具を獲得します。
+Item/Effects/504604┃クリックで使用: 選択した神話等級の脚装備を獲得します。
 Item/Effects/302101┃15秒間スタミナを回復します。
 Item/Effects/302102┃15秒間スタミナを回復します。
 Item/Effects/302103┃15秒間スタミナを回復します。
@@ -15036,6 +15213,12 @@ Item/Effects/301602┃15秒間体力を回復します。
 Item/Effects/303501┃{0}クレジット獲得します。
 Item/Effects/303502┃クレジット獲得します。(自分 {0} / 味方 {1})
 Item/Effects/303503┃クレジット獲得します。(自分 {0} / 味方 {1})
+Item/Effects/303504┃{0}クレジット獲得します。
+Item/Effects/303505┃{0}クレジット獲得します。
+Item/Effects/303506┃{0}クレジット獲得します。
+Item/Effects/303507┃{0}クレジット獲得します。
+Item/Effects/303508┃{0}クレジット獲得します。
+Item/Effects/303509┃{0}クレジット獲得します。
 Item/Effects/802601┃永久に移動速度が0.1増加します。
 Item/BulletCapacity/Reload┃<color=yellow>装弾数:</color> {0}発
 Item/BulletCapacity/Charge┃<color=yellow>最大チャージ数:</color> {0}発(チャージ:{1}秒)
@@ -15393,9 +15576,9 @@ CharacterState/Group/Desc/7010710┃一定時間の間ダメージを持続的�
 CharacterState/Group/Name/7010720┃傷の悪化
 CharacterState/Group/Desc/7010720┃再使用待機中です。
 Trait/Name/7110801┃キャンピングガイド
-Trait/Tooltip/7110801┃毎晩「携帯用焚き火台」を獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると一定時間の間\n非戦闘状態の時の移動速度が増加します。\n\nまた、釣りやジャガイモ採取で\nいい食材を得られる確率が大きく増加します。
-Trait/DetailTooltip/7110801┃毎晩「携帯用焚き火台」を<color=white>{0}個</color>獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると<color=white>{3}秒</color>間非戦闘状態の時の移動速度が<color=white>{2}</color>増加します。\nまた、釣りやジャガイモ採取でいい食材を得られる確率が大きく増加します。
-Trait/StatTooltip/7110801┃毎晩「携帯用焚き火台」を<color=white>{0}個</color>獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると<color=white>{3}秒</color>間非戦闘状態の時の移動速度が<color=white>{2}</color>増加します。\nまた、釣りやジャガイモ採取でいい食材を得られる確率が大きく増加します。\n\n獲得した合計携帯用焚き火台数：{1}
+Trait/Tooltip/7110801┃毎晩「狩人の大釜」を獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると一定時間の間\n非戦闘状態の時の移動速度が増加します。\n\nまた、採集でいい食材を得られる確率が大きく増加します。
+Trait/DetailTooltip/7110801┃毎晩「狩人の大釜」を<color=white>{0}個</color>獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると<color=white>{3}秒</color>間非戦闘状態の時の移動速度が<color=white>{2}</color>増加します。\n\nまた、採集でいい食材を得られる確率が大きく増加します。
+Trait/StatTooltip/7110801┃毎晩「狩人の大釜」を<color=white>{0}個</color>獲得します。\nインベントリが足りない場合、地面に落とされます。\n\n食べ物や飲み物を作ると<color=white>{3}秒</color>間非戦闘状態の時の移動速度が<color=white>{2}</color>増加します。\n\nまた、採集でいい食材を得られる確率が大きく増加します。\n\n獲得した合計狩人の大釜数：{1}
 CharacterState/Group/Name/7110810┃キャンピングガイド
 CharacterState/Group/Desc/7110810┃非戦闘状態の時の移動速度が増加します。
 Trait/Name/7110901┃肉食主義
@@ -15704,6 +15887,61 @@ CharacterState/Group/Desc/7300340┃最大体力が増加しました。
 로딩팁 튜토리얼196┃ガーネットは孤児院にいた時、他の子供たちに料理を作ってあげるのが好きでした。
 로딩팁 튜토리얼197┃ガーネットは、ケネスの能力が暴走した時、彼を鎮めたことがあります。
 로딩팁 튜토리얼198┃ガーネットはVF能力によって体に傷跡が残りません。彼女が記憶と苦痛に執着する理由でもあります。
+MasteryType/Glove/Desc┃グローブは有効距離は短いですが、\n攻撃速度は早く連続攻撃ができます。
+MasteryType/Tonfa/Desc┃トンファーは唯一防御力を確保できる攻防一体の武器です。
+MasteryType/Hammer/Desc┃ハンマーは攻撃速度は遅いけですが強力な攻撃で相手の動きを鈍らせます。
+MasteryType/Bat/Desc┃棍棒はバランスの取れた武器です。\n様々な敵に柔軟に対応することができます。
+MasteryType/Whip/Desc┃鞭は相手の動きを制限する能力があります。\n使い手にも相手にもかなり難しい武器です。
+MasteryType/HighAngleFire/Desc┃投擲武器は強力な攻撃力を持っています。\n武器によって使用後の弾丸回復速度が異なるので数量管理がとても大事です。
+MasteryType/DirectFire/Desc┃暗器は色んな種類を持つ多才な武器です。\n武器によって使用後の数量回復速度が\n異なりますので数量管理に気をつけましょう。
+MasteryType/Bow/Desc┃弓は熟練するほど強くなる遠距離武器です。\n特に野生動物相手に対し有利です。
+MasteryType/CrossBow/Desc┃弩の名手は相手の接近を押し出しながら\n一方的なダメージを与えることができます。
+MasteryType/Pistol/Desc┃拳銃はスキルを頻繁に使うことができます。\n素早いプレイに特化した武器です。
+MasteryType/AssaultRifle/Desc┃突撃小銃は早い攻撃速度を活かし持続攻撃に\n特化した遠距離武器です。
+MasteryType/SniperRifle/Desc┃狙撃銃は長い飛距離と強力な攻撃力を持っています。\n視界よりも長い有効射程距離を持っているので位置の選定と視界の確保が大事です。
+MasteryType/Axe/Desc┃斧は攻撃速度は遅いですが一番強力な攻撃力を持っています。\n早く武器を製作して序盤の交戦を狙うプレイヤーに有利です。
+MasteryType/OneHandSword/Desc┃短剣は奇襲に特化した武器です。\n短い交戦では他のどの武器よりも強力な性能を見せます。
+MasteryType/TwoHandSword/Desc┃両手剣はバランスの取れた武器です。\n熟練するほど強くなります。\n序盤では多少扱いづらいのでお気を付けてください。
+MasteryType/Polearm/Desc┃ポールアームは長い飛距離と破壊力を持ったバランスの良い近接武器です。\n特に多数の敵に対峙する時に有利です。
+MasteryType/DualSword/Desc┃双剣は特有の2連撃を活用した\nスタイリッシュな連続攻撃が魅力です。
+MasteryType/Spear/Desc┃槍は長い兵器で、中距離で強力な破壊力を見せます。\nしかし近い敵には弱いので距離の調節が大事です。
+MasteryType/Nunchaku/Desc┃ヌンチャクは熟練する事が難しい武器ですが、\n熟練する事で多様に活用できる多芸多才な武器です。
+MasteryType/Rapier/Desc┃レイピアは相手の攻撃を回避しながら\n攻撃を与える華麗な動きが特徴です。
+MasteryType/Guitar/Desc┃遠距離でから音波で攻撃をするギターは、\nスキルの進化に応じて毎回異なるプレイができる\n多能な武器です。
+MasteryType/Camera/Desc┃カメラは投射体がない遠距離武器です。相手の視界を妨害でき、頻繁な交戦に有利です。
+MasteryType/Arcana/Desc┃アルカナはVFエネルギーが込められた遠距離武器です。スキルを絶えず使用して相手を制圧することができます。
+MasteryType/VFArm/Desc┃VF義手はVFを制御できるナノマシンが使用された近距離武器です。VFの出力量を調節して一度に大きなダメージを与えることができます。
+MasteryType/Glove/Stats┃グローブ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Tonfa/Stats┃トンファー装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Hammer/Stats┃ハンマー装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Axe/Stats┃斧装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Bat/Stats┃バット装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Whip/Stats┃鞭装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/OneHandSword/Stats┃短剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/TwoHandSword/Stats┃両手剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/DualSword/Stats┃双剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Spear/Stats┃槍装備時{0}{1}増加、\n{2}{3}増加、\n{4}{5}増加
+MasteryType/HighAngleFire/Stats┃投擲装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/DirectFire/Stats┃暗器装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Bow/Stats┃弓装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/CrossBow/Stats┃弩装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Pistol/Stats┃拳銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/AssaultRifle/Stats┃突撃小銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/SniperRifle/Stats┃狙撃銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Nunchaku/Stats┃ヌンチャク装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Rapier/Stats┃レイピア装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Guitar/Stats┃ギター装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Camera/Stats┃カメラ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
+MasteryType/Arcana/Stats┃アルカナ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加 
+MasteryType/VFArm/Stats┃VF義手装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加 
+MasteryType/Hunt/Stats┃{0} {1}増加
+MasteryType/Craft/Stats┃{0} {1}増加
+MasteryType/Search/Stats┃{0} {1}増加
+MasteryType/Move/Stats┃{0} {1}増加
+MasteryType/Health/Stats┃{0} {1}増加\n{2} {3}増加
+MasteryType/Defense/Stats┃{0} {1}増加\n{2} {3}増加
+MasteryType/Meditation/Stats┃{0} {1}増加
+MasteryType/Trap/Stats┃{0} {1}増加
 ButtonType/Confirm┃確認
 ButtonType/Cancel┃キャンセル
 ButtonType/restart┃再起動
@@ -15934,61 +16172,6 @@ FirstLoading3┃Loading ...
 게임문화개선캠페인┃<color=#FF0000>エターナルリターンはフェアーなゲームの価値を重視します。不適切なチーミングは制裁対象になります。</color>
 게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
 접속시간경과안내┃接続して{0}時間をプレイしました。適切な休息をとってください。
-MasteryType/Glove/Desc┃グローブは有効距離は短いですが、\n攻撃速度は早く連続攻撃ができます。
-MasteryType/Tonfa/Desc┃トンファーは唯一防御力を確保できる攻防一体の武器です。
-MasteryType/Hammer/Desc┃ハンマーは攻撃速度は遅いけですが強力な攻撃で相手の動きを鈍らせます。
-MasteryType/Bat/Desc┃棍棒はバランスの取れた武器です。\n様々な敵に柔軟に対応することができます。
-MasteryType/Whip/Desc┃鞭は相手の動きを制限する能力があります。\n使い手にも相手にもかなり難しい武器です。
-MasteryType/HighAngleFire/Desc┃投擲武器は強力な攻撃力を持っています。\n武器によって使用後の弾丸回復速度が異なるので数量管理がとても大事です。
-MasteryType/DirectFire/Desc┃暗器は色んな種類を持つ多才な武器です。\n武器によって使用後の数量回復速度が\n異なりますので数量管理に気をつけましょう。
-MasteryType/Bow/Desc┃弓は熟練するほど強くなる遠距離武器です。\n特に野生動物相手に対し有利です。
-MasteryType/CrossBow/Desc┃弩の名手は相手の接近を押し出しながら\n一方的なダメージを与えることができます。
-MasteryType/Pistol/Desc┃拳銃はスキルを頻繁に使うことができます。\n素早いプレイに特化した武器です。
-MasteryType/AssaultRifle/Desc┃突撃小銃は早い攻撃速度を活かし持続攻撃に\n特化した遠距離武器です。
-MasteryType/SniperRifle/Desc┃狙撃銃は長い飛距離と強力な攻撃力を持っています。\n視界よりも長い有効射程距離を持っているので位置の選定と視界の確保が大事です。
-MasteryType/Axe/Desc┃斧は攻撃速度は遅いですが一番強力な攻撃力を持っています。\n早く武器を製作して序盤の交戦を狙うプレイヤーに有利です。
-MasteryType/OneHandSword/Desc┃短剣は奇襲に特化した武器です。\n短い交戦では他のどの武器よりも強力な性能を見せます。
-MasteryType/TwoHandSword/Desc┃両手剣はバランスの取れた武器です。\n熟練するほど強くなります。\n序盤では多少扱いづらいのでお気を付けてください。
-MasteryType/Polearm/Desc┃ポールアームは長い飛距離と破壊力を持ったバランスの良い近接武器です。\n特に多数の敵に対峙する時に有利です。
-MasteryType/DualSword/Desc┃双剣は特有の2連撃を活用した\nスタイリッシュな連続攻撃が魅力です。
-MasteryType/Spear/Desc┃槍は長い兵器で、中距離で強力な破壊力を見せます。\nしかし近い敵には弱いので距離の調節が大事です。
-MasteryType/Nunchaku/Desc┃ヌンチャクは熟練する事が難しい武器ですが、\n熟練する事で多様に活用できる多芸多才な武器です。
-MasteryType/Rapier/Desc┃レイピアは相手の攻撃を回避しながら\n攻撃を与える華麗な動きが特徴です。
-MasteryType/Guitar/Desc┃遠距離でから音波で攻撃をするギターは、\nスキルの進化に応じて毎回異なるプレイができる\n多能な武器です。
-MasteryType/Camera/Desc┃カメラは投射体がない遠距離武器です。相手の視界を妨害でき、頻繁な交戦に有利です。
-MasteryType/Arcana/Desc┃アルカナはVFエネルギーが込められた遠距離武器です。スキルを絶えず使用して相手を制圧することができます。
-MasteryType/VFArm/Desc┃VF義手はVFを制御できるナノマシンが使用された近距離武器です。VFの出力量を調節して一度に大きなダメージを与えることができます。
-MasteryType/Glove/Stats┃グローブ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Tonfa/Stats┃トンファー装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Hammer/Stats┃ハンマー装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Axe/Stats┃斧装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Bat/Stats┃バット装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Whip/Stats┃鞭装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/OneHandSword/Stats┃短剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/TwoHandSword/Stats┃両手剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/DualSword/Stats┃双剣装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Spear/Stats┃槍装備時{0}{1}増加、\n{2}{3}増加、\n{4}{5}増加
-MasteryType/HighAngleFire/Stats┃投擲装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/DirectFire/Stats┃暗器装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Bow/Stats┃弓装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/CrossBow/Stats┃弩装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Pistol/Stats┃拳銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/AssaultRifle/Stats┃突撃小銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/SniperRifle/Stats┃狙撃銃装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Nunchaku/Stats┃ヌンチャク装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Rapier/Stats┃レイピア装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Guitar/Stats┃ギター装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Camera/Stats┃カメラ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加
-MasteryType/Arcana/Stats┃アルカナ装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加 
-MasteryType/VFArm/Stats┃VF義手装備時{0}{1}増加\n{2}{3}増加\n{4}{5}増加 
-MasteryType/Hunt/Stats┃{0} {1}増加
-MasteryType/Craft/Stats┃{0} {1}増加
-MasteryType/Search/Stats┃{0} {1}増加
-MasteryType/Move/Stats┃{0} {1}増加
-MasteryType/Health/Stats┃{0} {1}増加\n{2} {3}増加
-MasteryType/Defense/Stats┃{0} {1}増加\n{2} {3}増加
-MasteryType/Meditation/Stats┃{0} {1}増加
-MasteryType/Trap/Stats┃{0} {1}増加
 보유하지 않은 캐릭터입니다.┃未所持キャラクターです。\nショップで購入後使用できます。
 매칭 중 캐릭 변경 금지┃マッチング中にはキャラクターを変更できません。
 로딩 중┃ロード中\n< X キーを押すと座って休憩します。 >
@@ -16287,7 +16470,7 @@ TierRP┃ティア別最小ランクポイント
 랭크 솔로 명칭┃ソロモード
 코발트 프로토콜 명칭┃コバルト・プロトコル
 일반 스쿼드 설명 문구┃3人で1つのチームになってルミア島で最後まで生き残りましょう。
-랭크 스쿼드 설명 문구┃3人で1つのチームになってルミア島で最後まで生き残り、より高いランクを達成しましょう。\nデミゴッド、エターニティランクのランクリワードはランク対戦プレイ回数の95%以上をプレイしたサーバーを基準に支給されます。
+랭크 스쿼드 설명 문구┃3人で1つのチームになってルミア島で最後まで生き残り、より高いランクを達成しましょう。\nデミゴッド、エターニティランクのランクリワードは３回以上プレイしたサーバーの中で最も不利なサーバーを基準に支給されます。
 랭크 솔로 설명 문구┃現在準備中です。再開までお待ちください。
 코발트 프로토콜 설명 문구┃4 vs 4で相手チームのライフポイントが0になるまで戦い、勝利しましょう。
 훈련 설명 문구┃ゲームをプレイするための準備をしましょう。
@@ -16809,7 +16992,7 @@ OpenScoreboard┃実験状況ウィンドウを表示します。
 OpenMap┃拡張マップを表示します。
 ResetCamera┃自分のキャラクターの位置に画面を移動させます。
 OpenCharacterMastery┃熟練度ウィンドウを表示します。
-OpenVPad┃ショートカットキーでV-Padを確認します。\nクレジットは様々な行動で獲得できます。\n遠隔ドローン呼び出しやKiosk、戦術スキルをアップグレードする時に使えます。
+OpenVPad┃ショートカットキーでV-Padを確認します。\n熟練度や戦術スキルの情報を確認できます。
 OpenCharacterStat┃キャラクターの追加情報ウィンドウを表示します。
 OpenCharacterTotalStat┃キャラクターの全体情報ウィンドウをを表示します。
 ShowObjectText┃敵の戦闘能力情報、周辺のオブジェクトとドロップアイテムを表示します。
@@ -16891,6 +17074,8 @@ GameSetting/HoldScoreBoard┃実験状況がキーを押している状態での
 스코어보드 고정하기┃実験状況固定
 GameSetting/CharacterHighlight┃キャラクター表示(基本ショートカットキー：Space)キーを押す時、自分のキャラクターの位置をハイライトで強調します。
 캐릭터 찾기┃キャラクター表示ハイライト使用
+GameSetting/ShowCCTVRangeNearDetectionRange┃保安カメラの視界範囲に一定距離以上近づいた時、保安カメラの視界範囲を表示します。
+CCTV 감지 범위 접근 시 감지 범위 표시 사용┃保安カメラの視界範囲表示機能使用
 미니맵, 확장맵 특정 대상 아이콘 확대 기능 사용┃拡張マップ - アイコン拡大機能使用
 스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃最大射程距離内でスキル使用固定
 GameSetting/PickPointToInAreaIndicatorActive┃位置を指定するスキルを使用する時、マウスが最大射程距範囲の外に出ても最大射程距離内でスキルを使用します。
@@ -16954,6 +17139,10 @@ GameSetting/MarkPingWayPointSet┃拡張マップに目標移動経路の表示�
 GameSetting/EmoticonSetMouseWheel┃ゲームでエモートを使用する時、マウスホイールでエモートセットを変更できるようにします。
 자동 공격 설정┃自動攻撃設定
 GameSetting/AutoAttack┃未適用：攻撃命令を出してない場合、近くの対象を攻撃することはありません。\n基本：近くの対象を攻撃します。「適用」の条件で可能な製作、採集の後には攻撃しません。\n適用：近くの対象を攻撃します。停止、休憩、箱確認、Kioskを操作する時には攻撃を中止します。
+인벤토리아이템자동병합┃インベントリ自動整列
+GameSetting/AutomaticInventoryItemRestock┃インベントリに同じ消費アイテムが複数のスロットに存在する場合、一番後ろ側のスロットにある消費アイテムから使用します。\nインベントリのショートカットキーとは関係なく、右下のスロットが後順位になります。\n例）1・3・5番目のスロットにステーキがある場合、1・3・5の内どのショートカットキーを押しても5番目のステーキを先に消費します。
+인벤토리아이템우선사용설정┃インベントリアイテム使用設定
+GameSetting/InventoryItemUsePriority┃インベントリに同じ消費アイテムが複数のスロットに存在する場合、ショートカットキーとは関係なく、指定された規則に従ってアイテムを使用します。\nスロットの番号はインベントリの左上が1番、右下が10番です。\n昇順：1番・3番・5番目のスロットにステーキがある場合、どのショートカットキーを押しても1番目のスロットにあるステーキを先に使用します。\n降順：1番・3番・5番目のスロットにステーキがある場合、どのショートカットキーを押しても5番目のスロットにあるステーキを先に使用します。
 옵션사용안함┃使用しない
 옵션내림차순┃降順
 옵션오름차순┃昇順
@@ -17186,7 +17375,7 @@ BattleZoneRewardGaugeTooltip_Desc┃保安コンソールで戦利品を受け�
 폭발 타이머┃爆発タイマー
 폭발 타이머 설명┃禁止区域の中で滞在できる時間を表示します。
 일차┃日目
-일차 설명┃経過した日付を表示します。
+일차 설명┃経過した日付と現在の時間帯を表示します。
 밤낮┃昼夜
 밤낮 설명┃現在の時間帯を表示します。
 부활 아이콘/오프닝┃現在：オープニング
@@ -17465,7 +17654,7 @@ ReportType/COBALT_INAPPROPRIATE_NICKNAME┃不適切なニックネーム
 ReportType/COBALT_AWAY_GAME┃ゲーム放置/AFK(チーム員専用)
 ReportType/COBALT_KILLED_BY_ENEMY┃敵チームアシスト/意図的な死亡
 ReportType/COBALT_SNIPER┃配信スナイピング
-ReportType/COBALT_BUGS_AND_GLITCHES_ABUSE┃チート
+ReportType/COBALT_BUGS_AND_GLITCHES_ABUSE┃バグ・グリッチ悪用
 ReportType/COBALT_MISCELLANEOUS┃その他
 StrategyMap/VerbalHarassment/Report┃このプレイヤーを報告しますか？(理由：暴言または不適切な言葉)
 Lobby/LobbyVerbalHarassment/Report┃このプレイヤーを報告しますか？(理由：暴言または不適切な言葉)
@@ -17628,6 +17817,8 @@ Ping/Alpha/Dead┃{0}({1}) : アルファが処置されました。
 Ping/Omega/Dead┃{0}({1}) : オメガが処置されました。
 Ping/AlphaOmega/Dead┃{0}({1}) : アルファ、オメガがすべて処置されました。
 Ping/Omega/None┃{0}({1}): オメガはもう登場しません。
+Ping/AirSupplyEpic/Wait┃{0}({1}) : <color=#D05EFF>英雄補給箱</color>生成まで残り時間<color=#C2FFA0>{2}</color>、位置 : <color=#C2FFA0>{3}</color>
+Ping/AirSupplyMythic/Wait┃{0}({1}) : <color=#red>神話補給箱</color>生成まで残り時間<color=#C2FFA0>{2}</color>、位置 : <color=#C2FFA0>{3}</color>
 Ping/TransferConsole/Wait┃{0}({1}) : Kiosk(<color=#C2FFA0>{3}</color>)活性化まで残り時間 <color=#C2FFA0>{2}</color> 
 Ping/TransferConsole/Active┃{0}({1}) : Kiosk活性化位置 <color=#C2FFA0>{2}</color>
 Ping/AutoResurrection/Wait┃{0}({1}): 自動復活終了まで残り時間 <color=#C2FFA0>{2}</color>
@@ -17727,6 +17918,7 @@ CreditResurrectionButtonTooltip_DescTypeB┃死亡した味方を復活させる
 핑퇴각┃{0}({1})が{2}に<color=#FFBB00>退却の合図</color>を出しています。
 크레딧보유┃{0}({1})が<color=#F4FF63>{2}</color>クレジットを所持しています。
 크레딧지목┃{0}({1})が{2}({3})の<color=#F4FF63>{4}</color>クレジット所持量を指し示しています。
+아이템장착┃{0}({1})が[{2}]を装備中
 아이템보유┃{0}({1})が[{2}]を{3}個所持しています。
 아이템지목┃{0}({1})が[{2}]を示します。
 아군장착하지않음┃{0}({1})が{2}({3}) - <color=#C4C4C4>{4}</color> <color=#FF4848>を装備していません。</color>
@@ -17904,8 +18096,8 @@ UTC┃日本時間 (JST)
 사용불가 캐릭터┃使用禁止キャラクター
 이용 시간┃利用時間
 구속 서버┃サーバー
-구속 서버 안내 툴팁┃選択したモードを一番多くプレイしたサーバーの情報です。
-구속 서버 상세 안내┃ランク対戦をプレイした割合が95%以上のサーバーが帰属サーバーに指定され、\nデミゴッド・エターニティティアのランク報酬は帰属サーバーでのみ受け取ることができます。
+구속 서버 안내 툴팁┃現在の帰属サーバー情報です。
+구속 서버 상세 안내┃ランク対戦を3回以上プレイしたサーバーの中で最も不利なサーバーが帰属サーバーに指定され、\n帰属サーバーを基準にデミゴッド・エターニティティアのランク報酬が支給されます。
 귀속서버불일치┃現在選択されたサーバーと帰属サーバーが異なります。(帰属サーバー：{0})\nデミゴッド・エターニティティアのランク報酬は帰属サーバーでのみ受け取ることができます。
 귀속서버명┃帰属サーバー：
 제한 해제┃制限解除
@@ -18784,6 +18976,7 @@ Shortcut/Popup/ExistKey┃<color=#FFB62F>[{0}]</color>使用中のショート�
 로비 애니메이션 재생┃ロビーアニメーション再生
 카메라 흔들림 효과┃カメラの揺れ
 실험 단계 전환 연출 재생┃実験段階転換演出再生
+BasicSetting/StageChangeEffect┃実験段階が変わる時、演出を再生します。
 상점┃ショップ
 검색┃検索
 상품 구매┃商品購入
@@ -19038,6 +19231,9 @@ ERPassPurchaseWindow/SeasonContent/14┃一獲千金、誰もが一度は夢見�
 ERPassPurchaseWindow/SeasonTitle/15┃シーズン：レギオン
 ERPassPurchaseWindow/SeasonSubTitle/15┃見よ、必滅者たちよ。異界の軍団がここに現れる。
 ERPassPurchaseWindow/SeasonContent/15┃深淵の魔王が目覚め、輝く星さえも墜ちる時、\n地獄の炎が大地を包み込み、悪夢が空を暗黒に染め上げる。\n崇めよ、果てしない絶望の中で蠢く深淵の軍団を。\n恐れよ、闇が支配する世界の終焉を。
+ERPassPurchaseWindow/SeasonTitle/16┃シーズン：アカデミー
+ERPassPurchaseWindow/SeasonSubTitle/16┃「今からは命令通りに動け。分かったか！」
+ERPassPurchaseWindow/SeasonContent/16┃最近、ルミア島に入ってきた新入生たちの生存率がとても低いですね...\nですが、ご心配なく！ルミア島には最高の教官たちがいます！\n生存に必要なことを最速で教えてくれるはずです！あっ、そこ！逃げるな！
 비쥬얼┃ビジュアル
 오디오┃オーディオ
 Product/Name/BATTLE_PASS/4┃「シーズン4」ERパス
@@ -19051,6 +19247,7 @@ Product/Name/BATTLE_PASS/12┃ER PASS：チェンジ
 Product/Name/BATTLE_PASS/13┃ER PASS：夕焼け
 Product/Name/BATTLE_PASS/14┃ER PASS：ラッキー★
 Product/Name/BATTLE_PASS/15┃ER PASS：レギオン
+Product/Name/BATTLE_PASS/16┃ER PASS：アカデミー
 Product/Name/BATTLE_PASS_POINT┃ERポイント購入
 Product/Name/BATTLE_PASS┃「シーズン4」ERパス
 Product/Name/BATTLE_PASS_BUNDLE┃「シーズン4」ERプラス
@@ -19085,6 +19282,9 @@ Product/Name/BATTLE_PASS_UPGRADE_S14┃ER PASSアップグレード：ラッキ�
 Product/Name/BATTLE_PASS_S15┃ER PASS：レギオン
 Product/Name/BATTLE_PASS_BUNDLE_S15┃ER PLUS：レギオン
 Product/Name/BATTLE_PASS_UPGRADE_S15┃ER PASSアップグレード：レギオン
+Product/Name/BATTLE_PASS_S16┃ER PASS：アカデミー
+Product/Name/BATTLE_PASS_BUNDLE_S16┃ER PLUS：アカデミー
+Product/Name/BATTLE_PASS_UPGRADE_S16┃ER PASSアップグレード：アカデミー
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>ER PASS</size></color>\n<size=14>[払い戻し不可商品]</size>\n\nERパスを購入して、ゲームプレイをしながら<color=#B2EBF4>最大1,400NPとスキン、エモートなど100個以上の様々なリワード</color>を獲得しましょう！\nERパスのシーズンレベルは、ゲームをプレイすると獲得できます。\nERポイントを購入するとより早く報酬を獲得することができます。
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER PLUS</size></color>\n<size=14>[払い戻し不可商品]</size>\n\nERパスとティア<color=#ffdf72>19レベル</color>が購入できるERプラス商品です。\n<color=#B2EBF4>最大1,400NPとスキン、エモートなど100個以上の様々なリワード</color>を獲得できます。\nERパスのシーズンレベルは、ゲームをプレイすると獲得できます。\nERプラスを通じて追加されたティアレベルが\nパスの最大レベルを超える場合、<color=#f72323>差額は払い戻しされません。</color>
 Shop/Desc/BATTLE_PASS_UPGRADE┃ER PASSアップグレードを通じて追加されたティアレベルで\nパスの最大レベルを超える場合、差額は払い戻しできません。
@@ -19118,6 +19318,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S14┃ER PASSアップグレードによってER P
 Shop/Desc/BATTLE_PASS_S15┃ER PASSを購入してゲームをプレイすると\n<color=#B2EBF4>最大900NPとスキン、エモートなどの様々な報酬</color>を獲得できます。\nER PASSのレベルはゲームをプレイするだけで上げることができます。\nERポイントを購入するとより早く報酬を獲得することができます。\n\nER PASSに含まれているアイテムは後日他の形で活用されることがあります。
 Shop/Desc/BATTLE_PASS_BUNDLE_S15┃ER PLUSはER PASS購入と同時にER PASSのレベルを<color=#ffdf72>20レベル</color>まで上げられる商品です。\n<color=#B2EBF4>最大900NPとスキン、エモートなどの様々な報酬</color>を獲得できます。\nER PASSのレベルはゲームをプレイして上げることができます。\nER PLUSで上げたER PASSのレベルが\nER PASSの最大レベルを超えた場合の<color=#FF7575>差額は払い戻しできません。</color> \n\nER PASSに含まれているアイテムは後日他の形で活用されることがあります。
 Shop/Desc/BATTLE_PASS_UPGRADE_S15┃ER PASSアップグレードによってER PASSのレベルが\n最大レベルを超えた場合の差額は払い戻しできません。
+Shop/Desc/BATTLE_PASS_S16┃ER PASSを購入してゲームをプレイすると\n<color=#B2EBF4>最大900NPとスキン、エモートなどの様々な報酬</color>を獲得できます。\nER PASSのレベルはゲームをプレイするだけで上げることができます。\nERポイントを購入するとより早く報酬を獲得することができます。\n\nER PASSに含まれているアイテムは後日他の形で活用されることがあります。
+Shop/Desc/BATTLE_PASS_BUNDLE_S16┃ER PLUSはER PASS購入と同時にER PASSのレベルを<color=#ffdf72>20レベル</color>まで上げられる商品です。\n<color=#B2EBF4>最大900NPとスキン、エモートなどの様々な報酬</color>を獲得できます。\nER PASSのレベルはゲームをプレイして上げることができます。\nER PLUSで上げたER PASSのレベルが\nER PASSの最大レベルを超えた場合の<color=#FF7575>差額は払い戻しできません。</color> \n\nER PASSに含まれているアイテムは後日他の形で活用されることがあります。
+Shop/Desc/BATTLE_PASS_UPGRADE_S16┃ER PASSアップグレードによってER PASSのレベルが\n最大レベルを超えた場合の差額は払い戻しできません。
 Shop/Desc/BATTLE_PASS_CHECK┃ER PASS商品を購入すると<color=#B2EBF4>プレミアム報酬</color>と<color=#B2EBF4>特別ミッション</color>が活性化されます。\nまた、<color=#B2EBF4>ERポイント購入機能</color>を使用できます。\n\nER PASSは発売されたシーズンから次のシーズンまで進行させることができます。\n活性化されている1つのER PASSのみ進行させることができますのでご注意ください。\n回数に制限されずにお望みのER PASSを自由に活性化させることができます。
 Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃ER PLUS商品を購入するとER PASSの<color=#B2EBF4>プレミアム報酬</color>と<color=#B2EBF4>特別ミッション</color>が活性化されます。\nまた、<color=#B2EBF4>ERポイント購入機能</color>を使用できます。\n\nER PLUSでER PASSのレベルが\n最大レベルを超えた場合、<color=#FF7575>差額は払い戻しできません。</color>\n\nER PASSは発売されたシーズンから次のシーズンまで活性化させることができます。\n活性化されている1つのER PASSのみ進行させることができますのでご注意ください。\n回数に制限されずにお望みのER PASSを自由に活性化させることができます。
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃ER PASSアップグレードでER PASSのレベルが\n最大レベルを超えた場合の差額は払い戻しされません。
@@ -19143,16 +19346,16 @@ ER 패스 구매 불가 알림_시즌팩 보유┃すでにシーズンパック
 판매 종료까지 남은 시간 : {0}┃販売終了まで残り時間 : {0}
 특별 얼리버드까지 남은 시간 : {0}┃特別アーリーバード特典終了まで残り時間:{0}
 시즌팩 혜택 적용까지 남은 시간 : {0}┃特典適用までの残り時間 : {0}
-시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃シーズンパック：レギオン
+시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃シーズンパック：アカデミー
 시즌 5팩┃1.0パック
 시즌 패스 우편 제목┃1.0パック - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER PASS：レギオン> | キャラ | スキン | 特別商品
+시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER PASS：アカデミー> | キャラ | スキン | 特別商品
 얼리버드 혜택 기간 알림┃割引終了残り時間：
 시즌 패스 타이틀 설명┃<size=32>-シーズン5パック特典！-</size>
 시즌 패스 설명┃<size=20><color=#77bce0><ERパス : ハンター></color></size>\n最新の<ERパス : ハンター>をゲットしよう！\n\n<size=20><color=#77bce0>キャラ6人、スキン11種</color></size>\nシーズン5期間中にリリースされるすべてのキャラクターとスキンを提供します。\n\n<size=20><color=#77bce0>限定アイテム</color></size>\n限定スキン、限定エモート、限定墓石各1種ずつ、シーズン5パックをご購入した方のみ提供いたします。
 시즌 패스 주의 사항┃◆ <ERパス : ハンター>を購入した場合、1,190NPをお返しいたします。\n\n◆限定スキン、エモート、石碑は2月17日メンテナンス後支給されます。\n\n◆シーズン中にリリースされるイベントスキンはシーズンパックに含まれません。\n\n◆シーズン5パックに含まれる商品はリリース後メールボックスから支給されます。
 약 55% 할인┃最大<size=24>55%</size>割引
-약 50% 할인┃最大<size=24>50%</size>割引
+약 50% 할인┃最大<size=24>48%</size>割引
 신규 캐릭터 6종 & 스킨 11종┃新キャラ6種&スキン11種プレゼント
 SeasonPassIcon/5┃Img_SeasonPack5_Box_02
 SeasonPassIcon/6┃Img_SeasonPack6_Box_02
@@ -19257,6 +19460,15 @@ SeasonPassIcon/16┃Img_SeasonPack16_Box
 시즌팩 6 출시 캐릭터┃シーズン6 新キャラ 2種
 시즌팩 6 출시 스킨┃シーズン6 新スキン 6種
 시즌팩 6 특별 아이템┃シーズン6 スペシャルアイテム 4種
+시즌 16팩 주의사항 1┃シーズンパックより<ER PASS：アカデミー>を先に購入する場合、イベントNPおよび無料獲得NPは払い戻しできません。購入したNP(有料)のみ払い戻されます。
+시즌 16팩 주의사항 2┃<ER PASS>以外の商品は重複して保有することができ、払い戻しできません。
+시즌 16팩 주의사항 3┃シーズンパックに含まれているキャラクター、スキンをショップで重複購入した場合、払い戻しポリシーに基づいて対応いたします。
+시즌 16팩 주의사항 4┃シーズンパックの内容は変更されることがあります。詳細は告知をご覧ください。
+시즌 16팩 주의사항 5┃シーズンパックの商品は発売後、メールボックスのシーズンパックに支給され、後日他の形で再販されることがあります。
+<ER PASS : 아카데미> 포함┃＜ER PASS：アカデミー＞
+시즌팩 7 출시 캐릭터┃シーズン7 新キャラ 2種
+시즌팩 7 출시 스킨┃シーズン7 新スキン 6種
+시즌팩 7 특별 아이템┃シーズン7 スペシャルアイテム 4種
 WebViewPopup_Title┃イベント情報
 GoodsMenu/InGame┃ゲーム内カスタマイズ
 GoodsMenu/Customize┃ゲームカスタマイズ
@@ -19993,6 +20205,7 @@ Season12/Name┃<color=#FFD5B6>チェンジ</color>
 Season13/Name┃<color=#FF95A6>夕焼け</color>
 Season14/Name┃<color=#FFBE70>ラッキー★</color>
 Season15/Name┃<color=#937DFF>レギオン</color>
+Season16/Name┃<color=#FF6071>アカデミー</color>
 SeasonToBeAdded/Name┃新シーズン \n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1})がセッションを終了しました。
 100001_Title┃S3 ログインボーナス
@@ -20023,6 +20236,10 @@ SeasonToBeAdded/Name┃新シーズン \n D - {0}
 10000401_7_Desc┃- ＜深淵の魔王レノックス WIN＞アイコン\n- ＜深淵の魔王レノックス WIN＞エモート
 10000401_21_Title┃＜堕天使シャーロット HI＞SET
 10000401_21_Desc┃- ＜堕天使シャーロット HI＞アイコン\n- ＜堕天使シャーロット HI＞エモート
+10000501_7_Title┃＜戦術教官ラウラ 逃げるわよ～！＞SET
+10000501_7_Desc┃- ＜戦術教官ラウラ 逃げるわよ～！＞アイコン\n- ＜戦術教官ラウラ 逃げるわよ～！＞エモート
+10000501_21_Title┃＜訓練所所長カティア やあ＞SET
+10000501_21_Desc┃- ＜訓練所所長カティア やあ＞アイコン\n- ＜訓練所所長カティア やあ＞エモート
 20000101_1_Title┃新規プレイヤー支援セット－1日目
 20000101_1_Desc┃- 実験体選択券(初心者)\n- XP Boost(3日)\n- A-Coin Boost(3日)
 20000101_4_Title┃新規プレイヤー支援セット－4日目
@@ -20158,6 +20375,7 @@ Season2003/Name┃チェンジ A-Coinクエストブック
 Season2004/Name┃夕焼け A-Coinクエストブック
 Season2005/Name┃ラッキー★ A-Coinクエストブック
 Season2006/Name┃レギオン A-Coinクエストブック
+Season2007/Name┃アカデミー A-Coinクエストブック
 Season2100/Name┃シーズン5 A-Coinクエストブック
 Season2101/Name┃レギオントークンクエストブック
 Season2102/Name┃シーズン6 A-Coinクエストブック
@@ -20167,6 +20385,7 @@ HiddenPassPath/2003┃NPショップ内のマイレージショップで購入�
 HiddenPassPath/2004┃NPショップ内のマイレージショップで購入できます。
 HiddenPassPath/2005┃交換所でラッキー★トークンで購入できます。
 HiddenPassPath/2006┃交換所でレギオントークンを使用して購入できます。
+HiddenPassPath/2007┃交換所でアカデミートークンを使用して購入できます。
 HiddenPassPath/2102┃ショップで「選択券パッケージⅢ」を購入すると、利用できます。
 칭찬하기┃いいね！
 극찬하기┃MVP！
@@ -20193,8 +20412,17 @@ GuideRobotCreditRichModeLnKey┃案内ロボット：LUMI - クレジットチ�
 안내로봇크레딧부자모드노티타이틀┃案内ロボット - クレジットチャージ完了
 안내로봇전투모드채팅알림┃案内ロボットが{0}で警戒モードになりました。
 안내로봇크레딧부자모드채팅알림┃案内ロボットが{0}でクレジットのチャージを完了しました。
-안내로봇특수상점상품안내┃案内ロボット販売商品－特殊材料：<color=#b245ff>{6}</color>
+안내로봇특수상점상품안내┃案内ロボット販売商品－特殊材料：<color=#b245ff>{0}</color>
 안내로봇구매희망안내┃{0}({1})が案内ロボットの{2}アイテムを指定
+ItemExchange┃アイテムを交換できます。(╹▽╹)
+ExchangeableItem┃交換できるアイテムです。(╹▽╹)
+ExchangeableItemEmpty┃交換できるアイテムがありません。(´ㅿ`)
+안내로봇교환가능품목정보┃インベントリにあるアイテムを交換できます。\n· 隕石、生命の木を含めた特殊材料アイテム\n· 伝説、神話等級の装備アイテム
+안내로봇교환채팅안내┃案内ロボットで{0}({1})が{2}を{3}に交換しました。
+안내로봇아이템교환등록불가안내┃交換できないアイテムです。
+안내로봇아이템교환등록아이템┃アイテム登録
+안내로봇아이템교환결과아이템┃交換結果
+안내로봇아이템교환버튼┃交換する
 버프 큐브 핑┃{2}秒後、{0}地域にキューブ - {1}が生成されます。
 버프 큐브 핑2┃{0}({1})が{2}地域のキューブ - {3}を指定
 버프 큐브 핑3┃{0}地域に{2}秒後、キューブが生成されます。
@@ -20269,6 +20497,7 @@ SquadRumbleEnd_EntryFee┃入場料 : {0} {1}
 유니온 대전 팀생성 시 상대방 초대 수락 불가 팝업┃チーム登録中に招待を受諾することはできません。
 티어 매칭 불가 팝업 안내┃現在のティアではマッチングできません。
 팀 해체 가능 상태 알림 메시지┃チームメンバーの中でアカウントが利用制限となったメンバーがいるため、チームを退会できます。
+유니온 대전 유저 검색 불가 안내 메시지┃検索できないモードです。
 필터/아이템 보유 여부┃アイテム一覧
 필터/전체┃全体
 필터/보유┃所持中
@@ -20497,6 +20726,7 @@ ServerError/9451┃ユニオン対戦はアカウントレベル30以上から�
 ServerError/9452┃現在のチームのティアではマッチングできません。\nティアごとのマッチングスケジュールを確認してください。
 ServerError/99999┃互換性のないバージョンで接続を試みました。
 ServerError/HttpException┃サーバーと接続できません。
+gameTip_Desc_10250_1┃特別な料理を作れる焚き火を、ルミア島の様々な地域から見つけてみましょう！\nルミア島から得られるすべての一般(白色)の食べ物は焚き火で焼くと立派な料理になります。\n\n焚き火さえあれば、あなたも最高の料理人になれる！\n\n焚き火が遠すぎる場合、ガジェットアイテム「狩人の大釜」を使ってみるのはどうですか？\n「狩人の大釜」は<color=#8FDBF8>野生動物を倒して獲得</color>できます。
 게임팁 링크┃リンクに移動
 gameTip_Title_10000_1┃ルート/製作ガイド
 gameTip_Desc_10000_1┃箱にあるアイテムの中で、何を持っていけばいいのかよく分からない場合、\n<color=#8FDBF8>黄色いフレーム</color>があるアイテムを注目しましょう！\n必要なアイテムは黄色で表示されます。\n\n今いる地域でどのアイテムが必要なのか知りたい場合、<color=#8FDBF8>右側の製作ガイド</color>を見てみましょう！その地域で得られるアイテムを確認できます。\n\n必要な材料を集めていくと、より強力な装備を製作できます！
@@ -20577,7 +20807,6 @@ gameTip_Desc_10230_1┃何から始めたらいいのか、悩んでいますか
 gameTip_Title_10240_1┃クレジット復活
 gameTip_Desc_10240_1┃死んだからと言って諦めるにはまだ早い！\n\nKioskでチーム員がクレジットを使うと、死亡したチーム員を復活させることができます。\nただし、復活地点は選べないのでチーム員に先に言っておきましょう！
 gameTip_Title_10250_1┃焚き火
-gameTip_Desc_10250_1┃特別な料理を作れる焚き火を、ルミア島の様々な地域から探してみましょう！\nルミア島から得られるすべての一般(白色)の食べ物は焚き火で焼くと立派な料理になります。\n\n焚き火さえあれば、あなたも最高の料理人になれる！\n\n焚き火が遠すぎる場合、携帯用焚き火台を使ってみるのはどうですか？\n携帯用焚き火台は<color=#8FDBF8>野生動物を倒して獲得</color>できます。
 gameTip_Title_10260_1┃V-Pad
 gameTip_Desc_10260_1┃熟練度、戦術スキル、アイテムの管理等々...覚えることが多くて大変！\nそんな時はショートカットキー＜V＞を押してください！\n\n＜V-Pad＞で必要な情報を一目で簡単に確認できます！
 gameTip_Title_10270_1┃脱出
@@ -21910,9 +22139,9 @@ Tutorial/Victory/2┃そう。\n決まった運命なんてないのよ。
 Tutorial/Victory/3┃準備はできたみたいね。お疲れ様。
 GuideBook/MainTheme/Title/PREFACE┃概要
 GuideBook/SubTheme/Title/EternalReturn┃エターナルリターン
-이터널 리턴은 실험체들이 서로 경쟁하여 최후의 생존자를 가리는 <color=white>배틀 로얄</color> 게임입니다.┃エターナルリターンは、\n最後の生存者になるまで実験体同士で\n戦い合う<color=white>バトルロイヤル</color>ゲームです。
+GuideBook/Page/Content/EternalReturn/1┃エターナルリターンは、\n最後の生存者になるまで実験体同士で\n戦い合う<color=white>バトルロイヤル</color>ゲームです。
 GuideBook/Page/Content/EternalReturn/2┃ガイドからゲームの基本的な内容を一つずつ\n確認してみましょう。
-GuideBook/MainTheme/Title/GROWTH┃成長
+GuideBook/MainTheme/Title/GROWTH┃オープニング
 GuideBook/SubTheme/Title/EpicReady┃装備製作
 GuideBook/Page/Content/EpicReady/1┃<color=white>(1/3)</color>\n\nルミア島に着いたら、まずは<color=yellow>目標アイテム</color>を\n製作しなければなりません。\n\nスタート地域周辺の青色で表示される箱から\nその地域の材料アイテムを獲得できます。\n各地域にある<color=yellow>箱</color>を探索して、材料を見つけましょう。\n目標アイテム製作に必要なアイテムには\n<color=yellow>黄色いマーク</color>が付いて表示されます。
 GuideBook/Page/Content/EpicReadyTwo/1┃<color=white>(2/3)</color>\n\n材料アイテムは、箱から探索する他にも\n<color=white>ルミア島に存在する採集物や野生動物の死体または遠隔ドローンを呼び出す</color>ことで獲得する\nことができます。\n「Z」キーを押して材料アイテムを組み合わせると、<color=white>ルートの目標アイテム</color>を製作できます。
@@ -21933,7 +22162,7 @@ GuideBook/Page/Content/TreeOfLife/2┃<color=yellow>特殊材料</color>は<colo
 GuideBook/SubTheme/Title/UpgradeItems┃装備アップグレード
 GuideBook/Page/Content/UpgradeItems/1┃<color=yellow>伝説等級アイテム</color>を製作するためには\n<color=yellow>特殊材料</color>が必要です。
 GuideBook/Page/Content/UpgradeItems/2┃獲得した<color=yellow>特殊材料</color>は、<color=white>自分が使用したり、\n味方に渡したり</color>してそれぞれに必要な装備を\n製作することが重要です。
-GuideBook/MainTheme/Title/EXPLORATION┃生存
+GuideBook/MainTheme/Title/EXPLORATION┃ミドルゲーム
 GuideBook/SubTheme/Title/UpgradeItemsTwo┃特殊材料
 GuideBook/Page/Content/UpgradeItemsTwo/1┃<color=white>(1/2)</color>\n\n強力な装備を製作するためには、\nいろんな<color=yellow>特殊材料</color>が必要です。\n<color=yellow>特殊材料</color>は<color=white>生命の木、隕石、アルファ、\nオメガ、航空補給箱</color>などのオブジェクトから\n得ることができます。
 GuideBook/Page/Content/UpgradeItemsTwo/2┃オブジェクト争いで負けてしまった時は、\n<color=yellow>Kiosk</color>でクレジットを使って特殊材料を\n獲得しましょう。
@@ -21948,12 +22177,12 @@ GuideBook/SubTheme/Title/Vision┃視界確保
 GuideBook/Page/Content/Vision/1┃戦闘で有利を取るためには、<color=yellow>視界</color>を確保\nしなければなりません。\n\n<color=yellow>保安コンソール</color>を占領してその地域の\n視界を確保したり、<color=yellow>蛍光花</color>を確認したい方向に使って遠くまで確認することができます。\nまた、<color=yellow>望遠カメラ</color>や<color=yellow>偵察ドローン</color>を使用して\n設置した位置の周辺を確認することが\nできます。
 GuideBook/SubTheme/Title/TeamFight┃チームファイト
 GuideBook/Page/Content/TeamFight/1┃戦闘で勝つためには実験体の\n<color=white>スキルや戦術スキル、武器スキル</color>などを適切に\n活用しなければなりません。
-GuideBook/Page/Content/TeamFight/2┃<color=yellow>チームメンバーが全員倒される</color>と、<color=red>ゲームが\n終了</color>します。\n敵が<color=red>強力</color>過ぎる場合、まずは<color=white>撤退</color>して次の\nチャンスを狙いましょう。
+GuideBook/Page/Content/TeamFight/2┃<color=white>2日目の夜以降</color>に<color=yellow>チームメンバーが全員倒され、死亡状態になる</color>と、<color=red>ゲームが終了</color>します。\n敵が<color=red>強力</color>過ぎる場合、まずは<color=white>撤退</color>して次のチャンスを狙いましょう。
 GuideBook/Page/Content/TeamFight/3┃実験体は体力が0になると、<color=yellow>瀕死状態</color>になります。\n<color=white>瀕死状態</color>の味方を右クリックして一定時間\n相互作用すると、<color=white>瀕死状態</color>から回復させる\nことができます。\n<color=white>瀕死状態</color>の敵を仕留めると、一定量の体力を\n回復でき、敵の死体からクレジットや消耗品\nアイテム、食べ物などを獲得することが\nできます。
 GuideBook/SubTheme/Title/Resurrection┃味方蘇生
 GuideBook/Page/Content/Resurrection/1┃<color=yellow>3日目の昼</color>以降に死亡した味方は\n<color=yellow>Kiosk</color>で<color=white>クレジットを使って復活させることができます。</color> \n自分が持ってるクレジットだけでは足りない時は<color=white>死亡した味方のクレジット</color>を追加で消費します。
 GuideBook/Page/Content/Resurrection/2┃<color=yellow>5日目の昼</color>からは<color=white>Kioskで味方を復活させる\nことができません。</color>\n<color=yellow>5日目の夜</color>までは<color=yellow>案内ロボットLUMI</color>から味方を\n復活させることができます。
-GuideBook/MainTheme/Title/FINALBATTLE┃最終決戦
+GuideBook/MainTheme/Title/FINALBATTLE┃エンドゲーム
 GuideBook/SubTheme/Title/BattleReady┃戦闘準備
 GuideBook/Page/Content/BattleReady/1┃ボスモンスターである<color=yellow>ウィクライン</color>の登場は、\n最終決戦に近づいたことを意味します。\nウィクラインを<color=white>倒した</color>場合には<color=yellow>強力なバフ効果</color>と神話等級アイテムの材料、<color=yellow>VF血液サンプル</color>を獲得できます。
 GuideBook/Page/Content/BattleReady/2┃神話等級アイテムは<color=yellow>VF血液サンプル</color>で製作したり、<color=yellow>神話等級の補給箱</color>から獲得することができます。\n<color=yellow>VF血液サンプル</color>はウィクラインを倒す以外、<color=white>Kiosk</color>から購入することができます。
