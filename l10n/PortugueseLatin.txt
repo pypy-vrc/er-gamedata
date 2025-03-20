@@ -443,6 +443,9 @@ Installation/Name/4┃Lírio Branco
 Installation/Name/5┃Jarro do Abismo
 Installation/Name/6┃Fruta Bomba
 Installation/Name/7┃Barril de Óleo
+Installation/Name/21┃Lanterna Incandescente
+Installation/Name/22┃Corrida de Areia
+Installation/Name/23┃Chuva de Cura
 Object/Name/ItemBox┃Caixa
 Object/Name/AirSupplyItemBox┃Caixa de Suprimento
 Object/Name/AirSupplyItemBoxSpawnScratch┃Caixa de Suprimento
@@ -473,6 +476,7 @@ Object/Name/BarrierConsole┃Console da Porta
 Object/Name/MobileHyperLoopBase┃Hyperloop Portátil
 Object/Name/MobileHyperLoopBlue┃Hyperloop Portátil: γ
 Object/Name/MobileHyperLoopRed┃Escapar do Hyperloop
+Object/Name/HuntersPot┃Pote do Caçador
 Object/Name/CampFire┃Fogueira
 Area/Name/Harbor┃Docas
 Area/Name/Warehouse┃Armazém
@@ -598,6 +602,7 @@ SpecialItemType/Special┃Especial
 SpecialItemType/Summon┃Invocação
 SpecialItemType/GhostItem┃Especial
 SpecialItemType/Gadget┃Dispositivo
+SpecialItemType/OnSelect┃Trocar
 MiscItemType/None┃Nenhum
 MiscItemType/Material┃Material
 ItemConsumableType/None┃Nenhum
@@ -800,7 +805,7 @@ StatType/PreventBasicAttackDamagedRatio┃Redução de Dano de Ataque Básico
 StatType/PreventBasicAttackDamagedRatioByLv┃Redução de Dano de Ataque Básico por nível
 StatType/IncreaseSkillDamage┃Dano Extra de Habilidade
 StatType/IncreaseSkillDamageByLv┃Dano Extra de Habilidade por nível
-StatType/IncreaseSkillDamageRatio┃Dano de Habilidade Aumentado
+StatType/IncreaseSkillDamageRatio┃Aumento de Dano de Habilidade
 StatType/IncreaseSkillDamageRatio/Desc┃Dano de Habilidade Aumentado
 StatType/IncreaseSkillDamageRatioByLv┃Aumento de Dano de Habilidade por Nível
 StatType/PreventSkillDamaged┃Redução de Dano de Habilidade
@@ -936,6 +941,8 @@ ToolTipType/SkillDfCoef┃Multiplicador Bônus para Defesa
 ToolTipType/SkillSkillAmpCoef┃Amplificação de Habilidade Total
 ToolTipType/LegShotApCoef┃Dano de Ataque de Disparo Paralizante
 ToolTipType/DeadEyeApCoef┃Dano de Ataque de Bem Aplicado
+ToolTipType/LegShotDamage┃Dano de Tiro Paralisante
+ToolTipType/DeadEyeDamage┃Dano de Morte Verdadeira
 ToolTipType/DamageAmpCoef┃Amplificação de Habilidades de Dano
 ToolTipType/ShieldSkillAmpCoef┃Amplificação de Habilidades de Escudo
 ToolTipType/LegShotSkillAmpCoef┃Dano de Amplificação de Disparo Paralizante
@@ -1335,6 +1342,9 @@ ToolTipType/W3FinalDamage┃[3 Acúmulos - Corte Nichirin] Dano de Ultimo Golpe
 ToolTipType/R1AdditionalAttackPower┃Dano de Poder de Ataque Adicional
 ToolTipType/R2BaseDamage┃Dano de Primeiro e Segundo Golpe
 ToolTipType/R2DirectDamageAttackPower┃Dano de Terceiro Golpe
+ToolTipType/JustynaEnergy┃Energia Máxima
+ToolTipType/MinHpHeal┃Recuperação de Vida Mínima
+ToolTipType/MaxHpHeal┃Recuperação de Vida Máxima
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+{0}% de Amplificação de Habilidade por cada bala restante)</color>
 DayNight/Day┃Dia
 DayNight/Night┃Noite
@@ -1342,7 +1352,7 @@ CastingActionType/ToRest┃Preparando para descansar
 CastingActionType/ToSearch┃Procurando
 CastingActionType/ToBattle┃Parar de descansar
 CastingActionType/AirSupplyOpen┃Checando conteúdo
-CastingActionType/TransferSupplyBoxOpen┃Abrindo Caixa de Transferência
+CastingActionType/KioskSupplyBoxOpen┃Abrindo Caixa de Transferência
 CastingActionType/CollectibleOpen┃Coletando Recursos
 CastingActionType/BoxOpen┃Checando conteúdo
 CastingActionType/AreaSecurityCameraSight┃Operando Console
@@ -1355,6 +1365,7 @@ CastingActionType/CollectibleOpenSeaFish┃Pescando Bacalhau
 CastingActionType/CollectibleOpenTreeOfLife┃Coletando Árvore da Vida
 CastingActionType/CollectibleOpenMeteorite┃Coletando Meteorito
 CastingActionType/CollectibleOpenFlower┃Coletando Flores
+CastingActionType/CollectibleOpenMushroom┃Coletando Cogumelos
 CastingActionType/CollectibleHuntersPot1┃Preparando Ensopado de 100 Anos
 CastingActionType/CollectibleHuntersPot2┃Preparando Ensopado Perpétuo
 CraftTextForm┃{1} {0}
@@ -1373,8 +1384,9 @@ CastingActionType/CraftCustom_1┃Criando
 CastingActionType/Hyperloop┃Ir para aliados usando Hyperloop: <color=#FFBB00>{0}</color>
 CastingActionType/HyperloopToTeammate┃Operando o Hyperloop: Indo para <color=#FFBB00>???</color>
 CastingActionType/VerticalLauncher┃Preparando SLV
-CastingActionType/MobileVerticalLauncher┃Esperando pelo SLV
-CastingActionType/VLS_Ready┃Esperando pelo Operador do SLV
+CastingActionType/MobileVerticalLauncher┃Preparando SLV
+CastingActionType/VLS_Ready┃Esperando pelo SLV
+CastingActionType/VLS_Guest┃Esperando pelo Operador do SLV
 CastingActionType/InstallTrap┃Instalando armadilha
 CastingActionType/InstallCampFire┃Montando Fogueira
 CastingActionType/Resurrect┃Reviviendo
@@ -1419,6 +1431,9 @@ Collectible/6┃Rama de Batata
 Collectible/7┃Árvore Anciã
 Collectible/8┃Cratera
 Collectible/9┃Flor
+Collectible/10┃Pote do Caçador
+Collectible/11┃Pote do Caçador
+Collectible/12┃Congumelo
 DropFrequency/Never┃Nunca
 DropFrequency/Rare┃Raramente
 DropFrequency/Often┃Ocasionalmente
@@ -1580,6 +1595,7 @@ Skin/Name/1008001┃Líder da Banda Hart
 Skin/Name/1008002┃Hart Festival de Inverno
 Skin/Name/1008003┃Hart País das Maravilhas
 Skin/Name/1008004┃Hart Banda Marcial
+Skin/Name/1008005┃Hard Cadete
 Skin/Name/1009000┃Isol
 Skin/Name/1009001┃Isol do Apocalipse
 Skin/Name/1009002┃Isol Caçador de Espíritos
@@ -1656,6 +1672,7 @@ Skin/Name/1022002┃Luke, O Demônio das Ruas
 Skin/Name/1022003┃Luke Cadete
 Skin/Name/1022004┃Luke Garoto da Piscina
 Skin/Name/1022005┃Ludolph
+Skin/Name/1022006┃Luke Ceifador da Morte
 Skin/Name/1023000┃Cathy
 Skin/Name/1023001┃Cathy Médica de Combate
 Skin/Name/1023002┃Cathy Médica Android
@@ -1764,6 +1781,7 @@ Skin/Name/1047000┃Laura
 Skin/Name/1047001┃Laura Fantasma da Prisão
 Skin/Name/1047002┃Laura Organização Clandestina
 Skin/Name/1047003┃Laura Glória da Manhã
+Skin/Name/1047004┃Laura Instrutora Tática
 Skin/Name/1048000┃Tia
 Skin/Name/1048001┃Tia Artista de Rua
 Skin/Name/1048002┃Tia Bruxa Aprendiz
@@ -1794,6 +1812,7 @@ Skin/Name/1055000┃Estelle
 Skin/Name/1055001┃Estelle Forças Especiais
 Skin/Name/1055002┃Estelle Simulação de Incêndio
 Skin/Name/1055003┃Bestelle
+Skin/Name/1055004┃Estelle Especialista em Exercícios
 Skin/Name/1056000┃Piolo
 Skin/Name/1056001┃Piolo Desafiante
 Skin/Name/1056002┃Piolo Lutador de Rua
@@ -1817,6 +1836,7 @@ Skin/Name/1061002┃Irex
 Skin/Name/1062000┃Theodore
 Skin/Name/1062001┃Theodore Forças Especiais
 Skin/Name/1062002┃Theodore Clérigo de Batalha
+Skin/Name/1062003┃Theodore Especialista de Balística
 Skin/Name/1063000┃Ly Anh
 Skin/Name/1063001┃Ly Anh Presa
 Skin/Name/1063002┃Ly Anh Devoção Amaldiçoada
@@ -1827,6 +1847,7 @@ Skin/Name/1064003┃Vanya Fada Holográfica
 Skin/Name/1065000┃Debi e Marlene
 Skin/Name/1065001┃Debi e Marlene Agentes de Segurança
 Skin/Name/1065002┃Debi & Marlene Algodão Doce
+Skin/Name/1065003┃Debi & Marlene Pós-Escola
 Skin/Name/1066000┃Arda
 Skin/Name/1066001┃Arda Arqueológo
 Skin/Name/1067000┃Abigail
@@ -1844,6 +1865,7 @@ Skin/Name/1071000┃Kenneth
 Skin/Name/1071001┃Kenneth Clérigo de Batalha
 Skin/Name/1072000┃Katja
 Skin/Name/1072001┃Katja Asas de Corvo
+Skin/Name/1072002┃Katja Diretora de Treinamento
 Skin/Name/1073000┃Charlotte
 Skin/Name/1073001┃Charlotte Estudande Transferida
 Skin/Name/1073002┃Charlotte Maldição Carmesim
@@ -1891,6 +1913,8 @@ Skin/OnSelectVO/1073002┃Junte-se a mim no jogo supremo perante o fim do mundo!
 Skin/OnSelectVO/1020005┃Já é minha vez?
 Skin/OnSelectVO/1064003┃Vamos voar junto até um novo mundo!
 Skin/OnSelectVO/1045004┃Vamos para a próxima cena!
+Skin/OnSelectVO/1047004┃Onde você está? Ouvi que você precisava de minha ajuda.
+Skin/OnSelectVO/1072002┃Atenção, todos! Eu estou aqui.
 Skin/Desc/1001001┃Equipada com sua clássica motosserra ensanguentada, um par de tesouras e uma faca ótima para fatiar.\n Se você ouvi-la cantarolando, corra!
 Skin/Desc/1001002┃O sangue rega e faz florescer a rosa da carnificina
 Skin/Desc/1001003┃Existe as pessoas que criam as regras... E as que quebram elas.
@@ -2130,6 +2154,12 @@ Skin/Desc/1021004┃Hmm... só por hoje em.
 Skin/Desc/1076001┃Ah, ah! Finalmente é minha vez, né?
 Skin/Desc/1045004┃Sou boa em cantar e dançar?\nBem, o que você acha?
 Skin/Desc/1069002┃Este é o chocolate mais doce do mundo! Certifique-se de comer tudo sozinho, tá bom?
+Skin/Desc/1077001┃Aqueles que buscam o caminho não devem ser aprisionados.
+Skin/Desc/1055004┃Treinamento de Hoje: Como lidar com uma emergência!
+Skin/Desc/1062003┃Achou seu alvo? Bom, agora mira e atira!
+Skin/Desc/1047004┃Esse treinamento vai ser pesado, mas você vai aguentar, não vai?
+Skin/Desc/1072002┃Pessoal, foco! Eu só vou te mostrar dessa vez!
+Skin/Desc/1008005┃O-Obrigado por apoiar minha música!
 ItemType/EMOTION/Name┃Emote
 Emotion_Name_001┃Irritado
 Emotion_Name_002┃Rir
@@ -2439,6 +2469,16 @@ Emotion_ERPASS_4121┃Garnet Louca de Amor
 Emotion_ERPASS_4122┃Rozzi Namore Comigo
 Emotion_ERPASS_4123┃Cathy Guarda de Prisão Detida
 Emotion_ERPASS_4124┃Alonso Deleite Infernal
+Emotion_ERPASS_4125┃Ódio da Laura Instrutura Tática
+Emotion_ERPASS_4126┃Saudações da Estele Especialista em Exercícios
+Emotion_ERPASS_4127┃Niah Na Rodinha
+Emotion_ERPASS_4128┃Theodore Especialista de Balística Quer Você!
+Emotion_ERPASS_4129┃Istvan Apagado
+Emotion_ERPASS_4130┃Instrutora Fiora
+Emotion_ERPASS_4131┃Willian Terras Desoladas Jogo Começou!
+Emotion_ERPASS_4132┃Barbara Pesquisadora Tela de Erro
+Emotion_ERPASS_4133┃Justyna Prefeita de Justiça Ai!
+Emotion_ERPASS_4134┃Hisui Demônio das Ruas Sério?
 Emotion_LiDailin02_NP┃Um brinde!
 Emotion_LiDailin03_NP┃Só mais um...
 Emotion_LiDailin04_NP┃Li Dailin Provocativa
@@ -2954,6 +2994,9 @@ Emotion_Season13_Reward_5033┃Cadet Ayayayaaah!
 Emotion_Season13_Reward_5034┃Temporada 4 - Imortal
 Emotion_Season14_Reward_5035┃Abigail Poker Boing!
 Emotion_Season14_Reward_5036┃Magnus Cadet Susto
+Emotion_Season15_Reward_5038┃Charlotte Maldição Carmesim Segredo
+Emotion_Season15_Reward_5039┃Cadete Hart Aterrorizada!
+Emotion_Season15_Reward_5040┃Temporada 6 - Imortal
 Event_SSR_Creator_3098┃CJiang Boa!
 Event_SSR_Creator_3099┃Cjiang AHHH
 Event_SSR_Creator_3100┃CJiang Bravo
@@ -3080,6 +3123,17 @@ Event_S14Champion_NCMB_3118┃SEASON 5 CHAMPION NCMB
 Event_S14Champion_boongwa_3119┃SEASON 5 CHAMPION BOONGWA
 Event_S14Champion_peng_3120┃SEASON 5 CHAMPION PENG
 Event_S14Champion_JJangE_3121┃SEASON 5 CHAMPION JJANGE
+Emotion_Chiara05_NP┃Chiara Sorrindo
+Emotion_Chiara06_NP┃Chiara, De Forma Alguma!
+Emotion_Chiara07_NP┃Me Perdoe pois Eu Pequei
+Emotion_Chiara08_NP┃O Ultimo Julgamento Não Está Pronto!
+Emotion_Adriana05_NP┃Olá Driana!
+Emotion_Adriana06_NP┃Hasta la vista, baby!
+Emotion_Adriana07_NP┃Adriana Aprova!
+Emotion_Adriana08_NP┃Adriana Repulsa
+Emotion_Katja01_SeasonPass┃Katja Diretora de Treinamento LOVE
+Emotion_S7_Attend_Katja_2072006┃Katja Diretora de Treinamento OLÁ!
+Emotion_S7_Attend_Laura_2047005┃Laura Instrutora Tática Corre!
 Collection/Name/11001┃Tudo pela minha filha.
 Collection/Name/11002┃Você gostou... da minha pixel art?
 Collection/Name/11003┃Eu irei trazer salvação para essas almas perdidas.
@@ -3134,10 +3188,11 @@ Collection/Name/24016┃Coleção Final de Ano ⅠⅠⅠ (2024)
 Collection/Name/24017┃Coleção Final de Ano Ⅳ (2024)
 Collection/Name/24018┃Coleção Final de Ano Ⅳ (2024)
 Collection/Name/24019┃Coleção Final de Ano Ⅵ (2024)
-Collection/Name/24020┃Livro de Missões Tokens Legião
-Collection/Name/24021┃Coleção de Tokens Legião Ⅰ
-Collection/Name/24022┃Coleção de Tokens Legião ⅠⅠ
-Collection/Name/24023┃Coleção de Tokens Legião ⅠⅠⅠ
+Collection/Name/24020┃Coleção de Tokens Legião Ⅰ
+Collection/Name/24021┃Coleção de Tokens Legião ⅠⅠ
+Collection/Name/24022┃Coleção de Tokens Legião ⅠⅠⅠ
+Collection/Name/24023┃Coleção de Skin Conselho Estudantil Ⅰ
+Collection/Name/24024┃Coleção de Skin Conselho Estudantil Ⅱ
 Shop/Desc/Emotion_Hart01_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart02_NP┃Use emotes para se comunicar em jogo.
 Shop/Desc/Emotion_Hart03_NP┃Use emotes para se comunicar em jogo.
@@ -3374,31 +3429,21 @@ EMBLEM_MARK_SHOP_102037┃Ícone de Laura
 EMBLEM_MARK_SHOP_102038┃Ícone de Nicky
 EMBLEM_MARK_SHOP_102039┃Ícone de Jenny
 EMBLEM_MARK_SHOP_102040┃Ícone de Jax
-EMBLEM_MARK_SHOP_102041┃Ícone Vanya Fada Holográfica
-EMBLEM_MARK_SHOP_102042┃Ícone Leni Demônio Doce
-EMBLEM_MARK_SHOP_102043┃Ícone Mai Estrela do Pop
-EMBLEM_MARK_SHOP_102501┃Ícone S4 All ways Icheon
-EMBLEM_MARK_SHOP_102502┃Ícone S4 Gyeonggi Inata
-EMBLEM_MARK_SHOP_102503┃Ícone S4 GJ Slasher
-EMBLEM_MARK_SHOP_102504┃Ícone S4 DH.CNJ
-EMBLEM_MARK_SHOP_102505┃Ícone S4 BNK FearX
-EMBLEM_MARK_SHOP_102506┃Ícone S4 MIRAEN SEJONG
-EMBLEM_MARK_SHOP_102507┃Ícone S4 DAEJEON CYBERS
-EMBLEM_MARK_SHOP_102508┃Ícone S4 Seongnam ROX
-EMBLEM_MARK_SHOP_102509┃Ícone S5 BNK FearX
-EMBLEM_MARK_SHOP_102510┃Ícone S5 MIRAEN SEJONG
-EMBLEM_MARK_SHOP_102511┃Ícone S5 Seongnam ROX
-EMBLEM_MARK_SHOP_102512┃Ícone S5 Gyeonggi Inata
-EMBLEM_MARK_SHOP_102513┃Ícone S5 DAEJEON CYBERS
-EMBLEM_MARK_SHOP_102514┃Ícone S5 All ways Incheon
-EMBLEM_MARK_SHOP_102515┃Ícone S5 GJ Slasher
-EMBLEM_MARK_SHOP_102516┃Ícone S5 DH.CNJ
-EMBLEM_MARK_SHOP_102517┃Ícone T6 BNK FearX
-EMBLEM_MARK_SHOP_102518┃Ícone T6 MIRAEN SEJONG
-EMBLEM_MARK_SHOP_102519┃Ícone T6 Gyeongnam Sparkle
-EMBLEM_MARK_SHOP_102520┃Ícone T6 Seongnam ROX
-EMBLEM_MARK_SHOP_102521┃Ícone T6 Gyeonggi Innate
-EMBLEM_MARK_SHOP_102522┃Ícone T6 DH.CNJ
+EMBLEM_MARK_SHOP_102042┃Ícone S4 All ways Icheon
+EMBLEM_MARK_SHOP_102043┃Ícone S4 Gyeonggi Inata
+EMBLEM_MARK_SHOP_102501┃Ícone S4 DH.CNJ
+EMBLEM_MARK_SHOP_102502┃Ícone S4 BNK FearX
+EMBLEM_MARK_SHOP_102503┃Ícone S4 MIRAEN SEJONG
+EMBLEM_MARK_SHOP_102504┃Ícone S4 DAEJEON CYBERS
+EMBLEM_MARK_SHOP_102505┃Ícone S4 Seongnam ROX
+EMBLEM_MARK_SHOP_102506┃Ícone S5 BNK FearX
+EMBLEM_MARK_SHOP_102507┃Ícone S5 MIRAEN SEJONG
+EMBLEM_MARK_SHOP_102508┃Ícone S5 Seongnam ROX
+EMBLEM_MARK_SHOP_102509┃Ícone S5 Gyeonggi Inata
+EMBLEM_MARK_SHOP_102510┃Ícone S5 DAEJEON CYBERS
+EMBLEM_MARK_SHOP_102511┃Ícone S5 All ways Incheon
+EMBLEM_MARK_SHOP_102512┃Ícone S5 GJ Slasher
+EMBLEM_MARK_SHOP_102513┃Ícone S5 DH.CNJ
 EMBLEM_MARK_SHOP_102523┃Ícone T6 All ways Incheon
 EMBLEM_MARK_SHOP_102524┃Ícone T6 DAEJEON CYBERS
 EMBLEM_MARK_SHOP_102525┃Ícone T6 GJ Slasher
@@ -3841,6 +3886,8 @@ EMBLEM_MARK_EVENT_103186┃SEASON 5 CHAMPION NCMB
 EMBLEM_MARK_EVENT_103187┃SEASON 5 CHAMPION BOONGWA
 EMBLEM_MARK_EVENT_103188┃SEASON 5 CHAMPION PENG
 EMBLEM_MARK_EVENT_103189┃SEASON 5 CHAMPION JJANGE
+EMBLEM_MARK_EVENT_103191┃Katja Diretora de Treinamento OLÁ!
+EMBLEM_MARK_EVENT_103192┃Laura Instrutora Tática Corre!
 EMBLEM_MARK_ERPASS_104001┃Gelo Cristalizado
 EMBLEM_MARK_ERPASS_104002┃Árvore de Presentes!
 EMBLEM_MARK_ERPASS_104003┃Nariz Vermelho
@@ -3932,13 +3979,18 @@ EMBLEM_MARK_ERPASS_104088┃Sissela Diabrete
 EMBLEM_MARK_ERPASS_104089┃Alonso Guardião do Inferno
 EMBLEM_MARK_ERPASS_104090┃S6 Hisui
 EMBLEM_MARK_ERPASS_104091┃S6 Justyna
+EMBLEM_MARK_ERPASS_104092┃Katja DIretora de Treinamento
+EMBLEM_MARK_ERPASS_104093┃Laura Instrutora Tática
+EMBLEM_MARK_ERPASS_104094┃Theodore Especialista em Balística
+EMBLEM_MARK_ERPASS_104095┃Estelle Especialista de Exercícios
+EMBLEM_MARK_ERPASS_104096┃S7 NiaH
+EMBLEM_MARK_ERPASS_104097┃S7 Istvan
 EMBLEM_MARK_COLLECTION_119001┃Ícone Tesouro do Shoichi
 EMBLEM_MARK_COLLECTION_119002┃Ícone Tia Pixel Art
 EMBLEM_MARK_COLLECTION_119003┃Ícone Yuki Caçador de Espirítos Saia desse corpo!
 EMBLEM_MARK_COLLECTION_119004┃Ícone A gente briga mas se ama
 EMBLEM_MARK_COLLECTION_119005┃Ícone Dia do Casamento?
 EMBLEM_MARK_COLLECTION_119006┃Ícone Vanya Fada Holográfica
-EMBLEM_MARK_COLLECTION_119007┃Ícone Autógrafo da Mai Estrela do Pop
 EMBLEM_MARK_COLLECTION_119501┃Ícone Apoiador E-Sports T4
 EMBLEM_MARK_COLLECTION_119502┃Ícone Apoiador E-Sports T5
 EMBLEM_MARK_COLLECTION_119503┃Ícone Apoiador E-Sports T6
@@ -4317,6 +4369,9 @@ EMBLEM_BG_ERPASS_204046┃Fundo Rio Golpe de Sorte
 EMBLEM_BG_ERPASS_204047┃Fundo Charlotte Maldição Carmesim
 EMBLEM_BG_ERPASS_204048┃Fundo Lenox Imperatriz do Abismo
 EMBLEM_BG_ERPASS_204049┃Fundo Sissela Diabrete
+EMBLEM_BG_ERPASS_204050┃Fundo Katja Diretora de Treinamento
+EMBLEM_BG_ERPASS_204051┃Fundo Estelle Especialista de Exercícios
+EMBLEM_BG_ERPASS_204052┃Fundo Laura Instrutora Tática
 EMBLEM_BG_COLLECTION_219001┃Fundo de Hipercápsula
 ItemType/EMBLEM_OUTLINE/Name┃Borda de Perfil
 EMBLEM_OUTLINE_FREE1┃Borda Padrão
@@ -4694,6 +4749,9 @@ EMBLEM_OUTLINE_ERPASS_304045┃Borda Rio Golpe de Sorte
 EMBLEM_OUTLINE_ERPASS_304046┃Borda Charlotte Maldição Carmesim
 EMBLEM_OUTLINE_ERPASS_304047┃Borda Lenox Imperatriz do Abismo
 EMBLEM_OUTLINE_ERPASS_304048┃Borda Sissela Diabrete
+EMBLEM_OUTLINE_ERPASS_304049┃Borda Katja Diretora de Treinamento
+EMBLEM_OUTLINE_ERPASS_304050┃Borda Estelle Especialista de Exercícios
+EMBLEM_OUTLINE_ERPASS_304051┃Borda Laura Instrutora Tática
 EMBLEM_OUTLINE_COLLECTION_319001┃Borda da Hipercápsula
 Goods/Name/1304001┃Pontos ER
 ItemType/GRAVE/Name┃Lápide
@@ -4759,6 +4817,9 @@ Goods/Name/1604056┃VIP
 Goods/Name/1604057┃Portões do Inferno
 Goods/Name/1604058┃Ceifado de Almas
 Goods/Name/1604059┃Jack O' Lantern
+Goods/Name/1604060┃Capacete no Rifle
+Goods/Name/1604061┃Levante, soldado!
+Goods/Name/1604062┃Bandeira da Ocupação
 Goods/Name/1612001┃Médico da Peste
 Goods/Name/1612002┃Curiosidade Matou o Gato
 Goods/Name/1612003┃Sobrecarga
@@ -4769,6 +4830,7 @@ Goods/Name/1612007┃Siringa da Wickeline
 Goods/Name/1612008┃Coco do Pôr do Sol
 Goods/Name/1612009┃Jogo de Dardos da Rio
 Goods/Name/1612010┃Auréola Maldição Carmesim
+Goods/Name/1612011┃Peso Morto
 ItemType/SPRAY/Name┃Spray
 ItemType/SPRAY/Desc┃Deixe sua marca no chão!
 Goods/Name/1501001┃Nada
@@ -4877,6 +4939,9 @@ Goods/Name/1504056┃Coração da Jenny
 Goods/Name/1504057┃Marca da Maldição da Charlotte
 Goods/Name/1504058┃El Campeón: Edição Endiabrada
 Goods/Name/1504059┃Wilson Demoniozinho
+Goods/Name/1504060┃Vouncher de Laura
+Goods/Name/1504061┃Estelle Desistiu
+Goods/Name/1504062┃Insignia de Katja
 Goods/Name/1503046┃Aiden Resolveu
 Goods/Name/1503047┃INathacreditável!!
 Goods/Name/1503048┃Traga a Lenox o Saque!
@@ -4948,6 +5013,7 @@ Goods/Name/1406011┃Anunciante Narrador Shin Il (Coreano)
 Goods/Name/1406021┃Anunciante Evis & Gold Blin (Coreano)
 Goods/Name/1406031┃Kim In Yeong & NongRoute (Coreano)
 Goods/Name/1406041┃ShuviSenpai & Superior (Inglês)
+Goods/Name/1406051┃Locutor Kyokuin & Kakuni (Japonês)
 Goods/Name/1404161┃Anunciante Johann (Coreano)
 Goods/Name/1404162┃Anunciante Johann (Inglês)
 Goods/Name/1404163┃Anunciante Johann (Japonês)
@@ -4966,6 +5032,12 @@ Goods/Name/1404203┃Locutor Tia (Japonês)
 Goods/Name/1404211┃Locutor Aiden (Coreano)
 Goods/Name/1404212┃Locutor Aiden (Inglês)
 Goods/Name/1404213┃Locutor Aiden (Japonês)
+Goods/Name/1404221┃Locutor Arda (Coreano)
+Goods/Name/1404222┃Locutor Arda (Inglês)
+Goods/Name/1404223┃Locutor Arda (Japonês)
+Goods/Name/1404231┃Locutor Leni (Koreano)
+Goods/Name/1404232┃Locutor Leni (Inglês)
+Goods/Name/1404233┃Locutor Leni (Japonês)
 GoodsGroup/Name/1401051┃Padrão
 GoodsGroup/Name/1401021┃Ecos da Sobrevivência
 GoodsGroup/Name/1404011┃Caster de eSports
@@ -4996,6 +5068,7 @@ GoodsGroup/Name/1406011┃Shin Il
 GoodsGroup/Name/1406021┃Evis & Gold Blin
 GoodsGroup/Name/1406031┃Kim In Yeong & NongRoute
 GoodsGroup/Name/1406041┃ShuviSenpai & Superior
+GoodsGroup/Name/1406051┃Kyokuin & Kakuni
 GroupItemAttribute/Inst┃Inst.
 GroupItemAttribute/Piano┃Piano
 GroupItemAttribute/Vocal┃Vocal.
@@ -5045,6 +5118,8 @@ Goods/Name/2504017┃Roleta de Casino
 Goods/Name/2504018┃Disco Ball
 Goods/Name/2504019┃Wilson Fantasma
 Goods/Name/2504020┃Olho de Morcego
+Goods/Name/2504021┃Homem do Exercito
+Goods/Name/2504022┃Balão da Diretora de Treinamento Katja
 ItemType/CAMERA/Name┃Skin de Câmera Telefoto
 ItemType/CAMERA/Desc┃Customize a aparência das suas Câmeras Telefoto no jogo.
 Goods/Name/2601001┃Câmera Padrâo
@@ -5101,6 +5176,7 @@ Goods/Name/2704012┃Mudança
 Goods/Name/2704013┃Pôr do Sol
 Goods/Name/2704014┃Sortudo★
 Goods/Name/2704015┃Legião
+Goods/Name/2704016┃Academia
 Goods/Name/2705001┃Tela de Saguão do Primeiro Aniversário
 Goods/Name/2705002┃Hisui & Justyna
 ItemType/KILLANNOUNCE_ICONPACK/Name┃Ícone de Anúncio de Abate
@@ -5143,6 +5219,9 @@ Goods/Name/2804034┃Pistola da Jenny
 Goods/Name/2804035┃Auréola da Maldição Escarlate
 Goods/Name/2804036┃Reverencie a Imperatriz
 Goods/Name/2804037┃Wilson Diabrete
+Goods/Name/2804038┃Mira de Katja
+Goods/Name/2804039┃Charme de Laura
+Goods/Name/2804040┃Escudo de Estelle
 ItemType/TEAMSLOT_BG/Name┃Cenário de Time
 Goods/Name/3401001┃Cenário de Time Padrão
 Goods/Name/3402001┃Ursinho de Pelúcia Festivo
@@ -5194,6 +5273,7 @@ Goods/Name/3503020┃Selo da Sorte (7)
 Goods/Name/3503021┃Carta de Feriado
 Goods/Name/3503022┃Moeda de Apoio T6 Esports
 Goods/Name/3503023┃Cartão de Tokens Legião
+Goods/Name/3503024┃Carte de Skin Conselho Estudantil
 ItemType/WILD_CARD_SKIN/Name┃[Skin] Coringa
 ItemType/WILD_CARD_ETC/Name┃Coringa
 Goods/Name/3602002┃[Skin] Coringa
@@ -5298,7 +5378,6 @@ Product/Name/VampireShoichi_CollectPack_01┃Pacote de Coleção do Shoichi Vamp
 Product/Name/GhostHunterYuki_CollectPack_01┃Pacote de Coleção do Yuki Caçador de Espirítos
 Product/Name/SparklingTwinsDebiMarlene_Pack_01┃Pacote de Coleção das Gêmeas Algodão Doce
 Product/Name/LoveSerenadeEleven_Pack_01┃Pacote Colecionável da Eleven Serenata de Amor
-Product/Name/HolographFairyVanya_CollectPack_01┃Vanya Fada Holográfica
 Product/Name/2024_Festival_Box_02┃Cesta de Pães da Emma
 Product/Name/2024_Festival_Box_03┃Sacola de Padaria do Wilson
 Product/Name/LOOTBOX_BASIC_SINGLE_01┃Caixa DATA do Centro de Pesquisa
@@ -5406,6 +5485,7 @@ Product/Name/BATTLE_PASS/2003┃Livro de Missões de A-Coin Troca
 Product/Name/BATTLE_PASS/2004┃Livro de Missões de A-Coin Pôr-do-Sol
 Product/Name/BATTLE_PASS/2005┃Livro de Missões de A-Coin Fortuna★
 Product/Name/BATTLE_PASS/2006┃Livro de Missões de A-Coin Legião
+Product/Name/BATTLE_PASS/2007┃Livro de Missão A-Coin Academia
 Product/Name/2024_Select_Voucher_Pack┃Pacote de Voucher
 Product/Name/2024_Select_Voucher_Pack_01┃Pacote de Voucher Ⅰ
 Product/Name/2024_Select_Voucher_Pack_02┃Pacote de Voucher ⅠⅠ
@@ -5436,6 +5516,7 @@ Product/Name/EVENT_NPASS_S6_Premium_Token_1006┃Livro de Tokens Premium T6
 Product/Name/EVENT_NPASS_S6_Basic_Token_1007┃Livro de Tokens Básico T6
 Product/Name/BATTLE_PASS/2100┃Livro de Missões de A-Coin da T5
 Product/Name/BATTLE_PASS/2101┃Livro de Missões Tokens Legião
+Product/Name/BATTLE_PASS/2102┃S6 Livro de Missão A-Coin
 Product/Name/S5_Select_Voucher_Pack┃Pacote de Voucher
 Product/Name/S5_Select_Voucher_Pack_01┃Pacote de Voucher Ⅰ
 Product/Name/S5_Select_Voucher_Pack_02┃Pacote de Voucher ⅠⅠ
@@ -5478,6 +5559,11 @@ Product/Name/S6_Legion_Token_Seq_Pack_06┃Pacote Ⅵ de Tokens Legião T6
 Product/Name/S6_Legion_Token_Seq_Pack_07┃Pacote Ⅶ de Tokens Legião T6
 Product/Name/S6_Legion_Token_Seq_Pack_08┃Pacote Ⅷ de Tokens Legião T6
 Product/Name/S6_Legion_Token_Seq_Pack_09┃Pacote Ⅸ de Tokens Legião T6
+Product/Name/S6_Elena_SkinBox_Pack_01┃Pack de Caixa de Skin Conselho Estudantil (Multipla)
+Product/Name/S6_Elena_SkinBox_Pack_02┃Pack de Caixa de Skin Conselho Estudantil (Única)
+Product/Name/S6_Select_Voucher_Pack_01┃Pacote de Cupom Ⅰ
+Product/Name/S6_Select_Voucher_Pack_02┃Pacote de Cupom Ⅱ
+Product/Name/S6_Select_Voucher_Pack_03┃Pacote de Cupom Ⅲ
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emotes\n\n58% do preço de cada item que você já possua será reembolsado no seu Correio.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emotes\n\n56% do preço de cada item que você já possua será reembolsado no seu Correio.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emotes\n\n58% do preço de cada item que você já possua será reembolsado no seu Correio.
@@ -5657,6 +5743,11 @@ Shop/Desc/S6_Legion_Token_Seq_Pack_06┃<b><color=#FFBB00>[Conteúdo]</color></b
 Shop/Desc/S6_Legion_Token_Seq_Pack_07┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 15 Tokens Legião\n- Boost XP (1 dia)\n\n<b><color=#F15F5F>[Notas]</color></b> \n\n*Você pode usar Tokens no menu de Troca.\n*Você não pode usar Tokens depois que eles expirarem.\n*Este item é aberto imediatamente após a compra.
 Shop/Desc/S6_Legion_Token_Seq_Pack_08┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 30 Tokens Legião\n- 10 Bolsas Diabrete\n- Boost A-Coin (1 dia)\n\n<b><color=#F15F5F>[Notas]</color></b> \n\n*Você pode usar Tokens no menu de Troca.\n*Você não pode usar Tokens depois que eles expirarem.\n*Este item é aberto imediatamente após a compra.
 Shop/Desc/S6_Legion_Token_Seq_Pack_09┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 30 Tokens Legião\n- Boost XP (1 dia)\n\n<b><color=#F15F5F>[Notas]</color></b> \n\n*Você pode usar Tokens no menu de Troca.\n*Você não pode usar Tokens depois que eles expirarem.\n*Este item é aberto imediatamente após a compra.
+Shop/Desc/S6_Elena_SkinBox_Pack_01┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 10 Caixas de Skin Conselho Estudantil\n- 10 Chaves de Caixa\n- 15 Token Legião\n- Boost A-Coin (3 Dias)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Você pode utilizar esse item na Forja.\n*Itens com Boosts são utilizados imediatamente após a compra e não podem ser reembolsados.\n
+Shop/Desc/S6_Elena_SkinBox_Pack_02┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 1 Caixa de Skin Conselho Estudantil\n- 1 Chave de Caixa\n- 1 Token Legião\n- Boost A-Coin (1 Dia)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Você pode utilizar esse item na Forja.\n*Itens com Boosts são utilizados imediatamente após a compra e não podem ser reembolsados.
+Shop/Desc/S6_Select_Voucher_Pack_01┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 1 Voucher de Personagem\n- 1 Voucher de Skin Incomum\n- 10 Tokens Legião\n- Boost XP (3 Dias)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Você pode utilizar esse item na Forja.\n*Itens com Boosts são utilizados imediatamente após a compra e não podem ser reembolsados.\n
+Shop/Desc/S6_Select_Voucher_Pack_02┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 1 Voucher de Skin Incomum\n- 1 Voucher de Skin Rara\n- 20 Tokens Legião\n- Boost ER Point (3 Dias)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Você pode utilizar esse item na Forja.\n*Itens com Boosts são utilizados imediatamente após a compra e não podem ser reembolsados.\n
+Shop/Desc/S6_Select_Voucher_Pack_03┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- 1 Voucher Special de Skin Incomum/Rara\n- 1 Voucher Design de Skin Épica\n- 50 Tokens Legião\n- Livro de Missão A-Coin S6\n- Boost ER Point (3 Dias)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Você pode utilizar esse item na Forja.\n*Itens com Boosts são utilizados imediatamente após a compra e não podem ser reembolsados.\n
 Product/Name/SEASON_PASS_S5┃Pacote Temporada 5
 Shop/Desc/SEASON_PASS_S5┃Obtenha TODO o conteúdo da 5ª temporada a um preço estelar!
 Product/Name/SEASON_PASS_S6┃Pacote Temporada 6
@@ -5672,6 +5763,7 @@ Product/Name/SEASON_PASS_S12┃Pacote da Temporada: Mudança
 Product/Name/SEASON_PASS_S13┃Pacote da Temporada. Por do Sol
 Product/Name/SEASON_PASS_S14┃Pacote da Temporada: Lucky★
 Product/Name/SEASON_PASS_S15┃Pacote da Temporada: Legião
+Product/Name/SEASON_PASS_S16┃Pack da Season: Academia
 LOOTBOX_BASIC_SINGLE_01┃Caixa DATA do Centro de Pesquisa
 Shop/Desc/LOOTBOX_BASIC_SINGLE_01┃Uma caixa contendo até 4 itens e designs diferentes.\n<color=orange>Recompensas de ranqueadas e alguns itens especiais não estão incluídos.</color>\n\nCaixas compradas podem ser abertas em Forjamento usando a Chave de DATA.
 LOOTBOX_SKIN_SINGLE_01┃Caixa DATA de Skins
@@ -5699,6 +5791,7 @@ Shop/Desc/S10_KEY_LIMITED┃Você pode usar as Chave de DATA para abrir qualquer
 Shop/Desc/Vacance Token┃Este é um Token de Férias que pode ser usado para resgatar itens adicionados na Troca do menu de Forjamento.<color=red>\nEste token tem uma data de validade. Certifique-se de verificar a data de validade, pois não estará disponível posteriormente.</color>
 Shop/Desc/Lucky Token┃Um token Fortuna★ pode ser usado para resgatar itens adicionados no menu Troca na Forja.<color=red>\nEsse token tem data de validade. Por favor verifique a data de validade, já que ele não estará disponível depos.</color>
 Shop/Desc/Legion Token┃Um token de Legião pode ser usado para resgatar itens em troca no menu de Forja.<color=red>\nEsse token tem uma data de expiração. Por favor, verifique a data de expiração, pois o mesmo não vai estar disponível depois da data.</color>
+Shop/Desc/Academy Token┃O Token Academia pode ser usado para resgatar itens adicionados na aba de Troca no menu da Forja. <color=red>\nO token tem uma data de expiração. Por favor verifique a data de expiração pois o token não vai ser possivel utilizar após essa data.</color>
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃Use essa moeda para comprar diferentes itens no Eternal Return
@@ -5752,6 +5845,7 @@ Product/Name/EP_S12_Change Token┃10 Tokens Troca
 Product/Name/EP_S13_Sunset Token┃10 Tokens Pôr-do-Sol
 Product/Name/EP_S14_Lucky Token┃10 Tokens Lucky★
 Product/Name/EP_S15_Legion Token┃10 Tokens Legião
+Product/Name/EP_S16_Academy Token┃10 Tokens Academia
 Shop/Desc/EP_TOKEN_1000┃Moeda usada para comprar itens exclusivos de moedas EP.
 Shop/Desc/EP_TOKEN_200┃Moeda usada para comprar itens exclusivos de moedas EP.
 Shop/Desc/EP_TOKEN_RANDOM_01┃Obtenha um item aleatório da lista a seguir.
@@ -6062,6 +6156,8 @@ Goods/Name/3303004┃Tokens Lucky★
 Goods/Desc/3303004┃Tokens Lucky★ podem ser obtidos através do PASSE ER - Tokens Lucky★, Pacote da Temporada e possivelmente após desfazer itens completos na Forja. Todos os tokens tem uma data de expiração e só podem ser obtidos antes dessa data. Após passar da data, os tokens expiram.
 Goods/Name/3303005┃Tokens Legião
 Goods/Desc/3303005┃Tokens Legião podem ser obtidos através do PASSE ER - Tokens Legião, Pacote da Temporada e possivelmente após desfazer itens completos na Forja. Todos os tokens tem uma data de expiração e só podem ser obtidos antes dessa data. Após passar da data, os tokens expiram.
+Goods/Name/3303006┃Tokens Academia
+Goods/Desc/3303006┃Tokens Academia podem ser obtidos através do Passe ER Academia, Pacote de Temporada, ou com uma certa probabilidade ao desmontar itens completos na Forja.\nTodos os tokens de temporada tem uma data de expiração e só são disponíveis antes dessa data. Após eles expirarem, tokens se tornam inválidos.
 Goods/Name/3303301┃Tokens Natalinos
 Goods/Desc/3303301┃Tokens Natalinos podem ser obtidos após abrir uma Caixa Data de Natal e eles expiram após o evento terminar.
 Goods/Name/3303302┃Tokens Felizes
@@ -6107,6 +6203,10 @@ Goods/Desc/3103031┃Recompensa por completar a Coleção Ⅵ de Natal (2024).
 Goods/Name/3102019┃Bolsa Dourada da Sorte 2025!
 Goods/Name/3102020┃Bolsa do Diabrete
 Goods/Desc/3102020┃Obtenha de 3 a 100 Tokens Legião & 1 Cartão de Token Legião com uma certa probabilidade.\nVocê pode checar os detalhes dos itens através da lista de itens.
+Goods/Name/3102021┃Caixa de Skin Estudante do Conselho
+Goods/Desc/3102021┃Consiga 1 aparência completa ou design, e 1 Cartão Estudante do Conselho.\nAparências já obtidas aparecerão como duplicatas.\nDetalhes do conteúdo podem ser encontrados na lista de recompensas.
+Goods/Name/3190011┃Voucher Estudante do Conselho
+Goods/Desc/3190011┃Você pode selecionar um item da lista.\nDetalhes do conteúdo podem ser encontrados na lista de recompensas.
 특정 지역에서 구매할 수 없는 상품입니다.┃Esse produto não está disponível para venda em sua região.
 Goods/Name/3┃Caixa de Personagens Aleatórios
 Goods/Desc/1┃Você pode receber 300 NP de Evento ou 1,500 A-Coin como recompensa.
@@ -6144,6 +6244,9 @@ Product/Name/S15_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S15_RARE_MATTER┃1 Fragmento de DATA Raro
 Product/Name/S15_S14TOKEN_EXCHANGE┃2 Tokens 2 Lucky★
 Product/Name/S15_A-Coin_QUEST_BOOK┃Livro de Missões Legião A-Coin
+Product/Name/S16_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S16_RARE_MATTER┃1 Fragmento de DATA Raro
+Product/Name/S16_S15TOKEN_EXCHANGE┃2 Tokens Legião
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃Livro de Missões Feriadão A-Coin
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃Livro de Missões Maid de Batalha A-Coin
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃Livro de Missões Mudança A-Coin
@@ -6155,6 +6258,7 @@ Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n-
 Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- Livro de Missões de A-Coin Pôr do Sol \n(105.000 A-Coin ao concluir)\n- 30.000 A-Coin\n\n<b><color=#F15F5F>[Notas]</color></b>\n\n*Este Livro de Missões de A-Coin é ativado imediatamente após a compra. \n*Este Livro de Missões pode ser concluído a qualquer momento. \n*Verifique seus Livros de Missões de A-Coin no menu do Livro de Missões.
 Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- Livro de Missões A-Coin Lucky★\n(105,000 A-Coin Após completar)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notas]</color></b>\n\n*Esse Livro de Missões A-Coin é imediatamente ativado após comprar.\n*Esse Livro de Missões pode ser feito a qualquer momento.\n*Verifique seus Livros de Missões já obtidos no menu de Livro de Missão.
 Shop/Desc/S15_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- Livro de Missões Legião\n(105,000 A-Coin Após completar)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notas]</color></b>\n\n*Esse Livro de Missões A-Coin é imediatamente ativado após comprar.\n*Esse Livro de Missões pode ser feito a qualquer momento.\n*Verifique seus Livros de Missões já obtidos no menu de Livro de Missão.
+Shop/Desc/S16_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Conteúdo]</color></b>\n\n- Livro de Missões de A-Coin Academia\n(105,000 A-Coin ao completar)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notas]</color></b>\n\n* Esse Livro de Missões de A-Coin é ativo imediatamente ao efetuar a compra.\n* Esse Livro de Missões pode ser completo a qualquer hora.\n* Verifique os Livros de Missões que você possuí no menu de Livros de Missão.
 Product/Name/S5_Lucky_White_LootToken_01┃3 Tokens Vermelhos
 Product/Name/S5_Lucky_White_ACoin_15┃15 A-Coin
 Product/Name/S5_Lucky_Red_Lucky_Token_01┃80 Tokens Lucky★
@@ -6540,26 +6644,25 @@ Skill/Group/Name/1011200┃Da Cabeça Aos Pés
 Skill/Group/Name/1011300┃Abotoar
 Skill/Group/Name/1011400┃Investida do Engomadinho
 Skill/Group/Name/1011500┃Golpe de Misericórdia
-Skill/Group/Desc/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color> de dano verdadeiro adicional.\nYuki recupera todas as abotoaduras quando fora de combate ou ao usar Abotoar.
+Skill/Group/Desc/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color> dano de habilidade adicional.\nYuki recupera todas as abotoaduras quando fora de combate ou ao usar Abotoar.
 Skill/Group/Desc/1011200┃O próximo ataque de Yuki causa <color=white>{20}</color> de dano de ataque básico e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
 Skill/Group/Desc/1011300┃<color=green>Passiva:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, o dano recebido é reduzido em <color=white>{2}</color>. Quando Abotoar acaba, ele recebe {4} abotoaduras.
-Skill/Group/Desc/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{20}</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
+Skill/Group/Desc/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{20}</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos tem sua velocidade de ataque reduzida em {5} por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
 Skill/Group/Desc/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{20}</color> de dano de habilidade inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a <color=white>{6}</color> da vida máxima do inimigo.
-Skill/Group/Coef/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color> de dano verdadeiro adicional.\nYuki recupera todas as abotoaduras quando fora de combate ou ao usar Abotoar.
+Skill/Group/Coef/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> dano de habilidade adicional.\nYuki recupera todas as abotoaduras quando fora de combate ou ao usar Abotoar.
 Skill/Group/Coef/1011200┃O próximo ataque de Yuki causa <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque) * (Poder de Ataque Básico)</color> de dano de ataque básico e reduz a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\n\nConsumir uma abotoadura atordoa o inimigo por {4} segundos.
-Skill/Group/Coef/1011300┃<color=green>Passivo:</color> reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, o dano recebido é reduzido em {2}. Quando Abotoar acaba, ele recebe {4} abotoaduras.
-Skill/Group/Coef/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos são desarmados, desabilitando seus ataques básicos por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
-Skill/Group/Coef/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a {6} da vida máxima do inimigo.
+Skill/Group/Coef/1011300┃<color=green>Passiva:</color> Reduz o Tempo de Recarga de Abotoar em {0} segundos cada vez que Yuki causa dano.\n\nYuki arruma sua roupa por {1} segundos e reduz o Tempo de Recarga de Investida do Engomadinho em {3}. Enquanto usa Abotoar, o dano recebido é reduzido em <color=white>{2}</color><color=#ffd775>(+{5} Poder de Ataque)</color><color=white>%</color>. Quando Abotoar acaba, ele recebe {4} abotoaduras.
+Skill/Group/Coef/1011400┃Yuki dá uma investida de {2}m na direção alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade ao primeiro inimigo atingido. Inimigos atingidos tem sua velocidade de ataque reduzida em {5} por {3} segundos. Atingir inimigos com esta habilidade reduz o tempo de recarga de Investida do Engomadinho em {4} segundos.
+Skill/Group/Coef/1011500┃Yuki desembainha sua espada e corta uma área em sua frente, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade inicial à inimigos e deixando uma marca, reduzindo a Velocidade de Movimento dos inimigos em {3} por {2} segundos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro equivalente a <color=white>{6}</color><color=#ffd775>(+{7} Poder de Ataque)</color><color=white>%</color> da vida máxima do inimigo.
 Skill/Group/ExpansionTip/1011200┃<i>O alcance do Ataque Básico é ligeiramente aumentado enquanto em uso.</i>
-Skill/Group/ExpansionTip/1011400┃<i>Não pode atravessar paredes.</i>
 CharacterState/Group/Name/1011200┃Da Cabeça Aos Pés
 CharacterState/Group/Desc/1011200┃Próximo ataque básico causa dano adicional e reduz a Velocidade de Movimento dos inimigos.
 CharacterState/Group/Name/1011210┃Redução de Velocidade de Movimento
 CharacterState/Group/Desc/1011210┃Velocidade de Movimento reduzida.
 CharacterState/Group/Name/1011310┃Redução do Dano Recebido
 CharacterState/Group/Desc/1011310┃Dano recebido foi reduzido.
-CharacterState/Group/Name/1011400┃Desarmado
-CharacterState/Group/Desc/1011400┃Não pode realizar ataques básicos.
+CharacterState/Group/Name/1011400┃Redução de Velocidade de Ataque
+CharacterState/Group/Desc/1011400┃Sua velocidade de ataque foi reduzida.
 CharacterState/Group/Name/1011500┃Marca
 CharacterState/Group/Desc/1011500┃Causa dano quando Yuki embainha sua espada.
 CharacterState/Group/Name/1011510┃Marca
@@ -7140,22 +7243,23 @@ Skill/Group/Name/1027500┃Barragem de PEM
 Skill/Group/Name/1027600┃Incursão
 Skill/Group/Name/1027700┃Dead Drop
 Skill/Group/Name/1027800┃Agente Duplo
-Skill/Group/Desc/1027100┃Alex inicia uma infiltração por {0} segundos após conseguir uma eliminação ou assistência a partir do nível {6}. Inimigos não poderão ver Alex fora de seu campo de detecção.\nEnquanto estiver infiltrado, a Velocidade de Movimento de Alex é aumentada em {3} por {2} segundos se um inimigo estiver dentro de um raio de {1} m.\n\nOs níveis de Maestria de Arma de todas as armas de Alex aumentam igualmente.\nQuando estiver equipado com uma arma de ataque corpo-a-corpo, sua defesa é aumentada em {5}.
+Skill/Group/Desc/1027100┃Armazém de Armas: É fornecido à Alex um pacote de armas após atingir o nível {7}, {8} e {9}.\n\nAlex inicia uma infiltração por {0} segundos após conseguir uma eliminação ou assistência. Inimigos não poderão ver Alex fora de seu campo de detecção.\nEnquanto estiver infiltrado, a Velocidade de Movimento de Alex é aumentada em {3} por {2} segundos se um inimigo estiver dentro de um raio de {1} m.\n\nOs níveis de Maestria de Arma de todas as armas de Alex aumentam igualmente.\nQuando estiver equipado com uma arma de ataque corpo-a-corpo, sua defesa é aumentada em {5}.
 Skill/Group/Desc/1027200┃Alex atira com sua Pistola de Gauss, causando <color=white>{20}</color> de dano de habilidade aos inimigos atingidos.\nAtingir um inimigo aumenta o Poder de Ataque de Alex em {3} por {2} segundos. Este efeito pode se acumular até {4} vezes. Se Alex possuir o máximo de acúmulos com Pistola de Gauss e com Incursão, sua Velocidade de Ataque é aumentada em {5}.
 Skill/Group/Desc/1027300┃Alex lança um sinal na área-alvo, causando <color=white>{20}</color> de dano de habilidade aos inimigos no alcance e revelando-os por {2} segundos.\nAcertar um inimigo aumenta o alcance do Ataque Básico de Alex em {4} por {3} segundos.
-Skill/Group/Desc/1027400┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {4}.\n\nAlex recua, arremessando um shuriken elétrico na direção alvejada, causando <color=white>{20}</color> de dano de habilidade aos inimigos atingidos e iniciando uma infiltração. Inimigos atingidos recebem lentidão de {3}, decaindo depois de {2} segundos .\nEnquanto estiver infiltrado, Alex pode trocar de armas uma vez por {6} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.\nA Infiltração estará disponível apenas após o nível {7}.
+Skill/Group/Desc/1027400┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {4}.\n\nAlex recua, arremessando um shuriken elétrico na direção alvejada, causando <color=white>{20}</color> de dano de habilidade aos inimigos atingidos e iniciando uma infiltração. Inimigos atingidos recebem lentidão de {3}, decaindo depois de {2} segundos .\nEnquanto estiver infiltrado, Alex pode trocar de armas uma vez por {6} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.
 Skill/Group/Desc/1027500┃Alex chama um ataque aéreo na localização alvo, causando <color=white>{20}</color> de dano de habilidade aos inimigos no alcance e <color=white>{21}</color> de dano de habilidade aos inimigos no centro do alvo. Inimigos atingidos recebem lentidão de {11} por {10} segundos.\nO míssil então emite pulsos em um total de {5} vezes, causando <color=white>{22}</color> de dano de habilidade aos inimigos dentro do alcance a cada {4} segundos, além de aplicar lentidão de {13} por {12} segundos.Inimigos no centro da área recebem <color=white>{23}</color> de dano de habilidade.
 Skill/Group/Desc/1027600┃Alex avança até seu alvo, causando <color=white>{20}</color> de dano de habilidade.\nAtingir inimigos aumenta seu Poder de Ataque em {3} por {2} segundos. Este efeito pode se acumular até {4} vezes. Se Alex possuir o máximo de acúmulos com Pistola de Gauss e com Incursão, sua Velocidade de Ataque é aumentada em {5}.
 Skill/Group/Desc/1027700┃Alex arremessa seu Dead Drop no local designado, causando <color=white>{20}</color> de dano de habilidade aos inimigos no alcance e puxando-os para o centro da área.
-Skill/Group/Desc/1027800┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {1}. Enquanto o holograma estiver ativo, a sua da passiva é multiplicada por {3}.\n\nAlex se infiltra e avança na direção alvo, deixando para trás um holograma por {0} segundos.\nO holograma provoca os inimigos próximos, forçando-os a atacá-lo por {2} segundos.\n\nDepois de usar esta habilidade, Alex pode trocar suas armas dentro de {5} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.\nA Infiltração só está disponível a partir do nível {6}.
-Skill/Group/Coef/1027100┃Alex inicia uma infiltração por {0} segundos após conseguir uma eliminação ou assistência a partir do nível {6}, permanecendo infiltrado enquanto não atacar ou realizar interações. Os inimigos não poderão ver Alex fora de seu campo de detecção.\nEnquanto estiver infiltrado, a Velocidade de Movimento de Alex é aumentada em {3} por {2} segundos se um inimigo estiver dentro de um raio de {1} m.\n\nOs níveis de Maestria de Arma de todas as armas de Alex aumentam igualmente.\nQuando estiver equipado com uma arma de ataque corpo-a-corpo, sua defesa é aumentada em {5}.
+Skill/Group/Desc/1027800┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {1}. Enquanto o holograma estiver ativo, a sua da passiva é multiplicada por {3}.\n\nAlex se infiltra e avança na direção alvo, deixando para trás um holograma por {0} segundos.\nO holograma provoca os inimigos próximos, forçando-os a atacá-lo por {2} segundos.\n\nDepois de usar esta habilidade, Alex pode trocar suas armas dentro de {5} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.
+Skill/Group/Coef/1027100┃Armazém de Armas: Alex é fornecimento um pacote de armas após atingir o nível {7}, {8} e {9}.\n\nAlex inicia uma infiltração por {0} segundos após conseguir uma eliminação ou assistência. Inimigos não poderão ver Alex fora de seu campo de detecção.\nEnquanto estiver infiltrado, a Velocidade de Movimento de Alex é aumentada em {3} por {2} segundos se um inimigo estiver dentro de um raio de {1} m.\n\nOs níveis de Maestria de Arma de todas as armas de Alex aumentam igualmente.\nQuando estiver equipado com uma arma de ataque corpo-a-corpo, sua defesa é aumentada em {5}.
 Skill/Group/Coef/1027200┃Alex atira com sua Pistola de Gauss, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos atingidos.\nAtingir um inimigo aumenta o Poder de Ataque de Alex em {3} por {2} segundos. Este efeito pode se acumular até {4} vezes. Se Alex possuir o máximo de acúmulos com Pistola de Gauss e com Incursão, sua Velocidade de Ataque é aumentada em {5}.
 Skill/Group/Coef/1027300┃Alex lança um sinal na área-alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos no alcance e revelando-os por {2} segundos.\nAcertar um inimigo aumenta o alcance do Ataque Básico de Alex em {4} por {3} segundos.
-Skill/Group/Coef/1027400┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {4}.\n\nAlex recua, arremessando um shuriken elétrico na direção alvejada, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos atingidos e iniciando uma infiltração. Inimigos atingidos recebem lentidão de {3}, decaindo depois de {2} segundos .\nEnquanto estiver infiltrado, Alex pode trocar de armas uma vez por {6} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.\nA Infiltração estará disponível apenas após o nível {7}.
+Skill/Group/Coef/1027400┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {4}.\n\nAlex recua, arremessando um shuriken elétrico na direção alvejada, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos atingidos e iniciando uma infiltração. Inimigos atingidos recebem lentidão de {3}, decaindo depois de {2} segundos .\nEnquanto estiver infiltrado, Alex pode trocar de armas uma vez por {6} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.
 Skill/Group/Coef/1027500┃Alex chama um ataque aéreo na localização alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade aos inimigos no alcance e <color=white>{2}</color><color=#ffd775>(+{3} Poder de Ataque)</color> de dano de habilidade aos inimigos no centro do alvo. Inimigos atingidos recebem lentidão de {11} por {10} segundos.\nO míssil então emite pulsos em um total de {5} vezes, causando <color=white>{6}</color><color=#ffd775>(+{7} Poder de Ataque)</color> de dano de habilidade aos inimigos dentro do alcance a cada {4} segundos, além de aplicar lentidão de {13} por {12} segundos.Inimigos no centro da área recebem <color=white>{8}</color><color=#ffd775>(+{9} Poder de Ataque)</color> de dano de habilidade.
 Skill/Group/Coef/1027600┃Alex avança até seu alvo, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano de habilidade.\nAtingir inimigos aumenta seu Poder de Ataque em {3} por {2} segundos. Este efeito pode se acumular até {4} vezes. Se Alex possuir o máximo de acúmulos com Pistola de Gauss e com Incursão, sua Velocidade de Ataque é aumentada em {5}.
 Skill/Group/Coef/1027700┃Alex arremessa seu Dead Drop no local designado, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque)</color> de dano aos inimigos no alcance e puxando-os para o centro da área.
-Skill/Group/Coef/1027800┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {1}. Enquanto o holograma estiver ativo, a Velocidade de Ataque da passiva é multiplicada em {3} vezes.\n\nAlex se infiltra e avança na direção alvo, deixando para trás um holograma por {0} segundos.\nO holograma provoca os inimigos próximos, forçando-os a atacá-lo por {2} segundos.\n\nDepois de usar esta habilidade, Alex pode trocar suas armas dentro de {5} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.\nA Infiltração só está disponível a partir do nível {6}.
+Skill/Group/Coef/1027800┃<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada em {1}. Enquanto o holograma estiver ativo, a Velocidade de Ataque da passiva é multiplicada em {3} vezes.\n\nAlex se infiltra e avança na direção alvo, deixando para trás um holograma por {0} segundos.\nO holograma provoca os inimigos próximos, forçando-os a atacá-lo por {2} segundos.\n\nDepois de usar esta habilidade, Alex pode trocar suas armas dentro de {5} segundos. Trocar de armas ou encerrar a infiltração cancela o efeito.
+Skill/Group/ExpansionTip/1027100┃Alex pode imediatamente utilizar sua arma sem recarregar após trocar para a pistola.
 Skill/Group/ExpansionTip/1027400┃<i> Não pode passar paredes. </i>
 Skill/Group/ExpansionTip/1027800┃<i> Não pode passar paredes. </i>
 CharacterState/Group/Name/1027110┃Infiltração
@@ -7186,6 +7290,14 @@ CharacterState/Group/Desc/1027420┃Silenciado por Contragolpe.
 CharacterState/Group/Desc/1027430┃Velocidade de Ataque aumentada.
 CharacterState/Group/Desc/1027500┃Desacelerado por Barragem de PEM.
 CharacterState/Group/Desc/1027810┃Velocidade de Ataque aumentada.
+Skill/Group/Evolution/Name/1027200┃Caixa de Suprimentos Tonfa
+Skill/Group/Evolution/Desc/1027200┃Selecione uma Tonfa da Caixa
+Skill/Group/Evolution/Name/1027300┃Caixa de Suprimentos Espada de Duas Mãos
+Skill/Group/Evolution/Desc/1027300┃Selecione uma Espada de Duas Mãos da Caixa
+Skill/Group/Evolution/Name/1027400┃Caixa de Suprimentosa Shuriken
+Skill/Group/Evolution/Desc/1027400┃Selecione um Shuriken da Caixa
+Skill/Group/Evolution/Name/1027500┃Caixa de Suprimentos Pistola
+Skill/Group/Evolution/Desc/1027500┃Seleciona uma Pistola da Caixa
 Skill/Group/Name/1028100┃Amante de Livros
 Skill/Group/Name/1028200┃Odisséia
 Skill/Group/Name/1028300┃O Curioso Caso
@@ -7238,14 +7350,14 @@ Skill/Group/Name/1029300┃Bola de Canhão
 Skill/Group/Name/1029400┃Duck Dive
 Skill/Group/Name/1029500┃Surfar
 Skill/Group/Desc/1029100┃Leon cria uma poça a cada {6} segundos quando ele performa um ataque básico. A Velocidade de Movimento de Leon aumenta em {0} e sua Velocidade de Ataque aumenta em {1} enquanto ele estiver em cima de suas poças.\nTubarão de Poça: Os ataques básicos de Leon causam <color=white>{20}</color> de dano verdadeiro adicional enquanto ele estiver em cima de uma de suas poças.
-Skill/Group/Desc/1029200┃Leon joga água na direção selecionada, causando <color=white>{20}</color> de dano de habilidade, além de criar poças d'água.
-Skill/Group/Desc/1029300┃Leon concede um escudo a si mesmo e a seus aliados próximos. O escudo de Leon absorve <color=white>{20}</color> de dano por {2} segundos, e dos aliados próximos absorve <color=white>{22}</color> de dano. Uma poça é criada sempre que o escudo se dissipa.
-Skill/Group/Desc/1029400┃Leon instantaneamente cria uma poça onde estiver e mergulha. Ele emerge para fora da poça selecionada, causando <color=white>{20}</color> de dano de habilidade e lançando inimigos ao ar por {2} segundos. Uma poça é criada em cada lado dele sempre que ele mergulha.
+Skill/Group/Desc/1029200┃Leon joga água na direção selecionada, causando <color=white>{20}</color> dano de habilidade, além de criar traços de água. Traços de água tem os mesmos efeitos que poças d'água.
+Skill/Group/Desc/1029300┃Leon concede um escudo a si mesmo e a seus aliados próximos. O escudo de Leon absorve <color=white>{20}</color> de dano por {2} segundos, e dos aliados próximos absorve <color=white>{22}</color> de dano.
+Skill/Group/Desc/1029400┃Leon se prepara para instantaneamente mergulhar no local alvo. Ele emerge do mergulho, causando <color=white>{20}</color> dano de habilidade aos inimigos próximos e lançando eles no ar por {2} segundos. Ele se torna inalvejável enquanto mergulha e uma poça d'água é criado quando ele termina de mergulhar.
 Skill/Group/Desc/1029500┃Leon surfa em uma onda, causando <color=white>{20}</color> de dano de habilidade aos inimigos no caminho e empurrando-os para trás até a onda se dissipar. Inimigos empurrados contra o terreno recebem <color=white>{21}</color> de dano de habilidade e são lançados ao ar por {6} segundos. Uma poça é criada até que a onda se dissipe.
 Skill/Group/Coef/1029100┃Leon cria uma poça a cada {6} segundos quando ele performa um ataque básico. A Velocidade de Movimento de Leon aumenta em {0} e sua Velocidade de Ataque aumenta em {1} enquanto ele estiver em cima de suas poças.\nTubarão de Poça: Os ataques básicos de Leon causam <color=white>{2}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano verdadeiro adicional enquanto ele estiver em cima de uma de suas poças.
-Skill/Group/Coef/1029200┃Leon joga água na direção alvejada, causando <color=white>{0}</color><color=#DDA0DD>(+{2} Amplificação de Habilidade)</color> de dano, além de criar poças d'água.
-Skill/Group/Coef/1029300┃Leon concede um escudo a si mesmo e a seus aliados próximos. O escudo de Leon absorve <color=white>{0}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de dano por {2} segundos, e dos aliados próximos absorve <color=white>{10}</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano. Uma poça é criada sempre que o escudo se dissipa.
-Skill/Group/Coef/1029400┃Leon instantaneamente cria uma poça onde estiver e mergulha. Ele emerge para fora da poça selecionada, causando <color=white>{0}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade e lançando inimigos ao ar por {2} segundos. Uma poça é criada em cada lado dele sempre que ele mergulha.
+Skill/Group/Coef/1029200┃Leon joga água na direção alvejada, causando <color=white>{20}</color><color=#DDA0DD>(+{2} Amplificação de Habilidade)</color> dano de habilidade e criando traços de água. Traços de água tem o mesmo efeito de poças d'água.
+Skill/Group/Coef/1029300┃Leon concede um escudo a si mesmo e a seus aliados próximos. O escudo de Leon absorve <color=white>{0}</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de dano por {2} segundos, e dos aliados próximos absorve <color=white>{10}</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color> de dano.
+Skill/Group/Coef/1029400┃Leon se prepara para instantaneamente mergulhar no local alvo. Ele emerge do mergulho, causando <color=white>{0}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> dano de habilidade aos inimigos próximos e lançando eles no ar por {2} segundos. Ele se torna inalvejável enquanto mergulha e uma poça d'água é criado quando ele termina de mergulhar.
 Skill/Group/Coef/1029500┃Leon surfa em uma onda, causando <color=white>{0}</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos no caminho e empurrando-os para trás até a onda se dissipar. Inimigos empurrados contra o terreno recebem <color=white>{7}</color><color=#DDA0DD>(+{9} Amplificação de Habilidade)</color> de dano de habilidade e são lançados ao ar por {6} segundos. Uma poça é criada até que a onda se dissipe.
 CharacterState/Group/Name/1029110┃Torpedo Humano
 CharacterState/Group/Desc/1029110┃Velocidade de Ataque e de Movimento aumentadas por Torpedo Humano
@@ -7488,13 +7600,13 @@ Skill/Group/Desc/1035300┃Jan varre a área à sua frente com um chute, causand
 Skill/Group/Name/1035400┃Esquiva
 Skill/Group/Desc/1035400┃Jan avança para frente e faz com que seu próximo ataque básico cause <color=white>{6}</color><color=#688A08>(+ Vida Máxima do Inimigo {7})</color> de dano extra de habilidade. Acertar Joelhada ou Roundhouse Kick após o avanço o cura em {2}~{3} por cento do dano de habilidade causado (cura máxima alcançada quando estiver com menos de 40% de Vida). Jan pode usar Esquiva enquanto usa Roundhouse Kick. \n<color=#ffffC2>Aprimoramento:</color> O tempo de recarga de <color=white>Esquiva</color> é reduzido em {4}.
 Skill/Group/Name/1035500┃O Ringue
-Skill/Group/Desc/1035500┃Jan invoca um ringue quadrado por {0} segundos, concedendo a ele {9} acúmulos de Infexível a cada segundo em que o ringue estiver ativo. Inimigos que tocarem nas cordas são Desacelerados em {4} por {3} segundos e recebem <color=white>{11}</color> de dano. Inimigos que forem Empurrados contra as cordas são Empurrados de volta ao centro do ringue. As cordas desaparecem com o contato. Ajudar a eliminar um jogador dentro do ringue garante {6} acúmulos de Inflexível e aumenta a Velocidade de Movimento de Jan em {8} por {7} segundos.
+Skill/Group/Desc/1035500┃Jan invoca um ringue quadrado por {0} segundos, concedendo a ele {9} acúmulo(s) de Infexível.\n\nInimigos que tocarem nas cordas são desacelerados em {4} por {3} segundos e sofrem <color=white>{11}</color> de dano de habilidade.\n\nInimigos empurrados contra as cordas são então lançados de volta para o centro do ringue. As cordas desaparecem ao contato.\n\nAssistências em eliminações de personagens inimigos dentro do ringue concedem {6} acúmulo(s) de Infexível e aumentam a velocidade de movimento de Jan em {8} por {7} segundos.
 Skill/Group/Coef/1035100┃Jan ganha um acúmulo de Inflexível toda vez que causar dano. Quando possuir ao menos {0} acúmulos de Inflexível, sua próxima habilidade básica será aprimorada, consumindo os acúmulos e reduzindo o Tempo de Recarga de suas habilidades básicas em {4}.
 Skill/Group/Coef/1035200┃<color=#ffffC2>Joelhada:</color> Jan ataca com o joelho, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color><color=#688A08>(+{11} da Vida Máxima do Inimigo)</color> de dano de habilidade aos inimigos próximos e reduzindo sua velocidade em {3} por {2} segundos. Reative para usar Joelhada em Salto.  \n\n<color=white>Aprimoramento:</color> Reduz a defesa do inimigo em {5} por {4} segundos.  \n\n<color=#ffffC2>Joelhada em Salto:</color> Jan ataca com o joelho, causando <color=white>{7}</color><color=#ffd775>(+{8} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{9} Amplificação de Habilidade)</color><color=#688A08>(+{12} da Vida Máxima do Inimigo)</color> de dano de habilidade e lançando os inimigos ao ar por {10} segundos.  \n\n<color=white>Aprimoramento:</color> Acertar um inimigo reseta o tempo de recarga de Esquiva.
 Skill/Group/Coef/1035210┃<color=#ffffC2>Joelhada:</color> Jan ataca com o joelho, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color><color=#688A08>(+{11} da Vida Máxima do Inimigo)</color> de dano de habilidade aos inimigos próximos e reduzindo sua velocidade em {3} por {2} segundos. Reative para usar Joelhada em Salto.  \n\n<color=white>Aprimoramento:</color> Reduz a defesa do inimigo em {5} por {4} segundos.  \n\n<color=#ffffC2>Joelhada em Salto:</color> Jan ataca com o joelho, causando <color=white>{7}</color><color=#ffd775>(+{8} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{9} Amplificação de Habilidade)</color><color=#688A08>(+{12} da Vida Máxima do Inimigo)</color> de dano de habilidade e lançando os inimigos ao ar por {10} segundos.  \n\n<color=white>Aprimoramento:</color> Acertar um inimigo reseta o tempo de recarga de Esquiva.
 Skill/Group/Coef/1035300┃Jan varre a área à sua frente com um chute, causando <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{6} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos próximos. Inimigos na parte externa do cone são empurrados para trás, e inimigos que são empurrados contra o terreno ficam atordoados por {5} segundos. \n<color=#ffffC2>Aprimoramento:</color> Causa <color=white>{2}</color><color=#ffd775>(+{3} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{7} Amplificação de Habilidade)</color> de dano de habilidade e empurra todos os inimigos na área. Inimigos empurrados contra o terreno ficam atordoados por {4} segundos.
 Skill/Group/Coef/1035400┃Jan avança para frente e faz com que seu próximo ataque básico cause <color=white>{0}</color><color=#ffd775>(+{1} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color><color=#688A08>(+{6} da Vida Máxima do Inimigo)</color> de dano extra de habilidade. Acertar Joelhada ou Roundhouse Kick após o avanço o cura em {2}~{3} por cento do dano de habilidade causado (cura máxima alcançada quando estiver com menos de 40% de Vida). Jan pode usar Esquiva enquanto usa Roundhouse Kick. \n<color=#ffffC2>Aprimoramento:</color> O tempo de recarga de <color=white>Esquiva</color> é reduzido em {4}.
-Skill/Group/Coef/1035500┃Jan invoca um ringue quadrado por {0} segundos, concedendo a ele {9} acúmulos de Infexível a cada segundo em que o ringue estiver ativo. Inimigos que tocarem nas cordas são Desacelerados em {4} por {3} segundos e recebem <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> de dano. Inimigos que forem Empurrados contra as cordas são Empurrados de volta ao centro do ringue. As cordas desaparecem com o contato. Ajudar a eliminar um jogador dentro do ringue garante {6} acúmulos de Inflexível e aumenta a Velocidade de Movimento de Jan em {8} por {7} segundos.
+Skill/Group/Coef/1035500┃Jan invoca um ringue quadrado por {0} segundos, concedendo a ele {9} acúmulo(s) de Infexível.\n\nInimigos que tocarem nas cordas são desacelerados em {4} por {3} segundos e sofrem <color=white>{1}</color><color=#ffd775>(+{2} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{10} Amplificação de Habilidade)</color> de dano de habilidade.\n\nInimigos empurrados contra as cordas são então lançados de volta para o centro do ringue. As cordas desaparecem ao contato.\n\nAssistências em eliminações de personagens inimigos dentro do ringue concedem {6} acúmulo(s) de Infexível e aumentam a velocidade de movimento de Jan em {8} por {7} segundos.
 Skill/Group/ExpansionTip/1035100┃<i>Inflexível não acúmula por dano de item, armadura, e dano de habilidade de Tonfa.</i>
 Skill/Group/ExpansionTip/1035200┃<i> Se uma Joelhada aprimorada for usada, a próxima Joelhada em Salto também é aprimorada.\nNão pode passar paredes.</i> 
 Skill/Group/ExpansionTip/1035210┃<i> Se uma Joelhada aprimorada for usada, a próxima Joelhada em Salto também é aprimorada.\nNão pode passar paredes.</i> 
@@ -9700,8 +9812,8 @@ Skill/Group/ExpansionTip/3009000┃<i>Habilidade sobe de Nível na Maestria de A
 Skill/Group/Desc/3010000┃Ao atingir um inimigo com um ataque básico, você ganha {0} acúmulos de Superaquecimento para cada tiro. (Máximo de {1} acúmulos)\nSe você não usar um ataque básico por {6} segundos, você perde {3} acúmulos a cada {2} segundos. \n\nAtivar Sobrecarga instataneamente recarrega sua munição e te coloca em estado de Sobrecarga por {4} segundos. (Máx {8} segundos) \nDurante esse período, o dano de ataque básico adicional é aumentado em {7} (Máx {9}) e a velocidade de ataque é aumentada em {5}. O limite de velocidade de ataque é ignorado durante esse tempo. \nDano de ataque básico adicional e duração de Sobrecarga são aumentados baseados no número de acúmulos de Sobrecarga.
 Skill/Group/Coef/3010000┃Ao atingir um inimigo com um ataque básico, você ganha {0} acúmulos de Superaquecimento para cada tiro. (Máximo de {1} acúmulos)\nSe você não usar um ataque básico por {6} segundos, você perde {3} acúmulos a cada {2} segundos. \n\nAtivar Sobrecarga instataneamente recarrega sua munição e te coloca em estado de Sobrecarga por {4} segundos. (Máx {8} segundos) \nDurante esse período, o dano de ataque básico adicional é aumentado em {7} (Máx {9}) e a velocidade de ataque é aumentada em {5}. O limite de velocidade de ataque é ignorado durante esse tempo. \nDano de ataque básico adicional e duração de Sobrecarga são aumentados baseados no número de acúmulos de Sobrecarga.
 Skill/Group/ExpansionTip/3010000┃<i>Habilidade sobe de Nível na Maestria de Arma <color=white>Nv5, Nv10, e Nv15</color></i>
-Skill/Group/Desc/3011000┃Ativa <color=white>Vantagem Balística</color> na direção selecionada.\nQuando <color=white>Vantagem Balística</color> está ativa, seu campo de visão é aumentado em {0}, mas seu ângulo de visão é diminuído.\nVantagem Balística permite que você realize um <color=white>Tiro Incapacitante</color> e <color=white>Caça-Cabeças</color>.\n\n<color=white>Tiro Incapacitante</color>\nGarante {1} de visão, causa <color=white>{2}</color> de Dano de habilidade e garante visão do alvo por {3} segundos. Inimigos atingidos recebem lentidão em {7} por {6} segundos.\n\n<color=white>Caça-Cabeças</color>\nGarante {4} de visão e causa <color=white>{5}</color> de Dano de habilidade ao alvo atingido. <color=white>Caça-Cabeças</color> causa mais dano com base na Vida Perdida do alvo.
-Skill/Group/Coef/3011000┃Ativa <color=white>Vantagem Balística</color> na direção selecionada.\nQuando <color=white>Vantagem Balística</color> está ativa, seu campo de visão é aumentado em {0}, mas seu ângulo de visão é diminuído.\nVantagem Balística permite que você realize um <color=white>Tiro Incapacitante</color> e <color=white>Caça-Cabeças</color>.\n\n<color=white>Tiro Incapacitante</color>\nGarante {1} de visão, causa <color=white>{10}</color><color=#ffd775>(+{2} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de Dano de habilidade e garante visão do alvo por {3} segundos. Inimigos atingidos recebem lentidão em {7} por {6} segundos.\n\n<color=white>Caça-Cabeças</color>\nGarante {4} de visão e causa <color=white>{11}</color><color=#ffd775>(+{5} Poder de Ataque Adicional)</color><color=#DDA0DD>(+{9} Amplificação de Habilidade)</color> de Dano de habilidade ao alvo atingido. <color=white>Caça-Cabeças</color> causa mais dano com base na Vida Perdida do alvo.
+Skill/Group/Desc/3011000┃Ative <color=white>Vantagem Balística</color> por {20} segundos na direção alvo.\nUse <color=white>Tiro Incapacitante</color> e <color=white>Caça-Cabeças</color> dentro do seu alcance de visão. Você pode disparar {8} balas, sendo a última aplicada como <color=white>Caça-Cabeças</color>.\n\n<color=white>Tiro Incapacitante</color>\nConcede {1} de visão, causa <color=white>{2}</color> de dano de habilidade e revela inimigos atingidos por {3} segundos. Inimigos atingidos são desacelerados em {7} por {6} segundos.\n\n<color=white>Caça-Cabeças</color>\nConcede {4} de visão e causa <color=white>{5}</color> de dano de habilidade aos inimigos atingidos. <color=white>Caça-Cabeças</color> causa mais dano com base na Vida perdida do alvo.
+Skill/Group/Coef/3011000┃Ative <color=white>Vantagem Balística</color> por {20} segundos na direção alvo.\nUse <color=white>Tiro Incapacitante</color> e <color=white>Caça-Cabeças</color> dentro do seu alcance de visão. Você pode disparar {8} balas, sendo a última aplicada como <color=white>Caça-Cabeças</color>.\n\n<color=white>Tiro Incapacitante</color>\nConcede {1} de visão, causa <color=white>{10}</color><color=#ffd775>(+{2} Poder de Ataque Extra)</color><color=#DDA0DD>(+{8} Amplificação de Habilidade)</color> de dano de habilidade e revela inimigos atingidos por {3} segundos. Inimigos atingidos são desacelerados em {7} por {6} segundos.\n\n<color=white>Caça-Cabeças</color>\nConcede {4} de visão e causa <color=white>{11}</color><color=#ffd775>(+{5} Poder de Ataque Extra)</color><color=#DDA0DD>(+{9} Amplificação de Habilidade)</color> de dano de habilidade aos inimigos atingidos. <color=white>Caça-Cabeças</color> causa mais dano com base na Vida perdida do alvo.
 Skill/Group/ExpansionTip/3011000┃<i>Dano Máximo de Vantagem Balística: {0}\nVantagem Balística é desativada se você se mover ou for atingido por um efeito de controle de grupo.\n\nGanha pontos de habilidade na Maestria de Arma Nv7 e Nv14</i>
 Skill/Group/Desc/3001000┃Soca o seu alvo, causando <color=white>{6}</color> de dano de ataque básico e um adicional de {3} de dano final e {4} de dano verdadeiro. Dano causado com Gancho não pode causar um Acerto Crítico.
 Skill/Group/Coef/3001000┃Soca o seu alvo, causando <color=#ffd775>{2} Poder de Ataque Adicional * (Amplificação de Ataque Básico)</color><color=#DDA0DD>(+{5} Amplificação de Habilidade)</color> de dano de ataque básico e um adicional de {3} de dano final e {4} de dano verdadeiro. Dano causado com Gancho não pode causar um Acerto Crítico.
@@ -9966,10 +10078,10 @@ Skill/LobbyDesc/1010200┃Li Dailin avança para a frente, causando dano aos ini
 Skill/LobbyDesc/1010300┃Li Dailin toma um gole, ganhando Força Líquida, e aumentando sua CAS. Enquanto estiver bebendo, ela desvia de ataques básicos e o dano de habilidade recebido é reduzido.\n\n\n<color=white>Força Líquida:</color> O dano causado a um inimigo atingido pelo seu próximo ataque básico e o dano de Alcoolizada são aumentados dependendo do CAS dela.
 Skill/LobbyDesc/1010400┃Li Dailin cospe licor barato em um cone na sua frente, aplicando lentidão a inimigos atingidos.\n\n<color=yellow>Bêbada:</color> Consome CAS para reduzir gravemente a velocidade de movimento dos inimigos atingidos.
 Skill/LobbyDesc/1010500┃Li Dailin se lança para frente, imune a controle de grupo, suprimindo o primeiro inimigo atingido e seguindo com chutes consecutivos. \n\n<color=yellow>Bêbada:</color> Consome toda CAS quando ativado. O dano é aumentado dependendo da quantidade de CAS consumida.
-Skill/LobbyDesc/1011100┃Yuki acumula abotoaduras como recurso. Ao causar dano à um inimigo, ele consome uma de suas abotoaduras, causando dano verdadeiro adicional.\nYuki recupera todas as suas abotoaduras quando estiver fora de combate.\n\nAtivar Abotoar recupera todas as suas abotoaduras.
+Skill/LobbyDesc/1011100┃Yuki armazena abotoaduras como recurso. Ao causar dano a um inimigo, ele consome uma abotoadura armazenada, causando dano adicional de habilidade.\n\nYuki recupera completamente suas abotoaduras ao sair de combate.\n\n\nAtivar Abotoar recarrega todas as suas abotoaduras.
 Skill/LobbyDesc/1011200┃O próximo ataque básico de Yuki causa dano adicional e reduz a VdM do inimigo.\nConsumir uma abotoadura atordoa o inimigo.
-Skill/LobbyDesc/1011300┃<color=green>Passivo:</color> reduz o TdR de Abotoar cada vez que Yuki causa dano.\n\nYuki arruma sua roupa e reduz o TdR de Investida do Engomadinho. Enquanto usa Abotoar, sua defesa é aumentada. Quando Abotoar é completo, ele ganha abotoaduras.
-Skill/LobbyDesc/1011400┃Yuki dá uma investida na direção alvo, causando dano ao primeiro inimigo atingido. O inimigo é desarmado, desabilitando seus ataques normais por um certo tempo. Atingir inimigos com Investida do Engomadinho reduz tempo de recarga desta habilidade.
+Skill/LobbyDesc/1011300┃<color=green>Passivo:</color> reduz o tempo de recarga de Abotoar sempre que Yuki causa dano.\n\nYuki ajusta seu traje e reduz o tempo de recarga de Investida do Engomadinho. Enquanto usa Abotoar, o dano recebido é reduzido. Quando Abotoar é concluído, ele ganha abotoaduras.
+Skill/LobbyDesc/1011400┃Yuki avança na direção alvo, causando dano ao primeiro inimigo atingido.\nAcertar um inimigo reduz sua velocidade de ataque e diminui o tempo de recarga de Investida do Engomadinho.
 Skill/LobbyDesc/1011500┃Yuki desembainha sua espada e corta uma área à sua frente, causando dano inicial à inimigos e deixando uma marca, também reduzindo a VdM dos inimigos.\nA marca explode depois que Yuki embainha sua espada, causando dano verdadeiro igual à uma porcentagem da vida máxima do alvo.
 Skill/LobbyDesc/1012100┃Quando Hyejin acerta um inimigo 3 vezes com uma habilidade, Três Calamidades é ativado, amedrontando-os e causando dano de habilidade adicional.\n\nInimigos amedrontados não podem receber Três Calamidades novamente por um certo tempo.
 Skill/LobbyDesc/1012200┃Hyejin conjura um Talismã do Desespero na direção alvo, causando dano aos inimigos atingidos.\n\nEla pode ter 2 cargas do Talismã do Desespero.
@@ -10011,7 +10123,7 @@ Skill/LobbyDesc/1018200┃Shoichi lança sua lâmina na direção selecionada, c
 Skill/LobbyDesc/1018300┃Shoichi avança para um inimigo selecionado ou adaga, causando dano de habilidade a todos os inimigos em seu caminho.\nSe ele pegar uma adaga, o tempo de recarga de Saldo Final é zerado.
 Skill/LobbyDesc/1018400┃Shoichi dá um passo para trás e arremessa uma adaga para frente causando dano de habilidade aos inimigos atingidos e reduzindo sua velocidade de movimento. Inimigos atingidos são marcados com Negócio Arriscado e uma adaga cai atrás do inimigo.\nSe inimigos marcados forem atingidos, o dano recebido é aumentado. Toda vez que um inimigo marcado com Negócio Arriscado é atingido, o tempo de recarga é reduzido. Se eles forem mortos, o tempo de recarga é reduzido ainda mais.
 Skill/LobbyDesc/1018500┃Shoichi gira com sua maleta mortal, causando dano de habilidade a inimigos ao seu redor, reduzindo sua velocidade de movimento e jogando 4 adagas no chão em um quadrado.\nAdagas atravessam inimigos, causando dano de habilidade.
-Skill/LobbyDesc/1019100┃A cada alguns segundos, o próximo ataque básico de Emma recebe velocidade de ataque adicional e causa dano extra igual a uma parcela de sua Energia, além de conceder um escudo em baseado em sua Energia máxima.
+Skill/LobbyDesc/1019100┃A cada alguns segundos, o próximo ataque básico de Emma é aprimorado, causando dano de habilidade adicional e ganhando um escudo após atingir.
 Skill/LobbyDesc/1019200┃Emma joga sua carta na direção-alvo, causando dano ao primeiro inimigo atingido e revelando sua pomba escondida. A pomba fica invisível após alguns segundos.\nSe sua pomba está presente quando ela jogar a carta, a pomba se transformará magicamente em uma carta e voará na direção alvejada.\n\nAtingir um inimigo com 1 carta reduz o tempo de recarga de Soltar Pomba.\nInimigos atingidos por ambas as cartas recebem dano extra e têm sua velocidade de movimento reduzida.
 Skill/LobbyDesc/1019300┃Emma lança seu chapéu na área-alvo. Após algum tempo, ele explode, causando dano aos inimigos na área.\nA cartola desaparece após alguns segundos.\nAtingir um inimigo com Cartola Mágica reduz seu tempo de recarga.
 Skill/LobbyDesc/1019400┃Passiva: Toda vez que Emma consome Energia, ela recupera Vida igual a uma proporção da Energia consumida.\n\nEmma lança uma magia no inimigo alvo, transformando-o em um coelho e causando dano de habilidade.\nInimigos transformados em coelhos são enraizados e recebem lentidão.\nEsta habilidade não pode ser utilizada em inimigos derrubados.
@@ -10041,15 +10153,15 @@ Skill/LobbyDesc/1025200┃Bernice dispara um projétil expandido, causando dano 
 Skill/LobbyDesc/1025300┃Bernice posiciona uma armadilha no chão por alguns segundos, causando dano a inimigos que pisarem nela e enraizando-os.\nEle pode ter múltiplas cargas de Armadilha para Pés para usar e pode posicionar várias delas de acordo com o nivel da habilidade.
 Skill/LobbyDesc/1025400┃<color=green>Passive</color>: Bernice marca inimigos que pisarem em Armadilha para Pés, obtendo visão deles e um bônus em sua velocidade de movimento quando se mover em direção a alvos marcados.\nOs ataques básicos de Bernice em inimigos marcados reduzem o Tempo de Recarga de Tiro na Perna e de Bola Explosiva.\n\nAtiva: O falcão de Bernice voa para bem acima dele, aumentando o campo de visão de Bernice por certo tempo. O falcão marca inimigos próximos por alguns segundos.
 Skill/LobbyDesc/1025500┃Bernice dispara uma bola explosiva na direção alvo, causando dano ao primeiro inimigo atingido e enraizando-o.\nApós alguns segundos, a bola explode, causando dano de habilidade ao inimigo enraizado e se espalhando para o adversário mais próximo.
-Skill/LobbyDesc/1026100┃<color=green>Passiva: Barbara, sendo uma engenheira inteligente, reduz o tempo de criação de seus equipamentos.\n\nSua velocidade de ataque básico aumenta periodicamente e seu próximo ataque básico causa dano adicional de habilidade.
+Skill/LobbyDesc/1026100┃<color=green>Passiva: Barbara, sendo uma engenheira inteligente, reduz o tempo de criação de seus equipamentos.\n\nSeus ataques básicos são aprimorados periodicamente, causando dano de habilidade adicional e ganhando um escudo após atingir. Seus ataques básicos aprimorados aumentam sua velocidade de ataque,
 Skill/LobbyDesc/1026200┃Barbara instala uma Sentinela no local alvo. A sentinela permanece no local por um tempo definido. (Máximo de Sentinelas: 2)\n\nQuando seu <color=white>Laser de Elétrons Livres</color>, <color=white>Explosão Magnética</color> atigem um inimigo ou a cada 4th ataque de sua Sentinela ataca, seu canhão laser atira e carrega ate 3 cargas.\n\nSempre que uma sentinela causar dano, o tempo de recarga de <color=white>Laser de Elétrons Livres</color> é reduzido.
 Skill/LobbyDesc/1026300┃Barbara utiliza seu poderoso Laser de Elétrons Livres, causando dano de habilidade nos inimigos em linha reta. Atingir inimigos fornece Barbara um aumento temporario de velocidade que decai lentamente.
 Skill/LobbyDesc/1026400┃Barbara cria uma Explosão Magnética, causando dano de habilidade. Inimigos atingidos dentro a área são atordoados.
 Skill/LobbyDesc/1026500┃Os ataques básicos são aprimorados. Re-utilizer essa habilidade cancela o aprimoramente e só pode ser usado novamente após 3 segundos.\n\n\n<color=white>Melhoria - Sentinela BT MK III:</color> Barbara instala uma Sentinela aprimorada. A Sentinela aprimorada permanece no local por alguns segundos. Sem limites de instalação.\nA Sentinela aprimorada aplica um efeito de aprimoramento nas Sentinelas, aumentando a velocidade de ataque e ativando o canhão laser a cada 3rd ataque básico.\n\n\n<color=white>Ultralaser de Elétrons Livres:</color> Barbara utiliza Ultralaser de Elétrons Livres com toda sua força, causando dano de habilidade e destruindo todas as cameras e armadilhas no caminho. Inimigos atingidos continuam recebendo ano.\n\n\n<color=white>Explosão de Fótons:</color> Barbara cria uma Explosão Magnética Aprimorada, causando dano de habilidade. Inimigos atingidos dentro da área são atordoados. Após a explosão, uma área magnética aparece, causando dano consecutivo e aplicando lentidão.
-Skill/LobbyDesc/1027100┃Alex se infiltra após conseguir um abate ou assistência a partir do nível 6. Inimigos não podem ver Alex enquanto estiverem fora do campo de detecção.\nEnquanto estiver infiltrado, Alex tem sua velocidade de movimento aumentada caso um inimigo esteja dentro de certo alcance.\n\nO nível de sua maestria de arma aumenta igualmente para todas as armas.\nQuando estiver equipado com uma arma de combate corpo-a-corpo, a Defesa de Alex é aumentada.
+Skill/LobbyDesc/1027100┃Armazém de Armas: É fornecido à Alex um pacote de armas após atingir certo nível.\n\nAlex inicia uma infiltração após conseguir uma eliminação ou assistência. Inimigos não podem ver Alex enquanto estiverem fora do campo de detecção.\nEnquanto estiver infiltrado, Alex tem sua velocidade de movimento aumentada caso um inimigo esteja dentro de certo alcance.\n\nO nível de sua maestria de arma aumenta igualmente para todas as armas.\nQuando estiver equipado com uma arma de combate corpo-a-corpo, a Defesa de Alex é aumentada.
 Skill/LobbyDesc/1027200┃<color=#ffd775>Arma de longo alcance:</color>\nAlex atira com sua pistola de Gauss, causando dano aos inimigos atingidos.\nSe esta habilidade atingir um inimigo, o Poder de Ataque de Alex é aumentado por algum tempo. Este efeito pode ser acumulado tanto com Incursão quanto com Pistola de Gauss. Com o máximo de acúmulos, a Velocidade de Ataque de Alex é aumentada.\n\n<color=#ffd775>Arma corpo-a-corpo:</color>\nAlex avança até seu alvo, causando dano.\nAtingir um inimigo aumenta o Poder de Ataque de Alex por um momento. Este efeito pode ser acumulado tanto com Incursão quanto com Pistola de Gauss. Com o máximo de acúmulos, a Velocidade de Ataque de Alex é aumentada.
 Skill/LobbyDesc/1027300┃<color=#ffd775>Arma de longo alcance:</color>\nAlex lança um sinal na área-alvo, causando dano aos inimigos dentro do alcance e garantindo visão por um momento.\nAtingir um inimigo aumenta o alcance do ataque básico de Alex por alguns segundos.\n\n<color=#ffd775>Arma corpo-a-corpo:</color>\nAlex arremessa seu Dead Drop no local designado, causando dano aos inimigos na área e puxando-os para o centro.
-Skill/LobbyDesc/1027400┃<color=#ffd775>Arma de longo alcance</color>\n<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada.\nAlex arremessa um shuriken elétrico na direção designada, causando dano aos inimigos atingidos enquanto salta para trás, infiltrando-se. Os inimigos atingidos pelo shuriken recebem lentidão que decai rapidamente.\nPermanecer infiltrado após usar esta habilidade permite que Alex troque de arma uma vez. Desabilitar a infiltração ou mudar de arma cancela este efeito.\nA infiltração só estará disponível a partir do nível 6.\n\n<color=#ffd775>Arma corpo-a-corpo</color>\n<color=green>Passiva</color>: A Chance de Acerto Crítico de Alex é aumentada.\nEnquanto o holograma durar, esta Chance de Acerto Crítico bônus é multiplicada.\nAlex avança na direção alvo, infiltrando-se e deixando para trás um holograma.\nO holograma provoca inimigos próximos, forçando-os a atacá-lo.\nApós usar esta habilidade e permanecer infiltrado, Alex pode trocar de arma. Quebrar a infiltração ou trocar de arma cancela este efeito.\nA infiltração só está disponível a partir do nível 6.
+Skill/LobbyDesc/1027400┃<color=#ffd775>Arma de longo alcance</color>\n<color=green>Passiva</color>: A Velocidade de Ataque de Alex é aumentada.\nAlex arremessa um shuriken elétrico na direção designada, causando dano aos inimigos atingidos enquanto salta para trás, infiltrando-se. Os inimigos atingidos pelo shuriken recebem lentidão que decai rapidamente.\nPermanecer infiltrado após usar esta habilidade permite que Alex troque de arma uma vez. Desabilitar a infiltração ou mudar de arma cancela este efeito.\n\n<color=#ffd775>Arma corpo-a-corpo</color>\n<color=green>Passiva</color>: A Chance de Acerto Crítico de Alex é aumentada.\nEnquanto o holograma durar, esta Chance de Acerto Crítico bônus é multiplicada.\nAlex avança na direção alvo, infiltrando-se e deixando para trás um holograma.\nO holograma provoca inimigos próximos, forçando-os a atacá-lo.\nApós usar esta habilidade e permanecer infiltrado, Alex pode trocar de arma. Quebrar a infiltração ou trocar de arma cancela este efeito.
 Skill/LobbyDesc/1027500┃Alex convoca um ataque aéreo no local alvejado, fazendo com que um míssil caia no local, dano aos inimigos na área e ainda mais dano àqueles que estiverem no centro. Inimigos atingidos recebem lentidão.\nO míssil emite pulsos várias vezes, aplicando lentidão aos inimigos e causando dano, sendo que inimigos no centro da área recebem dano maior.
 Skill/LobbyDesc/1027600┃Alex avança até seu alvo, causando dano.\nAtingir um inimigo aumenta o Poder de Ataque de Alex por um momento. Este efeito pode ser acumulado tanto com Incursão quanto com Pistola de Gauss. Com o máximo de acúmulos, a Velocidade de Ataque de Alex é aumentada.
 Skill/LobbyDesc/1027700┃Alex arremessa seu Dead Drop no local designado, causando dano aos inimigos na área e puxando-os para o centro.
@@ -10060,9 +10172,9 @@ Skill/LobbyDesc/1028300┃Em Aliado: Sua protege seu alvo de danos com um escudo
 Skill/LobbyDesc/1028400┃Sua conjura uma lança e avança, causando dano de habilidade aos inimigos atingidos e retardando-os por um momento.\nInimigos que estiverem atordoados ou que possuírem um marca-página recebem mais dano de habilidade e são lançados ao ar.\nAtingir inimigos reduz o Tempo de Recarga de Don Quixote.\nSua é imune a efeitos de controle de grupo ao longo da duração desta habilidade.
 Skill/LobbyDesc/1028500┃Sua memoriza a última habilidade usada, podendo reutilizá-la.\n\n<color=yellow>Odisséia</color>: Inimigos atingidos recebem dano e uma marca que fica preso a eles.\nConjurar um novo marca-página consome o anterior, causando dano de habilidade.\nInimigos no centro da colisão dos livros são atordoados por um instante.\n<color=yellow>O Curioso Caso</color>: Em Aliado: Sua envolve o alvo em um escudo, protegendo-o de dano e de efeitos de controle de grupo.\nEm Inimigo: causa dano de habilidade e cega inimigos por um instante.\n<color=yellow>Don Quixote</color>: Inimigos atingidos recebem dano de habilidade e são retardados.\nInimigos atordoados ou que estiverem com uma marca recebem mais dano de habilidade e são lançados ao ar.\nSua é imune a efeitos de controle de grupo ao longo da duração desta habilidade.
 Skill/LobbyDesc/1029100┃Leon cria uma poça sempre que ele performa um ataque básico. A velocidade de movimento e a velocidade de ataque de Leon são aumentadas enquanto ele estiver em cima de suas poças.\nTubarão de Poça: Os ataques básicos de Leon causam dano de habilidade adicional quando ela está em cima de suas poças.
-Skill/LobbyDesc/1029200┃Leon joga água na direção alvo, causando dano de habilidade e criando várias poças d'água.
-Skill/LobbyDesc/1029300┃Leon envolve a si mesmo e ao seus aliados próximos com um escudo. Uma poça é criada quando o escudo se dissipa.
-Skill/LobbyDesc/1029400┃Leon instantaneamente cria uma poça onde estiver e mergulha. Ele então cria uma nova poça e emerge, causando dano habilidade e lançando inimigos ao ar. Leon fica inalvejável enquanto mergulha e uma poça é criada de cada lado dele sempre que ele mergulha.
+Skill/LobbyDesc/1029200┃Leon joga água na direção alvo, causando dano de habilidade e criando vários traços de água, traços de água tem o mesmo efeito que poças d'água.
+Skill/LobbyDesc/1029300┃Leon envolve a si mesmo e ao seus aliados próximos com um escudo.
+Skill/LobbyDesc/1029400┃Leon se prepara para cria mergulha no local alvo. Ele emerge do seu mergulho, causando dano de habilidade aos inimigos próximos e lançados eles para o ar. Ele se torna inalvejável enquanto mergulha e uma poça é criado após ele mergulhar.
 Skill/LobbyDesc/1029500┃Leon surfa uma onda, causando dano aos inimigos que estejam pelo caminho e empurrando-os para trás até a onda se dissipar. Inimigos empurrados contra o terreno recebem dano de habilidade e são lançados ao ar.
 Skill/LobbyDesc/1030100┃Eleven pode preparar um Combo #11 ao combinar um Coca e Batatas Fritas.\n\nAo atingir um inimigos com habilidades básicas, Eleven larga um lanche no chão. Pegar um lanche recupera sua Vida. Inimigos podem pisar nesses lanches para destruí-los.
 Skill/LobbyDesc/1030200┃Eleven bate no chão com seu hambúrger gigantesco, causando dano e lentidão. Canalizar a habilidade causa dano extra e reduz ainda mais a velocidade de movimento de inimigos.
@@ -10093,7 +10205,7 @@ Skill/LobbyDesc/1035100┃Jan recebe um acúmulo de Inflexível toda vez que cau
 Skill/LobbyDesc/1035200┃Jan ataca com uma joelhada, causando dano e aplicando lentidão aos inimigos na áera. Reative para usar Joelhada em Salto. Aprimoramento: Reduz a defesa do inimigo.\n\nJoelhada em Salto: Jan pula e desfere uma joelhada, causando dano aos inimigos atingidos e lançando-os ao ar. Aprimoramento: Atingir um inimigo zera o tempo de recarga de Esquiva.
 Skill/LobbyDesc/1035300┃Jan varre a área a sua frente com um chute, causando dano aos inimigos dentro do alcance. Inimigos atingidos pela parte mais externa são empurrados e, se colidirem contra o terreno, são atordoados.\n\nAprimoramento: Causa mais dano e empurra todos os inimigos atingidos e aqueles que colidirem contra o terreno são atordoados por um tempo maior.
 Skill/LobbyDesc/1035400┃Jan avança para frente e faz com que seu próximo Ataque Básico cause Dano Extra de Habilidade.\nAtingir Joelhada ou Roundhouse Kick depois do avanço cura Jan em uma porcentagem do dano causando, sendo que essa cura aumenta com base na Vida Perdida de Jan.\nJan pode usar Esquiva durante Roundhouse Kick.\n\nAprimoramento: O tempo de recarga de Esquiva é reduzido.
-Skill/LobbyDesc/1035500┃Jan invoca um ringue quadrado, garantindo-lhe acúmulos de Inflexível. Inimigos que tocarem nas cordas recebem dano e lentidão. Inimigos que forem empurrados contra a corda são empurrados novamente para o centro do ringue, além de receberem atordoamento. As cordas desaparecem com o contato.\nAjudar a eliminar um jogador dentro do ringue garante acúmulos de Inflexível e aumenta a velocidade de movimento de Jan.
+Skill/LobbyDesc/1035500┃Jan invoca um ringue quadrado, concedendo a ele acúmulos de Infexível.\n\nInimigos que tocarem nas cordas são desacelerados e sofrem dano.\n\nInimigos empurrados contra as cordas são então lançados de volta para o centro do ringue. As cordas desaparecem ao contato.\n\nAssistências em eliminações de personagens inimigos dentro do ringue concedem acúmulos de Infexível e aumentam a velocidade de movimento de Jan.
 Skill/LobbyDesc/1036100┃Telecinese: A partir do nível 6, Eva pode abrir contêineres, caixas de suprimentos, pescar, coletar e reerguer aliados caídos à distância.Ela só pode reviver, pilhar corpos, ou coletar meteorito e árvores da vida durante combate.\n\nPérola de FV: Quando Eva acerta uma habilidade ou é atingida por um ataque básico, ela lança uma pérola de Força Vital concentrada em direção ao inimigo, causando dano e aplicando lentidão.\nAcertar uma Pérola de FV em um alvo reduz seu tempo de recarga e concede Força Vital a Eva.\n\nEva ganha Força Vital constantemente fora de combate, recebendo uma quantia a mais por eliminações e assistências.Ataques Básicos Aprimorados concedem Força Vital
 Skill/LobbyDesc/1036200┃Eva lança uma orbe de luz na direção alvo, causando dano de habilidade aos inimigos atingidos. Quando a orbe atinge o alcance máximo ou a habilidade é reativada, ela explode, causando dano de habilidade.\nSe a explosão acertar um inimigo, o tempo de recarga é reduzido.\n\nAtingir um inimigo com Tríade da Luz garante Força Vital.
 Skill/LobbyDesc/1036300┃Eva forma um Redemoinho Fásico no local escolhido, causando dano de habilidade. Inimigos dentro do redemoinho recebem lentidão.\nO redemoinho colapsa após alguns segundos, causando dano de habilidade e lançando inimigos em seu centro ao ar.\n\nAcertar um inimigo com Redemoinho Fásico garante Força Vital.
@@ -10192,7 +10304,7 @@ Skill/LobbyDesc/1054500┃Karla lança um arpão gigante na direção alvo dando
 Skill/LobbyDesc/1055100┃A cura para Estelle e aliados próximos é aumentada. Estelle pode reviver aliados derrubados mais rápido e aliados revividos recuperam Vida adicional.
 Skill/LobbyDesc/1055220┃Estelle fortalece seu escudo, causando dano de habilidade adicional em seu próximo ataque básico e atordoando inimigos.
 Skill/LobbyDesc/1055300┃Estelle bate no chão com seu escudo, causando dano de habilidade e lentidão aos inimigos ao alcance.\nQuando usado Escudo de Perigo, Estelle pode se mover enquanto extingue inimigos ao alcance com seu extintor, causando dano de habilidade e diminuindo a velocidade de inimigos com cada acerto.
-Skill/LobbyDesc/1055400┃[Escudo de Perigo]\nEstelle abre seu Escudo de Perigo e pode se mover durante esse período. Ela bloqueia ataques inimigos por um curto período de tempo e cria uma área de proteção que reduz o dano recebido por aliados.\n\n[Entrada Forçada]\nQuando utilizado durante o Escudo de Perigo, Estelle avança e para no impacto, causando dano de habilidade ao alvo e empurrando-o. Durante a investida, Estelle é Imparável e destrói instantaneamente objetos como Câmeras Fotográficas inimigas.
+Skill/LobbyDesc/1055400┃[Escudo de Perigo]\nEstelle ativa seu Escudo de Perigo e pode se mover enquanto ele estiver ativo. Ela bloqueia ataques inimigos por um curto período de tempo.\n\n[Entrada Forçada]\nAo ser ativado durante Escudo de Perigo, Estelle avança para frente e para ao colidir com um alvo, causando dano de habilidade e empurrando-o para trás. Durante a investida, Estelle é Imparável e destrói instantaneamente objetivos, como Câmeras Fotográficas.
 Skill/LobbyDesc/1055500┃[Lançar a si]\nEstelle se protege e solicita um backup de heliponto. O heliponto localizará as coordenadas de Estelle e lançará uma bomba hidráulica no local, causando dano de habilidade e retardando os inimigos atingidos.\n\n[Lançar em Aliado]\nEstelle protege seu aliado e solicita um reforço de heliponto. Depois, Estelle desce do seu Helicoptero e causa dano de habilidade aos inimigos ao alcance e os levanta no ar.
 Skill/LobbyDesc/1056100┃Sempre que Piolo estiver fora de combate, ele ganha um acúmulo de [Bem-Treinado]. Se ele descansar por 2 ou mais segundos, ele ganha acúmulos adicionais quando terminar\n\nSe Piolo conjura [Justiceiro] enquanto [Bem-Treinado], seu próximo ataque básico causa dano de habilidade adicional.
 Skill/LobbyDesc/1056200┃<color=#ffffff>Girocópitero</color>: Piolo gira seu nunchaku na direção escolhida, causando dano de habilidade a cada 0.12 segundos nos inimigos dentro do alcance. Piolo causa  de dano aumentado contra inimigos a cada certa quantidade de tempo. Se Girocópitero foi lançado pela sua duração completa ou causou dano aumentado num numero vezes, Piolo poderá conjurar <color=#ffffff>Chokeslam</color>. \n\n<color=#ffffff>Chokeslam</color>: Piolo bate seu nunchaku na direção escolhida, causando dano de habilidade em inimigos dependendo se estão no interior ou no exterior do indicador. Inimigos atingidos no interior do indicador também sofrem lentidão.
@@ -10240,7 +10352,7 @@ Skill/LobbyDesc/3007000┃Dispara um buquê de flechas na área alvo, causando u
 Skill/LobbyDesc/3008000┃Dispara com a Besta na direção desejada. Alvos atingidos pelos dardos recebem dano e são empurrados. Inimigos que atingirem uma parede recebem dano extra e ficam atordoados.
 Skill/LobbyDesc/3009000┃Aumenta a Velocidade de Movimento e recarrega rapidamente sua arma.\nO Tempo de Recarga restante das suas habilidades básicas é reduzido.
 Skill/LobbyDesc/3010000┃Ao acertar um inimigo com um Ataque Básico, você ganha um acúmulo de Superaquecimento para cada bala. Se você não usar um Ataque Básico por um certo tempo, começará a perder os acúmulos.\nQuando essa habilidade é ativada, você recarrega sua arma instantaneamente, aumenta sua velocidade de ataque, recebe dano extra de ataque básico e ignora seu limite de Velocidade de Ataque.
-Skill/LobbyDesc/3011000┃Ativa Zona da Morte na direção especificada.\nQuando Zona da Morte está ativada, seu campo de visão aumenta, mas seu ângulo de visão diminui.\nPode disparar tanto Tiro Incapacitante quanto Caça-Cabeças na direção escolhida, causando dano.\nZona da Morte termina se você se mover ou for atingido por um efeito de controle de grupo.
+Skill/LobbyDesc/3011000┃Ative Vantagem Balística na direção especificada.\n\nDispare Tiro Incapacitante e Caça-Cabeças na direção alvo dentro do seu alcance de visão para causar dano.\n\nVantagem Balística termina se você se mover ou for atingido por efeitos de controle de grupo.\n\n\n<i>Tempo de Recarga Fixo: Esta habilidade não é afetada por Redução de Recarga.</i>
 Skill/LobbyDesc/3013000┃Bate o Martelo em uma direção específica, causando dano e reduzindo a Defesa do inimigo.
 Skill/LobbyDesc/3014000┃Ganha um acúmulo de Hélice Sanguinária a cada Ataque Básico. Com o máximo de acúmulos, você pode ativar Hélice Sanguinária para se movimentar na direção alvejada, brandindo o machado e causando dano a todos os inimigos dentro do alcance. Você também se cura com base no dano causado.
 Skill/LobbyDesc/3015000┃A ativação da habilidade Disfarçar faz com que você se torne transparente e aumente sua Velocidade de Movimento.\n\nAtive esta habilidade novamente em um alvo para se teletransportar para trás dele, causando lentidão e dano celular.
@@ -10688,8 +10800,8 @@ Item/Skills/6017004/Body┃Atingir uma cobaia com um Ataque Básico causa dano i
 Item/Skills/6017004/Desc┃Atingir uma cobaia com um Ataque Básico causa dano igual a {0}% da Vida Atual do alvo e concede um acúmulo de Vigor por {8} segundos. Cada acúmulo de Vigor aumenta sua Velocidade de Ataque em <color=white>{3}%</color>. Com {9} acúmulos, você recebe <color=#FFD775>{5}</color> de Poder de Ataque e <color=white>{6}</color> de Velocidade de Movimento.
 Item/Skills/6017005/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017006/Name┃<color=yellow>Vigor - Circulação</color>
-Item/Skills/6017005/Body┃Quando atingir uma cobaia com ataque básico, causa <color=#DDA0DD>{11}</color> dano de habilidade, e ganha stack de Vigor que fornece <color=white>{3}%</color> Velocidade de Ataque por {8} segundos.
-Item/Skills/6017005/Desc┃Quando atingir uma cobaia com ataque básico, causa (Curta Distancia: <color=white>{10}</color><color=#DDA0DD>(+{11} Amplificação de Habilidade</color>) ｜Á Distancia: <color=white>{10}</color><color=#DDA0DD>(+{12} Amplificação de abilidade</color>) dano de habilidade, e ganha stack de Vigor que fornece <color=white>{3}%</color> Velocidade de Ataque por {8} segundos.
+Item/Skills/6017005/Body┃Acertar inimigos com ataques básicos causa <color=#DDA0DD>{11}</color> de dano de habilidade e concede acúmulos de Vigor, que aumentam a Velocidade de Ataque em <color=white>{3}%</color> por {8} segundos.
+Item/Skills/6017005/Desc┃Acertar inimigos com ataques básicos causa dano de habilidade:\n\nCorpo a corpo: <color=white>{10}</color><color=#DDA0DD>(+{11} Amplificação de Habilidade)</color> ｜ À distância: <color=white>{10}</color><color=#DDA0DD>(+{12} Amplificação de Habilidade)</color>.\n\nAlém disso, concede acúmulos de Vigor, que aumentam a Velocidade de Ataque em <color=white>{3}%</color> por {8} segundos.
 Item/Skills/6017007/Name┃<color=yellow>Vigor - Circulação</color>
 Item/Skills/6017008/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017008/Body┃Atingir uma cobaia com um Ataque Básico causa dano igual a {1}% da Vida Atual do alvo e concede um acúmulo de Vigor por {8} segundos. Cada acúmulo de Vigor aumenta sua Velocidade de Ataque em <color=white>{3}%</color>. Com {9} acúmulos, você recebe <color=#FFD775>{5}</color> de Poder de Ataque e {6} de Velocidade de Movimento.
@@ -10702,8 +10814,8 @@ Item/Skills/6017023/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017024/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017025/Name┃<color=yellow>Vigor</color>
 Item/Skills/6017026/Name┃<color=yellow>Vigor - Êxtase</color>
-Item/Skills/6017026/Body┃Atingir uma cobaia inimiga com um ataque básico causa dano de habilidade igual a <color=#688A08>{1}% da Vida atual do alvo</color>  e acumula Vigor por {8} segundos. Sua velocidade de ataque aumenta em <color=white>{3}%</color>.
-Item/Skills/6017026/Desc┃Atingir uma cobaia inimiga com um ataque básico causa dano de habilidade igual a <color=#688A08>{1}% da Vida atual do alvo</color>  e acumula Vigor por {8} segundos. Sua velocidade de ataque aumenta em <color=white>{3}%</color>.
+Item/Skills/6017026/Body┃Atingir uma cobaia inimiga com um ataque básico causa dano de habilidade igual a <color=#688A08>{1}% da Vida atual do alvo</color> e acumula Vigor por {8} segundos. Sua Velocidade de Ataque aumenta em <color=white>{3}%</color>.
+Item/Skills/6017026/Desc┃Acertar inimigos com ataques básicos causa dano de habilidade igual a <color=#688A08>{1}% da Vida atual do personagem inimigo</color> e acumula Vigor por {8} segundos. Sua Velocidade de Ataque aumenta em <color=white>{3}%</color>.
 Item/Skills/6017027/Name┃<color=yellow>Vigor</color>
 CharacterState/Group/Name/6017000┃Vigor
 CharacterState/Group/Desc/6017000┃Velocidade de Ataque Aumentada
@@ -10911,8 +11023,8 @@ Skill/Code/Name/4508001┃Soco Fantástico
 Skill/Group/4508000/Name┃<color=yellow>Soco Fantástico</color>
 Skill/LobbyDesc/4508000┃Invoca o punho ilusório de um gênio na direção alvo.\nCobaias atingidas voam nessa direção.
 Skill/Group/LobbyDesc/4508000┃Invoca o punho ilusório de um gênio na direção alvo.\nCobaias atingidas voam nessa direção.
-Skill/Code/Desc/4508001┃Invoca o punho ilusório de um gênio na direção selecionada e desfere um soco rápido. \nInimigos atingidos recebem {0} + {1}% do seu HP máximo como dano de habilidade e são lançados nessa direção por {2} segundos. \nVocê e seus aliados não recebem dano. \n \nTempo de Recarga: {4} segundos 
-Skill/Code/Coef/4508001┃Invoca o punho ilusório de um gênio na direção selecionada e desfere um soco rápido. \nInimigos atingidos recebem {0} + {1}% do seu HP máximo como dano de habilidade e são lançados nessa direção por {2} segundos. \nVocê e seus aliados não recebem dano. \n \nTempo de Recarga: {4} segundos 
+Skill/Code/Desc/4508001┃Invoca o punho ilusório de um gênio na direção selecionada e desfere um soco rápido. \nInimigos atingidos recebem <color=white>{0}</color><color=#688A08>({1}% Vida Máxima do Alvo)</color> dano de habilidade e são empurrados na mesma direção.\nVocê e seus aliados não recebem dano. 
+Skill/Code/Coef/4508001┃Invoca o punho ilusório de um gênio na direção selecionada e desfere um soco rápido. \nInimigos atingidos recebem <color=white>{0}</color><color=#688A08>({1}% Vida Máxima do Alvo)</color> dano de habilidade e são empurrados na mesma direção por <color=white>{2} segundos</color>.\nVocê e seus aliados não recebem dano. \n
 CharacterState/Group/Name/4508000┃O Soco Fantástico do Gênio
 CharacterState/Group/Desc/4508000┃Dói, não é?
 CharacterState/Group/Name/6516010┃O Soco Fantástico do Gênio 2
@@ -11030,8 +11142,8 @@ Item/Skills/6027001/Body┃Ativa quando você tem {0} ou mais HP Adicional.\nSe 
 Item/Skills/6027001/Desc┃Ativa quando você tem {0} ou mais HP Adicional.\nSe você receber {2} ou mais de dano de seus inimigos durante {1} segundos quando ativo, inimigos dentro de {4}m em volta de você tem sua velocidade de movimento reduzida em <color=white>{5}%</color> por {3} segundos e sua tenacidade aumentada em {6}%. (Tempo de Recarga: {7}s)
 Item/Skills/6027101┃Iluminação - Liderando
 Item/Skills/6027101/Name┃<color=yellow>Iluminação - Liderando</color>
-Item/Skills/6027101/Body┃Ativa quando você tem {0} ou mais HP Adicional.\nSe você receber {2} ou mais de dano de seus inimigos durante {1} segundos quando ativo, inimigos dentro de {4}m em volta de você tem sua velocidade de movimento reduzida em <color=white>{5}%</color> por {3} segundos e sua tenacidade aumentada em {6}%. (Tempo de Recarga: {7}s)
-Item/Skills/6027101/Desc┃Ativa quando você tem {0} ou mais HP Adicional.\nSe você receber {2} ou mais de dano de seus inimigos durante {1} segundos quando ativo, inimigos dentro de {4}m em volta de você tem sua velocidade de movimento reduzida em <color=white>{5}%</color> por {3} segundos e sua tenacidade aumentada em {6}%. (Tempo de Recarga: {7}s)
+Item/Skills/6027101/Body┃Se você receber {2} ou mais dano de inimigos dentro de {1} segundos, seu dano recebido é reduzido em <color=white>(Corpo a Corpo: 15% I Á Distancia: 10%)</color> e a velocidade de ataque dos inimigos dentro de {4}m são reduzidos em <color=white>{5}%</color> por {3} segundos. (Tempo de Recarga: {7}s)
+Item/Skills/6027101/Desc┃Se você receber {2} ou mais dano de inimigos dentro de {1} segundos, seu dano recebido é reduzido em <color=white>(Corpo a Corpo: 15% I Á Distancia: 10%)</color> e a velocidade de ataque dos inimigos dentro de {4}m são reduzidos em <color=white>{5}%</color> por {3} segundos. (Tempo de Recarga: {7}s)
 CharacterState/Group/Name/6027000┃Liderando
 CharacterState/Group/Desc/6027000┃Você recebeu dano suficiente para ativar Liderando.
 CharacterState/Group/Name/6027010┃Liderando - Efeitos de Buff
@@ -11040,8 +11152,8 @@ CharacterState/Group/Name/6027020┃Liderando - Efeitos de Debuff
 CharacterState/Group/Desc/6027020┃Velocidade de ataque foi reduzida pelo efeito de Liderando inimigo.
 Item/Skills/6022101┃Iluminação – Foice do Ceifador
 Item/Skills/6022101/Name┃<color=yellow>Foice do Ceifador</color>
-Item/Skills/6022101/Body┃Ativa quando você tem 30 ou mais Penetração de Armadura.\nEnquanto estiver ativado, causar dano a um inimigo com menos de <color=#688A08>8%</color> HP irá instantáneamente eliminá-los. (Tempo de Recarga: {1}s)
-Item/Skills/6022101/Desc┃Ativa quando você tem 30 ou mais Penetração de Armadura.\nEnquanto estiver ativado, causar dano a um inimigo com menos de <color=#688A08>8%</color> HP irá instantáneamente eliminá-los. (Tempo de Recarga: {1}s)
+Item/Skills/6022101/Body┃Inimigos são instantaneamente eliminados após recebem dano e a Vida eles por menor que <color=#688A08>(Corpo a Corpo: 8% I Á Distancia: 5%)</color>. (Tempo de Recarga: {1}s)
+Item/Skills/6022101/Desc┃Inimigos são instantaneamente eliminados após recebem dano e a Vida eles por menor que <color=#688A08>(Corpo a Corpo: 8% I Á Distancia: 5%)</color>. (Tempo de Recarga: {1}s)
 Item/Skills/6030001┃Debilitação
 Item/Skills/6030001/Name┃<color=yellow>Debilitação</color>
 Item/Skills/6030001/Body┃Os inimigos atingidos por uma habilidade ficam debilitados, consumindo <color=#688A08>{0} do HP máximo do alvo</color><color=#DDA0DD>(+{1})</color><color=#688A08>% </color> dano de habilidade a cada segundo durante {2} segundos. (Máximo de acúmulos: {3})
@@ -11119,14 +11231,14 @@ Item/Skills/6036001/Body┃Atingir um inimigo 3 vezes dentro de {0} segundos lib
 Item/Skills/6036001/Desc┃Atingir um inimigo 3 vezes dentro de {0} segundos libera um redemoinho que causa {2}<color=#DDA0DD>(+{3}% de Amplificação de Habilidade)</color><color=#688A08>(+{5}% da Vida Máx. do alvo )</color> dano de habilidade a cada {8} segundos por {6} segundos (Tempo de Recarga: {7}s)
 Item/Skills/6036002┃Rajada de Vento - Mobilizar
 Item/Skills/6036002/Name┃<color=yellow>Rajada de Vento - Mobilizar</color>
-Item/Skills/6036002/Body┃Usar uma habilidade ultimate libera um redemoinho que causa <color=#FFD775>{2}</color><color=#688A08>(+{3}% da Vida Máx. do alvo)</color> dano de habilidade a cada {6} segundos por {4} segundos. (Tempo de Recarga: {5}s)
-Item/Skills/6036002/Desc┃Usar uma habilidade ultimate libera um redemoinho que causa <color=white>{2}</color><color=#FFD775>(+{4}% Poder de Ataque)</color><color=#688A08>(+{3}% da Vida Máx. do alvo)</color> dano de habilidade a cada {6} segundos por {4} segundos. (Tempo de Recarga: {5}s)
+Item/Skills/6036002/Body┃Usar efeitos de imobilização em personagens inimigos libera um redemoinho, que causa <color=#FFD775>{2}</color><color=#688A08>(+{3}% da Vida Máx. do alvo)</color> de dano de habilidade a cada {6} segundos por {4} segundos. (Tempo de Recarga: {5}s)
+Item/Skills/6036002/Desc┃Usar efeitos de imobilização em personagens inimigos libera um redemoinho, que causa <color=white>{2}</color><color=#FFD775>(+{4}% Poder de Ataque)</color><color=#688A08>(+{5}% da Vida Máx. do alvo)</color> de dano de habilidade a cada {8} segundos por {6} segundos. (Tempo de Recarga: {7}s)
 CharacterState/Group/Name/6036000┃Rajada de Vento
 CharacterState/Group/Desc/6036000┃Você atingou as condições para ativar redemoinho
 Item/Skills/6037001┃Módulo de Orientação
 Item/Skills/6037001/Name┃<color=yellow>Módulo de Orientação</color>
-Item/Skills/6037001/Body┃Atingir uma Cobaia inimiga com um efeito imobilizante deixa uma marca que dura {0} segundos.\nQuando aliados atingem um alvo marcado com um ataque básico, eles causam <color=green>{1}</color> dano de habilidade adicional e são curados por <color=green>{2}</color>. (Cooldown: {3}s) 
-Item/Skills/6037001/Desc┃Atingir uma Cobaia inimiga com um efeito imobilizante deixa uma marca que dura {0} segundos.\nQuando aliados atingem um alvo marcado com um ataque básico, eles causam {1}<color=green>(+Character Level*{2})</color> dano de habilidade adicional e são curados em {3}<color=green>(+Character Level*{4})</color>. (Cooldown: {3}s) 
+Item/Skills/6037001/Body┃Acertar um personagem inimigo com um efeito que prejudica o movimento deixa uma marca que dura {0} segundos.\n\nQuando aliados causam dano ao alvo separadamente, eles causam <color=green>{1}</color> de dano de habilidade adicional e são curados em <color=green>{2}</color>. (Tempo de Recarga: {3}s)
+Item/Skills/6037001/Desc┃Acertar um personagem inimigo com um efeito que prejudica o movimento deixa uma marca que dura {0} segundos.\n\nQuando aliados causam dano ao alvo separadamente, eles causam <color=white>{1}</color><color=green>(+Nível do Personagem * {2})</color> de dano de habilidade adicional e são curados em <color=white>{3}</color><color=green>(+Nível do Personagem * {4})</color>. (Tempo de Recarga: {5}s)
 CharacterState/Group/Name/6037010┃Módulo de Orientação - Recarregando
 CharacterState/Group/Desc/6037010┃Módulo de Orientação não está ativado
 CharacterState/Group/Name/6037000┃Módulo de Orientação - Marca
@@ -11198,7 +11310,10 @@ Item/Skills/6048001/Name┃<color=yellow>Despertar</color>
 Item/Skills/6048001/Body┃Usar uma habilidade Ultimate aumenta sua velocidade de ataque em <color=white>{1}%</color> e sua velocidade de movimento em <color=white>{2}%</color> por {0} segundos. Colisão com unidades é ignorado.
 Item/Skills/6048001/Desc┃Usar uma habilidade Ultimate aumenta sua velocidade de ataque em <color=white>{1}%</color> e sua velocidade de movimento em <color=white>{2}%</color> por {0} segundos. Colisão com unidades é ignorado.
 CharacterState/Group/Name/6048000┃Despertar
-CharacterState/Group/Desc/6048000┃Você está despertando. Seu ataque e velocidade de movimento estão aumentados.
+CharacterState/Group/Desc/6048000┃Você está passando por um despertar. Seus atributos são aumentados.
+Item/Skills/6048011/Name┃<color=yellow>Despertar</color>
+Item/Skills/6048011/Body┃Usar sua habilidade suprema aumenta sua Penetração de Armadura em <color=white>12%</color> por 6 segundos. (Tempo de Recarga: 20s)
+Item/Skills/6048011/Desc┃Usar sua habilidade suprema aumenta sua Penetração de Armadura em <color=white>12%</color> por 6 segundos. (Tempo de Recarga: 20s)
 Item/Skills/6049001┃Postergar
 Item/Skills/6049001/Name┃<color=yellow>Postergar</color>
 Item/Skills/6049001/Body┃<color=white>{0}%</color> do dano recebido de inimigos é aplicado gradualmente ao longo de {2} segundos.
@@ -11228,8 +11343,8 @@ Item/Skills/6053002/Body┃Após causar dano a um inimigo com habilidades difere
 Item/Skills/6053002/Desc┃Após causar dano a um inimigo com habilidades diferentes você recebe um acúmulo que aumenta seu dano de habilidade em <color=#DDA0DD>{0}%</color> por acúmulo. (Máx. de Acúmulos: {2})\nRecebe <color=white>{1}%</color> de velocidade de movimento enquanto possuir o máximo de acúmulos.
 Item/Skills/6054001┃Aquecendo - Explosão
 Item/Skills/6054001/Name┃<color=yellow>Aquecendo - Explosão</color>
-Item/Skills/6054001/Body┃Toda vez que atacar um inimigo com um ataque básico você recebe um acúmulo que aumenta seu Poder de Ataque em <color=#FFD775>{1}</color> e sua Velocidade de Ataque em <color=#FFD775>{0}%</color> por {4} segundos. (Máx. de Acúmulos: {2})\nRecebe <color=white>{3}%</color> Penetração de Armadura enquanto possuir o máximo de acúmulos.
-Item/Skills/6054001/Desc┃Toda vez que atacar um inimigo com um ataque básico você recebe um acúmulo que aumenta seu Poder de Ataque em <color=#FFD775>{1}</color> e sua Velocidade de Ataque em <color=#FFD775>{0}%</color> por {4} segundos. (Máx. de Acúmulos: {2})\nRecebe <color=white>{3}%</color> Penetração de Armadura enquanto possuir o máximo de acúmulos.
+Item/Skills/6054001/Body┃Cada vez que você ataca um inimigo com um ataque básico, você ganha um acúmulo que aumenta o Poder de Ataque em <color=#FFD775>{1}</color> e a Velocidade de Ataque em <color=white>{0}%</color> por {4} segundos. (Máximo de Acúmulos: {2})\n\nAo atingir o máximo de acúmulos, você ganha <color=white>{3}%</color> de Velocidade de Movimento.
+Item/Skills/6054001/Desc┃Cada vez que você ataca um inimigo com um ataque básico, você ganha um acúmulo que aumenta o Poder de Ataque em <color=#FFD775>{1}</color> e a Velocidade de Ataque em <color=white>{0}%</color> por {4} segundos. (Máximo de Acúmulos: {2})\n\nAo atingir o máximo de acúmulos, você ganha <color=white>{3}%</color> de Velocidade de Movimento.
 CharacterState/Group/Name/6049000┃Postergar
 CharacterState/Group/Desc/6049000┃O dano recebido foi postergado.
 CharacterState/Group/Name/6051000┃Arma de Choque - Surto
@@ -13500,6 +13615,7 @@ Item/Name/203511┃Corrente de Espinhos
 Item/Name/203512┃Luva do Pesadelo
 Item/Name/203513┃Helix
 Item/Name/203514┃Bracelete de Mithril
+Item/Name/203515┃Escudo Nova
 Item/Name/204101┃Pantufa
 Item/Name/204102┃Tênis de Corrida
 Item/Name/204103┃Meia-Calça
@@ -13538,6 +13654,8 @@ Item/Name/204506┃Coturnos Selvagem
 Item/Name/204507┃Passos Galáticos
 Item/Name/204508┃Cordel da Ilusão
 Item/Name/204509┃Botas de Corrida
+Item/Name/204510┃Botas Elidianas
+Item/Name/204511┃Passos da Rosa
 Item/Name/205101┃Pena
 Item/Name/205102┃Flor
 Item/Name/205103┃Laço
@@ -13647,6 +13765,7 @@ Item/Name/301113┃Macarrão Instantâneo
 Item/Name/301116┃Erva Oriental
 Item/Name/301119┃Chocolate
 Item/Name/301120┃Curry em Pó
+Item/Name/301121┃Cogumelo
 Item/Name/301201┃Filé de Bacalhau com Mel
 Item/Name/301204┃Bacalhau em Conserva
 Item/Name/301205┃Pão de Alho
@@ -13713,6 +13832,7 @@ Item/Name/301339┃Alho Assado
 Item/Name/301340┃Sanduíche de Café da Manhã
 Item/Name/301346┃Bife Quentinho
 Item/Name/301348┃Bolo do 1º Aniversário
+Item/Name/301349┃Espetinhos de Cogumelos Grelhados
 Item/Name/301401┃Peixe e Fritas
 Item/Name/301331┃Macarrão com Alho
 Item/Name/301332┃Pipoca
@@ -13722,13 +13842,23 @@ Item/Name/301405┃Salmão
 Item/Name/301406┃Batata Doce Amarela
 Item/Name/301407┃Pizza Congelada
 Item/Name/301408┃Sorvete de Chocolate com Menta
+Item/Name/301409┃Trufa
 Item/Name/301501┃Filé de Salmão
 Item/Name/301502┃Pizza Havaiana
 Item/Name/301503┃Batata Doce
+Item/Name/301504┃Macarrão Trufado
+Item/Name/301601┃Ensopado de 100 Anos
+Item/Name/301602┃Ensopado Perpétuo
 Item/Name/802601┃Soro de Plasma
 Item/Name/303501┃Recompensa
 Item/Name/303502┃Créditos+
 Item/Name/303503┃Créditos++
+Item/Name/303504┃Créditos
+Item/Name/303505┃Créditos
+Item/Name/303506┃Créditos
+Item/Name/303507┃Créditos
+Item/Name/303508┃Créditos
+Item/Name/303509┃Créditos
 Item/Name/401101┃Prego
 Item/Name/401103┃Couro
 Item/Name/401104┃Casco de Tartaruga
@@ -13830,6 +13960,15 @@ Item/Name/503104┃SLV Portátil
 Item/Name/503105┃Cartão de Acesso
 Item/Name/503106┃Cartão de Acesso - Y
 Item/Name/503107┃Cartão de Acesso - Vermelho
+Item/Name/503108┃Caldeirão do Caçador
+Item/Name/504401┃Caixa de Suprimentos Tonfa
+Item/Name/504402┃Caixa de Suprimentos Espada de Duas Mãos
+Item/Name/504403┃Caixa de Suprimentos Shuriken
+Item/Name/504404┃Caixa de Suprimentos Pistola
+Item/Name/504602┃Ateliê Portátil - Cabeça
+Item/Name/504601┃Ateliê Portátil - Peito
+Item/Name/504603┃Atélie Portátil - Braço/Acessório
+Item/Name/504604┃Atêlie Portátil - Perna
 Item/Name/540001┃Alta Costura
 Item/Name/999999┃Módulo de Habilidade Tática
 Item/Name/201518┃GPNVG
@@ -13854,6 +13993,7 @@ Item/Name/105503┃Nephleon
 Item/Name/201524┃Chapéu de Coelho
 Item/Name/202524┃Jaqueta Espectral
 Item/Name/202525┃Manto da Sabedoria
+Item/Name/202527┃Dragão de Chama Negra
 Item/Name/201701┃Coroa de Sangue
 Item/Name/121504┃Free Bird
 Item/Name/114505┃Olho de Águia
@@ -13878,6 +14018,38 @@ Item/Name/122503┃Ao Vivo
 Item/Name/122504┃Foco Triplo
 Item/Name/201526┃Máscara de Esgrima
 Item/Name/201527┃Óculos Smart
+Item/Name/201528┃Elmo Viking
+Item/Name/201529┃Protetor Ocular
+Item/Name/202415_D┃David: Armadura de Batalha
+Item/Name/202407_D┃David: Armadura de Mithril
+Item/Name/202416_D┃David: Vestido Ardente
+Item/Name/202421_D┃David: Crop de Mithril
+Item/Name/202501_D┃David: Kabana
+Item/Name/202503_D┃David: Mandado Sagrado
+Item/Name/202505_D┃David: Áo Dài
+Item/Name/202506_D┃David: Jaqueta Fantasma
+Item/Name/202507_D┃David: Traje do Guardião
+Item/Name/202508_D┃David: Vestido Elegante
+Item/Name/202509_D┃David: Traje Belíssimo
+Item/Name/202510_D┃David: Specter
+Item/Name/202511_D┃David: Manto de Sangue
+Item/Name/202512_D┃David: Omertà
+Item/Name/202513_D┃David: Jaqueta Estrela Cadente
+Item/Name/202514_D┃David: Couturier
+Item/Name/202515_D┃David: Armadura Tática
+Item/Name/202516_D┃David: Vestido Élfico
+Item/Name/202517_D┃David: Armadura do Titã
+Item/Name/202523_D┃David: Traje Ghillie
+Item/Name/202524_D┃David: Jaqueta Espectral
+Item/Name/202525_D┃David: Manto da Sabedoria
+Item/Name/202209_D┃David: Biquíni
+Item/Name/202504_D┃David: Terno Borgonha 47
+Item/Name/202502_D┃David: Rainha de Copas
+Item/Name/202521_D┃David: Traje de Corrida
+Item/Name/202522_D┃David: Vestido da Noiva Fantasma
+Item/Name/202518_D┃David: O Revenant
+Item/Name/202526_D┃David: Inquisitor
+Item/Name/202527_D┃David: Dragão de Chama Negra
 Item/Help/101101┃Um par básico de tesouras.
 Item/Help/101102┃Um tipo de caneta para escrever. A tinta dentro do suporte da caneta flui\npela ponta, permitindo que seja usada por um longo tempo,\nembora sua mão fique coberta de tinta se não for usada corretamente.
 Item/Help/101104┃Uma faca usada na cozinha. Pode ser uma arma mortal nas mãos de\num especialista em facas.
@@ -14423,6 +14595,7 @@ Item/Help/301113┃Tem um gosto ótimo se você o colocar em um saco, esmagá-lo
 Item/Help/301116┃Uma erva usada para medicina..
 Item/Help/301119┃Quando você está com pouco açúcar, comer isso faz você se sentir\nforte e feliz.
 Item/Help/301120┃Seria ótimo se fosse cozido com água quente.
+Item/Help/301121┃Um cogumelo comestível comum—apenas se certifique de não confundí-lo com um venenoso.
 Item/Help/301205┃Com esse cheiro, pelo menos você saberá que não precisará se\npreocupar com vampiros.
 Item/Help/301207┃Tão eficaz quanto amargo.
 Item/Help/301209┃Considere cuidadosamente por onde começar a comer:\na cabeça ou a cauda?
@@ -14448,10 +14621,13 @@ Item/Help/301329┃Se você contar os três lugares de maior destaque no mundo d
 Item/Help/301331┃Ninguém pode discutir com ramen bem cozido.
 Item/Help/301347┃Eu pedi sem pepinos...
 Item/Help/301348┃Um bolo cheio de alegria para celebrar um ano de incríveis memórias juntos!
+Item/Help/301349┃Um delicioso petisco vegano!
 Item/Help/301403┃A refeição favorita de qualquer um, preparada pela própria Eleven.
 Item/Help/301407┃Pronto em minutos.
 Item/Help/301408┃Para alguns, tem gosto de pasta de dente, para outros, é um deleite divíno.\n Experimente e decida!
+Item/Help/301409┃Um ingrediente incomum com um aroma marcante.
 Item/Help/301503┃Um favorito de ação de graças.
+Item/Help/301504┃Carregado com trufas, para o máximo de sabor... embora só um pouquinho já teria sido suficiente.
 Item/Help/401103┃Existem animais por aí? Seria prudente guardar um pouco disto, uma vez que o couro pode ser\nusado de várias maneiras diferentes.
 Item/Help/401104┃Isso me lembra de uma caixa de areia que eu tinha quando era criança...
 Item/Help/401105┃Um material que é sempre elástico.\nDiferente de suas bochechas, que perdem a elasticidade dia após dia.
@@ -14542,11 +14718,11 @@ Item/Effects/502203┃Clique para instalar <color=lightblue>Dinamite</color>.\n<
 Item/Effects/502204┃Clique para instalar uma <color=lightblue>Armadilha de Bambu</color>.\n<color=yellow>Efeitos da armadilha:</color> Inimigos ficam enraizados por 0.5 segundo.
 Item/Effects/502205┃Clique para instalar uma <color=lightblue>Armadilha Booby</color>.\n<color=yellow>Efeitos da armadilha:</color> Inimigos ficam enraizados por 0,5 segundos.
 Item/Effects/502206┃Clique para instalar um <color=lightblue>Ruído Metálico</color>. Gera barulho em uma área de 25 metros de distância quando instalado e quando desaparece.
-Item/Effects/502207┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revelará uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você.\nLimite de Posicionamento de Câmeras: 2
-Item/Effects/502208┃Clique para lançar o <color=lightblue>Drone de Reconhecimento</color> na área designada.\nGarante visão do local alvo por 7 segundos.
-Item/Effects/502209┃Clique para instalar uma <color=lightblue>Câmera de Trilha</color> que revela seus arredores.\nRevela inimigos e armadilhas ocultas.\nApós 3 segundos,\na câmera entrará no modo Infiltração.\nLimite de Posicionamento de Câmeras: 2
-Item/Effects/502211┃Clique para instalar uma <color=lightblue>Câmera de Aumento</color> que oferece visão ampla em uma direção específica.\nRevela armadilhas e sobreviventes próximos.\nÉ possível instalar até três câmeras.
-Item/Effects/502212┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revelará uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você.\nLimite de Posicionamento de Câmeras: 3
+Item/Effects/502207┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revela uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você.(Duração:{2}s)\nLimite de Posicionamento de Câmeras: {3}
+Item/Effects/502208┃Clique para lançar o <color=lightblue>Drone de Reconhecimento</color> na área designada.\nGarante visão do local alvo por {2} segundos.
+Item/Effects/502209┃Clique para instalar uma <color=lightblue>Câmera de Trilha</color> que revela seus arredores.\nRevela inimigos e armadilhas ocultas.\nApós {1} segundos,\na câmera entrará no modo Infiltração. (Duração:{2}s)\nLimite de Posicionamento de Câmeras: {3}
+Item/Effects/502211┃Clique para instalar uma <color=lightblue>Câmera de Aumento</color> que oferece visão ampla em uma direção específica.\nRevela armadilhas e sobreviventes próximos. (Duração:{2}s)\nLimite de Posicionamento de Câmeras: {3}
+Item/Effects/502212┃Clique para instalar uma <color=lightblue>Câmera Telefoto</color> que revelará uma grande área ao seu redor. Revela armadilhas e jogadores escondidos perto de você. (Duração:{2}s)\nLimite de Posicionamento de Câmeras: {3}
 Item/Effects/502301┃Clique para instalar um <color=lightblue>Cordão Espinhoso</color>.
 Item/Effects/502302┃Clique para instalar a <color=lightblue>Roleta de Meiji</color>.
 Item/Effects/502303┃Clique para instalar uma <color=lightblue>Guilhotina de Selva</color>.\n<color=yellow> Efeitos da armadilha:</color> Inimigos ficam enraizados por 0,5 segundos.
@@ -14572,6 +14748,11 @@ Item/Effects/503104┃Clique para chamar um <color=lightblue>SLV Portátil</colo
 Item/Effects/503105┃Clique para chamar um hyperloop que o levará para dentro do Laboratório.
 Item/Effects/503106┃Clique para chamar um hyperloop que o levará para dentro do Laboratório Especial.
 Item/Effects/503107┃Clique para chamar um hyperloop que o levará para a Doca Abandonada.
+Item/Effects/503108┃Clique para instalar um <color=lightblue>Caldeirão do Caçador</color> que dura por {0} segundos. \nVocê pode coletar comida do caldeirão até 3 vezes e preparar consumíveis enquanto próximo a ele, como uma fogueira.\n\nO instale dentro do alcance de uma fogueira para coletar itens de comida ainda melhores.
+Item/Effects/504401┃Clique para trocar pela sua Tonfa selecionada.
+Item/Effects/504402┃Clique para trocar pela sua Espada de Duas Mãos selecionada.
+Item/Effects/504403┃Clique para trocar pela sua Shuriken selecionada.
+Item/Effects/504404┃Clique para trocar pela sua Pistola selecionada.
 Item/Effects/302101┃recupera Energia durante 15 segundos.
 Item/Effects/302102┃recupera Energia durante 15 segundos.
 Item/Effects/302103┃recupera Energia durante 15 segundos.
@@ -14718,6 +14899,12 @@ Item/Effects/301602┃recupera Vida durante 15 segundos.
 Item/Effects/303501┃Obtenha {0} crédito(s).
 Item/Effects/303502┃(Você/Aliado) Obtém {0}/{1} crédito(s).
 Item/Effects/303503┃(Você/Aliado) Obtém {0}/{1} crédito(s).
+Item/Effects/303504┃Obtenha {0} crédito(s).
+Item/Effects/303505┃Obtenha {0} crédito(s).
+Item/Effects/303506┃Obtenha {0} crédito(s).
+Item/Effects/303507┃Obtenha {0} crédito(s).
+Item/Effects/303508┃Obtenha {0} crédito(s).
+Item/Effects/303509┃Obtenha {0} crédito(s).
 Item/Effects/802601┃Ganhe 0.1 de Velocidade de Movimento permanentemente
 Item/BulletCapacity/Reload┃<color=yellow>Munições Máx.:</color> {0}
 Item/BulletCapacity/Charge┃<color=yellow>Munições Máx.:</color> {0} (Recarga: {1}s)
@@ -15385,6 +15572,61 @@ CharacterState/Group/Desc/7300340┃Vida Máxima aumentada.
 로딩팁 튜토리얼196┃Piolo nasceu na periferia e teve uma infância bem difícil.
 로딩팁 튜토리얼197┃Martina é conhecida pelos seus amigos por fumar muito e ser uma alcoólatra.
 로딩팁 튜토리얼198┃Martina adora correr e às vezes participa de maratonas.
+MasteryType/Glove/Desc┃Luvas têm um alcance muito baixo, mas elas podem realizar vários ataques consecutivos rápidos.
+MasteryType/Tonfa/Desc┃Tonfas são as únicas armas de batalha capazes de manter sua Defesa.
+MasteryType/Hammer/Desc┃Martelos têm uma velocidade de ataque muito baixa, mas podem restringir o movimento do oponente com um único golpe forte.
+MasteryType/Bat/Desc┃Bastões são armas flexíveis e equilibradas que podem lidar com diversos inimigos facilmente.
+MasteryType/Whip/Desc┃Chicotes são armas bastante complicadas devido à sua capacidade de restringir o movimento de inimigos.
+MasteryType/HighAngleFire/Desc┃Armas lançáveis comumente possuem poder de ataque alto. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza de que você está prestando atenção em quantas unidades você pode usar.
+MasteryType/DirectFire/Desc┃Shurikens têm uma variedade grande de tipos de arma e são muito versáteis. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza de que você está prestando atenção em quantas unidades você pode usar.
+MasteryType/Bow/Desc┃Arcos são armas de longo alcance que ficam mais fortes quanto mais domínio você obtém. São especialmente eficazes contra animais selvagens.
+MasteryType/CrossBow/Desc┃O poder da Besta reside em sua capacidade de atacar inimigos enquanto concentra ataques em apenas uma direção.
+MasteryType/Pistol/Desc┃Pistolas permitem que você use habilidades com mais frequência. Essas armas são especializadas em agilidade e mobilidade elegante.
+MasteryType/AssaultRifle/Desc┃Rifles de assalto são armas de longo alcance especializadas em ataques rápidos e constantes.
+MasteryType/SniperRifle/Desc┃Os Rifles de Precisão possuem um forte Poder de Ataque e o maior alcance de ataque. Eles cobrem mais distância do que o alcance da visão, portanto, certifique-se de selecionar cuidadosamente uma posição e garantir um bom alcance de visão.
+MasteryType/Axe/Desc┃Machados podem ser muito lentos, mas causam mais danos. Armas que são rápidas de fabricar oferecem uma vantagem de tempo na batalha.
+MasteryType/OneHandSword/Desc┃Adagas são armas especialmente focadas em ataques surpresa. Eles são uma das melhores e mais fortes armas para batalhas curtas.
+MasteryType/TwoHandSword/Desc┃Espadas de duas mãos são armas bem equilibradas. Quanto mais tempo você gasta dominando-as, mais você as aprecia. No entanto, jogadores iniciantes devem ter cuidado ao tentar manejá-las.
+MasteryType/Polearm/Desc┃As armas de haste têm o maior equilíbrio de poder destrutivo e longo alcance - especialmente quando se lida com muitos inimigos ao mesmo tempo.
+MasteryType/DualSword/Desc┃As espadas duplas são especializadas em desencadear belos pares de ataques consecutivos.
+MasteryType/Spear/Desc┃Lanças podem desencadear ataques de longo alcance com alto poder de destruição. No entanto, elas são fracas contra inimigos que se aproximam demais. É importante controlar sua distância em relação aos inimigos.
+MasteryType/Nunchaku/Desc┃Nunchakus são difíceis de aprender a se usar, mas podem ser armas versáteis nas mãos de um mestre.
+MasteryType/Rapier/Desc┃Rapieiras são capazes de movimentos rápidos que evitam os ataques inimigos, tornando seus golpes um sucesso.
+MasteryType/Guitar/Desc┃Guitarras são armas de longo alcance que usam ondas sonoras. Essas armas são muito versáteis, pois sua jogabilidade e estratégia podem mudar completamente, dependendo do número de pontos de Evolução aplicados às suas habilidades.
+MasteryType/Camera/Desc┃Câmeras são armas de longo alcance que não utilizam projéteis. Elas podem ser usadas para cegar inimigos, impedindo-os de acertar ataques.
+MasteryType/Arcana/Desc┃Arcanas são armas de longo alcance capazes de manipular energia composta de pura Força Vital. Aqueles que manipulam Arcanas eliminam seus inimigos com uma conjuração sem fim de habilidades.
+MasteryType/VFArm/Desc┃Próteses de FV são armas corpo a corpo que utilizam nanomáquinas para controlar FV. Os portadores podem ajustar o fluxo de FV para causar danos severos de uma vez.
+MasteryType/Glove/Stats┃Equipar Luvas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Tonfa/Stats┃Equipar Tonfa aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Hammer/Stats┃Equipar Martelo aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Axe/Stats┃Equipar Machado aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Bat/Stats┃Equipar Bastão aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Whip/Stats┃Equipar Chicote aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/OneHandSword/Stats┃Equipar Adaga aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/TwoHandSword/Stats┃Equipar Espada de Duas Mãos aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/DualSword/Stats┃Equipar Espadas Duplas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Spear/Stats┃Equipar Lança aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/HighAngleFire/Stats┃Equipar Arma Lançável aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/DirectFire/Stats┃Equipar Shuriken aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Bow/Stats┃Equipar Arco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/CrossBow/Stats┃Equipar Besta aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Pistol/Stats┃Equipar Pistola aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/AssaultRifle/Stats┃Equipar Rifle de Assalto aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/SniperRifle/Stats┃Equipar Rifle de Precisão aumenta {2} em {3}\n{4} em {5}
+MasteryType/Nunchaku/Stats┃Equipar Nunchaku aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Rapier/Stats┃Equipar Rapieira aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Guitar/Stats┃Equipar Guitarra aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Camera/Stats┃Equipar Câmera aumenta {0} em {1}\n{4} por {5}
+MasteryType/Arcana/Stats┃Equipar Arcana aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/VFArm/Stats┃Equipar Prótese FV aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
+MasteryType/Hunt/Stats┃Aumento de {0} em {1}
+MasteryType/Craft/Stats┃Aumento de {0} em {1}
+MasteryType/Search/Stats┃Aumento de {0} em {1}
+MasteryType/Move/Stats┃Aumento de {0} em {1}
+MasteryType/Health/Stats┃Aumento de {0} em {1}\naumento de {2} em {3}
+MasteryType/Defense/Stats┃Aumento de {0} em {1}\naumento de {2} em {3}
+MasteryType/Meditation/Stats┃Aumento de {0} em {1}
+MasteryType/Trap/Stats┃Aumento de {0} em {1}
 ButtonType/Confirm┃Confirmar
 ButtonType/Cancel┃Cancelar
 SupportLanguage/Korean┃한국어
@@ -15611,61 +15853,6 @@ FirstLoading3┃Loading ...
 게임문화개선캠페인┃<color=#FF0000>Eternal Return valoriza o jogo justo. Os jogadores que violarem as regras do time enfrentarão suspensão de conta.</color>
 게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
 접속시간경과안내┃Você esteve jogando por {0} hora(s). Que tal fazer uma pausa?
-MasteryType/Glove/Desc┃Luvas têm um alcance muito baixo, mas elas podem realizar vários ataques consecutivos rápidos.
-MasteryType/Tonfa/Desc┃Tonfas são as únicas armas de batalha capazes de manter sua Defesa.
-MasteryType/Hammer/Desc┃Martelos têm uma velocidade de ataque muito baixa, mas podem restringir o movimento do oponente com um único golpe forte.
-MasteryType/Bat/Desc┃Bastões são armas flexíveis e equilibradas que podem lidar com diversos inimigos facilmente.
-MasteryType/Whip/Desc┃Chicotes são armas bastante complicadas devido à sua capacidade de restringir o movimento de inimigos.
-MasteryType/HighAngleFire/Desc┃Armas lançáveis comumente possuem poder de ataque alto. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza de que você está prestando atenção em quantas unidades você pode usar.
-MasteryType/DirectFire/Desc┃Shurikens têm uma variedade grande de tipos de arma e são muito versáteis. A quantidade de itens que você pode carregar, assim como quantos são feitos varia de arma para arma, então tenha certeza de que você está prestando atenção em quantas unidades você pode usar.
-MasteryType/Bow/Desc┃Arcos são armas de longo alcance que ficam mais fortes quanto mais domínio você obtém. São especialmente eficazes contra animais selvagens.
-MasteryType/CrossBow/Desc┃O poder da Besta reside em sua capacidade de atacar inimigos enquanto concentra ataques em apenas uma direção.
-MasteryType/Pistol/Desc┃Pistolas permitem que você use habilidades com mais frequência. Essas armas são especializadas em agilidade e mobilidade elegante.
-MasteryType/AssaultRifle/Desc┃Rifles de assalto são armas de longo alcance especializadas em ataques rápidos e constantes.
-MasteryType/SniperRifle/Desc┃Os Rifles de Precisão possuem um forte Poder de Ataque e o maior alcance de ataque. Eles cobrem mais distância do que o alcance da visão, portanto, certifique-se de selecionar cuidadosamente uma posição e garantir um bom alcance de visão.
-MasteryType/Axe/Desc┃Machados podem ser muito lentos, mas causam mais danos. Armas que são rápidas de fabricar oferecem uma vantagem de tempo na batalha.
-MasteryType/OneHandSword/Desc┃Adagas são armas especialmente focadas em ataques surpresa. Eles são uma das melhores e mais fortes armas para batalhas curtas.
-MasteryType/TwoHandSword/Desc┃Espadas de duas mãos são armas bem equilibradas. Quanto mais tempo você gasta dominando-as, mais você as aprecia. No entanto, jogadores iniciantes devem ter cuidado ao tentar manejá-las.
-MasteryType/Polearm/Desc┃As armas de haste têm o maior equilíbrio de poder destrutivo e longo alcance - especialmente quando se lida com muitos inimigos ao mesmo tempo.
-MasteryType/DualSword/Desc┃As espadas duplas são especializadas em desencadear belos pares de ataques consecutivos.
-MasteryType/Spear/Desc┃Lanças podem desencadear ataques de longo alcance com alto poder de destruição. No entanto, elas são fracas contra inimigos que se aproximam demais. É importante controlar sua distância em relação aos inimigos.
-MasteryType/Nunchaku/Desc┃Nunchakus são difíceis de aprender a se usar, mas podem ser armas versáteis nas mãos de um mestre.
-MasteryType/Rapier/Desc┃Rapieiras são capazes de movimentos rápidos que evitam os ataques inimigos, tornando seus golpes um sucesso.
-MasteryType/Guitar/Desc┃Guitarras são armas de longo alcance que usam ondas sonoras. Essas armas são muito versáteis, pois sua jogabilidade e estratégia podem mudar completamente, dependendo do número de pontos de Evolução aplicados às suas habilidades.
-MasteryType/Camera/Desc┃Câmeras são armas de longo alcance que não utilizam projéteis. Elas podem ser usadas para cegar inimigos, impedindo-os de acertar ataques.
-MasteryType/Arcana/Desc┃Arcanas são armas de longo alcance capazes de manipular energia composta de pura Força Vital. Aqueles que manipulam Arcanas eliminam seus inimigos com uma conjuração sem fim de habilidades.
-MasteryType/VFArm/Desc┃Próteses de FV são armas corpo a corpo que utilizam nanomáquinas para controlar FV. Os portadores podem ajustar o fluxo de FV para causar danos severos de uma vez.
-MasteryType/Glove/Stats┃Equipar Luvas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Tonfa/Stats┃Equipar Tonfa aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Hammer/Stats┃Equipar Martelo aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Axe/Stats┃Equipar Machado aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Bat/Stats┃Equipar Bastão aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Whip/Stats┃Equipar Chicote aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/OneHandSword/Stats┃Equipar Adaga aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/TwoHandSword/Stats┃Equipar Espada de Duas Mãos aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/DualSword/Stats┃Equipar Espadas Duplas aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Spear/Stats┃Equipar Lança aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/HighAngleFire/Stats┃Equipar Arma Lançável aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/DirectFire/Stats┃Equipar Shuriken aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Bow/Stats┃Equipar Arco aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/CrossBow/Stats┃Equipar Besta aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Pistol/Stats┃Equipar Pistola aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/AssaultRifle/Stats┃Equipar Rifle de Assalto aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/SniperRifle/Stats┃Equipar Rifle de Precisão aumenta {2} em {3}\n{4} em {5}
-MasteryType/Nunchaku/Stats┃Equipar Nunchaku aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Rapier/Stats┃Equipar Rapieira aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Guitar/Stats┃Equipar Guitarra aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Camera/Stats┃Equipar Câmera aumenta {0} em {1}\n{4} por {5}
-MasteryType/Arcana/Stats┃Equipar Arcana aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/VFArm/Stats┃Equipar Prótese FV aumenta {0} em {1}\n{2} em {3}\n{4} em {5}
-MasteryType/Hunt/Stats┃Aumento de {0} em {1}
-MasteryType/Craft/Stats┃Aumento de {0} em {1}
-MasteryType/Search/Stats┃Aumento de {0} em {1}
-MasteryType/Move/Stats┃Aumento de {0} em {1}
-MasteryType/Health/Stats┃Aumento de {0} em {1}\naumento de {2} em {3}
-MasteryType/Defense/Stats┃Aumento de {0} em {1}\naumento de {2} em {3}
-MasteryType/Meditation/Stats┃Aumento de {0} em {1}
-MasteryType/Trap/Stats┃Aumento de {0} em {1}
 보유하지 않은 캐릭터입니다.┃Você não possui este personagem.\nPor favor, desbloqueie-o na loja para poder jogar com ele. 
 매칭 중 캐릭 변경 금지┃Você não pode trocar de personagem enquanto procura por partida.
 로딩 중┃Carregando\n< Aperte o botão X para sentar e descansar. >
@@ -15959,7 +16146,7 @@ TierRP┃Pontos mínimos de classificação por Tier
 랭크 솔로 명칭┃Modo Solo
 코발트 프로토콜 명칭┃Protocolo Cobalt
 일반 스쿼드 설명 문구┃Forme uma equipe de 3 pessoas e torne-se o último sobrevivente na Ilha Lumia.
-랭크 스쿼드 설명 문구┃Forme uma equipe de 3 jogadores e sobreviva até a batalha final para alcançar uma classificação mais alta.\nAs Recompensas Ranqueadas de Titã e Imortal serão concedidas com base no servidor onde você jogou 95% ou mais de suas partidas ranqueadas.
+랭크 스쿼드 설명 문구┃Junte-se em uma equipe de 3 e sobreviva até a última batalha para alcançar um ranque maior.\nAs Recompensas dos Ranques Titã e Imortal serão distribuídas baseado no servidor com o menor ranque entre os servidores que você jogou pelo menos 3 jogos.
 랭크 솔로 설명 문구┃Este modo está atualmente em preparação. Aguarde o retorno do Modo Solo.
 코발트 프로토콜 설명 문구┃Reduza os pontos de vida do time adversário para 0 e vença o jogo 4vs4 voltado para a batalha.
 훈련 설명 문구┃Prepare-se para jogos com treinamento.
@@ -16374,7 +16561,7 @@ DeferPointDemotion/PopupContents┃Você ficou sem pontos de graça e foi rebaix
 메인날씨_흐림_설명┃Clima padrão da Ilha Lumia sem efeitos aplicados.
 메인날씨_쾌청┃Limpo
 메인날씨_쾌청_개요┃Clima Ideal
-메인날씨_쾌청_설명┃No geral, há menos arbustos ao redor da ilha e seu alcance de visão aumentou.\nA recuperação de consumíveis criados também aumentou.\nVocê tem maiores chances de obter materiais raros coletando batatas e pescando.
+메인날씨_쾌청_설명┃Há menos arbustos ao redor da ilha e seu alcance de visão é maior.\nA recuperação de consumíveis criados também aumenta.\nVocê tem chances maiores de obter materiais raros coletando consumíveis.
 메인날씨_비┃Chuvoso
 메인날씨_비_개요┃Clima Denso
 메인날씨_비_설명┃No geral, há mais arbustos ao redor da ilha.\nSeu alcance auditivo diminui e o poder de ataque dos animais selvagens é reduzido.
@@ -16480,7 +16667,7 @@ OpenScoreboard┃Mostra o placar e situação da partida.
 OpenMap┃Abre o mapa. (Independente de Clique da Roda do Mouse)
 ResetCamera┃Move a câmera de volta para a localização do seu personagem.
 OpenCharacterMastery┃Abre a tela de Maestria.
-OpenVPad┃Abra o VPad com os atalhos de teclado.\nCréditos podem ser recebidos por várias ações.\nPodem ser usados para chamar Drones Remotos, Quiosques, e aprimorar Habilidades Tácticas.
+OpenVPad┃Abra o VPad com os atalhos de teclado.\nVocê pode checar seu Nível de Maestria e informações sobre sua Habilidade Tática.
 OpenCharacterStat┃Abre a tela de estatísticas do personagem.
 OpenCharacterTotalStat┃Abre a tela de estatísticas detalhadas do personagem.
 ShowObjectText┃Mostra informação relacionada a inimigos, objetos e itens derrubados no chão.
@@ -16562,7 +16749,11 @@ GameSetting/HoldScoreBoard┃Ver placar apenas enquanto estiver pressionando a t
 스코어보드 고정하기┃Mostra o placar da partida
 GameSetting/CharacterHighlight┃Use a função "Encontrar Personagem" (na tecla padrão: Espaço) para exibir um destaque que vai ajudar a encontrar o seu personagem.
 캐릭터 찾기┃Ativar função "Encontrar Personagem"
+GameSetting/ShowCCTVRangeNearDetectionRange┃Mostra o alcance da detecção do CCTV ao se aproximar.
+CCTV 감지 범위 접근 시 감지 범위 표시 사용┃Mostrar o alcance de Detecção ao se Aproximar do CCTV
 미니맵, 확장맵 특정 대상 아이콘 확대 기능 사용┃Minimap Extendido - Expandir Ícone
+스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃Usar Habilidade no Alcance Máximo
+GameSetting/PickPointToInAreaIndicatorActive┃Essa opção faz com que as habilidades que precisam de uma área alvo sempre sejam usadas dentro do alcance máximo, mesmo que o cursor do mouse ultrapasse esse limite.
 GameSetting/MouseOverIconSizeUp┃Segure Alt e passe o mouse por cima do Minimapa Expandido para aumentar os ícones.
 NormalMatchingSolo┃Iniciar busca por partida Normal Solo com tempo de fila oculto.\n*Você precisa habilitar essa opção em Configurações ＞ Jogo.
 NormalMatchingDuo┃Iniciar busca por partida Normal Duo com tempo de fila oculto.\n*Você precisa habilitar essa opção em Configurações ＞ Jogo.
@@ -16622,6 +16813,13 @@ GameSetting/MarkPingWayPointSet┃Marque/Desmarque sua rota designada
 GameSetting/EmoticonSetMouseWheel┃Permite alterar o conjunto de gestos em jogo usando a roda do mouse.
 자동 공격 설정┃Opções de Ataque Automatico
 GameSetting/AutoAttack┃Nunca: Não atacará automaticamente inimigos próximos. Padrão: Automaticamente ataca inimigos próximos. Não irá atacar depois de coletar ou criar. Sempre: Automaticamente ataca inimigos próximos menos quando você aperta o botão de Parar, está descansando, checando uma caixa, ou interagindo com um Quiosque.
+인벤토리아이템자동병합┃Organização Automática dos Slots de Inventário
+GameSetting/AutomaticInventoryItemRestock┃Quando há múltiplos consumíveis do mesmo tipo em espaços diferentes em seu inventário, eles serão consumidos baseado na prioridade, começando pelo com a mais baixa.\nIndependente da tecla apertada, espaços mais no fundo são considerados de prioridade mais baixa.\nExemplo: Se houver Bife nos Espaços 1, 3 e 5, apertar qualquer uma dessas teclas irá consumir o Bife do espaço 5 primeiro.
+인벤토리아이템우선사용설정┃Prioridade dos Espaços do Inventário
+GameSetting/InventoryItemUsePriority┃Quando há múltiplos consumíveis do mesmo tipo em espaços diferentes em seu inventário, eles serão consumidos baseado na configuração, independente da tecla pressionada.\nO espaço número 1 é o da esquerda em cima, e o número 10 é o da direita embaixo.\nExemplo:\nCrescente: Se houver Bife nos Espaços 1, 3 e 5, apertar qualquer uma dessas teclas irá consumir o Bife do espaço 1 primeiro.\nDecrescente: Se houver Bife nos Espaços 1, 3 e 5, apertar qualquer uma dessas teclas irá consumir o Bife do espaço 5 primeiro.
+옵션사용안함┃Desabilitar
+옵션내림차순┃Decrescente
+옵션오름차순┃Crescente
 #Standard┃Padrão
 #NotUse┃Nunca
 #Always┃Sempre
@@ -16850,9 +17048,17 @@ BattleZoneRewardGaugeTooltip_Desc┃Receba as recompensas da Zona de Batalha no 
 폭발 타이머┃Tempo de detonação
 폭발 타이머 설명┃Indica o quanto você pode permanecer na Área Restrita indicada.
 일차┃Tempo
-일차 설명┃Indica a quantidade de dias que já se passaram.
+일차 설명┃Indica a quantidade de dias que já se passaram e o dia/noite atual.
 밤낮┃Dia e noite
 밤낮 설명┃Indica se é dia ou noite.
+부활 아이콘/오프닝┃Fase Atual: Abertura
+부활 아이콘 설명/오프닝┃Se você for eliminado, reaparecerá após alguns segundos. Se toda a equipe for eliminada, o tempo de reaparecimento aumentará.
+부활 아이콘/미들 게임┃Fase Atual: Meio do Jogo
+부활 아이콘 설명/미들 게임┃Você pode reviver aliados no Quiosque ou na loja do Lumi por <color=#F4FF63>{0}</color> Créditos.
+부활 아이콘/미들 게임 후반┃Fase Atual: Meio do Jogo
+부활 아이콘 설명/미들 게임 후반┃Você pode reviver aliados na loja do Lumi por <color=#F4FF63>{0}</color> Créditos.
+부활 아이콘/엔드 게임┃Fase Atual: Fim do Jogo
+부활 아이콘 설명/엔드 게임┃Você não pode mais reaparecer após ser eliminado nem reviver aliados.
 기본 공격 추가 피해량┃Dano Extra de Ataque Básico | Amplificação de Ataques Básicos (%)
 기본 공격 추가 피해량 설명┃Dano Extra de Ataque Básico: Adiciona dano extra a cada Ataque Básico.\nNão é afetado por Amplificação de Ataques Básicos. \nAmplificação de Ataque Básico: Aumenta o dano de seus Ataques Básicos em uma porcentagem. É afetada pela sua Maestria de Arma.
 기본 공격 증폭┃Amplificação de Ataques Básicos (%)
@@ -17177,7 +17383,7 @@ Kill┃ELIMINAÇÃO
 항공보급안내┃Em 1 minuto, Suprimentos Aéreos irão chegar nas áreas designadas.
 첫 금지구역예정지안내┃A próxima área restrita foi designada. Os Suprimentos Aéreos chegarão em breve.
 금지구역지정안내┃Áreas Restritas definidas. Os Suprimentos Aéreos chegarão.
-금지구역지정 및 해제 안내┃Áreas restritas agora estão livres. Abastecimento Aéreo está chegando.
+금지구역지정 및 해제 안내┃Áreas restritas agora estão livres. Suprimentos Aéreos estão chegando.
 금지구역 및 레이더 지정 안내┃Áreas Restritas definidas. O Radar por Satélite será ativado por 5 segundos.
 급속 재생 종료 안내2┃O dia {0} começou. Os jogadores não podem mais ser Reconstruídos Rapidamente.
 급속 재생 종료 안내┃Os Jogadores não podem mais ser Automaticamente Reconstruídos.
@@ -17285,6 +17491,8 @@ Ping/Alpha/Dead┃{0}({1}) : Alfa foi eliminado.
 Ping/Omega/Dead┃{0}({1}) : Ômega foi eliminado.
 Ping/AlphaOmega/Dead┃{0}({1}) : Alfa e Ômega foram eliminados.
 Ping/Omega/None┃{0}({1}): Omega não aparece mais.
+Ping/AirSupplyEpic/Wait┃{0}({1}) : <color=#C2FFA0>{2}</color> até o surgimento da <color=#D05EFF>Caixa de Suprimentos Épica</color>. (<color=#C2FFA0>{3}</color>)
+Ping/AirSupplyMythic/Wait┃{0}({1}) : <color=#C2FFA0>{2}</color> até o surgimento da <color=#red>Caixa de Suprimentos Mítica</color>. (<color=#C2FFA0>{3}</color>)
 Ping/TransferConsole/Wait┃{0}({1}) : Tempo Restante até a (<color=#C2FFA0>{3}</color>) Ativação <color=#C2FFA0>{2}</color> de Quiosque.
 Ping/TransferConsole/Active┃{0}({1}): Localização do Quiosque Ativo <color=#C2FFA0>{2}</color>
 Ping/AutoResurrection/Wait┃{0}({1}): Tempo Restante até o Renascimento Automático <color=#C2FFA0>{2}</color>
@@ -17483,6 +17691,10 @@ ToastMessage/AlreadyBoughtBattlezoneReward┃Time já recebeu uma recompensa
 채팅핑_게임시간┃Atualmente <color=#86E57F>{1} do Dia {0}</color>. (Tempo até o próximo dia : <color=#C2FFA0>{2}</color>)
 채팅핑_폭발타이머┃{0}({1}): <color=#FF4848>{2}</color> segundos restando do tempo de detonação.
 채팅핑_현재지역┃{0}({1}): Atualmente em {2}.
+채팅핑_부활 아이콘_오프닝┃Fase Atual: Abertura.\nSe você for eliminado, reaparecerá após alguns segundos. (Tempo restante: <color=#C2FFA0>{0}</color>)
+채팅핑_부활 아이콘_미들 게임┃Fase Atual: Meio do Jogo.\nVocê pode reviver aliados no Quiosque ou na loja do Lumi por <color=#F4FF63>{1}</color> Créditos. (Tempo restante: <color=#C2FFA0>{0}</color>)
+채팅핑_부활 아이콘_미들 게임 후반┃Fase Atual: Meio do Jogo.\nVocê pode reviver aliados na loja do Lumi por <color=#F4FF63>{1}</color> Créditos. (Tempo restante: <color=#C2FFA0>{0}</color>)
+채팅핑_부활 아이콘_엔드 게임┃Fase Atual: Fim do Jogo.\nVocê não pode mais reaparecer após ser eliminado nem reviver aliados.\n<color=white>Glória aos peões que alcançarem o fim do desespero.</color>
 탈출투표찬성채팅창노출┃Você pode escapar com {0} votos a favor, {1} votos contra, e {2} abstinências.
 탈출투표반대채팅창노출┃Você pode escapar com {0} votos a favor, {1} votos contra, e {2} abstinências.
 TranslationComplete┃<color=#59F030>[TD]</color>
@@ -17556,8 +17768,8 @@ UTC┃UTC
 사용불가 캐릭터┃Não pode usar este personagem.
 이용 시간┃Cronograma
 구속 서버┃Servidor
-구속 서버 안내 툴팁┃Informação do servidor do modo mais jogado.
-구속 서버 상세 안내┃Seu Servidor Aplicável é aquele onde você jogou mais de 95% de suas partidas Ranqueadas.\nSe nenhum servidor atender a esse critério, será aquele onde você tiver o nível mais baixo.\nAs recompensas para Titan e Immortal serão apenas concedido com base neste Servidor Aplicável.
+구속 서버 안내 툴팁┃Informações do Servidor Atribuído
+구속 서버 상세 안내┃Seu servidor atribuído é aquele com a classificação mais baixa onde você jogou 3 ou mais partidas ranqueadas.\nAs recompensas para Titã e Imortal serão distribuídas apenas com base nesse servidor atribuído.
 귀속서버불일치┃O servidor atualmente selecionado e o servidor aplicável são diferentes: (Servidor aplicável: {0})\nVocê só pode receber recompensas Titan e Immortal de acordo com seu servidor aplicável.
 귀속서버명┃Servidor Aplicável:
 제한 해제┃Sem Limite
@@ -18431,6 +18643,8 @@ Shortcut/Popup/ExistKey┃<color=#FFB62F>[{0}]</color> Este atalho já está em 
 {0}초 후에 자동으로 닫힙니다.┃Essa janela será fechada automaticamente após {0} segundos.
 로비 애니메이션 재생┃Ativar Animação do Lobby
 카메라 흔들림 효과┃Efeito de Vibração da Câmera
+실험 단계 전환 연출 재생┃Mostrar Efeitos da Transição de Fase
+BasicSetting/StageChangeEffect┃Habilita os efeitos visuais na transição entre fases.
 상점┃Loja
 검색┃Pesquisa
 상품 구매┃Comprar
@@ -18450,6 +18664,7 @@ Shortcut/Popup/ExistKey┃<color=#FFB62F>[{0}]</color> Este atalho já está em 
 새로고침 쿨타임 표기┃Atualiza em {0}s
 개인 상점 진입 불가 안내┃Você não pode comprar itens na sua Loja Pessoal agora.
 개인 상점 기간 만료 안내┃Não é possível comprar itens durante a atualização diária
+개인 상점 정보 갱신 안내┃A informação de produto foi atualizada. Atualizando Loja Pessoal.
 보유 중┃<color=#C67D3C>Possuídos atualmente</color>
 구매 제한 초과┃Lime de compra excedido
 공개 예정┃Vindo em Breve
@@ -18656,6 +18871,9 @@ ERPassPurchaseWindow/SeasonContent/14┃Todo mundo já sonhou em se tornar rico 
 ERPassPurchaseWindow/SeasonTitle/15┃Temporada: Legião
 ERPassPurchaseWindow/SeasonSubTitle/15┃Testemunhem, mortais, as forças do abismo que descem sobre vós.
 ERPassPurchaseWindow/SeasonContent/15┃A Imperatriz Demônio desperta do abismo, estrelas caem dos céus, \ne o fogo do inferno consome a terra, lançando pesadelos pelo céu. \nReverencie o exército do desespero que surge do abismo. \nTema o fim—um mundo governado pela escuridão.
+ERPassPurchaseWindow/SeasonTitle/16┃Temporada: Academia
+ERPassPurchaseWindow/SeasonSubTitle/16┃Escutem e sigam as ordens. O treinamento começa agora!
+ERPassPurchaseWindow/SeasonContent/16┃Parece que a taxa de sobrevivência para as novas cobaias na Ilha Lumia é bem pequena. Mas não se preocupe! Nós vamos fazer o nosso melhor como instrutures para lhe ajudar!\nEles vão se esforçar para aprender tudo em pouco tempo! Ei—espere! Você não pode correr!
 비쥬얼┃Visual
 오디오┃Áudio
 Product/Name/BATTLE_PASS/4┃ER Pass da Temporada 4
@@ -18669,6 +18887,7 @@ Product/Name/BATTLE_PASS/12┃Passe ER: Troca
 Product/Name/BATTLE_PASS/13┃Passe ER: Pôr-do-Sol
 Product/Name/BATTLE_PASS/14┃Passe ER: Fortuna★
 Product/Name/BATTLE_PASS/15┃Temporada: Legião
+Product/Name/BATTLE_PASS/16┃ER PASS: Academia
 Product/Name/BATTLE_PASS_POINT┃Comprar Pontos ER
 Product/Name/BATTLE_PASS┃Passe ER
 Product/Name/BATTLE_PASS_BUNDLE┃ER Plus
@@ -18703,6 +18922,9 @@ Product/Name/BATTLE_PASS_UPGRADE_S14┃Upgrade do Passe ER: Fortuna★
 Product/Name/BATTLE_PASS_S15┃Passe ER: Legião
 Product/Name/BATTLE_PASS_BUNDLE_S15┃Passe ER Plus: Legião
 Product/Name/BATTLE_PASS_UPGRADE_S15┃Upgrade do Passe ER: Legião
+Product/Name/BATTLE_PASS_S16┃ER PASS: Academia
+Product/Name/BATTLE_PASS_BUNDLE_S16┃ER PLUS: Academia
+Product/Name/BATTLE_PASS_UPGRADE_S16┃ER PASS Melhorado: Academia
 Shop/Desc/BATTLE_PASS┃<color=#ffdf72><size=32>Passe ER</size></color>\n<size=14>[Não-Reembolsável]</size>\n\nCompre o Passe ER, jogue Eternal Return e ganhe mais de 100 recompensas únicas, incluindo <color=#B2EBF4>skins, emotes, NP e muito mais!</color>\nGanhe níveis para o Passe ER apenas por jogar Eternal Return!\nSe você quiser receber suas recompensas AINDA MAIS RÁPIDO, você sempre pode comprar Pontos ER para aumentar seu progresso!
 Shop/Desc/BATTLE_PASS_BUNDLE┃<color=#ffdf72><size=32>ER Plus</size></color>\n<size=14>[Não-Reembolsável]</size>\n\nER Plus inclui o Passe ER e <color=#ffdf72>19 níveis</color> para dar um impulso instantâneo no seu passe.\nGanhe mais de 100 recompensas únicas incluindo <color=#B2EBF4>skins, emotes, NP e muito mais!</color>\nGanhe níveis para o Passe ER apenas por jogar Eternal Return!\nSe você quiser receber suas recompensas AINDA MAIS RÁPIDO, você sempre pode comprar Pontos ER para aumentar seu progresso!
 Shop/Desc/BATTLE_PASS_UPGRADE┃Níveis adicionados através da contra do Upgrade do ER Pass \nVocê não será reembolsado se ultrapassar o nível máximo.
@@ -18733,6 +18955,9 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S14┃Após comprar o Upgrade do Passe ER, se o n�
 Shop/Desc/BATTLE_PASS_S15┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
 Shop/Desc/BATTLE_PASS_BUNDLE_S15┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nCaso o nível do Passe ER aumente além do nível máximo pela compra do Passe ER Plus, <color=#FF7575>a diferença não vai ser reembolsada.</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
 Shop/Desc/BATTLE_PASS_UPGRADE_S15┃Após comprar o Upgrade do Passe ER, se o nível do Passe ER\nexceder o nível máximo, a diferença não será reembolsada.
+Shop/Desc/BATTLE_PASS_S16┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
+Shop/Desc/BATTLE_PASS_BUNDLE_S16┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nCaso o nível do Passe ER aumente além do nível máximo pela compra do Passe ER Plus, <color=#FF7575>a diferença não vai ser reembolsada.</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
+Shop/Desc/BATTLE_PASS_UPGRADE_S16┃Após comprar o Upgrade do Passe ER, se o nível do Passe ER\nexceder o nível máximo, a diferença não será reembolsada.
 Shop/Desc/BATTLE_PASS_CHECK┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
 Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃<color=#B2EBF4>Recompensas Premium</color> e <color=#B2EBF4>Missões Pagas</color> são ativadas comprando o Passe ER.\nVocê também pode <color=#B2EBF4>Comprar Pontos ER</color>.\n\nCaso o nível do Passe ER aumente além do nível máximo pela compra do Passe ER Plus, <color=#FF7575>a diferença não vai ser reembolsada.</color>.\n\nO passe ER fica disponível por duas temporadas: a atual e a seguinte.\nApenas um Passe ER fica ativo.\nVocê pode mudar qual Passe ER está ativo livremente.
 Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃Após comprar o Upgrade do Passe ER, se o nível do Passe ER\nexceder o nível máximo, a diferença não será reembolsada.
@@ -18758,16 +18983,16 @@ ER 패스 구매 불가 알림_시즌팩 보유┃Você não pode comprar o ER P
 판매 종료까지 남은 시간 : {0}┃Tempo até a promoção acabar: {0}
 특별 얼리버드까지 남은 시간 : {0}┃A Oferta Antecipada termina em: {0}
 시즌팩 혜택 적용까지 남은 시간 : {0}┃Tempo até o pacote começart: {0}
-시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃Pacote da Temporada: Legião
+시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃Pacote da Temporada: Academia
 시즌 5팩┃Pacote 1.0
 시즌 패스 우편 제목┃Pacote 1.0 - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<Passe ER: Legião> | Personagens | Skins | Itens Exclusivos
+시즌 패스 아이콘 마우스 오버 툴팁 내용┃<ER Pass: Academia> | Personagens | Skins | Itens Exclusivos
 얼리버드 혜택 기간 알림┃Oferta Antecipada termina em:
 시즌 패스 타이틀 설명┃<size=32>- Benefícios do Pacote da Temporada 6 -</size>
 시즌 패스 설명┃<size=20><color=#77bce0>Incluí o ER Pass: Presença Fantasmagórica</color></size>\nDesbloqueie o novo ER Pass: Presença Fantasmagória agora!\n\n<size=20><color=#77bce0>Incluí 6 personagens, 11 Skins</color></size>\nGanhe todos os personagens & skins lançadas na Temporada 5.\n\n<size=20><color=#77bce0>Itens Exclusivos</color></size>\nUma skin exclusiva, um emote e uma tumba serão incluídas apenas para usuários que comprarem o passe da Temporada 5.
 시즌 패스 주의 사항┃◆ Usuários que já compraram o ER Pass: Presença Fantasmagórica seram reembolsados com 1,190 NP.\n\n◆ Skin, emotes e tumba exclusiva serão entregues depois da manutenção no dia 16 de Feveireiro. \n\n◆ Skins de Eventos durante a temporada 5 não serão inclusos no pacote da temporada.\n\n◆ Produtos incluidos no pacote da Temporada 5 serão enviados pela  Caixa de Mensagens depois do lançamento.
 약 55% 할인┃<size=24>55% de desconto!</size>
-약 50% 할인┃<size=24>50% de desconto!</size>
+약 50% 할인┃<size=24>48% de desconto!</size>
 신규 캐릭터 6종 & 스킨 11종┃Incluí 6 personagens & 11 Skins
 SeasonPassIcon/5┃Img_SeasonPack5_Box_02
 SeasonPassIcon/6┃Img_SeasonPack6_Box_02
@@ -18844,6 +19069,15 @@ SeasonPassIcon/16┃Img_SeasonPack16_Box
 시즌팩 6 출시 캐릭터┃2 Temporada 6 Personagens
 시즌팩 6 출시 스킨┃6 Temporada 6 Skins
 시즌팩 6 특별 아이템┃4 Temporada 6 Itens Especiais
+시즌 16팩 주의사항 1┃Se você já tiver o <ER Pass: Academy>, você receberá o reembolso do valor de NP pago que você usou para comprá-lo.
+시즌 16팩 주의사항 2┃Itens duplicados que não sejam o <ER Pass> não serão reembolsados.
+시즌 16팩 주의사항 3┃Se você comprar personagens ou skins duplicados incluídos no Pacote de Temporada através da loja, a política de reembolso será aplicada.
+시즌 16팩 주의사항 4┃Por favor se refira aos anúncios separados para os detalhes dos itens incluídos no Pacote da Temporada, o conteúdo pode ter sido alterado.
+시즌 16팩 주의사항 5┃Itens do Pacote de Temporada vão ser enviados para sua Caixa de Mensagens → Pacote de Temporada após o lançamento e podem ser vendidos novamente no futuro de outras formas.
+<ER PASS : 아카데미> 포함┃<ER Pass: Academia>
+시즌팩 7 출시 캐릭터┃2 Temporada 7 Personagens
+시즌팩 7 출시 스킨┃6 Temporada 7 Skins
+시즌팩 7 특별 아이템┃4 Temporada 7 Itens Especiais
 WebViewPopup_Title┃Detalhes do Evento
 GoodsMenu/InGame┃Customização em jogo
 GoodsMenu/Customize┃Customização do Jogo
@@ -19540,6 +19774,7 @@ QuickStart/ButtonNotice/Matching┃Na Fila
 팀장이 매칭을 시작했습니다.┃O capitão do time iniciou a busca.
 모드매칭불가안내툴팁┃O modo não pode ser pareado no momento.
 빠른 시작 조건 불만족┃Esta função não pode ser usada em equipe.
+빠른 시작 조건 팀장아님┃Apenas o capitão da equipe pode utilizar essa função.\nCapitão da Equipe: {0}
 빠른 시작 매칭 취소┃O pareamento do Início Rápido foi concluída. Não é possível entrar em uma equipe.
 Chat/Tab/All┃Todos
 Chat/Tab/System┃Sistema
@@ -19568,6 +19803,7 @@ Season12/Name┃<color=#FFD5B6>Mudança</color>
 Season13/Name┃<color=#FF95A6>Pôr do Sol</color>
 Season14/Name┃<color=#FFBE70>Sortudo★</color>
 Season15/Name┃<color=#937DFF>Legião</color>
+Season16/Name┃<color=#FF6071>Academia</color>
 SeasonToBeAdded/Name┃Nova Temporada \n D - {0}
 팀원이 세션을 나갔습니다.┃{0}({1}) saiu da sessão.
 100001_Title┃Evento de Login Temporada 3
@@ -19598,6 +19834,10 @@ SeasonToBeAdded/Name┃Nova Temporada \n D - {0}
 10000401_7_Desc┃- Imperatriz do Abismo Lenox Te Peguei! Perfil\n- Imperadora do Abismo Lenox Te Peguei! Emote
 10000401_21_Title┃Conjunto Maldição Carmesim Charlotte Olá
 10000401_21_Desc┃- Maldição Carmesim Charlotte Olá Perfil\n- Maldição Carmesim Charlotte Olá Emote
+10000501_7_Title┃Conjunto Instrutor de Táticas Laura Corre!
+10000501_7_Desc┃Perfil Instrutor de Táticas Laura Corre!\n-Emote Instrutor de Táticas Laura Corre!
+10000501_21_Title┃Conjunto Diretora de Treinamento Katja OLÁ!
+10000501_21_Desc┃Coffret Katja Directrice de Formation SALUT !
 20000101_1_Title┃Conjunto de Suporte Novo Jogador Dia 1
 20000101_1_Desc┃- Voucher de Seleção de Personagem (Iniciante)\n- Bônus de XP(3 Dias)\n- Bônus de A-Coin(3 Dias)
 20000101_4_Title┃Conjunto de Suporte Novo Jogador Dia 4
@@ -19731,14 +19971,18 @@ Season2003/Name┃Livro de Missões de A-Coin Troca
 Season2004/Name┃Livro de Missões de A-Coin Pôr do Sol
 Season2005/Name┃Livro de Missões de A-Coin Sortudo ★
 Season2006/Name┃Livro de Missões de A-Coin Legião
+Season2007/Name┃Livro de Missão A-Coin Academia
 Season2100/Name┃Livro de Missões de A-Coin T5
 Season2101/Name┃Livro de Missões Tokens Legião
+Season2102/Name┃S6 Livro de Missão A-Coin
 HiddenPassPath/2001┃Compre este item na Loja NP - Token de Linhagem para ativá-lo.
 HiddenPassPath/2002┃Compre este item na Loja NP - Token de Linhagem para ativá-lo.
 HiddenPassPath/2003┃Compre este item na Loja NP - Token de Linhagem para ativá-lo.
 HiddenPassPath/2004┃Compre este item na Loja NP - Token de Linhagem para ativá-lo.
 HiddenPassPath/2005┃Compre esse item usando Tokens Sortudo ★ no menu Trocar para ativar.
 HiddenPassPath/2006┃Compre este item com Tokens da Legião no menu de Troca para ativá-lo.
+HiddenPassPath/2007┃Compre esse item com Tokens Academia no menu de Troca para ativar.
+HiddenPassPath/2102┃Compre o Pacote de Voucher Ⅲ na Loja para ativar esse item.
 칭찬하기┃Joinha
 극찬하기┃Joinha Dourado
 극찬 불가 알림┃Você usou todos os seus joinhas disponiveís hoje.
@@ -19764,8 +20008,17 @@ GuideRobotCreditRichModeLnKey┃Robô Guia: Lumi - Créditos Cobrados
 안내로봇크레딧부자모드노티타이틀┃Robô Guia: Lumi - Créditos Cobrados
 안내로봇전투모드채팅알림┃Alguém está roubando
 안내로봇크레딧부자모드채팅알림┃O robô guia está cheio de créditos em {0}.
-안내로봇특수상점상품안내┃Itens principais do Robo Guia Lumi:\n<color=#b245ff>{6}</color>
+안내로봇특수상점상품안내┃Itens principais do Robo Guia Lumi:\n<color=#b245ff>{0}</color>
 안내로봇구매희망안내┃{0}({1}) tem como alvo o item {2} do Lumi
+ItemExchange┃Deixe-me trocar isso para você :)
+ExchangeableItem┃Este item está disponível para troca :)
+ExchangeableItemEmpty┃Não há itens disponíveis para troca :(
+안내로봇교환가능품목정보┃Você pode trocar itens que possui em seu inventário, \n· Materiais especiais, incluindo Meteorito e Árvore da Vida \n· Equipamentos Lendários e Míticos
+안내로봇교환채팅안내┃{0}({1}) trocou {2} por {3} através do Lumi.
+안내로봇아이템교환등록불가안내┃Você não pode trocar esse item.
+안내로봇아이템교환등록아이템┃Solicitação de Troca
+안내로봇아이템교환결과아이템┃Resultados da Troca
+안내로봇아이템교환버튼┃Troca de Itens
 버프 큐브 핑┃Um cubo {1} aparecerá em {0} em {2} segundos.
 버프 큐브 핑2┃{0}({1}) tem como alvo o cubo {3} em {2}.
 버프 큐브 핑3┃Um cubo aparecerá em {0} em {2} segundos.
@@ -19840,6 +20093,7 @@ SquadRumbleEnd_EntryFee┃Custo de Entrada: {0} {1}
 유니온 대전 팀생성 시 상대방 초대 수락 불가 팝업┃Você não pode aceitar convites enquanto estiver criando um time.
 티어 매칭 불가 팝업 안내┃Você não pode encontrar partidas em seu tier atual.
 팀 해체 가능 상태 알림 메시지┃A conta de um membro da equipe foi suspensa, permitindo que você saia da equipe.
+유니온 대전 유저 검색 불가 안내 메시지┃Não foi capaz de conectar ao modo.
 필터/아이템 보유 여부┃Item Obtido?
 필터/전체┃Tudo
 필터/보유┃Obtido
@@ -20066,6 +20320,7 @@ ServerError/9451┃Circuito União está disponível para jogadores nível 30 ou
 ServerError/9452┃Não é possivel iniciar a file para o tier dessa equipe. Por favor verifique o calendário de fila para cada tier.
 ServerError/99999┃A conexão foi estabelecida com uma versão incompatível.
 ServerError/HttpException┃Falha ao comunicar com o servidor. (9201)
+gameTip_Desc_10250_1┃Ache uma fogueira na Ilha de Lumia onde você possa fazer pratos especiais. \nTodos os materiais (brancos) normais que você acha na Ilha de Lumia podem se transformar em pratos incríveis quando cozinhados em uma fogueira. \n \nCom uma fogueira, você vira um chef top! \n \nSe uma fogueira estiver muito longe, por que não tentar Gadget - Pote do Caçador?\nO Pote do Caçador pode ser encontrado após <color=#8FDBF8>derrotar animais selvagens</color>.
 게임팁 링크┃Mover Link
 gameTip_Title_10000_1┃Planejamento / Guia de Criação
 gameTip_Desc_10000_1┃Então você abriu uma caixa - não sabe quais itens pegar? Preste atenção nos <color=#8FDBF8>marcadores amarelos</color> nos itens! Esses são os itens que você definitivamente vai precisar. \n \nIncerto sobre qual item pegar nessa área? Não se preocupe! O <color=#8FDBF8>Guia de Criação</color> te mostra quais itens você pode obter! \n \nVocê pode criar equipamentos poderosos coletando todos os ingredientes necessários! 
@@ -20146,7 +20401,6 @@ gameTip_Desc_10230_1┃Não tem certeza do que fazer? \n \nApenas siga um operad
 gameTip_Title_10240_1┃Renascimento Pago
 gameTip_Desc_10240_1┃Não desista só porque você está morto! \n \nSeus companheiros de equipe podem gastar uma certa quantidade de créditos para reviver um companheiro morto em um Quiosque.  \nNo entanto, você não pode escolher um lugar para renascer, então é melhor avisar seus companheiros com antecedência.
 gameTip_Title_10250_1┃Fogueira
-gameTip_Desc_10250_1┃Ache uma fogueira na Ilha de Lumia onde você possa fazer pratos especiais. \nTodos os materiais (brancos) normais que você acha na Ilha de Lumia podem se transformar em pratos incríveis quando cozinhados em uma fogueira. \n \nCom uma fogueira, você vira um chef top! \n \nSe uma fogueira estiver muito longe, por que não tentar um kit de fogueira portátil? \nKits de fogueira podem ser obtidos <color=#8FDBF8>caçando animais selvagens</color>.
 gameTip_Title_10260_1┃V-Pad
 gameTip_Desc_10260_1┃Maestria, habilidades táticas, gerenciamento de itens... Muita coisa pra ficar pensando, né? \nNão se preocupe, apenas aperte V!  \n \nCom o novo V-Pad, você vai conseguir ver toda a informação que precisa para progredir no jogo num relance. \nV-Pad está aqui para te livrar de problemas!
 gameTip_Title_10270_1┃Escape
@@ -20192,7 +20446,7 @@ gameTip_Desc_10401_1┃O clima da Ilha de Lumia é influenciado por 1 clima prin
 gameTip_Title_10402_1┃Clima Principal
 gameTip_Desc_10402_1┃Os climas principais são Nublado, Limpo, Chuvoso e Tempestade de Areia.\n\nNublado: Clima padrão da Ilha de Lumia, sem nenhum mudança.\n\nLimpo: Um clima ideal. Visibilidade e Comidas feitas são melhoradas.\n\nChuvoso: Perfeito para se esconder. O número de arbustos na ilha é aumentado e a distância que consegue ouvir é reduzida.\n\nTempestade de Areia: Um clima bem restritivo. Cobaias ganham tenacidade e redemoinhos são criados pelo mapa.
 gameTip_Title_10402_2┃Clima Principal - Limpo
-gameTip_Desc_10402_2┃Em geral tem menos arbustos pela ilha e seu alcance de visão é aumentado.\nSua recuperação por consumíveis criados também é maior.\nMaiores chances de  conseguir materiais raros coletando batatas ou pescando.
+gameTip_Desc_10402_2┃Em geral tem menos arbustos pela ilha e seu alcance de visão é aumentado.\nSua recuperação por consumíveis criados também é maior.\nMaiores chances de conseguir materiais raros coletando batatas ou pescando.
 gameTip_Title_10402_3┃Clima Principal - Chuvoso
 gameTip_Desc_10402_3┃Em geral tem mais arbustos pela ilha.\nA distância que consegue ouvir é reduzida e os animais selvagens são mais fracos.
 gameTip_Title_10402_4┃Clima Principal - Tempestade de Areia
@@ -21478,7 +21732,7 @@ Tutorial/Victory/2┃Não existe futuro escrito na pedra.
 Tutorial/Victory/3┃Parece que você está pronto. Bom trabalho.
 GuideBook/MainTheme/Title/PREFACE┃Introdução
 GuideBook/SubTheme/Title/EternalReturn┃Eternal Return
-이터널 리턴은 실험체들이 서로 경쟁하여 최후의 생존자를 가리는 <color=white>배틀 로얄</color> 게임입니다.┃Eternal Return é um jogo <color=white>Battle Royale</color>, onde as cobaias disputam para se tornarem o último sobrevivente.
+GuideBook/Page/Content/EternalReturn/1┃Eternal Return é um jogo <color=white>Battle Royale</color>, onde as cobaias disputam para se tornarem o último sobrevivente.
 GuideBook/Page/Content/EternalReturn/2┃Esse guia vai te mostrar as mecânicas básicas do jogo para que você possa dorminar suas partidas do começo ao fim.
 GuideBook/MainTheme/Title/GROWTH┃Começo do Jogo
 GuideBook/SubTheme/Title/EpicReady┃Criação
@@ -21516,7 +21770,7 @@ GuideBook/SubTheme/Title/Vision┃Mantenha a Visão
 GuideBook/Page/Content/Vision/1┃Esteja atento a todos os momentos!\n<color=yellow>Visão</color> ajuda a tomar decisões durante lutas e evitar ser pego de surpresa.\n\nO <color=yellow>Console de Segurança</color> revela pontos estratégicos na área quando ativado.\nA <color=yellow>Flor Brilhante</color> detona revelando uma área em cone na direção do ataque.\n<color=yellow>Câmeras Fotográficas e Drones</color> podem ser usados do seu inventário para fornecer visão da área escolhida, use-os estratégicamente.
 GuideBook/SubTheme/Title/TeamFight┃Lutas em Equipe
 GuideBook/Page/Content/TeamFight/1┃Usar suas <color=white>Habilidades, Habilidades Táticas e Habilidades Táticas</color> efetivamente é a chave para ganhar lutas em equipe.
-GuideBook/Page/Content/TeamFight/2┃Seu experimento será <color=red>terminado</color> quando <color=yellow>você e seus companheiros forem derrubados ou eliminados</color>.\nSe o time inimigo for <color=red>muito forte</color> considere <color=white>recuar</color> e esperar por uma oportunidade melhor.
+GuideBook/Page/Content/TeamFight/2┃<color=white>A partir do Dia 3</color>, caso <color=yellow>você ou seus companheiros</color> forem todos derrubados, o experimento vai <color=red>terminar</color>.\nCaso a equipe inimigo seja <color=red>muito forte</color>, considere <color=white>recuar</color> e espere por uma oportunidade melhor.
 GuideBook/Page/Content/TeamFight/3┃Quando a Vida de um personagem chegar a zero, eles entram no estado <color=yellow>Derrubado</color>.\nClique com o botão direito em um <color=white>aliado derrubado</color> para reviver ele.\nElimine um <color=white>inimigo derrubado</color> para recuperar um pouco de vida e pegar seus Créditos, Comida e outros recursos.
 GuideBook/SubTheme/Title/Resurrection┃Reviver
 GuideBook/Page/Content/Resurrection/1┃A partir do <color=yellow>Dia 3</color>, você pode usar <color=white>Créditos</color> para reviver aliados eliminados em um <color=yellow>Quiosque</color>.\nSe você não possuir Créditos o suficiente, parte dos créditos do aliado eliminado será usado automaticamente.
