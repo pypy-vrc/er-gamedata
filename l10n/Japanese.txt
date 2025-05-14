@@ -1120,8 +1120,9 @@ ToolTipType/IstvanCloneReinforceDamage┃[もう一つの可能性] 強化ダメ
 ToolTipType/MinHpHeal┃最小体力回復量
 ToolTipType/MaxHpHeal┃最大体力回復量
 ToolTipType/PathDamage┃経路上のダメージ量
-ToolTipType/NiahStackDamage┃スタックごとのダメージ量
+ToolTipType/NiahStackDamage┃1スタックあたりダメージ量
 ToolTipType/NiahAcive1Cooldown┃[アーケードドロップ] クールダウン
+ToolTipType/StackShield┃1スタックあたりシールド量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+余った弾1 * スキル増幅の{0}%)</color>
 DayNight/Day┃昼
 DayNight/Night┃夜
@@ -1327,10 +1328,13 @@ Loading/MatchingMode/Tutorial1_Re┃TRAINING
 Loading/MatchingMode/Tutorial2_Re┃TRAINING
 Loading/MatchingMode/Tutorial3_Re┃TRAINING
 Loading/MatchingMode/SquadRumble┃UNION GAME
+Loading/MatchingMode/LoneWolf┃EVENT GAME
+Loading/MatchingMode/LoneWolfCustom┃CUSTOM GAME
 Loading/MatchingTeamMode/Solo┃ルミア島
 Loading/MatchingTeamMode/Squad┃ルミア島
 Loading/MatchingTeamMode/Cobalt┃コバルト・プロトコル
 Loading/MatchingTeamMode/LoneWolf┃ルミア島
+Loading/MatchingTeamMode/LoneWolfCustom┃ルミア島
 ItemType/SKIN/Name┃スキン
 Skin/Name/1001000┃ジャッキー
 Skin/Name/1001001┃処刑者ジャッキー
@@ -1660,6 +1664,7 @@ Skin/Name/1076001┃拘束着ガーネット
 Skin/Name/1077000┃ユミン
 Skin/Name/1077001┃流浪する者ユミン
 Skin/Name/1078000┃ヒスイ
+Skin/Name/1078001┃路地裏ヒスイ
 Skin/Name/1079000┃ユスティナ
 Skin/Name/1080000┃イシュトヴァーン
 Skin/Name/1081000┃ニア
@@ -1949,6 +1954,7 @@ Skin/Desc/1057002┃真実、公正...記者としての初心を忘れてはい
 Skin/Desc/1022006┃死神は、常にあなたの傍にいる。どうかこのことを、お忘れなく。
 Skin/Desc/1032003┃今回のマウンドは、結構荒れてるな。
 Skin/Desc/1003005┃秩序を守ること。それが、正しい訓練への第一歩だ。
+Skin/Desc/1078001┃おい、ここを誰の縄張りだと思ってんだ？
 ItemType/EMOTION/Name┃エモート
 Emotion_Name_001┃怒
 Emotion_Name_002┃笑
@@ -2950,6 +2956,20 @@ Event_2024_NL_Champion_DaSoo_3122┃2024 LEAGUE CHAMPION DASOO
 Event_2024_NL_Champion_JINho_3123┃2024 LEAGUE CHAMPION JINHO
 Event_2024_NL_Champion_ing9_3124┃2024 LEAGUE CHAMPION ING9
 Event_2024_NL_Champion_ZeroJin_3125┃2024 LEAGUE CHAMPION ZEROJIN
+Emotion_Event_Pack_Niah_2081001┃ニア 勝利のダンス
+Emotion_SNS_Niah_2081006┃ニア 勝利の万歳
+Emotion_EsportsClub_Niah_2081007┃ニア VICTORY
+Emotion_EsportsClub_Rio_2031011┃莉央 キャリーする
+Emotion_EsportsClub_Celine_2043005┃セリーヌ 勝った
+Emotion_EsportsClub_Arda_2066005┃アルダ 何を言っているのかね？
+Emotion_EsportsClub_Justyna_2079006┃ユスティナ GO！
+Emotion_EsportsClub_Irem_2061007┃イレム 負けちゃったにゃ...
+Emotion_EsportsClub_Eleven_2030011┃Eleven お願い...
+Emotion_EsportsClub_Hisui_2078006┃ヒスイ 簡単じゃん～
+Emotion_Niah01_NP┃GG ニア
+Emotion_Niah02_NP┃WA！ニア
+Emotion_Niah03_NP┃サンキュー ニア
+Emotion_Niah04_NP┃何してんの ニア
 Collection/Name/11001┃すべては娘のため…
 Collection/Name/11002┃ピクセルアートは…好き…？
 Collection/Name/11003┃彷徨う魂に救済を
@@ -2987,6 +3007,8 @@ Collection/Name/22007┃S5 eスポーツサポーターⅠ
 Collection/Name/22008┃S5 eスポーツサポーターⅡ
 Collection/Name/22009┃S6 eスポーツサポーターⅠ
 Collection/Name/22010┃S6 eスポーツサポーターⅡ
+Collection/Name/22011/1┃S7 eスポーツサポーターⅠ
+Collection/Name/22011/2┃S7 eスポーツサポーターⅡ
 Collection/Name/24001┃2024年 金の福袋！
 Collection/Name/24002┃花咲かし大作戦Ⅰ
 Collection/Name/24003┃花咲かし大作戦Ⅱ
@@ -3020,6 +3042,8 @@ Collection/Name/24026/4┃スターコレクションⅣ
 Collection/Name/24026/5┃スターコレクションⅤ
 Collection/Name/24027┃ゴールドスター交換
 Collection/Name/24028┃ゴールドスターボックス交換
+Collection/Name/24029/1┃5月の確率UPスキンコレクションⅠ
+Collection/Name/24029/2┃5月の確率UPスキンコレクションⅡ
 Shop/Desc/Emotion_Hart01_NP┃ゲーム内でエモートを使ってコミュニケーションすることができます。
 Shop/Desc/Emotion_Hart02_NP┃ゲーム内でエモートを使ってコミュニケーションすることができます。
 Shop/Desc/Emotion_Hart03_NP┃ゲーム内でエモートを使ってコミュニケーションすることができます。
@@ -3735,6 +3759,8 @@ EMBLEM_MARK_EVENT_103194┃2024 LEAGUE CHAMPION DASOO
 EMBLEM_MARK_EVENT_103195┃2024 LEAGUE CHAMPION JINHO
 EMBLEM_MARK_EVENT_103196┃2024 LEAGUE CHAMPION ING9
 EMBLEM_MARK_EVENT_103197┃2024 LEAGUE CHAMPION ZEROJIN
+EMBLEM_MARK_EVENT_103198┃ニア 勝利の万歳 アイコン
+EMBLEM_MARK_EVENT_103199┃先駆者 アイコン
 EMBLEM_MARK_ERPASS_104001┃氷の結晶アイコン
 EMBLEM_MARK_ERPASS_104002┃プレゼントする木アイコン
 EMBLEM_MARK_ERPASS_104003┃赤い鼻アイコン
@@ -3843,6 +3869,7 @@ EMBLEM_MARK_COLLECTION_119008┃死神ルク掃除完了
 EMBLEM_MARK_COLLECTION_119501┃S4 eスポーツサポーター
 EMBLEM_MARK_COLLECTION_119502┃S5 eスポーツサポーター
 EMBLEM_MARK_COLLECTION_119503┃S6 eスポーツサポーター
+EMBLEM_MARK_COLLECTION_119504┃S7 eスポーツサポーター
 ItemType/EMBLEM_BG/Name┃プロフィール背景
 EMBLEM_BG_FREE1┃基本背景
 EMBLEM_BG_SHOP_202001┃ヒョヌ背景
@@ -3888,6 +3915,7 @@ EMBLEM_BG_SHOP_202040┃ホログラムフェアリーヴァーニャ背景
 EMBLEM_BG_SHOP_202041┃小悪魔レニ背景
 EMBLEM_BG_SHOP_202042┃アイドルマイ背景
 EMBLEM_BG_SHOP_202043┃死神ルク背景
+EMBLEM_BG_SHOP_202044┃ニア背景
 EMBLEM_BG_SHOP_202501┃S4 All ways Incheon 背景
 EMBLEM_BG_SHOP_202502┃S4 Gyeonggi Innate 背景
 EMBLEM_BG_SHOP_202503┃S4 GJ Slasher 背景
@@ -4270,6 +4298,7 @@ EMBLEM_OUTLINE_SHOP_302040┃ホログラムフェアリーヴァーニャフレ
 EMBLEM_OUTLINE_SHOP_302041┃小悪魔レニフレーム
 EMBLEM_OUTLINE_SHOP_302042┃アイドルマイフレーム
 EMBLEM_OUTLINE_SHOP_302043┃死神ルクフレーム
+EMBLEM_OUTLINE_SHOP_302044┃ニアフレーム
 EMBLEM_OUTLINE_SHOP_302501┃S4 All ways Incheon フレーム
 EMBLEM_OUTLINE_SHOP_302502┃S4 Gyeonggi Innate フレーム
 EMBLEM_OUTLINE_SHOP_302503┃S4 GJ Slasher フレーム
@@ -5124,6 +5153,7 @@ Goods/Name/3403013┃ラッキー★
 Goods/Name/3403014┃秋の感謝祭
 Goods/Name/3403015┃アグライア
 Goods/Name/3403016┃2024 クリスマス
+Goods/Name/3403017┃ニア
 Goods/Name/3419001┃冬の雪花
 ItemType/EVENT/Name┃収集品アイテム
 Goods/Name/3503001┃[N] 収集品アイテム
@@ -5153,6 +5183,7 @@ Goods/Name/3503024┃生徒会長のカード
 Goods/Name/3503025┃チェンジカード
 Goods/Name/3503026┃シルバースター
 Goods/Name/3503027┃ゴールドスター
+Goods/Name/3503028┃5月の確率UPスキンカード
 ItemType/WILD_CARD_SKIN/Name┃[スキン専用] ワイルドカード
 ItemType/WILD_CARD_ETC/Name┃ワイルドカード
 Goods/Name/3602002┃[スキン専用] ワイルドカード
@@ -5473,6 +5504,11 @@ Product/Name/S7_Star_Box_Pack_01┃スターボックスパッケージ
 Product/Name/S7_Star_Box_Pack_02┃グリーンスターボックスパッケージ
 Product/Name/S7_Star_Box_Pack_03┃ホワイトスターボックスパッケージ
 Product/Name/GildedReaperLuke_CollectPack_01┃死神ルクコレクションパッケージ
+Product/Name/Niah_Event_Pack_01┃ニア登場記念パッケージ
+Product/Name/EVENT_NPASS_S7_Premium_Token_1010┃S7 プレミアムトークンブックⅡ
+Product/Name/EVENT_NPASS_S7_Basic_Token_1011┃S7 ベーシックトークンブックⅡ
+Product/Name/2025_May_SkinBox_Pack_01┃5月の確率UPスペシャルパッケージ
+Product/Name/2025_May_SkinBox_Pack_02┃5月の確率UPパッケージ
 Product/Name/Perfect_Support_Pack_01┃パーフェクトパッケージ
 Shop/Desc/Aya_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Hyunwoo_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の56%が払い戻され、メールボックスに支給されます。
@@ -5711,6 +5747,9 @@ Shop/Desc/S7_Star_Box_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- ブ�
 Shop/Desc/S7_Star_Box_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- グリーンスターボックス 1個\n- A-Coin Boost(1時間)\n\n※ 購入した商品は製作所より開けることができます。\n※ スターボックスは「ホワイト・グリーン・ブルー・パープル・ゴールド」の順で構成されています。\n※ スターボックスからは＜次の色のスターボックス、同じ色のスターボックス、A-Coin＞の中から1つを獲得し、確率に応じて収集品アイテム「シルバースター」を追加で獲得します。\n※ ただし、ゴールドスターボックスの場合、スターボックスの代わりにアカデミートークンを獲得します。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/S7_Star_Box_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- ホワイトスターボックス 4個\n- XP Boost(1時間)\n\n※ 購入した商品は製作所より開けることができます。\n※ スターボックスは「ホワイト・グリーン・ブルー・パープル・ゴールド」の順で構成されています。\n※ スターボックスからは＜次の色のスターボックス、同じ色のスターボックス、A-Coin＞の中から1つを獲得し、確率に応じて収集品アイテム「シルバースター」を追加で獲得します。\n※ ただし、ゴールドスターボックスの場合、スターボックスの代わりにアカデミートークンを獲得します。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 死神ルクエモート2種\n- 死神ルクアイコン\n- 死神ルクフレーム\n- 死神ルク背景\n- アカデミートークン 10個\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- ニアエモート\n- ニア背景\n- ニアフレーム\n- ニアチームスロット背景\n- アカデミートークン 10個\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2025_May_SkinBox_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 5月の確率UPスキンデータボックス 10個\n- データキー 10個\n- アカデミートークン 15個\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2025_May_SkinBox_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- 5月の確率UPスキンデータボックス 1個\n- データキー 1個\n- アカデミートークン 1個\n- A-Coin Boost(1時間)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Perfect_Support_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- [スキン専用] ワイルドカード (英雄) 1個\n- [スキン専用] ワイルドカード (レア) 1個\n- ワイルドカード (レア) 1個\n- 1,000 NP\n- ラッキー★ボール 1個\n- ラッキー★ボックス 10個\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ パーフェクトパッケージはSteamウォレットのクレジットで購入できます。\n※ ワイルドカードは「製作所 ‐ ワイルドカード」から開けることができます。\n※ 商品リストの詳細についてはデータボックスの確率表示リンクをご参考ください。\n※ パーフェクトパッケージに含まれた1,000NP商品は無料獲得NPで構成されています。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Product/Name/SEASON_PASS_S5┃シーズン5パック
 Shop/Desc/SEASON_PASS_S5┃シーズン5にリリースされる商品をお得な価格で事前購入してみてください!
@@ -5913,8 +5952,8 @@ BanReasonType/SNIPER┃スナイピング行為
 BanReasonType/TEAMING┃チーミング
 BanReasonType/VERBAL_HARASSMENT┃言語暴力
 Skill/Group/Name/4000000┃ブリンク
-Skill/Group/LobbyDesc/4000000┃使用すると指定した位置の方に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
-Skill/Group/LobbyDesc/4512000┃使用すると指定した位置の方に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
+Skill/Group/LobbyDesc/4000000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
+Skill/Group/LobbyDesc/4512000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
 Skill/Code/Desc/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が増加します。</color>
 Skill/Code/Coef/4000001┃使用すると指定した位置に瞬間移動します。\n\n<color=#565730>モジュール強化：</color><color=#595959>{2}秒間移動速度が{3}%増加し、衝突を無視します。</color>
 Skill/Code/ExpansionTip/4000001┃<i>2レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
@@ -6022,10 +6061,10 @@ Skill/Group/Name/4107000┃強い絆
 Skill/Group/LobbyDesc/4107000┃周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して周りの味方に移動速度とダメージ吸血効果を与えます。\n\n<color=#ff3399>強化：</color>より多くのエネルギーを獲得できます。
 Skill/Group/LobbyDesc/4519000┃周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して周りの味方に移動速度とダメージ吸血効果を与えます。\n\n<color=#ff3399>強化：</color>より多くのエネルギーを獲得できます。
 Skill/Code/Desc/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}%</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
-Skill/Code/Coef/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}%</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
+Skill/Code/Coef/4107001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}のエネルギーをチャージでき、{3}秒間チャージされなかった場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}%</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#565730>モジュール強化：</color><color=#595959>エネルギーの最大保有量と獲得率が増加します。</color>
 Skill/Code/ExpansionTip/4107001┃<i>2レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
 Skill/Code/Desc/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}%</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>モジュール強化：</color>エネルギーの最大保有量と獲得率が増加します。
-Skill/Code/Coef/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}%</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>モジュール強化：</color>エネルギーの最大保有量と獲得率が増加します。
+Skill/Code/Coef/4107002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}のエネルギーをチャージでき、{3}秒間チャージされなかった場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}%</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>モジュール強化：</color>エネルギーの最大保有量と獲得率が増加します。
 Skill/Code/Desc/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}%</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
 Skill/Code/Coef/4519001┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力{1}％あたり1のエネルギーを獲得します。\n最大{2}までエネルギーをチャージし、{3}秒間チャージされない場合には獲得したエネルギーが消滅します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度(<color=white>{5}%</color>+<color=#6B72FF>エネルギー*{7}</color>)とダメージ吸血効果(<color=white>{6}</color>+<color=#6B72FF>エネルギー*{8}</color>)%を与えます。\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
 Skill/Code/Desc/4519002┃<color=green>持続効果：</color>周りの範囲内で実験体との戦闘によって失った体力に比例するエネルギーを獲得します。\n\n使用するとすべてのエネルギーを消耗して{4}秒間周りの味方に移動速度<color=white>{5}%</color>とダメージ吸血効果<color=white>{6}</color>%を与えます。\n\n\n<color=#FFFFC2>強化完了済み：</color>エネルギーの最大保有量と獲得率が増加します。
@@ -6037,23 +6076,23 @@ CharacterState/Group/Desc/4107010┃ダメージ吸血と移動速度が増加�
 CharacterState/Group/Name/4107020┃強い絆 - 不可
 CharacterState/Group/Desc/4107020┃絆の効果を受け、一定時間の間絆の効果が適用されません。
 Skill/Group/Name/4114000┃ストライダー - A13
-Skill/Group/LobbyDesc/4114000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間敵にダメージを与えた場合には追加スキルダメージを与えてしばらくの間移動速度が増加します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
-Skill/Group/LobbyDesc/4523000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間敵にダメージを与えた場合には追加スキルダメージを与えてしばらくの間移動速度が増加します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
-Skill/Code/Desc/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
-Skill/Code/Coef/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
+Skill/Group/LobbyDesc/4114000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間、敵実験体にダメージを与えた場合には追加スキルダメージを与えてしばらくの間移動速度が増加します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
+Skill/Group/LobbyDesc/4523000┃使用すると敵実験体に向かって移動する時の移動速度が増加し、持続時間の間、敵実験体にダメージを与えた場合には追加スキルダメージを与えてしばらくの間移動速度が増加します。\n\n<color=#ff3399>強化：</color>このスキルでダメージを与えた対象の移動速度を減少させます。
+Skill/Code/Desc/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。</color>
+Skill/Code/Coef/4114001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#565730>モジュール強化：</color><color=#595959>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。</color>
 Skill/Code/ExpansionTip/4114001┃<i>2レベルにアップグレードするためには<color=#b245ff>戦術強化モジュール</color>が必要です。</i>
-Skill/Code/Desc/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
-Skill/Code/Coef/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
+Skill/Code/Desc/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
+Skill/Code/Coef/4114002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>モジュール強化：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
 CharacterState/Group/Name/4114000┃ストライダー - A13
 CharacterState/Group/Desc/4114000┃移動速度が増加します。
 CharacterState/Group/Name/4114020┃ストライダー - A13(打撃)
 CharacterState/Group/Desc/4114020┃移動速度が減少します。
 CharacterState/Group/Name/4114030┃ストライダー - A13
 CharacterState/Group/Desc/4114030┃移動速度が増加します。
-Skill/Code/Desc/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
-Skill/Code/Coef/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
-Skill/Code/Desc/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
-Skill/Code/Coef/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間敵にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
+Skill/Code/Desc/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
+Skill/Code/Coef/4523001┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
+Skill/Code/Desc/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には<color=white>{3}</color>の追加スキルダメージを与えて<color=white>{6}秒</color>間移動速度が<color=white>{7}%</color>増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間{5}%減少させます。
+Skill/Code/Coef/4523002┃使用すると{1}秒間敵実験体に向かって移動する時の移動速度が{2}%増加し、持続時間の間、敵実験体にダメージを与えた場合には(<color=white>{6}</color>+<color=green>キャラクターレベル*{7}</color>)の追加スキルダメージを与えて<color=white>{15}秒</color>間移動速度が({11}近距離 {16}%{13} | {12}遠距離 {17}%{14})増加します。\n\n<color=#FFFFC2>強化完了済み：</color>このスキルでダメージを与えた対象の移動速度を{4}秒間({11}近距離 {8}%{13} | {12}遠距離 {9}%{14})減少させます。
 Skill/Group/Name/4112000┃真実の刃
 Skill/Group/LobbyDesc/4112000┃使用すると周りの敵にダメージを与えます。また、ダメージを与えた敵の数に比例して移動速度が増加します。\n\n<color=#ff3399>強化：</color>真実の刃をもう一つ召喚し、追加ダメージを与えます。
 Skill/Group/LobbyDesc/4521000┃使用すると周りの敵にダメージを与えます。また、ダメージを与えた敵の数に比例して移動速度が増加します。\n\n<color=#ff3399>強化：</color>真実の刃をもう一つ召喚し、追加ダメージを与えます。
@@ -6172,21 +6211,21 @@ Skill/Group/Name/1001400┃襲撃
 Skill/Group/Name/1001500┃電気ノコギリ殺人鬼
 Skill/Group/Name/1001510┃虐殺
 Skill/Group/Desc/1001100┃ジャッキーからダメージを受けた敵実験体が3秒以内に瀕死状態または死亡する場合、ジャッキーの基本スキルのクールダウンが初期化されます。\n\nジャッキーはスキルで敵にダメージを与えると、{0}秒間<color=white>{1}</color>の持続ダメージを与える出血効果を与えます。ジャッキーは出血状態の対象に基本攻撃すると、<color=white>{2}</color>の追加スキルダメージを与えて出血の持続時間を更新します。
+Skill/Group/Coef/1001100┃ジャッキーからダメージを受けた敵実験体が3秒以内に瀕死状態または死亡する場合、ジャッキーの基本スキルのクールダウンが初期化されます。\n\nジャッキーはスキルで敵にダメージを与えると、{0}秒間<color=white>{1}</color><color=#ffd775>(+攻撃力の{3})</color>の持続ダメージを与える出血効果を与えます。ジャッキーは出血状態の対象に基本攻撃すると、<color=white>{2}</color><color=#ffd775>(+攻撃力の{5})</color>の追加スキルダメージを与えて出血の持続時間を更新します。
+Skill/Group/ExpansionTip/1001100┃<i></i>
 Skill/Group/Desc/1001200┃ジャッキーが指定した方向に武器を振り回して<color=white>{0}</color><color=#688A08>(+対象の現在体力の{2})</color>のスキルダメージを与えます。\n<color=white>連斬</color>が敵に的中した場合、もう一度使用することができます。\n再使用するとジャッキーが指定した方向へ進みながら武器を振り回し、<color=white>{1}</color>のスキルダメージを与えます。
 Skill/Group/Desc/1001210┃ジャッキーが指定した方向に武器を振り回して<color=white>{0}</color><color=#688A08>(+対象の現在体力の{2})</color>のスキルダメージを与えます。\n<color=white>連斬</color>が敵に的中した場合、もう一度使用することができます。\n再使用するとジャッキーが指定した方向へ進みながら武器を振り回し、<color=white>{1}</color>のスキルダメージを与えます。
-Skill/Group/Desc/1001300┃ジャッキーがアドレナリンを活性化させ、移動速度が{1}増加した後{0}秒にわたって減少します。アドレナリン活性化中に出血状態の敵に向かって移動すると移動速度が追加で{4}増加し、出血状態の敵に基本攻撃が的中すると自分の失った体力に比例して<color=white>{2}</color> ~ <color=white>{3}</color>の体力を回復します。
-Skill/Group/Desc/1001400┃ジャッキーが指定した位置にジャンプし、周りの敵に<color=white>{0}</color>のスキルダメージを与え、{1}秒間敵の移動速度を{2}減少させます。
-Skill/Group/Desc/1001500┃ジャッキーが{0}秒間電気ノコギリを取り出し、基本攻撃で<color=white>{3}</color>の追加スキルダメージを与えます。ジャッキーが敵実験体のキルに関与した場合、持続時間が{1}秒増加します。スキルを発動してから{2}秒後になると<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{4}</color> ~ <color=white>{5}</color>のスキルダメージを与えます。
-Skill/Group/Desc/1001510┃ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{0}</color> ~ <color=white>{1}</color>のスキルダメージを与えます。
-Skill/Group/Coef/1001100┃ジャッキーからダメージを受けた敵実験体が3秒以内に瀕死状態または死亡する場合、ジャッキーの基本スキルのクールダウンが初期化されます。\n\nジャッキーはスキルで敵にダメージを与えると、{0}秒間<color=white>{1}</color><color=#ffd775>(+攻撃力の{3})</color>の持続ダメージを与える出血効果を与えます。ジャッキーは出血状態の対象に基本攻撃すると、<color=white>{2}</color><color=#ffd775>(+攻撃力の{5})</color>の追加スキルダメージを与えて出血の持続時間を更新します。
 Skill/Group/Coef/1001200┃ジャッキーが指定した方向に武器を振り回して<color=white>{0}</color><color=#ffd775>(+攻撃力の{2})</color><color=#688A08>(+対象の現在体力の{6})</color>のスキルダメージを与えます。\n<color=white>連斬</color>が敵に的中した場合、もう一度使用することができます。\n再使用するとジャッキーが指定した方向へ進みながら武器を振り回し、<color=white>{1}</color><color=#ffd775>(+攻撃力の{4})</color>のスキルダメージを与えます。
 Skill/Group/Coef/1001210┃ジャッキーが指定した方向に武器を振り回して<color=white>{0}</color><color=#ffd775>(+攻撃力の{2})</color><color=#688A08>(+対象の現在体力の{6})</color>のスキルダメージを与えます。\n<color=white>連斬</color>が敵に的中した場合、もう一度使用することができます。\n再使用するとジャッキーが指定した方向へ進みながら武器を振り回し、<color=white>{1}</color><color=#ffd775>(+攻撃力の{4})</color>のスキルダメージを与えます。
+Skill/Group/Desc/1001300┃ジャッキーがアドレナリンを活性化させ、移動速度が{1}増加した後{0}秒にわたって減少します。アドレナリン活性化中に出血状態の敵に向かって移動すると移動速度が追加で{4}増加し、出血状態の敵に基本攻撃が的中すると自分の失った体力に比例して<color=white>{2}</color> ~ <color=white>{3}</color>の体力を回復します。
 Skill/Group/Coef/1001300┃ジャッキーがアドレナリンを活性化させ、移動速度が{1}増加した後{0}秒にわたって減少します。アドレナリン活性化中に出血状態の敵に向かって移動すると移動速度が追加で{4}増加し、出血状態の敵に基本攻撃が的中すると自分の失った体力に比例して<color=white>{2}</color><color=#ffd775>(+攻撃力の{5})</color> ~ <color=white>{3}</color><color=#ffd775>(+攻撃力の{7})</color>の体力を回復します。
+Skill/Group/ExpansionTip/1001300┃<i>体力回復量は自分の現在体力が最大体力の{0}の場合に最大になります。</i>
+Skill/Group/Desc/1001400┃ジャッキーが指定した位置にジャンプし、周りの敵に<color=white>{0}</color>のスキルダメージを与え、{1}秒間敵の移動速度を{2}減少させます。
 Skill/Group/Coef/1001400┃ジャッキーが指定した位置にジャンプし、周りの敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、{2}秒間敵の移動速度を{3}減少させます。
+Skill/Group/Desc/1001500┃ジャッキーが{0}秒間電気ノコギリを取り出し、基本攻撃で<color=white>{3}</color>の追加スキルダメージを与えます。ジャッキーが敵実験体のキルに関与した場合、持続時間が{1}秒増加します。スキルを発動してから{2}秒後になると<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{4}</color> ~ <color=white>{5}</color>のスキルダメージを与えます。
+Skill/Group/Desc/1001510┃ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{0}</color> ~ <color=white>{1}</color>のスキルダメージを与えます。
 Skill/Group/Coef/1001500┃ジャッキーが{0}秒間電気ノコギリを取り出し、基本攻撃で<color=white>{3}</color><color=#ffd775>(+攻撃力の{4})</color>の追加スキルダメージを与えます。ジャッキーが敵実験体のキルに関与した場合、持続時間が{1}秒増加します。スキルを発動してから{2}秒後になると<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{6}</color><color=#ffd775>(+攻撃力の{8})</color> ~ <color=white>{7}</color><color=#ffd775>(+攻撃力の{10})</color>のスキルダメージを与えます。
 Skill/Group/Coef/1001510┃ジャッキーが電気ノコギリ大きく振り回し、敵の失った体力に比例する<color=white>{0}</color><color=#ffd775>(+攻撃力の{2})</color> ~ <color=white>{1}</color><color=#ffd775>(+攻撃力の{4})</color>のスキルダメージを与えます。
-Skill/Group/ExpansionTip/1001100┃<i></i>
-Skill/Group/ExpansionTip/1001300┃<i>体力回復量は自分の現在体力が最大体力の{0}の場合に最大になります。</i>
 Skill/Group/ExpansionTip/1001500┃<i>双剣を装備する場合、基本攻撃が1回に変更される代わりに攻撃力の{1}のダメージを与え、アドレナリン分泌の体力回復が2倍になります。\n\n虐殺ダメージ量は対象の現在体力が最大体力の{0}の場合に最大になります。</i>
 Skill/Group/ExpansionTip/1001510┃<i>虐殺ダメージ量は対象の現在体力が最大体力の{0}の場合に最大になります。</i>
 CharacterState/Group/Name/1001100┃狂気めいた血祭り
@@ -7958,14 +7997,14 @@ Skill/Group/Coef/1044520┃指定した方向に制御できないVFを放出し
 Skill/Group/Coef/1044530┃指定した方向に制御できないVFを放出して、<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。エンベノミゼーションが敵実験体にダメージを与えると、暴走持続時間が{2}秒延長されます。\n基本攻撃でダメージを与えるたびにエンベノミゼーションのクールダウンが{3}秒減少します。
 Skill/Group/Coef/1044540┃指定した方向に制御できないVFを放出して、<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、{5}秒にわたって移動速度を{2}減少させます。エンベノミゼーションが敵実験体にダメージを与えると暴走持続時間が{3}秒延長されます。\n基本攻撃でダメージを与えるたびにエンベノミゼーションのクールダウンが{4}秒減少します。
 Skill/Group/ExpansionTip/1044100┃<i>強化したそれぞれの武器の効果はVF暴走(R)スキルのレベルに応じて増加します。<i>
-Skill/Group/ExpansionTip/1044500┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044501┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044502┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044503┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044510┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044520┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044530┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1044540┃<i>実験体やボスモンスターを倒すと、エンベノミゼーションのクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044500┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044501┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044502┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044503┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044510┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044520┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044530┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1044540┃<i>実験体やボスモンスターを倒すと、<color=white>ドライバイト</color>と<color=white>エンベノミゼーション</color>のクールダウンが初期化されます。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Item/Skills/6002010┃意念[デスアダー]
 Item/Skills/6002011/Name┃<color=yellow>意念</color>
 Item/Skills/6002012/Name┃<color=yellow>意念</color>
@@ -9749,6 +9788,55 @@ CharacterState/Group/Name/1080510┃波動関数の収縮 - 阻止不可
 CharacterState/Group/Desc/1080510┃波動関数の収縮キャスト中、阻止不可状態になります。
 CharacterState/Group/Name/1080520┃波動関数の収縮 - 移動速度減少
 CharacterState/Group/Desc/1080520┃波動関数の収縮によって移動速度が減少しました。
+Skill/Group/Name/1081100┃K.O.
+Skill/Group/Name/1081200┃アーケードドロップ
+Skill/Group/Name/1081210┃アーケードドロップ
+Skill/Group/Name/1081300┃シンクロポイント
+Skill/Group/Name/1081310┃シンクロポイント
+Skill/Group/Name/1081400┃1UP
+Skill/Group/Name/1081500┃ニアのゲームワールド
+Skill/LobbyDesc/1081100┃ニアは基本攻撃やスキルで敵にダメージを与えるたびに、<color=white>K.O.</color>スタックを対象に付与し、一定のダメージ量を蓄積します。\n蓄積したダメージ量が対象の体力とシールドの合計を上回った場合、対象を処刑します。
+Skill/Group/Desc/1081100┃ニアは基本攻撃やスキルで敵にダメージを与えるたびに、<color=white>K.O.</color>スタックを対象に付与し、<color=white>{0}</color> + <color=#ffff00>1スタックあたり{1}</color>のスキルダメージを蓄積します。\n蓄積したダメージ量が対象の体力とシールドの合計を上回った場合、対象を処刑します。
+Skill/Group/Coef/1081100┃ニアは基本攻撃やスキルで敵にダメージを与えるたびに、<color=white>K.O.</color>スタックを対象に付与し、<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{1})</color> + <color=#ffff00>1スタックあたり{2}</color><color=#DDA0DD>(+スキル増幅の{3})</color>のスキルダメージを蓄積します。\n蓄積したダメージ量が対象の体力とシールドの合計を上回った場合、対象を処刑します。
+Skill/Group/ExpansionTip/1081100┃<i><color=white>K.O.</color>スタックに蓄積されるダメージ量は対象の防御力に影響されます。</i>
+Skill/LobbyDesc/1081200┃ニアが指定した位置に<color=white>アーケードボタン</color>を落としてスキルダメージを与え、<color=white>シンクロポイント</color>のクールダウンが減少します。\n<color=white>アーケードボタン</color>は<color=white>シンクロポイント</color>の位置に引き寄せられながら経路上の敵にスキルダメージを与え、対象の移動速度を減少させます。\n<color=white>アーケードボタン</color>が引き寄せられる時に敵に的中すると、<color=white>アーケードドロップ</color>のクールダウンが減少します。
+Skill/Group/Desc/1081200┃ニアが指定した位置に<color=white>アーケードボタン</color>を落として<color=white>{2}</color>のスキルダメージを与え、<color=white>シンクロポイント</color>のクールダウンが{8}秒減少します。\n<color=white>アーケードボタン</color>は<color=white>シンクロポイント</color>の位置に引き寄せられながら経路上の敵に<color=white>{3}</color>のスキルダメージを与え、対象の移動速度を{4}秒間{5}減少させます。\n<color=white>アーケードボタン</color>が引き寄せられる時に敵に的中すると、<color=white>アーケードドロップ</color>のクールダウンが{6}減少します。\n\n<color=white>アーケードボタン</color>は最大{9}個まで生成でき、{10}秒間維持されます。
+Skill/Group/Coef/1081200┃ニアが指定した位置に<color=white>アーケードボタン</color>を落として<color=white>{3}</color><color=#DDA0DD>(+スキル増幅の{4})</color>のスキルダメージを与え、<color=white>シンクロポイント</color>のクールダウンが{11}秒減少します。\n<color=white>アーケードボタン</color>は<color=white>シンクロポイント</color>の位置に引き寄せられながら経路上の敵に<color=white>{5}</color><color=#DDA0DD>(+スキル増幅の{6})</color>のスキルダメージを与え、対象の移動速度を{7}秒間{8}減少させます。\n<color=white>アーケードボタン</color>が引き寄せられる時に敵に的中すると、<color=white>アーケードドロップ</color>のクールダウンが{9}減少します。\n\n<color=white>アーケードボタン</color>は最大{12}個まで生成でき、{13}秒間維持されます。
+Skill/Group/ExpansionTip/1081200┃<i>複数の<color=white>アーケードボタン</color>が同時に的中する場合、受けるダメージが{0}ずつ減少します。</i>
+Skill/LobbyDesc/1081300┃ニアが指定した位置に<color=white>シンクロポイント</color>を設置してダメージを与え、範囲内の敵を中央に引き寄せます。\nアーケードボタンが<color=white>シンクロポイント</color>の中央に引き寄せられると、範囲内に固定ダメージを与えてなくなります。
+Skill/Group/Desc/1081300┃ニアが指定した位置に<color=white>シンクロポイント</color>を設置して<color=white>{0}</color>のスキルダメージを与え、範囲内の敵を中央に引き寄せます。\nアーケードボタンが<color=white>シンクロポイント</color>の中央に引き寄せられると、範囲内に<color=white>{1}</color>の固定ダメージを与えてなくなります。\n\n<color=white>シンクロポイント</color>は{2}秒間維持されます。
+Skill/Group/Coef/1081300┃ニアが指定した位置に<color=white>シンクロポイント</color>を設置して<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{1})</color>のスキルダメージを与え、範囲内の敵を中央に引き寄せます。\nアーケードボタンが<color=white>シンクロポイント</color>の中央に引き寄せられると、範囲内に<color=white>{2}</color>の固定ダメージを与えてなくなります。\n\n<color=white>シンクロポイント</color>は{3}秒間維持されます。
+Skill/LobbyDesc/1081400┃ニアが自分自身に<color=white>1UP</color>効果を付与します。\n<color=white>1UP</color>効果が継続する間は致命的なダメージを受けてもしばらくの間死亡せずに体力を回復します。回復が終わった後、移動速度が増加します。
+Skill/Group/Desc/1081400┃ニアが{0}秒間自分自身に<color=white>1UP</color>効果を付与します。\n<color=white>1UP</color>効果が継続する間は致命的なダメージを受けても{1}秒間死亡せず、 最大体力の<color=white>{2}</color>の体力を回復します。\n回復が終わった後、移動速度が<color=white>{3}</color>増加し、{4}秒にわたって元に戻ります。
+Skill/Group/Coef/1081400┃ニアが{0}秒間自分自身に<color=white>1UP</color>効果を付与します。\n<color=white>1UP</color>効果が継続する間は致命的なダメージを受けても{1}秒間死亡せず、<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{3})</color><color=white>%</color>の体力を回復します。\n回復が終わった後、移動速度が<color=white>{4}</color><color=#DDA0DD>(+スキル増幅の{5})</color><color=white>%</color>増加し、{6}秒にわたって元に戻ります。
+Skill/LobbyDesc/1081500┃<color=green>持続効果</color>：ニアが敵実験体にスキルでダメージを与えるたびに<color=white>バッテリー</color>スタックを獲得します。\n<color=white>ニアのゲームワールド</color>スキルを使用する時、<color=white>バッテリー</color>スタックを消耗してスタック数に比例するシールドを獲得します。\n\nスキルキャスト中、前方に<color=white>ゲームワールド</color>が現れます。ニアはスキルをキャストしている間、すべての妨害効果免疫状態になります。ゲームワールドの外側に的中した敵は気絶し、移動できなくなります。\n生成された<color=white>ゲームワールド</color>の中で敵にスキルでダメージを与えると、持続時間が増加します。スキルで一定回数ダメージを与えると、<color=white>ゲームワールド</color>の中にいるすべての敵にスキルダメージを与えます。
+Skill/Group/Desc/1081500┃<color=green>持続効果</color>：ニアが敵実験体にスキルでダメージを与えるたびに<color=white>バッテリー</color>スタックを獲得します。\n<color=white>ニアのゲームワールド</color>スキルを使用する時、<color=white>バッテリー</color>スタックを消耗して<color=white>{0}</color> + <color=#ffff00>1スタックあたり{1}</color>のシールドを獲得します。\n\nスキルキャスト中、前方に<color=white>ゲームワールド</color>が現れます。ニアはスキルをキャストしている間、最大{7}秒間すべての妨害効果免疫状態になります。ゲームワールドの外側に的中した敵は{4}秒間気絶し、移動できなくなります。\n生成された<color=white>ゲームワールド</color>の中で敵に<color=white>アーケードドロップ</color>でダメージを与えると、持続時間が追加で{6}秒増加します。スキルで{8}回ダメージを与えると、<color=white>ゲームワールド</color>の中にいるすべての敵に<color=white>{5}</color>のスキルダメージを与えます。
+Skill/Group/Coef/1081500┃<color=green>持続効果</color>：ニアが敵実験体にスキルでダメージを与えるたびに<color=white>バッテリー</color>スタックを獲得します。\n<color=white>ニアのゲームワールド</color>スキルを使用する時、<color=white>バッテリー</color>スタックを消耗して<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{1})</color> + <color=#ffff00>1スタックあたり{2}</color>のシールドを獲得します。\n\nスキルキャスト中、前方に<color=white>ゲームワールド</color>が現れます。ニアはスキルをキャストしている間、最大{11}秒間すべての妨害効果免疫状態になります。ゲームワールドの外側に的中した敵は{7}秒間気絶し、移動できなくなります。\n生成された<color=white>ゲームワールド</color>の中で敵に<color=white>アーケードドロップ</color>でダメージを与えると、持続時間が追加で{10}秒増加します。スキルで{12}回ダメージを与えると、<color=white>ゲームワールド</color>の中にいるすべての敵に<color=white>{8}</color><color=#DDA0DD>(+スキル増幅の{9})</color>のスキルダメージを与えます。
+Skill/Group/ExpansionTip/1081500┃<i><color=white>ニアのゲームワールド</color>が持続する間、<color=white>アーケードドロップ</color>のクールダウンは{0}秒になります。ニアは<color=white>ゲームワールド</color>の範囲外にスキルを使用できません。</i>
+CharacterState/Group/Name/1081100┃K.O.
+CharacterState/Group/Name/1081200┃アーケードドロップ - 移動速度現象
+CharacterState/Group/Name/1081300┃シンクロポイント - 引き寄せ
+CharacterState/Group/Name/1081400┃1UP
+CharacterState/Group/Name/1081410┃1UP - 死亡免疫状態
+CharacterState/Group/Name/1081420┃1UP - 移動速度増加
+CharacterState/Group/Name/1081500┃バッテリー
+CharacterState/Group/Name/1081520┃ニアのゲームワールド - シールド
+CharacterState/Group/Name/1081530┃ニアのゲームワールド - 気絶
+CharacterState/Group/Name/1081540┃ニアのゲームワールド - 気絶無視
+CharacterState/Group/Name/1081560┃ニアのゲームワールド - すべての妨害効果免疫
+CharacterState/Group/Name/1081570┃ニアのゲームワールド - 全体ダメージ
+CharacterState/Group/Desc/1081100┃体力が低い状態でK.O.スタックが追加されると、処刑されます。
+CharacterState/Group/Desc/1081200┃アーケードドロップのボタンによって移動速度が減少しました。
+CharacterState/Group/Desc/1081300┃シンクロポイントによって中央に引き寄せられました。
+CharacterState/Group/Desc/1081400┃ニアが命をもう一個獲得しました！
+CharacterState/Group/Desc/1081410┃ニアが命を1個使って死亡せずに回復しました。
+CharacterState/Group/Desc/1081420┃ニアが命を1個使って移動速度が増加しました。
+CharacterState/Group/Desc/1081500┃ニアのシールドが回復しています。
+CharacterState/Group/Desc/1081520┃バッテリースタックに比例するシールドでダメージを吸収します。
+CharacterState/Group/Desc/1081530┃ニアのゲームワールドの外側の攻撃に的中し、気絶しました。
+CharacterState/Group/Desc/1081540┃ニアのゲームワールドの外側の攻撃に的中しても気絶しません。
+CharacterState/Group/Desc/1081560┃ニアはゲームワールドが持続する間、妨害効果の影響を受けません。
+CharacterState/Group/Desc/1081570┃ニアがゲームワールドで敵に複数ダメージを与えると、エリア全体にダメージを与えます。.
 Skill/Group/Name/3015000┃マントと短剣
 Skill/Group/Name/3015100┃マントと短剣
 Skill/Group/Name/3016000┃受け流し
@@ -11029,7 +11117,7 @@ Skill/LobbyDesc/4509010┃一定時間後、指定した位置に隕石を落と
 Skill/Group/LobbyDesc/4509000┃しばらくすると、指定した位置に隕石を落として大きなダメージを与えます。\n隕石に当たった敵はしばらく気絶します。
 Skill/Group/LobbyDesc/4509010┃一定時間後、指定した位置に隕石を落としてダメージを与えます。
 Skill/Code/Desc/4509001┃しばらくすると、指定した位置に隕石を落として{4}の固定ダメージを与えます。
-Skill/Code/Coef/4509001┃しばらくすると、指定した位置に隕石が落として固定ダメージを与えます。\nダメージ量：<color=white>{1}</color><color=#008000>(+キャラクターレベル * {2})</color>
+Skill/Code/Coef/4509001┃しばらくすると、指定した位置に隕石を落として固定ダメージを与えます。\nダメージ量：<color=white>{1}</color><color=#008000>(+キャラクターレベル * {2})</color>
 Skill/Code/Desc/4509011┃一定時間後、指定した位置に隕石を落として{4}のダメージを与えます。
 Skill/Code/Coef/4509011┃一定時間後、指定した位置に隕石を落として<color=white>{1}</color><color=#008000>(+キャラクターレベル * {2})</color>のダメージを与えます。
 CharacterState/Group/Name/4509000┃メテオストライク
@@ -11037,10 +11125,10 @@ CharacterState/Group/Desc/4509000┃隕石に当たりました。
 Skill/Group/Name/4508000┃溜めパンチ
 Skill/Code/Name/4508001┃溜めパンチ
 Skill/Group/4508000/Name┃<color=yellow>溜めパンチ</color>
-Skill/LobbyDesc/4508000┃指定した方向にジンが思いっきりパンチします。\n的中された実験体はパンチされた方向に飛ばされます。
-Skill/Group/LobbyDesc/4508000┃指定した方向にジンが思いっきりパンチします。\n的中された実験体はパンチされた方向に飛ばされます。
-Skill/Code/Desc/4508001┃指定した方向に召喚したジンが風船の拳で思いっきりパンチし、的中した対象に<color=white>{0}</color><color=#688A08>(対象の最大体力の{1}%)</color>のスキルダメージを与えます。対象は指定した方向に遠くまで押し飛ばされます。\n自分または味方の場合、ダメージを受けません。
-Skill/Code/Coef/4508001┃指定した方向に召喚したジンが風船の拳で思いっきりパンチし、的中した対象に<color=white>{0}</color><color=#688A08>(対象の最大体力の{1}%)</color>のスキルダメージを与えます。対象は<color=white>{2}秒間</color>にわたって遠くまで押し飛ばされます。\n自分または味方の場合、ダメージを受けません。
+Skill/LobbyDesc/4508000┃ジンが指定した方向に思いっきりパンチします。\n的中された実験体はパンチされた方向に飛ばされます。
+Skill/Group/LobbyDesc/4508000┃ジンが指定した方向に思いっきりパンチします。\n的中された実験体はパンチされた方向に飛ばされます。
+Skill/Code/Desc/4508001┃召喚したジンが風船の拳で指定した方向に思いっきりパンチし、的中した対象に<color=white>{0}</color><color=#688A08>(対象の最大体力の{1}%)</color>のスキルダメージを与えます。対象は指定した方向に遠くまで押し飛ばされます。\n自分または味方の場合、ダメージを受けません。
+Skill/Code/Coef/4508001┃召喚したジンが風船の拳で指定した方向に思いっきりパンチし、的中した対象に<color=white>{0}</color><color=#688A08>(対象の最大体力の{1}%)</color>のスキルダメージを与えます。対象は<color=white>{2}秒間</color>にわたって遠くまで押し飛ばされます。\n自分または味方の場合、ダメージを受けません。
 CharacterState/Group/Name/4508000┃ジンの溜めパンチ
 CharacterState/Group/Desc/4508000┃ホームラーーン！
 CharacterState/Group/Name/6516010┃ジンの溜めパンチ2
@@ -11108,10 +11196,10 @@ Skill/Group/LobbyDesc/4505000┃しばらく停止状態になった後、指定
 Skill/LobbyDesc/4505010┃しばらく停止状態になった後、指定した方向に突進します。
 Skill/Group/LobbyDesc/4505010┃しばらく停止状態になった後、指定した方向に突進します。
 Skill/Group/4505000/Name┃<color=yellow>神経衝撃</color>
-Skill/Code/Desc/4505001┃{0}秒間停止状態になった後、停止状態が解除されると、すぐに指定した方向に突進します。
-Skill/Code/Coef/4505001┃{0}秒間停止状態になった後、停止状態が解除されると、すぐに指定した方向に突進します。
-Skill/Code/Desc/4505011┃{0}秒間停止状態になった後、停止状態が解除されると、すぐに指定した方向に突進します。
-Skill/Code/Coef/4505011┃{0}秒間停止状態になった後、停止状態が解除されると、すぐに指定した方向に突進します。
+Skill/Code/Desc/4505001┃{0}秒間停止状態になった後、停止状態が解除されると、指定した方向にすぐに移動します。
+Skill/Code/Coef/4505001┃{0}秒間停止状態になった後、停止状態が解除されると、指定した方向にすぐに移動します。
+Skill/Code/Desc/4505011┃{0}秒間停止状態になった後、停止状態が解除されると、指定した方向にすぐに移動します。
+Skill/Code/Coef/4505011┃{0}秒間停止状態になった後、停止状態が解除されると、指定した方向にすぐに移動します。
 Skill/Group/Name/4506000┃祈願
 Skill/Code/Name/4506001┃祈願
 TacticalSkillSet/Code/Name/500061┃祈願
@@ -11138,11 +11226,11 @@ TacticalSkillSet/Code/Name/500241┃付着
 Skill/LobbyDesc/4524000┃指定した方向に投射体の投げて、初めて的中した対象にダメージを与えます。スキルを再使用すると、対象に向かって突進します。
 Skill/Group/LobbyDesc/4524000┃指定した方向に投射体の投げて、初めて的中した対象にダメージを与えます。スキルを再使用すると、対象に向かって突進します。
 Skill/Group/4524000/Name┃<color=yellow>付着</color>
-Skill/Code/Desc/4524001┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えます。対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
-Skill/Group/Coef/4524000┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えます。対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Code/Desc/4524001┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えて、対象の視界を獲得します。\n対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Group/Coef/4524000┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えて、対象の視界を獲得します。\n対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
 Skill/Code/Desc/4524011┃投射体が付着した敵に突進し、スキルダメージを与えます。
-Skill/Code/Desc/4524002┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えます。対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
-Skill/Code/Coef/4524002┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えます。対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Code/Desc/4524002┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えて、対象の視界を獲得します。\n対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Code/Coef/4524002┃指定した方向に投射体の投げ、初めて的中した対象に<color=white>{0}</color>のスキルダメージを与えて、対象の視界を獲得します。\n対象にスキルが的中した場合、{1}秒以内にスキルを再使用すると、対象に向かって突進し、<color=white>{2}</color>のスキルダメージを与えます。
 Skill/Code/Desc/4524012┃投射体が付着した敵に突進し、<color=white>{2}</color>のスキルダメージを与えます。
 Skill/Group/Coef/4524010┃投射体が付着した敵に突進し、<color=white>{2}</color>のスキルダメージを与えます。
 Skill/Code/Coef/4524012┃投射体が付着した敵に突進し、<color=white>{2}</color>のスキルダメージを与えます。
@@ -12290,6 +12378,10 @@ Forge/ToolTip/disintegrateTicket┃財貨を消耗せずにアイテムを分解
 Forge/Disintegrate/InfoLink┃分解確率
 Rare-Matter┃データピース(レア)
 Normal-Matter┃データピース
+이벤트 중인 아이템이 포함된 상태입니다.┃イベント確率が適用された商品です。
+이벤트 중인 상자 목록┃イベント確率適用商品
+Pickup/EventList/Title┃イベント確率適用商品
+Pickup/EventList/Dec┃クリックすると、イベント確率が適用された商品リストを確認できます。
 Forge/ToolTip/DisintegrateMode┃分解するアイテムを一括で選択します。
 Forge/ToolTip/DisintegrateMode/Btn_Filter┃アイテム分解フィルタを変更します。
 Forge/ToolTip/DisintegrateMode/Btn_Select┃選択したフィルタを適用してアイテムを再選択します。
@@ -12497,6 +12589,10 @@ Goods/Name/3102022┃チェンジスキンデータボックス
 Goods/Desc/3102022┃完全なスキンまたはスキンピース1つとチェンジカード1つを獲得できるデータボックスです。\nすでに所持しているスキンも重複して獲得することがあります。\n出現するアイテムはアイテムリストで確認できます。
 Goods/Name/3190012┃チェンジスキン選択券
 Goods/Desc/3190012┃リストの中から一つを選択して獲得できます。\n出現するアイテムはアイテムリストで確認できます。
+Goods/Name/3102023┃5月の確率UPスキンデータボックス
+Goods/Desc/3102023┃完全なスキンまたはスキンピース1つと5月の確率UPスキンカード1つを獲得できるデータボックスです。\nすでに所持しているスキンも重複して獲得することがあります。\n出現するアイテムはアイテムリストで確認できます。
+Goods/Name/3190013┃5月の確率UPスキン選択券
+Goods/Desc/3190013┃リストの中から一つを選択して獲得できます。\n出現するアイテムはアイテムリストで確認できます。
 Goods/Name/1┃シークレットDrops
 Goods/Name/2┃Secret BOX (Mini)
 Goods/Name/3┃実験体ランダムボックス
@@ -14524,6 +14620,9 @@ Item/Name/201526┃アンガルド
 Item/Name/201527┃インサイト
 Item/Name/201528┃ヴァルハラヘルム
 Item/Name/201529┃アイシールド
+Item/Name/201420┃魔女の帽子
+Item/Name/201421┃狐面
+Item/Name/201530┃David ヘッドホン
 Item/Name/202415_D┃バトルスーツ - David
 Item/Name/202407_D┃ミスリル鎧 - David
 Item/Name/202416_D┃炎のドレス - David
@@ -19119,6 +19218,7 @@ Shortcut/Active3┃スキル3
 Shortcut/Active4┃スキル4
 Shortcut/WeaponSkill┃武器スキル
 Shortcut/TacticalSkill┃戦術スキル
+GadgetSkill┃ガジェット金庫を活性化させます。
 Shortcut/Alpha1┃スロット1
 Shortcut/Alpha2┃スロット2
 Shortcut/Alpha3┃スロット3
@@ -20668,6 +20768,8 @@ Shop/Desc/EVENT_NPASS_S6_Premium_Token_1006┃<color=#ffdf72>最大75個のレ�
 Shop/Desc/EVENT_NPASS_S6_Basic_Token_1007┃<color=#ffdf72>最大25個のレギオントークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S7_Premium_Token_1008┃<color=#ffdf72>最大75個のアカデミートークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S7_Basic_Token_1009┃<color=#ffdf72>最大25個のアカデミートークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S7_Premium_Token_1010┃<color=#ffdf72>最大75個のアカデミートークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最大25個のアカデミートークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Season1000/Name┃1周年記念クエストブック
 Season1001/Name┃クムドリ&クムスニクエストブック
 Season1002/Name┃Dessert39クエストブック
@@ -20678,6 +20780,8 @@ Season1006/Name┃S6 プレミアムトークンブック
 Season1007/Name┃S6 ベーシックトークンブック
 Season1008/Name┃S7 プレミアムトークンブック
 Season1009/Name┃S7 ベーシックトークンブック
+Season1010/Name┃S7 プレミアムトークンブックⅡ
+Season1011/Name┃S7 ベーシックトークンブックⅡ
 Season2000/Name┃1周年記念A-Coinクエストブック
 Season2001/Name┃バカンス A-Coinクエストブック
 Season2002/Name┃武装メイド A-Coinクエストブック
@@ -20825,6 +20929,7 @@ SquadRumble_Introduce04┃最終順位を基準に、所属しているチーム
 숫자#8┃#8
 현재 티어┃現在ティア
 최고 티어┃最高ティア
+이벤트 아이템 선택권 UI 데코┃EVENT
 필터/아이템 보유 여부┃アイテム一覧
 필터/전체┃全体
 필터/보유┃所持中
@@ -22450,6 +22555,12 @@ CharacterStoryHeight/80┃189cm
 CharacterStoryGender/80┃男性
 CharacterStoryTitle/80┃その選択に相応しい結果をもたらそう。
 CharacterStoryDesc/80┃ただ自身の研究を進めるために島に来た元研究員。\n真面目で表情の変化が少ないため、何を考えているのか分からない。\n\n彼はアグライアの研究員になる前から、量子力学の中でも「多世界解釈」に注目し、\n異なる世界線の重ね合わせや選択の可能性について研究していた。\n\nそんな中ある日、量子と次元に関するVF能力を研究していた彼は、事故に巻き込まれ、\n致命傷を負うことになる。\n危機に陥った瞬間、彼はこの先、VFが人類にもたらす災厄を目撃する。\nその後、彼は自分の目で見たその災厄が\n「この世界」の未来であるかを確かめるため、自ら実験に参加した。\n\n生と死が混ざり合い、選ばれたわずかな人間だけが生存できる場所、ルミア島。\n\n彼は思った。\nこの島こそが、これから人類が迎える新時代に最も近い場所なのかもしれない、と。
+CharacterStoryName/81┃ニア・ヘラー
+CharacterStoryAge/81┃19歳
+CharacterStoryHeight/81┃148cm
+CharacterStoryGender/81┃女性
+CharacterStoryTitle/81┃ゲーム、一緒にやる？
+CharacterStoryDesc/81┃ゲームが大好きな少女。\n「NiaH」という名前で活動し、数多くのゲームで驚異的な記録を残している。\n普段は食事すらめんどくさがるほど無口な性格だが、\nゲームのこととなると、意外な行動力を見せる。\n\n彼女にとってゲームは、ただの娯楽ではない。\n人間関係を築けるもう一つの世界であり、\n大切な人と出会うきっかけをくれた宝物である。\n\nその大切な人を失った時、彼女の心は壊れてしまった。\nその事実を受け入れられなかった彼女は、現実から目を逸らし、\n残酷な現実ではなく、楽しさに満ちたもう一つの世界に閉じこもる。\n\n彼女は、今日もゲームをする。\n自分だけの世界で、誰かを待ちながら...
 CharacterPlayTip/1┃ジャッキーはターゲットにした敵をしつこく追いかけて虐殺し、そのたびにバースト能力が高まる連続殺人鬼です。
 CharacterPlayTip/2┃アヤは敵にスキルを的中させやすく、敵との距離を保つことのできるスキルを持つ、安定性の高い遠距離型実験体です。
 CharacterPlayTip/3┃フィオラはフェンシング選手らしく素早い動きで敵との距離を調節し、スキルを連続で的中させるたびに強力なダメージを与えます。
@@ -22530,6 +22641,7 @@ CharacterPlayTip/77┃ユミンは風のように敵陣を自由に歩き回り�
 CharacterPlayTip/78┃ヒスイは日輪會の一員です。様々な剣を収集し、剣の記憶と能力を引き出していろんな剣術を使って戦闘を主導する実験体です。
 CharacterPlayTip/79┃ユスティナな正義のヒーローを夢見る元気いっぱいな少女です。エネルギーを使って攻撃したり、移動することができ、一帯を殲滅できるほどの強力な火力を持つ実験体です。
 CharacterPlayTip/80┃イシュトヴァーンは強化時、自分の行動と、異なる結果を持つもう一人の自分の姿で攻撃します。イシュトヴァーンは各戦闘の状況に応じて様々な可能性を研究し、より良い結果を得るために実験を繰り返します。
+CharacterPlayTip/81┃ニアはゲームが大好きな少女です。ゲームのように現実世界を操作し、自分だけのゲームの世界で敵の動きを妨害し、有利な戦闘に導くことができます。
 Trait/Name/7900101┃攻撃力 I
 Trait/Name/7900102┃攻撃力 II
 Trait/Name/7900103┃攻撃力 III
@@ -22594,25 +22706,25 @@ Trait/Name/7920803┃汚い沼 Ill
 Trait/Name/7921003┃プラズマ·ノヴァ
 Trait/Name/7921101┃シナジー I
 Trait/Name/7921102┃シナジー Il
-Trait/Name/7921103┃シナジー Ill
+Trait/Name/7921103┃シナジー
 Trait/Name/7921203┃圧倒的な力
 Trait/Name/7921301┃大容量バッテリー I
 Trait/Name/7921302┃大容量バッテリー Il
 Trait/Name/7921303┃大容量バッテリー
 Trait/Name/7921501┃ディスコ I
 Trait/Name/7921502┃ディスコ Il
-Trait/Name/7921503┃ディスコ Ill
+Trait/Name/7921503┃ディスコ
 Trait/Name/7921602┃ライフバッグ
 Trait/Name/7921701┃機動打撃部隊 I
 Trait/Name/7921702┃機動打撃部隊 Il
-Trait/Name/7921703┃機動打撃部隊 Ill
+Trait/Name/7921703┃機動打撃部隊
 Trait/Name/7921802┃怪しい実験
 Trait/Name/7921903┃ワルキューレ·ドライブ
 Trait/Name/7922003┃A.M.D.S
 Trait/Name/7922102┃地震波
 Trait/Name/7922201┃傷の悪化 I
 Trait/Name/7922202┃傷の悪化 Il
-Trait/Name/7922203┃傷の悪化 Ill
+Trait/Name/7922203┃傷の悪化
 Trait/Name/7922302┃徹甲弾
 Trait/Name/7922402┃吸引 Mk2
 Trait/Name/7922502┃鈍感
@@ -22698,12 +22810,12 @@ Trait/StatTooltip/7920103┃自分の現在体力が最大体力の{0}%以下の
 Trait/StatTooltip/7920201┃自分の現在体力が最大体力の{0}%以下の場合致命打確率、攻撃速度が増加します。\n\n致命打確率増加量: {1}%\n攻撃速度増加量: {2}%
 Trait/StatTooltip/7920202┃自分の現在体力が最大体力の{0}%以下の場合致命打確率、攻撃速度が増加します。\n\n致命打確率増加量: {1}%\n攻撃速度増加量: {2}%
 Trait/StatTooltip/7920203┃自分の現在体力が最大体力の{0}%以下の場合、移動速度と体力再生が増加します。\n\n移動速度増加量: {1}\n体力再生増加量: {2}%
-Trait/StatTooltip/7920301┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力{1}% ダメージ、現在体力{2}%回復\n(遠距離) 現在体力{3}% ダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
-Trait/StatTooltip/7920302┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力{1}% ダメージ、現在体力{2}%回復\n(遠距離) 現在体力{3}% ダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
-Trait/StatTooltip/7920303┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力{1}% ダメージ、現在体力{2}%回復\n(遠距離) 現在体力{3}% ダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
-Trait/StatTooltip/7920401┃死亡時{0}秒後、{1}m内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%だけの固定ダメージを与えます。
-Trait/StatTooltip/7920402┃死亡時{0}秒後、{1}m内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%だけの固定ダメージを与えます。
-Trait/StatTooltip/7920403┃死亡時{0}秒後、{1}m内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%だけの固定ダメージを与えます。
+Trait/StatTooltip/7920301┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力の{1}%のダメージ、現在体力{2}%回復\n(遠距離) 現在体力の{3}%のダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
+Trait/StatTooltip/7920302┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力の{1}%のダメージ、現在体力{2}%回復\n(遠距離) 現在体力の{3}%のダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
+Trait/StatTooltip/7920303┃敵実験体にスキルでダメージを与える時、対象の現在体力の一部にあたる固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン{0}秒)\n\n(近距離) 現在体力の{1}%のダメージ、現在体力{2}%回復\n(遠距離) 現在体力の{3}%のダメージ、現在体力{4}%回復\n\n現在適用中のダメージ比率: {5}%\n現在適用中の体力回復比率: {6}%
+Trait/StatTooltip/7920401┃死亡してから{0}秒後、{1}m以内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%の固定ダメージを与えます。
+Trait/StatTooltip/7920402┃死亡してから{0}秒後、{1}m以内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%の固定ダメージを与えます。
+Trait/StatTooltip/7920403┃死亡してから{0}秒後、{1}m以内のすべての敵を{2}秒間空中に浮かせて、対象の失った体力の{3}%の固定ダメージを与えます。
 Trait/StatTooltip/7920501┃{0}秒以上、 敵からダメージを受けなかった場合、毎秒失った体力とスタミナの{1}%を回復します。
 Trait/StatTooltip/7920502┃{0}秒以上、 敵からダメージを受けなかった場合、毎秒失った体力とスタミナの{1}%を回復します。
 Trait/StatTooltip/7920503┃{0}秒以上、 敵からダメージを受けなかった場合、毎秒失った体力とスタミナの{1}%を回復します。
@@ -22717,12 +22829,12 @@ Trait/StatTooltip/7910721┃スキル増幅が{0}増加します。
 Trait/StatTooltip/7920801┃自分が死亡した場合、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。
 Trait/StatTooltip/7920802┃自分が死亡した場合、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。
 Trait/StatTooltip/7920803┃自分が死亡した場合、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。
-Trait/StatTooltip/7920903┃武器スキル使用時、 2秒後{1}m範囲内のすべての敵実験体を{2}秒間沈黙状態にします。(クールダウン{0}秒)
-Trait/StatTooltip/7921003┃武器スキル使用時、1秒後{2}m範囲内のすべての敵に{4}秒間{0}の固定ダメージを与えます。(クールダウン{1}秒)
-Trait/StatTooltip/7921101┃究極技使用時一般スキルのクールダウンが{0}%減少します。 (クールダウン{1}秒)\nクールダウン状態で一般スキル使用時インフュージョンのクールダウンが{2}秒減少します。
-Trait/StatTooltip/7921102┃究極技使用時一般スキルのクールダウンが{0}%減少します。 (クールダウン{1}秒)\nクールダウン状態で一般スキル使用時インフュージョンのクールダウンが{2}秒減少します。
-Trait/StatTooltip/7921103┃究極技使用時一般スキルのクールダウンが{0}% 減少します。 (クールダウン{1}秒)\nクールダウン状態で一般スキル使用時インフュージョンのクールダウンが{2}秒減少します。
-Trait/StatTooltip/7921203┃究極技使用時、{0}秒間すべての妨害免疫状態になり、移動速度が{2}%増加します。(クールダウン{1}秒)
+Trait/StatTooltip/7920903┃武器スキルを使用してから2秒後、{1}m範囲内のすべての敵実験体を{2}秒間沈黙状態にさせます。(クールダウン {0}秒)
+Trait/StatTooltip/7921003┃武器スキルを使用してから1秒後、{2}m範囲内のすべての敵に{4}秒間{0}の固定ダメージを与えます。(クールダウン {1}秒)
+Trait/StatTooltip/7921101┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Trait/StatTooltip/7921102┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Trait/StatTooltip/7921103┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Trait/StatTooltip/7921203┃究極技を使用すると、{0}秒間すべての妨害免疫状態になり、移動速度が{2}%増加します。\n(クールダウン {1}秒)
 Trait/StatTooltip/7921301┃自分や味方が占領した増幅装置1個あたり、増幅装置から得る効果が{0}% 追加増加します。\n\n攻撃力追加増加量 : {1}\n防御力 追加増加量 : {2}\n移動速度追加増加量 : {3}
 Trait/StatTooltip/7921302┃防御貫通が{4}、最大体力が{5}増加します。
 Trait/StatTooltip/7921303┃防御貫通が{4}、最大体力が{5}増加します。
@@ -22733,30 +22845,30 @@ Trait/StatTooltip/7921501┃敵実験体にスキルでダメージを与えた�
 Trait/StatTooltip/7921502┃敵実験体にスキルでダメージを与えた場合、対象を{0}秒間踊らせます。(クールダウン {1}秒)
 Trait/StatTooltip/7921503┃敵実験体にスキルでダメージを与えた場合、対象を{0}秒間踊らせます。(クールダウン {1}秒)
 Trait/StatTooltip/7921602┃自分のヒールパックから得られる回復効果が{0}%増加し、回復する時にシールドを{1}獲得します。ライフバッグで獲得したシールドが維持される間、移動速度が{2}％増加します。
-Trait/StatTooltip/7921701┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
-Trait/StatTooltip/7921702┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
-Trait/StatTooltip/7921703┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
-Trait/StatTooltip/7921903┃自分の体力が8.5%以下の状態で敵実験体にダメージを受けた時、 [ワルキューレ·ドライブ: 保護]効果が発動します。(クールダウン 45秒)\n\n[ワルキューレ·ドライブ: 保護]\n一定距離をすぐに移動した後、2秒間1200のシールドを獲得し、移動速度が60%増加します。\n\nチーム在庫：1
+Trait/StatTooltip/7921701┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
+Trait/StatTooltip/7921702┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
+Trait/StatTooltip/7921703┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を{2}秒間{3}%減少させます。
+Trait/StatTooltip/7921903┃自分の体力が20%以下の状態で敵実験体にダメージを受けた時、 [ワルキューレ·ドライブ: 保護]効果が発動します。(クールダウン 45秒)\n\n[ワルキューレ·ドライブ: 保護]\n一定距離をすぐに移動した後、2秒間1200のシールドを獲得し、移動速度が60%増加します。\n\nチーム在庫：1
 Trait/StatTooltip/7922003┃A.M.D.S バリアが活性化されます。\nA.M.D.S バリアは敵が自分に与えるスキルの効果とダメージを1回無視します。\n(クールダウン 30秒)\nバリアを破壊した対象の4ｍ範囲内のすべての敵に125(+対象の現在体力の10%)の固定ダメージを与えます。\n\nチーム在庫：1
 Trait/StatTooltip/7922102┃基本攻撃すると、衝撃波を放って範囲内の敵にスキルダメージを与えます。\n最大{6}回使用でき、クールダウン後、使用回数が初期化されます。\n(クールダウン：{7}秒)\n\n衝撃波ダメージ量\n(近距離) {0} (+攻撃力の{1})(+スキル増幅の{2})\n(遠距離) {3} (+攻撃力の{4})(+スキル増幅の{5})
-Trait/StatTooltip/7922201┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1} だけの追加固定ダメージを与えます。(最大{2}スタック)
-Trait/StatTooltip/7922202┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1} だけの追加固定ダメージを与えます。(最大{2}スタック)
-Trait/StatTooltip/7922203┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1} だけの追加固定ダメージを与えます。(最大{2}スタック)
-Trait/StatTooltip/7922302┃防御貫通が{0}% だけ増加します。
+Trait/StatTooltip/7922201┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1}の追加固定ダメージを与えます。(最大{2}スタック)
+Trait/StatTooltip/7922202┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1}の追加固定ダメージを与えます。(最大{2}スタック)
+Trait/StatTooltip/7922203┃敵実験体に基本攻撃をすると時、スタックあたり近距離 {0} / 遠距離 {1}の追加固定ダメージを与えます。(最大{2}スタック)
+Trait/StatTooltip/7922302┃防御貫通が{0}%増加します。
 Trait/StatTooltip/7922402┃自分または自分の召喚物が与えるすべてのダメージの{1}%の体力と{0}%のスタミナを回復します。
 Trait/StatTooltip/7922502┃自分が致命打ダメージを受けた時、{0}秒間受ける致命打ダメージが{1}% 減少します。 (クールダウン {2}秒)
 Trait/StatTooltip/7922602┃妨害耐性が{1}%増加します。
-Trait/StatTooltip/7922702┃相手を移動不可状態にすると、{0}秒間対象が受けるすべてのダメージが{1}%増加します。 (クールダウン {2}秒)
+Trait/StatTooltip/7922702┃相手を移動不可状態にさせると、{0}秒間対象が受けるすべてのダメージが{1}%増加します。 (クールダウン {2}秒)
 Trait/StatTooltip/7922803┃基本攻撃またはスキルで敵にダメージを与えた場合、\n固定ダメージを与えます。(クールダウン {0}秒)\n\n(近距離){1}の固定ダメージを{3}回与えます。\n(遠距離){2}の固定ダメージを{4}回与えます。
-Trait/StatTooltip/7922903┃移動時に毒の足跡を残します。\n毒の足跡を踏んだ対象は{0}秒間固定ダメージを受けます。\n\nダメージ量:{1} + 対象最大体力の{2}%
-Trait/StatTooltip/7923101┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
-Trait/StatTooltip/7923102┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
-Trait/StatTooltip/7923103┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Trait/StatTooltip/7922903┃移動する時、毒の足跡を残します。\n毒の足跡を踏んだ対象は{0}秒間固定ダメージを受けます。\n\nダメージ量:{1} + 対象の最大体力の{2}%
+Trait/StatTooltip/7923101┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Trait/StatTooltip/7923102┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Trait/StatTooltip/7923103┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
 Trait/StatTooltip/7923203┃与えるスキルダメージに致命打が発動します。攻撃力が{0}%、致命打ダメージが{1}%減少します。
 Trait/StatTooltip/7923002┃自分が復活した時、自分を除くすべての実験体と\n召喚物が{0}秒間硬直状態になります。
-Trait/StatTooltip/7923903┃敵実験体にスキルでダメージを与えた場合、{0}秒後、対象にレーザーを発射し、{1} + ({2} * スキル増幅)のスキルダメージを与えます。\n(クールダウン：{3}秒)
-Trait/StatTooltip/7923803┃敵実験体にスキルでダメージを与えた場合、対象の防御力を{0}秒間{1}減少させます。\nデバフ効果の持続時間終了後、{2} + ({3} * スキル増幅)のスキルダメージを与えます。\n(クールダウン：{4}秒)
-Trait/StatTooltip/7923703┃基本攻撃で敵実験体にダメージを与えた場合、{0} + ({1} * 攻撃力)のスキルダメージを与え、{2}秒間防御貫通が{3}増加します。\n(クールダウン：{4}秒)
+Trait/StatTooltip/7923903┃敵実験体にスキルでダメージを与えた場合、{0}秒後、対象にレーザーを発射し、{1}(+スキル増幅の{2}%)のスキルダメージを与えます。\n(クールダウン：{3}秒)
+Trait/StatTooltip/7923803┃敵実験体にスキルでダメージを与えた場合、対象の防御力を{0}秒間{1}減少させます。\nデバフ効果の持続時間終了後、{2}(+スキル増幅の{3}%)のスキルダメージを与えます。\n(クールダウン：{4}秒)
+Trait/StatTooltip/7923703┃基本攻撃で敵実験体にダメージを与えた場合、{0}(+攻撃力の{1}%)のスキルダメージを与え、{2}秒間防御貫通が{3}増加します。\n(クールダウン：{4}秒)
 Trait/StatTooltip/7923401┃使用すると、<color=white>{0}</color>m範囲内のすべての敵実験体を自分の近くに引き寄せて{1}秒間気絶させた後、<color=white>{2}</color>の固定ダメージを与えます。\n(クールダウン {3}秒)\n\nチーム在庫：1
 Trait/StatTooltip/7923411┃{0}秒後、{1}秒間移動速度が{2}%まで徐々に増加し、初めて衝突した敵に{3}のスキルダメージを与えてノックバックさせます。\n(クールダウン：{4}秒)\n\nチーム在庫：1
 Trait/StatTooltip/7923421┃指定した方向の地面に亀裂を入れ、{0}秒後、{1} + <color=#688A08>敵の現在体力の{2}%</color>の固定ダメージを与えて{3}秒間気絶させ、{5}秒間移動速度を{6}%減少させます。\n(クールダウン：{4}秒)\n\nチーム在庫：1
@@ -22836,7 +22948,7 @@ CharacterState/Group/Desc/7920510┃一定時間の間、敵からダメージ�
 CharacterState/Group/Name/7920500┃寝坊
 CharacterState/Group/Desc/7920500┃体力とスタミナを回復しています。
 CharacterState/Group/Name/7920600┃蘇生
-CharacterState/Group/Desc/7920600┃死亡時一定時間後、体力とスタミナを回復し、復活します。
+CharacterState/Group/Desc/7920600┃死亡すると一定時間後、体力とスタミナを回復し、復活します。
 CharacterState/Group/Name/7920700┃全能者
 CharacterState/Group/Desc/7920700┃スキル増幅が増加します。\n装着された他のインフュージョン1個あたりのスキル増幅が追加で増加します。
 CharacterState/Group/Name/7920710┃全能者
@@ -22856,19 +22968,19 @@ CharacterState/Group/Desc/7920820┃固定状態となり 移動スキルを使�
 CharacterState/Group/Name/7920610┃蘇生
 CharacterState/Group/Desc/7920610┃再使用待機中です。攻撃力とスキル増幅が増加します。
 CharacterState/Group/Name/7920900┃口封じ
-CharacterState/Group/Desc/7920900┃武器スキル使用時、しばらくの後範囲内のすべての敵実験体をしばらくの間沈黙状態にします。
+CharacterState/Group/Desc/7920900┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵実験体を一定時間沈黙状態にさせます。
 CharacterState/Group/Name/7920920┃口封じ
 CharacterState/Group/Desc/7920920┃沈黙状態になりました。
 CharacterState/Group/Name/7920930┃口封じ
 CharacterState/Group/Desc/7920930┃再使用待機中です。
 CharacterState/Group/Name/7921000┃プラズマ·ノヴァ
-CharacterState/Group/Desc/7921000┃武器スキル使用時、しばらくの後範囲内のすべての敵に固定ダメージを与えます。
+CharacterState/Group/Desc/7921000┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵に固定ダメージを与えます。
 CharacterState/Group/Name/7921010┃プラズマ·ノヴァ
 CharacterState/Group/Desc/7921010┃範囲内のすべての敵に固定ダメージを与えます。
 CharacterState/Group/Name/7921020┃プラズマ·ノヴァ
 CharacterState/Group/Desc/7921020┃再使用待機中です。
 CharacterState/Group/Name/7921100┃シナジー
-CharacterState/Group/Desc/7921100┃究極技使用時、一般スキルのクールダウンが減少します。\n一般スキルを使用するたびにクールダウンが減少します。
+CharacterState/Group/Desc/7921100┃究極技を使用すると、一般スキルのクールダウンが減少します。\nクールダウン状態で一般スキルを使用すると、シナジーインフュージョンのクールダウンが減少します。
 CharacterState/Group/Name/7921110┃シナジー
 CharacterState/Group/Desc/7921110┃再使用待機中です。
 CharacterState/Group/Name/7921200┃圧倒的な力
@@ -22922,7 +23034,7 @@ CharacterState/Group/Desc/7922110┃再使用待機中です。
 CharacterState/Group/Name/7922120┃地震波 - スタック
 CharacterState/Group/Desc/7922120┃基本攻撃するとスタックを消耗してスキルダメージを与えます。
 CharacterState/Group/Name/7922200┃傷の悪化
-CharacterState/Group/Desc/7922200┃敵実験体に基本攻撃じ傷を与え、スタック数に応じて追加固定ダメージを与えます。 
+CharacterState/Group/Desc/7922200┃敵実験体に基本攻撃を与えると、傷を残し、スタック数に応じて追加固定ダメージを与えます。 
 CharacterState/Group/Name/7922210┃傷の悪化
 CharacterState/Group/Desc/7922210┃傷が刻まれ、基本攻撃ダメージを受ける時、追加固定ダメージを受けます。
 CharacterState/Group/Name/7922300┃徹甲弾
@@ -22930,7 +23042,7 @@ CharacterState/Group/Desc/7922300┃防御貫通力が増加します。
 CharacterState/Group/Name/7922400┃吸引 Mk2
 CharacterState/Group/Desc/7922400┃自分または自分の召喚物が与えるすべてのダメージ量の一部を体力とスタミナに回復させます。
 CharacterState/Group/Name/7922520┃鈍感
-CharacterState/Group/Desc/7922520┃自分が致命打ダメージを受けた時、一定時間の間、受ける致命打 ダメージが減少します。
+CharacterState/Group/Desc/7922520┃自分が致命打ダメージを受けた時、一定時間の間受ける致命打ダメージが減少します。
 CharacterState/Group/Name/7922500┃鈍感
 CharacterState/Group/Desc/7922500┃受ける致命打ダメージが減少します。
 CharacterState/Group/Name/7922510┃鈍感
@@ -22940,25 +23052,25 @@ CharacterState/Group/Desc/7922610┃妨害耐性が増加します。
 CharacterState/Group/Name/7922600┃堅固
 CharacterState/Group/Desc/7922600┃妨害耐性が増加します。
 CharacterState/Group/Name/7922720┃イバラの棘
-CharacterState/Group/Desc/7922720┃相手を移動不可状態にすると、対象が受けるすべてのダメージが増加します。
+CharacterState/Group/Desc/7922720┃相手を移動不可状態にさせると、対象が受けるすべてのダメージが増加します。
 CharacterState/Group/Name/7922700┃イバラの棘
 CharacterState/Group/Desc/7922700┃移動不可状態となり一定時間の間、受けるすべてのダメージが増加します。
 CharacterState/Group/Name/7922710┃イバラの棘
 CharacterState/Group/Desc/7922710┃再使用待機中です。
 CharacterState/Group/Name/7922800┃代理人
-CharacterState/Group/Desc/7922800┃基本攻撃またはスキルで敵にダメージを与えた時に固定ダメージを与えます。
+CharacterState/Group/Desc/7922800┃基本攻撃またはスキルで敵にダメージを与えた場合、固定ダメージを与えます。
 CharacterState/Group/Name/7922810┃代理人
 CharacterState/Group/Desc/7922810┃再使用待機中です。
 CharacterState/Group/Name/7922820┃代理人
 CharacterState/Group/Desc/7922820┃代理人効果によって固定ダメージを受けます。
 CharacterState/Group/Name/7922900┃毒の足跡
-CharacterState/Group/Desc/7922900┃移動時に毎秒固定ダメージを与える毒の足跡を生成します。
+CharacterState/Group/Desc/7922900┃移動する時、毎秒固定ダメージを与える毒の足跡を残します。
 CharacterState/Group/Name/7922910┃毒の足跡
 CharacterState/Group/Desc/7922910┃毒中毒になり、毎秒固定ダメージを受けます。
 CharacterState/Group/Name/7923100┃山鳴り
 CharacterState/Group/Desc/7923100┃基本攻撃ダメージが2回適用されます。
 CharacterState/Group/Name/7923110┃山鳴り
-CharacterState/Group/Desc/7923110┃攻撃力が永久的に減少します。
+CharacterState/Group/Desc/7923110┃攻撃力が永久に減少します。
 CharacterState/Group/Name/7923120┃山鳴り
 CharacterState/Group/Desc/7923120┃再使用待機中です。
 CharacterState/Group/Name/7923000┃降臨
@@ -23009,17 +23121,17 @@ CharacterState/Group/Desc/6506020┃驀進スキルによって能力値が増�
 CharacterState/Group/Name/6506030┃驀進 : 暴走
 CharacterState/Group/Desc/6506030┃驀進スキルによって以下の能力値が増加しました。\n- 攻撃速度増加\n- 移動速度増加
 CharacterState/Group/Name/6506040┃驀進 : 暴走 - スタック2
-CharacterState/Group/Desc/6506040┃驀進スキルに的中された敵の数だけ防御力、移動速度が追加で増加しました。
+CharacterState/Group/Desc/6506040┃驀進スキルに的中された敵の数の分、防御力と移動速度が追加で増加しました。
 CharacterState/Group/Name/6506050┃驀進 : バーンアウト : 鈍化
 CharacterState/Group/Desc/6506050┃驀進スキルによって移動速度を減少しました。
 CharacterState/Group/Name/6506070┃驀進：スタック
 CharacterState/Group/Desc/6506070┃与えるダメージが増加して受けるダメージが減少します。
-CharacterState/Group/Name/6510010┃亀裂 : スターン
-CharacterState/Group/Desc/6510010┃亀裂スキルによって気絶しました。
+CharacterState/Group/Name/6510010┃大地粉砕 : 気絶
+CharacterState/Group/Desc/6510010┃大地粉砕によって気絶しました。
 CharacterState/Group/Name/6511010┃心眼 : 活性化
 CharacterState/Group/Desc/6511010┃次に受けるダメージを防ぎ、ダメージを与えた敵を気絶させます。
-CharacterState/Group/Name/6510020┃亀裂 : 鈍化
-CharacterState/Group/Desc/6510020┃亀裂スキルによって移動速度が減少します。
+CharacterState/Group/Name/6510020┃大地粉砕 : 移動速度減少
+CharacterState/Group/Desc/6510020┃大地粉砕によって移動速度が減少します。
 CharacterState/Group/Name/6511030┃心眼 : 気絶
 CharacterState/Group/Desc/6511030┃心眼スキルによって気絶しました。
 CharacterState/Group/Name/6509010┃神経衝撃 : 停止
@@ -23110,18 +23222,18 @@ Infusion/Trait/Desc/7900803┃致命打確率が{0}%増加します。
 Infusion/Trait/Desc/7910601┃致命打ダメージが{0}%増加します。
 Infusion/Trait/Desc/7910611┃致命打ダメージが{0}%増加します。
 Infusion/Trait/Desc/7910621┃致命打ダメージが{0}%増加します。
-Infusion/Trait/Desc/7920101┃現在体力が最大体力の {0}%以下の場合、防御力、ダメージ吸血が増加します。\n
-Infusion/Trait/Desc/7920102┃現在体力が最大体力の {0}%以下の場合、防御力、ダメージ吸血が増加します。\n
-Infusion/Trait/Desc/7920103┃現在体力が最大体力の {0}%以下の場合、防御力、ダメージ吸血が増加します。\n
-Infusion/Trait/Desc/7920201┃現在体力が最大体力の{0}%以下の場合、致命打確率、攻撃速度が増加します。
-Infusion/Trait/Desc/7920202┃現在体力が最大体力の{0}%以下の場合、致命打確率、攻撃速度が増加します。\n
-Infusion/Trait/Desc/7920203┃現在体力が最大体力の{0}%以下の場合、移動速度と体力再生が増加します。\n
+Infusion/Trait/Desc/7920101┃現在体力が最大体力の{0}%以下の場合、防御力とダメージ吸血が増加します。\n
+Infusion/Trait/Desc/7920102┃現在体力が最大体力の{0}%以下の場合、防御力とダメージ吸血が増加します。\n
+Infusion/Trait/Desc/7920103┃現在体力が最大体力の{0}%以下の場合、防御力とダメージ吸血が増加します。\n
+Infusion/Trait/Desc/7920201┃現在体力が最大体力の{0}%以下の場合、移動速度と体力再生が増加します。
+Infusion/Trait/Desc/7920202┃現在体力が最大体力の{0}%以下の場合、移動速度と体力再生が増加します。
+Infusion/Trait/Desc/7920203┃現在体力が最大体力の{0}%以下の場合、移動速度と体力再生が増加します。
 Infusion/Trait/Desc/7920301┃敵実験体にスキルによるダメージを与える時、対象の現在体力の一部に応じた固定ダメージを与えて\n自分の現在体力の一部を回復します。(クールダウン {0}秒)
 Infusion/Trait/Desc/7920302┃敵実験体にスキルによるダメージを与える時、対象の現在体力の一部に応じた固定ダメージを与えて自分の現在体力の一部を回復します。(クールダウン {0}秒)
 Infusion/Trait/Desc/7920303┃敵実験体にスキルによるダメージを与える時、対象の現在体力の一部に応じた固定ダメージを与えて自分の現在体力の一部を回復します。(クールダウン {0}秒)
-Infusion/Trait/Desc/7920401┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%だけの固定ダメージを与えます。
-Infusion/Trait/Desc/7920402┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%だけの固定ダメージを与えます。
-Infusion/Trait/Desc/7920403┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%だけの固定ダメージを与えます。
+Infusion/Trait/Desc/7920401┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%の固定ダメージを与えます。
+Infusion/Trait/Desc/7920402┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%の固定ダメージを与えます。
+Infusion/Trait/Desc/7920403┃死亡した場合、しばらくの後に範囲内のすべての敵を空中に浮かせ、対象の失った体力の{3}%の固定ダメージを与えます。
 Infusion/Trait/Desc/7920501┃{0}秒以上敵からダメージを受けなかった場合、 毎秒失った体力とスタミナの{1}%を回復します。
 Infusion/Trait/Desc/7920502┃{0}秒以上敵からダメージを受けなかった場合、 毎秒失った体力とスタミナの{1}%を回復します。
 Infusion/Trait/Desc/7920503┃{0}秒以上敵からダメージを受けなかった場合、 毎秒失った体力とスタミナの{1}%を回復します。
@@ -23135,12 +23247,12 @@ Infusion/Trait/Desc/7910721┃スキル増幅が{0}増加します。
 Infusion/Trait/Desc/7920801┃死亡すると、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。\n\nチーム在庫：1
 Infusion/Trait/Desc/7920802┃死亡すると、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。\n\nチーム在庫：1
 Infusion/Trait/Desc/7920803┃死亡すると、{0}秒間一定範囲内の敵実験体の移動速度を{1}%、防御力を{2}%減少させる沼を生成します。\n\nチーム在庫：1
-Infusion/Trait/Desc/7920903┃武器スキル使用時、しばらくの後に範囲内のすべての敵実験体を一定時間の間沈黙状態にします。(クールダウン {0}秒)
+Infusion/Trait/Desc/7920903┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵実験体を一定時間の間沈黙状態にさせます。(クールダウン {0}秒)
 Infusion/Trait/Desc/7921003┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵に{4}秒間{0}の固定ダメージを与えます。 (クールダウン {1}秒)
-Infusion/Trait/Desc/7921101┃究極技使用時、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキル 使用時、インフュージョンのクールダウンが{2}秒減少します。
-Infusion/Trait/Desc/7921102┃究極技使用時、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキル 使用時、インフュージョンのクールダウンが{2}秒減少します。
-Infusion/Trait/Desc/7921103┃究極技使用時、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキル 使用時、インフュージョンのクールダウンが{2}秒減少します。
-Infusion/Trait/Desc/7921203┃究極技使用時、{0}秒間すべての妨害免疫状態になり、移動速度が{2}%増加します。(クールダウン{1}秒)
+Infusion/Trait/Desc/7921101┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Infusion/Trait/Desc/7921102┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Infusion/Trait/Desc/7921103┃究極技を使用すると、一般スキルのクールダウンが{0}%減少します。 (クールダウン {1}秒)\nクールダウン状態で一般スキルを使用すると、当インフュージョンのクールダウンが{2}秒減少します。
+Infusion/Trait/Desc/7921203┃究極技を使用すると、{0}秒間すべての妨害免疫状態になり、移動速度が{2}%増加します。(クールダウン{1}秒)
 Infusion/Trait/Desc/7921301┃自分や味方が占領した増幅装置 1個ごとに増幅装置から得る効果が{0}% 追加増加します。
 Infusion/Trait/Desc/7921302┃防御貫通が{4}、最大体力が{5}増加します。
 Infusion/Trait/Desc/7921303┃防御貫通が{4}、最大体力が{5}増加します。
@@ -23151,31 +23263,31 @@ Infusion/Trait/Desc/7921501┃敵実験体にスキルでダメージを与え�
 Infusion/Trait/Desc/7921502┃敵実験体にスキルでダメージを与えた場合、対象を{0}秒間踊らせます。(クールダウン {1}秒)\n\nチーム在庫：1
 Infusion/Trait/Desc/7921503┃敵実験体にスキルでダメージを与えた場合、対象を{0}秒間踊らせます。(クールダウン {1}秒)\n\nチーム在庫：1
 Infusion/Trait/Desc/7921602┃自分のヒールパックから得られる回復効果が{0}%増加し、回復する時にシールドを{1}獲得します。ライフバッグで獲得したシールドが維持される間、移動速度が{2}％増加します。
-Infusion/Trait/Desc/7921701┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
-Infusion/Trait/Desc/7921702┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
-Infusion/Trait/Desc/7921703┃加速境界通過後{0}秒内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
+Infusion/Trait/Desc/7921701┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
+Infusion/Trait/Desc/7921702┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
+Infusion/Trait/Desc/7921703┃加速境界通過後、{0}秒以内に基本攻撃を的中させると、\n{1}の追加固定ダメージを与え、\n対象の移動速度を減少させます。
 Infusion/Trait/Desc/7921802┃ランダムなインフュージョンを獲得します。
-Infusion/Trait/Desc/7921903┃自分の体力が8.5%以下の状態で敵実験体にダメージを受けた時、 [ワルキューレ·ドライブ: 保護]効果が発動します。(クールダウン 45秒)\n\n[ワルキューレ·ドライブ: 保護]\n一定距離をすぐに移動した後、2秒間1200のシールドを獲得し、移動速度が60%増加します。\n\nチーム在庫：1
+Infusion/Trait/Desc/7921903┃自分の体力が20%以下の状態で敵実験体にダメージを受けた時、 [ワルキューレ·ドライブ: 保護]効果が発動します。(クールダウン 45秒)\n\n[ワルキューレ·ドライブ: 保護]\n一定距離をすぐに移動した後、2秒間1200のシールドを獲得し、移動速度が60%増加します。\n\nチーム在庫：1
 Infusion/Trait/Desc/7922003┃A.M.D.S バリアが活性化されます。\nA.M.D.S バリアは敵が自分に与えるスキルの効果とダメージを1回無視します。\n(クールダウン 30秒)\nバリアを破壊した対象の4ｍ範囲内のすべての敵に125(+対象の現在体力の10%)の固定ダメージを与えます。\n\nチーム在庫：1
 Infusion/Trait/Desc/7922102┃基本攻撃すると、衝撃波を放って範囲内の敵に自分の攻撃力とスキル増幅に比例するスキルダメージを与えます。
 Infusion/Trait/Desc/7922201┃敵実験体に基本攻撃をすると傷スタックを残し、スタックごとに追加固定ダメージを与えます。 (最大{2}スタック)
 Infusion/Trait/Desc/7922202┃敵実験体に基本攻撃をすると傷スタックを残し、スタックごとに追加固定ダメージを与えます。 (最大{2}スタック)
 Infusion/Trait/Desc/7922203┃敵実験体に基本攻撃をすると傷スタックを残し、スタックごとに追加固定ダメージを与えます。 (最大{2}スタック)
-Infusion/Trait/Desc/7922302┃防御貫通が{0}%だけ増加します。
+Infusion/Trait/Desc/7922302┃防御貫通が{0}%増加します。
 Infusion/Trait/Desc/7922402┃自分または自分の召喚物が与えるすべてのダメージの{1}%の体力と{0}%のスタミナを回復します。
 Infusion/Trait/Desc/7922502┃自分が致命打 ダメージを受けた時、{0}秒間 受ける 致命打 ダメージが{1}%減少します。 (クールダウン {2}秒)
 Infusion/Trait/Desc/7922602┃妨害耐性が{1}%増加します。
-Infusion/Trait/Desc/7922702┃相手を移動不可状態にすると{0}秒間対象が受ける すべてのダメージが{1}%増加します。 (クールダウン {2}秒)
+Infusion/Trait/Desc/7922702┃相手を移動不可状態にさせると、{0}秒間対象が受ける すべてのダメージが{1}%増加します。 (クールダウン {2}秒)
 Infusion/Trait/Desc/7922803┃基本攻撃またはスキルで敵にダメージを与えた場合、\n固定ダメージを与えます。(クールダウン{0}秒)\n\n(近距離){1}の固定ダメージを{3}秒間与えます。\n(遠距離){2}の固定ダメージを{4}秒間与えます。
-Infusion/Trait/Desc/7922903┃移動時に毒の足跡を残します。\n毒の足跡を踏んだ対象は{0}秒間固定ダメージを受けます。\n\nダメージ量:{1} + 対象最大体力の{2}%\n\nチーム在庫：1
-Infusion/Trait/Desc/7923101┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
-Infusion/Trait/Desc/7923102┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
-Infusion/Trait/Desc/7923103┃攻撃力が永久的に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Infusion/Trait/Desc/7922903┃移動する時、毒の足跡を残します。\n毒の足跡を踏んだ対象は{0}秒間固定ダメージを受けます。\n\nダメージ量:{1} + 対象の最大体力の{2}%\n\nチーム在庫：1
+Infusion/Trait/Desc/7923101┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Infusion/Trait/Desc/7923102┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
+Infusion/Trait/Desc/7923103┃攻撃力が永久に{1}%減少します。\n基本攻撃ダメージが2回適用されます。\n(クールダウン{0}秒)\n\nチーム在庫：1
 Infusion/Trait/Desc/7923002┃自分が復活した時、自分を除くすべての実験体と\n召喚物が{0}秒間硬直状態になります。
 Infusion/Trait/Desc/7923203┃与えるスキルダメージに致命打が発動します。攻撃力が{0}%、致命打ダメージが{1}%減少します。
-Infusion/Trait/Desc/7923903┃敵実験体にスキルでダメージを与えた場合、{0}秒後、対象にレーザーを発射し、{1} + ({2} * スキル増幅)のスキルダメージを与えます。\n(クールダウン：{3}秒)
-Infusion/Trait/Desc/7923803┃敵実験体にスキルでダメージを与えた場合、対象の防御力を{0}秒間{1}減少させます。\nデバフ効果の持続時間終了後、{2} + ({3} * スキル増幅)のスキルダメージを与えます。\n(クールダウン：{4}秒)
-Infusion/Trait/Desc/7923703┃基本攻撃で敵実験体にダメージを与えた場合、{0} + ({1} * 攻撃力)のスキルダメージを与え、{2}秒間防御貫通が{3}増加します。\n(クールダウン：{4}秒)
+Infusion/Trait/Desc/7923903┃敵実験体にスキルでダメージを与えた場合、{0}秒後、対象にレーザーを発射し、{1}(+スキル増幅の{2}%)のスキルダメージを与えます。\n(クールダウン：{3}秒)
+Infusion/Trait/Desc/7923803┃敵実験体にスキルでダメージを与えた場合、対象の防御力を{0}秒間{1}減少させます。\nデバフ効果の持続時間終了後、{2}(+スキル増幅の{3}%)のスキルダメージを与えます。\n(クールダウン：{4}秒)
+Infusion/Trait/Desc/7923703┃基本攻撃で敵実験体にダメージを与えた場合、{0}(+攻撃力の{1}%)のスキルダメージを与え、{2}秒間防御貫通が{3}増加します。\n(クールダウン：{4}秒)
 Infusion/Trait/Desc/7923401┃戦術スキルを変更します。\n\n<color=white>{0}</color>m範囲内のすべての敵実験体を自分の近くに引き寄せて{1}秒間気絶させた後、<color=white>{2}</color>の固定ダメージを与えます。\n(クールダウン：{3}秒)\n\nチーム在庫：1
 Infusion/Trait/Desc/7923411┃戦術スキルを変更します。\n\n{0}秒後、{1}秒間移動速度が{2}%まで徐々に増加し、初めて衝突した敵に{3}のスキルダメージを与えてノックバックさせます。\n(クールダウン：{4}秒)\n\nチーム在庫：1
 Infusion/Trait/Desc/7923421┃戦術スキルを変更します。\n\n指定した方向の地面に亀裂を入れ、{0}秒後、{1} + <color=#688A08>敵の現在体力の{2}%</color>の固定ダメージを与えて{3}秒間気絶させ、{5}秒間移動速度を{6}%減少させます。\n(クールダウン：{4}秒)\n\nチーム在庫：1
@@ -23242,8 +23354,8 @@ Item/Skills/6022001/Desc┃体力が一定比率以下の敵実験体にダメ�
 Item/Skills/6506000┃驀進
 Item/Skills/6506001┃驀進
 Item/Skills/6506001/Name┃<color=yellow>驀進</color>
-Item/Skills/6506001/Body┃{0}秒後、周り{1}m以内の敵実験体に{2}のダメージを与え、\n{7}秒間暴走状態になり、追加能力値を獲得します。\n\n誰にもダメージを与えられなかった場合、{6}秒間気絶し、\n{3}秒間移動速度が{5}%減少します。\n\n暴走状態になった時、\n攻撃速度が{8}%、移動速度が{9}%増加し、\n的中させた敵実験体の数だけ以下の効果を追加で獲得します。\n\n(近距離)\n与えるダメージ6%増加、受けるダメージ12%減少\n(遠距離)\n与えるダメージ4.5%増加、受けるダメージ10%減少\n\nクールダウン : {4}秒
-Item/Skills/6506001/Desc┃{0}秒後、周り{1}m以内の敵実験体に{2}のダメージを与え、\n{7}秒間暴走状態になり、追加能力値を獲得します。\n\n誰にもダメージを与えられなかった場合、{6}秒間気絶し、\n{3}秒間移動速度が{5}%減少します。\n\n暴走状態になった時、\n攻撃速度が{8}%、移動速度が{9}%増加し、\n的中させた敵実験体の数だけ以下の効果を追加で獲得します。\n\n(近距離)\n与えるダメージ6%増加、受けるダメージ12%減少\n(遠距離)\n与えるダメージ4.5%増加、受けるダメージ10%減少\n\nクールダウン : {4}秒
+Item/Skills/6506001/Body┃{0}秒後、周り{1}m以内の敵実験体に{2}のダメージを与え、\n{7}秒間暴走状態になり、追加能力値を獲得します。\n\n誰にもダメージを与えられなかった場合、{6}秒間気絶し、\n{3}秒間移動速度が{5}%減少します。\n\n暴走状態になった時、\n攻撃速度が{8}%、移動速度が{9}%増加し、\n的中させた敵実験体の数の分、以下の効果を追加で獲得します。\n\n(近距離)\n与えるダメージ6%増加、受けるダメージ12%減少\n(遠距離)\n与えるダメージ4.5%増加、受けるダメージ10%減少\n\nクールダウン : {4}秒
+Item/Skills/6506001/Desc┃{0}秒後、周り{1}m以内の敵実験体に{2}のダメージを与え、\n{7}秒間暴走状態になり、追加能力値を獲得します。\n\n誰にもダメージを与えられなかった場合、{6}秒間気絶し、\n{3}秒間移動速度が{5}%減少します。\n\n暴走状態になった時、\n攻撃速度が{8}%、移動速度が{9}%増加し、\n的中させた敵実験体の数の分、以下の効果を追加で獲得します。\n\n(近距離)\n与えるダメージ6%増加、受けるダメージ12%減少\n(遠距離)\n与えるダメージ4.5%増加、受けるダメージ10%減少\n\nクールダウン : {4}秒
 Item/Skills/6507000┃テザリング
 Item/Skills/6507001┃テザリング
 Item/Skills/6507001/Name┃<color=yellow>テザリング</color>
@@ -23288,26 +23400,26 @@ Trait/Tooltip/7920103┃自分の現在体力が一定量以下になる場合�
 Trait/Tooltip/7920303┃スキルでダメージを与えた時、敵実験体に固定ダメージを与えて、自分の体力を回復します。
 Trait/Tooltip/7920403┃自分が死亡した時しばらくの後、範囲内のすべての敵をしばらく空中に浮かせ、対象が失った体力に応じて固定ダメージを与えます。
 Trait/Tooltip/7920503┃一定時間の間、敵からダメージを受けなかった時、毎秒体力とスタミナを回復します。
-Trait/Tooltip/7920603┃死亡時一定時間後、体力とスタミナを回復し、復活します。
+Trait/Tooltip/7920603┃死亡すると一定時間後、体力とスタミナを回復し、復活します。
 Trait/Tooltip/7920802┃自分が死亡した場合、移動速度と防御力を減少させる沼を 生成します。
-Trait/Tooltip/7920903┃武器スキル使用時、しばらくの後範囲内のすべての敵実験体をしばらくの間沈黙状態にします。
-Trait/Tooltip/7921003┃武器スキル使用時、しばらくの後範囲内のすべての敵に固定ダメージを与えます。
-Trait/Tooltip/7921103┃究極技使用時、一般スキルのクールダウンが減少します。\n一般スキルを使用するたびにクールダウンが減少します。
-Trait/Tooltip/7921203┃究極技使用時、しばらくのすべての妨害免疫状態になる同時に移動速度が増加します。
+Trait/Tooltip/7920903┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵実験体をしばらくの間沈黙状態にさせます。
+Trait/Tooltip/7921003┃武器スキルを使用すると、しばらくしてから範囲内のすべての敵に固定ダメージを与えます。
+Trait/Tooltip/7921103┃究極技を使用すると、一般スキルのクールダウンが減少します。\n一般スキルを使用するたびに当インフュージョンのクールダウンが減少します。
+Trait/Tooltip/7921203┃究極技を使用すると、しばらくの間すべての妨害免疫状態になり、移動速度が増加します。
 Trait/Tooltip/7921302┃防御貫通と最大体力が増加します。
 Trait/Tooltip/7921402┃所持クレジット数に比例して敵実験体と敵実験体の召喚物に与えるダメージが増加します。
 Trait/Tooltip/7921602┃自分のヒールパックから得られる回復効果が増加し、回復する時にシールドを獲得します。ライフバッグで獲得したシールドが維持される間、移動速度が増加します。
 Trait/Tooltip/7921703┃加速境界通過時、一定時間次の基本攻撃が強化されます。
 Trait/Tooltip/7922102┃敵実験体に基本攻撃すると、衝撃波を放って範囲内の敵にスキルダメージを与えます。\n
-Trait/Tooltip/7922203┃敵実験体に基本攻撃じ傷を与え、スタック数に応じて追加固定ダメージを与えます。
-Trait/Tooltip/7922302┃防御貫通力が増加します。
+Trait/Tooltip/7922203┃敵実験体に基本攻撃を与えると、傷を残し、スタック数に応じて追加固定ダメージを与えます。 
+Trait/Tooltip/7922302┃防御貫通が増加します。
 Trait/Tooltip/7922402┃自分または自分の召喚物が与えるすべてのダメージ量の一部を体力とスタミナに回復させます。
 Trait/Tooltip/7922502┃受ける致命打ダメージが減少します。
 Trait/Tooltip/7922602┃妨害耐性が増加します。
 Trait/Tooltip/7922702┃移動不可状態となり一定時間の間、受けるすべてのダメージが増加します。
-Trait/Tooltip/7921903┃自分の体力が一定量以下の状態で敵実験体にダメージを受けた時、 \n[ワルキューレ·ドライブ: 保護]効果が発動します。\n\n[ワルキューレ·ドライブ: 保護]\n3秒間シールドを獲得して、移動速度が増加します。\n一定距離をすぐ移動します。(クールダウン 30秒)
+Trait/Tooltip/7921903┃自分の体力が一定量以下の状態で敵実験体にダメージを受けた時、 \n[ワルキューレ·ドライブ: 保護]効果が発動します。\n\n[ワルキューレ·ドライブ: 保護]\n3秒間シールドを獲得して、移動速度が増加します。\n一定距離をすぐ移動します。
 Trait/Tooltip/7922803┃基本攻撃またはスキルで敵にダメージを与えた時に固定ダメージを与えます。
-Trait/Tooltip/7922903┃移動時に毎秒固定ダメージを与える毒の足跡を生成します。
+Trait/Tooltip/7922903┃移動する時、毎秒固定ダメージを与える毒の足跡を残します。
 Trait/Tooltip/7923103┃基本攻撃ダメージが2回適用されます。
 Trait/Tooltip/7923302┃クールダウン減少が増加します。クールダウン減少の最大値を超えたクールダウン減少の数値に比例して適合能力値(攻撃力またはスキル増幅)を獲得します。
 Trait/Tooltip/7923401┃範囲内のすべての敵実験体を自分の近くに引き寄せて気絶させた後、固定ダメージを与えます。
@@ -23469,6 +23581,7 @@ Cobalt/부활남은시간┃<color=#47D5FF>Bキー</color>を押して合成機�
 장비의 부위를 선택하세요.┃装備のパーツを選んでください。
 코발트추천아이템툴팁┃実験体の能力値に適したアイテムです。
 합성기 분쇄 불가 알림┃コバルトモードではアイテムを捨てられません。合成機またはシュレッダーを利用して粉砕できます。
+합성기설명┃합성기설명
 전체 아이템 보기┃全アイテム一覧
 추천 아이템 보기┃おすすめアイテム一覧
 페이즈 마다 인퓨전 선택 포인트가 쌓입니다.┃フェーズが始まると、インフュージョンポイントを獲得します。\nインフュージョンはインフュージョンポイントを使用して獲得できます。
