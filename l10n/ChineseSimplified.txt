@@ -1120,6 +1120,9 @@ ToolTipType/IstvanCloneReinforceDamage┃[其他可能性]强化伤害量
 ToolTipType/MinHpHeal┃最小体力恢复
 ToolTipType/MaxHpHeal┃最大体力恢复
 ToolTipType/PathDamage┃路径伤害
+ToolTipType/NiahStackDamage┃每叠层伤害量
+ToolTipType/NiahAcive1Cooldown┃落点冷却
+ToolTipType/StackShield┃每叠层护盾
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(每剩1个弹匣*技能增幅的{0}%)</color>
 DayNight/Day┃白天
 DayNight/Night┃夜晚
@@ -1323,10 +1326,13 @@ Loading/MatchingMode/Tutorial1_Re┃TRAINING
 Loading/MatchingMode/Tutorial2_Re┃TRAINING
 Loading/MatchingMode/Tutorial3_Re┃TRAINING
 Loading/MatchingMode/SquadRumble┃UNION GAME
+Loading/MatchingMode/LoneWolf┃EVENT GAME
+Loading/MatchingMode/LoneWolfCustom┃CUSTOM GAME
 Loading/MatchingTeamMode/Solo┃卢米亚岛
 Loading/MatchingTeamMode/Squad┃卢米亚岛
 Loading/MatchingTeamMode/Cobalt┃钴协议
 Loading/MatchingTeamMode/LoneWolf┃卢米亚岛
+Loading/MatchingTeamMode/LoneWolfCustom┃卢米亚岛
 ItemType/SKIN/Name┃皮肤
 Skin/Name/1001000┃杰琪
 Skin/Name/1001001┃绞杀者 杰琪
@@ -1656,6 +1662,7 @@ Skin/Name/1076001┃禁锢者 盖瑞特
 Skin/Name/1077000┃俞岷
 Skin/Name/1077001┃云游道士 俞岷
 Skin/Name/1078000┃翡翠
+Skin/Name/1078001┃暗巷里 翡翠
 Skin/Name/1079000┃尤斯蒂娜
 Skin/Name/1080000┃伊舒特
 Skin/Name/1081000┃妮娅
@@ -1945,6 +1952,7 @@ Skin/Desc/1057002┃记者，铭记初心，追寻真相与公正。\n<color=#FF
 Skin/Desc/1022006┃别忘了，死神始终与你相伴。
 Skin/Desc/1032003┃这局看来会异常激烈。
 Skin/Desc/1003005┃井然有序，才是正确训练的第一步。
+Skin/Desc/1078001┃嘿，你知道你现在在谁的地盘吗？
 ItemType/EMOTION/Name┃表情
 Emotion_Name_001┃生气
 Emotion_Name_002┃笑
@@ -2946,6 +2954,20 @@ Event_2024_NL_Champion_DaSoo_3122┃2024 LEAGUE CHAMPION DASOO
 Event_2024_NL_Champion_JINho_3123┃2024 LEAGUE CHAMPION JINHO
 Event_2024_NL_Champion_ing9_3124┃2024 LEAGUE CHAMPION ING9
 Event_2024_NL_Champion_ZeroJin_3125┃2024 LEAGUE CHAMPION ZEROJIN
+Emotion_Event_Pack_Niah_2081001┃妮娅 胜利之舞
+Emotion_SNS_Niah_2081006┃妮娅 太阳万岁
+Emotion_EsportsClub_Niah_2081007┃妮娅 胜利
+Emotion_EsportsClub_Rio_2031011┃莉央 我来CARRY
+Emotion_EsportsClub_Celine_2043005┃席琳 赢了
+Emotion_EsportsClub_Arda_2066005┃阿尔达 这是什么意思？
+Emotion_EsportsClub_Justyna_2079006┃尤斯蒂娜 GO!
+Emotion_EsportsClub_Irem_2061007┃爱琳 输了！
+Emotion_EsportsClub_Eleven_2030011┃Eleven 拜托拜托
+Emotion_EsportsClub_Hisui_2078006┃翡翠 轻轻松松
+Emotion_Niah01_NP┃妮娅 GG
+Emotion_Niah02_NP┃妮娅 WA!
+Emotion_Niah03_NP┃妮娅 谢谢~
+Emotion_Niah04_NP┃妮娅 你在干嘛？
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
 Collection/Name/11003┃拯救迷失的灵魂
@@ -2983,6 +3005,8 @@ Collection/Name/22007┃赛季S5・电竞助力者Ⅰ
 Collection/Name/22008┃赛季S5・电竞助力者Ⅱ
 Collection/Name/22009┃赛季S6・电竞助力者Ⅰ
 Collection/Name/22010┃赛季S6・电竞助力者Ⅱ
+Collection/Name/22011/1┃赛季S7・电竞助力者Ⅰ
+Collection/Name/22011/2┃赛季S7・电竞助力者Ⅱ
 Collection/Name/24001┃2024黄金福袋！
 Collection/Name/24002┃春日花海大作战 Ⅰ
 Collection/Name/24003┃春日花海大作战 Ⅱ
@@ -3016,6 +3040,8 @@ Collection/Name/24026/4┃收集星星Ⅳ
 Collection/Name/24026/5┃收集星星Ⅴ
 Collection/Name/24027┃交换金星
 Collection/Name/24028┃交换金星箱子
+Collection/Name/24029/1┃5月概率提升皮肤卡片收藏Ⅰ
+Collection/Name/24029/2┃5月概率提升皮肤卡片收藏Ⅱ
 Shop/Desc/Emotion_Hart01_NP┃可以在游戏中使用表情符号进行交流。
 Shop/Desc/Emotion_Hart02_NP┃可以在游戏中使用表情符号进行交流。
 Shop/Desc/Emotion_Hart03_NP┃可以在游戏中使用表情符号进行交流。
@@ -3731,6 +3757,8 @@ EMBLEM_MARK_EVENT_103194┃2024 LEAGUE CHAMPION DASOO
 EMBLEM_MARK_EVENT_103195┃2024 LEAGUE CHAMPION JINHO
 EMBLEM_MARK_EVENT_103196┃2024 LEAGUE CHAMPION ING9
 EMBLEM_MARK_EVENT_103197┃2024 LEAGUE CHAMPION ZEROJIN
+EMBLEM_MARK_EVENT_103198┃妮娅 太阳万岁
+EMBLEM_MARK_EVENT_103199┃先驱者
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃礼物树
 EMBLEM_MARK_ERPASS_104003┃红鼻子
@@ -3839,6 +3867,7 @@ EMBLEM_MARK_COLLECTION_119008┃死神 卢克 清理完毕
 EMBLEM_MARK_COLLECTION_119501┃赛季S4・电竞助力者
 EMBLEM_MARK_COLLECTION_119502┃赛季S5・电竞助力者
 EMBLEM_MARK_COLLECTION_119503┃赛季S6・电竞助力者
+EMBLEM_MARK_COLLECTION_119504┃赛季S7・电竞助力者
 ItemType/EMBLEM_BG/Name┃个人背景
 EMBLEM_BG_FREE1┃默认背景
 EMBLEM_BG_SHOP_202001┃玄佑 背景
@@ -3884,6 +3913,7 @@ EMBLEM_BG_SHOP_202040┃全息精灵 万尼亚背景
 EMBLEM_BG_SHOP_202041┃甜蜜恶魔 雷妮背景
 EMBLEM_BG_SHOP_202042┃偶像 梅背景
 EMBLEM_BG_SHOP_202043┃死神 卢克背景
+EMBLEM_BG_SHOP_202044┃妮娅背景
 EMBLEM_BG_SHOP_202501┃赛季S4・All ways Incheon背景
 EMBLEM_BG_SHOP_202502┃赛季S4・Gyeonggi Innate背景
 EMBLEM_BG_SHOP_202503┃赛季S4・GJ Slasher背景
@@ -4266,6 +4296,7 @@ EMBLEM_OUTLINE_SHOP_302040┃全息精灵 万尼亚边框
 EMBLEM_OUTLINE_SHOP_302041┃甜蜜恶魔 雷妮边框
 EMBLEM_OUTLINE_SHOP_302042┃偶像 梅边框
 EMBLEM_OUTLINE_SHOP_302043┃死神 卢克边框
+EMBLEM_OUTLINE_SHOP_302044┃妮娅边框
 EMBLEM_OUTLINE_SHOP_302501┃赛季S4・All ways Incheon边框
 EMBLEM_OUTLINE_SHOP_302502┃赛季S4・Gyeonggi Innate边框
 EMBLEM_OUTLINE_SHOP_302503┃赛季S4・GJ Slasher边框
@@ -5120,6 +5151,7 @@ Goods/Name/3403013┃好运★
 Goods/Name/3403014┃中秋节
 Goods/Name/3403015┃阿格莱亚
 Goods/Name/3403016┃2024圣诞
+Goods/Name/3403017┃妮娅
 Goods/Name/3419001┃冬日雪花
 ItemType/EVENT/Name┃收藏库物品
 Goods/Name/3503001┃[N] 收藏库物品
@@ -5149,6 +5181,7 @@ Goods/Name/3503024┃学生会长卡片
 Goods/Name/3503025┃转变卡片
 Goods/Name/3503026┃银星
 Goods/Name/3503027┃金星
+Goods/Name/3503028┃5月概率提升皮肤卡片
 ItemType/WILD_CARD_SKIN/Name┃[仅限皮肤]任意牌
 ItemType/WILD_CARD_ETC/Name┃任意牌
 Goods/Name/3602002┃[仅限皮肤]任意牌
@@ -5469,6 +5502,11 @@ Product/Name/S7_Star_Box_Pack_01┃星星箱子特别组合包
 Product/Name/S7_Star_Box_Pack_02┃绿星箱子组合包
 Product/Name/S7_Star_Box_Pack_03┃银星箱子组合包
 Product/Name/GildedReaperLuke_CollectPack_01┃死神 卢克收藏组合包
+Product/Name/Niah_Event_Pack_01┃妮娅特别组合包
+Product/Name/EVENT_NPASS_S7_Premium_Token_1010┃赛季S7高级代币书Ⅱ
+Product/Name/EVENT_NPASS_S7_Basic_Token_1011┃赛季S7基础代币书Ⅱ
+Product/Name/2025_May_SkinBox_Pack_01┃5月概率提升皮肤箱特别组合包
+Product/Name/2025_May_SkinBox_Pack_02┃5月概率提升皮肤箱基础组合包
 Product/Name/Perfect_Support_Pack_01┃完美礼包
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
@@ -5707,6 +5745,9 @@ Shop/Desc/S7_Star_Box_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- �
 Shop/Desc/S7_Star_Box_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 绿星箱子 x 1\n- A-Coin Boost(1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 星星箱子的颜色顺序为 : 银色、绿色、蓝色、紫色、金色箱子。\n※ 开启箱子时，可以获得[下一颜色星星箱子、同一颜色星星箱子、A-Coin]其中之一，有概率额外获得银星收藏物品。\n※ 但开启黄金箱子时将获得军官学园代币，不会获得星星箱子。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/S7_Star_Box_Pack_03┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 银星箱子 x 4\n- XP Boost(1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 星星箱子的颜色顺序为 : 银色、绿色、蓝色、紫色、金色箱子。\n※ 开启箱子时，可以获得[下一颜色星星箱子、同一颜色星星箱子、A-Coin]其中之一，有概率额外获得银星收藏物品。\n※ 但开启黄金箱子时将获得军官学园代币，不会获得星星箱子。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 死神 卢克 2款表情\n- 死神 卢克头像\n- 死神 卢克边框\n- 死神 卢克背景\n- 军官学园代币 x 10\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 妮娅表情\n- 妮娅背景\n- 妮娅边框\n- 妮娅队伍格背景\n- 军官学园代币 x 10\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/2025_May_SkinBox_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 5月概率提升皮肤箱 x 10\n- 开箱钥匙 x 10\n- 军官学园代币 x 15\n- A-Coin Boost (1日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/2025_May_SkinBox_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 5月概率提升皮肤箱 x 1\n- 开箱钥匙 x 1\n- 军官学园代币 x 1\n- A-Coin Boost (1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Perfect_Support_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- [仅限皮肤]任意牌（英雄）x 1\n- [仅限皮肤]任意牌（稀有）x 1\n- 任意牌（稀有）x 1\n- 1,000 NP\n- 好运★箱 x 10\n- 好运★球 x 1\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n<b><color=#F15F5F>[购买注意事项]</color></b> \n※ 可以使用Steam钱包购买完美礼包。\n※ 可以在制作所的[任意牌]页面使用任意牌。\n※ 请查看箱子概率链接确认详细商品列表。\n※ 完美礼包中的1,000 NP为免费NP。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
@@ -5999,17 +6040,17 @@ Skill/Code/Coef/4517002┃使用后{0}秒间处于凝滞状态，无法做出任
 CharacterState/Group/Name/4104000┃凝滞
 CharacterState/Group/Desc/4104000┃因极光陀螺处于凝滞状态。
 Skill/Group/Name/4105000┃净化
-Skill/Group/LobbyDesc/4105000┃立即解除负面效果，增加移动速度。\n\n<color=#ff3399>强化效果 : </color>使用后暂时处于免疫所有负面效果状态。
-Skill/Group/LobbyDesc/4518000┃立即解除负面效果，增加移动速度。\n\n<color=#ff3399>强化效果 : </color>使用后暂时处于免疫所有负面效果状态。
-Skill/Code/Desc/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
-Skill/Code/Coef/4105001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Group/LobbyDesc/4105000┃立即解除减益效果，增加移动速度。\n\n<color=#ff3399>强化效果 : </color>使用后暂时处于免疫所有负面效果状态。
+Skill/Group/LobbyDesc/4518000┃立即解除减益效果，增加移动速度。\n\n<color=#ff3399>强化效果 : </color>使用后暂时处于免疫所有负面效果状态。
+Skill/Code/Desc/4105001┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
+Skill/Code/Coef/4105001┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#565730>战术强化组件 : </color><color=#595959>{1}秒间处于免疫所有负面效果的状态。</color>
 Skill/Code/ExpansionTip/4105001┃<i>增加的移动速度在持续一段时间后逐渐恢复。</i>\n\n<i>强化至2级需要使用<color=#b245ff>战术强化组件</color>。</i>
-Skill/Code/Desc/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4105002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Desc/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4518001┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Desc/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4518002┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4105002┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4105002┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4518001┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4518001┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4518002┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4518002┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
 CharacterState/Group/Name/4105000┃免疫所有负面效果
 CharacterState/Group/Desc/4105000┃免疫所有负面效果。
 CharacterState/Group/Name/4105010┃移动速度增加 - 净化
@@ -6168,21 +6209,21 @@ Skill/Group/Name/1001400┃袭击
 Skill/Group/Name/1001500┃电锯杀人狂
 Skill/Group/Name/1001510┃屠杀
 Skill/Group/Desc/1001100┃当杰琪在3秒内将承受攻击的敌人实验体陷入濒死或死亡状态时，将重置杰琪基本技能的冷却时间。\n\n杰琪造成技能伤害时，{0}秒间造成<color=white>{1}</color>的持续伤害并赋予目标「流血」状态。杰琪对陷入「流血」状态的目标造成<color=white>{2}</color>的额外技能伤害，并重置「流血」的持续时间。
+Skill/Group/Coef/1001100┃当杰琪在3秒内将承受攻击的敌人实验体陷入濒死或死亡状态时，将重置杰琪基本技能的冷却时间。\n\n杰琪造成技能伤害时，{0}秒间造成 <color=white>{1}</color><color=#ffd775>(+攻击力的{3})</color>的持续伤害并赋予目标「流血」状态。杰琪对陷入「流血」状态的目标造成<color=white>{2}</color><color=#ffd775>(+攻击力的{5})</color>额外技能伤害，并重置「流血」的持续时间。
+Skill/Group/ExpansionTip/1001100┃<i></i>
 Skill/Group/Desc/1001200┃杰琪朝着指定方向连续挥动武器，造成<color=white>{0}</color><color=#688A08>(+目标当前体力{2})</color>的技能伤害。\n<color=white>连斩</color>命中敌人时，可以再次使用。再次使用时，杰琪向指定的方向稍微前进，挥动武器造成<color=white>{1}</color>的技能伤害。
 Skill/Group/Desc/1001210┃杰琪朝着指定方向连续挥动武器，造成<color=white>{0}</color><color=#688A08>(+目标当前体力{2})</color>的技能伤害。\n<color=white>连斩</color>命中敌人时，可以再次使用。再次使用时，杰琪向指定的方向稍微前进，挥动武器造成<color=white>{1}</color>的技能伤害。
-Skill/Group/Desc/1001300┃杰琪促进肾上腺素分泌，提高{1}移动速度后在{0}秒间逐渐复原。在技能激活期间，移向处于流血的敌人时移动速度增加{4} ，普攻命中处于流血的敌人时，根据自身已失体力恢复<color=white>{2}</color> ~ <color=white>{3}</color>体力。
-Skill/Group/Desc/1001400┃杰琪跳到指定方向，给范围内敌人造成<color=white>{0}</color>技能伤害，{1}秒内的移动速度减少{2}。
-Skill/Group/Desc/1001500┃杰琪启动电锯{0}秒，普攻造成<color=white>{3}</color>的额外技能伤害。杰琪参与击杀实验体时，持续时间增加{1}秒。\n电锯杀人狂启动{2}秒后，可以使用<color=white>屠杀</color>。\n\n<color=white>屠杀</color> : 杰琪全力挥舞电锯，根据敌人已失体力，造成<color=white>{4}</color> ~ <color=white>{5}</color>的技能伤害。
-Skill/Group/Desc/1001510┃杰琪大力挥动电锯，根据敌人的已失体力造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能伤害。
-Skill/Group/Coef/1001100┃当杰琪在3秒内将承受攻击的敌人实验体陷入濒死或死亡状态时，将重置杰琪基本技能的冷却时间。\n\n杰琪造成技能伤害时，{0}秒间造成 <color=white>{1}</color><color=#ffd775>(+攻击力的{3})</color>的持续伤害并赋予目标「流血」状态。杰琪对陷入「流血」状态的目标造成<color=white>{2}</color><color=#ffd775>(+攻击力的{5})</color>额外技能伤害，并重置「流血」的持续时间。
 Skill/Group/Coef/1001200┃杰琪朝着指定方向连续挥动武器，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{2})</color><color=#688A08>(+目标当前体力{6})</color>的技能伤害。\n<color=white>连斩</color>命中敌人时，可以再次使用。再次使用时，杰琪向指定的方向稍微前进，挥动武器造成<color=white>{1}</color><color=#ffd775>(+攻击力的{4})</color>的技能伤害。
 Skill/Group/Coef/1001210┃杰琪朝着指定方向连续挥动武器，造成<color=white>{0}</color><color=#ffd775>(+攻击力的{2})</color><color=#688A08>(+目标当前体力{6})</color>的技能伤害。\n<color=white>连斩</color>命中敌人时，可以再次使用。再次使用时，杰琪向指定的方向稍微前进，挥动武器造成<color=white>{1}</color><color=#ffd775>(+攻击力的{4})</color>的技能伤害。
+Skill/Group/Desc/1001300┃杰琪促进肾上腺素分泌，提高{1}移动速度后在{0}秒间逐渐复原。在技能激活期间，移向处于流血的敌人时移动速度增加{4} ，普攻命中处于流血的敌人时，根据自身已失体力恢复<color=white>{2}</color> ~ <color=white>{3}</color>体力。
 Skill/Group/Coef/1001300┃杰琪促进肾上腺素分泌，移动速度增加后{1}在{0}秒间逐渐复原。在技能激活期间，移向处于流血的敌人增加{4}移动速度 ，使用普攻命中处于流血的敌人时，根据自身已失体力恢复<color=white>{2}</color><color=#ffd775>(+攻击力的 {5})</color> ~ <color=white>{3}</color><color=#ffd775>(+攻击力的 {7})</color>体力。
+Skill/Group/ExpansionTip/1001300┃<i>在当前体力为体力上限{0}时，可以获得最大体力恢复量。</i>
+Skill/Group/Desc/1001400┃杰琪跳到指定方向，给范围内敌人造成<color=white>{0}</color>技能伤害，{1}秒内的移动速度减少{2}。
 Skill/Group/Coef/1001400┃杰琪跳到指定方向，对范围内敌人造成<color=white>{0}</color><color=#ffd775>(+攻击力{1})</color>的技能伤害，{2}秒内的移动速度减少{3}。
+Skill/Group/Desc/1001500┃杰琪启动电锯{0}秒，普攻造成<color=white>{3}</color>的额外技能伤害。杰琪参与击杀实验体时，持续时间增加{1}秒。\n电锯杀人狂启动{2}秒后，可以使用<color=white>屠杀</color>。\n\n<color=white>屠杀</color> : 杰琪全力挥舞电锯，根据敌人已失体力，造成<color=white>{4}</color> ~ <color=white>{5}</color>的技能伤害。
+Skill/Group/Desc/1001510┃杰琪大力挥动电锯，根据敌人的已失体力造成<color=white>{0}</color> ~ <color=white>{1}</color>的技能伤害。
 Skill/Group/Coef/1001500┃杰琪启动电锯{0}秒，普攻造成<color=white>{3}</color><color=#ffd775>(+攻击力{4})</color>的额外技能伤害。杰琪参与击杀实验体时，持续时间增加{1}秒。\n启动电锯杀人狂{2}秒后，可以使用<color=white>屠杀</color>。\n\n<color=white>屠杀</color> : 杰琪全力挥舞电锯，根据敌人已失体力，造成<color=white>{6}</color><color=#ffd775>(+攻击力的{8})</color> ~ <color=white>{7}</color><color=#ffd775>(+攻击力的{10})</color>的技能伤害。
 Skill/Group/Coef/1001510┃杰琪大力挥动电锯，根据敌人的已失体力造成<color=white>{0}</color><color=#ffd775>(+攻击力的{2})</color> ~ <color=white>{1}</color><color=#ffd775>(+攻击力的{4})</color>的技能伤害。
-Skill/Group/ExpansionTip/1001100┃<i></i>
-Skill/Group/ExpansionTip/1001300┃<i>在当前体力为体力上限{0}时，可以获得最大体力恢复量。</i>
 Skill/Group/ExpansionTip/1001500┃<i>使用双剑时，普攻变更为1次，但是可造成攻击力{1}的伤害，分泌肾上腺素(W)将恢复双倍的体力。\n\n当目标当前体力为体力上限{0}时，屠杀伤害量可达到最大值。</i>
 Skill/Group/ExpansionTip/1001510┃<i>当目标当前体力为体力上限 {0}时，屠杀伤害量可达到最大值。</i>
 CharacterState/Group/Name/1001100┃疯狂的鲜血盛宴
@@ -7430,7 +7471,7 @@ CharacterState/Group/Name/1033520┃愤怒的上勾拳！ - 悬空
 CharacterState/Group/Desc/1033100┃狂躁 - 普攻造成额外伤害，周围敌人承受范围伤害。
 CharacterState/Group/Desc/1033110┃无法充能愤怒值。
 CharacterState/Group/Desc/1033200┃降低移动速度。
-CharacterState/Group/Desc/1033300┃妮琪正在格挡敌人攻击。对减益效果和负面效果免疫。
+CharacterState/Group/Desc/1033300┃妮琪正在格挡敌人攻击。对负面效果免疫。
 CharacterState/Group/Desc/1033320┃减少来自敌人的伤害。
 CharacterState/Group/Desc/1033330┃降低移动速度。
 CharacterState/Group/Desc/1033400┃降低移动速度。
@@ -7954,14 +7995,14 @@ Skill/Group/Coef/1044520┃朝指定的方向释放无法控制的VF能量造成
 Skill/Group/Coef/1044530┃朝指定的方向释放无法控制的VF能量造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>技能伤害。蛇之震怒对敌人实验体造成伤害时，暴走持续时间延长{2}秒。\n每次使用普攻造成伤害时，缩减蛇之震怒的冷却{3}秒。
 Skill/Group/Coef/1044540┃朝指定的方向释放无法控制的VF能量造成<color=white>{0}</color><color=#ffd775>(+攻击力的{1})</color>技能伤害，{5}秒间移动速度减少{2}。蛇之震怒对敌人实验体造成伤害时，暴走持续时间延长{3}秒。\n每次使用普攻造成伤害时，缩减蛇之震怒的冷却{4}秒。
 Skill/Group/ExpansionTip/1044100┃<i>强化武器的效果受VF暴走(R)技能等级影响。<i>
-Skill/Group/ExpansionTip/1044500┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044501┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044502┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044503┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044510┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044520┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044530┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Group/ExpansionTip/1044540┃<i>击杀实验体或者终极野怪时，会重置蛇之震怒的冷却时间。</i>\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044500┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044501┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044502┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044503┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044510┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044520┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044530┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
+Skill/Group/ExpansionTip/1044540┃<i>击杀实验体或者终极野怪时，将重置<color=white>毒牙</color>和<color=white>蛇之震怒</color> 的冷却时间。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
 Item/Skills/6002010┃意念[南棘蛇]
 Item/Skills/6002011/Name┃<color=yellow>意念</color>
 Item/Skills/6002012/Name┃<color=yellow>意念</color>
@@ -9745,6 +9786,55 @@ CharacterState/Group/Name/1080510┃波函数坍缩 - 无法阻止
 CharacterState/Group/Desc/1080510┃施法波函数坍缩期间处于无法阻止的状态。
 CharacterState/Group/Name/1080520┃波函数坍缩 - 移动速度变缓
 CharacterState/Group/Desc/1080520┃因波函数坍缩移动速度降低了。
+Skill/Group/Name/1081100┃K.O.
+Skill/Group/Name/1081200┃落点
+Skill/Group/Name/1081210┃落点
+Skill/Group/Name/1081300┃节拍交汇
+Skill/Group/Name/1081310┃节拍交汇
+Skill/Group/Name/1081400┃1UP
+Skill/Group/Name/1081500┃妮娅的游戏世界
+Skill/LobbyDesc/1081100┃妮娅使用普攻或技能对敌人造成伤害时，将为目标附加能够储存伤害的<color=white>K.O.</color>叠层。当附加<color=white>K.O.</color>叠层时，若储存的伤害量超过目标的体力和护盾总和，目标将被处决。
+Skill/Group/Desc/1081100┃妮娅使用普攻或技能对敌人造成伤害时，将为目标附加能够储存<color=white>{0}</color> + <color=#ffff00>每叠层{1}</color>技能伤害的<color=white>K.O.</color>叠层。当附加<color=white>K.O.</color>叠层时，若储存的伤害量超过目标的体力和护盾总和，目标将被处决。
+Skill/Group/Coef/1081100┃妮娅使用普攻或技能对敌人造成伤害时，将为目标附加能够储存<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{1})</color> + <color=#ffff00>每叠层{2}</color><color=#DDA0DD>(+技能增幅的{3})</color>技能伤害的<color=white>K.O.</color>叠层。当附加<color=white>K.O.</color>叠层时，若储存的伤害量超过目标的体力和护盾总和，目标将被处决。
+Skill/Group/ExpansionTip/1081100┃<i><color=white>K.O.</color>储存的伤害受目标防御力影响。</i>
+Skill/LobbyDesc/1081200┃妮娅在指定位置投掷<color=white>按键</color>，造成技能伤害并缩减<color=white>节拍交汇</color>冷却时间。当地面设有<color=white>节拍交汇</color>时，<color=white>按键</color>将被其吸引，对路径造成技能伤害并降低目标移动速度。被拉动的<color=white>按键</color>命中敌人时，将缩减<color=white>落点</color>冷却时间。
+Skill/Group/Desc/1081200┃妮娅在指定位置投掷<color=white>按键</color>，造成<color=white>{2}</color>技能伤害，使<color=white>节拍交汇</color>冷却时间缩减{8}秒。当地面设有<color=white>节拍交汇</color>时，<color=white>按键</color>将被其吸引，对路径造成<color=white>{3}</color>技能伤害，并使目标{4}秒内的移动速度减少{5}。被拉动的<color=white>按键</color>命中敌人时，<color=white>落点</color>冷却时间将缩减{6}。\n\n最多可以设置{9}个<color=white>按键</color>，每个可以持续{10}秒。
+Skill/Group/Coef/1081200┃妮娅在指定位置投掷<color=white>按键</color>，造成<color=white>{3}</color><color=#DDA0DD>(+技能增幅{4})</color>的技能伤害，使<color=white>节拍交汇</color>冷却时间缩减{11}秒。当地面设有<color=white>节拍交汇</color>时，<color=white>按键</color>将被其吸引，对路径造成<color=white>{5}</color><color=#DDA0DD>(+技能增幅{6})</color>的技能伤害，并使目标{7}秒内的移动速度减少{8}。被拉动的<color=white>按键</color>命中敌人时，<color=white>落点</color>冷却时间将缩减{9}。\n\n最多可以设置{12}个<color=white>按键</color>，每个可以持续{13}秒。
+Skill/Group/ExpansionTip/1081200┃<i>同时被多个<color=white>按键</color>命中时，每次承受伤害减少{0}。</i>
+Skill/LobbyDesc/1081300┃妮娅在指定位置设置<color=white>节拍交汇</color>，造成技能伤害，并将范围内的敌人拉向中心。当按键进入已部署的<color=white>节拍交汇</color>时，将在范围内造成真实伤害并移除按键。
+Skill/Group/Desc/1081300┃妮娅在指定位置设置<color=white>节拍交汇</color>，造成<color=white>{0}</color>技能伤害，并将范围内的敌人拉向中心。当按键进入已部署的<color=white>节拍交汇</color>时，将在范围内造成<color=white>{1}</color>的真实伤害并移除按键。\n\n<color=white>节拍交汇</color>可以维持{2}秒。
+Skill/Group/Coef/1081300┃妮娅在指定位置设置<color=white>节拍交汇</color>，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{1})</color>的技能伤害，并将范围内的敌人拉向中心。当按键进入已部署的<color=white>节拍交汇</color>时，将在范围内造成<color=white>{2}</color>的真实伤害并移除按键。\n\n<color=white>节拍交汇</color>可以维持{3}秒。
+Skill/LobbyDesc/1081400┃妮娅为自身赋予<color=white>1UP</color>效果。妮娅在<color=white>1UP</color>效果持续期间受到致命伤害时，将进入短暂的免死状态并逐渐恢复体力。结束恢复后，妮娅的移动速度增加。
+Skill/Group/Desc/1081400┃妮娅为自身赋予持续{0}秒的<color=white>1UP</color>效果。妮娅在<color=white>1UP</color>持续期间受到致命伤害时，将进入持续{1}秒的免死状态，恢复体力上限<color=white>{2}</color>的体力。结束恢复后，妮娅的移动速度增加<color=white>{3}</color>，并在{4}秒内逐渐复原。
+Skill/Group/Coef/1081400┃妮娅为自身赋予持续{0}秒的<color=white>1UP</color>效果。妮娅在<color=white>1UP</color>持续期间受到致命伤害时，将进入持续{1}秒的免死状态，恢复体力上限<color=white>{2}</color><color=#DDA0DD>(+技能增幅{3})</color><color=white>%</color>的体力。结束恢复后，妮娅的移动速度增加<color=white>{4}</color><color=#DDA0DD>(+技能增幅{5})</color><color=white>%</color>，并在{6}秒内逐渐复原。
+Skill/LobbyDesc/1081500┃<color=green>被动</color> : 每当妮娅施法技能对敌人实验体造成伤害时，将获得<color=white>电池</color>叠层。施法<color=white>妮娅的游戏世界</color>技能时，将根据<color=white>电池</color>叠层数获得护盾，并移除所有的<color=white>电池</color>叠层。\n\n妮娅集中精神，进入负面效果免疫的状态并在前方生成<color=white>游戏世界</color>，触碰其边缘的敌人将陷入晕厥并停止移动。\n每当妮娅在生成的<color=white>游戏世界</color>内使用技能对敌人造成伤害时，将延长集中精神持续的时间。技能造成多次伤害时，则会对<color=white>游戏世界</color>内的所有敌人造成技能伤害。
+Skill/Group/Desc/1081500┃<color=green>被动</color> : 每当妮娅施法技能对敌人实验体造成伤害时，将获得<color=white>电池</color>叠层。施法<color=white>妮娅的游戏世界</color>技能时，将获得<color=white>{0}</color> + <color=#ffff00>每叠层{1}</color>的护盾，并清除<color=white>电池</color>叠层。\n\n妮娅集中精神，进入最多持续{7}秒的负面效果免疫，在前方生成<color=white>游戏世界</color>，触碰其边缘的敌人将陷入持续{4}秒的晕厥并停止移动。\n每当妮娅在生成的<color=white>游戏世界</color>内，使用<color=white>落点</color>对敌人造成伤害时，集中精神持续时间将额外延长{6}秒。技能造成{8}次伤害时，则会对<color=white>游戏世界</color>内的所有敌人造成<color=white>{5}</color>技能伤害。
+Skill/Group/Coef/1081500┃<color=green>被动</color> : 每当妮娅施法技能对敌人实验体造成伤害时，将获得<color=white>电池</color>叠层。施法<color=white>妮娅的游戏世界</color>技能时，将获得<color=white>{0}</color><color=#DDA0DD>(+技能增幅{1})</color> + <color=#ffff00>每叠层{2}</color>的护盾，并清除<color=white>电池</color>叠层。\n\n妮娅集中精神，进入最多持续{11}秒的负面效果免疫，在前方生成<color=white>游戏世界</color>，触碰其边缘的敌人将陷入持续{7}秒的晕厥并停止移动。\n每当妮娅在生成的<color=white>游戏世界</color>内，使用<color=white>落点</color>对敌人造成伤害时，集中精神持续时间将额外延长{10}秒。技能造成{12}次伤害时，则会对<color=white>游戏世界</color>内的所有敌人造成<color=white>{8}</color><color=#DDA0DD>(+技能增幅{9})</color>技能伤害。
+Skill/Group/ExpansionTip/1081500┃<i><color=white>妮娅的游戏世界</color>持续时间内，<color=white>落点</color>的冷却时间将调整为{0}秒。持续时间内妮娅无法在<color=white>游戏世界</color>之外的位置使用技能。</i>
+CharacterState/Group/Name/1081100┃K.O.
+CharacterState/Group/Name/1081200┃落点 - 移动速度降低
+CharacterState/Group/Name/1081300┃节拍交汇 - 拉近
+CharacterState/Group/Name/1081400┃1UP
+CharacterState/Group/Name/1081410┃1UP - 死亡免疫
+CharacterState/Group/Name/1081420┃1UP - 移动速度增加
+CharacterState/Group/Name/1081500┃电池
+CharacterState/Group/Name/1081520┃妮娅的游戏世界 - 护盾
+CharacterState/Group/Name/1081530┃妮娅的游戏世界 - 晕厥
+CharacterState/Group/Name/1081540┃妮娅的游戏世界 - 免疫晕厥
+CharacterState/Group/Name/1081560┃妮娅的游戏世界 - 负面效果免疫
+CharacterState/Group/Name/1081570┃妮娅的游戏世界 - 整体伤害
+CharacterState/Group/Desc/1081100┃在体力较低的情况下适用K.O.叠层时，目标将被处决。
+CharacterState/Group/Desc/1081200┃因落点的按键，移动速度降低了。
+CharacterState/Group/Desc/1081300┃因节拍交汇被拉到了中心。
+CharacterState/Group/Desc/1081400┃妮娅获得了另一次的生命。
+CharacterState/Group/Desc/1081410┃妮娅获得了新生，将恢复体力、不会死亡。
+CharacterState/Group/Desc/1081420┃妮娅利用重新获得的生命，移动速度增加了。
+CharacterState/Group/Desc/1081500┃妮娅护盾得到了蓄能。
+CharacterState/Group/Desc/1081520┃根据持有的电池叠层数，获得了护盾、阻挡伤害。
+CharacterState/Group/Desc/1081530┃因妮娅的游戏世界外边缘陷入了晕厥。
+CharacterState/Group/Desc/1081540┃妮娅触碰游戏世界外边缘时，不会陷入晕厥。
+CharacterState/Group/Desc/1081560┃妮娅在游戏世界持续时间内，不会受到负面效果。
+CharacterState/Group/Desc/1081570┃妮娅在游戏世界内对敌人造成多次伤害时，将对区域范围内所有敌人造成伤害。
 Skill/Group/Name/3015000┃斗篷和短剑
 Skill/Group/Name/3015100┃斗篷和短剑
 Skill/Group/Name/3016000┃格挡
@@ -10386,8 +10476,8 @@ Skill/Code/Coef/4103003┃使用后获得(<color=white>{1}</color>+<color=#688a0
 Skill/Code/ExpansionTip/4103003┃<i>根据持有护盾量，成比例增加移动速度。</i>
 Skill/Code/Desc/4104003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>战术强化组件 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
 Skill/Code/Coef/4104003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>战术强化组件 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Desc/4105003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4105003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4105003┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4105003┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>战术强化组件 : </color>{1}秒间处于免疫所有负面效果的状态。
 Skill/Code/Desc/4107003┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>战术强化组件 : </color>增加蓄能上限及能量的获得率。
 Skill/Code/Coef/4107003┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>战术强化组件 : </color>增加蓄能上限及能量的获得率。
 Skill/Code/Desc/4114003┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>战术强化组件 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
@@ -10932,10 +11022,10 @@ Item/Skills/6500001┃净化
 Item/Skills/6500001/Name┃<color=yellow>净化</color>
 Item/Skills/6500002┃净化
 Item/Skills/6500002/Name┃<color=yellow>净化</color>
-Item/Skills/6500001/Body┃使用物品后，立即解除所有负面效果。悬空、震退、攫取和凝滞除外。\n冷却 : {0}秒
-Item/Skills/6500001/Desc┃使用物品后，立即解除所有负面效果。悬空、震退、攫取和凝滞除外。\n冷却 : {0}秒
+Item/Skills/6500001/Body┃使用物品后，立即解除所有减益效果。悬空、震退、攫取和凝滞除外。\n冷却 : {0}秒
+Item/Skills/6500001/Desc┃使用物品后，立即解除所有减益效果。悬空、震退、攫取和凝滞除外。\n冷却 : {0}秒
 CharacterState/Group/Name/6500000┃净化
-CharacterState/Group/Desc/6500000┃解除所有负面效果。
+CharacterState/Group/Desc/6500000┃解除所有减益效果。
 Item/Skills/6501000┃加速
 Item/Skills/6501001┃加速
 Item/Skills/6501001/Name┃<color=yellow>加速</color>
@@ -11044,10 +11134,10 @@ CharacterState/Group/Desc/6516010┃真的很痛！
 Skill/Group/Name/4510000┃闪电之盾
 Skill/Code/Name/4510001┃闪电之盾
 TacticalSkillSet/Code/Name/4510001┃<color=yellow>闪电之盾</color>
-Skill/LobbyDesc/4510000┃给予指定的盟友闪电之盾，解除负面效果。\n闪电之盾消失时将给周围造成伤害。
-Skill/Group/LobbyDesc/4510000┃给予指定的盟友闪电之盾，解除负面效果。\n闪电之盾消失时将给周围造成伤害。
-Skill/Code/Desc/4510001┃{4}秒间给予盟友闪电之盾，解除负面效果。\n护盾吸收{6}的伤害，护盾消失时给周围的敌人造成{2}+护盾吸收伤害量{3}%的技能伤害。
-Skill/Code/Coef/4510001┃{4}秒间给予盟友闪电之盾，解除负面效果。\n护盾吸收{0}+ <color=#DDA0DD>技能增幅{1}%</color>的伤害，护盾消失时给周围的敌人造成{2}+护盾吸收伤害量{3}%的技能伤害。
+Skill/LobbyDesc/4510000┃给予指定的盟友闪电之盾，解除减益效果。\n闪电之盾消失时将给周围造成伤害。
+Skill/Group/LobbyDesc/4510000┃给予指定的盟友闪电之盾，解除减益效果。\n闪电之盾消失时将给周围造成伤害。
+Skill/Code/Desc/4510001┃{4}秒间给予盟友闪电之盾，解除减益效果。\n护盾吸收{6}的伤害，护盾消失时给周围的敌人造成{2}+护盾吸收伤害量{3}%的技能伤害。
+Skill/Code/Coef/4510001┃{4}秒间给予盟友闪电之盾，解除减益效果。\n护盾吸收{0}+ <color=#DDA0DD>技能增幅{1}%</color>的伤害，护盾消失时给周围的敌人造成{2}+护盾吸收伤害量{3}%的技能伤害。
 CharacterState/Group/Name/4510000┃闪电之盾
 CharacterState/Group/Desc/4510000┃闪电之盾会给予你保护。
 CharacterState/Group/Name/6517010┃释放闪电之盾
@@ -11161,8 +11251,8 @@ Skill/Code/Coef/4516003┃使用后获得(<color=white>{1}</color>+<color=#688a0
 Skill/Code/ExpansionTip/4516003┃<i>根据持有护盾量，成比例增加移动速度。</i>
 Skill/Code/Desc/4517003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
 Skill/Code/Coef/4517003┃使用后{0}秒间处于凝滞状态，无法做出任何行动。\n\n<color=#FFFFC2>强化后 : </color>因极光陀螺进入凝滞状态时，快速恢复{1}冷却。
-Skill/Code/Desc/4518003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
-Skill/Code/Coef/4518003┃使用后立即解除自身负面效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Desc/4518003┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
+Skill/Code/Coef/4518003┃使用后立即解除自身减益效果，{2}秒间移动速度增加{3}%。\n无法解除悬空、击退、攫取和凝滞。\n\n<color=#FFFFC2>强化后 : </color>{1}秒间处于免疫所有负面效果的状态。
 Skill/Code/Desc/4519003┃<color=green>被动 : </color>当周围实验体在战斗中失去体力时，根据已失体力获得成比例的能量。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加<color=white>{5}</color>并获得<color=white>{6}</color>%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
 Skill/Code/Coef/4519003┃<color=green>被动 : </color>当周围实验体在战斗中每失去{1}%体力时，获得能量1。\n最多可蓄能至{2}，{3}秒内未能蓄能时，持有的能量将会全部消失。\n\n使用后消耗所有能量，{4}秒间周围盟友移动速度增加(<color=white>{5}</color>+<color=#6B72FF>能量*{7}</color>)，获得(<color=white>{6}</color>+<color=#6B72FF>能量*{8}</color>)%吸血-所有伤害效果。\n\n<color=#FFFFC2>强化后 : </color>增加蓄能上限及能量的获得率。
 Skill/Code/Desc/4523003┃使用后，移向敌人实验体时的移动速度增加{2}% ，持续{1}秒，在持续时间内对敌人造成伤害时，将造成<color=white>{3}</color>额外技能伤害并结束效果。\n\n<color=#FFFFC2>强化后 : </color>承受阔步者伤害目标的移动速度减少{5}%，持续{4}秒。
@@ -12290,6 +12380,10 @@ Forge/ToolTip/disintegrateTicket┃无需额外消耗货币即可分解物品。
 Forge/Disintegrate/InfoLink┃分解概率
 Rare-Matter┃稀有DATA材料
 Normal-Matter┃DATA材料
+이벤트 중인 아이템이 포함된 상태입니다.┃包含适用活动的物品。
+이벤트 중인 상자 목록┃活动箱子目录
+Pickup/EventList/Title┃活动箱子目录
+Pickup/EventList/Dec┃点击查看适用活动的箱子目录。
 Forge/ToolTip/DisintegrateMode┃一键选择要分解的物品。
 Forge/ToolTip/DisintegrateMode/Btn_Filter┃更改分解物品的筛选条件。
 Forge/ToolTip/DisintegrateMode/Btn_Select┃请按照当前筛选重新选择物品。
@@ -12497,6 +12591,10 @@ Goods/Name/3102022┃转变皮肤箱
 Goods/Desc/3102022┃开启箱子时，可以获得一款完整的皮肤或皮肤碎片，同时还可以获得一张转变卡片。\n可能会重复出现已持有的皮肤。\n请通过商品列表确认详情。
 Goods/Name/3190012┃转变皮肤选择券
 Goods/Desc/3190012┃可以选择其中一款皮肤。\n请通过列表查看商品详细内容。
+Goods/Name/3102023┃5月概率提升皮肤箱
+Goods/Desc/3102023┃开启箱子时，可以获得一款完整的皮肤或皮肤碎片，同时还可以获得一张5月概率提升皮肤卡片。\n可能会重复出现已持有的皮肤。\n请通过商品列表确认详情。
+Goods/Name/3190013┃5月概率提升皮肤选择券
+Goods/Desc/3190013┃可以选择其中一款皮肤。\n请通过列表查看商品详细内容。
 Goods/Name/1┃秘密掉宝
 Goods/Name/2┃秘密掉宝 (mini)
 Goods/Name/3┃随机角色箱
@@ -14524,6 +14622,9 @@ Item/Name/201526┃En Garde
 Item/Name/201527┃玄见
 Item/Name/201528┃瓦尔哈拉头盔
 Item/Name/201529┃玄瞳头盔
+Item/Name/201420┃魔女帽
+Item/Name/201421┃狐狸假面
+Item/Name/201530┃戴维德耳机
 Item/Name/202415_D┃骑士战甲・戴维德
 Item/Name/202407_D┃秘银链甲・戴维德
 Item/Name/202416_D┃星火洋装・戴维德
@@ -17964,7 +18065,7 @@ WickelineUI_ReadyTooltip┃维克莱恩博士开始出动。
 플레어건B기능┃{0}区域被设为超凡补给箱降落位置。
 하이퍼루프VLS전환노티┃1分钟后，传送门将转换为VLS。
 하이퍼루프VLS전환완료노티┃传送门已转换为VLS。
-하이퍼루프VLS공존노티┃一分钟后，安全区的传送门将切换为VLS。
+하이퍼루프VLS공존노티┃1分钟后，安全区的传送门将切换为VLS。
 하이퍼루프VLS공존완료노티┃安全区域内的传送门已切换为VLS。
 수직발사중인적존재┃当前所在区域内存在正在垂直发射的敌人！
 더미알파생성┃1分钟后，阿尔法将在{0}出现。
@@ -19014,6 +19115,7 @@ Shortcut/Active3┃技能3
 Shortcut/Active4┃技能4
 Shortcut/WeaponSkill┃武器技能
 Shortcut/TacticalSkill┃战术技能
+GadgetSkill┃激活便携工具储存库
 Shortcut/Alpha1┃背包格1
 Shortcut/Alpha2┃背包格2
 Shortcut/Alpha3┃背包格3
@@ -20563,6 +20665,8 @@ Shop/Desc/EVENT_NPASS_S6_Premium_Token_1006┃<color=#ffdf72>最多获得75个�
 Shop/Desc/EVENT_NPASS_S6_Basic_Token_1007┃<color=#ffdf72>最多可以获得25个炼狱代币</color><color=#B2EBF4>的基础代币书。\n购买商品时可以使用。</color></size>\n\n<size=18>[等级积分说明]\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Shop/Desc/EVENT_NPASS_S7_Premium_Token_1008┃<color=#ffdf72>最多获得75个军官学园代币</color><color=#B2EBF4>的高级代币书。\n购买商品时可以使用。</color></size>\n\n<size=18>[等级积分说明]\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Shop/Desc/EVENT_NPASS_S7_Basic_Token_1009┃<color=#ffdf72>最多可以获得25个军官学园代币</color><color=#B2EBF4>的基础代币书。\n购买商品时可以使用。</color></size>\n\n<size=18>[等级积分说明]\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
+Shop/Desc/EVENT_NPASS_S7_Premium_Token_1010┃<color=#ffdf72>最多获得75个军官学园代币</color><color=#B2EBF4>的高级代币书。\n购买商品时可以使用。</color></size>\n\n<size=18>[等级积分说明]\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
+Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最多可以获得25个军官学园代币</color><color=#B2EBF4>的基础代币书。\n购买商品时可以使用。</color></size>\n\n<size=18>[等级积分说明]\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Season1000/Name┃一周年纪念任务书
 Season1001/Name┃梦精灵任务书
 Season1002/Name┃Dessert39任务书
@@ -20573,6 +20677,8 @@ Season1006/Name┃赛季S6高级代币书
 Season1007/Name┃赛季S6基础代币书
 Season1008/Name┃赛季S7高级代币书
 Season1009/Name┃赛季S7基础代币书
+Season1010/Name┃赛季S7高级代币书Ⅱ
+Season1011/Name┃赛季S7基础代币书Ⅱ
 Season2000/Name┃一周年A-Coin任务书
 Season2001/Name┃度假A-Coin任务书
 Season2002/Name┃战斗女仆A-Coin任务书
@@ -20687,7 +20793,7 @@ SquadRumbleEnd_KillCount┃击杀 : {0} TK
 팀 해체 불가 안내 팝업(팀원 참여 상태)┃有正在参与的队友，无法解散队伍。
 SquadRumbleEnd_EntryFee┃入场费 : {0} {1}
 유니온 대전 랭크 설명 제목┃联盟对战规则
-유니온 대전 랭크 설명 내용┃队伍中的三名成员可以参与联盟对战匹配，根据对局结果决定段位。\n\n<b>[段位晋升规则]</b>\n- 联盟对战等级 : F级 ~ SSS级\n- 联盟对战最终排名是基于分数（队伍排名 + TK总和），而非队伍排名决定。\n- 根据分数对应的最终排名，决定升级、不变或降级。\n\n<b>[F级 ~ A级]</b>\n- 根据积分决定F级 ~ A级，每次匹配时扣除入场费（积分）\n\n<b>[S级 ~ SS级]</b>\n- S级 ~ SS级需要持有对应段位的门票才能匹配。
+유니온 대전 랭크 설명 내용┃队伍中的三名成员可以参与联盟对战匹配，根据对局结果决定段位。\n\n<b>[段位晋升规则]</b>\n- 联盟对战等级 : F级 ~ SSS级\n- 联盟对战最终排名是基于分数（队伍排名 + TK总和），而非队伍排名决定。\n- 根据分数对应的最终排名，决定升级、不变或降级。\n\n<b>[F级 ~ A级]</b>\n- 根据积分决定F级 ~ A级，每次匹配时扣除入场费（积分）\n\n<b>[S级 ~ SSS级]</b>\n- S级 ~ SSS级需要持有对应段位的门票才能匹配。
 경기 결과가 없습니다.┃当前没有处理中的信息。
 최종 보상 합계┃最终总奖励
 탈출 보상┃逃生奖励
@@ -20720,6 +20826,7 @@ SquadRumble_Introduce04┃最终排名将决定所属联盟的段位是否晋级
 숫자#8┃#8
 현재 티어┃当前段位
 최고 티어┃最高段位
+이벤트 아이템 선택권 UI 데코┃EVENT
 필터/아이템 보유 여부┃是否持有物品
 필터/전체┃全部
 필터/보유┃已解锁
@@ -22345,6 +22452,12 @@ CharacterStoryHeight/80┃189cm
 CharacterStoryGender/80┃男
 CharacterStoryTitle/80┃「选择决定结果。」
 CharacterStoryDesc/80┃他曾是一名研究员，为了追寻自己的研究，独自踏上了这座孤岛。\n他那副始终不变的冷峻神情，令人难以揣测他的想法。\n\n在成为阿格莱亚的研究员之前，伊舒特便沉醉于量子力学的奥秘，尤其是多世界诠释。\n他不断追问，人能否在不同的世界线中做出抉择？\n\n在后来的一次实验中，他在研究量子和维度相关的VF能力时遭遇意外，身负重伤。\n在濒死之际，他窥见了VF在未来给人类带来的灾厄。\n为了确认这个未来是否会成为现实，他选择了主动加入实验。\n\n他开始思索——\n在这生死交错之地，唯有被选中的少数人方能存活。\n或许，这座卢米亚岛才是最接近人类新时代的地方。
+CharacterStoryName/81┃妮娅・海勒
+CharacterStoryAge/81┃19岁
+CharacterStoryHeight/81┃148cm
+CharacterStoryGender/81┃女
+CharacterStoryTitle/81┃「要一起玩游戏吗？」
+CharacterStoryDesc/81┃她是一位真心热爱并享受游戏的少女。\n她以昵称「NiaH」活动，在无数游戏中创下了自己的记录。\n妮娅平日沉默寡言，甚至连吃饭都觉得麻烦。\n但只要是和游戏有关的事情，她总能展现出惊人的行动力。\n\n对妮娅来说，游戏不仅仅是消遣娱乐的工具。\n更是一个可以和他人产生联系的世界，是珍贵而不可替代的存在。\n\n当妮娅失去了珍视的朋友时，她的内心彻底崩溃了。\n无法面对现实的她，只能选择逃避。\n逃向那个没有残酷、只有快乐的世界。\n\n妮娅会继续游戏。\n在属于她的世界中，静静等待那个会来找她的人…
 CharacterPlayTip/1┃杰琪是一位连环杀人魔，无情地追击和屠杀目标，每次击杀时都能获得更强大的爆发力。
 CharacterPlayTip/2┃阿雅是一位具有较高稳定性的远程实验体。轻松使用技能从远处命中目标。
 CharacterPlayTip/3┃菲欧娜利用击剑选手的敏捷性，控制与敌人间的距离，每次连招技能命中时，都能造成更大的伤害。
@@ -22425,6 +22538,7 @@ CharacterPlayTip/77┃道士俞岷像风一样在敌人之间自由穿梭，通�
 CharacterPlayTip/78┃翡翠隶属于日轮会，正在追捕一名背叛组织的叛徒。\n翡翠热衷于收集剑，她能够唤醒剑的记忆与力量，施展多样的剑术，在战斗中掌握主动权。
 CharacterPlayTip/79┃尤斯蒂娜是一位梦想成为正义英雄的活力少女。她善于利用能量不断地攻击和移动，并以强大的火力横扫敌人所在的区域。
 CharacterPlayTip/80┃伊舒特在强化时将展现出一个与自身行动产生不同结果的另一个自己。他在每一次交战中不断研究各种可能性，通过反复实验寻找更优的结果。
+CharacterPlayTip/81┃妮娅是一位真心热爱并享受游戏的少女。她将现实视为一场可操纵的游戏，精准地限制敌人的行动节奏，主导每一场对决的走向。
 Trait/Name/7900101┃攻击力 I
 Trait/Name/7900102┃攻击力 II
 Trait/Name/7900103┃攻击力 III
@@ -22489,25 +22603,25 @@ Trait/Name/7920803┃女巫沼泽 Ill
 Trait/Name/7921003┃等离子新星
 Trait/Name/7921101┃时间探索者 I
 Trait/Name/7921102┃时间探索者 Il
-Trait/Name/7921103┃时间探索者 Ill
+Trait/Name/7921103┃时间探索者
 Trait/Name/7921203┃大力士
 Trait/Name/7921301┃充能过量 I
 Trait/Name/7921302┃充能过量 Il
 Trait/Name/7921303┃充能过量
 Trait/Name/7921501┃迷失森林 I
 Trait/Name/7921502┃迷失森林 Il
-Trait/Name/7921503┃迷失森林 Ill
+Trait/Name/7921503┃迷失森林
 Trait/Name/7921602┃救生袋
 Trait/Name/7921701┃机动突击队 I
 Trait/Name/7921702┃机动突击队 Il
-Trait/Name/7921703┃机动突击队 Ill
+Trait/Name/7921703┃机动突击队
 Trait/Name/7921802┃怪异实验
 Trait/Name/7921903┃瓦尔基里驱动
 Trait/Name/7922003┃A.M.D.S
 Trait/Name/7922102┃地震波
 Trait/Name/7922201┃伤口恶化 I
 Trait/Name/7922202┃伤口恶化 Il
-Trait/Name/7922203┃伤口恶化 Ill
+Trait/Name/7922203┃伤口恶化
 Trait/Name/7922302┃制动力
 Trait/Name/7922402┃吸灵 Mk2
 Trait/Name/7922502┃强心针
@@ -22631,7 +22745,7 @@ Trait/StatTooltip/7921602┃自身持有治愈包时，增加{0}%治愈包的恢
 Trait/StatTooltip/7921701┃通过加速边界后的{0}秒间使用普攻命中敌人时，造成{1}额外真实伤害， {2}秒间减少敌人的移动速度{3}%。
 Trait/StatTooltip/7921702┃通过加速边界后的{0}秒间使用普攻命中敌人时，造成{1}额外真实伤害， {2}秒间减少敌人的移动速度{3}%。
 Trait/StatTooltip/7921703┃通过加速边界后的{0}秒间使用普攻命中敌人时，造成{1}额外真实伤害， {2}秒间减少敌人的移动速度{3}%。
-Trait/StatTooltip/7921903┃自身体力低于8.5%的状态下承受来自敌人实验体的伤害时，启动[瓦尔基里驱动 : 护盾] 效果。（冷却 45秒）\n\n[瓦尔基里驱动 : 护盾] : 瞬间移动一段距离后，2秒间获得1200护盾，移动速度增加60%。\n\n队伍库存 1
+Trait/StatTooltip/7921903┃自身体力低于20%的状态下承受来自敌人实验体的伤害时，启动[瓦尔基里驱动 : 护盾] 效果。（冷却 45秒）\n\n[瓦尔基里驱动 : 护盾] : 瞬间移动一段距离后，2秒间获得1200护盾，移动速度增加60%。\n\n队伍库存 1
 Trait/StatTooltip/7922003┃A.M.D.S屏障已启动。A.M.D.S屏障暂时无视敌人的技能效果以及伤害。\n（冷却30秒 ）\n对破坏屏障的敌方实验体4m范围内造成125(+目标当前体力10%)的真实伤害。\n\n队伍库存 1
 Trait/StatTooltip/7922102┃使用普攻会发射冲击波，对范围内的敌人造成技能伤害。\n最多可以使用{6}次，冷却后将重置使用次数。\n（冷却 : {7}秒）\n\n冲击波伤害量\n（近战）{0} (+攻击力的{1})(+技能增幅{2})\n（远程）{3} (+攻击力的{4})(+技能增幅{5})
 Trait/StatTooltip/7922201┃对敌人实验体使用普攻时，每一叠层造成近战 {0} / 远程 {1}额外真实伤害。 (叠层上限: {2})
@@ -22649,14 +22763,14 @@ Trait/StatTooltip/7923102┃攻击力永久减少{1}%。\n普攻伤害适用2次
 Trait/StatTooltip/7923103┃攻击力永久减少{1}%。\n普攻伤害适用2次。\n(冷却: {0}秒)\n\n队伍库存：1
 Trait/StatTooltip/7923203┃造成技能伤害时启动暴击。攻击力减少{0}%，暴击伤害减少{1}%。
 Trait/StatTooltip/7923002┃自身在复活时，除自身外的所有实验体和召唤物在{0}秒间陷入凝滞状态。
-Trait/StatTooltip/7923903┃使用独立技能对敌人实验体造成伤害时，{0}秒后将向目标发射激光，造成{1} + ({2} * 技能增幅)的技能伤害。\n冷却 : {3}秒
-Trait/StatTooltip/7923803┃使用独立技能对敌人实验体造成伤害时，目标的防御力将减少{1}、持续{0}秒。\n减益持续时间结束后，将造成{2} + ({3} * 技能增幅)的技能伤害。\n冷却 : {4}秒
-Trait/StatTooltip/7923703┃使用普攻对敌人实验体造成伤害时，造成{0} + ({1} * 攻击力)的技能伤害，防御穿透增加{3}、持续{2}秒。\n冷却 : {4}秒
+Trait/StatTooltip/7923903┃使用独立技能对敌人实验体造成伤害时，{0}秒后将向目标发射激光，造成{1}(+技能增幅{2}%)的技能伤害。\n冷却 : {3}秒
+Trait/StatTooltip/7923803┃使用独立技能对敌人实验体造成伤害时，目标的防御力将减少{1}、持续{0}秒。\n减益持续时间结束后，将造成{2}(+技能增幅{3}%)的技能伤害。\n冷却 : {4}秒
+Trait/StatTooltip/7923703┃使用普攻对敌人实验体造成伤害时，造成{0}(+攻击力{1}%)的技能伤害，防御穿透增加{3}、持续{2}秒。\n冷却 : {4}秒
 Trait/StatTooltip/7923401┃使用物品时，将<color=white>{0}</color>m范围内的所有敌方实验体拉至自身周围，使他们晕厥{1}秒并造成<color=white>{2}</color>真实伤害。\n冷却 : {3}秒\n\n队伍库存 : 1
 Trait/StatTooltip/7923411┃{0}秒后，移动速度逐渐增加{2}%、持续{1}秒，对第一个碰撞的敌人造成{3}技能伤害并将敌人击退。\n冷却 : {4}秒\n\n队伍库存 : 1
 Trait/StatTooltip/7923421┃向指定方向的地面生成粉碎区域，{0}秒后造成{1} + 敌人<color=#688A08>当前体力的{2}%</color>的真实伤害并使敌人在{3}秒间陷入晕厥，移动速度在{5}秒间减少{6}%。\n冷却 : {4}秒\n\n队伍库存 : 1
 Trait/StatTooltip/7923302┃冷却缩减增加<color=white>{1}%</color>。当冷却缩减达到最大值时，每超出{3}%将获得<color=#FFD775>攻击力的{2}</color>或<color=#DDA0DD>技能增幅的{4}</color>。\n（最多适用{5}%）
-Trait/StatTooltip/7923502┃使用终极技能时，{1}秒内获得<color=#008000>(等级*{2})</color>的护盾。\n冷却 : {3}秒
+Trait/StatTooltip/7923502┃使用终极技能时，{1}秒内可以获得<color=#008000>实验体等级*{2}</color>的护盾。\n冷却 : {3}秒
 Trait/StatTooltip/7923602┃随着体力降低增加防御力。当体力低于{2}%以下时，防御力将逐渐达到最大值<color=white>{1}%</color>。
 CharacterState/Group/Name/7900100┃攻击力
 CharacterState/Group/Desc/7900100┃增加攻击力。
@@ -22909,12 +23023,12 @@ CharacterState/Group/Name/6506050┃爆震 : 耗尽 : 减慢
 CharacterState/Group/Desc/6506050┃因爆震技能减少移动速度。
 CharacterState/Group/Name/6506070┃爆震 : 叠层
 CharacterState/Group/Desc/6506070┃增加造成伤害并减少承受伤害。
-CharacterState/Group/Name/6510010┃裂痕 : 晕厥
-CharacterState/Group/Desc/6510010┃因裂痕技能陷入晕厥。
+CharacterState/Group/Name/6510010┃地碎 : 晕厥
+CharacterState/Group/Desc/6510010┃因地碎技能陷入晕厥。
 CharacterState/Group/Name/6511010┃读心术 : 激活
 CharacterState/Group/Desc/6511010┃抵御下次伤害并使命中的敌人陷入晕厥。
-CharacterState/Group/Name/6510020┃裂痕 : 减慢
-CharacterState/Group/Desc/6510020┃因裂痕技能减少移动速度。
+CharacterState/Group/Name/6510020┃地碎 : 减慢
+CharacterState/Group/Desc/6510020┃因地碎技能减少移动速度。
 CharacterState/Group/Name/6511030┃读心术: 晕厥
 CharacterState/Group/Desc/6511030┃因读心术技能陷入晕厥。
 CharacterState/Group/Name/6509010┃脉冲 : 停止
@@ -23050,7 +23164,7 @@ Infusion/Trait/Desc/7921701┃通过加速边界后的{0}秒间使用普攻命�
 Infusion/Trait/Desc/7921702┃通过加速边界后的{0}秒间使用普攻命中敌人时，造成{1}额外真实伤害，并减少敌人的移动速度。
 Infusion/Trait/Desc/7921703┃通过加速边界后的{0}秒间使用普攻命中敌人时，造成{1}额外真实伤害，并减少敌人的移动速度。
 Infusion/Trait/Desc/7921802┃获得随机能量灌注。
-Infusion/Trait/Desc/7921903┃自身体力低于8.5%的状态下承受来自敌人实验体的伤害时，启动[瓦尔基里驱动 : 护盾] 效果。（冷却 45秒）\n\n[瓦尔基里驱动 : 护盾] : 瞬间移动一段距离后，2秒间获得1200护盾，移动速度增加60%。\n\n队伍库存 1
+Infusion/Trait/Desc/7921903┃自身体力低于20%的状态下承受来自敌人实验体的伤害时，启动[瓦尔基里驱动 : 护盾] 效果。（冷却 45秒）\n\n[瓦尔基里驱动 : 护盾] : 瞬间移动一段距离后，2秒间获得1200护盾，移动速度增加60%。\n\n队伍库存 1
 Infusion/Trait/Desc/7922003┃A.M.D.S屏障已启动。A.M.D.S屏障暂时无视敌人的技能效果以及伤害。\n（冷却30秒 ）\n对破坏屏障的敌方实验体4m范围内造成125(+目标当前体力10%)的真实伤害。\n\n队伍库存 1
 Infusion/Trait/Desc/7922102┃使用普攻将发射冲击波，根据自身攻击力和技能增幅对范围内的敌人造成成比例的技能伤害。
 Infusion/Trait/Desc/7922201┃对敌人实验体使用普攻会形成伤口，每一叠层造成额外真实伤害。 (叠层上限: {2})
@@ -23070,14 +23184,14 @@ Infusion/Trait/Desc/7923002┃自身在复活时，除自身外的所有实验�
 Infusion/Trait/Desc/7923201┃造成技能伤害时启动暴击。额外增加暴击率。
 Infusion/Trait/Desc/7923202┃造成技能伤害时启动暴击。额外增加暴击率。
 Infusion/Trait/Desc/7923203┃造成技能伤害时启动暴击。攻击力减少{0}%，暴击伤害减少{1}%。
-Infusion/Trait/Desc/7923903┃使用独立技能对敌人实验体造成伤害时，{0}秒后将向目标发射激光，造成{1} + ({2} * 技能增幅)的技能伤害。\n冷却 : {3}秒
-Infusion/Trait/Desc/7923803┃使用独立技能对敌人实验体造成伤害时，目标的防御力将减少{1}、持续{0}秒。\n减益持续时间结束后，将造成{2} + ({3} * 技能增幅)的技能伤害。\n冷却 : {4}秒
-Infusion/Trait/Desc/7923703┃使用普攻对敌人实验体造成伤害时，造成{0} + ({1} * 攻击力)的技能伤害，防御穿透增加{3}、持续{2}秒。\n冷却 : {4}秒
+Infusion/Trait/Desc/7923903┃使用独立技能对敌人实验体造成伤害时，{0}秒后将向目标发射激光，造成{1}(+技能增幅{2}%)的技能伤害。\n冷却 : {3}秒
+Infusion/Trait/Desc/7923803┃使用独立技能对敌人实验体造成伤害时，目标的防御力将减少{1}、持续{0}秒。\n减益持续时间结束后，将造成{2}(+技能增幅{3}%)的技能伤害。\n冷却 : {4}秒
+Infusion/Trait/Desc/7923703┃使用普攻对敌人实验体造成伤害时，造成{0}(+攻击力{1}%)的技能伤害，防御穿透增加{3}、持续{2}秒。\n冷却 : {4}秒
 Infusion/Trait/Desc/7923401┃变更战术技能。\n\n将<color=white>{0}</color>m范围内的所有敌方实验体拉至自身周围，使他们晕厥{1}秒并造成<color=white>{2}</color>真实伤害。\n冷却 : {3}秒\n\n队伍库存 : 1
 Infusion/Trait/Desc/7923411┃变更战术技能。\n\n{0}秒后，移动速度逐渐增加{2}%、持续{1}秒，对第一个碰撞的敌人造成{3}技能伤害并将敌人击退。\n冷却 : {4}秒\n\n队伍库存 : 1
 Infusion/Trait/Desc/7923421┃变更战术技能。\n\n向指定方向的地面生成粉碎区域，{0}秒后造成{1} + 敌人<color=#688A08>当前体力的{2}%</color>的真实伤害，并使敌人在{3}秒间陷入晕厥，移动速度在{5}秒间减少{6}%。\n冷却 : {4}秒\n\n队伍库存 : 1
 Infusion/Trait/Desc/7923302┃冷却缩减增加<color=white>{1}%</color>。当冷却缩减达到最大值时，每超出{3}%将获得<color=#FFD775>{2}攻击力</color>或<color=#DDA0DD>{4}技能增幅</color>。\n（最多适用{5}%）
-Infusion/Trait/Desc/7923502┃使用终极技能时，{1}秒内获得<color=#008000>(等级*{2})</color>的护盾。\n冷却 : {3}秒
+Infusion/Trait/Desc/7923502┃使用终极技能时，{1}秒内获得<color=#008000>实验体等级*{2}</color>的护盾。\n冷却 : {3}秒
 Infusion/Trait/Desc/7923602┃随着体力降低增加防御力。当体力低于{2}%以下时，防御力将逐渐达到最大值<color=white>{1}%</color>。
 Infusion/Special/Desc/9000001┃获得1个随机能量灌注商品。
 CastingActionType/TakeOverTurbine┃正在占领增幅装置。
@@ -23245,7 +23359,7 @@ VF Credit이 부족합니다.┃荣誉值不足。
 이미 추가 장비 보급이 진행 중입니다┃装备额外补给已经在进行中。
 합성기 사용 가능 안내┃可以通过合成器({0})购买物品。
 인퓨전 선택 가능 안내┃请通过合成器({0})选择能量灌注。
-아이템 구매 가능 페이즈 안내┃{0}Phase解除
+아이템 구매 가능 페이즈 안내┃Phase{0}解除
 CobaltRandomPickMouseOver┃将当前所选的实验体换成已解锁或\n包含在免费轮换角色中的其他随机实验体。
 다른 사람이 점령 중입니다.┃其他实验体正在试图占领。
 전체채팅 사용┃允许钴模式全部聊天
@@ -23366,6 +23480,7 @@ Cobalt/부활남은시간┃按<color=#47D5FF>B键</color>，在合成器中强�
 장비의 부위를 선택하세요.┃请选择装备部位。
 코발트추천아이템툴팁┃适合实验体能力值的物品。
 합성기 분쇄 불가 알림┃钴协议模式中无法丢弃物品，可以使用合成器及销毁装置进行销毁。
+합성기설명┃합성기설명
 전체 아이템 보기┃全部物品列表
 추천 아이템 보기┃推荐物品列表
 페이즈 마다 인퓨전 선택 포인트가 쌓입니다.┃Phase开始后将获得能量灌注点数。\n消耗能量灌注点数时，可以获得能量灌注。
