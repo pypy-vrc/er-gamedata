@@ -80,6 +80,7 @@ Character/Name/78┃히스이
 Character/Name/79┃유스티나
 Character/Name/80┃이슈트반
 Character/Name/81┃니아
+Character/Name/82┃슈린
 Character/Name/9999┃나쟈
 GameResult/Character/Name/1┃Jackie
 GameResult/Character/Name/2┃Aya
@@ -162,6 +163,7 @@ GameResult/Character/Name/78┃Hisui
 GameResult/Character/Name/79┃Justyna
 GameResult/Character/Name/80┃Istvan
 GameResult/Character/Name/81┃Niah
+GameResult/Character/Name/82┃Xuelin
 Monster/Name/1┃닭
 Monster/Name/2┃박쥐
 Monster/Name/3┃멧돼지
@@ -1139,6 +1141,13 @@ ToolTipType/WallDamage┃벽 충돌 피해량
 ToolTipType/WallDamageApCoef┃벽 충돌 피해량 공격력 계수(%)
 ToolTipType/WallDamageAmpCoef┃벽 충돌 피해량 스킬증폭 계수(%)
 ToolTipType/MaxBullet┃최대 장탄 수
+ToolTipType/XuelinActive1_1Damage┃어검 지속 피해량
+ToolTipType/XuelinActive1_2Damage┃회수 지속 피해량
+ToolTipType/XuelinActive3Damage┃어검 피해량
+ToolTipType/XuelinActive3DamageApCoef┃어검 피해량 공격력 계수
+ToolTipType/XuelinActive4ReinforceSwordDamage┃강화 어검 피해량
+ToolTipType/XuelinActive4ReinforceSwordDamageApCoef┃강화 어검 피해량 공격력 계수
+ToolTipType/XuelinActive4ReturnDamage┃회수 피해량
 ToolTipCoef/AttackPower┃<color=#ffd775>(+ 공격력의 {0}%)</color>
 ToolTipCoef/AdditionalAttackPower┃<color=#ffd775>(+ 추가 공격력의 {0}%)</color>
 ToolTipCoef/SkillAmp┃<color=#dda0dd>(+ 스킬 증폭의 {0}%)</color>
@@ -1363,6 +1372,7 @@ GameResult/Tag/MatchingMode/Tutorial2_Re┃훈련
 GameResult/Tag/MatchingMode/Tutorial3_Re┃훈련
 GameResult/Tag/MatchingTeamMode/Squad┃루미아
 GameResult/Tag/MatchingTeamMode/Cobalt┃코발트
+GameResult/Tag/MatchingTeamMode/Duo┃듀오
 GameResult/Tag/MatchingMode/SquadRumble┃유니온 대전
 Loading/MatchingMode/Normal┃NORMAL GAME
 Loading/MatchingMode/Cobalt┃COBALT
@@ -1382,6 +1392,7 @@ Loading/MatchingTeamMode/Squad┃루미아 섬
 Loading/MatchingTeamMode/Cobalt┃코발트 프로토콜
 Loading/MatchingTeamMode/LoneWolf┃루미아 섬
 Loading/MatchingTeamMode/LoneWolfCustom┃루미아 섬
+GameModeType/Name/NORMAL┃스쿼드
 ItemType/SKIN/Name┃스킨
 Skin/Name/1001000┃재키
 Skin/Name/1001001┃처형자 재키
@@ -1728,6 +1739,7 @@ Skin/Name/1079000┃유스티나
 Skin/Name/1079001┃선도부장 유스티나
 Skin/Name/1080000┃이슈트반
 Skin/Name/1081000┃니아
+Skin/Name/1082000┃슈린
 Skin/OnSelectVO/1001003┃시스템은 부술 때 제일 짜릿하지. 안 그래?
 Skin/OnSelectVO/1002002┃빵야빵야! 불꽃놀이 시작이에요!
 Skin/OnSelectVO/1007005┃그럼 신나게 달려볼까.
@@ -1853,7 +1865,7 @@ Skin/Desc/1036002┃누군가의 평범한 삶을 지킬 수 있다면, 이걸�
 Skin/Desc/1028003┃오늘은 바다가 들려주는 동화에 귀를 기울여봐요.
 Skin/Desc/1029002┃단련하기에 나쁘지 않은 환경이군.
 Skin/Desc/1031004┃해를 가리고 있잖아. 비켜줄래?
-Skin/Desc/1033002┃그냥 마음껏 뛰어놀라고? 간단한 대본이라도 달란 말이야!
+Skin/Desc/1033002┃후우, 날도 뜨거운데 조금 쉬다 갈까?
 Skin/Desc/1048001┃붓과 함께라면, 어디든 내 캔버스야!
 Skin/Desc/1049001┃Ready, Check, Good! 루미아 랜드에서 즐거운 시간을 보낼 수 있도록 노력할게!\n
 Skin/Desc/1051001┃끝없이 피어나는 꽃처럼, 제 노래는 멈추지 않아요.
@@ -3107,6 +3119,13 @@ Emotion_Union_Estelle_2055009┃안전 교관 에스텔 내가 정말로...
 Event_ISBN_3136┃믿어줘
 Event_ISBN_3137┃미안 멋있지?
 Event_ISBN_3138┃굿굿!
+Emotion_Xuelin01_NP┃슈린 존명!
+Emotion_Xuelin02_NP┃슈린 실례합니다...
+Emotion_Xuelin03_NP┃슈린 졌어요
+Emotion_Xuelin04_NP┃슈린 안돼요!
+Emotion_SNS_Xuelin_2082005┃슈린 그런가?
+Event_2ndAnniversary_3135┃Whippy 비앙카 하트
+Emotion_2nd_Anniv_Nadja_2000014┃2주년 나쟈 축하해
 Emotion_2nd_Anniv_Eva_2036009┃2주년 이바 손하트
 Emotion_2nd_Anniv_Elena_2050011┃2주년 엘레나 손키스
 Collection/Name/11001┃모든 건 딸을 위해서입니다.
@@ -3186,6 +3205,10 @@ Collection/Name/24029/1┃5월 확률업 스킨 컬렉션 Ⅰ
 Collection/Name/24029/2┃5월 확률업 스킨 컬렉션 Ⅱ
 Collection/Name/24030┃스페셜 주사위 교환
 Collection/Name/24031┃주사위 카드 선택권 교환
+Collection/Name/24032/1┃스페셜 2주년 썸머 컬렉션 Ⅰ
+Collection/Name/24032/2┃스페셜 2주년 썸머 컬렉션 Ⅱ
+Collection/Name/24033/1┃2주년 썸머 컬렉션 Ⅰ
+Collection/Name/24033/2┃2주년 썸머 컬렉션 Ⅱ
 SeasonCollection/Name/30001/1┃스플래쉬! 1단계
 SeasonCollection/Name/30001/2┃스플래쉬! 2단계
 SeasonCollection/Name/30001/3┃스플래쉬! 3단계
@@ -3943,6 +3966,8 @@ EMBLEM_MARK_EVENT_103206┃SEASON 6 CHAMPION DANANA
 EMBLEM_MARK_EVENT_103207┃SEASON 6 CHAMPION ROMATIC
 EMBLEM_MARK_EVENT_103208┃청랑일섬 츠바메 멈춰! 아이콘
 EMBLEM_MARK_EVENT_103209┃해변의 인형사 클로에 안녕 아이콘
+EMBLEM_MARK_EVENT_103210┃2주년 나쟈 축하해 아이콘
+EMBLEM_MARK_EVENT_103211┃슈린 그런가? 아이콘
 EMBLEM_MARK_EVENT_103216┃2주년 이바 손하트 아이콘
 EMBLEM_MARK_EVENT_103217┃2주년 엘레나 손키스 아이콘
 EMBLEM_MARK_ERPASS_104001┃얼어붙은 얼음 결정체 아이콘
@@ -4417,6 +4442,7 @@ EMBLEM_BG_EVENT_203006┃메이드 아델라 배경
 EMBLEM_BG_EVENT_203007┃한가위 배경
 EMBLEM_BG_EVENT_203008┃2024 크리스마스 배경
 EMBLEM_BG_EVENT_203009┃WeGame출시 기념! 배경
+EMBLEM_BG_EVENT_203010┃2주년 기념 배경
 EMBLEM_BG_ERPASS_204002┃이터널 리턴 배경
 EMBLEM_BG_ERPASS_204003┃실험 배경
 EMBLEM_BG_ERPASS_204004┃방울방울 배경
@@ -4827,6 +4853,7 @@ EMBLEM_OUTLINE_EVENT_303006┃메이드 아델라 테두리
 EMBLEM_OUTLINE_EVENT_303007┃한가위 테두리
 EMBLEM_OUTLINE_EVENT_303008┃2024 크리스마스 테두리
 EMBLEM_OUTLINE_EVENT_303009┃WeGame출시 기념! 테두리
+EMBLEM_OUTLINE_EVENT_303010┃2주년 기념 테두리
 EMBLEM_OUTLINE_ERPASS_304001┃얼음 테두리
 EMBLEM_OUTLINE_ERPASS_304002┃크리스마스 파티 테두리
 EMBLEM_OUTLINE_ERPASS_304003┃색깔공 장식 테두리
@@ -5345,6 +5372,7 @@ Goods/Name/2705001┃1주년 기념 로비 스크린
 Goods/Name/2705002┃히스이&유스티나
 Goods/Name/2705003┃달토끼 키우기
 Goods/Name/2705004┃방과 후 자유시간 데비&마를렌
+Goods/Name/2705005┃2주년 기념 로비 스크린
 ItemType/KILLANNOUNCE_ICONPACK/Name┃킬 어나운스 아이콘
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃인게임에서 처치 시 노출되는 UI 아이콘을 선택할 수 있습니다.
 Goods/Name/2801001┃불굴
@@ -5492,6 +5520,8 @@ Goods/Name/3503036┃배수 카드 (x1)
 Goods/Name/3503037┃배수 카드 (x2)
 Goods/Name/3503038┃배수 카드 (x3)
 Goods/Name/3503039┃허상 주사위 조각
+Goods/Name/3503040┃2주년 썸머 카드
+Goods/Name/3503041┃스페셜 2주년 썸머 카드
 ItemType/WILD_CARD_SKIN/Name┃[스킨 전용] 와일드 카드
 ItemType/WILD_CARD_ETC/Name┃와일드 카드
 Goods/Name/3602002┃[스킨 전용] 와일드 카드
@@ -5929,6 +5959,11 @@ Product/Name/EVENT_NPASS_2025_ReturnSummer_1014┃다시, 그 여름 퀘스트 �
 Product/Name/S7_All_In_One_Pack_01┃올인원 패키지 Ⅰ
 Product/Name/S7_All_In_One_Pack_02┃올인원 패키지 Ⅱ
 Product/Name/S7_All_In_One_Pack_03┃올인원 패키지 Ⅲ
+Product/Name/EVENT_NPASS_S8_Premium_Token_1015┃시즌 8 프리미엄 토큰 북
+Product/Name/EVENT_NPASS_S8_Basic_Token_1016┃시즌 8 베이직 토큰 북
+Product/Name/2025_2nd_Anniv_Summer_Pack_01┃2주년 썸머 박스 스페셜 패키지
+Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2주년 썸머 박스 패키지
+Product/Name/S7_Season_Fragments_Pack_01┃시즌 조각 패키지
 Shop/Desc/Aya_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Hyunwoo_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 56%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Adriana_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
@@ -6194,6 +6229,9 @@ Shop/Desc/NewbieStarter_Support_Pack_01┃<b><color=#FFBB00>[구성품 안내]</
 Shop/Desc/S7_All_In_One_Pack_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 고급/희귀 스킨 보급권 1개\n- 이모티콘 선별 보급권 1개\n- 프로필 선별 보급권 1개\n- 아카데미 토큰 5개\n- XP 부스트(1일)\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 고급/희귀 스킨 보급권은 구매 즉시 개봉되어 획득하는 상품입니다.\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/S7_All_In_One_Pack_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 와일드 카드(고급) 1개\n- 와일드 카드(희귀) 1개\n- [스킨 전용] 와일드 카드(희귀) 1개\n- 아카데미 토큰 15개\n- ER Point 부스트(3일)\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/S7_All_In_One_Pack_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- [스킨 전용] 와일드 카드(영웅) 1개\n- 와일드 카드(영웅) 1개\n- 이모티콘 선별 보급권 1개\n- 프로필 선별 보급권 1개\n- 아카데미 토큰 30개\n- A-Coin 부스트(3일)\n\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/2025_2nd_Anniv_Summer_Pack_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 2주년 썸머 박스 10개\n- 박스 키 10개\n- 스플래쉬! 토큰 15개\n- A-Coin 부스트(1일)\n- 스페셜 2주년 썸머 카드 1개\n- 2주년 썸머 카드 1개\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/2025_2nd_Anniv_Summer_Pack_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 2주년 썸머 박스 1개\n- 박스 키 1개\n- 스플래쉬! 토큰 1개\n- A-Coin 부스트(1시간)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/S7_Season_Fragments_Pack_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 고급 시즌 조각팩 10개\n- 시즌 조각팩 30개\n- 일반 시즌 조각팩 30개\n- A-Coin 부스트(1일)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 개봉할 수 있습니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Product/Name/SEASON_PASS_S5┃시즌 5 팩
 Shop/Desc/SEASON_PASS_S5┃시즌 5에 출시될 구성품을 저렴한 가격에 미리 구매해보세요!
 Product/Name/SEASON_PASS_S6┃시즌 6 팩
@@ -7718,6 +7756,7 @@ TierRP┃티어 별 최소 랭크포인트
 관전 시 팀 TK 세부 정보 표시┃관전 시 팀 TK 세부 정보 표시
 팀 셔플 기능 사용 경고┃팀 셔플 기능 사용 시 배치된 봇과 팀 슬롯의 잠금 상태가 모두 해제됩니다.\n팀 셔플 기능을 사용하시겠습니까?
 방장이 팀을 다시 구성합니다.┃방장이 팀 셔플 기능을 사용하여 팀을 재구성하였습니다.
+CustomGameList/Popup/GameName┃{0}의 게임
 다중플랫폼팝업/제목┃방송 플랫폼을 선택하세요
 다중플랫폼팝업/치지직버튼┃치지직
 다중플랫폼팝업/유튜브버튼┃유튜브
@@ -8475,6 +8514,8 @@ GameSetting/EmoticonSetMouseWheel┃인게임에서 감정표현 기능을 사�
 GameSetting/AutoAttack┃하지 않음: 공격 명령을 내리지 않았을 경우 근처에 있는 대상을 공격하지 않습니다.\n표준: 근처에 있는 대상을 공격합니다. '항상'의 조건에 추가하여, 제작, 채집 후에는 공격하지 않습니다.\n항상: 근처에 있는 대상을 공격합니다. 정지, 휴식, 상자 확인, 키오스크를 조작할때는 공격하지 않습니다.
 인벤토리아이템자동병합┃인벤토리 자동 병합
 GameSetting/AutomaticInventoryItemRestock┃인벤토리에 소비 가능한 동일 아이템이 여러 슬롯 존재하는 경우, 가장 후순위 슬롯의 아이템부터 소비합니다.\n인벤토리 단축키와 무관하게 우하단 슬롯일수록 후순위로 판단합니다.\n예시: 1번 3번 5번 슬롯에 스테이크가 있는 경우, 1번 3번 5번 어떤 단축키를 눌러도 5번 슬롯의 스테이크부터 소모 
+옵션/VLS상호작용확장맵활성화┃VLS 상호작용 확장맵 활성화
+GameSetting/VLSInteractExpandMapActivate┃VLS와 상호작용 시, 확장맵을 자동으로 활성화합니다.
 인벤토리아이템우선사용설정┃인벤토리 아이템 우선 사용 설정
 GameSetting/InventoryItemUsePriority┃인벤토리에 소비 가능한 동일 아이템이 여러 칸 존재하는 경우, 단축키와 무관하게 지정된 규칙에 따라 아이템을 소비합니다.\n인벤토리의 좌측 상단을 1번 칸, 우측 하단을 10번 칸으로 정의합니다.\n오름차순: 1번 3번 5번 슬롯에 스테이크가 있는 경우, 1번 3번 5번 어떤 단축키를 눌러도 1번 슬롯의 스테이크부터 소모\n내림차순: 1번 3번 5번 슬롯에 스테이크가 있는 경우, 1번 3번 5번 어떤 단축키를 눌러도 5번 슬롯의 스테이크부터 소모
 옵션사용안함┃사용 안 함
@@ -11720,6 +11761,7 @@ SeasonToBeAdded/Name┃새로운 시즌 \n D - {0}
 100005_Title┃시즌 7 출석부
 100006_Title┃시즌 8 출석부
 400001_Title┃굿바이 2024! 연말 특별 보급 출석부
+400002_Title┃2주년 특별 보급 출석부
 10000101_7_Title┃위드리아나 쭈왑 세트
 10000101_7_Desc┃- 위드리아나 쭈왑 프로필\n- 위드리아나 쭈왑 이모티콘
 10000101_14_Title┃스킨 데이터 세트
@@ -11875,6 +11917,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1009┃<color=#ffdf72>최대 25개의 아�
 Shop/Desc/EVENT_NPASS_S7_Premium_Token_1010┃<color=#ffdf72>최대 75개의 아카데미 토큰</color><color=#B2EBF4>을 획득할 수 있는 프리미엄 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color></size>\n\n<size=18>[레벨 포인트 안내]\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
 Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>최대 25개의 아카데미 토큰</color><color=#B2EBF4>을 획득할 수 있는 베이직 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color></size>\n\n<size=18>[레벨 포인트 안내]\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃<color=#ffdf72>다양한 아이템</color><color=#B2EBF4>을 획득할 수 있는 퀘스트 북 입니다.\n상품 구매 시 달성한 레벨에 대한 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 100포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n퀘스트 북 구매 후 포인트를 구매할 수 있습니다.
+Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>최대 75개의 스플래쉬! 토큰</color><color=#B2EBF4>을 획득할 수 있는 프리미엄 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
+Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>최대 25개의 스플래쉬! 토큰</color><color=#B2EBF4>을 획득할 수 있는 베이직 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
 Season1000/Name┃1주년 기념 퀘스트 북
 Season1001/Name┃꿈돌이&꿈순이 퀘스트 북
 Season1002/Name┃디저트39 퀘스트 북
@@ -11888,6 +11932,8 @@ Season1009/Name┃시즌 7 베이직 토큰 북
 Season1010/Name┃시즌 7 프리미엄 토큰 북 Ⅱ
 Season1011/Name┃시즌 7 베이직 토큰 북 Ⅱ
 Season1014/Name┃다시, 그 여름 퀘스트 북
+Season1015/Name┃시즌 8 프리미엄 토큰 북
+Season1016/Name┃시즌 8 베이직 토큰 북
 Season2000/Name┃1주년 A-Coin 퀘스트 북
 Season2001/Name┃바캉스 A-Coin 퀘스트 북
 Season2002/Name┃전투메이드 A-Coin 퀘스트 북
@@ -12421,6 +12467,10 @@ Goods/Name/3102025┃주사위
 Goods/Desc/3102025┃구성품 중 1개를 확률적으로 획득할 수 있습니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
 Goods/Name/3190014┃주사위 카드 선택권
 Goods/Desc/3190014┃주사위 6개 중 1개를 선택하여 획득할 수 있습니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3102026┃2주년 썸머 박스
+Goods/Desc/3102026┃온전한 스킨 또는 도안 1개와 2주년 썸머 카드 1개를 획득할 수 있는 상자입니다.\n기존 보유하고 있는 스킨도 중복 출현합니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
+Goods/Name/3190015┃2주년 썸머 스킨 선택권
+Goods/Desc/3190015┃구성품 중 1개를 선택하여 획득할 수 있습니다.\n구성품은 보상 리스트를 통해 확인할 수 있습니다.
 Goods/Name/3199001┃시즌 조각팩
 Goods/Desc/3199001┃일반~고급 등급의 시즌 조각 1개를 획득할 수 있습니다.\n획득한 시즌 조각은 시즌 컬렉션에 자동 등록되며 이미 등록한 시즌 조각은 시즌 조각 포인트로 변경됩니다.
 Goods/Name/3199002┃일반 시즌 조각팩
@@ -16151,6 +16201,41 @@ CharacterState/Group/Desc/1081530┃니아의 게임월드 가장자리에 의�
 CharacterState/Group/Desc/1081540┃니아의 게임월드 가장자리를 지나가도 기절하지 않습니다.
 CharacterState/Group/Desc/1081560┃니아의 게임월드가 지속되는 동안 방해효과의 영향을 받지 않습니다.
 CharacterState/Group/Desc/1081570┃니아가 게임월드에서 적에게 피해를 여러 번 입히면 영역 전체에 피해를 입힙니다.
+Skill/Group/Name/1082100┃결심응진
+Skill/Group/Name/1082200┃비검잔위
+Skill/Group/Name/1082300┃무진검결
+Skill/Group/Name/1082400┃비섬보
+Skill/Group/Name/1082500┃만검귀종
+Skill/Group/Desc/1082100┃슈린의 기본 공격 및 기본 스킬 적중 시, <color=white>유운잔영검</color> 중첩을 획득합니다. {0}중첩 시 다음 기본 공격이 강화되어, 대상에게 어검을 날려 <color=white>{1}</color>의 추가 스킬 피해를 입히고, <color=white>비검잔위</color>와 <color=white>비섬보</color>의 쿨다운이 {2}초 감소하며 </color=white>{3}</color>의 체력을 회복합니다. 야생동물 상대로는 회복 효과가 {4}로 감소합니다.
+Skill/Group/Coef/1082100┃슈린의 기본 공격 및 기본 스킬 적중 시, <color=white>유운잔영검</color> 중첩을 획득합니다. {0}중첩 시 다음 기본 공격이 강화되어, 대상에게 어검을 날려 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color>의 추가 스킬 피해를 입히고, <color=white>비검잔위</color>와 <color=white>비섬보</color>의 쿨다운이 {3}초 감소하며 <color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color>의 체력을 회복합니다. 야생동물 상대로는 회복 효과가 {6}로 감소합니다.
+Skill/LobbyDesc/1082100┃슈린의 기본 공격 및 기본 스킬 적중 시, <color=white>유운잔영검</color> 중첩을 획득합니다. 3중첩 시 다음 기본 공격이 강화되어, 대상에게 어검을 날려 추가 스킬 피해를 입히고, <color=white>비검잔위</color>와 <color=white>비섬보</color>의 쿨다운이 감소하며 체력을 회복합니다.
+Skill/Group/Desc/1082200┃슈린이 어검을 날려 경로 상의 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다. 지정 위치에 도착하면 {1}초 동안 회전하며, 범위 내 적에게 {2}초마다 <color=white>{3}</color>의 스킬 피해를 입힙니다.\n\n회전하는 어검에 닿으면 어검을 회수하면서 <color=white>비섬보</color>의 쿨다운을 {4} 돌려받습니다. 회수한 어검은 {5}초 동안 슈린 주변을 회전하며 범위 내 적에게 {6}초마다 <color=white>{7}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Coef/1082200┃슈린이 어검을 날려 경로 상의 적에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 지정 위치에 도착하면 {2}초 동안 회전하며, 범위 내 적에게 {3}초마다 <color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color>의 스킬 피해를 입힙니다.\n\n회전하는 어검에 닿으면 어검을 회수하면서 <color=white>비섬보</color>의 쿨다운을 {6} 돌려받습니다. 회수한 어검은 {7}초 동안 슈린 주변을 회전하며 범위 내 적에게 {8}초마다 <color=white>{9}</color><color=#ffd775>(+공격력의 {10})</color>의 스킬 피해를 입힙니다.
+Skill/LobbyDesc/1082200┃슈린이 어검을 날려 경로 상의 적에게 스킬 피해를 입힙니다. 지정 위치에 도착하면 일정 시간 동안 회전하며, 범위 내 적에게 지속적으로 스킬 피해를 입힙니다.\n\n회전하는 어검에 닿으면 어검을 회수하면서 <color=white>비섬보</color>의 쿨다운의 일부를 돌려받습니다. 회수한 어검은 일정 시간 동안 슈린 주변을 회전하며 범위 내 적에게 지속적으로 스킬 피해를 입힙니다.
+Skill/Group/Desc/1082300┃슈린이 어검으로 자신을 감싸 {0}초 동안 모든 방해 면역 상태가 되며 받는 모든 피해를 막아냅니다. 이후 지정한 방향으로 어검을 날려 처음 적중한 적 실험체에게 <color=white>{1}</color>의 스킬 피해를 입히고 {2}초 동안 이동 속도를 {3} 감소시킵니다.\n\n이동 불가 효과를 막아냈을 경우, <color=white>유운잔영검</color> {4}중첩을 획득하며 <color=white>{5}</color>의 스킬 피해를 입히고 이동 속도 감소 대신 {6}초 동안 기절시킵니다.
+Skill/Group/Coef/1082300┃슈린이 어검으로 자신을 감싸 {0}초 동안 모든 방해 면역 상태가 되며 받는 모든 피해를 막아냅니다. 이후 지정한 방향으로 어검을 날려 처음 적중한 적 실험체에게 <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color>의 스킬 피해를 입히고 {3}초 동안 이동 속도를 {4} 감소시킵니다.\n\n이동 불가 효과를 막아냈을 경우, <color=white>유운잔영검</color> {5}중첩을 획득하며 <color=white>{6}</color><color=#ffd775>(+공격력의 {7})</color>의 스킬 피해를 입히고 이동 속도 감소 대신 {8}초 동안 기절시킵니다.
+Skill/Group/ExpansionTip/1082300┃<i>실험체를 제외한 대상은 관통됩니다.</i>
+Skill/LobbyDesc/1082300┃슈린이 어검으로 자신을 감싸 일정 시간 동안 모든 방해 면역 상태가 되며 받는 모든 피해를 막아냅니다. 이후 지정한 방향으로 어검을 날려 처음 적중한 적 실험체에게 스킬 피해를 입히고 이동 속도를 감소시킵니다.\n\n이동 불가 효과를 막아냈을 경우, <color=white>유운잔영검</color> 3중첩을 획득하며 스킬 피해를 입히고 이동 속도 감소 대신 기절시킵니다.
+Skill/Group/Desc/1082400┃슈린이 지정한 방향으로 돌진하며 경로 상 적에게 <color=white>{0}</color>의 스킬 피해를 입히고 {1}초 동안 이동 속도를 {2} 감소시킵니다. 이후, 돌진했던 경로를 따라 어검이 떨어지며 범위 내 적에게 <color=white>{3}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Coef/1082400┃슈린이 지정한 방향으로 돌진하며 경로 상 적에게 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입히고 {2}초 동안 이동 속도를 {3} 감소시킵니다. 이후, 돌진했던 경로를 따라 어검이 떨어지며 범위 내 적에게 <color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color>의 스킬 피해를 입힙니다.
+Skill/LobbyDesc/1082400┃슈린이 지정한 방향으로 돌진하며 경로 상 적에게 스킬 피해를 입히고 이동 속도를 감소시킵니다. 이후, 돌진했던 경로를 따라 어검이 떨어지며 범위 내 적에게 스킬 피해를 입힙니다.
+Skill/Group/Desc/1082500┃슈린이 영역을 펼치며 <color=white>{0}</color>의 스킬 피해를 입힙니다. 영역은 {1}초 동안 유지됩니다. 영역 내에 위치한 적에게 슈린이 개별 피해를 입힐 때마다, 대상에게 어검이 떨어져 <color=white>{2}</color>의 추가 스킬 피해를 입힙니다. {3}번째로 떨어지는 어검은 강화되어 대상에게 떨어져 주변에 <color=white>{4}</color>의 추가 스킬 피해를 입히며 {5}초 동안 이동 속도를 {6} 감소시킵니다.\n\n<color=white>비섬보</color>를 사용한 후, 도착 지점이 영역 밖일 경우 외곽의 어검이 슈린에게 돌아오며 경로 상 적들에게 <color=white>{7}</color>의 스킬 피해를 입히고, 두 번째 적중부터는 피해량이 {8} 감소됩니다.
+Skill/Group/Coef/1082500┃슈린이 영역을 펼치며 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입힙니다. 영역은 {2}초 동안 유지됩니다. 영역 내에 위치한 적에게 슈린이 개별 피해를 입힐 때마다, 대상에게 어검이 떨어져 <color=white>{3}</color><color=#ffd775>(+공격력의 {4})</color>의 추가 스킬 피해를 입힙니다. {5}번째로 떨어지는 어검은 강화되어 대상에게 떨어져 주변에 <color=white>{6}</color><color=#ffd775>(+공격력의 {7})</color>의 추가 스킬 피해를 입히며 {8}초 동안 이동 속도를 {9} 감소시킵니다.\n\n<color=white>비섬보</color>를 사용한 후, 도착 지점이 영역 밖일 경우 외곽의 어검이 슈린에게 돌아오며 경로 상 적들에게 <color=white>{10}</color><color=#ffd775>(+공격력의 {11})</color>의 스킬 피해를 입히고, 두 번째 적중부터는 피해량이 {12} 감소됩니다.
+Skill/LobbyDesc/1082500┃슈린이 영역을 펼치며 스킬 피해를 입힙니다. 영역은 일정 시간 동안 유지됩니다. 영역 내에 위치한 적에게 슈린이 개별 피해를 입힐 때마다, 대상에게 어검이 떨어져 추가 스킬 피해를 입힙니다. 5번째로 떨어지는 어검은 강화되어 대상에게 떨어져 주변에 추가 스킬 피해를 입히며 이동 속도를 감소시킵니다.\n\n<color=white>비섬보</color>를 사용한 후, 도착 지점이 영역 밖일 경우 외곽의 어검이 슈린에게 돌아오며 경로 상 적들에게 스킬 피해를 입히고, 두 번째 적중부터는 피해량이 감소됩니다.
+CharacterState/Group/Name/1082100┃결심응진 - 유운잔영검 중첩
+CharacterState/Group/Desc/1082100┃유운잔영검 중첩을 획득하였습니다.
+CharacterState/Group/Name/1082110┃결심응진 - 기본 공격 강화
+CharacterState/Group/Desc/1082110┃슈린의 다음 기본 공격이 강화되어 추가 스킬 피해를 입힙니다.
+CharacterState/Group/Name/1082300┃무진검결 - 받는 피해 무효화, 모든 방해 효과 면역
+CharacterState/Group/Desc/1082300┃슈린이 받는 피해와 모든 방해 효과에 면역됩니다.
+CharacterState/Group/Name/1082330┃무진검결 - 이동 속도 감소
+CharacterState/Group/Desc/1082330┃무진검결에 의해 이동 속도가 감소하였습니다.
+CharacterState/Group/Name/1082340┃무진검결 - 기절
+CharacterState/Group/Desc/1082340┃무진검결에 의해 기절되었습니다.
+CharacterState/Group/Name/1082400┃비섬보 - 이동 속도 감소
+CharacterState/Group/Desc/1082400┃비섬보에 의해 이동 속도가 감소하였습니다.
+CharacterState/Group/Name/1082520┃만검귀종 - 이동 속도 감소
+CharacterState/Group/Desc/1082520┃만검귀종에 의해 이동 속도가 감소하였습니다.
 Skill/Group/Name/3015000┃망토와 단검
 Skill/Group/Name/3015100┃망토와 단검
 Skill/Group/Name/3016000┃빗겨 흘리기
@@ -17793,7 +17878,7 @@ CharacterState/Group/Name/6053020┃예열 - 최대 충첩 상태
 CharacterState/Group/Desc/6053020┃최대 중첩을 달성하여 능력치가 상승했습니다.
 CharacterState/Group/Name/6054000┃예열 - 격앙
 CharacterState/Group/Desc/6054000┃능력치가 증가했습니다.
-CharacterState/Group/Name/6053020┃예열 - 최대 충첩 상태
+CharacterState/Group/Name/6054010┃예열 - 최대 충첩 상태
 CharacterState/Group/Desc/6054010┃최대 중첩을 달성하여 능력치가 상승했습니다.
 Item/Skills/6058001┃달인
 Item/Skills/6058001/Name┃<color=yellow>달인</color>
@@ -17890,13 +17975,13 @@ Skill/Group/Desc/8300300┃<color=lightblue>사냥꾼의 솥단지</color>를 �
 Skill/Group/Name/8300400┃ORB - 감시
 Skill/Group/Desc/8300400┃<color=lightblue>ORB - 감시</color>를 호출합니다.\n실험체의 현재 위치와 목표 지점 사이를 {0}초간 주회하며 전방 {1}도의 시야를 {2}m 밝힙니다.
 Skill/Group/Name/8300500┃ORB - 안전
-Skill/Group/Desc/8300500┃<color=lightblue>ORB - 안전</color>을 호출합니다.\n목표 지점까지 이동하는 동안 {1}m 내의 아군 실험체에게 폭발 타이머 차감 면역 능력 및 이동 속도 {2}를 부여합니다.
+Skill/Group/Desc/8300500┃<color=lightblue>ORB - 안전</color>을 호출합니다.\n목표 지점까지 이동하는 동안 {1}m 내의 아군 실험체에게 폭발 타이머 차감 면역 능력을 부여합니다.
 Skill/Group/Name/8300600┃ORB - 회복
 Skill/Group/Desc/8300600┃<color=lightblue>ORB - 회복</color>을 호출합니다.\n실험체의 현재 위치와 목표 지점 사이를 {0}초간 주회하며 주변 {1}m 내의 아군 실험체의 체력을 초당 {2} + 최대 체력의 {3}, 스태미너를 초당 {2} + 최대 스태미너의 {4} 회복합니다.
 Skill/Group/Name/8300700┃ORB - 폭발
 Skill/Group/Desc/8300700┃<color=lightblue>ORB - 폭발</color>을 호출합니다.\n실험체의 현재 위치에서 목표 지점으로 이동한 뒤 {0}초 후 {1}m 범위 내의 설치물을 파괴하고 실험체에게 현재 체력의 {2} / 야생동물에게 현재 체력의 {3}만큼 피해를 주고, 약한 치유 감소 효과를 부여합니다.
 CharacterState/Group/Name/12000100┃세이프티 필드
-CharacterState/Group/Desc/12000100┃이동 속도가 증가하고, 폭발 타이머가 줄어들지 않습니다.
+CharacterState/Group/Desc/12000100┃폭발 타이머가 줄어들지 않습니다.
 CharacterState/Group/Name/13000000┃VF 가속
 CharacterState/Group/Desc/13000000┃이동 속도와 시야가 증가했습니다.
 CharacterState/Group/Name/13000100┃VF 과부하
@@ -22064,6 +22149,12 @@ CharacterStoryHeight/81┃148cm
 CharacterStoryGender/81┃여
 CharacterStoryTitle/81┃“게임, 할래?”
 CharacterStoryDesc/81┃게임을 진심으로 좋아하고 즐기는 소녀.\n닉네임 'NiaH'로 활동하며 수많은 게임에 기록을 남겼다.\n평소엔 밥을 먹는 것조차 귀찮아하고 말이 없는 성격이지만, 게임과 관련된 일에선 의외의 행동력을 보여준다.\n\n니아에게 있어 게임은 단순한 오락 거리가 아니었다.\n타인과 교감할 수 있는 또 하나의 세계이자, 소중한 것을 얻게 해준 보물이었다.\n\n니아가 소중한 것을 잃었을 때, 니아의 마음은 부서지고 말았다.\n그리고 진실을 받아들이지 못한 채 눈을 돌렸다.\n잔혹한 현실이 아닌, 즐거움만이 가득한 또 하나의 세계로.\n\n니아는 계속 게임을 할 것이다.\n자신의 세계에서, 누군가 찾아오기만을 기다리며.
+CharacterStoryName/82┃류 슈린
+CharacterStoryAge/82┃22세
+CharacterStoryHeight/82┃168cm
+CharacterStoryGender/82┃여
+CharacterStoryTitle/82┃이 검으로, 길을 열어드리죠.
+CharacterStoryDesc/82┃검을 조종하여 어검술을 펼치는 소녀.\n당당하고 멋진 모습을 보여주려 하나, 실상은 허당기 가득한 순수한 마음의 소유자.\n깊은 산골의 외진 마을, 대대로 검을 지켜온 가문의 외동딸로 태어났다.\n\n어려서부터 그녀는 늘 검과 함께였고, 검과 있을 때면 마을의 기원과 정수가 마음에 깃드는 느낌이었다.\n검을 매일 닦고, 날을 세우고, 검과 마주 앉아 마음을 가다듬었다.\n\n그러던 어느 날, 검을 모시던 사원이 원인을 알 수 없는 화마에 휩싸였다.\n아버지와 마을 사람들이 불길에 갇혔고, 슈린은 한 치 망설임도 없이 불 속으로 뛰어들었다.\n\n누가, 왜 사원을 불태웠는지는 중요하지 않았다.\n그저, 자신이 소중히 여기던 것들이 눈앞에서 재로 사라지는 걸 두고 볼 수 없었을 뿐.\n\n그 순간, 검이 그녀의 마음에 공명하듯 반응했다.\n검은 마치 살아있는 존재처럼 힘을 내뿜었고, 그 힘은 슈린의 몸을 감싸안았다.\n검과 슈린의 능력으로, 그녀는 위험에 빠진 모두를 구해낼 수 있었다.\n\n이후, 슈린은 처음으로 마을을 떠나기로 결심한다.\n검을 지키는 자를 넘어서, 검이 선택한 진정한 주인이 되기 위해.\n자신이 지키고자 한 것들을, 스스로의 힘으로 지키기 위해.
 CharacterPlayTip/1┃재키는 목표로 한 적을 끈질기게 추격하여 학살하고, 그때마다 폭발력이 더해지는 연쇄살인마입니다.
 CharacterPlayTip/2┃아야는 적중이 쉬운 스킬들과 거리를 벌릴 수 있는 스킬들이 특징인 안정성 높은 원거리 실험체입니다.
 CharacterPlayTip/3┃피오라는 펜싱 선수다운 민첩한 움직임으로 적과 거리를 조절하며, 스킬을 연속 적중할수록 강력한 피해를 입힙니다.
@@ -22145,6 +22236,7 @@ CharacterPlayTip/78┃히스이는 일륜회 소속으로 조직을 배신한 �
 CharacterPlayTip/79┃유스티나는 정의의 히어로가 되기를 꿈꾸는 활기찬 소녀입니다. 에너지를 활용해 끊임없이 공격하고 이동하며, 적의 일대를 초토화할 수 있는 강력한 화력을 자랑합니다.
 CharacterPlayTip/80┃이슈트반은 강화 시 자신의 행동과 다른 결과를 도출하는 또 다른 자기 자신의 모습을 보여줍니다. 각 교전 상황에 따라 여러 가능성들을 계속 연구하며 더 나은 결과를 얻기 위한 실험을 반복합니다.
 CharacterPlayTip/81┃니아는 게임을 진심으로 좋아하고 즐기는 소녀입니다. 현실을 게임처럼 조작하고 자신만의 게임 세계에서 적들의 움직임을 제한하여 유리한 교전을 이끌어나갑니다.
+CharacterPlayTip/82┃슈린은 어검술을 수련한 순박한 시골 소녀입니다. 어검을 날려 적을 공격하거나 자신을 방어하며, 한순간에 적진에 파고 들어 전투의 흐름을 뒤엎을 수 있는 실험체입니다.
 MasteryType/Glove/Desc┃글러브는 사거리가 짧지만, 가장 빠르게 연속 공격할 수 있습니다.
 MasteryType/Tonfa/Desc┃톤파는 유일하게 방어력을 확보할 수 있는 공방일체형 무기입니다.
 MasteryType/Hammer/Desc┃망치는 공격 속도가 느리지만 강력한 한 방으로 상대의 움직임을 제약할 수 있습니다.
@@ -23058,8 +23150,8 @@ OperatorSetting/PaidResurrectionTarget┃자신이 아군 유료 부활 가능 �
 OperatorSetting/AutoReplaceLateGameItems┃목표 아이템이 변경되었음을 안내합니다.
 루미아 섬 안내 로봇┃안내 로봇: LUMI - 크레딧 충전 완료
 OperatorSetting/GuidedRobotBattleModeNotice┃루미아 섬 안내 로봇 "LUMI"의 크레딧 충전이 완료 되었음을 안내합니다.
-임시, 최종 안전지대 안내┃임시 안전지대 안내
-OperatorSetting/TemporarySafeZoneNotice┃임시 안전지대 페이즈에 대한 정보를 안내합니다.
+임시, 최종 안전지대 안내┃임시, 최종 안전지대 안내
+OperatorSetting/TemporarySafeZoneNotice┃임시, 최종 안전지대 페이즈에 대한 정보를 안내합니다.
 빈사 스킬┃빈사 스킬
 OperatorSetting/DyingConditionGuide┃자신이 빈사 상태가 되었을 때 사용할 수 있는 빈사 스킬을 안내합니다.
 비밀 연구실┃비밀 연구실
