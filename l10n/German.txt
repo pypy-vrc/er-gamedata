@@ -162,6 +162,7 @@ GameResult/Character/Name/78┃Hisui
 GameResult/Character/Name/79┃Justyna
 GameResult/Character/Name/80┃Istvan
 GameResult/Character/Name/81┃NiaH
+GameResult/Character/Name/82┃Xuelin
 Monster/Name/1┃Huhn
 Monster/Name/2┃Fledermaus
 Monster/Name/3┃Wildschwein
@@ -540,6 +541,9 @@ StatType/CriticalStrikeDamage┃Kritischer Schaden
 StatType/PreventCriticalStrikeDamaged┃Kritische Schadensreduktion
 StatType/CooldownReduction┃Abklingzeitverringerung
 StatType/CooldownReduction/Desc┃Erlaubt es dir, Fähigkeiten öfter einsetzen zu können.
+StatType/UltCooldownReduction┃Ulti Abklingzeitverringerung
+StatType/WeaponCooldownReduction┃Waffenfähigkeit Abklingzeitverringerung
+StatType/TacticalCooldownReduction┃Takt. Fähigkeit Abklingzeitverringerung
 StatType/CooldownLimit┃Max. Abklingzeitverringerung
 StatType/LifeSteal┃Omnisyphon
 StatType/LifeSteal/Desc┃Omnisyphon: Betrifft allen ausgehenden Schaden außer Fallenschaden
@@ -1305,6 +1309,7 @@ GameResult/Tag/MatchingMode/Tutorial2_Re┃Tutorial
 GameResult/Tag/MatchingMode/Tutorial3_Re┃Tutorial
 GameResult/Tag/MatchingTeamMode/Squad┃Squad
 GameResult/Tag/MatchingTeamMode/Cobalt┃Cobalt Protocol
+GameResult/Tag/MatchingTeamMode/Duo┃Duo
 GameResult/Tag/MatchingMode/SquadRumble┃Unionswettbewerb
 Loading/MatchingMode/Normal┃NORMAL GAME
 Loading/MatchingMode/Cobalt┃COBALT
@@ -1324,6 +1329,7 @@ Loading/MatchingTeamMode/Squad┃Lumia Island
 Loading/MatchingTeamMode/Cobalt┃Cobalt Protocol
 Loading/MatchingTeamMode/LoneWolf┃Lumia Island
 Loading/MatchingTeamMode/LoneWolfCustom┃Lumia Island
+GameModeType/Name/NORMAL┃Squad
 ItemType/SKIN/Name┃Skin
 Skin/Name/1001000┃Jackie
 Skin/Name/1001001┃Henker Jackie
@@ -1795,7 +1801,6 @@ Skin/Desc/1036002┃Wenn ich dafür jemand anderem ein normales Leben ermöglich
 Skin/Desc/1028003┃Ich frage mich, welche Geschichten mir der Ozean wohl erzählen wird...
 Skin/Desc/1029002┃Endlich bin ich in meinem Element!
 Skin/Desc/1031004┃Du blockierst die Sonne. Könntest du ein bisschen zur Seite gehen?
-Skin/Desc/1033002┃Ich soll mich einfach entspannen? Stand das wirklich so im Drehbuch?
 Skin/Desc/1048001┃Gib mir einen Pinsel und die Welt wird meine Leinwand!
 Skin/Desc/1049001┃Das Ticket sieht gut aus! Viel Spaß in Lumialand!
 Skin/Desc/1051001┃Möge diese Melodie niemals verwelken.
@@ -3030,6 +3035,7 @@ Emotion_Lenox07_NP┃Lenox hat einen gefangen!
 Emotion_Lenox08_NP┃Lenox Auf geht's!
 Event_MoonRabbit_3128┃Idle Moon Rabbit Lyn Ängstlich
 Event_MoonRabbit_3129┃Idle Moon Rabbit Lyn Lecker!
+Event_WeGame_Open_3131┃WeGame Veröffentlichungsfeier!
 Event_S15Champion_OneCircle_3132┃SEASON 6 CHAMPION ONECIRCLE
 Event_S15Champion_Danana_3133┃SEASON 6 CHAMPION DANANA
 Event_S15Champion_Romatic_3134┃SEASON 6 CHAMPION ROMATIC
@@ -3045,6 +3051,16 @@ Emotion_Luke06_NP┃Luke Just Vibing
 Emotion_Luke07_NP┃Okey Lukey
 Emotion_Luke08_NP┃Luke Nein!
 Emotion_Union_Estelle_2055009┃Drill-Spezialistin Estelle Geschafft!
+Event_ISBN_3136┃Bitte glaub mir
+Emotion_Xuelin01_NP┃Xuelins Grüße
+Emotion_Xuelin02_NP┃Xuelin Bitte verzeih mir
+Emotion_Xuelin03_NP┃Xuelin hat verloren
+Emotion_Xuelin04_NP┃Xuelin sagt nein!
+Emotion_SNS_Xuelin_2082005┃Xuelin Wirklich?
+Event_2ndAnniversary_3135┃Whippy Biancas Herz
+Emotion_2nd_Anniv_Nadja_2000014┃2nd Anniversary Nadja
+Emotion_2nd_Anniv_Eva_2036009┃2nd Anniversary Eva Herz!
+Emotion_2nd_Anniv_Elena_2050011┃2nd Anniversary Elena Luftkuss!
 Collection/Name/11001┃Alles für meine Tochter.
 Collection/Name/11002┃Magst du... Pixel Art?
 Collection/Name/11003┃Ich werde allen verlorenen Seelen die Erlösung bringen.
@@ -3122,6 +3138,10 @@ Collection/Name/24029/1┃Mai Skinsammlung Ⅰ
 Collection/Name/24029/2┃Mai Skinsammlung ⅠⅠ
 Collection/Name/24030┃Spezialwürfel eintauschen
 Collection/Name/24031┃Würfelkarten eintauschen
+Collection/Name/24032/1┃Special 2nd Anniv. Sommer Sammlung Ⅰ
+Collection/Name/24032/2┃Special 2nd Anniv. Sommer Sammlung Ⅱ
+Collection/Name/24033/1┃2nd Anniv. Sommer Sammlung Ⅰ
+Collection/Name/24033/2┃2nd Anniv. Sommer Sammlung Ⅱ
 SeasonCollection/Name/30001/1┃Splash! Level 1
 SeasonCollection/Name/30001/2┃Splash! Level 2
 SeasonCollection/Name/30001/3┃Splash! Level 3
@@ -3872,11 +3892,16 @@ EMBLEM_MARK_EVENT_103200┃Mit Lyn dem Mondkaninchen!
 EMBLEM_MARK_EVENT_103201┃Lumia Akademiekampf 1ter Platz
 EMBLEM_MARK_EVENT_103202┃Lumia Akademiekampf 2ter Platz
 EMBLEM_MARK_EVENT_103203┃Lumia Akademiekampf 3ter Platz
+EMBLEM_MARK_EVENT_103204┃WeGame Veröffentlichungsfeier!
 EMBLEM_MARK_EVENT_103205┃SEASON 6 CHAMPION ONECIRCLE
 EMBLEM_MARK_EVENT_103206┃SEASON 6 CHAMPION DANANA
 EMBLEM_MARK_EVENT_103207┃SEASON 6 CHAMPION ROMATIC
-EMBLEM_MARK_EVENT_103208┃Blaue Welle Tsubame STOP!
-EMBLEM_MARK_EVENT_103209┃Meeresbrise Chloe Hi!
+EMBLEM_MARK_EVENT_103208┃Blue Wave Tsubame STOP!
+EMBLEM_MARK_EVENT_103209┃Ocean Breeze Chloe Hi!
+EMBLEM_MARK_EVENT_103210┃2nd Anniversary Nadja
+EMBLEM_MARK_EVENT_103211┃Xuelin Wirklich?
+EMBLEM_MARK_EVENT_103216┃2nd Anniversary Eva Herz!
+EMBLEM_MARK_EVENT_103217┃2nd Anniversary Elena Luftkuss!
 EMBLEM_MARK_ERPASS_104001┃Kristallisiertes Eis
 EMBLEM_MARK_ERPASS_104002┃Baum der Geschenke!
 EMBLEM_MARK_ERPASS_104003┃Rote Nase
@@ -4343,6 +4368,8 @@ EMBLEM_BG_EVENT_203005┃Dr. Nadja Hintergrund
 EMBLEM_BG_EVENT_203006┃Dienstmädchen Adela Hintergrund
 EMBLEM_BG_EVENT_203007┃Herbst Festival Hintergrund
 EMBLEM_BG_EVENT_203008┃2024 Silvester Hintergrund
+EMBLEM_BG_EVENT_203009┃WeGame Veröffentl.feier. Hintergrund
+EMBLEM_BG_EVENT_203010┃2nd Anniversary Hintergrund
 EMBLEM_BG_ERPASS_204002┃Eternal Return Hintergrund
 EMBLEM_BG_ERPASS_204003┃Experiment Hintergrund
 EMBLEM_BG_ERPASS_204004┃Verregneter Hintergrund
@@ -4752,6 +4779,8 @@ EMBLEM_OUTLINE_EVENT_303005┃Dr. Nadja Rahmen
 EMBLEM_OUTLINE_EVENT_303006┃Diesntmädchen Adela Rahmen
 EMBLEM_OUTLINE_EVENT_303007┃Herbst Festival Rahmen
 EMBLEM_OUTLINE_EVENT_303008┃2024 Silvester Rahmen
+EMBLEM_OUTLINE_EVENT_303009┃WeGame Veröffentl.feier. Rahmen
+EMBLEM_OUTLINE_EVENT_303010┃2nd Anniversary Rahmen
 EMBLEM_OUTLINE_ERPASS_304001┃Gefrorener Rahmen
 EMBLEM_OUTLINE_ERPASS_304002┃Festlicher Rahmen
 EMBLEM_OUTLINE_ERPASS_304003┃Weihnachtsschmuck Rahmen
@@ -5012,6 +5041,7 @@ Goods/Name/1503054┃Delicioso!
 Goods/Name/1503055┃Die Uhr tickt!
 Goods/Name/1503056┃Ein süßes Geschenk
 Goods/Name/1503057┃Ein Unzerbrechliches Herz
+Goods/Name/1503058┃WeGame Veröffentl.feier. Spray
 GroupItemAttribute/KR┃Koreanisch
 GroupItemAttribute/EN┃Englisch
 GroupItemAttribute/JA┃Japanisch
@@ -5263,6 +5293,7 @@ Goods/Name/2705001┃1st Anniversary Lobby Screen
 Goods/Name/2705002┃Hisui & Justyna
 Goods/Name/2705003┃Idle Moon Rabbit
 Goods/Name/2705004┃Nach der Schule Debi & Marlene
+Goods/Name/2705005┃2nd Anniversary
 ItemType/KILLANNOUNCE_ICONPACK/Name┃Kill-Ansagen Emblem
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃Passe deine UI für Kill-Ansagen an
 Goods/Name/2801001┃Unerschütterlich
@@ -5351,6 +5382,7 @@ Goods/Name/3403016┃2024 Festtage
 Goods/Name/3403017┃NiaH
 Goods/Name/3403018┃Nach der Schule Zwillinge Selfie
 Goods/Name/3403019┃Nach der Schule Zwillinge Portrait
+Goods/Name/3403020┃WeGame Veröffentlichungsfeier!
 Goods/Name/3419001┃Schneeflocke
 ItemType/EVENT/Name┃Kollektion Item
 Goods/Name/3503001┃[N] Kollektion Item
@@ -5392,6 +5424,8 @@ Goods/Name/3503036┃(x1) Multiplizierkarte
 Goods/Name/3503037┃(x2) Multiplizierkarte
 Goods/Name/3503038┃(x3) Multiplizierkarte
 Goods/Name/3503039┃Würfelfragment
+Goods/Name/3503040┃2nd Anniversary Sommerkarte
+Goods/Name/3503041┃Besondere 2nd Anniv. Sommerkarte
 ItemType/WILD_CARD_SKIN/Name┃[Skin] Joker
 ItemType/WILD_CARD_ETC/Name┃Joker
 Goods/Name/3602002┃[Skin] Joker
@@ -5807,6 +5841,11 @@ Product/Name/EVENT_NPASS_2025_ReturnSummer_1014┃Sommer ist zurück! Questbuch
 Product/Name/S7_All_In_One_Pack_01┃Alles in einem Bündel Ⅰ
 Product/Name/S7_All_In_One_Pack_02┃Alles in einem Bündel ⅠⅠ
 Product/Name/S7_All_In_One_Pack_03┃Alles in einem Bündel ⅠⅠⅠ
+Product/Name/EVENT_NPASS_S8_Premium_Token_1015┃S8 Premium-Tokenbuch
+Product/Name/EVENT_NPASS_S8_Basic_Token_1016┃S8 Basis-Token-Buch
+Product/Name/2025_2nd_Anniv_Summer_Pack_01┃2nd Anniv. Sommerbox-Paket (Mehrere)
+Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2nd Anniv. Sommerbox-Paket (Einzel)
+Product/Name/S7_Season_Fragments_Pack_01┃Saison-Fragmente-Paket
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emoticons\n\n56% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
@@ -6086,7 +6125,6 @@ Shop/Desc/LOOTBOX_SKIN_05┃Dieses Produkt enthält 11 Skin Data Boxen.\nSkins u
 LOOTBOX_SKIN_10┃11 Skin Data Boxen
 Shop/Desc/LOOTBOX_SKIN_10┃Dieses Produkt enthält 11 Skin Data Boxen.\nSkins und Skin-Designs können aus der Skin Data Box bezogen werden.\n<color=orange>Ranglistenbelohnungen und einige speziell genutzte Gegenstände sind nicht enthalten. </color>\n\nGekaufte Kisten können in der Schmiede mit dem Datenschlüssel geöffnet werden.
 MONTHLY_PURCHASE_SET_01┃Weitere Informationen finden Sie in der Ankündigung der Veranstaltung.
-Shop/Desc/MONTHLY_PURCHASE_SET_01┃Dieses Produkt enthält 3 Skin Datenboxen und 3 Datenschlüssel.\nIn der Skin Daten Box können Skins und Skin-Designs enthalten sein.\n<color=orange>Ranglistenbelohnungen und einige besondere Gegenstände sind nicht enthalten.</color>\n\nDie Anzahl der Käufe für dieses Produkt wird monatlich zurückgesetzt.\nGekaufte Boxen können in Forging mit  Datenschlüsseln geöffnet werden.
 Shop/Desc/DAILY_PURCHASE_SET_01┃Du kannst 1 der folgenden erhalten: Forschungsdaten-Box, Datenschlüssel, NP, Gewöhnliches Material oder Token.\n\nDie Anzahl der Käufe für dieses Produkt wird täglich zurückgesetzt.\n<color=orange>Es wird sofort nach dem Kauf geöffnet.</color>
 Shop/Desc/S10_KEY_LIMITED┃Mit dem Datenschlüssel kannst du jede Art von Box öffnen.\n\nDie Anzahl der Umtauschvorgänge pro Konto wird nicht zurückgesetzt
 Shop/Desc/Vacance Token┃Dies ist ein Sommerevent-Token, der verwendet werden kann, um Gegenstände einzulösen, die im Schmiedemenü zum Umtausch hinzugefügt wurden.<color=red>\nDieser Token hat ein Ablaufdatum. Bitte achte auf das Verfallsdatum, da er später nicht mehr verfügbar ist.</color>
@@ -6151,6 +6189,8 @@ Product/Name/EP_S14_Lucky Token┃10 Lucky★ Tokens
 Product/Name/EP_S15_Legion Token┃10 Legion Tokens
 Product/Name/EP_S16_Academy Token┃10 Academy Tokens
 Product/Name/EP_S17_Splash Token┃10 Splash! Tokens
+Product/Name/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃Tausch-Fragmente
+Product/Name/MILEAGE_SEASON_COLLECTION_PACK_9901032┃10 Saison-Fragmente-Paket
 Shop/Desc/EP_TOKEN_1000┃Währung zum Kauf von EP-Token-exklusiven Gegenständen.
 Shop/Desc/EP_TOKEN_200┃Währung zum Kauf von EP-Token-exklusiven Gegenständen.
 Shop/Desc/EP_TOKEN_RANDOM_01┃Erhalte einen zufälligen Gegenstand von der folgenden Liste.
@@ -7252,20 +7292,20 @@ A-Coin┃A-Coin
 EP┃EP
 XP┃XP
 Mileage┃Meilen
-A-Coin 재화 설명┃Du kannst <color=#FFB62F>A-Coin</color> einfach erhalten, indem du Matches spielst.
-A-Coin 재화 툴팁 타이틀┃A-Coin
-A-Coin 재화 툴팁 설명┃Du erhältst A-Coin, indem du Eternal Return spielst. Ganz einfach!
-NP 재화 설명┃<color=#FFB62F>NP</color> sind im Shop erhältlich.\nKostenlose NP sind nicht erstattungsfähig.
-NP 재화 툴팁 타이틀┃NP
-NP 재화 툴팁 설명┃NP können im Ingame-Shop gekauft werden. \n Bezahlte NP: {0} \n Kostenlose NP: {1}\nKostenlose NP sind nicht erstattungsfähig.
-EP 토큰 재화 설명┃<color=#FFB62F>EP-Tokens</color> sind eine spezielle Währung für den EP-Token-Shop. ER-Punkte, die du nach Erreichen der maximalen Stufe deines ER-Passes erhältst, werden stattdessen in EP-Tokens umgewandelt.
-EP 토큰 재화 툴팁 타이틀┃EP-Tokens
-EP 토큰 재화 툴팁 설명┃Wenn du bereits die maximale Stufe in einem ER-Pass erreicht hast, wirst du statt überschüssigen ER-Punkten mit EP-Tokens belohnt!
-이벤트 NP 재화 설명┃<color=#FFB62F>Event NP</color> können in Events erworben werden und verfallen ein paar Tage nach dem Erwerb. Wenn du etwas kaufst, werden die NP von deinem Event-NP-Guthaben abgezogen, bevor dein bezahltes/freies NP-Guthaben abgezogen wird.\n*Event-NP ist nicht erstattungsfähig.
-이벤트 NP 재화 툴팁 타이틀┃Event NP
-이벤트 NP 재화 툴팁 설명┃Event-NP können in Events erworben werden und verfallen ein paar Tage nach dem Erwerb. Wenn du etwas kaufst, werden die NP von deinem Event-NP-Guthaben abgezogen, bevor es von deinem bezahlten/freien NP-Guthaben abgezogen wird.\n*Event NP ist nicht erstattungsfähig.
-마일리지 재화 툴팁 타이틀┃Meilen
-마일리지 재화 툴팁 설명┃Verwenden diese Währung, um Gegenstände im Meilen-Shop zu kaufen.\nDu kannst Meilen erhalten, wenn du NP kaufst.
+A-Coin 재화 설명┃Drop-Tokens
+A-Coin 재화 툴팁 타이틀┃Drop-Tokens
+A-Coin 재화 툴팁 설명┃Drop-Tokens
+NP 재화 설명┃Drop-Tokens
+NP 재화 툴팁 타이틀┃Drop-Tokens
+NP 재화 툴팁 설명┃Drop-Tokens
+EP 토큰 재화 설명┃Drop-Tokens
+EP 토큰 재화 툴팁 타이틀┃Drop-Tokens
+EP 토큰 재화 툴팁 설명┃Drop-Tokens
+이벤트 NP 재화 설명┃Drop-Tokens
+이벤트 NP 재화 툴팁 타이틀┃Drop-Tokens
+이벤트 NP 재화 툴팁 설명┃Drop-Tokens
+마일리지 재화 툴팁 타이틀┃Drop-Tokens
+마일리지 재화 툴팁 설명┃Drop-Tokens
 이벤트 배너 오버레이 툴팁 타이틀┃Event-Banner
 이벤트 배너 오버레이 툴팁 설명┃Du kannst das Banner für laufende Veranstaltungen einsehen.
 출석부 오버레이 툴팁 타이틀┃Teilnahme
@@ -7523,6 +7563,8 @@ TierRP┃Minimum Rangpunkte pro Rang
 관전 시 팀 TK 세부 정보 표시┃Team TK-Details während der Wiederholung anzeigen
 팀 셔플 기능 사용 경고┃Mit dieser Team Shuffle-Funktion werden sowohl der platzierte Bot als auch der Team-Slot freigeschaltet.\nMöchtest du Team Shuffle verwenden?
 방장이 팀을 다시 구성합니다.┃Der Leiter hat die Teams mit Team Shuffle neu organisiert.
+CustomGameList/Popup/GameName┃{0}s Room
+다중플랫폼팝업/제목┃Streaming-Plattform wählen
 CustomGame/Options/Default/AllowAcceleration┃Sperrgebietsbeschleunigung
 CustomGame/Options/Default/AllowEscape┃Flucht erlauben
 CustomGame/Options/Default/AllowEmotion┃Emotes erlauben
@@ -8248,6 +8290,8 @@ GameSetting/EmoticonSetMouseWheel┃Ermöglicht, während dem Spiel die Emoteset
 GameSetting/AutoAttack┃Nie: Greift niemals automatisch Gegner in der Nähe an.\nStandard: Greift automatisch Gegner in der Nähe an. Greift nicht an, während gesammelt oder hergestellt wird.\nImmer: Greift immer an, außer du benutzt den Stop-Befehl, rastest, durchsuchst eine Kiste oder benutzt einen Kiosk.
 인벤토리아이템자동병합┃Auto-Sortierung von Inventarplätzen
 GameSetting/AutomaticInventoryItemRestock┃Wenn sich mehrere Verbrauchsitems desselben Typs in verschiedenen Inventarslots befinden, werden die Items beginnend mit dem Slot mit der niedrigsten Priorität verbraucht.\nUnabhängig vom benutzten Hotkey werden Slots, die sich weiter rechts unten befinden, als niedriger priorisiert angesehen.\nBeispiel: Wenn sich in den Slots 1, 3 und 5 ein Steak befindet, wird durch Drücken eines beliebigen Hotkeys für diese Slots zuerst das Steak aus Slot 5 verbraucht.
+옵션/VLS상호작용확장맵활성화┃Erweiterte Karte für VLS aktivieren
+GameSetting/VLSInteractExpandMapActivate┃Die erweiterte Karte wird automatisch aktiviert, wenn ein VLS-Apparat verwendet wird.
 인벤토리아이템우선사용설정┃Inventarslots Prioritäts-Einstellungen
 GameSetting/InventoryItemUsePriority┃Wenn sich mehrere Verbrauchsitems desselben Typs in verschiedenen Inventarslots befinden, werden sie gemäß den festgelegten Einstellungen verbraucht, unabhängig vom zugewiesenen Hotkey.\nDer obere linke Inventarslot ist Slot 1 und der untere rechte ist Slot 10.\nBeispiel:\nAufsteigend:  Wenn sich in den Slots 1, 3 und 5 ein Steak befindet, wird durch Drücken eines beliebigen Hotkeys für diese Slots zuerst das Steak aus Slot 1 verbraucht.\nAbsteigend: Wenn sich auf den Slots 1, 3 und 5 Steaks befinden, wird durch Drücken eines beliebigen Hotkeys für diese Slots zuerst das Steak von Slot 5 verbraucht.
 옵션사용안함┃Deaktivieren
@@ -8759,6 +8803,7 @@ ReportType/COBALT_KILLED_BY_ENEMY┃Absichtliches Feeden
 ReportType/COBALT_SNIPER┃Stream Sniping
 ReportType/COBALT_BUGS_AND_GLITCHES_ABUSE┃Bug oder Glitch Ausnutzung
 ReportType/COBALT_MISCELLANEOUS┃Sonstiges
+ReportType/SMURFING┃Smurfing
 StrategyMap/VerbalHarassment/Report┃Willst du diesen Spieler wegen der Verwendung von Schimpfwörtern und unangemessener Sprache melden?
 Lobby/LobbyVerbalHarassment/Report┃Willst du diesen Spieler wegen der Verwendung von Schimpfwörtern und unangemessener Sprache melden?
 PlayerReportConfirm┃Spieler melden wegen <color=#FF9F36>{0}</color>?\nFalschmeldungen können mit Strafen belangt werden.
@@ -9491,14 +9536,19 @@ Collection/Filter/Complete┃Vollständig
 컬렉션 아이템 소모 체크박스┃Ich habe dies gelesen und würde den Artikel gerne verwenden.
 SeasonCollection/Info/Title┃Saison-Kollektion
 SeasonCollection/Info/Desc┃Nutze Tausch-Fragmente um Saison-Fragmente zu erhalten!
+SeasonCollection/Tooltip/Unregistered┃Benutze Tausch-Fragmente um Saison-Fragmente zu erhalten.
 SeasonCollection/Reward/Title┃Saison-Sammelbelohnungen
+SeasonCollection/Reward/Grade┃Level {0} Belohnung
 SeasonCollection/Reward/Condition┃Freizuschalten nach Beanspruchung des vorherigen Levels.
 SeasonCollection/Point/Title┃Saison-Fragment-Punkte
+SeasonCollection/Point/Info/1┃*Du kannst Tausch-Fragmente einsetzen, um Saison-Fragmente zu erhalten.
+SeasonCollection/Point/Info/2┃*Wenn du ein Saisonfragment erhältst, das du bereits verwendet hast, wird es entsprechend seiner Seltenheit in eine bestimmte Anzahl von Saison-Fragment-Punkten umgewandelt. (Ungewöhnlich: 10 Pkt / Gewöhnlich: 1 Pkt)
 SeasonCollection/Point/Info/3┃*Am Ende der Saison werden alle unbenutzten Tausch- und Saison-Fragmente zurückgesetzt.
 SeasonCollection/Popup/Confirm/Title┃Registriere Saison-Fragmente
 SeasonCollection/Popup/Confirm┃Willst du mit dem Tausch fortfahren?
 SeasonCollection/Popup/Reject┃Nicht genug Fragmente für einen Tausch.
 SeasonCollection/Popup/Exchange┃Du hast bereits deine Saisonfragmente erhalten. Anzahl wurde aktualisiert: {0}
+SeasonCollection/Popup/NotYetProgress┃Dieses Level ist noch nicht verfügbar. Überprüfe dein aktuelles Level in der laufenden Saison-Sammlung.
 CharacterGuide/1┃Jackie ist Nahkampf Assassin mit schneller Handlung. Die Ideale Kampf verläuft indem sie den Kampf mit Hack & Slash (Q) initiiert welches getroffene Gegner ins bluten versetzt, mit der Hilfe ihrer zweiten Fertigkeit Adrenalin Schub (W) verursacht sie mehr schaden und heilt sich mit Normalen Angriffen an blutenden Gegnern.\nJackie hat viel Freiheit mit dem Wählen ihrer Gegner, mit Sprungangriff (E) kann sie auf oder von ihnen weg Springen.
 CharacterGuide/2┃Aya ist ein Schütze mit hoher Reichweite. Ihre Strategie sollte mit jeder Waffe anders angepasst werden. Ruhiger Schuss (W) ist eine starke Fertigkeit jedoch ist es schwer zu treffen weil du die Richtung nach der Aktivierung nicht mehr ändern kannst, deswegen ist es eine gute Idee es mit Leere Patrone (R) zu kombinieren, welches Gegner betäubt und sie sehr verwundbar macht.
 CharacterGuide/3┃Fiora setzt mit jedem ihrer Normalen Angriffe einen Stapel Touché (Passive) auf ihren Gegner. Gegner mit Touché werden visuell markiert um besseren überblick zu haben. Mit der Fertigkeit Zusammengesetzter Angriff (E) diese Stapel schneller auf den Gegner setzen da sie zwei normale Angriffe schnell hintereinander macht. Mit Schlitz (Q) und Ausfallschritt (E) verursacht sie mehr Schaden an Gegnern mit Touché Stapeln. 
@@ -9749,6 +9799,8 @@ ToastMessage/루트ID 클립보드 복사┃Plan-ID in Zwischenablage gespeicher
 VPad 태그 별 아이템 추천 로직 설명┃Du hast das angezielte Item <color=#b245ff>fertiggestellt</color>. \n\nBitte wähle ein weiteres Item aus.
 루트 더보기┃Siehe Mehr
 루트 접기┃Siehe Weniger
+WeaponRoute/AutoTranslate/Translation┃Übersetzung
+WeaponRoute/AutoTranslate/Original┃Original
 루트 검색┃Pläne durchsuchen
 ID로 가져오기┃Plan-ID importieren
 루트 만들기┃Neuer Plan
@@ -10607,7 +10659,7 @@ SeasonPassIcon/17┃Img_SeasonPack17_Box
 시즌 17팩 주의사항 5┃Saisonpaketartikel werden zu deiner Mailbox gesendet → Saisonpaket bei Veröffentlichung und wird in Zukunft möglicherweise in anderer Weise verkauft.
 <ER PASS : 스플래쉬!> 포함┃<ER-Pass: Splash!>
 시즌팩 8 출시 캐릭터┃2 Saison 8 Charaktere
-시즌팩 8 출시 스킨┃6 Saison 8 Skins
+시즌팩 8 출시 스킨┃6 S8 Skins + 2 S8 Charaktere
 시즌팩 8 특별 아이템┃4 Saison 8 Items
 WebViewPopup_Title┃Eventinfo
 GoodsMenu/InGame┃In-Game-Anpassung
@@ -11357,6 +11409,7 @@ SeasonToBeAdded/Name┃Neue Saison in \n D - {0}
 100005_Title┃Saison 7 Login Event
 100006_Title┃Saison 8 Login Event
 400001_Title┃2024 Abschied Login Event
+400002_Title┃2nd Anniversary Besonderes Login-Event
 10000101_7_Title┃Widriana Sip 'n Smile Set
 10000101_7_Desc┃- Sip 'n Smile Profilbild\n-  Sip 'n Smile Emote
 10000101_14_Title┃Skin Daten Set
@@ -11510,6 +11563,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1009┃Erhalte bis zu <color=#ffdf72>25 Aca
 Shop/Desc/EVENT_NPASS_S7_Premium_Token_1010┃Erhalte bis zu <color=#ffdf72>75 Academy Tokens</color><color=#B2EBF4> mit diesem Premium Tokenbuch.\nKaufe diesen Artikel um Belohnungen freizuschalten.</color></size>\n\n<size=18>[Punkte pro Level]\nJedes Level benötigt 10 Punkte zum freischalten. Du kannst Punkte verdienen indem du Missionen beendest oder sie für 2 NP pro Punkt kaufst.\nPunkte können nur gekauft werden nachdem du ein Tokenbuch erworben hast.
 Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃Erhalte bis zu <color=#ffdf72>25 Academy Tokens</color><color=#B2EBF4> mit diesem Premium Tokenbuch.\nKaufe diesen Artikel um Belohnungen freizuschalten.</color></size>\n\n<size=18>[Punkte pro Level]\nJedes Level benötigt 10 Punkte zum freischalten. Du kannst Punkte verdienen indem du Missionen beendest oder sie für 2 NP pro Punkt kaufst.\nPunkte können nur gekauft werden nachdem du ein Tokenbuch erworben hast.
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃Dieses Quest-Buch enthält eine <color=#ffdf72>Vielzahl an Gegenständen</color><color=#B2EBF4>.\nKaufe es, um den Inhalt freizuschalten.</color> <size=18>[Punkte pro Stufe]</size> Jedes Level erfordert 100 Punkte zum Freischalten. Du kannst Punkte verdienen, indem du Missionen abschließt oder sie für 2 NP pro Punkt kaufst. Punkte können nur gekauft werden, nachdem du ein Token-Buch erworben hast.
+Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃Erhalte bis zu <color=#ffdf72>75 Splash!-Tokens</color><color=#B2EBF4> mit diesem Premium-Token-Buch. \nKaufe diesen Gegenstand, um Belohnungen freizuschalten. </color>\n\n<size=18>[Punkte pro Level]</size>\nJedes Level erfordert 10 Punkte, um freigeschaltet zu werden. Du kannst Punkte verdienen, indem du Missionen abschließt oder sie für 2 NP pro Punkt kaufst. \nPunkte können nur gekauft werden, wenn du ein Token-Buch besitzt.
+Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃Erhalte bis zu <color=#ffdf72>25 Splash!-Tokens</color><color=#B2EBF4> mit diesem Basis-Token-Buch. \nKaufe diesen Gegenstand, um Belohnungen freizuschalten. </color>\n\n<size=18>[Punkte pro Level]</size>\nJedes Level erfordert 10 Punkte, um freigeschaltet zu werden. Du kannst Punkte verdienen, indem du Missionen abschließt oder sie für 2 NP pro Punkt kaufst. \nPunkte können nur gekauft werden, wenn du ein Token-Buch besitzt.
 Season1000/Name┃1st Anniversary Questbuch
 Season1001/Name┃Kumdori & Kumsuni Questbuch
 Season1002/Name┃Dessert39 Questbuch
@@ -11520,6 +11575,8 @@ Season1009/Name┃S7 Basic Tokenbuch
 Season1010/Name┃S7 Premium Tokenbuch Ⅱ
 Season1011/Name┃S7 Basic Tokenbuch Ⅱ
 Season1014/Name┃Der Sommer Ist Zurück! Quest-Buch
+Season1015/Name┃S8 Premium Tokenbuch
+Season1016/Name┃S8 Basic Tokenbuch
 Season2000/Name┃1st Anniversary A-Coin Questbuch
 Season2001/Name┃Vacance A-Coin Questbuch
 Season2002/Name┃Battle Maids A-Coin Questbuch
@@ -11840,7 +11897,7 @@ Goods/Name/3102002┃Forschungsdaten-Box
 Goods/Desc/3102001┃Diese Box enthält Skins und Skin-Designs. \nER-PASS, Ranglisten-Belohnungen oder Limitierte Event-Skins sind nicht enthalten.\nDatenboxen können über Shop-Pakete oder andere Produkte erworben werden.
 Goods/Desc/3102002┃Diese Boxe enthält verschiedene Items und Designs.\nRanglisten-Belohnungen und Limitierte Items sind nicht enthalten.
 Goods/Name/3102003┃Tägliche Box
-Goods/Desc/3102003┃Du kannst 1 der folgenden erhalten: Forschungsdaten-Box, Datenschlüssel, NP, Gewöhnliches Material oder Token.
+Goods/Desc/3102003┃Du kannst 1 der folgenden erhalten: Forschungsdaten-Box, Datenschlüssel, NP, Datenfragment, Token oder Saison-Fragment.
 Goods/Name/3102004┃Tägliche Mission Zufallsbox
 Goods/Desc/3102004┃Belohnung für tägliche Missionen die du nicht erhalten konntest.
 Goods/Name/3102005┃Zufälliger Ungewöhnlicher/Seltener Skin Gutschein
@@ -11896,8 +11953,9 @@ Goods/Desc/3303004┃Lucky★ Tokens können durch den Lucky★ ER Pass oder im 
 Goods/Name/3303005┃Legion Tokens
 Goods/Desc/3303005┃Legion Tokens können durch den Legion ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
 Goods/Name/3303006┃Akademie Tokens
-Goods/Desc/3303006┃Legion Tokens können durch den Legion ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
-Goods/Desc/3303007┃Legion Tokens können durch den Legion ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
+Goods/Desc/3303006┃Akademie-Tokens können durch den Akademie ER Pass oder im Tauschmenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
+Goods/Name/3303007┃Splash! Tokens
+Goods/Desc/3303007┃Splash! Tokens können durch den Splash! ER Pass, durch das Saisonpaket oder mit gewisser Wahrscheinlichkeit beim Zerlegen von Items im Schmiedemenü erhalten werden. Alle Saisontokens haben ein Ablaufdatum und sind nur bis zu diesem Datum verfügbar. Nach Ablauf verfallen die Tokens und werden ungültig.
 Goods/Name/3303301┃Weihnachts-Tokens
 Goods/Desc/3303301┃Weihnachts-Tokens können durch das Öffnen von Weihnachts-Datenboxen erhalten werden und verfallen zum Ende des Events.
 Goods/Name/3303302┃Joy Tokens
@@ -11974,12 +12032,16 @@ Goods/Name/3102025┃Würfel
 Goods/Desc/3102025┃Erhalte ein Item mit bestimmer Wahrscheinlichkeit aus einer Liste von Items. Du kannst die Details der beinhalteten Items in der Itemliste nachsehen.
 Goods/Name/3190014┃Würfelseitengutschein
 Goods/Desc/3190014┃Du kannst einen von 6 Würfelseiten wählen.\nDetails zum Inhalt können in der Belohnungliste gefunden werden.
+Goods/Name/3102026┃2nd Anniv. Sommer-Box
+Goods/Desc/3102026┃Erhalte 1 vollständigen Skin oder Design und 1 2nd Anniversary Sommer-Karte.\nSkins, die du bereits besitzt, werden als Duplikate angezeigt.\nDetails zum Inhalt findest du in der Belohnungsliste.
+Goods/Name/3190015┃2nd Anniv. Sommer-Skin-Gutschein
+Goods/Desc/3190015┃Du kannst einen Artikel aus der Liste auswählen.\nDetails zum Inhalt findest du in der Belohnungsliste.
 Goods/Name/3199001┃Saisonfragmentebündel
-Goods/Desc/3199001┃Du kannst 1 gewöhnliches/ungewöhnliches Saisonfragment bekommen.\nWas es zu gewinnen gibt, kannst du dem Inhaltsverzeichnis entnehmen.
+Goods/Desc/3199001┃Du kannst 1 gewöhnliches/ungewöhnliches Saison-Fragment erhalten.\nSaison-Fragmente werden automatisch auf die Saison-Sammlung angewendet. Doppelte Saison-Fragmente werden in Saison-Fragment-Punkte umgewandelt.
 Goods/Name/3199002┃Gewöhnliche Saisonfragmentebündel
-Goods/Desc/3199002┃Du kannst 1 gewöhnliches Saisonfragment bekommen.\nWas es zu gewinnen gibt, kannst du dem Inhaltsverzeichnis entnehmen.
+Goods/Desc/3199002┃Du kannst 1 gewöhnliches Saison-Fragment erhalten.\nSaison-Fragmente werden automatisch auf die Saison-Sammlung angewendet. Doppelte Saison-Fragmente werden in Saison-Fragment-Punkte umgewandelt.
 Goods/Name/3199003┃Ungewöhnliche Saisonfragmentebündel
-Goods/Desc/3199003┃Du kannst 1 ungewöhnliches Saisonfragment bekommen.\nWas es zu gewinnen gibt, kannst du dem Inhaltsverzeichnis entnehmen.
+Goods/Desc/3199003┃Du kannst 1 ungewöhnliches Saison-Fragment erhalten.\nSaison-Fragmente werden automatisch auf die Saison-Sammlung angewendet. Doppelte Saison-Fragmente werden in Saison-Fragment-Punkte umgewandelt.
 특정 지역에서 구매할 수 없는 상품입니다.┃Dieses Produkt ist für den Verkauf in deiner Region nicht zugelassen.
 Goods/Name/3┃Zufälliger Charakter Box
 Goods/Desc/1┃Du kannst 300 Event-NP oder 1.500 A-Coin als Belohnung erhalten.
@@ -12040,7 +12102,7 @@ Shop/Desc/S13_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Su
 Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Lucky★ A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
 Shop/Desc/S15_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Legion A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
 Shop/Desc/S16_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Akademie A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
-Shop/Desc/S17_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Splash! A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Überprüfe die A-Coin Questbücher in deinem Besitz im Questbuch-Menü.
+Shop/Desc/S17_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Splash! A-Coin Questbuch\n(105,000 A-Coin nach Vervollständigung)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin-Questbuch wird sofort nach dem Kauf aktiviert. \n*Dieses Questbuch kann jederzeit abgeschlossen werden.  \n*Überprüfe deine A-Coin-Questbücher im Questbuch-Menü.
 Shop/Desc/S16_AFTERSCHOOL_QUEST_BOOK┃<b><color=#FFBB00>[Inhalt]</color></b>\n\n- Nach der Schule Zwillinge Questbuch\n\n<b><color=#F15F5F>[Notiz]</color></b>\n\n*Dieses A-Coin Questbuch wird direkt nach Kauf aktiviert.\n*Dieses Questbuch kann jederzeit vervollständigt werden.\n*Deine A-Coin Questbücher findest du im Questbuch-Menü
 Product/Name/S5_Lucky_White_LootToken_01┃3 Rote Tokens
 Product/Name/S5_Lucky_White_ACoin_15┃15 A-Coin
@@ -14243,6 +14305,18 @@ Skill/Group/Desc/1057100┃Kombiniere <color=#35CB38>Tele-Kamera</color> und <co
 Skill/Group/Desc/1057110┃Kombiniere <color=#35CB38>Tele-Kamera</color> und <color=#D6D6D6>Zweig</color>, um eine <color=#35CB38>Spurenkamera</color> mit Infiltration zu erstellen.\n\nMartinas 4K-UHD-Kamera verbraucht Energie aus ihrer Batterie, um Basisangriffe durchzuführen, die <color=#ffd775>{11}</color> Schaden verursachen. Während die Batterie aufgeladen wird, kann Martina keine Basisangriffe ausführen.\nAktuelle Aufladedauer: {0} Sekunden\n\nMartinas Basisangriffe zeigen ihr aktuelles Ziel an. Martinas Angriffskraft wird außerdem für jedes gewonnene 1% Angriffstempo um {3} erhöht.\n\n<color=#ffffff>[Interview]</color>\nMartinas Erfahrung in der verdeckten Kriegsführung erlaubt es ihr, beim Interview intuitiv Gefahren in der Nähe zu spüren. Bei Kämpfen zwischen Testobjekten in einem Radius von {1}m wird ein spezieller Ping auf der Minimap angezeigt.\nImmer wenn Martina {4} aufeinanderfolgende Basisangriffe auf einen Feind ausführt, markiert sie diesen. Wenn sie einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht <color=white>{13}</color> Fähigkeitsschaden.\n\n<color=#ffd775>[Übertragung]</color>\nBasisangriffe verursachen <color=#ffd775>{12}</color> Schaden. Wenn Martina einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht <color=white>{14}</color> Fähigkeitsschaden.
 Skill/Group/Coef/1057100┃Kombiniere <color=#35CB38>Tele-Kamera</color> und <color=#D6D6D6>Zweig</color>, um eine <color=#35CB38>Spurenkamera</color> mit Infiltration zu erstellen.\n\nMartinas 4K-UHD-Kamera verbraucht Energie aus ihrer Batterie, um Basisangriffe durchzuführen, die <color=#ffd775>({11} Angriffskraft) * (Basisangriffsverstärkung)</color> Schaden verursachen. Während die Batterie aufgeladen wird, kann Martina keine Basisangriffe ausführen.\nAktuelle Aufladedauer: {0} Sekunden\n\nMartinas Basisangriffe zeigen ihr aktuelles Ziel an. Martinas Angriffskraft wird außerdem für jedes gewonnene 1% Angriffstempo um {3} erhöht.\n\n<color=#ffffff>[Interview]</color>\nMartinas Erfahrung in der verdeckten Kriegsführung erlaubt es ihr, beim Interview intuitiv Gefahren in der Nähe zu spüren. Bei Kämpfen zwischen Testobjekten in einem Radius von {1}m wird ein spezieller Ping auf der Minimap angezeigt.\nImmer wenn Martina {4} aufeinanderfolgende Basisangriffe auf einen Feind ausführt, markiert sie diesen. Wenn sie einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht<color=white>{5}</color><color=#ffd775>(+{6} Angriffskraft)</color> Fähigkeitsschaden.\n\n<color=#ffd775>[Übertragung]</color>\nBasisangriffe verursachen <color=#ffd775>({12} Angriffskraft) * (Basisangriffsverstärkung)</color> Schaden. Wenn Martina einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht <color=white>{7}</color><color=#ffd775>(+{8} Angriffskraft)</color> Fähigkeitsschaden.
 Skill/Group/Coef/1057110┃Kombiniere <color=#35CB38>Tele-Kamera</color> und <color=#D6D6D6>Zweig</color>, um eine <color=#35CB38>Spurenkamera</color> mit Infiltration zu erstellen.\n\nMartinas 4K-UHD-Kamera verbraucht Energie aus ihrer Batterie, um Basisangriffe durchzuführen, die <color=#ffd775>({11} Angriffskraft) * (Basisangriffsverstärkung)</color> Schaden verursachen. Während die Batterie aufgeladen wird, kann Martina keine Basisangriffe ausführen.\nAktuelle Aufladedauer: {0} Sekunden\n\nMartinas Basisangriffe zeigen ihr aktuelles Ziel an. Martinas Angriffskraft wird außerdem für jedes gewonnene 1% Angriffstempo um {3} erhöht.\n\n<color=#ffffff>[Interview]</color>\nMartinas Erfahrung in der verdeckten Kriegsführung erlaubt es ihr, beim Interview intuitiv Gefahren in der Nähe zu spüren. Bei Kämpfen zwischen Testobjekten in einem Radius von {1}m wird ein spezieller Ping auf der Minimap angezeigt.\nImmer wenn Martina {4} aufeinanderfolgende Basisangriffe auf einen Feind ausführt, markiert sie diesen. Wenn sie einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht<color=white>{5}</color><color=#ffd775>(+{6} Angriffskraft)</color> Fähigkeitsschaden.\n\n<color=#ffd775>[Übertragung]</color>\nBasisangriffe verursachen <color=#ffd775>({12} Angriffskraft) * (Basisangriffsverstärkung)</color> Schaden. Wenn Martina einen markierten Gegner mit einer Fähigkeit trifft, verbraucht sie die Markierung und verursacht <color=white>{7}</color><color=#ffd775>(+{8} Angriffskraft)</color> Fähigkeitsschaden.
+Skill/Group/Name/1058100┃Waffenkoffer
+Skill/Group/Name/1058200┃40mm Granate
+Skill/Group/Name/1058210┃SMG Burst
+Skill/Group/Name/1058220┃Raketenbeschleunigung
+Skill/Group/Name/1058300┃Shotgun
+Skill/Group/Name/1058400┃SMG
+Skill/Group/Name/1058410┃SMG - Deaktiviert
+Skill/Group/Name/1058500┃Raketenwerfer
+Skill/Group/Name/1058510┃Raketenwerfer - Deaktiviert
+Skill/Group/Desc/1058100┃<color=white>Düstere Händlerin</color>: Nach dem Einsatz ihrer Fähigkeit holt Haze für {0} Sekunden ein neues Sturmgewehr mit voller Munition aus ihrem Waffenkoffer. Während sie ihr Sturmgewehr hervorholt, kann Haze keine Basisangriffe ausführen, aber ihr nächster Basisangriff richtet getroffenen Gegnern <color=white>{1}</color> zusätzlichen Fähigkeitsschaden an. Außerdem erhöht sich ihr Lauftempo für {2} Sekunden um {3}. <color=white>Düstere Händlerin</color> wird nur in der Sturmgewehr-Form angewendet. \n\n<color=white>Waffenkoffer</color>: Haze verwendet für jede Fähigkeit verschiedene Arten von Waffen. Wenn die Fähigkeit endet, holt sie ein neues Sturmgewehr aus ihrem Waffenkoffer und aktiviert <color=white>Düstere Händlerin</color>.
+Skill/Group/Coef/1058100┃<color=white>Düstere Händlerin</color>: Nach dem Einsatz ihrer Fähigkeit holt Haze für {0} Sekunden ein neues Sturmgewehr mit voller Munition aus ihrem Waffenkoffer. Während sie ihr Sturmgewehr hervorholt, kann Haze keine Basisangriffe ausführen, aber ihr nächster Basisangriff richtet getroffenen Gegnern <color=white>{20}</color><color=#DDA0DD>(+{22}% Fäh.verst.)</color> zusätzlichen Fähigkeitsschaden an. Außerdem wird ihr Lauftempo für {2} Sekunden um {3} erhöht. <color=white>Düstere Händlerin</color> wird nur in der Sturmgewehrform angewendet.\n\n<color=white>Waffenkoffer</color>: Haze verwendet für jede Fähigkeit verschiedene Arten von Waffen. Wenn die Fähigkeit endet, holt sie ein neues Sturmgewehr aus ihrem Waffenkoffer und aktiviert <color=white>Düstere Händlerin</color>.
+Skill/LobbyDesc/1058100┃<color=white>Düstere Händlerin</color>: Nach dem Einsatz ihrer Fähigkeit holt Haze für 0,75 Sekunden ein neues Sturmgewehr mit voller Munition aus ihrem Waffenkoffer. Während sie ihr Sturmgewehr hervorholt, kann Haze keine Basisangriffe ausführen, aber ihr nächster Basisangriff fügt getroffenen Gegnern zusätzlichen Fähigkeitsschaden zu. <color=white>Düstere Händlerin</color> wird nur in der Sturmgewehrform angewendet.\n\n<color=white>Waffenkoffer</color>: Haze verwendet für jede Fähigkeit verschiedene Arten von Waffen. Wenn die Fähigkeit endet, holt sie ein neues Sturmgewehr aus ihrem Waffenkoffer und aktiviert <color=white>Düstere Händlerin</color>
 Skill/Group/Name/1059100┃Ausbeutung
 Skill/Group/Name/1059200┃Sturzflug
 Skill/Group/Name/1059300┃Verstärkung
@@ -15388,7 +15462,7 @@ CharacterState/Group/Desc/5003000┃Deine Anpassbarkeit steigt permanent um 3.
 CharacterState/Group/Name/5003100┃Omega besiegt
 CharacterState/Group/Desc/5003100┃Deine Anpassbarkeit steigt permanent um 3.
 CharacterState/Group/Name/5003200┃Vernichtung
-CharacterState/Group/Desc/5003200┃Wenn du einem gegnerischen Charakter Schaden zufügst, erhöht sich dein Fähigkeitsschaden.
+CharacterState/Group/Desc/5003200┃Wenn du einem gegnerischen Charakter Schaden zufügst, richtest du zusätzlichen Fähigkeitsschaden an.
 CharacterState/Group/Name/5003210┃Vernichtung
 CharacterState/Group/Desc/5003210┃Klingt ab.
 Skill/Group/Name/2010200┃Überwältigende Präsenz
@@ -16146,17 +16220,17 @@ Skill/Group/ExpansionTip/8000200┃{0} der Abklingzeit wird zurückgegeben, fall
 Skill/Group/ExpansionTip/8000300┃Wenn die HP 0 erreicht während diese Fähigkeit benutzt wird, sterben zu Boden gegangene Testsubjekte sofort und richten keinen Schaden mit Spaltungsexplosion an.
 Item/Skills/6033001┃Photonenwerfer
 Item/Skills/6033001/Name┃<color=yellow>Photonenwerfer</color>
-Item/Skills/6033001/Body┃Dein 3ter Basisangriff richtet <color=#FFD775>{6}</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schaden.
-Item/Skills/6033001/Desc┃Dein 3ter Basisangriff richtet <color=white>{1}</color><color=#FFD775>(+{2}% Angriffskraft)</color><color=green>(+Charakterstufe*{3})</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schaden.
+Item/Skills/6033001/Body┃Dein 3. Basisangriff richtet <color=#FFD775>{6}</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schadens.
+Item/Skills/6033001/Desc┃Dein 3. Basisangriff richtet <color=white>{1}</color><color=#FFD775>(+{2}% Angriffskraft)</color><color=green>(+Charakterlevel*{3})</color> zusätzlichen Fähigkeitsschaden und heilt dich um <color=white>{4}%</color> des zusätzlichen Schadens.
 Item/Skills/6033002/Name┃<color=yellow>Photonenwerfer</color>
-Item/Skills/6033002/Body┃Dein 3ter Basisangriff richtet <color=#DDA0DD>{5}</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schaden.
-Item/Skills/6033002/Desc┃Dein 3ter Basisangriff richtet <color=white>{1}</color><color=#DDA0DD>(+{5}% Fähigkeitsverstärkung)</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schaden.
+Item/Skills/6033002/Body┃Dein 3. Basisangriff richtet <color=#DDA0DD>{5}</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schadens.
+Item/Skills/6033002/Desc┃Dein 3. Basisangriff richtet <color=white>{1}</color><color=#DDA0DD>(+{5}% Fäh.verst.)</color> zusätzlichen Fähigkeitsschaden an und heilt dich um <color=white>{4}%</color> des zusätzlichen Schadens.\n
 Item/Skills/6033003/Name┃<color=yellow>Photonenwerfer</color>
-Item/Skills/6033003/Body┃Dein 3ter Basisangriff richtet <color=#DDA0DD>{5}</color> zusätzlichen Fähigkeitsschaden an.
-Item/Skills/6033003/Desc┃Dein 3ter Basisangriff richtet <color=white>{1}</color><color=#DDA0DD>(+{5}% Fähigkeitsverstärkung)</color> zusätzlichen Fähigkeitsschaden an.
+Item/Skills/6033003/Body┃Dein 3. Basisangriff richtet <color=#DDA0DD>{5}</color> zusätzlichen Fähigkeitsschaden an.
+Item/Skills/6033003/Desc┃Dein 3ter Basisangriff richtet <color=white>{1}</color><color=#DDA0DD>(+{5}% Fäh.verst.)</color> zusätzlichen Fähigkeitsschaden an.
 Item/Skills/6033004/Name┃<color=yellow>Photonenwerfer</color>
-Item/Skills/6033004/Body┃Dein 3ter Basisangriff richtet <color=#FFD775>{6}</color> zusätzlichen Fähigkeitsschaden an.
-Item/Skills/6033004/Desc┃Dein 3ter Basisangriff richtet <color=white>{1}</color><color=#FFD775>(+{2}% Angriffskraft)</color><color=green>(+Charakterstufe*{3})</color> zusätzlichen Fähigkeitsschaden an.
+Item/Skills/6033004/Body┃Dein 3. Basisangriff richtet <color=#FFD775>{6}</color> zusätzlichen Fähigkeitsschaden an.
+Item/Skills/6033004/Desc┃Dein 3. Basisangriff richtet <color=white>{1}</color><color=#FFD775>(+{2}% Angriffskraft)</color><color=green>(+Charakterlevel*{3})</color> zusätzlichen Fähigkeitsschaden an.
 CharacterState/Group/Name/6033000┃Photonenwerfer - Steigerung
 CharacterState/Group/Desc/6033000┃Erhalte eine Steigerung von Photonenwerfer indem du mit einem Basisangriff triffst.
 Item/Skills/6032001┃Ermächtigung
@@ -16313,7 +16387,7 @@ CharacterState/Group/Name/6053020┃Aufflammen - Max Steigerungen
 CharacterState/Group/Desc/6053020┃Bonuswerte von maximalen Steigerungen erhalten.
 CharacterState/Group/Name/6054000┃Aufflammen - Ausbruch
 CharacterState/Group/Desc/6054000┃Deine Werte haben sich erhöht.
-CharacterState/Group/Name/6053020┃Aufflammen - Max Steigerungen
+CharacterState/Group/Name/6054010┃Aufflammen - Max Steigerungen
 CharacterState/Group/Desc/6054010┃Bonuswerte von maximalen Steigerungen erhalten.
 Item/Skills/6058001┃Meister
 Item/Skills/6058001/Name┃<color=yellow>Meister</color>
@@ -16334,7 +16408,7 @@ Item/Skills/6059001/Desc┃Wenn beim Eintritt in den Kampf ein gegnerischer Char
 Item/Skills/6056001┃Im Visier
 Item/Skills/6056001/Name┃<color=yellow>Im Visier</color>
 Item/Skills/6056001/Body┃Wenn du mit separaten Fähigkeiten an gegnerischen Charakteren Schaden verursachst, die weiter als <color=white>{0}m</color> entfernt sind, fügst du <color=#DDA0DD>{1}</color> zusätzlichen Fähigkeitsschaden zu und erhältst {2} Sekunden lang Sicht auf das Ziel. (Abklingzeit: {3}s)
-Item/Skills/6056001/Desc┃Wenn du mit separaten Fähigkeiten an gegnerischen Charakteren Schaden verursachst, die weiter als <color=white>{0}m</color> entfernt sind, fügst du zusätzliche <color=white>{1}</color><color=#DDA0DD>(+{3} % Fäh.verst.)</color><color=green>(+Charakterlevel * {5})</color> Fähigkeitsschaden zu und erhältst {2} Sekunden lang Sicht auf das Ziel. (Abklingzeit: {3}s)
+Item/Skills/6056001/Desc┃Wenn du mit separaten Fähigkeiten an gegnerischen Charakteren Schaden verursachst, die weiter als <color=white>{0}m</color> entfernt sind, fügst du zusätzliche <color=white>{1}</color><color=#DDA0DD>(+{3} % Fäh.verst.)</color><color=green>(+Charakterlevel * {5})</color> Fähigkeitsschaden zu und erhältst {6} Sekunden lang Sicht auf das Ziel. (Abklingzeit: {7}s)
 CharacterState/Group/Name/6056010┃Im Visier
 CharacterState/Group/Desc/6056010┃Du hast durch Im Visier Sicht auf den Gegner gewonnen
 CharacterState/Group/Name/6056020┃Im Visier
@@ -16410,11 +16484,11 @@ Skill/Group/Desc/8300300┃Klick um einen <color=lightblue>Jägertopf</color> zu
 Skill/Group/Name/8300400┃ORB - Fernsteuerung
 Skill/Group/Desc/8300400┃Rufe einen <color=lightblue>ORB – Recon</color> herbei.\nDer Orb patrouilliert {0} Sekunden lang zwischen deinem aktuellen Standort und dem Zielpunkt und gewährt dir {2} m Sichtweite in einem {1}°-Kegel vor dir.
 Skill/Group/Name/8300500┃ORB - Sicherheit
-Skill/Group/Desc/8300500┃Rufe einen <color=lightblue>ORB – Sicherheit</color> herbei.\nDer Orb bewegt sich von deinem aktuellen Standort zum Zielpunkt und gewährt Verbündeten innerhalb von {1} m Immunität gegen den Explosionstimer und {2} Lauftempo.
+Skill/Group/Desc/8300500┃Rufe einen <color=lightblue>ORB – Sicherheit</color> herbei.\nDer Orb bewegt sich von deinem aktuellen Standort zum Zielpunkt und gewährt Verbündeten innerhalb von {1} m Immunität gegen den Explosionstimer.
 Skill/Group/Name/8300700┃ORB - Explosion
-Skill/Group/Desc/8300700┃Rufe einen <color=lightblue>ORB – Explosion</color>.\n{0}s nachdem der Orb von deinem aktuellen Standort zum Zielpunkt gereist ist, zerstört er alle Installationen innerhalb von {1}m und fügt gegnerischen Charakteren Schaden in Höhe von {2} der maximalen HP und wilden Tieren Schaden in Höhe von {3} der maximalen HP zu. Er fügt außerdem Heilungsreduzierug zu.
+Skill/Group/Desc/8300700┃Rufe einen <color=lightblue>ORB – Explosion</color>.\n{0}s nachdem der Orb von deinem aktuellen Standort zum Zielpunkt gereist ist, zerstört er alle Installationen innerhalb von {1}m und fügt gegnerischen Charakteren Schaden in Höhe von {2} der momentanen HP und wilden Tieren Schaden in Höhe von {3} der momentanen HP zu. Er fügt außerdem Heilungsreduzierug zu.
 CharacterState/Group/Name/12000100┃Sicherheitsfeld
-CharacterState/Group/Desc/12000100┃Dein Lauftempo wird erhöht und dein Explosionstimer wird nicht verbraucht.
+CharacterState/Group/Desc/12000100┃Dein Explosionstimer wird nicht verbraucht.
 CharacterState/Group/Name/13000000┃VF-Beschleunigung
 CharacterState/Group/Desc/13000000┃Lauftempo und Sicht erhöht.
 CharacterState/Group/Name/13000100┃VF-Überladung
@@ -17431,7 +17505,7 @@ BattleMission/17005009/1┃Füge gegnerischen Charakteren 14.000+ Schaden zu
 BattleMission/17005010/1┃Hyperloope 20 Mal
 BattleMission/17006001/1┃Terminiere oder schalte Teams 5 mal aus.
 BattleMission/17006002/1┃Töte 3 gegnerische Charaktere in Hotel
-BattleMission/17006003/1┃Benutze den Loop-Kartenschlüssel 1 Mal
+BattleMission/17006003/1┃Benutze den Loop-Kartenschlüssel - y 1 Mal
 BattleMission/17006004/1┃Töte 3 gegnerische Charaktere
 BattleMission/17006005/1┃Sammle Baum des Lebens 5 Mal
 BattleMission/17006006/1┃Benutze den VLS 3 Mal
@@ -18330,6 +18404,7 @@ Item/Name/401402┃Evolutionskristall
 Item/Name/401403┃Machtkristall
 Item/Name/401405┃Blutrote Scherbe
 Item/Name/401406┃Himmelblaue Scherbe
+Item/Name/401407┃Sphäre der Leere
 Item/Name/409401┃Wiederherstellungband
 Item/Name/409402┃Systemabschaltcode
 Item/Name/409403┃Rootkit
@@ -18382,14 +18457,20 @@ Item/Name/503105┃Loop-Kartenschlüssel
 Item/Name/503106┃Loop-Kartenschlüssel - y
 Item/Name/503107┃Loop-Kartenschlüssel - Rot
 Item/Name/503108┃Jägertopf
-Item/Name/504401┃Tonfaversorgungskiste
-Item/Name/504402┃Zweihandschwertversorgungskiste
-Item/Name/504403┃Shurikenversorgungskiste
-Item/Name/504404┃Pistolenversorgungskiste
-Item/Name/504602┃Tragbarer Crafter - Kopf
-Item/Name/504601┃Tragbarer Crafter - Brust
-Item/Name/504603┃Tragbarer Crafter - Arm/Zubehör
-Item/Name/504604┃Tragbarer Crafter - Bein
+Item/Name/504101┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504201┃Aglaias Geschenk - Ungewöhnlich
+Item/Name/504301┃Aglaias Geschenk - Selten
+Item/Name/504401┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504402┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504403┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504404┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504405┃Aglaias Geschenk - Episch
+Item/Name/504501┃Aglaias Geschenk - Legendär
+Item/Name/504602┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504601┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504603┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504604┃Aglaias Geschenk - Gewöhnlich
+Item/Name/504605┃Aglaias Geschenk - Mythisch
 Item/Name/540001┃Haute Couture
 Item/Name/999999┃Takt. Fähigkeitsmodul
 Item/Name/201518┃GPNVG
@@ -19166,16 +19247,22 @@ Item/Effects/502310┃Klicke, um eine <color=hellblau>Akupressur-Matte</color> z
 Item/Effects/503104┃Klicke, um ein <color=lightblue>Mobiles VLS</color> zu rufen, das in {0} Sekunden eintrifft und nach dem Einsatz zerstört wird.\nInteragiere, um in die Luft geworfen zu werden und dich zu bewegen.
 Item/Effects/503105┃Klicke, um einen Loop zu rufen, der dich zum Labor bringt.
 Item/Effects/503106┃Klicke, um einen Loop zu rufen, der dich zum Speziallabor bringt.
-Item/Effects/503107┃Klicke, um einen Loop zu rufen, der dich zum Verlassenen Dock bringt.
+Item/Effects/503107┃Klicke um einen Fluchtloop zu rufen.
 Item/Effects/503108┃Klick um einen <color=lightblue>Jägertopf</color> zu installieren, der für {0} Sekunden bleibt.\nDu kannst bis zu 3 Mal Essen von dem Topf sammeln und in der Nähe konsumierbare Gegenstände vorbereiten, wie bei einem Lagerfeuer.\nInstalliere es in Reichweite eines Lagerfeuer um noch bessere Essensgegenstände zu sammeln.
-Item/Effects/504401┃Klick um für deine ausgewählte Tonfawaffe auszuwechseln.
-Item/Effects/504402┃Klick um für deine ausgewählte Zweihandschwertwaffe auszuwechseln.
-Item/Effects/504403┃Klick um für deine ausgewählte Shurikenwaffe auszuwechseln.
-Item/Effects/504404┃Klick um für deine ausgewählte Pistolenwaffe auszuwechseln.
-Item/Effects/504601┃Klick um für deine ausgewählte mythische Brustrüstung auszuwechseln.
-Item/Effects/504602┃Klick um für deine ausgewählte mythische Kopfrüstung auszuwechseln.
-Item/Effects/504603┃Klick um für deine ausgewählte mythische Arm-/Zubehörrüstung auszuwechseln.
-Item/Effects/504604┃Klick um für deine ausgewählte mythische Beinrüstung auszuwechseln.
+Item/Effects/504101┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504201┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504301┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504401┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504402┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504403┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504404┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504405┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504501┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504601┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504602┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504603┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504604┃Klicke, um dein ausgewähltes Item einzutauschen.
+Item/Effects/504605┃Klicke, um dein ausgewähltes Item einzutauschen.
 Item/Effects/302101┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302102┃stellt AP über 15 Sekunden wieder her.
 Item/Effects/302103┃stellt AP über 15 Sekunden wieder her.
@@ -19337,7 +19424,7 @@ Item/Skills/OnlyCloseCombat┃<color=red>Gilt nicht für Fernkampfwaffen.</color
 Item/Skills/OnlyRangedCombat┃<color=red>Gilt nicht für Nahkampfwaffen.</color>
 EscapeType/EscapeMaterial┃Dieser Gegenstand wird zur Herstellung eines <color=#D05EFF>Rootkits</color> verwendet.\nHol dir einen <color=#C4C4C4>Systemabschaltcode</color> von einem Kiosk und benutze beide Gegenstände, um ein <color=#D05EFF>Rootkit</color> herzustellen.
 EscapeType/EscapeKey┃Dieser Gegenstand wird zur Herstellung eines <color=#D05EFF>Rootkits</color> verwendet.\nHol dir eine <color=#C4C4C4>Regenerationsmanschette</color>, indem du wilde Tiere jagst oder Luftvorräte plünderst, und benutze beide Gegenstände, um ein <color=#D05EFF>Rootkit</color> herzustellen.
-EscapeType/EscapeQualification┃Du brauchst einen <color=#D05EFF>Loop-Kartenschlüssel - Rot</color>, um mit dem Hyperloop zum Verlassenen Dock zu gelangen.\nUm zum Verlassenen Dock zu gelangen, müssen deine Verbündeten für die Flucht stimmen. Sollte die Entscheidung anders ausfallen, ist eine zweite Abstimmung durch Anklicken nach {0} Sekunden möglich.
+EscapeType/EscapeQualification┃Du brauchst einen <color=#D05EFF>Loop-Kartenschlüssel - Rot</color> um zu flüchten. Eine Mehrheit muss bei der Abstimmung die Flucht wählen. Falls die Flucht abgelehnt wird, wird nach {0} eine zweite Wahl gehalten.
 Item/Name/202601┃David: Kampfanzug
 Item/Name/202602┃David: Mythrilrüstung
 Item/Name/202603┃David: Flammenkleid
@@ -19731,7 +19818,7 @@ Trait/Tooltip/7310101┃Deine Angriffskraft oder Fähigkeitsverstärkung erhöht
 Trait/DetailTooltip/7310101┃Deine <color=#FFD775>Angriffskraft</color> oder <color=#DDA0DD>Fähigkeitsverstärkung</color>  erhöht sich um <color=#FFD775>{1}~{2}</color> oder <color=#DDA0DD>{3}~{4}</color> wenn Tag/Nacht einbricht. Dies erhöht sich im Laufe des Spiels.
 Trait/StatTooltip/7310101┃Deine Angriffskraft oder Fähigkeitsverstärkung erhöht sich um <color=white>{1}</color> wenn Tag/Nacht einbricht. Dies erhöht sich im Laufe des Spiels.\n\nErhöht {1}: {0}
 Trait/Name/7310301┃Overwatch
-Trait/Tooltip/7310301┃Deine Abklingszeitverringerung ist erhöht. \nSobald du ein gewisses Level erreichst, wird deine Abklingzeitverringerung zusätzlich erhöht.\nEine gewisse Anzahl an Abklingzeitverringerung zu erreichen gibt dir Werte.
+Trait/Tooltip/7310301┃Deine Abklingszeitverringerung ist erhöht. \nEine gewisse Anzahl an Abklingzeitverringerung zu erreichen gibt dir Werte.
 Trait/DetailTooltip/7310301┃Deine Abklingszeitverringerung ist um <color=white>{1}</color> erhöht. \nSobald du Level <color=white>{8}</color> erreichst, wird deine Abklingzeitverringerung zusätzlich um <color=white>{9}</color> erhöht.\nWenn deine Abklingzeitverringerung <color=white>{2}</color> übertrifft, wird deine <color=#FFD775>Angriffskraft</color> oder <color=#DDA0DD>Fähigkeitsverstärkung</color> um <color=#FFD775>{3}</color> oder <color=#DDA0DD>{4}</color> jeweils erhöht.
 Trait/StatTooltip/7310301┃Deine Abklingszeitverringerung ist um <color=white>{1}</color> erhöht. \nSobald du Level <color=white>{8}</color> erreichst, wird deine Abklingzeitverringerung zusätzlich um <color=white>{9}</color> erhöht.\nWenn deine Abklingzeitverringerung <color=white>{2}</color> übertrifft, wird deine <color=white>{5} um {6} erhöht</color>.\n\nAktuelle Abklingzeitverringerung: {7}
 Trait/Name/7310401┃Durchlöchern
@@ -19788,7 +19875,7 @@ CharacterState/Group/Name/7000730┃Beschleuniger
 CharacterState/Group/Desc/7000730┃Klingt ab
 Trait/Name/7310201┃Zirkulärsystem
 Trait/Tooltip/7310201┃Stelle HP wieder her wenn du Fähigkeiten benutzt.
-Trait/DetailTooltip/7310201┃Stelle HP wieder her gleich <color=white>{3}</color><color=#008000>(+Level*{4})</color>+<color=#688A08>{5} deiner Max HP</color><color=#008000>(+Level*{6})%</color> für {2} Sekunden wenn du Grundfähigkeiten benutzt.\nWird nur einmal pro Sekunde pro Fähigkeit angewendet.\n\nWiederherstellungseffekte von diesem Augment lösen nicht andere Augmente aus.
+Trait/DetailTooltip/7310201┃Regeneriert bei Verwendung von Basisfähigkeiten HP in Höhe von <color=white>{3}</color><color=#008000>(+Level*{4})</color>+<color=#688A08>{5}% max HP</color> für {2} Sekunden.\nWird nur einmal pro Sekunde und pro Fähigkeit angewendet.\n\nDie Heilungseffekte dieses Augments lösen keine anderen Augmentierungen aus.
 Trait/StatTooltip/7310201┃Stelle HP wieder her gleich <color=white>{7}</color> für {2} Sekunden wenn du Grundfähigkeiten benutzt.\nWird nur einmal pro Sekunde pro Fähigkeit angewendet.\n\nWiederherstellungseffekte von diesem Augment lösen nicht andere Augmente aus.\n\nGesamtwiederherstellung: {0} HP
 Trait/Name/7300301┃Siphonmahlstrom
 Trait/Tooltip/7300301┃Den selben Charakter mit Basisangriffen oder seperaten Fähigkeiten zwei Mal anzugreifen erhöht dein Lauftempo. Sobald der Effekt des erhöhten Lauftempo endet, richtest du Fähigkeitsschaden in deinem Umfeld an. Du stellst HP wieder her basierend auf der Anzahl der getroffenen Charaktere.
@@ -19821,11 +19908,21 @@ Trait/StatTooltip/7011301┃Erhöht dein Angriffstempo um <color=white>{13}%</co
 CharacterState/Group/Name/7011310┃Wolfsmaske
 CharacterState/Group/Desc/7011310┃Kämpfe wie ein Wolf und wachse wie einer. Tötest du Eber, gegnerische Testsubjekte oder Bossmonster, erhöht sich deine Max.-LP.
 Trait/Name/7211301┃Krachtus
+Trait/Tooltip/7211301┃Schaden an einen gegnerischen Charakter anzurichten befestigt einen Kaktus an diesen.\nFalls der gegner mit dem Kaktus Schaden von dem Basisangriff oder seperaten Fähigkeit eines Teammitglied nimmt, explodiert der Kaktus und richtet Schaden an.\nNach einer gewissen Zeit explodiert der Kaktus von selbst und richtet reduzierten Schaden an.
+Trait/DetailTooltip/7211301┃Schaden an einen gegnerischen Charakter anzurichten befestigt einen <color=white>Kaktus</color> an diesen für <color=white>{1}Sekunde(n)</color>. (Abklingzeit: {2} s)\nFalls der Gegner mit dem <color=white>Kaktus</color> Schaden von dem Basisangriff oder seperaten Fähigkeit eines Teammitglied nimmt, explodiert der Kaktus und richtet <color=white>{3}~{4}</color><color=#688A08>(+{8}% der Max HP des Gegner)</color> Schaden an.\nNach einer gewissen Zeit explodiert der <color=white>Kaktus</color> von selbst und richtet {5}% reduzierten Schaden an.\n\nSchaden an Wildtieren ist erhöht um {6}% und nur die Hälfte der Abklingzeit wird benutzt.
+Trait/StatTooltip/7211301┃Schaden an einen gegnerischen Charakter anzurichten befestigt einen <color=white>Kaktus</color> an diesen für <color=white>{1}Sekunde(n)</color>. (Abklingzeit: {2} s)\nFalls der Gegner mit dem <color=white>Kaktus</color> Schaden von dem Basisangriff oder seperaten Fähigkeit eines Teammitglied nimmt, explodiert der Kaktus und richtet <color=white>{7}</color><color=#688A08>(+{8}% der Max HP des Gegner)</color> Schaden an.\nNach einer gewissen Zeit explodiert der <color=white>Kaktus</color> von selbst und richtet {5}% reduzierten Schaden an.\n\nSchaden an Wildtieren ist erhöht um {6}% und nur die Hälfte der Abklingzeit wird benutzt.\n\nGesamter angerichteter Schaden: {0}
 CharacterState/Group/Name/7211300┃Krachtus
+CharacterState/Group/Desc/7211300┃Wenn du einem Gegner Schaden anrichtest, wird ein Kaktus an das Ziel angeheftet.
 CharacterState/Group/Name/7211310┃Krachtus
+CharacterState/Group/Desc/7211310┃Klingt ab
 CharacterState/Group/Name/7211320┃Krachtus
+CharacterState/Group/Desc/7211320┃Die Explosion richtet Schaden an.
 Trait/Name/7211401┃Macht der Einschüchterung
+Trait/Tooltip/7211401┃Erhöht den erlittenen Schaden von Gegnern in der Nähe.
+Trait/DetailTooltip/7211401┃Erhöht den erlittenen Schaden von Gegnern in <color=white>{1}m</color> Reichweite um <color=white>{2}%</color>.\nJede Steigerung von Macht der Einschüchterung reduziert den Effekt um {3}%. (Max. Steigerungen: {4})
+Trait/StatTooltip/7211401┃Erhöht den erlittenen Schaden von Gegnern in <color=white>{1}m</color> Reichweite um <color=white>{2}%</color>.\nJede Steigerung von Macht der Einschüchterung reduziert den Effekt um {3}%. (Max. Steigerungen: {4})\n\nGesamter angerichteter Schaden: {0}
 CharacterState/Group/Name/7211420┃Macht der Einschüchterung
+CharacterState/Group/Desc/7211420┃Erhöht den erlittenen Schaden von Gegnern in der Nähe.
 로딩팁 튜토리얼1┃Ein Gegenstand, welcher oben links mit einem gelben Dreieck versehen ist, gehört zu deinem ausgewählten Bauplan.\nSammel immer zuerst die Gegenstände deines Bauplans ein!
 로딩팁 튜토리얼2┃Gesuchte Gegenstände, die du in deinem derzeitigen Gebiet finden kannst, werden über der Minikarte angezeigt.
 로딩팁 튜토리얼3┃Verbessere immer zuerst deine Waffe!\n Eine voll ausgebaute Waffe entscheidet früh im Spiel oft den Unterschied zwischen töten und getötet werden.
@@ -20508,6 +20605,12 @@ CharacterStoryHeight/81┃148 cm
 CharacterStoryGender/81┃Weiblich
 CharacterStoryTitle/81┃Willst du ne Runde spielen?
 CharacterStoryDesc/81┃Ein Mädchen, das Spiele über alles liebt.\nUnter dem Nickname „NiaH“ hat sie eine große Auswahl an Spielen ausprobiert.\nNormalerweise ist sie ruhig und selbst zu faul, sich regelmäßig etwas zu Essen zu machen, aber wenn es um Spiele geht, ist sie sehr entschlossen.\n\nFür sie waren Spiele nicht nur ein Hobby.\nSie waren eine Welt, in der sie wirklich mit anderen in Kontakt treten konnte - etwas Kostbares und Unersetzliches.\n\nDoch als sie einen der wertvollsten Freunde, die sie in dieser Welt kennengelernt hatte, verlor, zerbrach ihr Herz.\nUnfähig, die Wahrheit zu akzeptieren, wandte sie sich ab - und flüchtete in eine andere Welt, die nur mit Freude und nicht mit Schmerz gefüllt war.\n\nNiaH wird weiter spielen.\nIn ihrer eigenen Welt ... und darauf warten, dass jemand sie findet.
+CharacterStoryName/82┃Liu Xuelin
+CharacterStoryAge/82┃22 Jahre alt
+CharacterStoryHeight/82┃168cm
+CharacterStoryGender/82┃Weiblich
+CharacterStoryTitle/82┃Mit diesem Schwert werde ich den Pfad ebnen.
+CharacterStoryDesc/82┃Eine junge Frau die ihre Schwerter psychisch kontrolliert.\n\nSie versucht immer, Gelassenheit auszustrahlen, aber in ihrem Inneren ist sie ein gutherziges, tollpatschiges Mädchen, dem man einfach nicht nein sagen kann.\n\nSie kommt als Einzelkind aus einem fernem Dorf in den Bergen. Ihre Familie hat schon seit jeher ein heiliges Schwert beschützt.\n\nSchon seit Kindesalter hat sie dieses Schwert begeleitet. Sie spürt ihre Ahnen und die Geschichte des Dorfes wann immer sie in der Nähe dieses Schwertes ist. Jeden tag schleift, pflegt und sitzt sie damit und reflektiert ihre Vergangenheit.\n\nEines Tages ging der Schrein, in dem das Schwert ruhte, in Flammen auf. Ihr Vater und viele ihrer Dorfgenossen waren darin eingesperrt. Und ohne zu zögern stürmte sie in das Gebäude hinein.\n\nWer oder was das Feuer gelegt hat, war ihr in dem Moment egal. Sie wusste allein, dass sie all diese Menschen und das Schwert, alles was ihr am Herzen lag, nicht verlieren wollte.\n\nJust in dem Moment, erkannte das Schwert die Wahrhaftigkeit ihrer Gefühle an. Es entsandte eine starke Kraftwelle, und hüllte sie in Stärke ein. Mit dem Schwert und ihrer neuen Macht, konnte Xuelin alle von dem Feuer retten.\n\nSo beschloss sie am nächsten Tag, ihr Dorf zu verlassen.\n\nNicht nur als Behüter oder Pfleger des Schwertes, aber als die Auserwählte dieser Klinge. Um zu schützen, was ihr lieb ist.\n
 CharacterPlayTip/1┃Jackie ist eine Serienmörderin, die ihre Opfer unerbittlich verfolgt und massakriert. Mit jedem Mord wird sie stärker und stärker.
 CharacterPlayTip/2┃Aya ist eine Fernkämpferin mit hoher Stabilität, die ihre Gegner mit Fähigkeiten auch leicht aus großer Entfernung treffen kann.
 CharacterPlayTip/3┃Fiora nutzt ihre Beweglichkeit als Fechterin, um die Distanz zu ihren Gegnern zu kontrollieren und mit jedem weiteren Treffer zusätzlichen Schaden zu verursachen.
@@ -20588,6 +20691,7 @@ CharacterPlayTip/78┃Hisui, ein Mitglied der Nichirinkai, ist auf der Jagd nach
 CharacterPlayTip/79┃Justyna ist ein lebhaftes Mädchen, das davon träumt, eine Heldin der Gerechtigkeit zu werden. Mit unerbittlicher Präzision führt sie kontinuierliche Angriffe aus und entfesselt mächtige Energiestöße, die ganze gegnerische Gebiete vernichten können.
 CharacterPlayTip/80┃Istvan schaltet eine alternative Version von sich selbst frei, die andere Resultate als seine üblichen Aktionen hervorbringt. In jedem Kampf erforscht er ständig verschiedene Möglichkeiten und führt immer wieder Experimente durch, um bessere Ergebnisse zu erzielen.
 CharacterPlayTip/81┃NiaH liebt Videospiele. Sie steuert die Realität wie ein Videospiel und bekämpft ihre Feinde, indem sie deren Bewegung einschränkt und sich in atemberaubende Kämpfe verwickelt.
+CharacterPlayTip/82┃Xuelin ist eine bescheidene junge Frau vom Land, die ihre Schwerter psychisch kontrollieren kann. Sie bekämpft ihre Gegner indem sie mystische Schwerter nach ihnen wirft. Mit diesen schützt sie sich auch. Wenn die Zeit reif ist, stürmt sie ins Getümmel und ändert den Ausgang der Schlacht.
 MasteryType/Glove/Desc┃Handschuhe haben eine kurze Reichweite, aber sie können rapide zuschlagen.
 MasteryType/Tonfa/Desc┃Tonfas sind die einizgen Kampfwaffen, die auch deine Verteidigung verstärken.
 MasteryType/Hammer/Desc┃Hammer haben sehr niedriges Angriffstempo, aber sie richten mit ihren heftigen Schlägen enormen Schaden an.
@@ -21252,7 +21356,7 @@ gameTip_Desc_10625_1┃Es gibt verschiedene Arten von Geheimlaboren mit untersch
 gameTip_Title_10801_1┃Einführung in Dimensionsrisse
 gameTip_Desc_10801_1┃Der Riss ist ein Phänomen, das durch abnormale VF-Energie verursacht wird. Es handelt sich um ein Portal, das Testpersonen in der Nähe in einen anderen Raum teleportiert. Die Art des Risses variiert je nach Zeitpunkt des Auftretens und der Anzahl der verbleibenden Teams.
 gameTip_Title_10802_1┃Dimensionsriss
-gameTip_Desc_10802_1┃Dieser Riss entsteht tagsüber. Er teleportiert alle Testobjekte, die ihn betreten, in das Kampflabor. Ein Dimensionsriss kann nur von einem Team genutzt werden.
+gameTip_Desc_10802_1┃Dieser Riss entsteht vor allem tagsüber. Er teleportiert alle Testobjekte, die ihn betreten, in das Kampflabor. Ein Dimensionsriss kann nur von einem Team genutzt werden.
 gameTip_Title_10802_2┃Kampflabor
 gameTip_Desc_10802_2┃Testobjekte, die den Dimensionsriss betreten, werden in das Kampflabor teleportiert, wo alle getöteten Verbündeten wiederbelebt werden. Nur zwei Teams können den Dimensionsriss betreten, und das Team, das den Sieg errungen hat, erhält eine mächtige Belohnung. Teams, die in einem Kampflabor, das über einen regulären Dimensionsriss zugänglich ist, ausgelöscht wurden, werden wiederbelebt. Teams, die in einem Kampflabor, das über einen verstärkten Dimensionsriss (verfügbar ab Tag 3) betreten wurde, ausgelöscht wurden, werden jedoch aus dem Experiment eliminiert.
 gameTip_Title_10802_3┃Dimensionsriss - Verstärkt
@@ -21322,8 +21426,8 @@ OperatorSetting/PaidResurrectionTarget┃Lerne, wie man Verbündete für Credits
 OperatorSetting/AutoReplaceLateGameItems┃Benachrichtigt dich dass die anvisierten Items geändert wurden.
 루미아 섬 안내 로봇┃Guide-Roboter: Lumi - Volle Credits
 OperatorSetting/GuidedRobotBattleModeNotice┃Finde heraus, wenn der Guide-Roboter Lumi voll mit Credits aufgeladen ist.
-임시, 최종 안전지대 안내┃Temporäre Sicherheitszone Guide
-OperatorSetting/TemporarySafeZoneNotice┃Lerne über die Phasen der Temporären Sicherheitszonen.
+임시, 최종 안전지대 안내┃Temporäre, Finale Sicherheitszone Guide
+OperatorSetting/TemporarySafeZoneNotice┃Erfahre mehr über die Phasen der Temporären und Finalen Sicherheitszone
 빈사 스킬┃Downed-Fähigkeiten
 OperatorSetting/DyingConditionGuide┃Lerne über die Spezialfähigkeiten, während du am Boden bist.
 비밀 연구실┃Geheimnisvolles Labor
@@ -21692,6 +21796,7 @@ Tutorial/나쟈/Dialogue/13┃Drückee Schnellstart, wenn du bereit bist, am nä
 Tutorial/나쟈/Dialogue/14┃Wenn du dir immer noch nicht sicher bist, was was ist, solltest du vielleicht mehr Trainings absolvieren.
 Tutorial/나쟈/Dialogue/15┃Das war's für jetzt.\nIch bin sicher, du bist es leid, mich reden zu hören.\nViel Spaß, {0}! Ich werde im Forschungszentrum auf dich warten.
 Tutorial/나쟈/Dialogue/16┃Bist du mit dem Training fertig? Spitze! Bevor du in das Experiment springst, nimm dir einen Augenblick um den Guide zu überprüfen. Es hat ein praktisches Video, dass die Dinge durchgeht die du Wissen musst!
+Tutorial/나쟈/Dialogue/17┃Das sollte als Training ausreichen. Jetzt ist es an der Zeit, dass du dich dem Experiment anschließt und echte Erfahrungen sammelst.
 스킵┃Überspringen
 Tutorial/Announce/핵심1번/00┃Diese Tasten wirst du am öftesten benutzen. Klicke auf den Knopf rechts, wenn du bereit bist.
 Tutorial/Announce/핵심1번/01┃Benutze Rechtsklick, um dich zu bewegen.
@@ -21969,7 +22074,7 @@ GuideBook/Page/Content/TemporarySafeZone/1┃<color=yellow>Temporäre Sicherheit
 GuideBook/Page/Content/TemporarySafeZone/2┃Nur <color=yellow>ein Team</color> kann in jeder temporären sicheren Zone überleben.\nWähle das <color=white>günstigste Schlachtfeld</color> für dein Team und bewege dich entsprechend dorthin.
 GuideBook/Page/Content/TemporarySafeZone/3┃Alle <color=yellow>ausgeschiedenen oder gedownte Teammates</color> des Teams, das die temporäre Sicherheitszone überlebt, werden wiederbelebt.
 GuideBook/SubTheme/Title/LastSafeZone┃Finale Sicherheitszone
-GuideBook/Page/Content/LastSafeZone/1┃Es bleibt nur noch der <color=yellow>finale Kampf</color>, um den endgültigen Sieger zu ermitteln.\nDie <color=yellow>finale Sicherheitszone</color> wird in dem Gebiet ausgewiesen, der die beiden temporären Sicherheitszonen verbindet.\nBeeilt euch zur finalen Sicherheitszone, bevor das andere Team eintrifft.
+GuideBook/Page/Content/LastSafeZone/1┃Es bleibt nur noch der <color=yellow>finale Kampf</color>, um den endgültigen Sieger zu ermitteln.\nDie <color=yellow>Chronosphäre</color> befindet sich in der <color=yellow>finalen Sicherheitszone</color> im Gebiet welches die beiden tempörären Sicherheitszonen verbindet.\nBeeile dich in die <color=yellow>finalen Sicherheitszone</color> die sich um die Chronosphäre formt!
 GuideBook/Page/Content/LastSafeZone/2┃Sichere dir den Sieg, Ruhm und Ehre!\n<color=white>Ruhm den Bauern, die das Ende der Verzweiflung erreicht haben!</color>
 Trait/Name/7900101┃Stärke I
 Trait/Name/7900102┃Stärke II
@@ -22201,7 +22306,7 @@ Trait/StatTooltip/7923703┃Wenn du einen gegnerischer Charakter mit einem Basis
 Trait/StatTooltip/7923401┃Zieht alle gegnerischen Charaktere im Umkreis von <color=white>{0}</color>m zu sich, betäubt sie für {1} Sekunden und verursacht <color=white>{2}</color> wahren Schaden. \n(Abklingzeit: {3}s)\n\nPro Team: 1
 Trait/StatTooltip/7923411┃{0} Sekunden nach Aktivierung, erhöhe dein Lauftempo stetig um {2}% für {1} Sekunden.\nMit einem Gegner zu kollidieren stößt diese zurück und richtet {3} Fähigkeitsschaden an.\n(Cooldown: {4}s)\n\nPro Team: 1
 Trait/StatTooltip/7923421┃Erzeugt einen Riss nach vorne, der {1} + <color=#688A08> {2}% der aktuellen HP des Gegners</color> Schaden zufügt, ihn für {3} Sekunden betäubt und anschließend nach {0} Sekunden für {5} Sekunden um {6}% verlangsamt.\n\n(Abklingzeit: {4}s)\n\nPro Team: 1
-Trait/StatTooltip/7923302┃Deine Abklingszeitverringerung ist um <color=white>{1}%</color> erhöht.\nWenn du mehr als die maximale Abklingzeitverringerung erreicht hast, gewährt dir jede {3}% zusätzliche Abklingszeitverringerung <color=white>{2}</color> {4}. (Max: 5%)\n\nErhöhte {4}: {0}
+Trait/StatTooltip/7923302┃Deine Abklingszeitverringerung ist um <color=white>{1}</color> erhöht.\nWenn du über <color=white>{2}</color> besitzt, erhöht sich deine <color=white>{5} um {6}</color>.\n\nAktuelle Abklingzeitsverringerung: {7}
 Trait/StatTooltip/7923502┃Wenn du deine ultimative Fähigkeit einsetzt, erhältst du einen <color=#008000>(Level*{2})</color> Schild für {1} Sekunden. (Abklingzeit: {3}s)
 Trait/StatTooltip/7923602┃Deine Verteidigung erhöht sich basierend auf deinen verlorenen HP. Sie kann um bis zu <color=white>{1}%</color> ansteigen, wenn deine HP unter {2}% fallen.
 CharacterState/Group/Name/7900100┃Stärke
@@ -22341,7 +22446,7 @@ CharacterState/Group/Desc/7921710┃Normaler Angriff verstärkt.
 CharacterState/Group/Name/7921720┃Spezialeinheit
 CharacterState/Group/Desc/7921720┃Lauftempo verringert.
 CharacterState/Group/Name/7921900┃Walkürenritt
-CharacterState/Group/Desc/7921900┃Wenn du unter einer gewissen Grenze von LP bist und Schaden von einem Testobjekt nimmst, aktiviert sich [Walkürenritt: Schutz].\n\n[Walkürenritt: Schutz] \nTeleportiere dich sofort an einen zufälligen Ort außerhalb des Kampfes. Erhalte danach für 3 Sekunden einen Schild und erhöhtes Lauftempo.
+CharacterState/Group/Desc/7921900┃Wenn du unter einer gewissen Menge von HP bist und Schaden von einem Testobjekt nimmst, aktiviert sich [Walkürenritt: Schutz].\n\n[Walkürenritt: Schutz] \nTeleportiere dich sofort an einen zufälligen Ort außerhalb des Kampfes. Erhalte danach für gewisse Zeit ein Schild und erhöhtes Lauftempo.
 CharacterState/Group/Name/7921930┃Walkürenritt
 CharacterState/Group/Desc/7921930┃Durch den Walkürenritt beschützt
 CharacterState/Group/Name/7921910┃Walkürenritt
@@ -22573,8 +22678,8 @@ Infusion/Trait/Desc/7921102┃Das Verwenden deiner Ultimate (R) reduziert die Ab
 Infusion/Trait/Desc/7921103┃Das Verwenden deiner Ultimate (R) reduziert die Abklingzeit deiner normalen Fertigkeiten um {0}%.\n(Infusionsabklingzeit: {1}s)\nDas Verwenden einer normalen Fertigkeit reduziert die Abklingzeit dieser Infusion um {2} Sekunden.
 Infusion/Trait/Desc/7921203┃Werde für {0} Sekunden unaufhaltsam und erhalte {2}% zusätzliches Lauftempo, nachdem du deine Ultimate (R) benutzt. (Abklingzeit: {1}s)
 Infusion/Trait/Desc/7921301┃Für jedes Energiesignal unter verbündeter Kontrolle erhöht sich der Effekt jedes Energiesignals um {0}%.\n
-Infusion/Trait/Desc/7921302┃Rüstungsdurchdringung und LP um jeweils {4} und {5} erhöht.
-Infusion/Trait/Desc/7921303┃Rüstungsdurchdringung und LP um jeweils {4} und {5} erhöht.
+Infusion/Trait/Desc/7921302┃Rüstungsdurchdringung und Max HP um jeweils {4} und {5} erhöht.
+Infusion/Trait/Desc/7921303┃Rüstungsdurchdringung und Max HP um jeweils {4} und {5} erhöht.
 Infusion/Trait/Desc/7921401┃Je {0} Credits in deinem Besitz fügst du {1}% Bonusschaden an gegnerischen Testobjekten und ihren beschworenen Einheiten zu. (Bis zu {2} Steigerungen)
 Infusion/Trait/Desc/7921402┃Je {0} Credits in deinem Besitz fügst du {1}% Bonusschaden an gegnerischen Testobjekten und ihren beschworenen Einheiten zu. (Bis zu {2} Steigerungen)
 Infusion/Trait/Desc/7921403┃Je {0} Credits in deinem Besitz fügst du {1}% Bonusschaden an gegnerischen Testobjekten und ihren beschworenen Einheiten zu. (Bis zu {2} Steigerungen)
@@ -22586,8 +22691,8 @@ Infusion/Trait/Desc/7921701┃Dein nächster normaler Angriff innerhalb von {0} 
 Infusion/Trait/Desc/7921702┃Dein nächster normaler Angriff innerhalb von {0} nachdem du eine Beschleunigungslinie passierst, richtet {1} zusätzlichen absoluten Schaden an, und verlangsamt das Ziel.
 Infusion/Trait/Desc/7921703┃Dein nächster normaler Angriff innerhalb von {0} nachdem du eine Beschleunigungslinie passierst, richtet {1} zusätzlichen absoluten Schaden an, und verlangsamt das Ziel.
 Infusion/Trait/Desc/7921802┃Erhalte eine zufällige Infusion.
-Infusion/Trait/Desc/7921903┃Wenn du unter einer gewissen Grenze von LP bist und Schaden von einem Testobjekt nimmstwirst du sofort an einen zufälligen Ort außerhalb des Kampfes teleportiert. Erhalte danach für {1} Sekunden einen Schild und erhöhtes Lauftempo.\n(Abklingzeit {0}s)\n\nNur 1x pro Team
-Infusion/Trait/Desc/7922003┃Erhalte eine Barriere, die dich gegen Fähigkeiteneffekte und Schaden von Gegnern immun macht. (Abklingzeit: {0}s).\nWenn ein gegnerisches Testobjekt die Barriere durchbricht, konterst du mit einem Zielsuchraketenangriff. 
+Infusion/Trait/Desc/7921903┃Wenn du unter {2}% HP bist und Schaden von einem Testobjekt nimmst, aktiviert sich [Walkürenritt: Schutz]. (Abklingzeit: {0}s)\n\n[Walkürenritt: Schutz] \nTeleportiere dich sofort an einen zufälligen Ort außerhalb des Kampfes. Erhalte danach ein 1200 Schild für {1} Sekunden und {4}% Lauftempo.\n\nPro Team: 1
+Infusion/Trait/Desc/7922003┃Aktiviert die A.M.D.S Barriere, die dich gegen alle Fähigkeitseffekte und angerichteten Schaden von Gegnern für kurze Zeit immun macht. (Abklingzeit: {0}s)\nWenn die Barriere von einem gegnerischen Testsubjekt gebrochen wird, schieße eine verfolgendes Geschoss ab das {2}(+{3}% der aktuellen HP des Ziel) absoluten Schaden an allen Gegnern in {1}m Reichweite vom Ziel.
 Infusion/Trait/Desc/7922102┃Normale Angriffe setzen eine Schockwelle frei, die Fähigkeitensschaden basierend auf deiner Angriffskraft und Fähigkeitsverstärkung an Gegnern in Reichweite zufügt.
 Infusion/Trait/Desc/7922201┃Hinterlasse eine Narbe, wenn du ein gegnerisches Testobjekt mit einem normalen Angriff triffst. Deine normalen Angriffe verursachen zusätzlichen absoluten Schaden für jede Narbensteigerung beim Gegner. (Maximal {2} Steigerungen)
 Infusion/Trait/Desc/7922202┃Hinterlasse eine Narbe, wenn du ein gegnerisches Testobjekt mit einem normalen Angriff triffst. Deine normalen Angriffe verursachen zusätzlichen absoluten Schaden für jede Narbensteigerung beim Gegner. (Maximal {2} Steigerungen)
@@ -22607,11 +22712,11 @@ Infusion/Trait/Desc/7923203┃Kritische Treffer erfolgen auch durch deinen Fähi
 Infusion/Trait/Desc/7923903┃Einen gegnerischen Charakter mit einer Fähigkeit zu treffen feuert einen Laser auf das Ziel nach {0} Sekunden, welcher {1} + ({2}% Fähigkeitsverstärkung) Fähigkeitsschaden anrichtet. (Cooldown: {3}s)
 Infusion/Trait/Desc/7923803┃Einen gegnerischen Charakter mit einer Fähigkeit zu treffen reduziert die Verteidigung des Ziels um {1} für {0} Sekunden.\nAußerdem richtet es {2} + ({3}% Fähigkeitsverstärkung) Fähigkeitsschaden an, nachdem der Debuff endet.\n(Cooldown: {4}s)
 Infusion/Trait/Desc/7923703┃Einen gegnerischen Charakter mit einem Basisangriff zu treffen richtet {0} + ({1}% Angriffskraft) Fähigkeitsschaden an und erhöht die Rüstungsdurchdringung um {3} für {2} Sekunden.\n(Cooldown: {4}s)
-Infusion/Trait/Desc/7923401┃Neue Taktische Fähigkeit.\n\nZiehe alle gegnerischen Charaktere innerhalb <color=white>{0}</color>m zu dir, betäube sie für {1} Sekunden und richte <color=white>{2}</color> absoluten Schaden an.\n(Cooldown: {3}s)
-Infusion/Trait/Desc/7923411┃Neue Taktische Fähigkeit.\n\nVerstärke dich {0} Sekunden nach Aktivierung mit [Rollender Donner].\n\n[Rollender Donner]\nAngetrieben von einer Welle aus Donner erhöht sich dein Lauftempo allmählich um {2}% für {1} Sekunden. Mit einem Gegner zusammenzustoßen wirft diesen zurück und richtet {3} Fähigkeitsschaden an.\n(Cooldown: {4}s)
-Infusion/Trait/Desc/7923421┃Neue Taktische Fähigkeit.\n\nErzeuge einen Riss nach vorne, richte {1} + <color=#688A08>{2}% der aktuellen HP der Gegner</color> Schaden an, betäube sie für {3} Sekunden und verlangsame sie um {6}% für {5} Sekunden nach {0} Sekunden.\n\n(Cooldown: {4}s)
-Infusion/Trait/Desc/7923302┃Deine Abklingszeitverringerung ist um <color=white>{1}%</color> erhöht.\nWenn du mehr als die maximale Abklingzeitverringerung erreicht hast, gewährt dir jede {3}% zusätzliche Abklingszeitverringerung <color=#FFD775>{2} Angrffskraft</color> oder <color=#FFD775>{4} Fähigkeitsverstärkung</color>. (Max: 10%)
-Infusion/Trait/Desc/7923502┃Beim Benutzen deiner ultimativen Fähigkeit erhältst du ein Schild in Höhe von <color=#008000>(Level*{2})</color>.\n(Abklingzeit: {3}s)
+Infusion/Trait/Desc/7923401┃Wechsle Taktische Fähigkeiten.\n\nZiehe alle gegnerischen Charaktere innerhalb <color=white>{0}</color>m zu dir, betäube sie für {1} Sekunden und richte <color=white>{2}</color> absoluten Schaden an.\n(Cooldown: {3}s)\n\nPro Team: 1
+Infusion/Trait/Desc/7923411┃Wechsle Taktische Fähigkeiten.\n\n{0} Sekunden nach Aktivierung erhöht sich dein Lauftempo allmählich um {2}% für {1} Sekunden. Mit einem Gegner zu kollidieren stößt sie zurück und richtet {3} Fähigkeitsschaden an.\n(Abklingzeit: {4}s)\n\nPro Team: 1
+Infusion/Trait/Desc/7923421┃Wechsle Taktische Fähigkeiten.\n\nErzeuge einen Riss nach vorne, richte {1} + <color=#688A08>{2}% der aktuellen HP der Gegner</color> Schaden an, betäube sie für {3} Sekunden und verlangsame sie um {6}% für {5} Sekunden nach {0} Sekunden.\n(Cooldown: {4}s)\n\nPro Team: 1
+Infusion/Trait/Desc/7923302┃Deine Abklingzeitverringerung wird um <color=white>{1}</color> erhöht. \nWährend deine Abklingzeitverringerung über <color=white>{2}</color> liegt, erhöht sich deine <color=#FFD775>Angriffskraft</color> bzw. deine <color=#DDA0DD>Fähigkeitsverstärkung</color> um <color=#FFD775>{3}</color> bzw. <color=#DDA0DD>{4}</color>.
+Infusion/Trait/Desc/7923502┃Beim Benutzen deiner ultimativen Fähigkeit erhältst du einen Schild in Höhe von <color=#008000>(Charakter-Level*{2})</color>.\n(Abklingzeit: {3}s)
 Infusion/Trait/Desc/7923602┃Deine Verteidigung erhöht sich basierend auf deinen verlorenen HP. Sie kann um bis zu <color=white>{1}%</color> ansteigen, wenn deine HP unter {2}% fallen.
 Infusion/Special/Desc/9000001┃Erhalte eine zufällige Infusion.
 CastingActionType/TakeOverTurbine┃Erobere Energiesignal
@@ -22732,7 +22837,7 @@ Trait/Tooltip/7921903┃Wenn du unter einer gewissen Grenze von LP bist und Scha
 Trait/Tooltip/7922803┃Deine nächste Fertigkeit oder normaler Angriff richtet eine Menge absoluten Schaden an.
 Trait/Tooltip/7922903┃Deine Fußstapfen hinterlassen schädliches Gift.
 Trait/Tooltip/7923103┃Dein nächster normaler Angriff wird doppelt Schaden hinzufügen
-Trait/Tooltip/7923302┃Deine Abklingszeitverringerung ist erhöht. Wenn du mehr als die maximale Abklingzeitverringerung erreicht hast, erhältst du zusätzliche Abklingszeitverringerung Angriffskraft oder Fähigkeitsverstärkung.
+Trait/Tooltip/7923302┃Deine Abklingszeitverringerung ist erhöht. Wenn du eine bestimmte Menge Abklingzeitverringerung erreichst, erhältst du Bonuswerte.
 Trait/Tooltip/7923401┃Ziehe alle gegnerischen Testsubjekte innerhalb der Reichweite zu dir, betäube sie und richte absoluten Schaden an.
 Trait/Tooltip/7923411┃Dein Lauftempo erhöht sich schrittweise für einen Zeitraum, richte Fähigkeitsschaden an den ersten Gegner an mit dem du in Kontakt kommst und wirf diesen zurück.
 Trait/Tooltip/7923421┃Erzeuge einen Riss nach vorne, richte absoluten Schaden an basierend auf den aktuellen HP des Gegners, betäube und verlangsame sie.
