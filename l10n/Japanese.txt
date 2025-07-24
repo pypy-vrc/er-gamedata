@@ -80,6 +80,7 @@ Character/Name/78┃ヒスイ
 Character/Name/79┃ユスティナ
 Character/Name/80┃イシュトヴァーン
 Character/Name/81┃ニア
+Character/Name/82┃シュリン
 Character/Name/9999┃ナジャ
 GameResult/Character/Name/1┃Jackie
 GameResult/Character/Name/2┃Jackie
@@ -162,6 +163,7 @@ GameResult/Character/Name/78┃Hisui
 GameResult/Character/Name/79┃Justyna
 GameResult/Character/Name/80┃Istvan
 GameResult/Character/Name/81┃NiaH
+GameResult/Character/Name/82┃Xuelin
 Monster/Name/1┃ニワトリ
 Monster/Name/2┃コウモリ
 Monster/Name/3┃イノシシ
@@ -1133,6 +1135,13 @@ ToolTipType/WallDamage┃壁衝突ダメージ
 ToolTipType/WallDamageApCoef┃壁衝突ダメージの攻撃力係数(%)
 ToolTipType/WallDamageAmpCoef┃壁衝突ダメージのスキル増幅係数(%)
 ToolTipType/MaxBullet┃最大装填数
+ToolTipType/XuelinActive1_1Damage┃飛剣持続ダメージ量
+ToolTipType/XuelinActive1_2Damage┃回収持続ダメージ量
+ToolTipType/XuelinActive3Damage┃飛剣ダメージ量
+ToolTipType/XuelinActive3DamageApCoef┃飛剣ダメージ量の攻撃力係数
+ToolTipType/XuelinActive4ReinforceSwordDamage┃強化飛剣ダメージ量
+ToolTipType/XuelinActive4ReinforceSwordDamageApCoef┃強化飛剣ダメージ量の攻撃力係数
+ToolTipType/XuelinActive4ReturnDamage┃回収ダメージ量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+余った弾1 * スキル増幅の{0}%)</color>
 DayNight/Day┃昼
 DayNight/Night┃夜
@@ -1331,6 +1340,7 @@ GameResult/Tag/MatchingMode/Tutorial2_Re┃訓練
 GameResult/Tag/MatchingMode/Tutorial3_Re┃訓練
 GameResult/Tag/MatchingTeamMode/Squad┃スクワッド
 GameResult/Tag/MatchingTeamMode/Cobalt┃コバルト
+GameResult/Tag/MatchingTeamMode/Duo┃デュオ
 GameResult/Tag/MatchingMode/SquadRumble┃ユニオン対戦
 Loading/MatchingMode/Normal┃NORMAL GAME
 Loading/MatchingMode/Cobalt┃COBALT
@@ -1350,6 +1360,7 @@ Loading/MatchingTeamMode/Squad┃ルミア島
 Loading/MatchingTeamMode/Cobalt┃コバルト・プロトコル
 Loading/MatchingTeamMode/LoneWolf┃ルミア島
 Loading/MatchingTeamMode/LoneWolfCustom┃ルミア島
+GameModeType/Name/NORMAL┃スクワッド
 ItemType/SKIN/Name┃スキン
 Skin/Name/1001000┃ジャッキー
 Skin/Name/1001001┃処刑者ジャッキー
@@ -1696,6 +1707,7 @@ Skin/Name/1079000┃ユスティナ
 Skin/Name/1079001┃風紀委員長ユスティナ
 Skin/Name/1080000┃イシュトヴァーン
 Skin/Name/1081000┃ニア
+Skin/Name/1082000┃シュリン
 Skin/OnSelectVO/1001003┃システムは壊す時がいつもしびれるよね、でしょ？
 Skin/OnSelectVO/1002002┃バンバーン！花火の始まりですよ！
 Skin/OnSelectVO/1007005┃んじゃ、やってみるか。
@@ -1821,7 +1833,7 @@ Skin/Desc/1036002┃誰かの平凡な人生を守れるなら、これでいい
 Skin/Desc/1028003┃今日は海が聞かせてくれる物語に耳を傾けてみましょう。
 Skin/Desc/1029002┃トレーニングするには悪くない環境だな。
 Skin/Desc/1031004┃太陽を見えないんだけど… どいてくれる？
-Skin/Desc/1033002┃走り回ればいい？簡単な台本でもくれよ！
+Skin/Desc/1033002┃ふう～、今日は暑いし、ちょっとやすんでから行くか。
 Skin/Desc/1048001┃筆と一緒なら...どこでも...私のキャンバスだよね？
 Skin/Desc/1049001┃Ready, Check, Good! ルミアランドで楽しい時間をお過ごしくださいませ！
 Skin/Desc/1051001┃ずっと咲き続ける花のように、私の歌は止まりません。
@@ -3071,6 +3083,13 @@ Emotion_Luke06_NP┃僕はいいですよ？ ルク
 Emotion_Luke07_NP┃了解です ルク
 Emotion_Luke08_NP┃いいえ ルク
 Emotion_Union_Estelle_2055009┃安全教官エステル 私が本当に...
+Emotion_Xuelin01_NP┃了解です！ シュリン
+Emotion_Xuelin02_NP┃失礼しました... シュリン
+Emotion_Xuelin03_NP┃負けを認めます... シュリン
+Emotion_Xuelin04_NP┃ダメです！ シュリン
+Emotion_SNS_Xuelin_2082005┃ふむ... シュリン
+Event_2ndAnniversary_3135┃Whippy ビアンカ ハート
+Emotion_2nd_Anniv_Nadja_2000014┃2周年記念ナジャ おめでとう
 Emotion_2nd_Anniv_Eva_2036009┃2周年記念エヴァ 指ハート
 Emotion_2nd_Anniv_Elena_2050011┃2周年記念エレナ 投げキス
 Collection/Name/11001┃すべては娘のため…
@@ -3150,6 +3169,10 @@ Collection/Name/24029/1┃5月の確率UPスキンコレクションⅠ
 Collection/Name/24029/2┃5月の確率UPスキンコレクションⅡ
 Collection/Name/24030┃金のサイコロ交換
 Collection/Name/24031┃サイコロの目選択券交換
+Collection/Name/24032/1┃2周年サマーコレクションⅠ
+Collection/Name/24032/2┃2周年サマーコレクションⅡ
+Collection/Name/24033/1┃2周年スペシャルサマーコレクションⅠ
+Collection/Name/24033/2┃2周年スペシャルサマーコレクションⅡ
 SeasonCollection/Name/30001/1┃スプラッシュ！ -  第1段階
 SeasonCollection/Name/30001/2┃スプラッシュ！ -  第2段階
 SeasonCollection/Name/30001/3┃スプラッシュ！ -  第3段階
@@ -3906,6 +3929,8 @@ EMBLEM_MARK_EVENT_103206┃SEASON 6 CHAMPION DANANA アイコン
 EMBLEM_MARK_EVENT_103207┃SEASON 6 CHAMPION ROMATIC アイコン
 EMBLEM_MARK_EVENT_103208┃清涼一閃つばめ 待て！ アイコン
 EMBLEM_MARK_EVENT_103209┃海辺の人形師クロエ Hi アイコン
+EMBLEM_MARK_EVENT_103210┃2周年おめでとう ナジャ アイコン
+EMBLEM_MARK_EVENT_103211┃ふむ... シュリン アイコン
 EMBLEM_MARK_EVENT_103216┃2周年記念エヴァ 指ハート アイコン
 EMBLEM_MARK_EVENT_103217┃2周年記念エレナ 投げキス アイコン
 EMBLEM_MARK_ERPASS_104001┃氷の結晶アイコン
@@ -4379,6 +4404,7 @@ EMBLEM_BG_EVENT_203005┃ナジャ背景
 EMBLEM_BG_EVENT_203006┃メイドアデラ背景
 EMBLEM_BG_EVENT_203007┃秋の感謝祭背景
 EMBLEM_BG_EVENT_203008┃2024 クリスマス背景
+EMBLEM_BG_EVENT_203010┃2周年記念背景
 EMBLEM_BG_ERPASS_204002┃エターナルリターン背景
 EMBLEM_BG_ERPASS_204003┃実験背景
 EMBLEM_BG_ERPASS_204004┃ぽたぽた背景
@@ -4788,6 +4814,7 @@ EMBLEM_OUTLINE_EVENT_303005┃ナジャフレーム
 EMBLEM_OUTLINE_EVENT_303006┃メイドアデラフレーム
 EMBLEM_OUTLINE_EVENT_303007┃秋の感謝祭フレーム
 EMBLEM_OUTLINE_EVENT_303008┃2024 クリスマスフレーム
+EMBLEM_OUTLINE_EVENT_303010┃2周年記念フレーム
 EMBLEM_OUTLINE_ERPASS_304001┃アイスフレーム
 EMBLEM_OUTLINE_ERPASS_304002┃クリスマスパーティーフレーム
 EMBLEM_OUTLINE_ERPASS_304003┃オーナメントフレーム
@@ -5303,6 +5330,7 @@ Goods/Name/2705001┃1周年記念
 Goods/Name/2705002┃ヒスイ＆ユスティナ
 Goods/Name/2705003┃月ウサギのそだてかた
 Goods/Name/2705004┃放課後デビー&マーリン
+Goods/Name/2705005┃2周年記念
 ItemType/KILLANNOUNCE_ICONPACK/Name┃アナウンスアイコン
 ItemType/KILLANNOUNCE_ICONPACK/Desc┃ゲーム内で処置時に表示されるUIアイコンを選択できます。
 Goods/Name/2801001┃不屈
@@ -5449,6 +5477,8 @@ Goods/Name/3503036┃1倍カード
 Goods/Name/3503037┃2倍カード
 Goods/Name/3503038┃3倍カード
 Goods/Name/3503039┃サイコロピース
+Goods/Name/3503040┃2周年サマーカード
+Goods/Name/3503041┃2周年スペシャルサマーカード
 ItemType/WILD_CARD_SKIN/Name┃[スキン専用] ワイルドカード
 ItemType/WILD_CARD_ETC/Name┃ワイルドカード
 Goods/Name/3602002┃[スキン専用] ワイルドカード
@@ -5886,6 +5916,11 @@ Product/Name/EVENT_NPASS_2025_ReturnSummer_1014┃サマー・リターンクエ
 Product/Name/S7_All_In_One_Pack_01┃All in One パッケージⅠ
 Product/Name/S7_All_In_One_Pack_02┃All in One パッケージⅡ
 Product/Name/S7_All_In_One_Pack_03┃All in One パッケージⅢ
+Product/Name/EVENT_NPASS_S8_Premium_Token_1015┃S8 プレミアムトークンブック
+Product/Name/EVENT_NPASS_S8_Basic_Token_1016┃S8 ベーシックトークンブック
+Product/Name/2025_2nd_Anniv_Summer_Pack_01┃2周年記念サマースペシャルパッケージ
+Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2周年記念サマーパッケージ
+Product/Name/S7_Season_Fragments_Pack_01┃シーズンピースパッケージ
 Shop/Desc/Aya_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Hyunwoo_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の56%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Adriana_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
@@ -6151,6 +6186,9 @@ Shop/Desc/NewbieStarter_Support_Pack_01┃<b><color=#FFBB00>[内容]</color></b>
 Shop/Desc/S7_All_In_One_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 高級/レアスキン補給券 1個\n- エモート選別カード 1個\n- プロフィール選別カード 1個\n- アカデミートークン 5個\n- XP Boost(1日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 高級/レアスキン補給券は購入と同時にアイテムを獲得する商品です。\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/S7_All_In_One_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- ワイルドカード (高級) 1個\n- ワイルドカード (レア) 1個\n- [スキン専用] ワイルドカード (レア) 1個\n- アカデミートークン 15個\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/S7_All_In_One_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- [スキン専用] ワイルドカード (英雄) 1個\n- ワイルドカード (英雄) 1個\n- エモート選別カード 1個\n- プロフィール選別カード 1個\n- アカデミートークン 30個\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2025_2nd_Anniv_Summer_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 2周年記念サマーボックス 10個\n- データキー 10個\n- スプラッシュトークン 15個\n- A-Coin Boost(1日)\n- 2周年スペシャルサマーカード 1枚\n- 2周年サマーカード 1枚\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/2025_2nd_Anniv_Summer_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- 2周年記念サマーボックス 1個\n- データキー 1個\n- スプラッシュトークン 1個\n- A-Coin Boost(1時間)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S7_Season_Fragments_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- シーズンピースパック(高級) 10個\n- シーズンピースパック 30個\n- シーズンピースパック(一般) 30個\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Product/Name/SEASON_PASS_S5┃シーズン5パック
 Shop/Desc/SEASON_PASS_S5┃シーズン5にリリースされる商品をお得な価格で事前購入してみてください!
 Product/Name/SEASON_PASS_S6┃シーズン6パック
@@ -6359,6 +6397,18 @@ BanReasonType/SNIPER┃スナイピング行為
 BanReasonType/TEAMING┃チーミング
 BanReasonType/VERBAL_HARASSMENT┃言語暴力
 BanReasonType/SMURFING┃スマーフ行為(サブアカウント)
+GameMainHud/Chapter/Name/AutoResurrectionCanNotEliminate┃オープニング
+GameMainHud/Chapter/Name/AutoResurrectionCanEliminate┃オープニング後半
+GameMainHud/Chapter/Name/CreditResurrection┃ミドルゲーム
+GameMainHud/Chapter/Name/LumiResurrection┃ミドルゲーム後半ｎ
+GameMainHud/Chapter/Name/ResurrectionKit┃オープニング
+GameMainHud/Chapter/Name/NotRevive┃エンドゲーム
+GameMainHud/Chapter/Desc/AutoResurrectionCanNotEliminate┃全滅しても自動で復活し、実験に再参加できます。
+GameMainHud/Chapter/Desc/AutoResurrectionCanEliminate┃全滅しない限り、自動で復活して実験に再参加できます。
+GameMainHud/Chapter/Desc/CreditResurrection┃Kioskや案内ロボットLUMIを利用して味方を復活させることができます。
+GameMainHud/Chapter/Desc/LumiResurrection┃案内ロボットLUMIを利用して味方を復活させることができます。
+GameMainHud/Chapter/Desc/ResurrectionKit┃再生キットを使って全滅状況で復活します。
+GameMainHud/Chapter/Desc/NotRevive┃復活できません。ご注意ください。
 Skill/Group/Name/4000000┃ブリンク
 Skill/Group/LobbyDesc/4000000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
 Skill/Group/LobbyDesc/4512000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
@@ -7396,7 +7446,7 @@ EP 토큰 재화 툴팁 설명┃EPトークンショップで使用できる財
 실험 시작까지 남은 시간┃実験開始まで残り時間
 잠시 후 실험이 시작됩니다.┃もうすぐ、実験が開始します。
 플레이할 무기 타입을 선택해 주세요.┃武器タイプを選択してください。
-캐릭터 선택까지 남은 시간┃キャラクター選択まで残り時間
+캐릭터 선택까지 남은 시간┃実験体選択残り時間
 루트 선택 시간┃実験開始まで残り時間
 시작┃スタート
 보기┃見る
@@ -7645,6 +7695,7 @@ TierRP┃ティア別最小ランクポイント
 관전 시 팀 TK 세부 정보 표시┃観戦中、チームのTK詳細情報表示
 팀 셔플 기능 사용 경고┃チームシャッフル機能を使用すると配置されたBotとチームスロットのロック状態がすべて解除されます。\nチームシャッフル機能を使用しますか？
 방장이 팀을 다시 구성합니다.┃ルームマスターがシャッフル機能を使用してチームを再構成しました。
+CustomGameList/Popup/GameName┃{0}のルーム
 다중플랫폼팝업/제목┃配信プラットフォームを選択してください。
 다중플랫폼팝업/치지직버튼┃CHZZK
 다중플랫폼팝업/유튜브버튼┃YouTube
@@ -8215,16 +8266,22 @@ LearnActive4┃四番目のスキルを強化します。
 LearnPassive┃パッシブスキルを強化します。
 LearnWeaponSkill┃武器スキルを強化します。
 LearnTacticalSkill┃戦術スキルを強化します。
-Active1ToSelf┃最初のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
-Active2ToSelf┃2つ目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
-Active3ToSelf┃3つ目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
-Active4ToSelf┃4つ目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
+Active1ToSelf┃1番目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
+Active2ToSelf┃2番目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
+Active3ToSelf┃3番目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
+Active4ToSelf┃4番目のスキルを自分に即時キャストします。（自分を指定できるスキルのみ）
 WeaponSkillToSelf┃武器スキルを自分に即時キャストします。（自分を指定できるスキルのみ）
 TacticalSkillToSelf┃戦術スキルを自分に即時キャストします。（自分を指定できるスキルのみ）
-InstantCastActive1┃最初のスキルを即時キャストします。
-InstantCastActive2┃2つ目のスキルを即時キャストします。
-InstantCastActive3┃3つ目のスキルを即時キャストします。
-InstantCastActive4┃4つ目のスキルを即時キャストします。
+NormalCastActive1┃1番目のスキルをキャストします。
+NormalCastActive2┃2番目のスキルをキャストします。
+NormalCastActive3┃3番目のスキルをキャストします。
+NormalCastActive4┃4番目のスキルをキャストします。
+NormalCastWeaponSkill┃武器スキルをキャストします。
+NormalCastTacticalSkill┃戦術スキルをキャストします。
+InstantCastActive1┃1番目のスキルを即時キャストします。
+InstantCastActive2┃2番目のスキルを即時キャストします。
+InstantCastActive3┃3番目のスキルを即時キャストします。
+InstantCastActive4┃4番目のスキルを即時キャストします。
 InstantCastWeaponSkill┃武器スキルを即時キャストします。
 InstantCastTacticalSkill┃戦術スキルを即時キャストします。
 InstantUseActiveItem1┃アイテムスキルを即時キャストします。
@@ -8332,6 +8389,7 @@ RankMatchingDuo┃マッチング状態を表示せずにランク対戦＜デ�
 RankMatchingSquad┃マッチング状態を表示せずにランク対戦のマッチングを開始します。\n* この機能は設定 ＞ 配信モードから「マッチングショートカットキー使用」オプションをチェックする必要があります。
 StreamingModeSetting/SquadRumbleMatching┃マッチング状態を表示せずにユニオン対戦のマッチングを開始します。\n* この機能は設定 ＞ ゲームメニューでチェックする必要があります。
 유니온 대전 방송모드 에러 팝업┃チームを登録した後にご利用できます。\n登録済みのチームメンバーと一緒にユニオン対戦のチームロビーに入場してからご利用ください。
+이벤트 대전 방송모드 에러 팝업┃イベント対戦に参加できない時間または現在利用できるイベント対戦がありません。
 GameSetting/SecretMatching┃ショートカットキーでマッチングを開始できます。\nショートカットキーでマッチングすると、マッチング状態を表示しません。\n各モードの秘密マッチングショートカットキーは設定 ＞ 入力 ＞ インターフェースで設定または変更できます。
 단축키 매칭 사용┃マッチングショートカットキー使用
 Setting/Broadcast/InvitePanelState┃チーム構成後招待招待画面非表示
@@ -8384,6 +8442,8 @@ GameSetting/EmoticonSetMouseWheel┃ゲームでエモートを使用する時�
 GameSetting/AutoAttack┃未適用：攻撃命令を出してない場合、近くの対象を攻撃することはありません。\n基本：近くの対象を攻撃します。「適用」の条件で可能な製作、採集の後には攻撃しません。\n適用：近くの対象を攻撃します。停止、休憩、箱確認、Kioskを操作する時には攻撃を中止します。
 인벤토리아이템자동병합┃インベントリ自動整列
 GameSetting/AutomaticInventoryItemRestock┃インベントリに同じ消費アイテムが複数のスロットに存在する場合、一番後ろ側のスロットにある消費アイテムから使用します。\nインベントリのショートカットキーとは関係なく、右下のスロットが後順位になります。\n例）1・3・5番目のスロットにステーキがある場合、1・3・5の内どのショートカットキーを押しても5番目のステーキを先に消費します。
+옵션/VLS상호작용확장맵활성화┃VLS使用中、拡張マップ表示
+GameSetting/VLSInteractExpandMapActivate┃VLSを使用している時、自動で拡張マップを表示します。
 인벤토리아이템우선사용설정┃インベントリアイテム使用設定
 GameSetting/InventoryItemUsePriority┃インベントリに同じ消費アイテムが複数のスロットに存在する場合、ショートカットキーとは関係なく、指定された規則に従ってアイテムを使用します。\nスロットの番号はインベントリの左上が1番、右下が10番です。\n昇順：1番・3番・5番目のスロットにステーキがある場合、どのショートカットキーを押しても1番目のスロットにあるステーキを先に使用します。\n降順：1番・3番・5番目のスロットにステーキがある場合、どのショートカットキーを押しても5番目のスロットにあるステーキを先に使用します。
 옵션사용안함┃使用しない
@@ -10195,6 +10255,12 @@ Shortcut/WeaponSkillToSelf┃武器スキルを自分に使用
 Shortcut/TacticalSkillToSelf┃戦術スキルを自分に使用
 Shortcut/InstantCastGadgetSkill┃ガジェットスキル即時キャスト
 InstantCastGadgetSkill┃ガジェットヴォルトに装備されたガジェットスキルを即時キャストします。
+Shortcut/NormalCastActive1┃スキル1キャスト
+Shortcut/NormalCastActive2┃スキル2キャスト
+Shortcut/NormalCastActive3┃スキル3キャスト
+Shortcut/NormalCastActive4┃スキル4キャスト
+Shortcut/NormalCastWeaponSkill┃武器スキルキャスト
+Shortcut/NormalCastTacticalSkill┃戦術スキルキャスト
 Shortcut/InstantCastActive1┃スキル1を即時キャスト
 Shortcut/InstantCastActive2┃スキル2を即時キャスト
 Shortcut/InstantCastActive3┃スキル3を即時キャスト
@@ -11603,6 +11669,7 @@ SeasonToBeAdded/Name┃新シーズン \n D - {0}
 100005_Title┃S7 ログインボーナス
 100006_Title┃S8 ログインボーナス
 400001_Title┃年末年始 生存者への特別補給
+400002_Title┃2周年記念特別ログインボーナス
 10000101_7_Title┃＜ウィドリアナチュワプ＞SET
 10000101_7_Desc┃- ＜ウィドリアナチュワプ＞アイコン\n- ＜ウィドリアナチュワプ＞エモート
 10000101_14_Title┃スキンデータセット
@@ -11758,6 +11825,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1009┃<color=#ffdf72>最大25個のアカ�
 Shop/Desc/EVENT_NPASS_S7_Premium_Token_1010┃<color=#ffdf72>最大75個のアカデミートークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最大25個のアカデミートークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃<color=#ffdf72>様々なアイテム</color><color=#B2EBF4>を獲得できるクエストブックです。\n商品を購入すると、レベルに応じて報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに100ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはクエストブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>最大75個のスプラッシュトークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>最大25個のスプラッシュトークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Season1000/Name┃1周年記念クエストブック
 Season1001/Name┃クムドリ&クムスニクエストブック
 Season1002/Name┃Dessert39クエストブック
@@ -11771,6 +11840,8 @@ Season1009/Name┃S7 ベーシックトークンブック
 Season1010/Name┃S7 プレミアムトークンブックⅡ
 Season1011/Name┃S7 ベーシックトークンブックⅡ
 Season1014/Name┃サマー・リターンクエストブック
+Season1015/Name┃S8 プレミアムトークンブック
+Season1016/Name┃S8 ベーシックトークンブック
 Season2000/Name┃1周年記念A-Coinクエストブック
 Season2001/Name┃バカンス A-Coinクエストブック
 Season2002/Name┃武装メイド A-Coinクエストブック
@@ -12014,7 +12085,7 @@ LootRandomBoxWindow/Btn_Once┃1回
 10회┃10回
 LootRandomBoxWindow/Btn_All┃10回
 전체보상 정보보기┃全体リスト
-LootRandomBoxWindow/RefundAgreement┃使用したデータボックスとデータキーは払い戻しできません。
+LootRandomBoxWindow/RefundAgreement┃使用したアイテムは払い戻しできません。
 LootRandomBoxWindow/UnOpenedBox┃受領できなかった報酬があります。
 상자 구성품 확인 툴팁┃クリックすると獲得できるアイテムを確認できます。
 구매할 상품을 선택하세요.┃購入する商品を選択してください。
@@ -12295,6 +12366,10 @@ Goods/Name/3102025┃サイコロ
 Goods/Desc/3102025┃リストの中から一つをランダムに獲得できます。\n出現するアイテムはアイテムリストで確認できます。
 Goods/Name/3190014┃サイコロの目選択券
 Goods/Desc/3190014┃6つのサイコロの目から一つを選択して獲得できます。\n出現するアイテムはアイテムリストで確認できます。
+Goods/Name/3102026┃2周年記念サマーボックス
+Goods/Desc/3102026┃完全なスキンまたはスキンピース1つと2周年サマーカード1つを獲得できるデータボックスです。\nすでに所持しているスキンも重複して獲得することがあります。\n出現するアイテムはアイテムリストで確認できます。
+Goods/Name/3190015┃2周年記念サマースキン選択券
+Goods/Desc/3190015┃リストの中から一つを選択して獲得できます。\n獲得できるアイテムはアイテムリストで確認できます。
 Goods/Name/3199001┃シーズンピースパック
 Goods/Desc/3199001┃一般等級から高級等級までのシーズンピースを1つ獲得できます。\n獲得したシーズンピースはシーズンコレクションに自動で登録されます。\n登録済みのシーズンピースはピースポイントに変換されます。
 Goods/Name/3199002┃シーズンピースパック(一般)
@@ -16022,6 +16097,41 @@ CharacterState/Group/Desc/1081530┃ニアのゲームワールドの外側の�
 CharacterState/Group/Desc/1081540┃ニアのゲームワールドの外側の攻撃に的中しても気絶しません。
 CharacterState/Group/Desc/1081560┃ニアはゲームワールドが持続する間、妨害効果の影響を受けません。
 CharacterState/Group/Desc/1081570┃ニアがゲームワールドで敵に複数ダメージを与えると、エリア全体にダメージを与えます。.
+Skill/Group/Name/1082100┃剣心一如
+Skill/Group/Name/1082200┃飛剣残影
+Skill/Group/Name/1082300┃無塵剣訣
+Skill/Group/Name/1082400┃流雲剣雨
+Skill/Group/Name/1082500┃万剣帰宗
+Skill/Group/Desc/1082100┃シュリンは基本攻撃または基本スキルが敵に的中すると、<color=white>流雲残影剣</color>スタックを獲得します。{0}スタックになると、次の基本攻撃が強化され、対象に飛剣を飛ばして<color=white>{1}</color>の追加スキルダメージを与えます。また、<color=white>飛剣残影</color>と<color=white>流雲剣雨</color>のクールダウンが{2}秒減少し、<color=white>{3}</color>の体力を回復します。野生動物の場合、回復効果が{4}に減少します。
+Skill/Group/Coef/1082100┃シュリンは基本攻撃または基本スキルが敵に的中すると、<color=white>流雲残影剣</color>スタックを獲得します。{0}スタックになると、次の基本攻撃が強化され、対象に飛剣を飛ばして<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>の追加スキルダメージを与えます。また、<color=white>飛剣残影</color>と<color=white>流雲剣雨</color>のクールダウンが{3}秒減少し、<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color>の体力を回復します。野生動物の場合、回復効果が{6}に減少します。
+Skill/LobbyDesc/1082100┃シュリンは基本攻撃または基本スキルが敵に的中すると、<color=white>流雲残影剣</color>スタックを獲得します。3スタックになると、次の基本攻撃が強化され、対象に飛剣を飛ばして追加スキルダメージを与えます。また、<color=white>飛剣残影</color>と<color=white>流雲剣雨</color>のクールダウンが減少し、体力を回復します。
+Skill/Group/Desc/1082200┃シュリンが飛剣を飛ばして経路上の敵に<color=white>{0}</color>のスキルダメージを与えます。飛剣は指定した位置まで飛んで行った後、{1}秒間回転し、範囲内の敵に{2}秒ごとに<color=white>{3}</color>のスキルダメージを与え続けます。\n\nシュリンが回転する飛剣に触れた場合、飛剣を回収し、<color=white>流雲剣雨</color>のクールダウンが{4}返されます。回収した飛剣は{5}秒間シュリンの周りを回転し続けながら範囲内の敵に{6}秒ごとに<color=white>{7}</color>のスキルダメージを与え続けます。
+Skill/Group/Coef/1082200┃シュリンが飛剣を飛ばして経路上の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。飛剣は指定した位置まで飛んで行った後、{2}秒間回転し、範囲内の敵に{3}秒ごとに<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color>のスキルダメージを与え続けます。\n\nシュリンが回転する飛剣に触れた場合、飛剣を回収し、<color=white>流雲剣雨</color>のクールダウンが{6}返されます。回収した飛剣は{7}秒間、シュリンの周りを回転し続けながら範囲内の敵に{8}秒ごとに<color=white>{9}</color><color=#ffd775>(+攻撃力の{10})</color>のスキルダメージを与え続けます。
+Skill/LobbyDesc/1082200┃シュリンが飛剣を飛ばして経路上の敵にスキルダメージを与えます。飛剣は指定した位置まで飛んで行った後、一定時間の間回転し、範囲内の敵にスキルダメージを与え続けます。\n\nシュリンが回転する飛剣に触れた場合、飛剣を回収し、<color=white>流雲剣雨</color>のクールダウンの一部が返されます。回収した飛剣は一定時間の間、シュリンの周りを回転し続けながら範囲内の敵にスキルダメージを与え続けます。
+Skill/Group/Desc/1082300┃シュリンが飛剣で自分の体を守り、{0}秒間妨害効果免疫状態になり、受けるダメージをすべて防御します。その後、指定した方向に飛剣を飛ばして、最初に的中した敵実験体に<color=white>{1}</color>のスキルダメージを与え、{2}秒間移動速度を{3}減少させます。\n\n移動不可効果を防御した場合には<color=white>流雲残影剣</color>スタックを{4}スタック獲得し、<color=white>{5}</color>のスキルダメージを与え、移動速度減少効果の代わりに対象を{6}秒間気絶させます。
+Skill/Group/Coef/1082300┃シュリンが飛剣で自分の体を守り、{0}秒間妨害効果免疫状態になり、受けるダメージをすべて防御します。その後、指定した方向に飛剣を飛ばして、最初に的中した敵実験体に<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>のスキルダメージを与え、{3}秒間移動速度を{4}減少させます。\n\n移動不可効果を防御した場合には<color=white>流雲残影剣</color>スタックを{5}スタック獲得し、<color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color>のスキルダメージを与え、移動速度減少効果の代わりに対象を{8}秒間気絶させます。
+Skill/Group/ExpansionTip/1082300┃<i>実験体以外の対象は貫通します。</i>
+Skill/LobbyDesc/1082300┃シュリンが飛剣で自分の体を守り、一定時間の間妨害効果免疫状態になり、受けるダメージをすべて防御します。その後、指定した方向に飛剣を飛ばして、最初に的中した敵実験体にスキルダメージを与え、移動速度を減少させます。\n\n移動不可効果を防御した場合には<color=white>流雲残影剣</color>スタックを3スタック獲得し、スキルダメージを与え、移動速度減少効果の代わりに対象を気絶させます。
+Skill/Group/Desc/1082400┃シュリンが指定した方向に突進し、経路上の敵に<color=white>{0}</color>のスキルダメージを与えて{1}秒間移動速度を{2}減少させます。\nその後、突進した経路に沿って剣が落とされ、範囲内の敵に<color=white>{3}</color>のスキルダメージを与えます。
+Skill/Group/Coef/1082400┃シュリンが指定した方向に突進し、経路上の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えて{2}秒間移動速度を{3}減少させます。\nその後、突進した経路に沿って剣が落とされ、範囲内の敵に<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color>のスキルダメージを与えます。
+Skill/LobbyDesc/1082400┃シュリンが指定した方向に突進し、経路上の敵にスキルダメージを与えて移動速度を減少させます。\nその後、突進した経路に沿って剣が落とされ、範囲内の敵にスキルダメージを与えます。
+Skill/Group/Desc/1082500┃シュリンが領域を展開して範囲内の敵に<color=white>{0}</color>のスキルダメージを与えます。領域は{1}秒間維持されます。\n領域内にいる敵にシュリンが個別ダメージを与えるたびに剣が落とされ、<color=white>{2}</color>の追加スキルダメージを与えます。\n{3}つ目に落ちて来る剣は強化され、対象の周りに<color=white>{4}</color>の追加スキルダメージを与えて{5}秒間移動速度を{6}減少させます。\n\n<color=white>流雲剣雨</color>を使用した後、到着地点が領域外の場合には外側に位置した飛剣がシュリンのところに戻りながら経路上の敵に<color=white>{7}</color>のスキルダメージを与えます。2回目の的中からはダメージ量が{8}減少します。
+Skill/Group/Coef/1082500┃シュリンが領域を展開して範囲内の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。領域は{2}秒間維持されます。\n領域内にいる敵にシュリンが個別ダメージを与えるたびに剣が落とされ、<color=white>{3}</color><color=#ffd775>(+攻撃力の{4})</color>の追加スキルダメージを与えます。\n{5}つ目に落ちて来る剣は強化され、対象の周りに<color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color>の追加スキルダメージを与えて{8}秒間移動速度を{9}減少させます。\n\n<color=white>流雲剣雨</color>を使用した後、到着地点が領域外の場合には外側に位置した飛剣がシュリンのところに戻りながら経路上の敵に<color=white>{10}</color><color=#ffd775>(+攻撃力の{11})</color>のスキルダメージを与えます。2回目の的中からはダメージ量が{12}減少します。
+Skill/LobbyDesc/1082500┃シュリンが領域を展開して範囲内の敵にスキルダメージを与えます。領域は一定時間維持されます。\n領域内にいる敵にシュリンが個別ダメージを与えるたびに剣が落とされ、追加スキルダメージを与えます。\n5つ目に落ちて来る剣は強化され、対象の周りに追加スキルダメージを与えて移動速度を減少させます。\n\n<color=white>流雲剣雨</color>を使用した後、到着地点が領域外の場合には外側に位置した飛剣がシュリンのところに戻りながら経路上の敵にスキルダメージを与えます。2回目の的中からはダメージ量が減少します。
+CharacterState/Group/Name/1082100┃剣心一如 - 流雲残影剣スタック
+CharacterState/Group/Desc/1082100┃流雲残影剣スタックを獲得しました。
+CharacterState/Group/Name/1082110┃剣心一如 - 基本攻撃強化
+CharacterState/Group/Desc/1082110┃シュリンの基本攻撃が強化し、 追加スキルダメージを与えます。
+CharacterState/Group/Name/1082300┃無塵剣訣 - 受けるダメージ無効化・妨害効果免疫
+CharacterState/Group/Desc/1082300┃シュリンが妨害効果免疫状態になり、受けるダメージをすべて防ぎます。
+CharacterState/Group/Name/1082330┃無塵剣訣 - 移動速度減少
+CharacterState/Group/Desc/1082330┃無塵剣訣によって移動速度が減少しました。
+CharacterState/Group/Name/1082340┃無塵剣訣 - 気絶
+CharacterState/Group/Desc/1082340┃無塵剣訣によって気絶しました。
+CharacterState/Group/Name/1082400┃流雲剣雨 - 移動速度減少
+CharacterState/Group/Desc/1082400┃流雲剣雨によって移動速度が減少しました。
+CharacterState/Group/Name/1082520┃万剣帰宗 - 移動速度減少
+CharacterState/Group/Desc/1082520┃万剣帰宗によって移動速度が減少しました。
 Skill/Group/Name/3015000┃マントと短剣
 Skill/Group/Name/3015100┃マントと短剣
 Skill/Group/Name/3016000┃受け流し
@@ -17652,7 +17762,7 @@ CharacterState/Group/Name/6053020┃予熱 - 最大スタック状態
 CharacterState/Group/Desc/6053020┃最大スタックになったため、能力値が増加しました。
 CharacterState/Group/Name/6054000┃予熱 - 激昂
 CharacterState/Group/Desc/6054000┃能力値が増加しました。
-CharacterState/Group/Name/6053020┃予熱 - 最大スタック状態
+CharacterState/Group/Name/6054010┃予熱 - 最大スタック状態
 CharacterState/Group/Desc/6054010┃最大スタックになったため、能力値が増加しました。
 Item/Skills/6058001┃達人
 Item/Skills/6058001/Name┃<color=yellow>達人</color>
@@ -17749,13 +17859,13 @@ Skill/Group/Desc/8300300┃<color=lightblue>狩人の大釜</color>を設置し�
 Skill/Group/Name/8300400┃ORB - 偵察
 Skill/Group/Desc/8300400┃<color=lightblue>ORB - 偵察</color>を使用します。\n実験体の位置から使用した位置に向かって{0}秒間移動し、最大距離に到達すると元の位置に向かって移動します。前方{1}度・{2}mの視界を表示します。
 Skill/Group/Name/8300500┃ORB - 安全
-Skill/Group/Desc/8300500┃<color=lightblue>ORB - 安全</color>を使用します。\n使用した位置に向かって移動し、周り{1}m範囲内にセーフゾーンを生成して移動速度を{2}増加させます。
+Skill/Group/Desc/8300500┃<color=lightblue>ORB - 安全</color>を使用します。\n使用した位置に向かって移動し、周り{1}m範囲内にセーフゾーンを生成します。
 Skill/Group/Name/8300600┃ORB - 回復
 Skill/Group/Desc/8300600┃<color=lightblue>ORB - 回復</color>を呼び出します。\n実験体の位置と呼び出した位置の間を{0}秒間往復し、周り{1}m以内にいる味方実験体の体力を1秒ごとに{2} + 最大体力の{3}、スタミナを1秒ごとに{2} + 最大スタミナの{4}回復させます。
 Skill/Group/Name/8300700┃ORB - 爆発
 Skill/Group/Desc/8300700┃<color=lightblue>ORB - 爆発</color>を使用します。\n実験体の位置から使用した位置に移動し、{0}秒後、{1}m範囲内の設置物を破壊します。実験体には対象の現在体力の{2} / 野生動物には対象の現在体力の{3}のダメージを与え、治癒減少 - 弱効果を付与します。
 CharacterState/Group/Name/12000100┃セーフティエリア
-CharacterState/Group/Desc/12000100┃移動速度が増加し、爆発タイマーが停止します。
+CharacterState/Group/Desc/12000100┃爆発タイマーが停止します。
 CharacterState/Group/Name/13000000┃VF加速
 CharacterState/Group/Desc/13000000┃移動速度と視界が増加しました。
 CharacterState/Group/Name/13000100┃VFオーバーロード
@@ -21920,6 +22030,12 @@ CharacterStoryHeight/81┃148cm
 CharacterStoryGender/81┃女性
 CharacterStoryTitle/81┃ゲーム、一緒にやる？
 CharacterStoryDesc/81┃ゲームが大好きな少女。\n「NiaH」という名前で活動し、数多くのゲームで驚異的な記録を残している。\n普段は食事すらめんどくさがるほど無口な性格だが、\nゲームのこととなると、意外な行動力を見せる。\n\n彼女にとってゲームは、ただの娯楽ではない。\n人間関係を築けるもう一つの世界であり、\n大切な人と出会うきっかけをくれた宝物である。\n\nその大切な人を失った時、彼女の心は壊れてしまった。\nその事実を受け入れられなかった彼女は、現実から目を逸らし、\n残酷な現実ではなく、楽しさに満ちたもう一つの世界に閉じこもる。\n\n彼女は、今日もゲームをする。\n自分だけの世界で、誰かを待ちながら...
+CharacterStoryName/82┃リウ・シュリン
+CharacterStoryAge/82┃22歳
+CharacterStoryHeight/82┃168cm
+CharacterStoryGender/82┃女性
+CharacterStoryTitle/82┃この剣で、道を切り開きましょう。
+CharacterStoryDesc/82┃剣を操り、飛剣術を使う少女。\n堂々としたかっこいい姿を見せようとするが、\nどこか間の抜けた行動をしてしまう純粋な心の持ち主。\n山奥の田舎村に生まれた、剣の守り人家系の一人娘。\n\n彼女は幼い頃から村に代々伝わる剣が眠る場所へ毎日足を運んでいた。\n剣と共にいると、村の起源と精髄が心に響いてくるように感じられた。\n少女は毎日剣を磨き、刃を研ぎながら、剣と向き合い、自らの心を磨いた。\n\nそんなある日、剣が守られている寺院で原因不明の火災が発生した。\n少女の父と村人が炎に飲み込まれた時、少女は迷わずその中へ飛び込んだ。\n\n誰が、なぜ寺院に火をつけたのか。それは重要ではなかった。\nただ自分が大切にしてきたものが目の前で灰になっていく姿を、\n黙って見ているわけにはいかなかっただけだった。\n\nその瞬間、剣が彼女の心に共鳴するかのように反応した。\n剣はまるで生きているかのように力を放ち、その力は少女の体を包み込んだ。\nこうして少女は剣と自らの力で、危機に陥った人々を救い出すことができた。\n\nその後、少女は初めて村を離れることを決意する。\n剣を守るだけでなく、剣に選ばれた真の主になるために。\n\n自分が守りたいものを、自らの力で守るために。
 CharacterPlayTip/1┃ジャッキーはターゲットにした敵をしつこく追いかけて虐殺し、そのたびにバースト能力が高まる連続殺人鬼です。
 CharacterPlayTip/2┃アヤは敵にスキルを的中させやすく、敵との距離を保つことのできるスキルを持つ、安定性の高い遠距離型実験体です。
 CharacterPlayTip/3┃フィオラはフェンシング選手らしく素早い動きで敵との距離を調節し、スキルを連続で的中させるたびに強力なダメージを与えます。
@@ -22001,6 +22117,7 @@ CharacterPlayTip/78┃ヒスイは日輪會の一員です。様々な剣を収�
 CharacterPlayTip/79┃ユスティナな正義のヒーローを夢見る元気いっぱいな少女です。エネルギーを使って攻撃したり、移動することができ、一帯を殲滅できるほどの強力な火力を持つ実験体です。
 CharacterPlayTip/80┃イシュトヴァーンは強化時、自分の行動と、異なる結果を持つもう一人の自分の姿で攻撃します。イシュトヴァーンは各戦闘の状況に応じて様々な可能性を研究し、より良い結果を得るために実験を繰り返します。
 CharacterPlayTip/81┃ニアはゲームが大好きな少女です。ゲームのように現実世界を操作し、自分だけのゲームの世界で敵の動きを妨害し、有利な戦闘に導くことができます。
+CharacterPlayTip/82┃シュリンは飛剣を使う純粋な田舎少女です。飛剣を使って敵を攻撃したり、自分を防御し、敵陣に入り込んで戦闘の流れを覆せる実験体です。
 MasteryType/Glove/Desc┃グローブは有効距離は短いですが、\n攻撃速度は早く連続攻撃ができます。
 MasteryType/Tonfa/Desc┃トンファーは唯一防御力を確保できる攻防一体の武器です。
 MasteryType/Hammer/Desc┃ハンマーは攻撃速度は遅いけですが強力な攻撃で相手の動きを鈍らせます。
@@ -22807,8 +22924,8 @@ OperatorSetting/PaidResurrectionTarget┃味方がクレジットで復活でき
 OperatorSetting/AutoReplaceLateGameItems┃目標アイテムが変更されたことを案内します。
 루미아 섬 안내 로봇┃案内ロボット：LUMI - クレジットチャージ完了
 OperatorSetting/GuidedRobotBattleModeNotice┃ルミア島の案内ロボット「LUMI」がクレジットを充分に集めたことを案内します。
-임시, 최종 안전지대 안내┃臨時セーフゾーン案内
-OperatorSetting/TemporarySafeZoneNotice┃臨時セーフゾーン段階についての情報を案内します。
+임시, 최종 안전지대 안내┃臨時・最終セーフゾーン案内
+OperatorSetting/TemporarySafeZoneNotice┃臨時・最終セーフゾーン段階についての情報を案内します。
 빈사 스킬┃瀕死スキル
 OperatorSetting/DyingConditionGuide┃自分が瀕死状態になった時に使用できるスキルを案内します。
 비밀 연구실┃秘密の研究室
