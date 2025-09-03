@@ -81,6 +81,8 @@ Character/Name/79┃尤斯蒂娜
 Character/Name/80┃伊舒特
 Character/Name/81┃妮娅
 Character/Name/82┃雪琳
+Character/Name/83┃亨利
+Character/Name/84┃布莱尔
 Character/Name/9999┃娜佳
 GameResult/Character/Name/1┃Jackie
 GameResult/Character/Name/2┃Aya
@@ -162,8 +164,10 @@ GameResult/Character/Name/77┃Yumin
 GameResult/Character/Name/78┃Hisui
 GameResult/Character/Name/79┃Justyna
 GameResult/Character/Name/80┃Istvan
-GameResult/Character/Name/81┃妮娅
+GameResult/Character/Name/81┃NiaH
 GameResult/Character/Name/82┃Xuelin
+GameResult/Character/Name/83┃Henry
+GameResult/Character/Name/84┃布莱尔
 Monster/Name/1┃鸡
 Monster/Name/2┃蝙蝠
 Monster/Name/3┃野猪
@@ -1107,6 +1111,7 @@ ToolTipType/AddedHpShield┃额外体力比例增加护盾
 ToolTipType/AdditionalShield┃额外护盾吸收量
 ToolTipType/FinalDamage┃所有伤害增加量
 ToolTipType/Consumehp┃体力消耗量
+ToolTipType/AbigailStackDamage┃每叠层伤害
 ToolTipType/InsanityDuration┃精神失常持续时间
 ToolTipType/PreventBasicAttackDamaged┃普攻伤害减少
 ToolTipType/PainHeal┃每个苦痛叠层恢复量
@@ -1143,6 +1148,10 @@ ToolTipType/XuelinActive3DamageApCoef┃飞剑伤害量攻击力系数
 ToolTipType/XuelinActive4ReinforceSwordDamage┃强化飞剑伤害量
 ToolTipType/XuelinActive4ReinforceSwordDamageApCoef┃强化飞剑伤害量攻击力系数
 ToolTipType/XuelinActive4ReturnDamage┃回收伤害量
+ToolTipType/Henry1_1Damage┃分针伤害量
+ToolTipType/Henry1_1ExtraDamage┃分针额外真实伤害
+ToolTipType/Henry1_2Damage┃时针伤害量
+ToolTipType/Henry1_2ExtraDamage┃时针额外真实伤害
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(每剩1个弹匣*技能增幅的{0}%)</color>
 DayNight/Day┃白天
 DayNight/Night┃夜晚
@@ -1390,6 +1399,7 @@ DataModeType/Name/Duo┃双人
 DataModeType/Name/Squad┃三人
 DataModeType/Name/Cobalt┃钴协议
 DataModeType/Name/LoneWolf┃孤狼
+DataModeType/Name/Normal┃三人
 GameModeType/Name/LONEWOLF┃孤狼
 GameModeType/Name/SINGLE┃三人
 GameModeType/Name/NORMAL┃三人
@@ -1641,6 +1651,7 @@ Skin/Name/1048000┃蒂娅
 Skin/Name/1048001┃街头画家 蒂娅
 Skin/Name/1048002┃见习魔女 蒂娅
 Skin/Name/1048003┃像素画家 蒂娅
+Skin/Name/1048004┃海绘师 蒂娅
 Skin/Name/1049000┃费利克斯
 Skin/Name/1049001┃游乐园 费利克斯
 Skin/Name/1049002┃OP.GG 费利克斯
@@ -1748,6 +1759,8 @@ Skin/Name/1080000┃伊舒特
 Skin/Name/1080001┃执事 伊舒特
 Skin/Name/1081000┃妮娅
 Skin/Name/1082000┃雪琳
+Skin/Name/1083000┃亨利
+Skin/Name/1084000┃布莱尔
 Skin/OnSelectVO/1001003┃规则就是用来打破的，不是吗？
 Skin/OnSelectVO/1002002┃烟花庆典要开始了！
 Skin/OnSelectVO/1007005┃让我们来做点有趣的事吧！
@@ -2053,6 +2066,7 @@ Skin/Desc/1050005┃不知不觉间，我们已经相伴这么久了。
 Skin/Desc/1050006┃岁月流转，有些东西却始终未曾改变。
 Skin/Desc/1074002┃我们尊敬的客户大人，您现在是在还清债务后休息呢，对吧？
 Skin/Desc/1080001┃在无数可能性之中，我终于调出了这款拥有最完美比例的红茶。不知道是否合您的口味？
+Skin/Desc/1048004┃终于能把这片湛蓝的海收进我的调色盘了……
 Skin/Desc/1067003┃在大海中不需要任何言语，水下的寂静足以让人沉浸其中。
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
@@ -2138,7 +2152,10 @@ Collection/Name/24032/1┃2周年特别夏日收藏Ⅰ
 Collection/Name/24032/2┃2周年特别夏日收藏 Ⅱ
 Collection/Name/24033/1┃2周年夏日收藏Ⅰ
 Collection/Name/24033/2┃2周年夏日收藏Ⅱ
-Collection/Name/24036┃亨利「时间开始流动」
+Collection/Name/24034/1┃秋日收藏Ⅰ
+Collection/Name/24034/2┃秋日收藏Ⅱ
+Collection/Name/24035/1┃秋日登录活动收藏Ⅰ
+Collection/Name/24036┃亨利「流动的时间」
 SeasonCollection/Name/30001/1┃逐浪 - 第一阶段
 SeasonCollection/Name/30001/2┃逐浪 - 第二阶段
 SeasonCollection/Name/30001/3┃逐浪 - 第三阶段
@@ -2193,43 +2210,6 @@ GameMainHud/Chapter/Desc/CreditResurrection┃可以通过Kiosk复活队友。
 GameMainHud/Chapter/Desc/LumiResurrection┃可以通过LUMI复活队友。
 GameMainHud/Chapter/Desc/ResurrectionKit┃可以使用复活工具在全灭时复活。
 GameMainHud/Chapter/Desc/NotRevive┃请注意，无法再复活了。
-공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
-공식 홈페이지 링크 카카오┃https://er.game.daum.net/
-디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
-트위터 링크 한국어┃https://twitter.com/EternalReturnKR
-KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
-유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
-공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
-웨이보 링크 중문간체┃https://weibo.com/6511008423
-빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
-팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
-KOOK 링크 중문간체┃https://kook.vip/ZG55e1
-공지사항 중문 간체┃https://guide.sapstargames.com/eternal/
-공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
-디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
-유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
-페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
-인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
-공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
-트위터 링크 일본어┃https://twitter.com/EternalReturnJP
-유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
-디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
-공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
-공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
-디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
-트위터 링크 스페인어┃https://twitter.com/EternalReturnES
-페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
-공식 홈페이지 링크 영어┃https://playeternalreturn.com/
-디스코드 링크 영어┃https://discord.com/invite/eternalreturn
-트위터 링크 영어┃https://twitter.com/_EternalReturn_/
-페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
-OOPZ 링크 중문 간체┃https://oopz.cn/s/aTrzaY
-SSR_CS 링크 중문간체┃https://qiyukf.com/client?k=278c943cf2d677784855a69ce3fa9bd3
-NGA 링크 중문 간체┃https://bbs.nga.cn/thread.php?fid=510501
 Goods/Name/1304001┃ER积分
 GroupItemAttribute/KR┃韩语
 GroupItemAttribute/EN┃英语
@@ -2817,6 +2797,9 @@ Goods/Name/3403019┃课余闲时・日常
 Goods/Name/3403020┃WeGame上线纪念！队伍格背景
 Goods/Name/3403021┃热带次元 艾比盖尔 休假
 Goods/Name/3403022┃热带次元 艾比盖尔 美好时光
+Goods/Name/3403023┃雷妮熊仔
+Goods/Name/3403024┃雪琳
+Goods/Name/3403025┃亨利
 Goods/Name/3419001┃冬日雪花
 ItemType/EVENT/Name┃收藏库物品
 Goods/Name/3503001┃[N] 收藏库物品
@@ -2861,6 +2844,7 @@ Goods/Name/3503039┃虚像骰子碎片
 Goods/Name/3503040┃2周年夏日卡
 Goods/Name/3503041┃2周年特别夏日卡
 Goods/Name/3503042┃赛季S8・电竞助力者币
+Goods/Name/3503043┃秋日卡片
 Goods/Desc/3503043┃试着完成秋日收藏吧！\n可以在收藏菜单中查看秋日收藏的达成条件。
 ItemType/WILD_CARD_SKIN/Name┃[仅限皮肤]任意牌
 ItemType/WILD_CARD_ETC/Name┃任意牌
@@ -3005,6 +2989,8 @@ Goods/Name/3303304┃白色代币
 Goods/Desc/3303304┃可以在交换所中使用白色代币。\n可以用于交换红色代币、挑战箱等。\n活动结束后，代币将会消失。
 Goods/Name/3303305┃红色代币
 Goods/Desc/3303305┃可以在交换所中使用红色代币。\n可以用于交换好运★代币、好运★球或好运★箱。\n活动结束后，代币将会消失。
+Goods/Name/3303306┃秋日代币
+Goods/Desc/3303306┃可以使用通过「秋日代币箱」或「登录活动收藏」获得的秋日代币购买商品。\n活动结束后，所持有的秋日代币将全部消失。
 Goods/Name/3303999┃里程
 Goods/Desc/3303999┃购买NP商品时将获得里程。
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃查看全部概率
@@ -3124,6 +3110,8 @@ Goods/Name/3190014┃骰子点数选择券
 Goods/Desc/3190014┃可以在六种骰子中选择其中一种获得。\n请通过奖励列表查看详情。
 Goods/Name/3102026┃2周年夏日箱
 Goods/Desc/3102026┃可以获得完整皮肤或者1个碎片以及一张[2周年夏日卡片]。\n可能会重复出现已持有的皮肤。\n请通过奖励列表查看详情。
+Goods/Name/3102027┃秋日代币箱
+Goods/Desc/3102027┃开启秋日代币箱时，可以固定获得25个秋日代币。\n此外，根据概率还会随机额外获得20、30、40或50个秋日代币。\n请通过奖励列表查看详情。
 Goods/Name/3190015┃2周年夏日皮肤选择券
 Goods/Desc/3190015┃可以选择获得列表中的1个物品。\n请通过奖励列表查看详情。
 Goods/Name/3199001┃赛季碎片包
@@ -4284,9 +4272,20 @@ Emotion_S8_EsportsPack_2546┃赛季S8・Daegu Suseong Guardians表情
 Emotion_S8_EsportsPack_2547┃赛季S8・GJ Slasher表情
 Emotion_S8_EsportsPack_2548┃赛季S8・Gyeonggi Innate表情
 Emotion_S8_EsportsPack_2549┃赛季S8・DAEJEON AutoArms表情
+Emotion_Henry01_NP┃亨利 还不错
+Emotion_Henry02_NP┃亨利 NO
+Emotion_Henry03_NP┃亨利 有点慢了
+Emotion_Henry04_NP┃亨利 淡定
+Emotion_SNS_Henry_2083005┃亨利 流动的时间
+Emotion_Leni_2069009┃雷妮熊爪爪
 Event_S16Champion_OneCircle_3142┃SEASON 7 CHAMPION ONECIRCLE
 Event_S16Champion_Romatic_3143┃SEASON 7 CHAMPION ROMATIC
 Event_S16Champion_Bum_3144┃SEASON 7 CHAMPION BUM
+Emotion_Barbara05_NP┃芭芭拉 才不要
+Emotion_Barbara06_NP┃芭芭拉 还不错
+Emotion_Barbara07_NP┃芭芭拉 等、等一下！
+Emotion_Barbara08_NP┃芭芭拉 走吧！
+Event_ERWolf_01_3145┃砰！
 ItemType/EMBLEM_MARK/Name┃个人头像
 EMBLEM_MARK_FREE1┃Aglaia标志
 EMBLEM_MARK_SHOP_102002┃玄佑头像
@@ -4863,6 +4862,8 @@ EMBLEM_MARK_EVENT_103215┃2周年 埃琳娜 恭喜
 EMBLEM_MARK_EVENT_103216┃2周年 伊娃 发射爱心
 EMBLEM_MARK_EVENT_103217┃2周年 埃琳娜 飞吻
 EMBLEM_MARK_EVENT_103218┃存在的记忆
+EMBLEM_MARK_EVENT_103219┃雷妮熊爪爪
+EMBLEM_MARK_EVENT_103220┃亨利 流动的时间
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃礼物树
 EMBLEM_MARK_ERPASS_104003┃红鼻子
@@ -5351,6 +5352,7 @@ EMBLEM_BG_EVENT_203007┃中秋节背景
 EMBLEM_BG_EVENT_203008┃2024圣诞背景
 EMBLEM_BG_EVENT_203009┃WeGame上线纪念！背景
 EMBLEM_BG_EVENT_203010┃2周年纪念背景
+EMBLEM_BG_EVENT_203011┃雷妮熊仔背景
 EMBLEM_BG_ERPASS_204002┃永恒轮回背景
 EMBLEM_BG_ERPASS_204003┃实验背景
 EMBLEM_BG_ERPASS_204004┃水滴背景
@@ -5775,6 +5777,7 @@ EMBLEM_OUTLINE_EVENT_303007┃中秋节
 EMBLEM_OUTLINE_EVENT_303008┃2024圣诞边框
 EMBLEM_OUTLINE_EVENT_303009┃WeGame上线纪念！边框
 EMBLEM_OUTLINE_EVENT_303010┃2周年纪念边框
+EMBLEM_OUTLINE_EVENT_303011┃雷妮熊仔边框
 EMBLEM_OUTLINE_ERPASS_304001┃冰雪
 EMBLEM_OUTLINE_ERPASS_304002┃圣诞派对
 EMBLEM_OUTLINE_ERPASS_304003┃彩球
@@ -6300,6 +6303,7 @@ Product/Name/WEGAME_IAP_S08_DAEJEONAutoArms_Pack_01┃赛季S8・DAEJEON AutoArm
 Product/Name/LOOTBOX_SKINxKEY_SET_10_S8_BONUS┃皮肤DATA箱 x 钥匙 (11组)
 Product/Name/EVENT_NPASS_S8_Premium_Token_1018┃赛季S8高级代币书Ⅱ
 Product/Name/EVENT_NPASS_S8_Basic_Token_1019┃赛季S8基础代币书Ⅱ
+Product/Name/EVENT_NPASS_S8_LeniBear_1020┃雷妮贝尔任务书
 Product/Name/DROPS_COIN_ESports_Box_EAS7┃电竞箱（EA赛季S7）
 Product/Name/DROPS_COIN_ESports_Box_EAS8┃电竞箱（EA赛季S8）
 Product/Name/DROPS_COIN_ESports_Box_EAS9┃电竞箱（EA赛季S9）
@@ -6309,6 +6313,8 @@ Product/Name/DROPS_COIN_ESports_Box_S3┃电竞箱（赛季S3）
 Product/Name/DROPS_COIN_ESports_Box_S4┃电竞箱（赛季S4）
 Product/Name/DROPS_COIN_ESports_Box_S5┃电竞箱（赛季S5）
 Product/Name/DROPS_COIN_ESports_Box_2024_ESportsClub┃电竞箱（2024同好大赛）
+Product/Name/S8_Autumn_Regular_Pack_01┃秋日代币常规组合包
+Product/Name/S8_Autumn_Big_Pack_01┃秋日代币特别组合包
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
@@ -6612,6 +6618,9 @@ Shop/Desc/DROPS_COIN_ESports_Box_S3┃<b><color=#FFBB00>[内容]</color></b>\n\n
 Shop/Desc/DROPS_COIN_ESports_Box_S4┃<b><color=#FFBB00>[内容]</color></b>\n\n- 电竞箱（赛季S4）\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 该商品是购买后立即开启的商品。\n※ 购买后，可以根据概率获得其中的1个物品。\n※ 请通过列表确认详细内容。
 Shop/Desc/DROPS_COIN_ESports_Box_S5┃<b><color=#FFBB00>[内容]</color></b>\n\n- 电竞箱（赛季S5）\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 该商品是购买后立即开启的商品。\n※ 购买后，可以根据概率获得其中的1个物品。\n※ 请通过列表确认详细内容。
 Shop/Desc/DROPS_COIN_ESports_Box_2024_ESportsClub┃<b><color=#FFBB00>[内容]</color></b>\n\n- 电竞箱（2024同好大赛）\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 该商品是购买后立即开启的商品。\n※ 购买后，可以根据概率获得其中的1个物品。\n※ 请通过列表确认详细内容。
+Shop/Desc/EVENT_NPASS_S8_LeniBear_1020┃<color=#E5D85C>推出雷妮贝尔任务书！</color>\n<color=#B2EBF4>千万不要错过可爱的雷妮熊仔主题物品！</color>\n购买商品后，达成对应等级时可以获得奖励。\n\n<size=18>[等级积分说明]</size>\n每级需要100积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买任务书后可以购买积分。
+Shop/Desc/S8_Autumn_Regular_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 秋日代币箱 x 3\n- 开箱钥匙 x 3\n- XP Boost(1日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所使用购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S8_Autumn_Big_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 秋日代币箱 x 10\n- 开箱钥匙 x 10\n- ER积分 Boost(1日)\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所使用购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
 Product/Name/SEASON_PASS_S6┃S6赛季包
@@ -6867,6 +6876,8 @@ Season1016/Name┃赛季S8基础代币书
 Season1017/Name┃2周年任务书
 Season1018/Name┃赛季S8高级代币书Ⅱ
 Season1019/Name┃赛季S8基础代币书Ⅱ
+Season1020/Name┃雷妮贝尔任务书
+Season1021/Name┃中秋特别任务书
 Season2000/Name┃一周年A-Coin任务书
 Season2001/Name┃度假A-Coin任务书
 Season2002/Name┃战斗女仆A-Coin任务书
@@ -7038,7 +7049,9 @@ Product/Name/S17_S16TOKEN_EXCHANGE┃军官学园代币 x 2
 Product/Name/S17_A-Coin_QUEST_BOOK┃逐浪A-Coin任务书
 Product/Name/S17_TROPICALDIMENSION_QUSET_BOOK┃热带次元 艾比盖尔任务书
 Product/Name/Autumn_RareMatter_01┃稀有DATA材料 x 1
+Product/Name/Autumn_AutumnCard_01┃秋日卡片 x 1
 Product/Name/Autumn_ACoin_100┃A-Coin x 100
+Product/Name/Autumn_S17_Token_01┃逐浪代币 x 10
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃度假A-Coin任务书
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃战斗女仆A-Coin任务书
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃转变A-Coin任务书
@@ -8315,11 +8328,8 @@ Skill/Group/Name/1008420┃震音
 Skill/Group/Name/1008500┃Peacemaker
 Skill/Group/Desc/1008100┃哈特每次进行普攻时，将额外释放2个声波，每个声波对敌人造成普攻伤害<color=white>{1}</color>。
 Skill/Group/Desc/1008200┃哈特弹奏着吉他同时为声波充电。之后可以再使用2次技能。\n\n再次使用时 : 向指定方向释放声波，造成<color=white>{10}</color>~<color=white>{11}</color>技能伤害。在等待{0}秒后再次使用时将达到最大伤害。\n\n被声波命中2次的敌人{12}秒间移动速度减少{6}。
-Skill/Group/Desc/1008210┃哈特弹奏着吉他同时为声波充电。之后可以再使用2次技能。\n\n再次使用时 : 向指定方向释放声波，造成<color=white>{10}</color>~<color=white>{11}</color>技能伤害。在等待{0}秒后再次使用时将达到最大伤害。\n\n被声波命中2次的敌人{12}秒间移动速度减少{6}。
 Skill/Group/Desc/1008300┃哈特弹奏吉他，{0}秒内攻击力增加{1}，普攻射程增加{8}。
 Skill/Group/Desc/1008400┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{8}</color>的技能伤害。此技能可以再次使用1次。
-Skill/Group/Desc/1008410┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{8}</color>的技能伤害。此技能可以再次使用1次。
-Skill/Group/Desc/1008420┃哈特快速向指定方向移动一小段距离，对附近的敌人释放声波，造成<color=white>{8}</color>的技能伤害。此技能可以再次使用1次。
 Skill/Group/Desc/1008500┃哈特召唤放大器开始持续{0}秒的演出。区域范围内的所有目标都不会死亡，范围内目标的体力值降至{7}以下时，将免疫伤害或体力恢复效果。\n\n演出结束后，区域内所有目标将恢复<color=white>{6}</color>体力。
 Skill/Group/Coef/1008100┃哈特每次进行普攻时，将额外释放2个声波，每个声波对敌人造成<color=#ffd775>(攻击力{2}) * (普攻增幅)</color>的普攻伤害。
 Skill/Group/Coef/1008200┃哈特弹奏着吉他同时为声波充电。之后可以再使用2次技能。\n\n再次使用时 : 向指定方向释放声波，造成<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻击力{5})</color>的技能伤害。在等待{0}秒后再次使用时将达到最大伤害。\n\n被声波命中2次的敌人{10}秒间移动速度减少{6}。
@@ -11083,15 +11093,20 @@ Skill/Group/Name/1067200┃二元自旋
 Skill/Group/Name/1067300┃时空交错
 Skill/Group/Name/1067400┃维度跃迁
 Skill/Group/Name/1067500┃次元时空
+Skill/LobbyDesc/1067100┃艾比盖尔下一次普攻将造成额外的技能伤害，减少目标的防御力。\n每次技能命中时，都将缩减<color=white>撕裂之刃</color>的冷却时间。
 Skill/Group/Desc/1067100┃艾比盖尔下一次普攻造成<color=white>{20}</color>额外技能伤害，{3}秒间目标的防御力减少{4}。\n每次技能命中时，<color=white>撕裂之刃</color>的冷却时间缩减{0}秒。\n\n此普攻也被视为技能攻击。
-Skill/Group/Desc/1067200┃艾比盖尔挥动镰刀。第一次旋转造成<color=white>{20}</color>技能伤害，第二次旋转造成<color=white>{21}</color>技能伤害。\n施法二元自旋时，{0}秒间移动速度增加{1}。
-Skill/Group/Desc/1067300┃艾比盖尔割裂出一个扇形空间，造成<color=white>{20}</color><color=#688A08>(+目标当前体力{21})</color>的技能伤害，命中时生成一个吸收<color=white>{22}</color>伤害的护盾，持续{1}秒。\n命中多个敌人的情况下，每额外命中一个敌人护盾增加{0}。(上限{7})\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
-Skill/Group/Desc/1067400┃艾比盖尔透过维度裂痕瞬间移动至敌人周围的指定位置，造成<color=white>{20}</color>的技能伤害。\n\n对留有<color=white>时空坐标</color>标识的目标使用时，将重置<color=white>维度跃迁</color>冷却。
-Skill/Group/Desc/1067500┃艾比盖尔进入时空漩涡，{0}秒间处于无法指定目标的状态。\n落地后造成<color=white>{20}</color>的技能伤害，{1}秒间移动速度减少{2}。\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
 Skill/Group/Coef/1067100┃艾比盖尔下一次普攻造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅{2})</color>额外技能伤害，{3}秒间目标的防御力减少{4}。\n每次技能命中时，<color=white>撕裂之刃</color>的冷却时间缩减{0}秒。\n\n此普攻也被视为技能攻击。
+Skill/LobbyDesc/1067200┃艾比盖尔挥动镰刀。第一次旋转造成技能伤害，第二次旋转造成强化技能伤害。\n施法二元自旋时，暂时增加移动速度。
+Skill/Group/Desc/1067200┃艾比盖尔挥动镰刀。第一次旋转造成<color=white>{20}</color>技能伤害，第二次旋转造成<color=white>{21}</color>技能伤害。\n施法二元自旋时，{0}秒间移动速度增加{1}。
 Skill/Group/Coef/1067200┃艾比盖尔挥动镰刀。第一次旋转造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅{3})</color>技能伤害，第二次旋转造成<color=white>{4}</color><color=#DDA0DD>(+技能增幅{5})</color>技能伤害。\n施法二元自旋时，{0}秒间移动速度增加{1}。
+Skill/LobbyDesc/1067300┃艾比盖尔割裂出一个扇形空间，造成技能伤害，命中时将生成一个吸收伤害的护盾。\n命中多个敌人时，每额外命中一个敌人将增加一定的护盾量，持续一段时间。\n\n对技能命中的敌人留下<color=white>时空坐标</color>标识。\n时空坐标标识持续的时间内，艾比盖尔可以获得标识对象的视野。
+Skill/Group/Desc/1067300┃艾比盖尔割裂出一个扇形空间，造成<color=white>{20}</color><color=#688A08>(+目标当前体力{21})</color>的技能伤害，命中时生成一个吸收<color=white>{22}</color>伤害的护盾，持续{1}秒。\n命中多个敌人的情况下，每额外命中一个敌人护盾增加{0}。(上限{7})\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
 Skill/Group/Coef/1067300┃艾比盖尔割裂出一个扇形空间，造成<color=white>{2}</color><color=#688A08>(+目标当前体力{3}</color><color=#DDA0DD>(+技能增幅{4})</color><color=#688A08>)</color>的技能伤害，命中时生成一个吸收<color=white>{5}</color><color=#DDA0DD>(+技能增幅{6})</color>伤害的护盾，持续{1}秒。\n命中多个敌人的情况下，每额外命中一个敌人，护盾增加{0}。(上限{7})\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
+Skill/LobbyDesc/1067400┃艾比盖尔透过维度裂痕瞬间移动至敌人周围的指定位置，造成技能伤害。\n\n对留有<color=white>时空坐标</color>标识的目标使用时，将重置<color=white>维度跃迁</color>冷却。
+Skill/Group/Desc/1067400┃艾比盖尔透过维度裂痕瞬间移动至敌人周围的指定位置，造成<color=white>{20}</color>的技能伤害。\n\n对留有<color=white>时空坐标</color>标识的目标使用时，将重置<color=white>维度跃迁</color>冷却。
 Skill/Group/Coef/1067400┃艾比盖尔透过维度裂痕瞬间移动至敌人周围的指定位置，造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅{1})</color>的技能伤害。\n\n对留有<color=white>时空坐标</color>标识的目标使用时，将重置<color=white>维度跃迁</color>冷却。
+Skill/LobbyDesc/1067500┃艾比盖尔进入时空漩涡，一段时间内处于无法指定目标的状态。\n落地后造成技能伤害，移动速度减少。\n\n对技能命中的敌人留下<color=white>时空坐标</color>标识。\n时空坐标标识持续的时间内，艾比盖尔可以获得标识对象的视野。
+Skill/Group/Desc/1067500┃艾比盖尔进入时空漩涡，{0}秒间处于无法指定目标的状态。\n落地后造成<color=white>{20}</color>的技能伤害，{1}秒间移动速度减少{2}。\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
 Skill/Group/Coef/1067500┃艾比盖尔进入时空漩涡，{0}秒间处于无法指定目标的状态。\n落地后造成<color=white>{3}</color><color=#DDA0DD>(+技能增幅{4})</color>的技能伤害，{1}秒间移动速度减少{2}。\n\n同时对技能命中的敌人留下<color=white>时空坐标</color>标识。\n艾比盖尔可以获得时空坐标标识对象的视野，持续{8}秒。
 CharacterState/Group/Name/1067110┃撕裂之刃 - 强化普攻
 CharacterState/Group/Desc/1067110┃艾比盖尔下一个普攻将造成额外的技能伤害。
@@ -11706,6 +11721,43 @@ CharacterState/Group/Name/1082400┃飞闪步 - 移动速度降低
 CharacterState/Group/Desc/1082400┃因飞闪步移动速度降低了。
 CharacterState/Group/Name/1082520┃万剑归宗 - 移动速度降低
 CharacterState/Group/Desc/1082520┃因万剑归宗移动速度降低了。
+Skill/Group/Name/1083100┃裂时之隙
+Skill/Group/Name/1083200┃指针
+Skill/Group/Name/1083210┃指针
+Skill/Group/Name/1083300┃时控装置
+Skill/Group/Name/1083400┃瞬时跃迁
+Skill/Group/Name/1083500┃时序重铸域
+Skill/LobbyDesc/1083100┃亨利在短时间内对敌人实验体造成一定的伤害时，将为其附加一个计时器。计时结束时，将根据目标失去的体力对其造成技能伤害。
+Skill/Group/Desc/1083100┃亨利在{0}秒内对敌人实验体造成其体力上限{1}的伤害时，将为目标附加一个计时器。{2}秒后，计时器爆炸对其造成<color=white>{3}</color><color=#688A08>(+目标失去体力{4})</color>的技能伤害。
+Skill/Group/Coef/1083100┃亨利在{0}秒内对敌人实验体造成体力上限{1}的伤害时，并为目标附着一个计时器。{2}秒后计时器将爆炸，并对其附着的敌人造成<color=white>{20}</color><color=#DDA0DD>(+技能增幅{21})</color><color=#688A08>(+目标失去体力{4})</color>的技能伤害。
+Skill/Group/ExpansionTip/1083100┃<i>当目标在承受计时器爆炸伤害前死亡时，冷却时间缩减{0}。</i>
+Skill/LobbyDesc/1083200┃亨利向指定方向投掷分针，对路径上的敌人造成技能伤害，并在一段时间内可以再次使用技能。\n\n再次使用 : 向指定方向投掷时针，对路径上的敌人造成更高的技能伤害。\n\n从每个技能命中的第二个目标开始，伤害将减少。若命中处于移动受损状态的敌人，将额外造成真实伤害。
+Skill/Group/Desc/1083200┃亨利向指定方向投掷分针，对路径上的敌人造成<color=white>{5}</color>技能伤害，命中处于移动受损状态的敌人时，将造成<color=white>{0}</color>的额外真实伤害。亨利可以在{2}秒内可以再次使用技能。\n\n再次使用 : 向指定方向投掷时针，对路径上的敌人造成<color=white>{6}</color><color=#688A08>(+目标体力上限{4})</color>的技能伤害，命中处于移动受损状态的敌人时，将造成<color=white>{1}</color>的额外真实伤害。\n\n从每个技能命中的第二个目标开始，将造成{3}的伤害。
+Skill/Group/Coef/1083200┃亨利向指定方向投掷分针，对路径上的敌人造成<color=white>{20}</color><color=#DDA0DD>(+技能增幅{21})</color>的技能伤害，命中处于移动受损状态的敌人时，将造成<color=white>{0}</color><color=green>(+亨利等级</color><color=white> * {7}</color><color=green>)</color>的额外真实伤害。亨利可以在{2}秒内可以再次使用技能。\n\n再次使用 : 向指定方向投掷时针，对路径上的敌人造成<color=white>{22}</color><color=#DDA0DD>(+技能增幅{23})</color><color=#688A08>(+目标体力上限{4})</color>的技能伤害，命中处于移动受损状态的敌人时，将造成<color=white>{1}</color><color=green>(+亨利等级</color><color=white> * {8}</color><color=green>)</color>的额外真实伤害。\n\n从每个技能命中的第二个目标开始，将造成{3}的伤害。
+Skill/LobbyDesc/1083300┃亨利在指定位置生成<color=white>时控装置</color>。装置会定期对其上的敌人造成技能伤害，并降低其移动速度。\n\n命中敌方实验体或终极野怪时，将缩减技能的冷却时间。
+Skill/Group/Desc/1083300┃亨利在指定位置生成持续{4}秒的<color=white>时控装置</color>。每{0}秒，装置会对其上的敌人造成<color=white>{3}</color><color=#688A08>(+目标体力上限{5})</color>的技能伤害，并使其移动速度降低{1}。\n\n命中敌方实验体或终极野怪时，冷却时间减少{2}。
+Skill/Group/Coef/1083300┃亨利在指定位置生成持续{4}秒的<color=white>时控装置</color>。每{0}秒，装置会对其上的敌人造成<color=white>{20}</color><color=#DDA0DD>(+技能增幅{21})</color><color=#688A08>(+目标体力上限{5})</color>的技能伤害，并使其移动速度降低{1}。\n\n命中敌方实验体或终极野怪时，冷却时间减少{2}。
+Skill/Group/ExpansionTip/1083300┃<i>当瞬时跃迁瞬间移动位置位于时控装置上时，装置持续时间将延长{0}秒。</i>
+Skill/LobbyDesc/1083400┃亨利集中精神快速逆转时间，并瞬间移动到指定位置。若落点位于<color=white>时控装置</color>之上，则会束缚装置上的敌人并造成技能伤害。当敌方实验体位于装置上时，亨利的移动速度将在短时间内提升，随后逐渐恢复。\n\n在开始瞬间移动时，<color=white>指针</color>与<color=white>时控装置</color>的冷却时间将会减少。
+Skill/Group/Desc/1083400┃亨利集中精神{0}秒，快速倒转时间并瞬间移动到指定位置。若落点位于<color=white>时控装置</color>之上，则会束缚{1}秒装置上的敌人并造成<color=white>{6}</color>技能伤害。当敌方实验体位于装置上时，亨利{2}秒内移动速度增加{3}，随后逐渐恢复。\n\n在开始瞬间移动时，<color=white>指针</color>的冷却时间减少{4}，<color=white>时控装置</color>冷却时间减少{5}。
+Skill/Group/Coef/1083400┃亨利集中精神{0}秒，快速倒转时间并瞬间移动到指定位置。若落点位于<color=white>时控装置</color>之上，则会束缚{1}秒装置上的敌人并造成<color=white>{20}</color><color=#DDA0DD>(+技能增幅{21})</color>的技能伤害。当敌方实验体位于装置上时，亨利{2}秒内移动速度增加{3}，随后逐渐下降。\n\n在开始瞬间移动时，<color=white>指针</color>的冷却时间减少{4}，<color=white>时控装置</color>冷却时间减少{5}。
+Skill/LobbyDesc/1083500┃亨利在一段时间内进入免疫所有负面效果的状态，并在周围展开领域，对敌人造成技能伤害并获得护盾。\n\n领域持续期间，将减缓敌方投射物的速度，并逐渐降低敌人的移动速度。当时针和分针重合时，领域将引发爆炸，清除其中的敌方投射物，对敌人造成技能伤害并使其晕厥。
+Skill/Group/Desc/1083500┃亨利进入{0}秒免疫所有负面效果的状态，并在周围展开领域，对敌人造成<color=white>{8}</color>技能伤害并获得吸收<color=white>{10}</color>伤害的护盾。\n\n领域持续期间，敌方投射物的速度减缓{3}，敌人的移动速度降低{5}。领域消失时，将引发爆炸并清除其中的敌方投射物，对敌人造成<color=white>{9}</color>技能伤害并使其晕厥{7}秒。
+Skill/Group/Coef/1083500┃亨利进入{0}秒免疫所有负面效果的状态，并在周围展开领域，对敌人造成<color=white>{20}</color><color=#DDA0DD>(+技能增幅{21})</color>技能伤害并获得吸收<color=white>{24}</color><color=#DDA0DD>(+技能增幅{25})</color><color=#688A08>(+体力上限{26})</color>伤害的护盾。\n\n领域存在期间，敌方投射物的速度减缓{3}，敌人的移动速度降低{5}。领域消失时，将引发爆炸并清除其中的敌方投射物，对敌人造成<color=white>{22}</color><color=#DDA0DD>(+技能增幅{23})</color>技能伤害并使其晕厥{7}秒。
+CharacterState/Group/Name/1083100┃裂时之隙 - 附加计时器
+CharacterState/Group/Desc/1083100┃由于裂时之隙，敌人会被附着计时器，短时间后受到技能伤害。
+CharacterState/Group/Name/1083300┃时控装置 - 移动速度降低
+CharacterState/Group/Desc/1083300┃因时控装置移动速度变缓。
+CharacterState/Group/Name/1083400┃瞬时跃迁 - 移动速度增加
+CharacterState/Group/Desc/1083400┃因瞬时跃迁移动速度增加了。
+CharacterState/Group/Name/1083410┃瞬时跃迁 - 束缚
+CharacterState/Group/Desc/1083410┃因时控装置爆炸陷入束缚。
+CharacterState/Group/Name/1083500┃时序重铸域 - 护盾
+CharacterState/Group/Desc/1083500┃亨利展开领域获得了护盾。
+CharacterState/Group/Name/1083510┃时序重铸域 - 晕厥
+CharacterState/Group/Desc/1083510┃因时序重铸域陷入晕厥。
+CharacterState/Group/Name/1083520┃时序重铸域 - 移动速度降低
+CharacterState/Group/Desc/1083520┃在时序重铸域内移动速度降低。
 Skill/Group/Name/3015000┃斗篷和短剑
 Skill/Group/Name/3015100┃斗篷和短剑
 Skill/Group/Name/3016000┃格挡
@@ -12238,11 +12290,6 @@ Skill/LobbyDesc/1065200┃<color=white>黛比 : </color>黛比向前方持剑挥
 Skill/LobbyDesc/1065300┃<color=white>黛比 : </color>黛比挥舞手中的剑，剑光流转造成技能伤害，阻挡范围内敌人的投射体及普攻。\n\n<color=white>玛莲 : </color>玛莲快速旋转的同时发射多个能量束快速飞向附近的敌人，分别对命中的敌人造成技能伤害，达到一定命中次数时，每次命中都将会刻上<color=white>靛与赤</color>中的<color=white>红色</color>。对能量束已命中的敌人造成减少了的伤害。
 Skill/LobbyDesc/1065400┃<color=green>被动 : </color>黛比&玛莲交替出场时增加移动速度。\n\n<color=white>黛比 : </color>呼唤玛莲出场。交替出场时，玛莲将移至身后发射能量束，对首个命中的敌人造成技能伤害。并在一段时间后，使该敌人和周围所有敌人的移动速度减少。\n黛比将在交替出场的位置暂时待机，使用<color=white>赤月斩</color>时，黛比向前方突进，对路径上的敌人造成技能伤害并使敌人悬空。\n\n<color=white>玛莲 : </color>呼唤黛比出场。交替出场时，黛比向前方突进，对路径上的敌人造成技能伤害并使敌人悬空。\n玛莲将在交替出场的位置暂时待机，使用<color=white>靛风斩</color>时，玛莲向后移动发射能量束，对首个命中的敌人造成技能伤害。并在一段时间后，使该敌人和周围所有敌人的移动速度减少。\n\n<i>冷却固定: 此技能不受冷却缩减影响。</i>
 Skill/LobbyDesc/1065500┃黛比和玛莲一同突进，对路径上的所有敌人造成技能伤害后将敌人拉向自身，使敌人暂时晕厥，造成多次额外真实伤害，并刻上<color=white>靛与赤</color>。
-Skill/LobbyDesc/1067100┃艾比盖尔下一次普攻将造成额外的技能伤害，减少目标的防御力。\n每次技能命中时，都将缩减<color=white>撕裂之刃</color>的冷却时间。
-Skill/LobbyDesc/1067200┃艾比盖尔挥动镰刀。第一次旋转造成技能伤害，第二次旋转造成强化技能伤害。\n施法二元自旋时，暂时增加移动速度。
-Skill/LobbyDesc/1067300┃艾比盖尔割裂出一个扇形空间，造成技能伤害，命中时将生成一个吸收伤害的护盾。\n命中多个敌人时，每额外命中一个敌人将增加一定的护盾量，持续一段时间。\n\n对技能命中的敌人留下<color=white>时空坐标</color>标识。\n时空坐标标识持续的时间内，艾比盖尔可以获得标识对象的视野。
-Skill/LobbyDesc/1067400┃艾比盖尔透过维度裂痕瞬间移动至敌人周围的指定位置，造成技能伤害。\n\n对留有<color=white>时空坐标</color>标识的目标使用时，将重置<color=white>维度跃迁</color>冷却。
-Skill/LobbyDesc/1067500┃艾比盖尔进入时空漩涡，一段时间内处于无法指定目标的状态。\n落地后造成技能伤害，移动速度减少。\n\n对技能命中的敌人留下<color=white>时空坐标</color>标识。\n时空坐标标识持续的时间内，艾比盖尔可以获得标识对象的视野。
 Skill/LobbyDesc/1069100┃雷妮基本技能命中队友实验体时，将为目标生成小熊。\n\n获得小熊的队友命中敌人时，小熊将会离开并造成额外的技能伤害。\n因小熊造成伤害时，可以缩减雷妮的基本技能冷却。
 Skill/LobbyDesc/1069200┃雷妮发射胡萝卜火箭炮并稍微向后移动一点距离。胡萝卜发射至射程末端、命中敌人或作用于队友时将立即爆炸。\n爆炸时将对敌人造成技能伤害或恢复队友体力。
 Skill/LobbyDesc/1069300┃雷妮跳至指定位置，用锤子敲击地面对敌人造成技能伤害并减少敌人的移动速度。命中中央范围时，将增加减少的移动速度。\n命中队友时，移动速度将在短时间内减少后再次增加。
@@ -15473,9 +15520,9 @@ Item/Name/201528┃瓦尔哈拉头盔
 Item/Name/201529┃玄瞳头盔
 Item/Name/201420┃魔女帽
 Item/Name/201421┃狐狸假面
+Item/Name/201530┃戴维德耳机
 Item/Name/201422┃竞速护目镜
 Item/Name/201423┃战术护目镜
-Item/Name/201530┃戴维德耳机
 Item/Name/201531┃水手帽
 Item/Name/201532┃舰长礼帽
 Item/Name/201533┃暗影面纱
@@ -17307,6 +17354,12 @@ CharacterStoryHeight/82┃168cm
 CharacterStoryGender/82┃女
 CharacterStoryTitle/82┃让我用这把剑，为你开辟前路！
 CharacterStoryDesc/82┃她是一位能操纵剑，施展御剑术的少女。\n虽然渴望展现出从容帅气的模样，但实际上却是个拥有天然呆属性的单纯少女。\n她出生在深山村落，她的家族世代守护着宝剑。\n\n作为家中的独生女， 雪琳自幼便与剑朝夕相伴。\n与剑相伴时，她仿佛能感受到村庄的祈愿和精髓环绕心间。\n她每天都会擦拭剑、磨砺刀锋，端坐在剑前平心静气。\n\n直到某天，供奉剑的寺院不知因何原因突然被大火吞噬。\n看到被困在烈焰中的父亲和村民们，雪琳毫不犹豫地冲进了火海。\n\n是谁、又是为什么想要焚毁寺院，这些对她而言都无关紧要。\n重要的是，她无法眼睁睁地看着自己珍视的一切，在眼前化为灰烬。\n\n就在那一刻，那把剑仿佛感应到了她的心意，作出了回应。\n剑身释放出宛如生命般的力量，这股力量环绕在雪琳周身。\n凭借着剑和自身的力量，雪琳成功将所有陷入险境的人从火海中救了出来。\n\n此后，雪琳做出了人生中第一次离开村庄的决定。\n不仅仅是作为守剑人，而是要真正成为被剑选中的主人。\n为了依靠自己的力量，守护那些她想要守护之物。
+CharacterStoryName/83┃亨利・康斯坦特
+CharacterStoryAge/83┃不详（推测已逾120岁）
+CharacterStoryHeight/83┃173cm
+CharacterStoryGender/83┃男
+CharacterStoryTitle/83┃「你有想过……让时间倒流吗？」
+CharacterStoryDesc/83┃他是一位停滞在时间里的钟表匠。\n他总是一副面无表情、冷淡的模样，几乎从不流露情绪。\n他说话生硬、语调刻板，刻意与他人保持距离。\n\n但很久以前，他也曾拥有一个充满希望的世界。\n有亲密的朋友、敬爱的师父……\n还有这世上独一无二、他深爱的妻子。\n他曾以为，那段日子会永远持续下去。\n\n直到一场突如其来的灾难，将这一切彻底摧毁。\n在绝望中嘶吼的亨利觉醒了VF，他一次次回溯时间，\n试图挽回所爱之人，然而结局却始终未曾改变。\n\n从那之后，亨利的情感逐渐变得迟钝、干涸。\n失去了活下去的理由，他唯一剩下的，是那些早已褪色的记忆。\n即使这些回忆早已斑驳，他仍将它们视若珍宝。\n因为他知道，一旦自己也消失，便再无人记得他们曾存在过。\n于是他苦苦挣扎，依靠那虚无缥缈的希望，一天又一天地活了下来。\n他渴望着，奇迹能够再次降临。\n\n经过了一段漫长的时间，阿格莱亚主动找到了亨利。\n从他们身上看到新的可能性后，亨利下定了决心——\n不管发生什么，他都要回到那个地方。\n\n停滞许久的时间，终于再次开始流动。\n只为了，再次见到那张美丽的笑脸。\n\n他曾为纪念妻子分娩，亲手打造了一只怀表。\n至今，那只尚未完成的怀表仍被他珍藏着。
 CharacterPlayTip/1┃杰琪是一位连环杀人魔，无情地追击和屠杀目标，每次击杀时都能获得更强大的爆发力。
 CharacterPlayTip/2┃阿雅是一位具有较高稳定性的远程实验体。轻松使用技能从远处命中目标。
 CharacterPlayTip/3┃菲欧娜利用击剑选手的敏捷性，控制与敌人间的距离，每次连招技能命中时，都能造成更大的伤害。
@@ -17389,61 +17442,7 @@ CharacterPlayTip/79┃尤斯蒂娜是一位梦想成为正义英雄的活力少�
 CharacterPlayTip/80┃伊舒特在强化时将展现出一个与自身行动产生不同结果的另一个自己。他在每一次交战中不断研究各种可能性，通过反复实验寻找更优的结果。
 CharacterPlayTip/81┃妮娅是一位真心热爱并享受游戏的少女。她将现实视为一场可操纵的游戏，精准地限制敌人的行动节奏，主导每一场对决的走向。
 CharacterPlayTip/82┃雪琳是一位修炼御剑术的淳朴乡村少女。她能挥出剑攻击敌人或保护自己，并在瞬间突入敌阵，扭转战斗局势。
-MasteryType/Glove/Desc┃虽然手套的攻击距离有限，但可以实现连续且快速的攻击。
-MasteryType/Tonfa/Desc┃旋棍是唯一能同时确保防御力和攻击力的武器。
-MasteryType/Hammer/Desc┃锤子虽然攻击速度较慢，但可以通过强有力的攻击来限制对方的动作。
-MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以灵活地应对各式各样的对手。
-MasteryType/Whip/Desc┃鞭子会限制动作范围，无论对使用者来说还是敌人来说，都是难对付的武器。
-MasteryType/HighAngleFire/Desc┃投掷武器具有强大的攻击力。 \n每种武器使用后，弹丸恢复速度有所不同，需要注意数量管理。
-MasteryType/DirectFire/Desc┃暗器的种类最多，是多才多艺的武器。 \n每种武器使用后，弹丸恢复的速度不同，需要注意数量管理。\n
-MasteryType/Bow/Desc┃弓是使用越熟练威力就越强的远距离武器，\n在面对野生动物的时候尤其有利。
-MasteryType/CrossBow/Desc┃短弩高手可以一边逼开接近的对手，一边给予其单方面的伤害。
-MasteryType/Pistol/Desc┃手枪允许玩家频繁地使用技能，特别适合灵活快速的玩法。
-MasteryType/AssaultRifle/Desc┃ 突击步枪是以快速攻击且具有持续攻击性为特色的远距离武器。
-MasteryType/SniperRifle/Desc┃狙击枪具有最远射程和强大攻击力。\n因为射程比视野远，所以选择位置和确保视野清晰是非常重要的。
-MasteryType/Axe/Desc┃斧子虽然慢但具有最强大的攻击力。\n适合想要快速製作武器进行初期战斗的玩家。
-MasteryType/OneHandSword/Desc┃短剑是专门用于突袭的武器。\n在短时间交战中，比其他武器更具杀伤力。
-MasteryType/TwoHandSword/Desc┃双手剑是均衡的武器。\n越熟练越能发挥更大的杀伤力，但需注意，它在初期有些弱。
-MasteryType/Polearm/Desc┃长柄武器是兼具射程和杀伤力的近距离武器。 \n特别适合用于面对多数敌人时的情况。
-MasteryType/DualSword/Desc┃双剑活用了二连击的特色，不仅可以连续攻击还很时髦。
-MasteryType/Spear/Desc┃枪是长兵器，在中距离攻击中具有强大杀伤力。\n但是对处于近处的敌人来说比较弱，所以要适当把握距离。
-MasteryType/Nunchaku/Desc┃双节棍是很难学会的武器，但熟练后，可以是变化万千的危险武器。
-MasteryType/Rapier/Desc┃西洋剑的优点是在躲避敌人攻击的同时还能发起进攻。
-MasteryType/Guitar/Desc┃吉他可以从远距离发出声波，这是一种多功能武器，\n随着技能的发展及升级，每次演奏的方式和攻击都会有所不同。
-MasteryType/Camera/Desc┃相机是一种没有投射体的远攻武器。 可以用来挡住目标的视线，也有利于频繁交战。
-MasteryType/Arcana/Desc┃圣器是一种具有 VF 能量的远程武器。 可以不断地使用技能来制服对手。
-MasteryType/VFArm/Desc┃VF机械臂是利用纳米机器来控制VF的近攻武器。 装备者可以通过调整VF流量，一次性造成严重的伤害。
-MasteryType/Glove/Stats┃装备手套时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Tonfa/Stats┃装备旋棍时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hammer/Stats┃装备锤子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Axe/Stats┃装备斧子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bat/Stats┃装备棍棒时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Whip/Stats┃装备鞭子时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/OneHandSword/Stats┃装备短剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/TwoHandSword/Stats┃装备双手剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DualSword/Stats┃装备双剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Spear/Stats┃装备枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/HighAngleFire/Stats┃装备投掷时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/DirectFire/Stats┃装备暗器时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Bow/Stats┃装备弓箭时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/CrossBow/Stats┃装备短弩时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Pistol/Stats┃装备手枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/AssaultRifle/Stats┃装备突击步枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/SniperRifle/Stats┃装备狙击枪时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Nunchaku/Stats┃装备双节棍时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Rapier/Stats┃装备西洋剑时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Guitar/Stats┃装备吉他时增加 {1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Camera/Stats┃装备相机时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Arcana/Stats┃装备圣器时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/VFArm/Stats┃装备VF机械臂时增加{1} {0}\n{3} {2}\n{5} {4}
-MasteryType/Hunt/Stats┃增加 {1} {0}
-MasteryType/Craft/Stats┃增加 {1} {0}
-MasteryType/Search/Stats┃增加 {1} {0}
-MasteryType/Move/Stats┃增加 {1} {0}
-MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
-MasteryType/Meditation/Stats┃增加 {1} {0}
-MasteryType/Trap/Stats┃增加 {1} {0}
+CharacterPlayTip/83┃亨利是一名利用操纵时间的能力来干扰敌人行动，并为我方创造有利战斗环境的实验体。
 보유하지 않은 캐릭터입니다.┃此实验体尚未解锁。\n请在商店中购买后以进行使用。
 매칭 중 캐릭 변경 금지┃在匹配过程中无法更换实验体。
 로딩 중┃正在加载中\n<按X键休息>
@@ -17575,6 +17574,7 @@ AI 대전 플레이 가능┃<color=#FFB62F>AI 对战模式</color>已开启。
 연습 모드 플레이 가능┃<color=#FFB62F>训练模式</color>已开启。
 스쿼드 대전 플레이 가능┃<color=#FFB62F>三人对战</color>已开启。
 유니온 대전 팀 생성 가능┃可以组建<color=#FFB62F>联盟对战</color>队伍。
+이벤트 대전 플레이 가능┃<color=#FFB62F>活动对战模式</color>已开启。
 PurchaseWithdrawalType/Text/Asset7Days┃自购买之日起7日(含当天)后或购买时发放的NP和里程已使用部分时，则无法申请取消退款。
 PurchaseWithdrawalType/TEXT/Asset7Days_KAKAO┃自购买之日起7日(含当天)内可以申请退款。但已开启或使用部分商品时无法取消退款。未经法定代理人同意，使用未成年人名义的付款方式进行付款时，则可能会被取消。
 PurchaseWithdrawalType/Text/Asset7Days_KAKAO┃自购买之日起7日(含当天)内可以申请退款。但已开启或使用部分商品时无法取消退款。未经法定代理人同意，使用未成年人名义的付款方式进行付款时，则可能会被取消。
@@ -17809,7 +17809,7 @@ CustomGame/Options/Default/ChangeTeamNumber┃随机更换队伍编号
 CustomGame/Options/Default/DelayReplay┃回放延迟
 CustomGame/Options/Default/DisableReplay┃无法回放
 CustomGame/Options/Default/DisableEliminatedSpectator┃团队死亡时无法观战
-CustomGame/Options/Default/VisibleTeamKillDetail┃显示观战时队伍TK详情
+CustomGame/Options/Default/VisibleTeamKillDetail┃显示详细击杀数
 CustomGame/Options/Default/TournamentScoreMode┃使用赛事积分
 CustomGame/Options/Default/AllowDimensionalRiftResurrection┃允许生成次元裂隙（一般）
 일반 스쿼드 명칭┃一般模式
@@ -18495,8 +18495,8 @@ NormalMatchingSquad┃在不显示匹配状态的情况下开始一般模式。\
 RankMatchingSolo┃在不显示匹配状态的情况下开始一般模式单人对战。\n*需要在设置＞游戏选项中确认是否使用了该功能。
 RankMatchingDuo┃在不显示匹配状态的情况下开始一般模式双人对战。\n*需要在设置＞游戏选项中确认是否使用了该功能。
 RankMatchingSquad┃在不显示匹配状态的情况下开始排位模式。\n*需要在设置＞直播模式选项中确认是否开启了[使用快捷键匹配]功能。
-StreamingModeSetting/SquadRumbleMatching┃在不显示匹配状态的情况下开始联盟对战模式。\n*需要在设置＞游戏选项中确认是否开启了此功能。
-StreamingModeSetting/EventModeMatching┃在不显示匹配状态的情况下开始活动对战匹配。\n*需要在设置＞游戏选项中确认是否开启了此功能。
+StreamingModeSetting/SquadRumbleMatching┃在不显示匹配状态的情况下开始联盟对战模式。\n*需要在设置＞直播模式选项中确认是否开启了此功能。
+StreamingModeSetting/EventModeMatching┃在不显示匹配状态的情况下开始活动对战匹配。\n*需要在设置＞直播模式选项中确认是否开启了此功能。
 유니온 대전 방송모드 에러 팝업┃加入联盟队伍后可以使用。\n请前往联盟对应的队伍大厅后使用。
 이벤트 대전 방송모드 에러 팝업┃当前不是可参与活动对战的时间，或暂无已开启的活动对战。
 GameSetting/SecretMatching┃可使用快捷键进行匹配。\n使用快捷键匹配时，将不显示匹配待机画面。\n各模式隐藏式匹配快捷键可在设置的地方进行设置 - 界面/更改。
@@ -18555,6 +18555,8 @@ GameSetting/AutomaticInventoryItemRestock┃如果物品栏中存在多个可消
 GameSetting/VLSInteractExpandMapActivate┃和VLS进行交互时，将自动激活扩展地图。
 인벤토리아이템우선사용설정┃物品栏物品优先使用顺序
 GameSetting/InventoryItemUsePriority┃如果物品栏中存在多个可消耗的相同物品，将根据设定的规则消耗物品，不受快捷键影响。\n将物品栏左上角定义为1号槽位，右下角定义为10号槽位。\n升序 : 当1、3、5号槽位均有牛排时，按下1、3、5任意快捷键时，将首先消耗1号槽位的牛排。\n降序 : 当1、3、5号槽位均有牛排时，按下1、3、5任意快捷键时，都会优先消耗5号槽位的牛排。
+GameSetting/AutoEatFoodBattlePlayerHPRecoverAscend┃和实验体战斗时，如物品栏中存在多个食物，优先消耗恢复量较低的食物。\n消耗的顺序遵循「物品栏物品优先使用顺序」设置。
+GameSetting/AutoEatFoodBattlePlayerHPRecoverDescend┃和实验体战斗时，如物品栏中存在多个食物，优先消耗恢复量较高的食物。\n消耗的顺序遵循「物品栏物品优先使用顺序」设置。
 옵션사용안함┃不使用
 옵션내림차순┃降序
 옵션오름차순┃升序
@@ -19916,7 +19918,8 @@ AutoResurrectionHUD/CannotReviveText┃无法再复活了
 팀 루트┃队友路径
 목표 경로 지정┃指定目标路径
 목표 경로 삭제┃删除目标路径
-LUMI 동선 보기┃查看LUMI移动路线
+LUMI 동선 보기┃高亮显示物件
+오브젝트 강조 표시┃高亮显示物件
 야생동물 위치 정보┃野生动物位置
 실험 종료┃实验结束
 금지구역 사망┃在禁区中死亡。
@@ -20704,7 +20707,9 @@ SeasonPassIcon/16┃Img_SeasonPack16_Box
 SeasonPassIcon/17┃Img_SeasonPack17_Box
 다시보지 않기┃不再显示
 오늘 다시 보지 않기┃今日不再显示
-한정판 스킨┃限定版皮肤
+한정판 스킨┃特别皮肤
+스페셜 오퍼 적용 중 안내 메시지_1┃1,000NP折扣！\n限时优惠中！
+스페셜 오퍼 적용 중 안내 메시지_2┃* 限时优惠结束后，售价将恢复至7,100 NP。
 패스 페이지 데코_Free┃免费奖励
 패스 페이지 데코_Premium┃进阶奖励
 패스 페이지 데코_PREMIUM REWARDS┃丰厚奖励
@@ -22032,6 +22037,61 @@ LootExchangeWindow/tokenInfo/TokenRemainder┃剩余时间结束后，将无法�
 재화가 부족합니다. 제작소(상자)로 이동하시겠습니까?┃货币不足，要前往制作所吗？
 재화가 부족합니다. 제작소로 이동하시겠습니까?┃货币不足，要前往制作所吗？
 {0} 회┃{0}次
+MasteryType/Glove/Desc┃虽然手套的攻击距离有限，但可以实现连续且快速的攻击。
+MasteryType/Tonfa/Desc┃旋棍是唯一能同时确保防御力和攻击力的武器。
+MasteryType/Hammer/Desc┃锤子虽然攻击速度较慢，但可以通过强有力的攻击来限制对方的动作。
+MasteryType/Bat/Desc┃棍棒是均衡的武器。用它可以灵活地应对各式各样的对手。
+MasteryType/Whip/Desc┃鞭子会限制动作范围，无论对使用者来说还是敌人来说，都是难对付的武器。
+MasteryType/HighAngleFire/Desc┃投掷武器具有强大的攻击力。 \n每种武器使用后，弹丸恢复速度有所不同，需要注意数量管理。
+MasteryType/DirectFire/Desc┃暗器的种类最多，是多才多艺的武器。 \n每种武器使用后，弹丸恢复的速度不同，需要注意数量管理。\n
+MasteryType/Bow/Desc┃弓是使用越熟练威力就越强的远距离武器，\n在面对野生动物的时候尤其有利。
+MasteryType/CrossBow/Desc┃短弩高手可以一边逼开接近的对手，一边给予其单方面的伤害。
+MasteryType/Pistol/Desc┃手枪允许玩家频繁地使用技能，特别适合灵活快速的玩法。
+MasteryType/AssaultRifle/Desc┃ 突击步枪是以快速攻击且具有持续攻击性为特色的远距离武器。
+MasteryType/SniperRifle/Desc┃狙击枪具有最远射程和强大攻击力。\n因为射程比视野远，所以选择位置和确保视野清晰是非常重要的。
+MasteryType/Axe/Desc┃斧子虽然慢但具有最强大的攻击力。\n适合想要快速製作武器进行初期战斗的玩家。
+MasteryType/OneHandSword/Desc┃短剑是专门用于突袭的武器。\n在短时间交战中，比其他武器更具杀伤力。
+MasteryType/TwoHandSword/Desc┃双手剑是均衡的武器。\n越熟练越能发挥更大的杀伤力，但需注意，它在初期有些弱。
+MasteryType/Polearm/Desc┃长柄武器是兼具射程和杀伤力的近距离武器。 \n特别适合用于面对多数敌人时的情况。
+MasteryType/DualSword/Desc┃双剑活用了二连击的特色，不仅可以连续攻击还很时髦。
+MasteryType/Spear/Desc┃枪是长兵器，在中距离攻击中具有强大杀伤力。\n但是对处于近处的敌人来说比较弱，所以要适当把握距离。
+MasteryType/Nunchaku/Desc┃双节棍是很难学会的武器，但熟练后，可以是变化万千的危险武器。
+MasteryType/Rapier/Desc┃西洋剑的优点是在躲避敌人攻击的同时还能发起进攻。
+MasteryType/Guitar/Desc┃吉他可以从远距离发出声波，这是一种多功能武器，\n随着技能的发展及升级，每次演奏的方式和攻击都会有所不同。
+MasteryType/Camera/Desc┃相机是一种没有投射体的远攻武器。 可以用来挡住目标的视线，也有利于频繁交战。
+MasteryType/Arcana/Desc┃圣器是一种具有 VF 能量的远程武器。 可以不断地使用技能来制服对手。
+MasteryType/VFArm/Desc┃VF机械臂是利用纳米机器来控制VF的近攻武器。 装备者可以通过调整VF流量，一次性造成严重的伤害。
+MasteryType/Glove/Stats┃装备手套时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Tonfa/Stats┃装备旋棍时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hammer/Stats┃装备锤子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Axe/Stats┃装备斧子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bat/Stats┃装备棍棒时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Whip/Stats┃装备鞭子时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/OneHandSword/Stats┃装备短剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/TwoHandSword/Stats┃装备双手剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DualSword/Stats┃装备双剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Spear/Stats┃装备枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/HighAngleFire/Stats┃装备投掷时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/DirectFire/Stats┃装备暗器时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Bow/Stats┃装备弓箭时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/CrossBow/Stats┃装备短弩时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Pistol/Stats┃装备手枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/AssaultRifle/Stats┃装备突击步枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/SniperRifle/Stats┃装备狙击枪时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Nunchaku/Stats┃装备双节棍时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Rapier/Stats┃装备西洋剑时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Guitar/Stats┃装备吉他时增加 {1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Camera/Stats┃装备相机时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Arcana/Stats┃装备圣器时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/VFArm/Stats┃装备VF机械臂时增加{1} {0}\n{3} {2}\n{5} {4}
+MasteryType/Hunt/Stats┃增加 {1} {0}
+MasteryType/Craft/Stats┃增加 {1} {0}
+MasteryType/Search/Stats┃增加 {1} {0}
+MasteryType/Move/Stats┃增加 {1} {0}
+MasteryType/Health/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Defense/Stats┃增加 {1} {0}\n增加 {3} {2}
+MasteryType/Meditation/Stats┃增加 {1} {0}
+MasteryType/Trap/Stats┃增加 {1} {0}
 ButtonType/Confirm┃确定
 ButtonType/Cancel┃取消
 ButtonType/restart┃重启
@@ -22122,7 +22182,7 @@ CantConsumItem┃不能再吃东西了
 Evasion┃回避
 Guard┃守护！
 AlonsoCCImmune┃免疫移动受损
-LINK┃LINK
+SoulLink┃共享体力值
 NotInvalidTarget┃无效目标
 InvalidTarget┃无效目标
 ServerUnavailable┃当前无法进行匹配，请查看公告。
@@ -22164,11 +22224,7 @@ LINK┃LINK
 공지사항 링크┃https://guide.sapstargames.com/eternal/
 공식 홈페이지 링크┃https://playeternalreturn.com
 스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return/?l=schinese
-디스코드 링크┃https://discord.gg/eternalreturn
-트위터 링크┃https://twitter.com/_EternalReturn_/
-페이스북 링크┃https://www.facebook.com/eternalreturngame
-레딧 링크┃https://www.reddit.com/r/eternalreturn/
-웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
+웨이보 링크┃https://weibo.com/u/7899230744
 KOOK 링크┃https://www.kookapp.cn/app/invite/ZG55e1
 빌리빌리 링크┃https://space.bilibili.com/413651489
 QQ 그룹 팝업 메인 버튼┃QQ频道
