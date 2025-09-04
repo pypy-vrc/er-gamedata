@@ -163,6 +163,7 @@ GameResult/Character/Name/79┃Justyna
 GameResult/Character/Name/80┃Istvan
 GameResult/Character/Name/81┃NiaH
 GameResult/Character/Name/82┃Xuelin
+GameResult/Character/Name/83┃Henry
 Monster/Name/1┃Gallina
 Monster/Name/2┃Murciélago
 Monster/Name/3┃Jabalí
@@ -1142,6 +1143,10 @@ ToolTipType/XuelinActive3DamageApCoef┃Daño PA de Espada de Energía
 ToolTipType/XuelinActive4ReinforceSwordDamage┃Daño Mejorado de Espada de Energía
 ToolTipType/XuelinActive4ReinforceSwordDamageApCoef┃Daño PA Mejorado de Espada de Energía
 ToolTipType/XuelinActive4ReturnDamage┃Daño de Recuperación
+ToolTipType/Henry1_1Damage┃Daño de Manecillas de Reloj
+ToolTipType/Henry1_1ExtraDamage┃Daño verdadero añadido de Manecillas de Reloj
+ToolTipType/Henry1_2Damage┃Daño de Manecillas de los minutos
+ToolTipType/Henry1_2ExtraDamage┃Daño verdadero añadido de Manecillas de los minutos
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+{0}% Amp. de habilidad por cada bala restante)</color>
 DayNight/Day┃Día
 DayNight/Night┃Noche
@@ -1343,8 +1348,9 @@ GameResult/Tag/MatchingMode/Tutorial2_Re┃Tutorial
 GameResult/Tag/MatchingMode/Tutorial3_Re┃Tutorial
 GameResult/Tag/MatchingTeamMode/Squad┃Escuadrón
 GameResult/Tag/MatchingTeamMode/Cobalt┃Protocolo Cobalto
-GameResult/Tag/MatchingTeamMode/Solo┃Lobo Soliario
+GameResult/Tag/MatchingTeamMode/Solo┃Lobo Solitario
 GameResult/Tag/MatchingTeamMode/Duo┃Duo
+GameResult/Tag/MatchingMode/SquadRumble┃Circuito Unión
 GameResult/Tag/MatchingMode/LoneWolfCustom┃Partida Personalizada
 GameResult/Tag/MatchingMode/LoneWolf┃Modo Evento
 Loading/MatchingMode/Normal┃NORMAL GAME
@@ -1386,13 +1392,14 @@ MatchingModeType/FullName/LoneWolfCustom┃Partida Personalizada (Lobo Solitario
 ContentType/Name/NORMAL_MODE┃Partida Normal
 ContentType/Name/RANK_MODE┃Partida Clasificatoria
 ContentType/Name/COBALT_MODE┃Protocolo Cobalto
-ContentType/Name/LONE_WOLF_MODE┃Lobo Soliario
+ContentType/Name/LONE_WOLF_MODE┃Lobo Solitario
 ContentType/Name/SQUAD_RUMBLE_MODE┃Circuito Unión (Beta)
 DataModeType/Name/Solo┃Solo
 DataModeType/Name/Duo┃Duo
 DataModeType/Name/Squad┃Escuadrón
 DataModeType/Name/Cobalt┃Cobalto
 DataModeType/Name/LoneWolf┃Lobo Solitario
+DataModeType/Name/Normal┃Escuadrón
 GameModeType/Name/LONEWOLF┃Lobo Solitario
 GameModeType/Name/SINGLE┃Escuadrón
 GameModeType/Name/NORMAL┃Escuadrón
@@ -1642,6 +1649,7 @@ Skin/Name/1048000┃Tia
 Skin/Name/1048001┃Artista Callejera Tia
 Skin/Name/1048002┃Aprendiz de Bruja Tia
 Skin/Name/1048003┃Tia Pixel Art
+Skin/Name/1048004┃Tia Artista Marina
 Skin/Name/1049000┃Felix
 Skin/Name/1049001┃Lumia Land Felix
 Skin/Name/1049002┃OP.GG Felix
@@ -1748,6 +1756,8 @@ Skin/Name/1079001┃Justyna Prefecta
 Skin/Name/1080000┃Istvan
 Skin/Name/1080001┃Istvan Mayordomo
 Skin/Name/1081000┃NiaH
+Skin/Name/1082000┃Xuelin
+Skin/Name/1083000┃Henry
 Skin/OnSelectVO/1001003┃Las reglas solamente existen para romperlas. ¿Cierto?
 Skin/OnSelectVO/1002002┃¡Mira, los fuegos artificiales están comenzando!
 Skin/OnSelectVO/1007005┃Muy bien, divirtámonos un poco.
@@ -2053,6 +2063,7 @@ Skin/Desc/1050005┃¿Hemos pasado tanto tiempo juntos ya?
 Skin/Desc/1050006┃No importa cuánto tiempo pase, hay cosas que nunca cambian.
 Skin/Desc/1074002┃Has pagado tus deudas antes de tomarte este pequeño descanso, ¿verdad, querido cliente?
 Skin/Desc/1080001┃El té negro perfecto existe—he considerado todas las variables. ¿Y bien? ¿Qué te parece?
+Skin/Desc/1048004┃Estoy tan feliz de poder capturar el azul del océano en mi lienzo.
 Skin/Desc/1067003┃No hay necesidad de palabras; Deja que la quietud del océano lo ahogue todo.
 Collection/Name/11001┃Todo por mi hija
 Collection/Name/11002┃Te... ¿gusta el Pixel Art?
@@ -2137,6 +2148,9 @@ Collection/Name/24032/1┃Colección Especial 2.° Aniv. de Verano Ⅰ
 Collection/Name/24032/2┃Colección Especial 2.° Aniv. de Verano Ⅱ
 Collection/Name/24033/1┃Colección 2.° Aniv. de Verano Ⅰ
 Collection/Name/24033/2┃Colección 2.° Aniv. de Verano Ⅱ
+Collection/Name/24034/1┃Colección de Otoño Ⅰ
+Collection/Name/24034/2┃Colección de Otoño Ⅱ
+Collection/Name/24035/1┃Colección de Acceso de Otoño Ⅰ
 Collection/Name/24036┃Henry: "El Tiempo Vuela"
 SeasonCollection/Name/30001/1┃¡Splash! Nivel 1
 SeasonCollection/Name/30001/2┃¡Splash! Nivel 2
@@ -2192,43 +2206,6 @@ GameMainHud/Chapter/Desc/CreditResurrection┃Tus compañeros de equipo pueden d
 GameMainHud/Chapter/Desc/LumiResurrection┃Tus compañeros de equipo pueden devolverte al experimento a través de la Tienda de Lumi.
 GameMainHud/Chapter/Desc/ResurrectionKit┃Si tu equipo es eliminado, utiliza el Kit de Resurrección para volver al experimento.
 GameMainHud/Chapter/Desc/NotRevive┃¡Cuidado! Ya no puedes revivir.
-공식 홈페이지 링크 한국어┃https://playeternalreturn.com/
-공식 홈페이지 링크 카카오┃https://er.game.daum.net/
-디스코드 링크 한국어┃https://discord.com/invite/eternalreturn
-트위터 링크 한국어┃https://twitter.com/EternalReturnKR
-KG 톡채널 링크 한국어┃https://pf.kakao.com/_ryNSK
-유튜브 링크 한국어┃https://www.youtube.com/channel/UCEOaB76vS9RfiAwEzxB8QGw
-공식 홈페이지 링크 중문간체┃https://playeternalreturn.com/main?hl=zh-CN
-웨이보 링크 중문간체┃https://weibo.com/6511008423
-빌리빌리 링크 중문간체┃https://space.bilibili.com/413651489
-팬북 링크 중문간체┃https://fanbook.mobi/PZgT8F9W
-KOOK 링크 중문간체┃https://kook.vip/ZG55e1
-공지사항 중문 간체┃https://guide.sapstargames.com/eternal/
-공식 홈페이지 링크 중문번체┃https://playeternalreturn.com/main?hl=zh-TW
-디스코드 링크 중문번체┃https://discord.com/invite/eternalreturn
-유튜브 링크 중문번체┃https://www.youtube.com/channel/UCofWPculpBRwc3QNwZwZeoA
-페이스북 링크 중문번체┃https://www.facebook.com/eternalreturnbs/
-인스타그램 링크 중문번체┃https://www.instagram.com/eternalreturntw/
-공식 홈페이지 링크 일본어┃https://playeternalreturn.com/main?hl=ja-JP
-트위터 링크 일본어┃https://twitter.com/EternalReturnJP
-유튜브 링크 일본어┃https://www.youtube.com/channel/UC6BFQT5l63khueoxBv6zseA
-디스코드 링크 일본어┃https://discord.com/invite/eternalreturn
-공식 홈페이지 링크 포르투갈어┃https://playeternalreturn.com/main?hl=en-US
-공식 홈페이지 링크 스페인어┃https://playeternalreturn.com/
-디스코드 링크 스페인어┃https://discord.com/invite/eternalreturn
-트위터 링크 스페인어┃https://twitter.com/EternalReturnES
-페이스북 링크 스페인어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 스페인어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 스페인어┃https://www.instagram.com/eternalreturngame
-공식 홈페이지 링크 영어┃https://playeternalreturn.com/
-디스코드 링크 영어┃https://discord.com/invite/eternalreturn
-트위터 링크 영어┃https://twitter.com/_EternalReturn_/
-페이스북 링크 영어┃https://www.facebook.com/EternalReturnGame/
-레딧 링크 영어┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크 영어┃https://www.instagram.com/eternalreturngame
-OOPZ 링크 중문 간체┃https://oopz.cn/s/aTrzaY
-SSR_CS 링크 중문간체┃https://qiyukf.com/client?k=278c943cf2d677784855a69ce3fa9bd3
-NGA 링크 중문 간체┃https://bbs.nga.cn/thread.php?fid=510501
 Goods/Name/1304001┃Puntos ER
 GroupItemAttribute/KR┃Coreano
 GroupItemAttribute/EN┃Inglés
@@ -2796,6 +2773,9 @@ Goods/Name/3403019┃Retrato de Gemelas Después de Clases
 Goods/Name/3403020┃¡Celebración del Lanzamiento WeGame!
 Goods/Name/3403021┃Verano de Abigail Dimensión Tropical
 Goods/Name/3403022┃Días de Verano de Abigail Dimensión Tropical
+Goods/Name/3403023┃Oso de Leni
+Goods/Name/3403024┃Xuelin
+Goods/Name/3403025┃Henry
 Goods/Name/3419001┃Copo de nieve
 ItemType/EVENT/Name┃Objeto de colección
 Goods/Name/3503001┃[N] Artículo de colección
@@ -2840,6 +2820,8 @@ Goods/Name/3503039┃Fragmento de Dado
 Goods/Name/3503040┃Carta de verano del 2.° Aniversario
 Goods/Name/3503041┃Carta de verano Especial del 2.° Aniversario
 Goods/Name/3503042┃Moneda de Seguidor de Esports T8
+Goods/Name/3503043┃Carta de Otoño
+Goods/Desc/3503043┃¡Completa la Colección de Otoño!\nPuedes comprobar los requerimientos para completar la colección en el menú de Colección.
 ItemType/WILD_CARD_SKIN/Name┃[Aspecto] Comodín
 ItemType/WILD_CARD_ETC/Name┃Comodín
 Goods/Name/3602002┃[Aspecto] Comodín
@@ -2985,6 +2967,8 @@ Goods/Name/3303304┃Fichas Blancas
 Goods/Desc/3303304┃Puedes usar estas fichas en la Forja.\nCámbialas por Fichas Rojas, Cajas de Cupido y otros objetos.\nEstas fichas expiran al final del evento.
 Goods/Name/3303305┃Fichas Rojas
 Goods/Desc/3303305┃Puedes usar estas fichas en la Forja.\nCámbialas por Fichas de Fortuna★, Bolas de Fortuna★, Cajas de Fortuna★ y otros objetos.\nEstas fichas expiran al final del evento.
+Goods/Name/3303306┃Fichas de Otoño
+Goods/Desc/3303306┃Puedes usar estas fichas en Forja.\nPuedes conseguir estas fichas a través de las Cajas de Fichas de Otoño o de la Colección de Acceso y utilizarlos para comprar objetos especiales.\nEstas fichas expiran al final del evento.
 Goods/Name/3303999┃Millas
 Goods/Desc/3303999┃Acumula Millas al comprar productos con NP.
 BoxRewardInfoWindow/Contents/ContentsBg/Url/LinkToDropTable┃Lista de Probabilidad General
@@ -4251,6 +4235,12 @@ Emotion_S8_EsportsPack_2546┃Daegu Suseong Guardians T8
 Emotion_S8_EsportsPack_2547┃GJ Slasher T8
 Emotion_S8_EsportsPack_2548┃Gyeonggi Innate T8
 Emotion_S8_EsportsPack_2549┃DAEJEON AutoArms T8
+Emotion_Henry01_NP┃Henry Buen Trabajo
+Emotion_Henry02_NP┃Henry No No No
+Emotion_Henry03_NP┃Henry Llegas Tarde
+Emotion_Henry04_NP┃Henry Está Bien
+Emotion_SNS_Henry_2083005┃Henry El Tiempo Vuela
+Emotion_Leni_2069009┃Leni Pata de Oso
 Event_S16Champion_OneCircle_3142┃SEASON 7 CHAMPION ONECIRCLE
 Event_S16Champion_Romatic_3143┃SEASON 7 CHAMPION ROMATIC
 Event_S16Champion_Bum_3144┃SEASON 7 CHAMPION BUM
@@ -4826,6 +4816,8 @@ EMBLEM_MARK_EVENT_103215┃2.° Aniversario Elena ¡Salud!
 EMBLEM_MARK_EVENT_103216┃2.° Aniversario Eva ¡Salud!
 EMBLEM_MARK_EVENT_103217┃2.° Aniversario Elena¡Beso al Aire!
 EMBLEM_MARK_EVENT_103218┃Memorias
+EMBLEM_MARK_EVENT_103219┃Leni Pata de Oso
+EMBLEM_MARK_EVENT_103220┃Henry el Tiempo Vuela
 EMBLEM_MARK_ERPASS_104001┃Hielo cristalizado
 EMBLEM_MARK_ERPASS_104002┃¡Árbol de regalos!
 EMBLEM_MARK_ERPASS_104003┃Nariz Roja
@@ -4943,6 +4935,7 @@ EMBLEM_MARK_COLLECTION_119501┃Icono de patrocinador de S4 Esports
 EMBLEM_MARK_COLLECTION_119502┃Icono de patrocinador de S5 Esports
 EMBLEM_MARK_COLLECTION_119503┃Icono de patrocinador de S6 Esports
 EMBLEM_MARK_COLLECTION_119504┃Icono de patrocinador de S7 Esports
+EMBLEM_MARK_COLLECTION_119505┃Icono de patrocinador de S8 Esports
 ItemType/EMBLEM_BG/Name┃Fondo de Perfil
 EMBLEM_BG_FREE1┃Fondo Predeterminado
 EMBLEM_BG_SHOP_202001┃Fondo de Hyunwoo
@@ -5313,6 +5306,7 @@ EMBLEM_BG_EVENT_203007┃Fondo del Festival del Medio Otoño
 EMBLEM_BG_EVENT_203008┃Fondo de Final de año 2024
 EMBLEM_BG_EVENT_203009┃Fondo de Celebración del Lanzamiento WeGame
 EMBLEM_BG_EVENT_203010┃Fondo 2.° Aniversario.
+EMBLEM_BG_EVENT_203011┃Fondo Leni Osa
 EMBLEM_BG_ERPASS_204002┃Fondo Eternal Return
 EMBLEM_BG_ERPASS_204003┃Fondo Experimento
 EMBLEM_BG_ERPASS_204004┃Fondo Lluvioso
@@ -5737,6 +5731,7 @@ EMBLEM_OUTLINE_EVENT_303007┃Fondo del Festival de Mitad Otoño
 EMBLEM_OUTLINE_EVENT_303008┃Borde Fin de año 2024
 EMBLEM_OUTLINE_EVENT_303009┃Borde de Celebración del Lanzamiento WeGame
 EMBLEM_OUTLINE_EVENT_303010┃Borde del 2.° Aniversario
+EMBLEM_OUTLINE_EVENT_303011┃Borde Leni Osa
 EMBLEM_OUTLINE_ERPASS_304001┃Borde Congelado
 EMBLEM_OUTLINE_ERPASS_304002┃Borde de Día Festivo
 EMBLEM_OUTLINE_ERPASS_304003┃Borde Ornamental
@@ -6211,6 +6206,47 @@ Product/Name/S8_Token_Boost_Pack_08┃Paquete de Fichas ¡Splash! Ⅷ
 Product/Name/S8_Token_Boost_Pack_09┃Paquete de Fichas ¡Splash! Ⅸ
 Product/Name/DROPS_COIN_Sercret_Drops_Box┃Caja de Bolsas de Drops
 Product/Name/BATTLE_PASS/2105┃Libro de Misiones de Abigail Dimensión Tropical
+Product/Name/2025_S08_Esports_Pack_01┃Paquete de Patrocinador de S8 Esports
+Product/Name/S08_SeongnamROX_Pack_01┃Paquete de Seongnam ROX S8
+Product/Name/S08_FNSEJONG_Pack_01┃Paquete de FN SEJONG S8
+Product/Name/S08_JecheonPhalanx_Pack_01┃Paquete de Jecheon Phalanx S8
+Product/Name/S08_NewRiseGangwon_Pack_01┃Paquete de New Rise Gangwon S8
+Product/Name/S08_allwaysINCHEON_Pack_01┃Paquete de all ways INCHEON S8
+Product/Name/S08_BusanBeSPA_Pack_01┃Paquete de Busan BeSPA S8
+Product/Name/S08_CNJesports_Pack_01┃Paquete de CNJ esports S8
+Product/Name/S08_GyeongnamSparkle_Pack_01┃Paquete de Gyeongnam Sparkle S8
+Product/Name/S08_DaeguGuardians_Pack_01┃Paquete de Daegu Suseong Guardians S8
+Product/Name/S08_GJSlasher_Pack_01┃Paquete de GJ Slasher S8
+Product/Name/S08_GyeonggiInnate_Pack_01┃Paquete de Gyeonggi Innate S8
+Product/Name/S08_DAEJEONAutoArms_Pack_01┃Paquete de DAEJEON AutoArms S8
+Product/Name/WEGAME_IAP_2025_S08_Esports_Pack_01┃Paquete de Patrocinador de S8 Esports
+Product/Name/WEGAME_IAP_S08_SeongnamROX_Pack_01┃Paquete de Seongnam ROX S8
+Product/Name/WEGAME_IAP_S08_FNSEJONG_Pack_01┃Paquete de FN SEJONG S8
+Product/Name/WEGAME_IAP_S08_JecheonPhalanx_Pack_01┃Paquete de Jecheon Phalanx S8
+Product/Name/WEGAME_IAP_S08_NewRiseGangwon_Pack_01┃Paquete de New Rise Gangwon S8
+Product/Name/WEGAME_IAP_S08_allwaysINCHEON_Pack_01┃Paquete de all ways INCHEON S8
+Product/Name/WEGAME_IAP_S08_BusanBeSPA_Pack_01┃Paquete de Busan BeSPA S8
+Product/Name/WEGAME_IAP_S08_CNJesports_Pack_01┃Paquete de CNJ esports S8
+Product/Name/WEGAME_IAP_S08_GyeongnamSparkle_Pack_01┃Paquete de Gyeongnam Sparkle S8
+Product/Name/WEGAME_IAP_S08_DaeguGuardians_Pack_01┃Paquete de Daegu Suseong Guardians S8
+Product/Name/WEGAME_IAP_S08_GJSlasher_Pack_01┃Paquete de GJ Slasher S8
+Product/Name/WEGAME_IAP_S08_GyeonggiInnate_Pack_01┃Paquete de Gyeonggi Innate S8
+Product/Name/WEGAME_IAP_S08_DAEJEONAutoArms_Pack_01┃Paquete de DAEJEON AutoArms S8
+Product/Name/LOOTBOX_SKINxKEY_SET_10_S8_BONUS┃11 Sets de Datos de Aspecto
+Product/Name/EVENT_NPASS_S8_Premium_Token_1018┃Libro de Fichas Premium S8
+Product/Name/EVENT_NPASS_S8_Basic_Token_1019┃Libro de Fichas Básico S8
+Product/Name/EVENT_NPASS_S8_LeniBear_1020┃Libro de Misiones Leni Osa
+Product/Name/DROPS_COIN_ESports_Box_EAS7┃Caja de Esports (EA S7)
+Product/Name/DROPS_COIN_ESports_Box_EAS8┃Caja de Esports (EA S8)
+Product/Name/DROPS_COIN_ESports_Box_EAS9┃Caja de Esports (EA S9)
+Product/Name/DROPS_COIN_ESports_Box_S1┃Caja de Esports (S1)
+Product/Name/DROPS_COIN_ESports_Box_S2┃Caja de Esports (S2)
+Product/Name/DROPS_COIN_ESports_Box_S3┃Caja de Esports (S3)
+Product/Name/DROPS_COIN_ESports_Box_S4┃Caja de Esports (S4)
+Product/Name/DROPS_COIN_ESports_Box_S5┃Caja de Esports (S5)
+Product/Name/DROPS_COIN_ESports_Box_2024_ESportsClub┃Caja de Esports (Torneo ECG 2024)
+Product/Name/S8_Autumn_Regular_Pack_01┃Paquete de Fichas de Otoño Normal
+Product/Name/S8_Autumn_Big_Pack_01┃Paquete de Fichas de Otoño Grande
 Shop/Desc/Aya_ComboPack_01┃1 Aspecto\n4 Emotes\n\nEl 58% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Aspecto\n4 Emotes\n\nEl 56% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
 Shop/Desc/Adriana_ComboPack_01┃1 Aspecto\n4 Emotes\n\nEl 58% del valor de cada artículo que ya poseas, será reembolsado a tú buzón.
@@ -6482,30 +6518,33 @@ Shop/Desc/S8_Token_Boost_Pack_06┃<b><color=#FFBB00>[Contenidos]</color></b>\n\
 Shop/Desc/S8_Token_Boost_Pack_07┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 5 Llaves de Caja\n- Potenciador de A-Coin (1 Hora)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Puedes abrir este objeto en la Forja.\n*Los objetos que incluyen potenciadores que son aplicados inmediatamente al adquirirse no son reembolsables.
 Shop/Desc/S8_Token_Boost_Pack_08┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 10 Cajas de Datos de Aspecto\n- 10 Cajas de Datos de Laboratorio\n- 90 Fichas de ¡Splash!\n- Potenciador de A-Coin (3 dias)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Puedes abrir este objeto en la Forja.\n*Los objetos que incluyen potenciadores que son aplicados inmediatamente al adquirirse no son reembolsables.
 Shop/Desc/S8_Token_Boost_Pack_09┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 10 Cajas de Fichas Aleatorias de Temporada\n- 10 Llaves de Caja\n- Caja de Diseño de Apariencia Épica\n- Potenciador de Puntos ER (1 día)\n- Potenciador de A-Coin (1 día)\n- Potenciador de XP (1 día)\n\n<b><color=#F15F5F>[Notas]</color></b> \n*Puedes abrir este objeto en la Forja.\n*Los objetos que incluyen potenciadores que son aplicados inmediatamente al adquirirse no son reembolsables.\n
-Shop/Desc/DROPS_COIN_Sercret_Drops_Box┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 5 Llaves de Caja\n- Potenciador de A-Coin (1 Hora)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Este objeto será abierto inmediatamente tras su compra.\n* Obtén 300 NP de Evento o 1,500 A-Coin.\n* Limitado a 3 compras por día.
-Shop/Desc/2025_S08_Esports_Pack_01┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 5 Llaves de Caja\n- Potenciador de A-Coin (1 Hora)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Las probabilidades de recompensas gratis y de evento no son reveladas.\n* Este objeto será abierto inmediatamente tras su compra.\n* Obtén 300 NP de Evento o 1,500 A-Coin.\n* Limitado a 3 compras por día.
-Shop/Desc/S08_SeongnamROX_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Gesto "Saludo de Tsubame Ola Azul"\n- 1 Caja de Datos de Aspectos\n- 1 Llave\n- 1 Caja de Datos del Laboratorio\n- 400 NP\n- Aumento de XP (3 Días)\n- Aumento de Monedas A (3 Días)\n- Aumento de Puntos ER (3 Días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas comisiones, las ganancias de la venta de este paquete se usarán como premio de Esports.\n* Los objetos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los objetos que incluyan aumentos que se apliquen inmediatamente al comprarlos no son reembolsables.\n* Los NP incluidos en este paquete son NP gratis.\n
-Shop/Desc/S08_FNSEJONG_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Seongnam ROX\n- Ícono de S8 Seongnam ROX\n- Fondo de S8 Seongnam ROX\n- Borde de S8 Seongnam ROX\n- Fondo de Ranura de Equipo de S8 Seongnam ROX\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_JecheonPhalanx_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 FN SEJONG\n- Ícono de S8 FN SEJONG\n- Fondo de S8 FN SEJONG\n- Borde de S8 FN SEJONG\n- Fondo de Ranura de Equipo de S8 FN SEJONG\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_NewRiseGangwon_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Jacheon Phalanx\n- Ícono de S8 Jacheon Phalanx\n- Fondo de S8 Jacheon Phalanx\n- Borde de S8 Jacheon Phalanx\n- Fondo de Ranura de Equipo de S8 Jacheon Phalanx\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_allwaysINCHEON_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 New Rise Gangwon\n- Ícono de S8 New Rise Gangwon\n- Fondo de S8 New Rise Gangwon\n- Borde de S8 New Rise Gangwon\n- Fondo de Ranura de Equipo de S8 New Rise Gangwon\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_BusanBeSPA_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 all ways INCHEON\n- Ícono de S8 all ways INCHEON\n- Fondo de S8 all ways INCHEON\n- Borde de S8 all ways INCHEON\n- Fondo de Ranura de Equipo de S8 all ways INCHEON\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_CNJesports_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Busan BeSPA\n- Ícono de S8 Busan BeSPA\n- Fondo de S8 Busan BeSPA\n- Borde de S8 Busan BeSPA\n- Fondo de Ranura de Equipo de S8 Busan BeSPA\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_GyeongnamSparkle_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 CNJ esports\n- Ícono de S8 CNJ esports\n- Fondo de S8 CNJ esports\n- Borde de S8 CNJ esports\n- Fondo de Ranura de Equipo de S8 CNJ esports\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_DaeguGuardians_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Gyengnam Sparkle\n- Ícono de S8 Gyengnam Sparkle\n- Fondo de S8 Gyengnam Sparkle\n- Borde de S8 Gyengnam Sparkle\n- Fondo de Ranura de Equipo de S8 Gyengnam Sparkle\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_GJSlasher_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Daegu Suseong Guardians\n- Ícono de S8 Daegu Suseong Guardians\n- Fondo de S8 Daegu Suseong Guardians\n- Borde de S8 Daegu Suseong Guardians\n- Fondo de Ranura de Equipo de S8 Daegu Suseong Guardians\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_GyeonggiInnate_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 GJ Slayer\n- Ícono de S8 GJ Slayer\n- Fondo de S8 GJ Slayer\n- Borde de S8 GJ Slayer\n- Fondo de Ranura de Equipo de S8 GJ Slayer\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/S08_DAEJEONAutoArms_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Gyeonngi Innate\n- Ícono de S8 Gyeonngi Innate\n- Fondo de S8 Gyeonngi Innate\n- Borde de S8 Gyeonngi Innate\n- Fondo de Ranura de Equipo de S8 Gyeonngi Innate\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/LOOTBOX_SKINxKEY_SET_10_S8_BONUS┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 DAEJEON AutoArms\n- Ícono de S8 DAEJEON AutoArms\n- Fondo de S8 DAEJEON AutoArms\n- Borde de S8 DAEJEON AutoArms\n- Fondo de Ranura de Equipo de S8 DAEJEON AutoArms\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
-Shop/Desc/DROPS_COIN_ESports_Box_EAS7┃Este producto contiene 11 Cajas de Datos de Aspectos y 11 Llaves.  \nLos aspectos y diseños de aspecto se pueden obtener de la Caja de Datos de Aspectos.  \n<color=orange>Las recompensas de clasificatoria y algunos objetos de uso especial no están incluidos.</color>  \n\n<color=#FFBB00>Puedes obtener 1 Caja de Datos de Aspectos de Bonificación de la Temporada 8 durante el periodo del evento.</color>  \nConsulta los detalles a través del anuncio del evento.  \n\nLas cajas compradas se pueden abrir en la Forja usando la Llave.\n
-Shop/Desc/DROPS_COIN_ESports_Box_EAS8┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 7)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_EAS9┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 8)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_S1┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 9)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_S2┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 1)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_Sercret_Drops_Box┃<b><color=#FFBB00>[Contenidos]</color></b>\n\n- 5 Llaves de Caja\n- Potenciador de A-Coin (1 Hora)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Las probabilidades de recompensas gratis y de evento no son reveladas.\n* Este objeto será abierto inmediatamente tras su compra.\n* Obtén 300 NP de Evento o 1,500 A-Coin.\n* Limitado a 3 compras por día.
+Shop/Desc/2025_S08_Esports_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Gesto "Saludo de Tsubame Ola Azul"\n- 1 Caja de Datos de Aspectos\n- 1 Llave\n- 1 Caja de Datos del Laboratorio\n- 400 NP\n- Aumento de XP (3 Días)\n- Aumento de Monedas A (3 Días)\n- Aumento de Puntos ER (3 Días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas comisiones, las ganancias de la venta de este paquete se usarán como premio de Esports.\n* Los objetos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los objetos que incluyan aumentos que se apliquen inmediatamente al comprarlos no son reembolsables.\n* Los NP incluidos en este paquete son NP gratis.\n
+Shop/Desc/S08_SeongnamROX_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Seongnam ROX\n- Ícono de S8 Seongnam ROX\n- Fondo de S8 Seongnam ROX\n- Borde de S8 Seongnam ROX\n- Fondo de Ranura de Equipo de S8 Seongnam ROX\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_FNSEJONG_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 FN SEJONG\n- Ícono de S8 FN SEJONG\n- Fondo de S8 FN SEJONG\n- Borde de S8 FN SEJONG\n- Fondo de Ranura de Equipo de S8 FN SEJONG\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_JecheonPhalanx_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Jacheon Phalanx\n- Ícono de S8 Jacheon Phalanx\n- Fondo de S8 Jacheon Phalanx\n- Borde de S8 Jacheon Phalanx\n- Fondo de Ranura de Equipo de S8 Jacheon Phalanx\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_NewRiseGangwon_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 New Rise Gangwon\n- Ícono de S8 New Rise Gangwon\n- Fondo de S8 New Rise Gangwon\n- Borde de S8 New Rise Gangwon\n- Fondo de Ranura de Equipo de S8 New Rise Gangwon\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_allwaysINCHEON_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 all ways INCHEON\n- Ícono de S8 all ways INCHEON\n- Fondo de S8 all ways INCHEON\n- Borde de S8 all ways INCHEON\n- Fondo de Ranura de Equipo de S8 all ways INCHEON\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_BusanBeSPA_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Busan BeSPA\n- Ícono de S8 Busan BeSPA\n- Fondo de S8 Busan BeSPA\n- Borde de S8 Busan BeSPA\n- Fondo de Ranura de Equipo de S8 Busan BeSPA\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_CNJesports_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 CNJ esports\n- Ícono de S8 CNJ esports\n- Fondo de S8 CNJ esports\n- Borde de S8 CNJ esports\n- Fondo de Ranura de Equipo de S8 CNJ esports\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_GyeongnamSparkle_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Gyengnam Sparkle\n- Ícono de S8 Gyengnam Sparkle\n- Fondo de S8 Gyengnam Sparkle\n- Borde de S8 Gyengnam Sparkle\n- Fondo de Ranura de Equipo de S8 Gyengnam Sparkle\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_DaeguGuardians_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Daegu Suseong Guardians\n- Ícono de S8 Daegu Suseong Guardians\n- Fondo de S8 Daegu Suseong Guardians\n- Borde de S8 Daegu Suseong Guardians\n- Fondo de Ranura de Equipo de S8 Daegu Suseong Guardians\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_GJSlasher_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 GJ Slayer\n- Ícono de S8 GJ Slayer\n- Fondo de S8 GJ Slayer\n- Borde de S8 GJ Slayer\n- Fondo de Ranura de Equipo de S8 GJ Slayer\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_GyeonggiInnate_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 Gyeonngi Innate\n- Ícono de S8 Gyeonngi Innate\n- Fondo de S8 Gyeonngi Innate\n- Borde de S8 Gyeonngi Innate\n- Fondo de Ranura de Equipo de S8 Gyeonngi Innate\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/S08_DAEJEONAutoArms_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Emote de S8 DAEJEON AutoArms\n- Ícono de S8 DAEJEON AutoArms\n- Fondo de S8 DAEJEON AutoArms\n- Borde de S8 DAEJEON AutoArms\n- Fondo de Ranura de Equipo de S8 DAEJEON AutoArms\n- Impulso de XP (3 días)\n- Impulso de A-Coin (3 días)\n- Impulso de Puntos ER (3 días)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes comprar este paquete usando tu Cartera de Steam.\n* Excluyendo algunas tarifas, las ganancias de la venta de este paquete se distribuirán al equipo correspondiente.\n* Los artículos de este paquete se añadirán inmediatamente a tu Colección tras la compra.  \n* Los artículos que incluyan impulsos que se apliquen inmediatamente tras la compra no son reembolsables.
+Shop/Desc/LOOTBOX_SKINxKEY_SET_10_S8_BONUS┃Este producto contiene 11 Cajas de Datos de Aspectos y 11 Llaves.  \nLos aspectos y diseños de aspecto se pueden obtener de la Caja de Datos de Aspectos.  \n<color=orange>Las recompensas de clasificatoria y algunos objetos de uso especial no están incluidos.</color>  \n\n<color=#FFBB00>Puedes obtener 1 Caja de Datos de Aspectos de Bonificación de la Temporada 8 durante el periodo del evento.</color>  \nConsulta los detalles a través del anuncio del evento.  \n\nLas cajas compradas se pueden abrir en la Forja usando la Llave.\n
+Shop/Desc/DROPS_COIN_ESports_Box_EAS7┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 7)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_EAS8┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 8)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_EAS9┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (EA Temporada 9)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_S1┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 1)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_S2┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 3)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
 Shop/Desc/DROPS_COIN_ESports_Box_S3┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 3)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_S4┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 3)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_S5┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 4)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
-Shop/Desc/DROPS_COIN_ESports_Box_2024_ESportsClub┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 5)\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Este objeto se abre inmediatamente después de la compra.\n* Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n* Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_S4┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 4)\n\n<b><color=#F15F5F>[Notas]</color></b>\n*Este objeto se abre inmediatamente después de la compra.\n*Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n*Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_S5┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Temporada 5)\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Este objeto se abre inmediatamente después de la compra.\n* Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n* Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/DROPS_COIN_ESports_Box_2024_ESportsClub┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- Caja de Esports (Torneo ECG 2024)\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Este objeto se abre inmediatamente después de la compra.\n* Puedes obtener 1 objeto incluido en la caja con cierta probabilidad.\n* Puedes consultar los detalles de los objetos incluidos en la lista de objetos.
+Shop/Desc/EVENT_NPASS_S8_LeniBear_1020┃<color=#E5D85C>¡Hemos lanzado el Libro de Misiones de Leni Osa!</color>\n<color=#B2EBF4>¡No pierdas la oportunidad de conseguir objetos de Leni Osa</color> cuando subas de nivel!\n\n<size=18>[Puntos por nivel]</size>\nCada nivel requiere 100 puntos para desbloquearse. Puedes ganar puntos completando misiones o comprándolos por 2 NP cada punto.\nLos puntos solo se pueden comprar después de tener un Libro de Misiones.
+Shop/Desc/S8_Autumn_Regular_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- 3 Cajas de Otoño\n- 3 Llaves de Caja\n- Potenciador XP (1 Día)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes abrir este artículo en la Forja.\n* Artículos que incluyan potenciadores que son aplicados inmediatamente tras su compra no son reembolsables.
+Shop/Desc/S8_Autumn_Big_Pack_01┃<b><color=#FFBB00>[Contenido]</color></b>\n\n- 10 Cajas de Otoño\n- 10 Llaves de Caja\n- Potenciador EP (1 Día)\n- Potenciador A-Coin (1 Día)\n\n<b><color=#F15F5F>[Notas]</color></b> \n* Puedes abrir este artículo en la Forja.\n* Artículos que incluyan potenciadores que son aplicados inmediatamente tras su compra no son reembolsables.
 Product/Name/SEASON_PASS_S5┃Paquete de la Temporada 5
 Shop/Desc/SEASON_PASS_S5┃¡Consigue todo el contenido de la Temporada 5 a un precio increíble!
 Product/Name/SEASON_PASS_S6┃Paquete de la Temporada 6
@@ -6753,6 +6792,9 @@ Season1014/Name┃Libro de misiones de ¡El verano ha vuelto!
 Season1015/Name┃Libro de Fichas Premium T8
 Season1016/Name┃Libro de Fichas Básico T8
 Season1017/Name┃Libro de Misiones A-Coin del 2.° Aniversario
+Season1018/Name┃Libro de Fichas Premium de S8 Ⅱ
+Season1019/Name┃Libro de Fichas Básico de S8  Ⅱ
+Season1020/Name┃Libro de Fichas de Leni Osa
 Season2000/Name┃Libro de Misiones A-Coin de 1er Aniversario
 Season2001/Name┃Libro de Misiones A-coin de Vacaciones
 Season2002/Name┃Libro de Misiones A-coin de Sirvientes de Batalla
@@ -6914,7 +6956,9 @@ Product/Name/S17_RARE_MATTER┃1 Fragmento de Datos Raro
 Product/Name/S17_A-Coin_QUEST_BOOK┃Libro de misiones de A-Coin ¡Splash!
 Product/Name/S17_TROPICALDIMENSION_QUSET_BOOK┃Libro de Misiones de Abigail Dimensión Tropical
 Product/Name/Autumn_RareMatter_01┃1 Fragmento de Datos Raro
-Product/Name/Autumn_ACoin_100┃A-Coin X 100
+Product/Name/Autumn_AutumnCard_01┃1 Carta de Otoño
+Product/Name/Autumn_ACoin_100┃100 A-Coin
+Product/Name/Autumn_S17_Token_01┃100 Fichas de ¡Splash!
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃Libro de Misiones de Vacaciones A-Coin
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃Libro de Misiones de Sirvientas de Batalla A-Coin
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃Libro de Misiones de Cambio A-Coin
@@ -7968,7 +8012,7 @@ Skill/Group/Coef/1001400┃<color=green>Pasiva:</color> Cuando Jackie asiste en 
 Skill/LobbyDesc/1001500┃Jackie enciende su motosierra letal. Su velocidad de movimiento y velocidad de ataque aumentan en {1} y {2}, respectivamente, durante {0} segundos. La duración de estos efectos se incrementa si asiste en la eliminación de personajes enemigos. Al reutilizar la habilidad mientras está activa, puede usar <color=white>Masacre</color>.\n\n<color=white>Masacre</color>: Jackie gira la motosierra en un área amplia a su alrededor, infligiendo de daño de habilidad según los PV que haya perdido el enemigo, y curándose una porción del daño infligido.\nSi asiste en la eliminación de personajes enemigos, puede volver a usar <color=white>Masacre</color>.
 Skill/Group/Desc/1001500┃Jackie enciende su motosierra letal. Su velocidad de movimiento y velocidad de ataque aumentan en {1} y {2}, respectivamente, durante {0} segundos. La duración de estos efectos se incrementa en {3} segundos si asiste en la eliminación de personajes enemigos. Al reutilizar la habilidad mientras está activa, puede usar <color=white>Masacre</color>.\n\n<color=white>Masacre</color>: Jackie gira la motosierra en un área amplia a su alrededor, infligiendo entre <color=white>{4}</color> y <color=white>{5}</color> de daño de habilidad según los PV que haya perdido el enemigo, y curándose un {6} del daño infligido.\nSi asiste en la eliminación de personajes enemigos, puede volver a usar <color=white>Masacre</color>.
 Skill/Group/Coef/1001500┃Jackie saca su motosierra letal. Su velocidad de movimiento y velocidad de ataque aumentan en {1} y {2} respectivamente, durante {0} segundos. La duración de estos efectos se incrementa en {3} segundos si asiste en la eliminación de personajes enemigos. Al reutilizar la habilidad mientras está activa, puede usar <color=white>Masacre</color>.\n\n<color=white>Masacre</color>: Jackie gira la motosierra en un área amplia a su alrededor, infligiendo entre <color=white>{4}</color><color=#ffd775>(+{5} Poder de Ataque)</color> y <color=white>{6}</color><color=#ffd775>(+{7} Poder de Ataque)</color> de daño de habilidad según los PV que haya perdido el enemigo, y curándose un {8} del daño infligido.\nSi asiste en la eliminación de personajes enemigos, puede volver a usar <color=white>Masacre</color>.
-Skill/Group/ExpansionTip/1001500┃<i>El daño de Masacre se limita cuando la vida actual del objetivo baja al {0} de su vida máxima.</i>
+Skill/Group/ExpansionTip/1001500┃<i>El daño de Masacre se limita cuando la vida actual del objetivo baja al {0} de sus PV Máximos.</i>\n<i>La duración de esta habilidad no se puede aumentar más allá de su máximo original.</i>
 CharacterState/Group/Name/1001100┃Carnicería Lunática - Subidón de adrenalina
 CharacterState/Group/Desc/1001100┃La adrenalina recorre el cuerpo de Jackie hace que el Sangrado se aplique con acumulaciones máximas, inflija daño de habilidad adicional y la cura una porción de los PV que ha perdido.
 CharacterState/Group/Name/1001130┃Sangrado
@@ -8183,15 +8227,12 @@ Skill/Group/Name/1008400┃Flanger
 Skill/Group/Name/1008410┃Flanger
 Skill/Group/Name/1008420┃Flanger
 Skill/Group/Name/1008500┃Pacificador
-Skill/Group/Desc/1008100┃Se liberan 2 ondas de sonido con cada ataque básico, lo que inflige <color=white>{1}</color> puntos de daño. Si Hart inflige daño a un enemigo con un ataque básico, recupera <color=white>{0}</color> PE.
+Skill/Group/Desc/1008100┃Los ataques básicos de Hart liberan 2 ondas de sonido adicionales, infligiendo <color=white>{1}</color> daño de ataque básico.
 Skill/Group/Desc/1008200┃Hart toca su guitarra y libera una onda de sonido. Puede reutilizar esta habilidad dos veces después de usarla.\n\nAl volver a usarla: Hart libera una onda de sonido en la dirección objetivo, lo que inflige <color=white>{10}</color> a <color=white>{11}</color> de daño de habilidad. El daño máximo se alcanza después de esperar {0} segundos o más.\n\nLos enemigos golpeados por ambas ondas de sonido se ralentizan en {6} durante {12} segundos.
-Skill/Group/Desc/1008210┃Hart toca su guitarra y libera una onda de sonido. Puede reutilizar esta habilidad dos veces después de usarla.\n\nAl volver a usarla: Hart libera una onda de sonido en la dirección objetivo, lo que inflige <color=white>{10}</color> a <color=white>{11}</color> de daño de habilidad. El daño máximo se alcanza después de esperar {0} segundos o más.\n\nLos enemigos golpeados por ambas ondas de sonido se ralentizan en {6} durante {12} segundos.
 Skill/Group/Desc/1008300┃Hart toca un riff en su guitarra, lo que aumenta su poder de ataque en {1} y su alcance de ataque básico en {8} durante {0} segundos.
 Skill/Group/Desc/1008400┃Hart se mueve una corta distancia hacia la ubicación objetivo y libera una onda de sonido a los enemigos cercanos, lo que inflige <color=white>{8}</color> de daño de habilidad. Esta habilidad se puede reutilizar una vez.
-Skill/Group/Desc/1008410┃Hart se mueve una corta distancia hacia la ubicación objetivo y libera una onda de sonido a los enemigos cercanos, lo que inflige <color=white>{8}</color> de daño de habilidad. Esta habilidad se puede reutilizar una vez.
-Skill/Group/Desc/1008420┃Hart se mueve una corta distancia hacia la ubicación objetivo y libera una onda de sonido a los enemigos cercanos, lo que inflige <color=white>{8}</color> de daño de habilidad. Esta habilidad se puede reutilizar una vez.
 Skill/Group/Desc/1008500┃Hart invoca sus amplificadores para dar un espectáculo durante {0} segundos, manteniendo con vida a todos sus objetivos en el área. Los objetivos cuyos PV caen por debajo de {7} no pueden sufrir daño ni recuperar PV.\n\nUna vez que el espectáculo termina, todos los objetivos en el área recuperan <color=white>{6}</color> PV. 
-Skill/Group/Coef/1008100┃Se liberan 2 ondas de sonido con cada ataque básico, lo que inflige <color=#ffd775>({2} Poder de ataque)*(Amplificación de ataque básico)</color> de daño de ataque básico. Si Hart inflige daño a un enemigo con un ataque básico, recupera <color=white>{0}</color> PE.
+Skill/Group/Coef/1008100┃Los ataques básicos de Hart liberan 2 ondas de sonido adicionales, infligiendo <color=#ffd775>({2} Poder de Ataque) * (Amp de Ataque Básico)</color> daño de ataque básico.
 Skill/Group/Coef/1008200┃Hart toca su guitarra y libera una onda de sonido. Puede reutilizar esta habilidad dos veces después de tocarla.\n\nAl volver a usarla: Hart libera una onda de sonido en la dirección objetivo, lo que inflige de <color=white>{2}</color><color=#ffd775>(+{3} de poder de ataque)</color> a <color=white>{4}</color><color=#ffd775>(+{5} de poder de ataque)</color> daño de habilidad. El daño máximo se alcanza después de esperar {0} segundos o más.\n\nLos enemigos golpeados por ambas ondas de sonido se ralentizan en {6} durante {10} segundos.
 Skill/Group/Coef/1008210┃Hart toca su guitarra y libera una onda de sonido. Puede reutilizar esta habilidad dos veces después de tocarla.\n\nAl volver a usarla: Hart libera una onda de sonido en la dirección objetivo, lo que inflige de <color=white>{2}</color><color=#ffd775>(+{3} de poder de ataque)</color> a <color=white>{4}</color><color=#ffd775>(+{5} de poder de ataque)</color> daño de habilidad. El daño máximo se alcanza después de esperar {0} segundos o más.\n\nLos enemigos golpeados por ambas ondas de sonido se ralentizan en {6} durante {10} segundos.
 Skill/Group/Coef/1008300┃Hart toca un riff en su guitarra, lo que aumenta su poder de ataque en {1} y su alcance de ataque básico en {8} durante {0} segundos.
@@ -10939,15 +10980,20 @@ Skill/Group/Name/1067200┃Giro Binario
 Skill/Group/Name/1067300┃Cortadura Dimensional
 Skill/Group/Name/1067400┃Salto Cuántico
 Skill/Group/Name/1067500┃Asalto Dimensional
+Skill/LobbyDesc/1067100┃El siguiente ataque básico de Abigail causa daño de habilidad adicional y reduce la defensa del objetivo.\nAl golpear a un enemigo con una habilidad, el tiempo de reutilización de <color=white>Hoja Desgarradora</color> se reduce.
 Skill/Group/Desc/1067100┃El siguiente ataque básico de Abigail inflige <color=white>{20}</color> de daño de habilidad adicional y reduce la defensa del objetivo en {4} durante {3} segundos.\nCuando golpea a un enemigo con una habilidad, el enfriamiento de <color=white>Hoja Desgarradora</color> se reduce en {0} segundos.\n\nEste ataque básico también es considerado una habilidad.
-Skill/Group/Desc/1067200┃Abigail balancea su guadaña. El primer giro inflige <color=white>{20}</color> de daño de habilidad, y el segundo giro inflige <color=white>{21}</color> de daño de habilidad.\nCuando se utiliza Giro Binario, la velocidad de movimiento de Abigail incrementa en {1} durante {0} segundos.
-Skill/Group/Desc/1067300┃Abigail desgarra el espacio, infligiendo <color=white>{20}</color><color=688A08>(+{21} de los PV actuales del objetivo)</color> de daño de habilidad.\nGolpear a un enemigo le otorga a Abigail un escudo que absorbe <color=white>{22}</color> de daño durante {1} segundos.\nGolpear a varios enemigos incrementa la defensa de Abigail en {0} por cada enemigo adicional golpeado. (Máx. {7})\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
-Skill/Group/Desc/1067400┃Abigail se teletransporta a través de una grieta dimensional hacia la ubicación seleccionada cerca del enemigo, infligiendo <color=white>{20}</color> de daño de habilidad.\n\nCuando se usa en un objetivo marcado con <color=white>Coordenadas</color>, el enfriamiento de <color=white>Salto Cuántico</color> se reestablece.
-Skill/Group/Desc/1067500┃Abigail se esconde en una dimensión distinta y se vuelve inalcanzable durante {0} segundos.\nEntonces, ella aterriza, infligiendo <color=white>{20}</color> de daño de habilidad y ralentizando a los enemigos en {2} durante {1} segundos.\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
 Skill/Group/Coef/1067100┃El siguiente ataque básico de Abigail inflige <color=white>{1}</color><color=#DDA0DD>(+{2} de Amp. de Habilidad)</color> de daño de habilidad adicional y reduce la defensa del objetivo en {4} durante {3} segundos.\nCuando golpea a un enemigo con una habilidad, el enfriamiento de <color=white>Hoja Desgarradora</color> se reduce en {0} segundos.\n\nEste ataque básico también es considerado una habilidad.
+Skill/LobbyDesc/1067200┃Abigail balancea su guadaña. El primer giro causa algo de daño de habilidad y el segundo giro causa un daño de habilidad más fuerte.\nAl lanzar Giro Binario, su velocidad de movimiento aumenta brevemente.
+Skill/Group/Desc/1067200┃Abigail balancea su guadaña. El primer giro inflige <color=white>{20}</color> de daño de habilidad, y el segundo giro inflige <color=white>{21}</color> de daño de habilidad.\nCuando se utiliza Giro Binario, la velocidad de movimiento de Abigail incrementa en {1} durante {0} segundos.
 Skill/Group/Coef/1067200┃Abigail balancea su guadaña. El primer giro inflige <color=white>{2}</color><color=#DDA0DD>(+{3} de Amp. de Habilidad)</color> de daño de habilidad, y el segundo giro inflige <color=white>{4}</color><color=#DDA0DD>(+{5} de Amp. de Habilidad)</color> de daño de habilidad.\nCuando se utiliza Giro Binario, la velocidad de movimiento de Abigail incrementa en {1} durante {0} segundos.
+Skill/LobbyDesc/1067300┃Abigail atraviesa el espacio e inflige daño de habilidad.\nGolpear a un enemigo le otorga un escudo que absorbe el daño durante un período de tiempo.\n\nLos objetivos alcanzados por la habilidad están marcados con <color=white>Coordenadas</color>, lo que le otorga a Abigail visión de sus objetivos durante un período de tiempo.
+Skill/Group/Desc/1067300┃Abigail desgarra el espacio, infligiendo <color=white>{20}</color><color=688A08>(+{21} de los PV actuales del objetivo)</color> de daño de habilidad.\nGolpear a un enemigo le otorga a Abigail un escudo que absorbe <color=white>{22}</color> de daño durante {1} segundos.\nGolpear a varios enemigos incrementa la defensa de Abigail en {0} por cada enemigo adicional golpeado. (Máx. {7})\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
 Skill/Group/Coef/1067300┃Abigail desgarra el espacio, infligiendo <color=white>{2}</color><color=688A08>(+{3} de los PV actuales del objetivo)</color><color=#DDA0DD>(+{4} de Amp. de Habilidad)</color> de daño de habilidad.\nGolpear a un enemigo le otorga a Abigail un escudo que absorbe <color=white>{5}</color><color=#DDA0DD>(+{6} de Amp. de Habilidad)</color> de daño durante {1} segundos.\nGolpear a varios enemigos incrementa la defensa de Abigail en {0} por cada enemigo adicional golpeado. (Máx. {7})\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
+Skill/LobbyDesc/1067400┃Abigail se teletransporta a través de una grieta dimensional a un lugar específico alrededor del enemigo, causando daño de habilidad.\n\nCuando se usa en un objetivo marcado con <color=white>Coordenadas</color>, el tiempo de reutilización de <color=white>Salto Cuántico</color> se reinicia.
+Skill/Group/Desc/1067400┃Abigail se teletransporta a través de una grieta dimensional hacia la ubicación seleccionada cerca del enemigo, infligiendo <color=white>{20}</color> de daño de habilidad.\n\nCuando se usa en un objetivo marcado con <color=white>Coordenadas</color>, el enfriamiento de <color=white>Salto Cuántico</color> se reestablece.
 Skill/Group/Coef/1067400┃Abigail se teletransporta a través de una grieta dimensional hacia la ubicación seleccionada cerca del enemigo, infligiendo <color=white>{0}</color><color=#DDA0DD>(+{1} de Amp. de Habilidad)</color> de daño de habilidad.\n\nCuando se usa en un objetivo marcado con <color=white>Coordenadas</color>, el enfriamiento de <color=white>Salto Cuántico</color> se reestablece.
+Skill/LobbyDesc/1067500┃Abigail se esconde en una dimensión diferente y se vuelve inalcanzable por un tiempo.\nLuego aterriza, causando daño de habilidad y ralentizando a los enemigos.\n\nLos objetivos alcanzados por la habilidad están marcados con <color=white>Coordenadas</color>, lo que le otorga a Abigail visión de sus objetivos durante un período de tiempo.
+Skill/Group/Desc/1067500┃Abigail se esconde en una dimensión distinta y se vuelve inalcanzable durante {0} segundos.\nEntonces, ella aterriza, infligiendo <color=white>{20}</color> de daño de habilidad y ralentizando a los enemigos en {2} durante {1} segundos.\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
 Skill/Group/Coef/1067500┃Abigail se esconde en una dimensión distinta y se vuelve inalcanzable durante {0} segundos.\nEntonces, ella aterriza, infligiendo <color=white>{3}</color><color=#DDA0DD>(+{4} de Amp. de Habilidad)</color> de daño de habilidad y ralentizando a los enemigos en {2} durante {1} segundos.\n\nLos objetivos golpeados por la habilidad serán marcados con <color=white>Coordenadas</color>, otorgándole visión a Abigail de los objetivos durante {8} segundos.
 CharacterState/Group/Name/1067110┃Hoja Desgarradora - Ataque Básico Mejorado
 CharacterState/Group/Desc/1067110┃El siguiente ataque básico de Abigail inflige daño de habilidad adicional.
@@ -11562,6 +11608,43 @@ CharacterState/Group/Name/1082400┃DRPG (Demasiado Rápida Para Golpear) - Rale
 CharacterState/Group/Desc/1082400┃Has sido ralentizado por DRPG (Demasiado Rápida Para Golpear).
 CharacterState/Group/Name/1082520┃Regreso de las Hojas - Ralentizado
 CharacterState/Group/Desc/1082520┃Has sido ralentizado por las hojas que regresan.
+Skill/Group/Name/1083100┃Fractura Temporal
+Skill/Group/Name/1083200┃Manecillas de Reloj
+Skill/Group/Name/1083210┃Manecillas de Reloj
+Skill/Group/Name/1083300┃Cronógrafo
+Skill/Group/Name/1083400┃Salto en el Tiempo
+Skill/Group/Name/1083500┃Cronocampo
+Skill/LobbyDesc/1083100┃Cuando Henry inflige cierta cantidad de daño a un personaje enemigo en cierta cantidad de tiempo, les une un temporizador. Cuando el temporizador termina, inflige daño de habilidad proporcional a los PV perdidos del objetivo.
+Skill/Group/Desc/1083100┃Cuando Henry inflige daño equivalente a {1} de los PV Máximos de su objetivo en {0} segundos a un personaje enemigo, les une un temporizador. Tras {2} segundos, el temporizador explota, infligiendo <color=white>{3}</color><color=#688A08>(+{4} PV Perdido del Objetivo)</color> daño de habilidad.
+Skill/Group/Coef/1083100┃Cuando Henry inflige daño equivalente a {1} de los PV Máximos de su objetivo en {0} segundos a un personaje enemigo, les une un temporizador. Tras {2} segundos, el temporizador explota, infligiendo <color=white>{20}</color><color=#DDA0DD>(+{21} Amplificación de Habilidades)</color><color=#688A08>(+{4} PV Perdido del Objetivo)</color> daño de habilidad.
+Skill/Group/ExpansionTip/1083100┃<i>Si el enemigo con el temporizador unido muere antes de recibir daño, el enfriamiento se reduce en {0}.</i>
+Skill/LobbyDesc/1083200┃Henry lanza la manecilla de los minutos en la dirección seleccionada, infligiendo daño de habilidad a los enemigos en su camino. La habilidad se puede reutilizar durante cierto tiempo.\n\nReutilización: Henry lanza la manecilla de las horas en la dirección seleccionada, infligiendo más daño de habilidad a los enemigos en su camino.\n\nA partir del segundo enemigo golpeado,cada habilidad inflige daño reducido. Los objetivos inmovilizados reciben daño verdadero adicional.
+Skill/Group/Desc/1083200┃Henry lanza la manecilla de los minutos en la dirección seleccionada, infligiendo <color=white>{5}</color> daño de habilidad a los enemigos en su camino. Los objetivos inmovilizados golpeados reciben <color=white>{0}</color> daño verdadero adicional. Puede reutilizarse durante {2} segundos.\n\nReutilización: Henry lanza la manecilla de las horas en la dirección seleccionada, infligiendo <color=white>{6}</color><color=#688A08>(+{4}% PV Máximo del objetivo)</color> daño de habilidad. Los objetivos inmovilizados golpeados reciben <color=white>{1}</color> daño verdadero adicional.\n\nA partir del segundo enemigo golpeado, cada habilidad inflige {3} daño.
+Skill/Group/Coef/1083200┃Henry lanza la manecilla de los minutos en la dirección seleccionada, infligiendo <color=white>{20}</color><color=#DDA0DD>(+{21} Amplificación de Habilidades)</color> daño de habilidad a los enemigos en su camino. Los objetivos inmovilizados golpeados reciben <color=white>{0}</color><color=green>(+Nivel de Henry</color><color=white> * {7}</color><color=green>)</color> daño verdadero adicional. Puede reutilizarse durante {2} segundos.\n\nReutilización: Henry lanza la manecilla de las horas en la dirección seleccionada, infligiendo <color=white>{22}</color><color=#DDA0DD>(+{23} Amplificación de Habilidades)</color><color=#688A08>(+{4}% PV Máximo del objetivo)</color> daño de habilidad. Los objetivos inmovilizados golpeados reciben <color=white>{1}</color><color=green>(+Nivel de Henry</color><color=white> * {8}</color><color=green>)</color> daño verdadero adicional.\n\nA partir del segundo enemigo golpeado, cada habilidad inflige {3} daño.
+Skill/LobbyDesc/1083300┃Henry crea un <color=white>Cronógrafo</color> en la localización seleccionada. Los enemigos que permanecen en él reciben daño de habilidad cada cierta cantidad de tiempo y son ralentizados.\n\nGolpear a un Personaje Enemigo o un Monstruo Jefe reduce el enfriamiento de la habilidad.
+Skill/Group/Desc/1083300┃Henry crea un <color=white>Cronógrafo</color> en la localización seleccionada que dura {4} segundos. Los enemigos que permanecen en él reciben <color=white>{3}</color><color=#688A08>(+{5}% PV Máximo del objetivo)</color> daño de habilidad cada {0} segundos y son ralentizados en {1}.\n\nGolpear a un Personaje Enemigo o un Monstruo Jefe reduce el enfriamiento en {2}.
+Skill/Group/Coef/1083300┃Henry crea un <color=white>Cronógrafo</color> en la localización seleccionada que dura {4} segundos. Los enemigos que permanecen en él reciben <color=white>{20}</color><color=#DDA0DD>(+{21} Amplificación de Habilidades)</color><color=#688A08>(+{5}% PV Máximo del objetivo)</color> daño de habilidad cada {0} segundos y son ralentizados en {1}.\n\nGolpear a un Personaje Enemigo o un Monstruo Jefe reduce el enfriamiento en {2}.
+Skill/Group/ExpansionTip/1083300┃<i>Si el teletransporte de Salto en el Tiempo hace que aterrice en un Cronógrafo, la duración del Cronógrafo se aumenta en {0} segundos.</i>
+Skill/LobbyDesc/1083400┃Henry canaliza y rebobina el tiempo rápidamente para teletransportarse a la dirección seleccionada.\nsi aterriza en un <color=white>Cronógrafo</color>, los enemigos dentro de éste son enraizados y reciben daño de habilidad. Si aterriza cuando un personaje enemigo está en él, la velocidad de movimiento de Henry aumenta brevemente, decayendo con el tiempo.\n\nCuando comienza a teletransportarse, el enfriamiento de <color=white>Manecillas de Reloj</color> y el de <color=white>Cronógrafo</color> se reducen.
+Skill/Group/Desc/1083400┃Henry canaliza durante {0} segundos y rebobina el tiempo rápidamente para teletransportarse a la dirección seleccionada.\nsi aterriza en un <color=white>Cronógrafo</color>, los enemigos dentro de éste son enraizados durante {1} segundos y reciben <color=white>{6}</color> daño de habilidad. Si aterriza cuando un personaje enemigo está en él, la velocidad de movimiento de Henry aumenta en {3} durante {2} segundos, decayendo con el tiempo.\n\nCuando comienza a teletransportarse, el enfriamiento de <color=white>Manecillas de Reloj</color> se reduce en {4} y el de <color=white>Cronógrafo</color> en {5}.
+Skill/Group/Coef/1083400┃Henry canaliza durante {0} segundos y rebobina el tiempo rápidamente para teletransportarse a la dirección seleccionada.\nsi aterriza en un <color=white>Cronógrafo</color>, los enemigos dentro de éste son enraizados durante {1} segundos y reciben <color=white>{20}</color><color=#DDA0DD>(+{21} Amplificación de Habilidades)</color> daño de habilidad. Si aterriza cuando un personaje enemigo está en él, la velocidad de movimiento de Henry aumenta en {3} durante {2} segundos, decayendo con el tiempo.\n\nCuando comienza a teletransportarse, el enfriamiento de <color=white>Manecillas de Reloj</color> se reduce en {4} y el de <color=white>Cronógrafo</color> en {5}.
+Skill/LobbyDesc/1083500┃Henry se vuelve inmune al control de masas y genera un campo a su alrededor por un periodo de tiempo, infligiendo daño de habilidad, y obteniendo un escudo.\n\nMientras el campo está activo, los enemigos y sus proyectiles son ralentizados. Cuando el temporizador termina, el campo explota, destruyendo los proyectiles, inligiendo daño de habilidad y aturdiendo a los enemigos.
+Skill/Group/Desc/1083500┃Henry se vuelve inmune al control de masas y genera un campo a su alrededor durante {0} segundos, infligiendo <color=white>{8}</color> daño de habilidad, y obteniendo un escudo que absorbe <color=white>{10}</color> daño.\n\nMientras el campo está activo, los enemigos son ralentizados cada vez más con el tiempo hasta {5} y sus proyectiles se ralentizan en {3}. El campo explota, destruyendo los proyectiles en su interior, inligiendo <color=white>{9}</color> daño de habilidad a los enemigos y aturdiéndolos durante {7} segundos.
+Skill/Group/Coef/1083500┃Henry se vuelve inmune al control de masas y genera un campo a su alrededor durante {0} segundos, infligiendo <color=white>{20}</color><color=#DDA0DD>(+{21} Amplificación de Habilidades)</color> daño de habilidad, y obteniendo un escudo que absorbe <color=white>{24}</color><color=#DDA0DD>(+{25} Amplificación de Habilidades)</color><color=#688A08>(+{26} PV Máximos)</color> daño.\n\nMientras el campo está activo, los enemigos son ralentizados cada vez más con el tiempo hasta {5} y sus proyectiles se ralentizan en {3}. El campo explota, destruyendo los proyectiles en su interior, inligiendo <color=white>{22}</color><color=#DDA0DD>(+{23} Amplificación de Habilidades)</color> daño de habilidad a los enemigos y aturdiéndolos durante {7} segundos.
+CharacterState/Group/Name/1083100┃Fractura Temporal - Explosión del Temporizador
+CharacterState/Group/Desc/1083100┃Tienes un temporizador debido a Fractura Temporal. Recibirás daño de habilidad en breves.
+CharacterState/Group/Name/1083300┃Cronógrafo - Ralentizado
+CharacterState/Group/Desc/1083300┃Has sido ralentizado por el Cronógrafo.
+CharacterState/Group/Name/1083400┃Salto en el Tiempo- Aumento de Velocidad de Movimiento
+CharacterState/Group/Desc/1083400┃¡Salto en el Tiempo! ¡Tu velocidad de movimiento ha aumentado!
+CharacterState/Group/Name/1083410┃Salto en el Tiempo - Enraizado
+CharacterState/Group/Desc/1083410┃El Cronógrafo ha explotado y has sido enraizado.
+CharacterState/Group/Name/1083500┃Cronocampo - Escudo
+CharacterState/Group/Desc/1083500┃Henry ha creado un campo temporal y has recibido un escudo.
+CharacterState/Group/Name/1083510┃Cronocampo - Aturdido
+CharacterState/Group/Desc/1083510┃Has sido aturdido por el campo temporal.
+CharacterState/Group/Name/1083520┃Cronocampo - Ralentizado
+CharacterState/Group/Desc/1083520┃Has sido ralentizado por el campo temporal.
 Skill/Group/Name/3015000┃A Capa y Daga
 Skill/Group/Name/3015100┃A Capa y Daga
 Skill/Group/Name/3016000┃Bloqueo
@@ -12094,11 +12177,6 @@ Skill/LobbyDesc/1065200┃<color=white>Debi:</color> Debi golpea con su espada h
 Skill/LobbyDesc/1065300┃<color=white>Debi:</color> Debi con golpea su espada violentamente, infligiendo daño de habilidades, y bloquea los proyectiles enemigos y ataques básicos dentro de su alcance.\n\n<color=white>Marlene:</color> Marlene gira rápidamente y libera múltiples rayos de energía que vuelan hacia los enemigos cercanos. Los enemigos reciben daño de habilidades con cada golpe y se tiñen con <color=white>Azul & Rojo</color> cada número de golpes. Los enemigos que ya han sido golpeados por la energía recibirán daño reducido.
 Skill/LobbyDesc/1065400┃<color=green>Pasiva:</color> Debi y Marlene tienen mayor Velocidad de movimiento cuando se intercambian.\n\n<color=white>Debi:</color> Llama a Marlene para intercambiar. Al cambiar, se mueve hacia atrás y libera energía, infligiendo daño de habilidades al primer enemigo que golpea. Después de un período de tiempo, ese enemigo y todos los enemigos cercanos son Ralentizados.\nDebi permanece en su posición cambiada por un corto periódo de tiempo, y al utilizar <color=white>Corte Creceinte</color>, Debi se lanzará hacia adelante, infligiendo daño de habilidades a los enemigos en su camino y lanzándolos por los aires.\n\n<color=white>Marlene:</color> Llama a Debi para intercambiar. Al cambiar, Debi se lanza hacia adelante, infligiendo daño de habilidades a los enemigos en su camino y lanzándolos por los aires.\nMarlene permanece en su posición cambiada por un corto periódo de tiempo, y utilizar <color=white>Corte Severo</color> hace que Marlene se mueva hacia atrás y libere energía, infligiendo daño de habilidades al primer enemigo golpeado. Este enemigo y todos los enemigos cercanos son Ralentizados durante un breve período de tiempo.
 Skill/LobbyDesc/1065500┃Debi y Marlene se deslizan juntas, infligiendo daño de habilidades a todos los enemigos en su camino antes de atraerlos hacia ellas y son Aturdirlos por un momento. Los enemigos recibirán múltiples golpes adicionales de daño verdadero y se tiñen con <color=white>Azul & Rojo</color>.
-Skill/LobbyDesc/1067100┃El siguiente ataque básico de Abigail causa daño de habilidad adicional y reduce la defensa del objetivo.\nAl golpear a un enemigo con una habilidad, el tiempo de reutilización de <color=white>Hoja Desgarradora</color> se reduce.
-Skill/LobbyDesc/1067200┃Abigail balancea su guadaña. El primer giro causa algo de daño de habilidad y el segundo giro causa un daño de habilidad más fuerte.\nAl lanzar Giro Binario, su velocidad de movimiento aumenta brevemente.
-Skill/LobbyDesc/1067300┃Abigail atraviesa el espacio e inflige daño de habilidad.\nGolpear a un enemigo le otorga un escudo que absorbe el daño durante un período de tiempo.\n\nLos objetivos alcanzados por la habilidad están marcados con <color=white>Coordenadas</color>, lo que le otorga a Abigail visión de sus objetivos durante un período de tiempo.
-Skill/LobbyDesc/1067400┃Abigail se teletransporta a través de una grieta dimensional a un lugar específico alrededor del enemigo, causando daño de habilidad.\n\nCuando se usa en un objetivo marcado con <color=white>Coordenadas</color>, el tiempo de reutilización de <color=white>Salto Cuántico</color> se reinicia.
-Skill/LobbyDesc/1067500┃Abigail se esconde en una dimensión diferente y se vuelve inalcanzable por un tiempo.\nLuego aterriza, causando daño de habilidad y ralentizando a los enemigos.\n\nLos objetivos alcanzados por la habilidad están marcados con <color=white>Coordenadas</color>, lo que le otorga a Abigail visión de sus objetivos durante un período de tiempo.
 Skill/LobbyDesc/1069100┃Al golpear a un sujeto de prueba aliado, aparece un osito de peluche en el objetivo.\n\nCuando un ataque de un aliado que ha ganado un osito de peluche golpea a un enemigo, el osito de peluche sale volando e inflige daño de habilidad adicional.\nHacer daño con el osito de peluche reduce el tiempo de reutilización de la habilidad básica de Leni.
 Skill/LobbyDesc/1069200┃Leni dispara su Bazooka Zanahoria y es empujada ligeramente hacia atrás. La zanahoria vuela hasta el final de su alcance o explota si golpea a un enemigo o aliado. Cuando explota, causa daño de habilidad a los enemigos y cura a los aliados.
 Skill/LobbyDesc/1069300┃Leni salta y golpea su mazo en el lugar objetivo, causando daño de habilidad y ralentizando a los enemigos. Los enemigos golpeados en el centro se ralentizan aún más.\nGolpear a un aliado lo ralentiza durante un corto período de tiempo y luego aumenta su velocidad de movimiento.
@@ -13212,7 +13290,7 @@ Item/Skills/6059001/Desc┃Al entrar en combate, si un personaje enemigo permane
 Item/Skills/6056001┃Preciso
 Item/Skills/6056001/Name┃<color=yellow>Preciso</color>
 Item/Skills/6056001/Body┃Infligir daño con habilidades distintas a personajes enemigos desde más de <color=white>{0} m</color> inflige <color=#DDA0DD>{1}</color> de daño de habilidad adicional a los enemigos alcanzados y otorga visión del objetivo durante {2} segundos. (Enfriamiento: {3} s)
-Item/Skills/6056001/Desc┃Al infligir daño con habilidades distintas a enemigos a más de <color=white>{0}m</color> de distancia, infliges <color=white>{1}</color><color=#DDA0DD>(+{3}% de Amplificación de Habilidad)</color><color=green>(+Nivel del personaje * {5})</color> de daño de habilidad adicional a los enemigos alcanzados y obtienes visión del objetivo durante {6} segundos. (Tiempo de reutilización: {7}s)
+Item/Skills/6056001/Desc┃Al infligir daño con habilidades distintas a enemigos a más de <color=white>{0}m</color> de distancia, inflige <color=white>{1}</color><color=#DDA0DD>(+{3}% Amplificación de Habilidades)</color><color=green>(+Nivel del personaje * {5})</color> daño de habilidad adicional a los enemigos golpeados y obtienes visión del objetivo durante {6} segundos. (Enfriamiento: {7}s)
 CharacterState/Group/Name/6056010┃Preciso
 CharacterState/Group/Desc/6056010┃Has ganado visión del enemigo objetivo golpeado por Preciso
 CharacterState/Group/Name/6056020┃Preciso
@@ -15326,9 +15404,9 @@ Item/Name/201528┃Yelmo Vikingo
 Item/Name/201529┃Protector ocular
 Item/Name/201420┃Sombrero de Bruja Blanco
 Item/Name/201421┃Máscara de Zorro
+Item/Name/201530┃Auriculares David
 Item/Name/201422┃Gafas de Sol Deportivas
 Item/Name/201423┃Gafas Tácticas
-Item/Name/201530┃Auriculares David
 Item/Name/201531┃El Marinero
 Item/Name/201532┃El Capitán
 Item/Name/201533┃Velo Negro
@@ -17233,6 +17311,12 @@ CharacterStoryHeight/82┃168 cm
 CharacterStoryGender/82┃Femenino
 CharacterStoryTitle/82┃Crearé el camino con está espada.
 CharacterStoryDesc/82┃Una chica joven que sabe esgrima psíquica.\n\nIntenta parecer guay y serena, pero en realidad, tiene un corazón puro y a veces es un poco torpe de las formas más encantadoras.\n\nNacida como hija única en un pueblo aislado en las montañas, viene de una familia que ha protegido una espada sagrada durante generaciones.\n\nDesde una edad muy temprana, la espada siempre estuvo a su lado. Siempre que estaba con ella, sentía que el origen y el espíritu de su pueblo se asentaban en su corazón. La pulía a diario, afilaba su filo, y se sentaba con ella a reflexionar en silencio.\n\nUn día, el santuario que daba hogar a la hoja fue consumido de repente por fuego. Su padre y varios pueblerinos quedaron atrapados dentro. Sin pensarlo dos veces, Xuelin corrió hacia las llamas.\n\nNo importa quién empezó el incendio o por qué. Todo lo que sabía era que no podía ver como las cosas que con tanto cariño guardaba en su corazón eran reducidas a cenizas.\n\nEn ese momento, la espada respondió a su corazón. Liberó una energía poderosa, como si tuviera voluntad propia, y la envolvió en su fuerza. Con la espada y sus habilidades recién despertadas, fue capaz de salvar a todos del incendio.\n\nDespués de aquel día, Xuelin decidió abandonar su pueblo por primera vez.\n\nNo sólo como aquella que protege la espada, también como aquella que fue verdaderamente elegida por ella.\nPara proteger lo que aprecia, con sus propias manos.
+CharacterStoryName/83┃Henry Constant
+CharacterStoryAge/83┃Desconocido (Se estima que 120+ años)
+CharacterStoryHeight/83┃173 cm
+CharacterStoryGender/83┃Hombre
+CharacterStoryTitle/83┃¿Alguna vez has anhelado volver atrás en el tiempo?
+CharacterStoryDesc/83┃Un relojero congelado en el tiempo.\nSu expresión permanece ilegible, su presencia fría. Rara vez muestra emoción.\nHabla formal y contenido, siempre manteniendo a otros a cierta distancia.\n\nEn un pasado distante, su vida rebosaba con esperanza.\nTenía amigos leales. Un mentor al que respetaba profundamente.\nY una amada esposa, su alma gemela.\nSe sentía como si esos días alegres fueran a durar para siempre.\n\nPero la felicidad fue destrozada por un desastre repentino.\nEn las profundidades de la desesperación, Henry despertó su habilidad FV.\nRetrocedío en el tiempo incontables veces, intentando salvarla.\nPero cada intento terminaba en fracaso. No había nada que pudiera hacer.\n\nTras eso, sus emociones se desvanecieron y desaparecieron.\nSin más razones para vivir, se aferró a las memorias que ya habían perdido su luz.\nAguantó, sabiendo que si el desaparecía, esas memorias se desvanecerían consigo.\nDía a día, aguantó, poniendo su fe en un deseo sin esperanza.\nY ese día, puede que llegue un milagro.\n\nMuchos años después, Aglaia contactó con él.\nA través de ellos, vio una nueva posibilidad.\nY tomó una decisión.\nSin importar el coste, volvería.\n\nEl tiempo, una vez parado, había vuelto a moverse de nuevo.\nTodo por la posibilidad de ver su sonrisa de nuevo.\n\nAún lleva consigo el reloj de bolsillo que había empezado a fabricar para celebrar el nacimiento de su hijo.\nSigue sin estar terminado, pero siempre lo mantiene cerca.
 CharacterPlayTip/1┃Jackie es una asesina en serie que implacablemente persigue y masacra sus objetivos. Ella obtiene aún más poder con cada muerte.
 CharacterPlayTip/2┃Aya es un personaje a distancia con gran estabilidad que puede golpear fácilmente los enemigos con sus habilidades desde una larga distancia.
 CharacterPlayTip/3┃Fiora utiliza su agilidad como esgrimista para controlar su distancia de los enemigos, infligiendo daño adicional con cada golpe sucesivo.
@@ -17315,61 +17399,7 @@ CharacterPlayTip/79┃Justyna es una chica extrovertida que sueña con convertir
 CharacterPlayTip/80┃Istvan se fortalece, desbloqueando una versión alternativa de sí mismo que produce resultados distintos a sus acciones habituales. Explora constantemente diversas posibilidades en cada combate, realizando experimentos una y otra vez para lograr mejores resultados.
 CharacterPlayTip/81┃NiaH ama los videojuegos. Controla la realidad como un videojuego y lucha contra sus enemigos limitando su movimiento, participando en luchas increíbles.
 CharacterPlayTip/82┃Xuelin es una chica modesta de pueblo entrenada en el arte de la esgrima psíquica. Ataca a sus enemigos lanzándoles sus espadas de energía o usándolas para defenderse. También puede lanzarse hacia las líneas enemigas en un instante para tornar una batalla a su favor.
-MasteryType/Glove/Desc┃Los guantes tienen un rango de ataque muy corto, pero pueden realizar ataques consecutivos muy rápidamente.
-MasteryType/Tonfa/Desc┃Las tonfas son las únicas armas capaces de mantener una buena defensa.
-MasteryType/Hammer/Desc┃Los martillos tienen una velocidad de ataque muy lenta, pero pueden restringir el movimiento de tu oponente con un solo gran impacto.
-MasteryType/Bat/Desc┃Los bates son armas flexibles y balanceadas que pueden atacar a diversos enemigos fácilmente.
-MasteryType/Whip/Desc┃Los látigos son armas bastante ingeniosas debido a su capacidad de restringir el movimiento de enemigos.
-MasteryType/HighAngleFire/Desc┃Las armas arrojadizas normalmente tienen un poder de ataque alto. La cantidad de acumulaciones que puedes poseer, tal y como cuantas se pueden hacer, varía depende las armas, así que asegurate de cuantas tienes y puedes fabricar.
-MasteryType/DirectFire/Desc┃Los shurikens tienen una gran variedad de tipos de arma y son muy versátiles. La cantidad de acumulaciones que puedes poseer, tal y como cuantas se pueden hacer, varía depende las armas, así que asegurate de cuantas tienes y puedes fabricar.
-MasteryType/Bow/Desc┃Los arcos son armas de larga distancia que se vuelven más poderosos mientras más maestría tengas. Son muy efectivos contra animales salvajes.
-MasteryType/CrossBow/Desc┃Las ballestas se especializan en su ráfaga de ataques unidireccionales que empujan a tus enemigos hacia atrás.
-MasteryType/Pistol/Desc┃Las pistolas te permiten usar habilidades más a menudo. Estas armas se especializan en agilidad y gran mobilidad.
-MasteryType/AssaultRifle/Desc┃Los rifles de asalto son armas de larga distancia que se especializan en ataques rápidos y constantes. 
-MasteryType/SniperRifle/Desc┃Los rifles francotiradores poseen un fuerte poder de ataque y el rango de alcance más largo. Cubren más distancia que tu rango de visión, así que asegúrate de seleccionar una buena posición y expandir tu rango de visión.
-MasteryType/Axe/Desc┃Las hachas pueden ser muy lentas, pero hacen muchísimo daño. Son rápidas de fabricar por lo cual te pueden dar una ventaja en la batalla.
-MasteryType/OneHandSword/Desc┃Las dagas son armas especializadas en ataques sorpresa. Son una de las mejores armas para batallas cortas.
-MasteryType/TwoHandSword/Desc┃Las espadas de dos manos son armas bien equilibradas. Mientras más tiempo pases subiendo su maestría, las verás con mejores ojos. Sin embargo, no son muy recomendables para principiantes.
-MasteryType/Polearm/Desc┃Las armas de asta tienen el mejor equilibrio entre poder destructivo y largo alcance, especialmente cuando te enfrentas a muchos enemigos simultáneamente.
-MasteryType/DualSword/Desc┃Las espadas dobles se especializan en liberar dos ráfagas de ataques hermosos y consecutivos.
-MasteryType/Spear/Desc┃Las lanzas pueden verse como poderosas armas de mediana distancia. Sin embargo, son bastante débiles contra enemigos a corta distancia. Es importante controlar la distancia con ellas.
-MasteryType/Nunchaku/Desc┃Los nunchaku son difíciles de aprender, pero pueden ser un arma versátil con usos creativos si se dominan.
-MasteryType/Rapier/Desc┃Las rapiers son capaces de movimientos fugaces que evaden ataques enemigos permitiéndoles acertar sus ataques exitosamente. 
-MasteryType/Guitar/Desc┃Las guitarras son armas de larga distancia que atacan con ondas de sonido.\nEstas armas son muy versátiles ya que tu estilo de juego y estrategia pueden cambiar completamente dependiendo del número de puntos de evolución que uses en sus habilidades.
-MasteryType/Camera/Desc┃Las camaras son un arma de largo alcance sin proyectil. Pueden ser usadas para cegar a los enemigos, lo que causa que fallen debido al luminoso flash.
-MasteryType/Arcana/Desc┃Los Arcanos son armas a distancia capaces de manipular la enegia FV pura. Los usuarios de Arcanos pueden eliminar a sus oponentes con un sinfin de habilidades.
-MasteryType/VFArm/Desc┃Las Prótesis FV son armas cuerpo a cuerpo que utilizan nanomáquinas para controlar la FV. Sus portadores pueden ajustar el flujo de FV para causar mayor daño severo a la vez.
-MasteryType/Glove/Stats┃Equiparse Guantes incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}.
-MasteryType/Tonfa/Stats┃Equiparse Tonfa incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Hammer/Stats┃Equiparse Martillo incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Axe/Stats┃Equiparse Hacha incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Bat/Stats┃Equiparse Bate incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Whip/Stats┃Equiparse Latigo incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/OneHandSword/Stats┃Equiparse Daga incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/TwoHandSword/Stats┃Equiparse Espada a Dos Manos incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/DualSword/Stats┃Equiparse Espadas Duales incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Spear/Stats┃Equiparse Lanza incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/HighAngleFire/Stats┃Equiparse Arrojadizos incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/DirectFire/Stats┃Equiparse Shuriken incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Bow/Stats┃Equiparse Arco incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/CrossBow/Stats┃Equiparse Ballesta incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Pistol/Stats┃Equiparse Pistola incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/AssaultRifle/Stats┃Equiparse Fusíl de Asalto incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/SniperRifle/Stats┃Equiparse Rifle de Francotirador incrementa la {2} en {3} y\nla {4} en {5}
-MasteryType/Nunchaku/Stats┃Equiparse Nunchakus incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Rapier/Stats┃Equiparse Estoque incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Guitar/Stats┃Equiparse Guitarra incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
-MasteryType/Camera/Stats┃Equipar Cámara aumenta {0} por {1}\n{4} por {5}
-MasteryType/Arcana/Stats┃Equipar Arcanos aumenta {0} en {1}\n {2} en {3}\n {4} en {5}
-MasteryType/VFArm/Stats┃Equipar Prótesis de Fuerza Vital incrementa {0} en {1}\n{2} en {3}\n{4} en {5}
-MasteryType/Hunt/Stats┃Incremento de {1} del {0}
-MasteryType/Craft/Stats┃Incremento de {1} del {0}
-MasteryType/Search/Stats┃Incremento de {1} del {0}
-MasteryType/Move/Stats┃Incremento de {1} del {0}
-MasteryType/Health/Stats┃Incremento de {1} del {0}\nIncremento de {3} del {2}
-MasteryType/Defense/Stats┃Incremento de {1} del {0}\nIncremento de {3} del {2}
-MasteryType/Meditation/Stats┃Incremento de {1} del {0}
-MasteryType/Trap/Stats┃Incremento de {1} del {0}
+CharacterPlayTip/83┃Henry manipula el tiempo para bloquear a los enemigos y crear condiciones óptimas para sus aliados.
 보유하지 않은 캐릭터입니다.┃No has obtenido este personaje.\nPuedes obtenerlo en la tienda.
 매칭 중 캐릭 변경 금지┃No puedes cambiar de personaje mientras buscas una partida.
 로딩 중┃Cargando\n< Presiona la tecla X para sentarse y descansar. >
@@ -17383,6 +17413,7 @@ RANKED GAME┃Partida Clasificatoria
 재시도┃Intente de nuevo
 전체 스킵┃Omitir
 획득 가젯 에너지┃Energía de Dispositivo
+팀원필요특수재료┃{0}({1}) tiene el {2} requerido por <color=#FFBB00>aliado</color>.
 EVENT_NP┃NP de Evento
 EVENT_NP 기간만료┃Los NP de Evento no pueden utilizarse después de su expiración.
 NP┃NP
@@ -17429,7 +17460,7 @@ EP 토큰 재화 툴팁 설명┃Cuando ya tienes un Pase ER en el nivel máximo
 청약철회 상품 이미지┃Objeto
 청약철회 상품 유형┃Tipo
 청약철회 상품 명┃Nombre de Objeto
-청약철회 상품 구매가┃Precio
+청약철회 상품 구매가┃Precio de Pago
 청약철회 상품 구매일┃Fecha
 청약철회 상태┃Estado
 청약철회 상태 가능┃Solicitud de Devolución
@@ -17807,6 +17838,7 @@ ToolTip/LevelUpGuide/WeaponSkill┃Haz clic o presiona {0} para subir Nivel de h
 mainMenu/GameStart┃Comenzar el juego
 mainMenu/TeamLobby┃Sala de Espera del equipo
 mainMenu/QuickStart┃Inicio Rápido
+mainMenu/QuickStart/CharacterPoolTooltip┃Algunos personajes no están disponibles en este modo.
 mainMenu/Inventory┃Coleccionables
 mainMenu/Loadout┃Equipamiento
 mainMenu/ERPass┃Pase ER
@@ -18411,8 +18443,8 @@ NormalMatchingSquad┃Comienza a buscar una Partida Normal con el tiempo de espe
 RankMatchingSolo┃Empezar a buscar una partida Clasificatoria en Solitario con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración＞Juego.
 RankMatchingDuo┃Empezar a buscar una partida Clasificatoria en Duo con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración ＞Juego.
 RankMatchingSquad┃Comienza a buscar una Partida Clasificada con el tiempo de espera oculto.\n*Debes habilitar la opción [Usar atajos de espera] en Configuración＞Modo de transmisión.
-StreamingModeSetting/SquadRumbleMatching┃Empezar a buscar una partida de Circuito Unión con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Opciones ＞ Juego.
-StreamingModeSetting/EventModeMatching┃Empezar búsqueda de partida Modo Evento con el tiempo de cola oculto.\n*Necesitas habilitar esta opción en Ajustes ＞ Juego.
+StreamingModeSetting/SquadRumbleMatching┃Empezar a buscar una partida de Circuito Unión con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Opciones ＞ Modo de Transmisión.
+StreamingModeSetting/EventModeMatching┃Empezar búsqueda de partida Modo Evento con el tiempo de cola oculto.\n*Necesitas habilitar esta opción en Ajustes ＞ Modo de Transmisión.
 유니온 대전 방송모드 에러 팝업┃Circuito Unión está disponible tras unirse a un equipo.\nPor favor entra en la lobby del equipo de Circuito Unión con el que estás participando para proceder.
 이벤트 대전 방송모드 에러 팝업┃Modo Evento no está disponible ahora mismo.
 GameSetting/SecretMatching┃Puedes utilizar atajos del teclado para buscar partidas. \nBuscar partidas con los accesos directos oculta el tiempo de espera.\nPuedes añadir o editar los atajos del teclado en Configuración＞ Ingresar＞ Interfaz.
@@ -19831,7 +19863,8 @@ AutoResurrectionHUD/CannotReviveText┃Ya no puedes ser revivido/a
 팀 루트┃Planos Guardados del Equipo
 목표 경로 지정┃Designar ruta objetivo
 목표 경로 삭제┃Ruta clara y específica
-LUMI 동선 보기┃Ver Ruta de Lumi
+LUMI 동선 보기┃Destacar Objetivo
+오브젝트 강조 표시┃Destacar Objetivo
 야생동물 위치 정보┃Localización de Animales Salvajes
 실험 종료┃Terminado
 금지구역 사망┃Has muerto en un área restringida
@@ -21361,6 +21394,13 @@ RecommendImpossibleTeamLobbyFull┃El equipo se encuentra completo.
 팀원 찾기를 완료했습니다.┃Búsqueda de compañeros de equipo completada.
 팀원이 이탈하여 팀원찾기가 중단되었습니다.┃Tu compañero de equipo se ha ido. La búsqueda de compañeros de equipo se ha pausado.
 팀원 찾기 시간 초과로 실패┃No hay compañeros de equipo disponibles. Vuelve a intentarlo más tarde.
+TeamLobby/CharacterPool/Notice┃Algunos personajes no están disponibles en este modo.
+TeamLobby/CharacterPool/PopupBtn┃Comprobar Personajes
+모드 캐릭터 수 제한┃El número de personajes necesitados para jugar este modo es insuficiente.
+CharacterPoolPopup/Title┃Ajuste de Personajes de Modo
+CharacterPoolPopup/Category/PoolCharacter┃Personajes Disponibles
+CharacterPoolPopup/Category/MostPlayed┃Personajes Más Jugados
+CharacterPoolPopup/NoMatch┃No hay resultados.
 Friends/Category/NoInput┃¡Los nombres de los grupos no pueden estar vacíos!
 Friends/Category/Over20Letter┃Los nombres de los grupos no pueden excederse de 20 caracteres.
 Friends/Category/DuplicateName┃Ya tienes un grupo con este nombre.
@@ -21899,6 +21939,61 @@ LootExchangeWindow/tokenInfo/TokenRemainder┃El intercambio no estará disponib
 재화가 부족합니다. 제작소(상자)로 이동하시겠습니까?┃Forma de pago insuficiente. ¿Ir a Forja (Caja)?
 재화가 부족합니다. 제작소로 이동하시겠습니까?┃Forma de pago insuficiente. ¿Ir a Forja?
 {0} 회┃{0} Veces
+MasteryType/Glove/Desc┃Los guantes tienen un rango de ataque muy corto, pero pueden realizar ataques consecutivos muy rápidamente.
+MasteryType/Tonfa/Desc┃Las tonfas son las únicas armas capaces de mantener una buena defensa.
+MasteryType/Hammer/Desc┃Los martillos tienen una velocidad de ataque muy lenta, pero pueden restringir el movimiento de tu oponente con un solo gran impacto.
+MasteryType/Bat/Desc┃Los bates son armas flexibles y balanceadas que pueden atacar a diversos enemigos fácilmente.
+MasteryType/Whip/Desc┃Los látigos son armas bastante ingeniosas debido a su capacidad de restringir el movimiento de enemigos.
+MasteryType/HighAngleFire/Desc┃Las armas arrojadizas normalmente tienen un poder de ataque alto. La cantidad de acumulaciones que puedes poseer, tal y como cuantas se pueden hacer, varía depende las armas, así que asegurate de cuantas tienes y puedes fabricar.
+MasteryType/DirectFire/Desc┃Los shurikens tienen una gran variedad de tipos de arma y son muy versátiles. La cantidad de acumulaciones que puedes poseer, tal y como cuantas se pueden hacer, varía depende las armas, así que asegurate de cuantas tienes y puedes fabricar.
+MasteryType/Bow/Desc┃Los arcos son armas de larga distancia que se vuelven más poderosos mientras más maestría tengas. Son muy efectivos contra animales salvajes.
+MasteryType/CrossBow/Desc┃Las ballestas se especializan en su ráfaga de ataques unidireccionales que empujan a tus enemigos hacia atrás.
+MasteryType/Pistol/Desc┃Las pistolas te permiten usar habilidades más a menudo. Estas armas se especializan en agilidad y gran mobilidad.
+MasteryType/AssaultRifle/Desc┃Los rifles de asalto son armas de larga distancia que se especializan en ataques rápidos y constantes. 
+MasteryType/SniperRifle/Desc┃Los rifles francotiradores poseen un fuerte poder de ataque y el rango de alcance más largo. Cubren más distancia que tu rango de visión, así que asegúrate de seleccionar una buena posición y expandir tu rango de visión.
+MasteryType/Axe/Desc┃Las hachas pueden ser muy lentas, pero hacen muchísimo daño. Son rápidas de fabricar por lo cual te pueden dar una ventaja en la batalla.
+MasteryType/OneHandSword/Desc┃Las dagas son armas especializadas en ataques sorpresa. Son una de las mejores armas para batallas cortas.
+MasteryType/TwoHandSword/Desc┃Las espadas de dos manos son armas bien equilibradas. Mientras más tiempo pases subiendo su maestría, las verás con mejores ojos. Sin embargo, no son muy recomendables para principiantes.
+MasteryType/Polearm/Desc┃Las armas de asta tienen el mejor equilibrio entre poder destructivo y largo alcance, especialmente cuando te enfrentas a muchos enemigos simultáneamente.
+MasteryType/DualSword/Desc┃Las espadas dobles se especializan en liberar dos ráfagas de ataques hermosos y consecutivos.
+MasteryType/Spear/Desc┃Las lanzas pueden verse como poderosas armas de mediana distancia. Sin embargo, son bastante débiles contra enemigos a corta distancia. Es importante controlar la distancia con ellas.
+MasteryType/Nunchaku/Desc┃Los nunchaku son difíciles de aprender, pero pueden ser un arma versátil con usos creativos si se dominan.
+MasteryType/Rapier/Desc┃Las rapiers son capaces de movimientos fugaces que evaden ataques enemigos permitiéndoles acertar sus ataques exitosamente. 
+MasteryType/Guitar/Desc┃Las guitarras son armas de larga distancia que atacan con ondas de sonido.\nEstas armas son muy versátiles ya que tu estilo de juego y estrategia pueden cambiar completamente dependiendo del número de puntos de evolución que uses en sus habilidades.
+MasteryType/Camera/Desc┃Las camaras son un arma de largo alcance sin proyectil. Pueden ser usadas para cegar a los enemigos, lo que causa que fallen debido al luminoso flash.
+MasteryType/Arcana/Desc┃Los Arcanos son armas a distancia capaces de manipular la enegia FV pura. Los usuarios de Arcanos pueden eliminar a sus oponentes con un sinfin de habilidades.
+MasteryType/VFArm/Desc┃Las Prótesis FV son armas cuerpo a cuerpo que utilizan nanomáquinas para controlar la FV. Sus portadores pueden ajustar el flujo de FV para causar mayor daño severo a la vez.
+MasteryType/Glove/Stats┃Equiparse Guantes incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}.
+MasteryType/Tonfa/Stats┃Equiparse Tonfa incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Hammer/Stats┃Equiparse Martillo incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Axe/Stats┃Equiparse Hacha incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Bat/Stats┃Equiparse Bate incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Whip/Stats┃Equiparse Latigo incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/OneHandSword/Stats┃Equiparse Daga incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/TwoHandSword/Stats┃Equiparse Espada a Dos Manos incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/DualSword/Stats┃Equiparse Espadas Duales incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Spear/Stats┃Equiparse Lanza incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/HighAngleFire/Stats┃Equiparse Arrojadizos incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/DirectFire/Stats┃Equiparse Shuriken incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Bow/Stats┃Equiparse Arco incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/CrossBow/Stats┃Equiparse Ballesta incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Pistol/Stats┃Equiparse Pistola incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/AssaultRifle/Stats┃Equiparse Fusíl de Asalto incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/SniperRifle/Stats┃Equiparse Rifle de Francotirador incrementa la {2} en {3} y\nla {4} en {5}
+MasteryType/Nunchaku/Stats┃Equiparse Nunchakus incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Rapier/Stats┃Equiparse Estoque incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Guitar/Stats┃Equiparse Guitarra incrementa la {0} en {1}\nel {2} en {3} y\nla {4} en {5}
+MasteryType/Camera/Stats┃Equipar Cámara aumenta {0} por {1}\n{4} por {5}
+MasteryType/Arcana/Stats┃Equipar Arcanos aumenta {0} en {1}\n {2} en {3}\n {4} en {5}
+MasteryType/VFArm/Stats┃Equipar Prótesis de Fuerza Vital incrementa {0} en {1}\n{2} en {3}\n{4} en {5}
+MasteryType/Hunt/Stats┃Incremento de {1} del {0}
+MasteryType/Craft/Stats┃Incremento de {1} del {0}
+MasteryType/Search/Stats┃Incremento de {1} del {0}
+MasteryType/Move/Stats┃Incremento de {1} del {0}
+MasteryType/Health/Stats┃Incremento de {1} del {0}\nIncremento de {3} del {2}
+MasteryType/Defense/Stats┃Incremento de {1} del {0}\nIncremento de {3} del {2}
+MasteryType/Meditation/Stats┃Incremento de {1} del {0}
+MasteryType/Trap/Stats┃Incremento de {1} del {0}
 ButtonType/Confirm┃Confirmar
 ButtonType/Cancel┃Cancelar
 ButtonType/restart┃Reiniciar
@@ -21989,7 +22084,7 @@ CantConsumItem┃No puedes comer más comida
 Evasion┃Esquivar
 Guard┃¡En Guardia!
 AlonsoCCImmune┃Inmunidad a la Inmovilización
-LINK┃LINK
+SoulLink┃Vida Compartida
 NotInvalidTarget┃Objetivo inválido
 InvalidTarget┃Objetivo inválido
 ServerUnavailable┃El juego no se puede iniciar. Por favor, consulta la sección de noticias.
@@ -22030,14 +22125,12 @@ LoadingText/SceneLoad┃Con el mapa extendido (M) puedes navegar con tu personaj
 LINK┃LINK
 공식 홈페이지 링크┃https://playeternalreturn.com
 스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
-디스코드 링크┃https://discord.gg/eternalreturn
+디스코드 링크┃https://discord.com/invite/eternalreturn
 트위터 링크┃https://twitter.com/_EternalReturn_/
 페이스북 링크┃https://www.facebook.com/eternalreturngame
 유튜브 링크┃https://www.youtube.com/@EternalReturnGame
 레딧 링크┃https://www.reddit.com/r/eternalreturn/
 인스타그램 링크┃https://www.instagram.com/eternalreturngame/
-웨이보 링크┃https://www.weibo.com/6511008423/profile?rightmod=1&wvr=6&mod=personnumber
-빌리빌리 링크┃https://space.bilibili.com/413651489
 QQ 그룹 팝업 메인 버튼┃QQ频道
 QQ 그룹 팝업 메인 버튼 링크┃https://pd.qq.com/s/euobpuz5w
 QQ 그룹1┃QQ 实验群1
