@@ -522,6 +522,13 @@ StatType/MaxHpCoef┃最大体力係数
 StatType/MaxSp┃最大スタミナ
 StatType/MaxHpHealRatio┃最大体力比例回復量
 StatType/MaxSp/Desc┃最大スタミナが増加します。
+StatType/MaxVPLobby┃最大気力
+StatType/MaxVPLobby/Desc┃スキルを使用する時に必要な資源「気力(VP)」の最大値です。
+StatType/MaxVP┃最大気力
+StatType/MaxVP/Desc┃スキルを使用する時に必要な資源「気力(VP)」の最大値です。
+StatType/AddedVpAmount┃追加気力
+StatType/VpRegenRatio┃気力回復量
+StatType/VpRegenRatio/Desc┃0.5秒ごとに回復する気力量
 StatType/AttackPower┃攻撃力
 StatType/AttackPowerAfterAmplication┃基本攻撃増幅適用ダメージ量
 StatType/AttackPower/Desc┃基本攻撃とほとんどのスキルで与えるダメージが増加します。
@@ -2093,8 +2100,8 @@ Skin/Desc/1048004┃この青い海をキャンバスに描けるなんて、嬉
 Skin/Desc/1067003┃海の中では何も話す必要がありません。何もかもすべて飲み込まれ、静かに沈むだけですから。
 Skin/Desc/1081001┃ご主人様も一緒にゲームやる？
 Skin/Desc/1004005┃その弱々しい肉体に頼るバカが、まだいたとはな。
-Skin/Desc/1063003┃青色の火についてきてください...あなたが望む祭りは、まだ終わっていませんから...
-Skin/Desc/1071002┃あの輝かしい花火が、失った色を取り戻してくれることを祈っている。
+Skin/Desc/1063003┃青い火についてきてください...あなたが望むお祭りは、まだ終わっていませんから...
+Skin/Desc/1071002┃あの眩しい花火が、失った色を取り戻してくれることを祈っている。
 Skin/Desc/1076002┃この指に結ばれた赤い鎖が、いつか必ず私たちを会わせてくれるはず...
 Skin/Desc/1011006┃みんな楽しんでいるようで何よりです。招待した甲斐がありましたね。
 Skin/Desc/1049005┃修練に終わりはないって言うけど、今回だけは成果を見せる番だ！
@@ -2142,6 +2149,8 @@ Collection/Name/22011/1┃S7 eスポーツサポーターⅠ
 Collection/Name/22011/2┃S7 eスポーツサポーターⅡ
 Collection/Name/22012/1┃S8 eスポーツサポーターⅠ
 Collection/Name/22012/2┃S8 eスポーツサポーターⅡ
+Collection/Name/22013/1┃S9 eスポーツサポーターⅠ
+Collection/Name/22013/2┃S9 eスポーツサポーターⅡ
 Collection/Name/24001┃2024年 金の福袋！
 Collection/Name/24002┃花咲かし大作戦Ⅰ
 Collection/Name/24003┃花咲かし大作戦Ⅱ
@@ -4239,6 +4248,7 @@ CreditResurrectionButtonTooltip_DescTypeB┃死亡した味方を復活させる
 핑대상_데스┃{0}({1}): {2}({3})の死亡回数{4}
 HP 알림┃{0}({1}): <color=#86E57F>体力{2}%</color>
 SP 알림┃{0}({1}): <color=#86E57F>スタミナ{2}%</color>
+VP 알림┃{0}({1}): <color=#FFFF00>気力{2}%</color>
 휴식 알림┃{0}({1})が<color=#86E57F>休息を要請しています</color>。
 제작 알림┃{0}({1})が<color=#86E57F>の製作を要請しています。</color>
 공격력스탯 알림┃{0}({1}): <color=#86E57F>攻撃力{2}</color>
@@ -4253,6 +4263,7 @@ SP 알림┃{0}({1}): <color=#86E57F>スタミナ{2}%</color>
 사거리스탯 알림┃{0}({1}): <color=#86E57F>射程距離{2}</color>
 체력재생스탯 알림┃{0}({1}): <color=#86E57F>体力再生{2}</color>
 스태미너재생스탯 알림┃{0}({1}): <color=#86E57F>スタミナ再生{2}</color>
+기력재생스탯 알림┃{0}({1}): <color=#FFFF00>気力再生{2}</color>
 방어관통스탯 알림┃{0}({1}): <color=#86E57F>防御貫通減少{2}%</color>
 모든피해감소스탯 알림┃{0}({1}): <color=#86E57F>すべてのダメージ減少{2}</color>
 모든피해증감스탯 알림┃{0}({1}): <color=#86E57F>ダメージ減少{2}</color>
@@ -5119,6 +5130,7 @@ Product Info┃Product Info
 스쿼드 프로필 세팅┃スクワッドモードで使用するプロフィールをセットします。
 SkillCostType/NoCost┃コストなし
 SkillCostType/Sp┃スタミナ
+SkillCostType/Vp┃気力
 SkillCostType/Hp┃体力
 SkillCostType/CurrentHpRatio┃現在体力
 SkillCostType/HpCost┃体力消耗量
@@ -5130,6 +5142,7 @@ SkillCostPing/NoCost┃コストなし
 SkillCostPing/Hp┃体力
 SkillCostPing/CurrentHpRatio┃現在体力
 SkillCostPing/Sp┃スタミナ
+SkillCostPing/Vp┃気力
 SkillCostPing/Ep┃燃料
 SkillCostPing/Vf┃バイタルフォース
 SkillCostPing/GadgetEnergy┃ガジェットエネルギー
@@ -8163,6 +8176,7 @@ Emotion_S8_UnionReward_Adina_2052008┃GG、アディナ ありがとう
 Emotion_Niah_Win_2081008┃ニアの勝ち
 Emotion_Mirka_2085001┃ミルカ グルルル...
 Event_B0R1_3146┃B0-R1 おいしそう！
+Emotion_EsportsPack_Garnet_2076008┃運命の赤い約束 ガーネット 何して遊ぶ？
 ItemType/EMBLEM_MARK/Name┃プロフィールアイコン
 EMBLEM_MARK_FREE1┃Aglaiaアイコン
 EMBLEM_MARK_SHOP_102002┃ヒョヌアイコン
@@ -10352,6 +10366,18 @@ Goods/Name/3402546┃S8 Daegu Suseong Guardians チームスロット背景
 Goods/Name/3402547┃S8 GJ Slasher チームスロット背景
 Goods/Name/3402548┃S8 Gyeonggi Innate チームスロット背景
 Goods/Name/3402549┃S8 DAEJEON AutoArms チームスロット背景
+Goods/Name/3402550┃S9 Seongnam ROX チームスロット背景
+Goods/Name/3402551┃S9 FN SEJONG チームスロット背景
+Goods/Name/3402552┃S9 Jecheon Phalanx チームスロット背景
+Goods/Name/3402553┃S9 New Rise Gangwon チームスロット背景
+Goods/Name/3402554┃S9 all ways INCHEON チームスロット背景
+Goods/Name/3402555┃S9 Busan BeSPA チームスロット背景
+Goods/Name/3402556┃S9 CNJ esports チームスロット背景
+Goods/Name/3402557┃S9 Gyeongnam Sparkle チームスロット背景
+Goods/Name/3402558┃S9 Daegu Suseong Guardians チームスロット背景
+Goods/Name/3402559┃S9 GJ Slasher チームスロット背景
+Goods/Name/3402560┃S9 Gyeonggi Innate チームスロット背景
+Goods/Name/3402561┃S9 DAEJEON AutoArms チームスロット背景
 Goods/Name/3403001┃機械回路
 Goods/Name/3403002┃星空の夜
 Goods/Name/3403003┃秋の紅葉
@@ -10422,6 +10448,7 @@ Goods/Name/3503041┃2周年スペシャルサマーカード
 Goods/Name/3503042┃S8 eスポーツサポーターコイン
 Goods/Name/3503043┃落ち葉カード
 Goods/Desc/3503043┃2025 落ち葉コレクションを完成させてみましょう！\n2025 落ち葉コレクションの達成条件は収集品からご確認いただけます。
+Goods/Name/3503044┃S9 eスポーツサポーターコイン
 ItemType/WILD_CARD_SKIN/Name┃[スキン専用] ワイルドカード
 ItemType/WILD_CARD_ETC/Name┃ワイルドカード
 Goods/Name/3602002┃[スキン専用] ワイルドカード
@@ -11031,6 +11058,7 @@ Product/Name/BATTLE_PASS/2005┃ラッキー★：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2006┃レギオン：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2007┃アカデミー：A-Coin クエストブック
 Product/Name/BATTLE_PASS/2008┃スプラッシュ！：A-Coin クエストブック
+Product/Name/BATTLE_PASS/2009┃祭り A-Coin クエストブック
 Product/Name/2024_Select_Voucher_Pack┃選択券パッケージ
 Product/Name/2024_Select_Voucher_Pack_01┃選択券パッケージⅠ
 Product/Name/2024_Select_Voucher_Pack_02┃選択券パッケージⅡ
@@ -11187,6 +11215,9 @@ Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2周年記念サマーパッケー�
 Product/Name/S7_Season_Fragments_Pack_01┃シーズンピースパッケージ
 Product/Name/S7_Season_Fragments_Pack_02┃シーズンピースパッケージ
 Product/Name/S7_Season_Fragments_Pack_03┃シーズンピースパッケージ
+Product/Name/S9_Season_Fragments_Pack_01┃シーズンピースパッケージ
+Product/Name/S9_Season_Fragments_Pack_02┃シーズンピースパッケージ
+Product/Name/S9_Season_Fragments_Pack_03┃シーズンピースパッケージ
 Product/Name/EVENT_NPASS_2nd_Anniversary_1017┃2周年記念クエストブック
 Product/Name/TropicalDimensionAbigail_CollectPack_01┃トロピカルアビゲイルコレクションパッケージ
 Product/Name/DestroyerMAG_CollectPack_01┃Mk. VIII Destroyer M.A.G コレクションパッケージ
@@ -11492,8 +11523,8 @@ Shop/Desc/S7_Change_SkinBox_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n
 Shop/Desc/S7_Star_Box_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- ブルースターボックス 2個\n- グリーンスターボックス 5個\n- ホワイトスターボックス 10個\n- スプラッシュトークン 10個\n- A-Coin Boost(1日)\n\n※ 購入した商品は製作所より開けることができます。\n※ スターボックスは「ホワイト・グリーン・ブルー・パープル・ゴールド」の順で\n構成されています。\n※ スターボックスからは＜次の色のスターボックス、同じ色のスターボックス、A-Coin＞の中から1つを獲得し、確率に応じて収集品アイテム「シルバースター」を追加で\n獲得します。\n※ ただし、ゴールドスターボックスの場合、スターボックスの代わりに\nスプラッシュトークンを獲得します。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/S7_Star_Box_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- グリーンスターボックス 1個\n- A-Coin Boost(1時間)\n\n※ 購入した商品は製作所より開けることができます。\n※ スターボックスは「ホワイト・グリーン・ブルー・パープル・ゴールド」の順で\n構成されています。\n※ スターボックスからは＜次の色のスターボックス、同じ色のスターボックス、A-Coin＞の中から1つを獲得し、確率に応じて収集品アイテム「シルバースター」を追加で\n獲得します。\n※ ただし、ゴールドスターボックスの場合、スターボックスの代わりに\nスプラッシュトークンを獲得します。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/S7_Star_Box_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- ホワイトスターボックス 4個\n- XP Boost(1時間)\n\n※ 購入した商品は製作所より開けることができます。\n※ スターボックスは「ホワイト・グリーン・ブルー・パープル・ゴールド」の順で\n構成されています。\n※ スターボックスからは＜次の色のスターボックス、同じ色のスターボックス、A-Coin＞の中から1つを獲得し、確率に応じて収集品アイテム「シルバースター」を追加で\n獲得します。\n※ ただし、ゴールドスターボックスの場合、スターボックスの代わりに\nスプラッシュトークンを獲得します。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
-Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 死神ルクエモート2種\n- 死神ルクアイコン\n- 死神ルクフレーム\n- 死神ルク背景\n- アカデミートークン 10個\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
-Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- ニアエモート\n- ニア背景\n- ニアフレーム\n- ニアチームスロット背景\n- アカデミートークン 10個\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 死神ルクエモート2種\n- 死神ルクアイコン\n- 死神ルクフレーム\n- 死神ルク背景\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- ニアエモート\n- ニア背景\n- ニアフレーム\n- ニアチームスロット背景\n- A-Coin Boost(3日)\n- ER Point boost(3日)\n\n※ 購入した商品は「コレクション」から確認できます。\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/2025_May_SkinBox_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 5月の確率UPスキンデータボックス 10個\n- データキー 10個\n- アカデミートークン 15個\n- A-Coin Boost(1日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/2025_May_SkinBox_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- 5月の確率UPスキンデータボックス 1個\n- データキー 1個\n- アカデミートークン 1個\n- A-Coin Boost(1時間)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所 ‐ ボックス」から開けることができます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/Perfect_Support_Pack_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- [スキン専用] ワイルドカード (英雄) 1個\n- [スキン専用] ワイルドカード (レア) 1個\n- ワイルドカード (レア) 1個\n- 1,000 NP\n- ラッキー★ボール 1個\n- ラッキー★ボックス 10個\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ パーフェクトパッケージはSteamウォレットのクレジットで購入できます。\n※ ワイルドカードは「製作所 ‐ ワイルドカード」から開けることができます。\n※ 商品リストの詳細についてはデータボックスの確率表示リンクをご参考ください。\n※ パーフェクトパッケージに含まれた1,000NP商品は無償NPで構成されています。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
@@ -11844,6 +11875,7 @@ Season2005/Name┃ラッキー★ A-Coinクエストブック
 Season2006/Name┃レギオン A-Coinクエストブック
 Season2007/Name┃アカデミー A-Coinクエストブック
 Season2008/Name┃スプラッシュ！ A-Coinクエストブック
+Season2009/Name┃祭り A-Coin クエストブック
 Season2100/Name┃シーズン5 A-Coinクエストブック
 Season2101/Name┃レギオントークンクエストブック
 Season2102/Name┃シーズン6 A-Coinクエストブック
@@ -12011,12 +12043,17 @@ Product/Name/Autumn_RareMatter_01┃データピース(レア) X 1
 Product/Name/Autumn_AutumnCard_01┃落ち葉カード X 1
 Product/Name/Autumn_ACoin_100┃A-Coin X 100
 Product/Name/Autumn_S17_Token_01┃スプラッシュトークン X 10
+Product/Name/S18_ACOIN_UNLIMITED┃A-Coin X 150
+Product/Name/S18_RARE_MATTER┃データピース(レア) X 1
+Product/Name/S18_S17TOKEN_EXCHANGE┃スプラッシュトークン X 2
+Product/Name/S18_A-Coin_QUEST_BOOK┃祭り A-Coin クエストブック
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃バカンス A-Coinクエストブック
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃武装メイド A-Coinクエストブック
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃チェンジ A-Coinクエストブック
 Product/Name/MILEAGE_S13_A-Coin_QUEST_BOOK_9900004┃夕焼け A-Coinクエストブック
 Product/Name/MILEAGE_S14_A-Coin_QUEST_BOOK_9900005┃ラッキー★ A-Coinクエストブック
 Product/Name/MILEAGE_S15_A-Coin_QUEST_BOOK_9900006┃レギオン A-Coinクエストブック
+Product/Name/MILEAGE_S16_A-Coin_QUEST_BOOK_9900007┃アカデミー A-Coin クエストブック
 Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- バカンス A-Coinクエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「バカンス A-Coinクエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「バカンス A-Coinクエストブック」は「QUEST BOOK」からご確認いただけます。
 Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 武装メイド A-Coinクエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「武装メイド A-Coinクエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「武装メイド A-Coinクエストブック」は「QUEST BOOK」からご確認いただけます。
 Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- チェンジ A-Coinクエストブック\n  (最大105,000 A-Coin獲得可能)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入すると、「チェンジ A-Coinクエストブック」がすぐに解除されます。\n※ このクエストブックには使用期限がありません。いつでも達成することができます。\n※ 「チェンジ A-Coinクエストブック」は「QUEST BOOK」からご確認いただけます。
@@ -12048,6 +12085,74 @@ PickupEvent/Name/SEASON8_SKIN_BOX_PICKUP┃追加されたスキンボーナス�
 PickupEvent/Desc/SEASON8_SKIN_BOX_PICKUP┃スキンデータボックスに追加されたスキンが登場するボーナス確率が適用されています。
 Product/Name/S6_LuckyMarble2025_Legion_Token_01┃レギオントークン X10
 Product/Name/S6_LuckyMarble2025_ACoin_100┃A-Coin X 100
+PickupEvent/Name/Pickup_Emote_Voucher_251016┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251023┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251030┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251106┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251113┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251120┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251127┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251204┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251211┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251218┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_251225┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260101┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260108┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260115┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260122┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260129┃エモート選別カード
+PickupEvent/Name/Pickup_Emote_Voucher_260205┃エモート選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251016┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251023┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251030┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251106┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251113┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251120┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251127┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251204┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251211┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251218┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_251225┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260101┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260108┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260115┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260122┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260129┃プロフィール選別カード
+PickupEvent/Name/Pickup_Emblem_Voucher_260205┃プロフィール選別カード
+PickupEvent/Desc/Pickup_Emote_Voucher_251016┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251023┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251030┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251106┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251113┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251120┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251127┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251204┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251211┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251218┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_251225┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260101┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260108┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260115┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260122┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260129┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emote_Voucher_260205┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251016┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251023┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251030┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251106┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251113┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251120┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251127┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251204┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251211┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251218┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251225┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260101┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260108┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260115┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260122┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260129┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260205┃アイテムリストは毎週木曜日午後12時(JST)に変更されます。
 Skill/Group/Name/4000000┃ブリンク
 Skill/Group/LobbyDesc/4000000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
 Skill/Group/LobbyDesc/4512000┃使用すると指定した位置に一定距離瞬間移動します。\n\n<color=#ff3399>強化：</color>使用した後、一時的に移動速度が増加し、衝突を無視します。
@@ -15062,9 +15167,9 @@ Skill/LobbyDesc/1001100┃ジャッキーが基本攻撃またはスキルでダ
 Skill/Group/Desc/1001100┃ジャッキーが基本攻撃またはスキルでダメージを与えると、対象に{0}秒間<color=white>{1}</color>の持続ダメージを与える出血効果を最大{2}スタックまで付与します。\n出血効果が最大スタックになったり、ジャッキーが実験体のキルに関与した場合には、ジャッキーが{3}秒間<color=white>アドレナリン分泌</color>状態になります。<color=white>アドレナリン分泌</color>状態のジャッキーは敵に基本攻撃またはスキルでダメージを与えるたびに出血効果が最大スタックになり、<color=white>{4}</color>の追加スキルダメージを与えて失った体力に比例して<color=white>{5}</color> ~ <color=white>{6}</color>の体力を回復します。\n\nジャッキーの体力が{7}以下になると、体力回復量が最大値で適用されます。
 Skill/Group/Coef/1001100┃ジャッキーが基本攻撃またはスキルでダメージを与えると、対象に{0}秒間<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>の持続ダメージを与える出血効果を最大{3}スタックまで付与します。\n出血効果が最大スタックになったり、ジャッキーが実験体のキルに関与した場合には、ジャッキーが{4}秒間<color=white>アドレナリン分泌</color>状態になります。<color=white>アドレナリン分泌</color>状態のジャッキーは敵に基本攻撃またはスキルでダメージを与えるたびに出血効果が最大スタックになり、<color=white>{5}</color><color=#ffd775>(+攻撃力の{6})</color>の追加スキルダメージを与えて失った体力に比例して<color=white>{7}</color><color=#ffd775>(+攻撃力の{8})</color> ~ <color=white>{9}</color><color=#ffd775>(+攻撃力の{10})</color>の体力を回復します。\n\nジャッキーの体力が{11}以下になると、体力回復量が最大値で適用されます。
 Skill/Group/ExpansionTip/1001100┃<i>実験体やボスモンスターの出血効果が最大スタックになった場合のみ<color=white>アドレナリン分泌</color>状態になります。</i>
-Skill/LobbyDesc/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回してスキルダメージを与え、与えたダメージ量の一部を体力に回復します。出血効果が最大スタックの対象にはより大きなダメージ量を与えます。\n\n敵に的中した場合には一定時間の間、スキルを再使用できます。
-Skill/Group/Desc/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回して<color=white>{0}</color><color=#688A08>(+対象の現在体力の{1})</color>のスキルダメージを与え、与えたダメージ量の{2}を体力に回復します。出血効果が最大スタックの対象には{3}増加したダメージ量を与えます。\n\n敵に的中した場合には{4}秒間スキルを再使用できます。
-Skill/Group/Coef/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color><color=#688A08>(+対象の現在体力の{2})</color>のスキルダメージを与え、与えたダメージ量の{3}を体力に回復します。出血効果が最大スタックの対象には{4}増加したダメージ量を与えます。\n\n敵に的中した場合には{5}秒間スキルを再使用できます。
+Skill/LobbyDesc/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回してスキルダメージを与え、与えたダメージ量の一部を体力として回復します。出血効果が最大スタックの対象にはより大きなダメージ量を与えます。\n\n敵に的中した場合には一定時間の間、スキルを再使用できます。
+Skill/Group/Desc/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回して<color=white>{0}</color><color=#688A08>(+対象の現在体力の{1})</color>のスキルダメージを与え、与えたダメージ量の{2}を体力として回復します。出血効果が最大スタックの対象には{3}増加したダメージ量を与えます。\n\n敵に的中した場合には{4}秒間スキルを再使用できます。
+Skill/Group/Coef/1001200┃ジャッキーが指定した方向に突進しながら武器を振り回して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color><color=#688A08>(+対象の現在体力の{2})</color>のスキルダメージを与え、与えたダメージ量の{3}を体力として回復します。出血効果が最大スタックの対象には{4}増加したダメージ量を与えます。\n\n敵に的中した場合には{5}秒間スキルを再使用できます。
 Skill/LobbyDesc/1001300┃ジャッキーの次の基本攻撃が強化して、スキルダメージを追加で与えて対象の移動速度を減少させます。
 Skill/Group/Desc/1001300┃ジャッキーの次の基本攻撃が強化して、<color=white>{0}</color>のスキルダメージを追加で与えて{1}秒間対象の移動速度を{2}減少させます。
 Skill/Group/Coef/1001300┃ジャッキーの次の基本攻撃が強化して、<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを追加で与えて{2}秒間対象の移動速度を{3}減少させます。
@@ -15072,9 +15177,9 @@ Skill/Group/ExpansionTip/1001300┃<i>双剣武器の場合、強化基本攻撃
 Skill/LobbyDesc/1001400┃<color=green>持続効果：</color>ジャッキーが実験体のキルに関与した場合、<color=white>襲撃</color>のクールダウンが初期化されます。出血効果が最大スタックの対象に基本攻撃が的中すると、クールダウンが減少します。\n\nジャッキーが指定した位置にジャンプして周りの敵にスキルダメージを与えます。
 Skill/Group/Desc/1001400┃<color=green>持続効果：</color>ジャッキーが実験体のキルに関与した場合、<color=white>襲撃</color>のクールダウンが初期化されます。出血効果が最大スタックの対象に基本攻撃が的中すると、クールダウンが{3}秒減少します。\n\nジャッキーが指定した位置にジャンプして周りの敵に<color=white>{0}</color>のスキルダメージを与えます。
 Skill/Group/Coef/1001400┃<color=green>持続効果：</color>ジャッキーが実験体のキルに関与した場合、<color=white>襲撃</color>のクールダウンが初期化されます。出血効果が最大スタックの対象に基本攻撃が的中すると、クールダウンが{4}秒減少します。\n\n\nジャッキーが指定した位置にジャンプして周りの敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。
-Skill/LobbyDesc/1001500┃ジャッキーが電気ノコギリを取り出して移動速度と攻撃速度が増加します。敵実験体のキルに関与した場合、持続時間が増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例するスキルダメージを与え、与えたダメージ量の一部を体力に回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
-Skill/Group/Desc/1001500┃ジャッキーが電気ノコギリを取り出して{0}秒間移動速度が{1}、攻撃速度が{2}増加します。敵実験体のキルに関与した場合、持続時間が{3}秒増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例して<color=white>{4}</color> ~ <color=white>{5}</color>のスキルダメージを与え、与えたダメージ量の{6}を体力に回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
-Skill/Group/Coef/1001500┃ジャッキーが電気ノコギリを取り出して{0}秒間移動速度が{1}、攻撃速度が{2}増加します。敵実験体のキルに関与した場合、持続時間が{3}秒増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例して<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color> ~ <color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color>のスキルダメージを与え、与えたダメージ量の{8}を体力に回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
+Skill/LobbyDesc/1001500┃ジャッキーが電気ノコギリを取り出して移動速度と攻撃速度が増加します。敵実験体のキルに関与した場合、持続時間が増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例するスキルダメージを与え、与えたダメージ量の一部を体力として回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
+Skill/Group/Desc/1001500┃ジャッキーが電気ノコギリを取り出して{0}秒間移動速度が{1}、攻撃速度が{2}増加します。敵実験体のキルに関与した場合、持続時間が{3}秒増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例して<color=white>{4}</color> ~ <color=white>{5}</color>のスキルダメージを与え、与えたダメージ量の{6}を体力として回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
+Skill/Group/Coef/1001500┃ジャッキーが電気ノコギリを取り出して{0}秒間移動速度が{1}、攻撃速度が{2}増加します。敵実験体のキルに関与した場合、持続時間が{3}秒増加します。活性化されている間に再使用すると、<color=white>虐殺</color>を使用することができます。\n\n<color=white>虐殺：</color>ジャッキーが電気ノコギリ大きく振り回して敵の失った体力に比例して<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color> ~ <color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color>のスキルダメージを与え、与えたダメージ量の{8}を体力として回復します。敵実験体のキルに関与した場合、<color=white>虐殺</color>をもう一度使用することができます。
 Skill/Group/ExpansionTip/1001500┃<i>虐殺ダメージ量は対象の現在体力が最大体力の{0}の場合に最大になります。</i>\n<i>このスキルの持続時間は元の最大持続時間よりも増加できません。</i>
 CharacterState/Group/Name/1001100┃狂気めいた血祭り - アドレナリン分泌
 CharacterState/Group/Desc/1001100┃ジャッキーがアドレナリン分泌状態になり、出血スタックを最大スタックまで付与して追加スキルダメージを与え、失った体力に比例して体力を回復します。
@@ -15156,7 +15261,7 @@ Skill/Group/Coef/1007300┃ヒョヌが虚勢を発動すると、<color=white>�
 Skill/Group/Coef/1007400┃ヒョヌが指定した方向に突進し、敵にぶつかると<color=#ffd775>(+追加攻撃力の{3})</color><color=#dda0dd>(+スキル増幅の{8})</color><color=#688A08>(+対象の現在体力の{0})</color>のスキルダメージを与えて敵を突き飛ばします。\n\n突き飛ばした敵が壁にぶつかった場合、<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{7})</color><color=#dda0dd>(+スキル増幅の{9})</color>のスキルダメージを与えて{1}秒間気絶させます。
 Skill/Group/Coef/1007500┃ヒョヌが{0}秒間力を溜めた後、強力なパンチを打ち、敵に<color=white>{10}</color><color=#ffd775>(+追加攻撃力の{11})</color><color=#dda0dd>(+スキル増幅の{12})</color> ~ <color=white>{13}</color><color=#ffd775>(+追加攻撃力の{14})</color><color=#dda0dd>(+スキル増幅の{15})</color>のスキルダメージを与え、{3}秒間防御力を{4}減少させて少し突き飛ばします。\n\n力を最大に溜めた場合、対象を範囲の外まで押し飛ばして{2}秒間気絶させます。
 Skill/Group/ExpansionTip/1007300┃<i>行動妨害効果：エアボーン、スロー、恐怖、魅惑、束縛、気絶、ノックバック、制圧、踊り、挑発、硬直、停止、氷結、眠気、睡眠</i>
-Skill/Group/ExpansionTip/1007400┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1007400┃<i>このスキルでは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1007500┃<i>スキルチャージ時間に応じて最大{0}秒の後ディレイが適用されます。</i>\n<i>スキルを使用できなかった場合、クールダウンが{1}返されます。</i>
 CharacterState/Group/Name/1007100┃ドッグファイト
 CharacterState/Group/Desc/1007100┃敵を攻撃すると追加ダメージを与え、体力を回復します。
@@ -15211,9 +15316,9 @@ CharacterState/Group/Desc/1003520┃移動速度が減少しました。
 CharacterState/Group/Name/1003530┃フレッシュ
 CharacterState/Group/Desc/1003530┃フレッシュによって気絶しました。
 Skill/Group/ExpansionTip/1003400┃<i>マルシェは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1003500┃<i>このスキルは壁を越えられません。</i>\n<i>敵との距離が近い場合にはその場で動かずにスキルを使用します。</i>
-Skill/Group/ExpansionTip/1003510┃<i>このスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1003520┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1003500┃<i>このスキルでは壁を越えられません。</i>\n<i>敵との距離が近い場合にはその場で動かずにスキルを使用します。</i>
+Skill/Group/ExpansionTip/1003510┃<i>このスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1003520┃<i>このスキルでは壁を越えられません。</i>
 Skill/Group/Name/1006100┃野性
 Skill/Group/Name/1006200┃ブルズアイ
 Skill/Group/Name/1006300┃リス罠
@@ -15339,7 +15444,7 @@ Skill/Group/Coef/1009500┃アイソルがMok製爆弾を設置します。Mok�
 Skill/Group/ExpansionTip/1009100┃<i>アイソルの視界に敵のトラップが見えた場合、アイソルは該当トラップを記憶し画面に表示します</i>
 Skill/Group/ExpansionTip/1009200┃<i>このスキルは「アイソルが設置したトラップ」判定が適用されます。</i>
 Skill/Group/ExpansionTip/1009300┃<i>火網は敵の設置物にダメージを与えることができます</i>
-Skill/Group/ExpansionTip/1009400┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1009400┃<i>このスキルでは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1009500┃<i>このスキルは「アイソルが設置したトラップ」判定が適用されます。</i>
 CharacterState/Group/Name/1009100┃遊撃戦
 CharacterState/Group/Desc/1009100┃アイソルの攻撃力またはスキル増幅が増加しました。
@@ -15651,7 +15756,7 @@ Skill/Group/Coef/1018300┃彰一が敵または自分が設置した短剣に�
 Skill/Group/Coef/1018400┃彰一が後ろに下がりながら前方に短剣をなげ、的中した敵に <color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{4})</color>のスキルダメージを与えて{2}秒間移動速度を{3}減少させます。的中した敵には{5}秒間協商刻印を付与し、敵の後ろ側に短剣が生成されます。刻印対象は投げた短剣で受けるダメージが{7}増加し、短剣が的中するたびにクールダウンが{6}秒減少します。\n\n刻印対象が死亡するとスキルのクールダウンが{8}減少します。
 Skill/Group/Coef/1018500┃彰一が鞄を振り回して範囲内の敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{6})</color>のスキルダメージを与え、{2}秒間{5}の移動速度を減少させます。\n鞄を振り回す時、四方に4つの短剣を設置して経路上の敵に{3}<color=#DDA0DD>(+スキル増幅の{7})</color>のスキルダメージを与えます。
 Skill/Group/ExpansionTip/1018100┃<i><color=white>不当利得</color>の効果で投げられた短剣は不当利得のスタックを獲得できません。</i>
-Skill/Group/ExpansionTip/1018400┃<i>このスキルは壁を越えられません。</i>\n<i>刻印対象者に短剣が的中すると刻印の維持時間が再度適用されます。</i>
+Skill/Group/ExpansionTip/1018400┃<i>このスキルでは壁を越えられません。</i>\n<i>刻印対象者に短剣が的中すると刻印の維持時間が再度適用されます。</i>
 CharacterState/Group/Name/1018100┃不当利得
 CharacterState/Group/Desc/1018100┃スタックが最大になると、次の基本攻撃が追加スキルダメージを与えて敵の後ろに短剣が生成されます。
 CharacterState/Group/Name/1018110┃不当利得－強化
@@ -15746,8 +15851,8 @@ Skill/Group/Coef/1021400┃ロッジが指定した対象をジャンプして�
 Skill/LobbyDesc/1021500┃ロッジが敵や地面に付着する爆弾を発射します。爆弾は一定時間後に爆発します。\n爆弾を敵に付着した場合、敵の移動速度が減少し、爆発する時にスキルダメージを与えます。\n爆弾が付着された対象はロッジに視界を共有します。\n\n爆弾が爆発する前に対象に基本攻撃を５回的中させるとすぐに爆発し、対象の最大体力に応じた固定ダメージを与えて移動速度を減少させます。スキルを的中させると2回攻撃したことになります。\n\n爆弾をすぐに爆発させ場合にはセムテックス弾Mk-IIスキルのクールダウンが減少し、一定時間の間移動速度が増加します。
 Skill/Group/Desc/1021500┃ロッジが敵や地面に付着する爆弾を発射します。爆弾は{0}秒後に爆発します。\n爆弾を敵に付着した場合、敵の移動速度が{1}減少し、爆発する時には<color=white>{20}</color>のスキルダメージを与えます。\n爆弾が付着された対象はロッジに視界を共有します。\n\n爆弾が爆発する前に対象に基本攻撃を{4}回的中させるとすぐに爆発し、対象の最大体力の{5}の固定ダメージを追加で与えて{10}秒間移動速度を{11}減少させます。スキルを的中させると{9}回攻撃したことになります。\n\n爆弾をすぐに爆発させた場合にはセムテックス弾Mk-IIスキルのクールダウンが{6}減少し、{7}秒間移動速度が{8}増加します。
 Skill/Group/Coef/1021500┃ロッジが敵や地面に付着する爆弾を発射します。爆弾は{0}秒後に爆発します。\n爆弾を敵に付着した場合、敵の移動速度が{1}減少し、爆発する時に<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。\n爆弾が付着された対象はロッジに視界を共有します。\n\n爆弾が爆発する前に対象に基本攻撃を{4}回的中させるとすぐに爆発し、対象の最大体力の{5}の固定ダメージを追加で与えて{10}秒間移動速度を{11}減少させます。スキルを的中させると{9}回攻撃したことになります。\n\n爆弾をすぐに爆発させた場合にはセムテックス弾Mk-IIスキルのクールダウンが{6}減少し、{7}秒間移動速度が{8}増加します。
-Skill/Group/ExpansionTip/1021200┃<i>このスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1021400┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1021200┃<i>このスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1021400┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1021100┃ダブルショット
 CharacterState/Group/Name/1021110┃甘いチョコレートドリンク
 CharacterState/Group/Name/1021120┃甘いチョコレート
@@ -16024,8 +16129,8 @@ Skill/Group/Coef/1027500┃アレックスが指定した位置に衛生ミサ�
 Skill/Group/Coef/1027600┃アレックスが対象に素早く突進して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。\nスキルが的中すると{2}秒間攻撃力が{3}増加します。(最大{4}回スタック)\nコイルガンの効果と同時に最大スタックになると、攻撃速度が{5}増加します。
 Skill/Group/Coef/1027700┃アレックスが指定した地点にプラズママインを発射して範囲内の敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、敵を中心部に引き寄せます。
 Skill/Group/Coef/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が{1}増加し、ホログラムが持続する間は効果が{3}倍適用されます。\n\nアレックスが{0}秒間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして{2}秒間自分を攻撃するようにします。\n\nスキル使用後には{5}秒間武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐに消えます。
-Skill/Group/ExpansionTip/1027400┃<i>このスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1027800┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1027400┃<i>このスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1027800┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1027110┃潜入
 CharacterState/Group/Name/1027120┃潜入-移動速度増加
 CharacterState/Group/Name/1027150┃武器変更
@@ -16086,8 +16191,8 @@ Skill/Group/Coef/1028500┃スアは最近読んだ本の内容を記憶し、�
 Skill/Group/Coef/1028510┃スアが指定した位置に2冊の本を生成してしばらくの後に中央に本を引き寄せて範囲内の敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{1})</color>のスキルダメージを与え、{3}秒間栞を残します。\n栞が残った対象に新しい栞を残すと<color=white>{4}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えて{2}秒間気絶させます。\n本の衝突地点にいる敵には{8}増加したダメージを与えて{9}秒間移動速度を{10}減少させます。
 Skill/Group/Coef/1028520┃味方や自分に使用すると青い鳥が{0}秒間<color=white>{1}</color><color=#DDA0DD>(+スキル増幅の{6})</color>のスキルダメージを吸収し、妨害効果免疫状態になるシールドを付けます。\n\n敵に使用すると青い鳥が<color=white>{3}</color><color=#DDA0DD>(+スキル増幅の{4})</color>のスキルダメージを与えて{5}秒間敵を失明させます。
 Skill/Group/Coef/1028530┃スアが武器をランスに変えます。その後、前方に突進して始めて的中した敵に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えて{13}秒間移動速度を{14}減少させます。\n栞が残った状態の敵には<color=white>{3}</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えて空中に浮かせます。\nスアはドン・キホーテを的中させた場合、失った体力に比例して<color=white>{6}</color><color=#DDA0DD>(+スキル増幅の{8})</color> ~ <color=white>{9}</color><color=#DDA0DD>(+スキル増幅の{11})</color>の体力を回復します。\n敵に的中させた場合、ドン・キホーテのクールダウンが{12}減少します。\nスアが武器を変更する間には妨害効果免疫状態になります。
-Skill/Group/ExpansionTip/1028400┃<i>このスキルは壁を越えられません。</i>\n<i>スアの体力が{0}の場合、最大回復量が適用されます。</i>
-Skill/Group/ExpansionTip/1028530┃<i>このスキルは壁を越えられません。</i>\n<i>スアの体力が{0}の場合、最大回復量が適用されます。</i>
+Skill/Group/ExpansionTip/1028400┃<i>このスキルでは壁を越えられません。</i>\n<i>スアの体力が{0}の場合、最大回復量が適用されます。</i>
+Skill/Group/ExpansionTip/1028530┃<i>このスキルでは壁を越えられません。</i>\n<i>スアの体力が{0}の場合、最大回復量が適用されます。</i>
 CharacterState/Group/Name/1028100┃心の糧
 CharacterState/Group/Name/1028200┃オデッセイ－気絶
 CharacterState/Group/Name/1028210┃オデッセイ－栞
@@ -16366,8 +16471,8 @@ Skill/Group/Coef/1035300┃ヤンがキックで敵に<color=white>{0}</color><c
 Skill/Group/Coef/1035400┃ヤンが前に突進し、次の基本攻撃を強化して<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#DDA0DD>(+スキル増幅の{5})</color><color=#688A08>(+敵の最大体力の{6})</color>のスキルダメージを追加で与えます。次のニーストライクとトマホークスピンスキルダメージが的中すると、失った体力に比例して的中させたスキルダメージの{2} ~ {3}の体力を回復します(体力が40％以下の場合、最大回復量適用)。トマホークスピンキャスト中に使用できます。\n<color=#ffffC2>強化効果：</color><color=white>ウィービング</color>のクールダウンを{4}減少させます。
 Skill/Group/Coef/1035500┃ヤンが{0}秒間維持される四角リングを召喚して、熱血の意志スタックを{9}獲得します。四角のリングロープに衝突した敵は<color=white>{1}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{10})</color>のスキルダメージを受け、{3}秒間移動速度が{4}減少されます。ノックバックで突き飛ばされた敵がロープに衝突すると、四角リングの中央に弾け飛ばされます。衝突するとロープは消えます。競技場の範囲内で敵実験体のキルに関与した場合、ヤンは熱血の意志スタック{6}をすぐに獲得し、{7}秒間移動速度が{8}増加します。
 Skill/Group/ExpansionTip/1035100┃<i>アイテム・装備・トンファー武器スキルによるダメージは熱血の意志スタックを獲得しません。
-Skill/Group/ExpansionTip/1035200┃<i>強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1035210┃<i> 強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1035200┃<i>強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1035210┃<i> 強化ニーストライクを使用すると、次のリッピング·ニーストライクに強化効果を適用します。\nこのスキルでは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1035500┃<i>実験体及びボスモンスターにのみ的中します。</i>
 CharacterState/Group/Name/1035100┃熱血の意志
 CharacterState/Group/Name/1035200┃ニーストライク - 移動速度減少
@@ -16941,7 +17046,7 @@ Skill/Group/Coef/1046500┃指定した位置に落雷を落として<color=whit
 Skill/Group/Coef/1046510┃指定した位置に落雷を落として<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、移動速度を{2}秒間{3}減少させます。落雷の中心に当たった敵は<color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color>のスキルダメージを受け、{6}秒間気絶します。\n以降、2つ目の落雷が落ち、<color=white>{7}</color><color=#ffd775>(+攻撃力の{8})</color>のスキルダメージを与えて移動速度を{9}秒間{10}減少させます。\n\n2つ目の落雷が落ちる前にスキルを再使用すると、落雷が落ちた位置に移動することができます。この場合、2つ目の落雷はすぐに落とされます。1つ目の落雷を敵実験体に的中させて移動すると、エイデンはすべての<color=white>アンペア</color>をチャージします。
 Skill/Group/ExpansionTip/1046200┃<i>この基本攻撃はスキル攻撃とも見なされ、致命打が発生しません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/ExpansionTip/1046210┃<i>この基本攻撃はスキル攻撃とも見なされ、致命打が発生しません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1046400┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1046400┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1046100┃ハイパーチャージ
 CharacterState/Group/Desc/1046100┃エイデンが残りの弾丸の数だけ遠距離攻撃ができます。
 CharacterState/Group/Name/1046110┃アンペア
@@ -17023,8 +17128,8 @@ CharacterState/Group/Name/1047500┃黄昏の泥棒
 CharacterState/Group/Desc/1047500┃ラウラに引き寄せられました。
 CharacterState/Group/Name/1047530┃黄昏の泥棒 - シールド
 CharacterState/Group/Desc/1047530┃ラウラがシールドを獲得しました。
-Skill/Group/ExpansionTip/1047200┃<i>このスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1047210┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1047200┃<i>このスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1047210┃<i>このスキルでは壁を越えられません。</i>
 Skill/Group/Name/1048100┃カラーミックス
 Skill/Group/Name/1048400┃ブラシストローク - 黄色
 Skill/Group/Name/1048410┃ブラシストローク - 赤色
@@ -17076,9 +17181,9 @@ Skill/Group/ExpansionTip/1048500┃<i>クールダウン固定: このスキル�
 Skill/Group/ExpansionTip/1048510┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/ExpansionTip/1048520┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/ExpansionTip/1048530┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1048600┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1048610┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1048620┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1048600┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルでは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1048610┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルでは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/1048620┃カラーリング(E)共通効果：スキルを使用すると自動的に次の色に変わります。\n<i>このスキルでは壁を越えられません。</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/ExpansionTip/1048630┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 CharacterState/Group/Name/1048300┃怒りのリス効果
 CharacterState/Group/Name/1048310┃祝福のリス効果
@@ -17138,7 +17243,7 @@ Skill/Group/ExpansionTip/1049400┃<i>このスキルは最後に使用する時
 Skill/LobbyDesc/1049500┃フェリックスが槍先に力を入れ、前に突進しながら槍を突き出してスキルダメージを与えます。最後まで力をチャージすると、的中した対象を気絶させます。\nスキルを使用すると、基本スキルが3回目の連携に変更され、<color=white>連携攻撃</color>のスタックが増加します。\n\n力をチャージする間には突進方向を変更することができ、突進する時は妨害効果免疫状態になります。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/Desc/1049500┃フェリックスが槍先に力を入れ、前に突進しながら槍を突き出して<color=white>{0}</color> ~ <color=white>{1}</color>のスキルダメージを与えます。最後まで力をチャージすると、的中した対象を{2}秒間気絶させます。\nスキルを使用すると、基本スキルが3回目の連携に変更され、<color=white>連携攻撃</color>のスタックが{3}増加します。\n\n力をチャージする間には突進方向を変更することができ、突進する時は妨害効果免疫状態になります。
 Skill/Group/Coef/1049500┃フェリックスが槍先に力を入れ、前に突進しながら槍を突き出して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>~<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。最後まで力をチャージすると、的中した対象を{4}秒間気絶させます。\nスキルを使用すると、基本スキルが3回目の連携に変更され、<color=white>連携攻撃</color>のスタックが{5}増加します。\n\n力をチャージする間には突進方向を変更することができ、突進する時は妨害効果免疫状態になります。
-Skill/Group/ExpansionTip/1049500┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1049500┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1049150┃連携攻撃
 CharacterState/Group/Name/1049160┃旋風斬 - エアボーン
 CharacterState/Group/Name/1049170┃連携槍術 - シールド
@@ -17316,8 +17421,8 @@ Skill/Group/Coef/1053410┃マーカスが指定した方向に{0}m突進しま�
 Skill/Group/Coef/1053500┃マーカスが指定した方向にジャンプして斧を振り下ろします。振り下ろした範囲は{4}秒間<color=white>亀裂</color>状態になり、攻撃された敵は<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを受け、{8}秒間防御力が{9}減少し、{2}秒間移動速度が{3}減少されてはすぐに元に戻ります。\n\n<color=white>亀裂</color>範囲でエアボーンやノックバックの影響を受けると<color=white>ショック</color>ダメージを受けて<color=white>ショック</color>状態になります。この効果は<color=white>亀裂</color>範囲の中で1回のみ適用されます。\n\n敵を<color=white>ショック</color>状態にさせた場合、<color=white>地殻変動</color>のクールダウンが{7}秒減少します。
 Skill/Group/ExpansionTip/1053100┃<i>ショック状態の対象者から視界が提供されます。すでにショック状態の対象は条件を満たしてもショック状態になりません。</i>
 Skill/Group/ExpansionTip/1053300┃<i></i>
-Skill/Group/ExpansionTip/1053400┃<i>このスキルは壁を越えられません。</i>
-Skill/Group/ExpansionTip/1053410┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1053400┃<i>このスキルでは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1053410┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1053120┃ショック - 移動速度減少
 CharacterState/Group/Desc/1053120┃ショックによって移動速度が減少しました。
 CharacterState/Group/Name/1053130┃ショック
@@ -17395,11 +17500,11 @@ Skill/Group/Desc/1055300┃<color=#FFFFC2>先制対応：</color>エステルが
 Skill/Group/Desc/1055320┃盾防御状態をすぐに解除します。
 Skill/Group/Coef/1055300┃<color=#FFFFC2>先制対応：</color>エステルが盾で地面を打ち、前方の範囲に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えて敵の移動速度を{3}秒間{4}減少させます。減少された移動速度は徐々に回復します。\n\n<color=#FFFFC2>緊急鎮火：</color>盾防御(E)中に使用すると、{5}秒間移動しながら消化液を撒いて範囲内の敵に{10}秒あたり<color=white>{6}</color><color=#DDA0DD>(+スキル増幅の{8})</color><color=#688a08>(+最大体力の{7})</color>のスキルダメージを与え、的中させるたびに敵の移動速度を最大{9}まで減少させます。スキルを再使用すると、スキルを中断し、もう一度使用すると盾防御状態を解除します。
 Skill/Group/Coef/1055320┃盾防御状態をすぐに解除します。
-Skill/Group/ExpansionTip/1055300┃<i>このスキルは壁を越えられません。</i>\n<i>緊急鎮火使用中にも盾防御状態が維持されます。</i>
+Skill/Group/ExpansionTip/1055300┃<i>このスキルでは壁を越えられません。</i>\n<i>緊急鎮火使用中にも盾防御状態が維持されます。</i>
 Skill/LobbyDesc/1055300┃エステルが盾で地面を打ち、前方の範囲にスキルダメージを与えて敵の移動速度を減少させます。盾防御(E)状態でスキルを使用すると、敵に一定時間消化液を撒いて範囲内の敵にスキルダメージを与え、的中させるたびに敵の移動速度を減少させます。
 Skill/Group/Desc/1055400┃<color=#FFFFC2>盾防御：</color>エステルが消防用の盾を広げて敵が投げた投射体を破壊します。スキルを使用してから{1}秒間は敵からの攻撃によるダメージを受けません。その後、受けるダメージ量が<color=white>{2}</color>減少します。突進後にスキルを再使用すると、防御状態を終了させることができます。\n\n<color=#FFFFC2>盾突進：</color>盾防御(E)中にスキルを使用すると、前に突進してぶつかった対象に<color=white>{4}</color>のスキルダメージを与えて押した飛ばします。突進中、エステルは阻止不可状態になり、敵の望遠カメラのようなオブジェクトを一気に破壊することができます。突進中にスキルを再使用すると、突進を止めることができます。
 Skill/Group/Coef/1055400┃<color=#FFFFC2>盾防御：</color>エステルが消防用の盾を広げて敵が投げた投射体を破壊します。スキルを使用してから{1}秒間は敵からの攻撃によるダメージを受けません。その後、受けるダメージ量が<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{3})</color>減少します。突進後にスキルを再使用すると、防御状態を終了させることができます。\n\n<color=#FFFFC2>盾突進：</color>盾防御(E)中にスキルを使用すると、前に突進してぶつかった対象に<color=white>{4}</color><color=#DDA0DD>(+スキル増幅の{6})</color><color=#688a08>(+最大体力の{5})</color>のスキルダメージを与えて押し飛ばします。突進中、エステルは阻止不可状態になり、敵の望遠カメラのようなオブジェクトを一気に破壊することができます。突進中にスキルを再使用すると、突進を止めることができます。
-Skill/Group/ExpansionTip/1055400┃<i>このスキルは壁を越えられません。</i>\n<i>盾防御状態では移動速度が{0}減少します。</i>
+Skill/Group/ExpansionTip/1055400┃<i>このスキルでは壁を越えられません。</i>\n<i>盾防御状態では移動速度が{0}減少します。</i>
 Skill/LobbyDesc/1055400┃エステルが消防用の盾を広げて敵が投げた投射体を破壊します。スキルを使用してから短い時間の間は敵からの攻撃によるダメージを受けません。その後、受けるダメージ量が減少します。\n盾防御(E)状態でスキルを再使用すると、正面に突進して敵にスキルダメージを与えながら押し飛ばします。突進中、エステルは阻止不可能な状態になり、望遠カメラのようなオブジェクトを一気に破壊することができます。
 Skill/Group/Desc/1055500┃<color=#FFFFC2>自分に使用：</color>自分に<color=white>{0}</color><color=#F78181>(+失った体力の{1})</color>に値するシールドを{2}秒間付与し、ヘリコプター支援要請をします。ヘリコプターは{3}秒後にエステルの位置を捕捉し、水爆弾を爆発させて範囲内の敵に<color=white>{4}</color><color=#688A08>(+最大体力の{5})</color>に値するスキルダメージを与え、敵の移動速度を{6}秒間{7}減少させます。\n\n<color=#FFFFC2>味方に使用：</color>エステルが味方に<color=white>{8}</color><color=#F78181>(+対象の失った体力の{9})</color>に値するシールドを{10}秒間付与し、ヘリコプターを呼び出して{11}秒後に味方の位置に素早く移動して半径5m範囲の敵に<color=white>{12}</color><color=#688A08>(+最大体力の{13})</color>に値するスキルダメージを与え、{14}秒間敵を空中に浮かせます。
 Skill/Group/Coef/1055500┃<color=#FFFFC2>自分に使用：</color>自分に<color=white>{0}</color><color=#DDA0DD>(+スキル増幅の{1})</color><color=#F78181>(+失った体力の{2})</color>に値するシールドを{3}秒間付与し、ヘリコプター支援要請をします。ヘリコプターは{4}秒後にエステルの位置を捕捉し、水爆弾を爆発させて範囲内の敵に<color=white>{5}</color><color=#DDA0DD>(+スキル増幅の{6})</color><color=#688A08>(+最大体力の{7})</color>に値するスキルダメージを与え、敵の移動速度を{8}秒間{9}減少させます。\n\n<color=#FFFFC2>味方に使用：</color>エステルが味方に<color=white>{10}</color><color=#DDA0DD>(+スキル増幅の{11})</color><color=#F78181>(+対象の失った体力の{12})</color>に値するシールドを{13}秒間付与し、ヘリコプターを呼び出して{14}秒後に味方の位置に素早く移動して半径5m範囲の敵に<color=white>{15}</color><color=#DDA0DD>(+スキル増幅の{16})</color><color=#688A08>(+最大体力の{17})</color>に値するスキルダメージを与え、{18}秒間敵を空中に浮かせます。
@@ -17598,11 +17703,11 @@ Skill/Group/Coef/1058220┃<color=white>ロケットランチャー状態：</co
 Skill/Group/ExpansionTip/1058220┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/Desc/1058300┃後ろに一歩下がり、前方に向けて散弾銃を発射します。的中した敵に<color=white>{0}</color>のスキルダメージを与え、{1}秒間気絶させます。\n\n<color=white>サブマシンガン状態</color>または<color=white>ロケットランチャー状態</color>で使用すると、武器を解除し、クールダウンを追加で{2}減少させます。
 Skill/Group/Coef/1058300┃後ろに一歩下がり、前方に向けて散弾銃を発射します。的中した敵に<color=white>{20}</color><color=#dda0dd>(+スキル増幅の{22})</color>のスキルダメージを与え、{1}秒間気絶させます。\n\n<color=white>サブマシンガン状態</color>または<color=white>ロケットランチャー状態</color>で使用すると、武器を解除し、クールダウンを追加で{2}減少させます。
-Skill/Group/ExpansionTip/1058300┃<i>このスキルは壁を越えられません。</i>\n<i><color=white>散弾銃</color>を使用し、直前まで使用していた武器が解除されます。</i>
+Skill/Group/ExpansionTip/1058300┃<i>このスキルでは壁を越えられません。</i>\n<i><color=white>散弾銃</color>を使用し、直前まで使用していた武器が解除されます。</i>
 Skill/LobbyDesc/1058300┃後ろに一歩下がり、前方に向けて散弾銃を発射します。的中した敵にスキルダメージを与え、しばらく気絶させます。\n\n<color=white>サブマシンガン状態</color>または<color=white>ロケットランチャー状態</color>で使用すると、武器を解除し、クールダウンを追加で減少させます。
 Skill/Group/Desc/1058400┃<color=white>サブマシンガンに武器切り替え：</color>前方に短く突進し、{8}秒間{0}発弾倉のサブマシンガンに切り替えます。\n\nサブマシンガン状態では移動しながら敵を攻撃でき、攻撃命令で対象を変更できます。各攻撃は<color=white>{1}</color><color=#DDA0DD>(+スキル増幅{22}あたり1)</color>のスキルダメージを与え、{5}発目の弾ごとに基本攻撃的中時効果が発動します。サブマシンガン状態を維持する間、製作や採取など一部の行動が制限され、<color=white>40mmグレネード</color>スキルは<color=white>サブマシンガン連射</color>スキルに変更されます。\n\nサブマシンガン状態が終了すると、余った弾の数に比例してクールダウンが最大{6}減少します。
 Skill/Group/Coef/1058400┃<color=white>サブマシンガンに武器切り替え：</color>前方に短く突進し、{8}秒間{0}発弾倉のサブマシンガンに切り替えます。\n\nサブマシンガン状態では移動しながら敵を攻撃でき、攻撃命令で対象を変更できます。各攻撃は<color=white>{20}</color><color=#DDA0DD>(+スキル増幅{22}あたり1)</color>のスキルダメージを与え、{5}発目の弾ごとに基本攻撃的中時効果が発動します。サブマシンガン状態を維持する間、製作や採取など一部の行動が制限され、<color=white>40mmグレネード</color>スキルは<color=white>サブマシンガン連射</color>スキルに変更されます。\n\nサブマシンガン状態が終了すると、余った弾の数に比例してクールダウンが最大{6}減少します。
-Skill/Group/ExpansionTip/1058400┃<i>このスキルは壁を越えられません。</i>\n<i><color=white>サブマシンガン</color>を使用し、直前まで使用していた武器が解除されます。\n最初の突進後、最も近い実験体や戦闘状態の野生動物が自動的にターゲティングされます。\n<color=white>サブマシンガン状態</color>は弾倉がすべて消費されるか、持続時間が終了されるか、他の銃器を使用すると解除されます。</i>
+Skill/Group/ExpansionTip/1058400┃<i>このスキルでは壁を越えられません。</i>\n<i><color=white>サブマシンガン</color>を使用し、直前まで使用していた武器が解除されます。\n最初の突進後、最も近い実験体や戦闘状態の野生動物が自動的にターゲティングされます。\n<color=white>サブマシンガン状態</color>は弾倉がすべて消費されるか、持続時間が終了されるか、他の銃器を使用すると解除されます。</i>
 Skill/LobbyDesc/1058400┃<color=white>サブマシンガンに武器切り替え：</color>前方に短く突進し、持続時間の間、40発弾倉のサブマシンガンに切り替えます。\n\nサブマシンガン状態では移動しながら敵を攻撃でき、攻撃命令で対象を変更できます。各攻撃は短い時間ごとにスキルダメージを与え、5発目の弾ごとに基本攻撃的中時効果が発動します。サブマシンガン状態を維持する間、製作や採取など一部の行動が制限され、<color=white>40mmグレネード</color>スキルは<color=white>サブマシンガン連射</color>スキルに変更されます。\n\nサブマシンガン状態が終了すると、余った弾の数に比例してクールダウンが減少します。
 Skill/Group/Desc/1058410┃サブマシンガンを捨て、ウェポンケースから突撃小銃を取り出します。\n\n現在1発当たりダメージ量：{20}<color=#DDA0DD>(+スキル増幅{22}あたり1)</color>
 Skill/Group/Coef/1058410┃サブマシンガンを捨て、ウェポンケースから突撃小銃を取り出します。\n\n現在1発当たりダメージ量：<color=white>{20}</color><color=#dda0dd>(+スキル増幅{22}あたり1)</color>
@@ -17634,13 +17739,13 @@ Skill/Group/Name/1059300┃硬化
 Skill/Group/Name/1059400┃追撃 / 検挙
 Skill/Group/Name/1059410┃追撃 / 検挙
 Skill/Group/Name/1059500┃強奪
-Skill/Group/Desc/1059100┃同じ敵を{0}回攻撃するたびに<color=white>{1}</color><color=#688A08>(+対象の最大体力の{7})</color>の追加スキルダメージを与え、移動速度が{3}増加した後、{4}秒にかけて元通りになります。与えた搾取ダメージ量の{5}を体力に回復します。野生動物の場合、回復効果が{6}に減少します。
+Skill/Group/Desc/1059100┃同じ敵を{0}回攻撃するたびに<color=white>{1}</color><color=#688A08>(+対象の最大体力の{7})</color>の追加スキルダメージを与え、移動速度が{3}増加した後、{4}秒にかけて元通りになります。与えた搾取ダメージ量の{5}を体力として回復します。野生動物の場合、回復効果が{6}に減少します。
 Skill/Group/Desc/1059200┃アイザックが敵に強く突進して<color=white>{0}</color>のスキルダメージを与えます。
 Skill/Group/Desc/1059300┃アイザックが武器の硬度を上げて次の基本攻撃または基本スキルを強化し、<color=white>{0}</color>のスキルダメージを追加で与えます。このスキルで強化された基本攻撃または基本スキルが搾取を発動させた場合、基本スキルのクールダウンが{1}減少します。
 Skill/Group/Desc/1059400┃アイザックが素早く突進し、{0}秒間次のスキルを準備します。\n\n再使用：前方の敵を引き寄せてシールドを破壊し、<color=white>{1}</color>のスキルダメージを与えて{2}秒間気絶させます。引き寄せられた敵は{3}秒間防御力が{4}減少します。
 Skill/Group/Desc/1059410┃アイザックが素早く突進し、{0}秒間次のスキルを準備します。\n\n再使用：前方の敵を引き寄せてシールドを破壊し、<color=white>{1}</color>のスキルダメージを与えて{2}秒間気絶させます。引き寄せられた敵は{3}秒間防御力が{4}減少します。
 Skill/Group/Desc/1059500┃アイザックが指定した地点を強く叩きつけて<color=white>{0}</color>のスキルダメージを与え、搾取刻印のない敵を範囲の外に押し出します。対象の搾取刻印スタックに比例して、<color=white>対象の失った体力の{1} ~ {3}</color>に値する追加スキルダメージを与え、しばらくの間移動速度を{2}減少させます。
-Skill/Group/Coef/1059100┃同じ敵を{0}回攻撃するたびに<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>の追加スキルダメージを与え、移動速度が{5}増加した後、{6}秒にかけて元通りになります。与えた搾取ダメージ量の{7}を体力に回復します。野生動物の場合、回復効果が{9}に減少します。
+Skill/Group/Coef/1059100┃同じ敵を{0}回攻撃するたびに<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>の追加スキルダメージを与え、移動速度が{5}増加した後、{6}秒にかけて元通りになります。与えた搾取ダメージ量の{7}を体力として回復します。野生動物の場合、回復効果が{9}に減少します。
 Skill/Group/Coef/1059200┃アイザックが敵に強く突進して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えます。
 Skill/Group/Coef/1059300┃アイザックが武器の硬度を上げて次の基本攻撃または基本スキルを強化し、<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを追加で与えます。このスキルで強化された基本攻撃または基本スキルが搾取を発動させた場合、基本スキルのクールダウンが{3}減少します。
 Skill/Group/Coef/1059400┃アイザックが素早く突進し、{0}秒間次のスキルを準備します。\n\n再使用：前方の敵を引き寄せてシールドを破壊し、<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color>のスキルダメージを与えて{4}秒間気絶させます。引き寄せられた敵は{5}秒間防御力が{6}減少します。
@@ -18141,10 +18246,10 @@ Skill/Group/Coef/1069200┃レニがニンジンバズーカを発射しなが�
 Skill/Group/Coef/1069300┃レニが飛び跳ねて指定した位置にピコピコハンマーを振り下ろします。\n敵または味方にそれぞれ違う効果が適用されます。\n\n\n敵：<color=white>{0}</color><color=green>(+レニのレベル</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与えて{6}秒間移動速度を減少させます。\n真ん中の範囲に的中された敵は{7}、外側の範囲に的中された敵は{8}の移動速度が減少します。\n味方：{9}秒間移動速度を{10}減少させた後、{11}秒間移動速度を{12}<color=green>(+レニのレベル</color><color=white> * {13}</color><color=green>)</color>増加させます。
 Skill/Group/Coef/1069400┃レニがエアーホーンガンを発射します。\n敵または味方にそれぞれ違う効果が適用されます。\n\n敵：<color=white>{0}</color><color=green>(+レニのレベル</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与え、{3}秒間気絶させます。\n味方：{7}秒間<color=white>{4}</color><color=green>(+レニのレベル</color><color=white> * {5}</color><color=green>)</color><color=#DDA0DD>(+スキル増幅の{6})</color>のシールドを付与します。
 Skill/Group/Coef/1069500┃レニがスプリングトラップを設置します。\n敵に的中させた場合には<color=white>{0}</color><color=green>(+レニのレベル</color><color=white> * {1}</color><color=green>)</color><color=#DDA0DD>(+スキル増幅の{2})</color>のスキルダメージを与え、指定した方向に敵を跳ね飛ばします。\n飛ばした敵が壁にぶつかった場合、<color=white>{5}</color><color=#DDA0DD>(+スキル増幅の{7})</color><color=#688A08>(+対象の最大体力の{6})</color>のスキルダメージを与えて敵の移動速度を{3}秒間{4}減少させます。\n\n<i>スプリングトラップはレニも利用できます！</i>
-Skill/Group/ExpansionTip/1069200┃<i>味方に適用される効果はレニにも適用されます。\nこのスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1069200┃<i>味方に適用される効果はレニにも適用されます。\nこのスキルでは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1069300┃<i>味方の実験体に的中した場合、レニも同じ効果を受けます。</i>
 Skill/Group/ExpansionTip/1069400┃<i>味方の実験体に的中した場合、レニも同じ効果を受けます。</i>
-Skill/Group/ExpansionTip/1069500┃<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1069500┃<i>このスキルでは壁を越えられません。</i>
 CharacterState/Group/Name/1069100┃クマさん攻撃！
 CharacterState/Group/Desc/1069100┃攻撃すると、クマさんが対象に飛んで行って追加スキルダメージを与えます。\n<i>「この子はゴルトベア！仲良くしてね～！」</i>
 CharacterState/Group/Name/1069300┃ピコピコハンマー！ - 移動速度減少
@@ -18186,7 +18291,7 @@ Skill/LobbyDesc/1070400┃つばめが自分の位置に<color=white>身代わ�
 Skill/Group/Desc/1070500┃つばめが敵対象に向かって素早く移動しながら経路上のすべての敵に<color=white>{0}</color>のスキルダメージを与えます。対象の失った体力に比例してダメージ量が最大{1}まで増加します。(対象の体力が{2}の場合、最大値が適用されます。)\n\n<color=white>秘技 - 生死の刻印</color>が{3}スタックの対象に<color=white>日車流暗殺術</color>でダメージを与えると、<color=white>秘技 - 生死の刻印</color>の効果が適用されます。\n\n<color=white>秘技 - 生死の刻印</color>のスタック数に応じて<color=white>日車流暗殺術</color>のクールダウンが{5} ~ {4}減少します。
 Skill/Group/Coef/1070500┃つばめが敵対象に向かって素早く移動しながら経路上のすべての敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{5})</color>のスキルダメージを与えます。対象の失った体力に比例してダメージ量が最大{1}まで増加します。(対象の体力が{2}の場合、最大値が適用されます。)\n\n<color=white>秘技 - 生死の刻印</color>が{3}スタックの対象に<color=white>日車流暗殺術</color>でダメージを与えると、<color=white>秘技 - 生死の刻印</color>の効果が適用されます。\n\n<color=white>秘技 - 生死の刻印</color>のスタック数に応じて<color=white>日車流暗殺術</color>のクールダウンが{6} ~ {4}減少します。
 Skill/LobbyDesc/1070500┃つばめが敵対象に向かって素早く移動しながら経路上のすべての敵にスキルダメージを与えます。対象の失った体力に比例してダメージ量が増加します。\n\n<color=white>秘技 - 生死の刻印</color>が最大スタックになった対象に<color=white>日車流暗殺術</color>でダメージを与えると、<color=white>秘技 - 生死の刻印</color>の効果が適用されます。\n\n<color=white>秘技 - 生死の刻印</color>のスタック数に応じて<color=white>日車流暗殺術</color>のクールダウンが減少します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/ExpansionTip/1070400┃<i><color=white>霧隠れの術</color>によって隠密状態の時に<color=white>忍び足</color>を使用する場合には、隠密状態が解除されずに発動します。</i>\n<i>このスキルは壁を越えられません。</i>
+Skill/Group/ExpansionTip/1070400┃<i><color=white>霧隠れの術</color>によって隠密状態の時に<color=white>忍び足</color>を使用する場合には、隠密状態が解除されずに発動します。</i>\n<i>このスキルでは壁を越えられません。</i>
 Skill/Group/ExpansionTip/1070500┃<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 CharacterState/Group/Name/1070110┃秘技 - 生死の刻印
 CharacterState/Group/Desc/1070110┃つばめによって<color=white>秘技 - 生死の刻印</color>スタックが切り刻まれました。
@@ -18205,10 +18310,10 @@ Skill/Group/Name/1071200┃憤怒の一撃
 Skill/Group/Name/1071300┃業火
 Skill/Group/Name/1071400┃猛攻撃
 Skill/Group/Name/1071500┃火炎粉砕
-Skill/Group/Desc/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると{0}秒間スタックを{1}獲得します。(最大5スタック)\n\n{2}スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびに<color=#688A08>対象の最大体力の{3}</color>のスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージ量の<color=white>{4}</color>を体力に回復します。
-Skill/Group/Coef/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると{0}秒間スタックを{1}獲得します。(最大5スタック)\n\n{2}スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびに<color=#688A08>対象の最大体力の{3}</color><color=#ffd775>(+攻撃力の{4})</color><color=#688A08>%</color>のスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージ量の<color=white>{5}</color><color=#ffd775>(+攻撃力の{6})</color><color=white>%</color>を体力に回復します。
+Skill/Group/Desc/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると{0}秒間スタックを{1}獲得します。(最大5スタック)\n\n{2}スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびに<color=#688A08>対象の最大体力の{3}</color>のスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージ量の<color=white>{4}</color>を体力として回復します。
+Skill/Group/Coef/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると{0}秒間スタックを{1}獲得します。(最大5スタック)\n\n{2}スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびに<color=#688A08>対象の最大体力の{3}</color><color=#ffd775>(+攻撃力の{4})</color><color=#688A08>%</color>のスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージ量の<color=white>{5}</color><color=#ffd775>(+攻撃力の{6})</color><color=white>%</color>を体力として回復します。
 Skill/Group/ExpansionTip/1071100┃<i>ケネスはこのスキルで最大<color=white>{0}</color> = <color=white>{1}</color>(+攻撃力の{2})まで回復できます。</i>\n<i>野生動物に与えられるダメージ量は最大{3}に制限されます。</i>
-Skill/LobbyDesc/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると一定時間の間スタックを獲得します。\n\n最大スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびにスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージの一部を体力に回復します。
+Skill/LobbyDesc/1071100┃ケネスが基本攻撃またはスキルでダメージを与えると一定時間の間スタックを獲得します。\n\n最大スタックになるとケネスの斧が燃え上がり、基本攻撃またはスキルが的中するたびにスキルダメージを追加で与えます。\nケネスはこのスキルで与えたダメージの一部を体力として回復します。
 Skill/Group/Desc/1071200┃ケネスが斧を大きく振り回して<color=white>{0}</color>のスキルダメージを与えて、短い時間の間的中した対象を空中に浮かせます。\n\n<color=white>抑圧された怒り－最大スタック：</color>ダメージ量が{1}増加し、的中した敵1人あたり失った体力の{2}(最大{3})を回復します。
 Skill/Group/Coef/1071200┃ケネスが斧を大きく振り回して<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与えて、短い時間の間的中した対象を空中に浮かせます。\n\n<color=white>抑圧された怒り－最大スタック：</color>ダメージ量が{2}増加し、的中した敵1人あたり失った体力の{3}(最大{4})を回復します。
 Skill/Group/ExpansionTip/1071200┃<i>このスキルは基本攻撃及びスキル攻撃判定と見なされ、最初に的中した敵に的中時効果が発動します。</i>
@@ -18491,10 +18596,10 @@ Skill/Group/Desc/1078200┃ヒスイが打刀を振って<color=white>{0}</color
 Skill/Group/Coef/1078200┃ヒスイが打刀を振って<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>\nのスキルダメージを与え、振り下ろしながら<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{3})</color>のスキルダメージを与えて対象の移動速度を{5}秒間{4}減少させます。
 Skill/Group/ExpansionTip/1078200┃<i>追加攻撃速度に比例してクールダウンとキャスト時間が減少します。</i>\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>
 Skill/LobbyDesc/1078200┃ヒスイが打刀を振ってスキルダメージを与え、振り下ろしながらスキルダメージを与えて対象の移動速度を減少させます。\n\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>
-Skill/Group/Desc/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀して<color=white>{0}</color>のスキルダメージを与え、納刀しながら同じ範囲に<color=white>{1}</color><color=#688A08>(+対象の最大体力の{2})</color>のスキルダメージをもう一度与えます。抜刀が的中した場合、<color=white>{3}</color>のシールドを獲得し、的中させた実験体の数に比例してシールド量が{4}増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵に<color=white>{5}</color>のスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵には<color=white>{6}</color>のスキルダメージを与えながら対象を{7}秒間空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に<color=white>{8}</color>のスキルダメージを<color=white>{9}回</color>与え、与えたダメージの{10}を体力に回復します。最後の一撃は<color=white>{11}</color>のスキルダメージを与え、与えたダメージの{12}を体力に回復します。
-Skill/Group/Coef/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀して<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与え、納刀しながら同じ範囲に<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=#688A08>(+対象の最大体力の{4})</color>\nのスキルダメージをもう一度与えます。抜刀が的中した場合、<color=white>{5}</color><color=#ffd775>(+追加攻撃力の{6})</color>のシールドを獲得し、的中させた実験体の数に比例してシールド量が{7}増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵に<color=white>{8}</color><color=#ffd775>(+追加攻撃力の{9})</color>のスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵には<color=white>{10}</color><color=#ffd775>(+追加攻撃力の{11})</color>のスキルダメージを与えながら対象を{12}秒間空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に<color=white>{13}</color><color=#ffd775>(+追加攻撃力の{14})</color>のスキルダメージを<color=white>{15}</color><color=#ADA478>(追加攻撃速度に比例して最大{16}回)</color>回与え、与えたダメージの{17}を体力に回復します。最後の一撃は<color=white>{18}</color><color=#ffd775>(+追加攻撃力の{19})</color>のスキルダメージを与え、与えたダメージの{20}を体力に回復します。
+Skill/Group/Desc/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀して<color=white>{0}</color>のスキルダメージを与え、納刀しながら同じ範囲に<color=white>{1}</color><color=#688A08>(+対象の最大体力の{2})</color>のスキルダメージをもう一度与えます。抜刀が的中した場合、<color=white>{3}</color>のシールドを獲得し、的中させた実験体の数に比例してシールド量が{4}増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵に<color=white>{5}</color>のスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵には<color=white>{6}</color>のスキルダメージを与えながら対象を{7}秒間空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に<color=white>{8}</color>のスキルダメージを<color=white>{9}回</color>与え、与えたダメージの{10}を体力として回復します。最後の一撃は<color=white>{11}</color>のスキルダメージを与え、与えたダメージの{12}を体力として回復します。
+Skill/Group/Coef/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀して<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与え、納刀しながら同じ範囲に<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=#688A08>(+対象の最大体力の{4})</color>\nのスキルダメージをもう一度与えます。抜刀が的中した場合、<color=white>{5}</color><color=#ffd775>(+追加攻撃力の{6})</color>のシールドを獲得し、的中させた実験体の数に比例してシールド量が{7}増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵に<color=white>{8}</color><color=#ffd775>(+追加攻撃力の{9})</color>のスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵には<color=white>{10}</color><color=#ffd775>(+追加攻撃力の{11})</color>のスキルダメージを与えながら対象を{12}秒間空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に<color=white>{13}</color><color=#ffd775>(+追加攻撃力の{14})</color>のスキルダメージを<color=white>{15}</color><color=#ADA478>(追加攻撃速度に比例して最大{16}回)</color>回与え、与えたダメージの{17}を体力として回復します。最後の一撃は<color=white>{18}</color><color=#ffd775>(+追加攻撃力の{19})</color>のスキルダメージを与え、与えたダメージの{20}を体力として回復します。
 Skill/Group/ExpansionTip/1078300┃<i>追加攻撃速度に比例してスキルキャスト時間が減少します。</i>\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>\n<i>野生動物には<color=white>3スタック - 日輪乱舞</color>の回復効果が{0}に減少します。</i>
-Skill/LobbyDesc/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀してスキルダメージを与え、納刀しながら同じ範囲にスキルダメージをもう一度与えます。抜刀が的中した場合、シールドを獲得し、的中させた実験体の数に比例してシールド量が増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵にスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵にはより高いスキルダメージを与えながら空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に複数のスキルダメージを与え、与えたダメージの一部を体力に回復します。最後の一撃はより高いスキルダメージを与え、与えたダメージの一部を体力に回復します。
+Skill/LobbyDesc/1078300┃<color=green>持続効果：</color>ヒスイはスキルが的中すると、<color=white>居合</color>スタックを獲得します。<color=white>居合</color>スタック数に応じて使用できるスキルが変わり、スタックがない状態ではスキルを使用できません。\n\n<color=white>1スタック - 一刀両断：</color>ヒスイは抜刀してスキルダメージを与え、納刀しながら同じ範囲にスキルダメージをもう一度与えます。抜刀が的中した場合、シールドを獲得し、的中させた実験体の数に比例してシールド量が増加します。\n\n<color=white>2スタック - 一閃：</color>ヒスイが経路上のすべての敵にスキルダメージを与えながら経路上で最も遠くにいる敵の後ろまで移動します。最後に貫かれた敵にはより高いスキルダメージを与えながら空中に浮かせます。\n\n<color=white>3スタック - 日輪乱舞：</color>ヒスイが対象指定不可状態になり、範囲内の敵に複数のスキルダメージを与え、与えたダメージの一部を体力として回復します。最後の一撃はより高いスキルダメージを与え、与えたダメージの一部を体力として回復します。
 Skill/Group/Desc/1078400┃ヒスイが後ろに一歩下がった後、姿勢を取り戻して、脇差を抜きながら前方に移動し、経路上の敵と到着地点の敵に<color=white>{0}</color>のスキルダメージを与えます。
 Skill/Group/Coef/1078400┃ヒスイが後ろに一歩下がった後、姿勢を取り戻して、脇差を抜きながら前方に移動し、経路上の敵と到着地点の敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与えます。
 Skill/Group/ExpansionTip/1078400┃<i>追加攻撃速度に比例してクールダウンとキャスト時間が減少します。</i>\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>
@@ -18541,7 +18646,7 @@ Skill/Group/Coef/1079300┃ユスティナが指定した位置にエネルギ�
 Skill/LobbyDesc/1079300┃ユスティナが指定した位置にエネルギー砲撃で2回スキルダメージを与え、一定時間の間敵の移動速度を減少させます。また、的中した対象には一定時間の間ターゲットマークを付けます。
 Skill/Group/Desc/1079400┃ユスティナが指定した方向に素早く移動し、<color=white>{0}秒間</color>次の基本攻撃が<color=white>{1}</color>の追加スキルダメージを与えます。{2}秒間再使用するたびにエネルギーの消耗量が<color=white>{3}</color>ずつ増加し、最大<color=white>{4}</color>まで増加します。リチャージ状態になるとエネルギー消耗量が初期化されます。\n\nこのスキルは<color=white>連続砲撃＆殲滅砲撃</color>と<color=white>集中砲撃</color>のキャスト中にも使用できます。
 Skill/Group/Coef/1079400┃ユスティナが指定した方向に素早く移動し、<color=white>{0}秒間</color>次の基本攻撃が<color=white>{1}</color><color=#DDA0DD>(+スキル増幅の{2})</color>の追加スキルダメージを与えます。{3}秒間再使用するたびにエネルギーの消耗量が<color=white>{4}</color>ずつ増加し、最大<color=white>{5}</color>まで増加します。リチャージ状態になるとエネルギー消耗量が初期化されます。\n\nこのスキルは<color=white>連続砲撃＆殲滅砲撃</color>と<color=white>集中砲撃</color>のキャスト中にも使用できます。
-Skill/Group/ExpansionTip/1079400┃<i>このスキルは壁を越えられません。</i>\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>
+Skill/Group/ExpansionTip/1079400┃<i>このスキルでは壁を越えられません。</i>\n<i>クールダウン固定：クールダウン減少ステータスの影響を受けません。</i>
 Skill/LobbyDesc/1079400┃ユスティナが指定した方向に素早く移動し、一定時間の間次の基本攻撃が追加スキルダメージを与えます。一定時間の間、再使用するたびにエネルギーの消耗量が増加し、最大50まで増加します。リチャージ状態になるとエネルギー消耗量が初期化されます。\n\nこのスキルは<color=white>連続砲撃＆殲滅砲撃</color>と<color=white>集中砲撃</color>のキャスト中にも使用できます。
 Skill/Group/Desc/1079500┃ユスティナが対象指定不可状態になって空中高く飛び上がり、最大火力で指定した範囲内の敵に{0}秒間{1}秒ごとに<color=white>{2}</color>のスキルダメージを与えます。スキル使用中には、移動速度が{3}減少した状態で移動することができます。対象指定不可状態はユスティナが着地するまで維持されます。
 Skill/Group/Coef/1079500┃ユスティナが対象指定不可状態になって空中高く飛び上がり、最大火力で指定した範囲内の敵に{0}秒間{1}秒ごとに<color=white>{2}</color><color=#DDA0DD>(+スキル増幅の{3})</color>のスキルダメージを与えます。スキル使用中には移動速度が{4}減少した状態で移動することができます。対象指定不可状態はユスティナが着地するまで維持されます。
@@ -18754,14 +18859,14 @@ Skill/Group/ExpansionTip/3015010┃<i>武器熟練度<color=white>5Lv・10Lv・1
 Skill/Group/Desc/3016000┃{0}秒間防御姿勢をとり、すべてのダメージとデバフ効果免疫状態になります。その後{2}m突進し、敵に<color=white>{20}</color>のスキルダメージを与えます。
 Skill/Group/Coef/3016000┃{0}秒間防御姿勢をとり、すべてのダメージと妨害効果免疫状態になります。その後{2}m突進し、敵に<color=white>{4}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#dda0dd>(+スキル増幅の{3})</color>のスキルダメージを与えます。
 Skill/Group/ExpansionTip/3016000┃<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/Group/Desc/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵に<color=white>{2}</color><color=#688A08>(+対象の最大体力の{3})</color>のスキルダメージを与えます。与えたダメージの{4}を体力に回復します。
-Skill/Group/Coef/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵に<color=white>{8}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{7})</color><color=#688A08>(+対象の最大体力の{3})</color>のスキルダメージを与えます。与えたダメージの{4}を体力に回復します。
-Skill/Group/ExpansionTip/3014000┃<i>このスキルは壁を越えられません。</i>\n<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/Desc/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵に<color=white>{2}</color><color=#688A08>(+対象の最大体力の{3})</color>のスキルダメージを与えます。与えたダメージの{4}を体力として回復します。
+Skill/Group/Coef/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵に<color=white>{8}</color><color=#ffd775>(+追加攻撃力の{2})</color><color=#DDA0DD>(+スキル増幅の{7})</color><color=#688A08>(+対象の最大体力の{3})</color>のスキルダメージを与えます。与えたダメージの{4}を体力として回復します。
+Skill/Group/ExpansionTip/3014000┃<i>このスキルでは壁を越えられません。</i>\n<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/Desc/3018000┃スキルを使用すると指定した方向へ突進し、経路上のすべての敵に<color=white>{6}</color>のスキルダメージを6回与えます。\n突進しながら敵に攻撃を{2}回成功すると{1}秒以内にもう一度スキルを使用できます。\nスキルを再び使用すると指定した方向へ突進しながら経路上のすべての敵に<color=white>{7}</color>のスキルダメージを与えます。
 Skill/Group/Desc/3018010┃スキルを使用すると指定した方向へ突進し、経路上のすべての敵に<color=white>{6}</color>のスキルダメージを6回与えます。\n突進しながら敵に攻撃を{2}回成功すると{1}秒以内にもう一度スキルを使用できます。\nスキルを再び使用すると指定した方向へ突進しながら経路上のすべての敵に<color=white>{7}</color>のスキルダメージを与えます。
 Skill/Group/Coef/3018000┃スキルを使用すると指定した方向へ突進し、経路上のすべての敵に<color=white>{6}</color><color=#ffd775>(+追加攻撃力の{0})</color><color=#DDA0DD>(+スキル増幅の{4})</color>のスキルダメージを6回与えます。\n突進しながら敵に攻撃を{2}回成功すると{1}秒以内にもう一度スキルを使用できます。\nスキルを再使用すると指定した方向へ突進しながら経路上のすべての敵に<color=white>{7}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えます。
 Skill/Group/Coef/3018010┃スキルを使用すると指定した方向へ突進し、経路上のすべての敵に<color=white>{6}</color><color=#ffd775>(+追加攻撃力の{0})</color><color=#DDA0DD>(+スキル増幅の{4})</color>のスキルダメージを6回与えます。\n突進しながら敵に攻撃を{2}回成功すると{1}秒以内にもう一度スキルを使用できます。\nスキルを再使用すると指定した方向へ突進しながら経路上のすべての敵に<color=white>{7}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=#DDA0DD>(+スキル増幅の{5})</color>のスキルダメージを与えます。
-Skill/Group/ExpansionTip/3018000┃<i>このスキルは壁を越えられません。</i>\n<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/Group/ExpansionTip/3018000┃<i>このスキルでは壁を越えられません。</i>\n<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/ExpansionTip/3018010┃<i>武器熟練度<color=white>5Lv・10Lv・15Lv</color>の時にスキルレベルアップ</i>\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/Group/Desc/3009000┃{0}秒間移動速度が<color=white>{3}</color>増加します。移動している間は基本攻撃できません。\n移動後、次の{1}回の基本攻撃速度が{2}増加します。
 Skill/Group/Coef/3009000┃{0}秒間移動速度が<color=white>{4}</color><color=#DDA0DD>(+スキル増幅の{5})</color>増加します。移動している間は基本攻撃できません。\n移動後、次の{1}回の基本攻撃速度が{2}増加します。
@@ -19091,7 +19196,7 @@ Skill/LobbyDesc/1027500┃アレックスが指定した位置に衛生ミサイ
 Skill/LobbyDesc/1027600┃アレックスが対象に素早く突進しダメージを与えます。\nスキルが的中すると一定時間の間攻撃力が増加します。コイルガンの効果と同時に最大スタックになると、攻撃速度が増加します。
 Skill/LobbyDesc/1027700┃アレックスが指定した地点にプラズママインを発射して範囲内の敵にダメージを与え、中心部に引っ張ります。
 Skill/LobbyDesc/1027800┃<color=green>持続効果：</color>アレックスの攻撃速度が増加します。\nアレックスが一定時間の間維持されるホログラムを生成し、指定した方向へ素早く移動して即時潜入状態になります。\nホログラムは範囲内の敵に挑発をして敵に自分の強制攻撃させます。\n\nスキル使用後一定時間の間潜入状態を維持すると、武器を一度交替できる状態になります。この状態は潜入が解除されたり武器を変更するとすぐ消えます。\n潜入効果は6レベル以降に適用されます。
-Skill/LobbyDesc/1028100┃スアはスキルを使用すると心の糧を獲得し、次の基本攻撃が相手に強化ダメージを与え、与えたダメージの一部を体力に回復します。\n心の糧はスタックを貯めることができます。スタックを保有した場合は攻撃速度が増加します。\n心の糧で敵にダメージを与えるとすべてのスキルのクールダウンが減少します。\nこの基本攻撃はスキル攻撃とも見なされます。
+Skill/LobbyDesc/1028100┃スアはスキルを使用すると心の糧を獲得し、次の基本攻撃が相手に強化ダメージを与え、与えたダメージの一部を体力として回復します。\n心の糧はスタックを貯めることができます。スタックを保有した場合は攻撃速度が増加します。\n心の糧で敵にダメージを与えるとすべてのスキルのクールダウンが減少します。\nこの基本攻撃はスキル攻撃とも見なされます。
 Skill/LobbyDesc/1028200┃スアが指定した位置に2冊の本を生成し、その後、中央に本を引き寄せて範囲内の敵にスキルダメージを与え、栞を残します。\n栞が残った対象に新しい栞を残すとスキルダメージを与えて気絶させます。\n本の衝突地点にいる敵にはより大きなダメージを与えて移動速度を減少させます。
 Skill/LobbyDesc/1028300┃味方や自分に使用すると青い鳥がスキルダメージを吸収し、妨害効果免疫状態になるシールドを付けます。\n\n敵に使用すると青い鳥がスキルダメージを与えて敵を失明させます。
 Skill/LobbyDesc/1028400┃スアが武器をランスに変えます。その後、前方に突進して始めて的中した敵にスキルダメージを与えて移動速度を減少させます。\n栞が残った状態の敵にはより大きなスキルダメージを与えて空中に浮かせます。\nスアはドン・キホーテを的中させた場合、失った体力の一部を回復します。\nスアが武器を変更する間には妨害効果免疫状態になります。
@@ -19206,7 +19311,7 @@ Skill/LobbyDesc/1057200┃<color=#ffffff>[取材中]</color>\nマルティナが
 Skill/LobbyDesc/1057300┃<color=#ffffff>[取材中]</color>\nマルティナが一定時間維持される小型カメラを設置し、周りの視界を確保します。<color=white>早送り</color>スキルが小型カメラを的中すると小型カメラがマルティナがいる方向を撮影し、敵にスキルダメージを与え、移動速度を減少させます。\n\n<color=#ffd775>[放送中]</color>\n小型カメラ撮影は敵を束縛し、最大保持数または設置できる数を増加させます。
 Skill/LobbyDesc/1057400┃<color=#ffffff>[取材中]</color>\nマルティナが現在の位置にビデオテープを残して指定した方向に素早く移動します。以降、スキル持続時間の間早戻し状態を維持します。早戻し状態ではマルティナの移動速度が少し増加します。\n\n早戻し状態が終了すると、妨害効果免疫状態になり、ビデオテープの位置に素早く戻ります。この際、マルティナに触れた敵は移動速度が減少します。\n\n再使用：ビデオテープの位置により速く戻ります。\n\n<color=#ffd775>[放送中]</color>\nビデオテープの位置に戻ってくる時、マルティナに触れた敵は気絶し、早戻し状態の間に実験体から受けたダメージ量の一部を回復します。
 Skill/LobbyDesc/1057500┃<color=#ffffff>[取材中]</color>\nマルティナが指定した方向を撮影し、撮影する間範囲内に撮影対象が入ってくると録画持続時間の間移動速度が増加します。撮影に成功すると対象によって<color=white>録画スタック</color>を獲得し、移動速度が増加します。\n\n<color=white>録画スタック</color>が一定条件以上になるとマルティナが取材を終わらせ、<color=#ffd775>放送</color>を始めてスキルの威力が強化されます。\n\n<color=#2ECCFA>撮影条件</color> : <color=#819FF7>撮影対象</color>の中で2つの対象を一定時間以上撮影すると、録画スタック2と武器熟練度獲得。\n<color=#2ECCFA>死体撮影条件1</color> : <color=#819FF7>撮影対象</color>の中で1体の死体を一定時間以上撮影すると、録画スタック1と武器熟練度獲得。(最大スタック獲得制限・同じ死体重複撮影不可)\n<color=#819FF7>撮影対象</color> : 敵実験体、生命の木、隕石、アルファ、オメガ、ウィクライン、ガンマ\n撮影対象の内、生命の木と隕石以外の対象は撮影した後、一定時間の間再撮影できません。\n\n\n<color=#ffd775>[放送中]</color>\nマルティナが指定した方向を撮影し、敵にダメージを与えます。スキルが終了する時、更に大きなダメージを与え、中央の敵を気絶させます。
-Skill/LobbyDesc/1059100┃同じ敵を3回攻撃するたびに追加スキルダメージを与え、移動速度が増加します。与えた搾取ダメージ量の一部を体力に回復します。
+Skill/LobbyDesc/1059100┃同じ敵を3回攻撃するたびに追加スキルダメージを与え、移動速度が増加します。与えた搾取ダメージ量の一部を体力として回復します。
 Skill/LobbyDesc/1059200┃アイザックが敵に強く突進してスキルダメージを与えます。
 Skill/LobbyDesc/1059300┃アイザックが武器の硬度を上げて次の基本攻撃または基本スキルを強化し、スキルダメージを追加で与えます。このスキルで強化された基本攻撃または基本スキルが搾取を発動させると、基本スキルのクールダウンが減少します。
 Skill/LobbyDesc/1059400┃アイザックが素早く突進し、次のスキルを準備します。\n\n再使用：前方の敵を引き寄せてシールドを破壊し、スキルダメージを与えてしばらくの間気絶させます。引き寄せられた敵は防御力が減少します。
@@ -19252,7 +19357,7 @@ Skill/LobbyDesc/3009000┃移動速度が増加します。移動している間
 Skill/LobbyDesc/3010000┃基本攻撃で敵を攻撃するたびに銃弾1発ごとに過熱スタックを獲得します。一定時間基本攻撃をしない場合、過熱スタックが減少します。\nスキルを使用すると過熱状態になります。過熱状態では攻撃速度が増加し、攻撃速度の上限を無視します。過熱スタックに比例して持続時間や追加ダメージが増加します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3011000┃狙撃モードを活性化し、指定した方向を狙撃します。\n視界内の指定した方向へ阻止射撃とデッドアイを使用してダメージを与えます。\n移動したり妨害効果を受けた場合には狙撃モードが解除されます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3013000┃指定した方向へ金鎚を叩きつけてダメージを与えて防御力を減少させます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
-Skill/LobbyDesc/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵にダメージを与えます。与えたダメージの一部を体力に回復します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
+Skill/LobbyDesc/3014000┃指定した方向に進みながら斧を振り回して範囲内のすべての敵にダメージを与えます。与えたダメージの一部を体力として回復します。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3015000┃マント効果により一定時間透明になって移動速度が増加します。増加した移動速度は一定時間に渡って減少します。\n\n指定した敵の後ろに移動してスキルダメージと対象の現在の体力に応じて追加ダメージを与え、移動速度を減少させます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3016000┃一定時間の間防御姿勢をとり、すべてのダメージと妨害効果免疫状態になります。\nその後指定した方向へ突進し、敵にスキルダメージを与えます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
 Skill/LobbyDesc/3018000┃指定した方向へ突進し、経路上のすべての敵にダメージを与えます。\n攻撃に成功するとスキルをもう一度使用できます。\n\n<i>クールダウン固定: このスキルはクールダウン減少の影響を受けません。</i>
@@ -19610,8 +19715,8 @@ Item/Skills/6009001/Body┃同じ名前の固有効果は一つのみ適用さ�
 Item/Skills/6009001/Desc┃同じ名前の固有効果は一つのみ適用されます。\n\n<color=#01ac01>{0} +{1}</color>
 Item/Skills/6012000┃魔弾
 Item/Skills/6012001/Name┃<color=yellow>魔弾</color>
-Item/Skills/6012001/Body┃基本スキルを使用すると、{8}秒間持続する[魔弾]スタックを獲得します。 (最大{7}スタック)\n{7}スタックになった状態で基本攻撃をすると、<color=#DDA0DD>{2}</color><color=#688A08>(+敵の最大体力の{5})</color>の追加スキルダメージを与え、与えたダメージの<color=white>{4}</color>を体力に回復します。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{6}秒)
-Item/Skills/6012001/Desc┃基本スキルを使用すると、{9}秒間持続する[魔弾]スタックを獲得します。 (最大{8}スタック)\n{8}スタックになった状態で基本攻撃をすると、<color=#DDA0DD>スキル増幅の{1}</color> + <color=#688A08>敵の最大体力の{6}</color>の追加スキルダメージを与え、与えたダメージの<color=white>{3}</color>を体力に回復します。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{7}秒)
+Item/Skills/6012001/Body┃基本スキルを使用すると、{8}秒間持続する[魔弾]スタックを獲得します。 (最大{7}スタック)\n{7}スタックになった状態で基本攻撃をすると、<color=#DDA0DD>{2}</color><color=#688A08>(+敵の最大体力の{5})</color>の追加スキルダメージを与え、与えたダメージの<color=white>{4}</color>を体力として回復します。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{6}秒)
+Item/Skills/6012001/Desc┃基本スキルを使用すると、{9}秒間持続する[魔弾]スタックを獲得します。 (最大{8}スタック)\n{8}スタックになった状態で基本攻撃をすると、<color=#DDA0DD>スキル増幅の{1}</color> + <color=#688A08>敵の最大体力の{6}</color>の追加スキルダメージを与え、与えたダメージの<color=white>{3}</color>を体力として回復します。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{7}秒)
 Item/Skills/6012002/Name┃<color=yellow>魔弾</color>
 Item/Skills/6012002/Body┃基本スキルを使用すると、{8}秒間持続する[魔弾]スタックを獲得します。 (最大{7}スタック)\n{7}スタックになると、基本攻撃する時、<color=#DDA0DD>{2}</color><color=#688A08>(+敵の最大体力の{5})</color>の追加スキルダメージを与えます。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{6}秒)
 Item/Skills/6012002/Desc┃基本スキルを使用すると、{9}秒間持続する[魔弾]スタックを獲得します。 (最大{8}スタック)\n{8}スタックになった状態で基本攻撃をすると、<color=green>キャラクターレベル * {5}</color><color=#DDA0DD>(+スキル増幅の{1})</color><color=#688A08>(+敵の最大体力の{6})</color>の追加スキルダメージを与えます。効果が発動した後、[魔弾]スタックはすべてなくなります。(クールダウン：{7}秒)
@@ -19898,12 +20003,12 @@ CharacterState/Group/Desc/6512000┃偽りの誓約によって能力値が増�
 Item/Skills/6513000┃真実の刃
 Item/Skills/6513001┃真実の刃
 Item/Skills/6513001/Name┃<color=yellow>真実の刃</color>
-Item/Skills/6513001/Body┃周りの敵に<color=white>{0}</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%が体力に回復されます。\n\nクールダウン : {4}秒
-Item/Skills/6513001/Desc┃周りの敵に<color=white>{0}</color> + <color=#FFD775>攻撃力の{6}%</color> + <color=#DDA0DD>スキル増幅の{1}%</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%が体力に回復されます。\n\nクールダウン : {4}秒
+Item/Skills/6513001/Body┃周りの敵に<color=white>{0}</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%を体力として回復します。\n\nクールダウン : {4}秒
+Item/Skills/6513001/Desc┃周りの敵に<color=white>{0}</color> + <color=#FFD775>攻撃力の{6}%</color> + <color=#DDA0DD>スキル増幅の{1}%</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%を体力として回復します。\n\nクールダウン : {4}秒
 Item/Skills/6513002┃真実の刃
 Item/Skills/6513002/Name┃<color=yellow>真実の刃</color>
-Item/Skills/6513002/Body┃周りの敵に<color=white>{0}</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%が体力に回復されます。\n\nクールダウン : {4}秒
-Item/Skills/6513002/Desc┃周りの敵に<color=white>{0}</color> + <color=#FFD775>攻撃力の{6}%</color> + <color=#DDA0DD>スキル増幅の{1}%</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%が体力に回復されます。\n\nクールダウン : {4}秒
+Item/Skills/6513002/Body┃周りの敵に<color=white>{0}</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%を体力として回復します。\n\nクールダウン : {4}秒
+Item/Skills/6513002/Desc┃周りの敵に<color=white>{0}</color> + <color=#FFD775>攻撃力の{6}%</color> + <color=#DDA0DD>スキル増幅の{1}%</color>のダメージを与えて移動速度を(近距離 : {2}%) (遠距離 : {5}%)奪います。また、敵に与えたダメージ量の{3}%を体力として回復します。\n\nクールダウン : {4}秒
 CharacterState/Group/Name/6513010┃信念
 CharacterState/Group/Desc/6513010┃移動速度が増加しました。
 CharacterState/Group/Name/6513020┃信念
@@ -19943,9 +20048,9 @@ Skill/LobbyDesc/4509000┃しばらくすると、指定した位置に隕石を
 Skill/LobbyDesc/4509010┃一定時間後、指定した位置に隕石を落としてダメージを与えます。
 Skill/Group/LobbyDesc/4509000┃しばらくすると、指定した位置に隕石を落として大きなダメージを与えます。\n隕石に当たった敵はしばらく気絶します。
 Skill/Group/LobbyDesc/4509010┃一定時間後、指定した位置に隕石を落としてダメージを与えます。
-Skill/Code/Desc/4509001┃しばらくすると、指定した位置に隕石を落として{4}の固定ダメージを与えます。
+Skill/Code/Desc/4509001┃しばらくすると、指定した位置に隕石を落として<color=white>{4}</color>の固定ダメージを与えます。
 Skill/Code/Coef/4509001┃しばらくすると、指定した位置に隕石を落として固定ダメージを与えます。\nダメージ量：<color=white>{1}</color><color=#008000>(+キャラクターレベル * {2})</color>
-Skill/Code/Desc/4509011┃一定時間後、指定した位置に隕石を落として{4}のダメージを与えます。
+Skill/Code/Desc/4509011┃一定時間後、指定した位置に隕石を落として<color=white>{4}</color>のダメージを与えます。
 Skill/Code/Coef/4509011┃一定時間後、指定した位置に隕石を落として<color=white>{1}</color><color=#008000>(+キャラクターレベル * {2})</color>のダメージを与えます。
 CharacterState/Group/Name/4509000┃メテオストライク
 CharacterState/Group/Desc/4509000┃隕石に当たりました。
@@ -20389,7 +20494,7 @@ Item/Skills/6062001/Name┃<color=yellow>劫火の心臓</color>
 Item/Skills/6062001/Body┃戦闘状態になると、{0}秒ごとに周り3.5m以内の敵に<color=#688A08>{1}</color>のダメージを与え、実験体に与えたダメージ量の<color=white>{2}%</color>を回復します。(最大回復量：{3})
 Item/Skills/6062001/Desc┃戦闘状態になると、{0}秒ごとに周り3.5m以内の敵に<color=white>{1}</color><color=#688A08>(+最大体力の{2}%)</color>のダメージを与え、実験体に与えたダメージ量の<color=white>{4}%</color>を回復します。(最大回復量：{5})
 CharacterState/Group/Name/6062000┃劫火の心臓
-CharacterState/Group/Desc/6062000┃黒炎竜の心臓が鳴り始め、周りの敵にダメージを与えて、実験体に与えたダメージの一部を体力に回復します。
+CharacterState/Group/Desc/6062000┃黒炎竜の心臓が鳴り始め、周りの敵にダメージを与えて、実験体に与えたダメージの一部を体力として回復します。
 Item/Skills/6063001┃ファフニールの鱗
 Item/Skills/6063001/Name┃<color=yellow>ファフニールの鱗</color>
 Item/Skills/6063001/Body┃敵実験体から累積{0}のダメージを受けるたびに[鱗]スタックを1獲得します。[鱗]スタックは{1}秒間継続し、最大{2}スタックまで貯めることができます。対象が移動不可状態になると、[鱗]を追加で1スタック獲得します。\n[鱗]1スタックにつき防御力が<color=white>{3}</color>増加し、最大スタックになると、{4}秒間徐々に減少する<color=#688A08>{5}</color>のシールドを獲得し、移動速度が<color=white>{6}%</color>増加します。
@@ -22661,6 +22766,7 @@ CharacterPlayTip/80┃イシュトヴァーンは強化時、自分の行動と�
 CharacterPlayTip/81┃ニアはゲームが大好きな少女です。ゲームのように現実世界を操作し、自分だけのゲームの世界で敵の動きを妨害し、有利な戦闘に導くことができます。
 CharacterPlayTip/82┃シュリンは飛剣を使う純粋な田舎少女です。飛剣を使って敵を攻撃したり、自分を防御し、敵陣に入り込んで戦闘の流れを覆せる実験体です。
 CharacterPlayTip/83┃ヘンリーは時間を操る能力で敵の移動を妨害し、味方に有利な戦闘環境を提供できる実験体です。
+CharacterPlayTip/84┃VF覚醒者に対して強い憎しみを持つブレアは、「XMS-5」を使って身体能力を向上させてVF覚醒者を感知し、スキルを連携させて戦う実験体です。
 MasteryType/Glove/Desc┃グローブは有効距離は短いですが、\n攻撃速度は早く連続攻撃ができます。
 MasteryType/Tonfa/Desc┃トンファーは唯一防御力を確保できる攻防一体の武器です。
 MasteryType/Hammer/Desc┃ハンマーは攻撃速度は遅いけですが強力な攻撃で相手の動きを鈍らせます。
@@ -25241,7 +25347,7 @@ Cobalt/부활남은시간┃<color=#47D5FF>Bキー</color>を押して合成機�
 분쇄 불가 알림┃このアイテムは粉砕できません。
 전설 장비 확정 포인트┃<color=#FC3537>神話</color>シュレッダーポイント
 전설 장비 확정 포인트 설명┃粉砕したアイテムの等級に従って神話シュレッダーポイントを獲得します。\n一定の数値に達すると<color=#FC3537>神話等級</color>のアイテムドラフトが活性化されます。
-유물 아이템 구입┃戦術スキル
+유물 아이템 구입창 제목┃戦術スキル
 유물 아이템 구입창 제목┃戦術スキルを選んでください。　
 전술스킬을 선택하세요┃戦術スキルを選んでください。　
 재고 소진┃在庫切れ
