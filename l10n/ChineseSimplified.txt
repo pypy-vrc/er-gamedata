@@ -81,7 +81,7 @@ Character/Name/79┃尤斯蒂娜
 Character/Name/80┃伊舒特
 Character/Name/81┃妮娅
 Character/Name/82┃雪琳
-Character/Name/83┃亨利
+Character/Name/83┃雪琳
 Character/Name/84┃布莱尔
 Character/Name/9999┃娜佳
 GameResult/Character/Name/1┃Jackie
@@ -522,6 +522,13 @@ StatType/MaxHpCoef┃体力上限系数
 StatType/MaxSp┃耐力上限
 StatType/MaxHpHealRatio┃恢复量和体力上限成比例
 StatType/MaxSp/Desc┃增加耐力上限
+StatType/MaxVPLobby┃气力上限
+StatType/MaxVPLobby/Desc┃技能施放时需消耗的资源气力(VP)的最大值。
+StatType/MaxVP┃气力上限
+StatType/MaxVP/Desc┃技能施放时需消耗的资源气力(VP)的最大值。
+StatType/AddedVpAmount┃额外气力
+StatType/VpRegenRatio┃气力恢复量
+StatType/VpRegenRatio/Desc┃每0.5秒的气力恢复量。
 StatType/AttackPower┃攻击力
 StatType/AttackPowerAfterAmplication┃普攻增幅适用伤害
 StatType/AttackPower/Desc┃增加普攻和大部分的技能造成的伤害。
@@ -2140,6 +2147,8 @@ Collection/Name/22011/1┃赛季S7・电竞助力者Ⅰ
 Collection/Name/22011/2┃赛季S7・电竞助力者Ⅱ
 Collection/Name/22012/1┃赛季S8・电竞助力者Ⅰ
 Collection/Name/22012/2┃赛季S8・电竞助力者Ⅱ
+Collection/Name/22013/1┃赛季S9・电竞助力者Ⅰ
+Collection/Name/22013/2┃赛季S9・电竞助力者Ⅱ
 Collection/Name/24001┃2024黄金福袋！
 Collection/Name/24002┃春日花海大作战 Ⅰ
 Collection/Name/24003┃春日花海大作战 Ⅱ
@@ -2347,7 +2356,7 @@ StrategyMap/음성채팅┃语音聊天
 내 루트┃请选择路径。
 기본특성으로 대체됩니다.┃替换为默认潜能。
 루트 슬롯이 부족합니다.┃路径格不足，无法导入路径。
-언어 변경 재시작 알림 팝업┃需要重新登录才能使用所选语言。\n未重新登录时部分区域可能无法应用所选语言。
+언어 변경 재시작 알림 팝업┃重新启动以应用语言更改。\n未重启时，部分内容可能无法正确显示。
 메뉴오픈┃大厅选单已开启。移动至大厅后即可参与一般战斗。
 제작 목표를 추가해 보세요.┃请添加制作目标。
 제작 가이드를 시작할까요?┃要开启制作指南吗？
@@ -4237,6 +4246,7 @@ CreditResurrectionButtonTooltip_DescTypeB┃复活死亡的队友时，优先使
 핑대상_데스┃{0}({1}) : {2}({3})的死亡数{4}
 HP 알림┃{0}({1}) : <color=#86E57F>体力{2}%</color>
 SP 알림┃{0}({1}) : <color=#86E57F>耐力{2}%</color>
+VP 알림┃{0}({1}) : <color=#FFFF00>气力{2}%</color>
 휴식 알림┃{0}({1})请求<color=#86E57F>休息</color>
 제작 알림┃{0}({1})请求制作<color=#86E57F></color>
 공격력스탯 알림┃{0}({1}) : <color=#86E57F>攻击力{2}</color>
@@ -4251,6 +4261,7 @@ SP 알림┃{0}({1}) : <color=#86E57F>耐力{2}%</color>
 사거리스탯 알림┃{0}({1}) : <color=#86E57F>射程{2}</color>
 체력재생스탯 알림┃{0}({1}) : <color=#86E57F>体力再生{2}</color>
 스태미너재생스탯 알림┃{0}({1}) : <color=#86E57F>耐力再生{2}</color>
+기력재생스탯 알림┃{0}({1}) : <color=#FFFF00>气力再生{2}</color>
 방어관통스탯 알림┃{0}({1}) : <color=#86E57F>减少防御穿透{2}%</color>
 모든피해감소스탯 알림┃{0}({1}) : <color=#86E57F>减少所有伤害{2}</color>
 모든피해증감스탯 알림┃{0}({1}) : <color=#86E57F>减少伤害{2}</color>
@@ -4891,10 +4902,10 @@ ToastMessage/루트ID 클립보드 복사┃路径ID已复制
 개편 루트 자동 생성 버튼┃自动生成路径
 개편 추천 루트 라벨┃推荐路径目录
 개편 루트 내 장비 탭┃可制作的装备
-이 루트에서 제작 가능한 장비 목록┃此路径中可以制作的装备目录
-이 루트에서 제작 가능한 음식 목록┃此路径中可以制作的食物目录
-이 루트에서 제작 가능한 음료 목록┃此路径中可以制作的饮料目录
-이 루트에서 제작 가능한 트랩 목록┃此路径中可以制作的陷阱目录
+이 루트에서 제작 가능한 장비 목록┃此路径中可以制作的装备列表
+이 루트에서 제작 가능한 음식 목록┃此路径中可以制作的食物列表
+이 루트에서 제작 가능한 음료 목록┃此路径中可以制作的饮料列表
+이 루트에서 제작 가능한 트랩 목록┃此路径中可以制作的陷阱列表
 개편 루트 상세 탭┃路径详情
 개편 루트 상세 - 장비 라벨┃装备
 개편 루트 상세 - 인벤토리 라벨┃库存
@@ -5117,6 +5128,7 @@ Product Info┃Product Info
 스쿼드 프로필 세팅┃设置三人模式中使用的个人资料。
 SkillCostType/NoCost┃无消耗
 SkillCostType/Sp┃耐力
+SkillCostType/Vp┃气力
 SkillCostType/Hp┃体力
 SkillCostType/CurrentHpRatio┃当前体力
 SkillCostType/HpCost┃体力消耗
@@ -5128,6 +5140,7 @@ SkillCostPing/NoCost┃无消耗
 SkillCostPing/Hp┃体力
 SkillCostPing/CurrentHpRatio┃当前体力
 SkillCostPing/Sp┃耐力
+SkillCostPing/Vp┃气力
 SkillCostPing/Ep┃燃料
 SkillCostPing/Vf┃Vital Force
 SkillCostPing/GadgetEnergy┃便携工具能量
@@ -5470,6 +5483,7 @@ PurchaseCompletedPassNotice┃UNLOCKED!
 신규 시즌 추가 안내┃新赛季补充通知
 신규 시즌 추가 설명1┃获取ER通行证赛季皮肤、大厅背景、个人背景和新物品等丰富多样的奖励！
 신규 시즌 추가 설명2┃<color=#FFFFFF>新赛季已开始！\n在玩游戏的同时提升ER通行证等级，获得多种奖励！\n将停止之前赛季的ER通行证</color> <color=#FFBE70>并自动激活新赛季的ER通行证</color> <color=#FFFFFF>。\n可以重新激活之前的ER通行证，仅限在对应的ER通行证期间才能领取未领取的奖励。</color>
+신규 시즌 추가 설명3┃自动激活新赛季ER通行证
 배틀패스┃ER通行证
 ER Point┃ER积分
 ER 패스 구매┃购买ER通行证
@@ -8878,7 +8892,7 @@ EMBLEM_MARK_COLLECTION_119007┃偶像 梅 粉丝福利
 EMBLEM_MARK_COLLECTION_119008┃死神 卢克 清理完毕
 EMBLEM_MARK_COLLECTION_119009┃课余闲时
 EMBLEM_MARK_COLLECTION_119010┃热带次元 艾比盖尔 双手托脸
-EMBLEM_MARK_COLLECTION_119011┃Mk. VIII 毁灭者 M.A.G降临
+EMBLEM_MARK_COLLECTION_119011┃Mk. VIII 毁灭者 M.A.G 降临
 EMBLEM_MARK_COLLECTION_119501┃赛季S4・电竞助力者
 EMBLEM_MARK_COLLECTION_119502┃赛季S5・电竞助力者
 EMBLEM_MARK_COLLECTION_119503┃赛季S6・电竞助力者
@@ -10358,6 +10372,18 @@ Goods/Name/3402546┃赛季S8・Daegu Suseong Guardians队伍格背景
 Goods/Name/3402547┃赛季S8・GJ Slasher队伍格背景
 Goods/Name/3402548┃赛季S8・Gyeonggi Innate队伍格背景
 Goods/Name/3402549┃赛季S8・DAEJEON AutoArms队伍格背景
+Goods/Name/3402550┃赛季S9・Seongnam ROX队伍格背景
+Goods/Name/3402551┃赛季S9・FN SEJONG队伍格背景
+Goods/Name/3402552┃赛季S9・Jecheon Phalanx队伍格背景
+Goods/Name/3402553┃赛季S9・New Rise Gangwon队伍格背景
+Goods/Name/3402554┃赛季S9・all ways INCHEON队伍格背景
+Goods/Name/3402555┃赛季S9・Busan BeSPA队伍格背景
+Goods/Name/3402556┃赛季S9・CNJ esports队伍格背景
+Goods/Name/3402557┃赛季S9・Gyeongnam Sparkle队伍格背景
+Goods/Name/3402558┃赛季S9・Daegu Suseong Guardians队伍格背景
+Goods/Name/3402559┃赛季S9・GJ Slasher队伍格背景
+Goods/Name/3402560┃赛季S9・Gyeonggi Innate队伍格背景
+Goods/Name/3402561┃赛季S9・DAEJEON AutoArms队伍格背景
 Goods/Name/3403001┃机械电路
 Goods/Name/3403002┃星光之夜
 Goods/Name/3403003┃秋日红叶
@@ -10429,6 +10455,7 @@ Goods/Name/3503041┃2周年特别夏日卡
 Goods/Name/3503042┃赛季S8・电竞助力者币
 Goods/Name/3503043┃秋日卡片
 Goods/Desc/3503043┃试着完成秋日收藏吧！\n可以在收藏菜单中查看秋日收藏的达成条件。
+Goods/Name/3503044┃赛季S9・电竞助力者币
 ItemType/WILD_CARD_SKIN/Name┃[仅限皮肤]任意牌
 ItemType/WILD_CARD_ETC/Name┃任意牌
 Goods/Name/3602002┃[仅限皮肤]任意牌
@@ -10494,8 +10521,8 @@ Goods/Name/4018051┃花火大会碎片51
 Goods/Name/4018052┃花火大会碎片52
 Goods/Name/4018053┃花火大会碎片53
 Goods/Name/4018054┃花火大会碎片54
-ItemType/REROLL_TICKET/Name┃模块
-Goods/Name/4402001┃双模块
+ItemType/REROLL_TICKET/Name┃模组
+Goods/Name/4402001┃双模组
 ItemType/SEASON_PASS/Name┃赛季包
 ItemType/CHARACTER/Name┃实验体
 ItemType/EVENT_NP/Name┃活动NP
@@ -11038,6 +11065,7 @@ Product/Name/BATTLE_PASS/2005┃好运★A-Coin任务书
 Product/Name/BATTLE_PASS/2006┃炼狱A-Coin任务书
 Product/Name/BATTLE_PASS/2007┃军官学园A-Coin任务书
 Product/Name/BATTLE_PASS/2008┃逐浪A-Coin任务书
+Product/Name/BATTLE_PASS/2009┃花火大会A-Coin任务书
 Product/Name/2024_Select_Voucher_Pack┃选择券组合包
 Product/Name/2024_Select_Voucher_Pack_01┃选择券组合包Ⅰ
 Product/Name/2024_Select_Voucher_Pack_02┃选择券组合包Ⅱ
@@ -11194,6 +11222,9 @@ Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2周年夏日箱基础组合包
 Product/Name/S7_Season_Fragments_Pack_01┃赛季碎片组合包
 Product/Name/S7_Season_Fragments_Pack_02┃赛季碎片组合包
 Product/Name/S7_Season_Fragments_Pack_03┃赛季碎片组合包
+Product/Name/S9_Season_Fragments_Pack_01┃赛季碎片组合包
+Product/Name/S9_Season_Fragments_Pack_02┃赛季碎片组合包
+Product/Name/S9_Season_Fragments_Pack_03┃赛季碎片组合包
 Product/Name/EVENT_NPASS_2nd_Anniversary_1017┃2周年任务书
 Product/Name/TropicalDimensionAbigail_CollectPack_01┃热带次元 艾比盖尔收藏组合包
 Product/Name/DestroyerMAG_CollectPack_01┃Mk. VIII 毁灭者 M.A.G收藏组合包
@@ -11499,8 +11530,8 @@ Shop/Desc/S7_Change_SkinBox_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\
 Shop/Desc/S7_Star_Box_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 蓝星箱子 x 2\n- 绿星箱子 x 5\n- 银星箱子 x 10\n- 逐浪代币 x 10\n-  A-Coin Boost(1天)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 星星箱子的颜色顺序为 : 银色、绿色、蓝色、紫色、金色箱子。\n※ 开启箱子时，可以获得[下一颜色星星箱子、同一颜色星星箱子、A-Coin]其中之一，有概率额外获得银星收藏物品。\n※ 但开启金星箱子时将获得逐浪代币，不会获得星星箱子。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/S7_Star_Box_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 绿星箱子 x 1\n- A-Coin Boost(1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 星星箱子的颜色顺序为 : 银色、绿色、蓝色、紫色、金色箱子。\n※ 开启箱子时，可以获得[下一颜色星星箱子、同一颜色星星箱子、A-Coin]其中之一，有概率额外获得银星收藏物品。\n※ 但开启金星箱子时将获得逐浪代币，不会获得星星箱子。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/S7_Star_Box_Pack_03┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 银星箱子 x 4\n- XP Boost(1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 星星箱子的颜色顺序为 : 银色、绿色、蓝色、紫色、金色箱子。\n※ 开启箱子时，可以获得[下一颜色星星箱子、同一颜色星星箱子、A-Coin]其中之一，有概率额外获得银星收藏物品。\n※ 但开启金星箱子时将获得逐浪代币，不会获得星星箱子。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
-Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 死神 卢克 2款表情\n- 死神 卢克头像\n- 死神 卢克边框\n- 死神 卢克背景\n- 军官学园代币 x 10\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
-Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 妮娅表情\n- 妮娅背景\n- 妮娅边框\n- 妮娅队伍格背景\n- 军官学园代币 x 10\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 死神 卢克 2款表情\n- 死神 卢克头像\n- 死神 卢克边框\n- 死神 卢克背景\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 妮娅表情\n- 妮娅背景\n- 妮娅边框\n- 妮娅队伍格背景\n- A-Coin Boost(3日)\n- ER积分 Boost(3日)\n\n※ 可以通过藏品确认已购买的商品。\n※ 含有已持有的物品时，售价可能会发生变化。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/2025_May_SkinBox_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 5月概率提升皮肤箱 x 10\n- 开箱钥匙 x 10\n- 军官学园代币 x 15\n- A-Coin Boost (1日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/2025_May_SkinBox_Pack_02┃<b><color=#FFBB00>[内容物]</color></b>\n\n- 5月概率提升皮肤箱 x 1\n- 开箱钥匙 x 1\n- 军官学园代币 x 1\n- A-Coin Boost (1小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买后可以前往制作所开启购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/Perfect_Support_Pack_01┃<b><color=#FFBB00>[内容物]</color></b>\n\n- [仅限皮肤]任意牌（英雄）x 1\n- [仅限皮肤]任意牌（稀有）x 1\n- 任意牌（稀有）x 1\n- 1,000 NP\n- 好运★箱 x 10\n- 好运★球 x 1\n- XP Boost(7日)\n- A-Coin Boost(7日)\n\n<b><color=#F15F5F>[购买注意事项]</color></b> \n※ 可以使用Steam钱包购买完美礼包。\n※ 可以在制作所的[任意牌]页面使用任意牌。\n※ 请查看箱子概率链接确认详细商品列表。\n※ 完美礼包中的1,000 NP为免费NP。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
@@ -11851,6 +11882,7 @@ Season2005/Name┃好运★A-Coin任务书
 Season2006/Name┃炼狱A-Coin任务书
 Season2007/Name┃军官学园A-Coin任务书
 Season2008/Name┃逐浪A-Coin任务书
+Season2009/Name┃花火大会A-Coin任务书
 Season2100/Name┃S5赛季A-Coin任务书
 Season2101/Name┃炼狱代币任务书
 Season2102/Name┃S6赛季A-Coin任务书
@@ -11865,6 +11897,7 @@ HiddenPassPath/2005┃可以在NP商店内的「里程商店」购买后使用�
 HiddenPassPath/2006┃可以在NP商店内的「里程商店」购买后使用。
 HiddenPassPath/2007┃可以在交换所中使用军官学园代币购买后使用。
 HiddenPassPath/2008┃可以在交换所中使用逐浪代币购买后使用。
+HiddenPassPath/2009┃可以在交换所使用花火大会代币购买后使用。
 HiddenPassPath/2102┃可以在商店购买<选择券组合包Ⅲ>后使用。
 HiddenPassPath/2103┃可以在商店购买<选择券组合包Ⅲ>后使用。
 HiddenPassPath/2104┃可以在交换所中使用军官学园代币购买后使用。
@@ -12012,16 +12045,22 @@ Product/Name/S17_RARE_MATTER┃稀有DATA材料 x 1
 Product/Name/S17_S16TOKEN_EXCHANGE┃军官学园代币 x 2
 Product/Name/S17_A-Coin_QUEST_BOOK┃逐浪A-Coin任务书
 Product/Name/S17_TROPICALDIMENSION_QUSET_BOOK┃热带次元 艾比盖尔任务书
+Product/Name/S17_S18TOKEN_EXCHANGE┃花火大会代币 x 2
 Product/Name/Autumn_RareMatter_01┃稀有DATA材料 x 1
 Product/Name/Autumn_AutumnCard_01┃秋日卡片 x 1
 Product/Name/Autumn_ACoin_100┃A-Coin x 100
 Product/Name/Autumn_S17_Token_01┃逐浪代币 x 10
+Product/Name/S18_ACOIN_UNLIMITED┃A-Coin x 150
+Product/Name/S18_RARE_MATTER┃稀有DATA材料 x 1
+Product/Name/S18_S17TOKEN_EXCHANGE┃逐浪代币 x 2
+Product/Name/S18_A-Coin_QUEST_BOOK┃花火大会A-Coin任务书
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃度假A-Coin任务书
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃战斗女仆A-Coin任务书
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃转变A-Coin任务书
 Product/Name/MILEAGE_S13_A-Coin_QUEST_BOOK_9900004┃晚霞A-Coin任务书
 Product/Name/MILEAGE_S14_A-Coin_QUEST_BOOK_9900005┃好运★A-Coin任务书
 Product/Name/MILEAGE_S15_A-Coin_QUEST_BOOK_9900006┃炼狱A-Coin任务书
+Product/Name/MILEAGE_S16_A-Coin_QUEST_BOOK_9900007┃军官学园A-Coin任务书
 Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 度假A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活度假A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看度假A-Coin任务书。
 Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 战斗女仆A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活战斗女仆A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看战斗女仆A-Coin任务书。
 Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[内容]</color></b>\n\n- 转变A-Coin任务书\n  (全部完成后，共可获得105,000 A-Coin)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[购买注意事项]</color></b>\n\n※ 购买商品后将立即激活转变A-Coin任务书。\n※ 该任务书没有使用时间限制，可以随时进行。\n※ 可以通过任务书菜单查看转变A-Coin任务书。
@@ -12053,6 +12092,74 @@ PickupEvent/Name/SEASON8_SKIN_BOX_PICKUP┃新增皮肤Bonus概率
 PickupEvent/Desc/SEASON8_SKIN_BOX_PICKUP┃皮肤DATA箱新增皮肤已适用Bonus概率。
 Product/Name/S6_LuckyMarble2025_Legion_Token_01┃炼狱代币 X10
 Product/Name/S6_LuckyMarble2025_ACoin_100┃A-Coin X 100
+PickupEvent/Name/Pickup_Emote_Voucher_251016┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251023┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251030┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251106┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251113┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251120┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251127┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251204┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251211┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251218┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_251225┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260101┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260108┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260115┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260122┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260129┃表情精选补给券
+PickupEvent/Name/Pickup_Emote_Voucher_260205┃表情精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251016┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251023┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251030┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251106┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251113┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251120┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251127┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251204┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251211┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251218┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_251225┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260101┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260108┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260115┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260122┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260129┃头像精选补给券
+PickupEvent/Name/Pickup_Emblem_Voucher_260205┃头像精选补给券
+PickupEvent/Desc/Pickup_Emote_Voucher_251016┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251023┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251030┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251106┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251113┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251120┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251127┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251204┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251211┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251218┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_251225┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260101┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260108┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260115┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260122┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260129┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emote_Voucher_260205┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251016┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251023┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251030┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251106┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251113┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251120┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251127┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251204┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251211┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251218┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_251225┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260101┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260108┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260115┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260122┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260129┃每周四 11:00(GMT+8)调整商品列表。
+PickupEvent/Desc/Pickup_Emblem_Voucher_260205┃每周四 11:00(GMT+8)调整商品列表。
 Skill/Group/Name/4000000┃闪灵
 Skill/Group/LobbyDesc/4000000┃使用后向指定位置移动一段距离。\n\n<color=#ff3399>强化效果 : </color>使用后，暂时增加移动速度且无视碰撞。
 Skill/Group/LobbyDesc/4512000┃使用后向指定位置移动一段距离。\n\n<color=#ff3399>强化效果 : </color>使用后，暂时增加移动速度且无视碰撞。
@@ -19843,9 +19950,9 @@ Skill/LobbyDesc/4509000┃稍后陨石将坠落在指定的位置并造成巨大
 Skill/LobbyDesc/4509010┃稍后，将在指定位置坠落陨石并造成伤害。
 Skill/Group/LobbyDesc/4509000┃稍后陨石将坠落在指定的位置并造成巨大的伤害。\n被陨石击中的敌人将暂时陷入晕厥。
 Skill/Group/LobbyDesc/4509010┃稍后，将在指定位置坠落陨石并造成伤害。
-Skill/Code/Desc/4509001┃稍后陨石将坠落在指定的位置，造成{4}的真实伤害。
+Skill/Code/Desc/4509001┃稍后陨石将坠落在指定的位置，造成<color=white>{4}</color>的真实伤害。
 Skill/Code/Coef/4509001┃稍后陨石将坠落在指定的位置，造成真实伤害。\n伤害量 : <color=white>{1}</color><color=#008000>(+实验体等级 * {2})</color>
-Skill/Code/Desc/4509011┃稍后，将在指定位置坠落陨石并造成{4}伤害。
+Skill/Code/Desc/4509011┃稍后，将在指定位置坠落陨石并造成<color=white>{4}</color>伤害。
 Skill/Code/Coef/4509011┃稍后，将在指定位置坠落陨石并造成<color=white>{1}</color><color=#008000>(+实验体等级 * {2})</color>伤害。
 CharacterState/Group/Name/4509000┃流星撞击
 CharacterState/Group/Desc/4509000┃被陨石击中
@@ -22561,6 +22668,7 @@ CharacterPlayTip/80┃伊舒特在强化时将展现出一个与自身行动产�
 CharacterPlayTip/81┃妮娅是一位真心热爱并享受游戏的少女。她将现实视为一场可操纵的游戏，精准地限制敌人的行动节奏，主导每一场对决的走向。
 CharacterPlayTip/82┃雪琳是一位修炼御剑术的淳朴乡村少女。她能挥出剑攻击敌人或保护自己，并在瞬间突入敌阵，扭转战斗局势。
 CharacterPlayTip/83┃亨利是一名利用操纵时间的能力来干扰敌人行动，并为我方创造有利战斗环境的实验体。
+CharacterPlayTip/84┃布莱尔对VF觉醒者抱有深深的憎恶。她借助XMS-5提升自身的身体机能，并获得了探测VF觉醒者的能力，是一名擅长连贯施展技能、掌控战局的实验体。
 MasteryType/Glove/Desc┃虽然手套的攻击距离有限，但可以实现连续且快速的攻击。
 MasteryType/Tonfa/Desc┃旋棍是唯一能同时确保防御力和攻击力的武器。
 MasteryType/Hammer/Desc┃锤子虽然攻击速度较慢，但可以通过强有力的攻击来限制对方的动作。
@@ -25148,7 +25256,7 @@ Cobalt/부활남은시간┃按<color=#47D5FF>B键</color>，在合成器中强�
 분쇄 불가 알림┃无法销毁该装置。
 전설 장비 확정 포인트┃<color=#FC3537>超凡等级</color>装备确定补给点数
 전설 장비 확정 포인트 설명┃按照已销毁的物品等级获得超凡等级装备确定补给点数。\n达到一定数值时可激活<color=#FC3537>超凡等级</color>物品集成。
-유물 아이템 구입┃战术技能
+유물 아이템 구입창 제목┃战术技能
 유물 아이템 구입창 제목┃请选择战术技能。
 전술스킬을 선택하세요┃请选择战术技能。
 재고 소진┃库存耗尽
