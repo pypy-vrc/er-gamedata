@@ -522,6 +522,13 @@ StatType/MaxHpCoef┃Max HP
 StatType/MaxSp┃Max SP
 StatType/MaxHpHealRatio┃Max HP vs Recovery
 StatType/MaxSp/Desc┃Increases Max SP
+StatType/MaxVPLobby┃Max VP
+StatType/MaxVPLobby/Desc┃Max VP consumed when using a skill.
+StatType/MaxVP┃Max VP
+StatType/MaxVP/Desc┃Max VP consumed when using a skill.
+StatType/AddedVpAmount┃Extra VP
+StatType/VpRegenRatio┃VP Recovery
+StatType/VpRegenRatio/Desc┃VP recovered every 0.5 seconds.
 StatType/AttackPower┃Attack Power
 StatType/AttackPowerAfterAmplication┃Basic Skill Amplification Damage
 StatType/AttackPower/Desc┃Increases the damage of Basic Attacks and most Skills
@@ -2145,6 +2152,8 @@ Collection/Name/22011/1┃S7 Esports Supporter Ⅰ
 Collection/Name/22011/2┃S7 Esports Supporter ⅠⅠ
 Collection/Name/22012/1┃S8 Esports Supporter Ⅰ
 Collection/Name/22012/2┃S8 Esports Supporter ⅠⅠ
+Collection/Name/22013/1┃S9 Esports Supporter Ⅰ
+Collection/Name/22013/2┃S9 Esports Supporter ⅠⅠ
 Collection/Name/24001┃2024 Golden Lucky Pouch!
 Collection/Name/24002┃Blooming Flower Ⅰ
 Collection/Name/24003┃Blooming Flower Ⅱ
@@ -4242,6 +4251,7 @@ CreditResurrectionButtonTooltip_DescTypeB┃The cost of reviving an ally will be
 핑대상_데스┃{0}({1}): {2}({3}) - Deaths: {4}
 HP 알림┃{0}({1}): <color=#86E57F>HP {2}%</color>
 SP 알림┃{0}({1}): <color=#86E57F>SP {2}%</color>
+VP 알림┃{0}({1}): <color=#FFFF00>VP {2}%</color>
 휴식 알림┃{0}({1}) is <color=#86E57F>resting</color>
 제작 알림┃{0}({1}) has requested <color=#86E57F>Crafting</color>.
 공격력스탯 알림┃{0}({1}): <color=#86E57F>Attack Power {2}</color>
@@ -4256,6 +4266,7 @@ SP 알림┃{0}({1}): <color=#86E57F>SP {2}%</color>
 사거리스탯 알림┃{0}({1}): <color=#86E57F>Range {2}</color>
 체력재생스탯 알림┃{0}({1}): <color=#86E57F>HP Regen {2}</color>
 스태미너재생스탯 알림┃{0}({1}): <color=#86E57F>SP Regen {2}</color>
+기력재생스탯 알림┃{0}({1}): <color=#FFFF00>VP Regen {2}</color>
 방어관통스탯 알림┃{0}({1}): <color=#86E57F>Armor Penetration Reduction {2}%</color>
 모든피해감소스탯 알림┃{0}({1}): <color=#86E57F>Damage Reduction {2}</color>
 모든피해증감스탯 알림┃{0}({1}): <color=#86E57F>Damage Reduction {2}</color>
@@ -5124,6 +5135,7 @@ Product Info┃Product Info
 스쿼드 프로필 세팅┃Profile setting for Squad modes.
 SkillCostType/NoCost┃No Cost
 SkillCostType/Sp┃SP:
+SkillCostType/Vp┃VP:
 SkillCostType/Hp┃HP:
 SkillCostType/CurrentHpRatio┃Current HP
 SkillCostType/HpCost┃HP Cost:
@@ -5135,6 +5147,7 @@ SkillCostPing/NoCost┃No Cost
 SkillCostPing/Hp┃HP
 SkillCostPing/CurrentHpRatio┃Current HP
 SkillCostPing/Sp┃SP
+SkillCostPing/Vp┃VP
 SkillCostPing/Ep┃Fuel
 SkillCostPing/Vf┃Vital Force
 SkillCostPing/GadgetEnergy┃Gadget Energy
@@ -5479,6 +5492,7 @@ PurchaseCompletedPassNotice┃UNLOCKED!
 신규 시즌 추가 안내┃New Season Notice
 신규 시즌 추가 설명1┃New season, new rewards! Unlock The ER Pass season skin, lobby screen, profile backgrounds, and more!
 신규 시즌 추가 설명2┃<color=#FFFFFF>The new season has begun!\nLevel up your ER Pass and get awesome rewards!\nYour old ER Pass has been deactivated </color><color=#FFBE70>and your new ER Pass has been automatically activated.</color>\n<color=#FFFFFF>You can reactivate your old ER Pass and any unclaimed rewards will be available for collection for the corresponding duration of your ER Pass</color>.
+신규 시즌 추가 설명3┃new ER Pass has been automatically activated
 배틀패스┃ER Pass
 ER Point┃ER Point
 ER 패스 구매┃Purchase ER Pass
@@ -5697,9 +5711,9 @@ SeasonPassIcon/18┃Img_SeasonPack18_Box
 시즌팩 8 특별 아이템┃4 Season 8 Special Items
 시즌 18팩 주의사항 1┃If you already own the <ER Pass: Matsuri>, the Paid NP you spent will be refunded.
 시즌 18팩 주의사항 2┃Duplicate items besides the <ER Pass> are not automatically refunded.
-시즌 18팩 주의사항 3┃For duplicate characters or skins included in the Season Pack, the refund policy applies.
-시즌 18팩 주의사항 4┃Season Pack contents are subject to change, so check our website and announcements for details.
-시즌 18팩 주의사항 5┃Season Pack items will be sent to your Mailbox → Season Pack upon release. Items may be resold through other methods in the future.
+시즌 18팩 주의사항 3┃The refund policy applies for duplicate characters or skins.
+시즌 18팩 주의사항 4┃Season Pack contents are subject to change. Keep an eye out for details in our website.
+시즌 18팩 주의사항 5┃Items arrive in your mailbox upon release. They may also be resold through other ways in the future.
 <ER PASS : 마츠리> 포함┃<ER Pass: Matsuri>
 시즌팩 9 출시 캐릭터┃2 Season 9 Characters
 시즌팩 9 출시 스킨┃6 S9 Skins
@@ -10367,6 +10381,18 @@ Goods/Name/3402546┃S8 Daegu Suseong Guardians
 Goods/Name/3402547┃S8 GJ Slasher 
 Goods/Name/3402548┃S8 Gyeonggi Innate
 Goods/Name/3402549┃S8 DAEJEON AutoArms 
+Goods/Name/3402550┃S9 Seongnam ROX 
+Goods/Name/3402551┃S9 FN SEJONG 
+Goods/Name/3402552┃S9 Jecheon Phalanx 
+Goods/Name/3402553┃S9 New Rise Gangwon 
+Goods/Name/3402554┃S9 all ways INCHEON 
+Goods/Name/3402555┃S9 Busan BeSPA 
+Goods/Name/3402556┃S9 CNJ esports 
+Goods/Name/3402557┃S9 Gyeongnam Sparkle 
+Goods/Name/3402558┃S9 Daegu Suseong Guardians 
+Goods/Name/3402559┃S9 GJ Slasher 
+Goods/Name/3402560┃S9 Gyeonggi Innate
+Goods/Name/3402561┃S9 DAEJEON AutoArms 
 Goods/Name/3403001┃Mechanical Circuit
 Goods/Name/3403002┃Starry Night
 Goods/Name/3403003┃Autumn Leaves
@@ -10438,6 +10464,7 @@ Goods/Name/3503041┃Special 2nd Anniv. Summer Card
 Goods/Name/3503042┃S8 Esports Supporter Coin
 Goods/Name/3503043┃Autumn Card
 Goods/Desc/3503043┃Complete the Autumn Collection!\nYou can check the requirements to complete the collection in the Collection menu.
+Goods/Name/3503044┃S9 Esports Supporter Coin
 ItemType/WILD_CARD_SKIN/Name┃[Skin] Wild Card
 ItemType/WILD_CARD_ETC/Name┃Wild Card
 Goods/Name/3602002┃[Skin] Wild Card
@@ -11050,6 +11077,7 @@ Product/Name/BATTLE_PASS/2005┃Lucky★ A-Coin Quest Book
 Product/Name/BATTLE_PASS/2006┃Legion A-Coin Quest Book
 Product/Name/BATTLE_PASS/2007┃Academy A-Coin Quest Book
 Product/Name/BATTLE_PASS/2008┃Splash! A-Coin Quest Book
+Product/Name/BATTLE_PASS/2009┃Matsuri A-Coin Quest Book
 Product/Name/2024_Select_Voucher_Pack┃Voucher Bundle
 Product/Name/2024_Select_Voucher_Pack_01┃Voucher Bundle Ⅰ
 Product/Name/2024_Select_Voucher_Pack_02┃Voucher Bundle Ⅱ
@@ -11206,6 +11234,9 @@ Product/Name/2025_2nd_Anniv_Summer_Pack_02┃2nd Anniv. Summer Box Bundle (Singl
 Product/Name/S7_Season_Fragments_Pack_01┃Season Fragments Bundle
 Product/Name/S7_Season_Fragments_Pack_02┃Season Fragments Bundle
 Product/Name/S7_Season_Fragments_Pack_03┃Season Fragments Bundle
+Product/Name/S9_Season_Fragments_Pack_01┃Season Fragments Bundle
+Product/Name/S9_Season_Fragments_Pack_02┃Season Fragments Bundle
+Product/Name/S9_Season_Fragments_Pack_03┃Season Fragments Bundle
 Product/Name/EVENT_NPASS_2nd_Anniversary_1017┃2nd Anniversary Quest Book
 Product/Name/TropicalDimensionAbigail_CollectPack_01┃Tropical Dimension Abigail Collection Bundle
 Product/Name/DestroyerMAG_CollectPack_01┃Mk. VIII Destroyer M.A.G Collection Bundle
@@ -11511,8 +11542,8 @@ Shop/Desc/S7_Change_SkinBox_Pack_02┃<b><color=#FFBB00>[Contents]</color></b>\n
 Shop/Desc/S7_Star_Box_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 2 Blue Star Boxes \n- 5 Green Star Boxes \n- 10 White Star Boxes \n- 10 Splash! Tokens\n- A-Coin Boost (1 Day)\n\n*You can open this item in Forging.\n*Boxes are opened in the following sequence: White, Green, Blue, Purple, Gold.\n*Each box may contain a box of the next color, the same color, or some A-Coin, along with a chance for a Star Box Collection item.\n*For Gold boxes, receive Splash! Tokens instead of another box.\n* Items that include boosts that are immediately applied upon purchase are non-refundable.
 Shop/Desc/S7_Star_Box_Pack_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Green Star Box\n- A-Coin Boost (1 Hour)\n\n*You can open this item in Forging.\n*Boxes are opened in the following sequence: White, Green, Blue, Purple, Gold.\n*Each box may contain a box of the next color, the same color, or some A-Coin, along with a chance for a Star Box Collection item.\n*For Gold boxes, receive Splash! Tokens instead of another box.\n* Items that include boosts that are immediately applied upon purchase are non-refundable.
 Shop/Desc/S7_Star_Box_Pack_03┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 4 White Star Boxes\n- XP Boost (1 Hour)\n\n*You can open this item in Forging.\n*Boxes are opened in the following sequence: White, Green, Blue, Purple, Gold.\n*Each box may contain a box of the next color, the same color, or some A-Coin, along with a chance for a Star Box Collection item.\n*For Gold boxes, receive Splash! Tokens instead of another box.\n* Items that include boosts that are immediately applied upon purchase are non-refundable.
-Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 2 Grim Reaper Luke Emotes\n- 1 Grim Reaper Luke Profile Icon\n- 1 Grim Reaper Luke Profile Border\n- 1 Grim Reaper Luke Profile Background\n- 10 Academy Tokens\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The items of this bundle will be immediately added to your Collectibles upon purchase. \n* The purchase price may vary depending on the items you already own. \n* Items that include boosts that are immediately applied upon purchase are non-refundable.
-Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Niah Emote\n- Niah Background\n- Niah Border\n- Niah Team Slot BG\n- 10 Academy Tokens\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The items of this bundle will be immediately added to your Collectibles upon purchase. \n* The purchase price may vary depending on the items you already own. \n* Items that include boosts that are immediately applied upon purchase are non-refundable.
+Shop/Desc/GildedReaperLuke_CollectPack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 2 Grim Reaper Luke Emotes\n- 1 Grim Reaper Luke Profile Icon\n- 1 Grim Reaper Luke Profile Border\n- 1 Grim Reaper Luke Profile Background\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The items of this bundle will be immediately added to your Collectibles upon purchase. \n* The purchase price may vary depending on the items you already own. \n* Items that include boosts that are immediately applied upon purchase are non-refundable.
+Shop/Desc/Niah_Event_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Niah Emote\n- Niah Background\n- Niah Border\n- Niah Team Slot BG\n- A-Coin Boost (3 Days)\n- ER Point Boost (3 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* The items of this bundle will be immediately added to your Collectibles upon purchase. \n* The purchase price may vary depending on the items you already own. \n* Items that include boosts that are immediately applied upon purchase are non-refundable.
 Shop/Desc/2025_May_SkinBox_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 10 May Skin Boxes\n- 10 Box Keys\n- 15 Academy Tokens\n- A-Coin Boost (1 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*You can open this item in Forging.\n*Items that include boosts that are immediately applied upon purchase are non-refundable.
 Shop/Desc/2025_May_SkinBox_Pack_02┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 1 May Skin Box\n- 1 Box Key\n- 1 Academy Token\n- A-Coin Boost (1 Hour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*You can open this item in Forging.\n*Items that include boosts that are immediately applied upon purchase are non-refundable.
 Shop/Desc/Perfect_Support_Pack_01┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 1 [Skin] Wild Card (Epic)\n- 1 [Skin] Wild Card (Rare)\n- 1 Wild Card (Rare)\n- 1,000 NP\n- 1 Lucky★ Ball\n- 10 Lucky★ Boxes\n- XP Boost (7 Days)\n- A-Coin Boost (7 Days)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* You can purchase this bundle using your Steam Wallet.\n* You can use the Wild Cards included in this bundle in the Wild Card menu within the Forging section. \n* For a detailed item list, please refer to the box probability disclosure link.\n* The NP included in this bundle is Free NP.\n* Items that include boosts that are immediately applied upon purchase are non-refundable.
@@ -11863,6 +11894,7 @@ Season2005/Name┃Lucky★ A-Coin Quest Book
 Season2006/Name┃Legion A-Coin Quest Book
 Season2007/Name┃Academy A-Coin Quest Book
 Season2008/Name┃Splash! A-Coin Quest Book
+Season2009/Name┃Matsuri A-Coin Quest Book
 Season2100/Name┃S5 A-Coin Quest Book
 Season2101/Name┃Legion Tokens Quest Book
 Season2102/Name┃S6 A-Coin Quest Book
@@ -11877,6 +11909,7 @@ HiddenPassPath/2005┃Purchase this item in the NP Store - Mileage to activate i
 HiddenPassPath/2006┃Purchase this item in the NP Store - Mileage to activate it.
 HiddenPassPath/2007┃Purchase this item with Academy Tokens in the Exchange menu to activate it.
 HiddenPassPath/2008┃Purchase this item with Splash! Tokens in the Exchange menu to activate it.
+HiddenPassPath/2009┃Purchase this item with Matsuri Tokens in the Exchange menu to activate it.
 HiddenPassPath/2102┃Purchase the Voucher Bundle Ⅲ in the Store to activate this item.
 HiddenPassPath/2103┃Purchase the Voucher Bundle Ⅲ in the Store to activate this item.
 HiddenPassPath/2104┃Purchase this item with Academy Tokens in the Exchange menu to activate it.
@@ -12024,16 +12057,22 @@ Product/Name/S17_RARE_MATTER┃1 Rare Data Fragment
 Product/Name/S17_S16TOKEN_EXCHANGE┃2 Academy Tokens
 Product/Name/S17_A-Coin_QUEST_BOOK┃Splash! A-Coin Quest Book
 Product/Name/S17_TROPICALDIMENSION_QUSET_BOOK┃Tropical Dimension Abigail Quest Book
+Product/Name/S17_S18TOKEN_EXCHANGE┃2 Matsuri Tokens
 Product/Name/Autumn_RareMatter_01┃1 Rare Data Fragment
 Product/Name/Autumn_AutumnCard_01┃1 Autumn Card
 Product/Name/Autumn_ACoin_100┃100 A-Coin
 Product/Name/Autumn_S17_Token_01┃10 Splash! Tokens
+Product/Name/S18_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S18_RARE_MATTER┃1 Rare Data Fragment
+Product/Name/S18_S17TOKEN_EXCHANGE┃2 Splash! Tokens
+Product/Name/S18_A-Coin_QUEST_BOOK┃Matsuri A-Coin Quest Book
 Product/Name/MILEAGE_S10_A-Coin_QUEST_BOOK_9900001┃Vacance A-Coin Quest Book
 Product/Name/MILEAGE_S11_A-Coin_QUEST_BOOK_9900002┃Battle Maids A-Coin Quest Book
 Product/Name/MILEAGE_S12_A-Coin_QUEST_BOOK_9900003┃Change A-Coin Quest Book
 Product/Name/MILEAGE_S13_A-Coin_QUEST_BOOK_9900004┃Sunset  A-Coin Quest Book
 Product/Name/MILEAGE_S14_A-Coin_QUEST_BOOK_9900005┃Lucky★ A-Coin Quest Book
 Product/Name/MILEAGE_S15_A-Coin_QUEST_BOOK_9900006┃Legion  A-Coin Quest Book
+Product/Name/MILEAGE_S16_A-Coin_QUEST_BOOK_9900007┃Academy A-Coin Quest Book
 Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Vacance A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time. \n*Check your owned A-Coin Quest Books in the Quest Book menu.
 Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Battle Maids A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
 Shop/Desc/S12_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Change A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
@@ -12042,8 +12081,8 @@ Shop/Desc/S14_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- 
 Shop/Desc/S15_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Legion A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
 Shop/Desc/S16_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Academy A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
 Shop/Desc/S17_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Splash! A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
-Shop/Desc/S16_AFTERSCHOOL_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- After School Twins Quest Book\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
-Shop/Desc/S17_TROPICALDIMENSION_QUSET_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Tropical Dimension Abigail Quest Book\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.\n*This Quest Book can be completed through missions on Lumia Island.
+Shop/Desc/S16_AFTERSCHOOL_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- After School Twins Quest Book\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned Quest Books in the Quest Book menu.
+Shop/Desc/S17_TROPICALDIMENSION_QUSET_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Tropical Dimension Abigail Quest Book\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned Quest Books in the Quest Book menu.\n*This Quest Book can be completed through missions on Lumia Island.
 Shop/Desc/S18_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contents]</color></b>\n\n- Matsuri A-Coin Quest Book\n(105,000 A-Coin upon completion)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*This A-Coin Quest Book is immediately activated upon purchase. \n*This Quest Book can be completed at any time.  \n*Check your owned A-Coin Quest Books in the Quest Book menu.
 Product/Name/S5_Lucky_White_LootToken_01┃3 Red Tokens
 Product/Name/S5_Lucky_White_ACoin_15┃15 A-Coin
@@ -12065,6 +12104,74 @@ PickupEvent/Name/SEASON8_SKIN_BOX_PICKUP┃New Skin Probability Bonus
 PickupEvent/Desc/SEASON8_SKIN_BOX_PICKUP┃A bonus probability has been applied to the new skins added to Skin Data Boxes.
 Product/Name/S6_LuckyMarble2025_Legion_Token_01┃10 Legion Tokens
 Product/Name/S6_LuckyMarble2025_ACoin_100┃A-Coin X 100
+PickupEvent/Name/Pickup_Emote_Voucher_251016┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251023┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251030┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251106┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251113┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251120┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251127┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251204┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251211┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251218┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_251225┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260101┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260108┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260115┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260122┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260129┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emote_Voucher_260205┃Random Emote Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251016┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251023┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251030┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251106┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251113┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251120┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251127┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251204┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251211┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251218┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_251225┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260101┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260108┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260115┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260122┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260129┃Random Profile Voucher
+PickupEvent/Name/Pickup_Emblem_Voucher_260205┃Random Profile Voucher
+PickupEvent/Desc/Pickup_Emote_Voucher_251016┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251023┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251030┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251106┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251113┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251120┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251127┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251204┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251211┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251218┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_251225┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260101┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260108┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260115┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260122┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260129┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emote_Voucher_260205┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251016┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251023┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251030┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251106┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251113┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251120┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251127┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251204┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251211┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251218┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_251225┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260101┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260108┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260115┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260122┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260129┃Items included reset every Thursday at 3 AM  (UTC).
+PickupEvent/Desc/Pickup_Emblem_Voucher_260205┃Items included reset every Thursday at 3 AM  (UTC).
 Skill/Group/Name/4000000┃Blink
 Skill/Group/LobbyDesc/4000000┃Teleport a short distance toward a targeted direction.\n\n<color=#ff3399>Upon enhancement:</color> Temporarily increases Movement Speed, avoiding collisions.
 Skill/Group/LobbyDesc/4512000┃Teleport a short distance toward a targeted direction.\n\n<color=#ff3399>Upon enhancement:</color> Temporarily increases Movement Speed, avoiding collisions.
@@ -19934,9 +20041,9 @@ Skill/LobbyDesc/4509000┃A meteorite will soon spawn in the targeted location, 
 Skill/LobbyDesc/4509010┃A meteorite will soon collide in the targeted location, dealing damage.
 Skill/Group/LobbyDesc/4509000┃A meteorite will soon spawn in the targeted location, dealing true damage.\nEnemies hit by meteorites are stunned for a short time.
 Skill/Group/LobbyDesc/4509010┃A meteorite will soon collide in the targeted location, dealing damage.
-Skill/Code/Desc/4509001┃A meteorite will soon spawn in the targeted location, dealing {4} true damage.
+Skill/Code/Desc/4509001┃A meteorite will soon spawn in the targeted location, dealing <color=white>{4}</color> true damage.
 Skill/Code/Coef/4509001┃A meteorite will soon spawn in the targeted location, dealing true damage.\nDamage: <color=white>{1}</color><color=#008000>(+Character Level*{2})</color>
-Skill/Code/Desc/4509011┃A meteorite will soon collide in the targeted location, dealing {4} damage.
+Skill/Code/Desc/4509011┃A meteorite will soon collide in the targeted location, dealing <color=white>{4}</color> damage.
 Skill/Code/Coef/4509011┃A meteorite will soon collide in the targeted location, dealing <color=white>{1}</color><color=#008000>(+Character Level * {2})</color> damage.
 CharacterState/Group/Name/4509000┃Meteor Strike
 CharacterState/Group/Desc/4509000┃You've been struck by a meteorite.
@@ -25259,7 +25366,7 @@ Cobalt/부활남은시간┃Press <color=#47D5FF>B</color> to visit the Synthesi
 분쇄 불가 알림┃Only equipment can be shredded.
 전설 장비 확정 포인트┃<color=#FFC62E>Mythic</color> Equipment Guaranteed Supply Points
 전설 장비 확정 포인트 설명┃Earn points based on the shredded item's rarity.\nWhen a certain number is reached, <color=yellow>Mythic</color> item draft is activated.
-유물 아이템 구입┃Tactical Skill
+유물 아이템 구입창 제목┃Tactical Skill
 유물 아이템 구입창 제목┃Choose a Tactical Skill.
 전술스킬을 선택하세요┃Choose a Tactical Skill.
 재고 소진┃Out of stock
