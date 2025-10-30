@@ -1161,6 +1161,18 @@ ToolTipType/Henry1_1Damage┃分針ダメージ量
 ToolTipType/Henry1_1ExtraDamage┃分針追加固定ダメージ
 ToolTipType/Henry1_2Damage┃時針ダメージ量
 ToolTipType/Henry1_2ExtraDamage┃時針追加固定ダメージ
+ToolTipType/BlairPassiveDualReinforceAttackDamage┃[双剣 基本攻撃強化] ダメージ量
+ToolTipType/BlairPassiveDualReinforceAttackApCoef┃[双剣 基本攻撃強化] 追加攻撃力係数(%)
+ToolTipType/BlairPassiveCombineReinforceAttackDamage┃[両剣 基本攻撃強化] ダメージ量
+ToolTipType/BlairPassiveCombineReinforceAttackApCoef┃[両剣 基本攻撃強化] 追加攻撃力係数(%)
+ToolTipType/BlairPassiveDualCoolDownReduce┃[双剣 基本攻撃強化] クールダウン減少量(%)
+ToolTipType/BlairPassiveCombineCoolDownReduce┃[両剣 基本攻撃強化] クールダウン減少量(%)
+ToolTipType/TargetMaxHpCoef┃対象の最大体力(%)
+ToolTipType/FirstAttackPower┃1打目 攻撃力係数(%)
+ToolTipType/SecondAttackPower┃2打目 攻撃力係数(%)
+ToolTipType/HealAdditionalAttackPower┃体力回復量の追加攻撃力係数(%)
+ToolTipType/BlairActive3CombineShield┃[連携攻撃] シールド量
+ToolTipType/BlairActive4VpRecovery┃的中時の気力回復量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(+余った弾1 * スキル増幅の{0}%)</color>
 DayNight/Day┃昼
 DayNight/Night┃夜
@@ -1383,6 +1395,7 @@ Loading/MatchingTeamMode/Squad┃ルミア島
 Loading/MatchingTeamMode/Cobalt┃コバルト・プロトコル
 Loading/MatchingTeamMode/LoneWolf┃ルミア島
 Loading/MatchingTeamMode/LoneWolfCustom┃ルミア島
+Loading/MatchingTeamMode/SquadRumbleCobalt┃UNION GAME
 MatchingModeType/Name/Practice┃練習モード
 MatchingModeType/Name/Test┃AI対戦
 MatchingModeType/Name/Normal┃一般対戦
@@ -1764,6 +1777,7 @@ Skin/Name/1071002┃運命の青い約束 ケネス
 Skin/Name/1072000┃カティア
 Skin/Name/1072001┃夜烏カティア
 Skin/Name/1072002┃訓練所所長カティア
+Skin/Name/1072003┃カフェスタッフ カティア
 Skin/Name/1073000┃シャーロット
 Skin/Name/1073001┃転校生シャーロット
 Skin/Name/1073002┃堕天使シャーロット
@@ -2106,6 +2120,7 @@ Skin/Desc/1071002┃あの眩しい花火が、失った色を取り戻してく
 Skin/Desc/1076002┃この指に結ばれた赤い鎖が、いつか必ず私たちを会わせてくれるはず...
 Skin/Desc/1011006┃みんな楽しんでいるようで何よりです。招待した甲斐がありましたね。
 Skin/Desc/1049005┃修練に終わりはないって言うけど、今回だけは成果を見せる番だ！
+Skin/Desc/1072003┃注文はこいつに、チップは僕に。
 Collection/Name/11001┃すべては娘のため…
 Collection/Name/11002┃ピクセルアートは…好き…？
 Collection/Name/11003┃彷徨う魂に救済を
@@ -3746,7 +3761,7 @@ SP 재생┃スタミナ再生
 모드사용가능여부┃使用可能モード
 모드사용불가┃現在モードで使用できないアイテムがあります。
 부활시아이템소멸┃<color=#B90005>急速再生後、インベントリからなくなる</color>アイテムです。
-드론 전송 필요 크레딧┃遠隔ドローン呼び出しクレジット : <color=#F4FF63>{0}</color> (+{1})
+드론 전송 필요 크레딧┃遠隔ドローン呼び出しクレジット : <color=#F4FF63>{0}</color>
 전송 콘솔 필요 크레딧┃Kiosk必要クレジット : <color=#F4FF63>{0}</color>
 VLS_Wait_Guest_Connect┃Hostとつながりました。
 VLS_Wait_Guest_Breakaway┃右クリックで離脱
@@ -3888,6 +3903,37 @@ Replay 로드 에러┃問題が発生してリプレイすることができま
 Replay 게임 종료 확인 안됨┃ゲームが終了していないため、リプレイ再生ができません。
 리플레이팝업설명┃「リプレイ(Beta)注意事項」\n- リプレイはゲームが完全に終了してから5分後に確認できます。\n- 前のバージョン実行時、ロード中停止する現象などが発生することがあり、この場合にはゲームを終了させた後に再実行する必要があります。
 리플레이 불가 모드┃現在このモードはリプレイ機能を使用できません。
+Replay/KeyGuide┃ガイド [F12]
+Replay/Group/Play┃再生
+Replay/PlayGroup/PlayAndStop┃再生/一時停止
+Replay/PlayGroup/Skip┃スキップ
+Replay/PlayGroup/Reverse┃巻き戻し
+Replay/PlayGroup/PlayFast┃再生速度を速くする
+Replay/PlayGroup/PlaySlow┃再生速度を遅くする
+Replay/Group/Select┃選択
+Replay/SelectGroup/SelectTeam┃チーム選択
+Replay/SelectGroup/SelectMember┃チーム員選択
+Replay/Group/CameraMove┃カメラ移動
+Replay/CameraMoveGroup/MoveWickline┃カメラ視点：ウィクライン
+Replay/CameraMoveGroup/MoveLumi┃カメラ視点：LUMI
+Replay/CameraMoveGroup/MoveBori┃カメラ視点：B0-R1
+Replay/CameraMoveGroup/MoveTreeOfLife┃カメラ視点：生命の木
+Replay/CameraMoveGroup/MoveMeteorite┃カメラ視点：隕石
+Replay/CameraMoveGroup/MoveMythicSupplyBox┃カメラ視点：補給箱（神話等級）
+Replay/CameraMoveGroup/MoveEpicSupplyBox┃カメラ視点：補給箱（英雄等級）
+Replay/CameraMoveGroup/MovePlaceInBattle┃カメラ視点：現在戦闘中の場所
+Replay/CameraMoveGroup/MoveRestrictedArea┃カメラ視点：臨時セーフゾーン
+Replay/CameraMoveGroup/CameraZoomIn┃観戦カメラズームイン
+Replay/CameraMoveGroup/CameraZoomOut┃観戦カメラズームアウト
+Replay/CameraMoveGroup/MoveCharacter┃キャラクター移動
+Replay/Group/Marking┃表示/表記
+Replay/MarkingGroup/SwitchKDAandCredit┃KDA <-> クレジット 表示転換
+Replay/MarkingGroup/SwitchAllVision┃全視界に転換
+Replay/MarkingGroup/SwitchSelectVision┃選択した対象の視界に転換
+Replay/MarkingGroup/MarkOccupyTeam┃保安コンソール＆カメラ占領チーム表示
+Replay/MarkingGroup/MarkRemainingExplosiveTimer┃爆発タイマー表示
+Replay/MarkingGroup/SwitchMouseCursor┃マウスカーソル On/Off
+Replay/KeyGuideNotice┃入力されているキーを変更する場合、該当する機能は使用できません。
 ReportType/INTENTIONAL_IDLE┃ゲーム放置/AFK
 ReportType/VERBAL_HARASSMENT┃言語暴力(悪口など)
 ReportType/ASSIST_OPPOSING_TEAM┃意図的なチーミング行為
@@ -4953,6 +4999,7 @@ VPad 태그 별 아이템 추천 로직 설명┃目標アイテムを<color=#b2
 원격 드론 호출 개수/상관 없음┃関係なし
 원격 드론 호출 개수/사용┃使用する
 원격 드론 호출 개수/사용 안 함┃使用しない
+경로 제외 지역 설정┃ルート除外地域設定
 경로 제외 지역 설정 열기┃ルート除外地域設定表示
 경로 제외 지역 설정 닫기┃ルート除外地域設定非表示
 기타 설정┃その他設定
@@ -8176,6 +8223,11 @@ Emotion_S9_Attend_Garnet_2076007┃運命の赤い約束 ガーネット Hi
 Emotion_S8_UnionReward_Adina_2052008┃GG、アディナ ありがとう
 Emotion_Niah_Win_2081008┃ニアの勝ち
 Emotion_Mirka_2085001┃ミルカ グルルル...
+Emotion_Blair01_NP┃一気にかかってきな ブレア
+Emotion_Blair02_NP┃よこしな ブレア
+Emotion_Blair03_NP┃勝手にすれば？ ブレア
+Emotion_Blair04_NP┃失せろ ブレア
+Emotion_SNS_Blair_2084005┃何？ ブレア
 Event_B0R1_3146┃B0-R1 おいしそう！
 Emotion_EsportsPack_Garnet_2076008┃運命の赤い約束 ガーネット 何して遊ぶ？
 ItemType/EMBLEM_MARK/Name┃プロフィールアイコン
@@ -8772,6 +8824,7 @@ EMBLEM_MARK_EVENT_103222┃SEASON 7 CHAMPION ROMATIC
 EMBLEM_MARK_EVENT_103223┃SEASON 7 CHAMPION BUM
 EMBLEM_MARK_EVENT_103224┃運命の赤い約束 ガーネット Hi アイコン
 EMBLEM_MARK_EVENT_103225┃鬼火に惑わされし イアン ピース アイコン
+EMBLEM_MARK_EVENT_103226┃何？ ブレア アイコン
 EMBLEM_MARK_ERPASS_104001┃氷の結晶アイコン
 EMBLEM_MARK_ERPASS_104002┃プレゼントする木アイコン
 EMBLEM_MARK_ERPASS_104003┃赤い鼻アイコン
@@ -11288,6 +11341,10 @@ Product/Name/ThanksGiving_Special_2025_Pack_01┃ワイルドカード感謝祭�
 Product/Name/ThanksGiving_Special_2025_Pack_02┃ワイルドカード感謝祭パッケージⅡ
 Product/Name/ThanksGiving_Special_2025_Pack_03┃ワイルドカード感謝祭パッケージⅢ
 Product/Name/2025_S8_Event_EpicSkinDesignBox_01┃秋のお月見パッケージ
+Product/Name/S9_Blair_Emote_Pack_01┃ブレアエモートパッケージ
+Product/Name/EVENT_NPASS_S9_Premium_Token_1022┃S9 プレミアムトークンブック
+Product/Name/EVENT_NPASS_S9_Basic_Token_1023┃S9 ベーシックトークンブック
+Product/Name/EVENT_NPASS_S9_AllInOne_1024┃All in Oneクエストブック
 Shop/Desc/Aya_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Hyunwoo_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の56%が払い戻され、メールボックスに支給されます。
 Shop/Desc/Adriana_ComboPack_01┃スキン1種\nエモート4種\n\nすでに所持しているアイテムが含まれた場合には販売価格(単品)の58%が払い戻され、メールボックスに支給されます。
@@ -11601,6 +11658,7 @@ Shop/Desc/ThanksGiving_Special_2025_Pack_01┃<b><color=#FFBB00>[内容]</color>
 Shop/Desc/ThanksGiving_Special_2025_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- [スキン専用] ワイルドカード(レア) 1個\n- ワイルドカード(レア) 2個\n- スプラッシュトークン 15個\n- ER Point Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」で使用できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/ThanksGiving_Special_2025_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- [スキン専用] ワイルドカード(英雄) 1個\n- ワイルドカード(英雄) 1個\n- エモート選別カード3個\n- プロフィール選別カード3個\n- スプラッシュトークン 50個\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」で使用できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
 Shop/Desc/2025_S8_Event_EpicSkinDesignBox_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 英雄スキンピースボックス 1個\n- データキー 1個\n- A-Coin Boost(12時間)\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ 購入した商品は「製作所」で使用できます。\n※ 購入と同時に適用されるBoostアイテムが含まれている場合、払い戻しできません。
+Shop/Desc/S9_Blair_Emote_Pack_01┃新しく発売されたブレアのエモート4種を割引価格で手に入れましょう！\n\n<b><color=#FFBB00>[内容]</color></b>\n- ブレアエモート 4種\n\n<b><color=#F15F5F>[ご購入前の注意事項]</color></b>\n※ すでに所持している商品が含まれている場合、購入価格が調整されます。\n※ 購入した商品はメールボックスではなく、「コレクション」にすぐに適用されます。
 Product/Name/SEASON_PASS_S5┃シーズン5パック
 Shop/Desc/SEASON_PASS_S5┃シーズン5にリリースされる商品をお得な価格で事前購入してみてください!
 Product/Name/SEASON_PASS_S6┃シーズン6パック
@@ -11847,6 +11905,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最大25個のアカ�
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃<color=#ffdf72>様々なアイテム</color><color=#B2EBF4>を獲得できるクエストブックです。\n商品を購入すると、レベルに応じて報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに100ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはクエストブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>最大75個のスプラッシュトークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>最大25個のスプラッシュトークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S9_Premium_Token_1022┃<color=#ffdf72>最大75個の祭りトークン</color><color=#B2EBF4>を獲得できるプレミアムトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
+Shop/Desc/EVENT_NPASS_S9_Basic_Token_1023┃<color=#ffdf72>最大25個の祭りトークン</color><color=#B2EBF4>を獲得できるベーシックトークンブックです。\n商品を購入すると、報酬を獲得できます。</color>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに10ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはトークンブック購入後に購入できます。
 Shop/Desc/EVENT_NPASS_S9_AllInOne_1024┃<color=#ffdf72>様々なアイテム</color><color=#B2EBF4>を獲得できるクエストブックです。\n商品を購入すると、レベルに応じて報酬を獲得できます。</color></size>\n\n<size=18>[レベルポイント]</size>\nレベルを上げるためには、1レベルごとに100ポイントが必要です。 ミッションを達成したり、レベルポイントを購入してレベルを上げることができます。(1ポイントあたり2NP)\nレベルポイントはクエストブック購入後に購入できます。
 Season1000/Name┃1周年記念クエストブック
 Season1001/Name┃クムドリ&クムスニクエストブック
@@ -11868,6 +11928,9 @@ Season1018/Name┃S8 プレミアムトークンブックⅡ
 Season1019/Name┃S8 ベーシックトークンブックⅡ
 Season1020/Name┃レニベアクエストブック
 Season1021/Name┃秋の感謝祭記念贈り物クエストブック
+Season1022/Name┃S9 プレミアムトークンブック
+Season1023/Name┃S9 ベーシックトークンブック
+Season1024/Name┃All in Oneクエストブック
 Season2000/Name┃1周年記念A-Coinクエストブック
 Season2001/Name┃バカンス A-Coinクエストブック
 Season2002/Name┃武装メイド A-Coinクエストブック
@@ -14578,10 +14641,10 @@ Mission/1040301/1┃<color=#2AC0FF>ステーキ</color>アイテム獲得
 Mission/1040302/1┃<color=#2AC0FF>ステーキ</color>アイテム獲得
 Mission/1040401/1┃<color=#2AC0FF>ポテトフライ</color>アイテム獲得
 Mission/1040402/1┃<color=#2AC0FF>ポテトフライ</color>アイテム獲得
-Mission/1040501/1┃<color=#D05EFF>ムーンストーン</color>アイテム獲得
-Mission/1040502/1┃<color=#D05EFF>ムーンストーン</color>アイテム獲得
-Mission/1040503/1┃<color=#D05EFF>ムーンストーン</color>アイテム獲得
-Mission/1040504/1┃<color=#D05EFF>ムーンストーン</color>アイテム獲得
+Mission/1040501/1┃<color=#D05EFF>生命の木</color>アイテム獲得
+Mission/1040502/1┃<color=#D05EFF>生命の木</color>アイテム獲得
+Mission/1040503/1┃<color=#D05EFF>生命の木</color>アイテム獲得
+Mission/1040504/1┃<color=#D05EFF>生命の木</color>アイテム獲得
 Mission/1040601/1┃<color=#D05EFF>隕石</color>アイテム獲得
 Mission/1040602/1┃<color=#D05EFF>隕石</color>アイテム獲得
 Mission/1040603/1┃<color=#D05EFF>隕石</color>アイテム獲得
@@ -15566,6 +15629,8 @@ CharacterState/Group/Name/1012100┃三災
 CharacterState/Group/Desc/1012100┃ヘジンの三災にかかっています。
 CharacterState/Group/Name/1012110┃三災 - 恐怖
 CharacterState/Group/Desc/1012110┃恐怖状態になりました。
+CharacterState/Group/Name/1012130┃三災免疫
+CharacterState/Group/Desc/1012130┃三災にかかりません。
 CharacterState/Group/Name/1012300┃吸霊符 - 移動速度減少
 CharacterState/Group/Desc/1012300┃吸霊符の範囲内にいるため、移動速度が減少します。
 CharacterState/Group/Name/1012500┃五大明王の陣 - 移動速度減少
@@ -16148,6 +16213,7 @@ CharacterState/Group/Name/1027420┃パルススティング-沈黙
 CharacterState/Group/Name/1027430┃パルススティング-攻撃速度増加
 CharacterState/Group/Name/1027500┃精密爆撃-移動速度減少
 CharacterState/Group/Name/1027810┃撹乱-攻撃速度増加
+CharacterState/Group/Name/1027820┃撹乱-挑発
 CharacterState/Group/Desc/1027110┃潜入状態です。
 CharacterState/Group/Desc/1027120┃移動速度が増加しました。
 CharacterState/Group/Desc/1027150┃武器を変更できます。
@@ -16162,6 +16228,7 @@ CharacterState/Group/Desc/1027420┃パルススティングにより沈黙状�
 CharacterState/Group/Desc/1027430┃攻撃速度が増加しました。
 CharacterState/Group/Desc/1027500┃精密爆撃により移動速度が減少しました。
 CharacterState/Group/Desc/1027810┃攻撃速度が増加しました。
+CharacterState/Group/Desc/1027820┃撹乱によって挑発されました。
 Skill/Group/Evolution/Name/1027200┃トンファー補給箱
 Skill/Group/Evolution/Desc/1027200┃トンファー武器を選択して獲得できます。
 Skill/Group/Evolution/Name/1027300┃両手剣補給箱
@@ -16254,12 +16321,12 @@ Skill/Group/Name/1030200┃召し上がれ！
 Skill/Group/Name/1030300┃みんな集中！
 Skill/Group/Name/1030400┃On Air!
 Skill/Group/Name/1030500┃カロリーシールド
-Skill/Group/Desc/1030100┃<color=green>固有持続効果：</color>Elevenは<color=#2ac0ff>ポテトフライ</color>と<color=#35ff94>コーラ</color>を調合して<color=yellow>Elevenセット</color>を製作することができます。\n\nElevenの基本スキルが敵に的中するたびに<color=#8EF165>対象の最大体力の{0}</color>の体力を回復できるElevenバーガーを地面に{2}つ生成します。
+Skill/Group/Desc/1030100┃<color=green>固有持続効果：</color>Elevenは<color=#2ac0ff>パン</color>と<color=#35ff94>肉</color>を調合して<color=yellow>Elevenセット</color>を製作することができます。\n\nElevenの基本スキルが敵に的中するたびに<color=#8EF165>対象の最大体力の{0}</color>の体力を回復できるElevenバーガーを地面に{2}つ生成します。
 Skill/Group/Desc/1030200┃チャージ：Elevenがハンバーガーフォークを前方に振り下ろす準備をし、移動速度が{0}減少します。\n\n使用：Elevenがハンバーガーフォークを前方に振り下ろして敵に<color=white>{1}</color> ~ <color=white>{2}</color>のスキルダメージを追加で与え、{3}秒間敵の移動速度を{4} ~ {5}減少させます。
 Skill/Group/Desc/1030300┃チャージ：Elevenが敵を挑発する準備をします。受ける最終ダメージが{6}減少し、移動速度が{0}減少します。\n\n使用：Elevenがハンバーガーを持ち上げて範囲内の敵を{1} ~ {2}秒間挑発し、<color=white>{3}</color> ~ <color=white>{4}</color>のスキルダメージを与えます。また、ダメージ減少効果が{5}秒追加されます。
 Skill/Group/Desc/1030400┃チャージ：Elevenがハンバーガーフォークに乗って指定した地点にジャンプする準備をします。チャージ時間に比例して移動距離が増加します。\n\n使用：Elevenがハンバーガーフォークに乗って指定した地点にジャンプし、敵に<color=white>{0}</color> ~ <color=white>{1}</color>のスキルダメージを与えながら押し出します。飛んで行く間、Elevenはすべての妨害効果免疫状態になります。
 Skill/Group/Desc/1030500┃Elevenが{0}秒間<color=white>{1}</color>の体力を回復し、{2}秒ごとに周りの敵に<color=white>{3}</color>のスキルダメージを与えます。
-Skill/Group/Coef/1030100┃<color=green>固有持続効果：</color>Elevenは<color=#2ac0ff>ポテトフライ</color>と<color=#35ff94>コーラ</color>を調合して<color=yellow>Elevenセット</color>を製作できます。\n\nElevenの基本スキルが敵に的中するたびに<color=#8EF165>対象の最大体力の{0}</color>の体力を回復できるElevenバーガーを地面に{2}つ生成します。
+Skill/Group/Coef/1030100┃<color=green>固有持続効果：</color>Elevenは<color=#2ac0ff>パン</color>と<color=#35ff94>肉</color>を調合して<color=yellow>Elevenセット</color>を製作することができます。\n\nElevenの基本スキルが敵に的中するたびに<color=#8EF165>対象の最大体力の{0}</color>の体力を回復できるElevenバーガーを地面に{2}つ生成します。
 Skill/Group/Coef/1030200┃チャージ：Elevenがハンバーガーフォークを前方に振り下ろす準備をし、移動速度が{0}減少します。\n\n使用：Elevenがハンバーガーフォークを前方に振り下ろして敵に<color=white>{1}</color><color=#ffd775>(+攻撃力の{2})</color><color=#688a08>(+追加体力の{3})</color> ~ <color=white>{4}</color><color=#ffd775>(+攻撃力の{5})</color><color=#688a08>(+追加体力の{6})</color>のスキルダメージを追加で与え、{7}秒間敵の移動速度を{8} ~ {9}減少させます。
 Skill/Group/Coef/1030300┃チャージ：Elevenが敵を挑発する準備をします。受ける最終ダメージが{10}減少し、移動速度が{0}減少します。\n\n使用：Elevenがハンバーガーを持ち上げて範囲内の敵を{1} ~ {2}秒間挑発し、<color=white>{3}</color><color=#ffd775>(+攻撃力の{4})</color><color=#668a08>(+追加体力の{5})</color> ~ <color=white>{6}</color><color=#ffd775>(+攻撃力の{7})</color><color=#668a08>(+追加体力の{8})</color>のスキルダメージを与えます。また、ダメージ減少効果が{9}秒追加されます。
 Skill/Group/Coef/1030400┃チャージ：Elevenがハンバーガーフォークに乗って指定した地点にジャンプする準備をします。チャージ時間に比例して移動距離が増加します。\n\n使用：Elevenがハンバーガーフォークに乗って指定した地点にジャンプし、敵に<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color><color=#688a08>(+追加体力の{2})</color> ~ <color=white>{3}</color><color=#ffd775>(+攻撃力の{4})</color><color=#688a08>(+追加体力の{5})</color>のスキルダメージを与えながら押し出します。飛んで行く間、Elevenはすべての妨害効果免疫状態になります。
@@ -18781,6 +18848,8 @@ CharacterState/Group/Name/1082100┃剣心一如 - 流雲残影剣スタック
 CharacterState/Group/Desc/1082100┃流雲残影剣スタックを獲得しました。
 CharacterState/Group/Name/1082110┃剣心一如 - 基本攻撃強化
 CharacterState/Group/Desc/1082110┃シュリンの基本攻撃が強化し、 追加スキルダメージを与えます。
+CharacterState/Group/Name/1082210┃飛剣残影 - 回収
+CharacterState/Group/Desc/1082210┃飛剣を回収し、周りの敵に持続的にダメージを与えます。
 CharacterState/Group/Name/1082300┃無塵剣訣 - 受けるダメージ無効化・妨害効果免疫
 CharacterState/Group/Desc/1082300┃シュリンが妨害効果免疫状態になり、受けるダメージをすべて防ぎます。
 CharacterState/Group/Name/1082330┃無塵剣訣 - 移動速度減少
@@ -18828,6 +18897,66 @@ CharacterState/Group/Name/1083510┃時間再構築 - 気絶
 CharacterState/Group/Desc/1083510┃時間再構築によって気絶しました。
 CharacterState/Group/Name/1083520┃時間再構築 - 移動速度減少
 CharacterState/Group/Desc/1083520┃時間再構築エリアの中では移動速度が減少します。
+Skill/Group/Name/1084100┃ブレードシフト
+Skill/Group/Name/1084200┃ダブルクリーヴ / ダブルスウィープ
+Skill/Group/Name/1084210┃ダブルクリーヴ / ダブルスウィープ
+Skill/Group/Name/1084300┃抹殺 / ブレードストーム
+Skill/Group/Name/1084310┃抹殺 / ブレードストーム
+Skill/Group/Name/1084400┃スピンスラッシュ / カウンタースラッシュ
+Skill/Group/Name/1084410┃スピンスラッシュ / カウンタースラッシュ
+Skill/Group/Name/1084500┃XMS-5活性化 / エンドレスチェイス
+Skill/Group/Name/1084510┃XMS-5活性化 / エンドレスチェイス
+Skill/Group/Name/1084600┃シフトラッシュ
+Skill/LobbyDesc/1084100┃<color=green>持続効果：</color>ブレアが<color=white>双剣</color>を使用する場合、攻撃速度が増加し、基本攻撃が2回ずつ行われます。ブレアが<color=white>両剣</color>を使用する場合、基本攻撃の射程距離が増加し、基本攻撃は1回のみ行われます。\n\nブレアはレベル1から<color=white>シフトラッシュ</color>を使用して<color=white>双剣と両剣</color>に武器を切り替えることができます。武器を切り替えると、ブレアは<color=white>シフト</color>状態になり、次に使用する基本スキルが強化され、与えたダメージ量の一部を体力として回復します。攻撃が的中した場合には、気力を回復します。 \n<color=white>シフト</color>状態で使用したスキルは、もう一方の武器のスキルとクールダウンを共有しません。\n\nまた、ブレアがスキルを使用すると、次の基本攻撃が強化され、追加スキルダメージを与え、基本スキルの残りクールダウンが減少し、気力を回復します。\n\n<i>対象が野生動物の場合、体力回復効果が減少します。</i>
+Skill/Group/Desc/1084100┃<color=green>持続効果：</color>ブレアが<color=white>双剣</color>を使用する場合、攻撃速度が{0}増加し、基本攻撃が2回ずつ行われ、それぞれ<color=white>{1}</color>と<color=white>{2}</color>の基本攻撃ダメージを与えます。ブレアが<color=white>両剣</color>を使用する場合、基本攻撃の射程距離が{3}増加し、<color=white>{4}</color>の基本攻撃ダメージを与えます。両剣を使用する時は基本攻撃が1回のみ行われます。\n\nブレアはレベル1から<color=white>シフトラッシュ</color>を使用して<color=white>双剣と両剣</color>に武器を切り替えることができます。武器を切り替えると、ブレアは{5}秒間<color=white>シフト</color>状態になり、次に使用する基本スキルが強化され、与えたダメージ量の<color=white>{6}</color>を体力として回復します。攻撃が的中した場合には、気力を<color=white>{7}</color>回復します。 \n<color=white>シフト</color>状態で使用したスキルは、もう一方の武器のスキルとクールダウンを共有しません。\n\nまた、ブレアがスキルを使用すると、次の基本攻撃が強化され、<color=white>[双剣：それぞれ{8} | 両剣：{9}]</color>の追加スキルダメージを与え、基本スキルの残りクールダウンが<color=white>[双剣：それぞれ{10}ずつ | 両剣：{11}]</color>減少し、気力を<color=white>[双剣：それぞれ{12}ずつ | 両剣：{13}]</color>回復します。
+Skill/Group/Coef/1084100┃<color=green>持続効果：</color>ブレアが<color=white>双剣</color>を使用する場合、攻撃速度が{0}増加し、基本攻撃が2回ずつ行われ、それぞれ<color=#ffd775>攻撃力の{1} * (基本攻撃増幅)</color>と<color=#ffd775>攻撃力の{2} * (基本攻撃増幅)</color>の基本攻撃ダメージを与えます。ブレアが<color=white>両剣</color>を使用する場合、基本攻撃の射程距離が{3}増加し、<color=#ffd775>攻撃力の{4} * (基本攻撃増幅)</color>の基本攻撃ダメージを与えます。両剣を使用する時は基本攻撃が1回のみ行われます。\n\nブレアはレベル1から<color=white>シフトラッシュ</color>を使用して<color=white>双剣と両剣</color>に武器を切り替えることができます。武器を切り替えると、ブレアは{5}秒間<color=white>シフト</color>状態になり、次に使用する基本スキルが強化され、与えたダメージ量の<color=white>{6}</color><color=#ffd775>(+追加攻撃力の{7})</color><color=white>%</color>を体力として回復します。攻撃が的中した場合には、気力を<color=white>{8}</color>回復します。 \n<color=white>シフト</color>状態で使用したスキルは、もう一方の武器のスキルとクールダウンを共有しません。\n\nまた、ブレアがスキルを使用すると、次の基本攻撃が強化され、<color=white>[双剣：それぞれ{9}<color=#ffd775>(+追加攻撃力の{10})</color> | 両剣：{11}<color=#ffd775>(+追加攻撃力の{12})</color>]</color>の追加スキルダメージを与え、基本スキルの残りクールダウンが<color=white>[双剣：それぞれ{13}ずつ | 両剣：{14}]</color>減少し、気力を<color=white>[双剣：それぞれ{15}ずつ | 両剣：{16}]</color>回復します。
+Skill/Group/ExpansionTip/1084100┃<i>対象が野生動物の場合、体力回復効果が{0}に減少します。</i>
+Skill/LobbyDesc/1084200┃<color=white>双剣：</color>ブレアが双剣を勢いよく振り下ろしてスキルダメージを与えます。その後、左右に引き裂くように剣を振り、スキルダメージを与えます。\n\n<color=white>両剣：</color>ブレアが両剣を前方に2回大きくなぎ払い、それぞれスキルダメージを与えます。各攻撃が敵に的中した場合、体力を回復します。
+Skill/Group/Desc/1084200┃ブレアが双剣を勢いよく振り下ろして<color=white>{0}</color><color=#688A08>(+対象の最大体力の{1})</color>のスキルダメージを与えます。その後、左右に引き裂くように剣を振り、<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Group/Coef/1084200┃ブレアが双剣を勢いよく振り下ろして<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color><color=#688A08>(+対象の最大体力の{2}<color=#ffd775>(+追加攻撃力の{3})</color>%)</color>のスキルダメージを与えます。その後、左右に引き裂くように剣を振り、<color=white>{4}</color><color=#ffd775>(+追加攻撃力の{5})</color>のスキルダメージを与えます。
+Skill/LobbyDesc/1084210┃ブレアが両剣を前方に2回大きくなぎ払い、それぞれスキルダメージを与えます。各ダメージが敵に的中した場合には体力を回復します。
+Skill/Group/Desc/1084210┃ブレアが両剣を前方に2回大きくなぎ払い、それぞれ<color=white>{0}</color>と<color=white>{1}</color>のスキルダメージを与えます。各ダメージが敵に的中した場合には<color=white>{2}</color>の体力を回復します。
+Skill/Group/Coef/1084210┃ブレアが両剣を前方に2回大きくなぎ払い、それぞれ<color=white>{0}</color><color=#ffd775>(+攻撃力の{1})</color>と<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>\nのスキルダメージを与えます。各ダメージが敵に的中した場合には<color=white>{4}</color><color=#ffd775>(+追加攻撃力の{5})</color>の体力を回復します。
+Skill/LobbyDesc/1084300┃<color=white>双剣：</color>ブレアが前方に双剣を振り、スキルダメージを与えます。最初に的中した対象にはより高いダメージを与え、防御力を減少させます。\n\n<color=white>両剣：</color>ブレアが両剣を振り回し、しばらくの間指定した方向からのダメージに免疫状態になり、範囲内の敵に周期的にスキルダメージを与えます。
+Skill/Group/Desc/1084300┃ブレアが前方に双剣を振り、<color=white>{0}</color>のスキルダメージを与えます。最初に的中した対象には{1}増加したダメージを与え、{2}秒間防御力を{3}減少させます。
+Skill/Group/Coef/1084300┃ブレアが前方に双剣を振り、<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与えます。最初に的中した対象には{2}増加したダメージを与え、{3}秒間防御力を{4}減少させます。
+Skill/LobbyDesc/1084310┃ブレアが両剣を振り回し、しばらくの間指定した方向からのダメージに免疫状態になり、範囲内の敵に周期的にスキルダメージを与えます。
+Skill/Group/Desc/1084310┃ブレアが両剣を振り回し、{0}秒間指定した方向からのダメージに免疫状態になり、{1}秒ごとに範囲内の敵に<color=white>{2}</color>のスキルダメージを与えます。
+Skill/Group/Coef/1084310┃ブレアが両剣を振り回し、{0}秒間指定した方向からのダメージに免疫状態になり、{1}秒ごとに範囲内の敵に<color=white>{2}</color><color=#ffd775>(+攻撃力の{3})</color>のスキルダメージを与えます。
+Skill/LobbyDesc/1084400┃<color=white>双剣：</color>ブレアが双剣を振り回して円形範囲内の敵にスキルダメージを与えて移動速度を減少させます。\n<color=white>連携効果：</color><color=white>スピンスラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の移動速度を減少させます。\n\n<color=white>両剣：</color>ブレアが両剣を振り回して円形範囲内の敵にスキルダメージを与えてシールドを獲得します。\n<color=white>連携効果：</color><color=white>カウンタースラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の数に比例するシールドを獲得します。
+Skill/Group/Desc/1084400┃ブレアが双剣を振り回して円形範囲内の敵に<color=white>{0}</color>のスキルダメージを与えて移動速度を<color=white>{1}</color>減少させます。減少した移動速度は{2}秒にわたって元に戻ります。\n\n<color=white>連携効果：</color><color=white>スピンスラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の移動速度を{3}減少させます。減少した移動速度は{4}秒にわたって元に戻ります。
+Skill/Group/Coef/1084400┃ブレアが双剣を振り回して円形範囲内の敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与えて移動速度を<color=white>{2}</color>減少させます。減少した移動速度は{3}秒にわたって元に戻ります。\n\n<color=white>連携効果：</color><color=white>スピンスラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の移動速度を{4}減少させます。減少した移動速度は{5}秒にわたって元に戻ります。
+Skill/LobbyDesc/1084410┃<color=white>双剣：</color>ブレアが双剣を振り回して円形範囲内の敵にスキルダメージを与えて移動速度を減少させます。\n<color=white>連携効果：</color><color=white>スピンスラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の移動速度を減少させます。\n\n<color=white>両剣：</color>ブレアが両剣を振り回して円形範囲内の敵にスキルダメージを与えてシールドを獲得します。\n<color=white>連携効果：</color><color=white>カウンタースラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の数に比例するシールドを獲得します。
+Skill/Group/Desc/1084410┃ブレアが両剣を振り回して円形範囲内の敵に<color=white>{0}</color>のスキルダメージを与えて{1}秒間<color=white>{2}</color>のシールドを獲得します。\n\n<color=white>連携効果：</color><color=white>カウンタースラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の数に比例して{1}秒間<color=white>{3}</color>のシールドを獲得します。
+Skill/Group/Coef/1084410┃ブレアが両剣を振り回して円形範囲内の敵に<color=white>{0}</color><color=#ffd775>(+追加攻撃力の{1})</color>のスキルダメージを与えて{2}秒間<color=white>{3}</color><color=#ffd775>(+追加攻撃力の{4})</color>のシールドを獲得します。\n\n<color=white>連携効果：</color><color=white>カウンタースラッシュ</color>使用直後に<color=white>シフトラッシュ</color>を使用し、<color=white>連携攻撃</color>が成功した場合、的中した対象の数に比例して{2}秒間<color=white>{5}</color><color=#ffd775>(+追加攻撃力の{6})</color>のシールドを獲得します。(最大的中数：{7})
+Skill/Group/ExpansionTip/1084410┃<i><color=white>連携攻撃</color>で得たシールドは<color=white>シフトラッシュ</color>のレベルに応じて<color=white>[{0}/{1}/{2}/{3}]</color>のシールド量を獲得します。</i>
+Skill/LobbyDesc/1084500┃ブレアが一定時間強化され、VF覚醒者を<color=white>感知</color>できる状態になります。身体能力の上昇により気力回復量と攻撃速度が増加し、<color=white>ブレードシフト</color>の<color=white>シフト</color>状態で使用していないスキルにも体力回復効果が適用されます。\n\n<color=white>感知：</color>ブレアの視界範囲内にいる敵実験体に<color=white>感知マーク</color>を付与します。<color=white>感知マーク</color>のついた対象がブレアの視界範囲外に移動した場合、対象の方向が表示されます。<color=white>感知マーク</color>はブレアの<color=white>XMS-5活性化</color>が終了または対象がブレアから一定距離以上離れると解除されます。 \n\nブレアは<color=white>感知マーク</color>のついた対象の周辺に<color=white>エンドレスチェイス</color>を使用できます。\n\n<color=white>エンドレスチェイス：</color>ブレアがすべての気力を消耗して<color=white>感知マーク</color>のついた対象の周辺に素早く突進し、到着地点に消耗した気力に比例するスキルダメージを与えます。攻撃が的中した場合、気力を回復します。
+Skill/Group/Desc/1084500┃ブレアが{0}秒間強化され、VF覚醒者を<color=white>感知</color>できる状態になります。身体能力の上昇により気力回復量が{1}、攻撃速度が{8}増加し、<color=white>ブレードシフト</color>の<color=white>シフト</color>状態で使用していないスキルにも体力回復効果が適用されます。\n\n<color=white>感知：</color>ブレアの周り{2}範囲内の視界に映った敵実験体に<color=white>感知マーク</color>を付与します。<color=white>感知マーク</color>のついた対象がブレアの視界範囲外に移動した場合、対象の方向が表示されます。<color=white>感知マーク</color>はブレアの<color=white>XMS-5活性化</color>が終了または対象がブレアから{3}以上離れると解除されます。 \n\nブレアは{4}秒以内に<color=white>感知マーク</color>のついた対象の周辺に<color=white>エンドレスチェイス</color>を使用できます。\n\n<color=white>エンドレスチェイス：</color>ブレアがすべての気力を消耗して<color=white>感知マーク</color>のついた対象の周辺に素早く突進し、到着地点に<color=white>{5}</color><color=yellow>(+消耗した気力あたり{6})</color>のスキルダメージを与えます。攻撃が的中した場合、気力を{7}回復します。
+Skill/Group/Coef/1084500┃ブレアが{0}秒間強化され、VF覚醒者を<color=white>感知</color>できる状態になります。身体能力の上昇により気力回復量が{1}、攻撃速度が{9}増加し、<color=white>ブレードシフト</color>の<color=white>シフト</color>状態で使用していないスキルにも体力回復効果が適用されます。\n\n<color=white>感知：</color>ブレアの周り{2}範囲内の視界に映った敵実験体に<color=white>感知マーク</color>を付与します。<color=white>感知マーク</color>のついた対象がブレアの視界範囲外に移動した場合、対象の方向が表示されます。<color=white>感知マーク</color>はブレアの<color=white>XMS-5活性化</color>が終了または対象がブレアから{3}以上離れると解除されます。 \n\nブレアは{4}秒以内に<color=white>感知マーク</color>のついた対象の周辺に<color=white>エンドレスチェイス</color>を使用できます。\n\n<color=white>エンドレスチェイス：</color>ブレアがすべての気力を消耗して<color=white>感知マーク</color>のついた対象の周辺に素早く突進し、到着地点に<color=white>{5}</color><color=#ffd775>(+攻撃力の{6})</color><color=yellow>(+消耗した気力あたり{7})</color>のスキルダメージを与えます。攻撃が的中した場合、気力を{8}回復します。
+Skill/LobbyDesc/1084600┃ブレアが指定した方向に突進し、武器を<color=white>双剣または両剣</color>に切り替えます。\n\n<color=white>連携攻撃：</color><color=white>シフトラッシュ</color>は各スキルを発動した後、連携して使用することができます。連携して使用すると、突進の到着地点にスキルダメージを与え、与えたダメージ量の一部を体力として回復します。\n\nこのスキルは連続で使用する場合、消耗する気力が増加します。\n\n<i>このスキルでは壁を越えられません。</i>\n<i>対象が野生動物の場合、体力回復効果が減少します。</i>
+Skill/Group/Desc/1084600┃ブレアが指定した方向に突進し、武器を<color=white>双剣または両剣</color>に切り替えます。\n\n<color=white>連携攻撃：</color><color=white>シフトラッシュ</color>は各スキルを発動した後、連携して使用することができます。連携して使用すると、突進の到着地点に<color=white>{0}</color>のスキルダメージを与え、与えたダメージ量の<color=white>{1}</color>を体力として回復します。\n\nこのスキルは{2}秒以内に連続で使用する場合、消耗する気力が{3}増加します。
+Skill/Group/Coef/1084600┃ブレアが指定した方向に突進し、武器を<color=white>双剣または両剣</color>に切り替えます。\n\n<color=white>連携攻撃：</color><color=white>シフトラッシュ</color>は各スキルを発動した後、連携して使用することができます。連携して使用すると、突進の到着地点に<color=#ffd775>(+攻撃力の{1})</color>のスキルダメージを与え、与えたダメージ量の<color=white>{2}</color><color=#ffd775>(+追加攻撃力の{3})</color><color=white>%</color>を体力として回復します。\n\nこのスキルは{4}秒以内に連続で使用する場合、消耗する気力が{5}増加します。
+Skill/Group/ExpansionTip/1084600┃<i>このスキルでは壁を越えられません。</i>\n<i>対象が野生動物の場合、体力回復効果が{0}に減少します。</i>
+CharacterState/Group/Name/1084120┃ブレードシフト - シフト状態
+CharacterState/Group/Name/1084130┃ブレードシフト - 基本攻撃強化
+CharacterState/Group/Name/1084140┃シフトラッシュ - 気力消耗増加
+CharacterState/Group/Name/1084300┃抹殺 - 防御力減少
+CharacterState/Group/Name/1084400┃スピンスラッシュ - 移動速度減少
+CharacterState/Group/Name/1084410┃シフトラッシュ - 連携移動速度減少
+CharacterState/Group/Name/1084450┃カウンタースラッシュ - シールド
+CharacterState/Group/Name/1084460┃シフトラッシュ - シールド(強化)
+CharacterState/Group/Name/1084500┃XMS-5活性化 - 身体能力上昇
+CharacterState/Group/Name/1084530┃XMS-5活性化 - 感知
+CharacterState/Group/Desc/1084120┃ブレアの次の基本スキルが与えるダメージ量の一部を体力として回復し、攻撃が的中した場合には気力を回復します。
+CharacterState/Group/Desc/1084130┃ブレアの次の基本スキルが追加スキルダメージを与え、残りクールダウンが減少し、気力を回復します。
+CharacterState/Group/Desc/1084140┃連続で使用したため、武器スキルの気力消耗量が増加します。
+CharacterState/Group/Desc/1084300┃ブレアの抹殺によって防御力が減少します。
+CharacterState/Group/Desc/1084400┃ブレアのスピンスラッシュによって移動速度が減少します。
+CharacterState/Group/Desc/1084410┃ブレアのシフトラッシュによって移動速度が減少します。
+CharacterState/Group/Desc/1084450┃ブレアがカウンタースラッシュでシールドを獲得し、一定のダメージを吸収します。
+CharacterState/Group/Desc/1084460┃ブレアがシフトラッシュでシールドを獲得し、一定のダメージを吸収します。
+CharacterState/Group/Desc/1084500┃一時的にVF能力を覚醒し、身体能力が向上します。
+CharacterState/Group/Desc/1084530┃ブレアに感知されました。
 Skill/Group/Name/3015000┃マントと短剣
 Skill/Group/Name/3015100┃マントと短剣
 Skill/Group/Name/3016000┃受け流し
@@ -19209,7 +19338,7 @@ Skill/LobbyDesc/1029200┃レオンが指定した方向に水路を生成し、
 Skill/LobbyDesc/1029300┃レオンが自分と周りの味方にダメージを吸収するシールドを付与します。
 Skill/LobbyDesc/1029400┃レオンがキャストした後、その場で指定した地点に向かってダイビングします。ダイビングした後、飛び出る時、周りの敵にスキルダメージを与えて敵を空中に浮かせます。ダイビングする時、レオンは対象指定不可状態になり、飛び出る時には水溜りを生成します。
 Skill/LobbyDesc/1029500┃レオンが波を召喚します。レオンは波に乗って一緒に前進し、経路上の敵にスキルダメージを与え、敵は波が消える瞬間まで押し出されます。波に押し出された敵が壁にぶつかると敵にスキルダメージを与えて空中に浮かせます。
-Skill/LobbyDesc/1030100┃Elevenはポテトフライとコーラを調合してElevenセットを製作することができます。\n\nElevenの基本スキルが敵を的中するたびに体力を回復できるElevenバーガーを地面に生成します。Elevenバーガーは敵に踏まれると破壊されます。
+Skill/LobbyDesc/1030100┃Elevenは肉とパンを調合してElevenセットを製作することができます。\n\nElevenの基本スキルが敵を的中するたびに体力を回復できるElevenバーガーを地面に生成します。Elevenバーガーは敵に踏まれると破壊されます。
 Skill/LobbyDesc/1030200┃Elevenがハンバーガーフォークを前方に振り下ろして敵にダメージを与え、移動速度を減少させます。チャージ時間に比例してダメージ量と移動速度減少量が増加します。
 Skill/LobbyDesc/1030300┃Elevenがハンバーガーを持ち上げて範囲内の敵を挑発し、ダメージを与えます。チャージ中には受ける最終ダメージが減少し、この効果がスキル使用後にも一定時間継続されます。
 Skill/LobbyDesc/1030400┃Elevenがハンバーガーフォークに乗って指定した地点にジャンプし、敵にダメージを与えながら押し出します。チャージ時間に比例して移動距離とダメージ量が増加します。
@@ -20500,8 +20629,8 @@ CharacterState/Group/Name/6062000┃劫火の心臓
 CharacterState/Group/Desc/6062000┃黒炎竜の心臓が鳴り始め、周りの敵にダメージを与えて、実験体に与えたダメージの一部を体力として回復します。
 Item/Skills/6063001┃ファフニールの鱗
 Item/Skills/6063001/Name┃<color=yellow>ファフニールの鱗</color>
-Item/Skills/6063001/Body┃敵実験体から累積{0}のダメージを受けるたびに[鱗]スタックを1獲得します。[鱗]スタックは{1}秒間継続し、最大{2}スタックまで貯めることができます。対象が移動不可状態になると、[鱗]を追加で1スタック獲得します。\n[鱗]1スタックにつき防御力が<color=white>{3}</color>増加し、最大スタックになると、{4}秒間徐々に減少する<color=#688A08>{5}</color>のシールドを獲得し、移動速度が<color=white>{6}%</color>増加します。
-Item/Skills/6063001/Desc┃敵実験体から累積{0}のダメージを受けるたびに[鱗]スタックを1獲得します。[鱗]スタックは{1}秒間継続し、最大{2}スタックまで貯めることができます。対象が移動不可状態になると、[鱗]を追加で1スタック獲得します。\n[鱗]1スタックにつき防御力が<color=white>{3}</color>増加し、最大スタックになると、{4}秒間徐々に減少する<color=white>{5}</color><color=#688A08>(+追加体力の{6}%)</color>のシールドを獲得し、移動速度が<color=white>{7}%</color>増加します。
+Item/Skills/6063001/Body┃敵実験体から累積{0}のダメージを受けるたびに[鱗]スタックを1獲得します。[鱗]スタックは{1}秒間継続し、最大{2}スタックまで貯めることができます。移動不可状態になると、[鱗]を追加で1スタック獲得します。\n[鱗]1スタックにつき防御力が<color=white>{3}</color>増加し、最大スタックになると、{4}秒間徐々に減少する<color=#688A08>{5}</color>のシールドを獲得し、移動速度が<color=white>{6}%</color>増加します。
+Item/Skills/6063001/Desc┃敵実験体から累積{0}のダメージを受けるたびに[鱗]スタックを1獲得します。[鱗]スタックは{1}秒間継続し、最大{2}スタックまで貯めることができます。移動不可状態になると、[鱗]を追加で1スタック獲得します。\n[鱗]1スタックにつき防御力が<color=white>{3}</color>増加し、最大スタックになると、{4}秒間徐々に減少する<color=white>{5}</color><color=#688A08>(+追加体力の{6}%)</color>のシールドを獲得し、移動速度が<color=white>{7}%</color>増加します。
 CharacterState/Group/Name/6063000┃ファフニールの鱗
 CharacterState/Group/Desc/6063000┃防御力が増加します。
 CharacterState/Group/Name/6063010┃ファフニールの鱗 - 最大スタック
@@ -22686,6 +22815,12 @@ CharacterStoryHeight/83┃173cm
 CharacterStoryGender/83┃男性
 CharacterStoryTitle/83┃時間を戻したいと思ったことはないか？
 CharacterStoryDesc/83┃時間が止まってしまった時計屋。\n無表情で冷たい印象の彼は、感情を表に出すことがほとんどない。\nどこか他人行儀の話し方で、人とは常に距離を置こうとしている。\n\n遠い過去の昔、彼の人生は希望で満ちていた。\n親しい友、尊敬する師匠...\nそして、この世にたった一人だけの愛する妻。\n彼は、この幸せな日常がいつまでも続くと信じていた。\n\nしかし、その幸せだった日々は、突然の災難によって跡形もなく消えてしまった。\n泣き叫びながら絶望に落ちていた彼はVFを覚醒し、\n幾千もの時間を戻して愛する人を救おうとしたが、何一つ変わることはなかった。\n\nその後、彼の心は乾き、感情を失っていった。\n生きる理由を失った彼に残されたのは、色褪せた記憶のみ。\nしかし、その記憶さえも大切にしながら、彼は長い時間を一人で耐え続けてきた。\n自分までいなくなってしまうと、\nこの世に彼らを記憶する者は、誰もいなくなってしまうから。\n彼は、無駄な希望にすがりつつ、もがくように毎日を生きてきた。\nもう一度、奇跡が起こることを願って...\n\n時は過ぎ、アグライアが彼と接触した。\n彼らとの出会いから新たな可能性を見出したヘンリーは、\n何があっても、あの場所に戻ってみせると決意する。\n\n止まっていた彼の時間が、再び動き出す。\nあの美しい笑顔を、もう一度見るために。\n\n当時、妻の出産祝いに作っていた懐中時計。\n彼はその時計を未完成のまま、今もなお大切に持ち歩いている。
+CharacterStoryName/84┃ブレア・アッシュ
+CharacterStoryAge/84┃24歳
+CharacterStoryHeight/84┃170cm
+CharacterStoryGender/84┃女性
+CharacterStoryTitle/84┃この島に、何も残されないその日まで。
+CharacterStoryDesc/84┃化け物を倒すために、自ら化け物になった復讐者。\n島に来る前も、今も、常にVF覚醒者を探すことに執着している。\nVF暴走事故によって、たった一人の家族である父親が重傷を負って以来、\n彼女はVFに関わるあらゆるものを調べ続けてきた。\n\n彼女の父親は厳しく、怖い存在だった。\nしかし、母親を失った彼女にとって、頼れる唯一の存在であり、\n彼女の世界のすべてでもあった。\n\nきつい訓練や使う機会のなさそうな生存知識などを教わりながらも、\n彼女は従順に父に従ってきた。\nそれが、一人取り残される娘のために\n自分が知っていることをすべて教えようとする\n父親の不器用な愛情の形であるということを知っていたからだった。\n\nしかし、いつまでも自分を守り、いろんなことを教えてくれるはずの父親は、\n病院で目を覚ますことなく、途切れそうな命をつなぎとめるような状態になった。\nそして事件は、何者かによって静かにかき消されていた。\n\n彼女は今も、その日のことを後悔している。 \n後悔するたびに憎悪が増していき、何かを恨まずには耐えられなかった彼女は、\n事故に関する情報を一人で調べはじめ、\n自分が見た正体不明の超能力者に関わる情報にまで手をつけた。\n\nしかし、彼女の精神と肉体は次第に疲弊し、\n普通の体では耐えられない状態に至った。\nさらに、医者からもらった「鎮痛剤」の効果も薄れ、\n彼女は自分の体が限界に近づいていることに気付いた。\n\nすべてを諦め、一握りの灰となってこの世から消し去りたいと願ったその時、\n誰かが彼女に手を差し伸べた。\n\n\n...彼女は今も、その手が自分を救った救済の手だと信じている。
 CharacterPlayTip/1┃ジャッキーはターゲットにした敵をしつこく追いかけて虐殺し、そのたびにバースト能力が高まる連続殺人鬼です。
 CharacterPlayTip/2┃アヤは敵にスキルを的中させやすく、敵との距離を保つことのできるスキルを持つ、安定性の高い遠距離型実験体です。
 CharacterPlayTip/3┃フィオラはフェンシング選手らしく素早い動きで敵との距離を調節し、スキルを連続で的中させるたびに強力なダメージを与えます。
