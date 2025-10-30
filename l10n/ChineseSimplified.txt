@@ -1161,6 +1161,18 @@ ToolTipType/Henry1_1Damage┃分针伤害量
 ToolTipType/Henry1_1ExtraDamage┃分针额外真实伤害
 ToolTipType/Henry1_2Damage┃时针伤害量
 ToolTipType/Henry1_2ExtraDamage┃时针额外真实伤害
+ToolTipType/BlairPassiveDualReinforceAttackDamage┃[双剑普攻强化] 伤害量
+ToolTipType/BlairPassiveDualReinforceAttackApCoef┃[双剑普攻强化] 额外攻击力系数(%)
+ToolTipType/BlairPassiveCombineReinforceAttackDamage┃[双头剑普攻强化] 伤害量
+ToolTipType/BlairPassiveCombineReinforceAttackApCoef┃[双头剑普攻强化] 额外攻击力系数(%)
+ToolTipType/BlairPassiveDualCoolDownReduce┃[双剑普攻强化] 冷却缩减(%)
+ToolTipType/BlairPassiveCombineCoolDownReduce┃[双头剑普攻强化] 冷却缩减(%)
+ToolTipType/TargetMaxHpCoef┃目标体力上限(%)
+ToolTipType/FirstAttackPower┃1击攻击力系数(%)
+ToolTipType/SecondAttackPower┃2击攻击力系数(%)
+ToolTipType/HealAdditionalAttackPower┃体力恢复额外攻击力系数(%)
+ToolTipType/BlairActive3CombineShield┃[连携攻击] 护盾吸收量
+ToolTipType/BlairActive4VpRecovery┃命中时气力恢复量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(每剩1个弹匣*技能增幅的{0}%)</color>
 DayNight/Day┃白天
 DayNight/Night┃夜晚
@@ -1381,6 +1393,7 @@ Loading/MatchingTeamMode/Squad┃卢米亚岛
 Loading/MatchingTeamMode/Cobalt┃钴协议
 Loading/MatchingTeamMode/LoneWolf┃卢米亚岛
 Loading/MatchingTeamMode/LoneWolfCustom┃卢米亚岛
+Loading/MatchingTeamMode/SquadRumbleCobalt┃UNION GAME
 MatchingModeType/Name/Practice┃练习模式
 MatchingModeType/Name/Test┃AI 对战模式
 MatchingModeType/Name/Normal┃一般模式
@@ -1762,6 +1775,7 @@ Skin/Name/1071002┃青之宿命契约 肯尼思
 Skin/Name/1072000┃卡缇娅
 Skin/Name/1072001┃夜鸦 卡缇娅
 Skin/Name/1072002┃王牌教官 卡缇娅
+Skin/Name/1072003┃咖啡店兼职生 卡缇娅
 Skin/Name/1073000┃夏洛特
 Skin/Name/1073001┃转校生 夏洛特
 Skin/Name/1073002┃堕落天使 夏洛特
@@ -2104,6 +2118,7 @@ Skin/Desc/1071002┃希望那明亮的火焰，能替你找回失去的色彩。
 Skin/Desc/1076002┃缠绕在指尖的红色锁链，终将让我们相遇。
 Skin/Desc/1011006┃承蒙各位尽情享受，看来这次邀请没有白费啊。
 Skin/Desc/1049005┃虽说练习没有尽头，但这一次，正是展现成果的时候！
+Skin/Desc/1072003┃点单请找这位，小费给我就可以。
 Collection/Name/11001┃为了女儿，我可以付出一切！
 Collection/Name/11002┃你喜欢像素艺术吗？
 Collection/Name/11003┃拯救迷失的灵魂
@@ -2814,7 +2829,7 @@ Esc/Minimize┃最小化
 저장 후 나가기┃保存并退出
 추후 공개 예정입니다.┃稍后公开。
 편집 상태 알림 메시지┃编辑状态下无法移动。
-보관함 UI 숨기기 불가 상황 메시지┃登场动画期间无法使用该功能。
+보관함 UI 숨기기 불가 상황 메시지┃动画播放期间无法使用该功能。
 옵션┃设置
 해상도┃分辨率
 창 모드┃窗口模式
@@ -3744,7 +3759,7 @@ SP 재생┃耐力值再生
 모드사용가능여부┃可用模式
 모드사용불가┃存在当前模式下无法使用的物品。
 부활시아이템소멸┃该物品在<color=#B90005>快速再生时将消失。</color>
-드론 전송 필요 크레딧┃使用无人机配送所需荣誉值 : <color=#F4FF63>{0}</color> (+{1})
+드론 전송 필요 크레딧┃使用无人机配送所需荣誉值 : <color=#F4FF63>{0}</color> 
 전송 콘솔 필요 크레딧┃Kiosk所需荣誉值 : <color=#F4FF63>{0}</color>
 VLS_Wait_Guest_Connect┃已连接到Host
 VLS_Wait_Guest_Breakaway┃右键脱离
@@ -4951,6 +4966,7 @@ VPad 태그 별 아이템 추천 로직 설명┃<color=#b245ff>已完成</color
 원격 드론 호출 개수/상관 없음┃不限
 원격 드론 호출 개수/사용┃使用
 원격 드론 호출 개수/사용 안 함┃不使用
+경로 제외 지역 설정┃设置路径排除区域
 경로 제외 지역 설정 열기┃开启路径排除区域设置
 경로 제외 지역 설정 닫기┃关闭路径排除区域设置
 기타 설정┃其他设置
@@ -8178,7 +8194,13 @@ Emotion_S9_Attend_Garnet_2076007┃赤之宿命契约 盖瑞特 Hi~
 Emotion_S8_UnionReward_Adina_2052008┃迪娜的大拇指
 Emotion_Niah_Win_2081008┃妮娅 赢了！
 Emotion_Mirka_2085001┃米尔卡 嗷呜~
+Emotion_Blair01_NP┃布莱尔 一次解决
+Emotion_Blair02_NP┃布莱尔 交出来
+Emotion_Blair03_NP┃布莱尔 OK
+Emotion_Blair04_NP┃布莱尔 滚开
+Emotion_SNS_Blair_2084005┃布莱尔 看什么看？
 Event_B0R1_3146┃B0-R1 好吃！
+Emotion_EsportsPack_Garnet_2076008┃赤之宿命契约 盖瑞特 玩点什么呢？
 ItemType/EMBLEM_MARK/Name┃个人头像
 EMBLEM_MARK_FREE1┃Aglaia标志
 EMBLEM_MARK_SHOP_102002┃玄佑头像
@@ -8774,6 +8796,7 @@ EMBLEM_MARK_EVENT_103222┃SEASON 7 CHAMPION ROMATIC
 EMBLEM_MARK_EVENT_103223┃SEASON 7 CHAMPION BUM
 EMBLEM_MARK_EVENT_103224┃赤之宿命契约 盖瑞特 Hi~
 EMBLEM_MARK_EVENT_103225┃鬼火徊引 伊安 V
+EMBLEM_MARK_EVENT_103226┃布莱尔 看什么看？
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃礼物树
 EMBLEM_MARK_ERPASS_104003┃红鼻子
@@ -11295,6 +11318,10 @@ Product/Name/ThanksGiving_Special_2025_Pack_01┃中秋任意牌组合包1
 Product/Name/ThanksGiving_Special_2025_Pack_02┃中秋任意牌组合包2
 Product/Name/ThanksGiving_Special_2025_Pack_03┃中秋任意牌组合包3
 Product/Name/2025_S8_Event_EpicSkinDesignBox_01┃中秋特别礼包
+Product/Name/S9_Blair_Emote_Pack_01┃布莱尔表情组合包
+Product/Name/EVENT_NPASS_S9_Premium_Token_1022┃S9高级代币书
+Product/Name/EVENT_NPASS_S9_Basic_Token_1023┃S9基础代币书
+Product/Name/EVENT_NPASS_S9_AllInOne_1024┃全能任务书
 Shop/Desc/Aya_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还56%至游戏内信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款皮肤\n4款表情\n\n购买前已拥有的物品根据售价(单品)返还58%至游戏内信箱。
@@ -11608,6 +11635,7 @@ Shop/Desc/ThanksGiving_Special_2025_Pack_01┃<b><color=#FFBB00>[内容]</color>
 Shop/Desc/ThanksGiving_Special_2025_Pack_02┃<b><color=#FFBB00>[内容]</color></b>\n\n- [仅限皮肤]任意牌（稀有）x 1\n- 任意牌（稀有）x 2\n- 逐浪代币 x 15\n- ER积分 Boost(3日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所使用购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/ThanksGiving_Special_2025_Pack_03┃<b><color=#FFBB00>[内容]</color></b>\n\n- [仅限皮肤]任意牌（英雄）x 1\n- 任意牌（英雄）x 1\n- 表情精选补给券 x 3\n- 头像精选补给券 x 3\n- 逐浪代币 x 50\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所使用购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
 Shop/Desc/2025_S8_Event_EpicSkinDesignBox_01┃<b><color=#FFBB00>[内容]</color></b>\n\n- 英雄皮肤碎片箱 x 1\n- 开箱钥匙 x 1\n- A-Coin Boost (12小时)\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 可以在制作所使用购买的商品。\n※ 包含Boost的商品在购买后将立即激活，无法取消退款。
+Shop/Desc/S9_Blair_Emote_Pack_01┃可以使用优惠价格购买布莱尔4款表情。\n\n<b><color=#FFBB00>[内容]</color></b>\n- 布莱尔4款表情\n\n<b><color=#F15F5F>[注意事项]</color></b>\n※ 购买价格会根据已拥有的商品发生变化。\n※ 可以通过藏品确认购买的物品。
 Product/Name/SEASON_PASS_S5┃赛季包S5
 Shop/Desc/SEASON_PASS_S5┃以优惠价预购将在赛季S5发布的组合商品。
 Product/Name/SEASON_PASS_S6┃S6赛季包
@@ -11854,6 +11882,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最多可以获得25�
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃通过此任务书，可以获得<color=#ffdf72>多种物品</color><color=#B2EBF4>。\n购买商品后，可以通过提升等级获得对应的奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要100积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>最多可以获得75个逐浪代币</color><color=#B2EBF4>的高级代币书。\n购买商品后可以解锁奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>最多可以获得25个逐浪代币</color><color=#B2EBF4>的基础代币书。\n购买商品后可以解锁奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
+Shop/Desc/EVENT_NPASS_S9_Premium_Token_1022┃<color=#ffdf72>最多可以获得75个花火大会代币</color><color=#B2EBF4>的高级代币书。\n购买商品后可以解锁奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
+Shop/Desc/EVENT_NPASS_S9_Basic_Token_1023┃<color=#ffdf72>最多可以获得25个花火大会代币</color><color=#B2EBF4>的基础代币书。\n购买商品后可以解锁奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要10积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Shop/Desc/EVENT_NPASS_S9_AllInOne_1024┃通过此任务书，可以获得<color=#ffdf72>多种物品</color><color=#B2EBF4>。\n购买商品后，可以通过提升等级获得对应的奖励。</color>\n\n<size=18>[等级积分说明]</size>\n每级需要100积分，可以通过任务获取、或以每1个积分2NP的价格购买积分。\n购买代币书后可以购买积分。
 Season1000/Name┃一周年纪念任务书
 Season1001/Name┃梦精灵任务书
@@ -11875,6 +11905,9 @@ Season1018/Name┃赛季S8高级代币书Ⅱ
 Season1019/Name┃赛季S8基础代币书Ⅱ
 Season1020/Name┃雷妮贝尔任务书
 Season1021/Name┃中秋特别任务书
+Season1022/Name┃S9高级代币书
+Season1023/Name┃S9基础代币书
+Season1024/Name┃全能任务书
 Season2000/Name┃一周年A-Coin任务书
 Season2001/Name┃度假A-Coin任务书
 Season2002/Name┃战斗女仆A-Coin任务书
@@ -14476,10 +14509,10 @@ Mission/1040301/1┃获得<color=#2AC0FF>铁板牛排</color>
 Mission/1040302/1┃获得<color=#2AC0FF>铁板牛排</color>
 Mission/1040401/1┃获得<color=#2AC0FF>炸薯条</color>
 Mission/1040402/1┃获得<color=#2AC0FF>炸薯条</color>
-Mission/1040501/1┃获得 <color=#D05EFF>靛青月石</color>
-Mission/1040502/1┃获得 <color=#D05EFF>靛青月石</color>
-Mission/1040503/1┃获得 <color=#D05EFF>靛青月石</color>
-Mission/1040504/1┃获得 <color=#D05EFF>靛青月石</color>
+Mission/1040501/1┃获得<color=#D05EFF>生命树枝</color>
+Mission/1040502/1┃获得<color=#D05EFF>生命树枝</color>
+Mission/1040503/1┃获得<color=#D05EFF>生命树枝</color>
+Mission/1040504/1┃获得<color=#D05EFF>生命树枝</color>
 Mission/1040601/1┃获得 <color=#D05EFF>陨石</color>
 Mission/1040602/1┃获得 <color=#D05EFF>陨石</color>
 Mission/1040603/1┃获得 <color=#D05EFF>陨石</color>
@@ -15468,6 +15501,8 @@ CharacterState/Group/Name/1012100┃三灾
 CharacterState/Group/Desc/1012100┃陷入三灾的诅咒
 CharacterState/Group/Name/1012110┃三灾 - 恐惧
 CharacterState/Group/Desc/1012110┃陷入恐惧状态。
+CharacterState/Group/Name/1012130┃三灾消除
+CharacterState/Group/Desc/1012130┃无法陷入三灾的诅咒
 CharacterState/Group/Name/1012300┃吸灵符 - 移动速度减缓
 CharacterState/Group/Desc/1012300┃吸灵符范围内的敌人移动速度减少。
 CharacterState/Group/Name/1012500┃五大明王阵 - 移动速度减缓
@@ -16050,6 +16085,7 @@ CharacterState/Group/Name/1027420┃电脉回力镖 - 沉默
 CharacterState/Group/Name/1027430┃电脉回力镖 - 增加攻速
 CharacterState/Group/Name/1027500┃精准轰炸 - 减少移动速度
 CharacterState/Group/Name/1027810┃无间投影 - 增加攻速
+CharacterState/Group/Name/1027820┃无间投影 - 挑衅
 CharacterState/Group/Desc/1027110┃潜行中
 CharacterState/Group/Desc/1027120┃增加移动速度
 CharacterState/Group/Desc/1027150┃可变更武器
@@ -16064,6 +16100,7 @@ CharacterState/Group/Desc/1027420┃因电脉回力镖陷入沉默
 CharacterState/Group/Desc/1027430┃增加攻速
 CharacterState/Group/Desc/1027500┃因精准轰炸减少移动速度
 CharacterState/Group/Desc/1027810┃增加攻速
+CharacterState/Group/Desc/1027820┃因亚历克斯无间投影，陷入了挑衅状态。
 Skill/Group/Evolution/Name/1027200┃旋棍补给箱
 Skill/Group/Evolution/Desc/1027200┃可以选择旋棍武器进行领取。
 Skill/Group/Evolution/Name/1027300┃双手剑补给箱
@@ -16156,12 +16193,12 @@ Skill/Group/Name/1030200┃汉堡少女
 Skill/Group/Name/1030300┃开播啦！
 Skill/Group/Name/1030400┃汉堡骑越
 Skill/Group/Name/1030500┃美食风暴
-Skill/Group/Desc/1030100┃<color=green>独有被动效果</color> : Eleven将<color=#2ac0ff>炸薯条</color>和<color=#35ff94>可乐</color>组合在一起制作成<color=yellow>11号套餐</color>。\n\n每次基本技能命中时，都将在地上掉落{2}个可以恢复<color=#8EF165>目标体力上限{0}</color>的Eleven汉堡。
+Skill/Group/Desc/1030100┃<color=green>独有被动效果</color> : Eleven将<color=#2ac0ff>面包</color>和<color=#35ff94>肉</color>组合在一起制作成<color=yellow>11号套餐</color>。\n\n每次基本技能命中时，都将在地上掉落{2}个可以恢复<color=#8EF165>目标体力上限{0}</color>的Eleven汉堡。
 Skill/Group/Desc/1030200┃蓄力 : Eleven准备使用汉堡叉向下发起攻击，此时Eleven的移动速度减少{0}。\n\n使用 : Eleven使用汉堡叉向下发起攻击，造成<color=white>{1}</color>~<color=white>{2}</color>技能伤害，使敌人{3}秒间的移动速度减少{4}~{5}。
 Skill/Group/Desc/1030300┃蓄力 : Eleven准备挑衅敌人。承受的最终伤害减少{6}，移动速度降低{0}。\n\n使用 : Eleven挑衅范围内的敌人{1}~{2}秒，并造成<color=white>{3}</color> ~ <color=white>{4}</color>技能伤害。此外，伤害量减少效果将额外增加{5}秒。
 Skill/Group/Desc/1030400┃蓄力 : Eleven准备借助汉堡叉跳跃。根据蓄力时间增加跳跃距离。\n\n使用 : Eleven借助汉堡叉跳跃造成<color=white>{0}</color>~<color=white>{1}</color>技能伤害并推开目标。跳跃期间处于免疫所有负面效果的状态。
 Skill/Group/Desc/1030500┃Eleven{0}秒间恢复<color=white>{1}</color>的体力，每{2}秒对周围敌人造成<color=white>{3}</color>的技能伤害。
-Skill/Group/Coef/1030100┃<color=green>独有被动效果</color> : Eleven将<color=#2ac0ff>炸薯条</color>和<color=#35ff94>可乐</color>组合在一起制作成<color=yellow>11号套餐</color>。\n\n每次Eleven基本技能命中时，都将在地上掉落{2}个可以恢复<color=#8EF165>目标体力上限{0}</color>的Eleven汉堡。
+Skill/Group/Coef/1030100┃<color=green>独有被动效果</color> : Eleven将<color=#2ac0ff>面包</color>和<color=#35ff94>肉</color>组合在一起制作成<color=yellow>11号套餐</color>。\n\n每次基本技能命中时，都将在地上掉落{2}个可以恢复<color=#8EF165>目标体力上限{0}</color>的Eleven汉堡。
 Skill/Group/Coef/1030200┃蓄力 : Eleven准备使用汉堡叉向下发起攻击，此时Eleven的移动速度减少{0}。\n\n使用 : Eleven使用汉堡叉向下发起攻击，造成<color=white>{1}</color><color=#ffd775>(+攻击力{2})</color><color=#688a08>(+额外体力{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻击力{5})</color><color=#688a08>(+额外体力{6})</color>技能伤害，使敌人{7}秒间的移动速度减少{8}~{9}。
 Skill/Group/Coef/1030300┃蓄力 : Eleven准备挑衅敌人。承受的最终伤害减少{10}，移动速度降低{0}。\n\n使用 : Eleven挑衅范围内的敌人{1}~{2}秒，并造成<color=white>{3}</color><color=#ffd775>(+攻击力{4})</color><color=#668a08>(+额外体力{5})</color>~<color=white>{6}</color><color=#ffd775>(+攻击力{7})</color><color=#668a08>(+额外体力{8})</color>技能伤害。此外，伤害量减少效果将额外增加{9}秒。
 Skill/Group/Coef/1030400┃蓄力 : Eleven准备借助汉堡叉跳跃。根据蓄力时间增加跳跃距离。\n\n使用 : Eleven借助汉堡叉跳跃造成<color=white>{0}</color><color=#ffd775>(+攻击力{1})</color><color=#688a08>(+额外体力{2})</color>~<color=white>{3}</color><color=#ffd775>(+攻击力{4})</color><color=#688a08>(+额外体力{5})</color>技能伤害并推开目标。跳跃期间处于免疫所有负面效果的状态。
@@ -18683,6 +18720,8 @@ CharacterState/Group/Name/1082100┃剑道 - 流云残影剑叠层
 CharacterState/Group/Desc/1082100┃获得了流云残影剑叠层。
 CharacterState/Group/Name/1082110┃剑道 - 强化普攻
 CharacterState/Group/Desc/1082110┃雪琳下一次普攻得到了强化，将造成额外技能伤害。
+CharacterState/Group/Name/1082210┃剑影回旋 - 回收
+CharacterState/Group/Desc/1082210┃收回飞剑，持续对周围敌人造成伤害。
 CharacterState/Group/Name/1082300┃无尘剑诀 - 承受伤害无效&免疫所有负面效果
 CharacterState/Group/Desc/1082300┃雪琳免疫所有承受伤害和负面效果。
 CharacterState/Group/Name/1082330┃无尘剑诀 - 移动速度降低
@@ -18730,6 +18769,66 @@ CharacterState/Group/Name/1083510┃时序重铸域 - 晕厥
 CharacterState/Group/Desc/1083510┃因时序重铸域陷入晕厥。
 CharacterState/Group/Name/1083520┃时序重铸域 - 移动速度降低
 CharacterState/Group/Desc/1083520┃在时序重铸域内移动速度降低。
+Skill/Group/Name/1084100┃刃移
+Skill/Group/Name/1084200┃双重斩击 / 双重横扫
+Skill/Group/Name/1084210┃双重斩击 / 双重横扫
+Skill/Group/Name/1084300┃抹杀 / 刃舞风暴
+Skill/Group/Name/1084310┃抹杀 / 刃舞风暴
+Skill/Group/Name/1084400┃断裂斩 / 反击斩
+Skill/Group/Name/1084410┃断裂斩 / 反击斩
+Skill/Group/Name/1084500┃XMS-5启动 / 无尽追击
+Skill/Group/Name/1084510┃XMS-5启动 / 无尽追击
+Skill/Group/Name/1084600┃疾刃突进
+Skill/LobbyDesc/1084100┃<color=green>持续效果</color>：布莱尔的武器形态为<color=white>双剑形态</color>时，攻击速度增加，普攻将连续进行两次；当武器形态为<color=white>双头剑形态</color>时，普攻射程增加，普攻仅进行一次。\n\n布莱尔从1级开始即可使用<color=white>疾刃突进</color>，并可在<color=white>双剑&双头剑</color>两种武器形态中进行切换。切换武器形态时，将进入<color=white>切换</color>状态，强化下一个使用的基本技能，根据造成的伤害恢复部分体力，并在命中时恢复气力。在<color=white>切换</color>状态下使用的技能与另一武器形态相同技能栏不共享冷却。\n\n布莱尔使用技能后，将强化下一次普攻，造成额外技能伤害，缩减基本技能剩余冷却时间并恢复气力。\n\n<i>通过野生动物获得的体力恢复效果降低。</i>
+Skill/Group/Desc/1084100┃<color=green>持续效果</color>：布莱尔的武器形态为<color=white>双剑形态</color>时，攻击速度增加{0}，普攻将连续进行两次，分别造成<color=white>{1}</color>、<color=white>{2}</color>普攻伤害；当武器形态为<color=white>双头剑形态</color>时，普攻射程增加{3}，普攻造成<color=white>{4}</color>普攻伤害。\n\n布莱尔从1级开始即可使用<color=white>疾刃突进</color>，并可在<color=white>双剑&双头剑</color>两种武器形态中进行切换。切换武器形态时，将进入持续{5}秒的<color=white>切换</color>状态，强化下一个使用的基本技能，恢复造成伤害<color=white>{6}</color>的体力，并在命中时恢复<color=white>{7}</color>气力。在<color=white>切换</color>状态下使用的技能与另一武器形态相同技能栏不共享冷却。\n\n布莱尔使用技能后，将强化下一次普攻，造成<color=white>[双剑：每击{8} | 双头剑：{9}]</color>额外技能伤害，基本技能剩余冷却时间缩减<color=white>[双剑：每击{10} |双头剑：{11}]</color>并恢复<color=white>[双剑：每击{12} |双头剑：{13}]</color>气力。
+Skill/Group/Coef/1084100┃<color=green>持续效果</color>：布莱尔的武器形态为<color=white>双剑形态</color>时，攻击速度增加{0}，普攻将连续进行两次，分别造成<color=#ffd775>攻击力的{1} * (普攻增幅)</color>、<color=#ffd775>攻击力的{2} * (普攻增幅)</color>普攻伤害；当武器形态为<color=white>双头剑形态</color>时，普攻射程增加{3}，普攻造成<color=#ffd775>攻击力的{4} * (普攻增幅)</color>普攻伤害。\n\n布莱尔从1级开始即可使用<color=white>疾刃突进</color>，并可在<color=white>双剑&双头剑</color>两种武器形态中进行切换。切换武器形态时，将进入持续{5}秒的<color=white>切换</color>状态，强化下一个使用的基本技能，恢复造成伤害 <color=white>{6}</color><color=#ffd775>(+额外攻击力的{7})</color><color=white>%</color>的体力，并在命中时恢复<color=white>{8}</color>气力。在<color=white>切换</color>状态下使用的技能与另一武器形态相同技能栏不共享冷却。\n\n布莱尔使用技能后，将强化下一次普攻，造成<color=white>[双剑：每击{9}<color=#ffd775>(+额外攻击力的{10})</color> | 双头剑：{11}<color=#ffd775>(+额外攻击力的{12})</color>]</color>额外技能伤害，基本技能剩余冷却时间缩减<color=white>[双剑：每击{13} |双头剑：{14}]</color>并恢复<color=white>[双剑：每击{15} |双头剑：{16}]</color>气力。
+Skill/Group/ExpansionTip/1084100┃通过野生动物获得的体力恢复效果减少至{0}。
+Skill/LobbyDesc/1084200┃<color=white>双剑形态：</color>布莱尔使用双剑向前猛力斩下，对敌人造成技能伤害。随后横扫前方，再次造成技能伤害。\n\n<color=white>双头剑形态：</color>布莱尔使用双头剑向前方横扫两次，每次都对敌人造成技能伤害。每次命中敌人时，布莱尔都会恢复自身体力。
+Skill/Group/Desc/1084200┃布莱尔使用双剑向前猛力斩下，造成<color=white>{0}</color><color=#688A08>(+目标体力上限{1})</color>技能伤害。随后横扫前方，造成<color=white>{2}</color>技能伤害。
+Skill/Group/Coef/1084200┃布莱尔使用双剑向前猛力斩下，造成<color=white>{0}</color><color=#ffd775>(+额外攻击力{1})</color><color=#688A08>(+目标体力上限{2}<color=#ffd775>(+额外攻击力{3})</color>%)</color>的技能伤害。随后横扫前方，造成<color=white>{4}</color><color=#ffd775>(+额外攻击力{5})</color>的技能伤害。
+Skill/LobbyDesc/1084210┃布莱尔使用双头剑向前方横扫两次，每次都对敌人造成技能伤害。每次命中敌人时，布莱尔都会恢复自身体力。
+Skill/Group/Desc/1084210┃布莱尔使用双头剑向前方横扫两次，分别造成<color=white>{0}</color>、<color=white>{1}</color>的技能伤害。每次命中敌人时，布莱尔恢复<color=white>{2}</color>体力。
+Skill/Group/Coef/1084210┃布莱尔使用双头剑向前方横扫两次，分别造成<color=white>{0}</color><color=#ffd775>(+攻击力{1})</color>、 <color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的技能伤害。每次命中敌人时，布莱尔恢复<color=white>{4}</color><color=#ffd775>(+额外攻击力{5})</color>的体力。
+Skill/LobbyDesc/1084300┃<color=white>双剑形态：</color>布莱尔使用双剑横扫前方范围，对敌人造成技能伤害。首个命中的目标承受伤害增加，且防御力降低。\n\n<color=white>双头剑形态：</color>布莱尔挥动双头剑，短时间内对指定方向的伤害免疫，并周期性对范围内的敌人造成技能伤害。
+Skill/Group/Desc/1084300┃布莱尔使用双剑横扫前方范围，对敌人造成<color=white>{0}</color>技能伤害。对首个目标造成伤害增加{1}，并使其{2}秒内防御力降低{3}。
+Skill/Group/Coef/1084300┃布莱尔使用双剑横扫前方范围，对敌人造成<color=white>{0}</color><color=#ffd775>(+额外攻击力{1})</color>技能伤害。对首个目标造成伤害增加{2}，并使其{3}秒内防御力降低{4}。
+Skill/LobbyDesc/1084310┃布莱尔挥动双头剑，短时间内对指定方向的伤害免疫，并周期性对范围内的敌人造成技能伤害。
+Skill/Group/Desc/1084310┃布莱尔挥动双头剑，{0}秒内对指定方向的伤害免疫，每{1}秒对范围内的敌人造成<color=white>{2}</color>技能伤害。
+Skill/Group/Coef/1084310┃布莱尔挥动双头剑，{0}秒内对指定方向的伤害免疫，每{1}秒对范围内的敌人造成<color=white>{2}</color><color=#ffd775>(+攻击力{3})</color>的技能伤害。
+Skill/LobbyDesc/1084400┃<color=white>双剑形态：</color>布莱尔挥动双剑，对圆形范围内的目标造成技能伤害，降低其移动速度。\n<color=white>连携攻击</color>：使用<color=white>断裂斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将降低<color=white>连携攻击</color>命中目标的移动速度。\n\n<color=white>双头剑形态：</color>布莱尔挥动双头剑，对圆形范围内的目标造成技能伤害并获得护盾。\n<color=white>连携攻击</color>：使用<color=white>反击斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将根据<color=white>连携攻击</color>命中的目标数获得护盾。
+Skill/Group/Desc/1084400┃布莱尔挥动双剑，对圆形范围内的目标造成<color=white>{0}</color>技能伤害，使目标移动速度降低<color=white>{1}</color>。减少的移动速度将在{2}秒内恢复。\n\n<color=white>连携攻击</color>：使用<color=white>断裂斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将使<color=white>连携攻击</color>命中目标的移动速度降低{3}。减少的移动速度将在{4}秒内恢复。
+Skill/Group/Coef/1084400┃布莱尔挥动双剑，对圆形范围内的目标造成<color=white>{0}</color><color=#ffd775>(+额外攻击力{1})</color>的技能伤害，使目标移动速度降低<color=white>{2}</color>。减少的移动速度将在{3}秒内恢复。\n\n<color=white>连携攻击</color>：当使用<color=white>断裂斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将使<color=white>连携攻击</color>命中目标的移动速度降低{4}。减少的移动速度将在{5}秒内恢复。
+Skill/LobbyDesc/1084410┃<color=white>双剑形态：</color>布莱尔挥动双剑，对圆形范围内的目标造成技能伤害，降低其移动速度。\n<color=white>连携攻击</color>：使用<color=white>断裂斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将降低<color=white>连携攻击</color>命中目标的移动速度。\n\n<color=white>双头剑形态：</color>布莱尔挥动双头剑，对圆形范围内的目标造成技能伤害并获得护盾。\n<color=white>连携攻击</color>：使用<color=white>反击斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，将根据 <color=white>连携攻击</color>命中的目标数获得护盾。
+Skill/Group/Desc/1084410┃布莱尔挥动双头剑，对圆形范围内的目标造成<color=white>{0}</color>技能伤害并获得<color=white>{2}</color>护盾，护盾持续{1}秒。\n\n<color=white>连携攻击</color>：使用<color=white>反击斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，<color=white>连携攻击</color>每命中一个目标即可获得<color=white>{3}</color>的护盾，护盾持续{1}秒。
+Skill/Group/Coef/1084410┃布莱尔挥动双头剑，对圆形范围内的目标造成<color=white>{0}</color><color=#ffd775>(+额外攻击力{1})</color>技能伤害并获得<color=white>{3}</color><color=#ffd775>(+额外攻击力{4})</color>护盾，护盾持续{2}秒。\n\n<color=white>连携攻击</color>：使用<color=white>反击斩</color>后立即施放<color=white>疾刃突进</color>、成功触发<color=white>连携攻击</color>效果时，<color=white>连携攻击</color>每命中一个目标即可获得<color=white>{5}</color><color=#ffd775>(+额外攻击力{6})</color>的护盾，护盾持续{2}秒。（命中上限：{7}）
+Skill/Group/ExpansionTip/1084410┃<i>通过<color=white>连携攻击</color>获得的护盾，将根据<color=white>疾刃突进</color>等级获得<color=white>[{0}/{1}/{2}/{3}]</color>的护盾。</i>
+Skill/LobbyDesc/1084500┃布莱尔暂时进入强化状态，能够<color=white>探测</color>VF能力者。由于身体机能提升，布莱尔的气力恢复量和攻击速度增加，即使未使用<color=white>刃移</color>进行<color=white>切换</color>，也能获得体力恢复效果。\n\n<color=white>探测</color>：当敌方实验体出现在布莱尔视野可见范围时，将被赋予<color=white>探测</color>标记。带有<color=white>探测</color>标记的目标在布莱尔视野内不可见时，布莱尔可通过视觉效果确认目标的方向。布莱尔<color=white>XMS-5启动</color>技能结束或布莱尔与目标距离过远时，将解除赋予目标的<color=white>探测</color>效果。\n\n布莱尔可以在被<color=white>探测</color>目标周围施放<color=white>无尽追击</color>。\n\n<color=white>无尽追击</color>：布莱尔消耗全部气力，迅速突进至被<color=white>探测</color>目标周围，并在到达位置造成与消耗气力值成比例的技能伤害。命中目标时可以恢复气力。
+Skill/Group/Desc/1084500┃布莱尔进入持续{0}秒的强化状态，能够<color=white>探测</color>VF能力者。由于身体机能提升，布莱尔的气力恢复量增加{1}、攻击速度增加{8}，即使未使用<color=white>刃移</color>进行<color=white>切换</color>，也能获得体力恢复效果。\n\n<color=white>探测</color>：布莱尔{2}范围内出现视野范围可见的敌方实验体时，将赋予目标<color=white>探测</color>标记。带有<color=white>探测</color>标记的目标在布莱尔视野内不可见时，布莱尔可通过视觉效果确认目标的方向。布莱尔<color=white>XMS-5启动</color>技能结束或目标距离布莱尔超过{3}以上时，将解除赋予目标的<color=white>探测</color>效果。\n\n布莱尔在{4}秒内可以对被<color=white>探测</color>目标周围施放<color=white>无尽追击</color>。\n\n<color=white>无尽追击</color>：布莱尔消耗全部气力，迅速突进至被<color=white>探测</color>目标周围，并在到达位置造成<color=white>{5}</color><color=yellow>(+每消耗1气力*{6})</color>技能伤害。命中目标时可以恢复{7}气力。
+Skill/Group/Coef/1084500┃布莱尔进入持续{0}秒的强化状态，能够<color=white>探测</color>VF能力者。由于身体机能提升，布莱尔的气力恢复量增加{1}、攻击速度增加{9}，即使未使用<color=white>刃移</color>进行<color=white>切换</color>，也能获得体力恢复效果。\n\n<color=white>探测</color>：布莱尔{2}范围内出现视野范围可见的敌方实验体时，将赋予目标<color=white>探测</color>标记。带有<color=white>探测</color>标记的目标在布莱尔视野内不可见时，布莱尔可通过视觉效果确认目标的方向。布莱尔<color=white>XMS-5启动</color>技能结束或目标距离布莱尔超过{3}以上时，将解除赋予目标的<color=white>探测</color>效果。\n\n布莱尔在{4}秒内可以对被<color=white>探测</color>目标周围施放<color=white>无尽追击</color>。\n\n<color=white>无尽追击</color>：布莱尔消耗全部气力，迅速突进至被<color=white>探测</color>目标周围，并在到达位置造成<color=white>{5}</color><color=#ffd775>(+攻击力{6})</color><color=yellow>(+每消耗1气力*{7})</color>技能伤害。命中目标时可以恢复{8}气力。
+Skill/LobbyDesc/1084600┃布莱尔向指定方向突进，将武器形态切换为<color=white>双剑或双头剑</color>。\n\n<color=white>连携攻击</color>：<color=white>疾刃突进</color>可以在各技能攻击发动后衔接使用。连携使用时，将在突进终点位置造成技能伤害，并根据造成的伤害量恢复部分体力。\n\n连续使用该技能时，将增加消耗的气力。\n\n<i>此技能无法越过墙体。</i>\n<i>通过野生动物获得的体力恢复效果降低。</i>
+Skill/Group/Desc/1084600┃布莱尔向指定方向突进，将武器形态切换为<color=white>双剑或双头剑</color>。\n\n<color=white>连携攻击</color>：<color=white>疾刃突进</color>可以在各技能攻击发动后衔接使用。连携使用时，将在突进终点位置造成<color=white>{0}</color>技能伤害，并恢复造成伤害量<color=white>{1}</color>体力。\n\n{2}秒内连续使用该技能时，消耗的气力增加{3}。
+Skill/Group/Coef/1084600┃布莱尔向指定方向突进，将武器形态切换为<color=white>双剑或双头剑</color>。\n\n<color=white>连携攻击</color>：<color=white>疾刃突进</color>可以在各技能攻击发动后衔接使用。连携使用时，将在突进终点位置造成<color=#ffd775>(+攻击力{1})</color>的技能伤害，并恢复造成伤害量<color=white>{2}</color><color=#ffd775>(+额外攻击力{3})</color><color=white>%</color>的体力。\n\n{4}秒内连续使用该技能时，消耗的气力增加{5}。
+Skill/Group/ExpansionTip/1084600┃<i>此技能无法越过墙体。</i>\n<i>通过野生动物获得的体力恢复效果减少至{0}。</i>
+CharacterState/Group/Name/1084120┃刃移 - 切换状态
+CharacterState/Group/Name/1084130┃刃移 - 强化普攻
+CharacterState/Group/Name/1084140┃疾刃突进 - 消耗气力增加
+CharacterState/Group/Name/1084300┃抹杀 - 防御力降低
+CharacterState/Group/Name/1084400┃断裂斩 - 移动速度减少
+CharacterState/Group/Name/1084410┃疾刃突进 - 连携移动速度减少
+CharacterState/Group/Name/1084450┃反击斩 - 护盾
+CharacterState/Group/Name/1084460┃疾刃突进 - 护盾（强化）
+CharacterState/Group/Name/1084500┃XMS-5启动 - 身体机能提升
+CharacterState/Group/Name/1084530┃XMS-5启动 - 探测
+CharacterState/Group/Desc/1084120┃布莱尔下一次使用基本技能时，将根据造成的伤害恢复部分体力，并在命中时恢复气力。
+CharacterState/Group/Desc/1084130┃布莱尔下一次普攻将造成额外技能伤害，缩减剩余冷却时间、恢复气力。
+CharacterState/Group/Desc/1084140┃连续使用时将增加武器技能气力的消耗量。
+CharacterState/Group/Desc/1084300┃因布莱尔的抹杀技能防御力降低了。
+CharacterState/Group/Desc/1084400┃因布莱尔的断裂斩技能移动速度变缓。
+CharacterState/Group/Desc/1084410┃因布莱尔的疾刃突进技能移动速度变缓。
+CharacterState/Group/Desc/1084450┃布莱尔通过反击斩技能获得了护盾、吸收伤害。
+CharacterState/Group/Desc/1084460┃布莱尔通过疾刃突进技能获得了护盾、吸收伤害。
+CharacterState/Group/Desc/1084500┃VF觉醒、身体机能得到了提升。
+CharacterState/Group/Desc/1084530┃成为了布莱尔的探测目标。
 Skill/Group/Name/3015000┃斗篷和短剑
 Skill/Group/Name/3015100┃斗篷和短剑
 Skill/Group/Name/3016000┃格挡
@@ -19111,7 +19210,7 @@ Skill/LobbyDesc/1029200┃里昂向指定方向抛出一条水路，对命中的
 Skill/LobbyDesc/1029300┃里昂赋予自身及周围的队友护盾，吸收伤害。
 Skill/LobbyDesc/1029400┃里昂集中精神朝向指定位置原地潜水。潜水后从指定的水滩中跃出，造成技能伤害并将敌人悬空。里昂在潜水时处于无法指定目标的状态，并在浮出水面后生成水滩。
 Skill/LobbyDesc/1029500┃里昂召唤海浪，并乘风破浪前进，对路径上的敌人造成技能伤害并被海浪推离至海浪消失。若敌人被海浪冲撞至墙壁，将对敌人造成技能伤害并使其悬空。
-Skill/LobbyDesc/1030100┃Eleven可以将炸薯条和可乐组合成11号套餐。\n\n基本技能命中时，将在地上掉落能够恢复体力的汉堡。汉堡被敌人踩中时会被摧毁。
+Skill/LobbyDesc/1030100┃Eleven可以将面包和肉组合成11号套餐。\n\n基本技能命中时，将在地上掉落能够恢复体力的汉堡。汉堡被敌人踩中时会被摧毁。
 Skill/LobbyDesc/1030200┃Eleven蓄力使用汉堡叉向下重锤，造成技能伤害，并使敌人移动速度减少。根据蓄力时间增加伤害量和移动速度减少量。
 Skill/LobbyDesc/1030300┃Eleven蓄力后举起汉堡，挑衅周围的敌人并造成伤害。蓄力期间承受最终伤害减少，该效果在释放技能后将持续一段时间。
 Skill/LobbyDesc/1030400┃Eleven蓄力后乘着汉堡叉，跳到指定位置给周围的敌人造成伤害并推开敌人。根据蓄力时间增加跳跃距离和伤害量。
@@ -20402,8 +20501,8 @@ CharacterState/Group/Name/6062000┃灼火之心
 CharacterState/Group/Desc/6062000┃黑炎龙之心开始跳动。对周围敌人造成伤害，并按照对实验体造成的伤害恢复部分体力。
 Item/Skills/6063001┃法夫纳之鳞
 Item/Skills/6063001/Name┃<color=yellow>法夫纳之鳞</color>
-Item/Skills/6063001/Body┃每当累计承受敌人实验体{0}伤害时，将获得1层「鳞片」叠层。该效果可以维持{1}秒，且最多可以叠加至{2}层。使目标陷入无法移动状态时，将额外获得1层「鳞片」。每一个「鳞片」叠层可以增加<color=white>{3}</color>防御力。\n达到叠层上限时，将获得一个持续{4}秒且逐渐减弱的<color=#688A08>{5}</color>护盾，移动速度增加<color=white>{6}%</color>。
-Item/Skills/6063001/Desc┃每当累计承受敌人实验体{0}伤害时，将获得1层「鳞片」叠层。该效果可以维持{1}秒，且最多可以叠加至{2}层。使目标陷入无法移动状态时，将额外获得1层「鳞片」。每一个「鳞片」叠层可以增加<color=white>{3}</color>防御力。\n达到叠层上限时，将获得一个持续{4}秒且逐渐减弱的<color=white>{5}</color><color=#688A08>(+额外体力{6}%)</color>护盾，移动速度增加<color=white>{7}%</color>。
+Item/Skills/6063001/Body┃每当累计承受敌人实验体{0}伤害时，将获得1层「鳞片」叠层。该效果可以维持{1}秒，且最多可以叠加至{2}层。陷入无法移动状态时，将额外获得1层「鳞片」。每一个「鳞片」叠层可以增加<color=white>{3}</color>防御力。\n达到叠层上限时，将获得一个持续{4}秒且逐渐减弱的<color=#688A08>{5}</color>护盾，移动速度增加<color=white>{6}%</color>。
+Item/Skills/6063001/Desc┃每当累计承受敌人实验体{0}伤害时，将获得1层「鳞片」叠层。该效果可以维持{1}秒，且最多可以叠加至{2}层。陷入无法移动状态时，将额外获得1层「鳞片」。每一个「鳞片」叠层可以增加<color=white>{3}</color>防御力。\n达到叠层上限时，将获得一个持续{4}秒且逐渐减弱的<color=white>{5}</color><color=#688A08>(+额外体力{6}%)</color>护盾，移动速度增加<color=white>{7}%</color>。
 CharacterState/Group/Name/6063000┃法夫纳之鳞
 CharacterState/Group/Desc/6063000┃增加防御力。
 CharacterState/Group/Name/6063010┃法夫纳之鳞 - 叠层上限
@@ -22588,6 +22687,12 @@ CharacterStoryHeight/83┃173cm
 CharacterStoryGender/83┃男
 CharacterStoryTitle/83┃「你有想过……让时间倒流吗？」
 CharacterStoryDesc/83┃他是一位停滞在时间里的钟表匠。\n他总是一副面无表情、冷淡的模样，几乎从不流露情绪。\n他说话生硬、语调刻板，刻意与他人保持距离。\n\n但很久以前，他也曾拥有一个充满希望的世界。\n有亲密的朋友、敬爱的师父……\n还有这世上独一无二、他深爱的妻子。\n他曾以为，那段日子会永远持续下去。\n\n直到一场突如其来的灾难，将这一切彻底摧毁。\n在绝望中嘶吼的亨利觉醒了VF，他一次次回溯时间，\n试图挽回所爱之人，然而结局却始终未曾改变。\n\n从那之后，亨利的情感逐渐变得迟钝、干涸。\n失去了活下去的理由，他唯一剩下的，是那些早已褪色的记忆。\n即使这些回忆早已斑驳，他仍将它们视若珍宝。\n因为他知道，一旦自己也消失，便再无人记得他们曾存在过。\n于是他苦苦挣扎，依靠那虚无缥缈的希望，一天又一天地活了下来。\n他渴望着，奇迹能够再次降临。\n\n经过了一段漫长的时间，阿格莱亚主动找到了亨利。\n从他们身上看到新的可能性后，亨利下定了决心——\n不管发生什么，他都要回到那个地方。\n\n停滞许久的时间，终于再次开始流动。\n只为了，再次见到那张美丽的笑脸。\n\n他曾为纪念妻子分娩，亲手打造了一只怀表。\n至今，那只尚未完成的怀表仍被他珍藏着。
+CharacterStoryName/84┃布莱尔・阿什
+CharacterStoryAge/84┃24岁
+CharacterStoryHeight/84┃170cm
+CharacterStoryGender/84┃女
+CharacterStoryTitle/84┃「直到这个岛上的一切都消失为止。」
+CharacterStoryDesc/84┃为了追捕怪物，她逐渐化身为一个被复仇驱动的存在。\n无论是来到这座岛之前、还是现在，她一直都在拼命寻找某个VF觉醒者。\n\n那场VF失控事故，令她唯一的家人——父亲身受重伤。\n自那以后，她一直在调查与VF有关的一切。\n\n童年记忆中，父亲始终是个沉默而令人畏惧的人。\n逼迫她接受残酷的训练，教授那些看似永远用不上的生存技巧。\n但对于失去母亲的她而言，父亲就是她整个世界。\n是她唯一能依靠、相信的存在。\n她明白，那些看似冷酷的逼迫，其实都是一种笨拙的爱。\n父亲只是想在自己离开后，让女儿有能力独自活下去，于是将自己知道的一切尽数传授给她。\n\n那个总是保护她、教导她的父亲，如今却奄奄一息地躺在病床上。\n而那场事故，也被人无声地掩盖。\n\n布莱尔无数次懊悔那天的自己。\n每一次悔恨，都会在心底堆积成沉重的石块，压得她几乎无法呼吸。\n伴随悔恨而生的，是日益增长的憎恨，她无法在没有怨恨的世界里生存。\n\n从那天起，布莱尔开始独自调查和事故相关的一切。\n甚至调查起那个她亲眼见过、身份不明的超能力者。\n\n但她的身心正一点点被消耗殆尽。\n以普通人的身体去承受那种负荷几乎是不可能的，连医生给的止痛药似乎也在逐渐失去药效。\n\n她清楚地感到，自己的极限正在逼近。\n当她想要放下一切、像灰烬般从这个世界消失时——\n有人，向她伸出了手。\n\n布莱尔始终相信，那双手是将她从绝望中救出的救赎之手。
 CharacterPlayTip/1┃杰琪是一位连环杀人魔，无情地追击和屠杀目标，每次击杀时都能获得更强大的爆发力。
 CharacterPlayTip/2┃阿雅是一位具有较高稳定性的远程实验体。轻松使用技能从远处命中目标。
 CharacterPlayTip/3┃菲欧娜利用击剑选手的敏捷性，控制与敌人间的距离，每次连招技能命中时，都能造成更大的伤害。
