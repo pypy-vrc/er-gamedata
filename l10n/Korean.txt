@@ -1167,6 +1167,18 @@ ToolTipType/Henry1_1Damage┃분침 피해량
 ToolTipType/Henry1_1ExtraDamage┃분침 추가 고정 피해
 ToolTipType/Henry1_2Damage┃시침 피해량
 ToolTipType/Henry1_2ExtraDamage┃시침 추가 고정 피해
+ToolTipType/BlairPassiveDualReinforceAttackDamage┃[쌍검 기본공격 강화] 피해량
+ToolTipType/BlairPassiveDualReinforceAttackApCoef┃[쌍검 기본공격 강화] 추가 공격력 계수(%)
+ToolTipType/BlairPassiveCombineReinforceAttackDamage┃[쌍날검 기본공격 강화] 피해량
+ToolTipType/BlairPassiveCombineReinforceAttackApCoef┃[쌍날검 기본공격 강화] 추가 공격력 계수(%)
+ToolTipType/BlairPassiveDualCoolDownReduce┃[쌍검 기본공격 강화] 쿨다운 감소량(%)
+ToolTipType/BlairPassiveCombineCoolDownReduce┃[쌍날검 기본공격 강화] 쿨다운 감소량(%)
+ToolTipType/TargetMaxHpCoef┃대상 최대 체력(%)
+ToolTipType/FirstAttackPower┃1타 공격력 계수(%)
+ToolTipType/SecondAttackPower┃2타 공격력 계수(%)
+ToolTipType/HealAdditionalAttackPower┃체력 회복량 추가 공격력 계수(%)
+ToolTipType/BlairActive3CombineShield┃[연계 공격] 보호막 흡수량
+ToolTipType/BlairActive4VpRecovery┃적중 시 기력 회복량
 ToolTipCoef/AttackPower┃<color=#ffd775>(+ 공격력의 {0}%)</color>
 ToolTipCoef/AdditionalAttackPower┃<color=#ffd775>(+ 추가 공격력의 {0}%)</color>
 ToolTipCoef/SkillAmp┃<color=#dda0dd>(+ 스킬 증폭의 {0}%)</color>
@@ -1415,6 +1427,7 @@ Loading/MatchingTeamMode/Squad┃루미아 섬
 Loading/MatchingTeamMode/Cobalt┃코발트 프로토콜
 Loading/MatchingTeamMode/LoneWolf┃루미아 섬
 Loading/MatchingTeamMode/LoneWolfCustom┃루미아 섬
+Loading/MatchingTeamMode/SquadRumbleCobalt┃UNION GAME
 MatchingModeType/Name/Practice┃연습 모드
 MatchingModeType/Name/Test┃AI 상대 대전
 MatchingModeType/Name/Normal┃일반 대전
@@ -1796,6 +1809,7 @@ Skin/Name/1071002┃운명의 푸른 가약 케네스
 Skin/Name/1072000┃카티야
 Skin/Name/1072001┃밤까마귀 카티야
 Skin/Name/1072002┃훈련소장 카티야
+Skin/Name/1072003┃카페 알바 카티야
 Skin/Name/1073000┃샬럿
 Skin/Name/1073001┃전학생 샬럿
 Skin/Name/1073002┃타락의 유열 샬럿
@@ -2138,6 +2152,7 @@ Skin/Desc/1071002┃저 밝게 빛나는 불꽃이, 잃어버린 색을 되찾�
 Skin/Desc/1076002┃손가락에 얽힌 붉은 사슬은 필연코 우릴 만나게 해줄 거야.
 Skin/Desc/1011006┃여러분이 즐겨주시니, 초대한 보람이 있네요.
 Skin/Desc/1049005┃수련의 끝은 없다지만, 이번만큼은 결실을 보여줄 때야! 
+Skin/Desc/1072003┃주문은 얘한테, 팁은 나한테.
 Collection/Name/11001┃모든 건 딸을 위해서입니다.
 Collection/Name/11002┃픽셀아트.. 좋아해..?
 Collection/Name/11003┃길잃은 영혼에게 구원을.
@@ -2851,6 +2866,7 @@ Esc/Minimize┃최소화
 추후 공개 예정입니다.┃추후 공개 예정입니다.
 편집 상태 알림 메시지┃편집 상태에서는 이동할 수 없습니다.
 보관함 UI 숨기기 불가 상황 메시지┃등장 연출 중에는 이용할 수 없는 기능입니다.
+건너뛰기┃건너뛰기
 옵션┃옵션
 해상도┃해상도
 창 모드┃창 모드
@@ -3784,7 +3800,7 @@ SP 재생┃스태미나 재생
 모드사용가능여부┃사용 가능 모드
 모드사용불가┃현재 모드에서 사용할 수 없는 아이템이 있습니다.
 부활시아이템소멸┃해당 아이템은 <color=#B90005>급속 재생 시 사라집니다.</color>
-드론 전송 필요 크레딧┃원격드론 호출 크레딧: <color=#F4FF63>{0}</color> (+{1})
+드론 전송 필요 크레딧┃원격드론 호출 크레딧: <color=#F4FF63>{0}</color>
 전송 콘솔 필요 크레딧┃키오스크 필요 크레딧: <color=#F4FF63>{0}</color>
 VLS_Wait_Guest_Connect┃Host에 연결됨
 VLS_Wait_Guest_Breakaway┃우클릭으로 이탈
@@ -3927,6 +3943,37 @@ Replay 로드 에러┃문제가 발생하여 리플레이를 할 수 없습니�
 Replay 게임 종료 확인 안됨┃해당 게임은 종료되지 않아 리플레이를 재생할 수 없습니다.
 리플레이팝업설명┃[리플레이(Beta) 주의사항]\n- 완전히 종료된 지 5분이 지난 게임만 리플레이를 확인할 수 있습니다.\n- 이전 버전 실행 시, 로딩 중 멈춤 등의 현상이 발생할 수 있으며, 이 경우 게임을 종료 후 재실행 해야 합니다.
 리플레이 불가 모드┃현재 리플레이를 지원하지 않는 모드입니다.
+Replay/KeyGuide┃키 가이드 [F12]
+Replay/Group/Play┃재생
+Replay/PlayGroup/PlayAndStop┃재생/일시정지
+Replay/PlayGroup/Skip┃건너뛰기
+Replay/PlayGroup/Reverse┃되돌리기
+Replay/PlayGroup/PlayFast┃재생속도 빠르게
+Replay/PlayGroup/PlaySlow┃재생속도 느리게
+Replay/Group/Select┃선택
+Replay/SelectGroup/SelectTeam┃팀 선택
+Replay/SelectGroup/SelectMember┃팀원 선택
+Replay/Group/CameraMove┃카메라 이동
+Replay/CameraMoveGroup/MoveWickline┃위클라인으로 이동
+Replay/CameraMoveGroup/MoveLumi┃루미로 이동
+Replay/CameraMoveGroup/MoveBori┃보리로 이동
+Replay/CameraMoveGroup/MoveTreeOfLife┃생명의 나무로 이동
+Replay/CameraMoveGroup/MoveMeteorite┃운석으로 이동
+Replay/CameraMoveGroup/MoveMythicSupplyBox┃초월 보급 상자로 이동
+Replay/CameraMoveGroup/MoveEpicSupplyBox┃영웅 보급 상자로 이동
+Replay/CameraMoveGroup/MovePlaceInBattle┃현재 전투 중인 곳으로 이동
+Replay/CameraMoveGroup/MoveRestrictedArea┃임시 금지 구역으로 이동
+Replay/CameraMoveGroup/CameraZoomIn┃관전 카메라 줌 인
+Replay/CameraMoveGroup/CameraZoomOut┃관전 카메라 줌 아웃
+Replay/CameraMoveGroup/MoveCharacter┃캐릭터 이동
+Replay/Group/Marking┃표시/표기
+Replay/MarkingGroup/SwitchKDAandCredit┃KDA <-> 크레딧 표기 전환
+Replay/MarkingGroup/SwitchAllVision┃모든 시야로 전환
+Replay/MarkingGroup/SwitchSelectVision┃주시대상 시야로 전환
+Replay/MarkingGroup/MarkOccupyTeam┃보안콘솔/CCTV 점령 팀 표기
+Replay/MarkingGroup/MarkRemainingExplosiveTimer┃남은 폭발타이머 표시
+Replay/MarkingGroup/SwitchMouseCursor┃마우스 커서 On/Off
+Replay/KeyGuideNotice┃기재되어있는 키를 임의로 변경 시에는 기능을 사용할 수 없습니다.
 ReportType/INTENTIONAL_IDLE┃탈주 및 자리 비움
 ReportType/VERBAL_HARASSMENT┃언어 폭력 (욕설 등)
 ReportType/ASSIST_OPPOSING_TEAM┃고의적인 이적 행위
@@ -4998,8 +5045,10 @@ VPad 태그 별 아이템 추천 로직 설명┃목표 아이템을 <color=#b24
 원격 드론 호출 개수/상관 없음┃상관 없음
 원격 드론 호출 개수/사용┃사용
 원격 드론 호출 개수/사용 안 함┃사용 안 함
+경로 제외 지역 설정┃경로 제외 지역 설정
 경로 제외 지역 설정 열기┃경로 제외 지역 설정 열기
 경로 제외 지역 설정 닫기┃경로 제외 지역 설정 닫기
+경로 제외 지역 설정/제외된 지역┃제외된 지역: {0}개
 기타 설정┃기타 설정
 정렬 순서┃정렬 순서
 상세 검색 필터/적용┃적용
@@ -8243,6 +8292,11 @@ Emotion_S9_Attend_Garnet_2076007┃운명의 붉은 가약 가넷 하이~
 Emotion_S8_UnionReward_Adina_2052008┃따봉 디나야 고마워
 Emotion_Niah_Win_2081008┃니아 이겼다
 Emotion_Mirka_2085001┃미르카 으르렁
+Emotion_Blair01_NP┃블레어 한꺼번에 덤벼
+Emotion_Blair02_NP┃블레어 내놔
+Emotion_Blair03_NP┃블레어 그러던가
+Emotion_Blair04_NP┃블레어 꺼져
+Emotion_SNS_Blair_2084005┃블레어 뭘 봐
 Event_B0R1_3146┃보리 맛있군요
 Emotion_EsportsPack_Garnet_2076008┃마츠리 가넷 뭐하고 놀까?
 ItemType/EMBLEM_MARK/Name┃프로필 아이콘
@@ -8840,6 +8894,7 @@ EMBLEM_MARK_EVENT_103222┃SEASON 7 CHAMPION ROMATIC
 EMBLEM_MARK_EVENT_103223┃SEASON 7 CHAMPION BUM
 EMBLEM_MARK_EVENT_103224┃운명의 붉은 가약 가넷 하이~ 아이콘
 EMBLEM_MARK_EVENT_103225┃도깨비불에 이끌린 이안 브이 아이콘
+EMBLEM_MARK_EVENT_103226┃블레어 뭘 봐 아이콘
 EMBLEM_MARK_ERPASS_104001┃얼어붙은 얼음 결정체 아이콘
 EMBLEM_MARK_ERPASS_104002┃선물주는 나무 아이콘
 EMBLEM_MARK_ERPASS_104003┃빨간 코 아이콘
@@ -11364,6 +11419,10 @@ Product/Name/ThanksGiving_Special_2025_Pack_01┃한가위 와일드 카드 패�
 Product/Name/ThanksGiving_Special_2025_Pack_02┃한가위 와일드 카드 패키지 2
 Product/Name/ThanksGiving_Special_2025_Pack_03┃한가위 와일드 카드 패키지 3
 Product/Name/2025_S8_Event_EpicSkinDesignBox_01┃추석맞이 특별 패키지
+Product/Name/S9_Blair_Emote_Pack_01┃블레어 이모티콘 패키지
+Product/Name/EVENT_NPASS_S9_Premium_Token_1022┃시즌 9 프리미엄 토큰 북
+Product/Name/EVENT_NPASS_S9_Basic_Token_1023┃시즌 9 베이직 토큰 북
+Product/Name/EVENT_NPASS_S9_AllInOne_1024┃올인원 퀘스트 북
 Shop/Desc/Aya_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Hyunwoo_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 56%만큼 환급되어 우편으로 지급됩니다.
 Shop/Desc/Adriana_ComboPack_01┃스킨 1종\n이모티콘 4종\n\n보유 아이템이 있는 경우 판매 가격(단품)의 58%만큼 환급되어 우편으로 지급됩니다.
@@ -11677,6 +11736,7 @@ Shop/Desc/ThanksGiving_Special_2025_Pack_01┃<b><color=#FFBB00>[구성품 안�
 Shop/Desc/ThanksGiving_Special_2025_Pack_02┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- [스킨 전용] 와일드 카드(희귀) 1개\n- 와일드 카드(희귀) 2개\n- 스플래쉬! 토큰 15개\n- ER 포인트 부스트(3일)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 사용 가능합니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/ThanksGiving_Special_2025_Pack_03┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- [스킨 전용] 와일드 카드(영웅) 1개\n- 와일드 카드(영웅) 1개\n- 이모티콘 선별 보급권 3개\n- 프로필 선별 보급권 3개\n- 스플래쉬! 토큰 50개\n- A-Coin 부스트(3일)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 사용 가능합니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
 Shop/Desc/2025_S8_Event_EpicSkinDesignBox_01┃<b><color=#FFBB00>[구성품 안내]</color></b>\n\n- 영웅 스킨 도안 박스 1개\n- 박스 키 1개\n- A-Coin 부스트(12시간)\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 구매한 상품은 제작소에서 사용 가능합니다.\n※ 구매 즉시 사용되는 부스트가 포함된 상품은 청약철회가 불가합니다.
+Shop/Desc/S9_Blair_Emote_Pack_01┃신규 출시된 블레어 이모티콘 4종을 할인된 가격에 만나보세요!\n\n<b><color=#FFBB00>[구성품 안내]</color></b>\n- 블레어 이모티콘 4종\n\n<b><color=#F15F5F>[구매 전 주의사항]</color></b>\n※ 기존 보유하고 있는 상품에 따라 구매 가격이 변동됩니다.\n※ 해당 상품 구매 시 보관함으로 이동됩니다.
 Product/Name/SEASON_PASS_S5┃시즌 5 팩
 Shop/Desc/SEASON_PASS_S5┃시즌 5에 출시될 구성품을 저렴한 가격에 미리 구매해보세요!
 Product/Name/SEASON_PASS_S6┃시즌 6 팩
@@ -11927,6 +11987,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>최대 25개의 아�
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃<color=#ffdf72>다양한 아이템</color><color=#B2EBF4>을 획득할 수 있는 퀘스트 북 입니다.\n상품 구매 시 달성한 레벨에 대한 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 100포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n퀘스트 북 구매 후 포인트를 구매할 수 있습니다.
 Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>최대 75개의 스플래쉬! 토큰</color><color=#B2EBF4>을 획득할 수 있는 프리미엄 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
 Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>최대 25개의 스플래쉬! 토큰</color><color=#B2EBF4>을 획득할 수 있는 베이직 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
+Shop/Desc/EVENT_NPASS_S9_Premium_Token_1022┃<color=#ffdf72>최대 75개의 마츠리 토큰</color><color=#B2EBF4>을 획득할 수 있는 프리미엄 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
+Shop/Desc/EVENT_NPASS_S9_Basic_Token_1023┃<color=#ffdf72>최대 25개의 마츠리 토큰</color><color=#B2EBF4>을 획득할 수 있는 베이직 토큰 북 입니다. \n상품 구매 시 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 10포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n토큰 북 구매 후 포인트를 구매할 수 있습니다.
 Shop/Desc/EVENT_NPASS_S9_AllInOne_1024┃<color=#ffdf72>다양한 아이템</color><color=#B2EBF4>을 획득할 수 있는 퀘스트 북 입니다.\n상품 구매 시 달성한 레벨에 대한 보상을 획득할 수 있습니다.</color>\n\n<size=18>[레벨 포인트 안내]</size>\n레벨 당 100포인트가 필요하며, 미션 또는 1포인트 당 2 NP로 구매가능합니다.\n퀘스트 북 구매 후 포인트를 구매할 수 있습니다.
 Season1000/Name┃1주년 기념 퀘스트 북
 Season1001/Name┃꿈돌이&꿈순이 퀘스트 북
@@ -11948,6 +12010,9 @@ Season1018/Name┃시즌 8 프리미엄 토큰 북 Ⅱ
 Season1019/Name┃시즌 8 베이직 토큰 북 Ⅱ
 Season1020/Name┃레니베어 퀘스트 북
 Season1021/Name┃한가위 선물 꾸러미 퀘스트 북
+Season1022/Name┃시즌 9 프리미엄 토큰 북
+Season1023/Name┃시즌 9 베이직 토큰 북
+Season1024/Name┃올인원 퀘스트 북
 Season2000/Name┃1주년 A-Coin 퀘스트 북
 Season2001/Name┃바캉스 A-Coin 퀘스트 북
 Season2002/Name┃전투메이드 A-Coin 퀘스트 북
@@ -14661,10 +14726,10 @@ Mission/1040301/1┃<color=#2AC0FF>웰던 스테이크</color> 아이템 획득
 Mission/1040302/1┃<color=#2AC0FF>웰던 스테이크</color> 아이템 획득
 Mission/1040401/1┃<color=#2AC0FF>감자튀김</color> 아이템 획득
 Mission/1040402/1┃<color=#2AC0FF>감자튀김</color> 아이템 획득
-Mission/1040501/1┃<color=#D05EFF>문스톤</color> 아이템 획득
-Mission/1040502/1┃<color=#D05EFF>문스톤</color> 아이템 획득
-Mission/1040503/1┃<color=#D05EFF>문스톤</color> 아이템 획득
-Mission/1040504/1┃<color=#D05EFF>문스톤</color> 아이템 획득
+Mission/1040501/1┃<color=#D05EFF>생명의 나무</color> 아이템 획득
+Mission/1040502/1┃<color=#D05EFF>생명의 나무</color> 아이템 획득
+Mission/1040503/1┃<color=#D05EFF>생명의 나무</color> 아이템 획득
+Mission/1040504/1┃<color=#D05EFF>생명의 나무</color> 아이템 획득
 Mission/1040601/1┃<color=#D05EFF>운석</color> 아이템 획득
 Mission/1040602/1┃<color=#D05EFF>운석</color> 아이템 획득
 Mission/1040603/1┃<color=#D05EFF>운석</color> 아이템 획득
@@ -15659,6 +15724,8 @@ CharacterState/Group/Name/1012100┃삼재
 CharacterState/Group/Desc/1012100┃혜진의 삼재에 걸려 있습니다.
 CharacterState/Group/Name/1012110┃삼재 - 공포
 CharacterState/Group/Desc/1012110┃공포에 빠졌습니다.
+CharacterState/Group/Name/1012130┃삼재풀이
+CharacterState/Group/Desc/1012130┃혜진의 삼재에 걸리지 않습니다.
 CharacterState/Group/Name/1012300┃흡령부 - 이동 속도 감소
 CharacterState/Group/Desc/1012300┃흡령부의 범위 안에 있어 이동 속도가 감소하였습니다.
 CharacterState/Group/Name/1012500┃오대존명왕진 - 이동 속도 감소
@@ -16241,6 +16308,7 @@ CharacterState/Group/Name/1027420┃펄스 스팅 - 침묵
 CharacterState/Group/Name/1027430┃펄스 스팅 - 공격 속도 증가
 CharacterState/Group/Name/1027500┃정밀 폭격 - 이동 속도 감소
 CharacterState/Group/Name/1027810┃교란 - 공격 속도 증가
+CharacterState/Group/Name/1027820┃교란 - 도발
 CharacterState/Group/Desc/1027110┃잠입 상태입니다.
 CharacterState/Group/Desc/1027120┃이동 속도가 증가하였습니다.
 CharacterState/Group/Desc/1027150┃무기를 변경할 수 있습니다.
@@ -16255,6 +16323,7 @@ CharacterState/Group/Desc/1027420┃펄스 스팅으로 인해 침묵 상태가 
 CharacterState/Group/Desc/1027430┃공격 속도가 증가하였습니다.
 CharacterState/Group/Desc/1027500┃정밀 폭격으로 인해 이동 속도가 감소하였습니다.
 CharacterState/Group/Desc/1027810┃공격 속도가 증가하였습니다.
+CharacterState/Group/Desc/1027820┃알렉스에게 교란당해 도발에 걸렸습니다.
 Skill/Group/Evolution/Name/1027200┃톤파 보급 상자
 Skill/Group/Evolution/Desc/1027200┃톤파 무기를 선택하여 지급 받을 수 있습니다.
 Skill/Group/Evolution/Name/1027300┃양손검 보급 상자
@@ -16347,12 +16416,12 @@ Skill/Group/Name/1030200┃방해하지마!
 Skill/Group/Name/1030300┃자~ 집중!
 Skill/Group/Name/1030400┃나 불렀어?
 Skill/Group/Name/1030500┃다 덤벼보라구!
-Skill/Group/Desc/1030100┃<color=green>고유 지속 효과</color> : <color=#2ac0ff>감자튀김</color>과 <color=#35ff94>콜라</color>를 조합하여 <color=yellow>일레븐 세트</color>를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다, <color=#8EF165>대상의 최대 체력 {0}</color>만큼 체력을 회복시키는 일레븐 버거 {2}개를 바닥에 생성합니다.
+Skill/Group/Desc/1030100┃<color=green>고유 지속 효과</color> : <color=#2ac0ff>빵</color>과 <color=#35ff94>고기</color>를 조합하여 <color=yellow>일레븐 세트</color>를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다, <color=#8EF165>대상의 최대 체력 {0}</color>만큼 체력을 회복시키는 일레븐 버거 {2}개를 바닥에 생성합니다.
 Skill/Group/Desc/1030200┃충전 : 일레븐이 햄버거 포크를 내려칠 준비를 하며 이동 속도가 {0} 감소합니다.\n\n사용 : 일레븐이 햄버거 포크를 내려쳐 <color=white>{1}</color>~<color=white>{2}</color>의 스킬 피해를 입히며, {3}초간 적의 이동 속도를 {4}~{5} 감소시킵니다.
 Skill/Group/Desc/1030300┃충전 : 일레븐이 적들을 도발할 준비를 합니다. 받는 최종 피해가 {6} 감소하며 이동 속도가 {0} 감소합니다. \n\n사용 : 일레븐이 범위 내 적을 {1}~{2}초간 도발하면서 <color=white>{3}</color> ~ <color=white>{4}</color>의 스킬 피해를 입힙니다. 또한, 피해량 감소 효과가 {5}초 추가됩니다.
 Skill/Group/Desc/1030400┃충전 : 일레븐이 햄버거 포크를 타고 도약할 준비를 합니다. 충전 시간에 따라 거리가 늘어납니다.\n\n사용 : 일레븐이 햄버거 포크를 타고 도약하여 <color=white>{0}</color>~<color=white>{1}</color>의 스킬 피해를 입히며 대상을 밀어냅니다. 날아가는 동안 모든 방해 효과에 면역 상태가 됩니다.
 Skill/Group/Desc/1030500┃일레븐이 {0}초 동안 <color=white>{1}</color>의 체력을 회복하고, {2}초마다 주변의 적들에게 <color=white>{3}</color>의 스킬 피해를 입힙니다.
-Skill/Group/Coef/1030100┃<color=green>고유 지속 효과</color> : <color=#2ac0ff>감자튀김</color>과 <color=#35ff94>콜라</color>를 조합하여 <color=yellow>일레븐 세트</color>를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다, <color=#8EF165>대상의 최대 체력 {0}</color>만큼 체력을 회복시키는 일레븐 버거 {2}개를 바닥에 생성합니다.
+Skill/Group/Coef/1030100┃<color=green>고유 지속 효과</color> : <color=#2ac0ff>빵</color>과 <color=#35ff94>고기</color>를 조합하여 <color=yellow>일레븐 세트</color>를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다, <color=#8EF165>대상의 최대 체력 {0}</color>만큼 체력을 회복시키는 일레븐 버거 {2}개를 바닥에 생성합니다.
 Skill/Group/Coef/1030200┃충전 : 일레븐이 햄버거 포크를 내려칠 준비를 하며 이동 속도가 {0} 감소합니다.\n\n사용 : 일레븐이 햄버거 포크를 내려쳐  <color=white>{1}</color><color=#ffd775>(+공격력의 {2})</color><color=#688a08>(+추가 체력의 {3})</color>~<color=white>{4}</color><color=#ffd775>(+공격력의 {5})</color><color=#688a08>(+추가 체력의 {6})</color>의 스킬 피해를 입히며 {7}초간 적의 이동 속도를 {8}~{9}감소시킵니다.
 Skill/Group/Coef/1030300┃충전 : 일레븐이 적들을 도발할 준비를 합니다. 받는 최종 피해가 {10} 감소하며 이동 속도가 {0} 감소합니다. \n\n사용 : 일레븐이 범위 내 적을 {1}~{2}초간 도발하면서 <color=white>{3}</color><color=#ffd775>(+공격력의 {4})</color><color=#668a08>(+추가 체력의 {5})</color>~<color=white>{6}</color><color=#ffd775>(+공격력의 {7})</color><color=#668a08>(+추가 체력의 {8})</color>의 스킬 피해를 입힙니다. 또한, 피해량 감소 효과가 {9}초 추가됩니다.
 Skill/Group/Coef/1030400┃충전 : 일레븐이 햄버거 포크를 타고 도약할 준비를 합니다. 충전 시간에 따라 거리가 늘어납니다.\n\n사용 : 일레븐이 햄버거 포크를 타고 도약하여 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color><color=#688a08>(+추가 체력의 {2})</color>~<color=white>{3}</color><color=#ffd775>(+공격력의 {4})</color><color=#688a08>(+추가 체력의 {5})</color>의 스킬 피해를 입히며 대상을 밀어냅니다. 날아가는 동안 모든 방해 효과에 먼역 상태가 됩니다.
@@ -18876,6 +18945,8 @@ CharacterState/Group/Name/1082100┃결심응진 - 유운잔영검 중첩
 CharacterState/Group/Desc/1082100┃유운잔영검 중첩을 획득하였습니다.
 CharacterState/Group/Name/1082110┃결심응진 - 기본 공격 강화
 CharacterState/Group/Desc/1082110┃슈린의 다음 기본 공격이 강화되어 추가 스킬 피해를 입힙니다.
+CharacterState/Group/Name/1082210┃비검잔위 - 회수
+CharacterState/Group/Desc/1082210┃어검을 회수하여 주변 적에게 지속적으로 피해를 입힙니다.
 CharacterState/Group/Name/1082300┃무진검결 - 받는 피해 무효화, 모든 방해 효과 면역
 CharacterState/Group/Desc/1082300┃슈린이 받는 피해와 모든 방해 효과에 면역됩니다.
 CharacterState/Group/Name/1082330┃무진검결 - 이동 속도 감소
@@ -18923,6 +18994,66 @@ CharacterState/Group/Name/1083510┃시간 재구축 영역 - 기절
 CharacterState/Group/Desc/1083510┃시간 재구축 영역에 의해 기절했습니다.
 CharacterState/Group/Name/1083520┃시간 재구축 영역 - 이동 속도 감소
 CharacterState/Group/Desc/1083520┃시간 재구축 영역 안에서 이동 속도가 감소합니다.
+Skill/Group/Name/1084100┃블레이드 시프트
+Skill/Group/Name/1084200┃이중 참격 / 이중 휩쓸기
+Skill/Group/Name/1084210┃이중 참격 / 이중 휩쓸기
+Skill/Group/Name/1084300┃말살 / 칼날폭풍
+Skill/Group/Name/1084310┃말살 / 칼날폭풍
+Skill/Group/Name/1084400┃절단 베기 / 반격 베기
+Skill/Group/Name/1084410┃절단 베기 / 반격 베기
+Skill/Group/Name/1084500┃XMS-5 활성화 / 끝없는 추적
+Skill/Group/Name/1084510┃XMS-5 활성화 / 끝없는 추적
+Skill/Group/Name/1084600┃시프트 러시
+Skill/LobbyDesc/1084100┃<color=green>지속 효과</color>: 블레어의 무기 형태가 <color=white>쌍검 형태</color>일때는 공격 속도가 증가하고 기본 공격이 두 번 연속 진행되며 <color=white>쌍날검 형태</color>일때는 기본 공격 사거리가 증가하고 기본 공격이 한 번 진행됩니다.\n\n블레어는 1레벨부터 <color=white>시프트 러시</color>를 사용해 <color=white>쌍검, 쌍날검</color>으로 무기의 형태를 변경할 수 있습니다. 무기의 형태가 변경되면 <color=white>시프트</color> 상태가 되어 다음에 사용하는 기본 스킬을 강화해 입힌 피해량의 일부를 체력으로 회복하고 적중 시 기력을 회복합니다. <color=white>시프트</color>를 소모한 스킬은 다른 무기 형태의 동일한 스킬칸의 쿨다운과 공유되지 않습니다.\n\n또한 블레어가 스킬을 사용하면 다음 기본 공격이 강화되어 추가 스킬 피해를 입히고 기본 스킬의 남은 쿨다운 감소 및 기력을 회복합니다.\n\n<i>야생 동물 대상으로는 체력 회복 효과가 감소합니다.</i>
+Skill/Group/Desc/1084100┃<color=green>지속 효과</color>: 블레어의 무기 형태가 <color=white>쌍검 형태</color>일때는 공격 속도가 {0} 증가하고 기본 공격이 두 번 연속 진행되어 <color=white>{1}</color>, <color=white>{2}</color>의 기본 공격 피해를 입히며 <color=white>쌍날검 형태</color>일때는 기본 공격 사거리가 {3} 증가하고 기본 공격이 <color=white>{4}</color>의 기본 공격 피해를 입힙니다.\n\n블레어는 1레벨부터 <color=white>시프트 러시</color>를 사용해 <color=white>쌍검, 쌍날검</color>으로 무기의 형태를 변경할 수 있습니다. 무기의 형태가 변경되면 {5}초 동안 <color=white>시프트</color> 상태가 되어 다음에 사용하는 기본 스킬을 강화해 입힌 피해량의 <color=white>{6}</color>만큼 체력을 회복하고 적중 시 <color=white>{7}</color>의 기력을 회복합니다. <color=white>시프트</color>를 소모한 스킬은 다른 무기 형태의 동일한 스킬칸의 쿨다운과 공유되지 않습니다.\n\n또한 블레어가 스킬을 사용하면 다음 기본 공격이 강화되어 <color=white>[쌍검: 각각 {8} | 쌍날검: {9}]</color>의 추가 스킬 피해를 입히고 기본 스킬의 남은 쿨다운 <color=white>[쌍검: 각각 {10} | 쌍날검: {11}]</color> 감소 및 <color=white>[쌍검: 각각 {12} | 쌍날검: {13}]</color>의 기력을 회복합니다.
+Skill/Group/Coef/1084100┃<color=green>지속 효과</color>: 블레어의 무기 형태가 <color=white>쌍검 형태</color>일때는 공격 속도가 {0} 증가하고 기본 공격이 두 번 연속 진행되어 <color=#ffd775>공격력의 {1} * (기본 공격 증폭)</color>, <color=#ffd775>공격력의 {2} * (기본 공격 증폭)</color>의 기본 공격 피해를 입히며 <color=white>쌍날검 형태</color>일때는 기본 공격 사거리가 {3} 증가하고 기본 공격이 <color=#ffd775>공격력의 {4} * (기본 공격 증폭)</color>의 기본 공격 피해를 입힙니다.\n\n블레어는 1레벨부터 <color=white>시프트 러시</color>을 사용해 <color=white>쌍검, 쌍날검</color>으로 무기의 형태를 변경할 수 있습니다. 무기의 형태가 변경되면 {5}초 동안 <color=white>시프트</color> 상태가 되어 다음에 사용하는 기본 스킬을 강화해 입힌 피해량의 <color=white>{6}</color><color=#ffd775>(+추가 공격력의 {7})</color><color=white>%</color>만큼 체력을 회복하고 적중 시 <color=white>{8}</color>의 기력을 회복합니다. <color=white>시프트</color>를 소모한 스킬은 다른 무기 형태의 동일한 스킬칸의 쿨다운과 공유되지 않습니다.\n\n또한 블레어가 스킬을 사용하면 다음 기본 공격이 강화되어 <color=white>[쌍검: 각각 {9}<color=#ffd775>(+추가 공격력의 {10})</color> | 쌍날검: {11}<color=#ffd775>(+추가 공격력의 {12})</color>]</color>의 추가 스킬 피해를 입히고 기본 스킬의 남은 쿨다운 <color=white>[쌍검: 각각 {13} | 쌍날검: {14}]</color> 감소 및 <color=white>[쌍검: 각각 {15} | 쌍날검: {16}]</color>의 기력을 회복합니다.
+Skill/Group/ExpansionTip/1084100┃<i>야생동물 대상으로는 체력 회복 효과가 {0}로 감소합니다.</i>
+Skill/LobbyDesc/1084200┃<color=white>쌍검 형태: </color>블레어가 쌍검으로 강하게 내려베어 스킬 피해를 입힙니다. 이후 전방을 휩쓸어 스킬 피해를 입힙니다.\n\n<color=white>쌍날검 형태: </color>블레어가 쌍날검으로 전방을 두 번 휩쓸며 각각 스킬 피해를 입힙니다. 각 피해는 적에게 적중 시 체력을 회복합니다.
+Skill/Group/Desc/1084200┃블레어가 쌍검으로 강하게 내려베어 <color=white>{0}</color><color=#688A08>(+대상 최대 체력의 {1})</color>의 스킬 피해를 입힙니다. 이후 전방을 휩쓸어 <color=white>{2}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Coef/1084200┃블레어가 쌍검으로 강하게 내려베어 <color=white>{0}</color><color=#ffd775>(+추가 공격력의 {1})</color><color=#688A08>(+대상 최대 체력의 {2}<color=#ffd775>(+추가 공격력의 {3})</color>%)</color>의 스킬 피해를 입힙니다. 이후 전방을 휩쓸어 <color=white>{4}</color><color=#ffd775>(+추가 공격력의 {5})</color>의 스킬 피해를 입힙니다.
+Skill/LobbyDesc/1084210┃블레어가 쌍날검으로 전방을 두 번 휩쓸며 각각 스킬 피해를 입힙니다. 각 피해는 적에게 적중 시 체력을 회복합니다.
+Skill/Group/Desc/1084210┃블레어가 쌍날검으로 전방을 두 번 휩쓸며 각각 <color=white>{0}</color>, <color=white>{1}</color>의 스킬 피해를 입힙니다. 각 피해는 적에게 적중 시 <color=white>{2}</color>의 체력을 회복합니다.
+Skill/Group/Coef/1084210┃블레어가 쌍날검으로 전방을 두 번 휩쓸며 각각 <color=white>{0}</color><color=#ffd775>(+공격력의 {1})</color>, <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입힙니다. 각 피해는 적에게 적중 시 <color=white>{4}</color><color=#ffd775>(+추가 공격력의 {5})</color>의 체력을 회복합니다.
+Skill/LobbyDesc/1084300┃<color=white>쌍검 형태: </color>블레어가 쌍검으로 전방 범위를 베어가르며 스킬 피해를 입힙니다. 처음 적중한 대상에게 증가한 피해를 입히고 방어력을 감소시킵니다.\n\n<color=white>쌍날검 형태: </color>블레어가 쌍날검을 휘둘러 잠시 동안 지정한 방향의 피해로부터 면역이 되고 범위 내 적들에게 주기적으로 스킬 피해를 입힙니다.
+Skill/Group/Desc/1084300┃블레어가 쌍검으로 전방 범위를 베어가르며 <color=white>{0}</color>의 스킬 피해를 입힙니다. 처음 적중한 대상에게 {1} 증가한 피해를 입히고 {2}초 동안 방어력을 {3} 감소시킵니다.
+Skill/Group/Coef/1084300┃블레어가 쌍검으로 전방 범위를 베어가르며 <color=white>{0}</color><color=#ffd775>(+추가 공격력의 {1})</color>의 스킬 피해를 입힙니다. 처음 적중한 대상에게 {2} 증가한 피해를 입히고 {3}초 동안 방어력을 {4} 감소시킵니다.
+Skill/LobbyDesc/1084310┃블레어가 쌍날검을 휘둘러 잠시 동안 지정한 방향의 피해로부터 면역이 되고 범위 내 적들에게 주기적으로 스킬 피해를 입힙니다.
+Skill/Group/Desc/1084310┃블레어가 쌍날검을 휘둘러 {0}초 동안 지정한 방향의 피해로부터 면역이 되고 {1}초 마다 범위 내 적들에게 <color=white>{2}</color>의 스킬 피해를 입힙니다.
+Skill/Group/Coef/1084310┃블레어가 쌍날검을 휘둘러 {0}초 동안 지정한 방향의 피해로부터 면역이 되고 {1}초 마다 범위 내 적들에게 <color=white>{2}</color><color=#ffd775>(+공격력의 {3})</color>의 스킬 피해를 입힙니다.
+Skill/LobbyDesc/1084400┃<color=white>쌍검 형태: </color>블레어가 쌍검을 휘둘러 원형 범위에 스킬 피해를 입히고 이동 속도를 감소시킵니다.\n<color=white>연계 공격</color>: <color=white>절단 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상의 이동 속도를 감소시킵니다.\n\n<color=white>쌍날검 형태: </color>블레어가 쌍날검을 휘둘러 원형 범위에 스킬 피해를 입히고 보호막을 얻습니다.\n<color=white>연계 공격</color>: <color=white>반격 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상에 비례하는 보호막을 얻습니다.
+Skill/Group/Desc/1084400┃블레어가 쌍검을 휘둘러 원형 범위에 <color=white>{0}</color>의 스킬 피해를 입히고 이동 속도를 <color=white>{1}</color> 감소시킵니다. 이동 속도 감소 효과는 {2}초에 걸쳐 사라집니다.\n\n<color=white>연계 공격</color>: <color=white>절단 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상의 이동 속도를 {3} 감소시킵니다. 이동 속도 감소 효과는 {4}초에 걸쳐 사라집니다.
+Skill/Group/Coef/1084400┃블레어가 쌍검을 휘둘러 원형 범위에 <color=white>{0}</color><color=#ffd775>(+추가 공격력의 {1})</color>의 스킬 피해를 입히고 이동 속도를 <color=white>{2}</color> 감소시킵니다. 이동 속도 감소 효과는 {3}초에 걸쳐 사라집니다.\n\n<color=white>연계 공격</color>: <color=white>절단 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상의 이동 속도를 {4} 감소시킵니다. 이동 속도 감소 효과는 {5}초에 걸쳐 사라집니다.
+Skill/LobbyDesc/1084410┃<color=white>쌍검 형태: </color>블레어가 쌍검을 휘둘러 원형 범위에 스킬 피해를 입히고 이동 속도를 감소시킵니다.\n<color=white>연계 공격</color>: <color=white>절단 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상의 이동 속도를 감소시킵니다.\n\n<color=white>쌍날검 형태: </color>블레어가 쌍날검을 휘둘러 원형 범위에 스킬 피해를 입히고 보호막을 얻습니다.\n<color=white>연계 공격</color>: <color=white>반격 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상에 비례하는 보호막을 얻습니다.
+Skill/Group/Desc/1084410┃블레어가 쌍날검을 휘둘러 원형 범위에 <color=white>{0}</color>의 스킬 피해를 입히고 {1}초 동안 유지되는 <color=white>{2}</color>의 보호막을 얻습니다.\n\n<color=white>연계 공격</color>: <color=white>반격 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상 당 {1}초 동안 유지되는 <color=white>{3}</color>의 보호막을 얻습니다.
+Skill/Group/Coef/1084410┃블레어가 쌍날검을 휘둘러 원형 범위에 <color=white>{0}</color><color=#ffd775>(+추가 공격력의 {1})</color>의 스킬 피해를 입히고 {2}초 동안 유지되는 <color=white>{3}</color><color=#ffd775>(+추가 공격력의 {4})</color>의 보호막을 얻습니다.\n\n<color=white>연계 공격</color>: <color=white>반격 베기</color>로 <color=white>시프트 러시</color>의 <color=white>연계 공격</color>이 진행되면 <color=white>연계 공격</color>에 적중한 대상 당 {2}초 동안 유지되는 <color=white>{5}</color><color=#ffd775>(+추가 공격력의 {6})</color>의 보호막을 얻습니다. (최대 적중 수: {7})
+Skill/Group/ExpansionTip/1084410┃<i><color=white>연계 공격</color>으로 부여된 보호막은 <color=white>시프트 러시</color>의 레벨에 따라 <color=white>[{0}/{1}/{2}/{3}]</color>의 보호막 흡수량을 얻습니다. </i>
+Skill/LobbyDesc/1084500┃블레어가 잠시 강화되어 VF 능력자를 <color=white>탐지</color>할 수 있는 상태가 됩니다. 또한 신체 능력 상승으로 기력 회복량 및 공격 속도가 증가하고 <color=white>블레이드 시프트</color>의 <color=white>시프트</color>를 소비하지 않은 스킬도 체력 회복 효과가 적용됩니다.\n\n<color=white>탐지</color>: 블레어의 범위 내 시야에 보이는 적 실험체에게 <color=white>탐지됨</color>을 부여합니다. 블레어는 <color=white>탐지됨</color> 대상이 시야에 보이지 않는 상태가 되면 대상의 방향을 시각적으로 확인할 수 있습니다. 대상에게 부여된 <color=white>탐지됨</color>은 블레어의 <color=white>XMS-5 활성화</color> 스킬이 종료되거나 블레어와 매우 멀어지면 제거 됩니다. \n\n블레어는 <color=white>탐지됨</color> 대상 주변으로 <color=white>끝없는 추적</color>을 사용할 수 있습니다.\n\n<color=white>끝없는 추적</color>: 블레어가 모든 기력을 소모하며 <color=white>탐지됨</color> 대상의 주변으로 빠르게 돌진하고 도착 지점에 소모한 기력에 비례한 스킬 피해를 입힙니다. 적중한 대상이 있다면 기력을 회복합니다.
+Skill/Group/Desc/1084500┃블레어가 {0}초 동안 강화되어 VF 능력자를 <color=white>탐지</color>할 수 있는 상태가 됩니다. 또한 신체 능력 상승으로 기력 회복량이 {1}, 공격 속도가 {8} 증가하고 <color=white>블레이드 시프트</color>의 <color=white>시프트</color>를 소비하지 않은 스킬도 체력 회복 효과가 적용됩니다.\n\n<color=white>탐지</color>: 블레어의 {2} 범위 내 시야에 보이는 적 실험체에게 <color=white>탐지됨</color>을 부여합니다. 블레어는 <color=white>탐지됨</color> 대상이 시야에 보이지 않는 상태가 되면 대상의 방향을 시각적으로 확인할 수 있습니다. 대상에게 부여된 <color=white>탐지됨</color>은 블레어의 <color=white>XMS-5 활성화</color> 스킬이 종료되거나 블레어와 {3} 이상 멀어지면 제거됩니다. \n\n블레어는 {4}초 이내에 <color=white>탐지됨</color> 대상 주변으로 <color=white>끝없는 추적</color>을 사용할 수 있습니다.\n\n<color=white>끝없는 추적</color>: 블레어가 모든 기력을 소모하며 <color=white>탐지됨</color> 대상의 주변으로 빠르게 돌진하고 도착 지점에 <color=white>{5}</color><color=yellow>(+소모한 기력 당 {6})</color>의 스킬 피해를 입힙니다. 적중한 대상이 있다면 {7}의 기력을 회복합니다.
+Skill/Group/Coef/1084500┃블레어가 {0}초 동안 강화되어 VF 능력자를 <color=white>탐지</color>할 수 있는 상태가 됩니다. 또한 신체 능력 상승으로 기력 회복량이 {1}, 공격 속도가 {9} 증가하고 <color=white>블레이드 시프트</color>의 <color=white>시프트</color>를 소비하지 않은 스킬도 체력 회복 효과가 적용됩니다.\n\n<color=white>탐지</color>: 블레어의 {2} 범위 내 시야에 보이는 적 실험체에게 <color=white>탐지됨</color>을 부여합니다. 블레어는 <color=white>탐지됨</color> 대상이 시야에 보이지 않는 상태가 되면 대상의 방향을 시각적으로 확인할 수 있습니다. 대상에게 부여된 <color=white>탐지됨</color>은 블레어의 <color=white>XMS-5 활성화</color> 스킬이 종료되거나 블레어와 {3} 이상 멀어지면 제거 됩니다. \n\n블레어는 {4}초 이내에 <color=white>탐지됨</color> 대상 주변으로 <color=white>끝없는 추적</color>을 사용할 수 있습니다.\n\n<color=white>끝없는 추적</color>: 블레어가 모든 기력을 소모하며 <color=white>탐지됨</color> 대상의 주변으로 빠르게 돌진하고 도착 지점에 <color=white>{5}</color><color=#ffd775>(+공격력의 {6})</color><color=yellow>(+소모한 기력 당 {7})</color>의 스킬 피해를 입힙니다. 적중한 대상이 있다면 {8}의 기력을 회복합니다.
+Skill/LobbyDesc/1084600┃블레어가 지정한 방향으로 돌진하며 무기의 형태를 <color=white>쌍검 또는 쌍날검</color>으로 변경합니다.\n\n<color=white>연계 공격</color>: <color=white>시프트 러시</color>는 각 스킬 공격 발동 후 연계하여 사용할 수 있습니다. 연계 사용 시 돌진의 도착 지점에 스킬 피해를 입히고, 입힌 피해량의 일부를 체력으로 회복합니다.\n\n이 스킬을 연속으로 사용하면 증가된 기력을 소모합니다.\n\n<i>이 스킬은 벽을 넘을 수 없습니다.</i>\n<i>야생동물 대상으로는 체력 회복 효과가 감소합니다.</i>
+Skill/Group/Desc/1084600┃블레어가 지정한 방향으로 돌진하며 무기의 형태를 <color=white>쌍검 또는 쌍날검</color>으로 변경합니다.\n\n<color=white>연계 공격</color>: <color=white>시프트 러시</color>는 각 스킬 공격 발동 후 연계하여 사용할 수 있습니다. 연계 사용 시 돌진의 도착 지점에 <color=white>{0}</color>의 스킬 피해를 입히고, 입힌 피해량의 <color=white>{1}</color>만큼 체력을 회복합니다.\n\n이 스킬을 {2}초 안에 연속으로 사용하면 {3} 증가된 기력을 소모합니다.
+Skill/Group/Coef/1084600┃블레어가 지정한 방향으로 돌진하며 무기의 형태를 <color=white>쌍검 또는 쌍날검</color>으로 변경합니다.\n\n<color=white>연계 공격</color>: <color=white>시프트 러시</color>는 각 스킬 공격 발동 후 연계하여 사용할 수 있습니다. 연계 사용 시 돌진의 도착 지점에 <color=#ffd775>(+공격력의 {1})</color>의 스킬 피해를 입히고, 입힌 피해량의 <color=white>{2}</color><color=#ffd775>(+추가 공격력의 {3})</color><color=white>%</color>만큼 체력을 회복합니다.\n\n이 스킬을 {4}초 안에 연속으로 사용하면 {5} 증가된 기력을 소모합니다.
+Skill/Group/ExpansionTip/1084600┃<i>이 스킬은 벽을 넘을 수 없습니다.</i>\n<i>야생동물 대상으로는 체력 회복 효과가 {0}로 감소합니다.</i>
+CharacterState/Group/Name/1084120┃블레이드 시프트 - 시프트 상태
+CharacterState/Group/Name/1084130┃블레이드 시프트 - 기본 공격 강화
+CharacterState/Group/Name/1084140┃시프트 러시 - 기력 소모 증가
+CharacterState/Group/Name/1084300┃말살 - 방어력 감소
+CharacterState/Group/Name/1084400┃절단 베기 - 이속 감소
+CharacterState/Group/Name/1084410┃시프트 러시 - 연계 이속 감소
+CharacterState/Group/Name/1084450┃반격 베기 - 쉴드
+CharacterState/Group/Name/1084460┃시프트 러시 - 쉴드 (강화)
+CharacterState/Group/Name/1084500┃XMS-5 활성화 - 신체 능력 상승
+CharacterState/Group/Name/1084530┃XMS-5 활성화 - 탐지됨
+CharacterState/Group/Desc/1084120┃블레어의 다음 기본 스킬이 입힌 피해량의 일부를 체력으로 회복하고 적중 시 기력을 회복합니다.
+CharacterState/Group/Desc/1084130┃블레어의 다음 기본 공격이 추가 스킬 피해를 입히고 남은 쿨다운 감소 및 기력을 회복합니다.
+CharacterState/Group/Desc/1084140┃연속 사용으로 인해 무기 스킬의 기력 소모량이 증가합니다.
+CharacterState/Group/Desc/1084300┃블레어의 말살 스킬로 인해 방어력이 감소합니다.
+CharacterState/Group/Desc/1084400┃블레어의 절단 베기 스킬로 인해 이동 속도가 감소합니다.
+CharacterState/Group/Desc/1084410┃블레어의 시프트 러쉬 스킬로 인해 이동 속도가 감소합니다.
+CharacterState/Group/Desc/1084450┃블레어의 반격 베기 스킬로 보호막을 획득하여 피해를 흡수합니다.
+CharacterState/Group/Desc/1084460┃블레어의 시프트 러쉬 스킬로 보호막을 획득하여 피해를 흡수합니다.
+CharacterState/Group/Desc/1084500┃일시적으로 VF 능력을 각성하고 신체 능력이 향상됩니다.
+CharacterState/Group/Desc/1084530┃블레어에게 탐지되었습니다.
 Skill/Group/Name/3015000┃망토와 단검
 Skill/Group/Name/3015100┃망토와 단검
 Skill/Group/Name/3016000┃빗겨 흘리기
@@ -19304,7 +19435,7 @@ Skill/LobbyDesc/1029200┃레온이 지정한 방향으로 물길을 생성해 �
 Skill/LobbyDesc/1029300┃레온이 자신과 주변 아군에게 피해를 흡수하는 보호막을 부여합니다.
 Skill/LobbyDesc/1029400┃레온이 정신을 집중해 지정한 지점을 향해 제자리에서 다이빙을 합니다. 다이빙 후, 나올 때 주변 적들에게 스킬 피해를 입히고 공중에 띄웁니다. 다이빙 중 레온은 대상 지정 불가 상태가 되고, 나올 때 물웅덩이가 생성됩니다.
 Skill/LobbyDesc/1029500┃레온이 파도를 소환합니다. 레온은 파도를 타고 같이 전진하며 경로상 적들에게 스킬 피해를 입히고 파도가 없어지는 순간까지 같이 밀려납니다. 밀려나는 도중 벽에 부딪힌 적에게 스킬 피해를 입히며 공중에 띄웁니다.
-Skill/LobbyDesc/1030100┃일레븐은 감자튀김과 콜라를 조합하여 일레븐 세트를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다 체력을 회복시키는 일레븐 버거를 바닥에 생성합니다. 적이 밟을 경우 파괴됩니다.
+Skill/LobbyDesc/1030100┃일레븐은 빵과 고기를 조합하여 일레븐 세트를 제작할 수 있습니다.\n\n기본 스킬이 적중될 때마다 체력을 회복시키는 일레븐 버거를 바닥에 생성합니다. 적이 밟을 경우 파괴됩니다.
 Skill/LobbyDesc/1030200┃일레븐이 힘을 모았다가 햄버거 포크를 내리쳐 피해를 입히며 이동 속도를 감소시킵니다. 충전 시간에 비례하여 피해량과 이동 속도 감소량이 증가합니다.
 Skill/LobbyDesc/1030300┃일레븐이 힘을 모았다가 햄버거를 번쩍 들어올려 주변 범위 안의 적들을 도발하며 피해를 입힙니다. 충전 중에는 받는 최종 피해가 감소하며, 이 효과는 스킬 사용 후에도 일정 시간 유지됩니다.
 Skill/LobbyDesc/1030400┃일레븐이 힘을 모았다가 햄버거 포크를 타고 지정한 지점으로 점프하여 적들에게 피해를 입히며 적들을 밀어냅니다. 충전 시간에 비례하여 이동 거리와 피해량이 증가합니다.
@@ -22793,6 +22924,12 @@ CharacterStoryHeight/83┃173cm
 CharacterStoryGender/83┃남
 CharacterStoryTitle/83┃"시간을 되돌리고 싶다고... 생각해본 적 있나?"
 CharacterStoryDesc/83┃시간이 멈춰버린 시계공.\n항상 무표정에 차가워 보이는 인상으로 감정 표현이 매우 적다.\n언제나 딱딱한 말투를 쓰며, 타인과 거리를 두려 한다.\n\n먼 과거, 그의 삶은 희망으로 가득 차 있었다.\n좋은 친구와 존경하는 스승...\n그리고 세상에 단 하나 뿐인, 사랑하는 아내.\n언제까지고, 이 행복한 나날들이 계속될 것만 같았다.\n\n그러나 행복했던 나날들은 갑작스런 재난에 의해 산산조각 나고 말았다.\n울부짖으며 절망하던 헨리는 VF에 각성했고, 수 천번의 시간을 거슬러 사랑하는 이를 구하려 했지만, 결국 아무것도 할 수 없었다.\n\n그 뒤, 헨리의 감정은 점점 무뎌지고 메말라 갔다.\n살아갈 이유를 잃은 헨리에게 남은 것은 빛바랜 기억 뿐이었다.\n하지만 그 빛바랜 기억마저 소중했기에, 헨리는 홀로 긴 세월을 버텼다.\n자신마저 사라진다면, 그들을 추억할 사람은 아무도 남지 않을 것이기 때문에.\n어떻게든 발버둥 치며, 하루하루를 헛된 희망에 걸며 살아왔다.\n다시 한 번, 기적이 일어나길 바라면서.\n\n그렇게 긴 시간이 흐른 뒤, 아글라이아가 헨리와 접촉했다.\n그리고 그들을 통해 새로운 가능성을 찾은 헨리는 결심했다.\n무슨 일이 있더라도, 그곳으로 돌아가겠다고.\n\n멈춰있던 그의 시간이 다시 움직이기 시작했다.\n그 아름다웠던 미소를, 다시 한 번 보기 위해.\n\n과거, 아내의 출산 기념으로 만들던 회중시계를 아직 미완성인 채로 소중히 간직하고 있다.
+CharacterStoryName/84┃블레어 애쉬
+CharacterStoryAge/84┃24세
+CharacterStoryHeight/84┃170cm
+CharacterStoryGender/84┃여
+CharacterStoryTitle/84┃"이 섬에 아무것도 남지 않을 때까지."
+CharacterStoryDesc/84┃괴물을 잡기 위해 괴물이 되어가고 있는 복수귀.\n섬에 들어오기 전이나 지금이나 늘 어느 VF각성자를 찾는 데 혈안이 되어 있다.\nVF 폭주 사고로 인해 하나뿐인 가족인 아버지가 크게 다치고, 그 이후로 늘 VF와 관련된 것들을 쫓았다.\n\n그녀의 어린 시절, 아버지는 무뚝뚝하고 무서운 존재였다.\n늘 힘든 훈련을 시키고, 어쩌면 인생에서 절대 쓸 일 없는 생존 방법을 가르쳐줬다.\n그럼에도 블레어는 아버지를 따랐다. \n어린 나이에 어머니를 잃고 의지하고 믿을 수 있는 건 아버지뿐이였으니까.\n그녀에겐 아버지가 세상의 전부였다. 홀로 남게 될 자식을 위해, 자신이 배워온 것을 모두 알려주려는 아버지의 서툰 애정임을 블레어는 알고 있었다.\n\n그런 아버지가, 언제나 늘 자신을 지켜주고 가르침을 줄 것 같은 사람이, 병상에 간신히 숨만 쉬는 채로 누워있게 됐고, 사건은 누군가에 의해 조용히 덮어졌다.\n\n블레어는 그날의 자신을 후회했다. \n후회가 하나씩 쌓일 때마다, 증오도 함께 쌓였다. \n무언가를 원망하지 않으면 자신이 죽을 것 같았다.\n\n그날 이후, 사고와 관련된 모든 것들을 혼자 조사하기 시작했고, \n자신이 봤던 정체불명의 초능력자와 관련된 것들까지 조사했다.\n\n하지만 그녀의 몸과 마음은 점점 피폐해져 갔다. \n일반인의 몸으론 견디기 힘든 혹사였고, 의사가 진통제라고 준 그 약의 효력도 무뎌지는 것만 같았다. \n\n자신도 한계가 다가오고 있단 걸 느끼고 있었다. \n모든 걸 그만두고 그냥 한 줌의 재처럼 사라지고 싶었다.\n\n그 때, 그런 그녀에게 누군가가 손을 내밀었다.\n\n블레어는 그것이 아직도 자신을 구한 구원의 손길이라고 생각한다.\n
 CharacterPlayTip/1┃재키는 목표로 한 적을 끈질기게 추격하여 학살하고, 그때마다 폭발력이 더해지는 연쇄살인마입니다.
 CharacterPlayTip/2┃아야는 적중이 쉬운 스킬들과 거리를 벌릴 수 있는 스킬들이 특징인 안정성 높은 원거리 실험체입니다.
 CharacterPlayTip/3┃피오라는 펜싱 선수다운 민첩한 움직임으로 적과 거리를 조절하며, 스킬을 연속 적중할수록 강력한 피해를 입힙니다.
