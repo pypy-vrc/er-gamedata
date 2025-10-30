@@ -1162,6 +1162,18 @@ ToolTipType/Henry1_1Damage┃分針傷害量
 ToolTipType/Henry1_1ExtraDamage┃分針額外真實傷害
 ToolTipType/Henry1_2Damage┃時針傷害量
 ToolTipType/Henry1_2ExtraDamage┃時針額外真實傷害
+ToolTipType/BlairPassiveDualReinforceAttackDamage┃[雙劍普攻強化] 傷害量
+ToolTipType/BlairPassiveDualReinforceAttackApCoef┃[雙劍普攻強化] 額外攻擊力係數(%)
+ToolTipType/BlairPassiveCombineReinforceAttackDamage┃[雙頭劍普攻強化] 傷害量
+ToolTipType/BlairPassiveCombineReinforceAttackApCoef┃[雙頭劍普攻強化] 額外攻擊力係數(%)
+ToolTipType/BlairPassiveDualCoolDownReduce┃[雙劍普攻強化] 冷卻縮減(%)
+ToolTipType/BlairPassiveCombineCoolDownReduce┃[雙頭劍普攻強化] 冷卻縮減(%)
+ToolTipType/TargetMaxHpCoef┃目標體力上限(%)
+ToolTipType/FirstAttackPower┃1擊攻擊力係數(%)
+ToolTipType/SecondAttackPower┃2擊攻擊力係數(%)
+ToolTipType/HealAdditionalAttackPower┃體力恢復額外攻擊力係數(%)
+ToolTipType/BlairActive3CombineShield┃[連攜攻擊] 護盾吸收量
+ToolTipType/BlairActive4VpRecovery┃命中時氣力恢復量
 ToolTipCoef/RemainBullet┃<color=#dda0dd>(每剩1個彈匣*技能增幅的{0}%)</color>
 DayNight/Day┃白天
 DayNight/Night┃夜晚
@@ -1382,6 +1394,7 @@ Loading/MatchingTeamMode/Squad┃盧米亞島
 Loading/MatchingTeamMode/Cobalt┃鈷協議
 Loading/MatchingTeamMode/LoneWolf┃盧米亞島
 Loading/MatchingTeamMode/LoneWolfCustom┃盧米亞島
+Loading/MatchingTeamMode/SquadRumbleCobalt┃UNION GAME
 MatchingModeType/Name/Practice┃練習模式
 MatchingModeType/Name/Test┃AI 對戰模式
 MatchingModeType/Name/Normal┃一般模式
@@ -1763,6 +1776,7 @@ Skin/Name/1071002┃青之宿命契約 肯尼思
 Skin/Name/1072000┃卡緹雅
 Skin/Name/1072001┃夜鴉 卡緹雅
 Skin/Name/1072002┃王牌教官 卡緹雅
+Skin/Name/1072003┃咖啡店工讀生 卡緹雅
 Skin/Name/1073000┃夏洛特
 Skin/Name/1073001┃轉學生 夏洛特
 Skin/Name/1073002┃墮落天使 夏洛特
@@ -2105,6 +2119,7 @@ Skin/Desc/1071002┃希望那明亮的火焰，能替你找回失去的色彩。
 Skin/Desc/1076002┃纏繞在指尖的紅色鎖鏈，終將讓我們相遇。
 Skin/Desc/1011006┃歡迎各位盡情享受，期望這次邀請沒有白費啊。
 Skin/Desc/1049005┃雖說練習沒有盡頭，但這一次，正是展現成果的時候！
+Skin/Desc/1072003┃點單請找這位，小費給我就可以。
 Collection/Name/11001┃一切都是爲了我的女兒...
 Collection/Name/11002┃你喜歡像素藝術嗎？
 Collection/Name/11003┃拯救迷失的靈魂
@@ -2816,7 +2831,7 @@ Esc/Minimize┃最小化
 저장 후 나가기┃儲存並退出
 추후 공개 예정입니다.┃預計於日後公開。
 편집 상태 알림 메시지┃編輯狀態下無法移動。
-보관함 UI 숨기기 불가 상황 메시지┃登場動畫期間無法使用該功能。
+보관함 UI 숨기기 불가 상황 메시지┃動畫播放期間無法使用該功能。
 옵션┃設置
 해상도┃解析度
 창 모드┃視窗模式
@@ -3746,7 +3761,7 @@ SP 재생┃耐力值再生
 모드사용가능여부┃可使用模式
 모드사용불가┃該物品無法在此模式下使用。
 부활시아이템소멸┃該物品在<color=#B90005>快速再生時將消失。</color>
-드론 전송 필요 크레딧┃傳喚無人機配送所需榮譽值 : <color=#F4FF63>{0}</color> (+{1})
+드론 전송 필요 크레딧┃傳喚無人機配送所需榮譽值 : <color=#F4FF63>{0}</color>
 전송 콘솔 필요 크레딧┃Kiosk所需榮譽值 :  <color=#F4FF63>{0}</color>
 VLS_Wait_Guest_Connect┃已連接至Host
 VLS_Wait_Guest_Breakaway┃右鍵脫離
@@ -4953,6 +4968,7 @@ VPad 태그 별 아이템 추천 로직 설명┃<color=#b245ff>已完成</color
 원격 드론 호출 개수/상관 없음┃不限
 원격 드론 호출 개수/사용┃使用
 원격 드론 호출 개수/사용 안 함┃不使用
+경로 제외 지역 설정┃設置路徑排除區域
 경로 제외 지역 설정 열기┃開啟路徑排除區域設定
 경로 제외 지역 설정 닫기┃關閉路徑排除區域設定
 기타 설정┃其他設定
@@ -8179,7 +8195,13 @@ Emotion_S9_Attend_Garnet_2076007┃赤之宿命契約 蓋瑞特 Hi~
 Emotion_S8_UnionReward_Adina_2052008┃迪娜的大拇指
 Emotion_Niah_Win_2081008┃妮婭 贏了！
 Emotion_Mirka_2085001┃米爾卡 嗷嗚~
+Emotion_Blair01_NP┃布萊爾 一次解決
+Emotion_Blair02_NP┃布萊爾 交出來
+Emotion_Blair03_NP┃布萊爾 OK
+Emotion_Blair04_NP┃布萊爾 滾開
+Emotion_SNS_Blair_2084005┃布萊爾 看什麼看？
 Event_B0R1_3146┃B0-R1 好吃！
+Emotion_EsportsPack_Garnet_2076008┃赤之宿命契約 蓋瑞特 玩點什麼呢？
 ItemType/EMBLEM_MARK/Name┃個人頭像
 EMBLEM_MARK_FREE1┃Aglaia標誌
 EMBLEM_MARK_SHOP_102002┃玹雨 頭像
@@ -8774,6 +8796,7 @@ EMBLEM_MARK_EVENT_103222┃SEASON 7 CHAMPION ROMATIC
 EMBLEM_MARK_EVENT_103223┃SEASON 7 CHAMPION BUM
 EMBLEM_MARK_EVENT_103224┃赤之宿命契約 蓋瑞特 Hi~
 EMBLEM_MARK_EVENT_103225┃鬼火徊引 伊安 V
+EMBLEM_MARK_EVENT_103226┃布萊爾 看什麼看？
 EMBLEM_MARK_ERPASS_104001┃冰晶
 EMBLEM_MARK_ERPASS_104002┃禮物樹
 EMBLEM_MARK_ERPASS_104003┃紅鼻子
@@ -11290,6 +11313,10 @@ Product/Name/ThanksGiving_Special_2025_Pack_01┃中秋任意牌組合包1
 Product/Name/ThanksGiving_Special_2025_Pack_02┃中秋任意牌組合包2
 Product/Name/ThanksGiving_Special_2025_Pack_03┃中秋任意牌組合包3
 Product/Name/2025_S8_Event_EpicSkinDesignBox_01┃中秋特別禮包
+Product/Name/S9_Blair_Emote_Pack_01┃布萊爾表情組合包
+Product/Name/EVENT_NPASS_S9_Premium_Token_1022┃S9高級代幣書
+Product/Name/EVENT_NPASS_S9_Basic_Token_1023┃S9基礎代幣書
+Product/Name/EVENT_NPASS_S9_AllInOne_1024┃全能任務書
 Shop/Desc/Aya_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回58%至遊戲內信箱。
 Shop/Desc/Hyunwoo_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回56%至遊戲內信箱。
 Shop/Desc/Adriana_ComboPack_01┃1款造型\n4款表情\n\n購買前已擁有的物品將根據售價(單品)返回58%至遊戲內信箱。
@@ -11603,6 +11630,7 @@ Shop/Desc/ThanksGiving_Special_2025_Pack_01┃<b><color=#FFBB00>[內容]</color>
 Shop/Desc/ThanksGiving_Special_2025_Pack_02┃<b><color=#FFBB00>[內容]</color></b>\n\n- [僅限造型]任意牌（稀有）x 1\n- 任意牌（稀有）x 2\n- 逐浪代幣 x 15\n- ER積分 Boost(3日)\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 可以在製作所使用購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
 Shop/Desc/ThanksGiving_Special_2025_Pack_03┃<b><color=#FFBB00>[內容]</color></b>\n\n- [僅限造型]任意牌（英雄）x 1\n- 任意牌（英雄）x 1\n- 表情精選補給券 x 3\n- 頭像精選補給券 x 3\n- 逐浪代幣 x 50\n- A-Coin Boost(3日)\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 可以在製作所使用購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
 Shop/Desc/2025_S8_Event_EpicSkinDesignBox_01┃<b><color=#FFBB00>[內容]</color></b>\n\n- 英雄造型碎片箱 x 1\n- 開箱鑰匙 x 1\n- A-Coin Boost (12小時)\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 可以在製作所使用購買的商品。\n※ 包含Boost的商品在購買後將立即啟動，無法取消退款。
+Shop/Desc/S9_Blair_Emote_Pack_01┃可以使用優惠價格購買布萊爾4款表情。\n\n<b><color=#FFBB00>[內容]</color></b>\n- 布萊爾4款表情\n\n<b><color=#F15F5F>[注意事項]</color></b>\n※ 購買價格會根據已擁有的商品發生變化。\n※ 可以透過藏品確認購買的物品。
 Product/Name/SEASON_PASS_S5┃賽季S5組合包
 Shop/Desc/SEASON_PASS_S5┃以優惠價預購將在賽季S5推出的組合商品。
 Product/Name/SEASON_PASS_S6┃賽季S6組合包
@@ -11843,6 +11871,8 @@ Shop/Desc/EVENT_NPASS_S7_Basic_Token_1011┃<color=#ffdf72>最多可以獲得25�
 Shop/Desc/EVENT_NPASS_BASIC_CHECK┃通過此任務書，可以獲得<color=#ffdf72>多種物品</color><color=#B2EBF4>。\n購買商品後，可以通過提升等級獲得對應的獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要100積分，可以通過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
 Shop/Desc/EVENT_NPASS_S8_Premium_Token_1015┃<color=#ffdf72>最多可以獲得75個逐浪代幣</color><color=#B2EBF4>的高級代幣書。\n購買商品後可以解鎖獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要10積分，可以通過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
 Shop/Desc/EVENT_NPASS_S8_Basic_Token_1016┃<color=#ffdf72>最多可以獲得25個逐浪代幣</color><color=#B2EBF4>的基礎代幣書。\n購買商品後可以解鎖獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要10積分，可以通過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
+Shop/Desc/EVENT_NPASS_S9_Premium_Token_1022┃<color=#ffdf72>最多可以獲得75個花火大會代幣</color><color=#B2EBF4>的高級代幣書。\n購買商品後可以解鎖獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要10積分，可以透過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
+Shop/Desc/EVENT_NPASS_S9_Basic_Token_1023┃<color=#ffdf72>最多可以獲得25個花火大會代幣</color><color=#B2EBF4>的基礎代幣書。\n購買商品後可以解鎖獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要10積分，可以透過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
 Shop/Desc/EVENT_NPASS_S9_AllInOne_1024┃通過此任務書，可以獲得<color=#ffdf72>多種物品</color><color=#B2EBF4>。\n購買商品後，可以通過提升等級獲得對應的獎勵。</color>\n\n<size=18>[等級積分說明]</size>\n每級需要100積分，可以通過任務獲取、或以每1個積分2NP的價格購買積分。\n購買代幣書後可以購買積分。
 Season1000/Name┃一週年紀念任務書
 Season1001/Name┃夢精靈任務書
@@ -11864,6 +11894,9 @@ Season1018/Name┃賽季S8高級代幣書Ⅱ
 Season1019/Name┃賽季S8基礎代幣書Ⅱ
 Season1020/Name┃雷妮貝爾任務書
 Season1021/Name┃中秋特別任務書
+Season1022/Name┃S9高級代幣書
+Season1023/Name┃S9基礎代幣書
+Season1024/Name┃全能任務書
 Season2000/Name┃一週年A-Coin任務書
 Season2001/Name┃渡假A-Coin任務書
 Season2002/Name┃戰鬥女僕A-Coin任務書
@@ -14465,10 +14498,10 @@ Mission/1040301/1┃獲得<color=#2AC0FF>熱騰騰的牛排</color>
 Mission/1040302/1┃獲得<color=#2AC0FF>熱騰騰的牛排</color>
 Mission/1040401/1┃獲得<color=#2AC0FF>炸薯條</color>
 Mission/1040402/1┃獲得<color=#2AC0FF>炸薯條</color>
-Mission/1040501/1┃獲得 <color=#D05EFF>月亮石</color>
-Mission/1040502/1┃獲得 <color=#D05EFF>月亮石</color>
-Mission/1040503/1┃獲得 <color=#D05EFF>月亮石</color>
-Mission/1040504/1┃獲得 <color=#D05EFF>月亮石</color>
+Mission/1040501/1┃獲得<color=#D05EFF>生命樹枝</color>
+Mission/1040502/1┃獲得<color=#D05EFF>生命樹枝</color>
+Mission/1040503/1┃獲得<color=#D05EFF>生命樹枝</color>
+Mission/1040504/1┃獲得<color=#D05EFF>生命樹枝</color>
 Mission/1040601/1┃獲得 <color=#D05EFF>隕石</color>
 Mission/1040602/1┃獲得 <color=#D05EFF>隕石</color>
 Mission/1040603/1┃獲得 <color=#D05EFF>隕石</color>
@@ -15458,6 +15491,8 @@ CharacterState/Group/Name/1012100┃三災
 CharacterState/Group/Desc/1012100┃陷入三災的詛咒
 CharacterState/Group/Name/1012110┃三災 - 恐懼
 CharacterState/Group/Desc/1012110┃陷入恐懼狀態。
+CharacterState/Group/Name/1012130┃三災消除
+CharacterState/Group/Desc/1012130┃無法陷入三災的詛咒
 CharacterState/Group/Name/1012300┃吸靈符 - 移動速度減緩
 CharacterState/Group/Desc/1012300┃在吸靈符範圍內的敵人移動速度減少。
 CharacterState/Group/Name/1012500┃五大明王陣 - 移動速度減緩
@@ -16040,6 +16075,7 @@ CharacterState/Group/Name/1027420┃電脈回力鏢 - 沉默
 CharacterState/Group/Name/1027430┃電脈回力鏢 - 增加攻速
 CharacterState/Group/Name/1027500┃精準轟炸 - 減少移動速度
 CharacterState/Group/Name/1027810┃無間投影 - 增加攻速
+CharacterState/Group/Name/1027820┃無間投影 - 嘲諷
 CharacterState/Group/Desc/1027110┃潛行中
 CharacterState/Group/Desc/1027120┃增加移動速度
 CharacterState/Group/Desc/1027150┃可變更武器
@@ -16054,6 +16090,7 @@ CharacterState/Group/Desc/1027420┃因電脈回力鏢陷入沉默
 CharacterState/Group/Desc/1027430┃增加攻速
 CharacterState/Group/Desc/1027500┃因精準轟炸減少移動速度
 CharacterState/Group/Desc/1027810┃增加攻速
+CharacterState/Group/Desc/1027820┃因亞歷克斯無間投影，陷入了嘲諷狀態。
 Skill/Group/Evolution/Name/1027200┃雙拐補給箱
 Skill/Group/Evolution/Desc/1027200┃可以選擇雙拐武器進行領取。
 Skill/Group/Evolution/Name/1027300┃雙手劍補給箱
@@ -16146,12 +16183,12 @@ Skill/Group/Name/1030200┃漢堡少女
 Skill/Group/Name/1030300┃開播啦！
 Skill/Group/Name/1030400┃漢堡飛船
 Skill/Group/Name/1030500┃美食風暴
-Skill/Group/Desc/1030100┃<color=green>獨有被動效果</color> : 可製作<color=#2ac0ff>炸薯條</color>和<color=#35ff94>可樂</color>組合成 <color=yellow>11號套餐</color>。\n\n每次基本技能命中時，都將在地上掉落{2}個可恢復<color=#8EF165>目標體力上限{0}</color>的Eleven漢堡。
+Skill/Group/Desc/1030100┃<color=green>獨有被動效果</color> : 可製作<color=#2ac0ff>麵包</color>和<color=#35ff94>肉</color>組合成 <color=yellow>11號套餐</color>。\n\n每次基本技能命中時，都將在地上掉落{2}個可恢復<color=#8EF165>目標體力上限{0}</color>的Eleven漢堡。
 Skill/Group/Desc/1030200┃蓄力 : Eleven準備使用漢堡叉向下發起攻擊，此時Eleven的移動速度減少{0}。\n\n使用 : Eleven使用漢堡叉向下發起攻擊，造成<color=white>{1}</color>~<color=white>{2}</color>技能傷害，使敵人{3}秒間的移動速度減少{4}~{5}。
 Skill/Group/Desc/1030300┃蓄力 : Eleven準備嘲諷敵人。承受的最終傷害減少{6}，移動速度降低{0}。\n\n使用 : Eleven嘲諷範圍內的敵人{1}~{2}秒，並造成<color=white>{3}</color> ~ <color=white>{4}</color>技能傷害。此外，傷害量減少效果將額外增加{5}秒。
 Skill/Group/Desc/1030400┃蓄力 : Eleven準備借助漢堡叉跳躍。根據蓄力時間增加跳躍距離。\n\n使用 : Eleven借助漢堡叉跳躍造成<color=white>{0}</color>~<color=white>{1}</color>技能傷害並推開目標。跳躍期間處於免疫所有負面效果的狀態。
 Skill/Group/Desc/1030500┃Eleven{0}秒間恢復<color=white>{1}</color>的體力，每{2}秒對周圍敵人造成<color=white>{3}</color>的技能傷害。
-Skill/Group/Coef/1030100┃<color=green>獨有被動效果</color> : 可製作<color=#2ac0ff>炸薯條</color>和<color=#35ff94>可樂</color>組合成 <color=yellow>11號套餐</color>。\n\n每次基本技能命中時，都將在地上掉落{2}個可恢復<color=#8EF165>目標體力上限{0}</color>的Eleven漢堡。
+Skill/Group/Coef/1030100┃<color=green>獨有被動效果</color> : 可製作<color=#2ac0ff>麵包</color>和<color=#35ff94>肉</color>組合成 <color=yellow>11號套餐</color>。\n\n每次基本技能命中時，都將在地上掉落{2}個可恢復<color=#8EF165>目標體力上限{0}</color>的Eleven漢堡。
 Skill/Group/Coef/1030200┃蓄力 : Eleven準備使用漢堡叉向下發起攻擊，此時Eleven的移動速度減少{0}。\n\n使用 : Eleven使用漢堡叉向下發起攻擊，造成<color=white>{1}</color><color=#ffd775>(+攻擊力{2})</color><color=#688a08>(+額外體力{3})</color>~<color=white>{4}</color><color=#ffd775>(+攻擊力{5})</color><color=#688a08>(+額外體力{6})</color>技能傷害，使敵人{7}秒間的移動速度減少{8}~{9}。
 Skill/Group/Coef/1030300┃蓄力 : Eleven準備嘲諷敵人。承受的最終傷害減少{10}，移動速度降低{0}。\n\n使用 : Eleven嘲諷範圍內的敵人{1}~{2}秒，並造成<color=white>{3}</color><color=#ffd775>(+攻擊力{4})</color><color=#668a08>(+額外體力{5})</color>~<color=white>{6}</color><color=#ffd775>(+攻擊力{7})</color><color=#668a08>(+額外體力{8})</color>技能傷害。此外，傷害量減少效果將額外增加{9}秒。
 Skill/Group/Coef/1030400┃蓄力 : Eleven準備借助漢堡叉跳躍。根據蓄力時間增加跳躍距離。\n\n使用 : Eleven借助漢堡叉跳躍造成<color=white>{0}</color><color=#ffd775>(+攻擊力{1})</color><color=#688a08>(+額外體力{2})</color>~<color=white>{3}</color><color=#ffd775>(+攻擊力{4})</color><color=#688a08>(+額外體力{5})</color>技能傷害並推開目標。跳躍期間處於免疫所有負面效果的狀態。
@@ -18673,6 +18710,8 @@ CharacterState/Group/Name/1082100┃劍道 - 流雲殘影劍疊層
 CharacterState/Group/Desc/1082100┃獲得了流雲殘影劍疊層。
 CharacterState/Group/Name/1082110┃劍道 - 強化普攻
 CharacterState/Group/Desc/1082110┃雪琳下一次普攻得到了強化，將造成額外技能傷害。
+CharacterState/Group/Name/1082210┃劍影迴旋 - 回收
+CharacterState/Group/Desc/1082210┃收回飛劍，持續對周圍敵人造成傷害。
 CharacterState/Group/Name/1082300┃無塵劍訣 - 承受傷害無效&免疫所有負面效果
 CharacterState/Group/Desc/1082300┃雪琳免疫所有承受傷害和負面效果。
 CharacterState/Group/Name/1082330┃無塵劍訣 - 移動速度降低
@@ -18720,6 +18759,66 @@ CharacterState/Group/Name/1083510┃時序重鑄域 - 暈眩
 CharacterState/Group/Desc/1083510┃因時序重鑄域陷入暈眩。
 CharacterState/Group/Name/1083520┃時序重鑄域 - 移動速度降低
 CharacterState/Group/Desc/1083520┃在時序重鑄域內移動速度降低。
+Skill/Group/Name/1084100┃刃移
+Skill/Group/Name/1084200┃雙重斬擊 / 雙重橫掃
+Skill/Group/Name/1084210┃雙重斬擊 / 雙重橫掃
+Skill/Group/Name/1084300┃抹殺 / 刃舞風暴
+Skill/Group/Name/1084310┃抹殺 / 刃舞風暴
+Skill/Group/Name/1084400┃斷裂斬 / 反擊斬
+Skill/Group/Name/1084410┃斷裂斬 / 反擊斬
+Skill/Group/Name/1084500┃XMS-5啟動 / 無盡追擊
+Skill/Group/Name/1084510┃XMS-5啟動 / 無盡追擊
+Skill/Group/Name/1084600┃疾刃突進
+Skill/LobbyDesc/1084100┃<color=green>持續效果</color>：布萊爾的武器形態為<color=white>雙劍形態</color>時，攻擊速度增加，普攻將連續進行兩次；當武器形態為<color=white>雙頭劍形態</color>時，普攻射程增加，普攻僅進行一次。\n\n布萊爾從1級開始即可使用<color=white>疾刃突進</color>，並可在<color=white>雙劍&雙頭劍</color>兩種武器形態中進行切換。切換武器形態時，將進入<color=white>切換</color>狀態，強化下一個使用的基本技能，根據造成的傷害恢復部分體力，並在命中時恢復氣力。在<color=white>切換</color>狀態下使用的技能與另一武器形態相同技能欄不共用冷卻。\n\n布萊爾使用技能後，將強化下一次普攻，造成額外技能傷害，縮減基本技能剩餘冷卻時間並恢復氣力。\n\n<i>透過野生動物獲得的體力恢復效果降低。</i>
+Skill/Group/Desc/1084100┃<color=green>持續效果</color>：布萊爾的武器形態為<color=white>雙劍形態</color>時，攻擊速度增加{0}，普攻將連續進行兩次，分別造成<color=white>{1}</color>、<color=white>{2}</color>普攻傷害；當武器形態為<color=white>雙頭劍形態</color>時，普攻射程增加{3}，普攻造成<color=white>{4}</color>普攻傷害。\n\n布萊爾從1級開始即可使用<color=white>疾刃突進</color>，並可在<color=white>雙劍&雙頭劍</color>兩種武器形態中進行切換。切換武器形態時，將進入持續{5}秒的<color=white>切換</color>狀態，強化下一個使用的基本技能，恢復造成傷害<color=white>{6}</color>的體力，並在命中時恢復<color=white>{7}</color>氣力。在<color=white>切換</color>狀態下使用的技能與另一武器形態相同技能欄不共用冷卻。\n\n布萊爾使用技能後，將強化下一次普攻，造成<color=white>[雙劍：每擊{8} | 雙頭劍：{9}]</color>額外技能傷害，基本技能剩餘冷卻時間縮減<color=white>[雙劍：每擊{10} |雙頭劍：{11}]</color>並恢復<color=white>[雙劍：每擊{12} |雙頭劍：{13}]</color>氣力。
+Skill/Group/Coef/1084100┃<color=green>持續效果</color>：布萊爾的武器形態為<color=white>雙劍形態</color>時，攻擊速度增加{0}，普攻將連續進行兩次，分別造成<color=#ffd775>攻擊力的{1} * (普攻增幅)</color>、<color=#ffd775>攻擊力的{2} * (普攻增幅)</color>普攻傷害；當武器形態為<color=white>雙頭劍形態</color>時，普攻射程增加{3}，普攻造成<color=#ffd775>攻擊力的{4} * (普攻增幅)</color>普攻傷害。\n\n布萊爾從1級開始即可使用<color=white>疾刃突進</color>，並可在<color=white>雙劍&雙頭劍</color>兩種武器形態中進行切換。切換武器形態時，將進入持續{5}秒的<color=white>切換</color>狀態，強化下一個使用的基本技能，恢復造成傷害 <color=white>{6}</color><color=#ffd775>(+額外攻擊力的{7})</color><color=white>%</color>的體力，並在命中時恢復<color=white>{8}</color>氣力。在<color=white>切換</color>狀態下使用的技能與另一武器形態相同技能欄不共用冷卻。\n\n布萊爾使用技能後，將強化下一次普攻，造成<color=white>[雙劍：每擊{9}<color=#ffd775>(+額外攻擊力的{10})</color> | 雙頭劍：{11}<color=#ffd775>(+額外攻擊力的{12})</color>]</color>額外技能傷害，基本技能剩餘冷卻時間縮減<color=white>[雙劍：每擊{13} |雙頭劍：{14}]</color>並恢復<color=white>[雙劍：每擊{15} |雙頭劍：{16}]</color>氣力。
+Skill/Group/ExpansionTip/1084100┃透過野生動物獲得的體力恢復效果減少至{0}。
+Skill/LobbyDesc/1084200┃<color=white>雙劍形態：</color>布萊爾使用雙劍向前猛力斬下，對敵人造成技能傷害。隨後橫掃前方，再次造成技能傷害。\n\n<color=white>雙頭劍形態：</color>布萊爾使用雙頭劍向前方橫掃兩次，每次都對敵人造成技能傷害。每次命中敵人時，布萊爾都會恢復自身體力。
+Skill/Group/Desc/1084200┃布萊爾使用雙劍向前猛力斬下，造成<color=white>{0}</color><color=#688A08>(+目標體力上限{1})</color>技能傷害。隨後橫掃前方，造成<color=white>{2}</color>技能傷害。
+Skill/Group/Coef/1084200┃布萊爾使用雙劍向前猛力斬下，造成<color=white>{0}</color><color=#ffd775>(+額外攻擊力{1})</color><color=#688A08>(+目標體力上限{2}<color=#ffd775>(+額外攻擊力{3})</color>%)</color>的技能傷害。隨後橫掃前方，造成<color=white>{4}</color><color=#ffd775>(+額外攻擊力{5})</color>的技能傷害。
+Skill/LobbyDesc/1084210┃布萊爾使用雙頭劍向前方橫掃兩次，每次都對敵人造成技能傷害。每次命中敵人時，布萊爾都會恢復自身體力。
+Skill/Group/Desc/1084210┃布萊爾使用雙頭劍向前方橫掃兩次，分別造成<color=white>{0}</color>、<color=white>{1}</color>的技能傷害。每次命中敵人時，布萊爾恢復<color=white>{2}</color>體力。
+Skill/Group/Coef/1084210┃布萊爾使用雙頭劍向前方橫掃兩次，分別造成<color=white>{0}</color><color=#ffd775>(+攻擊力{1})</color>、 <color=white>{2}</color><color=#ffd775>(+攻擊力{3})</color>的技能傷害。每次命中敵人時，布萊爾恢復<color=white>{4}</color><color=#ffd775>(+額外攻擊力{5})</color>的體力。
+Skill/LobbyDesc/1084300┃<color=white>雙劍形態：</color>布萊爾使用雙劍橫掃前方範圍，對敵人造成技能傷害。首個命中的目標承受傷害增加，且防禦力降低。\n\n<color=white>雙頭劍形態：</color>布萊爾揮動雙頭劍，短時間內對指定方向的傷害免疫，並週期性對範圍內的敵人造成技能傷害。
+Skill/Group/Desc/1084300┃布萊爾使用雙劍橫掃前方範圍，對敵人造成<color=white>{0}</color>技能傷害。對首個目標造成傷害增加{1}，並使其{2}秒內防禦力降低{3}。
+Skill/Group/Coef/1084300┃布萊爾使用雙劍橫掃前方範圍，對敵人造成<color=white>{0}</color><color=#ffd775>(+額外攻擊力{1})</color>技能傷害。對首個目標造成傷害增加{2}，並使其{3}秒內防禦力降低{4}。
+Skill/LobbyDesc/1084310┃布萊爾揮動雙頭劍，短時間內對指定方向的傷害免疫，並週期性對範圍內的敵人造成技能傷害。
+Skill/Group/Desc/1084310┃布萊爾揮動雙頭劍，{0}秒內對指定方向的傷害免疫，每{1}秒對範圍內的敵人造成<color=white>{2}</color>技能傷害。
+Skill/Group/Coef/1084310┃布萊爾揮動雙頭劍，{0}秒內對指定方向的傷害免疫，每{1}秒對範圍內的敵人造成<color=white>{2}</color><color=#ffd775>(+攻擊力{3})</color>的技能傷害。
+Skill/LobbyDesc/1084400┃<color=white>雙劍形態：</color>布萊爾揮動雙劍，對圓形範圍內的目標造成技能傷害，降低其移動速度。\n<color=white>連攜攻擊</color>：使用<color=white>斷裂斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將降低<color=white>連攜攻擊</color>命中目標的移動速度。\n\n<color=white>雙頭劍形態：</color>布萊爾揮動雙頭劍，對圓形範圍內的目標造成技能傷害並獲得護盾。\n<color=white>連攜攻擊</color>：使用<color=white>反擊斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將根據<color=white>連攜攻擊</color>命中的目標數獲得護盾。
+Skill/Group/Desc/1084400┃布萊爾揮動雙劍，對圓形範圍內的目標造成<color=white>{0}</color>技能傷害，使目標移動速度降低<color=white>{1}</color>。減少的移動速度將在{2}秒內恢復。\n\n<color=white>連攜攻擊</color>：使用<color=white>斷裂斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將使<color=white>連攜攻擊</color>命中目標的移動速度降低{3}。減少的移動速度將在{4}秒內恢復。
+Skill/Group/Coef/1084400┃布萊爾揮動雙劍，對圓形範圍內的目標造成<color=white>{0}</color><color=#ffd775>(+額外攻擊力{1})</color>的技能傷害，使目標移動速度降低<color=white>{2}</color>。減少的移動速度將在{3}秒內恢復。\n\n<color=white>連攜攻擊</color>：當使用<color=white>斷裂斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將使<color=white>連攜攻擊</color>命中目標的移動速度降低{4}。減少的移動速度將在{5}秒內恢復。
+Skill/LobbyDesc/1084410┃<color=white>雙劍形態：</color>布萊爾揮動雙劍，對圓形範圍內的目標造成技能傷害，降低其移動速度。\n<color=white>連攜攻擊</color>：使用<color=white>斷裂斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將降低<color=white>連攜攻擊</color>命中目標的移動速度。\n\n<color=white>雙頭劍形態：</color>布萊爾揮動雙頭劍，對圓形範圍內的目標造成技能傷害並獲得護盾。\n<color=white>連攜攻擊</color>：使用<color=white>反擊斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，將根據 <color=white>連攜攻擊</color>命中的目標數獲得護盾。
+Skill/Group/Desc/1084410┃布萊爾揮動雙頭劍，對圓形範圍內的目標造成<color=white>{0}</color>技能傷害並獲得<color=white>{2}</color>護盾，護盾持續{1}秒。\n\n<color=white>連攜攻擊</color>：使用<color=white>反擊斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，<color=white>連攜攻擊</color>每命中一個目標即可獲得<color=white>{3}</color>的護盾，護盾持續{1}秒。
+Skill/Group/Coef/1084410┃布萊爾揮動雙頭劍，對圓形範圍內的目標造成<color=white>{0}</color><color=#ffd775>(+額外攻擊力{1})</color>技能傷害並獲得<color=white>{3}</color><color=#ffd775>(+額外攻擊力{4})</color>護盾，護盾持續{2}秒。\n\n<color=white>連攜攻擊</color>：使用<color=white>反擊斬</color>後立即施放<color=white>疾刃突進</color>、成功觸發<color=white>連攜攻擊</color>效果時，<color=white>連攜攻擊</color>每命中一個目標即可獲得<color=white>{5}</color><color=#ffd775>(+額外攻擊力{6})</color>的護盾，護盾持續{2}秒。（命中上限：{7}）
+Skill/Group/ExpansionTip/1084410┃<i>透過<color=white>連攜攻擊</color>獲得的護盾，將根據<color=white>疾刃突進</color>等級獲得<color=white>[{0}/{1}/{2}/{3}]</color>的護盾。</i>
+Skill/LobbyDesc/1084500┃布萊爾暫時進入強化狀態，能夠<color=white>探測</color>VF能力者。由於身體機能提升，布萊爾的氣力恢復量和攻擊速度增加，即使未使用<color=white>刃移</color>進行<color=white>切換</color>，也能獲得體力恢復效果。\n\n<color=white>探測</color>：當敵方實驗體出現在布萊爾視野可見範圍時，將被賦予<color=white>探測</color>標記。帶有<color=white>探測</color>標記的目標在布萊爾視野內不可見時，布萊爾可透過視覺效果確認目標的方向。布萊爾<color=white>XMS-5啟動</color>技能結束或布萊爾與目標距離過遠時，將解除賦予目標的<color=white>探測</color>效果。\n\n布萊爾可以在被<color=white>探測</color>目標周圍施放<color=white>無盡追擊</color>。\n\n<color=white>無盡追擊</color>：布萊爾消耗全部氣力，迅速突進至被<color=white>探測</color>目標周圍，並在到達位置造成與消耗氣力值成比例的技能傷害。命中目標時可以恢復氣力。
+Skill/Group/Desc/1084500┃布萊爾進入持續{0}秒的強化狀態，能夠<color=white>探測</color>VF能力者。由於身體機能提升，布萊爾的氣力恢復量增加{1}、攻擊速度增加{8}，即使未使用<color=white>刃移</color>進行<color=white>切換</color>，也能獲得體力恢復效果。\n\n<color=white>探測</color>：布萊爾{2}範圍內出現視野範圍可見的敵方實驗體時，將賦予目標<color=white>探測</color>標記。帶有<color=white>探測</color>標記的目標在布萊爾視野內不可見時，布萊爾可透過視覺效果確認目標的方向。布萊爾<color=white>XMS-5啟動</color>技能結束或目標距離布萊爾超過{3}以上時，將解除賦予目標的<color=white>探測</color>效果。\n\n布萊爾在{4}秒內可以對被<color=white>探測</color>目標周圍施放<color=white>無盡追擊</color>。\n\n<color=white>無盡追擊</color>：布萊爾消耗全部氣力，迅速突進至被<color=white>探測</color>目標周圍，並在到達位置造成<color=white>{5}</color><color=yellow>(+每消耗1氣力*{6})</color>技能傷害。命中目標時可以恢復{7}氣力。
+Skill/Group/Coef/1084500┃布萊爾進入持續{0}秒的強化狀態，能夠<color=white>探測</color>VF能力者。由於身體機能提升，布萊爾的氣力恢復量增加{1}、攻擊速度增加{9}，即使未使用<color=white>刃移</color>進行<color=white>切換</color>，也能獲得體力恢復效果。\n\n<color=white>探測</color>：布萊爾{2}範圍內出現視野範圍可見的敵方實驗體時，將賦予目標<color=white>探測</color>標記。帶有<color=white>探測</color>標記的目標在布萊爾視野內不可見時，布萊爾可透過視覺效果確認目標的方向。布萊爾<color=white>XMS-5啟動</color>技能結束或目標距離布萊爾超過{3}以上時，將解除賦予目標的<color=white>探測</color>效果。\n\n布萊爾在{4}秒內可以對被<color=white>探測</color>目標周圍施放<color=white>無盡追擊</color>。\n\n<color=white>無盡追擊</color>：布萊爾消耗全部氣力，迅速突進至被<color=white>探測</color>目標周圍，並在到達位置造成<color=white>{5}</color><color=#ffd775>(+攻擊力{6})</color><color=yellow>(+每消耗1氣力*{7})</color>技能傷害。命中目標時可以恢復{8}氣力。
+Skill/LobbyDesc/1084600┃布萊爾向指定方向突進，將武器形態切換為<color=white>雙劍或雙頭劍</color>。\n\n<color=white>連攜攻擊</color>：<color=white>疾刃突進</color>可以在各技能攻擊發動後銜接使用。連攜使用時，將在突進終點位置造成技能傷害，並根據造成的傷害量恢復部分體力。\n\n連續使用該技能時，將增加消耗的氣力。\n\n<i>此技能無法越過牆體。</i>\n<i>透過野生動物獲得的體力恢復效果降低。</i>
+Skill/Group/Desc/1084600┃布萊爾向指定方向突進，將武器形態切換為<color=white>雙劍或雙頭劍</color>。\n\n<color=white>連攜攻擊</color>：<color=white>疾刃突進</color>可以在各技能攻擊發動後銜接使用。連攜使用時，將在突進終點位置造成<color=white>{0}</color>技能傷害，並恢復造成傷害量<color=white>{1}</color>體力。\n\n{2}秒內連續使用該技能時，消耗的氣力增加{3}。
+Skill/Group/Coef/1084600┃布萊爾向指定方向突進，將武器形態切換為<color=white>雙劍或雙頭劍</color>。\n\n<color=white>連攜攻擊</color>：<color=white>疾刃突進</color>可以在各技能攻擊發動後銜接使用。連攜使用時，將在突進終點位置造成<color=#ffd775>(+攻擊力{1})</color>的技能傷害，並恢復造成傷害量<color=white>{2}</color><color=#ffd775>(+額外攻擊力{3})</color><color=white>%</color>的體力。\n\n{4}秒內連續使用該技能時，消耗的氣力增加{5}。
+Skill/Group/ExpansionTip/1084600┃<i>此技能無法越過牆體。</i>\n<i>透過野生動物獲得的體力恢復效果減少至{0}。</i>
+CharacterState/Group/Name/1084120┃刃移 - 切換狀態
+CharacterState/Group/Name/1084130┃刃移 - 強化普攻
+CharacterState/Group/Name/1084140┃疾刃突進 - 消耗氣力增加
+CharacterState/Group/Name/1084300┃抹殺 - 防禦力降低
+CharacterState/Group/Name/1084400┃斷裂斬 - 移動速度減少
+CharacterState/Group/Name/1084410┃疾刃突進 - 連攜移動速度減少
+CharacterState/Group/Name/1084450┃反擊斬 - 護盾
+CharacterState/Group/Name/1084460┃疾刃突進 - 護盾（強化）
+CharacterState/Group/Name/1084500┃XMS-5啟動 - 身體機能提升
+CharacterState/Group/Name/1084530┃XMS-5啟動 - 探測
+CharacterState/Group/Desc/1084120┃布萊爾下一次使用基本技能時，將根據造成的傷害恢復部分體力，並在命中時恢復氣力。
+CharacterState/Group/Desc/1084130┃布萊爾下一次普攻將造成額外技能傷害，縮減剩餘冷卻時間、恢復氣力。
+CharacterState/Group/Desc/1084140┃連續使用時將增加武器技能氣力的消耗量。
+CharacterState/Group/Desc/1084300┃因布萊爾的抹殺技能防禦力降低了。
+CharacterState/Group/Desc/1084400┃因布萊爾的斷裂斬技能移動速度變緩。
+CharacterState/Group/Desc/1084410┃因布萊爾的疾刃突進技能移動速度變緩。
+CharacterState/Group/Desc/1084450┃布萊爾透過反擊斬技能獲得了護盾、吸收傷害。
+CharacterState/Group/Desc/1084460┃布萊爾透過疾刃突進技能獲得了護盾、吸收傷害。
+CharacterState/Group/Desc/1084500┃VF覺醒、身體機能得到了提升。
+CharacterState/Group/Desc/1084530┃成為了布萊爾的探測目標。
 Skill/Group/Name/3015000┃斗篷和短劍
 Skill/Group/Name/3015100┃斗篷和短劍
 Skill/Group/Name/3016000┃格擋
@@ -19101,7 +19200,7 @@ Skill/LobbyDesc/1029200┃里昂向指定方向拋出一條水路，對命中的
 Skill/LobbyDesc/1029300┃里昂賦予自身及周圍的隊友護盾，吸收傷害。
 Skill/LobbyDesc/1029400┃里昂集中精神朝向指定位置原地潛水。潛水後從指定的水灘中躍出，造成技能傷害並將敵人懸空。里昂在潛水時處於無法指定目標的狀態，並在浮出水面後生成水灘。
 Skill/LobbyDesc/1029500┃里昂召喚海浪，並乘風破浪前進，對路徑上的敵人造成技能傷害並被海浪推離至海浪消失。若被海浪衝撞至牆壁。造成技能傷害時將導致懸空。
-Skill/LobbyDesc/1030100┃Eleven可以將炸薯條和可樂組合成11號套餐。\n\n基本技能命中時，掉落可恢復體力的漢堡在地上。漢堡被敵人踩中時會被摧毀。
+Skill/LobbyDesc/1030100┃Eleven可以將麵包和肉組合成11號套餐。\n\n基本技能命中時，掉落可恢復體力的漢堡在地上。漢堡被敵人踩中時會被摧毀。
 Skill/LobbyDesc/1030200┃Eleven蓄力使用漢堡叉向下重錘，造成技能傷害，並使敵人移動速度減少。根據蓄力時間增加傷害量和移動速度減少量。
 Skill/LobbyDesc/1030300┃Eleven蓄力後舉起漢堡，嘲諷周圍的敵人並造成傷害。蓄力期間承受最終傷害減少，該效果在釋放技能後將持續一段時間。
 Skill/LobbyDesc/1030400┃Eleven蓄力後乘著漢堡叉，跳到指定位置給周圍的敵人造成傷害並推開敵人。根據蓄力時間增加跳躍距離和傷害量。
@@ -20392,8 +20491,8 @@ CharacterState/Group/Name/6062000┃灼火之心
 CharacterState/Group/Desc/6062000┃黑炎龍之心開始跳動，對周圍敵人造成傷害，並依照對實驗體造成的傷害恢復部分體力。
 Item/Skills/6063001┃法夫納之鱗
 Item/Skills/6063001/Name┃<color=yellow>法夫納之鱗</color>
-Item/Skills/6063001/Body┃每當累計承受敵人實驗體{0}傷害時，將獲得1層「鱗片」疊層。該效果可以維持{1}秒，且最多可以疊加至{2}層。使目標陷入無法移動狀態時，將額外獲得1層「鱗片」。每一個「鱗片」疊層可以增加<color=white>{3}</color>防禦力。\n達到疊層上限時，將獲得一個持續{4}秒且逐漸減弱的<color=#688A08>{5}</color>護盾，移動速度增加<color=white>{6}%</color>。
-Item/Skills/6063001/Desc┃每當累計承受敵人實驗體{0}傷害時，將獲得1層「鱗片」疊層。該效果可以維持{1}秒，且最多可以疊加至{2}層。使目標陷入無法移動狀態時，將額外獲得1層「鱗片」。\n每一個「鱗片」疊層可以增加<color=white>{3}</color>防禦力。達到疊層上限時，將獲得一個持續{4}秒且逐漸減弱的<color=white>{5}</color><color=#688A08>(+額外體力{6}%)</color>護盾，移動速度增加<color=white>{7}%</color>。
+Item/Skills/6063001/Body┃每當累計承受敵人實驗體{0}傷害時，將獲得1層「鱗片」疊層。該效果可以維持{1}秒，且最多可以疊加至{2}層。陷入無法移動狀態時，將額外獲得1層「鱗片」。每一個「鱗片」疊層可以增加<color=white>{3}</color>防禦力。\n達到疊層上限時，將獲得一個持續{4}秒且逐漸減弱的<color=#688A08>{5}</color>護盾，移動速度增加<color=white>{6}%</color>。
+Item/Skills/6063001/Desc┃每當累計承受敵人實驗體{0}傷害時，將獲得1層「鱗片」疊層。該效果可以維持{1}秒，且最多可以疊加至{2}層。陷入無法移動狀態時，將額外獲得1層「鱗片」。\n每一個「鱗片」疊層可以增加<color=white>{3}</color>防禦力。達到疊層上限時，將獲得一個持續{4}秒且逐漸減弱的<color=white>{5}</color><color=#688A08>(+額外體力{6}%)</color>護盾，移動速度增加<color=white>{7}%</color>。
 CharacterState/Group/Name/6063000┃法夫納之鱗
 CharacterState/Group/Desc/6063000┃增加防禦力。
 CharacterState/Group/Name/6063010┃法夫納之鱗 - 疊層上限
@@ -22578,6 +22677,12 @@ CharacterStoryHeight/83┃173cm
 CharacterStoryGender/83┃男
 CharacterStoryTitle/83┃「你有想過...讓時間倒流嗎？」
 CharacterStoryDesc/83┃他是一位停滯在時間裡的鐘錶匠。\n他總是一副面無表情、冷淡的模樣，幾乎從不流露情緒。\n他說話生硬、語調刻板，刻意與他人保持距離。\n\n但很久以前，他也曾擁有一個充滿希望的世界。\n有親密的朋友、敬愛的師父...\n還有這世上獨一無二、他深愛的妻子。\n他曾以為，那段日子會永遠持續下去。\n\n直到一場突如其來的災難，將這一切徹底摧毀。\n在絕望中悲鳴的亨利覺醒了VF，他一次次回溯時間，\n試圖挽回所愛之人，然而結局卻始終未曾改變。\n\n從那之後，亨利的情感逐漸變得遲鈍、枯竭。\n失去了活下去的理由，他唯一留下的，是那些早已褪色的記憶。\n即使這些回憶早已斑駁，他仍將它們視若珍寶。\n因為他知道，一旦自己也消失，便再無人記得他們曾存在過。\n於是他苦苦掙扎，依靠那虛無縹緲的希望，一天又一天地活了下來。\n他渴望著，奇蹟能夠再次降臨。\n\n經過了一段漫長的時間，阿格萊亞主動找到了亨利。\n從他們身上看到新的可能性後，亨利下定了決心—\n不管發生什麼，他都要回到那個地方。\n\n停滯許久的時間，終於再次開始流動。\n只為了，再次見到那張美麗的笑臉。\n\n他曾為紀念妻子分娩，親手打造了一只懷錶。\n至今，那只尚未完成的懷錶仍被他珍藏著。
+CharacterStoryName/84┃布萊爾・阿什
+CharacterStoryAge/84┃24歲
+CharacterStoryHeight/84┃170cm
+CharacterStoryGender/84┃女
+CharacterStoryTitle/84┃「直到這個島上的一切都消失為止。」 
+CharacterStoryDesc/84┃為了追捕怪物，她逐漸化身為被復仇附身的軀殼。\n無論是來到這座島之前還是現在，她一直都在努力尋找著某個VF覺醒者。\n\n那場VF失控事故，令她唯一的家人——父親身受重傷。\n從那以後，她一直在調查與VF有關的事件。\n\n童年記憶中，父親始終是個沉默而令人畏懼的人。\n逼迫她接受嚴酷的訓練，學習那些看似永遠用不上的生存技巧。\n但對失去母親的她而言，父親就是她的世界。\n是她唯一能依靠、相信的存在。\n她明白，那些看似冷酷的逼迫，其實都是一種笨拙的愛。\n父親只是想在自己離開後，自己的女兒有能力獨自生活，於是將自己知道的一切盡數傳授給她。\n\n那個總是保護她、教導她的父親，如今卻奄奄一息地躺在病床上。\n而那場事故，也被他人無聲地掩蓋。\n\n布萊爾無數次懊悔那天的自己。\n每一次想起，都會在心底堆積沉重的石塊，一次次壓得她無法呼吸。\n伴隨悔恨而生的，是日益增長的憎恨，她無法在沒有怨恨的世界裡生存。\n\n從那天起，布萊爾開始獨自調查與整個案件關聯的內容。\n甚至調查到那個她親眼見過、身份不明的超能力者。\n\n但她健全的身心正一點點被消耗殆盡。\n以普通人的身體去承受這些負能量幾乎是不可能的，連醫生給的止痛藥也在逐漸失去藥效。\n\n她清楚地感受到，自己的極限正在逼近。\n當她想要放下一切、像灰燼般從這個世界消失時——\n有人，向她伸出了手。\n\n布萊爾始終相信，那雙手是能將她從絕望中救出的救贖之手。
 CharacterPlayTip/1┃傑琪是位連環殺人魔，無情地追擊和屠殺目標，每次擊殺都能獲得更強大的爆發力。
 CharacterPlayTip/2┃綾是位高穩定性的遠程實驗體。可輕鬆使用技能從遠處命中目標。
 CharacterPlayTip/3┃菲歐拉利用擊劍選手敏捷的特性，控制與敵人間的距離，每次連招技能命中時，都將造成更大的傷害。
