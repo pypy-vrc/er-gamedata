@@ -1805,6 +1805,9 @@ Esc/Minimize┃Minimizar
 닉네임에 특수 문자 사용 불가┃Tu nombre en el juego no puede contener caracteres especiales o espacios.
 닉네임 사용 불가 단어┃Tu nombre en el juego contiene palabras prohibidas.
 매칭 중 닉네임 변경 불가┃No puedes usar un ticket de cambio de nombre mientras buscas una partida.
+ShopNickNameProductPopup/Error/NicknameLength┃Tu nombre en el juego es muy largo o muy corto.
+ShopNickNameProductPopup/Error/SpecialCharacter┃Tu nombre en el juego no puede contener caracteres especiales o espacios.
+ShopNickNameProductPopup/Error/InappropriateWords┃Tu nombre en el juego contiene palabras prohibidas.
 확인┃Confirmar
 취소┃Cancelar
 저장┃Guardar
@@ -2027,7 +2030,6 @@ RankRP┃Supervivencias
 Kill_AssistRP/Elimination┃Muertes
 Kill_AssistRP/Down┃Bajas
 Kill_AssistRP/RepeatDown┃Repeticiones Excluídas
-Kill_AssistRP/BattleZoneDown┃Zonas de Batalla
 Kill_AssistRP/AutoResurrectionDown┃Bajas (Resurrección Automática)
 Kill_AssistRP/AutoResurrectionAfterDown┃Bajas (Normal)
 Kill_AssistRP/AutoResurrectionRepeatDown┃Repeticiones Excluídas (Resurrección Automática)
@@ -2042,7 +2044,6 @@ RankEnd_KillCount┃Número de Muertes: {0} ME
 RankEnd_Elimination┃Muertes: {0}
 RankEnd_Down┃Bajas: {0}
 RankEnd_RepeatDown┃Repeticiones Excluidas: {0}
-RankEnd_BattleZoneDown┃Zonas de Batalla: {0}
 RankEnd_AutoResurrectionDown┃Bajas (Resurrección Automática): {0}
 RankEnd_AutoResurrectionAfterDown┃Bajas (Normal): {0}
 RankEnd_AutoResurrectionRepeatDown┃Repeticiones Excluídas (Resurrección Automática): {0}
@@ -2097,7 +2098,6 @@ MyTierRP/ETERNITY┃<color=#FDFBEF>Rango Actual</color>
 RankRP_explanation┃Puntos otorgados según la clasificación alcanzada.
 Elimination_explanation┃Puntos otorgados por eliminar a un equipo enemigo o eliminar a un enemigo mientras está derribado tras la fase de resurrección automática.
 Down_explanation┃Puntos otorgados por derribar a un enemigo.
-BattleZoneDown_explanation┃Puntos otorgados por eliminar a un enemigo en la zona de batalla.
 AutoResurrectionDown_explanation┃Puntos otorgados por derribar a un enemigo durante la fase de resurrección automática.
 AutoResurrectionAfterDown_explanation┃Puntos otorgados por derribar a un enemigo después de la fase de Resurrección Automática.
 AutoResurrectionTeamWiped_explanation┃Puntos otorgados cuando Break/Clutch se activan por enemigos derribados por tus aliados eliminados durante la fase de Prevención de Eliminación.
@@ -2170,7 +2170,6 @@ DeferPointDemotion/PopupContents┃Te quedaste sin puntos de gracia y fuiste deg
 사망개요┃Información de Muerte
 사망개요 설명┃Se analiza y muestra el daño sufrido por el sujeto de prueba hasta la muerte durante la batalla.
 Shortcut/DeathRecapOnOff┃Información de Muerte
-DeathRecapOnOff┃Se analiza y muestra el daño sufrido por el sujeto de prueba hasta la muerte durante la batalla.
 GameSetting/DefaultShowExpandTooltip┃La información ampliada de detalles siempre se mostrará, incluso sin presionar la tecla (Alt).\n
 DefaultShowExpandTooltip┃Mostrar siempre la información ampliada de los detalles
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃* Establecer una tecla de activación rápida te permite utilizar una habilidad inmediatamente en la ubicación del cursor al presionarlas.
@@ -2179,7 +2178,6 @@ DefaultShowExpandTooltip┃Mostrar siempre la información ampliada de los detal
 스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃Permite Lanzar una Habilidad en su Rango Máximo
 GameSetting/PickPointToInAreaIndicatorActive┃Esta opción asegura que las habilidades que requieren apuntar a una ubicación se lanzan siempre en su rango máximo, inclusi si el cursor del ratón se mueve más allá de dicho rango.
 가젯볼트UIUX설정┃Ajustes de Interfaz de Usuario de Bóveda de Dispositivos
-GameSetting/GadgetVaultUIUXSetting┃¡Puedes personalizar la interfaz de usuario de la Bóveda de Dispositivos!\n Visualización de Ranura Rápida: La Bóveda de Dispositivos se fusiona con la parte inferior de la Ranura Rápida. Haz clic en el dispositivo de la Ranura Rápida para cambiar tu dispositivo equipado.\n Visualización de Rueda: Similar a los emoticonos, mantén pulsada la tecla de acceso rápido de la Bóveda de Dispositivos para cambiar tu dispositivo equipado. Pulsa brevemente la tecla de acceso rápido de la Bóveda de Dispositivos para usar el dispositivo equipado.
 가젯볼트UIUX설정/퀵슬롯병합┃Visualización de Ranura Rápida
 가젯볼트UIUX설정/휠┃Visualización de Rueda
 스토리 건너뛰기┃Saltar
@@ -2194,123 +2192,13 @@ GameSetting/GadgetVaultUIUXSetting┃¡Puedes personalizar la interfaz de usuari
 대사재생속도┃Velocidad de Reproducción
 최대 사거리 고정 툴팁┃Esta opción asegura que las habilidades que requieren apuntar a una ubicación se lanzan siempre en su rango máximo, inclusi si el cursor del ratón se mueve más allá de dicho rango.
 즉시 시전 사거리 표시┃Indicador de Activación Rápido
-즉시 시전 사거리 표시 툴팁┃El alcance de las habilidades se mostrará mientras mantengas presionada la tecla de activación rápida.
 모두 즉시 시전┃Activación rápida para todos
 모두 일반 시전┃Activación normal para todos
 모든 캐릭터┃Todos los personajes
 스킬┃Habilidad
 액티브아이템┃Habilidades del objeto
 아이템┃Objeto
-Emotion1┃Voz expresando la Gesto 1
-Emotion2┃Voz expresando la Gesto 2
-Emotion3┃Voz expresando la Gesto 3
-Emotion4┃Voz expresando la Gesto 4
-Emotion5┃Voz expresando la Gesto 5
-Emotion6┃Voz expresando la Gesto 6
-EmotionDance┃¡Úsalo para bailar!
-EmotionPlate┃Mostrar la interfaz de gestos
-EmotionPlate1┃Utilizar Set de Emotes 1
-EmotionPlate2┃Utilizar Set de Emotes 2
-EmotionPlate3┃Utilizar Set de Emotes 3
-PingTarget┃Señalizar objetivo
-MarkTarget┃Marcar Localización
-PingTargetKeyboard┃Marcar Objetivo
-MarkTargetKeyboard┃Marcar Localización
-DeleteMarkTarget┃Elimina la Marca
-LearnActive1┃Mejora la primera habilidad.
-LearnActive2┃Mejora la segunda habilidad.
-LearnActive3┃Mejora la tercera habilidad.
-LearnActive4┃Mejora la cuarta habilidad.
-LearnPassive┃Mejora la habilidad pasiva.
-LearnWeaponSkill┃Mejora la habilidad de arma.
-LearnTacticalSkill┃Mejora la habilidad táctica
-Active1ToSelf┃Habilidad de Autolanzamiento 1\n(Solo para las habilidades auto-dirigidas)
-Active2ToSelf┃Habilidad de Autolanzamiento 2\n(Solo para las habilidades auto-dirigidas)
-Active3ToSelf┃Habilidad de Autolanzamiento 3\n(Solo para las habilidades auto-dirigidas)
-Active4ToSelf┃Habilidad de Autolanzamiento 4\n(Solo para las habilidades auto-dirigidas)
-WeaponSkillToSelf┃Habilidad de Arma de Autolanzamiento \n(Solo para las habilidades auto-dirigidas)
-TacticalSkillToSelf┃Habilidad Táctica de Autolanzamiento (Solo para habilidades auto-dirigidas)
-NormalCastActive1┃Lanzar Habilidad 1.
-NormalCastActive2┃Lanzar Habilidad 2.
-NormalCastActive3┃Lanzar Habilidad 3.
-NormalCastActive4┃Lanzar Habilidad 4.
-NormalCastWeaponSkill┃Lanzar Habilidad de Arma.
-NormalCastTacticalSkill┃Lanzar Habilidad Táctica.
-InstantCastActive1┃Habilidad de Lanzamiento Rápido 1\n
-InstantCastActive2┃Habilidad de Lanzamiento Rápido 2\n
-InstantCastActive3┃Habilidad de Lanzamiento Rápido 3\n
-InstantCastActive4┃Habilidad de Lanzamiento Rápido 4\n
-InstantCastWeaponSkill┃Habilidad de Arma de Lanzamiento Rápido\n
-InstantCastTacticalSkill┃Activación Rápida de Habilidad Táctica
-InstantUseActiveItem1┃Activación Rápida de Habilidad de Objeto
-ChangeCameraMode┃Fija o remueve la cámara de la ubicación de tu personaje
-CameraDragScroll┃Mueve la cámara mientras mantiene presionada la tecla de acceso rápido.
-OpenCombineWindow┃Abre el menú de fabricación
-OpenQuickSlot┃Abre el Menú de Fabricación Rápida y la Lista de Artilugios.
-OpenQuickSlot_New1┃Abre el Menú de Fabricación Rápida y la Lista de Artilugios.
-OpenScoreboard┃Muestra el marcador y estado de la partida.
-OpenMap┃Abre el mapa. (Separado del clic de la Rueda del mouse)
-ResetCamera┃Mueve la cámara hacia la parte trasera de la ubicación de tu personaje
-OpenCharacterMastery┃Abre la ventana de maestrías
-OpenVPad┃Abre el VPad con el atajo del teclado.\nPuedes comprobar tu Nivel de Maestría e información sobre tu Habilidad Táctica.
-OpenCharacterStat┃Abre la ventana de estadísticas de personaje
-OpenCharacterTotalStat┃Abre la Pantalla de estadísticas detalladas del personaje.
-ShowObjectText┃Marca información sobre enemigos, objetos y objetos dejados en el suelo.
-ToggleShowOverlay┃Activa el bloqueo de pantalla para obtener información sobre enemigos, objetos y artículos caídos en el suelo.
-Escape┃Abre la configuración del juego
-ShowRouteList┃Mostrar lista de Planos guardados
-ShowProgressItem┃Checa la lista guardada de objetos para juego tardío.
-MaxChatWindow┃Extiende la ventana de chat.
-MinimapZoomIn┃Enfocar el minimapa
-MinimapZoomOut┃Alejar el minimapa
-CameraTeam1┃Mover la cámara a tu ubicación
-CameraTeam2┃Mover la cámara al aliado nº1
-CameraTeam3┃Mover la cámara al aliado nº2
-CameraTeam4┃Mover la cámara al aliado nº3
-Attack┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
-Stop┃Detiene todas las acciones de tu personaje y espera en su ubicación.
-Hold┃Detiene el caminar de tu personaje.
-Rest┃Descansa y recupera rápidamente la salud y estamina.
-Reload┃Recarga con amuniciones (Solo para pistolas)
-QuickCombine┃Crea el artículo más ubicado a la izquierda en la lista de creación rápida.
-QuickCombine2┃Crea el artículo en segundo lugar desde la izquierda en la lista de creación rápida.
-QuickCombine3┃Crea el artículo en tercer lugar desde la izquierda en la lista de creación rápida.
-QuickCombine4┃Crea el artículo en cuarto lugar desde la izquierda en la lista de creación rápida.
-QuickCombine5┃Crea el artículo en quinto lugar desde la izquierda en la lista de creación rápida.
-ProtectedQuickCombine┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
-ProtectedQuickCombine2┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
-ProtectedQuickCombine3┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
-ProtectedQuickCombine4┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
-ProtectedQuickCombine5┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
-ProtectedBoxItemIncludeQuickCombine┃Fabrica el artículo que se encuentra más a la izquierda en la lista de elaboración rápida desde el cuadro. (Sólo crea artículos de tu Plan Guardado)\n
-ProtectedBoxItemIncludeQuickCombine2┃Fabrica el segundo artículo desde la izquierda en la lista de elaboración rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
-ProtectedBoxItemIncludeQuickCombine3┃Fabrica el tercer artículo desde la izquierda en la lista de elaboración rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
-ProtectedBoxItemIncludeQuickCombine4┃Fabrica el cuarto artículo desde la izquierda en la lista de creación rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
-ProtectedBoxItemIncludeQuickCombine5┃Fabrica el quito artículo desde la izquierda en la lista de creación rápida desde el cuadro. (Solo crea artículos de tu Plan Puardado)
-ThrowItem┃Soltar un objeto del inventario. (Haga clic en el artículo de inventario)
-ChangeEnableGameUI┃Alternar la interfaz de usuario en el juego (no afecta a la sala de espera).
-ChangeEnableTrackerName┃Mostrar nombre de jugador
-ChangeEnableTrackerStatusBar┃Activa/Desactiva la interface para el PV y PE
-ChangeEnableReplayControllerUI┃Activar/Desactivar interfaz de control durante la reproducción.
-HideSummonObjectUI┃Cambiar interfaz de usuario para trampas y cámaras durante repeticiones.
-HideUserNameInMap┃Activa o desactiva los nombres en el mapa expandido y en el marcador durante las repeticiones.
-HideUserNameAndCharacterIconInMap┃Activa o desactiva los nombres y retratos en el mapa expandido y el marcador durante las repeticiones.
-ChangeEnableBattleZoneRuleGuideHUD┃Activar la Interfaz de Zona de Batalla durante la espectación o repeticiones.
-AddGuide┃Añade el objeto al objetivo de fabricación 
-MoveToAttack┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
-MoveToAttackMouse┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
-MoveOrderCustom┃Mueve hacia la ubicación seleccionada y apunta los enemigos. (Vincular tecla)
-MoveOrder┃Mueve hacia la ubicación seleccionada y apunta los enemigos.
-PickOnlySurvivor┃Mantener la tecla del puntero del mouse para priorizar a los jugadores seleccionados sobre animales salvajes, enemigos caídos, objetos, etc
-MoveCameraExpandMap┃Puedes usar Shift+MB1 para cambiar la cámara del minimapa expandido.\n
-ChangeEnableInGameChat┃Activar interfaz de chat en el juego.
-ChatItem┃Muestra información sobre el objeto en el chat (Clic en el icono del objeto)
-Spray┃Utiliza el spray seleccionado en su colección.
-Spray_New1┃Utiliza el spray seleccionado en su colección.
-FallBackTarget┃Señal de Retirada
-FallBackTargetCustom┃Señal de Retirada
 GameSetting/MoveExpandMap┃Muévase usando el minimapa expandido presionando Ctrl+MB2.
-MoveExpandMap┃Puedes moverte usando el minimapa expandido manteniendo la tecla Ctrl y presionando MB2.\N*Debes habilitar esta opción en Configuración ＞ Juego.
 확장 미니맵 이동 허용┃Velocidad del personaje en el mapa está completo.
 GameSetting/MouseReverse┃Alternar la configuración de inversión del mouse.
 마우스 좌우 반전(이동, 선택)┃Cambiar clic izquierdo/derecho
@@ -2341,10 +2229,8 @@ CCTV 감지 범위 접근 시 감지 범위 표시 사용┃Muestra el Rango de 
 GameSetting/MouseOverIconSizeUp┃Mantén presionada la tecla Alt y pasa el cursor sobre el minimapa expandido para agrandar los íconos.
 NormalMatchingSolo┃Empezar a buscar una partida Casual en Solitario con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración＞Juego.
 NormalMatchingDuo┃Empezar a buscar una partida Casual en Duo con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración＞Juego.
-NormalMatchingSquad┃Comienza a buscar una Partida Normal con el tiempo de espera oculto.\n*Debes habilitar la opción [Usar atajos de espera] en Configuración＞Modo de transmisión.
 RankMatchingSolo┃Empezar a buscar una partida Clasificatoria en Solitario con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración＞Juego.
 RankMatchingDuo┃Empezar a buscar una partida Clasificatoria en Duo con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Configuración ＞Juego.
-RankMatchingSquad┃Comienza a buscar una Partida Clasificada con el tiempo de espera oculto.\n*Debes habilitar la opción [Usar atajos de espera] en Configuración＞Modo de transmisión.
 SquadRumbleMatching┃Empezar a buscar una partida de Circuito Unión con el tiempo de espera oculto.\n*Necesitas habilitar esta opción en Opciones ＞ Modo de Transmisión.
 EventModeMatching┃Empezar búsqueda de partida Modo Evento con el tiempo de cola oculto.\n*Necesitas habilitar esta opción en Ajustes ＞ Modo de Transmisión.
 유니온 대전 방송모드 에러 팝업┃Circuito Unión está disponible tras unirse a un equipo.\nPor favor entra en la lobby del equipo de Circuito Unión con el que estás participando para proceder.
@@ -2371,7 +2257,7 @@ GameSetting/WildAnimal┃Mostrar temporizador para la aparición de Animales Sal
 GameSetting/ResourceItem┃Mostrar información de recursos como Piedras, Ramas, Árbol de la Vida, etc.
 GameSetting/AutoWeaponSkills┃Sube automáticamente de nivel tu Habilidad en Armas cuando está disponible.
 미니맵 잘못 클릭 방지 시간┃Demora Preventiva de Mal Click en el Minimapa
-GameSetting/PreventMinimapMove┃Para mejorar el control, si un movimiento o comando de habilidad es introducido mientras tu cursor está pasando por encima del minimapa, el comando será ignorado. Introducir un movimiento o comando de habilidad después de que el cursor haya pasado por encima del minimapa por una cantidad suficiente de tiempo activará el comando como siempre. Esto es para mejorar la predicción de las intenciones del jugador y su control de habilidades.
+GameSetting/SubTitle┃Para mejorar el control, si un movimiento o comando de habilidad es introducido mientras tu cursor está pasando por encima del minimapa, el comando será ignorado. Introducir un movimiento o comando de habilidad después de que el cursor haya pasado por encima del minimapa por una cantidad suficiente de tiempo activará el comando como siempre. Esto es para mejorar la predicción de las intenciones del jugador y su control de habilidades.
 미니맵표기방식┃Estilo de visualización del minimapa
 GameSetting/MinimapNotationSystem┃Puedes elegir entre "Mapa estándar" o "Mapa satelital" para mostrar el minimapa en el juego.
 확장맵표기방식┃Método de visualización de mapa extendido
@@ -2391,8 +2277,6 @@ GameSetting/CampfireCraftingSortPrior┃Mantiene la prioridad de elaboración y 
 AutoWeaponSkills┃Autoaprendizaje de Habilidad en Armas
 GameSetting/EnableMinimapMove┃Te permite moverte al hacer click derecho en el Minimapa.
 EnableMinimapMove┃Permitir Movimiento del Minimapa
-전장 HUD 자동 전환┃Cambio automático a Zona de Batalla HUD
-GameSetting/BattleZoneHUDAutoReplace┃Cambiar automáticamente a Zona de Batalla HUD cuando ingresas a la ubicación de Zona de Batalla y Zona de Batalla.
 옵션/후반아이템자동교체┃Permitir el reemplazo automático de objetos del juego tardío
 GameSetting/AutoReplaceLateGameItems┃Reemplaza automáticamente todos los elementos iniciales con la primera lista de objetos del juego tardío registrados en el Plan guardado después de completarlos.
 옵션/마크목표경로지정표기┃Marca de ruta objetivo designada
@@ -2400,7 +2284,7 @@ GameSetting/MarkPingWayPointSet┃Marca/Desmarca la ruta objetivo designada.
 마우스 휠로 이모티콘 세트 변경 허용┃Permitir cambiar conjuntos de gestos con la rueda del ratón
 GameSetting/EmoticonSetMouseWheel┃Te permite cambiar entre conjuntos de gestos usando la rueda del mouse mientras usas gestos en el juego.
 자동 공격 설정┃Ajustes de Autoataque
-GameSetting/AutoAttack┃Nunca: No atacarás a enemigos cercanos de manera automática.\nPredeterminado: Atacarás a enemigos cercanos automáticamente. No atacarás automáticamente después de fabricar o recolectar.\nSiempe: Atacarás enemigos cercanos automáticamente a menos que presiones el comando de detenerse, estés descansando, checando una caja, o interactuando con un Kiosco.
+GameSetting/AutomaticAttack┃Nunca: No atacarás a enemigos cercanos de manera automática.\nPredeterminado: Atacarás a enemigos cercanos automáticamente. No atacarás automáticamente después de fabricar o recolectar.\nSiempe: Atacarás enemigos cercanos automáticamente a menos que presiones el comando de detenerse, estés descansando, checando una caja, o interactuando con un Kiosco.
 인벤토리아이템자동병합┃Auto-Organización de Ranuras del Inventario
 GameSetting/AutomaticInventoryItemRestock┃Cuando hay múltiples consumibles del mismo tipo en ranuras distintas del inventario, los objetos serán consumidos empezando por el de menor prioridad.\nSin importar el botón usado, las ranuras colocadas más al fondo a la derecha se consideran de menor prioridad.\nPor ejemplo: Si hay Filete en las Ranuras 1, 3, y 5, pulsar cualquiera de estos botones consumirá el Filete de la ranura 5 primero.
 옵션/VLS상호작용확장맵활성화┃Permite el Mapa Expandido para el DLV
@@ -2430,7 +2314,6 @@ GameSetting/AutoChangeEquipment┃Al obtener un equipo de mayor rareza en tu pla
 GameSetting/CharacterShadow┃Alternar sombras de personajes
 탐색 가이드 원격 호출 사용┃Guía de búsqueda de llamadas remotas con drones
 자동 번역 사용┃Utiliza la traducción automática (BETA)
-GameSetting/AutoTranslate┃Traduce el chat de usuarios con diferentes configuraciones de idioma a tu idioma.\nLa traducción utilizará el idioma especificado en ambas configuraciones de juego.\nEs posible que las conversaciones en idiomas distintos a los establecidos en la configuración de tu juego no se traduzcan correctamente.\n- Idiomas admitidos: KR, ENG, JPN y CN (simplificado, tradicional).\n- Este es un servicio en versión beta y puede finalizar antes de tiempo.
 GameSetting/NavigaionHUDRemoteDroneActive┃Los elementos se pueden recuperar desde la Guía de búsqueda.
 StreamingModeSetting/AutoAcceptMatching┃Una vez completada la búsqueda, se acepta automáticamente. El rechazo de partida no es posible cuando se utiliza esta función.
 StreamingModeSetting/IgnoreRequestFriends┃Desactivar toda solicitud de amistad entrante.
@@ -2472,6 +2355,7 @@ GameSetting/AirSupplies┃Mostrar icono de Suministro aéreo
 오퍼레이터 음성┃Voz de la Operadora
 게임을 종료하시면 플레이 중인 캐릭터가 즉시 사망합니다. 종료하시겠습니까?┃Si sales del juego, tu personaje desaparecerá automáticamente. ¿Estás seguro/a que deseas salir?
 게임을 종료하시겠습니까?┃¿Deseas salir del juego?
+매칭 요약 강제 종료 후 결과 화면 이동┃¿Quieres salir de la búsqueda \n e ir a Resultados?
 게임 종료┃Salir del juego
 전투 포기┃Rendirse
 닫기┃Cancelar
@@ -2515,10 +2399,9 @@ Leave/Normal┃La clasificación en equipo no ha finalizado. Si te vas ahora, tu
 음성 감지┃Actividad de Voz
 음성 입력 감도┃Sensibilidad
 눌러서 말하기┃Pulsar para hablar
-눌러서 말하기 단축키┃Pulsar para hablar - Tecla de acceso rápido
+VoiceSetting/PushToTalk┃Pulsar para hablar - Tecla de acceso rápido
 변환 중┃Configurando...
 Shortcut/PushToTalk┃Pulsar para hablar
-PushToTalk┃Utiliza el chat de voz mientras mantienes presionada la tecla de acceso rápido.
 Vivox점검팝업┃El Chat de Voz no está disponible actualmente debido a un error.
 음성 채팅 안하기┃Deshabilitar Chat de Voz
 음성 채팅 참여┃Unirse al Chat de Voz
@@ -2554,38 +2437,14 @@ Vivox점검팝업┃El Chat de Voz no está disponible actualmente debido a un e
 지역 설명┃Área actual
 금지구역┃Área restringida
 금지구역 설명┃Tiempo restante hasta la asignación de las próximas áreas restringidas
-전장규칙안내HUD 전환버튼┃Cambiar a la Interfaz de usuario de Zona de Batalla
 기존UI 전환버튼┃Cambiar a la Interfaz de usuario Normal
-전장규칙안내HUD 전장예정지 제목┃Zona de Batalla Prevista
-전장규칙안내HUD 전장예정지 설명┃Esta área se establecerá como Zona de Batalla durante el siguiente día.
-전장규칙안내HUD 전장활성화 제목┃Activación de la Zona de Batalla
-전장규칙안내HUD 전장활성화 설명┃Ataca el Transbordador de Estabilizador Nervioso para obtener Estabilizadores Nerviosos.\nSalir o entrar en una Zona de Batalla activa hará que seas eliminado inmediatamente sin posibilidad de ser revivido.
-전장규칙안내HUD 전장보상 제목┃Recibe recompensas de la Zona de Batalla
-전장규칙안내HUD 전장보상 설명┃¡Felicitaciones por sobrevivir en la Zona de Batalla!\nHaz click en el botón "Reclamar recompensa" o haz click en el botón de la Consola de seguridad para seleccionar su recompensa.
-전장규칙안내HUD 전장보상 수령 버튼┃Reclamar recompensa
-전장규칙안내HUD 전장보상 수령 완료 본인┃Reclamar para sí mismo
-전장규칙안내HUD 전장보상 수령 완료 팀원┃Reclamar para miembro del equipo
 아이템 분해┃Destruir
 아이템 분해 팝업┃Obtenido tras la destrucción del artículo.
-전장 키트┃Equipo de Zona de Batalla
-전장 키트 설명┃Cuando tus personajes participan en la Zona de Batalla, se les otorgará "Reconstrucción rápida de la Zona de batalla" y un efecto de "Marca de Zona de batalla".\nEl equipo será removido para el equipo ganador.
-AreaAttributes/GroupName/1┃Zona de Batalla - Aceleración
-AreaAttributes/GroupDesc/1┃Esta Zona de batalla aumenta la Velocidad de movimiento y reduce el tiempo de enfriamiento.
-AreaAttributes/GroupName/2┃Zona de Batalla - Berserker
-AreaAttributes/GroupDesc/2┃Esta Zona de batalla aumenta el daño final infligido y otorga Omnisucción.
-AreaAttributes/GroupName/3┃Zona de Batalla - Defensa
-AreaAttributes/GroupDesc/3┃Esta Zona de Batalla te otorga un escudo después de una cierta cantidad de tiempo fuera del combate.
-BattleZoneDebuffGaugeTooltip_Title┃Indicador de Corrosión
-BattleZoneDebuffGaugeTooltip_Desc┃Se han acumulado varios materiales tóxicos en la Zona de batalla.\nUna vez que se alcanza el máximo, el Sujeto de pruebas morirá después de un cierto período de tiempo.
-BattleZoneRewardGaugeTooltip_Title┃Reclamar recompensas de la Zona de Batalla
-BattleZoneRewardGaugeTooltip_Desc┃Reclama las recompensas de Zona de Batalla en la Consola de seguridad.
-신경안정제셔틀충전중┃Cargando
+제한시간 내에 보상 아이템을 선택하세요.┃Elige un artículo de recompensa dentro del límite de tiempo.
 생존 팀 수┃Equipos
 생존 팀 수 설명┃Número de equipos restantes
 생존자 수┃Sobrevivientes
 생존자 수 설명┃Número de sobrevivientes vivos
-전장 생존자 수┃Número de sobrevivientes en la Zona de Batalla
-전장 생존자 수 설명┃Número de supervivientes que permanecen actualmente en la zona de batalla
 팀 처치 수┃Eliminaciones del equipo
 팀 처치 수 설명┃Total de eliminaciones de tu equipo
 플레이어 처치 수┃Número de jugadores eliminados
@@ -2851,7 +2710,6 @@ TempNickname┃Sujeto de pruebas {0}
 지금은 사용할 수 없습니다!┃¡No puedes usarla ahora!
 장착된 무기가 없어 공격할 수 없습니다.┃No puedes atacar sin un arma equipada.
 전투중휴식불가┃No puedes descansar en combate.
-전장전투단계중휴식불가┃Descanso desactivado en Zona de Batalla.
 전투중제작불가┃No puedes fabricar objetos durante combate.
 자원이 부족합니다!┃Recursos insuficientes.
 임시안전지대휴식불가┃Descanso deshabilitado en zona temporal segura.
@@ -3102,10 +2960,6 @@ WickelineUI_ReadyTooltip┃La Dra. Wickeline ha sido activada.
 위클라인처치노티┃La Dra. Wickeline ha sido asesinada
 위클라인죽음어나운스┃{0} ha eliminado a la Dra. Wickeline
 위클라인이동┃Se ha avistado a la Dra. Wickeline en {0}.
-전장예정노티┃1 Minuto antes de la Zona de Batalla
-전장예정┃Zona de Batalla se abrirá a las {0} en 1 minuto.
-전장생성노티┃Comienzo de la Zona de Batalla
-전장생성┃Se ha abierto una Zona de Batalla en {0}.
 자색안개예정노티┃30s para la niebla
 자색안개예정┃La niebla se activará en {0} dentro de 30 segundos.
 자색안개생성노티┃Activación de la niebla
@@ -3223,7 +3077,6 @@ Ping/Communication/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>necesita bebida<
 Ping/Communication/Thankyou/Chatting┃{0}({1}) <color=#C2FFA0>está agradecido</color>.
 Ping/Communication/Sorry/Chatting┃{0}({1}) <color=#C2FFA0>se disculpa</color>.
 Ping/Communication/Goodjob/Chatting┃{0}({1}) dice <color=#C2FFA0>¡bien hecho!</color>.
-Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) ha recibido <color=#C2FFA0>{2}</color> como recompensa de la Zona de Batalla.
 Ping/Tactical/Warning┃Advertencia
 Ping/Tactical/Escape┃Peligro
 Ping/Tactical/Help┃Soporte
@@ -3375,15 +3228,10 @@ VP 알림┃{0}({1}): <color=#FFFF00>PV {2}%</color>
 하이퍼루프알림생존자명시_비밀연구실┃{0}({1}): <color=#FFBB00>{2}</color>, Núm de Inimigos: {3}
 ToastMessage/HyperloopNotLab┃No puedes teletransportarte al Laboratorio.
 ToastMessage/CannotHyperLoopToBattleLab┃No puedes teletransportarte a aliados en el Laboratorio de Combate.
-ToastMessage/HyperloopNotBattlezone┃No puedes realizar Hyperloop hacia esta área hasta que la Zona de Batalla haya terminado.
-ToastMessage/HyperloopNotBattlezonePlayer┃Los compañeros de equipo que participan en la Zona de Batalla no pueden realizar Hyperloop.
 ToastMessage/HyperloopErrorInBattlezone┃No puedes realizar Hyperloop a un area cerrada.
 ToastMessage/HyperloopSecretLabCannotUse┃Aún no puedes usar el Hyperloop.
-ToastMessage/TransferConsoleErrorInBattlezone┃No puedes usar el Quiosco mientras la zona está en disputa.
-ToastMessage/KioskErrorInBattlezone┃No puedes usar el Quiosco mientras la zona está en disputa.
 ToastMessage/HyperloopErrorInTemporarySafeZone┃No puedes realizar Hyperloop durante la fase de Zona Segura.
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃No puedes usar el Quiosco durante la fase de Zona Segura.
-ToastMessage/SecurityConsoleErrorInBattlezone┃No puedes usar la Consola de seguridad mientras estás en una Zona de Batalla.
 ToastMessage/SecurityConsoleErrorInLastPhase┃La consola de seguridad no está disponible durante la fase final de la zona segura.
 SecurityConsoleErrorInLastPhase┃La consola de seguridad no está disponible durante la fase final de la zona segura.
 ToastMessage/AlreadyBoughtBattlezoneReward┃El equipo ya ha recibido una recompensa.
@@ -4222,6 +4070,7 @@ SkillCostPing/Vf┃Fuerza Vital
 SkillCostPing/GadgetEnergy┃Energía del Dispositivo
 장착중┃Equipando
 경로 확인┃Ruta (P)
+상단에서 목표 아이템을 선택하세요.┃Selecciona un objetivo de fabricación
 현재 지역┃Área actual
 제작 목표┃Recetas guardadas
 ※ 제작창에서 제작가이드를 추가 할 수 있습니다.┃Reune los objetos mostrados en la guía a la derecha siguiendo la ruta recomendada.
@@ -4289,7 +4138,6 @@ Shortcut/Active4ToSelf┃Lanza Habilidad 4 a uno mismo
 Shortcut/WeaponSkillToSelf┃Lanzar Habilidad de Arma a uno mismo
 Shortcut/TacticalSkillToSelf┃Autolanzamiento de Habilidad Táctica
 Shortcut/InstantCastGadgetSkill┃Lanzamiento rápido de artilugio
-InstantCastGadgetSkill┃Utiliza rápidamente los artilugios en la Bóveda de Artilugios.
 Shortcut/NormalCastActive1┃Lanzar Habilidad 1
 Shortcut/NormalCastActive2┃Lanzar Habilidad 2
 Shortcut/NormalCastActive3┃Lanzar Habilidad 3
@@ -4363,7 +4211,6 @@ Shortcut/ChangeEnableReplayControllerUI┃(Repeticion) Ocultar interfaz del cont
 Shortcut/HideSummonObjectUI┃(Espectador) Esconder la Interfaz de Trampas y Cámaras
 Shortcut/HideUserNameInMap┃(Espectador) Ocultar nombres en el mapa
 Shortcut/HideUserNameAndCharacterIconInMap┃(Espectador) Ocultar nombres y retratos
-Shortcut/ChangeEnableBattleZoneRuleGuideHUD┃(Espectador, Repetición) Esconder la Interfaz de Zona de Batalla
 Shortcut/NormalMatchingSolo┃Cola para Partida Normal (Solo)
 Shortcut/NormalMatchingDuo┃Cola para Partida Normal (Dúo)
 Shortcut/NormalMatchingSquad┃Cola para Partida Normal
@@ -4383,7 +4230,6 @@ Shortcut/FallBackTargetCustom┃Señal de Retirada (Personalizada)
 OptionActive┃Activar ({0})
 OptionDeactive┃Desactivar ({0})
 Shortcut/TranslateToggle┃Activar o desactivar la traducción automática
-TranslateToggle┃Puedes alternar temporalmente la traducción automática mientras la opción esté habilitada.
 Shortcut/Popup/Skill┃Habilidad
 Shortcut/Popup/Interface┃Interfaz
 Shortcut/Popup/Action┃Acciones
@@ -4813,7 +4659,6 @@ ToastMessage/Escape1017┃¡Un sujeto de prueba ha escapado de la Isla Lumia! El
 ToastMessage/Escape1018┃Solo podrás obtener el Brazalete de Regeneración de un compañero de equipo a partir del día 3.
 ToastMessage/Escape1019┃Más de un equipo está actualmente en el área. Submarino desactivado.
 ToastMessage/Escape1020┃Puedes mudarte después de obtener un Rootkit y se haya realizado un voto de escape.
-ToastMessage/Escape1021┃Un compañero de equipo está participando en la zona de batalla. No puedes teletransportarte.
 ToastMessage/Escape1022┃La Tarjeta de Acceso - Roja estará disponible después del día 4.
 ToastMessage/Escape1023┃No está disponible para su compra debido al bajo número de supervivientes en la isla Lumia.
 ToastMessage/Escape1024┃Solo se puede comprar si tienes un aliado muerto.
@@ -6228,6 +6073,124 @@ ShopPromotion_LimitCategoryWarn┃Una vez comprado el Paquete de Apariencias y O
 3118010_Title┃Objetos Especiales de la Colaboración
 3118010_Desc┃[Ficha] 50 Fichas de P5R\n[Dron] P5R Alibaba\n[Lápida] P5R Prisionero del Destino\n[Cámara] P5R Emociones\n[Pantalla de Lobby] Fondo Especial del Lobby de la Colaboración P5R\n[BGM de Fin de Partida] P5R Life Will Change\n[Potenciador] Potenciador A-Coin (7 Días)
 스킨 패키지┃Paquete de Aspectos
+BasicSetting/DeathRecapOnOff┃Se analiza y muestra el daño sufrido por el sujeto de prueba hasta la muerte durante la batalla.
+BasicSetting/PickPointInAreaIndicator┃Permite Lanzar una Habilidad en su Rango Máximo
+BasicSetting/GadgetVaultUIUXSetting┃¡Puedes personalizar la interfaz de usuario de la Bóveda de Dispositivos!\n Visualización de Ranura Rápida: La Bóveda de Dispositivos se fusiona con la parte inferior de la Ranura Rápida. Haz clic en el dispositivo de la Ranura Rápida para cambiar tu dispositivo equipado.\n Visualización de Rueda: Similar a los emoticonos, mantén pulsada la tecla de acceso rápido de la Bóveda de Dispositivos para cambiar tu dispositivo equipado. Pulsa brevemente la tecla de acceso rápido de la Bóveda de Dispositivos para usar el dispositivo equipado.
+BasicSetting/QuickCastIndicator┃El alcance de las habilidades se mostrará mientras mantengas presionada la tecla de activación rápida.
+BasicSetting/Emotion1┃Voz expresando la Gesto 1
+BasicSetting/Emotion2┃Voz expresando la Gesto 2
+BasicSetting/Emotion3┃Voz expresando la Gesto 3
+BasicSetting/Emotion4┃Voz expresando la Gesto 4
+BasicSetting/Emotion5┃Voz expresando la Gesto 5
+BasicSetting/Emotion6┃Voz expresando la Gesto 6
+BasicSetting/EmotionDance┃¡Úsalo para bailar!
+BasicSetting/EmotionPlate┃Mostrar la interfaz de gestos
+BasicSetting/EmotionPlate1┃Utilizar Set de Emotes 1
+BasicSetting/EmotionPlate2┃Utilizar Set de Emotes 2
+BasicSetting/EmotionPlate3┃Utilizar Set de Emotes 3
+BasicSetting/PingTarget┃Señalizar objetivo
+BasicSetting/MarkTarget┃Marcar Localización
+BasicSetting/PingTargetKeyboard┃Marcar Objetivo
+BasicSetting/MarkTargetKeyboard┃Marcar Localización
+BasicSetting/DeleteMarkTarget┃Elimina la Marca
+BasicSetting/LearnActive1┃Mejora la primera habilidad.
+BasicSetting/LearnActive2┃Mejora la segunda habilidad.
+BasicSetting/LearnActive3┃Mejora la tercera habilidad.
+BasicSetting/LearnActive4┃Mejora la cuarta habilidad.
+BasicSetting/LearnPassive┃Mejora la habilidad pasiva.
+BasicSetting/LearnWeaponSkill┃Mejora la habilidad de arma.
+BasicSetting/LearnTacticalSkill┃Mejora la habilidad táctica
+BasicSetting/Active1ToSelf┃Habilidad de Autolanzamiento 1\n(Solo para las habilidades auto-dirigidas)
+BasicSetting/Active2ToSelf┃Habilidad de Autolanzamiento 2\n(Solo para las habilidades auto-dirigidas)
+BasicSetting/Active3ToSelf┃Habilidad de Autolanzamiento 3\n(Solo para las habilidades auto-dirigidas)
+BasicSetting/Active4ToSelf┃Habilidad de Autolanzamiento 4\n(Solo para las habilidades auto-dirigidas)
+BasicSetting/WeaponSkillToSelf┃Habilidad de Arma de Autolanzamiento \n(Solo para las habilidades auto-dirigidas)
+BasicSetting/TacticalSkillToSelf┃Habilidad Táctica de Autolanzamiento (Solo para habilidades auto-dirigidas)
+BasicSetting/NormalCastActive1┃Lanzar Habilidad 1.
+BasicSetting/NormalCastActive2┃Lanzar Habilidad 2.
+BasicSetting/NormalCastActive3┃Lanzar Habilidad 3.
+BasicSetting/NormalCastActive4┃Lanzar Habilidad 4.
+BasicSetting/NormalCastWeaponSkill┃Lanzar Habilidad de Arma.
+BasicSetting/NormalCastTacticalSkill┃Lanzar Habilidad Táctica.
+BasicSetting/InstantCastActive1┃Habilidad de Lanzamiento Rápido 1\n
+BasicSetting/InstantCastActive2┃Habilidad de Lanzamiento Rápido 2\n
+BasicSetting/InstantCastActive3┃Habilidad de Lanzamiento Rápido 3\n
+BasicSetting/InstantCastActive4┃Habilidad de Lanzamiento Rápido 4\n
+BasicSetting/InstantCastWeaponSkill┃Habilidad de Arma de Lanzamiento Rápido\n
+BasicSetting/InstantCastTacticalSkill┃Activación Rápida de Habilidad Táctica
+BasicSetting/InstantUseActiveItem1┃Activación Rápida de Habilidad de Objeto
+BasicSetting/ChangeCameraMode┃Fija o remueve la cámara de la ubicación de tu personaje
+BasicSetting/CameraDragScroll┃Mueve la cámara mientras mantiene presionada la tecla de acceso rápido.
+BasicSetting/OpenCombineWindow┃Abre el menú de fabricación
+BasicSetting/OpenQuickSlot┃Abre el Menú de Fabricación Rápida y la Lista de Artilugios.
+BasicSetting/OpenQuickSlot_New1┃Abre el Menú de Fabricación Rápida y la Lista de Artilugios.
+BasicSetting/OpenScoreboard┃Muestra el marcador y estado de la partida.
+BasicSetting/OpenMap┃Abre el mapa. (Separado del clic de la Rueda del mouse)
+BasicSetting/ResetCamera┃Mueve la cámara hacia la parte trasera de la ubicación de tu personaje
+BasicSetting/OpenCharacterMastery┃Abre la ventana de maestrías
+BasicSetting/OpenVPad┃Abre el VPad con el atajo del teclado.\nPuedes comprobar tu Nivel de Maestría e información sobre tu Habilidad Táctica.
+BasicSetting/OpenCharacterStat┃Abre la ventana de estadísticas de personaje
+BasicSetting/OpenCharacterTotalStat┃Abre la Pantalla de estadísticas detalladas del personaje.
+BasicSetting/ShowObjectText┃Marca información sobre enemigos, objetos y objetos dejados en el suelo.
+BasicSetting/ToggleShowOverlay┃Activa el bloqueo de pantalla para obtener información sobre enemigos, objetos y artículos caídos en el suelo.
+BasicSetting/Escape┃Abre la configuración del juego
+BasicSetting/ShowRouteList┃Mostrar lista de Planos guardados
+BasicSetting/ShowProgressItem┃Checa la lista guardada de objetos para juego tardío.
+BasicSetting/MaxChatWindow┃Extiende la ventana de chat.
+BasicSetting/MinimapZoomIn┃Enfocar el minimapa
+BasicSetting/MinimapZoomOut┃Alejar el minimapa
+BasicSetting/CameraTeam1┃Mover la cámara a tu ubicación
+BasicSetting/CameraTeam2┃Mover la cámara al aliado nº1
+BasicSetting/CameraTeam3┃Mover la cámara al aliado nº2
+BasicSetting/CameraTeam4┃Mover la cámara al aliado nº3
+BasicSetting/Attack┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
+BasicSetting/Stop┃Detiene todas las acciones de tu personaje y espera en su ubicación.
+BasicSetting/Hold┃Detiene el caminar de tu personaje.
+BasicSetting/Rest┃Descansa y recupera rápidamente la salud y estamina.
+BasicSetting/Reload┃Recarga con amuniciones (Solo para pistolas)
+BasicSetting/QuickCombine┃Crea el artículo más ubicado a la izquierda en la lista de creación rápida.
+BasicSetting/QuickCombine2┃Crea el artículo en segundo lugar desde la izquierda en la lista de creación rápida.
+BasicSetting/QuickCombine3┃Crea el artículo en tercer lugar desde la izquierda en la lista de creación rápida.
+BasicSetting/QuickCombine4┃Crea el artículo en cuarto lugar desde la izquierda en la lista de creación rápida.
+BasicSetting/QuickCombine5┃Crea el artículo en quinto lugar desde la izquierda en la lista de creación rápida.
+BasicSetting/ProtectedQuickCombine┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
+BasicSetting/ProtectedQuickCombine2┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
+BasicSetting/ProtectedQuickCombine3┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
+BasicSetting/ProtectedQuickCombine4┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
+BasicSetting/ProtectedQuickCombine5┃Crea el artículo más cercano a la izquierda en la lista de creación rápida. (Solo artículos de fabricación de tu Plan Guardado)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine┃Fabrica el artículo que se encuentra más a la izquierda en la lista de elaboración rápida desde el cuadro. (Sólo crea artículos de tu Plan Guardado)\n
+BasicSetting/ProtectedBoxItemIncludeQuickCombine2┃Fabrica el segundo artículo desde la izquierda en la lista de elaboración rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine3┃Fabrica el tercer artículo desde la izquierda en la lista de elaboración rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine4┃Fabrica el cuarto artículo desde la izquierda en la lista de creación rápida desde el cuadro. (Solo crea artículos de tu Plan Guardado)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine5┃Fabrica el quito artículo desde la izquierda en la lista de creación rápida desde el cuadro. (Solo crea artículos de tu Plan Puardado)
+BasicSetting/ThrowItem┃Soltar un objeto del inventario. (Haga clic en el artículo de inventario)
+BasicSetting/ChangeEnableGameUI┃Alternar la interfaz de usuario en el juego (no afecta a la sala de espera).
+BasicSetting/ChangeEnableTrackerName┃Mostrar nombre de jugador
+BasicSetting/ChangeEnableTrackerStatusBar┃Activa/Desactiva la interface para el PV y PE
+BasicSetting/ChangeEnableReplayControllerUI┃Activar/Desactivar interfaz de control durante la reproducción.
+BasicSetting/HideSummonObjectUI┃Cambiar interfaz de usuario para trampas y cámaras durante repeticiones.
+BasicSetting/HideUserNameInMap┃Activa o desactiva los nombres en el mapa expandido y en el marcador durante las repeticiones.
+BasicSetting/HideUserNameAndCharacterIconInMap┃Activa o desactiva los nombres y retratos en el mapa expandido y el marcador durante las repeticiones.
+BasicSetting/AddGuide┃Añade el objeto al objetivo de fabricación 
+BasicSetting/MoveToAttack┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
+BasicSetting/MoveToAttackMouse┃Te lleva a la ubicación seleccionada y ataca a los enemigos cercanos.
+BasicSetting/MoveOrderCustom┃Mueve hacia la ubicación seleccionada y apunta los enemigos. (Vincular tecla)
+BasicSetting/MoveOrder┃Mueve hacia la ubicación seleccionada y apunta los enemigos.
+BasicSetting/PickOnlySurvivor┃Mantener la tecla del puntero del mouse para priorizar a los jugadores seleccionados sobre animales salvajes, enemigos caídos, objetos, etc
+BasicSetting/MoveCameraExpandMap┃Puedes usar Shift+MB1 para cambiar la cámara del minimapa expandido.\n
+BasicSetting/ChangeEnableInGameChat┃Activar interfaz de chat en el juego.
+BasicSetting/ChatItem┃Muestra información sobre el objeto en el chat (Clic en el icono del objeto)
+BasicSetting/Spray┃Utiliza el spray seleccionado en su colección.
+BasicSetting/Spray_New1┃Utiliza el spray seleccionado en su colección.
+BasicSetting/FallBackTarget┃Señal de Retirada
+BasicSetting/FallBackTargetCustom┃Señal de Retirada
+BasicSetting/MoveExpandMap┃Puedes moverte usando el minimapa expandido manteniendo la tecla Ctrl y presionando MB2.\N*Debes habilitar esta opción en Configuración ＞ Juego.
+BasicSetting/NormalMatchingSquad┃Comienza a buscar una Partida Normal con el tiempo de espera oculto.\n*Debes habilitar la opción [Usar atajos de espera] en Configuración＞Modo de transmisión.
+BasicSetting/RankMatchingSquad┃Comienza a buscar una Partida Clasificada con el tiempo de espera oculto.\n*Debes habilitar la opción [Usar atajos de espera] en Configuración＞Modo de transmisión.
+BasicSetting/AutoTranslate┃Traduce el chat de usuarios con diferentes configuraciones de idioma a tu idioma.\nLa traducción utilizará el idioma especificado en ambas configuraciones de juego.\nEs posible que las conversaciones en idiomas distintos a los establecidos en la configuración de tu juego no se traduzcan correctamente.\n- Idiomas admitidos: KR, ENG, JPN y CN (simplificado, tradicional).\n- Este es un servicio en versión beta y puede finalizar antes de tiempo.
+BasicSetting/PushToTalk┃Utiliza el chat de voz mientras mantienes presionada la tecla de acceso rápido.
+BasicSetting/InstantCastGadgetSkill┃Utiliza rápidamente los artilugios en la Bóveda de Artilugios.
+BasicSetting/TranslateToggle┃Puedes alternar temporalmente la traducción automática mientras la opción esté habilitada.
 ItemType/EMBLEM_MARK/Name┃Ícono de Perfil
 EMBLEM_MARK_FREE1┃Ícono de Aglaia
 EMBLEM_MARK_SHOP_102002┃Icono de Hyunwoo
@@ -8258,6 +8221,14 @@ Product/Name/S6_LuckyBox2025_Seq_Pack_05┃Trébol Afortunado #5
 Product/Name/S6_LuckyBox2025_Seq_Pack_06┃Trébol Afortunado #6
 Product/Name/S6_LuckyBox2025_Seq_Pack_07┃Trébol Afortunado #7
 Product/Name/S6_LuckyBox2025_Seq_Pack_08┃Trébol Afortunado #8
+Product/Name/S10_LuckyBox2026_Seq_Pack_01┃Trébol Afortunado #1
+Product/Name/S10_LuckyBox2026_Seq_Pack_02┃Trébol Afortunado #2
+Product/Name/S10_LuckyBox2026_Seq_Pack_03┃Trébol Afortunado #3
+Product/Name/S10_LuckyBox2026_Seq_Pack_04┃Trébol Afortunado #4
+Product/Name/S10_LuckyBox2026_Seq_Pack_05┃Trébol Afortunado #5
+Product/Name/S10_LuckyBox2026_Seq_Pack_06┃Trébol Afortunado #6
+Product/Name/S10_LuckyBox2026_Seq_Pack_07┃Trébol Afortunado #7
+Product/Name/S10_LuckyBox2026_Seq_Pack_08┃Trébol Afortunado #8
 Product/Name/2024_Festival_Seq_Pack_01┃Paquete de Shoichi Maestro de las Berlinas
 Product/Name/2024_Festival_Seq_Pack_02┃Paquete de campana dorada
 Product/Name/2024_Festival_Seq_Pack_03┃Paquete de vales de Selección de diseño de Aspecto épico
@@ -8629,6 +8600,10 @@ Product/Name/S10_Coraline_Emote_Pack_01┃Paquete de Emotes de Coraline
 Product/Name/S10_Coraline_Event_Pack_01┃Paquete de lanzamiento de Coraline
 Product/Name/S10_2026_Spring_Pack_01┃Paquete de primavera en flor
 Product/Name/S10_2026_Spring_Daily_Pack_01┃Caja diaria de primavera
+Product/Name/S10_2026_Lucky_Seq_Pack_01┃Paquete de Secuencia de la SuerteⅠ
+Product/Name/S10_2026_Lucky_Seq_Pack_02┃Paquete de Secuencia de la Suerte Ⅱ
+Product/Name/S10_2026_Lucky_Seq_Pack_03┃Paquete de Secuencia de la Suerte Ⅲ
+Product/Name/S10_2026_Lucky_Seq_Pack_04┃Paquete de Secuencia de la Suerte Ⅳ
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emotes\n\nEl 58% del costo de cada artículo que ya poseas será reembolsado a través del buzón.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emotes\n\nEl 56% del costo de cada artículo que ya poseas será reembolsado a través del buzón.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emotes\n\nEl 58% del costo de cada artículo que ya poseas será reembolsado a través del buzón.
@@ -9339,6 +9314,7 @@ Shop/Desc/Rare_WILDCARD_ETC┃Puedes intercambiar este <color=#2AC0FF>Comodín</
 Shop/Desc/Epic_WILDCARD_ETC┃Puedes intercambiar este <color=#d05EFF>Comodín</color> por un objeto Común/Poco Común/Raro/Épico, excluyendo aspectos.\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Puedes usar este objeto en el menú Comodín dentro de la sección Forja.\n* El Comodín se puede intercambiar por objetos, excluyendo aspectos.\n* Solo puedes intercambiar objetos de rareza igual o inferior a la del Comodín.\n* Algunos objetos no se pueden intercambiar con el Comodín.\n\nPor favor comprueba la elegibilidad para el intercambio antes de realizar la compra.
 Shop/Desc/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃Usa <color=#2AC0FF>Fragmentos de Intercambio</color> para usar Fragmentos de Temporada.\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Encuentra tus Fragmentos de Intercambio en el menú Colecciones - Temporada.\n* Selecciona Fragmentos de Temporada para usarlos.\n* Los Fragmentos de Intercambio se reinician cuando termina la Colección de Temporada. Asegúrate de revisar el periodo de la colección con tiempo.\n* Límitado a 1 compra por semana.
 Shop/Desc/MILEAGE_SEASON_COLLECTION_PACK_9901032┃Abre el <color=#35FF94>Paquete de Temporada</color> para obtener Fragmentos de Temporada Comunes o Poco Comunes con cierta probabilidad.\n\n<b><color=#F15F5F>[Notas]</color></b>\n\n* Puedes usar este objeto en la Forja.\n* Los Fragmentos de Temporada se usan de inmediato para la Colección de Temporada.\n* Los fragmentos repetidos se convierten en Puntos de Fragmento de Temporada.\n* Límitado a 3 compras por semana.
+Shop/Desc/S10_LuckyMarble2026_ExchangeFragments┃Usa <color=#2AC0FF>Fragmentos de Intercambio</color> para usar Fragmentos de Temporada.\n\n<b><color=#F15F5F>[Notas]</color></b>\n* Encuentra tus Fragmentos de Intercambio en el menú Colecciones - Temporada.\n* Selecciona Fragmentos de Temporada para usarlos.\n* Los Fragmentos de Intercambio se reinician cuando termina la Colección de Temporada. Asegúrate de revisar el periodo de la colección con tiempo.
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃Utiliza esta moneda para comprar diferentes artículos de Eternal Return.
@@ -9429,6 +9405,7 @@ Product/Name/S12_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/Festival2024_ACoin_100┃A-Coin X 100
 Product/Name/S10_LuckyMarble2026_Common_Fragment┃5 Paquetes Comunes de Fragmento de Temporada
+Product/Name/S10_LuckyMarble2026_ACoin_100┃A-Coin X 100
 Product/Name/S13_RARE_MATTER┃1 Fragmento de Datos Raro
 Product/Name/S13_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/Summer_LuckyMarble2024_ACoin_100┃A-Coin X 100
@@ -10699,7 +10676,7 @@ Goods/Desc/3102999┃Recibe 1 diseño de aspecto Raro con un 100% de probabilida
 Goods/Name/3303301┃Fichas de Fiestas
 Goods/Desc/3303301┃Las Fichas de Fiestas pueden ser obtenidas al abrir Cajas de Datos de Fiestas y expiran al final del evento.
 Goods/Name/3303302┃Fichas de Alegría
-Goods/Desc/3303302┃Las Fichas de Alegría pueden ser obtenidas al comprar un Trébol de la Suerte o Paquete de Alegría y expiran al final del evento.
+Goods/Desc/3303302┃Los Paquetes de Secuencia de la Suerte pueden obtenerse al comprar un Trébol de la Suerte o un Paquete de Alegría y expiran al final del evento.
 Goods/Name/3303303┃Fichas de Panadería
 Goods/Desc/3303303┃Las Fichas de Panadería pueden ser obtenidas al abrir una Cesta del Pan de Emma y expiran al final del evento.
 Goods/Name/3303304┃Fichas Blancas
@@ -15736,12 +15713,16 @@ Skill/Group/Coef/1044400┃Echion se desliza en la dirección seleccionada, infl
 Skill/LobbyDesc/1044500┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion y su daño de habilidad infligido proporcionalmente a su <color=white>Medidor FV</color> aumenta cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> por un periodo de tiempo y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta e inflige daño verdadero periódicamente a los enemigos cercanos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación por un período de tiempo, reduciendo su rango de ataque y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo daño de habilidad. La duración de Derramamiento aumenta cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color>.\n\n<i>Los efectos de Envenenamiento cambian según el arma que se esté utilizando.</i>\n<i>Enfriamiento Fijo: Esta habilidad no es afectada por la Reducción de Enfriamiento.</i>
 Skill/Group/Desc/1044500┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
 Skill/Group/Coef/1044500┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
+Skill/Group/IngameCoef/1044500┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
 Skill/Group/Desc/1044501┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
 Skill/Group/Coef/1044501┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
+Skill/Group/IngameCoef/1044501┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color> daño de habilidad. La duración de Derramamiento aumenta en {12} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {13} segundos.
 Skill/Group/Desc/1044502┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color> daño de habilidad. Tras {12} segundos, la FV inestable erupciona una vez más, infligiendo daño equivalente a {13} de la erupción anterior y lanzando a los enemigos por los aires durante {14} segundos.\nLa duración de Derramamiento aumenta en {16} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {17} segundos.
 Skill/Group/Coef/1044502┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color><color=#688a08>(+{21} PV Adicional)</color> daño de habilidad. Tras {12} segundos, la FV inestable erupciona una vez más, infligiendo daño equivalente a {13} de la erupción anterior y lanzando a los enemigos por los aires durante {14} segundos.\nLa duración de Derramamiento aumenta en {16} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {17} segundos.
+Skill/Group/IngameCoef/1044502┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque)</color><color=#688a08>(+{21} PV Adicional)</color> daño de habilidad. Tras {12} segundos, la FV inestable erupciona una vez más, infligiendo daño equivalente a {13} de la erupción anterior y lanzando a los enemigos por los aires durante {14} segundos.\nLa duración de Derramamiento aumenta en {16} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {17} segundos.
 Skill/Group/Desc/1044503┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color> daño de habilidad y ralentizando al objetivo en {12} durante {15} segundos. La duración de Derramamiento aumenta en {13} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {14} segundos.
 Skill/Group/Coef/1044503┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque Adicional)</color> daño de habilidad y ralentizando al objetivo en {12} durante {16} segundos. La duración de Derramamiento aumenta en {13} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {14} segundos.
+Skill/Group/IngameCoef/1044503┃<color=green>Passiva:</color> El <color=white>Medidor FV</color> de Echion aumenta y su daño de habilidad infligido aumenta en {0} por cada 1 <color=white>Medidor FV</color> cuando utiliza <color=white>Víbora Creciente (Q)</color> y <color=white>Mordedura Seca (E)</color>. Cuando su <color=white>Medidor FV</color> está lleno, entra en un estado de <color=white>Derramamiento de Fuerza Vital</color> durante {2} segundos y su daño aumentado se aplica al máximo. \n\n<color=white>Derramamiento de Fuerza Vital:</color> La velocidad de movimiento de Echion aumenta en {3} e inflige <color=white>{5}</color><color=#ffd775>(+{14} Poder de Ataque)</color> daño verdadero a los enemigos cercanos cada {4} segundos, activando <color=white>Envenenamiento (R)</color> y reiniciando el enfriamiento de <color=white>Mordedura Seca (E)</color>.\nMientras Derramamiento de Fuerza Vital está activo, matar a enemigos aumenta la duración de Derramamiento en {6} segundos y reinicia el enfriamiento de <color=white>Mordedura Seca (E)</color>.\n\n<color=white>Exuviación:</color> Cuando el Derramamiento termina, entra en Exuviación durante {7} segundos, reduciendo su rango de ataque en {9} y desactivando el aumento de <color=white>Medidor FV</color>.\n\n<color=white>Envenenamiento (R):</color> Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{10}</color><color=#ffd775>(+{11} Poder de Ataque Adicional)</color> daño de habilidad y ralentizando al objetivo en {12} durante {16} segundos. La duración de Derramamiento aumenta en {13} segundos cuando inflige daño a personajes enemigos con <color=white>Envenenamiento</color>. Infligir daño con ataques básicos reduce el enfriamiento de <color=white>Envenenamiento</color> en {14} segundos.
 Skill/Group/Desc/1044510┃Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{0}</color> de daño de habilidad. Golpear un enemigo con Envenenamiento extiende la duración del Derramamiento de FV en {2} segundos.\nLos ataques básicos reducen el enfriamiento de Envenenamiento en {3} segundos.
 Skill/Group/Desc/1044520┃Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{0}</color> de daño de habilidad. Después de {2} segundos, la FV inestable entra en erupción una vez adicional, infligiendo daño igual a {3} de la erupción anterior y lanzando a los enemigos por los aires durante {4} segundos.\nGolpear a un enemigo con Envenenamiento extiende la duración del Derramamiento de FV en {6} segundos.\nLos ataques básicos reducen el enfriamiento de Envenenamiento en {7} segundos.
 Skill/Group/Desc/1044530┃Echion dispara FV inestable en la dirección seleccionada, infligiendo <color=white>{0}</color> de daño de habilidad. Golpear a un enemigo con Envenenamiento extiende la duración del Derramamiento de FV en {2} segundos.\nLos ataques básicos reducen el enfriamiento de Envenenamiento en {3} segundos.
@@ -18204,26 +18185,10 @@ Skill/Code/Coef/4113003┃Consume {0} PV para hacer un Juramento durante {4} seg
 Skill/Code/ExpansionTip/4113003┃<i>Los PV Máx. no pueden ser reducidos debajo de {0} cuando realizas un Juramento.</i>
 Skill/Code/Desc/4108003┃Todos los aliados dentro del alcance recuperan <color=white>{1}</color> PV.\n\n<color=#FFFFC2>Mejora del Módulo:</color> La Defensa incrementa en <color=white>{4}</color> durante {5} segundos para los aliados alcanzados por el viento.
 Skill/Code/Coef/4108003┃Todos los aliados dentro del alcance recuperan (<color=white>{1}</color>+<color=green>Nivel de Personaje * {6}</color>) PV.\nDespués de la recuperación por parte de Viento Curativo, sólo un {3}% de cualquier otra recuperación puede ser aplicado durante los próximos {2} segundos.\n\n<color=#FFFFC2>Mejora del Módulo:</color> La Defensa incrementa en <color=white>{4}</color> durante {5} segundos para los aliados alcanzados por el viento.
-CharacterState/Group/Name/2100201┃Zona de Batalla - Aceleración
-CharacterState/Group/Desc/2100201┃Esta Zona de Batalla incrementa la velocidad de movimiento de los sujetos de pruebas en {0}%, y reduce los enfriamientos en {1}%.\nNo excede el valor máximo de enfriamientos.
-CharacterState/Group/Name/2100202┃Zona de Batalla - Frenesí
-CharacterState/Group/Desc/2100202┃Esta Zona de Batalla incrementa el daño infligido en {0}% y la Omnisucción en {1}%.
-CharacterState/Group/Name/2100203┃Zona de Batalla - Defensa
-CharacterState/Group/Desc/2100203┃Esta Zona de Batalla otorga un Escudo de {1} después de {0} segundos fuera de batalla. No puede ser reaplicado mientras el escudo aún esté en efecto.
-CharacterState/Group/Name/2120000┃Límite de Maestría de Zona de Batalla
-CharacterState/Group/Desc/2120000┃Limita la maestría máxima obtenible de armas/armaduras/PV mientras se esté en la Zona de Batalla
-CharacterState/Group/Name/2110002┃Reconstrucción Rápida de Laboratorio
-CharacterState/Group/Desc/2110002┃La Reconstrucción Rápida de la Zona de Batalla se activa cuando un jugador con un Kit de Zona de Batalla entra en la Zona de Batalla, otorgándole reconstrucción rápida cuando se le aniquila.
-CharacterState/Group/Name/2101001┃Remover Kit de Zona de Batalla
-CharacterState/Group/Desc/2101001┃Cuando un Kit de Zona de Batalla es removido, no puedes recibir "Reconstrucción Rápida de Zona de Batalla" ni "Marca de Zona de Batalla".
 CharacterState/Group/Name/2140000┃Kit Curativo
 CharacterState/Group/Desc/2140000┃Recupera PV y a lo largo del tiempo.
 CharacterState/Group/Name/2160000┃Kit de Escudo
 CharacterState/Group/Desc/2160000┃Escudado por un periodo de tiempo.
-CharacterState/Group/Name/2180200┃Medidor de Corrosión Congelado
-CharacterState/Group/Desc/2180200┃El Medidor de Corrosión no incrementará por un cierto periodo de tiempo.\nEl efecto termina cuando recuperas Medidor de Corrosión o después de cierto periodo.
-CharacterState/Group/Name/2190000┃Corrosión
-CharacterState/Group/Desc/2190000┃Si tu Corrosión está continuamente en el límite, morirás.\nRecupera tu Medidor de Corrosión eliminando Sujetos de pruebas o estando en el alcance del Transbordador de la Zona de Batalla.
 Skill/Group/Name/2003200┃Embestida
 Skill/LobbyDesc/2003200┃Corre en línea recta, empujando a los enemigos y causando daño.\nLos enemigos son derribados muy lejos. Si el Jabalí falla la embestida, es ralentizado por cierto periodo de tiempo y recibe daño adicional.
 Skill/LobbyDesc/┃Reconocimiento
@@ -18858,7 +18823,8 @@ Skill/Group/LobbyDesc/4509010┃Un meteorito caerá en la dirección seleccionad
 Skill/Code/Desc/4509001┃Un meteorito cae hacia la dirección seleccionada, infligiendo <color=white>{4}</color> de daño verdadero.
 Skill/Code/Coef/4509001┃Un meteorito caerá en la dirección seleccionada, infligiendo daño verdadero.\nDaño: <color=white>{1}</color><color=#008000>(+ Nivel de Personaje*{2})</color>\n
 Skill/Code/Desc/4509011┃Un meteorito caerá en la dirección seleccionada, infligiendo <color=white>{4}</color> de daño.
-Skill/Code/Coef/4509011┃Un meteorito caerá en la dirección seleccionada, infligiendo <color=white>{1}</color><color=#008000>(+ Nivel de Personaje*{2})</color>\nde daño.
+Skill/Code/Coef/4509001┃Un meteorito caerá en la dirección seleccionada, infligiendo <color=white>{1}</color><color=#008000>(+ Nivel de Personaje*{2})</color>\nde daño.
+Skill/Code/ExpansionTip/4509001┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 CharacterState/Group/Name/4509000┃Impacto de Meteoro
 CharacterState/Group/Desc/4509000┃Te ha golpeado un meteorito.
 Skill/Group/Name/4508000┃Puñetazo Fantástico
@@ -18868,6 +18834,7 @@ Skill/LobbyDesc/4508000┃Invoca el puño ilusorio de un genio en la dirección 
 Skill/Group/LobbyDesc/4508000┃Invoca el puño ilusorio de un genio en la dirección seleccionada.\nLos sujetos de prueba salen volando en esa dirección.
 Skill/Code/Desc/4508001┃Invoca el puño ilusorio de un genio hacia la direccón seleccionada y lanza un rápido puñetazo, causando <color=white>{0}</color><color=#688A08> (+{1}% de sus PV máximo)</color> como daño de habilidad a los objetivos y empujandolos lejos en esa dirección durante <color=white>{2} segundos</color>.\nTú y tus aliados no reciben daño.
 Skill/Code/Coef/4508001┃Invoca el puño ilusorio de un genio hacia la direccón seleccionada y lanza un rápido puñetazo, causando <color=white>{0}</color><color=#688A08>(+{1}% de sus PV máximo)</color> como daño de habilidad a los objetivos y empujandolos lejos en esa dirección durante <color=white>{2} segundos</color>.\nTú y tus aliados no reciben daño.
+Skill/Code/ExpansionTip/4508001┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 CharacterState/Group/Name/4508000┃El Puñetazo Fántastico del Genio
 CharacterState/Group/Desc/4508000┃Duele, ¿no es así?
 CharacterState/Group/Name/6516010┃El Puñetazo Fántastico del Genio 2
@@ -18900,12 +18867,14 @@ CharacterState/Group/Name/4502200┃Absorción del campo gravitacional
 CharacterState/Group/Desc/4502200┃Absorbido por el campo gravitacional.
 Skill/Code/Desc/4502001┃Arrastra a todos los sujetos de prueba enemigos dentro de <color=white>{0}</color>m hacia el lanzador, infligiendo <color=white>{2}</color> de daño verdadero y aturdiéndolos por {1} segundos.
 Skill/Code/Coef/4502001┃Arrastra a todos los sujetos de prueba enemigos dentro de <color=white>{0}</color>m hacia el lanzador, infligiendo <color=white>{2}</color> de daño verdadero y aturdiéndolos por {1} segundos.
+Skill/Code/ExpansionTip/4502001┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 Skill/Group/Name/4503000┃Trueno Rotatorio
 Skill/Code/Name/4503001┃Trueno Rotatorio
 TacticalSkillSet/Code/Name/500031┃Trueno Rotatorio
 Skill/Group/4503000/Name┃<color=yellow>Trueno Rotatorio</color>
 Skill/Code/Desc/4503001┃{0} segundos después de la activación, te mejoras a ti mismo con [Trueno Rotatorio].\n\n[Trueno Rotatorio]\nPropulsado por una ola trueno, tu Velocidad de Movimiento incrementa gradualmente en {2}% por {1} segundos. Chocar con un enemigo lo empuja hacia atrás y le inflige {3} de daño de habilidades.
 Skill/Code/Coef/4503001┃{0} segundos después de la activación, te mejoras a ti mismo con [Trueno Rotatorio].\n\n[Trueno Rotatorio]\nPropulsado por una ola trueno, tu Velocidad de Movimiento incrementa gradualmente en {2}% por {1} segundos. Chocar con un enemigo lo empuja hacia atrás y le inflige {3} de daño de habilidades.
+Skill/Code/ExpansionTip/4503001┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 CharacterState/Group/Name/4503000┃Trueno Rotatorio: Esperando por activación
 CharacterState/Group/Desc/4503000┃Los efectos de Trueno Rotatorio pronto serán aplicados sobre ti.
 CharacterState/Group/Name/4503100┃Azul Cobalto: Trueno Rotatorio
@@ -18939,6 +18908,8 @@ Skill/Code/Desc/4505001┃Te detienes temporalmente durante {0} segundos e inmed
 Skill/Code/Coef/4505001┃Te detienes temporalmente durante {0} segundos e inmediatamente saltas hacia la dirección objetivo cuando se libera el efecto.
 Skill/Code/Desc/4505011┃Te detienes temporalmente durante {0} segundos e inmediatamente saltas hacia la dirección objetivo cuando se libera el efecto.
 Skill/Code/Coef/4505011┃Te detienes temporalmente durante {0} segundos e inmediatamente saltas hacia la dirección objetivo cuando se libera el efecto.
+Skill/Code/ExpansionTip/4505001┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
+Skill/Code/ExpansionTip/4505011┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 Skill/Group/Name/4506000┃Plegaria
 Skill/Code/Name/4506001┃Plegaria
 TacticalSkillSet/Code/Name/500061┃Plegaria
@@ -18979,6 +18950,8 @@ CharacterState/Group/Name/4524020┃Rastreador - Rastreo Activado
 CharacterState/Group/Desc/4524020┃Dispara un proyectil en la dirección seleccionada, infligiendo daño de habilidad al primer objetivo alcanzado. Puedes volver a lanzar la habilidad para abalanzarte hacia él.
 CharacterState/Group/Name/4524030┃Rastreador - No seleccionable
 CharacterState/Group/Desc/4524030┃Eres no seleccionable gracias al Rastreador.
+Skill/Code/ExpansionTip/4524000┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
+Skill/Code/ExpansionTip/4524002┃<i>Enfriamiento fijo: Esta habilidad no se ve afectada por la Reducción de enfriamiento.</i>
 Skill/Code/Desc/4512003┃Telepórtate hacia la ubicación seleccionada.
 Skill/Code/Coef/4512003┃Telepórtate hacia la ubicación seleccionada.
 Skill/Code/Desc/4513003┃Los enemigos cercanos se ralentizan un {3}% durante {5} segundos al usarlos.\n\n<color=FFFFC2>Mejora del módulo:</color> Causa <color=white>{2}</color> daño de habilidad a enemigos en un rango de {6}m cada {4} segundos {1}.
@@ -22230,80 +22203,79 @@ ServerError/9450┃El equipo está completo y no puede aceptar más miembros. (9
 ServerError/9451┃El Circuito Unión está disponible para jugadores de nivel 30 y superior.
 ServerError/9452┃No hay emparejamientos disponibles para el nivel de este equipo. Consulta el calendario de emparejamientos para cada nivel.
 ServerError/99999┃Se ha establecido conexión con una versión incompatible.
-ServerError/SUCCESS┃Un error ha ocurrido. Por favor, reinicia tu juego.
 ServerError/UNKNOWN┃Un error ha ocurrido. Por favor, reinicia tu juego.
 ServerError/PARAMETER_TYPE_MISMATCH┃Un error ha ocurrido. Por favor, reinicia tu juego.
 ServerError/PARAMETER_MISSED┃Un error ha ocurrido. Por favor, reinicia tu juego.
-ServerError/PARAMETER_VALIDATION_FAILED┃Necesitas volver a entrar. El juego va a reiniciarse.
-ServerError/SESSION_HEADER_REQUIRED┃Un error ha ocurrido. Por favor, reinicia tu juego.
-ServerError/UNAVAILABLE_REQUEST┃El servidor se encuentra en mantención.
-ServerError/UNDER_MAINTENANCE┃Las versiones del cliente no concuerdan.
-ServerError/INVALID_SETUP┃Un error ha ocurrido. Por favor, reinicia tu juego.
+ServerError/PARAMETER_VALIDATION_FAILED┃Un error ha ocurrido. Por favor, reinicia tu juego.
+ServerError/SESSION_HEADER_REQUIRED┃Necesitas volver a entrar. El juego va a reiniciarse.
+ServerError/UNAVAILABLE_REQUEST┃Un error ha ocurrido. Por favor, reinicia tu juego.
+ServerError/UNDER_MAINTENANCE┃El servidor se encuentra en mantención.
+ServerError/INVALID_VERSION┃Las versiones del cliente no concuerdan.
 ServerError/MALFORMED_SESSION┃Un error ha ocurrido. Por favor, reinicia tu juego.
-ServerError/ABNORMAL_ACCESS┃Necesitas volver a entrar. El juego va a reiniciarse.
-ServerError/SESSION_EXPIRED┃No puedes ingresar al servidor. Por favor, revisa el estado de tu cuenta.
-ServerError/USER_IDENTIFY_FAILED┃El nombre de usuario no está disponible.
-ServerError/UNAVAILABLE_NICKNAME┃No puedes ingresar al servidor. Por favor, revisa el estado de tu cuenta.
-ServerError/ADMIN_UNAUTHENTICATED┃Error al conectarse a Steam.
-ServerError/STEAM_AUTH_FAILED┃Esta cuenta está restringida
-ServerError/PERMANENT_BAN_USER┃El nombre ya existe.
-ServerError/CHAT_AUTH_FAILED┃No puedes crear una nueva cuenta de MS.
-ServerError/WEGAME_AUTH_FAILED┃No se pueden encontrar los resultados de la partida.
-ServerError/NO_BATTLE_RESULT┃Información del juego no válida. (1201)
-ServerError/NOT_EXIST_GAME┃Información de repetición no válida. (1202)
-ServerError/NOT_EXIST_REPLAY┃Ya tienes el Pase ER. (1203)
-ServerError/ALREADY_BATTLE_PASS_PAID┃No tienes acceso a este Replay.(1204)
-ServerError/ALREADY_FULL_GAME┃No se ha podido encontrar una partida. Por favor, verifica tu servidor en la esquina superior derecha.
-ServerError/OUT_OF_SERVICE_MATCHING_REGION┃Error de conexión a la partida.
-ServerError/MISS_MATCHING_PASS┃Un miembro no cumple con los requisitos de nivel o personaje.
-ServerError/UNAVAILABLE_RANKING┃El juego anterior no terminó todavia.
-ServerError/NO_BATTLE_HOST┃Un miembro no cumple con los requisitos de nivel.
-ServerError/NOT_OPENED_CONTENT┃La búsqueda no está disponible actualmente.(1306)
-ServerError/NOT_ENOUGH_POOL_CHARACTERS┃Error de solicitud de compra
-ServerError/IAP_INVALID_ORDER┃Error de información de Steam
-ServerError/IAP_STEAM_API_SERVER_BUSY┃Información de producto inválida.
-ServerError/IAP_KAKAO_API_SERVER_BUSY┃Información de personaje no encontrada
-ServerError/LACK_OF_SPECIAL_MATTER┃Insuficientes fondos
-ServerError/LACK_OF_CURRENCY┃Insuficiente NP.
-ServerError/LACK_OF_NP┃Insuficientes A-COIN.
-ServerError/LACK_OF_ITEM┃Información de producto no encontrada
-ServerError/NO_PRODUCT_ID┃Información de producto incorrecta
-ServerError/INVALID_PROMOTION┃Número de compras excedido
-ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Límite de compra diaria excedido
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Límite de compra semanal excedido
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Límite de compra mensual excedido
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Los descuentos para esta compra ya expiraron.
-ServerError/UNABLE_PURCHASE_BY_SALE┃Número de compras diarias excedido. (2127)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Número de compras semanales excedido. (2128)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Número de compras mensuales excedido. (2129)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Límite de compras excedido. (2130)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Información de precio inválida. (2131)
-ServerError/INVALID_PRODUCT_PRICE┃No disponible para compra en tu región (2132)
-ServerError/TO_BE_UPDATED┃Ya has comprado este objeto. (2135)
-ServerError/ALREADY_BUY_SEQ┃Las condiciones de compra no han sido cumplidas. No se puede proceder con la compra.
-ServerError/INVALID_PURCHASE_CONDITION┃Ya has comprado este objeto. (2137)
-ServerError/ALREADY_BUY_PROMOTION┃No se ha podido encontrar información de la misión
-ServerError/INVALID_USER_MISSION┃Error de cambio de misión
-ServerError/INVALID_CHANGE_MISSION┃No puedes recibir la recompensa sin haber completado la misión
-ServerError/NOVICE_MISSION_EMPTY_CODES┃Información erronea
-ServerError/NOT_EXIST_GIFT_MAIL┃Expirado. No puedes recibir la recompensa.
-ServerError/GIFT_MAIL_IS_EXPIRED┃No se puede encontrar la recompensa canjeable.
-ServerError/NOT_EXIST_EVENT_DATA┃No puedes compartir un Plan Guardado importado.
-ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃No puedes borrar un Plan Guardado que no ha sido compartido.
-ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃No hay Plan Guardado para editar.
-ServerError/NOT_EXIST_WEAPON_ROUTE┃Plan Guardado no existetente.
+ServerError/ABNORMAL_ACCESS┃Un error ha ocurrido. Por favor, reinicia tu juego.
+ServerError/SESSION_EXPIRED┃Necesitas volver a entrar. El juego va a reiniciarse.
+ServerError/USER_IDENTIFY_FAILED┃No puedes ingresar al servidor. Por favor, revisa el estado de tu cuenta.
+ServerError/UNAVAILABLE_NICKNAME┃El nombre de usuario no está disponible.
+ServerError/INVALID_MACHINE_NUM┃No puedes ingresar al servidor. Por favor, revisa el estado de tu cuenta.
+ServerError/STEAM_AUTH_FAILED┃Error al conectarse a Steam.
+ServerError/BAN_USER┃Esta cuenta está restringida
+ServerError/ALREADY_HAVE_NICKNAME┃El nombre ya existe.
+ServerError/CAN_NOT_CREATE_MS_ACCOUNT┃No puedes crear una nueva cuenta de MS.
+ServerError/NO_BATTLE_RESULT┃No se pueden encontrar los resultados de la partida.
+ServerError/NOT_EXIST_GAME┃Información del juego no válida. (1201)
+ServerError/NOT_EXIST_REPLAY┃Información de repetición no válida. (1202)
+ServerError/ALREADY_BATTLE_PASS_PAID┃Ya tienes el Pase ER. (1203)
+ServerError/NOT_ALLOW_REPLAY_USER┃No tienes acceso a este Replay.(1204)
+ServerError/OUT_OF_SERVICE_MATCHING_REGION┃No se ha podido encontrar una partida. Por favor, verifica tu servidor en la esquina superior derecha.
+ServerError/MISS_MATCHING_PASS┃Error de conexión a la partida.
+ServerError/UNAVAILABLE_RANKING┃Un miembro no cumple con los requisitos de nivel o personaje.
+ServerError/UNAVAILABLE_MATCHING_PRE_GAME_NOT_FINISHED┃El juego anterior no terminó todavia.
+ServerError/NOT_OPENED_CONTENT┃Un miembro no cumple con los requisitos de nivel.
+ServerError/CANNOT_MATCHING_NOT_IN_LOBBY_STATUS┃La búsqueda no está disponible actualmente.(1306)
+ServerError/IAP_INVALID_ORDER┃Error de solicitud de compra
+ServerError/IAP_STEAM_API_SERVER_BUSY┃Error de información de Steam
+ServerError/IAP_KAKAO_API_SERVER_BUSY┃Información de producto inválida.
+ServerError/KAKAO_IAP_USE_CASH_API_FAIL┃Información de personaje no encontrada
+ServerError/LACK_OF_CURRENCY┃Insuficientes fondos
+ServerError/LACK_OF_NP┃Insuficiente NP.
+ServerError/LACK_OF_ACOIN┃Insuficientes A-COIN.
+ServerError/NO_PRODUCT_ID┃Información de producto no encontrada
+ServerError/INVALID_PROMOTION┃Información de producto incorrecta
+ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Número de compras excedido
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Límite de compra diaria excedido
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Límite de compra semanal excedido
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Límite de compra mensual excedido
+ServerError/UNABLE_PURCHASE_BY_SALE┃Los descuentos para esta compra ya expiraron.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Número de compras diarias excedido. (2127)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Número de compras semanales excedido. (2128)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Número de compras mensuales excedido. (2129)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Límite de compras excedido. (2130)
+ServerError/INVALID_PRODUCT_PRICE┃Información de precio inválida. (2131)
+ServerError/UNABLE_PURCHASE_BY_SPECIFIC_AREA┃No disponible para compra en tu región (2132)
+ServerError/ALREADY_BUY_SEQ┃Ya has comprado este objeto. (2135)
+ServerError/INVALID_PURCHASE_CONDITION┃Las condiciones de compra no han sido cumplidas. No se puede proceder con la compra.
+ServerError/ALREADY_BUY_PROMOTION┃Ya has comprado este objeto. (2137)
+ServerError/INVALID_USER_MISSION┃No se ha podido encontrar información de la misión
+ServerError/INVALID_CHANGE_MISSION┃Error de cambio de misión
+ServerError/INVALID_PROGRESS_COUNT┃No puedes recibir la recompensa sin haber completado la misión
+ServerError/NOT_EXIST_GIFT_MAIL┃Información erronea
+ServerError/GIFT_MAIL_IS_EXPIRED┃Expirado. No puedes recibir la recompensa.
+ServerError/NOT_EXIST_REWARD┃No se puede encontrar la recompensa canjeable.
+ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃No puedes compartir un Plan Guardado importado.
+ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃No puedes borrar un Plan Guardado que no ha sido compartido.
+ServerError/NOT_EXIST_WEAPON_ROUTE┃No hay Plan Guardado para editar.
 ServerError/NOT_EXIST_RECOMMEND_WEAPON_ROUTE┃Plan Guardado no existetente.
-ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃No puedes importar tu propio Plan Guardado.
-ServerError/MY_SHARE_WEAPON_ROUTE┃El personaje seleccionado no puede usar este Plan Guardado.
-ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃Ya no está disponible para comprar.
-ServerError/INVALID_WEAPON_ROUTE_PATH┃Acceso denegado.
-ServerError/TRAIT_NOT_EXIST_PAGE┃En este momento no hay páginas vacías.
-ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃Ya no está disponible para comprar.
-ServerError/INVALID_TRAIT┃No se puede encontrar la información del Nivel Clasificado.
-ServerError/NOT_EXIST_RANKING_TIER┃No se puede encontrar la recompensa canjeable de la partida.
-ServerError/NOT_EXIST_RANKING_REWARD┃No se puede iniciar el emparejamiento. La diferencia entre los niveles del equipo es demasiado amplia.
-ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃El nivel Diamante o superior no es posible para el emparejamiento con equipos pre-hechos.
-ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT_GREATER_THAN_NOW┃{1} o superior no puede jugar con Equipos en grupos de {2}P en el servidor {0}
+ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃Plan Guardado no existetente.
+ServerError/MY_SHARE_WEAPON_ROUTE┃No puedes importar tu propio Plan Guardado.
+ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃El personaje seleccionado no puede usar este Plan Guardado.
+ServerError/ALREADY_MAX_PAID_COUNT┃Ya no está disponible para comprar.
+ServerError/TRAIT_NOT_EXIST_PAGE┃Acceso denegado.
+ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃En este momento no hay páginas vacías.
+ServerError/TRAIT_MAX_PAGE┃Ya no está disponible para comprar.
+ServerError/NOT_EXIST_RANKING_TIER┃No se puede encontrar la información del Nivel Clasificado.
+ServerError/NOT_EXIST_RANKING_REWARD┃No se puede encontrar la recompensa canjeable de la partida.
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃No se puede iniciar el emparejamiento. La diferencia entre los niveles del equipo es demasiado amplia.
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT_GREATER_THAN_NOW┃El nivel Diamante o superior no es posible para el emparejamiento con equipos pre-hechos.
 ServerError/ALREADY_RECEIVED_DLC_PRODUCT┃Información de skin no encontrada
 ServerError/INVALID_PRODUCT_ID┃Ya tienes este personaje
 ServerError/ALREADY_MAX_FRIEND_RECEIVE_COUNT┃La lista de solicitudes de amistad de este jugador está llena.
@@ -24302,6 +24274,7 @@ Skin/Name/1083001┃Henry Clérigo de Batalla
 Skin/Name/1084000┃Blair
 Skin/Name/1084001┃Blair Carrera Intrépida
 Skin/Name/1085000┃Mirka
+Skin/Name/1085001┃Mirka Sirvienta Salvaje
 Skin/Name/1086000┃Fenrir
 Skin/Name/1087000┃Coraline
 Skin/OnSelectVO/1001003┃Las reglas solamente existen para romperlas. ¿Cierto?
@@ -24646,6 +24619,7 @@ Skin/Desc/1075002┃Nada es más difícil de ver que el esfuerzo sin talento. Aq
 Skin/Desc/1084001┃¡Muéstrame tu velocidad!
 Skin/Desc/1059003┃¿Aún lo estás pensando? Te di más que suficiente tiempo.
 Skin/Desc/1034003┃Aunque las huellas se desvanezcan, la escena debe permanecer.
+Skin/Desc/1085001┃¡Hazte a un lado, señor! ¡Podría voltear todo al revés!
 Skin/Desc/1016005┃¡Partamos en busca de mi propio sentido de la justicia! ¡Vamos!
 Skin/Desc/1047005┃Un maestro ladrón está seguro de sí mismo incluso sin máscara.
 Skin/Desc/1050007┃¿Puedes escucharlo? El dueto que tocamos juntos.
@@ -24803,7 +24777,6 @@ ItemTag/Ex_ItemSkill┃Habilidad Activa de Objeto
 ItemTag/Ex_Dummy1┃Reducción de Curación
 ItemTag/Ex_Dummy2┃Utilidad
 ItemTag/Ex_Endure┃Regeneración
-전장보상재화부족┃Marcas de Zona de Batalla insuficientes.
 Product/ResetTime/Week┃{0} S
 Product/ResetTime/Day┃{0} D
 Product/ResetTime/Hour┃{0} Hr.
@@ -24881,24 +24854,6 @@ gameTip_Title_10160_1┃Nivel / Habilidad
 gameTip_Desc_10160_1┃¡Usa los puntos que ganas al subir de nivel y aprender habilidades más fuertes!\n\nCuando alcanzas cierto nivel de maestría, el "nivel" del Sujeto de prueba sube. Según su nivel incrementa, también lo hacen sus estadísticas. Gana puntos de habilidad para volver tus habilidades incluso más poderosas.\n\n¡Sube de nivel y vuélvete tan fuerte como puedas!
 gameTip_Title_10170_1┃Destrezas
 gameTip_Desc_10170_1┃Puedes añadir nuevas habilidades y mejoras a tus Sujetos de prueba al seleccionar Destrezas.\n\nLas Destrezas permiten más variedad y opciones. Por ejemplo, usar Destrezas de Fortificación incrementará tu Defensa y reducirá el Daño. Si usas Destrezas de Soporte, ¡puede que seas capaz de ayudar a tus compañeros de equipo y llevarles a la victoria!\n\n¿No sabes que Destreza es la más adecuada para tu Sujeto de prueba? ¡Revísalas en <color=#8FDBF8>[Equipamiento →Menú de Destrezas]</color>!
-gameTip_Title_10200_1┃Zona de Batalla
-gameTip_Desc_10200_1┃Las Zonas de Batalla son áreas creadas deliberadamente para combatir. Su propósito es recolectar información sobre los Sujetos de prueba que se hacen notar en ambientes tan extremos.\n\nCada Zona de Batalla tiene un ambiente especial. Algunas pueden incrementar la Velocidad de movimiento, otras incrementan la Omnisucción, y otras pueden recargar tu escudo.\n\nEl ganador recibirá <color=#8FDBF8>premios especiales</color> que solo pueden ser encontrados en la Zona de Batalla.
-gameTip_Title_10200_2┃Flujo de la Zona de Batalla
-gameTip_Desc_10200_2┃Todas las ubicaciones previstas de las Áreas Restringidas del Día 2 serán elegidas como <color=#8FDBF8>ubicación de la Zona de Batalla</color>.\n\nLa ubicación de la <color=#8FDBF8>Zona de Batalla</color> será designado en la Noche 2.\n\nEl tipo de Zona de Batalla puede ser revisado al comprobar la Marca de Zona de Batalla en la Consola de Seguridad de dicho lugar en el Mapa Mundial.
-gameTip_Title_10200_3┃Como Participar en Zonas de Batalla
-gameTip_Desc_10200_3┃Cuando una Zona de Batalla comienza, los Sujetos de prueba dentro del área se vuelven participantes de la Zona de Batalla.\n\nSi los participantes mueren en la Zona de Batalla, serán revividos después de un corto periodo de tiempo.\n\nSin embargo, no podrás participar en la Zona de Batalla nuevamente una vez hayas revivido, ¡así que ten cuidado!\n\nSi un Sujeto de prueba entra o deja la Zona de Batalla, <color=#8FDBF8>morirá inmediatamente</color> y no podrá ser revivido.
-gameTip_Title_10200_4┃Recompensas de la Zona de Batalla
-gameTip_Desc_10200_4┃El equipo ganador de una Zona de Batalla puede puede obtener recompensas como materiales especiales o un módulo de Habilidad táctica ya sea en el HUD o en la Consola de Seguridad.\n\n¡Cuanto más participantes haya en la Zona de Batalla, mejores serán las recompensas!\n\nLas recompensas de la Zona de Batalla solo pueden ser recogidas <color=#8FDBF8>una vez por equipo</color>, ¡elige con cuidado!
-gameTip_Title_10210_1┃Sistema de Zona de Batalla
-gameTip_Desc_10210_1┃La Zona de Batalla está compuesta por los siguientes cuatro sistemas:\n\nKit de Zona de Batalla / Marca de Zona de Batalla / Indicador de Corrosión / Transporte de Zona de Batalla\n\nCada sistema está vinculado sistematicamente.
-gameTip_Title_10210_2┃Kit de Zona de Batalla
-gameTip_Desc_10210_2┃Cuando un Sujeto de pruebas participa en una Zona de Batalla con su Kit de Zona de Batalla, obteniendo una <color=#8FDBF8>mejora de Reconstrucción Rápida</color> y una <color=#8FDBF8>Marca de Zona de Batalla</color>.\n\nUn Sujeto de pruebas con la mejora de Reconstrucción Rápida es revivido después de un corto periodo si muere.\n\nEl Kit de Zona de Batalla es permanentemente retirado de los Sujetos de pruebas que ganaron una Zona de Batalla.
-gameTip_Title_10210_3┃Marca de Zona de Batalla
-gameTip_Desc_10210_3┃La Marca de Zona de Batalla simboliza el ambiente único y otorga efectos especiales a los participantes.\n\nSi un participante muere, la Marca de Zona de Batalla puede ser recuperada y usada como moneda por el equipo ganador para comprar recompensas.\n\nSi no hay equipo ganador, las Marcas de Zona de Batalla son retiradas permanentemente.
-gameTip_Title_10210_4┃Indicador de Corrosión
-gameTip_Desc_10210_4┃En la Zona de Batalla, el <color=#8FDBF8>Indicador de Corrosión</color> se acumula a cambio de mejorar las habilidades del Sujeto de pruebas.\n\nLos Sujetos de pruebas que agoten por completo su Indicador de Corrosión morirán después de cierto periodo de tiempo.\n\nEl Indicador de Corrosión puede recuperarse permaneciendo dentro del alcance de un Transporte de Zona de Batalla o matando otros Sujetos de pruebas.
-gameTip_Title_10210_5┃Transporte de Zona de Batalla
-gameTip_Desc_10210_5┃El Transporte de la Zona de Batalla recorre una ruta designada en la Zona de Batalla, restaurando el Indicador de Corrosión.\n\nSi solamente hay aliados alrededor, el Indicador de Corrosión se restaurará continuamente.\n\n¡Lucha alrededor del Transporte!
 gameTip_Title_10220_1┃Habilidades Tácticas
 gameTip_Desc_10220_1┃Las Habilidades Tácticas son cruciales en el juego, así que es importante elegirlas y utilizarlas sabiamente en función de tu equipo, la selección del enemigo y el estilo de tu propio Sujeto de pruebas. ¡Diviértete creando estrategias y disfrutando de una variedad de habilidades Tácticas!\n\n*Puedes <color=#8FDBF8>mejorar</color> tus Habilidades Tácticas gastando Créditos. Actualizaciones desde el nivel 2 requieren <color=#8FDBF8>materiales especiales</color>.
 gameTip_Title_10230_1┃Operador
@@ -25047,7 +25002,6 @@ gameTip_category_SecretLab┃Laboratorio Secreto
 gameTip_category_VictoryAndDefeat┃Victoria y Derrota
 gameTip_category_UseCredits┃Utiliza Créditos
 gameTip_category_BeginnerTips┃Consejos para principiantes
-gameTip_category_BattleZone┃Zona de Batalla
 gameTip_category_Escape┃Escape
 gameTip_category_CobaltProtocol┃Protocolo Cobalto
 gameTip_category_Rift┃Grieta
@@ -25305,8 +25259,6 @@ OperatorSetting/BossMonster┃Aprende sobre Alpha/Omega/Wickeline.
 OperatorSetting/CreateNoticeSpecialCollectible┃Aprende sobre Árbol de la Vida y Meteoritos.
 상위 등급 장비 제작┃Fabricando Equipo de Rareza Alta
 OperatorSetting/GetSpecialCollectible┃Aprende sobre fabricar equipo recomendado cuando tienes los materiales especiales requeridos.
-전장┃Zonas de Batalla
-OperatorSetting/BattleZone┃Aprende sobre el combate en Zonas de Batalla.
 탈출┃Escapar
 OperatorSetting/Escape┃Aprende cómo escapar cuando eres el único integrante restante de tu equipo.
 전송 콘솔┃Kioscos
@@ -25337,7 +25289,7 @@ OperatorSetting/VerticalLauncher┃Descubre información acerca del Dispositivo 
 안내 로봇 유료 부활 대상자┃Resurrección de Pago de Lumi
 OperatorSetting/GuidedRobotPaidResurrection┃Anuncia cuando puedes pagar para revivir en la tienda de Lumi cuando las resurrecciones de pago habituales ya no sean posibles.
 균열 가이드┃Grieta
-OperatorSetting/RiftGuide┃Aprende más acerca del sistema de Grietas y Portales.
+OperatorSetting/RiftGuide┃Aprende más acerca del sistema de Grietas.
 대체아이템동적추천┃Recomendaciones de Objetos Alternativos
 OperatorSetting/NavAltRecItem┃Anuncia objetos alternativos que puedes fabricar cuando has recogido un material especial que no es tu objeto objetivo.
 루트 목표 추가 불가능 알림┃No puedes añadir más objetos deseados a tu Plan Guardado.
@@ -25385,8 +25337,6 @@ InGameGuide/Nadja/Group/Name/10103000┃Un Árbol de la Vida ha Aparecido
 InGameGuide/Nadja/Group/Desc/10103000┃Un Árbol de la Vida ha aparecido en <color=yellow>{0}</color>.\nVayamos a conseguirlo.
 InGameGuide/Nadja/Group/Name/10110000┃Fabricando Equipo de Rareza Alta
 InGameGuide/Nadja/Group/Desc/10110000┃Tienes algunos materiales especiales. ¿Te gustaría hacer algo con ellos?\nHaz Clic-Derecho para añadir los objetos deseados.
-InGameGuide/Nadja/Group/Name/10120000┃Zonas de Batalla
-InGameGuide/Nadja/Group/Desc/10120000┃Una Zona de Batalla será designada pronto en <color=yellow>{0}</color>.\nPuedes obtener una recompensa por ser el último sobreviviente en la Zona de Batalla.
 InGameGuide/Nadja/Group/Name/10130000┃Omega se Acerca
 InGameGuide/Nadja/Group/Desc/10130000┃Omega pronto aparecerá en <color=yellow>{0}</color>.
 InGameGuide/Nadja/Group/Name/10133000┃Omega ha Llegado
@@ -25497,12 +25447,6 @@ InGameGuide/Nadja/Group/Name/10331100┃Grieta - Grieta Dimensional
 InGameGuide/Nadja/Group/Desc/10331100┃Felicidades por tu victoria.\nNo olvides recoger tu recompensa antes de salir.
 InGameGuide/Nadja/Group/Name/10340000┃Recomendaciones de Objetos Alternativos
 InGameGuide/Nadja/Group/Desc/10340000┃Has recogido un material especial.\nEste no es uno de tus objetos objetivo. Entrégaselo a un aliado o comprueba qué objetos alternativos puedes fabricar.
-InGameGuide/Nadja/Group/Name/10121000┃Ubicación de Zona de Batalla
-InGameGuide/Nadja/Group/Desc/10121000┃Una Zona de Batalla será designada pronto.\nEntre más enemigos elimines, mejores recompensas podrás obtener si es que ganas.
-InGameGuide/Nadja/Group/Name/10122000┃Activación de Zona de Batalla
-InGameGuide/Nadja/Group/Desc/10122000┃Una Zona de batalla ha sido activada.\nNadie puede irse hasta que haya un ganador.
-InGameGuide/Nadja/Group/Name/10123000┃Recompensas de Zona de Batalla
-InGameGuide/Nadja/Group/Desc/10123000┃Veo que has ganado la Zona de Batalla.\nAquí tu recompensa.
 오퍼레이터 신규유저 보상 제목┃En honor a nuestro nuevo sujeto de pruebas.
 오퍼레이터 신규유저 보상 내용┃Ajustarte a la isla no debió de ser fácil, pero me parece que estás listo ahora.\nA pesar de que no ya puedo llamarte más mi aprendiz... estoy un poco alegre por ti.\nGracias por dar lo mejor que tienes. Me divertí mucho.\nNo estoy segura de si llamar a esto un regalo o una recompensa, pero ten... ¡disfrútalo!
 오퍼레이터 기존유저 보상 제목┃Para ti, nuestro experimentado sujeto de pruebas.
