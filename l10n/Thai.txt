@@ -1808,6 +1808,9 @@ Esc/Minimize┃ย่อ
 닉네임에 특수 문자 사용 불가┃ชื่อของคุณไม่สามารถประกอบไปด้วยตัวอักกษรไปด้วยหรือที่ว่างได้
 닉네임 사용 불가 단어┃ชื่อของคุณมีคำต้องห้ามอยู่
 매칭 중 닉네임 변경 불가┃คุณไม่สามารถใช้ตั๋วเปลี่ยนชื่อระหว่างจับคู่ได้
+ShopNickNameProductPopup/Error/NicknameLength┃ชื่อของคุณอาจยาวหรือสั้นเกินไป
+ShopNickNameProductPopup/Error/SpecialCharacter┃ชื่อของคุณไม่สามารถประกอบไปด้วยตัวอักกษรไปด้วยหรือที่ว่างได้
+ShopNickNameProductPopup/Error/InappropriateWords┃ชื่อของคุณมีคำต้องห้ามอยู่
 확인┃ยืนยัน
 취소┃ยกเลิก
 저장┃เซฟ
@@ -2028,7 +2031,6 @@ RankRP┃เอาชีวิตรอด
 Kill_AssistRP/Elimination┃เสียชีวิต
 Kill_AssistRP/Down┃ล้ม
 Kill_AssistRP/RepeatDown┃ไม่นับการเกิดใหม่
-Kill_AssistRP/BattleZoneDown┃สนามรบ
 Kill_AssistRP/AutoResurrectionDown┃ล้ม (ป้องกันการถูกกำจัด)
 Kill_AssistRP/AutoResurrectionAfterDown┃ล้ม (ปกติ)
 Kill_AssistRP/AutoResurrectionRepeatDown┃ไม่นับการเกิดใหม่ (ป้องกันการถูกกำจัด)
@@ -2043,7 +2045,6 @@ RankEnd_KillCount┃ยอดสังหาร: {0} TK
 RankEnd_Elimination┃เสียชีวิต: {0}
 RankEnd_Down┃ล้ม: {0}
 RankEnd_RepeatDown┃ไม่นับการเกิดใหม่:{0}
-RankEnd_BattleZoneDown┃สนามรบ: {0}
 RankEnd_AutoResurrectionDown┃ล้ม (ป้องกันการถูกกำจัด): {0}
 RankEnd_AutoResurrectionAfterDown┃ล้ม (ปกติ): {0}
 RankEnd_AutoResurrectionRepeatDown┃ไม่นับการเกิดใหม่ (ป้องกันการถูกกำจัด): {0}
@@ -2098,7 +2099,6 @@ MyTierRP/ETERNITY┃<color=#FDFBEF>อันดับปัจจุบัน</c
 RankRP_explanation┃แต้มได้ตามอันดับที่ได้
 Elimination_explanation┃แต้มได้รับจากการกวาดล้างทีมศัตรูหรือกำจัดศัตรูในขณะที่พวกเขาล้มลงหลังจากเฟสป้องกันการถูกกำจัด
 Down_explanation┃แต้มที่ได้จากการทำให้ศัตรูล้มลง
-BattleZoneDown_explanation┃แต้มที่ได้จากการสังหารศัตรูในพื้นที่ สนามรบ
 AutoResurrectionDown_explanation┃แต้มได้รับหลังจากทำให้ศัตรูล้มในระหว่างเฟสป้องกันการถูกกำจัด
 AutoResurrectionAfterDown_explanation┃แต้มได้รับหลังจากทำให้ศัตรูล้มหลังจากเฟสป้องกันการถูกกำจัด
 AutoResurrectionTeamWiped_explanation┃แต้มได้รับเมื่อเกิด ทำลาย/พลิกเกม สำหรับศัตรูที่ล้มโดยเพื่อนร่วมทีมที่ถูกกำจัดไปในระหว่างเฟสป้องกันการถูกกำจัด
@@ -2168,7 +2168,6 @@ DeferPointDemotion/PopupContents┃แต้มเกียรติยศขอ
 사망개요┃โอเวอร์เลย์ การตาย
 사망개요 설명┃ความเสียหายที่ได้รับจากตัวทดลองจนกระทั่งถึงตอนตายจากการต่อสู้จะถูกวิเคราะห์และแสดงออกมา
 Shortcut/DeathRecapOnOff┃โอเวอร์เลย์ การตาย
-DeathRecapOnOff┃ความเสียหายที่ได้รับจากตัวทดลองจนกระทั่งถึงตอนตายจากการต่อสู้จะถูกวิเคราะห์และแสดงออกมา
 GameSetting/DefaultShowExpandTooltip┃คู่มือข้อมูลเพิ่มเติมจะแสดงเสมอแม้จะไม่ได้กดปุ่ม (Alt)
 DefaultShowExpandTooltip┃แสดงคู่มือข้อมูลเพิ่มเติมเสมอ
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃*ถ้าคุณตั้งทางลัดบนคีย์บอร์ดของคุณสำหรับการใช้งานที่รวดเร็ว คุณสามารถใช้งานมันได้เพียงวางเคอร์เซอร์แล้วกดปุ่มเท่านั้น
@@ -2177,7 +2176,6 @@ DefaultShowExpandTooltip┃แสดงคู่มือข้อมูลเ�
 스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃เปิดใช้งานการร่ายสกิลภายในระยะสูงสุด
 GameSetting/PickPointToInAreaIndicatorActive┃การตั้งค่านี้จะทำให้แน่ใจว่าสกิลที่ต้องการเล็งไปยังเป้าหมาย สามารถร่ายได้ในระยะสูงสุดเสมอ แม้ว่าเคอเซอร์ของเม้าส์จะอยู่เหนือกว่าระยะนั้น
 가젯볼트UIUX설정┃การตั้งค่า UI คลังแกดเจ็ต
-GameSetting/GadgetVaultUIUXSetting┃คุณสามารถปรับแต่ง UI ของคลังแกดเจ็ต ได้!\nการแสดงผลช่องด่วน: คลังแกดเจ็ตจะถูกรวมเข้ากับด้านล่างของช่องด่วน คลิกที่แกดเจ็ตในช่องด่วนเพื่อเปลี่ยนแกดเจ็ตที่คุณสวมใส่\nการแสดงผลวงล้อ: คล้ายกับการแสดงอารมณ์ กดปุ่มลัดคลังแกดเจ็ต ค้างไว้เพื่อเปลี่ยนแกดเจ็ตที่คุณสวมใส่ กดปุ่มลัดคลังแกดเจ็ต สั้นๆ เพื่อใช้แกดเจ็ตที่คุณสวมใส่
 가젯볼트UIUX설정/퀵슬롯병합┃การแสดงผลช่องด่วน
 가젯볼트UIUX설정/휠┃การแสดงผลวงล้อ
 스토리 계속하기┃ข้ามเนื้อเรื่อง
@@ -2187,123 +2185,13 @@ GameSetting/GadgetVaultUIUXSetting┃คุณสามารถปรับแ�
 에피소드 해금 불가┃บทนี้ไม่สามารถใช้งานได้
 최대 사거리 고정 툴팁┃การตั้งค่านี้จะทำให้แน่ใจว่าสกิลที่ต้องการเล็งไปยังเป้าหมาย สามารถร่ายได้ในระยะสูงสุดเสมอ แม้ว่าเคอเซอร์ของเม้าส์จะอยู่เหนือกว่าระยะนั้น
 즉시 시전 사거리 표시┃อินดิเคเตอร์สำหรับร่ายลัด
-즉시 시전 사거리 표시 툴팁┃ระยะจะแสดงออกมาเมื่อกดปุ่มร่ายทางลัดค้างเอาไว้
 모두 즉시 시전┃ร่ายทางลัด
 모두 일반 시전┃ร่ายปกติ
 모든 캐릭터┃ตัวละครทั้งหมด
 스킬┃สกิล
 액티브아이템┃สกิลไอเทม
 아이템┃ไอเทม
-Emotion1┃เสียงแบบที่ 1
-Emotion2┃เสียงแบบที่ 2
-Emotion3┃เสียงแบบที่ 3
-Emotion4┃เสียงแบบที่ 4
-Emotion5┃เสียงแบบที่ 5
-Emotion6┃เสียงแบบที่ 6
-EmotionDance┃ใช้เพื่อเต้น!
-EmotionPlate┃ใช้อิโมติคอน
-EmotionPlate1┃ใช้อิโมติคอนชุดที่ 1
-EmotionPlate2┃ใช้อิโมติคอนชุดที่ 2
-EmotionPlate3┃ใช้อิโมติคอนชุดที่ 3
-PingTarget┃เลือกเป้าหมาย
-MarkTarget┃ปักพื้นที่
-PingTargetKeyboard┃ปักเป้าหมาย
-MarkTargetKeyboard┃ปักพื้นที่
-DeleteMarkTarget┃นำจุดปักออก
-LearnActive1┃เสริมพลังสกิลแรก
-LearnActive2┃เสริมพลังสกิลที่สอง
-LearnActive3┃เสริมพลังสกิลที่สาม
-LearnActive4┃เสริมพลังสกิลที่สี่
-LearnPassive┃เสริมพลังสกิลติดตัว
-LearnWeaponSkill┃เสริมพลังสกิลอาวุธ
-LearnTacticalSkill┃เสริมพลังสกิลกลยุทธ์
-Active1ToSelf┃ร่ายสกิล 1 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-Active2ToSelf┃ร่ายสกิล 2 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-Active3ToSelf┃ร่ายสกิล 3 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-Active4ToSelf┃ร่ายสกิล 4 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-WeaponSkillToSelf┃ร่ายสกิลประจำอาวุธ ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-TacticalSkillToSelf┃ร่ายสกิลกลยุทธ์ ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
-NormalCastActive1┃ร่ายสกิล 1
-NormalCastActive2┃ร่ายสกิล 2
-NormalCastActive3┃ร่ายสกิล 3
-NormalCastActive4┃ร่ายสกิล 4
-NormalCastWeaponSkill┃ร่ายสกิลอาวุธ
-NormalCastTacticalSkill┃ร่ายสกิลกลยุทธ์
-InstantCastActive1┃ร่ายลัด สกิล 1
-InstantCastActive2┃ร่ายลัด สกิล 2
-InstantCastActive3┃ร่ายลัด สกิล 3
-InstantCastActive4┃ร่ายลัด สกิล 4
-InstantCastWeaponSkill┃ร่ายลัด สกิลอาวุธ
-InstantCastTacticalSkill┃ร่ายลัด สกิลกลยุทธ์
-InstantUseActiveItem1┃คีย์ลัดสำหรับสกิลไอเท็ม
-ChangeCameraMode┃แก้ไขหรือปรับเปลี่ยนกล้องของตัวละครของคุณ
-CameraDragScroll┃ย้ายกล้องเมื่อกดปุ่มลัด
-OpenCombineWindow┃เปิดเมนูการคราฟ
-OpenQuickSlot┃เปิดเมนูคราฟลัดและรายการแก็ดเจ็ต
-OpenQuickSlot_New1┃เปิดเมนูคราฟลัดและรายการแก็ดเจ็ต
-OpenScoreboard┃แสดงหน้ากระดานแต้มและสเตตัส
-OpenMap┃แสดงแผนที่แบบขยาย
-ResetCamera┃ย้ายกล้องไปด้านหลังของจุดที่ตัวละครอยู่
-OpenCharacterMastery┃เปิดหน้าจอแสดงมาสเตอร์รี่
-OpenVPad┃เปิด VPad ด้วยคีย์ลัดบนคีย์บอร์ด \nคุณสามารถตรวจสอบระดับความเชี่ยวชาญและข้อมูลของสกิลเทคนิค
-OpenCharacterStat┃เปิดหน้าจอแสดงค่าสเตตัสของตัวละคร
-OpenCharacterTotalStat┃เปิดหน้าแสดงรายละเอียสถานะตัวละคร
-ShowObjectText┃แสดงข้อมูลของศัตรู, สิ่งของและของที่ทิ้งเอาไว้
-ToggleShowOverlay┃ล็อคการเคลื่อนย้ายของการแสดงข้อมูลของศัตรู, สิ่งของและของที่ทิ้งเอาไว้
-Escape┃เปิดการตั้งค่า
-ShowRouteList┃แสดงรายการของแผนที่บันทึกไว้
-ShowProgressItem┃ตรวจสอบรายการที่บันทึกสำหรับช่วงท้ายของเกม
-MaxChatWindow┃ขยายจอแชท
-MinimapZoomIn┃ซูมเข้าไปในมินิแมพ
-MinimapZoomOut┃ซูมออกจากมินิแมพ
-CameraTeam1┃หมุนกล้องไปยังพื้นที่ของคุณ
-CameraTeam2┃หมุนกล้องไปยังเพื่อนร่วมทีม 1
-CameraTeam3┃หมุนกล้องไปยังเพื่ื่อนร่วมทีม 2
-CameraTeam4┃หมุนกล้องไปยังเพื่ื่อนร่วมทีม 3
-Attack┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
-Stop┃หยุดทุกการกระทำของตัวละครของคุณและยืนรอในพื้นที่นั้น
-Hold┃สั่งหยุดการเดิน
-Rest┃สั่งพักผ่อนและฟื้นเลือดกับสตามิน่า
-Reload┃สั่งเปลี่ยนกระสุน(เฉพาะสายปืนเท่านั้น)
-QuickCombine┃คราฟไอเทมที่อยู่มุมซ้ายสุดในรายการคราฟลัด
-QuickCombine2┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสองในรายการคราฟลัด
-QuickCombine3┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสามในรายการคราฟลัด
-QuickCombine4┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสี่ในรายการคราฟลัด
-QuickCombine5┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับห้าในรายการคราฟลัด
-ProtectedQuickCombine┃คราฟไอเทมที่อยู่ซ้ายสุดในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedQuickCombine2┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสองในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedQuickCombine3┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสามในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedQuickCombine4┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสี่ในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedQuickCombine5┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับห้าในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedBoxItemIncludeQuickCombine┃คราฟไอเทมที่อยู่ซ้ายสุดในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedBoxItemIncludeQuickCombine2┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสองในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedBoxItemIncludeQuickCombine3┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสามในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedBoxItemIncludeQuickCombine4┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสี่ในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ProtectedBoxItemIncludeQuickCombine5┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับห้าในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
-ThrowItem┃ทิ้งไอเทมในกระเป๋า(คลิ๊กไอเทมในกระเป๋า)
-ChangeEnableGameUI┃ตั้งค่า UI ในเกม (ไม่ส่งผลในล็อบบี้)
-ChangeEnableTrackerName┃เปิด/ปิด ชื่อเล่น
-ChangeEnableTrackerStatusBar┃เปลี่ยนมุมมองของ UI สำหรับ HP และ SP
-ChangeEnableReplayControllerUI┃เปิด/ปิด ตัวควบคุม UI ระหว่างใช้รีเพลย์
-HideSummonObjectUI┃สลับ UI สำหรับกับดักและกล้องในระหว่างรีเพลย์
-HideUserNameInMap┃เปิดปิดชื่อเล่นบนแผนที่แบบขยายและตารางคะแนนระหว่างรีเพลย์
-HideUserNameAndCharacterIconInMap┃เปิดปิดชื่อเล่นบนแผนที่แบบขยายและตารางคะแนนระหว่างรีเพลย์
-ChangeEnableBattleZoneRuleGuideHUD┃สลับ UI ในสนามรบระหว่างอยู่ในโหมดสอดส่องหรือรีเพลย์
-AddGuide┃ใส่ไอเทมลงไปในแผน
-MoveToAttack┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
-MoveToAttackMouse┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
-MoveOrderCustom┃ย้ายสิ่งที่อัญเชิญออกมาของคุณไปยังเป้าหมายที่เลือก สามารถเลือกศัตรูเป็นเป้าได้ (ล็อคคีย์)
-MoveOrder┃ย้ายสิ่งที่อัญเชิญออกมาของคุณไปยังเป้าหมายที่เลือก สามารถเลือกศัตรูเป็นเป้าได้
-PickOnlySurvivor┃ขณะที่กดปุ่มลัด จะเปลี่ยนให้การชี้เมาส์นั้นเล็งที่ศัตรูก่อนสัตว์ป่า หรือศัตรูที่ล้ม หรือสิ่งของอื่นๆในฉาก
-MoveCameraExpandMap┃คุณสามารถใช้ Ctrl+MB 1 เพื่อเปลี่ยนกล้องบนมินิแมพที่ขยายขึ้นได้
-ChangeEnableInGameChat┃สลับ UI ของเกมแชท
-ChatItem┃แสดงข้อมูลของไอเทในแชท(กดเลือกไอคอนของไอเทม)
-Spray┃เลือกใช้สเปรย์ในช่องของคุณ
-Spray_New1┃เลือกใช้สเปรย์ในช่องของคุณ
-FallBackTarget┃เตือนให้ถอย
-FallBackTargetCustom┃เตือนให้ถอย
 GameSetting/MoveExpandMap┃คุณสามารถเคลื่อนที่ได้ด้วยการเปิดมินิแมพแล้วกดปุ่ม Ctrl และ MB2 พร้อมกัน
-MoveExpandMap┃คุณสามารถเคลื่อนที่ได้ด้วยการเปิดมินิแมพแล้วกดปุ่ม Ctrl และ MB2 พร้อมกัน\n*จำเป็นต้องเปิดใน ตั้งค่า ＞ ตัวเกม.
 확장 미니맵 이동 허용┃ขยายแผนที่การเคลื่อนที่ของตัวละคร
 GameSetting/MouseReverse┃สลับการตั้งค่าของเมาส์
 마우스 좌우 반전(이동, 선택)┃สลับคลิ๊กซ้าย/ขวา
@@ -2334,10 +2222,8 @@ CCTV 감지 범위 접근 시 감지 범위 표시 사용┃แสดงระ�
 GameSetting/MouseOverIconSizeUp┃กด Alt และนำเม้าส์ไปชี้ที่ มินิแมพแบบขยายเพื่อขยายไอค่อน
 NormalMatchingSolo┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้ส่วนนี้ในการตั้งค่า ＞ เกม
 NormalMatchingDuo┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้ส่วนนี้ในการตั้งค่า ＞ เกม
-NormalMatchingSquad┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้งาน [ใช้คิวลัด] ในตั้งค่า ＞ โหมดถ่ายทอดสด
 RankMatchingSolo┃เริ่มต้นการจัดหาห้องสำหรับห้องแรงค์ โซโล่ เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้ส่วนนี้ในการตั้งค่า ＞ เกม
 RankMatchingDuo┃เริ่มต้นการจัดหาห้องสำหรับห้องแรงค์ โซโล่ เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้ส่วนนี้ในการตั้งค่า ＞ เกม
-RankMatchingSquad┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้งาน [ใช้คิวลัด] ในตั้งค่า ＞ โหมดถ่ายทอดสด
 SquadRumbleMatching┃เริ่มต้นการจัดหาห้องสำหรับลีกยูเนี่ยน เวลาหาคิวจะถูกซ่อนเอาไว้ \n* คุณจำเป็นต้องเปิดใช้งานส่วนนี้ใน การตั้งค่า  ＞ เกม
 EventModeMatching┃เริ่มการค้นหาห้องสำหรับ โหมดกิจกรรม\nจับห้องโดยซ่อนเวลาหาห้อง \n*คุณต้องเปิดใช้งานระบบนี้ใน การตั้งค่า ＞ เกม
 유니온 대전 방송모드 에러 팝업┃Union Circuit จะใช้งานได้หลังจากเข้าร่วมทีม  \nกรุณาเข้าสู่ล็อบบี้ของทีม Union Circuit ที่คุณเข้าร่วมเพื่อดำเนินการต่อ\n
@@ -2363,7 +2249,7 @@ GameSetting/WildAnimal┃แสดงตัวจับเวลาสัตว�
 GameSetting/ResourceItem┃แสดงข้อมูลเกี่ยวกับสิ่งของตามธรรมชาติ อาทิ หิน กิ่งไม้ หรือ พฤกษาแห่งชีวิต
 GameSetting/AutoWeaponSkills┃ทำการเรียนรู้สกิลอาวุธทันที เมื่อสามารถทำได้
 미니맵 잘못 클릭 방지 시간┃ดีเลย์การป้องกันการกดผิดบนมินิแมพ
-GameSetting/PreventMinimapMove┃เพื่อปรับปรุงการควบคุม หากสกิลการเคลื่อนที่หรือคำสั่งการใช้สกิลถูกสั่งใช้งานเมื่อตัวชี้ของเมาส์อยู่บนมินิแมพ คำสั่งจะถูกเมินเฉย\nการใช้สกิลในทิศที่มินิแมพอยู่จะสามารถกระทำการได้โดยวางตัวชี้ของเมาส์บนมินิแมพสักระยะ\nระบบนี้ถูกทำขึ้นมาเพื่อการใช้สกิลที่แม่นยำและดียิ่งขึ้น
+GameSetting/SubTitle┃เพื่อปรับปรุงการควบคุม หากสกิลการเคลื่อนที่หรือคำสั่งการใช้สกิลถูกสั่งใช้งานเมื่อตัวชี้ของเมาส์อยู่บนมินิแมพ คำสั่งจะถูกเมินเฉย\nการใช้สกิลในทิศที่มินิแมพอยู่จะสามารถกระทำการได้โดยวางตัวชี้ของเมาส์บนมินิแมพสักระยะ\nระบบนี้ถูกทำขึ้นมาเพื่อการใช้สกิลที่แม่นยำและดียิ่งขึ้น
 미니맵표기방식┃สไตล์การแสดงผลมินิแมพ
 GameSetting/MinimapNotationSystem┃คุณสามารถเลือกได้ระหว่าง "แผนที่พื้นฐาน" / "แผนที่ดาวเทียม" เพื่อแสดงผลเป็นมินิแมพภายในเกม
 확장맵표기방식┃วิธีการแสดงแผนที่
@@ -2383,8 +2269,6 @@ GameSetting/CampfireCraftingSortPrior┃รักษาลำดับการ�
 AutoWeaponSkills┃เรียนรู้สกิลอาวุธทันที
 GameSetting/EnableMinimapMove┃อนุญาตให้คุณเคลื่อนที่ในมินิแมพได้โดยการกดคลิ๊กขวา
 EnableMinimapMove┃อนุญาตการเคลื่อนที่มินิแมพ
-전장 HUD 자동 전환┃สลับเข้าสู่หน้า HUD สนามรบ โดยอัตโนมัติ
-GameSetting/BattleZoneHUDAutoReplace┃จะทำการสลับเข้าสู่หน้า HUD สนามรบทันทีเมื่อคุณเข้าสู่เขตสนามรบ
 옵션/후반아이템자동교체┃อนุญาตการสวมแทนที่โดยอัตโนมัติ 
 GameSetting/AutoReplaceLateGameItems┃อนุญาตการสวมแทนที่ของสวมใส่เริ่มต้นด้วยของสำหรับช่วงท้ายเกมที่ลงไว้ในแผนที่บันทึกหลังคราฟเสร็จโดยอัตโนมัติ
 옵션/마크목표경로지정표기┃ทำเครื่องหมายสำหรับเป้าที่กำหนด
@@ -2392,7 +2276,7 @@ GameSetting/MarkPingWayPointSet┃ทำ/ไม่ทำเครื่องห
 마우스 휠로 이모티콘 세트 변경 허용┃อนุญาตให้ใช้งานการเปลี่ยนชุดอิโมติคอนด้วยวงล้อของเมาส์
 GameSetting/EmoticonSetMouseWheel┃อนุญาตให้สลับไปมาระหว่างอิโมติคอนสองชุดด้วยการใช้วงล้อเมาส์ขณะใช้งานอิโมติคอนภายในเกม
 자동 공격 설정┃การตั้งค่าการโจมตีอัตโนมัติ
-GameSetting/AutoAttack┃ไม่เลย: จะไม่ทำการโจมตีปกติใส่ศัตรูที่ใกล้ที่สุด\nค่าพื้นฐาน: โจมตีปกติใส่ศัตรูที่ใกล้ที่สุด จะไม่โจมตีโดยอัตโนมติหลังจากทำการคราฟของหรือเก็บของ\nตลอดเวลา: จะทำการโจมตีใส่ศัตรูทันที ยกเว้นคุณจะออกคำสั่งให้หยุด พักหรือค้นหาของในกล่องหรือใช้งาน Kiosk
+GameSetting/AutomaticAttack┃ไม่เลย: จะไม่ทำการโจมตีปกติใส่ศัตรูที่ใกล้ที่สุด\nค่าพื้นฐาน: โจมตีปกติใส่ศัตรูที่ใกล้ที่สุด จะไม่โจมตีโดยอัตโนมติหลังจากทำการคราฟของหรือเก็บของ\nตลอดเวลา: จะทำการโจมตีใส่ศัตรูทันที ยกเว้นคุณจะออกคำสั่งให้หยุด พักหรือค้นหาของในกล่องหรือใช้งาน Kiosk
 인벤토리아이템자동병합┃จัดเรียงช่องในกระเป๋าอัตโนมัติ
 GameSetting/AutomaticInventoryItemRestock┃เมื่อมีของใช้ประเภทเดียวกันหลายชิ้นอยู่ในช่องที่แตกต่างกันของกระเป๋า ไอเทมจะถูกใช้งานจากลำดับที่ต่ำที่สุดของช่อง \nไม่ว่าจะใช้ปุ่มลัดใดก็ตาม ช่องที่อยู่ด้านขวาล่างจะถูกตัดสินว่ามีลำดับที่ต่ำกว่า \nตัวอย่าง: ถ้าหากมีสเต็กอยู่ในช่อง 1 3 และ 5 ไม่ว่าจะกดที่ปุ่มไหนตามช่องนี้ ก็จะเลือกกินสเต็กของช่องที่ 5 ก่อน
 옵션/VLS상호작용확장맵활성화┃เปิดใข้งานการขยายแผนที่สำหรับ VLS
@@ -2419,7 +2303,6 @@ GameSetting/AutoChangeEquipment┃เมื่อได้รับของท�
 GameSetting/CharacterShadow┃เปิด/ปิด เงาตัวละครได้
 탐색 가이드 원격 호출 사용┃คู่มือหาของ การเรียกโดรน
 자동 번역 사용┃เปิดใช้งาน Auto-Translation (Beta)
-GameSetting/AutoTranslate┃แปลแชทจากผู้ใช้งานซึ่งมีการใช้ภาษาที่แตกต่างกันให้เป็นภาษาของคุณ\nการแปลจะอิงตามภาษาที่คุณเลือกใช้ภายในเกม การสนทนาที่นอกเหนือภาษาที่เลือกไว้ในการตั้งค่าอาจจะไม่ถูกต้องแม่นยำ\n-ภาษาที่ใช้งานได้: เกาหลี, อังกฤษ, ญี่ปุ่น และ จีน (ตัวย่อและตัวเต็ม)\n-ระบบยังอยู่ในช่วงทดสอบ อาจสิ้นสุดการทดลองใช้งานก่อนกำหนด
 GameSetting/NavigaionHUDRemoteDroneActive┃ไอเทมสามารถเรียกได้จากคู่มือหาของ
 StreamingModeSetting/AutoAcceptMatching┃หลังจากจับคู่เสร็จ จะทำการตอบรับอัตโนมัติและจะไม่สามารถปฏิเสธได้
 StreamingModeSetting/IgnoreRequestFriends┃ปิดคำขอเป็นเพื่อนที่เข้ามาทั้งหมด
@@ -2461,6 +2344,7 @@ GameSetting/AirSupplies┃แสดง แอร์ซัพพลาย
 오퍼레이터 음성┃เสียงผู้ประสาน
 게임을 종료하시면 플레이 중인 캐릭터가 즉시 사망합니다. 종료하시겠습니까?┃หากคุณออกจากเกมไป ตัวละครของคุณจะตายทันที แน่ใจหรือไม่ที่จะออกจากเกม?
 게임을 종료하시겠습니까?┃ต้องการออกจากเกมหรือไม่
+매칭 요약 강제 종료 후 결과 화면 이동┃คุณต้องการออกจากการจับคู่\nและไปยังหน้าผลลัพธ์?
 게임 종료┃ออกเกม
 전투 포기┃ออกจากเกม
 닫기┃ยกเลิก
@@ -2503,7 +2387,7 @@ Leave/Normal┃อันดับของทีมยังสรุปไม�
 음성 감지┃การตรวจจับเสียง
 음성 입력 감도┃ความไวในการตอบสนอง
 눌러서 말하기┃กดเพื่อพูด
-눌러서 말하기 단축키┃คีย์ลีดเพื่อพูด
+VoiceSetting/PushToTalk┃คีย์ลีดเพื่อพูด
 변환 중┃ตั้งค่า...
 Shortcut/PushToTalk┃กดเพื่อพูด
 Vivox점검팝업┃แชทด้วยเสียงไม่สามารถใช้งานได้ เนื่องจากพบข้อผิดพลาด
@@ -2541,38 +2425,14 @@ Vivox점검팝업┃แชทด้วยเสียงไม่สามาร
 지역 설명┃พื้นที่ปัจจุบัน
 금지구역┃พื้นที่ปิดตาย
 금지구역 설명┃เวลาที่เหลืออยู่จนกว่าพื้นที่ปิดถัดไปจะถูกเลือก
-전장규칙안내HUD 전환버튼┃เปลี่ยนเป็น UI สนามรบ
 기존UI 전환버튼┃เปลี่ยนเป็น UI ทั่วไป
-전장규칙안내HUD 전장예정지 제목┃สนามรบที่คาดเอาไว้
-전장규칙안내HUD 전장예정지 설명┃พื้นที่นี้จะเป็นสนามรบในคืนถัดไป
-전장규칙안내HUD 전장활성화 제목┃สนามรบทำงาน
-전장규칙안내HUD 전장활성화 설명┃ฟื้นฟูเกจประสาทเสียจากเครื่องที่ลอยไปลอยมาในพื้นที่สนามรบ\nการเข้าหรือออกจากสนามรบจะเป็นการฆ่าคุณโดยทันทีและหมดโอกาสชุบชีวิต
-전장규칙안내HUD 전장보상 제목┃รับรางวัลของสนามรบ
-전장규칙안내HUD 전장보상 설명┃ยินดีด้วยนะ คุณเป็นผู้รอดในสนามรบ\nกดที่ "รับรางวัล" หรือไปยังคอนโซลความปลอดภัยเพื่อเลือกรางวัล
-전장규칙안내HUD 전장보상 수령 버튼┃รับรางวัล
-전장규칙안내HUD 전장보상 수령 완료 본인┃รับให้ตัวเอง
-전장규칙안내HUD 전장보상 수령 완료 팀원┃รับให้เพื่อน
 아이템 분해┃ทำลาย
 아이템 분해 팝업┃ได้รับเมื่อทำการทำลาย
-전장 키트┃อุปกรณ์สนามรบ
-전장 키트 설명┃เมื่อตัวทดลองเข้าสู่สนามรบ พวกเข้าจะได้รับสิทธิ "การฟื้นฟูอย่างรวดเร็วในสนามรบ" และได้รับผลของ 'ตราสนามรบ' \nอุปกรณ์ดังกล่าวจะถูกนำออกจากทีมที่ชนะ
-AreaAttributes/GroupName/1┃สนามรบ - เร่งความเร็ว
-AreaAttributes/GroupDesc/1┃สนามรบนี้จะเพิ่มความเร็วการเคลื่อนที่และคูลดาวน์
-AreaAttributes/GroupName/2┃สนามรบ - คลั่ง
-AreaAttributes/GroupDesc/2┃สนามรบนี้จะเพิ่มความเสียหายทุดท้ายและทำให้คุณได้รับผลการดูดซึมพลังชีวิต
-AreaAttributes/GroupName/3┃สนามรบ - ตั้งรับ
-AreaAttributes/GroupDesc/3┃สนามรบนี้จะทำให้คุณได้โล่หลังจากไม่ได้ต่อสู้ไประยะหนึ่ง
-BattleZoneDebuffGaugeTooltip_Title┃เกจระบบประสาทเสีย
-BattleZoneDebuffGaugeTooltip_Desc┃จำนวนสารพิษสะสมมากขึ้นในสนามรบ\nเมื่อสะสมจนเต็ม ตัวทดลองจะตายหลังผ่านไประยะเวลาหนึ่ง
-BattleZoneRewardGaugeTooltip_Title┃รับของรางวัลสนามรบ
-BattleZoneRewardGaugeTooltip_Desc┃รับของรางวัลสนามรบที่คอนโซลความปลอดภัย
-신경안정제셔틀충전중┃ชาร์จ
+제한시간 내에 보상 아이템을 선택하세요.┃เลือกรางวัลที่ต้องการในระยะเวลาที่กำหนดเอาไว้
 생존 팀 수┃ทีม
 생존 팀 수 설명┃จำนวนทีมที่เหลือ
 생존자 수┃ผู้เอาชีวิตรอด
 생존자 수 설명┃จำนวนผู้เอาชีวิตรอดที่เหลือ
-전장 생존자 수┃จำนวนผู้เอาชีวิตรอดในสนามรบ
-전장 생존자 수 설명┃จำนวนผู้รอดที่เหลือในสนามรบ
 팀 처치 수┃ยอดสังหารของทีม
 팀 처치 수 설명┃จำนวนผู้เล่นที่ถูกฆ่าโดยทีมของคุณ
 플레이어 처치 수┃จำนวนผู้เล่นที่โดนฆ่า
@@ -3086,10 +2946,6 @@ WickelineUI_ReadyTooltip┃ดร.วิคเคอลีน เตรียม
 위클라인처치노티┃วิคเคอลีนตายแล้ว
 위클라인죽음어나운스┃{0} สังหารวิคเคอลีนลงได้แล้ว
 위클라인이동┃ดร.วิคเคอลีนจะปรากฏตัวใน {0}
-전장예정노티┃อีก 1 นาทีก่อนสนามรบจะเริ่ม
-전장예정┃สนามรบจะเปิดที่ {0} ในอีก 1 นาที
-전장생성노티┃สนามรบ เริ่มแล้ว
-전장생성┃สนามรบจะเปิดที่ {0}
 크루즈가동노티┃ืทางออกด้วยเรือดำน้ำจะทำงานใน 1 นาที
 플레어건사용노티┃ปืนพลุถูกยิงแล้ว!
 플레어건R기능┃ใครบางคนได้กำหนดจุดที่ ทรัพยากรระดับปกรณัม จะปรากฎ
@@ -3196,7 +3052,6 @@ Ping/Communication/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>ขอน้ำ<
 Ping/Communication/Thankyou/Chatting┃{0}({1}) บอก <color=#C2FFA0>ขอบคุณ</color>.
 Ping/Communication/Sorry/Chatting┃{0}({1}) บอก <color=#C2FFA0>ขอโทษ</color>.
 Ping/Communication/Goodjob/Chatting┃{0}({1}) บอก <color=#C2FFA0>ยอดเยี่ยม</color>!.
-Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) ได้รับ <color=#C2FFA0>{2}</color> ในฐานะรางวัลของสนามรบ
 Ping/Tactical/Warning┃เตือนภัย
 Ping/Tactical/Escape┃อันตราย
 Ping/Tactical/Help┃สนับสนุน
@@ -3348,15 +3203,10 @@ VP 알림┃{0}({1}): <color=#FFFF00>VP {2}%</color>
 하이퍼루프알림생존자명시_비밀연구실┃{0}({1}): <color=#FFBB00>{2}</color> - <color=#FF4848>จำนวนศัตรู: {3}</color>
 ToastMessage/HyperloopNotLab┃คุณจะใช้ไฮเปอร์ลูปไปในศูนย์วิจัยไม่ได้นะ
 ToastMessage/CannotHyperLoopToBattleLab┃คุณไม่สามารถใช้ไฮเปอร์ลูปไปหาพันธมิตรที่อยู่ในแล็ปปะทะไม่ได้
-ToastMessage/HyperloopNotBattlezone┃คุณไม่สามารถไฮเปอร์ลูปไปยังโซนนี้ได้จนกว่าสนามรบจะจบ
-ToastMessage/HyperloopNotBattlezonePlayer┃เพื่อนร่วมที่ที่อยู่ในสนามรบจะใช้ไฮเปอร์ลูปไม่ได้
 ToastMessage/HyperloopErrorInBattlezone┃คุณไม่สามารถใช้ไฮเปอร์ลูปในสนามรบได้
 ToastMessage/HyperloopSecretLabCannotUse┃คุณยังไม่สามารถใช้ไฮเปอร์ลูปได้
-ToastMessage/TransferConsoleErrorInBattlezone┃คุณไม่สามารถใช้ Kiosk ในพื้นที่สนามรบได้
-ToastMessage/KioskErrorInBattlezone┃คุณไม่สามารถใช้ Kiosk ในพื้นที่สนามรบได้
 ToastMessage/HyperloopErrorInTemporarySafeZone┃คุณไม่สามารถใช้งานไฮเปอร์ลูปได้ในช่วง พื้นที่ปลอดภัย
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃คุณไม่สามารถใช้งาน Kiosks ได้ในช่วง พื้นที่ปลอดภัย
-ToastMessage/SecurityConsoleErrorInBattlezone┃คุณไม่สามารถใช้ คอนโซลควบคุมความปลอดภัยในพื้นที่ สนามรบ ได้
 ToastMessage/SecurityConsoleErrorInLastPhase┃คอนโซลควบคุม ไม่สามารถใช้งานได้ในช่วง พื้นที่ปลอดภัยสุดท้ายได้
 SecurityConsoleErrorInLastPhase┃คอนโซลควบคุม ไม่สามารถใช้งานได้ในช่วง พื้นที่ปลอดภัยสุดท้ายได้
 ToastMessage/AlreadyBoughtBattlezoneReward┃ทีมได้รับรางวัลแล้ว
@@ -4189,6 +4039,7 @@ SkillCostPing/Vf┃วิทัลฟอร์ซ
 SkillCostPing/GadgetEnergy┃พลังงานแก็ดเจ็ต
 장착중┃สวมใส่
 경로 확인┃รูท
+상단에서 목표 아이템을 선택하세요.┃เลือกที่จะคราฟไอเทมจากด้านบน
 현재 지역┃พื้นที่ที่อยู่
 제작 목표┃บันทึกรายการ
 ※ 제작창에서 제작가이드를 추가 할 수 있습니다.┃รวบรวมไอเทมที่เห็นในคำแนะนำบนด้านขวาแล้วเดินตามรูทที่แนะนำ
@@ -4256,7 +4107,6 @@ Shortcut/Active4ToSelf┃ร่ายสกิล 4 ใส่ตัวเอง
 Shortcut/WeaponSkillToSelf┃ร่ายสกิลอาวุธใส่ตัวเอง
 Shortcut/TacticalSkillToSelf┃ร่ายสกิลกลยุทธ์ใส่ตัวเอง
 Shortcut/InstantCastGadgetSkill┃เรียกแก็ดเจ็ตแบบเร็ว
-InstantCastGadgetSkill┃เรียกแก็ดเจ็ตอย่างรวดเร็วจากคลังแก็ดเจ็ด
 Shortcut/NormalCastActive1┃ร่ายสกิล 1
 Shortcut/NormalCastActive2┃ร่ายสกิล 2
 Shortcut/NormalCastActive3┃ร่ายสกิล 3
@@ -4346,7 +4196,6 @@ Shortcut/FallBackTargetCustom┃แจ้งเตือนถอยลัด (�
 OptionActive┃เปิด ({0})
 OptionDeactive┃ปิด ({0})
 Shortcut/TranslateToggle┃เปิด/ปิด การแปลภาษาอัตโนมัติ
-TranslateToggle┃คุณสามารถ เปิด/ปิด การแปลภาษาอัตโนมัติเมื่อการตั้งค่านี้ถูกเปิดใช้
 Shortcut/Popup/Skill┃สกิล
 Shortcut/Popup/Interface┃อินเตอร์เฟซ
 Shortcut/Popup/Action┃แอคชั่น
@@ -4765,7 +4614,6 @@ ToastMessage/Escape1017┃มีตัวทดลองหลบหนีออ
 ToastMessage/Escape1018┃คุณสามารถได้รับกำไลฟื้นฟูเพื่อนร่วมทีม เมื่อเริ่มวันที่3
 ToastMessage/Escape1019┃มีมากกว่า 1 ทีมอยู่ในพื้นที่นี้ เรือดำน้ำถูกปิดการใช้งาน
 ToastMessage/Escape1020┃คุณสามารถเคลื่อนย้ายได้หลังจากที่ได้รับ Rootkit และได้โหวตหนีเรียบร้อย
-ToastMessage/Escape1021┃เพื่อนร่วมทีมกำลังเข้าร่วมสนามรบ ไม่สามารถเคลื่อนย้ายได้
 ToastMessage/Escape1022┃กุญแจลูปการ์ด - สีแดง จะใช้งานได้หลังจากวันที่ 4
 ToastMessage/Escape1023┃กุญแจลูปการ์ด - สีแดง ไม่สามารถซื้อได้ เนื่องจากจำนวนผู้รอดชีวิตบนเกาะลูเมียเหลือน้อยไป
 ToastMessage/Escape1024┃สามารถซื้อได้เมื่อมีเพื่อนที่ล้มลงไปแล้วเท่านั้น
@@ -6104,6 +5952,123 @@ NoviceSupport_1001┃ภารกืจนำทาง
 NoviceSupport_AllClearReward┃รางวัลเสร็จสมบูรณ์!
 ShopPromotionPopup_Dday_Over24┃D - {0}
 ShopPromotionPopup_Dday_Under24┃D - Day
+BasicSetting/DeathRecapOnOff┃ความเสียหายที่ได้รับจากตัวทดลองจนกระทั่งถึงตอนตายจากการต่อสู้จะถูกวิเคราะห์และแสดงออกมา
+BasicSetting/PickPointInAreaIndicator┃เปิดใช้งานการร่ายสกิลภายในระยะสูงสุด
+BasicSetting/GadgetVaultUIUXSetting┃คุณสามารถปรับแต่ง UI ของคลังแกดเจ็ต ได้!\nการแสดงผลช่องด่วน: คลังแกดเจ็ตจะถูกรวมเข้ากับด้านล่างของช่องด่วน คลิกที่แกดเจ็ตในช่องด่วนเพื่อเปลี่ยนแกดเจ็ตที่คุณสวมใส่\nการแสดงผลวงล้อ: คล้ายกับการแสดงอารมณ์ กดปุ่มลัดคลังแกดเจ็ต ค้างไว้เพื่อเปลี่ยนแกดเจ็ตที่คุณสวมใส่ กดปุ่มลัดคลังแกดเจ็ต สั้นๆ เพื่อใช้แกดเจ็ตที่คุณสวมใส่
+BasicSetting/QuickCastIndicator┃ระยะจะแสดงออกมาเมื่อกดปุ่มร่ายทางลัดค้างเอาไว้
+BasicSetting/Emotion1┃เสียงแบบที่ 1
+BasicSetting/Emotion2┃เสียงแบบที่ 2
+BasicSetting/Emotion3┃เสียงแบบที่ 3
+BasicSetting/Emotion4┃เสียงแบบที่ 4
+BasicSetting/Emotion5┃เสียงแบบที่ 5
+BasicSetting/Emotion6┃เสียงแบบที่ 6
+BasicSetting/EmotionDance┃ใช้เพื่อเต้น!
+BasicSetting/EmotionPlate┃ใช้อิโมติคอน
+BasicSetting/EmotionPlate1┃ใช้อิโมติคอนชุดที่ 1
+BasicSetting/EmotionPlate2┃ใช้อิโมติคอนชุดที่ 2
+BasicSetting/EmotionPlate3┃ใช้อิโมติคอนชุดที่ 3
+BasicSetting/PingTarget┃เลือกเป้าหมาย
+BasicSetting/MarkTarget┃ปักพื้นที่
+BasicSetting/PingTargetKeyboard┃ปักเป้าหมาย
+BasicSetting/MarkTargetKeyboard┃ปักพื้นที่
+BasicSetting/DeleteMarkTarget┃นำจุดปักออก
+BasicSetting/LearnActive1┃เสริมพลังสกิลแรก
+BasicSetting/LearnActive2┃เสริมพลังสกิลที่สอง
+BasicSetting/LearnActive3┃เสริมพลังสกิลที่สาม
+BasicSetting/LearnActive4┃เสริมพลังสกิลที่สี่
+BasicSetting/LearnPassive┃เสริมพลังสกิลติดตัว
+BasicSetting/LearnWeaponSkill┃เสริมพลังสกิลอาวุธ
+BasicSetting/LearnTacticalSkill┃เสริมพลังสกิลกลยุทธ์
+BasicSetting/Active1ToSelf┃ร่ายสกิล 1 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/Active2ToSelf┃ร่ายสกิล 2 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/Active3ToSelf┃ร่ายสกิล 3 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/Active4ToSelf┃ร่ายสกิล 4 ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/WeaponSkillToSelf┃ร่ายสกิลประจำอาวุธ ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/TacticalSkillToSelf┃ร่ายสกิลกลยุทธ์ ใส่ตัวเอง (แค่สกิลที่เล็งตัวเองได้เท่านั้น)
+BasicSetting/NormalCastActive1┃ร่ายสกิล 1
+BasicSetting/NormalCastActive2┃ร่ายสกิล 2
+BasicSetting/NormalCastActive3┃ร่ายสกิล 3
+BasicSetting/NormalCastActive4┃ร่ายสกิล 4
+BasicSetting/NormalCastWeaponSkill┃ร่ายสกิลอาวุธ
+BasicSetting/NormalCastTacticalSkill┃ร่ายสกิลกลยุทธ์
+BasicSetting/InstantCastActive1┃ร่ายลัด สกิล 1
+BasicSetting/InstantCastActive2┃ร่ายลัด สกิล 2
+BasicSetting/InstantCastActive3┃ร่ายลัด สกิล 3
+BasicSetting/InstantCastActive4┃ร่ายลัด สกิล 4
+BasicSetting/InstantCastWeaponSkill┃ร่ายลัด สกิลอาวุธ
+BasicSetting/InstantCastTacticalSkill┃ร่ายลัด สกิลกลยุทธ์
+BasicSetting/InstantUseActiveItem1┃คีย์ลัดสำหรับสกิลไอเท็ม
+BasicSetting/ChangeCameraMode┃แก้ไขหรือปรับเปลี่ยนกล้องของตัวละครของคุณ
+BasicSetting/CameraDragScroll┃ย้ายกล้องเมื่อกดปุ่มลัด
+BasicSetting/OpenCombineWindow┃เปิดเมนูการคราฟ
+BasicSetting/OpenQuickSlot┃เปิดเมนูคราฟลัดและรายการแก็ดเจ็ต
+BasicSetting/OpenQuickSlot_New1┃เปิดเมนูคราฟลัดและรายการแก็ดเจ็ต
+BasicSetting/OpenScoreboard┃แสดงหน้ากระดานแต้มและสเตตัส
+BasicSetting/OpenMap┃แสดงแผนที่แบบขยาย
+BasicSetting/ResetCamera┃ย้ายกล้องไปด้านหลังของจุดที่ตัวละครอยู่
+BasicSetting/OpenCharacterMastery┃เปิดหน้าจอแสดงมาสเตอร์รี่
+BasicSetting/OpenVPad┃เปิด VPad ด้วยคีย์ลัดบนคีย์บอร์ด \nคุณสามารถตรวจสอบระดับความเชี่ยวชาญและข้อมูลของสกิลเทคนิค
+BasicSetting/OpenCharacterStat┃เปิดหน้าจอแสดงค่าสเตตัสของตัวละคร
+BasicSetting/OpenCharacterTotalStat┃เปิดหน้าแสดงรายละเอียสถานะตัวละคร
+BasicSetting/ShowObjectText┃แสดงข้อมูลของศัตรู, สิ่งของและของที่ทิ้งเอาไว้
+BasicSetting/ToggleShowOverlay┃ล็อคการเคลื่อนย้ายของการแสดงข้อมูลของศัตรู, สิ่งของและของที่ทิ้งเอาไว้
+BasicSetting/Escape┃เปิดการตั้งค่า
+BasicSetting/ShowRouteList┃แสดงรายการของแผนที่บันทึกไว้
+BasicSetting/ShowProgressItem┃ตรวจสอบรายการที่บันทึกสำหรับช่วงท้ายของเกม
+BasicSetting/MaxChatWindow┃ขยายจอแชท
+BasicSetting/MinimapZoomIn┃ซูมเข้าไปในมินิแมพ
+BasicSetting/MinimapZoomOut┃ซูมออกจากมินิแมพ
+BasicSetting/CameraTeam1┃หมุนกล้องไปยังพื้นที่ของคุณ
+BasicSetting/CameraTeam2┃หมุนกล้องไปยังเพื่อนร่วมทีม 1
+BasicSetting/CameraTeam3┃หมุนกล้องไปยังเพื่ื่อนร่วมทีม 2
+BasicSetting/CameraTeam4┃หมุนกล้องไปยังเพื่ื่อนร่วมทีม 3
+BasicSetting/Attack┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
+BasicSetting/Stop┃หยุดทุกการกระทำของตัวละครของคุณและยืนรอในพื้นที่นั้น
+BasicSetting/Hold┃สั่งหยุดการเดิน
+BasicSetting/Rest┃สั่งพักผ่อนและฟื้นเลือดกับสตามิน่า
+BasicSetting/Reload┃สั่งเปลี่ยนกระสุน(เฉพาะสายปืนเท่านั้น)
+BasicSetting/QuickCombine┃คราฟไอเทมที่อยู่มุมซ้ายสุดในรายการคราฟลัด
+BasicSetting/QuickCombine2┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสองในรายการคราฟลัด
+BasicSetting/QuickCombine3┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสามในรายการคราฟลัด
+BasicSetting/QuickCombine4┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับสี่ในรายการคราฟลัด
+BasicSetting/QuickCombine5┃คราฟไอเทมที่อยู่มุมซ้ายสุดเป็นอันดับห้าในรายการคราฟลัด
+BasicSetting/ProtectedQuickCombine┃คราฟไอเทมที่อยู่ซ้ายสุดในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedQuickCombine2┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสองในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedQuickCombine3┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสามในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedQuickCombine4┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสี่ในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedQuickCombine5┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับห้าในรายการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine┃คราฟไอเทมที่อยู่ซ้ายสุดในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine2┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสองในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine3┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสามในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine4┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับสี่ในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine5┃คราฟไอเทมที่อยู่ซ้ายสุดเป็นอันดับห้าในรายการการคราฟเร็ว (คราฟเฉพาะของในแผนที่บันทึกเท่านั้น)
+BasicSetting/ThrowItem┃ทิ้งไอเทมในกระเป๋า(คลิ๊กไอเทมในกระเป๋า)
+BasicSetting/ChangeEnableGameUI┃ตั้งค่า UI ในเกม (ไม่ส่งผลในล็อบบี้)
+BasicSetting/ChangeEnableTrackerName┃เปิด/ปิด ชื่อเล่น
+BasicSetting/ChangeEnableTrackerStatusBar┃เปลี่ยนมุมมองของ UI สำหรับ HP และ SP
+BasicSetting/ChangeEnableReplayControllerUI┃เปิด/ปิด ตัวควบคุม UI ระหว่างใช้รีเพลย์
+BasicSetting/HideSummonObjectUI┃สลับ UI สำหรับกับดักและกล้องในระหว่างรีเพลย์
+BasicSetting/HideUserNameInMap┃เปิดปิดชื่อเล่นบนแผนที่แบบขยายและตารางคะแนนระหว่างรีเพลย์
+BasicSetting/HideUserNameAndCharacterIconInMap┃เปิดปิดชื่อเล่นบนแผนที่แบบขยายและตารางคะแนนระหว่างรีเพลย์
+BasicSetting/AddGuide┃ใส่ไอเทมลงไปในแผน
+BasicSetting/MoveToAttack┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
+BasicSetting/MoveToAttackMouse┃เลือกพื้นที่และให้โจมตีใส่ศัตรูที่ใกล้คุณที่สุด
+BasicSetting/MoveOrderCustom┃ย้ายสิ่งที่อัญเชิญออกมาของคุณไปยังเป้าหมายที่เลือก สามารถเลือกศัตรูเป็นเป้าได้ (ล็อคคีย์)
+BasicSetting/MoveOrder┃ย้ายสิ่งที่อัญเชิญออกมาของคุณไปยังเป้าหมายที่เลือก สามารถเลือกศัตรูเป็นเป้าได้
+BasicSetting/PickOnlySurvivor┃ขณะที่กดปุ่มลัด จะเปลี่ยนให้การชี้เมาส์นั้นเล็งที่ศัตรูก่อนสัตว์ป่า หรือศัตรูที่ล้ม หรือสิ่งของอื่นๆในฉาก
+BasicSetting/MoveCameraExpandMap┃คุณสามารถใช้ Ctrl+MB 1 เพื่อเปลี่ยนกล้องบนมินิแมพที่ขยายขึ้นได้
+BasicSetting/ChangeEnableInGameChat┃สลับ UI ของเกมแชท
+BasicSetting/ChatItem┃แสดงข้อมูลของไอเทในแชท(กดเลือกไอคอนของไอเทม)
+BasicSetting/Spray┃เลือกใช้สเปรย์ในช่องของคุณ
+BasicSetting/Spray_New1┃เลือกใช้สเปรย์ในช่องของคุณ
+BasicSetting/FallBackTarget┃เตือนให้ถอย
+BasicSetting/FallBackTargetCustom┃เตือนให้ถอย
+BasicSetting/MoveExpandMap┃คุณสามารถเคลื่อนที่ได้ด้วยการเปิดมินิแมพแล้วกดปุ่ม Ctrl และ MB2 พร้อมกัน\n*จำเป็นต้องเปิดใน ตั้งค่า ＞ ตัวเกม.
+BasicSetting/NormalMatchingSquad┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้งาน [ใช้คิวลัด] ในตั้งค่า ＞ โหมดถ่ายทอดสด
+BasicSetting/RankMatchingSquad┃เริ่มต้นการจัดหาห้องสำหรับห้องทั่วไป เวลาหาคิวจะถูกซ่อนเอาไว้\n*คุณจำเป็นต้องเปิดใช้งาน [ใช้คิวลัด] ในตั้งค่า ＞ โหมดถ่ายทอดสด
+BasicSetting/AutoTranslate┃แปลแชทจากผู้ใช้งานซึ่งมีการใช้ภาษาที่แตกต่างกันให้เป็นภาษาของคุณ\nการแปลจะอิงตามภาษาที่คุณเลือกใช้ภายในเกม การสนทนาที่นอกเหนือภาษาที่เลือกไว้ในการตั้งค่าอาจจะไม่ถูกต้องแม่นยำ\n-ภาษาที่ใช้งานได้: เกาหลี, อังกฤษ, ญี่ปุ่น และ จีน (ตัวย่อและตัวเต็ม)\n-ระบบยังอยู่ในช่วงทดสอบ อาจสิ้นสุดการทดลองใช้งานก่อนกำหนด
+BasicSetting/InstantCastGadgetSkill┃เรียกแก็ดเจ็ตอย่างรวดเร็วจากคลังแก็ดเจ็ด
+BasicSetting/TranslateToggle┃คุณสามารถ เปิด/ปิด การแปลภาษาอัตโนมัติเมื่อการตั้งค่านี้ถูกเปิดใช้
 ItemType/EMBLEM_MARK/Name┃โปรไฟล์ ไอคอน
 EMBLEM_MARK_FREE1┃ตราสัญลักษณ์ อัลไกอา
 EMBLEM_MARK_SHOP_102002┃ไอคอน ฮยอนอู
@@ -7971,6 +7936,14 @@ Product/Name/LuckyBox2024_Seq_Pack_08┃ขอให้โชคดี#8
 Product/Name/HappinessBox2024_Seq_Pack_01┃ชุดสุขใจ#1
 Product/Name/HappinessBox2024_Seq_Pack_02┃ชุดสุขใจ#2
 Product/Name/HappinessBox2024_Seq_Pack_03┃ชุดสุขใจ#3
+Product/Name/S10_LuckyBox2026_Seq_Pack_01┃ขอให้โชคดี#1
+Product/Name/S10_LuckyBox2026_Seq_Pack_02┃ขอให้โชคดี#2
+Product/Name/S10_LuckyBox2026_Seq_Pack_03┃ขอให้โชคดี#3
+Product/Name/S10_LuckyBox2026_Seq_Pack_04┃ขอให้โชคดี#4
+Product/Name/S10_LuckyBox2026_Seq_Pack_05┃ขอให้โชคดี#5
+Product/Name/S10_LuckyBox2026_Seq_Pack_06┃ขอให้โชคดี#6
+Product/Name/S10_LuckyBox2026_Seq_Pack_07┃ขอให้โชคดี#7
+Product/Name/S10_LuckyBox2026_Seq_Pack_08┃ขอให้โชคดี#8
 Product/Name/EVENT_NPASS_1stAnniversary_1000┃ครบรอบ 1 ปี สมุดภารกิจ
 Product/Name/BATTLE_PASS/2000┃ครบรอบ 1 ปี สมุดภารกิจ A-Coin
 Product/Name/BATTLE_PASS/2001┃วันหยุดพักร้อน สมุดภารกิจ A-Coin
@@ -8184,6 +8157,10 @@ Product/Name/S10_Coraline_Emote_Pack_01┃ชุดโครอลไลน์
 Product/Name/S10_Coraline_Event_Pack_01┃ชุดเปิดตัวโครอลไลน์
 Product/Name/S10_2026_Spring_Pack_01┃ชุดใบไม้ผลิมาเยือน
 Product/Name/S10_2026_Spring_Daily_Pack_01┃กล่องใบไม้ผลิ รายวัน
+Product/Name/S10_2026_Lucky_Seq_Pack_01┃แพ็กเกจลำดับนำโชคⅠ
+Product/Name/S10_2026_Lucky_Seq_Pack_02┃แพ็กเกจลำดับนำโชค Ⅱ
+Product/Name/S10_2026_Lucky_Seq_Pack_03┃แพ็กเกจลำดับนำโชค Ⅲ
+Product/Name/S10_2026_Lucky_Seq_Pack_04┃แพ็กเกจลำดับนำโชค Ⅳ
 Shop/Desc/Aya_ComboPack_01┃1 สกิน 4 อิโมติคอน\n\nคุณจะได้รับของมูลค่า 58% ของราคาสินค้า หากคุณมีสินค้าชิ้นนั้นๆอยู่แล้ว
 Shop/Desc/Hyunwoo_ComboPack_01┃1 สกิน 4 อิโมติคอน\n\nคุณจะได้รับของมูลค่า 56% ของราคาสินค้า หากคุณมีสินค้าชิ้นนั้นๆอยู่แล้ว
 Shop/Desc/Adriana_ComboPack_01┃1 สกิน 4 อิโมติคอน\n\nคุณจะได้รับของมูลค่า 58% ของราคาสินค้า หากคุณมีสินค้าชิ้นนั้นๆอยู่แล้ว
@@ -8740,6 +8717,7 @@ Shop/Desc/Rare_WILDCARD_ETC┃คุณสามารถแลกเปลี�
 Shop/Desc/Epic_WILDCARD_ETC┃คุณสามารถแลกเปลี่ยน <color=#D05EFF>ไวด์การ์ด</color> ให้เป็น 1 ไอเทมทั่วไป/ไม่ธรรมดา/หายาก/สุดยอด ยกเว้นสกิน\n\n<b><color=#F15F5F>[หมายเหตุ]</color></b>\n* คุณสามารถเปิดใช้งานไอเทมนี้ได้ที่หน้าเมนูไวด์การ์ดในเตาหลอม\n* ไวด์การ์ด สามารถแลกเป็นไอเทมได้ ยกเว้นสกิน\n* คุณสามารถแลกเปลี่ยนไอเทมที่ค่าเท่ากับหรือน้อยกว่าไวด์การ์ด\n* ไอเทมบางอย่างไม่สามารถแลกเปลี่ยนด้วย ไวด์การ์ด ได้\n\nกรุณาตรวจสอบสิ่งที่สามารถแลกเปลี่ยนได้ก่อนจะทำการซื้อขาย
 Shop/Desc/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃ใช้ <color=#2AC0FF>Exchange Fragments</color> เพื่อใช้ Season Fragments  \n\n<b><color=#F15F5F>[หมายเหตุ]</color></b>  \n- คุณสามารถดู Exchange Fragments ได้ในเมนู สะสม - Season  \n- เลือก Season Fragments เพื่อใช้งาน  \n- Exchange Fragments จะถูกรีเซ็ตเมื่อการสะสมประจำซีซันสิ้นสุดลง กรุณาตรวจสอบระยะเวลาการสะสมล่วงหน้า  \n- จำกัดการซื้อ 1 ครั้งต่อสัปดาห์\n
 Shop/Desc/MILEAGE_SEASON_COLLECTION_PACK_9901032┃เปิด <color=#35FF94>Season Pack</color> เพื่อรับ Season Fragments แบบทั่วไปหรือไม่ธรรมดาตามอัตราความน่าจะเป็นที่กำหนด  \n\n<b><color=#F15F5F>[หมายเหตุ]</color></b>  \n- คุณสามารถใช้ไอเทมนี้ได้ในเตาแปลง  \n- Season Fragments จะถูกใช้งานทันทีสำหรับการสะสมประจำซีซัน  \n- Season Fragments ที่ซ้ำจะถูกแปลงเป็น Season Fragment Points  \n- จำกัดการซื้อ 3 ครั้งต่อสัปดาห์\n
+Shop/Desc/S10_LuckyMarble2026_ExchangeFragments┃ใช้ <color=#2AC0FF>Exchange Fragments</color> เพื่อใช้ Season Fragments  \n\n<b><color=#F15F5F>[หมายเหตุ]</color></b>  \n- คุณสามารถดู Exchange Fragments ได้ในเมนู สะสม - Season  \n- เลือก Season Fragments เพื่อใช้งาน  \n- Exchange Fragments จะถูกรีเซ็ตเมื่อการสะสมประจำซีซันสิ้นสุดลง กรุณาตรวจสอบระยะเวลาการสะสมล่วงหน้า 
 Product/Name/EP_TOKEN_1000┃โทเคน 1000 EP
 Product/Name/EP_TOKEN_200┃โทเคน 200 EP
 Product/Name/EP_TOKEN_RANDOM_01┃กล่องสุ่ม EP
@@ -8815,6 +8793,7 @@ Product/Name/XMAS2023_EVENT_3000022┃500 A-Coin
 Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/Festival2024_ACoin_100┃A-Coin X 100
 Product/Name/S10_LuckyMarble2026_Common_Fragment┃5 ชิ้นส่วนซีซันแพ็คระดับธรรมดา
+Product/Name/S10_LuckyMarble2026_ACoin_100┃A-Coin X 100
 Product/Name/Summer_LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/S14_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S14_RARE_MATTER┃ชิ้นส่วน Data ขั้นหายาก 1 ชิ้น
@@ -10007,7 +9986,7 @@ Goods/Desc/3303009┃รอยัลโทเค่น สามารถได�
 Goods/Name/3303301┃โทเคน วันหยุด
 Goods/Desc/3303301┃โทเคนวันหยุด สามารถได้รับได้จากการเปิด กล่อง Data วันหยุด และจะหมดอายุการใช้งาานเมื่อสิ้นสุดอีเวนท์
 Goods/Name/3303302┃โทเคน หนุกหนาน
-Goods/Desc/3303302┃โทเคนหนุกหนาน สามารถได้รับจากการเปิด ใบโคลฟเวอร์หรือชุดสนุกสนาน และจะหมดอายุการใช้งาานเมื่อสิ้นสุดอีเวนท์
+Goods/Desc/3303302┃แพ็กเกจลำดับนำโชค สามารถได้รับจากการเปิด ใบโคลฟเวอร์หรือชุดสนุกสนาน และจะหมดอายุการใช้งานเมื่อสิ้นสุดอีเวนท์
 Goods/Name/3303303┃โทเคน ร้านขนมปัง
 Goods/Desc/3303303┃โทเคน ร้านขนมปังสามารถได้รับจากการเปิดตะกร้าขนมปังของเอ็มม่า และจะหายไปเมื่อจบอีเวนท์
 Goods/Name/3303304┃โทเคน สีขาว
@@ -14916,12 +14895,16 @@ Skill/Group/Coef/1044400┃เอคิออนพุ่งไปยังท�
 Skill/LobbyDesc/1044500┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาจะสร้างตามสัดส่วน <color=white>เกจ VF</color>เพิ่มขึ้นเมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color>. เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> ในช่วงระยะเวลาหนึ่ง และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น และสร้างความเสียหายจริงเป็นระยะๆให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลาหนึ่ง, ลดระยะโจมตีของเขาลงและปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล ระยะเวลาของเอ่อล้นเพิ่มขึ้น เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color>\n\n<i>ผลของพิษทะลวงขึ้นอยู่กับอาวุธที่ใช้ในปัจจุบัน</i>\n<i>คูลดาวน์ตายตัว: สกิลนี้ไม่ได้รับผลใดๆจากการลดคูลดาวน์</i>
 Skill/Group/Desc/1044500┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที
 Skill/Group/Coef/1044500┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที\n
+Skill/Group/IngameCoef/1044500┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที\n
 Skill/Group/Desc/1044501┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที\n
 Skill/Group/Coef/1044501┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที\n
+Skill/Group/IngameCoef/1044501┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color> ระยะเวลาของเอ่อล้นเพิ่มขึ้น {12} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {13} วินาที\n
 Skill/Group/Desc/1044502┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color> หลังจาก {12} วินาที VFที่ไม่สเถียรจะปะทุเพิ่มเติม สร้างความเสียหายเท่ากับ {13} ของการประทุก่อนหน้าและกระดอนศัตรูขึ้นไปยังอากาศเป็นเวลา {14} วินาที \nระยะเวลาของเอ่อล้นเพิ่มขึ้น {16} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {17} วินาที\n\n
 Skill/Group/Coef/1044502┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color><color=#688a08>(+{21} ของHPเพิ่มเติม)</color> หลังจาก {12} วินาที VFที่ไม่สเถียรจะปะทุเพิ่มเติม สร้างความเสียหายเท่ากับ {13} ของการประทุก่อนหน้าและกระดอนศัตรูขึ้นไปยังอากาศเป็นเวลา {14} วินาที \nระยะเวลาของเอ่อล้นเพิ่มขึ้น {16} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {17} วินาที\n
+Skill/Group/IngameCoef/1044502┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} พลังโจมตี)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตี)</color><color=#688a08>(+{21} ของHPเพิ่มเติม)</color> หลังจาก {12} วินาที VFที่ไม่สเถียรจะปะทุเพิ่มเติม สร้างความเสียหายเท่ากับ {13} ของการประทุก่อนหน้าและกระดอนศัตรูขึ้นไปยังอากาศเป็นเวลา {14} วินาที \nระยะเวลาของเอ่อล้นเพิ่มขึ้น {16} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {17} วินาที\n
 Skill/Group/Desc/1044503┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color> และทำให้เป้าหมายช้าลง {12} เป็นเวลา {15} วินาที ระยะเวลาของเอ่อล้นเพิ่มขึ้น {13} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {14} วินาที\n\n
 Skill/Group/Coef/1044503┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} Attack Power)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตีเพิ่่มเติม)</color> และทำให้เป้าหมายช้าลง {12} เป็นเวลา {16} วินาที ระยะเวลาของเอ่อล้นเพิ่มขึ้น {13} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {14} วินาที
+Skill/Group/IngameCoef/1044503┃<color=green>สกิลติดตัว:</color><color=white>เกจ VF</color>ของเอคิออน และความเสียหายสกิลของเขาเพิ่มขึ้น {0} ต่อ 1 <color=white>เกจ VF</color> เมื่อเขาใช้ <color=white>อสรพิษจันทร์เสี้ยว(Q)</color> และ <color=white>กัด(E)</color> เมื่อ <color=white>เกจ VF</color> ของเขาเต็ม เขาจะเข้าสู่สถานะ <color=white>VF เอ่อล้น</color> เป็นระยะเวลา {2} วินาที และดาเมจที่เพิ่มขึ้นของเขาจะขึ้นสู่จุดสูงสุด\n\n<color=white>VF เอ่อล้น:</color> ความเร็วเคลื่อนที่ของเอคิออนเพิ่มขึ้น {3} และสร้างความเสียหายจริง <color=white>{5}</color><color=#ffd775>(+{14} Attack Power)</color> เป็นระยะเวลา {4} วินาที ให้แก่ศัตรูที่อยู่ใกล้ๆ เปิดใช้งาน <color=white>พิษทะลวง(R)</color>และรีเซ็ตคูลดาวน์ของ <color=white>กัด(E)</color>.\nในขณะที่ VF เอ่อล้นเปิดใช้งานอยู่, การสังหารศัตรูจะเป็นการเพิ่มระยะเวลาสถานะเอ่อล้น {6} วินาที และรีเซ็ตคูลดาวน์ของ  <color=white>กัด(E)</color>\n\n<color=white>ขับพิษออก:</color> เมื่อสถานะเอ่อล้นสิ้นสุดลง, เขาจะเข้าสู่สถานะขับพิษออกเป็นระยะเวลา {7} วินาที, ลดระยะโจมตีของเขาลง {9} และปิดการใช้งาน <color=white>เกจ VF</color> เพิ่มขึ้น\n\n<color=white>พิษทะลวง(R):</color> เอคิออนยิง VF ที่ไม่สเถียรไปยังทิศทางเป้าหมาย, สร้างความเสียหายสกิล <color=white>{10}</color><color=#ffd775>(+{11} พลังโจมตีเพิ่่มเติม)</color> และทำให้เป้าหมายช้าลง {12} เป็นเวลา {16} วินาที ระยะเวลาของเอ่อล้นเพิ่มขึ้น {13} วินาที เมื่อเขาสร้างความเสียหายให้กับศัตรูที่ติด <color=white>พิษทะลวง</color> สร้างความเสียหายด้วยการโจมตีปกติจะลดคูลดาวน์ของ <color=white>พิษทะลวง</color> เป็นเวลา {14} วินาที
 Skill/Group/Desc/1044510┃เอคิออนยิงก้อน VF ไม่เสถียรออกไปยังทิศทางที่เลือก ทำความเสียหายสกิล<color=white>{0}</color> หน่วย หากโจมตีศัตรูโดนด้วยภุชงค์พิโรธจะทำให้ยืดระยะของ VF เอ่อล้นได้ {2} วินาที\nการโจมตีปกติจะลดคูลดาวน์ของภุชงค์พิโรธลง {3} วินาที\n\nภุชงค์พิโรธจะไม่รับการลดคูลดาวน์เสริมใดๆ
 Skill/Group/Desc/1044520┃เอคิออนยิงก้อน VF ไม่เสถียรออกไปยังทิศทางที่เลือก ทำความเสียหายสกิล <color=white>{0}</color> หน่วย, หลังผ่านไป {2}  วินาที VF ที่ไม่เสถียรจะปะทุออกมาอีกครั้งและทำความเสียหายเท่ากับ {3} ของการปะทุก่อนหน้านี้ และทำการยกตัวอีกฝ่ายลอยขึ้นฟ้าเป็นเวลา {4} วินาที\nการโจมตีใส่ศัตรูสำเร็จด้วยภุชงค์พิโรธจะทำให้ระยะของ VF เอ่อล้นเพิ่มขึ้นอีก {6} วินาที\nการโจมตีปกติจะลดคูลดาวน์ของภุชงค์พิโรธลง {7} วินาที
 Skill/Group/Desc/1044530┃เอคิออนยิงก้อน VF ไม่เสถียรออกไปยังทิศทางที่เลือก ทำความเสียหายสกิล<color=white>{0}</color> หน่วย หากโจมตีศัตรูโดนด้วยภุชงค์พิโรธจะทำให้ยืดระยะของ VF เอ่อล้นได้ {2} วินาที\nการโจมตีปกติจะลดคูลดาวน์ของภุชงค์พิโรธลง {3} วินาที\n\nภุชงค์พิโรธจะไม่รับการลดคูลดาวน์เสริมใดๆ
@@ -17275,26 +17258,10 @@ Skill/Code/Coef/4113003┃ใช้ HP {0} หน่วย และเข้า
 Skill/Code/ExpansionTip/4113003┃<i>HP เต็ม จะไม่ลดถึง {0} เมื่อทำงาน</i>
 Skill/Code/Desc/4108003┃พันธมิตรในระยะทั้งหมดฟื้นฟู HP\n\n<color=#FFFFC2>ผลเสริมโมดูล: </color>พลังป้องกันเพิ่มขึ้น <color=white>{4}</color> เป็นเวลา {5} วินาที เมื่อได้รับการฟื้นฟูโดยสายลมเยียวยา\n\n
 Skill/Code/Coef/4108003┃พันธมิตรในระยะทั้งหมดฟื้นฟู HP (<color=white>{1}</color>+<color=green>เลเวลตัวละคร * {6}</color>)\nหลังจากได้รับผลการฟื้นฟูโดยสายลมแห่งการเยียวยา ผลการฟื้นฟูจะมีผลเพียง {3}% เป็นเวลา {2} วินาที\n\n<color=#FFFFC2>ผลเสริมโมดูล: </color>พลังป้องกันเพิ่มขึ้น <color=white>{4}</color> เป็นเวลา {5} วินาที เมื่อได้รับการฟื้นฟูโดยสายลมเยียวยา\n\n
-CharacterState/Group/Name/2100201┃สนามรบ - เร่งความเร็ว
-CharacterState/Group/Desc/2100201┃สนามรบประเภทนี้จะเพิ่มความเร็วการเคลื่อนที่ให้กับตัวทดลอง {0}% และลดคูลดาวน์ลง {1}% แต่จะไม่เกินค่าขีดสุดคูลดาวน์ที่ลดได้
-CharacterState/Group/Name/2100202┃สนามรบ - คลั่ง
-CharacterState/Group/Desc/2100202┃สนามรบประเภทนี้จะเพิ่ิ่มความเสียหายที่ทำได้ {0}% และผลการดูดซึมพลังชีวิตอีก {1}%
-CharacterState/Group/Name/2100203┃สนามรบ - ตั้งรับ
-CharacterState/Group/Desc/2100203┃สนามรบประเภทนี้จะให้โล่ {1} หลังไม่ได้ทำการปะทะเป็นเวลา {0} วินาที โล่จะไม่เกิดซ้ำหากโล่เดิมยังมีผลอยู่
-CharacterState/Group/Name/2120000┃สนามรบ จำกัดมาสเตอร์รี่
-CharacterState/Group/Desc/2120000┃ภายในสนามรบ การได้รับมาสเตอร์รี่ อาวุธ/เกราะ/HP จะมีจำกัด
-CharacterState/Group/Name/2110002┃แล็บ ฟิ้นฟูว่องไว
-CharacterState/Group/Desc/2110002┃แล็บ ฟิ้นฟูว่องไวจะทำงานเมื่อมีผู้เล่นโดนกำจัดในแล็บปะทะก่อนวันที่ 3 ซึ่งจะทำการส่งพวกเขากลับไปยังการทดลอง แม้ว่าทีมจะถูกกำจัดกันทั้งหมดก็ตาม
-CharacterState/Group/Name/2101001┃นำอุปกรณ์สนามออก
-CharacterState/Group/Desc/2101001┃เมื่ออุปกรณ์สนามถูกนำออก คุณจะไม่สามารถใช้ การฟื้นฟูรวดเร็ว และ ตราสนามรบ ได้อีกต่อไป
 CharacterState/Group/Name/2140000┃แพ็คฟื้นฟู
 CharacterState/Group/Desc/2140000┃ฟื้นฟู HP ต่อเนื่องได้
 CharacterState/Group/Name/2160000┃แพ็คโล่
 CharacterState/Group/Desc/2160000┃ได้รับโล่ที่จะมีผลในระยะหนึ่ง
-CharacterState/Group/Name/2180200┃เกจหยุดนิ่ง
-CharacterState/Group/Desc/2180200┃เกจจะหยุดนิ่งในระยะหนึ่ง\nผลจะหายไปเมื่อคุณฟื้นฟูเกจหรือหมดระยะเวลา
-CharacterState/Group/Name/2190000┃วิตกขั้นสุด
-CharacterState/Group/Desc/2190000┃หากความหวาดวิตกถูกทิ้งเอาไว้นานๆ คุณจะตาย\nสามารถแก้ความวิตกได้ด้วยการสังหารตัวทดลองหรืออยู่ในระยะโดรนที่ลอยไปลอยมาในเขต
 Skill/Group/Name/2003200┃พุ่งเข้าใส่
 Skill/LobbyDesc/2003200┃วิ่งไปข้างหน้าเป็นเส้นตรงแล้วผลักศัตรูที่โดนไปทางด้านหลังจากนั้นทำความเสียหายใส่อีกฝ่าย\nหากหมูป่าชนพลาด มันจะช้าลงชั่วระยะหนึ่งและจะได้รับความเสียหายเพิ่มเติม
 Skill/LobbyDesc/┃ลาดตระเวน
@@ -17929,7 +17896,8 @@ Skill/Group/LobbyDesc/4509010┃อุกกาบาตจะตกในพื
 Skill/Code/Desc/4509001┃อุกกาบาตจะตกในพื้นที่ที่กำหนด ทำความเสียหายจริง <color=white>{4}</color> หน่วย\n
 Skill/Code/Coef/4509001┃อุกกาบาตจะตกในพื้นที่ที่กำหนด ทำความเสียหายจริง {4}\n<color=white>{1}</color><color=#008000>(+เลเวลตัวละคร*{2})</color> หน่วย
 Skill/Code/Desc/4509011┃อุกกาบาตจะตกในพื้นที่ที่กำหนด ทำความเสียหาย <color=white>{4}</color> หน่วย\n
-Skill/Code/Coef/4509011┃อุกกาบาตจะตกในพื้นที่ที่กำหนด ทำความเสียหาย {4}\n<color=white>{1}</color><color=#008000>(+เลเวลตัวละคร*{2})</color> หน่วย
+Skill/Code/Coef/4509001┃อุกกาบาตจะตกในพื้นที่ที่กำหนด ทำความเสียหาย {4}\n<color=white>{1}</color><color=#008000>(+เลเวลตัวละคร*{2})</color> หน่วย
+Skill/Code/ExpansionTip/4509001┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 CharacterState/Group/Name/4509000┃อุกกาบาตตก
 CharacterState/Group/Desc/4509000┃คุณโดนอุกกาบาตตกใส่
 Skill/Group/Name/4508000┃หมัดมายา
@@ -17939,6 +17907,7 @@ Skill/LobbyDesc/4508000┃หมัดมายาพุ่งไปยังท
 Skill/Group/LobbyDesc/4508000┃หมัดมายาพุ่งไปยังทิศที่เลือก ศัตรูที่โดนกระเด็นลอยไป
 Skill/Code/Desc/4508001┃เรียกหมัดลวงตา จินนี่ ออกมาในทิศที่เลือกและส่งหมัดไปต่อยด้วยความเร็วสูง ศัตรูได้รับความเสียหายสกิล <color=white>{0}</color><color=#688A08>(+{1}% ของ HP สูงสุดของพวกเขา)</color> และทำการผลักพวกเขาไปยังทิศทางนั้นเป็นเวลา {2} วินาที\nเพื่อนและตัวคุณ จะไม่โดนความเสียหาย
 Skill/Code/Coef/4508001┃เรียกหมัดลวงตา จินนี่ ออกมาในทิศที่เลือกและส่งหมัดไปต่อยด้วยความเร็วสูง ศัตรูได้รับความเสียหายสกิล <color=white>{0}</color><color=#688A08>({1}% ของ HP สูงสุดของพวกเขา)</color> และทำการผลักพวกเขาไปยังทิศทางนั้นเป็นเวลา {2} วินาที\nเพื่อนและตัวคุณ จะไม่โดนความเสียหาย
+Skill/Code/ExpansionTip/4508001┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 CharacterState/Group/Name/4508000┃หมัดมายา จินนี่
 CharacterState/Group/Desc/4508000┃เจ็บ ใช่มั้ยล่ะ?
 CharacterState/Group/Name/6516010┃หมัดมายา จินนี่ 2
@@ -17971,12 +17940,14 @@ CharacterState/Group/Name/4502200┃สนามแรงโน้มถ่ว�
 CharacterState/Group/Desc/4502200┃ติดในสนามแรงโน้มถ้วง
 Skill/Code/Desc/4502001┃ดึงศัตรูทั้งหมดที่อยู่ในระยะ <color=white>{0}</color> เมตรมาหาผู้ร่าย จากนั้นทำความเสียหายแท้จริง <color=white>{2}</color> หน่วยและทำให้พวกเขาชะงักไป {1} วินาที
 Skill/Code/Coef/4502001┃ดึงศัตรูทั้งหมดที่อยู่ในระยะ <color=white>{0}</color> เมตรมาหาผู้ร่าย จากนั้นทำความเสียหายแท้จริง <color=white>{2}</color> หน่วยและทำให้พวกเขาชะงักไป {1} วินาที
+Skill/Code/ExpansionTip/4502001┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 Skill/Group/Name/4503000┃สายฟ้ากัมปนาท
 Skill/Code/Name/4503001┃สายฟ้ากัมปนาท
 TacticalSkillSet/Code/Name/500031┃สายฟ้ากัมปนาท
 Skill/Group/4503000/Name┃<color=yellow>สายฟ้ากัมปนาท</color>
 Skill/Code/Desc/4503001┃{0} วินาทีหลังจากใช้งาน จะทำการมอบบัฟให้กับตัวเองด้วยผลของ [สายฟ้ากัมปนาท]\n\n[สายฟ้ากัมปนาท]\nประดุจสายฟ้าสาดซัด, ความเร็วการเคลื่อนที่ของคุณจะเพิ่มขึ้น {2}% เป็นเวลา {1} วินาที ศัตรูที่สัมผัสจะโดนดันถอยกลับไปและได้รับความเสียหายสกิล {3} หน่วย 
 Skill/Code/Coef/4503001┃{0} วินาทีหลังจากใช้งาน จะทำการมอบบัฟให้กับเตัวเองด้วยผลของ [สายฟ้ากัมปนาท]\n\n[สายฟ้ากัมปนาท]\nประดุจสายฟ้าสาดซัด, ความเร็วการเคลื่อนที่ของคุณจะเพิ่มขึ้น {2}% เป็นเวลา {1} วินาที ศัตรูที่สัมผัสจะโดนดันถอยกลับไปและได้รับความเสียหายสกิล {3} หน่วย 
+Skill/Code/ExpansionTip/4503001┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 CharacterState/Group/Name/4503000┃สายฟ้ากัมปนาท : รอการใช้งาน
 CharacterState/Group/Desc/4503000┃คุณกำลังจะได้รับผล สายฟ้ากัมปนาท
 CharacterState/Group/Name/4503100┃โคบอลต์: สายฟ้ากัมปนาท
@@ -18010,6 +17981,8 @@ Skill/Code/Desc/4505001┃คุณหยุดนิ่งเป็นเวล
 Skill/Code/Coef/4505001┃คุณหยุดนิ่งเป็นเวลา {0} วินาที และพุ่งไปในทิศทางที่เลือกทันทีหลังการหยุดนิ่งสิ้นสุด
 Skill/Code/Desc/4505011┃คุณหยุดนิ่งเป็นเวลา {0} วินาที และพุ่งไปในทิศทางที่เลือกทันทีหลังการหยุดนิ่งสิ้นสุด
 Skill/Code/Coef/4505011┃คุณหยุดนิ่งเป็นเวลา {0} วินาที และพุ่งไปในทิศทางที่เลือกทันทีหลังการหยุดนิ่งสิ้นสุด
+Skill/Code/ExpansionTip/4505001┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
+Skill/Code/ExpansionTip/4505011┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 Skill/Group/Name/4506000┃ภาวนา
 Skill/Code/Name/4506001┃ภาวนา
 TacticalSkillSet/Code/Name/500061┃ภาวนา
@@ -18050,6 +18023,8 @@ CharacterState/Group/Name/4524020┃ติดตาม - เริ่มกา�
 CharacterState/Group/Desc/4524020┃ยิงกระสุนไปในทิศทางที่กำหนด สร้างความเสียหายให้กับเป้าหมายแรกที่โดน หากกดใช้อีกครั้งจะพุ่งไปยังเป้าหมาย\n
 CharacterState/Group/Name/4524030┃ติดตาม - ไม่ตกเป็นเป้า
 CharacterState/Group/Desc/4524030┃ไม่ตกเป็นเป้าด้วยผลของ ติดตาม
+Skill/Code/ExpansionTip/4524000┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
+Skill/Code/ExpansionTip/4524002┃<i>คูลดาวน์คงที่: สกิลนี้ไม่รับผลลดคูลดาวน์</i>
 Skill/Code/Desc/4512003┃เคลื่อนย้ายไปตามทิศทางที่เลือก
 Skill/Code/Coef/4512003┃เคลื่อนย้ายไปตามทิศทางที่เลือก
 Skill/Code/Desc/4513003┃ปล่อยพลังสั่นสะเทือนไปรอบตัว ทำให้ศัตรูช้าลง {3}% เป็นเวลา {5} วินาที \n\n\n<color=#FFFFC2>ผลเสริมโมดูล: </color> ปล่อยคลื่นกระแทกทุกๆครั้งที่คุณเคลื่อนที่ขณะต่อสู้ ทำความเสียหาย <color=white>{2}</color>
@@ -20734,79 +20709,78 @@ ServerError/9450┃ทีมเต็มแล้ว ไม่สามารถ
 ServerError/9451┃ยูเนี่ยน เปิดให้เข้าได้สำหรับผู้เล่นที่มีเลเวลตั้งแต่ 30 ขึ้นไปเท่านั้น
 ServerError/9452┃การจับคู่ไม่สามารถใช้ได้สำหรับระดับทีมนี้ กรุณาตรวจสอบตารางเวลาสำหรับการจับคู่สำหรับแต่ละระดับ
 ServerError/99999┃การเชื่อมต่อเกิดขึ้นกับเวอร์ชั่นที่เข้ากันไม่ได้
-ServerError/SUCCESS┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
 ServerError/UNKNOWN┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
 ServerError/PARAMETER_TYPE_MISMATCH┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
 ServerError/PARAMETER_MISSED┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/PARAMETER_VALIDATION_FAILED┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
-ServerError/SESSION_HEADER_REQUIRED┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/UNAVAILABLE_REQUEST┃เซิร์ฟเวอร์อยู่ระหว่างการปรับปรุงนะคะ
-ServerError/UNDER_MAINTENANCE┃เวอร์ชั่นของลูกค้าไม่ตรง
-ServerError/INVALID_SETUP┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/PARAMETER_VALIDATION_FAILED┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/SESSION_HEADER_REQUIRED┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
+ServerError/UNAVAILABLE_REQUEST┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/UNDER_MAINTENANCE┃เซิร์ฟเวอร์อยู่ระหว่างการปรับปรุงนะคะ
+ServerError/INVALID_VERSION┃เวอร์ชั่นของลูกค้าไม่ตรง
 ServerError/MALFORMED_SESSION┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
-ServerError/ABNORMAL_ACCESS┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
-ServerError/SESSION_EXPIRED┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
-ServerError/USER_IDENTIFY_FAILED┃ไม่พบชื่อนี้
-ServerError/UNAVAILABLE_NICKNAME┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
-ServerError/ADMIN_UNAUTHENTICATED┃เกิดข้อผิดพลาดในการล็อคอินในสตีม
-ServerError/STEAM_AUTH_FAILED┃บัญชีนี้ถูกสั่งระงับ
-ServerError/PERMANENT_BAN_USER┃ชื่อเล่นนี้มีคนใช้แล้ว
-ServerError/CHAT_AUTH_FAILED┃คุณไม่สามารถสร้างบัญชี MS ใหม่ได้
-ServerError/WEGAME_AUTH_FAILED┃ไม่พบห้อง
-ServerError/NO_BATTLE_RESULT┃ข้อมูลเกมไม่ถูกต้อง (1201)
-ServerError/NOT_EXIST_GAME┃ข้อมูลรีเพลย์ไม่ถูกต้อง (1202)
-ServerError/NOT_EXIST_REPLAY┃คุณมี ER Pass อยู่แล้ว (1203)
-ServerError/ALREADY_BATTLE_PASS_PAID┃No tienes acceso a esta reproducción.(1204)
-ServerError/ALREADY_FULL_GAME┃ไม่สามารถหาห้องได้ กรุณาตรวจสอบเซิร์ฟเวอร์ของคุณที่มุมขวาบน
-ServerError/OUT_OF_SERVICE_MATCHING_REGION┃เกิดข้อผิดพลาดในการจับคู่
-ServerError/MISS_MATCHING_PASS┃ระดับของสมาชิกหรือจำนวนตัวละคนไม่ถึงเกณฑ์
-ServerError/UNAVAILABLE_RANKING┃เกมที่แล้วยังไม่สิ้นสุด
-ServerError/NO_BATTLE_HOST┃0
+ServerError/ABNORMAL_ACCESS┃เกิดปัญหา กรุณารีสตาร์ทเกมของคุณ
+ServerError/SESSION_EXPIRED┃กรุณาทำการล็อคอินใหม่อีกครั้ง เกมกำลังทำการรีสตาร์ทค่ะ
+ServerError/USER_IDENTIFY_FAILED┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
+ServerError/UNAVAILABLE_NICKNAME┃ไม่พบชื่อนี้
+ServerError/INVALID_MACHINE_NUM┃คุณไม่สามารถล็อคอินเข้าเซิร์ฟเวอร์นี้ได้ กรุณาเช็คสถานะบัญชีของคุณ
+ServerError/STEAM_AUTH_FAILED┃เกิดข้อผิดพลาดในการล็อคอินในสตีม
+ServerError/BAN_USER┃บัญชีนี้ถูกสั่งระงับ
+ServerError/ALREADY_HAVE_NICKNAME┃ชื่อเล่นนี้มีคนใช้แล้ว
+ServerError/CAN_NOT_CREATE_MS_ACCOUNT┃คุณไม่สามารถสร้างบัญชี MS ใหม่ได้
+ServerError/NO_BATTLE_RESULT┃ไม่พบห้อง
+ServerError/NOT_EXIST_GAME┃ข้อมูลเกมไม่ถูกต้อง (1201)
+ServerError/NOT_EXIST_REPLAY┃ข้อมูลรีเพลย์ไม่ถูกต้อง (1202)
+ServerError/ALREADY_BATTLE_PASS_PAID┃คุณมี ER Pass อยู่แล้ว (1203)
+ServerError/NOT_ALLOW_REPLAY_USER┃No tienes acceso a esta reproducción.(1204)
+ServerError/OUT_OF_SERVICE_MATCHING_REGION┃ไม่สามารถหาห้องได้ กรุณาตรวจสอบเซิร์ฟเวอร์ของคุณที่มุมขวาบน
+ServerError/MISS_MATCHING_PASS┃เกิดข้อผิดพลาดในการจับคู่
+ServerError/UNAVAILABLE_RANKING┃ระดับของสมาชิกหรือจำนวนตัวละคนไม่ถึงเกณฑ์
+ServerError/UNAVAILABLE_MATCHING_PRE_GAME_NOT_FINISHED┃เกมที่แล้วยังไม่สิ้นสุด
 ServerError/NOT_OPENED_CONTENT┃0
-ServerError/NOT_ENOUGH_POOL_CHARACTERS┃คำขอการซื้อ ขัดข้อง
-ServerError/IAP_INVALID_ORDER┃ข้อมูลสตีม ขัดข้อง
-ServerError/IAP_STEAM_API_SERVER_BUSY┃รหัสข้อมูลสินค้าไม่ถูกต้อง
-ServerError/IAP_KAKAO_API_SERVER_BUSY┃ไม่พบข้อมูลของตัวละคร
-ServerError/LACK_OF_SPECIAL_MATTER┃เงินไม่พอ
-ServerError/LACK_OF_CURRENCY┃NP ไม่เพียงพอ
-ServerError/LACK_OF_NP┃A-COIN ไม่เพียงพอ
-ServerError/LACK_OF_ITEM┃ไม่พบข้อมูลของผลิตภัณฑ์
-ServerError/NO_PRODUCT_ID┃ข้อมูลของผลิตภัณฑ์ไม่ถูกต้อง
-ServerError/INVALID_PROMOTION┃จำนวนการซื้อถึงขีดสุดแล้ว
-ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃การซื้อรายวันถึงขีดสุดแล้ว
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃การซื้อรายสัปดาห์ถึงขีดสุดแล้ว
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃การซื้อรายเดือนถึงขีดสุดแล้ว
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃การลดราคาสำหรับของชิ้นนี้หมดอายุแล้ว
-ServerError/UNABLE_PURCHASE_BY_SALE┃จำนวนครั้งที่ใช้ในการซื้อรายวันถึงขีดจำกัด (2127)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃จำนวนครั้งที่ใช้ในการซื้อรายสัปดาห์ถึงขีดจำกัด (2128)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃จำนวนครั้งที่ใช้ในการซื้อรายเดือนถึงขีดจำกัด (2129)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃จำนวนครั้งการซื้อถึงขีดจำกัด (2130)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃ข้อมูลของราคาไม่ถูกต้อง (2131)
-ServerError/INVALID_PRODUCT_PRICE┃ไม่สามารถสั่งซื้อได้ในภูมิภาคของคุณ (2132)
-ServerError/TO_BE_UPDATED┃คุณได้ซื้อสินค้าชิ้นนี้ไปแล้ว (2135)
-ServerError/ALREADY_BUY_SEQ┃เงื่อนไขการซื้อไม่ตรงกัน ไม่สามารถทำการซื้อได้
-ServerError/INVALID_PURCHASE_CONDITION┃คุณได้ซื้อสินค้าชิ้นนี้ไปแล้ว (2137)
-ServerError/ALREADY_BUY_PROMOTION┃ไม่พบข้อมูลของภารกิจ
-ServerError/INVALID_USER_MISSION┃เกิดข้อผิดพลาดในการเปลี่ยนภารกิจ
-ServerError/INVALID_CHANGE_MISSION┃คุณไม่สามารถรับรางวัลได้ถ้ายังไม่เคลียร์ภารกิจ
-ServerError/NOVICE_MISSION_EMPTY_CODES┃ข้อมูลไม่ถูกต้อง
-ServerError/NOT_EXIST_GIFT_MAIL┃หมดอายุ ไม่สามารถรับรางวัลได้
-ServerError/GIFT_MAIL_IS_EXPIRED┃ไม่พบรางวัลที่กดรับได้
-ServerError/NOT_EXIST_EVENT_DATA┃ไม่สามารถแชร์แผนการที่นำเข้ามาได้
-ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃ไม่สามารถกดลบแผนที่ไม่ได้รับการแบ่งปันได้
-ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃ไม่มีแผนท่ี่บันทึกเพื่อที่จะแก้
-ServerError/NOT_EXIST_WEAPON_ROUTE┃แผนที่บันทึกหายไปแล้ว
+ServerError/CANNOT_MATCHING_NOT_IN_LOBBY_STATUS┃0
+ServerError/IAP_INVALID_ORDER┃คำขอการซื้อ ขัดข้อง
+ServerError/IAP_STEAM_API_SERVER_BUSY┃ข้อมูลสตีม ขัดข้อง
+ServerError/IAP_KAKAO_API_SERVER_BUSY┃รหัสข้อมูลสินค้าไม่ถูกต้อง
+ServerError/KAKAO_IAP_USE_CASH_API_FAIL┃ไม่พบข้อมูลของตัวละคร
+ServerError/LACK_OF_CURRENCY┃เงินไม่พอ
+ServerError/LACK_OF_NP┃NP ไม่เพียงพอ
+ServerError/LACK_OF_ACOIN┃A-COIN ไม่เพียงพอ
+ServerError/NO_PRODUCT_ID┃ไม่พบข้อมูลของผลิตภัณฑ์
+ServerError/INVALID_PROMOTION┃ข้อมูลของผลิตภัณฑ์ไม่ถูกต้อง
+ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃จำนวนการซื้อถึงขีดสุดแล้ว
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃การซื้อรายวันถึงขีดสุดแล้ว
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃การซื้อรายสัปดาห์ถึงขีดสุดแล้ว
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃การซื้อรายเดือนถึงขีดสุดแล้ว
+ServerError/UNABLE_PURCHASE_BY_SALE┃การลดราคาสำหรับของชิ้นนี้หมดอายุแล้ว
+ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃จำนวนครั้งที่ใช้ในการซื้อรายวันถึงขีดจำกัด (2127)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃จำนวนครั้งที่ใช้ในการซื้อรายสัปดาห์ถึงขีดจำกัด (2128)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃จำนวนครั้งที่ใช้ในการซื้อรายเดือนถึงขีดจำกัด (2129)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃จำนวนครั้งการซื้อถึงขีดจำกัด (2130)
+ServerError/INVALID_PRODUCT_PRICE┃ข้อมูลของราคาไม่ถูกต้อง (2131)
+ServerError/UNABLE_PURCHASE_BY_SPECIFIC_AREA┃ไม่สามารถสั่งซื้อได้ในภูมิภาคของคุณ (2132)
+ServerError/ALREADY_BUY_SEQ┃คุณได้ซื้อสินค้าชิ้นนี้ไปแล้ว (2135)
+ServerError/INVALID_PURCHASE_CONDITION┃เงื่อนไขการซื้อไม่ตรงกัน ไม่สามารถทำการซื้อได้
+ServerError/ALREADY_BUY_PROMOTION┃คุณได้ซื้อสินค้าชิ้นนี้ไปแล้ว (2137)
+ServerError/INVALID_USER_MISSION┃ไม่พบข้อมูลของภารกิจ
+ServerError/INVALID_CHANGE_MISSION┃เกิดข้อผิดพลาดในการเปลี่ยนภารกิจ
+ServerError/INVALID_PROGRESS_COUNT┃คุณไม่สามารถรับรางวัลได้ถ้ายังไม่เคลียร์ภารกิจ
+ServerError/NOT_EXIST_GIFT_MAIL┃ข้อมูลไม่ถูกต้อง
+ServerError/GIFT_MAIL_IS_EXPIRED┃หมดอายุ ไม่สามารถรับรางวัลได้
+ServerError/NOT_EXIST_REWARD┃ไม่พบรางวัลที่กดรับได้
+ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃ไม่สามารถแชร์แผนการที่นำเข้ามาได้
+ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃ไม่สามารถกดลบแผนที่ไม่ได้รับการแบ่งปันได้
+ServerError/NOT_EXIST_WEAPON_ROUTE┃ไม่มีแผนท่ี่บันทึกเพื่อที่จะแก้
 ServerError/NOT_EXIST_RECOMMEND_WEAPON_ROUTE┃แผนที่บันทึกหายไปแล้ว
-ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃ไม่สามารถนำเข้าแผนของตัวคุณเองได้
-ServerError/MY_SHARE_WEAPON_ROUTE┃ตัวละครที่เลือกไม่สามารถใช้แผนที่บันทึกนีัได้
-ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃ไม่สามารถซื้อได้อีกต่อไป
-ServerError/INVALID_WEAPON_ROUTE_PATH┃การเข้าถึงไม่ถูกต้อง
-ServerError/TRAIT_NOT_EXIST_PAGE┃ไม่มีหน้าว่าง
-ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃ไม่สามารถซื้อได้อีกต่อไป
-ServerError/INVALID_TRAIT┃ไม่พบข้อมูลระดับแรงค์
-ServerError/NOT_EXIST_RANKING_TIER┃ไม่พบของรางวัล
-ServerError/NOT_EXIST_RANKING_REWARD┃ไม่สามารถค้นหาห้องได้ เนื่องจากระยะห่างของแรงค์ของคนในทีม
-ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT_GREATER_THAN_NOW┃มี {1} คนหรือมากกว่าที่ไม่สามารถจับคู่ในรูปแบบ ทีมสร้างล่วงหน้า {2}P ได้ ในเซิร์ฟเวอร์ {0}
+ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃แผนที่บันทึกหายไปแล้ว
+ServerError/MY_SHARE_WEAPON_ROUTE┃ไม่สามารถนำเข้าแผนของตัวคุณเองได้
+ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃ตัวละครที่เลือกไม่สามารถใช้แผนที่บันทึกนีัได้
+ServerError/ALREADY_MAX_PAID_COUNT┃ไม่สามารถซื้อได้อีกต่อไป
+ServerError/TRAIT_NOT_EXIST_PAGE┃การเข้าถึงไม่ถูกต้อง
+ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃ไม่มีหน้าว่าง
+ServerError/TRAIT_MAX_PAGE┃ไม่สามารถซื้อได้อีกต่อไป
+ServerError/NOT_EXIST_RANKING_TIER┃ไม่พบข้อมูลระดับแรงค์
+ServerError/NOT_EXIST_RANKING_REWARD┃ไม่พบของรางวัล
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃ไม่สามารถค้นหาห้องได้ เนื่องจากระยะห่างของแรงค์ของคนในทีม
 ServerError/ALREADY_RECEIVED_DLC_PRODUCT┃ไม่พบข้อมูลของสกิน
 ServerError/INVALID_PRODUCT_ID┃มีตัวละครนี้แล้ว
 ServerError/ALREADY_MAX_FRIEND_RECEIVE_COUNT┃คำขอเป็นเพื่อนเต็มแล้ว
@@ -22806,6 +22780,7 @@ Skin/Name/1083001┃นักบวชสายบู๊ เฮนรี่
 Skin/Name/1084000┃แบลร์
 Skin/Name/1084001┃นักซิ่งใจสิงห์ แบลร์
 Skin/Name/1085000┃เมอร์ก้า
+Skin/Name/1085001┃เมดเถื่อน เมอร์ก้า
 Skin/Name/1086000┃เฟนเรีย
 Skin/OnSelectVO/1001003┃กฎมีไว้ให้แหก ใช่มั้ยล่ะ?
 Skin/OnSelectVO/1002002┃ดูนั่นสิ ดอกไม้ไฟจะเริ่มจุดแล้ว!
@@ -23146,6 +23121,7 @@ Skin/Desc/1075002┃ไม่มีอะไรที่จะน่ารำค
 Skin/Desc/1084001┃ขอดูสปีดของเธอหน่อยเถอะ!
 Skin/Desc/1059003┃ยังครุ่นคิดอยู่อีกรึ? งั้น จะให้เวลาเกินพอเลยล่ะ
 Skin/Desc/1034003┃ถึงร่องรอยจะหาย แต่ฉากจะยังคงอยู่
+Skin/Desc/1085001┃หลบไป นายท่าน! ก่อนฉันจะคว่ำทุกอย่าง!
 Collection/Name/11001┃ทั้งหมด เพื่อลูกสาว
 Collection/Name/11002┃ชอบ...พิ๊กเซล มั้ยคะ?
 Collection/Name/11003┃ข้าจะนำพาการไถ่บาปมาสู่ดวงวิญญาณผู้หลงทาง
@@ -23296,7 +23272,6 @@ ItemTag/Ex_ItemSkill┃ใช้งานสกิลของไอเทม
 ItemTag/Ex_Dummy1┃ลดการฟื้นฟู
 ItemTag/Ex_Dummy2┃คุณประโยชน์
 ItemTag/Ex_Endure┃การฟื้นตัว
-전장보상재화부족┃มีตราสนามรบไม่เพียงพอ
 Product/ResetTime/Week┃{0} สัปดาห์
 Product/ResetTime/Day┃{0} วัน
 Product/ResetTime/Hour┃{0} ชั่วโมง
@@ -23370,24 +23345,6 @@ gameTip_Title_10160_1┃เลเวล / สกิล
 gameTip_Desc_10160_1┃ใช้แต้มที่ได้จากการเพิ่มของเลเวล เพื่อให้สกิลแกร่งขึ้น!\n\nเมื่อได้รับมาสเตอร์รี่มาถึงระดับหนึ่ง เลเวลของตัวทดลองเพิ่ม ก็จะได้สเตตัสเพิ่ม\n\nเพิ่มเลเวลให้มากที่สุด เพื่อแกร่งที่สุดไงล่ะ!
 gameTip_Title_10170_1┃Augments
 gameTip_Desc_10170_1┃คุณสามารถเพิ่มสกิลหรือบัฟให้กบัตัวทดลองได้ด้วยสิ่งที่เรียกว่า Augments\n\nAugments จะช่วยให้คุณมีทางเลือกมากขึ้น เช่น เพิ่มพลังป้องกัน ลดความเสียหาย สายซัพก็จะเน้นช่วยเหลือเพื่อนและทำให้พวกเขานำชัยมาให้\n\nหากไม่รู้ว่า Augment ไหนที่เหมาะกับตัวทดลอง ลองเช็คที่ <color=#8FDBF8>[Loadout → เมนู Augments]!<color>
-gameTip_Title_10200_1┃สนามรบ
-gameTip_Desc_10200_1┃สนามรบคือพื้นที่พิเศษที่ทำเพื่อการต่อสู้กัน\nเป้าหมายคือรวบรวมข้อมูลของตัวทดลองที่ปรากฏตัวออกมาในพื้นที่ที่มีความสุดโต่ง\n\nแต่ละสนามรบจะมีบัฟเฉพาะตัว บางพื้นที่เพิ่มความเร็วการเคลื่อนที่ บางพื้นที่มีความสามารถดูดซึมพลังชีวิต หรือบางพื้นที่มีโล่อยู่ด้วย\n\nผู้ชนะจะสามารถได้รับ <color=#8FDBF8>รางวัล<color>จากสนามรบได้ด้วยนะ
-gameTip_Title_10200_2┃การดำเนินไปของสนามรบ
-gameTip_Desc_10200_2┃พื้นที่ต่างๆได้ถูกคะเนไว้ล่วงหน้าของเช้าวันที่ 2 แล้วว่าจะเป็นสนามรบ\n\nพื้นที่ของแต่ละสนามรบจะเปลี่ยนไปในคืนที่ 2\n\nประเภทของแต่ละสนามรบจะสามารถตรวจสอบได้จากสัญลักษณ์ของสนามบนแผนที่
-gameTip_Title_10200_3┃วิธีเข้าร่วมเขตสนามรบ
-gameTip_Desc_10200_3┃เมื่อสนามรบเริ่มต้น ตัวทดลองทุกคนในพื้นที่จะกลายเป็นผู้เข้าร่วมสนามรบ\n\nหากผู้เข้าร่วมตาย จะถูกชุบชีวิตกลับมาหลังเวลาผ่านไป\n\nอย่างไรก็ตาม คุณจะไม่สามารถเข้าร่วมได้อีกหลังคืนชีพขึ้นมาแล้ว ดังนั้นโปรดระวังด้วย\n\nหากตัวทดลองเข้ามาในสนามรบ หรือ ออกไป พวกเขาจะ<color=#8FDBF8>ตายทันที<color>โดยคืนชีพไม่ได้อีก
-gameTip_Title_10200_4┃ของรางวัลสนามรบ
-gameTip_Desc_10200_4┃ผู้ชนะในพื้นที่สนามรบจะได้รางวัลเป็นวัตถุดิบพิเศษหรือของอัพเกรดสกิลกลยุทธ์ จาก HUD หรือที่คอนโซล\n\nยิ่งมีผู้เข้าร่วมในโซนมาก ของรางวัลยิ่งใหญ่ขึ้น\n\nสนามรบจะให้รางวัลเพียง<color=#8FDBF8>ชิ้นเดียว<color> ดังนั้น เลือกให้ดีล่ะ!
-gameTip_Title_10210_1┃ระบบสนามรบ
-gameTip_Desc_10210_1┃สนามรบจะประกอบไปด้วย 4 อย่าง ดังนี้:\n\nอุปกรณ์สนาม / ตราสนามรบ / เกจกัดกร่อน /โดรนในสนาม\n\nโดยแต่ละตัวจะทำงานเชื่อมโยงกันและกัน
-gameTip_Title_10210_2┃อุปกรณ์ในสนาม
-gameTip_Desc_10210_2┃เมื่อตัวทดลองอยู่ในสนาม พวกเขาจะได้รับบัฟ การฟื้นฟูอย่างรวดเร็ว และตราสนามรบ\n\nเมื่อตัวทดลองที่มีบัฟการฟื้นฟูอย่างรวดเร็วอยู่ จะถูกคืนชีพกลับมาหลังตายไป\n\nอุปกรณ์สนามรบจะถูกนำออกจากทีมที่ชนะในสนามรบ\n\n
-gameTip_Title_10210_3┃ตราสนามรบ
-gameTip_Desc_10210_3┃ตราสนามรบจะบ่งบอกว่าผู้เล่นในพื้นที่จะได้รับผลพิเศษแบบใดบ้าง\n\nเมื่อตัวทดลองที่มีบัฟการฟื้นฟูอย่างรวดเร็วอยู่ จะถูกคืนชีพกลับมาหลังตายไป\n\nอุปกรณ์สนามรบจะถูกนำออกจากทีมที่ชนะในสนามรบ\n\n\n
-gameTip_Title_10210_4┃เกจวิตก
-gameTip_Desc_10210_4┃ในพื้นที่สนามรบ <color=#8FDBF8>เกจวิตกจะสะสมต่อเนื่อง<color>เพื่อเสริมพลังให้กับตัวทดลอง\n\nตัวทดลองที่เกจเต็มแล้วจะตาย \n\nเกจวิตกจะฟื้นฟูได้ด้วยการอยู่ในระยะของโดรนภายในสนามรบ หรือ สังหารตัวทดลองคนอื่นๆ
-gameTip_Title_10210_5┃โดรนสนามรบ
-gameTip_Desc_10210_5┃โดรนในสนามรบจะเคลื่อนที่ไปมาตามเส้นทางที่กำหนดภายในสนาม และจะทำหน้าที่ฟื้นฟูเกจวิตก\n\nเมื่อเพื่อนๆอยู่รอบๆ มันจะฟื้นฟูเกจต่อเนื่อง\n\nดังนั้น สู้ใกล้ๆกับโดรนเถอะ!
 gameTip_Title_10220_1┃สกิลกลยุทธ์
 gameTip_Desc_10220_1┃สกิลกลยุทธ์ เป็นสิ่งที่ส่งผลต่อเกมอย่างยิ่งยวด มันสำคัญมาก ดังนั้นจงเลือกให้ดี และปรับให้เข้ากับศัตรูของคุณและสไตล์การเล่นที่คุณใช้ \nจงสนุกกับการวางแผน และกลยุทธ์ที่หลากหลาย!\n\n*คุณสามารถ<color=#8FDBF8>อัพเกรด<color>ได้ด้วยการใช้เครดิต การอัพขึ้นเลเวล 3 จะต้องใช้<color=#8FDBF8>ของพิเศษเฉพาะ<color>
 gameTip_Title_10230_1┃โอเปอเรเตอร์
@@ -23504,7 +23461,6 @@ gameTip_category_SecretLab┃แล็บลับ
 gameTip_category_VictoryAndDefeat┃ชนะและพ่ายแพ้
 gameTip_category_UseCredits┃ใช้เครดิต
 gameTip_category_BeginnerTips┃คำแนะนำมือใหม่
-gameTip_category_BattleZone┃พื้นที่สนามรบ
 gameTip_category_Escape┃หลบหนี
 gameTip_category_CobaltProtocol┃โคบอลต์ โปรโตคอล
 gameTip_category_Rift┃รอยแตก
@@ -23668,8 +23624,6 @@ OperatorSetting/BossMonster┃เรียนรู้เรื่อง อั�
 OperatorSetting/CreateNoticeSpecialCollectible┃เรียนรู้เรื่องพฤกษาแห่งชีวิตและอุกกาบาต
 상위 등급 장비 제작┃ทำของขั้นสูง
 OperatorSetting/GetSpecialCollectible┃เรียนรู้การทำอุปกรณ์ที่แนะนำเมื่อมีวัตถุดอบพิเศษ
-전장┃สนามรบ
-OperatorSetting/BattleZone┃เรียนรู้เกี่ยวกับสนามรบ
 탈출┃หลบหนี
 OperatorSetting/Escape┃เรียนรู้เรื่องการหลบหนี เมื่อเหลือตัวคนเดียวในทีม
 전송 콘솔┃Kiosks
@@ -23700,7 +23654,7 @@ OperatorSetting/VerticalLauncher┃เรียนรู้เกี่ยวก
 안내 로봇 유료 부활 대상자┃ชุบชีวิตโดยลูมิ
 OperatorSetting/GuidedRobotPaidResurrection┃จะถูกประกาศเมื่อคุณสามารถจ่ายเครดิตเพื่อชุบชีวิตกับลูมิ เมื่อไม่สามารถชุบชีวิตแบบปกติได้
 균열 가이드┃รอยแตก
-OperatorSetting/RiftGuide┃เรียนรู้เกี่ยวกับรอยแยกและวาร์ป
+OperatorSetting/RiftGuide┃เรียนรู้เกี่ยวกับรอยแยกแล
 대체아이템동적추천┃คำแนะนำไอเทมทางเลือก
 OperatorSetting/NavAltRecItem┃โชว์ไอเทมทางเลือกที่คุณสามารถประดิษฐ์ได้เมื่อคุณรวบรวมวัสดุพิเศษที่ไม่ใช่รายการเป้าหมายของคุณ
 루트 목표 추가 불가능 알림┃คุณไม่สามารถเลือกของเขาแผนที่บันทึกไปได้มากกว่านี้
@@ -23748,8 +23702,6 @@ InGameGuide/Nadja/Group/Name/10103000┃พฤกษาแห่งชีวิ�
 InGameGuide/Nadja/Group/Desc/10103000┃พฤกษาแห่งชีวิตงอกแล้วที่  <color=yellow>{0}</color>.\nไปเก็บกันเถอะ
 InGameGuide/Nadja/Group/Name/10110000┃คราฟของสวมใส่ชั้นสูง
 InGameGuide/Nadja/Group/Desc/10110000┃ได้ของพิเศษมาแล้ว มาลองใช้งานมันกันเถอะนะ\nคลิ๊กซ้ายเพื่อที่จะเพิ่มไอเทมเป้าหมายเข้ามา
-InGameGuide/Nadja/Group/Name/10120000┃โซนสนามรบ
-InGameGuide/Nadja/Group/Desc/10120000┃สนามรบถูกกำหนดที่  <color=yellow>{0}</color>.\nเมื่ออยู่รอดเป็นคนสุดท้าย จะได้รางวัลด้วยนะ
 InGameGuide/Nadja/Group/Name/10130000┃โอเมก้าใกล้จะมาถึงแล้ว
 InGameGuide/Nadja/Group/Desc/10130000┃โอเมก้าเกิดที่  <color=yellow>{0}</color>.
 InGameGuide/Nadja/Group/Name/10133000┃โอเมก้ามาแล้ว
@@ -23860,12 +23812,6 @@ InGameGuide/Nadja/Group/Name/10331100┃รอยแตก - รอยแตก�
 InGameGuide/Nadja/Group/Desc/10331100┃ยินดีด้วย คุณคือผู้ชนะ\nอย่าลืมรับรางวัลก่อนจากไปนะ
 InGameGuide/Nadja/Group/Name/10340000┃คำแนะนำไอเทมทางเลือก
 InGameGuide/Nadja/Group/Desc/10340000┃คุณรวบรวมวัตถุดิบพิเศษได้แล้ว นี่ไม่ใช่ไอเทมเป้าหมายของคุณ ส่งต่อให้พันธมิตร หรือตรวจสอบไอเทมอื่น ๆ ที่คุณสามารถประดิษฐ์ได้
-InGameGuide/Nadja/Group/Name/10121000┃เขตพื้นที่ต่อสู้
-InGameGuide/Nadja/Group/Desc/10121000┃เร็วๆ นี้จะมีการกำหนดพื้นที่ต่อสู้\nยิ่งกำจัดศัตรูได้มากเท่าไหร่ รางวัลที่คุณจะได้รับก็จะยิ่งมากขึ้นเท่านั้นหากชนะ
-InGameGuide/Nadja/Group/Name/10122000┃เปิดใช้งานพื้นที่ต่อสู้
-InGameGuide/Nadja/Group/Desc/10122000┃พื้นที่ต่อสู้เปิดใช้งานแล้ว\nจะไม่มีใครออกไปได้จนกว่าจะมีผู้ชนะ
-InGameGuide/Nadja/Group/Name/10123000┃รางวัลพื้นที่ต่อสู้
-InGameGuide/Nadja/Group/Desc/10123000┃ฉันเห็นแล้วว่าคุณคือผู้ชนะของพื้นที่ต่อสู้\nรับไปสิ นี่รางวัลของคุณ
 오퍼레이터 신규유저 보상 제목┃แด่ตัวทดลองหน้าใหม่
 오퍼레이터 신규유저 보상 내용┃การปรับตัวเข้ากับเกาะคงไม่ง่ายนักหรอก แต่ดูเหมือนตอนนี้เธอพร้อมแล้ว\nถึงฉันจะเรียกเธอว่าเด็กฝึกงานไม่ได้แล้ว...ฉันก็ดีใจกับเธอนะ\nขอบคุณที่พยายามอย่างเต็มที่นะ ฉันสนุกมากเลย\nฉันไม่แน่ใจว่าจะเรียกสิ่งนี้ว่าของขวัญหรือรางวัลดี แต่...ขอให้สนุกกับมันนะ!
 오퍼레이터 기존유저 보상 제목┃แด่คุณ รุ่นพี่ตัวทดลองของพวกเรา
