@@ -1849,6 +1849,9 @@ Esc/Minimize┃Réduire
 닉네임에 특수 문자 사용 불가┃Votre pseudo ne peut pas contenir de caractère spécial ni d'espace.
 닉네임 사용 불가 단어┃Votre pseudo contient un mot interdit.
 매칭 중 닉네임 변경 불가┃Impossible de changer de pseudo pendant une partie.
+ShopNickNameProductPopup/Error/NicknameLength┃Votre pseudo est soit trop long soit trop court.
+ShopNickNameProductPopup/Error/SpecialCharacter┃Votre pseudo ne peut pas contenir de caractère spécial ni d'espace.
+ShopNickNameProductPopup/Error/InappropriateWords┃Votre pseudo contient un mot interdit.
 확인┃Confirmer
 취소┃Annuler
 저장┃Enregistrer
@@ -2071,7 +2074,6 @@ RankRP┃Classement
 Kill_AssistRP/Elimination┃Éliminations
 Kill_AssistRP/Down┃Mises à terre
 Kill_AssistRP/RepeatDown┃Répétitions Exclues
-Kill_AssistRP/BattleZoneDown┃Zones de Combat
 Kill_AssistRP/AutoResurrectionDown┃Mises à terre (Réanimation Automatique)
 Kill_AssistRP/AutoResurrectionAfterDown┃Mises à terre (Normal)
 Kill_AssistRP/AutoResurrectionRepeatDown┃Répétitions Exclues (Réanimation Automatique)
@@ -2086,7 +2088,6 @@ RankEnd_KillCount┃Nombre d'éliminations de l'équipe : {0} TK
 RankEnd_Elimination┃Éliminations : {0}
 RankEnd_Down┃Mises à terre : {0}
 RankEnd_RepeatDown┃Répétitions exclues : {0}
-RankEnd_BattleZoneDown┃Zones de Combat : {0}
 RankEnd_AutoResurrectionDown┃Mises à terre (Réanimation Automatique) : {0}
 RankEnd_AutoResurrectionAfterDown┃Mises à terre (Normal) : {0}
 RankEnd_AutoResurrectionRepeatDown┃Répétitions Exclues (Réanimation Automatique) : {0}
@@ -2141,7 +2142,6 @@ MyTierRP/ETERNITY┃<color=#FDFBEF>Classement Actuel</color>
 RankRP_explanation┃Les points sont attribués en fonction du classement obtenu.
 Elimination_explanation┃Points attribués pour avoir tué une équipe ennemie ou pour avoir éliminé un ennemi après la phase de Réanimation Automatique.
 Down_explanation┃Points attribués pour avoir tué un ennemi.
-BattleZoneDown_explanation┃Points attribués pour avoir tué un ennemi dans la Zone de Combat.
 AutoResurrectionDown_explanation┃Points attribués pour avoir mis un ennemi à terre durant la phase de Réanimation Automatique.
 AutoResurrectionAfterDown_explanation┃Points attribués pour avoir mis un ennemi à terre après la phase de Réanimation Automatique.
 AutoResurrectionTeamWiped_explanation┃Points attribués quand un Break/Clutch s'active pour des ennemis mis à terre par vos alliés morts durant la phase de Réanimation Automatique.
@@ -2214,7 +2214,6 @@ DeferPointDemotion/PopupContents┃Vous n'avez plus de points d'immunité et vou
 사망개요┃Récapitulatif de mort
 사망개요 설명┃Les dégâts subis par le cobaye jusqu'à sa mort au cours d'un combat sont analysés et affichés.
 Shortcut/DeathRecapOnOff┃Récapitulatif de mort
-DeathRecapOnOff┃Les dégâts subis par le cobaye jusqu'à sa mort au cours d'un combat sont analysés et affichés.
 GameSetting/DefaultShowExpandTooltip┃Les informations détaillées seront toujours affichées, même sans appuyer sur la touche (Alt).
 DefaultShowExpandTooltip┃Toujours Afficher les Informations Détaillées
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃* Utiliser l'Activation Rapide de Compétence vous permet d'utiliser directement la compétence à l'endroit de votre curseur lorsque vous appuyez sur la touche assignée.
@@ -2223,7 +2222,6 @@ DefaultShowExpandTooltip┃Toujours Afficher les Informations Détaillées
 스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃Activer le lancement de compétences à la limite de la portée maximale
 GameSetting/PickPointToInAreaIndicatorActive┃Cette option permet de s'assurer que les compétences qui nécessitent de cibler un emplacement sont toujours lancées à la portée maximale, même si le curseur de la souris est en dehors de la portée.
 가젯볼트UIUX설정┃Paramètres de l'Interface du Coffre-fort de Gadget
-GameSetting/GadgetVaultUIUXSetting┃Vous pouvez personnaliser l'interface du Coffre-fort de Gadget ! \nAfficher dans le menu de Livraison Rapide : Le Coffre-fort de Gadget est fusionné avec le menu de Livraison Rapide. Cliquez sur le gadget dans le menu de Livraison Rapide pour changer le gadget équipé.\nAfficher la Roue : Similaire à celle des émoticônes, maintenez enfoncée la touche du Coffre-Fort de Gadget pour changer le gadget équipé. Appuyez brièvement sur la touche du Coffre-Fort de Gadget pour utiliser le gadget équipé.
 가젯볼트UIUX설정/퀵슬롯병합┃Afficher dans le menu de Livraison Rapide
 가젯볼트UIUX설정/휠┃Afficher la Roue
 스토리 건너뛰기┃Passer
@@ -2238,123 +2236,13 @@ GameSetting/GadgetVaultUIUXSetting┃Vous pouvez personnaliser l'interface du Co
 대사재생속도┃Vitesse de Lecture
 최대 사거리 고정 툴팁┃Cette option permet de s'assurer que les compétences qui nécessitent de cibler un emplacement sont toujours lancées à la portée maximale, même si le curseur de la souris est en dehors de la portée.
 즉시 시전 사거리 표시┃Indicateur d'Activer Rapide
-즉시 시전 사거리 표시 툴팁┃La portée s'affichera pour les compétences lors d'un appui long sur la touche Activer Rapide.
 모두 즉시 시전┃Rapide pour tous
 모두 일반 시전┃Normal pour tous
 모든 캐릭터┃Tous les Personnages
 스킬┃Compétence
 액티브아이템┃Compétence d'Objet
 아이템┃Équipement
-Emotion1┃Expression Vocale 1
-Emotion2┃Expression Vocale 2
-Emotion3┃Expression Vocale 3
-Emotion4┃Expression Vocale 4
-Emotion5┃Expression Vocale 5
-Emotion6┃Expression Vocale 6
-EmotionDance┃Utiliser pour danser !
-EmotionPlate┃Utiliser les émoticônes.
-EmotionPlate1┃Utiliser le set d'émoticônes 1.
-EmotionPlate2┃Utiliser le set d'émoticônes 2.
-EmotionPlate3┃Utiliser le set d'émoticônes 3.
-PingTarget┃Lancer une alerte
-MarkTarget┃Ajouter une balise
-PingTargetKeyboard┃Lancer une alerte
-MarkTargetKeyboard┃Ajouter une balise
-DeleteMarkTarget┃Supprimer la balise
-LearnActive1┃Améliore la première compétence.
-LearnActive2┃Améliore la deuxième compétence.
-LearnActive3┃Améliore la troisième compétence.
-LearnActive4┃Améliore la quatrième compétence.
-LearnPassive┃Améliore la compétence passive.
-LearnWeaponSkill┃Améliore la compétence d'arme.
-LearnTacticalSkill┃Améliore la compétence tactique.
-Active1ToSelf┃Compétence 1 sur soi (Si applicable)
-Active2ToSelf┃Compétence 2 sur soi (Si applicable)
-Active3ToSelf┃Compétence 3 sur soi (Si applicable)
-Active4ToSelf┃Compétence 4 sur soi (Si applicable)
-WeaponSkillToSelf┃Compétence d'arme sur soi (Si applicable)
-TacticalSkillToSelf┃Compétence tactique sur soi (Si applicable)
-NormalCastActive1┃Lancement de la Compétence 1.
-NormalCastActive2┃Lancement de la Compétence 2.
-NormalCastActive3┃Lancement de la Compétence 3.
-NormalCastActive4┃Lancement de la Compétence 4.
-NormalCastWeaponSkill┃Lancement de la Compétence d'Arme.
-NormalCastTacticalSkill┃Lancement de la Compétence Tactique.
-InstantCastActive1┃Lancement rapide de la compétence 1
-InstantCastActive2┃Lancement rapide de la compétence 2
-InstantCastActive3┃Lancement rapide de la compétence 3
-InstantCastActive4┃Lancement rapide de la compétence 4
-InstantCastWeaponSkill┃Lancement rapide de la compétence d'arme
-InstantCastTacticalSkill┃Lancement rapide de la compétence tactique
-InstantUseActiveItem1┃Lancement rapide de la compétence de l'objet
-ChangeCameraMode┃Active ou désactive le suivi du personnage par la caméra.
-CameraDragScroll┃Déplace la caméra tout en maintenant la touche de raccourci enfoncée.
-OpenCombineWindow┃Ouvre le menu de fabrication.
-OpenQuickSlot┃Ouvre le menu de Livraison Rapide et la Liste des Gadgets.
-OpenQuickSlot_New1┃Ouvre le menu de Livraison Rapide et la Liste des Gadgets.
-OpenScoreboard┃Ouvre le tableau des scores et les données du match.
-OpenMap┃Ouvre la carte étendue.
-ResetCamera┃Recentre la caméra sur votre personnage.
-OpenCharacterMastery┃Ouvre l'écran des Maîtrises.
-OpenVPad┃Ouvre le VPad à partir du raccourci clavier.\nVous pouvez consulter vos niveaux de Maîtrises et de votre Compétence Tactique.
-OpenCharacterStat┃Ouvre les statistiques des personnages.
-OpenCharacterTotalStat┃Ouvre les statistiques détaillées des personnages.
-ShowObjectText┃Met en surbrillance les informations des ennemis, les objets et les objets jetés sur le sol.
-ToggleShowOverlay┃Activer/Désactiver le verrouillage des informations sur les ennemis, entités et objets au sol.
-Escape┃Ouvre les Paramètres du jeu.
-ShowRouteList┃Voir la liste des Itinéraires.
-ShowProgressItem┃Voir la liste des Itinéraires de fin de partie.
-MaxChatWindow┃Agrandit la fenêtre du chat.
-MinimapZoomIn┃Zoom avant sur la minicarte.
-MinimapZoomOut┃Zoom arrière sur la minicarte.
-CameraTeam1┃Recentre la caméra sur votre personnage.
-CameraTeam2┃Déplace la caméra sur coéquipier 1.
-CameraTeam3┃Déplace la caméra sur coéquipier 2.
-CameraTeam4┃Déplace la caméra sur coéquipier 3.
-Attack┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
-Stop┃Arrête tout mouvement du personnage qui attend sur place.
-Hold┃Empêche le personnage de se déplacer.
-Rest┃Repos du personnage avec gain rapide de vie et d'endurance.
-Reload┃Recharge les munitions (Armes à feu seulement)
-QuickCombine┃Fabrique l'objet situé le plus à gauche dans la liste de Fabrication Rapide.
-QuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide.
-QuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide.
-QuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide.
-QuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide.
-ProtectedQuickCombine┃Fabrique l'objet situé le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedQuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedQuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedQuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedQuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedBoxItemIncludeQuickCombine┃Fabrique l'objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedBoxItemIncludeQuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedBoxItemIncludeQuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedBoxItemIncludeQuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
-ProtectedBoxItemIncludeQuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
-ThrowItem┃Permet de jeter un objet de l'inventaire. (Cliquez sur l'objet)
-ChangeEnableGameUI┃Active/désactive l'interface du jeu (n'affecte pas l'accueil).
-ChangeEnableTrackerName┃Active/désactive le pseudo.
-ChangeEnableTrackerStatusBar┃Active/désactive l'interface pour les PV et l'Endurance.
-ChangeEnableReplayControllerUI┃Active/désactive l'interface de contrôle du Replay
-HideSummonObjectUI┃Active/désactive l'interface des Pièges & Caméras pendant le Replay.
-HideUserNameInMap┃Affiche les noms des joueurs sur la Carte Étendue et le Tableau des Scores pendant les replays.
-HideUserNameAndCharacterIconInMap┃Affiche les noms des joueurs et leur portrait sur la Carte Étendue et le Tableau des Scores pendant les replays.
-ChangeEnableBattleZoneRuleGuideHUD┃Activer/Désactiver l'UI de Zone de Combat pendant en spectateur ou en replay.
-AddGuide┃Ajouter l'objet à l'itinéraire 
-MoveToAttack┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
-MoveToAttackMouse┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
-MoveOrderCustom┃Déplace une invocation jusqu'à l'emplacement ciblé. Utilisable sur un ennemi. (Assignation)
-MoveOrder┃Déplace une invocation jusqu'à l'emplacement ciblé. Utilisable sur un ennemi.
-PickOnlySurvivor┃L'appui long fait en sorte que les ennemis soient ciblés en priorité par le curseur de la souris, plutôt que les animaux sauvages, les ennemis à terre, les objets, etc.
-MoveCameraExpandMap┃Vous pouvez utiliser Ctrl+MB1 pour changer de caméra sur la carte élargie.
-ChangeEnableInGameChat┃Activer/désactiver l'IU du chat en jeu
-ChatItem┃Afficher les informations de l'objet dans le chat (clic sur l'icône)
-Spray┃Utilise le tag sélectionné dans votre inventaire.
-Spray_New1┃Utilise le tag sélectionné dans votre inventaire.
-FallBackTarget┃Signal de Retraite
-FallBackTargetCustom┃Signal de Retraite
 GameSetting/MoveExpandMap┃Se déplacer via la carte élargie en appuyant sur Ctrl + MB2.
-MoveExpandMap┃Déplacez-vous en utilisant la mini carte élargie, appuyez sur Ctrl et MB2.\n*Vous devez activer cette option dans Paramètres ＞ Jeu.
 확장 미니맵 이동 허용┃Déplacement perso sur la carte aggrandie
 GameSetting/MouseReverse┃Activer le paramètre d'inversion de la souris.
 마우스 좌우 반전(이동, 선택)┃Échanger clic droit/gauche
@@ -2385,10 +2273,8 @@ CCTV 감지 범위 접근 시 감지 범위 표시 사용┃Affiche la portée d
 GameSetting/MouseOverIconSizeUp┃Maintenez la touche Alt enfoncée et passez votre souris sur la Carte Étendue pour agrandir les icônes.
 NormalMatchingSolo┃Lancer une recherche de partie Normale en Solo avec le temps d'attente caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 NormalMatchingDuo┃Lancer une recherche de partie Normale en Duo avec le temps d'attente caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
-NormalMatchingSquad┃Lance une recherche de Partie Normale en masquant le temps d'attente.\n*Vous devez activer l'option [Utiliser les raccourcis claviers de recherche de partie] dans Paramètres ＞ Streaming.
 RankMatchingSolo┃Lancer une recherche de partie Classée en Solo avec le temps d'attente caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 RankMatchingDuo┃Lancer une recherche de partie Classée en Duo avec le temps d'attente caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
-RankMatchingSquad┃Lance une recherche de Partie Classée en masquant le temps d'attente.\n*Vous devez activer l'option [Utiliser les raccourcis claviers de recherche de partie] dans Paramètres ＞ Streaming.
 SquadRumbleMatching┃Commencer la recherche de partie en Circuit de l'Union avec le temps de recherche de partie caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 EventModeMatching┃Commencer la recherche de partie en Mode de jeu d'Évènement avec le temps de recherche de partie caché.\n\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 유니온 대전 방송모드 에러 팝업┃Le Circuit de l'Union est disponible après avoir rejoint une équipe.\nVeuillez entrer dans le lobby d'équipe du Circuit de l'Union pour continuer.
@@ -2415,7 +2301,7 @@ GameSetting/WildAnimal┃Affiche les temps de réapparition des Animaux Sauvages
 GameSetting/ResourceItem┃Affiche les informations pour les ressources comme la Pierre, la Branche, l'Arbre de Vie etc.
 GameSetting/AutoWeaponSkills┃Passe votre compétence d'arme au niveau supérieur automatiquement.
 미니맵 잘못 클릭 방지 시간┃Délai de prise en compte d'une erreur de clic sur la mini-carte.
-GameSetting/PreventMinimapMove┃Si un déplacement ou une compétence est lancée lorsque le curseur passe sur la mini-carte, l'action sera ignorée. Cependant, effectuer la même action alors que la souris se trouvait sur la mini-carte depuis un temps suffisament long prendra en compte l'action effectuée. Cela permet d'anticiper les déplacements des joueurs et d'avoir plus de contrôle sur ses compétences.
+GameSetting/SubTitle┃Si un déplacement ou une compétence est lancée lorsque le curseur passe sur la mini-carte, l'action sera ignorée. Cependant, effectuer la même action alors que la souris se trouvait sur la mini-carte depuis un temps suffisament long prendra en compte l'action effectuée. Cela permet d'anticiper les déplacements des joueurs et d'avoir plus de contrôle sur ses compétences.
 미니맵표기방식┃Style d'affichage de la minimap
 GameSetting/MinimapNotationSystem┃Vous pouvez choisir entre "Carte standard" et "Carte satellite" pour afficher la minimap en jeu.
 확장맵표기방식┃Méthode d'affichage de la carte déployée
@@ -2435,8 +2321,6 @@ GameSetting/CampfireCraftingSortPrior┃Conserve la priorité de fabrication et 
 AutoWeaponSkills┃Déblocage rapide de la Compétence d'Arme
 GameSetting/EnableMinimapMove┃Permet de vous déplacer en utilisant le clic droit sur la mini-carte.
 EnableMinimapMove┃Permettre le déplacement avec la mini-carte.
-전장 HUD 자동 전환┃Changement automatique en HUD de Zone de Combat
-GameSetting/BattleZoneHUDAutoReplace┃Passe automatiquement au HUD de Zone de Combat lorsque vous entrez dans une Zone de Combat.
 옵션/후반아이템자동교체┃Autoriser le Remplacement automatique des objets de fin de partie
 GameSetting/AutoReplaceLateGameItems┃Remplace automatiquement tous les objets de départ par la première liste d'objets de fin de partie enregistrés dans l'itinéraire après les avoir terminés.
 옵션/마크목표경로지정표기┃Affichage de l'itinéraire
@@ -2444,7 +2328,7 @@ GameSetting/MarkPingWayPointSet┃Affiche/Masque votre itinéraire sur la carte.
 마우스 휠로 이모티콘 세트 변경 허용┃Permettre le changement de set d'émoticônes à l'aide de la molette de la souris
 GameSetting/EmoticonSetMouseWheel┃Permet de changer de set d'émoticônes à l'aide de la molette de la souris lors de l'utilisation d'émoticônes en jeu.
 자동 공격 설정┃Paramètres d'auto-attaque
-GameSetting/AutoAttack┃Passif : N'attaquera pas les ennemis à proximité.\nSemi-Actif : Attaque automatiquement les ennemis à proximité. N'attaquera pas les ennemis à proximité après avoir fabriqué ou collecté des objets.\nActif : Attaque automatiquement les ennemis à proximité, sauf si vous saisissez la commande d'arrêt, si vous vous reposez, si vous ouvrez un colis aérien ou si vous interagissez avec une console/terminal.
+GameSetting/AutomaticAttack┃Passif : N'attaquera pas les ennemis à proximité.\nSemi-Actif : Attaque automatiquement les ennemis à proximité. N'attaquera pas les ennemis à proximité après avoir fabriqué ou collecté des objets.\nActif : Attaque automatiquement les ennemis à proximité, sauf si vous saisissez la commande d'arrêt, si vous vous reposez, si vous ouvrez un colis aérien ou si vous interagissez avec une console/terminal.
 인벤토리아이템자동병합┃Tri Auto des emplacements de l'inventaire
 GameSetting/AutomaticInventoryItemRestock┃Lorsqu'il y a plusieurs consommables du même type dans différents emplacements de l'inventaire, les objets seront consommés en commençant par l'emplacement ayant la plus faible priorité.\nQuelle que soit la touche utilisée, les emplacements situés les plus en bas à droite sont considérés comme ayant la plus faible priorité.\nExemple : S'il y a des steaks dans les emplacements 1, 3 et 5, appuyer sur n'importe quelle touche des emplacements consommera les steaks de l'emplacement 5 en premier.
 옵션/VLS상호작용확장맵활성화┃Activer la Carte Étendue en SPV
@@ -2474,7 +2358,6 @@ GameSetting/AutoChangeEquipment┃Lorsque vous obtenez un objet d'une rareté su
 GameSetting/CharacterShadow┃Activer/Désactiver les ombres des personnages
 탐색 가이드 원격 호출 사용┃Appeler un Drone de livraison via le Catalogue
 자동 번역 사용┃Utiliser la Traduction Automatique (BETA)
-GameSetting/AutoTranslate┃Traduit dans votre langue les discussions des joueurs dont les paramètres de langue sont différents des vôtres.\nLa traduction utilise la langue spécifiée dans vos deux paramètres de jeu.\nLes conversations dans des langues autres que celles définies dans vos paramètres de jeu peuvent ne pas être traduites correctement.\n- Langues prises en charge : Coréen, Anglais, Japonais et Chinois (Simplifié, Traditionnel).\n- Il s'agit d'un service bêta qui peut prendre fin prématurément.
 GameSetting/NavigaionHUDRemoteDroneActive┃Les objets peuvent être livrés en utilisant le Catalogue.
 StreamingModeSetting/AutoAcceptMatching┃Lorsque vous trouvez une partie, elle est automatiquement acceptée. Il est impossible de refuser une partie trouvée lorsque vous utilisez cette option.
 StreamingModeSetting/IgnoreRequestFriends┃Désactiver toutes les demandes d'ami
@@ -2516,6 +2399,7 @@ GameSetting/AirSupplies┃Afficher les icônes Colis Aérien
 오퍼레이터 음성┃Voix de l'opérateur
 게임을 종료하시면 플레이 중인 캐릭터가 즉시 사망합니다. 종료하시겠습니까?┃Si vous quittez le jeu, votre personnage mourra immédiatement. Voulez-vous vraiment quitter le jeu ?
 게임을 종료하시겠습니까?┃Voulez-vous vraiment quitter le jeu ?
+매칭 요약 강제 종료 후 결과 화면 이동┃Voulez-vous quitter la partie \net voir les résultats ?
 게임 종료┃Quitter le jeu
 전투 포기┃Se rendre
 닫기┃Annuler
@@ -2559,10 +2443,9 @@ Leave/Normal┃Le placement de l'équipe est toujours en cours. Si vous quittez 
 음성 감지┃Activité vocale
 음성 입력 감도┃Sensibilité
 눌러서 말하기┃Appuyer-pour-parler
-눌러서 말하기 단축키┃Raccourci "Appuyer-pour-parler"
+VoiceSetting/PushToTalk┃Raccourci "Appuyer-pour-parler"
 변환 중┃Paramètre...
 Shortcut/PushToTalk┃Appuyer pour Parler
-PushToTalk┃Rester appuyé pour parler
 Vivox점검팝업┃Le Chat Vocal est indisponible à cause d'une erreur.
 음성 채팅 안하기┃Désactiver le Chat Vocal
 음성 채팅 참여┃Rejoindre le Chat Vocal
@@ -2598,38 +2481,14 @@ Vivox점검팝업┃Le Chat Vocal est indisponible à cause d'une erreur.
 지역 설명┃Zone Actuelle
 금지구역┃Zone Restreinte
 금지구역 설명┃Temps restant avant la désignation des prochaines Zones Restreintes
-전장규칙안내HUD 전환버튼┃Passage à l'interface Zone de Combat
 기존UI 전환버튼┃Passage à l'interface Normale
-전장규칙안내HUD 전장예정지 제목┃Zone de Combat Prédite
-전장규칙안내HUD 전장예정지 설명┃Cette zone sera définie comme Zone de Combat pendant la nuit.
-전장규칙안내HUD 전장활성화 제목┃Activation de la Zone de Combat
-전장규칙안내HUD 전장활성화 설명┃Récupérez votre Jauge de Corrosion grâce aux Navettes de la Zone de Combat.\nSi vous quittez ou entrez dans une Zone de Combat active, vous serez immédiatement tué sans possibilité d'être réanimé.
-전장규칙안내HUD 전장보상 제목┃Recevoir les Récompenses de Zone de Combat
-전장규칙안내HUD 전장보상 설명┃Félicitations pour avoir survécu à la Zone de Combat !\nCliquez sur le bouton "Récupérer la récompense" ou sur la console de sécurité pour sélectionner votre récompense.
-전장규칙안내HUD 전장보상 수령 버튼┃Récupérer la récompense
-전장규칙안내HUD 전장보상 수령 완료 본인┃Récupéré pour soi
-전장규칙안내HUD 전장보상 수령 완료 팀원┃Récupéré par un allié
 아이템 분해┃Détruire
 아이템 분해 팝업┃Obtenu via destruction d'objet
-전장 키트┃Kit de Zone de Combat
-전장 키트 설명┃Lorsque des cobayes participent à une Zone de Combat, ils bénéficient de l'effet "Reconstruction Rapide de Zone de Combat" et de l'effet « Marque de Zone de Combat".\nLe kit est retiré pour l'équipe gagnante.
-AreaAttributes/GroupName/1┃Zone de Combat - Accélération
-AreaAttributes/GroupDesc/1┃Cette Zone de Combat augmente la vitesse de déplacement et réduit les temps de recharge.
-AreaAttributes/GroupName/2┃Zone de Combat - Berserk
-AreaAttributes/GroupDesc/2┃Cette Zone de Combat augmente les dégâts infligés et confère de l'Omnisyphon.
-AreaAttributes/GroupName/3┃Zone de Combat - Défense
-AreaAttributes/GroupDesc/3┃Cette Zone de Combat vous octroie un bouclier après un certain temps hors combat.
-BattleZoneDebuffGaugeTooltip_Title┃Jauge de Corrosion
-BattleZoneDebuffGaugeTooltip_Desc┃Un grand nombre de substances toxiques se sont accumulées dans la Zone de Combat.\nLorsque le maximum est atteint, le cobaye meurt après un court moment.
-BattleZoneRewardGaugeTooltip_Title┃Récupérer les récompenses de Zone de Combat
-BattleZoneRewardGaugeTooltip_Desc┃Récupérer les récompenses de Zone de Combat à la console de sécurité
-신경안정제셔틀충전중┃Chargement
+제한시간 내에 보상 아이템을 선택하세요.┃Choisissez une récompense dans le temps imparti.
 생존 팀 수┃Équipes
 생존 팀 수 설명┃Nombre d'Équipes Survivantes Restantes
 생존자 수┃Nombre de Survivants
 생존자 수 설명┃Nombre de Survivants restants
-전장 생존자 수┃Nombre de Survivants dans la Zone de Combat
-전장 생존자 수 설명┃Nombre de Survivants restant actuellement dans la Zone de Combat
 팀 처치 수┃Éliminations de l'équipe
 팀 처치 수 설명┃Total d'éliminations de l'équipe
 플레이어 처치 수┃Nombre de joueurs tués
@@ -2895,7 +2754,6 @@ TempNickname┃Cobaye {0}
 지금은 사용할 수 없습니다!┃Vous ne pouvez pas l'utiliser maintenant !
 장착된 무기가 없어 공격할 수 없습니다.┃Bonus reçus en équipant {0}:
 전투중휴식불가┃Vous ne pouvez pas vous reposer en combat.
-전장전투단계중휴식불가┃Repos désactivé dans la Zone de Combat.
 전투중제작불가┃Fabrication impossible pendant un combat.
 자원이 부족합니다!┃Ressources insuffisantes.
 임시안전지대휴식불가┃Repos désactivé dans la Zone de Sécurité temporaire.
@@ -3146,10 +3004,6 @@ WickelineUI_ReadyTooltip┃Wickeline est maintenant active.
 위클라인처치노티┃Wickeline a été tuée
 위클라인죽음어나운스┃{0} a tué Wickeline !
 위클라인이동┃Wickeline a été vue à {0}.
-전장예정노티┃1 Minute avant la Zone de Combat
-전장예정┃La Zone de Combat commencera à {0} dans 1 minute.
-전장생성노티┃Début de la Zone de Combat
-전장생성┃La Zone de Combat s'est ouverte à {0}.
 자색안개예정노티┃30s avant le Brouillard
 자색안개예정┃Le Brouillard sera activé à {0} dans 30 secondes.
 자색안개생성노티┃Activation du Brouillard
@@ -3267,7 +3121,6 @@ Ping/Communication/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>a besoin de bois
 Ping/Communication/Thankyou/Chatting┃{0}({1}) dit <color=#C2FFA0>merci</color>.
 Ping/Communication/Sorry/Chatting┃{0}({1}) dit <color=#C2FFA0>désolé</color>.
 Ping/Communication/Goodjob/Chatting┃{0}({1}) dit <color=#C2FFA0>bien joué</color> !
-Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) a reçu <color=#C2FFA0>{2}</color> comme récompense de la Zone de Combat.
 Ping/Tactical/Warning┃Signe Ennemi
 Ping/Tactical/Escape┃Danger !
 Ping/Tactical/Help┃À l'aide !
@@ -3422,15 +3275,10 @@ VP 알림┃{0}({1}): <color=#FFFF00>EV {2}%</color>
 하이퍼루프알림생존자명시_비밀연구실┃{0}({1}) : <color=#FFBB00>{2}</color> - <color=#FF4848> Nombre d'ennemis : {3}</color>
 ToastMessage/HyperloopNotLab┃Vous ne pouvez pas utiliser l'Hyperloop pour aller au Laboratoire.
 ToastMessage/CannotHyperLoopToBattleLab┃Vous ne pouvez pas utiliser l'Hyperloop sur un allié se trouvant dans le Laboratoire de Combat.
-ToastMessage/HyperloopNotBattlezone┃Vous ne pouvez pas utiliser l'Hyperloop pour aller dans cette zone tant que la Zone de Combat n'est pas terminée.
-ToastMessage/HyperloopNotBattlezonePlayer┃Vous ne pouvez pas utiliser l'Hyperloop pour rejoindre des alliés participants à une Zone de Combat.
 ToastMessage/HyperloopErrorInBattlezone┃Vous ne pouvez pas utiliser l'Hyperloop pour aller dans une zone fermée.
 ToastMessage/HyperloopSecretLabCannotUse┃Vous ne pouvez pas utiliser l'hyperloop pour le moment.
-ToastMessage/TransferConsoleErrorInBattlezone┃Vous ne pouvez pas utiliser de Kiosque durant une Zone de Combat.
-ToastMessage/KioskErrorInBattlezone┃Vous ne pouvez pas utiliser de Kiosque durant une Zone de Combat.
 ToastMessage/HyperloopErrorInTemporarySafeZone┃Vous ne pouvez pas utiliser l'Hyperloop pendant la phase de Zone de Sécurité.
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃Vous ne pouvez pas utiliser de Kiosque durant la phase de Zone de Sécurité.
-ToastMessage/SecurityConsoleErrorInBattlezone┃Vous ne pouvez pas utiliser de Console de Sécurité dans une Zone de Combat.
 ToastMessage/SecurityConsoleErrorInLastPhase┃La Console de Sécurité n'est pas activable durant la phase Zone de Sécurité Finale.
 SecurityConsoleErrorInLastPhase┃La Console de Sécurité n'est pas activable durant la phase Zone de Sécurité Finale.
 ToastMessage/AlreadyBoughtBattlezoneReward┃L'équipe a déjà reçu une récompense.
@@ -4269,6 +4117,7 @@ SkillCostPing/Vf┃Force Vitale
 SkillCostPing/GadgetEnergy┃Énergie de Gadget
 장착중┃Équipé
 경로 확인┃Trajet (P)
+상단에서 목표 아이템을 선택하세요.┃Choisissez un objet à fabriquer
 현재 지역┃Zone actuelle
 제작 목표┃Itinéraires
 ※ 제작창에서 제작가이드를 추가 할 수 있습니다.┃Rassemblez les objets présentés dans le guide à droite en suivant leTrajet recommandé.
@@ -4336,7 +4185,6 @@ Shortcut/Active4ToSelf┃Compétence 4 sur soi
 Shortcut/WeaponSkillToSelf┃Compétence d'arme sur soi
 Shortcut/TacticalSkillToSelf┃Compétence tactique sur soi
 Shortcut/InstantCastGadgetSkill┃Invocation Rapide du Gadget
-InstantCastGadgetSkill┃Invocation Rapide du Gadget dans le Coffre-fort de Gadget
 Shortcut/NormalCastActive1┃Lancement de la Compétence 1
 Shortcut/NormalCastActive2┃Lancement de la Compétence 2
 Shortcut/NormalCastActive3┃Lancement de la Compétence 3
@@ -4410,7 +4258,6 @@ Shortcut/ChangeEnableReplayControllerUI┃(Replay) Cacher l'interface de contrô
 Shortcut/HideSummonObjectUI┃(Spectateur) Cacher l'interface des Caméras et Pièges
 Shortcut/HideUserNameInMap┃(Spectateur) Cacher les noms des joueurs sur la carte\n
 Shortcut/HideUserNameAndCharacterIconInMap┃(Spectateur) Cacher les noms des joueurs et les portraits\n
-Shortcut/ChangeEnableBattleZoneRuleGuideHUD┃(Spectateur, Replay) Cacher l'interface des Zones de Combat
 Shortcut/NormalMatchingSolo┃Recherche de Partie Normale (Solo)
 Shortcut/NormalMatchingDuo┃Recherche de Partie Normale (Duo)
 Shortcut/NormalMatchingSquad┃Recherche de Partie Normale 
@@ -4430,7 +4277,6 @@ Shortcut/FallBackTargetCustom┃Alerte Rapide de Retraite (Personnalisé)
 OptionActive┃Activer ({0})
 OptionDeactive┃Désactiver ({0})
 Shortcut/TranslateToggle┃Activer la traduction automatique
-TranslateToggle┃Vous pouvez temporairement désactiver la traduction automatique lorsque cette option est activée.
 Shortcut/Popup/Skill┃Compétence
 Shortcut/Popup/Interface┃Interface
 Shortcut/Popup/Action┃Actions
@@ -4855,7 +4701,6 @@ ToastMessage/Escape1017┃Une équipe s'est échappée de l'ïle de Lumia ! Le Q
 ToastMessage/Escape1018┃Vous ne pouvez obtenir le Brassard de Régénération d'un coéquipier qu'à partir du 3e jour.
 ToastMessage/Escape1019┃Plus d'une équipe est dans la zone. Sous-marin désactivé.
 ToastMessage/Escape1020┃Vous pouvez vous rendre au Quai Abandonné après avoir obtenu un Rootkit et qu'un vote d'évasion a été effectué.
-ToastMessage/Escape1021┃Un coéquipier participe à une Zone de Combat. Téléportation impossible.
 ToastMessage/Escape1022┃La Carte d'Accès - Rouge est disponible après le Jour 4.
 ToastMessage/Escape1023┃La Carte d'Accès - Rouge n'est pas disponible à l'achat en raison du faible nombre de survivants sur l'île de Lumia.
 ToastMessage/Escape1024┃Ne peut être acheté que si vous avez un allié à terre.
@@ -6274,6 +6119,124 @@ ShopPromotion_LimitCategoryWarn┃Une fois le Pack de Skins de Collab & d'Objets
 3118010_Title┃Objets Spéciaux de Collab
 3118010_Desc┃[Jeton] 50 Jetons P5R\n[Drone] Alibaba P5R\n[Tombe] Prisonnier du Destin P5R\n[Caméra] Émotions P5R\n[Écran d'Accueil] Écran d'Accueil Spécial de Collab P5R\n[Musique de fin de partie] Life Will Change P5R\n[Boost] Boost d'A-Coin (7 Jours)
 스킨 패키지┃Pack de Skin
+BasicSetting/DeathRecapOnOff┃Les dégâts subis par le cobaye jusqu'à sa mort au cours d'un combat sont analysés et affichés.
+BasicSetting/PickPointInAreaIndicator┃Activer le lancement de compétences à la limite de la portée maximale
+BasicSetting/GadgetVaultUIUXSetting┃Vous pouvez personnaliser l'interface du Coffre-fort de Gadget ! \nAfficher dans le menu de Livraison Rapide : Le Coffre-fort de Gadget est fusionné avec le menu de Livraison Rapide. Cliquez sur le gadget dans le menu de Livraison Rapide pour changer le gadget équipé.\nAfficher la Roue : Similaire à celle des émoticônes, maintenez enfoncée la touche du Coffre-Fort de Gadget pour changer le gadget équipé. Appuyez brièvement sur la touche du Coffre-Fort de Gadget pour utiliser le gadget équipé.
+BasicSetting/QuickCastIndicator┃La portée s'affichera pour les compétences lors d'un appui long sur la touche Activer Rapide.
+BasicSetting/Emotion1┃Expression Vocale 1
+BasicSetting/Emotion2┃Expression Vocale 2
+BasicSetting/Emotion3┃Expression Vocale 3
+BasicSetting/Emotion4┃Expression Vocale 4
+BasicSetting/Emotion5┃Expression Vocale 5
+BasicSetting/Emotion6┃Expression Vocale 6
+BasicSetting/EmotionDance┃Utiliser pour danser !
+BasicSetting/EmotionPlate┃Utiliser les émoticônes.
+BasicSetting/EmotionPlate1┃Utiliser le set d'émoticônes 1.
+BasicSetting/EmotionPlate2┃Utiliser le set d'émoticônes 2.
+BasicSetting/EmotionPlate3┃Utiliser le set d'émoticônes 3.
+BasicSetting/PingTarget┃Lancer une alerte
+BasicSetting/MarkTarget┃Ajouter une balise
+BasicSetting/PingTargetKeyboard┃Lancer une alerte
+BasicSetting/MarkTargetKeyboard┃Ajouter une balise
+BasicSetting/DeleteMarkTarget┃Supprimer la balise
+BasicSetting/LearnActive1┃Améliore la première compétence.
+BasicSetting/LearnActive2┃Améliore la deuxième compétence.
+BasicSetting/LearnActive3┃Améliore la troisième compétence.
+BasicSetting/LearnActive4┃Améliore la quatrième compétence.
+BasicSetting/LearnPassive┃Améliore la compétence passive.
+BasicSetting/LearnWeaponSkill┃Améliore la compétence d'arme.
+BasicSetting/LearnTacticalSkill┃Améliore la compétence tactique.
+BasicSetting/Active1ToSelf┃Compétence 1 sur soi (Si applicable)
+BasicSetting/Active2ToSelf┃Compétence 2 sur soi (Si applicable)
+BasicSetting/Active3ToSelf┃Compétence 3 sur soi (Si applicable)
+BasicSetting/Active4ToSelf┃Compétence 4 sur soi (Si applicable)
+BasicSetting/WeaponSkillToSelf┃Compétence d'arme sur soi (Si applicable)
+BasicSetting/TacticalSkillToSelf┃Compétence tactique sur soi (Si applicable)
+BasicSetting/NormalCastActive1┃Lancement de la Compétence 1.
+BasicSetting/NormalCastActive2┃Lancement de la Compétence 2.
+BasicSetting/NormalCastActive3┃Lancement de la Compétence 3.
+BasicSetting/NormalCastActive4┃Lancement de la Compétence 4.
+BasicSetting/NormalCastWeaponSkill┃Lancement de la Compétence d'Arme.
+BasicSetting/NormalCastTacticalSkill┃Lancement de la Compétence Tactique.
+BasicSetting/InstantCastActive1┃Lancement rapide de la compétence 1
+BasicSetting/InstantCastActive2┃Lancement rapide de la compétence 2
+BasicSetting/InstantCastActive3┃Lancement rapide de la compétence 3
+BasicSetting/InstantCastActive4┃Lancement rapide de la compétence 4
+BasicSetting/InstantCastWeaponSkill┃Lancement rapide de la compétence d'arme
+BasicSetting/InstantCastTacticalSkill┃Lancement rapide de la compétence tactique
+BasicSetting/InstantUseActiveItem1┃Lancement rapide de la compétence de l'objet
+BasicSetting/ChangeCameraMode┃Active ou désactive le suivi du personnage par la caméra.
+BasicSetting/CameraDragScroll┃Déplace la caméra tout en maintenant la touche de raccourci enfoncée.
+BasicSetting/OpenCombineWindow┃Ouvre le menu de fabrication.
+BasicSetting/OpenQuickSlot┃Ouvre le menu de Livraison Rapide et la Liste des Gadgets.
+BasicSetting/OpenQuickSlot_New1┃Ouvre le menu de Livraison Rapide et la Liste des Gadgets.
+BasicSetting/OpenScoreboard┃Ouvre le tableau des scores et les données du match.
+BasicSetting/OpenMap┃Ouvre la carte étendue.
+BasicSetting/ResetCamera┃Recentre la caméra sur votre personnage.
+BasicSetting/OpenCharacterMastery┃Ouvre l'écran des Maîtrises.
+BasicSetting/OpenVPad┃Ouvre le VPad à partir du raccourci clavier.\nVous pouvez consulter vos niveaux de Maîtrises et de votre Compétence Tactique.
+BasicSetting/OpenCharacterStat┃Ouvre les statistiques des personnages.
+BasicSetting/OpenCharacterTotalStat┃Ouvre les statistiques détaillées des personnages.
+BasicSetting/ShowObjectText┃Met en surbrillance les informations des ennemis, les objets et les objets jetés sur le sol.
+BasicSetting/ToggleShowOverlay┃Activer/Désactiver le verrouillage des informations sur les ennemis, entités et objets au sol.
+BasicSetting/Escape┃Ouvre les Paramètres du jeu.
+BasicSetting/ShowRouteList┃Voir la liste des Itinéraires.
+BasicSetting/ShowProgressItem┃Voir la liste des Itinéraires de fin de partie.
+BasicSetting/MaxChatWindow┃Agrandit la fenêtre du chat.
+BasicSetting/MinimapZoomIn┃Zoom avant sur la minicarte.
+BasicSetting/MinimapZoomOut┃Zoom arrière sur la minicarte.
+BasicSetting/CameraTeam1┃Recentre la caméra sur votre personnage.
+BasicSetting/CameraTeam2┃Déplace la caméra sur coéquipier 1.
+BasicSetting/CameraTeam3┃Déplace la caméra sur coéquipier 2.
+BasicSetting/CameraTeam4┃Déplace la caméra sur coéquipier 3.
+BasicSetting/Attack┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
+BasicSetting/Stop┃Arrête tout mouvement du personnage qui attend sur place.
+BasicSetting/Hold┃Empêche le personnage de se déplacer.
+BasicSetting/Rest┃Repos du personnage avec gain rapide de vie et d'endurance.
+BasicSetting/Reload┃Recharge les munitions (Armes à feu seulement)
+BasicSetting/QuickCombine┃Fabrique l'objet situé le plus à gauche dans la liste de Fabrication Rapide.
+BasicSetting/QuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide.
+BasicSetting/QuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide.
+BasicSetting/QuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide.
+BasicSetting/QuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide.
+BasicSetting/ProtectedQuickCombine┃Fabrique l'objet situé le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedQuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedQuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedQuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedQuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine┃Fabrique l'objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine2┃Fabrique le deuxième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine3┃Fabrique le troisième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine4┃Fabrique le quatrième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine5┃Fabrique le cinquième objet le plus à gauche dans la liste de Fabrication Rapide depuis les Coffres. (Fabrique uniquement les objets de votre Itinéraire)
+BasicSetting/ThrowItem┃Permet de jeter un objet de l'inventaire. (Cliquez sur l'objet)
+BasicSetting/ChangeEnableGameUI┃Active/désactive l'interface du jeu (n'affecte pas l'accueil).
+BasicSetting/ChangeEnableTrackerName┃Active/désactive le pseudo.
+BasicSetting/ChangeEnableTrackerStatusBar┃Active/désactive l'interface pour les PV et l'Endurance.
+BasicSetting/ChangeEnableReplayControllerUI┃Active/désactive l'interface de contrôle du Replay
+BasicSetting/HideSummonObjectUI┃Active/désactive l'interface des Pièges & Caméras pendant le Replay.
+BasicSetting/HideUserNameInMap┃Affiche les noms des joueurs sur la Carte Étendue et le Tableau des Scores pendant les replays.
+BasicSetting/HideUserNameAndCharacterIconInMap┃Affiche les noms des joueurs et leur portrait sur la Carte Étendue et le Tableau des Scores pendant les replays.
+BasicSetting/AddGuide┃Ajouter l'objet à l'itinéraire 
+BasicSetting/MoveToAttack┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
+BasicSetting/MoveToAttackMouse┃Vous déplace jusqu'à l'emplacement ciblé et attaque les ennemis.
+BasicSetting/MoveOrderCustom┃Déplace une invocation jusqu'à l'emplacement ciblé. Utilisable sur un ennemi. (Assignation)
+BasicSetting/MoveOrder┃Déplace une invocation jusqu'à l'emplacement ciblé. Utilisable sur un ennemi.
+BasicSetting/PickOnlySurvivor┃L'appui long fait en sorte que les ennemis soient ciblés en priorité par le curseur de la souris, plutôt que les animaux sauvages, les ennemis à terre, les objets, etc.
+BasicSetting/MoveCameraExpandMap┃Vous pouvez utiliser Ctrl+MB1 pour changer de caméra sur la carte élargie.
+BasicSetting/ChangeEnableInGameChat┃Activer/désactiver l'IU du chat en jeu
+BasicSetting/ChatItem┃Afficher les informations de l'objet dans le chat (clic sur l'icône)
+BasicSetting/Spray┃Utilise le tag sélectionné dans votre inventaire.
+BasicSetting/Spray_New1┃Utilise le tag sélectionné dans votre inventaire.
+BasicSetting/FallBackTarget┃Signal de Retraite
+BasicSetting/FallBackTargetCustom┃Signal de Retraite
+BasicSetting/MoveExpandMap┃Déplacez-vous en utilisant la mini carte élargie, appuyez sur Ctrl et MB2.\n*Vous devez activer cette option dans Paramètres ＞ Jeu.
+BasicSetting/NormalMatchingSquad┃Lance une recherche de Partie Normale en masquant le temps d'attente.\n*Vous devez activer l'option [Utiliser les raccourcis claviers de recherche de partie] dans Paramètres ＞ Streaming.
+BasicSetting/RankMatchingSquad┃Lance une recherche de Partie Classée en masquant le temps d'attente.\n*Vous devez activer l'option [Utiliser les raccourcis claviers de recherche de partie] dans Paramètres ＞ Streaming.
+BasicSetting/AutoTranslate┃Traduit dans votre langue les discussions des joueurs dont les paramètres de langue sont différents des vôtres.\nLa traduction utilise la langue spécifiée dans vos deux paramètres de jeu.\nLes conversations dans des langues autres que celles définies dans vos paramètres de jeu peuvent ne pas être traduites correctement.\n- Langues prises en charge : Coréen, Anglais, Japonais et Chinois (Simplifié, Traditionnel).\n- Il s'agit d'un service bêta qui peut prendre fin prématurément.
+BasicSetting/PushToTalk┃Rester appuyé pour parler
+BasicSetting/InstantCastGadgetSkill┃Invocation Rapide du Gadget dans le Coffre-fort de Gadget
+BasicSetting/TranslateToggle┃Vous pouvez temporairement désactiver la traduction automatique lorsque cette option est activée.
 ItemType/EMBLEM_MARK/Name┃Icône de Profil
 EMBLEM_MARK_FREE1┃Icône Aglaia
 EMBLEM_MARK_SHOP_102002┃Icône de Hyunwoo
@@ -8258,6 +8221,14 @@ Product/Name/S6_LuckyBox2025_Seq_Pack_05┃Trèfle Chanceux #5
 Product/Name/S6_LuckyBox2025_Seq_Pack_06┃Trèfle Chanceux #6
 Product/Name/S6_LuckyBox2025_Seq_Pack_07┃Trèfle Chanceux #7
 Product/Name/S6_LuckyBox2025_Seq_Pack_08┃Trèfle Chanceux #8
+Product/Name/S10_LuckyBox2026_Seq_Pack_01┃Trèfle Chanceux #1
+Product/Name/S10_LuckyBox2026_Seq_Pack_02┃Trèfle Chanceux #2
+Product/Name/S10_LuckyBox2026_Seq_Pack_03┃Trèfle Chanceux #3
+Product/Name/S10_LuckyBox2026_Seq_Pack_04┃Trèfle Chanceux #4
+Product/Name/S10_LuckyBox2026_Seq_Pack_05┃Trèfle Chanceux #5
+Product/Name/S10_LuckyBox2026_Seq_Pack_06┃Trèfle Chanceux #6
+Product/Name/S10_LuckyBox2026_Seq_Pack_07┃Trèfle Chanceux #7
+Product/Name/S10_LuckyBox2026_Seq_Pack_08┃Trèfle Chanceux #8
 Product/Name/2024_Festival_Seq_Pack_01┃Pack Boîte de Beignets de Shoichi
 Product/Name/2024_Festival_Seq_Pack_02┃Pack Cloche Dorée
 Product/Name/2024_Festival_Seq_Pack_03┃Pack de Bons de Sélection de Modèle de Skin Épiques
@@ -8647,6 +8618,10 @@ Product/Name/S10_Coraline_Emote_Pack_01┃Pack d'Émoticônes de Coraline
 Product/Name/S10_Coraline_Event_Pack_01┃Pack de Sortie de Coraline
 Product/Name/S10_2026_Spring_Pack_01┃Pack Floraison Printanière
 Product/Name/S10_2026_Spring_Daily_Pack_01┃Boîte Journalière de Printemps
+Product/Name/S10_2026_Lucky_Seq_Pack_01┃Pack Séquence ChanceuseⅠ
+Product/Name/S10_2026_Lucky_Seq_Pack_02┃Pack Séquence Chanceuse Ⅱ
+Product/Name/S10_2026_Lucky_Seq_Pack_03┃Pack Séquence Chanceuse Ⅲ
+Product/Name/S10_2026_Lucky_Seq_Pack_04┃Pack Séquence Chanceuse Ⅳ
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Émoticônes\n\n58% du prix de chaque objet déjà possédé vous sera remboursé par Courrier.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Émoticônes\n\n56% du prix de chaque objet déjà possédé vous sera remboursé par Courrier.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Émoticônes\n\n58% du prix de chaque objet déjà possédé vous sera remboursé par Courrier.
@@ -9322,6 +9297,7 @@ Shop/Desc/Rare_WILDCARD_ETC┃Vous pouvez échanger cette <color=#2AC0FF>Carte J
 Shop/Desc/Epic_WILDCARD_ETC┃Vous pouvez échanger cette <color=#D05EFF>Carte Joker</color> contre 1 objet Commun/Atypique/Rare/Épique à l'exception des skins.\n\n<b><color=#F15F5F>[Notes]</color></b>\n*Vous pouvez utiliser cet objet dans le menu Carte Joker de la Forge. \n*Les Carte Joker peuvent être échangées contre objets,à l'exception des skins.\n*Vous ne pouvez échanger que des objets de rareté égale ou inférieure à vos Carte Joker. \n*Certains objets ne peuvent pas être échangés contre des Carte Joker. \n\nVeuillez vérifier l'éligibilité de l'échange avant d'effectuer votre achat.
 Shop/Desc/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃Utiliser <color=#2AC0FF>l'Échange de Fragments</color> pour obtenir des Fragments de Saison.\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Retrouvez vos Échange de Fragments dans le menu Vitrine - Saison. \n*Choisissez les Fragments de Saison que vous souhaitez obtenir.\n*Les Échange de Fragments sont réinitialisés une fois la Collection de Saison terminée. Vérifiez bien à l'avance la date de fin de la Collection de Saison\n*Limité à 1 achat par semaine.\n\n
 Shop/Desc/MILEAGE_SEASON_COLLECTION_PACK_9901032┃Ouvrez des <color=#35FF94>Packs de Saison</color> pour obtenir des Fragments de Saison Commun ou Atypique selon certaines probabilités.\n\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Les Fragments de Saison sont immédiatement utilisés dans la Collection de Saison.\n*Les Fragments de Saison en doublons sont automatiquement convertis en Points de Fragments de Saison.\n*Limité à 3 achats par semaine.
+Shop/Desc/S10_LuckyMarble2026_ExchangeFragments┃Utiliser <color=#2AC0FF>l'Échange de Fragments</color> pour obtenir des Fragments de Saison.\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Retrouvez vos Échange de Fragments dans le menu Vitrine - Saison. \n*Choisissez les Fragments de Saison que vous souhaitez obtenir.\n*Les Échange de Fragments sont réinitialisés une fois la Collection de Saison terminée. Vérifiez bien à l'avance la date de fin de la Collection de Saison
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃Utilisez cette monnaie pour acheter différents objets dans Eternal Return.
@@ -9415,6 +9391,7 @@ Product/Name/S12_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/Festival2024_ACoin_100┃A-Coin X 100
 Product/Name/S10_LuckyMarble2026_Common_Fragment┃5 Packs de Fragment de Saison Commun
+Product/Name/S10_LuckyMarble2026_ACoin_100┃A-Coin X 100
 Product/Name/LuckyMarble2024_Change_Token_01┃10 Jetons Changement
 Product/Name/S13_S12TOKEN_EXCHANGE┃2 Jetons Changement
 Product/Name/S13_S14TOKEN_EXCHANGE┃2 Jetons Lucky★
@@ -10710,7 +10687,7 @@ Goods/Desc/3102999┃Garanti de recevoir 1 Modèle de Skin Rare.
 Goods/Name/3303301┃Jetons des Fêtes de fin d'année
 Goods/Desc/3303301┃Les Jetons des Fêtes de fin d'année peuvent être obtenus en ouvrant des Boîtes de Données des Fêtes de fin d'année et ils expirent à la fin de l'événement.
 Goods/Name/3303302┃Jetons Bonheur
-Goods/Desc/3303302┃Les Jetons Bonheur peuvent être obtenus en achetant un Trèfle chanceux ou un Pack Bonheur et ils expirent à la fin de l'événement.
+Goods/Desc/3303302┃Les Packs Séquence Chanceuse peuvent être obtenus en achetant un Trèfle chanceux ou un Pack Bonheur et ils expirent à la fin de l'événement.
 Goods/Name/3303303┃Jetons de Boulangerie
 Goods/Desc/3303303┃Les Jetons de Boulangerie peuvent être obtenus en ouvrant des paniers à Pain d'Emma et ils expirent à la fin de l'événement.
 Goods/Name/3303304┃Jetons Blancs
@@ -15710,12 +15687,16 @@ Skill/Group/Coef/1044400┃Echion se rue dans la direction ciblée, infligeant <
 Skill/LobbyDesc/1044500┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion et les dégâts infligés par ses compétences sont proportionnels à sa <color=white>Jauge de FV</color> et augmentent lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant un certain temps et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée et il inflige des dégâts bruts sur la durée aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant un certain temps, réduisant sa portée d'attaque et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant des dégâts de compétence. La durée de Surplus de FV augmente lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color>.\n\n<i>Les effets d'Envenimation changent en fonction de l'arme utilisée.</i>\n<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 Skill/Group/Desc/1044500┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
 Skill/Group/Coef/1044500┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
+Skill/Group/IngameCoef/1044500┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
 Skill/Group/Desc/1044501┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
 Skill/Group/Coef/1044501┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
+Skill/Group/IngameCoef/1044501┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color> dégâts de compétence. La durée de Surplus de FV augmente de {12} secondes lorsqu'il inflige des dégâts à un ennemi avec <color=white>Envenimation</color>. Infliger des dégâts avec des attaques de base réduit le temps de recharge de <color=white>Envenimation</color> de {13} secondes.
 Skill/Group/Desc/1044502┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color> dégâts de compétence. Après {12} secondes, la FV instable entre en éruption, infligeant {13} des dégâts de la première éruption et projetant les ennemis dans les airs pendant {14} secondes. \nInfliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {16} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {17} secondes.
 Skill/Group/Coef/1044502┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color><color=#688a08>(+{21} des PV Supplémentaires)</color> dégâts de compétence. Après {12} secondes, la FV instable entre en éruption, infligeant {13} des dégâts de la première éruption et projetant les ennemis dans les airs pendant {14} secondes. \nInfliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {16} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {17} secondes.
+Skill/Group/IngameCoef/1044502┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque)</color><color=#688a08>(+{21} des PV Supplémentaires)</color> dégâts de compétence. Après {12} secondes, la FV instable entre en éruption, infligeant {13} des dégâts de la première éruption et projetant les ennemis dans les airs pendant {14} secondes. \nInfliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {16} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {17} secondes.
 Skill/Group/Desc/1044503┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color> dégâts de compétence et ralentissant les ennemis de {12} pendant {15} secondes. Infliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {13} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {14} secondes.
 Skill/Group/Coef/1044503┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque Supplémentaire)</color> dégâts de compétence et ralentissant les ennemis de {12} pendant {16} secondes. Infliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {13} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {14} secondes.
+Skill/Group/IngameCoef/1044503┃<color=green>Passif:</color>La <color=white>Jauge de FV</color> d'Echion augmente et les dégâts infligés par ses compétences augmentent de {0} par FV dans la <color=white>Jauge de FV</color> et lorsqu'il utilise <color=white>Vipère Cornue(Q)</color> et <color=white>Morsure Sèche(E)</color>. Lorsque sa <color=white>Jauge de FV</color> est pleine, il passe en état de <color=white>Surplus de FV</color> pendant {2} secondes et ses dégâts sont augmentés au maximum.\n\n<color=white>Surplus de FV:</color>La vitesse de déplacement d'Echion est augmentée de {3} et il inflige <color=white>{5}</color><color=#ffd775>(+{14} Puissance d'Attaque)</color> dégâts bruts toutes les {4} secondes aux ennemis proches, ce qui active <color=white>Envenimation(R)</color> et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\nLorsque le Surplus de FV est actif, tuer un ennemi pendant Surplus de FV augmente sa durée de {6} secondes et réinitialise le temps de recharge de <color=white>Morsure Sèche(E)</color>.\n\n<color=white>Exuviation:</color> Lorsque le Surplus de FV se termine, il entre en état d'Exuviation pendant {7} secondes, réduisant sa portée d'attaque de {9} et désactivant l'augmentation de sa <color=white>Jauge de FV</color>.\n\n<color=white>Envenimation(R):</color>Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{10}</color><color=#ffd775>(+{11} Puissance d'Attaque Supplémentaire)</color> dégâts de compétence et ralentissant les ennemis de {12} pendant {16} secondes. Infliger des dégâts a un ennemi avec <color=white>Envenimation</color> augmente la durée de Surplus de FV de {13} secondes. Les attaques de base d'Echion réduisent le temps de recharge d'<color=white>Envenimation</color> de {14} secondes.
 Skill/Group/Desc/1044510┃Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{0}</color> dégâts de compétence. Toucher un ennemi avec Envenimation augmente la durée de Surplus de FV de {2} secondes.\nLes attaques de base d'Echion réduisent le temps de recharge d'Envenimation de {3} secondes.
 Skill/Group/Desc/1044520┃Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{0}</color> dégâts de compétence. Après {2} secondes, la FV instable entre en éruption, infligeant {3} des dégâts de la première attaque et projetant les ennemis dans les airs pendant {4} secondes. Toucher un ennemi avec Envenimation augmente la durée de Surplus de FV de {6} secondes.\nLes attaques de base d'Echion réduisent le temps de recharge d'Envenimation de {7} secondes.
 Skill/Group/Desc/1044530┃Echion jette de la FV instable dans la direction ciblée, infligeant <color=white>{0}</color> dégâts de compétence. Toucher un ennemi avec Envenimation augmente la durée de Surplus de FV de {2} secondes.\nLes attaques de base d'Echion réduisent le temps de recharge d'Envenimation de {3} secondes.
@@ -18173,8 +18154,6 @@ Skill/Code/Desc/4104003┃Lors de l'utilisation, vous entrez en Stase pendant {0
 Skill/Code/Coef/4104003┃Lors de l'utilisation, vous entrez en Stase pendant {0} secondes. Vous ne pouvez effectuer aucune action lorsque vous êtes en Stase.\n\n<color=#FFFFC2>Amélioration du Module : </color>Vos temps de recharge sont restaurés {1} plus rapidement lorsque vous êtes sous l'effet Stase de Totem.
 Skill/Code/Desc/4105003┃Activez pour supprimer instantanément vos malus et effets de contrôle sur vous et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes.\nCela ne s'applique pas aux effets Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#FFFFC2>Amélioration du Module : </color>Vous êtes immunisé contre les effets de contrôle pendant {1} secondes.
 Skill/Code/Coef/4105003┃Activez pour supprimer instantanément vos malus et effets de contrôle sur vous et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes.\nCela ne s'applique pas aux effets Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#FFFFC2>Amélioration du Module : </color>Vous êtes immunisé contre les effets de contrôle pendant {1} secondes.
-CharacterState/Group/Name/2110002┃Reconstruction Rapide du Laboratoire
-CharacterState/Group/Desc/2110002┃La Reconstruction Rapide du Laboratoire s'active lorsque les joueurs sont vaincus dans le Laboratoire de Combat avant le Jour 3, les ramenant à l'expérience même si leur équipe est vaincue.
 CharacterState/Group/Desc/2140000┃Récupère des PV sur la durée.
 Skill/Group/Name/2003200┃Charge
 Skill/LobbyDesc/2003200┃Charge en ligne droite, repoussant les ennemis et leur infligeant des dégâts.\nLes ennemis sont projetés très très loin. Si le Sanglier rate la charge, il est ralenti pendant un certain temps et subit des dégâts supplémentaires.
@@ -18805,7 +18784,8 @@ Skill/Group/LobbyDesc/4509010┃Une météorite va bientôt apparaître à l'end
 Skill/Code/Desc/4509001┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant <color=white>{4}</color> dégâts bruts.
 Skill/Code/Coef/4509001┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant des dégâts bruts.\nDégâts : <color=white>{1}</color><color=#008000>(+Niveau du Personnage * {2})</color>
 Skill/Code/Desc/4509011┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant <color=white>{4}</color> dégâts.
-Skill/Code/Coef/4509011┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant <color=white>{1}</color><color=#008000>(+Niveau du Personnage * {2})</color>  dégâts.
+Skill/Code/Coef/4509001┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant <color=white>{1}</color><color=#008000>(+Niveau du Personnage * {2})</color>  dégâts.
+Skill/Code/ExpansionTip/4509001┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4509000┃Impact de Météore
 CharacterState/Group/Desc/4509000┃Vous avez été frappé par une météorite.
 Skill/Group/Name/4508000┃Punch Fantastique
@@ -18815,6 +18795,7 @@ Skill/LobbyDesc/4508000┃Invoque le poing illusoire d'un génie dans la directi
 Skill/Group/LobbyDesc/4508000┃Invoque le poing illusoire d'un génie dans la direction ciblée.\nLes cobayes touchés volent dans cette direction.
 Skill/Code/Desc/4508001┃Invoque le poing illusoire d'un génie dans la direction ciblée et donne un coup de poing rapide, infligeant <color=white>{0}</color><color=#688A08>+{1}% des PV max de la cible</color> dégâts de compétence et repoussant les ennemis.\nVous et vos alliés ne subissez pas de dégâts.
 Skill/Code/Coef/4508001┃Invoque le poing illusoire d'un génie dans la direction ciblée et donne un coup de poing rapide, infligeant <color=white>{0}</color><color=#688A08>+{1}% des PV max de la cible</color> dégâts de compétence et repoussant les ennemis pendant <color=white>{2} secondes</color>.\nVous et vos alliés ne subissez pas de dégâts.
+Skill/Code/ExpansionTip/4508001┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4508000┃Le Punch Fantastique du Génie
 CharacterState/Group/Desc/4508000┃Ça fait mal, n'est-ce pas ?
 CharacterState/Group/Name/6516010┃Le Punch Fantastique du Génie 2
@@ -18847,12 +18828,14 @@ CharacterState/Group/Name/4502200┃Absorption du Champ Gravitationnel
 CharacterState/Group/Desc/4502200┃Aspiré par le Champ Gravitationnel.
 Skill/Code/Desc/4502001┃Attire tous les cobayes ennemis dans un rayon de <color=white>{0}</color>m vers le lanceur, leur infligeant <color=white>{2}</color> dégâts bruts et les étourdissant pendant {1} secondes.
 Skill/Code/Coef/4502001┃Attire tous les cobayes ennemis dans un rayon de <color=white>{0}</color>m vers le lanceur, leur infligeant <color=white>{2}</color> dégâts bruts et les étourdissant pendant {1} secondes.
+Skill/Code/ExpansionTip/4502001┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 Skill/Group/Name/4503000┃Tonnerre Roulant
 Skill/Code/Name/4503001┃Tonnerre Roulant
 TacticalSkillSet/Code/Name/500031┃Tonnerre Roulant
 Skill/Group/4503000/Name┃<color=yellow>Tonnerre Roulant</color>
 Skill/Code/Desc/4503001┃{0} secondes après l'activation, l'effet [Tonnerre Roulant] vous sera appliqué.\n\n[Tonnerre Roulant]\nPropulsé par une vague du tonnerre, votre Vitesse de Déplacement augmente progressivement de {2}% pendant {1} secondes. Entrer en collision avec un ennemi le renvoie en arrière et lui inflige {3} dégâts de compétence.
 Skill/Code/Coef/4503001┃{0} secondes après l'activation, l'effet [Tonnerre Roulant] vous sera appliqué.\n\n[Tonnerre Roulant]\nPropulsé par une vague du tonnerre, votre Vitesse de Déplacement augmente progressivement de {2}% pendant {1} secondes. Entrer en collision avec un ennemi le renvoie en arrière et lui inflige {3} dégâts de compétence.
+Skill/Code/ExpansionTip/4503001┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4503000┃Tonnerre Roulant : En attente d'activation
 CharacterState/Group/Desc/4503000┃Les effets de Tonnerre Roulant vous seront bientôt appliqués.
 CharacterState/Group/Name/4503100┃Cobalt Bleu : Tonnerre Roulant
@@ -18886,6 +18869,8 @@ Skill/Code/Desc/4505001┃Vous vous arrêtez temporairement pendant {0} secondes
 Skill/Code/Coef/4505001┃Vous vous arrêtez temporairement pendant {0} secondes, puis bondissez immédiatement en avant dans la direction ciblée lorsque l'effet est dissipé.
 Skill/Code/Desc/4505011┃Vous vous arrêtez temporairement pendant {0} secondes, puis bondissez immédiatement en avant dans la direction ciblée lorsque l'effet est dissipé.
 Skill/Code/Coef/4505011┃Vous vous arrêtez temporairement pendant {0} secondes, puis bondissez immédiatement en avant dans la direction ciblée lorsque l'effet est dissipé.
+Skill/Code/ExpansionTip/4505001┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
+Skill/Code/ExpansionTip/4505011┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 Skill/Group/Name/4506000┃Prière
 Skill/Code/Name/4506001┃Prière
 TacticalSkillSet/Code/Name/500061┃Prière
@@ -18926,6 +18911,8 @@ CharacterState/Group/Name/4524020┃Traque - Charge Activé
 CharacterState/Group/Desc/4524020┃Tire le projectile dans la direction ciblée, infligeant des dégâts à la première cible touchée. Réactiver la compétence pour charger sur la cible.
 CharacterState/Group/Name/4524030┃Traque - Inciblable
 CharacterState/Group/Desc/4524030┃Vous êtes inciblable grâce à Traque.
+Skill/Code/ExpansionTip/4524000┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
+Skill/Code/ExpansionTip/4524002┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 Skill/Code/Desc/4512003┃Vous téléporte dans la direction ciblée.
 Skill/Code/Coef/4512003┃Vous téléporte dans la direction ciblée.
 Skill/Code/Desc/4513003┃Les ennemis proches sont ralentis de {3}% pendant {5} secondes après utilisation.\n\n\n<color=#FFFFC2>Amélioration  :</color>Inflige <color=white>{2}</color> dégâts de compétence aux ennemis à {6}m de portée toutes les {4} secondes pendant {1} secondes.</color>
@@ -22183,79 +22170,78 @@ ServerError/9450┃Votre équipe est pleine et ne peut pas accepter plus de memb
 ServerError/9451┃Le Circuit de l'Union est accessible aux joueurs de niveau 30 et plus.
 ServerError/9452┃La recherche de partie n'est pas disponible pour le palier de votre équipe. Veuillez consulter le planning de recherche de partie de chaque palier.
 ServerError/99999┃Version du jeu incompatible.
-ServerError/SUCCESS┃Une erreur est survenue. Veuillez redémarrer le jeu.
 ServerError/UNKNOWN┃Une erreur est survenue. Veuillez redémarrer le jeu.
 ServerError/PARAMETER_TYPE_MISMATCH┃Une erreur est survenue. Veuillez redémarrer le jeu.
 ServerError/PARAMETER_MISSED┃Une erreur est survenue. Veuillez redémarrer le jeu.
-ServerError/PARAMETER_VALIDATION_FAILED┃Vous devez vous identifier à nouveau. Le jeu va redémarrer.
-ServerError/SESSION_HEADER_REQUIRED┃Une erreur est survenue. Veuillez redémarrer le jeu.
-ServerError/UNAVAILABLE_REQUEST┃Le serveur est en cours de maintenance.
-ServerError/UNDER_MAINTENANCE┃Mauvaise version client.
-ServerError/INVALID_SETUP┃Une erreur est survenue. Veuillez redémarrer le jeu.
+ServerError/PARAMETER_VALIDATION_FAILED┃Une erreur est survenue. Veuillez redémarrer le jeu.
+ServerError/SESSION_HEADER_REQUIRED┃Vous devez vous identifier à nouveau. Le jeu va redémarrer.
+ServerError/UNAVAILABLE_REQUEST┃Une erreur est survenue. Veuillez redémarrer le jeu.
+ServerError/UNDER_MAINTENANCE┃Le serveur est en cours de maintenance.
+ServerError/INVALID_VERSION┃Mauvaise version client.
 ServerError/MALFORMED_SESSION┃Une erreur est survenue. Veuillez redémarrer le jeu.
-ServerError/ABNORMAL_ACCESS┃Vous devez vous identifier à nouveau. Le jeu va redémarrer.
-ServerError/SESSION_EXPIRED┃Connexion impossible au serveur. Veuillez vérifier l'état de votre compte.
-ServerError/USER_IDENTIFY_FAILED┃Ce pseudo n'est pas disponible.
-ServerError/UNAVAILABLE_NICKNAME┃Connexion impossible au serveur. Veuillez vérifier l'état de votre compte.
-ServerError/ADMIN_UNAUTHENTICATED┃Erreur lors de la connexion avec Steam.
-ServerError/STEAM_AUTH_FAILED┃Ce compte est restreint.
-ServerError/PERMANENT_BAN_USER┃Ce pseudo existe déjà.
-ServerError/CHAT_AUTH_FAILED┃0
-ServerError/WEGAME_AUTH_FAILED┃Impossible de trouver les résultats de la partie.
-ServerError/NO_BATTLE_RESULT┃Information de Partie Invalide. (1201)
-ServerError/NOT_EXIST_GAME┃Information de Replay Invalide. (1202)
-ServerError/NOT_EXIST_REPLAY┃Vous possédez déjà le Pass ER. (1203)
-ServerError/ALREADY_BATTLE_PASS_PAID┃Vous ne pouvez pas accéder au Replay. (1204)
-ServerError/ALREADY_FULL_GAME┃Impossible de trouver une partie. Veuillez vérifier le serveur sélectionné en haut à droite.
-ServerError/OUT_OF_SERVICE_MATCHING_REGION┃Erreur de connexion à la partie.
-ServerError/MISS_MATCHING_PASS┃Un membre de l'équipe ne correspond pas aux critères de niveau et de personnages.
-ServerError/UNAVAILABLE_RANKING┃Partie non terminée.
-ServerError/NO_BATTLE_HOST┃0
+ServerError/ABNORMAL_ACCESS┃Une erreur est survenue. Veuillez redémarrer le jeu.
+ServerError/SESSION_EXPIRED┃Vous devez vous identifier à nouveau. Le jeu va redémarrer.
+ServerError/USER_IDENTIFY_FAILED┃Connexion impossible au serveur. Veuillez vérifier l'état de votre compte.
+ServerError/UNAVAILABLE_NICKNAME┃Ce pseudo n'est pas disponible.
+ServerError/INVALID_MACHINE_NUM┃Connexion impossible au serveur. Veuillez vérifier l'état de votre compte.
+ServerError/STEAM_AUTH_FAILED┃Erreur lors de la connexion avec Steam.
+ServerError/BAN_USER┃Ce compte est restreint.
+ServerError/ALREADY_HAVE_NICKNAME┃Ce pseudo existe déjà.
+ServerError/CAN_NOT_CREATE_MS_ACCOUNT┃0
+ServerError/NO_BATTLE_RESULT┃Impossible de trouver les résultats de la partie.
+ServerError/NOT_EXIST_GAME┃Information de Partie Invalide. (1201)
+ServerError/NOT_EXIST_REPLAY┃Information de Replay Invalide. (1202)
+ServerError/ALREADY_BATTLE_PASS_PAID┃Vous possédez déjà le Pass ER. (1203)
+ServerError/NOT_ALLOW_REPLAY_USER┃Vous ne pouvez pas accéder au Replay. (1204)
+ServerError/OUT_OF_SERVICE_MATCHING_REGION┃Impossible de trouver une partie. Veuillez vérifier le serveur sélectionné en haut à droite.
+ServerError/MISS_MATCHING_PASS┃Erreur de connexion à la partie.
+ServerError/UNAVAILABLE_RANKING┃Un membre de l'équipe ne correspond pas aux critères de niveau et de personnages.
+ServerError/UNAVAILABLE_MATCHING_PRE_GAME_NOT_FINISHED┃Partie non terminée.
 ServerError/NOT_OPENED_CONTENT┃0
-ServerError/NOT_ENOUGH_POOL_CHARACTERS┃Impossible d'effectuer la transaction.
-ServerError/IAP_INVALID_ORDER┃Erreur d'importation des informations Steam.
-ServerError/IAP_STEAM_API_SERVER_BUSY┃Information du produit erronée.
-ServerError/IAP_KAKAO_API_SERVER_BUSY┃Impossible de trouver les informations du personnage.
-ServerError/LACK_OF_SPECIAL_MATTER┃Fonds insuffisants.
-ServerError/LACK_OF_CURRENCY┃NP insuffisants.
-ServerError/LACK_OF_NP┃A-Coin insuffisants.
-ServerError/LACK_OF_ITEM┃Impossible de trouver les informations du produit.
-ServerError/NO_PRODUCT_ID┃Informations du produit incorrectes.
-ServerError/INVALID_PROMOTION┃Montant d'achat par compte excédé.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Limite d'achats journalière atteinte.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Limite d'achats hebdomadaire atteinte.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Limite d'achats mensuelle atteinte.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Le rabais sur ce produit a expiré.
-ServerError/UNABLE_PURCHASE_BY_SALE┃Nombre d'achats journaliers excédé. (2127)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Nombre d'achats hebdomadaires excédé. (2128)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Nombre d'achats mensuels excédé. (2129)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Limite d'achats excédée. (2130)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Informations de prix invalides. (2131)
-ServerError/INVALID_PRODUCT_PRICE┃Indisponible à l'achat dans votre région. (2132)
-ServerError/TO_BE_UPDATED┃Vous avez déjà acheté cet article. (2135)
-ServerError/ALREADY_BUY_SEQ┃Les conditions d'achat ne sont pas remplies. Impossible de poursuivre l'achat.
-ServerError/INVALID_PURCHASE_CONDITION┃Vous avez déjà acheté cet article. (2137)
-ServerError/ALREADY_BUY_PROMOTION┃Impossible de trouver les informations de la mission.
-ServerError/INVALID_USER_MISSION┃Une erreur est survenue lors du changement de mission.
-ServerError/INVALID_CHANGE_MISSION┃Vous devez compléter la mission afin de recevoir la récompense.
-ServerError/NOVICE_MISSION_EMPTY_CODES┃Information erronée.
-ServerError/NOT_EXIST_GIFT_MAIL┃Date d'expiration passée. Impossible d'obtenir la récompense.
-ServerError/GIFT_MAIL_IS_EXPIRED┃Aucune récompense disponible.
-ServerError/NOT_EXIST_EVENT_DATA┃Impossible de partager un Itinéraire importé.
-ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃Vous ne pouvez pas supprimer un Itinéraire qui n'a pas été partagé.
-ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃Aucun Itinéraire modifiable.
-ServerError/NOT_EXIST_WEAPON_ROUTE┃Cet Itinéraire n'existe pas.
+ServerError/CANNOT_MATCHING_NOT_IN_LOBBY_STATUS┃0
+ServerError/IAP_INVALID_ORDER┃Impossible d'effectuer la transaction.
+ServerError/IAP_STEAM_API_SERVER_BUSY┃Erreur d'importation des informations Steam.
+ServerError/IAP_KAKAO_API_SERVER_BUSY┃Information du produit erronée.
+ServerError/KAKAO_IAP_USE_CASH_API_FAIL┃Impossible de trouver les informations du personnage.
+ServerError/LACK_OF_CURRENCY┃Fonds insuffisants.
+ServerError/LACK_OF_NP┃NP insuffisants.
+ServerError/LACK_OF_ACOIN┃A-Coin insuffisants.
+ServerError/NO_PRODUCT_ID┃Impossible de trouver les informations du produit.
+ServerError/INVALID_PROMOTION┃Informations du produit incorrectes.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Montant d'achat par compte excédé.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Limite d'achats journalière atteinte.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Limite d'achats hebdomadaire atteinte.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Limite d'achats mensuelle atteinte.
+ServerError/UNABLE_PURCHASE_BY_SALE┃Le rabais sur ce produit a expiré.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Nombre d'achats journaliers excédé. (2127)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Nombre d'achats hebdomadaires excédé. (2128)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Nombre d'achats mensuels excédé. (2129)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Limite d'achats excédée. (2130)
+ServerError/INVALID_PRODUCT_PRICE┃Informations de prix invalides. (2131)
+ServerError/UNABLE_PURCHASE_BY_SPECIFIC_AREA┃Indisponible à l'achat dans votre région. (2132)
+ServerError/ALREADY_BUY_SEQ┃Vous avez déjà acheté cet article. (2135)
+ServerError/INVALID_PURCHASE_CONDITION┃Les conditions d'achat ne sont pas remplies. Impossible de poursuivre l'achat.
+ServerError/ALREADY_BUY_PROMOTION┃Vous avez déjà acheté cet article. (2137)
+ServerError/INVALID_USER_MISSION┃Impossible de trouver les informations de la mission.
+ServerError/INVALID_CHANGE_MISSION┃Une erreur est survenue lors du changement de mission.
+ServerError/INVALID_PROGRESS_COUNT┃Vous devez compléter la mission afin de recevoir la récompense.
+ServerError/NOT_EXIST_GIFT_MAIL┃Information erronée.
+ServerError/GIFT_MAIL_IS_EXPIRED┃Date d'expiration passée. Impossible d'obtenir la récompense.
+ServerError/NOT_EXIST_REWARD┃Aucune récompense disponible.
+ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃Impossible de partager un Itinéraire importé.
+ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃Vous ne pouvez pas supprimer un Itinéraire qui n'a pas été partagé.
+ServerError/NOT_EXIST_WEAPON_ROUTE┃Aucun Itinéraire modifiable.
 ServerError/NOT_EXIST_RECOMMEND_WEAPON_ROUTE┃Cet Itinéraire n'existe pas.
-ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃Vous ne pouvez pas importer votre propre Itinéraire.
-ServerError/MY_SHARE_WEAPON_ROUTE┃Le personnage sélectionné ne peut pas utiliser cet Itinéraire.
-ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃N'est plus disponible à l'achat.
-ServerError/INVALID_WEAPON_ROUTE_PATH┃Accès Refusé.
-ServerError/TRAIT_NOT_EXIST_PAGE┃Il n'y a actuellement aucune page vite.
-ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃N'est plus disponible à l'achat.
-ServerError/INVALID_TRAIT┃Information sur le niveau de Classé non disponible.
-ServerError/NOT_EXIST_RANKING_TIER┃Aucune récompense de partie disponible.
-ServerError/NOT_EXIST_RANKING_REWARD┃Impossible de trouver une partie. La différence entre les niveaux des membres de l'équipe est trop grande.
-ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT_GREATER_THAN_NOW┃Les {1} ou plus ne peuvent pas affronter des équipes groupées de {2}P sur le serveur {0}.
+ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃Cet Itinéraire n'existe pas.
+ServerError/MY_SHARE_WEAPON_ROUTE┃Vous ne pouvez pas importer votre propre Itinéraire.
+ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃Le personnage sélectionné ne peut pas utiliser cet Itinéraire.
+ServerError/ALREADY_MAX_PAID_COUNT┃N'est plus disponible à l'achat.
+ServerError/TRAIT_NOT_EXIST_PAGE┃Accès Refusé.
+ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃Il n'y a actuellement aucune page vite.
+ServerError/TRAIT_MAX_PAGE┃N'est plus disponible à l'achat.
+ServerError/NOT_EXIST_RANKING_TIER┃Information sur le niveau de Classé non disponible.
+ServerError/NOT_EXIST_RANKING_REWARD┃Aucune récompense de partie disponible.
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃Impossible de trouver une partie. La différence entre les niveaux des membres de l'équipe est trop grande.
 ServerError/ALREADY_RECEIVED_DLC_PRODUCT┃Impossible de trouver les informations du skin.
 ServerError/INVALID_PRODUCT_ID┃Vous possédez déjà ce personnage.
 ServerError/ALREADY_MAX_FRIEND_RECEIVE_COUNT┃Liste de demandes d'amis pleine
@@ -24265,6 +24251,7 @@ Skin/Name/1083001┃Henry Prêtre de Guerre
 Skin/Name/1084000┃Blair
 Skin/Name/1084001┃Blair Course Intrépide
 Skin/Name/1085000┃Mirka
+Skin/Name/1085001┃Mirka Servante Sauvage
 Skin/Name/1086000┃Fenrir
 Skin/Name/1087000┃Coraline
 Skin/OnSelectVO/1001003┃Les règles n'existent que pour être transgressées. N'est-ce pas ?
@@ -24609,6 +24596,7 @@ Skin/Desc/1075002┃Il n'y a rien de plus pénible que de regarder des personnes
 Skin/Desc/1084001┃Montre-moi ta vitesse !
 Skin/Desc/1059003┃Tu réfléchis encore ? Je t'ai laissé plus de temps que nécessaire.
 Skin/Desc/1034003┃Même si les preuves disparaissent, la scène doit subsister.
+Skin/Desc/1085001┃Bouger, monsieur ! Je risque de tout renverser !
 Skin/Desc/1016005┃Je pars à la recherche de mon propre sens de la justice ! C'est parti !
 Skin/Desc/1047005┃Un grand voleur est confiant même sans masque.
 Skin/Desc/1050007┃Tu l'entends ? Le duo que nous avons joué ensemble.
@@ -24770,7 +24758,6 @@ ItemTag/Ex_ItemSkill┃Compétence active d'objet
 ItemTag/Ex_Dummy1┃Réduction des Soins
 ItemTag/Ex_Dummy2┃Utilitaire
 ItemTag/Ex_Endure┃Régénération
-전장보상재화부족┃Pas assez de marques Zone de Combat.
 Product/ResetTime/Week┃{0} S
 Product/ResetTime/Day┃{0} J
 Product/ResetTime/Hour┃{0} H
@@ -24848,24 +24835,6 @@ gameTip_Title_10160_1┃Niveau / Compétence
 gameTip_Desc_10160_1┃Utilisez les points que vous gagnez pour monter en niveau et utiliser des compétences plus puissantes !\n\nLorsque vous atteignez un certain niveau de maîtrise, le "niveau" du cobaye augmente. Les statistiques augmentent en même temps que les niveaux. Gagnez des points de compétence pour utiliser des compétences encore plus puissantes !\n\nMontez en niveau et devenez aussi fort que vous le pouvez !
 gameTip_Title_10170_1┃Spécialisations
 gameTip_Desc_10170_1┃Vous pouvez ajouter de nouvelles compétences et de nouveaux bonus à vos cobayes en sélectionnant des Spécialisations.\n\nLes Spécialisations offrent plus de variété et d'options. Par exemple, l'utilisation de Spécialisations de Fortification permet d'augmenter vos défenses et de réduire les dégâts subits. En utilisant des Spécialisations de Soutien, vous pourrez aider vos coéquipiers et les mener à la victoire !\n\nVous ne savez pas quelles sont les Spécialisations qui conviennent le mieux à vos cobayes ? Consultez-les dans le menu <color=#8FDBF8>[Équipement → Spécialisations]</color> !
-gameTip_Title_10200_1┃Zone de Combat
-gameTip_Desc_10200_1┃Les Zones de Combat sont des zones spécialement conçues pour le combat. Leur but est de collecter des données sur les cobayes qui se présentent dans ces environnements extrêmes.\n\nChaque Zone de Combat dispose d'un environnement spécial. Certaines peuvent augmenter la vitesse de déplacement, d'autres augmentent votre omnisiphon et d'autres encore vous octroient un bouclier.\n\nL'équipe victorieuse recevra des <color=#8FDBF8>récompenses spéciales</color> en fonction du nombre de cobayes dans la Zone de Combat.
-gameTip_Title_10200_2┃Emplacement des Zones de Combat
-gameTip_Desc_10200_2┃Tous les emplacements prévus pour les Zones Restreintes du Jour 2 seront désignés comme <color=#8FDBF8>Emplacements des Zones de Combat</color>.\n\nLes <color=#8FDBF8>Zones de Combat</color> seront activées lors de la Nuit 2.\n\nLe type d'une Zone de Combat peut être vérifié en consultant la Marque de la Zone de Combat sur la carte, à l'emplacement de l'icône de Console de Sécurité.
-gameTip_Title_10200_3┃Comment participer aux Zones de Combat
-gameTip_Desc_10200_3┃Lorsque la Zone de Combat commence, les cobayes présents dans la zone participent automatiquement à la Zone de Combat.\n\nSi les participants meurent dans une zone de combat, ils seront réanimés au bout d'un court laps de temps.\n\nCependant, vous ne pouvez pas participer à nouveau à une zone de combat après avoir été réanimé, alors soyez prudent !\n\nSi un cobaye entre ou sort d'une zone de combat en cours, il <color=#8FDBF8> meurt immédiatement</color> et ne peut pas être réanimé.
-gameTip_Title_10200_4┃Récompenses de la Zone de Combat
-gameTip_Desc_10200_4┃L'équipe victorieuse de la Zone de Combat peut obtenir des récompenses telles que des matériaux spéciaux ou un Module de Compétence Tactique dans le menu dédié ou à la Console de Sécurité.\n\nPlus il y a de participants dans la Zone de Combat, plus les récompenses sont intéressantes !\n\nLes récompenses de la Zone de Combat ne peuvent être obtenues <color=#8FDBF8>qu'une seule fois par équipe</color>, alors choisissez judicieusement !
-gameTip_Title_10210_1┃Systèmes des Zones de Combat
-gameTip_Desc_10210_1┃Une zone de combat est composée des quatre systèmes suivants :\n\nKit de Zone de Combat / Marque de Zone de Combat / Jauge de Corrosion / Navette de Zone de Combat.\n\nChaque système est systématiquement lié.
-gameTip_Title_10210_2┃Kit de Zone de Combat
-gameTip_Desc_10210_2┃Tous les cobayes démarrent la partie avec un Kit de Zone de Combat.\nLorsqu'un cobaye participe à une Zone de Combat avec un Kit de Zone de Combat, il reçoit un <color=#8FDBF8>Bonus de Reconstruction Rapide</color> et une <color=#8FDBF8>Marque de Zone de Combat</color>.\n\nUn cobaye doté du bonus de Reconstruction Rapide est réanimé au bout d'un court laps de temps s'il meurt.\n\nLe Kit de Zone de Combat est définitivement supprimé pour les cobayes ayant remporté une zone de combat.
-gameTip_Title_10210_3┃Marque de Zone de Combat
-gameTip_Desc_10210_3┃La Marque de Zone de Combat symbolise l'environnement unique et donne des effets spéciaux aux participants.\n\nSi un participant meurt, la Marque de Zone de Combat est récupérée et utilisée comme monnaie d'échange pour l'équipe victorieuse afin de lui permettre d'acheter des récompenses.\n\nS'il n'y a pas d'équipe victorieuse, les Marques de Zone de combat récupérées sont définitivement supprimées.
-gameTip_Title_10210_4┃Jauge de Corrosion
-gameTip_Desc_10210_4┃Dans une Zone de Combat, la <color=#8FDBF8>Jauge de Corrosion</color> s'accumule en échange du renforcement des capacités des cobayes.\n\nLes cobayes dont la Jauge de Corrosion atteint son maximum meurent au bout d'un certain temps.\n\nLa Jauge de Corrosion peut être restaurée en se tenant à proximité d'une Navette de Zone de Combat ou en tuant d'autres cobayes.
-gameTip_Title_10210_5┃Navette de Zone de Combat
-gameTip_Desc_10210_5┃Les Navettes de Zone de Combat parcourent une route prédéterminée dans la Zone de Combat et restaurent la Jauge de Corrosion.\n\nS'il n'y a que des alliés aux alentours de la Navette, la Jauge de Corrosion des membres de l'équipe sera continuellement restaurée.\n\nCombattez autour de la Navette !
 gameTip_Title_10220_1┃Compétences Tactiques
 gameTip_Desc_10220_1┃Les Compétences Tactiques sont cruciales dans le jeu. Il est donc important de les choisir et de les utiliser judicieusement en fonction de la composition de votre équipe, des cobayes ennemis et du style de votre propre cobaye. Amusez-vous à élaborer des stratégies et à découvrir la grande variété de compétences tactiques !\n\n*Vous pouvez <color=#8FDBF8>améliorer</color> votre compétence tactique en dépensant des crédits. Les améliorations de niveau 2 nécessitent un <color=#8FDBF8>Module de Compétence Tactique</color>.
 gameTip_Title_10230_1┃Opérateur
@@ -25014,7 +24983,6 @@ gameTip_category_SecretLab┃Laboratoire Secret
 gameTip_category_VictoryAndDefeat┃Victoire et Défaite
 gameTip_category_UseCredits┃Utiliser des Crédits
 gameTip_category_BeginnerTips┃Conseils pour Débutants
-gameTip_category_BattleZone┃Zone de Combat
 gameTip_category_Escape┃Évasion
 gameTip_category_CobaltProtocol┃Protocole Cobalt
 gameTip_category_Rift┃Faille
@@ -25272,8 +25240,6 @@ OperatorSetting/BossMonster┃En savoir plus sur Alpha/Omega/Wickeline.
 OperatorSetting/CreateNoticeSpecialCollectible┃En savoir plus sur l'Arbre de Vie et les Météorites.
 상위 등급 장비 제작┃Fabrication d'Équipements de Rareté Supérieure
 OperatorSetting/GetSpecialCollectible┃Apprenez à fabriquer des équipements recommandés lorsque vous possédez les matériaux spéciaux requis.
-전장┃Zones de Combat
-OperatorSetting/BattleZone┃En savoir plus sur les Zones de Combat.
 탈출┃Évasion
 OperatorSetting/Escape┃Apprenez comment vous évader lorsque vous êtes le dernier membre en vie de votre équipe.
 전송 콘솔┃Kiosques
@@ -25303,7 +25269,7 @@ OperatorSetting/VerticalLauncher┃Découvrez le système de propulsion vertical
 안내 로봇 유료 부활 대상자┃Réanimation grâce à Lumi
 OperatorSetting/GuidedRobotPaidResurrection┃Annonce quand vous pouvez payer pour réanimer un allié dans la boutique de Lumi, alors que les réanimations dans les kiosques ne sont plus possibles.
 균열 가이드┃Faille
-OperatorSetting/RiftGuide┃En savoir plus sur les Failles Dimensionnelles et les Portails.
+OperatorSetting/RiftGuide┃En savoir plus sur les Failles Dimensionnelles.
 대체아이템동적추천┃Recommandations d'Objets Alternatifs
 OperatorSetting/NavAltRecItem┃Annonce des objets alternatifs que vous pouvez fabriquer lorsque vous avez collecté un matériau spécial qui n'est pas votre objet cible.
 루트 목표 추가 불가능 알림┃Vous ne pouvez pas rajouter plus d'objets cibles à votre itinéraire
@@ -25351,8 +25317,6 @@ InGameGuide/Nadja/Group/Name/10103000┃Les Arbres de Vie sont apparus
 InGameGuide/Nadja/Group/Desc/10103000┃Des Arbres de Vie sont apparus à <color=yellow>{0}</color>.\nAllez en chercher.
 InGameGuide/Nadja/Group/Name/10110000┃Fabrication d'Équipements de Rareté Supérieure
 InGameGuide/Nadja/Group/Desc/10110000┃Vous avez des matériaux spéciaux.\nPourquoi ne pas les utiliser pour fabriquer quelque chose ?\nFaites un clic gauche pour ajouter des objets cibles.
-InGameGuide/Nadja/Group/Name/10120000┃Zones de Combat
-InGameGuide/Nadja/Group/Desc/10120000┃Les Zones de Combat vont bientôt être désignées à <color=yellow>{0}</color>.\nVous pouvez obtenir une récompense en étant le dernier survivant dans la Zone de Combat.
 InGameGuide/Nadja/Group/Name/10130000┃Omega Arrive
 InGameGuide/Nadja/Group/Desc/10130000┃Omega va bientôt apparaître à <color=yellow>{0}</color>.
 InGameGuide/Nadja/Group/Name/10133000┃Omega est Arrivé
@@ -25463,12 +25427,6 @@ InGameGuide/Nadja/Group/Name/10331100┃Faille - Faille Dimensionnelle
 InGameGuide/Nadja/Group/Desc/10331100┃Félicitations pour votre victoire. \nN'oubliez pas de prendre votre récompense avant de partir.
 InGameGuide/Nadja/Group/Name/10340000┃Recommandations d'Objets Alternatifs
 InGameGuide/Nadja/Group/Desc/10340000┃Vous avez récupéré un matériau spécial.\nCe n'est pas l'un des objets que vous recherchiez. Donnez-le à un allié ou vérifiez quels autres objets vous pouvez fabriquer.
-InGameGuide/Nadja/Group/Name/10121000┃Emplacement de la Zone de Combat
-InGameGuide/Nadja/Group/Desc/10121000┃La Zone de Combat va bientôt être désignée.\nPlus vous éliminez d'ennemis, plus la récompenses sera importante si vous gagnez.
-InGameGuide/Nadja/Group/Name/10122000┃Activation de la Zone de Combat
-InGameGuide/Nadja/Group/Desc/10122000┃La Zone de Combat est activée.\nPersonne ne peut plus en sortir tant qu'il n'y a pas de vainqueur.
-InGameGuide/Nadja/Group/Name/10123000┃Récompenses de la Zone de Combat
-InGameGuide/Nadja/Group/Desc/10123000┃Je vois que tu es le vainqueur de la Zone de Combat.\nVoici ta récompense.
 오퍼레이터 신규유저 보상 제목┃À notre nouveau cobaye.
 오퍼레이터 신규유저 보상 내용┃L'adaptation à la vie sur l'île n'a pas dû être facile, mais on dirait que tu es prêt maintenant.\nMême si je ne peux plus te considérer comme mon stagiaire... je suis plutôt content pour toi.\nMerci d'avoir fait de ton mieux. Je me suis beaucoup amusé.\nJe ne sais pas si je dois appeler ça un cadeau ou une récompense, mais tiens... profite-en bien !
 오퍼레이터 기존유저 보상 제목┃À toi, notre cobaye senior.
