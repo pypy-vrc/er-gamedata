@@ -1817,6 +1817,9 @@ Esc/Minimize┃Minimieren
 닉네임에 특수 문자 사용 불가┃Dein Name darf keine Sonderzeichen beinhalten.
 닉네임 사용 불가 단어┃Dein Name beinhaltet verbotene Wörter.
 매칭 중 닉네임 변경 불가┃Du kannst während der Matchsuche keine Spitznamensänderung durchführen.
+ShopNickNameProductPopup/Error/NicknameLength┃Dein Spitzname ist zu kurz oder zu lang.
+ShopNickNameProductPopup/Error/SpecialCharacter┃Dein Name darf keine Sonderzeichen beinhalten.
+ShopNickNameProductPopup/Error/InappropriateWords┃Dein Name beinhaltet verbotene Wörter.
 확인┃Bestätigen
 취소┃Abbrechen
 저장┃Speichern
@@ -2039,7 +2042,6 @@ RankRP┃Überleben
 Kill_AssistRP/Elimination┃Eliminierungen
 Kill_AssistRP/Down┃Downs
 Kill_AssistRP/RepeatDown┃Ausgenommene Wiederholungen: {0}
-Kill_AssistRP/BattleZoneDown┃Kampfzonen
 Kill_AssistRP/AutoResurrectionDown┃Downs (Eliminierungsprävention)
 Kill_AssistRP/AutoResurrectionAfterDown┃Downs (Normal)
 Kill_AssistRP/AutoResurrectionRepeatDown┃Wiederholungen ausgeschlossen (Eliminierungsprävention)
@@ -2054,7 +2056,6 @@ RankEnd_KillCount┃Anzahl Kills: {0} TK
 RankEnd_Elimination┃Tode: {0}
 RankEnd_Down┃Downs: {0}
 RankEnd_RepeatDown┃Ausgenommene Wiederholungen: {0}
-RankEnd_BattleZoneDown┃Kampfzonen: {0}
 RankEnd_AutoResurrectionDown┃Downs (Eliminierungsprävention): {0}
 RankEnd_AutoResurrectionAfterDown┃Downs (Normal): {0}
 RankEnd_AutoResurrectionRepeatDown┃Wiederholungen ausgeschlossen (Eliminierungsprävention): {0}
@@ -2109,7 +2110,6 @@ MyTierRP/ETERNITY┃<color=#C6C6C6>Momentane Stufe</color>
 RankRP_explanation┃Punkte die basierend auf der erreichten Platzierung vergeben werden.
 Elimination_explanation┃Punkte für das Auslöschen von Teams oder das Eliminieren eines Gegners, der am Boden liegt oder nach der Eliminierungspräventionsphase getötet wird.
 Down_explanation┃Punkte dafür, einen Gegner zu Boden zu bringen
-BattleZoneDown_explanation┃Punkte die basierend auf dem Töten von Gegnern vergeben in Kampfzonen.
 AutoResurrectionDown_explanation┃Punkte für das Downen von einem Gegner in der Eliminierungspräventionsphase.
 AutoResurrectionAfterDown_explanation┃Punkte für das Downen von einem Gegner nach der Eliminierungspräventionsphase.
 AutoResurrectionTeamWiped_explanation┃Punktebelohnung für das Ausschalten/Clutchen eines Kampfes während der Eliminierungspräventionsphase.
@@ -2179,7 +2179,6 @@ DeferPointDemotion/PopupContents┃Du hast keine Gnadenpunkte mehr und wurdest a
 사망개요┃Todes Overlay
 사망개요 설명┃Genommener Schaden von Testobjekt bis zum Tod wärend des Kampfes wird analysiert und angezeigt..
 Shortcut/DeathRecapOnOff┃Todes Overlay
-DeathRecapOnOff┃Genommener Schaden von Testobjekt bis zum Tod wärend des Kampfes wird analysiert und angezeigt..
 GameSetting/DefaultShowExpandTooltip┃Die detaillierte Beschreibung wird immer angezeigt, auch wenn du nicht (Alt) drückst.
 DefaultShowExpandTooltip┃Immer erweiterte Tooltip-Info anzeigen
 * 단축키를 즉시 시전으로 지정하면 단축키를 누르는 즉시 마우스 커서 위치에 사용됩니다.┃* Wenn du einen Hotkey fürs Schnellanwenden einrichtest, kannst du damit deine Fertigkeiten sofort an deinem Mauszeiger einsetzen!
@@ -2188,7 +2187,6 @@ DefaultShowExpandTooltip┃Immer erweiterte Tooltip-Info anzeigen
 스킬 사용 대상 위치를 최대 사거리 안으로 고정합니다.┃Fähigkeit innerhalb max. Reichweite wirken
 GameSetting/PickPointToInAreaIndicatorActive┃Diese Option stellt sicher, dass Fähigkeiten, die das Anvisieren eines Ortes erfordern, immer innerhalb der maximalen Reichweite gewirkt werden, auch wenn sich der Mauszeiger über diesen Bereich hinaus bewegt.
 가젯볼트UIUX설정┃Gadgettresor UI Einstellungen
-GameSetting/GadgetVaultUIUXSetting┃Du kannst das Gadgettresor UI anpassen!\nSchnellzugriffanzeige: Der Gadgettresor ist mit dem unterem Teil des Schnellzugriff verbunden. Klicke das Gadget in dem Schnellzugriff um dein ausgerüstetes Gadget zu wechseln.\n\nRadanzeige: Ähnlich wie Emotes, halte die Taste für das Gadgettresor um dein ausgerüstetes Gadget zu wechseln. Drücke die Taste nur kurz um das ausgerüstete Gadget anzuwenden.
 가젯볼트UIUX설정/퀵슬롯병합┃Schnellzugriffanzeige
 가젯볼트UIUX설정/휠┃Radanzeige
 스토리 건너뛰기┃Fortfahren
@@ -2203,115 +2201,13 @@ GameSetting/GadgetVaultUIUXSetting┃Du kannst das Gadgettresor UI anpassen!\nSc
 대사재생속도┃Wiedergabegeschwindigkeit
 최대 사거리 고정 툴팁┃Diese Option stellt sicher, dass Fähigkeiten, die das Anvisieren eines Ortes erfordern, immer innerhalb der maximalen Reichweite gewirkt werden, auch wenn sich der Mauszeiger über diesen Bereich hinaus bewegt.
 즉시 시전 사거리 표시┃Schnellanwendung mit Indikator
-즉시 시전 사거리 표시 툴팁┃Reichweite der Fähigkeiten wird beim halten der Schnellanwendungs Taste angezeigt.
 모두 즉시 시전┃Alle auf Schnellanwendung
 모두 일반 시전┃Alle auf Normalanwendung
 모든 캐릭터┃Alle Charaktere
 스킬┃Fähigkeit  
 액티브아이템┃Gegenstandsfähigkeit
 아이템┃Gegenstand
-Emotion1┃Äußerung 1
-Emotion2┃Äußerung 2
-Emotion3┃Äußerung 3
-Emotion4┃Äußerung 4
-Emotion5┃Äußerung 5
-Emotion6┃Äußerung 6
-EmotionDance┃Drücke um zu Tanzen!
-EmotionPlate┃Emote benutzen
-EmotionPlate1┃Emote Set 1 benutzen
-EmotionPlate2┃Emote Set 2 benutzen
-EmotionPlate3┃Emote Set 3 benutzen
-PingTarget┃Ziel pingen
-MarkTarget┃Pin Ort
-PingTargetKeyboard┃Ping Ziel
-MarkTargetKeyboard┃Pin Ort
-DeleteMarkTarget┃Pin Löschen
-LearnActive1┃Verbessert die erste Fähigkeit.
-LearnActive2┃Verbessert die zweite Fähigkeit.
-LearnActive3┃Verbessert die dritte Fähigkeit.
-LearnActive4┃Verbessert die vierte Fähigkeit.
-LearnPassive┃Verbessert die Passive Fähigkeit
-LearnWeaponSkill┃Verbessert die Waffenfähigkeit
-LearnTacticalSkill┃Verbessert die taktische Fähigkeit.
-Active1ToSelf┃Selbstanwendung Fähigkeit 1 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
-Active2ToSelf┃Selbstandwendung Fähigkeit 2 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
-Active3ToSelf┃Selbstanwendung Fähigkeit 3 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
-Active4ToSelf┃Selbstandwendung Fähigkeit 4 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
-WeaponSkillToSelf┃Selbstanwendung Fähigkeit 5 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
-InstantCastActive1┃Schnellanwendung Fähigkeit 1
-InstantCastActive2┃Schnellanwendung Fähigkeit 2
-InstantCastActive3┃Schnellanwendung Fähigkeit 3
-InstantCastActive4┃Schnellanwendung Fähigkeit 4
-InstantCastWeaponSkill┃Schnellanwendung der Waffenfähigkeit
-InstantCastTacticalSkill┃Schnellzauber Taktische Fähigkeit
-InstantUseActiveItem1┃Schnellzauber Item-Fähigkeit
-ChangeCameraMode┃Kameraverfolgung an/aus
-CameraDragScroll┃Bewegt die Kamera, während du den Hotkey gedrückt hältst.
-OpenCombineWindow┃Herstellungsmenü öffnen.
-OpenQuickSlot┃Öffnet den Craftingmenü-Quickslot und die Gadget-Liste.
-OpenQuickSlot_New1┃Öffnet den Craftingmenü-Quickslot und die Gadget-Liste.
-OpenScoreboard┃Tabelle öffnen.
-OpenMap┃Zeigt die erweiterte Karte an.
-ResetCamera┃Kamera auf Charakter zentrieren.
-OpenCharacterMastery┃Öffnet deine Könnenstabelle.
-OpenVPad┃Öffne dein VPad mit dem Tastenkürzel.\nDu kannst die Informationen zu deiner Meisterungsstufe und deiner taktischen Fähigkeit überprüfen.
-OpenCharacterStat┃Charakterübersicht öffnen
-OpenCharacterTotalStat┃Öffnet den Bildschirm mit detaillierten Charakterstatistiken.
-ShowObjectText┃Zeigt Information zu Gegnern, Objekte und auf dem Boden liegende Gegenstände an.
-ToggleShowOverlay┃Schalte Display Lock an, um Informationen zu Gegnern, Objekten und fallengelassenen Gegenständen zu sehen.
-Escape┃Einstellungen öffnen
-ShowRouteList┃Zeigt eine Liste mit gespeicherten Plänen
-ShowProgressItem┃Zeigt eine Liste mit gespeicherten Late-Game Gegenstände.
-MaxChatWindow┃Chat-Fenster erweitern
-MinimapZoomIn┃Minimap reinzoomen
-MinimapZoomOut┃Minimap rauszoomen
-CameraTeam1┃Bewegt die Kamera an deine Position.
-CameraTeam2┃Bewegt die Kamera zu Mitspieler 1.
-CameraTeam3┃Bewegt die Kamera zu Mitspieler 2.
-CameraTeam4┃Bewegt die Kamera zu Mitspieler 3.
-Attack┃Bewegt dich in Richtung des anvisierten Ortes und greift den Gegner an, der sich am nächsten zu deinem Cursor befindet.
-Stop┃Hält alle Aktionen deines Charakters an und bleibt an deinem Standort stehen.
-Hold┃Hält deinen Charakter vom Gehen ab.
-Rest┃Raste und erhalte schnell wieder Leben und AP.
-Reload┃Lädt munition nach (nur Schusswaffen)
-QuickCombine┃Fertigt den Gegenstand ganz links unter den Gegenständen in der Schnellhandwerksliste an.
-QuickCombine2┃Fertigt den zweiten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
-QuickCombine3┃Fertigt den dritten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
-QuickCombine4┃Fertigt den vierten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
-QuickCombine5┃Fertigt den fünften Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
-ProtectedQuickCombine┃Stellt den Gegestand ganz links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedQuickCombine2┃Stellt den zweiten Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedQuickCombine3┃Stellt den dritten Gegestand von links ausdeiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedQuickCombine4┃Stellt den vierten Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedQuickCombine5┃Stellt den fünften Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedBoxItemIncludeQuickCombine┃Stellt den Gegestand ganz links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedBoxItemIncludeQuickCombine2┃Stellt den zweiten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedBoxItemIncludeQuickCombine3┃Stellt den dritten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedBoxItemIncludeQuickCombine4┃Stellt den vierten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ProtectedBoxItemIncludeQuickCombine5┃Stellt den fünften Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
-ThrowItem┃Lass Item aus dem Inventar fallen. (Klick das Item)
-ChangeEnableGameUI┃Schalte In-Game-UI um (betrifft nicht die Lobby)
-ChangeEnableTrackerName┃Nicknamen anzeigen/deaktivieren
-ChangeEnableTrackerStatusBar┃UI für LP und AP anzeigen/deaktivieren.
-ChangeEnableReplayControllerUI┃Steuer-UI in Replays ein-/ausschalten.
-HideSummonObjectUI┃Aktiviere/Deaktiviere die UI für Fallen & Kameras in Wiederholungen.
-HideUserNameInMap┃Schaltet Nickname auf der erweiterten Karte und Scoreboard während Replays an/aus.
-HideUserNameAndCharacterIconInMap┃Schaltet Nickname und Portrait auf der erweiterten Karte und Scoreboard während Replays an/aus.
-AddGuide┃Füge den Gegenstand dem Plan hinzu 
-MoveToAttack┃Du bewegst dich zum angegebenen Ort und greifst den nächsten Gegner an.
-MoveToAttackMouse┃Du bewegst dich zum angegebenen Ort und greifst den Gegner an, der deinem Cursor am nächsten ist.
-MoveOrderCustom┃Bewegt beschworene Einheiten zur Zielposition und kann Gegner anvisieren. (Taste zuweisen)
-MoveOrder┃Bewegt beschworene Einheiten zur Zielposition und kann Gegner anvisieren.
-PickOnlySurvivor┃Halte diese Taste gedrückt um Spieler Objekten, besiegten Gegnern und wilden Tieren gegenüber zu priorisieren.
-MoveCameraExpandMap┃Du kannst Shift+MB1 benutzen, um die Kamera auf der erweiterten Karte zu benutzen.
-ChangeEnableInGameChat┃Schalte den In-Game-Chat und das UI um.
-ChatItem┃Zeige Info über den Gegendstand im Chat (Gegenstand-Symbol anklicken)
-Spray┃Benutze das in der Kollektion ausgewählte Spray.
-Spray_New1┃Benutze das in der Kollektion ausgewählte Spray.
-FallBackTarget┃Rückzugs-Ping
-FallBackTargetCustom┃Rückzugs-Ping
 GameSetting/MoveExpandMap┃Beweg dich mit Strg+MB2 über die erweiterte Karte.
-MoveExpandMap┃Mit STRG und MB2 kannst du dich mit der Erweiterten Minikarte bewegen.\n*Dafür musst du die Option in den Einstellungen＞Spiel aktivieren.
 확장 미니맵 이동 허용┃Bewegung auf erweiterter Karte
 GameSetting/MouseReverse┃Mausinvertierung ein-/ausschalten.
 마우스 좌우 반전(이동, 선택)┃Rechte und linke Maustaste tauschen
@@ -2339,10 +2235,8 @@ GameSetting/ShowCCTVRangeNearDetectionRange┃Zeigt den Erfassungsbereich des CC
 CCTV 감지 범위 접근 시 감지 범위 표시 사용┃Erfassungsbereich beim Annähern an CCTV anzeigen
 NormalMatchingSolo┃Starte die Suche nach einem normalen Solo-Match mit versteckter Wartezeit.\n*Du musst diese Option unter "Einstellungen ＞ Spiel" auswählen
 NormalMatchingDuo┃Starte die Suche nach einem normalen Duo-Match mit versteckter Wartezeit.\n*Du musst diese Option unter "Einstellungen ＞ Spiel" auswählen
-NormalMatchingSquad┃Beginne die Suche nach einem normalen Match mit verstecktem Queue-Timer.\n*Du kannst die [Queue Shortcuts]-Option unter "Einstellungen ＞ Broadcast Mode" aktivieren.
 RankMatchingSolo┃Starte die Suche nach einem gewerteten Solo-Match mit versteckter Wartezeit.\n*Du musst diese Option unter "Einstellungen ＞ Spiel" auswählen
 RankMatchingDuo┃Starte die Suche nach einem gewerteten Duo-Match mit versteckter Wartezeit.\n*Du musst diese Option unter "Einstellungen ＞ Spiel" auswählen
-RankMatchingSquad┃Beginne die Suche nach einem Ranglistenmatch mit verstecktem Queue-Timer.\n*Du kannst die [Queue Shortcuts]-Option unter "Einstellungen ＞ Broadcast Mode" aktivieren.
 SquadRumbleMatching┃Beginne die Suche nach einem Unionwettbewerbsspiel mit der Warteschlange versteckt.\n*Du musst diese Option in den Einstellungen aktivieren ＞ Übertragungsmodus
 EventModeMatching┃Beginne die Suche nach einem Eventmodusspiel mit der Warteschlange versteckt.\n*Du musst diese Option in den Einstellungen aktivieren ＞ Übertragungsmodus
 GameSetting/SecretMatching┃Du kannst Tastenkombinationen verwenden, um das Matchmaking zu starten.\nDas Starten von Spielsuchen durch Tastenkombinationen blendet die Wartezeit aus.\nDu kannst deine Tastenkombinationen unter "Einstellungen ＞ Eingabe ＞ Interface" hinzufügen oder bearbeiten.
@@ -2367,7 +2261,7 @@ GameSetting/WildAnimal┃Zeigt Timer für Wildtier-Respawns an.
 GameSetting/ResourceItem┃Zeigt Markierungen über Ressourcen wie Steinen, Zweigen, Baum des Lebens etc. an.
 GameSetting/AutoWeaponSkills┃Erlernt automatisch deine Waffenfertigkeit, sobald dies möglich ist.
 미니맵 잘못 클릭 방지 시간┃Verzögerung gegen Minimap-Misclicks
-GameSetting/PreventMinimapMove┃Für präzisere Kontrolle wird, wenn du einen Bewegungs- oder Fähigkeitsinput gibst, während dein Mauszeiger über die Minimap schwingt, der Befehl ignoriert. Wenn du hingegen schon länger über die Minimap gezeigt hattest, wird der Befehl wie gewohnt ausgeführt.
+GameSetting/SubTitle┃Für präzisere Kontrolle wird, wenn du einen Bewegungs- oder Fähigkeitsinput gibst, während dein Mauszeiger über die Minimap schwingt, der Befehl ignoriert. Wenn du hingegen schon länger über die Minimap gezeigt hattest, wird der Befehl wie gewohnt ausgeführt.
 미니맵표기방식┃Minimap-Stil
 GameSetting/MinimapNotationSystem┃Du kannst zwischen "Standardkarte" und "Satellitenkarte" für dein Ingame-Display der Minimap auswählen.
 확장맵표기방식┃Erweiterte Kartenanzeige
@@ -2394,7 +2288,7 @@ GameSetting/MarkPingWayPointSet┃Markiere/entmarkiere deine gewünschte Route
 마우스 휠로 이모티콘 세트 변경 허용┃Erlaubt den Wechsel von Emotesets mit dem Mausrad
 GameSetting/EmoticonSetMouseWheel┃Ermöglicht, während dem Spiel die Emotesets mit dem Mausrad zu wechseln
 자동 공격 설정┃Autoangriff Einstellungen
-GameSetting/AutoAttack┃Nie: Greift niemals automatisch Gegner in der Nähe an.\nStandard: Greift automatisch Gegner in der Nähe an. Greift nicht an, während gesammelt oder hergestellt wird.\nImmer: Greift immer an, außer du benutzt den Stop-Befehl, rastest, durchsuchst eine Kiste oder benutzt einen Kiosk.
+GameSetting/AutomaticAttack┃Nie: Greift niemals automatisch Gegner in der Nähe an.\nStandard: Greift automatisch Gegner in der Nähe an. Greift nicht an, während gesammelt oder hergestellt wird.\nImmer: Greift immer an, außer du benutzt den Stop-Befehl, rastest, durchsuchst eine Kiste oder benutzt einen Kiosk.
 인벤토리아이템자동병합┃Auto-Sortierung von Inventarplätzen
 GameSetting/AutomaticInventoryItemRestock┃Wenn sich mehrere Verbrauchsitems desselben Typs in verschiedenen Inventarslots befinden, werden die Items beginnend mit dem Slot mit der niedrigsten Priorität verbraucht.\nUnabhängig vom benutzten Hotkey werden Slots, die sich weiter rechts unten befinden, als niedriger priorisiert angesehen.\nBeispiel: Wenn sich in den Slots 1, 3 und 5 ein Steak befindet, wird durch Drücken eines beliebigen Hotkeys für diese Slots zuerst das Steak aus Slot 5 verbraucht.
 옵션/VLS상호작용확장맵활성화┃Erweiterte Karte für VLS aktivieren
@@ -2424,7 +2318,6 @@ GameSetting/AutoChangeEquipment┃Wenn du einen Gegenstand höherer Seltenheit e
 GameSetting/CharacterShadow┃Charakterschatten umschalten
 탐색 가이드 원격 호출 사용┃Suchanleitung Drohnen-Bestellung
 자동 번역 사용┃Auto-Übersetzung (BETA) benutzen
-GameSetting/AutoTranslate┃Übersetze den Chat von Benutzern mit anderen Spracheinstellungen in deine Sprache.\nFür die Übersetzung wird die Sprache verwendet, die in deinen beiden Spieleinstellungen angegeben ist.\nUnterhaltungen in anderen Sprachen als denen, die in den Spieleinstellungen festgelegt sind, werden möglicherweise nicht korrekt übersetzt.\n- Unterstützte Sprachen: KR, ENG, JPN und CN (Vereinfacht, Traditionell).\n- Dies ist ein Betaservice und kann vorzeitig enden.
 GameSetting/NavigaionHUDRemoteDroneActive┃Items können über die Suchanleitung bestellt werden.
 StreamingModeSetting/AutoAcceptMatching┃Nachdem die Spielsuche abgeschlossen ist, wird automatusch akzeptiert. Ablehnen des Spiels ist mit dieser Funktion nicht möglich.
 StreamingModeSetting/IgnoreRequestFriends┃Deaktiviere alle eintreffenden Freundschaftssanfragen.
@@ -2505,7 +2398,7 @@ Leave/Normal┃Teamwertung wurde noch nicht abgeschlossen. \nWenn du das Spiel j
 음성 감지┃Sprachchat-Aktivität
 음성 입력 감도┃Sensitivität
 눌러서 말하기┃Push To Talk
-눌러서 말하기 단축키┃Push To Talk-Taste
+VoiceSetting/PushToTalk┃Push To Talk-Taste
 변환 중┃Konfiguriere...
 Shortcut/PushToTalk┃Push To Talk
 Vivox점검팝업┃Der Sprachchat ist gerade wegen einem Fehler nicht verfügbar.
@@ -2543,38 +2436,14 @@ Vivox점검팝업┃Der Sprachchat ist gerade wegen einem Fehler nicht verfügba
 지역 설명┃Momentanes Gebiet
 금지구역┃Sperrgebiet
 금지구역 설명┃Verbleibende Zeit bis zur Bestimmung der nächsten Sperrgebiete
-전장규칙안내HUD 전환버튼┃Wechsel zur Kampfzonen-UI
 기존UI 전환버튼┃Wechsel zur Normalen UI
-전장규칙안내HUD 전장예정지 제목┃Künftige Kampfzone
-전장규칙안내HUD 전장예정지 설명┃Dieser Bereich wird während bei Nacht als Kampfzone eingerichtet.
-전장규칙안내HUD 전장활성화 제목┃Kampfzonen-Aktivierung
-전장규칙안내HUD 전장활성화 설명┃Stelle die Korrosionsanzeige über die Kampfzonen-Shuttles wieder her.\nWenn du eine aktive Kampfzone verlässt oder betrittst, wirst du sofort getötet, ohne die Chance, wiederbelebt zu werden.
-전장규칙안내HUD 전장보상 제목┃Kampfzonen-Belohnungen erhalten
-전장규칙안내HUD 전장보상 설명┃Herzlichen Glückwunsch, dass du die Kampfzone überlebt hast!\nKlicke auf die Schaltfläche „Belohnung anfordern“ oder auf die Schaltfläche der Sicherheitskonsole, um deine Belohnung auszuwählen.
-전장규칙안내HUD 전장보상 수령 버튼┃Belohnung erhalten
-전장규칙안내HUD 전장보상 수령 완료 본인┃Selbst erhalten
-전장규칙안내HUD 전장보상 수령 완료 팀원┃Von Teammate erhalten
 아이템 분해┃Zerstören
 아이템 분해 팝업┃Durch Zerstören des Items erhalten
-전장 키트┃Kampfzonen-Kit
-전장 키트 설명┃Wenn deine Charaktere an der Kampfzone teilnehmen, erhalten sie den Effekt „Schneller Wiederaufbau der Kampfzone“ und den Effekt „Kampfzonen-Marke“.\nDie Ausrüstung wird für das Siegerteam entfernt.
-AreaAttributes/GroupName/1┃Kampfzone - Beschleunigung
-AreaAttributes/GroupDesc/1┃Diese Kampfzone erhöht das Lauftempo und verringert die Abklingzeit.
-AreaAttributes/GroupName/2┃Kampfzone - Beschleunigung
-AreaAttributes/GroupDesc/2┃Diese Kampfzone erhöht den verursachten Endschaden und verleiht Omnisyphon.
-AreaAttributes/GroupName/3┃Kampfzone - Beschleunigung
-AreaAttributes/GroupDesc/3┃Diese Kampfzone gewährt dir nach einer bestimmten Zeit außerhalb des Kampfes einen Schild.
-BattleZoneDebuffGaugeTooltip_Title┃Korrosions-Leiste
-BattleZoneDebuffGaugeTooltip_Desc┃In der Kampfzone hat sich eine Reihe von giftigen Stoffen angesammelt.\nWenn das Maximum erreicht ist, wird das Testobjekt nach einer gewissen Zeit sterben.
-BattleZoneRewardGaugeTooltip_Title┃Kampfzonen-Belohnungen erhalten
-BattleZoneRewardGaugeTooltip_Desc┃Erhalte Kampfzonen-Belohnungen von der Sicherheitskonsole.
-신경안정제셔틀충전중┃Lädt auf
+제한시간 내에 보상 아이템을 선택하세요.┃Wähle eine Belohnung aus, bevor die Zeit abläuft.
 생존 팀 수┃Teams
 생존 팀 수 설명┃Anzahl der verbleibenden Teams
 생존자 수┃Überlebende
 생존자 수 설명┃Anzahl der Überlebenden
-전장 생존자 수┃Anzahl der Überlebenden in der Kampfzone
-전장 생존자 수 설명┃Anzahl der momentan verbleibenden Spieler in der Kampfzone
 팀 처치 수┃Teamkills
 팀 처치 수 설명┃Eure insgesamten Teamkills
 플레이어 처치 수┃Getöte Spieler
@@ -2837,7 +2706,6 @@ TempNickname┃Testobjekt {0}
 지금은 사용할 수 없습니다!┃Du kannst dies jetzt nicht verwenden.
 장착된 무기가 없어 공격할 수 없습니다.┃Du kannst nicht ohne Waffe angreifen.
 전투중휴식불가┃Nicht während des Kampfes.
-전장전투단계중휴식불가┃Rasten ist in Kampfzonen deaktiviert.
 전투중제작불가┃Nicht während des Kampfes.
 자원이 부족합니다!┃Unausreichende Ressourcen
 임시안전지대휴식불가┃Ausruhen deaktiviert in temporärer Sicherheitszone.
@@ -3080,10 +2948,6 @@ WickelineUI_ReadyTooltip┃Dr. Wickeline ist nun aktiv.
 위클라인처치노티┃Wickeline besiegt.
 위클라인죽음어나운스┃{0} hat Wickeline getötet.
 위클라인이동┃Wickeline wurde in {0} gesehen.
-전장예정노티┃1 Minute bis zur Kampfzone
-전장예정┃Kampfzonen werden in {0} in 1 Minute beginnen.
-전장생성노티┃Kampfzonen starten
-전장생성┃Eine Kampfzone hat in {0} begonnen.
 크루즈가동노티┃Flucht-U-Boot wird in 1 Minute aktiviert.
 플레어건사용노티┃Eine Leuchtpistole wurde abgefeuert.
 플레어건R기능┃Jemand wurde als Spawnpunkt für die Mythischen Vorräte ausgewählt.
@@ -3189,7 +3053,6 @@ Ping/Communication/NeedWater/Chatting┃{0}({1}) <color=#C2FFA0>braucht Getränk
 Ping/Communication/Thankyou/Chatting┃{0}({1}) sagt <color=#C2FFA0>danke</color>.
 Ping/Communication/Sorry/Chatting┃{0}({1}) sagt <color=#C2FFA0>sorry</color>.
 Ping/Communication/Goodjob/Chatting┃{0}({1}) sagt <color=#C2FFA0>gut gemacht</color>!
-Ping/BattleZone/WinnderTeamGetReward┃{0}({1}) hat <color=#C2FFA0>{2}</color> als Kampfzonenbelohnung erhalten.
 Ping/Tactical/Warning┃Spuren von Gegnern
 Ping/Tactical/Escape┃Gefahr!
 Ping/Tactical/Help┃Hilfe!
@@ -3332,15 +3195,10 @@ VP 알림┃{0}({1}): <color=#FFFF00>VP {2}%</color>
 하이퍼루프알림생존자명시_비밀연구실┃{0}({1}): Zielgebiet - <color=#FFBB00>{2}</color>, Feindanzahl: {4}
 ToastMessage/HyperloopNotLab┃Du kannst dich nicht zum Forschungszentrum teleportieren.
 ToastMessage/CannotHyperLoopToBattleLab┃Du kannst dich nicht zu Verbündeten im Kampflabor teleportieren.
-ToastMessage/HyperloopNotBattlezone┃Du kannst den Hyperloop erst nach Ende der Kampfzone benutzen.
-ToastMessage/HyperloopNotBattlezonePlayer┃Teammates, die an der Kampfzone teilnehmen, können den Hyperloop nicht benutzen.
 ToastMessage/HyperloopErrorInBattlezone┃Du kannst nicht aus der Kampfzone heraus hyperloopen.
 ToastMessage/HyperloopSecretLabCannotUse┃Du kannst den Hyperloop noch nicht verwenden.
-ToastMessage/TransferConsoleErrorInBattlezone┃Du kannst den Kiosk nicht während der Kampfzone benutzen.
-ToastMessage/KioskErrorInBattlezone┃Du kannst den Kiosk nicht während der Kampfzone benutzen.
 ToastMessage/HyperloopErrorInTemporarySafeZone┃Du kannst während der Kampfzone nicht diesen Hyperloop benutzen.
 ToastMessage/TransferConsoleErrorInTemporarySafeZone┃Du kannst den Kiosk nicht während der Sicherheitszonen-Phase benutzen.
-ToastMessage/SecurityConsoleErrorInBattlezone┃Du kannst die Überwachungskonsole nicht während der Kampfzone benutzen
 ToastMessage/AlreadyBoughtBattlezoneReward┃Team hat bereits eine Belohnung erhalten.
 ToastMessage/MarkPingWayPointMaxCount┃Das Limit an Routen ist erreicht.
 ToastMessage/UnavailableInCombat┃Im Kampf nicht verfügbar.
@@ -4171,6 +4029,7 @@ SkillCostPing/Vf┃Lebenskraft (VF)
 SkillCostPing/GadgetEnergy┃Werkzeugenergie
 장착중┃Ausrüsten
 경로 확인┃Route (P)
+상단에서 목표 아이템을 선택하세요.┃Wähle ein Gegenstand zum Herstellen
 현재 지역┃Derzeitiges Gebiet
 제작 목표┃Gespeicherte Pläne
 ※ 제작창에서 제작가이드를 추가 할 수 있습니다.┃Folge der empfohlenen Route und sammle die rechts aufgelisteten Gegenstände.
@@ -4238,7 +4097,6 @@ Shortcut/Active4ToSelf┃Fähigkeit 4 auf selbst einsetzen
 Shortcut/WeaponSkillToSelf┃Waffenfähigkeit auf selbst einsetzen
 Shortcut/TacticalSkillToSelf┃Taktische Fähigkeit auf selbst einsetzen
 Shortcut/InstantCastGadgetSkill┃Schnelles Werkzeug-Beschwören
-InstantCastGadgetSkill┃Beschwört rasch ein Werkzeug aus der Werkzeugkiste.
 Shortcut/InstantCastActive1┃Schnellanwendung Fähigkeit 1
 Shortcut/InstantCastActive2┃Schnellanwendung Fähigkeit 2
 Shortcut/InstantCastActive3┃Schnellanwendung Fähigkeit 3
@@ -4306,7 +4164,6 @@ Shortcut/ChangeEnableReplayControllerUI┃(Replay) Controller-UI verbergen
 Shortcut/HideSummonObjectUI┃(Zuschauer) Kamera und Fallen-UI verbergen
 Shortcut/HideUserNameInMap┃(Zuschauer) Nicknames auf der Karte verbergen
 Shortcut/HideUserNameAndCharacterIconInMap┃(Zuschauer) Nicknames und Portraits verbergen
-Shortcut/ChangeEnableBattleZoneRuleGuideHUD┃(Zuschauer, Wiederholung) Kampfzonen-UI verbergen
 Shortcut/NormalMatchingSolo┃Normales Spiel (Solo) suchen
 Shortcut/NormalMatchingDuo┃Normales Spiel (Duo) suchen
 Shortcut/NormalMatchingSquad┃Normales Spiel suchen
@@ -4324,7 +4181,6 @@ Shortcut/FallBackTargetCustom┃Schneller Rückzugs-Ping (Benutzerdefiniert)
 OptionActive┃Aktiviere ({})
 OptionDeactive┃Deaktiviere ({})
 Shortcut/TranslateToggle┃Auto-Übersetzung an-/ausschalten
-TranslateToggle┃Mit dieser Option kannst du die Auto-Übersetzung vorübergehend an- oder ausschalten.
 Shortcut/Popup/Skill┃Fähigkeit
 Shortcut/Popup/Interface┃Interface
 Shortcut/Popup/Action┃Aktionen
@@ -4750,7 +4606,6 @@ ToastMessage/Escape1017┃Ein Testobjekt ist von Lumia Island geflohen! Das verl
 ToastMessage/Escape1018┃Regenerationsmanschetten deiner Verbündeten sind erst ab Tag 3 auffindbar.
 ToastMessage/Escape1019┃Mehr als ein Team im Gebiet. U-Boot deaktiviert.
 ToastMessage/Escape1020┃Du kannst dich bewegen, nachdem du ein Rootkit erhalten hast und für die Flucht abgestimmt hast.
-ToastMessage/Escape1021┃Ein Teammate befindet sich in einer Kampfzone. Kann nicht teleportieren.
 ToastMessage/Escape1022┃Ein Loop-Kartenschlüssel - Rot kann nach Tag 4 gekauft werden
 ToastMessage/Escape1023┃Loop-Kartenschlüssel - Rot ist aufgrund der geringen Anzahl von Überlebenden auf Lumia Island nicht käuflich zu erwerben.
 ToastMessage/Escape1024┃Kann nur erworben werden, wenn ein Verbündeter gestorben ist.
@@ -6044,6 +5899,116 @@ NoviceSupport_1001┃Guide-Mission
 NoviceSupport_AllClearReward┃Belohnung: Alle abgeschlossen!
 ShopPromotionPopup_Dday_Over24┃D - {0}
 ShopPromotionPopup_Dday_Under24┃D - Day
+BasicSetting/DeathRecapOnOff┃Genommener Schaden von Testobjekt bis zum Tod wärend des Kampfes wird analysiert und angezeigt..
+BasicSetting/PickPointInAreaIndicator┃Fähigkeit innerhalb max. Reichweite wirken
+BasicSetting/GadgetVaultUIUXSetting┃Du kannst das Gadgettresor UI anpassen!\nSchnellzugriffanzeige: Der Gadgettresor ist mit dem unterem Teil des Schnellzugriff verbunden. Klicke das Gadget in dem Schnellzugriff um dein ausgerüstetes Gadget zu wechseln.\n\nRadanzeige: Ähnlich wie Emotes, halte die Taste für das Gadgettresor um dein ausgerüstetes Gadget zu wechseln. Drücke die Taste nur kurz um das ausgerüstete Gadget anzuwenden.
+BasicSetting/QuickCastIndicator┃Reichweite der Fähigkeiten wird beim halten der Schnellanwendungs Taste angezeigt.
+BasicSetting/Emotion1┃Äußerung 1
+BasicSetting/Emotion2┃Äußerung 2
+BasicSetting/Emotion3┃Äußerung 3
+BasicSetting/Emotion4┃Äußerung 4
+BasicSetting/Emotion5┃Äußerung 5
+BasicSetting/Emotion6┃Äußerung 6
+BasicSetting/EmotionDance┃Drücke um zu Tanzen!
+BasicSetting/EmotionPlate┃Emote benutzen
+BasicSetting/EmotionPlate1┃Emote Set 1 benutzen
+BasicSetting/EmotionPlate2┃Emote Set 2 benutzen
+BasicSetting/EmotionPlate3┃Emote Set 3 benutzen
+BasicSetting/PingTarget┃Ziel pingen
+BasicSetting/MarkTarget┃Pin Ort
+BasicSetting/PingTargetKeyboard┃Ping Ziel
+BasicSetting/MarkTargetKeyboard┃Pin Ort
+BasicSetting/DeleteMarkTarget┃Pin Löschen
+BasicSetting/LearnActive1┃Verbessert die erste Fähigkeit.
+BasicSetting/LearnActive2┃Verbessert die zweite Fähigkeit.
+BasicSetting/LearnActive3┃Verbessert die dritte Fähigkeit.
+BasicSetting/LearnActive4┃Verbessert die vierte Fähigkeit.
+BasicSetting/LearnPassive┃Verbessert die Passive Fähigkeit
+BasicSetting/LearnWeaponSkill┃Verbessert die Waffenfähigkeit
+BasicSetting/LearnTacticalSkill┃Verbessert die taktische Fähigkeit.
+BasicSetting/Active1ToSelf┃Selbstanwendung Fähigkeit 1 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
+BasicSetting/Active2ToSelf┃Selbstandwendung Fähigkeit 2 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
+BasicSetting/Active3ToSelf┃Selbstanwendung Fähigkeit 3 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
+BasicSetting/Active4ToSelf┃Selbstandwendung Fähigkeit 4 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
+BasicSetting/WeaponSkillToSelf┃Selbstanwendung Fähigkeit 5 (Nur für Fähigkeiten die auf sich selbst angewandt werden können)
+BasicSetting/InstantCastActive1┃Schnellanwendung Fähigkeit 1
+BasicSetting/InstantCastActive2┃Schnellanwendung Fähigkeit 2
+BasicSetting/InstantCastActive3┃Schnellanwendung Fähigkeit 3
+BasicSetting/InstantCastActive4┃Schnellanwendung Fähigkeit 4
+BasicSetting/InstantCastWeaponSkill┃Schnellanwendung der Waffenfähigkeit
+BasicSetting/InstantCastTacticalSkill┃Schnellzauber Taktische Fähigkeit
+BasicSetting/InstantUseActiveItem1┃Schnellzauber Item-Fähigkeit
+BasicSetting/ChangeCameraMode┃Kameraverfolgung an/aus
+BasicSetting/CameraDragScroll┃Bewegt die Kamera, während du den Hotkey gedrückt hältst.
+BasicSetting/OpenCombineWindow┃Herstellungsmenü öffnen.
+BasicSetting/OpenQuickSlot┃Öffnet den Craftingmenü-Quickslot und die Gadget-Liste.
+BasicSetting/OpenQuickSlot_New1┃Öffnet den Craftingmenü-Quickslot und die Gadget-Liste.
+BasicSetting/OpenScoreboard┃Tabelle öffnen.
+BasicSetting/OpenMap┃Zeigt die erweiterte Karte an.
+BasicSetting/ResetCamera┃Kamera auf Charakter zentrieren.
+BasicSetting/OpenCharacterMastery┃Öffnet deine Könnenstabelle.
+BasicSetting/OpenVPad┃Öffne dein VPad mit dem Tastenkürzel.\nDu kannst die Informationen zu deiner Meisterungsstufe und deiner taktischen Fähigkeit überprüfen.
+BasicSetting/OpenCharacterStat┃Charakterübersicht öffnen
+BasicSetting/OpenCharacterTotalStat┃Öffnet den Bildschirm mit detaillierten Charakterstatistiken.
+BasicSetting/ShowObjectText┃Zeigt Information zu Gegnern, Objekte und auf dem Boden liegende Gegenstände an.
+BasicSetting/ToggleShowOverlay┃Schalte Display Lock an, um Informationen zu Gegnern, Objekten und fallengelassenen Gegenständen zu sehen.
+BasicSetting/Escape┃Einstellungen öffnen
+BasicSetting/ShowRouteList┃Zeigt eine Liste mit gespeicherten Plänen
+BasicSetting/ShowProgressItem┃Zeigt eine Liste mit gespeicherten Late-Game Gegenstände.
+BasicSetting/MaxChatWindow┃Chat-Fenster erweitern
+BasicSetting/MinimapZoomIn┃Minimap reinzoomen
+BasicSetting/MinimapZoomOut┃Minimap rauszoomen
+BasicSetting/CameraTeam1┃Bewegt die Kamera an deine Position.
+BasicSetting/CameraTeam2┃Bewegt die Kamera zu Mitspieler 1.
+BasicSetting/CameraTeam3┃Bewegt die Kamera zu Mitspieler 2.
+BasicSetting/CameraTeam4┃Bewegt die Kamera zu Mitspieler 3.
+BasicSetting/Attack┃Bewegt dich in Richtung des anvisierten Ortes und greift den Gegner an, der sich am nächsten zu deinem Cursor befindet.
+BasicSetting/Stop┃Hält alle Aktionen deines Charakters an und bleibt an deinem Standort stehen.
+BasicSetting/Hold┃Hält deinen Charakter vom Gehen ab.
+BasicSetting/Rest┃Raste und erhalte schnell wieder Leben und AP.
+BasicSetting/Reload┃Lädt munition nach (nur Schusswaffen)
+BasicSetting/QuickCombine┃Fertigt den Gegenstand ganz links unter den Gegenständen in der Schnellhandwerksliste an.
+BasicSetting/QuickCombine2┃Fertigt den zweiten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
+BasicSetting/QuickCombine3┃Fertigt den dritten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
+BasicSetting/QuickCombine4┃Fertigt den vierten Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
+BasicSetting/QuickCombine5┃Fertigt den fünften Gegenstand von links unter den Gegenständen in der Schnellhandwerksliste an.
+BasicSetting/ProtectedQuickCombine┃Stellt den Gegestand ganz links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedQuickCombine2┃Stellt den zweiten Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedQuickCombine3┃Stellt den dritten Gegestand von links ausdeiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedQuickCombine4┃Stellt den vierten Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedQuickCombine5┃Stellt den fünften Gegestand von links aus deiner Schnellhandwerks-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine┃Stellt den Gegestand ganz links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine2┃Stellt den zweiten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine3┃Stellt den dritten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine4┃Stellt den vierten Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ProtectedBoxItemIncludeQuickCombine5┃Stellt den fünften Gegestand von links aus deiner "Schnellhandwerk aus Kisten"-Liste her. (Stellt ausschließlich Gegenstände deines Plans her)
+BasicSetting/ThrowItem┃Lass Item aus dem Inventar fallen. (Klick das Item)
+BasicSetting/ChangeEnableGameUI┃Schalte In-Game-UI um (betrifft nicht die Lobby)
+BasicSetting/ChangeEnableTrackerName┃Nicknamen anzeigen/deaktivieren
+BasicSetting/ChangeEnableTrackerStatusBar┃UI für LP und AP anzeigen/deaktivieren.
+BasicSetting/ChangeEnableReplayControllerUI┃Steuer-UI in Replays ein-/ausschalten.
+BasicSetting/HideSummonObjectUI┃Aktiviere/Deaktiviere die UI für Fallen & Kameras in Wiederholungen.
+BasicSetting/HideUserNameInMap┃Schaltet Nickname auf der erweiterten Karte und Scoreboard während Replays an/aus.
+BasicSetting/HideUserNameAndCharacterIconInMap┃Schaltet Nickname und Portrait auf der erweiterten Karte und Scoreboard während Replays an/aus.
+BasicSetting/AddGuide┃Füge den Gegenstand dem Plan hinzu 
+BasicSetting/MoveToAttack┃Du bewegst dich zum angegebenen Ort und greifst den nächsten Gegner an.
+BasicSetting/MoveToAttackMouse┃Du bewegst dich zum angegebenen Ort und greifst den Gegner an, der deinem Cursor am nächsten ist.
+BasicSetting/MoveOrderCustom┃Bewegt beschworene Einheiten zur Zielposition und kann Gegner anvisieren. (Taste zuweisen)
+BasicSetting/MoveOrder┃Bewegt beschworene Einheiten zur Zielposition und kann Gegner anvisieren.
+BasicSetting/PickOnlySurvivor┃Halte diese Taste gedrückt um Spieler Objekten, besiegten Gegnern und wilden Tieren gegenüber zu priorisieren.
+BasicSetting/MoveCameraExpandMap┃Du kannst Shift+MB1 benutzen, um die Kamera auf der erweiterten Karte zu benutzen.
+BasicSetting/ChangeEnableInGameChat┃Schalte den In-Game-Chat und das UI um.
+BasicSetting/ChatItem┃Zeige Info über den Gegendstand im Chat (Gegenstand-Symbol anklicken)
+BasicSetting/Spray┃Benutze das in der Kollektion ausgewählte Spray.
+BasicSetting/Spray_New1┃Benutze das in der Kollektion ausgewählte Spray.
+BasicSetting/FallBackTarget┃Rückzugs-Ping
+BasicSetting/FallBackTargetCustom┃Rückzugs-Ping
+BasicSetting/MoveExpandMap┃Mit STRG und MB2 kannst du dich mit der Erweiterten Minikarte bewegen.\n*Dafür musst du die Option in den Einstellungen＞Spiel aktivieren.
+BasicSetting/NormalMatchingSquad┃Beginne die Suche nach einem normalen Match mit verstecktem Queue-Timer.\n*Du kannst die [Queue Shortcuts]-Option unter "Einstellungen ＞ Broadcast Mode" aktivieren.
+BasicSetting/RankMatchingSquad┃Beginne die Suche nach einem Ranglistenmatch mit verstecktem Queue-Timer.\n*Du kannst die [Queue Shortcuts]-Option unter "Einstellungen ＞ Broadcast Mode" aktivieren.
+BasicSetting/AutoTranslate┃Übersetze den Chat von Benutzern mit anderen Spracheinstellungen in deine Sprache.\nFür die Übersetzung wird die Sprache verwendet, die in deinen beiden Spieleinstellungen angegeben ist.\nUnterhaltungen in anderen Sprachen als denen, die in den Spieleinstellungen festgelegt sind, werden möglicherweise nicht korrekt übersetzt.\n- Unterstützte Sprachen: KR, ENG, JPN und CN (Vereinfacht, Traditionell).\n- Dies ist ein Betaservice und kann vorzeitig enden.
+BasicSetting/InstantCastGadgetSkill┃Beschwört rasch ein Werkzeug aus der Werkzeugkiste.
+BasicSetting/TranslateToggle┃Mit dieser Option kannst du die Auto-Übersetzung vorübergehend an- oder ausschalten.
 ItemType/EMBLEM_MARK/Name┃Profilbild
 EMBLEM_MARK_FREE1┃Aglaia Symbol
 EMBLEM_MARK_SHOP_102002┃Hyunwoo Symbol
@@ -8022,6 +7987,14 @@ Product/Name/S6_LuckyBox2025_Seq_Pack_05┃Glücksklee #5
 Product/Name/S6_LuckyBox2025_Seq_Pack_06┃Glücksklee #6
 Product/Name/S6_LuckyBox2025_Seq_Pack_07┃Glücksklee #7
 Product/Name/S6_LuckyBox2025_Seq_Pack_08┃Glücksklee #8
+Product/Name/S10_LuckyBox2026_Seq_Pack_01┃Glücksklee #1
+Product/Name/S10_LuckyBox2026_Seq_Pack_02┃Glücksklee #2
+Product/Name/S10_LuckyBox2026_Seq_Pack_03┃Glücksklee #3
+Product/Name/S10_LuckyBox2026_Seq_Pack_04┃Glücksklee #4
+Product/Name/S10_LuckyBox2026_Seq_Pack_05┃Glücksklee #5
+Product/Name/S10_LuckyBox2026_Seq_Pack_06┃Glücksklee #6
+Product/Name/S10_LuckyBox2026_Seq_Pack_07┃Glücksklee #7
+Product/Name/S10_LuckyBox2026_Seq_Pack_08┃Glücksklee #8
 Product/Name/2024_Festival_Seq_Pack_01┃Shoichis Donut Box Bundle
 Product/Name/2024_Festival_Seq_Pack_02┃Goldene Glocke Bundle
 Product/Name/2024_Festival_Seq_Pack_03┃Episches Skin Design Selection Voucher Bundle
@@ -8369,6 +8342,10 @@ Product/Name/WEGAME_IAP_S10_JecheonPhalanx_Pack_01┃S10 Ascenders Bündel
 Product/Name/WEGAME_IAP_S10_GyeongnamSparkle_Pack_01┃S10 Gyeongnam Sparkle Bündel
 Product/Name/WEGAME_IAP_S10_DaeguGuardians_Pack_01┃S10 Daegu Suseong Guardians Bündel
 Product/Name/LOOTBOX_SKINxKEY_SET_10_S10_BONUS┃11 Skin Datenset
+Product/Name/S10_2026_Lucky_Seq_Pack_01┃Lucky Sequence PackⅠ
+Product/Name/S10_2026_Lucky_Seq_Pack_02┃Lucky Sequence Pack Ⅱ
+Product/Name/S10_2026_Lucky_Seq_Pack_03┃Lucky Sequence Pack Ⅲ
+Product/Name/S10_2026_Lucky_Seq_Pack_04┃Lucky Sequence Pack Ⅳ
 Shop/Desc/Aya_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Hyunwoo_ComboPack_01┃1 Skin\n4 Emoticons\n\n56% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
 Shop/Desc/Adriana_ComboPack_01┃1 Skin\n4 Emoticons\n\n58% der Kosten jedes Gegenstandes, den du bereits besitzt, wird durch deine Mailbox zurückerstattet.
@@ -8951,6 +8928,7 @@ Shop/Desc/Rare_WILDCARD_ETC┃Du kannst diesen <color=#2AC0FF>Joker</color> für
 Shop/Desc/Epic_WILDCARD_ETC┃Du kannst diesen <color=#D05EFF>Joker</color> für 1 Gewöhnlichen/Ungewöhnlichen/Seltenen/Epischen Gegenstand eintauschen, außer Skins.\n\n<b><color=#F15F5F>[Hinweise]</color></b>\n* Du kannst diesen Gegenstand im Joker-Menü in der "Schmieden"-Sektion verwenden. \n* Der Joker kann gegen Gegenstände eingetauscht werden, außer Skins. \n* Du kannst nur Gegenstände eintauschen, deren Seltenheitsgrad dem des Jokers entspricht oder darunter liegt. \n* Einige Gegenstände können nicht mit dem Joker eingetauscht werden. \n\nBitte überprüfe vor dem Kauf die Eintauschbedingungen.
 Shop/Desc/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃Gib <color=#2AC0FF>Tausch-Fragmente</color> aus, um Saison-Fragmente zu verwenden. \n\n<b><color=#F15F5F>[Hinweise]</color></b> \n* Deine Tausch-Fragmente findest du unter "Sammlungen" – "Saisonmenü". \n* Wähle Saison-Fragmente aus, um sie zu verwenden. \n* Tauschfragmente werden nach Ablauf der Saison-Sammlung zurückgesetzt. Informiere dich vorab über den Sammelzeitraum.\n* Begrenzt auf 1 Kauf pro Woche.
 Shop/Desc/MILEAGE_SEASON_COLLECTION_PACK_9901032┃Öffne das <color=#35FF94>Saisonpaket</color>, um mit einer bestimmten Wahrscheinlichkeit gewöhnliche oder ungewöhnliche Saisonfragmente zu erhalten. \n\n<b><color=#F15F5F>[Hinweise]</color></b> \n*Du kannst diesen Gegenstand beim Schmieden verwenden.\n*Saisonfragmente werden sofort für die Saison-Sammlung verwendet.\n*Doppelte Saisonfragmente werden in Saisonfragmentpunkte umgewandelt.\n*Begrenzt auf 3 Käufe pro Woche.
+Shop/Desc/S10_LuckyMarble2026_ExchangeFragments┃Gib <color=#2AC0FF>Tausch-Fragmente</color> aus, um Saison-Fragmente zu verwenden. \n\n<b><color=#F15F5F>[Hinweise]</color></b> \n* Deine Tausch-Fragmente findest du unter "Sammlungen" – "Saisonmenü". \n* Wähle Saison-Fragmente aus, um sie zu verwenden. \n* Tauschfragmente werden nach Ablauf der Saison-Sammlung zurückgesetzt. Informiere dich vorab über den Sammelzeitraum.
 Product/Name/ACCOUNT_A-Coin_10000┃A-Coin x 10000
 Product/Name/ACCOUNT_A-Coin_5000┃A-Coin x 5000
 Shop/Desc/ACCOUNT_A-Coin┃Benutze diese Währung um verschiedene Eternal Return Items zu kaufen
@@ -9037,6 +9015,7 @@ Product/Name/XMAS2023_EVENT_3000021┃15 Battle Maids Tokens
 Product/Name/XMAS2023_EVENT_3000022┃500 A-Coin
 Product/Name/LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/Festival2024_ACoin_100┃A-Coin X 100
+Product/Name/S10_LuckyMarble2026_ACoin_100┃A-Coin X 100
 Product/Name/Summer_LuckyMarble2024_ACoin_100┃A-Coin X 100
 Product/Name/S14_ACOIN_UNLIMITED┃150 A-Coin
 Product/Name/S14_RARE_MATTER┃1 Seltenes Datenfragment
@@ -10267,7 +10246,7 @@ Goods/Desc/3102999┃Erhalte garantiert ein Seltenes Skindesign.
 Goods/Name/3303301┃Weihnachts-Tokens
 Goods/Desc/3303301┃Weihnachts-Tokens können durch das Öffnen von Weihnachts-Datenboxen erhalten werden und verfallen zum Ende des Events.
 Goods/Name/3303302┃Joy Tokens
-Goods/Desc/3303302┃Joy Tokens können durch das Kaufen von Glücksklee oder dem Joy Bundle erhalten werden und verfallen zum Ende des Events.
+Goods/Desc/3303302┃Lucky Sequence Packs können durch den Kauf eines Glücksklees oder eines Joy Bundles erhalten werden und verfallen zum Ende des Events.
 Goods/Name/3303303┃Backstuben-Tokens
 Goods/Desc/3303303┃Backstuben-Tokens können durch das Öffnen von Emmas Brotkorb erhalten werden und verfallen zum Ende des Events.
 Goods/Name/3303304┃Weiße Tokens
@@ -15085,12 +15064,16 @@ Skill/LobbyDesc/1044400┃Echion spurtet in die anvisierte Richtung und richtet 
 Skill/LobbyDesc/1044500┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er proportional zu seiner <color=white>VF-Leiste</color> anrichtet, erhöht sich wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für eine gewisse Zeit und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist erhöht und er richtet regelmäßig absoluten Schaden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für eine gewisse Zeit, welches seine Angriffsreichweite reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color>.\n\n<i>Die Effekte von Blutvergiftung wechseln sich abhängig von der aktuellen Waffe.</i>\n<i>Fixe Abklingzeit: Diese Fähigkeit ist nicht von Abklingzeitreduzierung betroffen.</i>
 Skill/Group/Desc/1044500┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
 Skill/Group/Coef/1044500┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffskraft)</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
+Skill/Group/IngameCoef/1044500┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffskraft)</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
 Skill/Group/Desc/1044501┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
 Skill/Group/Coef/1044501┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffskraft)</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
+Skill/Group/IngameCoef/1044501┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffskraft)</color> Fähigkeitsschaden an. Die Dauer von Exzess erhöht sich um {12} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {13} Sekunden.
 Skill/Group/Desc/1044502┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color> Fähigkeitsschaden an. Nach {12} Sekunden, bricht das unstabile VF erneut aus, richtet Schaden gleich {13} des vorherigen Ausbruch aus und wirft Gegner für {14} Sekunden in die Luft. Die Dauer von Exzess erhöht sich um {16} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {17} Sekunden.
 Skill/Group/Coef/1044502┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffsschaden)</color><color=#688a08>(+{21} der zusätzlichen HP)</color> Fähigkeitsschaden an. Nach {12} Sekunden, bricht das unstabile VF erneut aus, richtet Schaden gleich {13} des vorherigen Ausbruch aus und wirft Gegner für {14} Sekunden in die Luft. Die Dauer von Exzess erhöht sich um {16} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {17} Sekunden
+Skill/Group/IngameCoef/1044502┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Angriffsschaden)</color><color=#688a08>(+{21} der zusätzlichen HP)</color> Fähigkeitsschaden an. Nach {12} Sekunden, bricht das unstabile VF erneut aus, richtet Schaden gleich {13} des vorherigen Ausbruch aus und wirft Gegner für {14} Sekunden in die Luft. Die Dauer von Exzess erhöht sich um {16} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {17} Sekunden
 Skill/Group/Desc/1044503┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color> Fähigkeitsschaden an und verlangsamt das Ziel um {12} für {15} Sekunden. Die Dauer von Exzess erhöht sich um {13} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {14} Sekunden.
 Skill/Group/Coef/1044503┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Zusätzliche Angriffskraft)</color> Fähigkeitsschaden an und verlangsamt das Ziel um {12} für {15} Sekunden. Die Dauer von Exzess erhöht sich um {13} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {14} Sekunden.
+Skill/Group/IngameCoef/1044503┃<color=green>Passive:</color> Echion's <color=white>VF-Leiste</color> und den Fähigkeitsschaden den er anrichtet, erhöht sich um {0} pro 1 <color=white>VF-Leiste</color> wenn er <color=white>Sichelviper(Q)</color> und <color=white>Trockenbiss(E)</color>. Wenn seine <color=white>VF-Leiste</color> voll ist, betritt er einen Zustand von <color=white>VF Exzess</color> für {2} und sein erhöhter Schaden ist maximiert. \n\n<color=white>VF Exzess:</color> Echions Lauftempo ist um {3} erhöht und er richtet <color=white>{5}</color><color=#ffd775>(+{14} Angriffskraft)</color> absoluten Schaden alle {4} Sekunden an Gegnern in der Nähe an, macht <color=white>Blutvergiftung(R)</color> aktiv und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\nWährend VF Exzess aktiv ist wird die Dauer von Exzess beim Töten eines Gegner um {6} erhöht und setzt die Abklingzeit von <color=white>Trockenbiss(E)</color> zurück.\n\n<color=white>Abstreifen:</color> Wenn Exzess endet, betritt er Abstreifen für {7} Sekunden, welches seine Angriffsreichweite um {9} reduziert und Zunahme von der <color=white>VF Leiste</color> ist deaktiviert.\n\n<color=white>Blutvergiftung(R):</color> Echion feuert unstabiles VF in die Zielrichtung und richtet <color=white>{10}</color><color=#ffd775>(+{11} Zusätzliche Angriffskraft)</color> Fähigkeitsschaden an und verlangsamt das Ziel um {12} für {15} Sekunden. Die Dauer von Exzess erhöht sich um {13} Sekunden wenn er mit <color=white>Blutvergiftung</color> Schaden an einen gegnerischen Charakter anrichtet. Schaden mit Basisangriffen anzurichten, reduziert die Abklingzeit von <color=white>Blutvergiftung</color> um {14} Sekunden.
 Skill/Group/ExpansionTip/1044500┃<i>Nachdem er ein Testobjekt oder Bossmonster besiegt, werden die Abklingzeiten von <color=white>Trockener Biss</color> und <color=white>Vergiftung</color> zurückgesetzt.<i>\n<i>Feste Abklingzeit: Diese Fähigkeit wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 Skill/Group/ExpansionTip/1044501┃<i>Nachdem er ein Testobjekt oder Bossmonster besiegt, werden die Abklingzeiten von <color=white>Trockener Biss</color> und <color=white>Vergiftung</color> zurückgesetzt.<i>\n<i>Feste Abklingzeit: Diese Fähigkeit wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 Skill/Group/ExpansionTip/1044502┃<i>Nachdem er ein Testobjekt oder Bossmonster besiegt, werden die Abklingzeiten von <color=white>Trockener Biss</color> und <color=white>Vergiftung</color> zurückgesetzt.<i>\n<i>Feste Abklingzeit: Diese Fähigkeit wird nicht von Abklingzeitreduzierung beeinflusst.</i>
@@ -16700,26 +16683,10 @@ Skill/Code/Coef/4113003┃Verbrauche {0} LP, um für {4} Sekunden geschworen zu 
 Skill/Code/ExpansionTip/4113003┃<i>Max. LP können durch Schwur nicht unter {0} reduziert werden.</i>
 Skill/Code/Desc/4108003┃Alle Verbündeten in Reichweite erhalten <color=white>{1}</color> LP.\n\n<color=#FFFFC2>Modulverbesserung: Die Verteidigung von Verbündeten, die vom Wind berührt werden, wird für {5} Sekunden um <color=white>{4}</color> erhöht.
 Skill/Code/Coef/4108003┃Alle Verbündeten in Reichweite erhalten (<color=white>{1}</color>+<color=green>Charakterlevel * {6}</color>) LP zurück.\n\nNach der Wiederherstellung durch 'Heilender Wind' werden nur {3}% der Wiederherstellung für einen weiteren 'Heilender Wind'-Effekt in den nächsten {2} Sekunden angewendet.\n\n<color=#FFFFC2>Modulverbesserung: Die Verteidigung von Verbündeten, die vom Wind berührt werden, wird für {5} Sekunden um <color=white>{4}</color> erhöht.
-CharacterState/Group/Name/2100201┃Kampfzone - Beschleunigung
-CharacterState/Group/Desc/2100201┃Diese Kampfzone erhöht das Lauftempo von Testobjekten um {0}% und verringert die Abklingzeit um {1}%. Überschreitet nicht den maximalen Abklingzeitwert.
-CharacterState/Group/Name/2100202┃Kampfzone - Berserker
-CharacterState/Group/Desc/2100202┃Diese Kampfzone erhöht den verursachten Schaden um {0}% und Omnisyphon um {1}%.
-CharacterState/Group/Name/2100203┃Kampfzone - Verteidigung
-CharacterState/Group/Desc/2100203┃Diese Kampfzone verleiht {1} Schild nach {0} Sekunden außerhalb des Kampfes. Kann nicht erneut angewandt werden, solange der Schild noch wirkt.
-CharacterState/Group/Name/2120000┃Kampfzone - Meisterungslimit
-CharacterState/Group/Desc/2120000┃Begrenzt die maximal erreichbare Meisterung von Waffen/Rüstung/LP, während man sich in der Kampfzone befindet.
-CharacterState/Group/Name/2110002┃Labor Schnelle Wiederbelebung
-CharacterState/Group/Desc/2110002┃Die schnelle Wiederaufbaug in der Kampfzone wird aktiviert, wenn Spieler im Kampflabor vor Tag 3 besiegt werden und bringt sie zurück ins Experiment, selbst wenn das ganze Team besiegt wurde.
-CharacterState/Group/Name/2101001┃Kampfzonenkit entfernen
-CharacterState/Group/Desc/2101001┃Wenn dein Kampfzonen-Kit entfernt wird, kannst du keine "Schnelle Wiederbelebung" und "Kampfzonen-Markierung" erhalten.
 CharacterState/Group/Name/2140000┃Heilungspaket
 CharacterState/Group/Desc/2140000┃Regeneriere HP im Laufe der Zeit
 CharacterState/Group/Name/2160000┃Schildpaket
 CharacterState/Group/Desc/2160000┃Für eine gewisse Zeit durch Schild geschützt.
-CharacterState/Group/Name/2180200┃Korrosionsleiste eingefroren
-CharacterState/Group/Desc/2180200┃Korrosionsleiste ist für kurze Zeit angehalten. Der Effekt endet, wenn du die Korrosionsanzeige wiederhergestellt hast oder nach einer bestimmten Zeit.
-CharacterState/Group/Name/2190000┃Korrosion
-CharacterState/Group/Desc/2190000┃Wenn dein Korrosionslevel stetig am Limit ist, wirst du sterben. Erhalte deine Korrosionsleiste zurück, indem du Testobjekte eliminierst oder dich in der Nähe des Shuttles befindest.
 Skill/Group/Name/2003200┃Ansturm
 Skill/LobbyDesc/2003200┃Stürmt in einer geraden Linie, stößt Feinde weg und fügt ihnen Schaden zu.\nFeinde werden sehr, sehr weit weggestoßen. Wenn das Wildschwein den Angriff verfehlt, wird es für eine bestimmte Zeit verlangsamt und erleidet zusätzlichen Schaden.
 Skill/LobbyDesc/┃Aufklährung
@@ -17354,7 +17321,8 @@ Skill/Group/LobbyDesc/4509010┃Ein Meteorit wird nach kurzer Zeit an der anvisi
 Skill/Code/Desc/4509001┃Ein Meteorit wird nach kurzer Zeit an der anvisierten Stelle einschlagen und <color=white>{4}</color> absoluten Schaden anrichten.
 Skill/Code/Coef/4509001┃Ein Meteorit wird nach kurzer Zeit am Zielort einschlagen und absoluten Schaden verursachen.\nSchaden: <color=white>{1}</color><color=#008000>(+Level*{2})</color>
 Skill/Code/Desc/4509011┃Ein Meteorit wird nach kurzer Zeit an der anvisierten Stelle einschlagen und <color=white>{4}</color> Schaden anrichten.
-Skill/Code/Coef/4509011┃Ein Meteorit wird nach kurzer Zeit am Zielort einschlagen und <color=white>{1}</color><color=#008000>(+Level*{2})</color> Schaden verursachen.
+Skill/Code/Coef/4509001┃Ein Meteorit wird nach kurzer Zeit am Zielort einschlagen und <color=white>{1}</color><color=#008000>(+Level*{2})</color> Schaden verursachen.
+Skill/Code/ExpansionTip/4509001┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 CharacterState/Group/Name/4509000┃Meteoriteneinschlag
 CharacterState/Group/Desc/4509000┃Du wurdest von einem Meteoriten getroffen.
 Skill/Group/Name/4508000┃Fantastischer Hieb
@@ -17364,6 +17332,7 @@ Skill/LobbyDesc/4508000┃Beschwöre die illusorische Faust eines Flaschengeiste
 Skill/Group/LobbyDesc/4508000┃Beschwöre die illusorische Faust eines Flaschengeistes in die gewünschte Richtung.Die getroffenen Testobjekte werden n diese Richtung geschleudert.
 Skill/Code/Desc/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die  Zielrichtung und führe einen schnellen Schlag aus.\nGetroffene Gegner erleiden {0}+<color=#688A08>{1}% maximalen HP des Ziel</color> als Fähigkeitsschaden und werden in die Richtung weit weggestoßen.\nDu und deine Verbündeten erleiden keinen Schaden.
 Skill/Code/Coef/4508001┃Beschwöre die illusorische Faust eines Flaschengeistes in die  Zielrichtung und führe einen schnellen Schlag aus.\nGetroffene Gegner erleiden {0}+<color=#688A08>{1}% maximalen HP des Ziel</color> als Fähigkeitsschaden und werden über <color=white>{2} Sekunden</color> in die Richtung weit weggestoßen.\nDu und deine Verbündeten erleiden keinen Schaden.
+Skill/Code/ExpansionTip/4508001┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 CharacterState/Group/Name/4508000┃Der fantastische Hieb des Flaschengeistes
 CharacterState/Group/Desc/4508000┃Tut weh, oder?
 CharacterState/Group/Name/6516010┃Der fantastische Hieb des Flaschengeistes 2
@@ -17396,12 +17365,14 @@ CharacterState/Group/Name/4502200┃Absorption des Gravitationsfeldes
 CharacterState/Group/Desc/4502200┃In das Gravitationsfeld hineingesogen.
 Skill/Code/Desc/4502001┃Zieht alle gegnerischen Testobjekte im Umkreis von <color=white>{0}</color>m zum Nutzer, verursacht <color=white>{2}</color> absoluten Schaden und betäubt sie für {1} Sekunden.
 Skill/Code/Coef/4502001┃Zieht alle gegnerischen Testobjekte im Umkreis von <color=white>{0}</color>m zum Nutzer, verursacht <color=white>{2}</color> absoluten Schaden und betäubt sie für {1} Sekunden.
+Skill/Code/ExpansionTip/4502001┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 Skill/Group/Name/4503000┃Donnergrollen
 Skill/Code/Name/4503001┃Donnergrollen
 TacticalSkillSet/Code/Name/500031┃Donnergrollen
 Skill/Group/4503000/Name┃<color=yellow>Donnergrollen</color>
 Skill/Code/Desc/4503001┃{0} Sekunden nach Aktivierung wirst du mit [Donnergrollen] verstärkt.\n\n[Donnergrollen]\nAngetrieben von einer Donnerwelle erhöht sich dein Lauftempo {1} Sekunden lang nach und nach um {2}%. Ein Zusammenstoß mit einem Gegner wirft diesen zurück und verursacht {3} Fähigkeitsschaden
 Skill/Code/Coef/4503001┃{0} Sekunden nach Aktivierung wirst du mit [Donnergrollen] verstärkt.\n\n[Donnergrollen]\nAngetrieben von einer Donnerwelle erhöht sich dein Lauftempo {1} Sekunden lang nach und nach um {2}%. Ein Zusammenstoß mit einem Gegner wirft diesen zurück und verursacht {3} Fähigkeitsschaden
+Skill/Code/ExpansionTip/4503001┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 CharacterState/Group/Name/4503000┃Donnergrollen: Wartet auf Aktivierung
 CharacterState/Group/Desc/4503000┃Der Effekt von Donnergrollen wird bald angewendet werden.
 CharacterState/Group/Name/4503100┃Kobaltblau: Donnergrollen
@@ -17435,6 +17406,8 @@ Skill/Code/Desc/4505001┃Du wirst für {0} Sekunden in Stase versetzt und sprin
 Skill/Code/Coef/4505001┃Du wirst für {0} Sekunden in Stase versetzt und springst dann sofort in die gewählte Richtung vorwärts, nachdem der Effekt endet.
 Skill/Code/Desc/4505011┃Du wirst für {0} Sekunden in Stase versetzt und springst dann sofort in die gewählte Richtung vorwärts, nachdem der Effekt endet.
 Skill/Code/Coef/4505011┃Du wirst für {0} Sekunden in Stase versetzt und springst dann sofort in die gewählte Richtung vorwärts, nachdem der Effekt endet.
+Skill/Code/ExpansionTip/4505001┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
+Skill/Code/ExpansionTip/4505011┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 Skill/Group/Name/4506000┃Gebet
 Skill/Code/Name/4506001┃Gebet
 TacticalSkillSet/Code/Name/500061┃Gebet
@@ -17475,6 +17448,8 @@ CharacterState/Group/Name/4524020┃Tracker - Tracker Aktiviert
 CharacterState/Group/Desc/4524020┃Feuert das Projektil in die Zielrichtung und fügt dem ersten getroffenen Ziel Schaden zu. Erneut einsetzen, um zum Ziel zu springen.
 CharacterState/Group/Name/4524030┃Tracker - Unanvisierbar
 CharacterState/Group/Desc/4524030┃Du bist wegen des Trackers unanvisierbar.
+Skill/Code/ExpansionTip/4524000┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
+Skill/Code/ExpansionTip/4524002┃<i>Feste Abklingzeit: Wird nicht von Abklingzeitreduzierung beeinflusst.</i>
 Skill/Code/Desc/4512003┃Teleportiere in eine bestimmte Richtung.
 Skill/Code/Coef/4512003┃Teleportiere in eine bestimmte Richtung.
 Skill/Code/Desc/4513003┃Bei Aktivierung werden nahe Gegner werden um {3}% verlangsamt für {5} Sekunden.\n\n\n<color=#FFFFC2>Verbessert:</color>Richtet <color=white>{2}</color> Fähigkeitsschaden an Gegnern in {6}m Reichweite jede {4} Sekunden für {1} Sekunden.</color> 
@@ -20650,79 +20625,79 @@ ServerError/9450┃Das Team ist voll und kann keine weiteren Mitglieder akzeptie
 ServerError/9451┃Unionswettbewerb ist verfügbar für Spieler der Stufe 30 und höher.
 ServerError/9452┃Spiel finden ist für die Stufe dieses Teams nicht verfügbar. Bitte überpüfe den Zeitplan für jede Stufe.
 ServerError/99999┃Es wurde sich mit einer inkompatiblen Version verbunden.
-ServerError/SUCCESS┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
 ServerError/UNKNOWN┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
 ServerError/PARAMETER_TYPE_MISMATCH┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
 ServerError/PARAMETER_MISSED┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/PARAMETER_VALIDATION_FAILED┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
-ServerError/SESSION_HEADER_REQUIRED┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/UNAVAILABLE_REQUEST┃Der Server ist momentan in Wartung.
-ServerError/UNDER_MAINTENANCE┃Falsche Client Version
-ServerError/INVALID_SETUP┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/PARAMETER_VALIDATION_FAILED┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/SESSION_HEADER_REQUIRED┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
+ServerError/UNAVAILABLE_REQUEST┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/UNDER_MAINTENANCE┃Der Server ist momentan in Wartung.
+ServerError/INVALID_VERSION┃Falsche Client Version
 ServerError/MALFORMED_SESSION┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
-ServerError/ABNORMAL_ACCESS┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
-ServerError/SESSION_EXPIRED┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
-ServerError/USER_IDENTIFY_FAILED┃Der Name ist bereits vergeben.
-ServerError/UNAVAILABLE_NICKNAME┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
-ServerError/ADMIN_UNAUTHENTICATED┃Fehler mit der Verbindung zu Steam.
-ServerError/STEAM_AUTH_FAILED┃Dieses Konto ist eingeschränkt.
-ServerError/PERMANENT_BAN_USER┃Nickname existiert bereits.
-ServerError/CHAT_AUTH_FAILED┃Du kannst keinen neuen MS Account erstellen.
-ServerError/WEGAME_AUTH_FAILED┃Kann nicht entsprechenes Ergebnis finden.
-ServerError/NO_BATTLE_RESULT┃Fehlerhafte Spielinformation. (1201)
-ServerError/NOT_EXIST_GAME┃Fehlerhafte Wiederholungsinformation. (1202)
-ServerError/NOT_EXIST_REPLAY┃Du besitzt den ER-Pass bereits. (1203)
-ServerError/ALREADY_BATTLE_PASS_PAID┃Du hast keinen Zugriff auf diese Wiederholung.(1204)
-ServerError/ALREADY_FULL_GAME┃Match kann nicht gefunden werden. Bitte prüfe deinen ausgewählten Server.
-ServerError/OUT_OF_SERVICE_MATCHING_REGION┃Fehler bei übereinstimmender Anfrage.
-ServerError/MISS_MATCHING_PASS┃Ein Spieler erfüllt die Stufen- oder Charakteranforderungen nicht.
-ServerError/UNAVAILABLE_RANKING┃Das letzte Spiel wurde noch nicht beendet.
-ServerError/NO_BATTLE_HOST┃Ein Mitspieler hat noch nicht den Mindestlevel erreicht.
-ServerError/NOT_OPENED_CONTENT┃Spielsuche gerade nicht verfügbar. (1306)
-ServerError/NOT_ENOUGH_POOL_CHARACTERS┃Fehler bei dem Kauf.
-ServerError/IAP_INVALID_ORDER┃Steam-Informationsfehler.
-ServerError/IAP_STEAM_API_SERVER_BUSY┃Ungültige Produkt Informationen
-ServerError/IAP_KAKAO_API_SERVER_BUSY┃Held Information nicht gefunden.
-ServerError/LACK_OF_SPECIAL_MATTER┃Nicht ausreichend Währung.
-ServerError/LACK_OF_CURRENCY┃Nicht ausreichend NP
-ServerError/LACK_OF_NP┃Nicht ausreichend A-COIN.
-ServerError/LACK_OF_ITEM┃Produktinformationen nicht gefunden.
-ServerError/NO_PRODUCT_ID┃Produktinformationen nicht richtig.
-ServerError/INVALID_PROMOTION┃Anzahl der Käufe überschritten.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Tägliches Kauflimit überschritten.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Wöchentliche Kauflimit überschritten.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Monatliches Kauflimit überschritten.
-ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Rabatte für diesen Kauf sind bereits ausgelaufen.
-ServerError/UNABLE_PURCHASE_BY_SALE┃Anzahl der täglichen Käufe überschritten. (2127)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Anzahl der wöchentlichen Käufe überschritten. (2128)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Anzahl der monatlichen Käufe überschritten. (2129)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Kaufbegrenzung überschritten. (2130)
-ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Ungültige Preisinformation. (2131)
-ServerError/INVALID_PRODUCT_PRICE┃Nicht zum Kauf in deiner Region verfügbar. (2132)
-ServerError/TO_BE_UPDATED┃Du hast diesen Gegenstand schon gekauft. (2135)
-ServerError/ALREADY_BUY_SEQ┃Einkaufsbedingungen wurden nicht erfüllt. Kann nicht mit dem Kauf fortfahren.
-ServerError/INVALID_PURCHASE_CONDITION┃Du hast diesen Gegenstand schon gekauft. (2137)
-ServerError/ALREADY_BUY_PROMOTION┃Missions Information kann nicht gefunden werde.
-ServerError/INVALID_USER_MISSION┃Missions wechsel Error.
-ServerError/INVALID_CHANGE_MISSION┃Du kannst die Belohnung nicht erhalten solang die Mission nicht beendet wurde.
-ServerError/NOVICE_MISSION_EMPTY_CODES┃Ungültige Informationen.
-ServerError/NOT_EXIST_GIFT_MAIL┃Abgelaufen. Belohnung kann nicht eingelöst werden.
-ServerError/GIFT_MAIL_IS_EXPIRED┃Es konnte keine einlösbare Belohnung gefunden werden.
-ServerError/NOT_EXIST_EVENT_DATA┃Ein importierter Plan kann nicht geteilt werden.
-ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃Ein Plan, der noch nicht freigegeben wurde, kann nicht gelöscht werden.
-ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃Kein Plan zum verändern.
-ServerError/NOT_EXIST_WEAPON_ROUTE┃Plan existiert nicht.
+ServerError/ABNORMAL_ACCESS┃Ein Fehler ist aufgetreten. Starte das Spiel neu.
+ServerError/SESSION_EXPIRED┃Du musst dich neu anmelden. Das Spiel wird neugestartet.
+ServerError/USER_IDENTIFY_FAILED┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
+ServerError/UNAVAILABLE_NICKNAME┃Der Name ist bereits vergeben.
+ServerError/INVALID_MACHINE_NUM┃Du konntets nicht eingeloggt werden. Prüfe bitte deine Daten.
+ServerError/STEAM_AUTH_FAILED┃Fehler mit der Verbindung zu Steam.
+ServerError/BAN_USER┃Dieses Konto ist eingeschränkt.
+ServerError/ALREADY_HAVE_NICKNAME┃Nickname existiert bereits.
+ServerError/CAN_NOT_CREATE_MS_ACCOUNT┃Du kannst keinen neuen MS Account erstellen.
+ServerError/NO_BATTLE_RESULT┃Kann nicht entsprechenes Ergebnis finden.
+ServerError/NOT_EXIST_GAME┃Fehlerhafte Spielinformation. (1201)
+ServerError/NOT_EXIST_REPLAY┃Fehlerhafte Wiederholungsinformation. (1202)
+ServerError/ALREADY_BATTLE_PASS_PAID┃Du besitzt den ER-Pass bereits. (1203)
+ServerError/NOT_ALLOW_REPLAY_USER┃Du hast keinen Zugriff auf diese Wiederholung.(1204)
+ServerError/OUT_OF_SERVICE_MATCHING_REGION┃Match kann nicht gefunden werden. Bitte prüfe deinen ausgewählten Server.
+ServerError/MISS_MATCHING_PASS┃Fehler bei übereinstimmender Anfrage.
+ServerError/UNAVAILABLE_RANKING┃Ein Spieler erfüllt die Stufen- oder Charakteranforderungen nicht.
+ServerError/UNAVAILABLE_MATCHING_PRE_GAME_NOT_FINISHED┃Das letzte Spiel wurde noch nicht beendet.
+ServerError/NOT_OPENED_CONTENT┃Ein Mitspieler hat noch nicht den Mindestlevel erreicht.
+ServerError/CANNOT_MATCHING_NOT_IN_LOBBY_STATUS┃Spielsuche gerade nicht verfügbar. (1306)
+ServerError/IAP_INVALID_ORDER┃Fehler bei dem Kauf.
+ServerError/IAP_STEAM_API_SERVER_BUSY┃Steam-Informationsfehler.
+ServerError/IAP_KAKAO_API_SERVER_BUSY┃Ungültige Produkt Informationen
+ServerError/KAKAO_IAP_USE_CASH_API_FAIL┃Held Information nicht gefunden.
+ServerError/LACK_OF_CURRENCY┃Nicht ausreichend Währung.
+ServerError/LACK_OF_NP┃Nicht ausreichend NP
+ServerError/LACK_OF_ACOIN┃Nicht ausreichend A-COIN.
+ServerError/NO_PRODUCT_ID┃Produktinformationen nicht gefunden.
+ServerError/INVALID_PROMOTION┃Produktinformationen nicht richtig.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_JUSTONCE┃Anzahl der Käufe überschritten.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_DAY┃Tägliches Kauflimit überschritten.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_WEEK┃Wöchentliche Kauflimit überschritten.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_ONCE_A_MONTH┃Monatliches Kauflimit überschritten.
+ServerError/UNABLE_PURCHASE_BY_SALE┃Rabatte für diesen Kauf sind bereits ausgelaufen.
+ServerError/UNABLE_PURCHASE_BY_CONDITION_DAY┃Anzahl der täglichen Käufe überschritten. (2127)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_WEEK┃Anzahl der wöchentlichen Käufe überschritten. (2128)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_MONTH┃Anzahl der monatlichen Käufe überschritten. (2129)
+ServerError/UNABLE_PURCHASE_BY_CONDITION_LIMIT_AMOUNT┃Kaufbegrenzung überschritten. (2130)
+ServerError/INVALID_PRODUCT_PRICE┃Ungültige Preisinformation. (2131)
+ServerError/UNABLE_PURCHASE_BY_SPECIFIC_AREA┃Nicht zum Kauf in deiner Region verfügbar. (2132)
+ServerError/ALREADY_BUY_SEQ┃Du hast diesen Gegenstand schon gekauft. (2135)
+ServerError/INVALID_PURCHASE_CONDITION┃Einkaufsbedingungen wurden nicht erfüllt. Kann nicht mit dem Kauf fortfahren.
+ServerError/ALREADY_BUY_PROMOTION┃Du hast diesen Gegenstand schon gekauft. (2137)
+ServerError/INVALID_USER_MISSION┃Missions Information kann nicht gefunden werde.
+ServerError/INVALID_CHANGE_MISSION┃Missions wechsel Error.
+ServerError/INVALID_PROGRESS_COUNT┃Du kannst die Belohnung nicht erhalten solang die Mission nicht beendet wurde.
+ServerError/NOT_EXIST_GIFT_MAIL┃Ungültige Informationen.
+ServerError/GIFT_MAIL_IS_EXPIRED┃Abgelaufen. Belohnung kann nicht eingelöst werden.
+ServerError/NOT_EXIST_REWARD┃Es konnte keine einlösbare Belohnung gefunden werden.
+ServerError/ALREADY_RECOMMEND_WEAPON_ROUTE┃Ein importierter Plan kann nicht geteilt werden.
+ServerError/ALREADY_NOT_RECOMMEND_WEAPON_ROUTE┃Ein Plan, der noch nicht freigegeben wurde, kann nicht gelöscht werden.
+ServerError/NOT_EXIST_WEAPON_ROUTE┃Kein Plan zum verändern.
 ServerError/NOT_EXIST_RECOMMEND_WEAPON_ROUTE┃Plan existiert nicht.
-ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃Du kannst nicht deine eigenen Pläne importieren.
-ServerError/MY_SHARE_WEAPON_ROUTE┃Der gewählte Charakter kann nicht diesen Plan benutzen.
-ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃Kann nicht mehr gekauft werden.
-ServerError/INVALID_WEAPON_ROUTE_PATH┃Fehlerhafter Zugriff.
-ServerError/TRAIT_NOT_EXIST_PAGE┃Es sind keine leeren Seiten vorhanden.
-ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃Kann nicht mehr gekauft werden.
-ServerError/INVALID_TRAIT┃Kann nicht die Ranginformationen finden.
-ServerError/NOT_EXIST_RANKING_TIER┃Kann nicht die Rundenbelohnungen finden.
-ServerError/NOT_EXIST_RANKING_REWARD┃Kann Spielersuche nicht starten, weil zu große Rangunterschiede zwischen den Spielern ist.
-ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃Diamant oder höher eingestufte Spieler können nicht mehr als Team der Spielsuche beitreten
+ServerError/NOT_EXIST_INIT_WEAPON_ROUTE┃Plan existiert nicht.
+ServerError/MY_SHARE_WEAPON_ROUTE┃Du kannst nicht deine eigenen Pläne importieren.
+ServerError/NOT_EXIST_CHARACTER_WEAPON_ROUTE┃Der gewählte Charakter kann nicht diesen Plan benutzen.
+ServerError/ALREADY_MAX_PAID_COUNT┃Kann nicht mehr gekauft werden.
+ServerError/TRAIT_NOT_EXIST_PAGE┃Fehlerhafter Zugriff.
+ServerError/TRAIT_NOT_EXIST_EMPTY_PAGE┃Es sind keine leeren Seiten vorhanden.
+ServerError/TRAIT_MAX_PAGE┃Kann nicht mehr gekauft werden.
+ServerError/NOT_EXIST_RANKING_TIER┃Kann nicht die Ranginformationen finden.
+ServerError/NOT_EXIST_RANKING_REWARD┃Kann nicht die Rundenbelohnungen finden.
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT┃Kann Spielersuche nicht starten, weil zu große Rangunterschiede zwischen den Spielern ist.
+ServerError/PRE_MADE_TEAM_RANK_TIER_RESTRICT_GREATER_THAN_NOW┃Diamant oder höher eingestufte Spieler können nicht mehr als Team der Spielsuche beitreten
 ServerError/ALREADY_RECEIVED_DLC_PRODUCT┃Skin Information nicht gefunden.
 ServerError/INVALID_PRODUCT_ID┃Held bereits erworben.
 ServerError/ALREADY_MAX_FRIEND_RECEIVE_COUNT┃Freundschaftsanfragen sind Voll
@@ -23162,7 +23137,6 @@ ItemTag/Ex_ItemSkill┃Aktive Gegenstandsfähigkeit
 ItemTag/Ex_Dummy1┃Heilungsreduzierung
 ItemTag/Ex_Dummy2┃Utility
 ItemTag/Ex_Endure┃Regeneration
-전장보상재화부족┃Nicht genug Kampfzonen-Marker.
 Product/ResetTime/Week┃{0} W
 Product/ResetTime/Day┃{0} T
 Product/ResetTime/Hour┃{0} S
@@ -23235,24 +23209,6 @@ gameTip_Title_10160_1┃Level / Fähigkeiten
 gameTip_Desc_10160_1┃Nutze die Punkte, die du erhältst, um ein Level aufzusteigen und stärkere Fähigkeiten einzusetzen!\n\nWenn du ein bestimmtes Level der Meisterung erreichst, steigt das „Level“ des Testobjekts. Mit steigendem Level steigen auch die Werte. Erhalte Fähigkeitspunkte, um noch stärkere Fähigkeiten einzusetzen.\n\nSteigere dein Level und werde so stark wie du kannst!
 gameTip_Title_10170_1┃Augmentierungen
 gameTip_Desc_10170_1┃Du kannst deinen Testobjekten neue Fähigkeiten und Verstärkungen hinzufügen, indem du Augmentierungen auswählst.\n\nAugmentierungen bieten mehr Vielfalt und Optionen. Zum Beispiel erhöht die Verwendung von Verstärkungs-Augmentierungen die Verteidigung und verringert den Schaden. Wenn du Unterstützungs-Augmentierungen verwendest, kannst du vielleicht deinen Teamkameraden helfen und sie zum Sieg führen!\n\nDu weißt nicht, welche Augmentierungen für deine Testobjekte besser geeignet sind? Schau sie dir im <color=#8FDBF8>[Ausrüstung → Augmentierung]</color> an!
-gameTip_Title_10200_1┃Kampfzonen
-gameTip_Desc_10200_1┃Kampfzonen sind spezielle Bereiche, die eigens für den Kampf geschaffen wurden. Ihr Zweck ist es, Daten über Testobjekte zu sammeln, die sich in diesen extremen Umgebungen aufhalten.\n\nJede Kampfzone hat eine besondere Umgebung. Manche können das Lauftempo erhöhen, andere das Omnisyphon, und wieder andere laden den Schild auf.\n\nDer Gewinner erhält <color=#8FDBF8>spezielle Belohnungen</color>, die nur in der Kampfzone zu finden sind.
-gameTip_Title_10200_2┃Auswahl der Kampfzonen
-gameTip_Desc_10200_2┃Alle vorhergesagten Standorte der Sperrgebiete von Tag 2 werden als <color=#8FDBF8>Kampfzonenstandorte</color> ausgewählt.\n\nDer Ort der <color=#8FDBF8>Kampfzone</color> wird in der Nacht 2 bestimmt.\n\nDie Art der Kampfzone kann über die Kampfzonenmarkierung auf der Karte „Standort der Sicherheitskonsole“ überprüft werden.
-gameTip_Title_10200_3┃Wie man an Kampfzonen teilnimmt
-gameTip_Desc_10200_3┃Wenn die Kampfzone beginnt, werden die Testobjekte in der Umgebung zu Teilnehmern der Kampfzone.\n\nWenn Teilnehmer in der Kampfzone sterben, werden sie nach einer kurzen Zeit außerhalb wiederbelebt.\n\nDu kannst jedoch nicht mehr an der Kampfzone teilnehmen, wenn du wiederbelebt wurdest, also sei vorsichtig!\n\nWenn ein Testobjekt die Kampfzone betritt oder verlässt, stirbt es <color=#8FDBF8>sofort</color> und kann nicht wiederbelebt werden.
-gameTip_Title_10200_4┃Kampfzonen-Belohnungen
-gameTip_Desc_10200_4┃Das siegreiche Team in der Kampfzone kann Belohnungen wie spezielle Materialien oder Upgrade-Kits für taktische Fähigkeiten entweder im HUD oder an der Sicherheitskonsole erhalten.\n\nJe mehr Teilnehmer an der Kampfzone teilnehmen, desto besser sind die Belohnungen!\n\nDie Belohnungen der Kampfzone können nur <color=#8FDBF8>einmal pro Team</color> erworben werden, also wähle mit Bedacht!
-gameTip_Title_10210_1┃Kampfzonen-System
-gameTip_Desc_10210_1┃Die Kampfzone besteht aus den folgenden vier Systemen:\n\nKampfzonen-Kit / Kampfzonen-Markierung / Korrosionsleiste / Kampfzonen-Shuttle\n\nJedes System ist systematisch miteinander verbunden
-gameTip_Title_10210_2┃Kampfzonen-Kit
-gameTip_Desc_10210_2┃Wenn ein Testobjekt an der Kampfzone teilnimmt und ein Kampfzonen-Kit besitzt, erhält es einen <color=#8FDBF8>"Schnelle Rekonstruktion"-Buff</color> und eine <color=#8FDBF8>Kampfzonen-Markierung</color>.\n\nEin Testobjekt mit dem Stärkungszauber „Schnelle Rekonstruktion“ wird nach kurzer Zeit wiederbelebt, wenn es stirbt.\n\nDas Kampfzonen-Kit wird bei Testobjekten, die in der Kampfzone gewonnen haben, dauerhaft entfernt.
-gameTip_Title_10210_3┃Kampfzonen-Markierung
-gameTip_Desc_10210_3┃Die Kampfzonen-Markierung symbolisiert die einzigartige Umgebung und verleiht den Teilnehmern besondere Effekte.\n\nWenn ein Teilnehmer stirbt, kann das Battle Zone Mark wiedergefunden und als Währung für das Siegerteam verwendet werden, um Belohnungen zu kaufen.\n\nWenn es kein Siegerteam gibt, werden die wiedergewonnenen Kampfzonenmarkierungen dauerhaft entfernt.
-gameTip_Title_10210_4┃Korrosionsleiste
-gameTip_Desc_10210_4┃In der Kampfzone sammelt sich die <color=#8FDBF8>Korrosionsleiste</color> an, um die Fähigkeiten der Testobjekte zu stärken.\n\nTestobjekte, die ihre Korrosionsleiste voll ausgeschöpft haben, sterben nach einer bestimmten Zeitspanne.\n\nDie Korrosionsleiste kann wiederhergestellt werden, indem man sich in Reichweite eines Kampfzonen-Shuttles aufhält oder andere Testobjekte tötet.
-gameTip_Title_10210_5┃Kampfzonen-Shuttle
-gameTip_Desc_10210_5┃Das Kampfzonen-Shuttle fährt eine bestimmte Route in der Kampfzone ab und stellt Korrosionsleisten wieder her.\n\nWenn nur Verbündete in der Nähe sind, wird die Korrosionsleiste kontinuierlich wiederhergestellt.\n\nKämpfe um das Shuttle herum!
 gameTip_Title_10220_1┃Taktische Fähigkeiten
 gameTip_Desc_10220_1┃Taktische Fähigkeiten sind im Spiel entscheidend, daher ist es wichtig, sie je nach Team, Gegnerauswahl und dem Stil des eigenen Testobjekts klug auszuwählen und einzusetzen. Viel Spaß beim Strategieren und Genießen einer Vielzahl von taktischen Fähigkeiten!\n\n*Du kannst <color=#8FDBF8>taktische Fähigkeiten verbessern</color>, indem du Credits ausgibst. Level 2 Upgrades erfordern <color=#8FDBF8>spezielle Materialien</color>.
 gameTip_Desc_10230_1┃Du weißt nicht, was du tun sollst?\n\nFolge einfach einem Operator, der dich beraten kann.\nSie wird dir den richtigen Weg für deine Situation zeigen.\n\nDu kannst sie in den [Einstellungen] ein- und ausschalten, und du kannst in den [Benutzerdefiniertes Spiel]-Voreinstellungen die Art der Führung auswählen, die du möchtest.
@@ -23368,7 +23324,6 @@ gameTip_category_SecretLab┃Geheimlabor
 gameTip_category_VictoryAndDefeat┃Sieg und Niederlage
 gameTip_category_UseCredits┃Benutze Credits
 gameTip_category_BeginnerTips┃Beginner-Tipps
-gameTip_category_BattleZone┃Kampfzone
 gameTip_category_Escape┃Flucht
 gameTip_category_CobaltProtocol┃Cobalt Protocol
 gameTip_category_Rift┃Riss
@@ -23597,8 +23552,6 @@ OperatorSetting/BossMonster┃Infos zu Alpha/Omega/Wickeline
 OperatorSetting/CreateNoticeSpecialCollectible┃Infos zu Baum des Lebens und Meteoriten
 상위 등급 장비 제작┃Seltene Ausrüstung herstellen
 OperatorSetting/GetSpecialCollectible┃Lerne, wie du noch stärkere Ausrüstung mit seltenen Spezialmaterialien herstellst.
-전장┃Kampfzonen
-OperatorSetting/BattleZone┃Erfahre mehr über Gefechte in Kampfzonen
 탈출┃Flucht
 OperatorSetting/Escape┃Lerne, wie du als letzter Überlebender des Teams noch fliehen kannst.
 전송 콘솔┃Kiosks
@@ -23629,7 +23582,7 @@ OperatorSetting/VerticalLauncher┃Finde über das Vertical Launch System (VLS) 
 안내 로봇 유료 부활 대상자┃Lumis Bezahlte Wiederbelebung
 OperatorSetting/GuidedRobotPaidResurrection┃Informiert dich, sobald du in Lumi's Laden Wiederbelebungen kaufen kannst, nachdem bezahlbare Wiederbelebungen deaktiviert wurden.
 균열 가이드┃Riss
-OperatorSetting/RiftGuide┃Erfahre mehr über Dimensionsrisse und Warps
+OperatorSetting/RiftGuide┃Erfahre mehr über Dimensionsrisse.
 대체아이템동적추천┃Alternative Gegenstandsempfehlungen
 OperatorSetting/NavAltRecItem┃Kündigt alternative Gegenstände an die du herstellen kannst wenn du ein spezielles Material gesammelt hast, welches nicht dein Zielgegenstand ist.
 루트 목표 추가 불가능 알림┃Du kannst keine weiteren Items zu deinem Plan hinzufügen.
@@ -23677,8 +23630,6 @@ InGameGuide/Nadja/Group/Name/10103000┃Baum des Lebens ist gespawnt
 InGameGuide/Nadja/Group/Desc/10103000┃Ein Baum des Lebens ist in <color=yellow>{0}</color> gespawnt.\nSchnapp ihn dir.
 InGameGuide/Nadja/Group/Name/10110000┃Seltene Gegenstände herstellen
 InGameGuide/Nadja/Group/Desc/10110000┃Du hast seltene Materialien gefunden. Wie wäre es damit stärkere Ausrüstung herzustellen? \nLinks-click um Items anzuvisieren.
-InGameGuide/Nadja/Group/Name/10120000┃Kampfzonen
-InGameGuide/Nadja/Group/Desc/10120000┃In <color=yellow>{0}</color> wird bald eine Kampfzone erscheinen.\nDu kannst eine Belohnung erhalten, wenn du der letzte Überlebende in der Kampfzone bist.
 InGameGuide/Nadja/Group/Name/10130000┃Omega spawnt bald
 InGameGuide/Nadja/Group/Desc/10130000┃Omega wird bald in <color=yellow>{0}</color> spawnen.
 InGameGuide/Nadja/Group/Name/10133000┃Omega ist eingetroffen
@@ -23789,12 +23740,6 @@ InGameGuide/Nadja/Group/Name/10331100┃Rift - Dimensionsriss
 InGameGuide/Nadja/Group/Desc/10331100┃Glückwunsch zum Sieg.\nVergiss nicht, deine Belohnung einzusammeln.
 InGameGuide/Nadja/Group/Name/10340000┃Alternative Gegenstandsempfehlungen
 InGameGuide/Nadja/Group/Desc/10340000┃Du hast ein spezielles Material gesammelt.\nDas ist nicht eines deiner Zielgegenstände. Gebe es zu einem Verbündeten oder prüfe welche alternativen Gegenstände du herstellen kannst.
-InGameGuide/Nadja/Group/Name/10121000┃Kampfzonen-Gebiet
-InGameGuide/Nadja/Group/Desc/10121000┃Bald wird eine Kampfzone zugewiesen.\nJe mehr Feinde du ausschaltest, desto mehr Belohnungen bekommst du, wenn du gewinnst.
-InGameGuide/Nadja/Group/Name/10122000┃Kampfzonen-Aktivierung
-InGameGuide/Nadja/Group/Desc/10122000┃Eine Kampfzone wurde aktiviert. Niemand kann die Zone verlassen, bis ein Gewinner feststeht.
-InGameGuide/Nadja/Group/Name/10123000┃Kampfzonen-Belohnungen
-InGameGuide/Nadja/Group/Desc/10123000┃Wie ich sehe, bist du der Gewinner der Kampfzone.\nHier ist deine Belohnung!
 오퍼레이터 신규유저 보상 제목┃Für unser neues Testobjekt
 오퍼레이터 신규유저 보상 내용┃Es war sicher nicht leicht, sich ans Inselleben zu gewöhnen, aber es sieht so aus, als ob du jetzt bereit wärst.\nAuch wenn ich dich nicht mehr meinen Schüler nennen kann, freue ich mich irgendwie für dich.\nDanke, dass du dein Bestes gegeben hast. Es hat mir sehr viel Spaß gemacht.\nIch bin mir nicht sicher, ob ich das als Geschenk oder als Belohnung bezeichnen soll, aber hier... genieße es!
 오퍼레이터 기존유저 보상 제목┃Für dich, erfahrenes Testobjekt
