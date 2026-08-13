@@ -2033,6 +2033,9 @@ subMenu/Mileage/BattlePass┃任务书
 SubMenu/Guide┃游戏指南
 subMenu/Archive/Main┃主线
 subMenu/Archive/Event┃活动
+Archive/CharacterSortByCode┃按实验体代码排序
+Archive/CharacterSortByDescend┃按解析率降序
+Archive/CharacterSortByAscend┃按解析率升序
 subMenu/Archive/Character┃观察日志
 LackOfAnalysisRate┃需要{0}%解析率
 Character/Overview┃概要
@@ -2411,8 +2414,6 @@ AutoResurrectionAfterDown_explanation┃在防止队伍全灭时间后，使敌�
 AutoResurrectionTeamWiped_explanation┃在触发溃灭或关键时刻时，若全灭队伍中有敌人在全灭保护期间进入濒死状态时，则可获得对应的分数。
 랭크보상수령조건안내┃需要进行一定次数以上的对局，才能领取赛季排位奖励。\n逃跑的游戏将不计入对局次数。
 랭크보상수령조건┃排位奖励领取条件 : {2}{0}/{1}</color>
-랭크보상수령조건달성┃<color=#00E300>已达成段位奖励领取条件</color>
-랭크보상수령조건미달성┃<color=#FF4B4C>未达成段位奖励领取条件</color>
 유예포인트┃宽限点数 : {0}
 휴면강등적용티어의유예포인트설명┃每场对局可以获得{0}个宽限点数。（上限 : {1}点）\n{2}天以上不玩游戏时，每{3}天扣除{4}点。\n当宽限点数变为0时，从次日起每日扣除{5}RP。
 DecayWarning/PopupContents┃宽限点数即将到期或已到期。\n开始休眠降级时，RP将会下降并有段位降级可能。
@@ -10594,7 +10595,7 @@ Product/Name/EP_S17_Splash Token┃逐浪代币 x 10
 Product/Name/EP_S18_Matsuri Token┃花火大会代币 x 10
 Product/Name/EP_S19_Royal Token┃命运筹码 x 10
 Product/Name/EP_S20_PetitMignon Token┃萌仆降临代币 x 10
-Product/Name/EP_S21_Sailing_Token┃夏日启航 x 10
+Product/Name/EP_S21_Sailing_Token┃夏日启航代币 x 10
 Product/Name/MILEAGE_EXCHANGE_COLLECTIBLE_9901031┃交换碎片
 Product/Name/MILEAGE_SEASON_COLLECTION_PACK_9901032┃赛季碎片包 x 10
 Shop/Desc/EP_TOKEN_1000┃可购买EP代币专用商品的货币。
@@ -11115,7 +11116,7 @@ Goods/Name/1504072┃可爱符
 Goods/Name/1504073┃松鼠女仆
 Goods/Name/1504074┃被压扁的贝尔马卡龙
 Goods/Name/1504075┃碧波斩浪 雪琳的章鱼
-Goods/Name/1504076┃（水属性）妮娅的胜利
+Goods/Name/1504076┃妮娅（水属性）的胜利
 Goods/Name/1504077┃海色琉光 塔齐娅的玻璃刃
 Goods/Name/1503046┃艾登 问题解决
 Goods/Name/1503047┃纳塔朋 慌张
@@ -13339,19 +13340,19 @@ CharacterState/Group/Desc/4117000┃移动速度降低了。
 CharacterState/Group/Name/4117010┃衰弱 - 造成伤害降低
 CharacterState/Group/Desc/4117010┃造成伤害降低了。
 Skill/Group/Name/4118000┃光之翼
-Skill/Group/LobbyDesc/4118000┃使用时，移除自身承受的移动速度降低效果，并在一定时间内提升移动速度与攻击速度。普攻命中敌方实验体时，降低目标移动速度。\n\n<color=#ff3399>强化效果：</color>普攻命中敌方实验体时，增加持续时间。
-Skill/Group/LobbyDesc/4528000┃使用时，移除自身承受的移动速度降低效果，并在一定时间内提升移动速度与攻击速度。普攻命中敌方实验体时，降低目标移动速度。\n\n<color=#ff3399>强化效果：</color>普攻命中敌方实验体时，增加持续时间。
-Skill/Code/Desc/4118001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
-Skill/Code/Coef/4118001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
+Skill/Group/LobbyDesc/4118000┃使用时，移除自身承受的移动速度降低效果，并在一定时间内提升移动速度与攻击速度。\n\n<color=#ff3399>强化效果：</color>普攻命中敌方实验体时，增加持续时间。
+Skill/Group/LobbyDesc/4528000┃使用时，移除自身承受的移动速度降低效果，并在一定时间内提升移动速度与攻击速度。\n\n<color=#ff3399>强化效果：</color>普攻命中敌方实验体时，增加持续时间。
+Skill/Code/Desc/4118001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
+Skill/Code/Coef/4118001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
 Skill/Code/ExpansionTip/4118001┃<i>强化至2级需要使用<color=#b245ff>战术强化组件</color>。</i>\n<i>冷却固定 : 此技能不受冷却缩减影响。</i>
-Skill/Code/Desc/4118002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
-Skill/Code/Coef/4118002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#FFFFC2>组件强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
+Skill/Code/Desc/4118002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#B4B73E>组件强化：</color><color=#9C9C9C>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
+Skill/Code/Coef/4118002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#FFFFC2>组件强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。</color>
 Skill/Code/ExpansionTip/4118002┃<i>冷却固定 : 此技能不受冷却缩减影响。</i>
-Skill/Code/Desc/4528001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
-Skill/Code/Coef/4528001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。\n
+Skill/Code/Desc/4528001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
+Skill/Code/Coef/4528001┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。\n
 Skill/Code/ExpansionTip/4528001┃<i>冷却固定: 此技能不受冷却缩减影响。</i>
-Skill/Code/Desc/4528002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
-Skill/Code/Coef/4528002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n普攻命中敌方实验体时，目标{5}秒内的移动速度降低{6}。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
+Skill/Code/Desc/4528002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
+Skill/Code/Coef/4528002┃使用时，移除自身承受的移动速度降低效果，{0}秒内移动速度增加<color=white>{1}</color><color=green>(+实验体等级*{7})</color><color=white>%</color>、攻击速度增加<color=white>{2}</color>。\n\n<color=#FFFFC2>完成强化：</color>普攻命中敌方实验体时，持续时间增加{3}秒。
 Skill/Code/ExpansionTip/4528002┃<i>冷却固定: 此技能不受冷却缩减影响。</i>
 CharacterState/Group/Name/4118000┃光之翼 - 增加移动速度&攻击速度
 CharacterState/Group/Desc/4118000┃移动速度和攻击速度提升了。
@@ -15611,6 +15612,7 @@ Skill/Group/Name/1005500┃跋尔伽婆
 Skill/LobbyDesc/1005100┃技能命中敌人时对他们标记「死神之目」。\n开启「死神之目」不仅可以获得对方的视野，还可以提高扎希尔的移动速度，其各技能命中敌人时，还会对敌人造成额外效果与额外技能伤害。
 Skill/Group/Desc/1005100┃当扎希尔对敌人使用技能时，赋予敌人持续{5}秒的「死神之目」标识并获得目标的视野，同时扎希尔的移动速度增加{0}，并在{6}秒间逐渐减少。\n\n当使用技能命中带有「死神之目」标识的敌人时，对敌人造成<color=white>{8}</color>的技能伤害，消耗「死神之目」的同时，该技能也将适用「死神之目」效果。
 Skill/Group/Coef/1005100┃当扎希尔对敌人使用技能时，赋予敌人可维持{5}秒的「死神之目」标识并获得目标的视野，同时扎希尔的移动速度增加{0}，并在{6}秒间逐渐减少。\n\n当使用技能命中带有「死神之目」标识的敌人时，对敌人造成<color=white>{1}</color><color=#DDA0DD>(+技能增幅的{7})</color>的技能伤害，消耗「死神之目」的同时，该技能也将适用「死神之目」效果。
+Skill/Group/ExpansionTip/1005100┃<i>造成持续伤害的独立技能每{0}秒适用一次判定。</i>
 Skill/LobbyDesc/1005200┃扎希尔借助神力，在一定范围内对敌人造成伤害。\n\n死神之目效果 : 增加伤害量。 
 Skill/Group/Desc/1005200┃扎希尔借助神力，在一定范围内造成<color=white>{9}</color>的技能伤害。\n<color=#ffffC2>死神之目效果 : </color> 造成<color=white>{10}</color>强化的伤害。
 Skill/Group/Coef/1005200┃扎希尔借助神力，在一定范围内造成<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{7})</color>的技能伤害。\n<color=#ffffC2>死神之目效果 : </color>造成<color=white>{2}</color><color=#DDA0DD>(+技能增幅的{8})</color>强化的技能伤害。
@@ -16261,7 +16263,6 @@ Skill/Group/Name/1023500┃急诊手术
 Skill/LobbyDesc/1023100┃凯希对敌人造成技能伤害时，将赋予敌人持续一段时间造成伤害的外伤。\n当外伤累积至3叠层时，可在长时间形成致命外伤状态，给敌人造成更大伤害。处于致命外伤状态的敌人所受的治愈效果减少。\n\n赋予敌人致命外伤时，一段时间内形成可抵御伤害的护盾。在持有护盾的情况下，移向处于外伤或者致命外伤状态的敌人时，会增加移动速度后逐渐减少。
 Skill/Group/Desc/1023100┃凯希对敌人造成技能伤害时，{0}秒间赋予造成<color=white>{1}</color>真实伤害的外伤。当一共累积{5}个外伤叠层时，可在{6}秒间形成致命外伤，造成<color=white>{8}</color><color=#688A08>(+体力上限 {7})</color>的真实伤害。处于致命外伤状态的敌人治愈效果减少{16}。\n\n赋予敌人致命外伤时，{9}秒间形成可抵御<color=white>{10}</color>伤害的护盾。在持有护盾的情况下，移向处于外伤或者致命外伤状态的敌人时，移动速度增加{12}后逐渐减少。
 Skill/Group/Coef/1023100┃凯希对敌人造成技能伤害时，{0}秒间赋予造成<color=#DDA0DD>技能增幅的{13}</color>真实伤害的外伤。当一共累积{5}个外伤叠层时，可在{6}秒间形成致命外伤状态，造成体力上限<color=white>{7}</color><color=#DDA0DD>(+技能增幅的{14})</color>的真实伤害。处于致命外伤状态的敌人治愈效果减少{16}。\n\n赋予敌人致命外伤时，{9}秒间形成可抵御<color=white>{10}</color><color=#DDA0DD>(+技能增幅的{15})</color>伤害的护盾。在持有护盾的情况下，移向处于外伤或者致命外伤状态的敌人时，移动速度增加{12}后逐渐减少。
-Skill/Group/ExpansionTip/1023100┃<i></i>
 Skill/LobbyDesc/1023200┃<color=green>被动</color>: 使用技能后，凯希的下一个普攻将造成技能伤害。\n\n凯希快速冲向指定方向，所有被冲撞的敌人承受技能伤害。 \n当凯希使敌人陷入致命外伤状态时，减少动脉切开术的冷却。
 Skill/Group/Desc/1023200┃<color=green>被动</color> : 使用技能后，凯希的下一个普攻造成<color=white>{2}</color>的额外技能伤害。\n\n凯希快速冲向指定方向，对所有冲撞的敌人造成<color=white>{0}</color>技能伤害。\n当凯希使敌人陷入致命外伤状态时，动脉切开术的冷却减少{4}。
 Skill/Group/Coef/1023200┃<color=green>被动</color>: 使用技能后，凯希的下一个普攻造成<color=#DDA0DD>技能增幅的{2}</color>的额外技能伤害。\n\n凯希快速冲向指定方向，所有被冲撞的敌人承受<color=white>{0}</color><color=#DDA0DD>(+技能增幅的{5})</color>技能伤害。\n当凯希使敌人陷入致命外伤状态时，减少动脉切开术的冷却{4}。
@@ -18193,7 +18194,7 @@ Skill/LobbyDesc/1058300┃海因茨向后退一步并向前方发射霰弹炮，
 Skill/Group/Desc/1058300┃海因茨向后退一步并向前方发射霰弹炮，给命中的敌人造成 <color=white>{0}</color>技能伤害并使其晕厥{1}秒。\n\n在<color=white>冲锋枪</color> 或 <color=white>火箭发射器</color>期间使用，解除武器模式的同时对应技能的冷却时间缩减{2}。
 Skill/Group/Coef/1058300┃海因茨向后退一步并向前方发射霰弹炮，给命中的敌人造成<color=white>{20}</color><color=#dda0dd>(+技能增幅的{22})</color>技能伤害并使其晕厥{1}秒。\n\n在<color=white>冲锋枪</color> 或 <color=white>火箭发射器</color>期间使用，将解除武器模式并缩减对应技能的冷却时间{2} 。
 Skill/Group/ExpansionTip/1058300┃<i>此技能无法穿越墙壁。</i>\n<i>使用<color=white>霰弹炮</color>，将解除之前使用的武器。</i>
-Skill/LobbyDesc/1058400┃<color=white>转换冲锋枪模式</color>:  稍微向前突进，在持续时间内转换为40发弹匣的冲锋枪模式。\n\n在使用冲锋枪期间可以边移动边发起攻击并根据攻击指令变换攻击目标。每次攻击在短时间内造成技能伤害，每5发子弹普攻命中时适用该效果。模式持续期间制作、采集等部分行动有所限制，<color=white>40mm 手榴弹</color> 将转换为 <color=white>冲锋枪连发</color> 技能。\n\n冲锋枪模式结束后，根据剩余的弹药比例缩减冷却时间。
+Skill/LobbyDesc/1058400┃<color=white>转换冲锋枪模式</color>:  稍微向前突进，在持续时间内转换为40发弹匣的冲锋枪模式。\n\n在使用冲锋枪期间可以边移动边发起攻击并根据攻击指令变换攻击目标。每次攻击在短时间内造成技能伤害，且每消耗一定数量的子弹，会触发一次基本攻击命中效果。维持该形态期间，制作、采集等部分行动有所限制，<color=white>40mm 手榴弹</color> 将转换为 <color=white>冲锋枪连发</color> 技能。\n\n冲锋枪模式结束后，根据剩余的弹药比例缩减冷却时间。
 Skill/Group/Desc/1058400┃<color=white>转换冲锋枪模式</color>: 稍微向前突进，转换为{0}发弹匣的冲锋枪模式，持续{8}秒。\n\n在使用冲锋枪期间可以边移动边发起攻击，并根据攻击指令变换攻击目标。每次攻击造成<color=white>{1}</color><color=#DDA0DD>(每{22}技能增幅+1)</color>技能伤害，每{5}发子弹普攻命中时适用该效果。模式持续期间将会限制制作、采集等部分行动，<color=white>40mm 手榴弹</color>将转换为<color=white>冲锋枪连发</color>技能。\n\n冲锋枪模式结束后，根据剩余的弹药比例最多可缩减{6}冷却时间。
 Skill/Group/Coef/1058400┃<color=white>转换冲锋枪模式</color>: 稍微向前突进，转换为{0}发弹匣的冲锋枪模式，持续{8}秒。\n\n在使用冲锋枪期间可以边移动边发起攻击并根据攻击指令变换攻击目标。每次攻击造成<color=white>{20}</color><color=#DDA0DD>(+每{22}技能增幅加1)</color>技能伤害，每{5}发子弹普攻命中时适用该效果。模式持续期间制作、采集等部分行动有所限制，<color=white>40mm 手榴弹</color>将转换为<color=white>冲锋枪连发</color>技能。\n\n冲锋枪模式结束后，根据剩余的弹药比例最多可缩减{6}冷却时间。
 Skill/Group/Desc/1058410┃海因茨丢掉冲锋枪，从武器箱中拿出突击步枪。\n\n当前每击伤害量 : {20}<color=#DDA0DD>(+每{22}技能增幅加1)</color>
@@ -23348,7 +23349,7 @@ CharacterStoryTitle/23┃鲜血和尸体对我来说就是家常便饭。
 CharacterStoryDesc/23┃她是一位多愁善感的乡村医生。\n因为感性和天生的善良让她过分关心患者。\n也是出于这种原因，她在工作的医院惹出了麻烦并因此被解雇。\n\n现在她靠着当地居民的支持经营着一家免费诊所，勉强糊口度日。\n尽管处境困难，凯希仍在思考如何更好地照顾病人。\n\n但村里的人在患重病的时候，还是会前往大医院看病。\n虽然大家都知道凯希很有实力、人也很好，但总觉得她有点怪异。\n人们纳闷，她照顾的病人，为何康复都如此缓慢呢？
 CharacterStoryName/24┃阿德拉・格罗
 CharacterStoryAge/24┃25岁
-CharacterStoryHeight/24┃167 cm
+CharacterStoryHeight/24┃167cm
 CharacterStoryGender/24┃女
 CharacterStoryTitle/24┃不要做无谓的挣扎了，我赢定了
 CharacterStoryDesc/24┃她是国际象棋世界冠军。\n她的面前只有胜利；她的字典里完全不存在「失败」这个词。\n她习惯于事事先发制人。\n胜利对她来说，不过是理所当然的事。\n\n通常她的动作很迟缓，有时候这让其他人觉得她很沉闷。\n但棋局一旦开始她立刻全神贯注，好像平常迟钝的她都是装出来的。\n\n她享受思考的过程，而且当自己采用缜密的战略、果敢的决策赢得棋局时，她会极其兴奋。
@@ -26977,7 +26978,6 @@ Skin/Name/1087001┃怦然心动 卡洛琳
 Skin/Name/1088000┃鼻荆
 Skin/Name/1089000┃克雷弗
 Skin/Name/1090000┃露西娅
-Skin/Name/1091000┃塞莉丝
 Skin/OnSelectVO/1001003┃规则就是用来打破的，不是吗？
 Skin/OnSelectVO/1002002┃烟花庆典要开始了！
 Skin/OnSelectVO/1007005┃让我们来做点有趣的事吧！
@@ -35226,7 +35226,7 @@ Prompt_20000402_01_151┃龙卷风以骇人的气势吞没了游艇...
 Prompt_20000402_01_152┃游艇上的所有人，都被卷上了天空。
 Prompt_20000402_01_153┃呜哇啊啊~~！
 Prompt_20000402_01_154┃眼、眼睛在转圈圈了...
-Prompt_20000402_01_155┃下集，妮娅，阵亡。
+Prompt_20000402_01_155┃下集，妮娅之死。
 Prompt_20000402_01_156┃大家，保持清醒！
 Prompt_20000402_01_157┃啊...！
 Prompt_20000402_01_158┃塔齐娅的目光，落在了独自坠落的希瑟拉身上。
