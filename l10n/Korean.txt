@@ -2035,6 +2035,9 @@ subMenu/Mileage/BattlePass┃퀘스트 북
 SubMenu/Guide┃게임팁
 subMenu/Archive/Main┃메인
 subMenu/Archive/Event┃이벤트
+Archive/CharacterSortByCode┃실험체 코드순
+Archive/CharacterSortByDescend┃분석률 내림차순
+Archive/CharacterSortByAscend┃분석률 오름차순
 subMenu/Archive/Character┃관찰일지
 LackOfAnalysisRate┃분석률 {0}% 필요
 Character/Overview┃분석 개요
@@ -2413,8 +2416,6 @@ AutoResurrectionAfterDown_explanation┃전멸 패배 방지 시기 이후에 �
 AutoResurrectionTeamWiped_explanation┃브레이크/클러치 발동 시 전멸 당한 팀원 중 전멸 패배 방지 시기에 빈사 상태가 된 적이 있을 경우, 획득하는 점수입니다
 랭크보상수령조건안내┃랭크 보상을 수령하시기 위해선, 일정 횟수 이상의 랭크 게임 플레이가 필요합니다.\n탈주한 게임은 플레이 횟수에서 제외됩니다
 랭크보상수령조건┃랭크 보상 수령 조건: {2}{0}/{1}</color>
-랭크보상수령조건달성┃<color=#00E300>랭크 보상 수령 조건 달성</color>
-랭크보상수령조건미달성┃<color=#FF4B4C>랭크 보상 수령 조건 미달성</color>
 유예포인트┃유예 포인트: {0}
 휴면강등적용티어의유예포인트설명┃유예 포인트는 게임 당 {0}포인트 씩 적립됩니다.(최대 {1}포인트)\n {2}일 이상 플레이하지 않은 경우 {3}일마다 {4}포인트씩 차감됩니다.\n유예 포인트가 0이 되면, 그 다음 날부터 매일 RP가 {5} 포인트씩 차감됩니다.
 DecayWarning/PopupContents┃유예 포인트가 곧 소멸하거나 이미 소멸한 상태입니다.\n휴면 강등이 시작되면, RP가 감소하며 티어가 강등될 수 있습니다.
@@ -13373,19 +13374,19 @@ CharacterState/Group/Desc/4117000┃이동 속도가 감소했습니다.
 CharacterState/Group/Name/4117010┃쇠약 - 입히는 피해 감소
 CharacterState/Group/Desc/4117010┃입히는 피해가 감소했습니다.
 Skill/Group/Name/4118000┃라이트 윙
-Skill/Group/LobbyDesc/4118000┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 일정 시간 동안 이동 속도와 공격 속도가 증가합니다. 적 실험체에게 기본 공격 적중 시 이동 속도가 감소합니다.\n\n<color=#ff3399>강화 시:</color> 적 실험체에게 기본 공격 적중 시 지속 시간이 증가합니다.
-Skill/Group/LobbyDesc/4528000┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 일정 시간 동안 이동 속도와 공격 속도가 증가합니다. 적 실험체에게 기본 공격 적중 시 이동 속도가 감소합니다.\n\n<color=#ff3399>강화 시:</color> 적 실험체에게 기본 공격 적중 시 지속 시간이 증가합니다.
-Skill/Code/Desc/4118001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
-Skill/Code/Coef/4118001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
+Skill/Group/LobbyDesc/4118000┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 일정 시간 동안 이동 속도와 공격 속도가 증가합니다.\n\n<color=#ff3399>강화 시:</color> 적 실험체에게 기본 공격 적중 시 지속 시간이 증가합니다.
+Skill/Group/LobbyDesc/4528000┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 일정 시간 동안 이동 속도와 공격 속도가 증가합니다.\n\n<color=#ff3399>강화 시:</color> 적 실험체에게 기본 공격 적중 시 지속 시간이 증가합니다.
+Skill/Code/Desc/4118001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
+Skill/Code/Coef/4118001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
 Skill/Code/ExpansionTip/4118001┃<i>2레벨 강화는 <color=#b245ff>전술 강화 모듈</color>을 소모합니다.</i>\n<i>쿨다운 고정: 쿨다운 감소 스탯의 영향을 받지 않습니다.</i>
-Skill/Code/Desc/4118002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
-Skill/Code/Coef/4118002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#FFFFC2>모듈 강화: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
+Skill/Code/Desc/4118002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#B4B73E>모듈 강화: </color><color=#9C9C9C>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.</color>
+Skill/Code/Coef/4118002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#FFFFC2>모듈 강화: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
 Skill/Code/ExpansionTip/4118002┃<i>쿨다운 고정: 쿨다운 감소 스탯의 영향을 받지 않습니다.</i>
-Skill/Code/Desc/4528001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
-Skill/Code/Coef/4528001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
+Skill/Code/Desc/4528001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
+Skill/Code/Coef/4528001┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
 Skill/Code/ExpansionTip/4528001┃<i>쿨다운 고정: 쿨다운 감소 스탯의 영향을 받지 않습니다.</i>
-Skill/Code/Desc/4528002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
-Skill/Code/Coef/4528002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n적 실험체에게 기본 공격 적중 시 이동 속도가 {5}초 동안 {6} 감소합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
+Skill/Code/Desc/4528002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
+Skill/Code/Coef/4528002┃사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 {0}초 동안 이동 속도가 <color=white>{1}</color><color=green>(+캐릭터 레벨*{7})</color><color=white>%</color>, 공격 속도가 <color=white>{2}</color> 증가합니다.\n\n<color=#FFFFC2>강화 완료됨: </color>적 실험체에게 기본 공격 적중 시 지속 시간이 {3}초 증가합니다.
 Skill/Code/ExpansionTip/4528002┃<i>쿨다운 고정: 쿨다운 감소 스탯의 영향을 받지 않습니다.</i>
 CharacterState/Group/Name/4118000┃라이트 윙 - 이동 속도, 공격 속도 증가
 CharacterState/Group/Desc/4118000┃이동 속도와 공격 속도가 증가했습니다.
@@ -15757,6 +15758,7 @@ Skill/Group/Name/1005500┃바르가바스트라
 Skill/LobbyDesc/1005100┃스킬 적중 시 적에게 사신의 눈을 부여합니다. 적에게 사신의 눈 부여 시 대상의 시야를 제공 받습니다. \n또한, 자히르의 이동 속도가 증가하고, 각 스킬 적중 시 추가효과와 추가 스킬 피해를 입힙니다.
 Skill/Group/Desc/1005100┃적에게 스킬을 적중시키면 적에게 {5}초간 유지되는 사신의 눈 표식을 부여하고 대상의 시야를 제공 받습니다. 또한, 자히르의 이동 속도가 {0} 증가하고 {6}초에 걸쳐 점점 감소합니다.\n \n사신의 눈 표식이 있는 적에게 스킬을 적중시키면 해당 적에게 있는 사신의 눈 표식을 소모하여 <color=white>{8}</color>의 스킬 피해를 입히고, 해당 스킬의 사신의 눈 효과를 적용합니다.
 Skill/Group/Coef/1005100┃적에게 스킬을 적중시키면 적에게 {5}초간 유지되는 사신의 눈 표식을 부여하고 대상의 시야를 제공 받습니다. 또한, 자히르의 이동 속도가 {0} 증가하고 {6}초에 걸쳐 점점 감소합니다. \n\n사신의 눈 표식이 있는 적에게 스킬을 적중시키면 해당 적에게 있는 사신의 눈 표식을 소모하여 <color=white>{1}</color><color=#DDA0DD>(+스킬 증폭의 {7})</color>의 스킬 피해를 입히고, 해당 스킬의 사신의 눈 효과를 적용합니다.
+Skill/Group/ExpansionTip/1005100┃<i>지속적으로 피해를 입히는 개별 스킬의 경우 {0}초 마다 판정이 적용됩니다.</i>
 Skill/LobbyDesc/1005200┃자히르가 신의 힘을 빌려 일정 범위에 피해를 입힙니다.\n\n사신의 눈 효과: 피해량이 증가합니다.
 Skill/Group/Desc/1005200┃자히르가 신의 힘을 빌려 일정 범위에 <color=white>{9}</color>의 스킬 피해를 입힙니다.\n\n<color=#ffffC2>사신의 눈 효과:</color> <color=white>{10}</color>의 강화된 피해를 입힙니다.
 Skill/Group/Coef/1005200┃자히르가 신의 힘을 빌려 일정 범위에 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {7})</color>의 스킬 피해를 입힙니다.\n\n<color=#ffffC2>사신의 눈 효과:</color> <color=white>{2}</color><color=#DDA0DD>(+스킬 증폭의 {8})</color>의 강화된 스킬 피해를 입힙니다.
@@ -16407,7 +16409,6 @@ Skill/Group/Name/1023500┃이머전시 OP
 Skill/LobbyDesc/1023100┃적에게 스킬 피해를 입히면 일정 시간동안 지속적으로 피해를 입히는 외상을 부여합니다.\n외상이 총 3스택이 쌓이면 긴 시간동안 더 큰 피해를 입히는 치명적 외상 상태가 됩니다. 치명적 외상 상태의 적은 치유 효과가 감소합니다.\n\n적에게 치명적 외상을 부여하면 일정 시간 피해를 막아주는 보호막을 획득합니다. 보호막이 있는 상태에서 외상 혹은 치명적 외상 상태인 적을 향해 이동할 때 이동 속도가 증가한 후 서서히 감소합니다.
 Skill/Group/Desc/1023100┃캐시가 적에게 스킬 피해를 입히면 {0}초 동안 <color=white>{1}</color>의 고정 피해를 입히는 외상을 부여합니다. 외상이 총 {5}스택이 쌓이면 {6}초 동안 <color=white>{8}</color><color=#688A08>(+대상 최대 체력의 {7})</color>만큼 고정 피해를 입히는 치명적 외상 상태가 됩니다. 치명적 외상 상태인 대상은 치유 효과가 {16} 감소합니다.\n\n적에게 치명적 외상을 부여하면 {9}초간 <color=white>{10}</color>의 피해를 막아주는 보호막을 획득합니다. 보호막이 있는 상태에서 외상 혹은 치명적 외상 상태인 적을 향해 이동할 때 이동 속도가 {12} 증가한 후 서서히 감소합니다.
 Skill/Group/Coef/1023100┃캐시가 적에게 스킬 피해를 입히면 {0}초 동안 <color=#DDA0DD>스킬 증폭의 {13}</color>의 고정 피해를 입히는 외상을 부여합니다. 외상이 총 {5}스택이 쌓이면 {6}초 동안 최대 체력의 <color=white>{7}</color><color=#DDA0DD>(+스킬 증폭의 {14})</color>만큼 고정 피해를 입히는 치명적 외상 상태가 됩니다. 치명적 외상 상태인 대상은 치유 효과가 {16} 감소합니다.\n\n적에게 치명적 외상을 부여하면 {9}초간 <color=white>{10}</color><color=#DDA0DD>(+스킬 증폭의 {15})</color>의 피해를 막아주는 보호막을 획득합니다. 보호막이 있는 상태에서 외상 혹은 치명적 외상 상태인 적을 향해 이동할 때 이동 속도가 {12} 증가한 후 서서히 감소합니다.
-Skill/Group/ExpansionTip/1023100┃<i></i>
 Skill/LobbyDesc/1023200┃<color=green>지속 효과</color>: 스킬을 사용한 다음 캐시는 기본 공격으로 스킬 피해를 입힙니다.\n\n캐시가 지정한 방향으로 빠르게 돌진하여 충돌하는 모든 적에게 스킬 피해를 입힙니다.\n캐시가 적을 치명적 외상 상태로 만들면 동맥절제술의 쿨다운이 감소합니다.
 Skill/Group/Desc/1023200┃<color=green>지속 효과</color>: 스킬을 사용한 다음 캐시는 기본 공격으로 <color=white>{2}</color>의 추가 스킬 피해를 입힙니다.\n\n캐시가 지정한 방향으로 빠르게 돌진하여 충돌하는 모든 적에게 <color=white>{0}</color>의 스킬 피해를 입힙니다.\n캐시가 적을 치명적 외상 상태로 만들면 동맥절제술의 쿨다운이 {4} 감소합니다.
 Skill/Group/Coef/1023200┃<color=green>지속 효과</color>: 스킬을 사용한 다음 캐시는 기본 공격으로 <color=#DDA0DD>스킬 증폭의 {2}</color>의 추가 스킬 피해를 입힙니다.\n\n캐시가 지정한 방향으로 빠르게 돌진하여 충돌하는 모든 적에게 <color=white>{0}</color><color=#DDA0DD>(+스킬 증폭의 {5})</color>의 스킬 피해를 입힙니다.\n캐시가 적을 치명적 외상 상태로 만들면 동맥절제술의 쿨다운이 {4} 감소합니다.
@@ -18341,7 +18342,7 @@ Skill/LobbyDesc/1058300┃뒤로 한 걸음 물러서서 전방에 산탄총을 
 Skill/Group/Desc/1058300┃뒤로 한 걸음 물러서서 전방에 산탄총을 발사하여 적중한 적에게 <color=white>{0}</color>의 스킬 피해를 입히고, {1}초 동안 기절시킵니다.\n\n<color=white>기관단총 폼</color> 혹은 <color=white>로켓 런처 폼</color>에서 사용한 경우, 폼을 해제하며 해당 스킬의 쿨다운을 {2} 추가로 감소시킵니다.
 Skill/Group/Coef/1058300┃뒤로 한 걸음 물러서서 전방에 산탄총을 발사하여 적중한 적에게 <color=white>{20}</color><color=#dda0dd>(+스킬 증폭의 {22})</color>의 스킬 피해를 입히고, {1}초 동안 기절시킵니다.\n\n<color=white>기관단총 폼</color> 혹은 <color=white>로켓 런처 폼</color>에서 사용한 경우, 폼을 해제하며 해당 스킬의 쿨다운을 {2} 추가로 감소시킵니다.
 Skill/Group/ExpansionTip/1058300┃<i>이 스킬은 벽을 넘을 수 없습니다.</i>\n<i><color=white>산탄총</color>을 사용하며, 기존에 사용하던 무기가 해제됩니다.</i>
-Skill/LobbyDesc/1058400┃<color=white>기관단총 폼으로 전환</color>: 전방으로 짧게 돌진하고, 지속 시간 동안 40발 탄창의 기관단총 폼으로 전환합니다.\n\n기관단총 폼에서는 이동하면서 대상을 공격할 수 있으며, 공격 명령으로 대상을 변경할 수 있습니다. 각 공격은 짧은 간격으로 스킬 피해를 입히고, 5번째 탄환마다 기본 공격 적중 시 효과가 적용됩니다. 폼을 유지하는 동안 제작, 채집 등 일부 행동이 제한되며, <color=white>40mm 유탄</color> 스킬이 <color=white>기관단총 연사</color> 스킬로 변경됩니다.\n\n기관단총 폼이 종료되면 남은 탄환 수에 비례해 쿨다운이 감소합니다.
+Skill/LobbyDesc/1058400┃<color=white>기관단총 폼으로 전환</color>: 전방으로 짧게 돌진하고, 지속 시간 동안 40발 탄창의 기관단총 폼으로 전환합니다.\n\n기관단총 폼에서는 이동하면서 대상을 공격할 수 있으며, 공격 명령으로 대상을 변경할 수 있습니다. 각 공격은 짧은 간격으로 스킬 피해를 입히고, 일정 탄환마다 기본 공격 적중 시 효과가 적용됩니다. 폼을 유지하는 동안 제작, 채집 등 일부 행동이 제한되며, <color=white>40mm 유탄</color> 스킬이 <color=white>기관단총 연사</color> 스킬로 변경됩니다.\n\n기관단총 폼이 종료되면 남은 탄환 수에 비례해 쿨다운이 감소합니다.
 Skill/Group/Desc/1058400┃<color=white>기관단총 폼으로 전환</color>: 전방으로 짧게 돌진하고, {8}초 동안 {0}발 탄창의 기관단총 폼으로 전환합니다.\n\n기관단총 폼에서는 이동하면서 대상을 공격할 수 있으며, 공격 명령으로 대상을 변경할 수 있습니다. 각 공격은 <color=white>{1}</color><color=#DDA0DD>(+스킬 증폭 {22} 당 1)</color>의 스킬 피해를 입히고, {5}번째 탄환마다 기본 공격 적중 시 효과가 적용됩니다. 폼을 유지하는 동안 제작, 채집 등 일부 행동이 제한되며, <color=white>40mm 유탄</color> 스킬이 <color=white>기관단총 연사</color> 스킬로 변경됩니다.\n\n기관단총 폼이 종료되면 남은 탄환 수에 비례해 최대 {6}의 쿨다운이 감소합니다.
 Skill/Group/Coef/1058400┃<color=white>기관단총 폼으로 전환</color>: 전방으로 짧게 돌진하고, {8}초 동안 {0}발 탄창의 기관단총 폼으로 전환합니다.\n\n기관단총 폼에서는 이동하면서 대상을 공격할 수 있으며, 공격 명령으로 대상을 변경할 수 있습니다. 각 공격은 <color=white>{20}</color><color=#DDA0DD>(+스킬 증폭 {22} 당 1)</color>의 스킬 피해를 입히고, {5}번째 탄환마다 기본 공격 적중 시 효과가 적용됩니다. 폼을 유지하는 동안 오브젝트와 상호작용할 수 없으며, <color=white>40mm 유탄</color> 스킬이 <color=white>기관단총 연사</color> 스킬로 변경됩니다.\n\n기관단총 폼이 종료되면 남은 탄환 수에 비례해 최대 {6}의 쿨다운이 감소합니다.
 Skill/Group/Desc/1058410┃기관단총을 버리고, 웨폰 케이스에서 돌격 소총을 꺼냅니다.\n\n현재 타격 당 피해량: {20}<color=#DDA0DD>(+스킬 증폭 {22} 당 1)</color>
@@ -23514,7 +23515,7 @@ CharacterStoryTitle/23┃피와 사체를 보는 건 익숙합니다.
 CharacterStoryDesc/23┃남다른 감성을 가진 마을 의사.\n감상적이고 착한 천성으로 환자의 일에 필요 이상으로 깊이 관여한다.\n이런 성격 탓에 과거 근무하던 병원에서 문제를 일으켜 쫓겨났다.\n\n현재는 작은 마을에서 무료 진료소를 운영하며 주민의 도움을 받아 근근이 연명하는 중.\n힘든 형편에도 불구하고 캐시는 어떻게 하면 환자들을 더 잘 돌봐줄 수 있을지 고민한다.\n\n마을 사람들은 큰 병이 도지면 캐시의 진료소 대신 큰 병원으로 향한다.\n캐시가 실력 있고 좋은 사람인 건 인정하지만, 어딘가 꺼림칙한 부분이 있기 때문이다.\n그녀가 돌보는 환자들은 왜 그렇게 회복이 늦는 걸까?
 CharacterStoryName/24┃아델라 그로
 CharacterStoryAge/24┃25세
-CharacterStoryHeight/24┃167 cm
+CharacterStoryHeight/24┃167cm
 CharacterStoryGender/24┃여
 CharacterStoryTitle/24┃왜 그렇게 애를 써? 어차피 내가 이길텐데.
 CharacterStoryDesc/24┃체스 세계 챔피언.\n그녀의 길에는 승리 뿐이며, 패배란 존재하지 않는다.\n항상 모든 일의 앞을 내다보고 움직이는 일에 능숙하다.\n그녀의 승리란 당연한 것이다.\n\n평소에는 답답할 정도로 느리게 행동하지만, 실제 게임이 시작되고 테이블에 앉으면 언제 그랬냐는 듯 게임에 집중한다.\n\n생각하는 것을 좋아하고, 정확히 판단해 자신이 생각한대로 판을 움직여 승리하는 치밀한 수 싸움에서 희열을 느낀다.
@@ -27176,7 +27177,7 @@ Skin/Name/1022005┃루돌크
 Skin/Name/1022006┃사신 루크
 Skin/Name/1023000┃캐시
 Skin/Name/1023001┃군의관 캐시
-Skin/Name/1023002┃사이키메딕 캐시
+Skin/Name/1023002┃ㅇ
 Skin/Name/1023003┃선생님 캐시
 Skin/Name/1023004┃프리즌 브레이크 캐시
 Skin/Name/1024000┃아델라
@@ -27228,7 +27229,6 @@ Skin/Name/1032001┃고요한 밤의 신사 윌리엄
 Skin/Name/1032002┃뒷골목 윌리엄
 Skin/Name/1032003┃아포칼립스 윌리엄
 Skin/Name/1033000┃니키
-Skin/Name/1033001┃뒷골목 니키
 Skin/Name/1033002┃비치발리볼 니키
 Skin/Name/1033003┃문제아 니키
 Skin/Name/1033004┃사립탐정 니키
@@ -27450,7 +27450,6 @@ Skin/Name/1087001┃설렘 가득 코렐라인
 Skin/Name/1088000┃비형
 Skin/Name/1089000┃크레이버
 Skin/Name/1090000┃루치아
-Skin/Name/1091000┃세레스
 Skin/OnSelectVO/1001003┃시스템은 부술 때 제일 짜릿하지. 안 그래?
 Skin/OnSelectVO/1002002┃빵야빵야! 불꽃놀이 시작이에요!
 Skin/OnSelectVO/1007005┃그럼 신나게 달려볼까.
@@ -28613,9 +28612,9 @@ InGameGuide/Nadja/Group/Desc/10010000┃<color=yellow>{0}</color>에서 필요�
 InGameGuide/Nadja/Group/Name/10011000┃지역 이동
 InGameGuide/Nadja/Group/Desc/10011000┃다음 목표지역은 <color=yellow>{0}</color>(이)야.
 InGameGuide/Nadja/Group/Name/10012000┃하이퍼루프 사용 안내
-InGameGuide/Nadja/Group/Desc/10012000┃스페이스바를 눌러 다음 지역으로 이동해보자.
+InGameGuide/Nadja/Group/Desc/10012000┃하이퍼 루프를 사용해 다음 지역으로 이동해보자.\n스페이스바를 누르면 바로 다음 지역으로 이동할 수 있어.
 InGameGuide/Nadja/Group/Name/10014000┃전송 드론 사용 안내
-InGameGuide/Nadja/Group/Desc/10014000┃원격 드론을 사용하여 남은 아이템을 주문해보자.\n지금 너가 주문해야 하는 아이템은 목표 아이템 아이콘을 좌클릭하여 확인할 수 있어.
+InGameGuide/Nadja/Group/Desc/10014000┃원격 드론을 사용하여 남은 아이템을 주문해보자.\n지금 너가 주문해야 하는 아이템을 알려줄테니 우클릭을 해서 주문해보자.
 InGameGuide/Nadja/Group/Name/10020000┃모닥불
 InGameGuide/Nadja/Group/Desc/10020000┃모닥불로 가서 음식을 만들자. 
 InGameGuide/Nadja/Group/Name/10022000┃모닥불
