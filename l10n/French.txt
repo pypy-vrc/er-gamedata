@@ -1975,6 +1975,9 @@ AI 대전 어려움 설명 문구┃Testez vos compétences en affrontant des bo
 유니온 대전 설명 문구┃Inscrivez votre équipe et battez-vous sur l'Île de Lumia !
 코발트 유니온 대전 설명 문구┃Inscrivez votre équipe et affrontez vos adversaires en Protocole Cobalt !
 유니온 대전 전체 설명 문구┃Jouer avec votre équipe préformée !
+ERPASS┃Pass ER
+QUESTBOOK┃Livre de Quête
+COLLECTION┃Vitrine
 참가자들을 기다리는 중입니다.┃Les participants sont en train d'attendre.
 시작 무기를 선택해 주세요.┃Sélectionnez votre arme de départ.
 시작 지역을 선택해 주세요.┃Sélectionnez votre zone de départ.
@@ -2886,6 +2889,7 @@ StreamingModeSetting/NormalMatchingSquad┃Recherche de partie avec temps d'atte
 StreamingModeSetting/RankMatchingSquad┃Recherche de partie avec temps d'attente masqué.
 StreamingModeSetting/SquadRumbleMatching┃Commencer la recherche de partie en Circuit de l'Union avec le temps de recherche de partie caché.\n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 StreamingModeSetting/EventModeMatching┃Commencer la recherche de partie en Mode de jeu d'Évènement avec le temps de recherche de partie caché.\n \n*Vous devez activer cette option dans Paramètres ＞ Streaming.
+StreamingModeSetting/EventModeRumbleOutMatching┃Commencer la recherche de partie en Mode de jeu d'Évènement avec le temps de recherche de partie caché.\n \n*Vous devez activer cette option dans Paramètres ＞ Streaming.
 StreamingModeSetting/DisableChattingService┃Vous ne pouvez pas envoyer/recevoir de messages. (Certaines fonctionnalités seront indisponible)
 IconCustomization/확장맵 미니맵 표시┃Activer l'icône Carte Déployée/Minimap
 IconCustomization/미니맵┃Minimap
@@ -2941,6 +2945,9 @@ GiveUp/CobaltCustom/Cobalt/Alone┃Abandonner une partie peut entraîner une pé
 GiveUp/SingleMode┃Êtes-vous sûr de vouloir abandonner ? Votre personnage mourra immédiatement lors de l'abandon.
 GiveUp/CustomMode┃Êtes-vous sûr de vouloir abandonner ? Votre personnage mourra immédiatement lors de l'abandon.
 GiveUp/SquadRumble/Squad/WithTeam┃Quitter une partie a un impact négatif sur vos coéquipiers.\nSi vous quittez, votre personnage sera éliminé et la partie prendra fin pour vous.\nCette action est irréversible. Voulez-vous continuer ?\n\n*Attention : Quitter une partie entraîne une pénalité de recherche de partie. Quitter des parties de manière répétée peut mener à des sanctions plus sévères.
+GiveUp/LoneWolf/Solo/Alone┃Êtes-vous sûr de vouloir abandonner ? Votre personnage mourra immédiatement lors de l'abandon.\n<color=#ff0000>(Vous subirez une pénalité d'attente pour avoir abandonné une partie.)</color>
+GiveUp/LoneWolf/Solo/WithTeam┃Êtes-vous sûr de vouloir abandonner ? Votre personnage mourra immédiatement lors de l'abandon.\n<color=#ff0000>(Vous subirez une pénalité d'attente pour avoir abandonné une partie.)</color>
+GiveUp/RumbleOut/Squad/WithTeam┃Quitter une partie a un impact négatif sur vos coéquipiers.\nSi vous quittez, votre personnage sera éliminé et la partie prendra fin pour vous.\nCette action est irréversible. Voulez-vous continuer ?\n\n*Attention : Quitter une partie entraîne une pénalité de recherche de partie. Quitter des parties de manière répétée peut mener à des sanctions plus sévères.
 포기안내문구┃Abandon dans 5 secondes.
 Leave/Rank┃Si vous quittez maintenant, vous paierez deux fois les frais de participation à la partie, et votre classement et vos éliminations ne seront pas pris en compte.
 Leave/Normal┃Le placement de l'équipe est toujours en cours. Si vous quittez maintenant, votre placement actuel sera enregistré en tant que placement final d'équipe.
@@ -4840,6 +4847,14 @@ Shortcut/InstantCastTacticalSkill┃Lancement rapide de la compétence tactique
 Shortcut/InstantCastWeaponTactical1┃Lancement rapide de la Compétence d'Arme & Tactique 1
 Shortcut/InstantCastWeaponTactical2┃Lancement rapide de la Compétence d'Arme & Tactique 2
 Shortcut/InstantUseActiveItem1┃Lancement rapide de la compétence d'un objet
+ShortcutSetting/QuickUseFood┃Consomme la nourriture dans votre inventaire.\nFonctionne selon les paramètres Monstre/Personnages Ennemis définis des paramètres de "Consommation automatique de nourriture".\nLorsque 2 objets ou plus vous procurent la même régénération, ils sont consommés dans l'ordre défini dans les "Paramètres de priorité".
+QuickUseFoodInvalid┃Aucune Nourriture dans votre inventaire.
+ShortcutSetting/QuickUseCamera┃Pose les caméras de votre inventaire.\nUtilise d'abord les Caméras Camouflées, puis les Caméras à Téléobjectif.
+QuickUseCameraInvalid┃Aucune caméra dans votre inventaire.
+ShortcutSetting/QuickUseSearchDrone┃Fait apparaître un Drone Éclaireur disponibles dans votre inventaire.
+QuickUseSearchDroneInvalid┃Aucune Drone Éclaireur dans votre inventaire.
+ShortcutSetting/QuickUseEMPDrone┃Fait apparaître un Drone IEM disponibles dans votre inventaire.
+QuickUseEMPDroneInvalid┃Aucune Drone IEM dans votre inventaire.
 Shortcut/LearnKeyGuide┃Cliquez sur le bouton ou la touche {0} pour passer au niveau supérieur.
 Shortcut/ChangeCameraMode┃Changer le mode de caméra
 Shortcut/CameraDragScroll┃Déplacer la caméra
@@ -5102,8 +5117,6 @@ PurchaseCompletedPassNotice┃DÉBLOQUÉ !
 비활성화된최대레벨시즌활성화불가팝업┃Les Pass au niveau max ne peuvent pas être activés.\n<color=#ff3e3e>Les récompenses peuvent être obtenues sans avoir à activer le Pass.</color>
 신규 시즌 추가 안내┃Annonce de nouvelle Saison
 신규 시즌 추가 설명1┃Nouvelle saison, nouvelles récompenses ! Débloquez les Skins du Pass ER,un nouvel écran d'accueil, arrière-plans et bien plus encore !
-신규 시즌 추가 설명2┃<color=#FFFFFF>La nouvelle saison a commencé !\nMontez votre Pass ER et obtenez de superbes récompenses !\nVotre ancien Pass ER a été désactivé</color> et votre <color=#FFBAFB>{0}</color>.\n<color=#FFFFFF>Vous pouvez réactiver votre ancien Pass ER et toutes les récompenses non récupérées seront disponibles pour la durée correspondante de votre Pass ER</color>.
-신규 시즌 추가 설명2_preAccess┃<color=#FFFFFF>La nouvelle saison a commencé !\nProcurez-vous le Pack de Saison <color=#FFBAFB>Sailing</color> pour bénéficier de bonus supplémentaires !\nDébloque instantanément le nouveau Pass ER à l'achat !</color>
 신규 시즌 추가 설명3┃nouveau Pass ER a été automatiquement activé
 배틀패스┃Pass ER
 ER Point┃Points ER
@@ -5194,16 +5207,14 @@ Shop/Error/CheckGiftMail┃Vous ne pouvez pas acheter cet article car vous avez 
 특별 얼리버드까지 남은 시간 : {0}┃Fin de l'Offre Spéciale dans : {0}
 시즌팩 혜택 적용까지 남은 시간 : {0}┃Temps avant le début de l'offre : {0}
 시즌팩 스페셜오퍼얼리버드 종료까지 남은 시간┃{0} restant
-시즌 패스 아이콘 마우스 오버 툴팁 타이틀┃Pack de Saison : Sur les Flots
 시즌 5팩┃Mégapack 1.0
 시즌 패스 우편 제목┃Mégapack 1.0 - {0}
-시즌 패스 아이콘 마우스 오버 툴팁 내용┃<Pass ER : Sur les Flots> | Personnages | Skins | Objets Exclusifs
 얼리버드혜택 기간 알림┃L'offre de prévente se termine dans :
 시즌 패스 타이틀 설명┃<size=32>-Avantages du Pack de Saison 6-</size>
 시즌 패스 설명┃<size=20><color=#77bce0>Inclut le Pass ER : Présence Fantomatique</color></size>\nDébloque le Pass ER de la Saison 5. Vous devez toujours gagner des Points ER pour obtenir les récompenses.\n\n<size=20><color=#77bce0>Inclut 6 Cobayes, 11 Skins</color></size>\nTous les Cobayes et Skins qui sortiront en boutique lors de la Saison 5.\n\n<size=20><color=#77bce0>Récompenses Exclusives</color></size>\nUn Skin exclusif, une émoticône et une tombe seront  fournis aux acheteurs de Pack de Saison 5.
 시즌 패스 주의 사항┃◆ Ceux qui ont déjà acheté le Pass ER : Présence Fantomatique seront remboursés de 1,190 NP.\n\n◆ Les Skins, émoticônes et tombes exclusifs seront distribués après la maintenance du 17 Février.\n\n◆ Les Skins d'évènements ne sont pas inclus. Ceux-ci devront être acquis en participant aux évènements associés.\n\n◆ Tous les autres produits inclus seront délivrés par courrier le jour de leur sortie.
-약 55% 할인┃<size=24>Soldé de 57%</size>
-약 50% 할인┃<size=24>Soldé de 53%</size>
+약 55% 할인┃<size=24>Soldé de 54%</size>
+약 50% 할인┃<size=24>Soldé de 49%</size>
 신규 캐릭터 6종 & 스킨 11종┃Inclut 6 Cobayes et 11 Skins
 SeasonPassIcon/5┃Img_SeasonPack5_Box_02
 SeasonPassIcon/6┃Img_SeasonPack6_Box_02
@@ -5874,6 +5885,16 @@ GameResult/OperatorText/MatchingMode/SquadRumble/MatchingTeamMode/3/GameRank/-1�
 GameResult/OperatorText/MatchingMode/SquadRumble/MatchingTeamMode/3/GameRank/-2┃...
 GameResult/OperatorText/MatchingMode/SquadRumble/MatchingTeamMode/3/GameRank/-3┃La prochaine fois, combattez jusqu'à la fin !
 GameResult/OperatorText/MatchingMode/SquadRumble/MatchingTeamMode/3/GameRank/1-1┃Vous êtes en feu ! La prochaine fois, j'apporterai des marshmallow.
+GameResult/OperatorText/MatchingMode/RumbleOut/MatchingTeamMode/3/GameRank/1┃Vous avez gagné... impressionnant.
+GameResult/OperatorText/MatchingMode/RumbleOut/MatchingTeamMode/3/GameRank/2┃Voilà ce que la recherche peut accomplir.
+GameResult/OperatorText/MatchingMode/RumbleOut/MatchingTeamMode/3/GameRank/3┃Des résultats intéressants.
+GameResult/OperatorText/MatchingMode/RumbleOut/MatchingTeamMode/3/GameRank/4┃Des résultats intéressants.
+GameResult/OperatorText/MatchingMode/RumbleOut/MatchingTeamMode/3/GameRank/5┃Hmm... La collecte de données est également importante, je suppose.
+GameResult/OperatorText/MatchingMode/RumbleOutCustom/MatchingTeamMode/3/GameRank/1┃Vous avez gagné... impressionnant.
+GameResult/OperatorText/MatchingMode/RumbleOutCustom/MatchingTeamMode/3/GameRank/2┃Voilà ce que la recherche peut accomplir.
+GameResult/OperatorText/MatchingMode/RumbleOutCustom/MatchingTeamMode/3/GameRank/3┃Des résultats intéressants.
+GameResult/OperatorText/MatchingMode/RumbleOutCustom/MatchingTeamMode/3/GameRank/4┃Des résultats intéressants.
+GameResult/OperatorText/MatchingMode/RumbleOutCustom/MatchingTeamMode/3/GameRank/5┃Hmm... La collecte de données est également importante, je suppose.
 글자수카운트┃({0}/{1}byte)
 정보 보기┃Voir info
 세부 목록┃Liste détaillée
@@ -7100,6 +7121,8 @@ VoiceTyping/Desc/On┃Convertit la voix en texte.\n* Cette fonctionnalité peut 
 VoiceTyping/Desc/Off┃Convertit la voix en texte.\n* Cette fonctionnalité peut être désactivée dans les Paramètres.
 VoiceTyping/Desc/InProgress┃Convertit la voix en texte.\nPeut prendre plus de temps en fonction des conditions du serveur.
 VoiceTyping/Desc/Unavailable┃La Reconnaissance Vocale est actuellement indisponible.
+Shortcut/ExperimentTooltip┃Afficher les Détails de la Mission de Recherche
+ShortcutSetting/ExperimentTooltip┃Consultez les Missions de Recherche en cours.
 차단 목록┃Liste des Joueurs Bloqués
 차단 목록에서 찾기┃Entrez le pseudo du joueur que vous souhaitez bloquer.
 차단하기버튼┃Bloquer
@@ -10258,7 +10281,7 @@ Shop/Desc/S11_2026_SpecialSkin_Seq_Pack_02┃<b><color=#FFBB00>[Contenu]</color>
 Shop/Desc/S11_2026_SpecialSkin_Seq_Pack_03┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Carte Joker de Skin Épique\n- 1 Module Double\n- 5 Boîtes de Données de Skin\n- 5 Clés de Données\n- 7 Boîtes de Données du Laboratoire\n- 5 Bons de Fragment de Saison Atypique\n- 20 000 A-Coin\n- 30 Jetons Petit Mignon\n- Boost de Point ER (1 Jour)\n- Boost d'A-Coin (1 Jour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Vous pouvez utiliser les Cartes Joker incluses dans ce pack dans le menu Cartes Joker de la Forge.\n*Pour une liste détaillée des produits, veuillez vous référer au lien détaillant les probabilités d'obtention. \n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_2026_SeasonCollection_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 10 Bons de Fragments de Saison Commun\n- 5 Bons de Fragments de Saison\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les Fragments de Saison sont immédiatement utilisés dans la Collection de Saison à l'achat.\n* Les articles immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_Bihyung_Event_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- Émoticône de Bihyung\n- Arrière-plan de Bihyung\n- Bordure de Bihyung\n- Fond de Salon d'Équipe de Bihyung\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b>\n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Le prix du pack peut changer en fonction des articles déjà possédés.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
-Shop/Desc/FestiveNekoIrem_CollectPack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 2 Émoticônes de Irem Chatte Festive\n- Icône de Irem Chatte Festive\n- Bordure de Irem Chatte Festive\n- Arrière-plan de Irem Chatte Festive\n- 10 Jetons Petit Mignon\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Le prix de ce pack peut varier en fonction des objets déjà possédés.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
+Shop/Desc/FestiveNekoIrem_CollectPack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 2 Émoticônes de Irem Chatte Festive\n- Icône de Irem Chatte Festive\n- Bordure de Irem Chatte Festive\n- Arrière-plan de Irem Chatte Festive\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Le prix de ce pack peut varier en fonction des objets déjà possédés.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_Craver_Emote_Pack_01┃Achetez les émoticônes du nouveau personnage à prix réduit !\n\n<b><color=#FFBB00>[Contenu]</color></b>\n\n- 4 Émoticônes de Craver\n- Boost d'XP (1 Jour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Le prix du pack peut changer en fonction des articles déjà possédés.\n* Les articles de ce pack seront immédiatement ajoutés à votre Collection lors de l'achat. \n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_Summer_Special_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Carte Joker de Skin Rare\n- 1 Carte Joker d'Objet Atypique\n- 3 Boîtes de Données de Skin\n- 1 Boule Lucky★\n- 3 Cubes Lucky★\n- 10 Boîtes Lucky★\n- 3 Clés de Données\n- 3 Boîtes de Données du Laboratoire\n- 30 Jetons Petit Mignon\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Vous pouvez utiliser les Cartes Joker incluses dans ce pack dans le menu Cartes Joker de la Forge. \n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_Summer_Daily_ACoin_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Boîte de Données du Laboratoire\n- 5 Bon de Fragments de Saison\n- 50 Points du Livre de Quêtes d'Été\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les Fragments de Saison sont ouverts immédiatement à l'achat et ajoutés à la Collection de Saison.\n* Les Points du Livre de Quêtes d'Été sont ajoutés immédiatement à l'achat et ne peuvent pas être transférés vers d'autres Livres de Quêtes.\n* Les articles contenant des Fragments de Saison ajoutés immédiatement à l'achat ne sont pas remboursables.
@@ -10274,7 +10297,7 @@ Shop/Desc/S11_Bianca_Blessing_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\
 Shop/Desc/S11_Bianca_Blessing_Pack_02┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Boîte Reine des Vampires\n- 1 Clé de Données\n- 1 Jetons Petit Mignon\n- Boost d'A-Coin (1 Heure)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_KakaoTalk_Irem_Emote_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 10 Émoticônes de Chibirem\n- 2 Icônes de Chibirem\n- Boost d'A-Coin (1 Jour)\n\n\n<b><color=#F15F5F>[Notes]</color></b>\n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S11_Season_Fragments_Last_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 10 Bons de Fragments de Saison Non Possédés\n- 2 Échanges de Fragments\n- 30 Bon de Fragments de Saison\n- 30 Bon de Fragments de Saison Commun\n- 10 Bon de Fragments de Saison Atypique\n- Boost de Point ER (7 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Vous pouvez obtenir 1 Fragment de Saison Commun ou Atypique que vous ne possédez pas avec chaque <color=#35FF94>Bons de Fragments de Saison Non Possédés</color>.\n* Vous pouvez ouvrir les Bons et les Bons de Fragments dans la Forge.\n* Vous pouvez utiliser les Échanges de Fragments inclus dans ce pack dans le menu Vitrine.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
-Shop/Desc/EternalWraithBianca_CollectPack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 2 Émoticônes de Bianca Spectre Éternel\n- Icône de Bianca Spectre Éternel\n- Bordure de Bianca Spectre Éternel\n- Arrière-plan de Bianca Spectre Éternel\n- 10 Jetons Petit Mignon\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Le prix de ce pack peut varier en fonction des objets déjà possédés.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
+Shop/Desc/EternalWraithBianca_CollectPack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 2 Émoticônes de Bianca Spectre Éternel\n- Icône de Bianca Spectre Éternel\n- Bordure de Bianca Spectre Éternel\n- Arrière-plan de Bianca Spectre Éternel\n- Boost d'A-Coin (3 Jours)\n- Boost de Point ER (3 Jours)\n\n<b><color=#F15F5F>[Notes]</color></b> \n* Les objets de ce pack seront immédiatement ajoutés à votre Collection à l'achat.\n* Le prix de ce pack peut varier en fonction des objets déjà possédés.\n* Les articles qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S12_PreSeason_Only_Box_Pack┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Boite de Modèle de Skin Épique\n- 2 Boîtes de Données de Skin\n- 2 Clés de Données\n- 2 Boîtes de Données du Laboratoire\n- Boost d'XP (1 Jour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S12_2026_WildCard_Seq_Pack_01┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Carte Joker de Skin Atypique\n- 1 Carte Joker d'Objet Atypique\n- 10 Bons de Fragments de Saison\n- 5 Boîtes Lucky★\n- 5 Jetons Sur les Flots\n- Boost d'A-Coin (1 Jour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Pour une liste détaillée des produits, veuillez vous référer au lien détaillant les probabilités d'obtention. \n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
 Shop/Desc/S12_2026_WildCard_Seq_Pack_02┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- 1 Bon de Skin Aléatoire Atypique/Rare\n- 1 Carte Joker de Skin Rare\n- 1 Carte Joker d'Objet Rare\n- 5 Bons de Fragments de Saison Atypique\n- 3 Cubes Lucky★\n- 15 Jetons Sur les Flots\n- Boost d'A-Coin (1 Jour)\n- Boost d'XP (1 Jour)\n\n<b><color=#F15F5F>[Notes]</color></b> \n*Vous pouvez ouvrir cet article dans la Forge.\n*Pour une liste détaillée des produits, veuillez vous référer au lien détaillant les probabilités d'obtention. \n*Les objets qui incluent des boosts immédiatement appliqués à l'achat ne sont pas remboursables.
@@ -10527,6 +10550,12 @@ Shop/Desc/BATTLE_PASS_UPGRADE_S20┃Les niveaux ajoutés à l'achat de l'Amélio
 Shop/Desc/BATTLE_PASS_S21┃Acheter le Pass ER, jouer et obtenez des récompenses uniques comme <color=#47B3FF>des skins, des émoticônes, 900 NP et bien plus encore !</color>\nMonter les niveaux de votre Pass ER en jouant à Eternal Return !\nSi vous voulez vos récompenses encore plus RAPIDEMENT, vous pouvez toujours acheter des Points ER pour accélérer votre progression !\nLes objets inclus dans le Pass ER peuvent être utilisés de différentes façons par la suite.
 Shop/Desc/BATTLE_PASS_BUNDLE_S21┃Le Pass ER Plus inclut le Pass ER et vous donne instantanément <color=#ffdf72>20 niveaux</color> de Pass ER.\nObtenez des récompenses uniques comme <color=#47B3FF>des skins, des émoticônes, 900 NP et bien plus encore !</color>\nMonter les niveaux de votre Pass ER en jouant à Eternal Return !\nSi vous voulez vos récompenses encore plus RAPIDEMENT, vous pouvez toujours acheter des Points ER pour accélérer votre progression !\n<color=#FF7575>Vous ne serez pas remboursé</color> si vous dépassez le niveau max du Pass ER.\n\nLes objets inclus dans le Pass ER peuvent être utilisés de différentes façons par la suite.
 Shop/Desc/BATTLE_PASS_UPGRADE_S21┃Les niveaux ajoutés à l'achat de l'Amélioration du Pass ER\nne seront pas remboursés si vous dépassez le niveau max du Pass ER.
+Shop/Desc/BATTLE_PASS_S22┃Acheter le Pass ER, jouer et obtenez des récompenses uniques comme <color=#47B3FF>des skins, des émoticônes, 900 NP et bien plus encore !</color>\nMonter les niveaux de votre Pass ER en jouant à Eternal Return !\nSi vous voulez vos récompenses encore plus RAPIDEMENT, vous pouvez toujours acheter des Points ER pour accélérer votre progression !\nLes objets inclus dans le Pass ER peuvent être utilisés de différentes façons par la suite.
+Shop/Desc/BATTLE_PASS_BUNDLE_S22┃Le Pass ER Plus inclut le Pass ER et vous donne instantanément <color=#ffdf72>20 niveaux</color> de Pass ER.\nObtenez des récompenses uniques comme <color=#47B3FF>des skins, des émoticônes, 900 NP et bien plus encore !</color>\nMonter les niveaux de votre Pass ER en jouant à Eternal Return !\nSi vous voulez vos récompenses encore plus RAPIDEMENT, vous pouvez toujours acheter des Points ER pour accélérer votre progression !\n<color=#FF7575>Vous ne serez pas remboursé</color> si vous dépassez le niveau max du Pass ER.\n\nLes objets inclus dans le Pass ER peuvent être utilisés de différentes façons par la suite.
+Shop/Desc/BATTLE_PASS_UPGRADE_S22┃Les niveaux ajoutés à l'achat de l'Amélioration du Pass ER\nne seront pas remboursés si vous dépassez le niveau max du Pass ER.
+Shop/Desc/BATTLE_PASS_CHECK┃Les <color=#B2EBF4>Récompenses Premium</color> et <color=#B2EBF4>Missions Payantes</color> sont activées lors de l'achat du Pass ER.\nVous pouvez également utiliser la fonction <color=#B2EBF4>Achat de Points ER</color>.\n\nLe Pass ER est disponible pour deux saisons : la saison en cours et la saison suivante.\nUn seul Pass ER sera activé.\nVous pouvez activer librement le Pass ER que vous souhaitez.
+Shop/Desc/BATTLE_PASS_BUNDLE_CHECK┃Les <color=#B2EBF4>Récompenses Premium</color> et <color=#B2EBF4>Missions Payantes</color> sont activées lors de l'achat du Pass ER Plus.\nVous pouvez également utiliser la fonction <color=#B2EBF4>Achat de Points ER</color>.\nnSi le niveau de votre Pass ER dépasse son niveau maximum grâce au Pass ER Plus, <color=#FF7575> la différence ne sera pas remboursée.</color>.\n\nLe Pass ER est disponible pour deux saisons : la saison en cours et la saison suivante.\nUn seul Pass ER sera activé.\nVous pouvez activer librement le Pass ER que vous souhaitez.
+Shop/Desc/BATTLE_PASS_UPGRADE_CHECK┃Si le niveau de votre Pass ER dépasse son niveau maximum \ngrâce au Pass ER Plus, la différence ne sera pas remboursée.
 Shop/Desc/BATTLE_PASS_ACTIVE_CHANGE┃Voulez vous activer le Pass sélectionné?\nVotre Pass actuel sera désactivé.
 Shop/Desc/BATTLE_PASS_POINT┃Vous pouvez acheter des Points ER pour augmenter votre niveau dans le Pass.
 DLC┃DLC
@@ -10873,6 +10902,7 @@ Product/Name/MILEAGE_S16_A-Coin_QUEST_BOOK_9900007┃Livre de Quêtes A-Coin Aca
 Product/Name/MILEAGE_S17_A-Coin_QUEST_BOOK_9900008┃Livre de Quête A-Coin Splash !
 Product/Name/MILEAGE_S18_A-Coin_QUEST_BOOK_9900009┃Livre de Quêtes A-Coin Matsuri
 Product/Name/MILEAGE_S19_A-Coin_QUEST_BOOK_9900010┃Livre de Quêtes A-Coin Royal
+Product/Name/MILEAGE_S20_A-Coin_QUEST_BOOK_9900011┃Livre de Quêtes A-Coin Petit Mignon
 Product/Name/MysticBunnySua_CollectPack_01┃Pack Collection de Sua Lapine Mystique
 Product/Name/GGST_ACOIN┃150 A-Coin
 Product/Name/S19_ACOIN_UNLIMITED┃150 A-Coin
@@ -10896,6 +10926,9 @@ Product/Name/S21_AFTERSCHOOL_QUEST_BOOK┃Livre de Quête des Jumelles Après le
 Product/Name/S21_CHEERFUL_PUNCH_QUEST_BOOK┃Livre de Quêtes de Nicky Poing Encourageant
 Product/Name/S21_MYSTIC_BUNNY_QUEST_BOOK┃Livre de Quêtes de Sua Lapine Mystique
 Product/Name/S21_TROPICALDIMENSION_QUEST_BOOK┃Livre de Quêtes de Abigail Dimension Tropicale
+Product/Name/S22_ACOIN_UNLIMITED┃150 A-Coin
+Product/Name/S22_RARE_MATTER┃1 Fragment de Données Rare
+Product/Name/S22_S21TOKEN_EXCHANGE┃2 Jetons Sur les Flots
 Product/Name/P5R_ACOIN┃150 A-Coin
 Shop/Desc/S10_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- Livre de Quêtes A-Coin Vacances\n(105,000 A-Coin une fois terminé)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*Ce Livre de Quêtes A-Coin est activé dès l'achat. \n*Ce Livre de Quêtes A-Coin peut être complété à n'importe quel moment.  \n*Consultez vos Livre de Quêtes A-Coin que vous possédez dans le menu Livre de Quêtes. 
 Shop/Desc/S11_A-Coin_QUEST_BOOK┃<b><color=#FFBB00>[Contenu]</color></b>\n\n- Livre de Quêtes A-Coin Servantes de Combat\n(105,000 A-Coin une fois terminé)\n- 30,000 A-Coin\n\n<b><color=#F15F5F>[Notes]</color></b>\n\n*Ce Livre de Quêtes A-Coin est activé dès l'achat. \n*Ce Livre de Quêtes A-Coin peut être complété à n'importe quel moment.  \n*Consultez vos Livre de Quêtes A-Coin que vous possédez dans le menu Livre de Quêtes. 
@@ -11038,7 +11071,7 @@ GroupItemAttribute/ArchiveMemoriesofSea┃Memories of Sea
 GroupItemAttribute/ArchiveSparks┃Sparks
 GroupItemAttribute/ArchiveStars┃Stars
 ItemType/LOOT_EXCHANGE_TICKET/Name┃Bon d'Échange de Skin Forgé
-ItemType/LOOT_EXCHANGE_TICKET/Desc┃Utilisez cet objet à la place des Jetons pour obtenir des skins épiques dans le menu [Échange].\nLe Bon d'Échange de Skin Forgé expire 300 jours après l'achat.\nVous pouvez utiliser le Bon d'Échange de Skin Forgé pour obtenir les skins à venir qui seront ajoutés au menu [Échange] pendant la saison. Les skins des Collaboration et autres skins spéciaux sont exclus.
+ItemType/LOOT_EXCHANGE_TICKET/Desc┃Utilisez cet objet à la place des Jetons pour obtenir des Skins Épiques dans le menu [Échange].\nVous pouvez aussi l'utiliser pour obtenir des skins qui seront ajoutés au menu [Échange] lors des prochaines saisons. n\Les Skins issus de collaborations et autres skins spéciaux ne sont pas échangeables.\n*Les Bons d'Échanges de Skins Forgé achetés avant la mise à jour de la Saison 12 expireront 300 jours après leur achat.\n*Les Bons d'Échanges de Skins Forgé achetés à partir de la mise à jour de la Saison 12 n’expirent jamais.\n*Notez que vous pouvez vérifier la date d’expiration de vos bons actuels en appuyant sur son icône dans le menu Échange.
 ItemType/ANNOUNCE/Name┃Pack Annonceur
 ItemType/ANNOUNCE/Desc┃Changer la voix de l'annonceur en partie.
 Goods/Name/1401000┃Aléatoire
@@ -11907,60 +11940,6 @@ Goods/Name/3602014┃Carte Joker d'Objet Épique
 ItemType/EXCHANGE_COLLECTIBLE/Name┃Fragments d'Échange
 ItemType/COLLECTIBLE/Name┃Fragments de Saison
 Goods/Name/4018000┃Échange de Fragments
-Goods/Name/4018001┃Fragment Sur les Flots 1
-Goods/Name/4018002┃Fragment Sur les Flots 2
-Goods/Name/4018003┃Fragment Sur les Flots 3
-Goods/Name/4018004┃Fragment Sur les Flots 4
-Goods/Name/4018005┃Fragment Sur les Flots 5
-Goods/Name/4018006┃Fragment Sur les Flots 6
-Goods/Name/4018007┃Fragment Sur les Flots 7
-Goods/Name/4018008┃Fragment Sur les Flots 8
-Goods/Name/4018009┃Fragment Sur les Flots 9
-Goods/Name/4018010┃Fragment Sur les Flots 10
-Goods/Name/4018011┃Fragment Sur les Flots 11
-Goods/Name/4018012┃Fragment Sur les Flots 12
-Goods/Name/4018013┃Fragment Sur les Flots 13
-Goods/Name/4018014┃Fragment Sur les Flots 14
-Goods/Name/4018015┃Fragment Sur les Flots 15
-Goods/Name/4018016┃Fragment Sur les Flots 16
-Goods/Name/4018017┃Fragment Sur les Flots 17
-Goods/Name/4018018┃Fragment Sur les Flots 18
-Goods/Name/4018019┃Fragment Sur les Flots 19
-Goods/Name/4018020┃Fragment Sur les Flots 20
-Goods/Name/4018021┃Fragment Sur les Flots 21
-Goods/Name/4018022┃Fragment Sur les Flots 22
-Goods/Name/4018023┃Fragment Sur les Flots 23
-Goods/Name/4018024┃Fragment Sur les Flots 24
-Goods/Name/4018025┃Fragment Sur les Flots 25
-Goods/Name/4018026┃Fragment Sur les Flots 26
-Goods/Name/4018027┃Fragment Sur les Flots 27
-Goods/Name/4018028┃Fragment Sur les Flots 28
-Goods/Name/4018029┃Fragment Sur les Flots 29
-Goods/Name/4018030┃Fragment Sur les Flots 30
-Goods/Name/4018031┃Fragment Sur les Flots 31
-Goods/Name/4018032┃Fragment Sur les Flots 32
-Goods/Name/4018033┃Fragment Sur les Flots 33
-Goods/Name/4018034┃Fragment Sur les Flots 34
-Goods/Name/4018035┃Fragment Sur les Flots 35
-Goods/Name/4018036┃Fragment Sur les Flots 36
-Goods/Name/4018037┃Fragment Sur les Flots 37
-Goods/Name/4018038┃Fragment Sur les Flots 38
-Goods/Name/4018039┃Fragment Sur les Flots 39
-Goods/Name/4018040┃Fragment Sur les Flots 40
-Goods/Name/4018041┃Fragment Sur les Flots 41
-Goods/Name/4018042┃Fragment Sur les Flots 42
-Goods/Name/4018043┃Fragment Sur les Flots 43
-Goods/Name/4018044┃Fragment Sur les Flots 44
-Goods/Name/4018045┃Fragment Sur les Flots 45
-Goods/Name/4018046┃Fragment Sur les Flots 46
-Goods/Name/4018047┃Fragment Sur les Flots 47
-Goods/Name/4018048┃Fragment Sur les Flots 48
-Goods/Name/4018049┃Fragment Sur les Flots 49
-Goods/Name/4018050┃Fragment Sur les Flots 50
-Goods/Name/4018051┃Fragment Sur les Flots 51
-Goods/Name/4018052┃Fragment Sur les Flots 52
-Goods/Name/4018053┃Fragment Sur les Flots 53
-Goods/Name/4018054┃Fragment Sur les Flots 54
 ItemType/EVENT_EXCHANGE_COLLECTIBLE/Name┃Échange de Fragments d'Événement
 ItemType/EVENT_COLLECTIBLE/Name┃Fragments d'Événement
 Goods/Name/4019000┃Échange de Fragment d'Événement
@@ -12269,7 +12248,6 @@ Goods/Name/6┃Boîte de Drops
 Goods/Desc/1┃Vous pouvez recevoir 300 NP d'Évenement ou 1,500 A-Coin comme récompense.
 Goods/Desc/2┃Vous pouvez recevoir 300 NP d'Évenement ou 1,500 A-Coin comme récompense.
 Goods/Desc/3┃Vous pouvez obtenir 1 Personnage.
-Goods/Desc/6┃Vous pouvez recevoir 300 NP d'Évenement (1 Jour) ou 1,500 A-Coin comme récompense.\nLes probabilités d'obtention des récompenses d'événement et gratuites ne sont pas divulguées.
 Goods/Name/3143001┃Boîte Esports (Saison EA 7)
 Goods/Name/3143002┃Boîte Esports (Saison EA 8)
 Goods/Name/3143003┃Boîte Esports (Saison EA 9)
@@ -13284,6 +13262,10 @@ Skill/Code/Coef/4512002┃Téléporte dans la direction ciblée.
 Skill/Code/ExpansionTip/4512002┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4000000┃Accélération
 CharacterState/Group/Desc/4000000┃Collisions ignorées. Vitesse de déplacement augmentée.
+Skill/Code/Desc/4200001┃Téléporte dans la direction ciblée.
+Skill/Code/Desc/4200002┃Téléporte dans la direction ciblée.\n\n<color=#FFFFC2>Amélioration du Module : </color>Augmente la vitesse de déplacement pendant {2} secondes.
+Skill/Code/Coef/4200001┃Téléporte dans la direction ciblée.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente la vitesse de déplacement de {3}% pendant {2} secondes et ignore les collisions.</color>
+Skill/Code/Coef/4200002┃Téléporte dans la direction ciblée.\n\n<color=#FFFFC2>Amélioration du Module : </color>Augmente la vitesse de déplacement pendant {2} secondes.
 Skill/Group/Name/4001000┃Séisme
 Skill/Group/LobbyDesc/4001000┃Inflige des dégâts de compétence aux ennemis proches et les ralentit.\n\n<color=#ff3399>Amélioration de la compétence :</color> Inflige des dégâts aux ennemis proches pendant un certain temps.
 Skill/Group/LobbyDesc/4513000┃Inflige des dégâts de compétence aux ennemis proches et les ralentit.\n\n<color=#ff3399>Amélioration de la compétence :</color> Inflige des dégâts aux ennemis proches pendant un certain temps.
@@ -13303,6 +13285,10 @@ CharacterState/Group/Name/4001010┃Séisme
 CharacterState/Group/Desc/4001010┃Ralenti par le séisme.
 CharacterState/Group/Name/4001000┃Séisme Gigantesque
 CharacterState/Group/Desc/4001000┃Fait trembler continuellement le sol, infligeant des dégâts aux ennemis.
+Skill/Code/Desc/4200011┃Les ennemis proches subissent <color=white>{11}</color> dégâts de compétence et sont ralentis de {3}% pendant {5} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Inflige <color=white>{2}</color> dégâts de compétence aux ennemis à {6}m de distance toutes les {4} secondes pendant {1} secondes.</color>
+Skill/Code/Desc/4200012┃Les ennemis proches subissent <color=white>{11}</color> dégâts de compétence et sont ralentis de {3}% pendant {5} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>Inflige <color=white>{2}</color> dégâts de compétence aux ennemis à {6}m de distance toutes les {4} secondes pendant {1} secondes.
+Skill/Code/Coef/4200011┃Déclenche un séisme autour de vous, infligeant <color=white>{12}</color><color=green>(+Niveau du Personnage*{13})</color><color=#688a08>(+{14}% des PV supplémentaires)</color> dégâts de compétence aux ennemis proches et les ralentissant de {3}% pendant {5} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Inflige {2}(+Niveau du Personnage*{7})(+{15}% des PV supplémentaires) dégâts de compétence aux ennemis à {6}m de distance toutes les {4} secondes pendant {1} secondes.</color>
+Skill/Code/Coef/4200012┃Déclenche un séisme autour de vous, infligeant <color=white>{12}</color><color=green>(+Niveau du Personnage*{13})</color><color=#688a08>(+{14}% des PV supplémentaires)</color> dégâts de compétence aux ennemis proches et les ralentissant de {3}% pendant {5} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color> Inflige <color=white>{2}</color><color=green>(+Niveau du Personnage*{7})</color><color=#688a08>(+{15}% des PV supplémentaires)</color> dégâts de compétence aux ennemis à {6}m de distance toutes les {4} secondes pendant {1} secondes.
 Skill/Group/Name/4101000┃Violation de Protocole
 Skill/Group/LobbyDesc/4101000┃Un E.M.O.T.E modifié explose. Les alliés reçoivent des PV bonus, tandis que les ennemis subissent des dégâts bruts.\n\n<color=#ff3399>Amélioration de la compétence :</color> Les effets sont plus puissants.
 Skill/Group/LobbyDesc/4514000┃Un E.M.O.T.E modifié explose. Les alliés reçoivent des PV bonus, tandis que les ennemis subissent des dégâts bruts.\n\n<color=#ff3399>Amélioration de la compétence :</color> Les effets sont plus puissants.
@@ -13322,6 +13308,10 @@ CharacterState/Group/Name/4101000┃AMI
 CharacterState/Group/Desc/4101000┃PV max augmentés.
 CharacterState/Group/Name/4101010┃Violation de Protocole
 CharacterState/Group/Desc/4101010┃Les dégâts subis sont réduits pendant un certain temps par Violation de Protocole.
+Skill/Code/Desc/4200021┃Envoie l'E.M.O.T.E modifié à l'endroit ciblé. L'E.M.O.T.E explose après quelques instants.\n\nLes PV des alliés proches augmentent de <color=white>{1}</color> pendant {4} secondes, tandis que les ennemis touchés subissent <color=white>{7}</color><color=#688A08>(+{8} PV Max de la Cible)</color> dégâts bruts.\n\nSubir des dégâts une fois réduit les dégâts consécutifs subis par la cible de {12} pendant {11} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>L'effet est considérablement augmenté.</color>
+Skill/Code/Desc/4200022┃Envoie l'E.M.O.T.E modifié à l'endroit ciblé. L'E.M.O.T.E explose après quelques instants.\n\nLes PV des alliés proches augmentent de <color=white>{1}</color> pendant {4} secondes,  tandis que les ennemis touchés subissent <color=white>{7}</color><color=#688A08>(+{8} PV Max de la Cible)</color> dégâts bruts.\n\nSubir des dégâts une fois réduit les dégâts consécutifs subis par la cible de {12} pendant {11} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>L'effet est considérablement augmenté.
+Skill/Code/Coef/4200021┃Envoie l'E.M.O.T.E modifié à l'endroit ciblé. L'E.M.O.T.E explose après {4} secondes.\n\nLes PV des alliés proches augmentent de <color=white>{5}</color><color=green>(+Niveau du Personnage*{1})</color> pendant {6} secondes, tandis que les ennemis touchés subissent <color=white>{7}</color><color=#688A08>(+{8} PV Max de la Cible)</color> dégâts bruts.\n\nSubir des dégâts une fois réduit les dégâts consécutifs subis par la cible de {12} pendant {11} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>L'effet est considérablement augmenté.</color>
+Skill/Code/Coef/4200022┃Envoie l'E.M.O.T.E modifié à l'endroit ciblé. L'E.M.O.T.E explose après {4} secondes.\n\nLes PV des alliés proches augmentent de <color=white>{5}</color><color=green>(+Niveau du Personnage*{1})</color> pendant {6} secondes,  tandis que les ennemis touchés subissent <color=green>Niveau du Personnage*{10}</color><color=#688A08>(+{8} PV Max de la Cible)</color> dégâts bruts.\n\nSubir des dégâts une fois réduit les dégâts consécutifs subis par la cible de {12} pendant {11} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>L'effet est considérablement augmenté.
 Skill/Group/Name/4102000┃Décalage Électrique
 Skill/Group/LobbyDesc/4102000┃Vous vous déplacez sur une courte distance. Votre Portée d'Attaque de Base est augmentée pendant un certain temps.\n\n<color=#ff3399>Amélioration de la compétence : </color>La portée d'attaque est augmentée.
 Skill/Group/LobbyDesc/4515000┃Vous vous déplacez sur une courte distance. Votre Portée d'Attaque de Base est augmentée pendant un certain temps.\n\n<color=#ff3399>Amélioration de la compétence : </color>La portée d'attaque est augmentée.
@@ -13339,6 +13329,10 @@ Skill/Code/Coef/4515002┃Lors de l'activation, vous vous déplacez de <color=wh
 Skill/Code/ExpansionTip/4515002┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4102000┃Électrique
 CharacterState/Group/Desc/4102000┃Portée d'Attaque de Base augmentée.
+Skill/Code/Desc/4200031┃Lors de l'activation, vous vous déplacez de <color=white>{1}m</color> vers le curseur. Votre Portée d'Attaque de Base est augmentée de {2}%.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>La portée d'attaque est augmentée.</color>
+Skill/Code/Desc/4200032┃Lors de l'activation, vous vous déplacez de <color=white>{1}m</color> vers le curseur. Votre Portée d'Attaque de Base est augmentée de {2}%.\n\n<color=#FFFFC2>Amélioration du Module : </color>La portée d'attaque est augmentée.
+Skill/Code/Coef/4200031┃Lors de l'activation, vous vous déplacez de <color=white>{1}m</color> vers le curseur. Vous devenez Électrique pendant {3} secondes et votre Portée d'Attaque de Base est augmentée de {2}%.\nVous cessez d'être Électrique après un certain temps.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>La portée d'attaque est augmentée de {4}.</color>
+Skill/Code/Coef/4200032┃Lors de l'activation, vous vous déplacez de <color=white>{1}m</color> vers le curseur. Vous devenez Électrique pendant {3} secondes et votre Portée d'Attaque de Base est augmentée de {2}%.\nVous cessez d'être Électrique après un certain temps.\n\n<color=#FFFFC2>Amélioration du Module : </color>La portée d'attaque est augmentée de {4}.</color>
 Skill/Group/Name/4103000┃Champ de Force
 Skill/Group/LobbyDesc/4103000┃Activez pour créer un champ de force autour de vous qui absorbe les dégâts.\n\n<color=#ff3399>Amélioration de la compétence :</color> Vous gagnez de la Ténacité pendant un certain temps.
 Skill/Group/LobbyDesc/4516000┃Activez pour créer un champ de force autour de vous qui absorbe les dégâts.\n\n<color=#ff3399>Amélioration de la compétence :</color> Vous gagnez de la Ténacité pendant un certain temps.
@@ -13358,6 +13352,10 @@ CharacterState/Group/Name/4103000┃Champ de Force - Protégé des dégâts
 CharacterState/Group/Desc/4103000┃Obtention d'un bouclier en fonction du montant de PV supplémentaires.
 CharacterState/Group/Name/4103010┃Champ de Force - Pas rapides
 CharacterState/Group/Desc/4103010┃Votre ténacité est augmentée grâce au champ de force.
+Skill/Code/Desc/4200041┃Obtient un bouclier absorbant <color=white>{1}</color> dégâts pendant {0} secondes.\n\n<color=#B4B73E>Amélioration de Module : </color><color=#9C9C9C>Vous gagnez {12}% de Ténacité pendant {11} secondes.</color>
+Skill/Code/Desc/4200042┃Obtient un bouclier absorbant <color=white>{1}</color> dégâts pendant {0} secondes.\n\n<color=#FFFFC2>Amélioration de Module : </color>Vous gagnez {12}% de Ténacité pendant {11} secondes.
+Skill/Code/Coef/4200041┃Obtient un bouclier absorbant <color=white>{1}</color><color=#688a08>(+{4} des PV supplémentaires)</color> dégâts pendant {0} secondes.\n\n<color=#B4B73E>Amélioration de Module : </color><color=#9C9C9C>Vous gagnez {12}(+{13}% des PV supplémentaires)% de Ténacité pendant {11} secondes.</color>
+Skill/Code/Coef/4200042┃Obtient un bouclier absorbant <color=white>{1}</color><color=#688a08>(+{4} des PV supplémentaires)</color> dégâts pendant {0} secondes.\n\n<color=#FFFFC2>Amélioration de Module : </color>Vous gagnez <color=white>{12}</color><color=#688a08>(+{13}% des PV supplémentaires)</color><color=white>%</color> de Ténacité pendant {11} secondes.
 Skill/Group/Name/4104000┃Totem
 Skill/Group/LobbyDesc/4104000┃Entre en stase pendant un court instant. Vous êtes inatteignable !\n\n<color=#ff3399>Amélioration de la compétence :</color> Le temps de recharge de vos compétences diminue rapidement lorsque vous êtes en stase.
 Skill/Group/LobbyDesc/4517000┃Entre en stase pendant un court instant. Vous êtes inatteignable !\n\n<color=#ff3399>Amélioration de la compétence :</color> Le temps de recharge de vos compétences diminue rapidement lorsque vous êtes en stase.
@@ -13375,6 +13373,10 @@ Skill/Code/Coef/4517002┃Lors de l'utilisation, vous entrez en stase pendant {0
 Skill/Code/ExpansionTip/4517002┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4104000┃Stase
 CharacterState/Group/Desc/4104000┃En stase grâce à Totem.
+Skill/Code/Desc/4200051┃Lors de l'utilisation, vous entrez en stase pendant {0} secondes. Vous ne pouvez effectuer aucune action lorsque vous êtes en stase.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Les temps de recharge sont rétablis {1} plus rapidement lorsque vous êtes en stase grâce à Totem.</color>
+Skill/Code/Desc/4200052┃Lors de l'utilisation, vous entrez en stase pendant {0} secondes. Vous ne pouvez effectuer aucune action lorsque vous êtes en stase.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les temps de recharge sont rétablis {1} plus rapidement lorsque vous êtes en stase grâce à Totem.
+Skill/Code/Coef/4200051┃Lors de l'utilisation, vous entrez en stase pendant {0} secondes. Vous ne pouvez effectuer aucune action lorsque vous êtes en stase.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Les temps de recharge sont rétablis {1} plus rapidement lorsque vous êtes en stase grâce à Totem.</color>
+Skill/Code/Coef/4200052┃Lors de l'utilisation, vous entrez en stase pendant {0} secondes. Vous ne pouvez effectuer aucune action lorsque vous êtes en stase.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les temps de recharge sont rétablis {1} plus rapidement lorsque vous êtes en stase grâce à Totem.
 Skill/Group/Name/4105000┃Purge
 Skill/Group/LobbyDesc/4105000┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches, et augmenter votre vitesse de déplacement.\n\n<color=#ff3399>Amélioration de la compétence :</color> Augmente votre ténacité et celle de vos alliés.
 Skill/Group/LobbyDesc/4518000┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches, et augmenter votre vitesse de déplacement.\n\n<color=#ff3399>Amélioration de la compétence :</color> Augmente votre ténacité et celle de vos alliés.
@@ -13396,6 +13398,10 @@ CharacterState/Group/Name/4105010┃Purge - Vitesse de Déplacement augmentée
 CharacterState/Group/Desc/4105010┃Vitesse de déplacement augmentée par Purge.
 CharacterState/Group/Name/4105020┃Nullification - Tenacité
 CharacterState/Group/Desc/4105020┃Votre tenacité est augmentée grâce à Nullification.
+Skill/Code/Desc/4200061┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes. Supprimer des malus ou effets de contrôle augmente la vitesse de déplacement de {7} pendant {6} secondes\nNe fonctionne pas sur les états Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente votre ténacité et celle de vos alliés de {5} pendant {4} secondes.</color>
+Skill/Code/Desc/4200062┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes. Supprimer des malus ou effets de contrôle augmente la vitesse de déplacement de {7} pendant {6} secondes\nNe fonctionne pas sur les états Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente votre ténacité et celle de vos alliés de {5} pendant {4} secondes.</color>
+Skill/Code/Coef/4200061┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes. Supprimer des malus ou effets de contrôle augmente la vitesse de déplacement de {7} pendant {6} secondes\nNe fonctionne pas sur les états Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente votre ténacité et celle de vos alliés de {5} pendant {4} secondes.</color>
+Skill/Code/Coef/4200062┃Activez pour supprimer instantanément les malus ou effets de contrôle sur vous et vos alliés proches et augmenter votre vitesse de déplacement de {3}% pendant {2} secondes. Supprimer des malus ou effets de contrôle augmente la vitesse de déplacement de {7} pendant {6} secondes\nNe fonctionne pas sur les états Projeté en l'air, Repoussé, Attrapé et Stase.\n\n<color=#FFFFC2>Amélioration du Module : </color>Augmente votre ténacité et celle de vos alliés de {5} pendant {4} secondes.
 Skill/Group/Name/4107000┃Voleur d'Âmes
 Skill/Group/LobbyDesc/4107000┃Gagne de l'énergie en fonction des PV perdus lors des combats avec les cobayes proches.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent de la Vitesse de déplacement et de l'Omnisiphon.\n\n<color=#ff3399>Amélioration de la compétence : </color>Obtient plus d'énergie.
 Skill/Group/LobbyDesc/4519000┃Gagne de l'énergie en fonction des PV perdus lors des combats avec les cobayes proches.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent de la Vitesse de déplacement et de l'Omnisiphon.\n\n<color=#ff3399>Amélioration de la compétence : </color>Obtient plus d'énergie.
@@ -13417,6 +13423,10 @@ CharacterState/Group/Name/4107010┃Voleur d'Âmes - Guarde
 CharacterState/Group/Desc/4107010┃Omnisiphon et Vitesse de déplacement augmentés.
 CharacterState/Group/Name/4107020┃Voleur d'Âmes - Application impossible
 CharacterState/Group/Desc/4107020┃Une fois affecté par Voleur d'Âmes, l'effet ne peut plus être appliqué pendant un certain temps.
+Skill/Code/Desc/4200071┃<color=green>Passif :</color> Gagne de l'énergie en fonction des PV perdus lors des combats avec les cobayes proches.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent <color=white>{5}%</color> Vitesse de déplacement et <color=white>{6}%</color> Omnisiphon pendant {4} secondes.\n\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente la réserve d'énergie maximale et le taux de gain d'énergie.</color>
+Skill/Code/Desc/4200072┃<color=green>Passif :</color> Gagne de l'énergie en fonction des PV perdus lors des combats avec les cobayes proches.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent <color=white>{5}%</color> Vitesse de déplacement et <color=white>{6}%</color> Omnisiphon pendant {4} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>Augmente la réserve d'énergie maximale et le taux de gain d'énergie.
+Skill/Code/Coef/4200071┃<color=green>Passif :</color> Gagne de l'énergie tous les {1}% des PV perdus lors des combats avec les cobayes proches.\nPeut être chargé jusqu'à {2}. L'énergie se dissipe si elle n'est pas chargée pendant {3} secondes.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent <color=white>{5}</color><color=#6B72FF>(+Énergie * {7})</color><color=white>%</color> Vitesse de déplacement et <color=white>{6}</color><color=#6B72FF>(+Énergie * {8})</color><color=white>%</color> Omnisiphon pendant {4} secondes.\n\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Augmente la réserve d'énergie maximale et le taux de gain d'énergie.</color>
+Skill/Code/Coef/4200072┃<color=green>Passif :</color> Gagne de l'énergie tous les {1}% des PV perdus lors des combats avec les cobayes proches.\nPeut être chargé jusqu'à {2}. L'énergie se dissipe si elle n'est pas chargée pendant {3} secondes.\n\nLors de l'utilisation, toute l'énergie est consommée et les alliés proches reçoivent <color=white>{5}</color><color=#6B72FF>(+Énergie * {7})</color><color=white>%</color>% Vitesse de déplacement et <color=white>{6}</color><color=#6B72FF>(+Énergie * {8})</color><color=white>%</color> Omnisiphon pendant {4} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>Augmente la réserve d'énergie maximale et le taux de gain d'énergie.
 Skill/Group/Name/4114000┃Strijder
 Skill/Group/LobbyDesc/4114000┃Augmente votre vitesse de déplacement vers les ennemis. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit des dégâts de compétence supplémentaires et votre vitesse de déplacement augmente pendant un moment.\n\n<color=#ff3399>Amélioration de la compétence :</color> Les ennemis endommagés par Strijder sont ralentis.
 Skill/Group/LobbyDesc/4523000┃Augmente votre vitesse de déplacement vers les ennemis. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit des dégâts de compétence supplémentaires et votre vitesse de déplacement augmente pendant un moment.\n\n<color=#ff3399>Amélioration de la compétence :</color> Les ennemis endommagés par Strijder sont ralentis.
@@ -13457,6 +13467,14 @@ CharacterState/Group/Name/4112000┃Lame de Vérité - Réflexion
 CharacterState/Group/Desc/4112000┃Votre vitesse de déplacement a été augmentée après avoir touché un ennemi avec la Vérité.
 CharacterState/Group/Name/4112010┃Lame de Vérité - Reconnaissance
 CharacterState/Group/Desc/4112010┃Dégâts subis augmentés car ils sont façonnés par la Vérité.
+Skill/Code/Desc/4200111┃Augmente votre vitesse de déplacement vers les ennemis de {2}% pendant {1} secondes. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit <color=white>{3}</color> dégâts de compétence et votre vitesse de déplacement augmente de <color=white>{7}%</color> pendant <color=white>{6} secondes</color>.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Les ennemis endommagés par Strijder sont ralentis de {5}% pendant {4} secondes</color>
+Skill/Code/Desc/4200112┃Augmente votre vitesse de déplacement vers les ennemis de {2}% pendant {1} secondes. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit <color=white>{3}</color> dégâts de compétence supplémentaires et votre vitesse de déplacement augmente de <color=white>{7}%</color> pendant <color=white>{6} secondes</color>.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les ennemis endommagés par Strijder sont ralentis de {5}% pendant {4} secondes.
+Skill/Code/Coef/4200111┃Augmente votre vitesse de déplacement vers les ennemis de {2}% pendant {1} secondes. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit <color=white>{6}</color><color=green>(+Niveau du Personnage*{7})</color> dégâts de compétence supplémentaires et votre vitesse de déplacement augmente de ({11}Mêlée {16}%{13} | {12}Distance{17}%{14}) pendant <color=white>{15} secondes</color>.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les ennemis endommagés par Strijder sont ralentis de ({11}Mêlée {8}%{13} | {12}Distance {9}%{14}) pendant {4} secondes.
+Skill/Code/Coef/4200112┃Augmente votre vitesse de déplacement vers les ennemis de {2}% pendant {1} secondes. Si vous infligez des dégâts à un ennemi pendant cette durée, il subit <color=white>{6}</color><color=green>(+Niveau du Personnage*{7})</color> dégâts de compétence supplémentaires et votre vitesse de déplacement augmente de ({11}Mêlée {16}%{13} | {12}Distance{17}%{14}) pendant <color=white>{15} secondes</color>.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les ennemis endommagés par Strijder sont ralentis de ({11}Mêlée {8}%{13} | {12}Distance {9}%{14}) pendant {4} secondes.
+Skill/Code/Desc/4200091┃Inflige <color=white>{0}</color> dégâts de compétence aux ennemis proches.\n\nEn fonction du nombre de cibles touchées, la vitesse de déplacement augmente de {4} à {5}% pendant {6} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Une autre lame de vérité apparaît, infligeant {11} dégâts de compétence supplémentaires.</color>
+Skill/Code/Desc/4200092┃Inflige <color=white>{0}</color> dégâts de compétence aux ennemis proches.\n\nEn fonction du nombre de cibles touchées, la vitesse de déplacement augmente de {4} à {5}% pendant {6} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>Une autre lame de vérité apparaît, infligeant {11} dégâts de compétence supplémentaires.
+Skill/Code/Coef/4200091┃Inflige <color=white>{0}</color><color=green>(+Niveau du Personnage*{8})</color> dégâts de compétence aux ennemis proches.\n\nEn fonction du nombre de cibles touchées, la vitesse de déplacement augmente de {4} à {5}% pendant {6} secondes.\n\n<color=#B4B73E>Amélioration du Module : </color><color=#9C9C9C>Une autre lame de vérité apparaît, infligeant {12}(+Niveau du Personnage*{13}) dégâts de compétence supplémentaires.</color>
+Skill/Code/Coef/4200092┃Inflige <color=white>{0}</color><color=green>(+Niveau du Personnage*{8})</color> dégâts de compétence aux ennemis proches.\n\nEn fonction du nombre de cibles touchées, la vitesse de déplacement augmente de {4} à {5}% pendant {6} secondes.\n\n<color=#FFFFC2>Amélioration du Module : </color>Une autre lame de vérité apparaît, infligeant {12}(+Niveau du Personnage*{13}) dégâts de compétence supplémentaires.
 Skill/Group/Name/4113000┃Serment Brisé
 Skill/Group/LobbyDesc/4113000┃Vos dégâts infligés augmentent au détriment de vos PV. Les PV utilisés sont lentement récupérés.\n\n<color=#ff3399>Amélioration de la compétence :</color> Si vous aidez à éliminer un cobaye, l'effet est renouvelé.
 Skill/Group/LobbyDesc/4522000┃Vos dégâts infligés augmentent au détriment de vos PV. Les PV utilisés sont lentement récupérés.\n\n<color=#ff3399>Amélioration de la compétence :</color> Si vous aidez à éliminer un cobaye, l'effet est renouvelé.
@@ -13493,6 +13511,10 @@ CharacterState/Group/Name/4108000┃Vent Curatif - Défense augmentée
 CharacterState/Group/Desc/4108000┃Soigné par un Vent Curatif.
 CharacterState/Group/Name/4108010┃Vent Curatif - Interférence
 CharacterState/Group/Desc/4108010┃Effets de soin réduits pour d'autres vents curatifs.
+Skill/Code/Desc/4200081┃Tous les alliés à portée sont soignés de <color=white>{1}</color> PV.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Les alliés touchés par le vent récupèrent <color=white>{4}</color> PV supplémentaires en {5} secondes.</color>
+Skill/Code/Desc/4200082┃Tous les alliés à portée sont soignés de <color=white>{1}</color> PV.\n\n<color=#FFFFC2>Amélioration du Module :</color><color=#9C9C9C> Les alliés touchés par le vent récupèrent <color=white>{4}</color> PV supplémentaires en {5} secondes.</color>
+Skill/Code/Coef/4200081┃Tous les alliés à portée récupèrent (<color=white>{1}</color>+<color=green>Niveau du Personnage*{6}</color>) PV.\nAprès le soin de Vent Curatif, seulement {3}% du soin est appliqué par un autre effet Vent Curatif pendant les prochaines {2} secondes.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Les alliés touchés par le vent récupèrent <color=white>{7}</color>+<color=green>(Niveau du Personnage*{8})</color> PV supplémentaires en {5} secondes.</color>
+Skill/Code/Coef/4200082┃Tous les alliés à portée récupèrent (<color=white>{1}</color>+<color=green>Niveau du Personnage*{6}</color>) PV.\nAprès le soin de Vent Curatif, seulement {3}% du soin est appliqué par un autre effet Vent Curatif pendant les prochaines {2} secondes.\n\n<color=#FFFFC2>Amélioration du Module :</color> Les alliés touchés par le vent récupèrent <color=white>{7}</color>+<color=green>(Niveau du Personnage*{8})</color> PV supplémentaires en {5} secondes.
 Skill/Group/Name/4115000┃Missiles Répulsifs
 Skill/Group/LobbyDesc/4115000┃Vous vous déplacez sur une courte distance et lancez un missile vers le personnage ennemi le plus proche à portée, infligeant des dégâts bruts aux ennemis touchés.\n\n<color=#ff3399>Amélioration de la compétence :</color> Des missiles supplémentaires sont lancés.
 Skill/Group/LobbyDesc/4525000┃Vous vous déplacez sur une courte distance et lancez un missile vers le personnage ennemi le plus proche à portée, infligeant des dégâts bruts aux ennemis touchés.\n\n<color=#ff3399>Amélioration de la compétence :</color> Des missiles supplémentaires sont lancés.
@@ -13510,6 +13532,10 @@ Skill/Code/Coef/4525002┃Vous vous déplacez sur une courte distance et lancez 
 Skill/Code/ExpansionTip/4525002┃<i>Temps de recharge fixe : cette compétence n'est pas affectée par la Réduction du Temps de Recharge.</i>
 CharacterState/Group/Name/4115000┃Missiles Répulsifs - Défense Réduite
 CharacterState/Group/Desc/4115000┃Défense réduite par des Missiles Répulsifs.
+Skill/Code/Desc/4200121┃Vous vous déplacez sur une courte distance et lancez 5 missiles vers le personnage ennemi le plus proche à portée, infligeant <color=white>{0}</color><color=#688A08>(+{2} des PV Max de la cible)</color> dégâts bruts par missile.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Lance 3 missiles supplémentaires.</color>
+Skill/Code/Desc/4200122┃Vous vous déplacez sur une courte distance et lancez 5 missiles vers le personnage ennemi le plus proche à portée, infligeant <color=white>{0}</color><color=#688A08>(+{2} des PV Max de la cible)</color> dégâts bruts par missile.\n\n<color=#FFFFC2>Amélioration du Module :</color><color=#9C9C9C> Lance 3 missiles supplémentaires.</color>
+Skill/Code/Coef/4200121┃Vous vous déplacez sur une courte distance et lancez 5 missiles vers le personnage ennemi le plus proche à portée, infligeant <color=white>{4}</color><color=green>(+Niveau du Personnage*{5})</color><color=#688A08>(+{3} des PV Max de la cible)</color> dégâts bruts par missile.\n\n<color=#B4B73E>Amélioration du Module :</color><color=#9C9C9C> Lance 3 missiles supplémentaires.</color>
+Skill/Code/Coef/4200122┃Vous vous déplacez sur une courte distance et lancez 5 missiles vers le personnage ennemi le plus proche à portée, infligeant <color=white>{4}</color><color=green>(+Niveau du Personnage*{5})</color><color=#688A08>(+{3} des PV Max de la cible)</color> dégâts bruts par missile.\n\n<color=#FFFFC2>Amélioration du Module :</color><color=#9C9C9C> Lance 3 missiles supplémentaires.</color>
 Skill/Group/Name/4116000┃Charge Plasma
 Skill/Group/LobbyDesc/4116000┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant des dégâts de compétence et ralentissant les ennemis touchés.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#ff3399>Amélioration de la compétence :</color> Réduit la défense des ennemis touchés par le projectile.
 Skill/Group/LobbyDesc/4526000┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant des dégâts de compétence et ralentissant les ennemis touchés.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#ff3399>Amélioration de la compétence :</color> Réduit la défense des ennemis touchés par le projectile.
@@ -13529,6 +13555,10 @@ CharacterState/Group/Name/4116000┃Charge Plasma - Réduction de la Défense
 CharacterState/Group/Desc/4116000┃Défense Réduite par Charge Plasma.
 CharacterState/Group/Name/4116010┃Charge Plasma - Ralenti
 CharacterState/Group/Desc/4116010┃Ralenti par Charge Plasma.
+Skill/Code/Desc/4200131┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant <color=white>{0}</color> dégâts de compétence et ralentissant les ennemis touchés de {7} pendant {6} secondes.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Réduit la défense des ennemis touchés par le projectile de {2} pendant {1} secondes.</color>
+Skill/Code/Desc/4200132┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant <color=white>{0}</color> dégâts de compétence et ralentissant les ennemis touchés de {7} pendant {6} secondes.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Réduit la défense des ennemis touchés par le projectile de {2} pendant {1} secondes.</color>
+Skill/Code/Coef/4200131┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant <color=white>{4}</color><color=green>(+Niveau du Personnage*{5})</color> dégâts de compétence et ralentissant les ennemis touchés de {7} pendant {6} secondes.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Réduit la défense des ennemis touchés par le projectile de {2} pendant {1} secondes.</color>
+Skill/Code/Coef/4200132┃Vous vous déplacez sur une courte distance et projetez de l'énergie plasma vers l'avant, infligeant <color=white>{4}</color><color=green>(+Niveau du Personnage*{5})</color> dégâts de compétence et ralentissant les ennemis touchés de {7} pendant {6} secondes.\nLes dégâts ne sont infligés qu'une seule fois, même si l'ennemi est touché par plusieurs projectiles.\n\n<color=#FFFFC2>Amélioration du Module :</color> Réduit la défense des ennemis touchés par le projectile de {2} pendant {1} secondes.
 Skill/Group/Name/4117000┃Asthénie
 Skill/Group/LobbyDesc/4117000┃Ralentit les personnages ennemis ciblés et réduit les dégâts infligés par votre cible.\n\n<color=#ff3399>Amélioration de la compétence :</color> Confère un effet plus puissant.
 Skill/Group/LobbyDesc/4527000┃Ralentit les personnages ennemis ciblés et réduit les dégâts infligés par votre cible.\n\n<color=#ff3399>Amélioration de la compétence :</color> Confère un effet plus puissant.
@@ -13569,6 +13599,10 @@ CharacterState/Group/Name/4118010┃Ailes de Lumière - Durée Prolongée avec l
 CharacterState/Group/Desc/4118010┃Durée prolongée en touchant des personnages ennemis avec des attaques de base.
 CharacterState/Group/Name/4118020┃Ailes de Lumière - Ralenti
 CharacterState/Group/Desc/4118020┃Ralenti par Ailes de Lumière.
+Skill/Code/Desc/4200151┃Supprime les effets de ralentissement.\nVotre vitesse de déplacement est augmentée de <color=white>{1}</color> et votre vitesse d'attaque de <color=white>{2}</color> pendant {0} secondes.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Toucher des personnages ennemis avec des attaques de base augmente la durée de {3} secondes.</color>
+Skill/Code/Desc/4200152┃Votre vitesse de déplacement est augmentée de <color=white>{1}</color> et votre vitesse d'attaque de <color=white>{2}</color> pendant {0} secondes.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Toucher des personnages ennemis avec des attaques de base augmente la durée de {3} secondes.</color>
+Skill/Code/Coef/4200151┃Supprime les effets de ralentissement.\nVotre vitesse de déplacement est augmentée de <color=white>{1}</color><color=green>(+Niveau du Personnage*{7})</color><color=white>%</color> et votre vitesse d'attaque de <color=white>{2}</color> pendant {0} secondes.\n\n<color=#B4B73E>Amélioration du Module :</color> <color=#9C9C9C>Toucher des personnages ennemis avec des attaques de base augmente la durée de {3} secondes.</color>
+Skill/Code/Coef/4200152┃Supprime les effets de ralentissement.\nVotre vitesse de déplacement est augmentée de <color=white>{1}</color><color=green>(+Niveau du Personnage*{7})</color><color=white>%</color> et votre vitesse d'attaque de <color=white>{2}</color> pendant {0} secondes.\n\n<color=#FFFFC2>Amélioration du Module :</color> <color=#9C9C9C>Toucher des personnages ennemis avec des attaques de base augmente la durée de {3} secondes.</color>
 Skill/Code/Name/4512001┃Saut Instantané
 Skill/Code/Name/4513001┃Séisme
 Skill/Code/Name/4514001┃Violation de Protocole
@@ -13617,6 +13651,21 @@ Skill/Group/Name/4525000┃Missiles Répulsifs
 Skill/Group/Name/4526000┃Charge Plasma
 Skill/Group/Name/4527000┃Asthénie
 Skill/Group/Name/4528000┃Ailes de Lumière
+Skill/Group/Name/4200000┃Saut Instantané
+Skill/Group/Name/4200010┃Séisme
+Skill/Group/Name/4200020┃Violation de Protocole
+Skill/Group/Name/4200030┃Décalage Électrique
+Skill/Group/Name/4200040┃Champ de Force
+Skill/Group/Name/4200050┃Totem
+Skill/Group/Name/4200060┃Purge
+Skill/Group/Name/4200070┃Voleur d'Âmes
+Skill/Group/Name/4200080┃Vent Curatif
+Skill/Group/Name/4200090┃Lame de Vérité
+Skill/Group/Name/4200100┃Serment Brisé
+Skill/Group/Name/4200110┃Strijder
+Skill/Group/Name/4200120┃Missiles Répulsifs
+Skill/Group/Name/4200130┃Charge Plasma
+Skill/Group/Name/4200150┃Ailes de Lumière
 TacticalSkillSet/Code/Name/500121┃Saut Instantané
 TacticalSkillSet/Code/Name/500122┃Saut Instantané
 TacticalSkillSet/Code/Name/500131┃Séisme
@@ -14580,6 +14629,7 @@ Item/Name/502305┃Hache à Pendule
 Item/Name/502306┃Piège Explosif
 Item/Name/502307┃RDX
 Item/Name/502308┃Drone IEM
+Item/Name/502308_2┃Dron IEM-X
 Item/Name/502310┃Tapis d'Acupression
 Item/Name/502401┃Fil
 Item/Name/502402┃Explosion d'Épines
@@ -15337,6 +15387,7 @@ Item/Help/502305┃Dès que vous marchez sur ce piège, une énorme hache se bal
 Item/Help/502306┃Un piège qui explose au toucher. Peut causer d'immenses dégâts s'il est\nplacé en avance sur le chemin d'un ennemi.
 Item/Help/502307┃Mélange de nitramine explosive. Généralement utilisé à des fins\ncommerciales ou militaires.
 Item/Help/502308┃Un drone IEM qui neutralise les pièges et les systèmes électroniques ennemis.\n Lui-même immunisé contre les IEM, il s'envole après avoir pulsé et donne de la vision.
+Item/Help/502308_2┃C'est différent d'un Drone IEM ! C'EST DIFFÉRENT !!
 Item/Help/502401┃Un fil créé selon un procédé spécial. Plus fin qu'un fil ordinaire, mais aussi résistant qu'une chaîne.
 Item/Help/502402┃De nombreuses aiguilles sont projetés d'un coup, perçant le corps.\nLes aiguilles peuvent perçer profondément dans les muscles et atteindre\nles vaisseaux. Difficile à guérir si on y ajoute du poison.
 Item/Help/502403┃Un piège effrayant qui projète d'énormes flammes quand on le touche.
@@ -15372,7 +15423,8 @@ Item/Effects/502304┃Cliquez pour installer une <color=lightblue>Mine</color>. 
 Item/Effects/502305┃Cliquez pour installer une <color=lightblue> Hache à Pendule</color>. <color=yellow>Effets du piège :</color> les ennemis\nsont immobilisés pendant 0.75 seconde.
 Item/Effects/502306┃Cliquez pour installer un <color=lightblue>Piège Explosif</color>. <color=yellow>Effets du piège :</color> explose sur\nun grand périmètre après 1,5 secondes.
 Item/Effects/502307┃Cliquez pour installer un <color=lightblue>RDX</color>. <color=yellow>Effets du piège :</color> explose sur un grand\npérimètre après 1,5 secondes.
-Item/Effects/502308┃Cliquez pour lancer le <color=lightblue>Drone IEM</color> dans la zone ciblée.\nDésactive les pièges et caméras et donne la vision de la zone ciblée pendant 7 secondes.
+Item/Effects/502308┃Cliquez pour lancer le <color=lightblue>Drone IEM</color> dans la zone ciblée.\nDésactive les pièges et caméras et donne la vision de la zone ciblée pendant {2} secondes.\n\n<color=yellow>Lance un Drone IEM-X amélioré pendant les Tempêtes de Sable.</color>
+Item/Effects/502308_2┃Cliquez pour lancer le <color=lightblue>Drone IEM-X</color> dans la zone ciblée.\nDésactive les pièges, les caméras, les consoles de sécurité et donne la vision de la zone ciblée pendant {2} secondes.\n\n<color=yellow>Lance un drone amélioré pendant les Tempêtes de Sable.</color>
 Item/Effects/502402┃Cliquez pour installer une <color=lightblue>Explosion d'Épines</color>. <color=yellow>Effets du piège :</color> ralentit de 50% pendant 3 secondes.
 Item/Effects/502403┃Cliquez pour installer un <color=lightblue>Piège Incendiaire</color>. <color=yellow>Effets du piège :</color> explose\nsur un grand périmètre après 1,5 secondes.
 Item/Effects/502404┃Cliquez pour installer un <color=lightblue>C-4</color>. <color=yellow>Effets du piège :</color> explose sur un grand\npérimètre après 1,5 secondes.
@@ -21515,6 +21567,12 @@ CharacterState/Group/Name/11015010┃Collant - Ralenti
 CharacterState/Group/Desc/11015010┃Du liquide noir s'est collé à vos chaussures, vous ralentissant.
 CharacterState/Group/Name/11014000┃Horloge de parquet : Accélération
 CharacterState/Group/Desc/11014000┃Le temps du compte à rebours est restauré de {0}. Les temps de recharge des Compétences, des Compétences Tactiques et des Compétences d'Arme sont réduits de {1}%.
+CharacterState/Group/Name/14000100┃Réduction sur les Matériaux
+CharacterState/Group/Desc/14000100┃L'achat de matériaux spéciaux coûte <color=yellow>{0} Crédits de moins</color>.\n(Cumulable avec la réduction de Lumi et la Spécialisation Grippe-sous.)
+CharacterState/Group/Name/14000400┃Démonstration de Force
+CharacterState/Group/Desc/14000400┃Gagnez immédiatement <color=yellow>{0} Crédits</color> dès que vous recevez ce bonus.\nGagnez <color=yellow>{1} Crédits</color> pour chaque assistance d'élimination d'un cobaye ennemi.
+CharacterState/Group/Name/14000700┃Récupération d'Échantillon Mutant
+CharacterState/Group/Desc/14000700┃Gagnez <color=yellow>{0} Crédits supplémentaires</color> pour chaque animal mutant tué.
 CharacterState/ModeModifier/IncreaseModeDamageRatio┃Inflige {1}{0}%</color> des dégâts de base.
 CharacterState/ModeModifier/PreventModeDamageRatio┃Subit {1}{0}%</color> des dégâts de base.
 CharacterState/ModeModifier/IncreaseModeHealRatio┃Effets de récupération efficaces à {1}{0}%</color>.
@@ -22881,6 +22939,86 @@ BattleMission/21008007/1┃Tuer 3 Ours
 BattleMission/21008008/1┃Entrer dans une Faille 1 fois
 BattleMission/21008009/1┃Obtenir 2 objets légendaires ou mythiques dans des Colis Aériens
 BattleMission/21008010/1┃Infliger plus de 19 000 dégâts aux Cobayes
+BattleMission/22001001/1┃Réussir un Break ou un Terminate 5 fois
+BattleMission/22001002/1┃Atteindre le niveau 18 de Maîtrise d'Arme
+BattleMission/22001003/1┃Infliger 25 000 dégâts aux Animaux Sauvages
+BattleMission/22001004/1┃Utiliser le Gadget - Marmite du Chasseur 3 fois
+BattleMission/22001005/1┃Tuer Wickeline 1 fois
+BattleMission/22001006/1┃Jouer 9 Parties Normales/Classées
+BattleMission/22001007/1┃Utiliser 15 fois l'Hyperloop
+BattleMission/22001008/1┃Obtenir 2 objets légendaires ou mythiques dans des Colis Aériens
+BattleMission/22001009/1┃Collecter 5 Météorite
+BattleMission/22001010/1┃Entrer dans une Faille 1 fois
+BattleMission/22002001/1┃Jouer 5 Parties Normales/Classées
+BattleMission/22002002/1┃Réussir un Break ou un Terminate 3 fois
+BattleMission/22002003/1┃Appeler 30 Drones de Livraison
+BattleMission/22002004/1┃Atteindre le niveau 16 de Maîtrise d'Arme
+BattleMission/22002005/1┃Réussir votre évasion 1 fois
+BattleMission/22002006/1┃Entrer dans une Faille 1 fois
+BattleMission/22002007/1┃Utiliser 10 fois l'Hyperloop
+BattleMission/22002008/1┃Infliger 36 500 dégâts aux Cobayes
+BattleMission/22002009/1┃Utiliser 10 Drones IEM
+BattleMission/22002010/1┃Consommer 30 Nourritures
+BattleMission/22003001/1┃Infliger plus de 19 000 dégâts aux Cobayes
+BattleMission/22003002/1┃Fabriquer plus de 4 objets légendaires
+BattleMission/22003003/1┃Atteindre le niveau 10 de Maîtrise de Fabrication
+BattleMission/22003004/1┃Finir 5 fois dans le TOP 3
+BattleMission/22003005/1┃Atteindre 6 TK 3 fois
+BattleMission/22003006/1┃Réussir votre évasion 1 fois
+BattleMission/22003007/1┃Entrer dans une Faille 1 fois
+BattleMission/22003008/1┃Réanimer un allié à terre 3 fois
+BattleMission/22003009/1┃Atteindre 5 TK
+BattleMission/22003010/1┃Tuer 15 Loups
+BattleMission/22004001/1┃Obtenir 8 000 crédits ou plus
+BattleMission/22004002/1┃Commander 20 fois au kiosque
+BattleMission/22004003/1┃Infliger 31 000 dégâts aux Cobayes
+BattleMission/22004004/1┃Fabriquer 3 objets légendaires
+BattleMission/22004005/1┃Finir 3 fois dans le TOP 3
+BattleMission/22004006/1┃Tuer 15 Chiens Sauvages
+BattleMission/22004007/1┃Consommer 30 Nourritures
+BattleMission/22004008/1┃Utiliser le SPV 3 fois
+BattleMission/22004009/1┃Jouer 5 Parties Normales/Classées
+BattleMission/22004010/1┃Tuer un Cobaye dans une zone restreinte
+BattleMission/22005001/1┃Tuer 3 Ours
+BattleMission/22005002/1┃Infliger 18 000 dégâts aux Animaux Sauvages
+BattleMission/22005003/1┃Réussir un Break ou un Terminate 3 fois
+BattleMission/22005004/1┃Fabriquer 8 objets légendaires
+BattleMission/22005005/1┃Collecter 5 Arbres de Vie
+BattleMission/22005006/1┃Atteindre le niveau 10 de Maîtrise de Fabrication
+BattleMission/22005007/1┃Tuer Alpha 5 fois
+BattleMission/22005008/1┃Atteindre le niveau 18 de Maîtrise d'Arme
+BattleMission/22005009/1┃Utiliser le SPV 3 fois
+BattleMission/22005010/1┃Commander 10 fois au kiosque
+BattleMission/22006001/1┃Infliger 44 000 dégâts aux Cobayes
+BattleMission/22006002/1┃Obtenir 5 objets légendaires ou mythiques dans des Colis Aériens
+BattleMission/22006003/1┃Survivre pendant plus de 15 minutes dans 8 parties
+BattleMission/22006004/1┃Utiliser le SPV 2 fois
+BattleMission/22006005/1┃Obtenir 700 crédits ou plus
+BattleMission/22006006/1┃Entrer dans une Faille 1 fois
+BattleMission/22006007/1┃Obtenir 3 Mithril
+BattleMission/22006008/1┃Obtenir 3 Échantillons Sanguins FV
+BattleMission/22006009/1┃Fabriquer 20 objets légendaires
+BattleMission/22006010/1┃Tuer 5 Corbeaux
+BattleMission/22007001/1┃Atteindre 10 TK
+BattleMission/22007002/1┃Atteindre le niveau 16 de Maîtrise d'Arme
+BattleMission/22007003/1┃Atteindre 8 TK 3 fois
+BattleMission/22007004/1┃Obtenir 5 objets dans des Colis Aériens
+BattleMission/22007005/1┃Utiliser 10 fois l'Hyperloop
+BattleMission/22007006/1┃Infliger 27 500 dégâts aux Animaux Sauvages
+BattleMission/22007007/1┃Infliger plus de 17 000 dégâts aux Cobayes
+BattleMission/22007008/1┃Obtenir 2 objets légendaires ou mythiques dans des Colis Aériens
+BattleMission/22007009/1┃Survivre pendant plus de 9 minutes dans 10 parties
+BattleMission/22007010/1┃Jouer 10 Parties Normales/Classées
+BattleMission/22008001/1┃Utiliser la Carte d'Accès - γ 1 fois
+BattleMission/22008002/1┃Obtenir 500 crédits
+BattleMission/22008003/1┃Commander 3 fois au kiosque
+BattleMission/22008004/1┃Jouer 10 Parties Normales/Classées
+BattleMission/22008005/1┃Utiliser le SPV 9 fois
+BattleMission/22008006/1┃Infliger 18 000 dégâts aux Cobayes
+BattleMission/22008007/1┃Fabriquer plus de 3 objets légendaires
+BattleMission/22008008/1┃Appeler 30 Drones de Livraison
+BattleMission/22008009/1┃Tuer 35 Poulets
+BattleMission/22008010/1┃Obtenir 3 Échantillons Sanguins FV
 특성┃Spécialisations
 모든 특성┃Spécialisations
 기본 슬롯 숨기기┃Cacher les Pages Prédéfinies
@@ -24098,378 +24236,6 @@ MasteryType/Health/Stats┃Augmentation de {1} de {0}\nAugmentation de {3} de {2
 MasteryType/Defense/Stats┃Augmentation de {1} de {0}\nAugmentation de {3} de {2}
 MasteryType/Meditation/Stats┃Augmentation de {1} de {0}
 MasteryType/Trap/Stats┃Augmentation de {1} de {0}
-ButtonType/Confirm┃Confirmer
-ButtonType/Cancel┃Annuler
-ButtonType/restart┃Redémarrer
-ButtonType/later┃Ultérieurement
-SupportLanguage/Korean┃한국어
-SupportLanguage/English┃English
-SupportLanguage/Japanese┃日本語
-SupportLanguage/ChineseSimplified┃简体中文
-SupportLanguage/ChineseTraditional┃繁體中文
-SupportLanguage/French┃Français (BETA)
-SupportLanguage/Spanish┃Español (España - BETA)
-SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
-SupportLanguage/Portuguese┃Português (BETA)
-SupportLanguage/Russian┃Русский (BETA)
-SupportLanguage/German┃Deutsch (BETA)
-SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
-SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
-SupportLanguage/Thai┃ภาษาไทย (BETA)
-SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
-SupportLanguage/Italian┃Italiano (BETA)
-SupportLanguage/Polish┃Polski (BETA)
-SupportCountryCharacterVoice/Korean┃한국어 (Coréen)
-SupportCountryCharacterVoice/English┃English (Anglais)
-SupportCountryCharacterVoice/Japanese┃日本語 (Japonais)
-SupportCountryCharacterVoice/ChineseSimplified┃简体中文
-중국지역가속안내┃Acceleration Option
-SupportCountryOperatorVoice/Korean┃한국어 (Coréen)
-SupportCountryOperatorVoice/English┃English (Anglais)
-SupportCountryOperatorVoice/Japanese┃日本語 (Japonais)
-SupportCountryOperatorVoice/ChineseSimplified┃简体中文
-Graphic/Low┃Faible
-Graphic/Medium┃Normal
-Graphic/High┃Élevé
-Graphic/Ultra┃Ultra
-MouseSize/Small┃Petite
-MouseSize/Medium┃Moyenne
-MouseSize/Large┃Grande
-FullScreenMode/ExclusiveFullScreen┃Plein écran
-FullScreenMode/FullScreenWindow┃Plein écran fenêtré
-FullScreenMode/MaximizedWindow┃Plein écran fenêtré
-FullScreenMode/Windowed┃Fenêtré
-Internal┃Erreur Inconnue
-ObjectNotFound┃Cible non trouvée
-NotEnoughInventory┃Inventaire plein
-NotEnoughInventoryTeam┃L'inventaire de <color=yellow>{0}({1})</color> est plein, impossible de lui transférer des objets.
-인벤토리 공간이 부족 합니다.┃Inventaire plein
-NotEnoughItem┃Quantité d'objet insuffisante
-NotEnoughItemBox┃Inventaire plein
-NotArea┃Ne peut pas être utilisé dans cette zone
-NotAvailableArea┃Zone non disponible
-CantCraft┃Objet non fabricable
-PreventedItem┃{0} fait partie de votre itinéraire sauvegardé !
-InvalidItemCode┃Objet inconnu
-ItemNotFound┃Objet non trouvé
-UnusableItem┃Objet inutilisable
-InvalidAction┃Requête non valide
-NotInteract┃Indisponible actuellement
-LackOfCredit┃Crédits insuffisants
-LackOfTacSkillModule┃Modules de Compétence Tactique insuffisants
-MaxOfCredit┃Impossible d'obtenir plus de Crédits
-MaxOfGadget┃Nombre de gadgets Max atteints.
-MaxOfEscapeItem┃Limite d'objets d'évasion atteinte.
-NotEnoughGVEnergy┃Énergie de Gadget Insuffisante
-CannotReconstructToDeadTeammate┃Impossible de rejoindre un allié à terre.
-CannotMoveToDeadTeammate┃Vous ne pouvez pas vous rendre à l'emplacement où votre allié est mort.
-NoProgressItemsRegisteredInThisRoute┃Aucun objet de fin de partie sauvegardé dans votre itinéraire actuel.
-ToastMessage/DisableHyperloop┃Pas disponible pour l'instant !
-ToastMessage/CanNotUseHyperloopNotAdjacent┃Impossible de se déplacer dans cette zone.
-2일차 이후는 인접한 지역으로만 이동할 수 있습니다┃Vous ne pouvez vous déplacer que dans les zones adjacentes après le Jour 2.
-상품 정보 에러 팝업┃Les informations sur ce produit sont indisponibles. Merci de réessayer.
-랜덤박스 상품 구매 후 아이템 획득 에러 팝업┃Impossible d'acquérir cet objet. Merci d'utiliser les objets achetés dans la Forge.
-EvidenceBoxCannotOpen┃Impossible à ouvrir pendant le temps de recharge.
-EvidenceBoxCannotPhase┃Peut être ouvert {1} {0}.
-ToastMessage/NotEnoughPlayerForMultiPractice┃Le mode Bac à Sable Multijoueur requiert au moins 2 joueurs.
-DisableWithdrawal┃Le service de remboursement est indisponible pour le moment.
-CharacterIsNotSelected┃Sélectionnez d'abord votre personnage.
-CharacterNotAlive┃Requête non valide.
-UndefinedWeaponTypeToEquip┃Cette arme ne peut pas être équipée.
-CannotPerformRightNow┃Actuellement impossible d'effectuer cette action.
-CannotPerformDuringCooldown┃En rechargement.
-NotAvailableYet┃Indisponible actuellement.
-RemoteDroneNotAvailableYet┃Drone de Livraison indisponible.
-CanNotManufacturable┃Le Drone de Livraison n'est pas capable d'apporter l'objet selectionné.
-CantConsumeItem┃Action non disponible pour le moment.
-NotEnoughSp┃EV ou ressource de compétence insuffisante.
-NotExistUserId┃Joueur non trouvé.
-InvalidBattleToken┃Partie non valide.
-AlreadyExistUserId┃Cet identifiant existe déjà.
-GameStartedAlready┃La partie a déjà commencé.
-NoBattleHost┃Impossible de trouver le serveur.
-CantConsumItem┃Vous ne pouvez plus consommer de nourriture!
-Evasion┃Esquiver
-Guard┃En Garde !
-AlonsoCCImmune┃Immunité contre les Immobilisations
-SoulLink┃Cible invalide.
-NotInvalidTarget┃Cible invalide.
-InvalidTarget┃Cible non-valide.
-ServerUnavailable┃Impossible de lancer le jeu. Veuillez essayer la Résolution de Problèmes.
-OutOfService┃Impossible de lancer le jeu. Veuillez essayer la Résolution de Problèmes.
-OutOfService_Temp┃En cours de maintenance. Merci pour votre patience.\nTemps restant : {0} {1} {2}
-InvalidMatchingMode┃Mode de jeu non valide
-AlreadyJoinedMatching┃Recherche de partie déjà initiée
-EmptyMatchingToken┃Partie non valide
-InvalidCommand┃Requête inconnue
-NotMatchingUser┃Requête non valide
-InvalidMatchingToken┃Requête non valide
-UnknownMatchingError┃La zone de recherche de partie sélectionnée n'est pas disponible.
-MatchingServerNone┃La zone de recherche de partie sélectionnée n'est pas disponible.
-UnavailableNickname┃Désolé, ce nom de joueur est déjà utilisé.
-매칭서버 타임아웃┃Veuillez vérifier votre connexion Internet.
-서버 부족으로 매칭을 시작할 수 없습니다. 잠시 후 다시 시도해주세요.┃Serveurs insuffisants - impossible de démarrer une partie. Veuillez réessayer plus tard.
-UserGameFinished┃Impossible de trouver la partie.
-서버 점검중입니다.┃Maintenance du serveur en cours.
-남은시간┃Temps Restant
-종료하기┃Quitter
-공지사항 바로가기┃Annonce
-NOTICE┃NOTICE
-LoadingText/Connect┃La liste des objets que vous pouvez fabriquer est située en haut de votre inventaire.
-LoadingText/Handshake┃Appuyez sur [X] pour vous reposer. Vous regagnez ainsi des PV et de l'Endurance.
-LoadingText/Join┃Si vos ennemis sont dans votre champ de vision, vous pouvez les attaquer peu importe l'environnement.
-LoadingText/LoadCharacter┃Un compte à rebours commence quand vous êtes dans une zone restreinte. Quand il atteint 0, le personnage explose.
-LoadingText/LoadLevel┃Les coffres encadrés en blanc indiquent qu'ils n'ont pas encore été ouverts.
-LoadingText/LoadEffect┃Appuyez sur CTRL + 1 ~ 6 pour écouter les blagues, provocations et autres interactions de votre personnage.
-LoadingText/Done┃Vous pouvez utiliser les compétences d'armes une fois le niveau 7 de Maîtrise atteint.
-LoadingText/SceneLoad┃Lorsque la carte aggrandie est ouverte (M), vous pouvez déplacer votre personnage en appuyant sur CTRL tout en cliquant droit sur la carte.
-설문조사 배너┃Répondez au questionnaire
-설문조사 링크┃https://steamcommunity.com/app/1049590/guides/?l=french
-커뮤니티 이벤트 배너┃Gagnez des récompenses !
-커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
-기본 커뮤니티┃Résolution de Problèmes
-기본 커뮤니티 링크┃https://discord.gg/eternalreturn
-기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
-LINK┃LINK
-공식 홈페이지 링크┃https://playeternalreturn.com
-스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
-디스코드 링크┃https://discord.com/invite/eternalreturn
-트위터 링크┃https://twitter.com/_EternalReturn_/
-페이스북 링크┃https://www.facebook.com/eternalreturngame
-유튜브 링크┃https://www.youtube.com/@EternalReturnGame
-레딧 링크┃https://www.reddit.com/r/eternalreturn/
-인스타그램 링크┃https://www.instagram.com/eternalreturngame/
-QQ 그룹 팝업 메인 버튼┃QQ频道
-QQ 그룹 팝업 메인 버튼 링크┃https://pd.qq.com/s/euobpuz5w
-QQ 그룹1┃QQ 实验群1
-QQ 그룹2┃QQ 实验群2
-QQ 그룹3┃QQ 实验群3
-QQ 그룹4┃QQ实验群4
-QQ 그룹5┃QQ实验群5
-QQ 그룹 링크1┃https://qm.qq.com/q/yBWlV4Imlk
-QQ 그룹 링크2┃https://qm.qq.com/q/KX0mZL70GY
-QQ 그룹 링크3┃https://qm.qq.com/q/eNPqIhUltS
-QQ 그룹 링크4┃https://qm.qq.com/q/MJ0vgUe8SW
-QQ 그룹 링크5┃https://qm.qq.com/q/mxEnSmj076
-사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/fr-FR/
-플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
-하트지급 링크┃https://discord.gg/HkVHuAh
-팬북 링크┃https://fanbook.mobi/PZgT8F9W
-QQ 링크1 중문간체┃https://qm.qq.com/q/yBWlV4Imlk
-QQ 링크2 중문간체┃https://qm.qq.com/q/KX0mZL70GY
-QQ 링크3 중문간체┃https://qm.qq.com/q/eNPqIhUltS
-QQ 링크4 중문간체┃https://qm.qq.com/q/MJ0vgUe8SW
-QQ 링크5 중문간체┃https://qm.qq.com/q/mxEnSmj076
-신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
-신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
-신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
-고객지원 링크┃https://playeternalreturn.com/help
-고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
-고객지원 링크_MS┃https://playeternalreturn.com/help
-점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
-점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
-점검 중 링크_MS┃https://playeternalreturn.com/posts/news
-카카오 홈페이지 링크┃http://er.game.daum.net/
-카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
-OutLink/Desc/1┃Bienvenue dans la communauté d'ER !
-OutLink/Desc/2┃Participez aux événements de notre communauté sur Discord ! Ajoutez-nous aussi à votre liste de souhait et suivez-nous sur Steam pour recevoir des notifications lors de la sortie du jeu !
-OutLink/Desc/3┃Dites-nous ce que vous pensez du jeu !
-OutLink/Desc/4┃Guides des joueurs
-OutLink/Desc/5┃Soutenez le jeu
-OutLink/Desc/6┃Devenez un supporter d'Eternal Return
-플레이 가이드┃Guide du joueur
-{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
-{0}년-{1}월-{2}일┃{2}-{1}-{0}
-{0}월 {1}일┃{1}/{0}
-게임 데이터를 불러오는데 실패했습니다.┃Erreur lors de la récupération des données du jeu.
-모드매칭불가안내┃Vérifiez quel mode est jouable aujourd'hui !\nLe mode du jour est : {0}, {1}
-접속이 제한된 계정입니다.┃Compte restreint.\nTemps restant : {0} {1} {2}\nRaison de la restriction: {3}
-영구 정지┃Compte suspendu définitivement.\nRaison : {0}
-접속 제한┃Votre compte a été suspendu.
-채팅 제한┃L'accès de votre compte aux parties classées a été suspendu.
-채팅 제재┃L'accès de votre compte aux chat été suspendu.
-채팅 로그┃<color=#AAABAD><size=20>Durée restante de la suspension : {0}</color>\n</size><size=24><color=#FFFFFF>Raison : </color><color=#e7aa40>{1}</color></size>
-클라이언트 버전 업데이트 이후 이용 가능합니다.┃Historiques de discussion
-클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Mettez le jeu à jour afin de pouvoir jouer.
-클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Mettez le jeu à jour afin de pouvoir jouer.
-서버와연결할수없음┃Erreur de connexion au serveur.
-팀원 중 누군가가 매칭 실패┃Un membre de votre équipe ne peut pas lancer la partie. Veuillez essayer à nouveau.
-티어 매칭 제한┃Un membre de votre équipe n'a pas le rang requis pour participer.\nMerci de vérifier le rang de votre coéquipier.
-매칭 중 결제 불가┃Achat impossible en recherche de partie.
-현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Connexion avec le serveur instable. ErrorCode: {0}
-점검중┃Serveurs en cours de maintenance.\nVeuillez nous excuser pour le désagrément.
-해결방법┃Résolution de problèmes
-해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
-해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
-해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
-서버와 연결이 끊어졌습니다.┃Erreur de connexion au serveur.
-에러가 발생하여 서버와 연결이 종료되었습니다┃Une erreur s'est produite. La connexion a été interrompue.
-KRAFTON ID 로그인 완료┃Connexion à votre compte KRAFTON ID ({0}) réussie
-크래프톤 기본오류문구┃Une erreur est survenue. Code d'erreur {0}
-크래프톤 유효하지않는코드┃Code créateur invalide.
-크래프톤 이미등록된코드┃Ce code créateur est déjà enregistré.
-크래프톤 유효한코드변경설명┃Le code ({0}) est toujours actif.\nSouhaitez-vous modifier le code ou arrêter de supporter ?
-크래프톤 후원중단하기┃Arrêter de supporter
-크래프톤 코드변경하기┃Changer de code
-크래프톤 유효기간설명┃Une fois enregistré, le code reste actif pendant 2160 heures (90 jours) et \npeut être modifié à tout moment.
-MatchingError/2024┃Un membre de l'équipe ne peut pas rentrer dans la partie. Veuillez recréer l'équipe.(2024)
-FirstLoading1┃Loading Text
-FirstLoading2┃Verifying Account...
-FirstLoading3┃Loading ...
-게임문화개선캠페인┃<color=#FF0000>Eternal Return accorde une grande importance au fair-play. Les joueurs enfreignant les règles de teaming verront leur compte suspendu.</color>
-게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
-접속시간경과안내┃Vous jouez depuis {0} heure(s). N'oubliez pas de faire des pauses!
-BanReasonType/None┃Autre (Contacter le Support)
-BanReasonType/VERBAL_DISCRIMINATION┃Discours Haineux
-BanReasonType/ABUSE_RATING┃Abus 
-BanReasonType/ACCOUNT_SHARING┃Partage/Boost de Compte
-BanReasonType/REFUND_ABUSING┃Remboursement/Rétrofacturations Anormaux
-BanReasonType/FALSE_ACCUSATION┃Perturbation des Services et Faux Signalements
-BanReasonType/EMPLOYER_HARASSMENT┃Abus du Support et Service Client
-BanReasonType/DOXXING┃Partage d'Informations Privées
-BanReasonType/TEMPORARY_RESTRICTION┃Suspension Temporaire
-BanReasonType/GAME_EXPERIENCE_DISRUPTION┃Perturbation de l'Expérience de Jeu
-BanReasonType/ASSIST_OPPOSING_TEAM┃Assistance à l'Ennemi ou Mort Intentionnelle
-BanReasonType/AWAY_FROM_KEYBOARD┃Esquive de partie (Abandon)
-BanReasonType/BUGS_AND_GLITCHES_ABUSE┃Abus de Bug
-BanReasonType/ILLEGAL_PROGRAMS┃Utilisation de Programmes non Autorisés
-BanReasonType/INAPPROPRIATE_NICKNAME┃Nom d'Utilisateur Inapproprié
-BanReasonType/INTENTIONAL_IDLE┃Absence pendant la Partie (AFK)
-BanReasonType/KILLED_BY_ENEMY┃Perte Intentionnelle
-BanReasonType/MISCELLANEOUS┃Autres
-BanReasonType/SNIPER┃Ciblage de Streamers
-BanReasonType/TEAMING┃Aide aux Ennemis
-BanReasonType/VERBAL_HARASSMENT┃Violence Verbale
-BanReasonType/SMURFING┃Multiples Comptes
-Setting/그래픽┃Graphismes
-Setting/확장맵┃Carte Étendue
-Setting/이모티콘┃Émoticône
-Setting/일반시전┃Lancement de Compétence
-Setting/아이템┃Objets
-Setting/오버레이┃Affichage d'Information
-Setting/화면┃Vidéo
-Setting/매칭┃Recherche de partie
-Setting/숨기기┃Cacher
-Setting/시전설정┃Paramètres de lancement des compétence
-Setting/HUD┃HUD
-Setting/스마트키┃Smart Cast
-Setting/카메라┃Caméra
-Setting/마우스┃Souris
-Setting/방송모드┃Streaming
-Setting/토글┃Activable
-Setting/감정표현┃Expressions
-Setting/UI┃IU
-Setting/빠른제작┃Fabrication Rapide
-Setting/즉시시전┃Lancement Rapide de Compétence
-Setting/목표아이템┃Objet Cible
-Setting/아이콘┃Icône
-Setting/타겟┃Cible
-Setting/스킬┃Compétence
-Setting/전체맵┃Carte Étendue
-Setting/레벨업┃Montée de niveau
-Setting/미니맵┃Mini Carte
-Setting/전술스킬┃Compétence Tactique
-Setting/음성표현┃Expressions
-Setting/맵┃Carte
-Setting/표시┃HUD
-Setting/단축키┃Raccourcis
-Setting/VLS┃SPV
-Setting/정보창┃Fenêtre d'informations
-Setting/게임시작┃Recherche de partie
-Setting/게임현황┃Tableau des scores
-Setting/더빙┃Voix du jeu
-Setting/도발┃Provocations
-Setting/동물┃Animaux
-Setting/야생동물┃Animaux Sauvages
-Setting/캐릭터정보┃Informations du Personnage
-Setting/궤적┃Trajectoire
-Setting/마크┃Marque
-Setting/맵이동┃Mouvement sur la carte
-Setting/능력치┃Statistiques
-Setting/무기및전술스킬┃Compétence d'Arme & Tactique
-Setting/드랍┃Jeter un objet
-Setting/보안콘솔┃Console de Sécurité 
-Setting/생존자만조준┃Cibler les joueurs uniquement
-Setting/농담┃Blagues
-Setting/수신거부┃Refuser des invitations
-Setting/시점고정┃Verrouiller la caméra
-Setting/시점이동┃Déplacer la caméra
-Setting/제자리┃Rester en position
-Setting/아군선택┃Sélectionner un allié
-Setting/오브젝트┃Objectif
-Setting/음성설정┃Paramètres des voix
-Setting/보이스┃Voix
-Setting/인디케이터┃Indicateur
-Setting/홀드┃Attendre
-Setting/자동교체┃Remplacement automatique
-Setting/자동번역┃Traduction automatique
-Setting/적공격┃Attaquer l'ennemi
-Setting/리플레이┃Replay
-Setting/상세정보┃Informations Détaillées
-Setting/닉네임가리기┃Cacher les noms des joueurs
-Setting/제작목록┃Liste des objets à fabriquer
-Setting/조준┃Cible
-Setting/퇴각핑┃Alerte
-Setting/체력기준┃Priorité des soins
-Setting/이동공격┃Attaque en mouvement
-Setting/스탯┃Statistiques
-Setting/친구요청받지않기┃Bloquer les demandes d'amis
-Setting/우선순위┃Priorité
-Setting/이름가리기┃Cacher les noms
-Setting/화면표시┃Affichage
-Setting/확장미니맵┃Carte Étendue
-Setting/캐릭터찾기┃Repérer son personnage
-Setting/추가정보┃Informations Complémentaires
-Setting/감도┃Sensibilité
-Setting/강제빠른제작┃Fabrication Rapide
-Setting/관전┃Spectateur
-Setting/제작┃Fabrication
-Setting/오퍼레이터┃Opérateur
-Setting/키설정┃Configurations des Touches
-Setting/번역┃Traduction
-Setting/범위표시┃Indicateur de Zone
-Setting/사거리┃Portée
-Setting/마이크┃Microphone
-Setting/사용자지정┃Personnalisé
-Setting/모니터┃Écran
-Setting/차단┃Bloqué
-Setting/캐릭터┃Personnage
-Setting/퀵캐스트┃Lancement Rapide de Compétence
-Setting/키오스크┃Kiosque
-Setting/언어┃Langue
-Setting/다국어┃Autres Langues
-Setting/팀원선택┃Sélectionner un allié
-Setting/화면이동┃Mouvement de caméra
-Setting/공격┃Attaque
-Setting/드래그┃Glisser
-Setting/가젯┃Gadget
-Setting/스크롤┃Défiler
-Setting/목표선택┃Sélectionner une cible
-Setting/음식┃Nourriture
-Setting/셀프시전┃Lancement sur soi
-Setting/자동소비┃Consommation automatique
-Setting/자신에게┃Sur soi
-Setting/전투중┃En Combat
-Setting/정보┃Informations
-Setting/채팅┃Chat
-Setting/스킬레벨┃Niveau de compétence
-Setting/타겟팅┃Ciblage
-Setting/연출┃Effets Visuels
-Setting/프레임┃Image par seconde
-Setting/핑┃Alerte
-Setting/대기열┃File d'attente
-Setting/무기스킬┃Compétence d'Arme
-Setting/정보오버레이┃Affichage d'Information
-Setting/클릭┃Clic
-Setting/CCTV┃Caméras de Surveillance
-Setting/FPS┃FPS
-Setting/VPad┃VPad
-Setting/사운드┃Son
-Setting/배경음┃Son Ambiant
-Setting/효과음┃Effets Sonores
-Setting/소리┃Audio
-검색결과┃Résultats
-검색결과없음┃Aucun résultat trouvé.
 ServerError/1000┃Une erreur est survenue. Veuillez redémarrer le jeu.
 ServerError/1001┃Une erreur est survenue. Veuillez redémarrer le jeu.
 ServerError/1002┃Une erreur est survenue. Veuillez redémarrer le jeu.
@@ -24887,6 +24653,378 @@ ServerError/SQUAD_RUMBLE_UNAVAILABLE_MATCHING_TIER┃La recherche de partie n'es
 ServerError/LIMIT_LOG_REPORT┃Version du jeu incompatible.
 ServerError/INVALID_MATCHING_VERSION┃Version du jeu incompatible.
 ServerError/이미 존재하는 닉네임입니다.┃Ce pseudo existe déjà.
+ButtonType/Confirm┃Confirmer
+ButtonType/Cancel┃Annuler
+ButtonType/restart┃Redémarrer
+ButtonType/later┃Ultérieurement
+SupportLanguage/Korean┃한국어
+SupportLanguage/English┃English
+SupportLanguage/Japanese┃日本語
+SupportLanguage/ChineseSimplified┃简体中文
+SupportLanguage/ChineseTraditional┃繁體中文
+SupportLanguage/French┃Français (BETA)
+SupportLanguage/Spanish┃Español (España - BETA)
+SupportLanguage/SpanishLatin┃Español (América Latina - BETA)
+SupportLanguage/Portuguese┃Português (BETA)
+SupportLanguage/Russian┃Русский (BETA)
+SupportLanguage/German┃Deutsch (BETA)
+SupportLanguage/Vietnamese┃Tiếng Việt (BETA)
+SupportLanguage/Indonesian┃Bahasa Indonesia (BETA)
+SupportLanguage/Thai┃ภาษาไทย (BETA)
+SupportLanguage/PortugueseLatin┃Português do Brasil (BETA)
+SupportLanguage/Italian┃Italiano (BETA)
+SupportLanguage/Polish┃Polski (BETA)
+SupportCountryCharacterVoice/Korean┃한국어 (Coréen)
+SupportCountryCharacterVoice/English┃English (Anglais)
+SupportCountryCharacterVoice/Japanese┃日本語 (Japonais)
+SupportCountryCharacterVoice/ChineseSimplified┃简体中文
+중국지역가속안내┃Acceleration Option
+SupportCountryOperatorVoice/Korean┃한국어 (Coréen)
+SupportCountryOperatorVoice/English┃English (Anglais)
+SupportCountryOperatorVoice/Japanese┃日本語 (Japonais)
+SupportCountryOperatorVoice/ChineseSimplified┃简体中文
+Graphic/Low┃Faible
+Graphic/Medium┃Normal
+Graphic/High┃Élevé
+Graphic/Ultra┃Ultra
+MouseSize/Small┃Petite
+MouseSize/Medium┃Moyenne
+MouseSize/Large┃Grande
+FullScreenMode/ExclusiveFullScreen┃Plein écran
+FullScreenMode/FullScreenWindow┃Plein écran fenêtré
+FullScreenMode/MaximizedWindow┃Plein écran fenêtré
+FullScreenMode/Windowed┃Fenêtré
+Internal┃Erreur Inconnue
+ObjectNotFound┃Cible non trouvée
+NotEnoughInventory┃Inventaire plein
+NotEnoughInventoryTeam┃L'inventaire de <color=yellow>{0}({1})</color> est plein, impossible de lui transférer des objets.
+인벤토리 공간이 부족 합니다.┃Inventaire plein
+NotEnoughItem┃Quantité d'objet insuffisante
+NotEnoughItemBox┃Inventaire plein
+NotArea┃Ne peut pas être utilisé dans cette zone
+NotAvailableArea┃Zone non disponible
+CantCraft┃Objet non fabricable
+PreventedItem┃{0} fait partie de votre itinéraire sauvegardé !
+InvalidItemCode┃Objet inconnu
+ItemNotFound┃Objet non trouvé
+UnusableItem┃Objet inutilisable
+InvalidAction┃Requête non valide
+NotInteract┃Indisponible actuellement
+LackOfCredit┃Crédits insuffisants
+LackOfTacSkillModule┃Modules de Compétence Tactique insuffisants
+MaxOfCredit┃Impossible d'obtenir plus de Crédits
+MaxOfGadget┃Nombre de gadgets Max atteints.
+MaxOfEscapeItem┃Limite d'objets d'évasion atteinte.
+NotEnoughGVEnergy┃Énergie de Gadget Insuffisante
+CannotReconstructToDeadTeammate┃Impossible de rejoindre un allié à terre.
+CannotMoveToDeadTeammate┃Vous ne pouvez pas vous rendre à l'emplacement où votre allié est mort.
+NoProgressItemsRegisteredInThisRoute┃Aucun objet de fin de partie sauvegardé dans votre itinéraire actuel.
+ToastMessage/DisableHyperloop┃Pas disponible pour l'instant !
+ToastMessage/CanNotUseHyperloopNotAdjacent┃Impossible de se déplacer dans cette zone.
+2일차 이후는 인접한 지역으로만 이동할 수 있습니다┃Vous ne pouvez vous déplacer que dans les zones adjacentes après le Jour 2.
+상품 정보 에러 팝업┃Les informations sur ce produit sont indisponibles. Merci de réessayer.
+랜덤박스 상품 구매 후 아이템 획득 에러 팝업┃Impossible d'acquérir cet objet. Merci d'utiliser les objets achetés dans la Forge.
+EvidenceBoxCannotOpen┃Impossible à ouvrir pendant le temps de recharge.
+EvidenceBoxCannotPhase┃Peut être ouvert {1} {0}.
+ToastMessage/NotEnoughPlayerForMultiPractice┃Le mode Bac à Sable Multijoueur requiert au moins 2 joueurs.
+DisableWithdrawal┃Le service de remboursement est indisponible pour le moment.
+CharacterIsNotSelected┃Sélectionnez d'abord votre personnage.
+CharacterNotAlive┃Requête non valide.
+UndefinedWeaponTypeToEquip┃Cette arme ne peut pas être équipée.
+CannotPerformRightNow┃Actuellement impossible d'effectuer cette action.
+CannotPerformDuringCooldown┃En rechargement.
+NotAvailableYet┃Indisponible actuellement.
+RemoteDroneNotAvailableYet┃Drone de Livraison indisponible.
+CanNotManufacturable┃Le Drone de Livraison n'est pas capable d'apporter l'objet selectionné.
+CantConsumeItem┃Action non disponible pour le moment.
+NotEnoughSp┃EV ou ressource de compétence insuffisante.
+NotExistUserId┃Joueur non trouvé.
+InvalidBattleToken┃Partie non valide.
+AlreadyExistUserId┃Cet identifiant existe déjà.
+GameStartedAlready┃La partie a déjà commencé.
+NoBattleHost┃Impossible de trouver le serveur.
+CantConsumItem┃Vous ne pouvez plus consommer de nourriture!
+Evasion┃Esquiver
+Guard┃En Garde !
+AlonsoCCImmune┃Immunité contre les Immobilisations
+SoulLink┃Cible invalide.
+NotInvalidTarget┃Cible invalide.
+InvalidTarget┃Cible non-valide.
+ServerUnavailable┃Impossible de lancer le jeu. Veuillez essayer la Résolution de Problèmes.
+OutOfService┃Impossible de lancer le jeu. Veuillez essayer la Résolution de Problèmes.
+OutOfService_Temp┃En cours de maintenance. Merci pour votre patience.\nTemps restant : {0} {1} {2}
+InvalidMatchingMode┃Mode de jeu non valide
+AlreadyJoinedMatching┃Recherche de partie déjà initiée
+EmptyMatchingToken┃Partie non valide
+InvalidCommand┃Requête inconnue
+NotMatchingUser┃Requête non valide
+InvalidMatchingToken┃Requête non valide
+UnknownMatchingError┃La zone de recherche de partie sélectionnée n'est pas disponible.
+MatchingServerNone┃La zone de recherche de partie sélectionnée n'est pas disponible.
+UnavailableNickname┃Désolé, ce nom de joueur est déjà utilisé.
+매칭서버 타임아웃┃Veuillez vérifier votre connexion Internet.
+서버 부족으로 매칭을 시작할 수 없습니다. 잠시 후 다시 시도해주세요.┃Serveurs insuffisants - impossible de démarrer une partie. Veuillez réessayer plus tard.
+UserGameFinished┃Impossible de trouver la partie.
+서버 점검중입니다.┃Maintenance du serveur en cours.
+남은시간┃Temps Restant
+종료하기┃Quitter
+공지사항 바로가기┃Annonce
+NOTICE┃NOTICE
+LoadingText/Connect┃La liste des objets que vous pouvez fabriquer est située en haut de votre inventaire.
+LoadingText/Handshake┃Appuyez sur [X] pour vous reposer. Vous regagnez ainsi des PV et de l'Endurance.
+LoadingText/Join┃Si vos ennemis sont dans votre champ de vision, vous pouvez les attaquer peu importe l'environnement.
+LoadingText/LoadCharacter┃Un compte à rebours commence quand vous êtes dans une zone restreinte. Quand il atteint 0, le personnage explose.
+LoadingText/LoadLevel┃Les coffres encadrés en blanc indiquent qu'ils n'ont pas encore été ouverts.
+LoadingText/LoadEffect┃Appuyez sur CTRL + 1 ~ 6 pour écouter les blagues, provocations et autres interactions de votre personnage.
+LoadingText/Done┃Vous pouvez utiliser les compétences d'armes une fois le niveau 7 de Maîtrise atteint.
+LoadingText/SceneLoad┃Lorsque la carte aggrandie est ouverte (M), vous pouvez déplacer votre personnage en appuyant sur CTRL tout en cliquant droit sur la carte.
+설문조사 배너┃Répondez au questionnaire
+설문조사 링크┃https://steamcommunity.com/app/1049590/guides/?l=french
+커뮤니티 이벤트 배너┃Gagnez des récompenses !
+커뮤니티 이벤트 링크┃https://steamcommunity.com/games/1049590/announcements/detail/4096538607434363341
+기본 커뮤니티┃Résolution de Problèmes
+기본 커뮤니티 링크┃https://discord.gg/eternalreturn
+기본 커뮤니티 공지 링크┃https://eternalreturn.zendesk.com/hc/en-us/articles/900003200686-Troubleshooting-Cannot-Start-Game-or-Matching
+LINK┃LINK
+공식 홈페이지 링크┃https://playeternalreturn.com
+스팀 링크┃https://store.steampowered.com/app/1049590/Black_Survival_Eternal_Return
+디스코드 링크┃https://discord.com/invite/eternalreturn
+트위터 링크┃https://twitter.com/_EternalReturn_/
+페이스북 링크┃https://www.facebook.com/eternalreturngame
+유튜브 링크┃https://www.youtube.com/@EternalReturnGame
+레딧 링크┃https://www.reddit.com/r/eternalreturn/
+인스타그램 링크┃https://www.instagram.com/eternalreturngame/
+QQ 그룹 팝업 메인 버튼┃QQ频道
+QQ 그룹 팝업 메인 버튼 링크┃https://pd.qq.com/s/euobpuz5w
+QQ 그룹1┃QQ 实验群1
+QQ 그룹2┃QQ 实验群2
+QQ 그룹3┃QQ 实验群3
+QQ 그룹4┃QQ实验群4
+QQ 그룹5┃QQ实验群5
+QQ 그룹 링크1┃https://qm.qq.com/q/yBWlV4Imlk
+QQ 그룹 링크2┃https://qm.qq.com/q/KX0mZL70GY
+QQ 그룹 링크3┃https://qm.qq.com/q/eNPqIhUltS
+QQ 그룹 링크4┃https://qm.qq.com/q/MJ0vgUe8SW
+QQ 그룹 링크5┃https://qm.qq.com/q/mxEnSmj076
+사전예약 링크┃https://eternalreturn.nimbleneuron.rocks/fr-FR/
+플레이가이드 링크┃https://www.youtube.com/playlist?list=PL3Ol-XKNFluq-l2055rrMPZxNfRGA2Iaj
+하트지급 링크┃https://discord.gg/HkVHuAh
+팬북 링크┃https://fanbook.mobi/PZgT8F9W
+QQ 링크1 중문간체┃https://qm.qq.com/q/yBWlV4Imlk
+QQ 링크2 중문간체┃https://qm.qq.com/q/KX0mZL70GY
+QQ 링크3 중문간체┃https://qm.qq.com/q/eNPqIhUltS
+QQ 링크4 중문간체┃https://qm.qq.com/q/MJ0vgUe8SW
+QQ 링크5 중문간체┃https://qm.qq.com/q/mxEnSmj076
+신고하기 링크┃https://support.playeternalreturn.com/hc/requests/new
+신고하기 링크_KAKAO┃https://er.game.daum.net/cs/faq
+신고하기 링크_MS┃https://support.playeternalreturn.com/hc/requests/new
+고객지원 링크┃https://playeternalreturn.com/help
+고객지원 링크_KAKAO┃https://er.game.daum.net/cs/faq
+고객지원 링크_MS┃https://playeternalreturn.com/help
+점검 중 링크┃https://steamcommunity.com/app/1049590/allnews
+점검 중 링크_KAKAO┃https://bbs.er.game.daum.net/gaia/do/er/notice/list?bbsId=ERN001
+점검 중 링크_MS┃https://playeternalreturn.com/posts/news
+카카오 홈페이지 링크┃http://er.game.daum.net/
+카카오 톡채널 링크┃http://pf.kakao.com/_ryNSK
+OutLink/Desc/1┃Bienvenue dans la communauté d'ER !
+OutLink/Desc/2┃Participez aux événements de notre communauté sur Discord ! Ajoutez-nous aussi à votre liste de souhait et suivez-nous sur Steam pour recevoir des notifications lors de la sortie du jeu !
+OutLink/Desc/3┃Dites-nous ce que vous pensez du jeu !
+OutLink/Desc/4┃Guides des joueurs
+OutLink/Desc/5┃Soutenez le jeu
+OutLink/Desc/6┃Devenez un supporter d'Eternal Return
+플레이 가이드┃Guide du joueur
+{0}년-{1}월-{2}일-{3:00}:{4:00}┃{2}-{1}-{0}-{3:00}:{4:00}
+{0}년-{1}월-{2}일┃{2}-{1}-{0}
+{0}월 {1}일┃{1}/{0}
+게임 데이터를 불러오는데 실패했습니다.┃Erreur lors de la récupération des données du jeu.
+모드매칭불가안내┃Vérifiez quel mode est jouable aujourd'hui !\nLe mode du jour est : {0}, {1}
+접속이 제한된 계정입니다.┃Compte restreint.\nTemps restant : {0} {1} {2}\nRaison de la restriction: {3}
+영구 정지┃Compte suspendu définitivement.\nRaison : {0}
+접속 제한┃Votre compte a été suspendu.
+채팅 제한┃L'accès de votre compte aux parties classées a été suspendu.
+채팅 제재┃L'accès de votre compte aux chat été suspendu.
+채팅 로그┃<color=#AAABAD><size=20>Durée restante de la suspension : {0}</color>\n</size><size=24><color=#FFFFFF>Raison : </color><color=#e7aa40>{1}</color></size>
+클라이언트 버전 업데이트 이후 이용 가능합니다.┃Historiques de discussion
+클라이언트 버전 업데이트 이후 이용 가능합니다._KAKAO┃Mettez le jeu à jour afin de pouvoir jouer.
+클라이언트 버전 업데이트 이후 이용 가능합니다._MS┃Mettez le jeu à jour afin de pouvoir jouer.
+서버와연결할수없음┃Erreur de connexion au serveur.
+팀원 중 누군가가 매칭 실패┃Un membre de votre équipe ne peut pas lancer la partie. Veuillez essayer à nouveau.
+티어 매칭 제한┃Un membre de votre équipe n'a pas le rang requis pour participer.\nMerci de vérifier le rang de votre coéquipier.
+매칭 중 결제 불가┃Achat impossible en recherche de partie.
+현재 PC 네트워크에서 게임 서버에 연결할 수 없습니다┃Connexion avec le serveur instable. ErrorCode: {0}
+점검중┃Serveurs en cours de maintenance.\nVeuillez nous excuser pour le désagrément.
+해결방법┃Résolution de problèmes
+해결방법링크┃https://steamcommunity.com/app/1049590/discussions/3/4070650515238995487/
+해결방법링크_KAKAO┃https://er.game.daum.net/cs/faq
+해결방법링크_MS┃https://support.playeternalreturn.com/hc/en-us/categories/900000295706
+서버와 연결이 끊어졌습니다.┃Erreur de connexion au serveur.
+에러가 발생하여 서버와 연결이 종료되었습니다┃Une erreur s'est produite. La connexion a été interrompue.
+KRAFTON ID 로그인 완료┃Connexion à votre compte KRAFTON ID ({0}) réussie
+크래프톤 기본오류문구┃Une erreur est survenue. Code d'erreur {0}
+크래프톤 유효하지않는코드┃Code créateur invalide.
+크래프톤 이미등록된코드┃Ce code créateur est déjà enregistré.
+크래프톤 유효한코드변경설명┃Le code ({0}) est toujours actif.\nSouhaitez-vous modifier le code ou arrêter de supporter ?
+크래프톤 후원중단하기┃Arrêter de supporter
+크래프톤 코드변경하기┃Changer de code
+크래프톤 유효기간설명┃Une fois enregistré, le code reste actif pendant 2160 heures (90 jours) et \npeut être modifié à tout moment.
+MatchingError/2024┃Un membre de l'équipe ne peut pas rentrer dans la partie. Veuillez recréer l'équipe.(2024)
+FirstLoading1┃Loading Text
+FirstLoading2┃Verifying Account...
+FirstLoading3┃Loading ...
+게임문화개선캠페인┃<color=#FF0000>Eternal Return accorde une grande importance au fair-play. Les joueurs enfreignant les règles de teaming verront leur compte suspendu.</color>
+게등위안내문┃본 게임은 만 15세 이용가 게임으로서 해당 연령 미만의 청소년이 이용하기에 부적절합니다.\n반드시 보호자의 지도 감독이 필요합니다.
+접속시간경과안내┃Vous jouez depuis {0} heure(s). N'oubliez pas de faire des pauses!
+BanReasonType/None┃Autre (Contacter le Support)
+BanReasonType/VERBAL_DISCRIMINATION┃Discours Haineux
+BanReasonType/ABUSE_RATING┃Abus 
+BanReasonType/ACCOUNT_SHARING┃Partage/Boost de Compte
+BanReasonType/REFUND_ABUSING┃Remboursement/Rétrofacturations Anormaux
+BanReasonType/FALSE_ACCUSATION┃Perturbation des Services et Faux Signalements
+BanReasonType/EMPLOYER_HARASSMENT┃Abus du Support et Service Client
+BanReasonType/DOXXING┃Partage d'Informations Privées
+BanReasonType/TEMPORARY_RESTRICTION┃Suspension Temporaire
+BanReasonType/GAME_EXPERIENCE_DISRUPTION┃Perturbation de l'Expérience de Jeu
+BanReasonType/ASSIST_OPPOSING_TEAM┃Assistance à l'Ennemi ou Mort Intentionnelle
+BanReasonType/AWAY_FROM_KEYBOARD┃Esquive de partie (Abandon)
+BanReasonType/BUGS_AND_GLITCHES_ABUSE┃Abus de Bug
+BanReasonType/ILLEGAL_PROGRAMS┃Utilisation de Programmes non Autorisés
+BanReasonType/INAPPROPRIATE_NICKNAME┃Nom d'Utilisateur Inapproprié
+BanReasonType/INTENTIONAL_IDLE┃Absence pendant la Partie (AFK)
+BanReasonType/KILLED_BY_ENEMY┃Perte Intentionnelle
+BanReasonType/MISCELLANEOUS┃Autres
+BanReasonType/SNIPER┃Ciblage de Streamers
+BanReasonType/TEAMING┃Aide aux Ennemis
+BanReasonType/VERBAL_HARASSMENT┃Violence Verbale
+BanReasonType/SMURFING┃Multiples Comptes
+Setting/그래픽┃Graphismes
+Setting/확장맵┃Carte Étendue
+Setting/이모티콘┃Émoticône
+Setting/일반시전┃Lancement de Compétence
+Setting/아이템┃Objets
+Setting/오버레이┃Affichage d'Information
+Setting/화면┃Vidéo
+Setting/매칭┃Recherche de partie
+Setting/숨기기┃Cacher
+Setting/시전설정┃Paramètres de lancement des compétence
+Setting/HUD┃HUD
+Setting/스마트키┃Smart Cast
+Setting/카메라┃Caméra
+Setting/마우스┃Souris
+Setting/방송모드┃Streaming
+Setting/토글┃Activable
+Setting/감정표현┃Expressions
+Setting/UI┃IU
+Setting/빠른제작┃Fabrication Rapide
+Setting/즉시시전┃Lancement Rapide de Compétence
+Setting/목표아이템┃Objet Cible
+Setting/아이콘┃Icône
+Setting/타겟┃Cible
+Setting/스킬┃Compétence
+Setting/전체맵┃Carte Étendue
+Setting/레벨업┃Montée de niveau
+Setting/미니맵┃Mini Carte
+Setting/전술스킬┃Compétence Tactique
+Setting/음성표현┃Expressions
+Setting/맵┃Carte
+Setting/표시┃HUD
+Setting/단축키┃Raccourcis
+Setting/VLS┃SPV
+Setting/정보창┃Fenêtre d'informations
+Setting/게임시작┃Recherche de partie
+Setting/게임현황┃Tableau des scores
+Setting/더빙┃Voix du jeu
+Setting/도발┃Provocations
+Setting/동물┃Animaux
+Setting/야생동물┃Animaux Sauvages
+Setting/캐릭터정보┃Informations du Personnage
+Setting/궤적┃Trajectoire
+Setting/마크┃Marque
+Setting/맵이동┃Mouvement sur la carte
+Setting/능력치┃Statistiques
+Setting/무기및전술스킬┃Compétence d'Arme & Tactique
+Setting/드랍┃Jeter un objet
+Setting/보안콘솔┃Console de Sécurité 
+Setting/생존자만조준┃Cibler les joueurs uniquement
+Setting/농담┃Blagues
+Setting/수신거부┃Refuser des invitations
+Setting/시점고정┃Verrouiller la caméra
+Setting/시점이동┃Déplacer la caméra
+Setting/제자리┃Rester en position
+Setting/아군선택┃Sélectionner un allié
+Setting/오브젝트┃Objectif
+Setting/음성설정┃Paramètres des voix
+Setting/보이스┃Voix
+Setting/인디케이터┃Indicateur
+Setting/홀드┃Attendre
+Setting/자동교체┃Remplacement automatique
+Setting/자동번역┃Traduction automatique
+Setting/적공격┃Attaquer l'ennemi
+Setting/리플레이┃Replay
+Setting/상세정보┃Informations Détaillées
+Setting/닉네임가리기┃Cacher les noms des joueurs
+Setting/제작목록┃Liste des objets à fabriquer
+Setting/조준┃Cible
+Setting/퇴각핑┃Alerte
+Setting/체력기준┃Priorité des soins
+Setting/이동공격┃Attaque en mouvement
+Setting/스탯┃Statistiques
+Setting/친구요청받지않기┃Bloquer les demandes d'amis
+Setting/우선순위┃Priorité
+Setting/이름가리기┃Cacher les noms
+Setting/화면표시┃Affichage
+Setting/확장미니맵┃Carte Étendue
+Setting/캐릭터찾기┃Repérer son personnage
+Setting/추가정보┃Informations Complémentaires
+Setting/감도┃Sensibilité
+Setting/강제빠른제작┃Fabrication Rapide
+Setting/관전┃Spectateur
+Setting/제작┃Fabrication
+Setting/오퍼레이터┃Opérateur
+Setting/키설정┃Configurations des Touches
+Setting/번역┃Traduction
+Setting/범위표시┃Indicateur de Zone
+Setting/사거리┃Portée
+Setting/마이크┃Microphone
+Setting/사용자지정┃Personnalisé
+Setting/모니터┃Écran
+Setting/차단┃Bloqué
+Setting/캐릭터┃Personnage
+Setting/퀵캐스트┃Lancement Rapide de Compétence
+Setting/키오스크┃Kiosque
+Setting/언어┃Langue
+Setting/다국어┃Autres Langues
+Setting/팀원선택┃Sélectionner un allié
+Setting/화면이동┃Mouvement de caméra
+Setting/공격┃Attaque
+Setting/드래그┃Glisser
+Setting/가젯┃Gadget
+Setting/스크롤┃Défiler
+Setting/목표선택┃Sélectionner une cible
+Setting/음식┃Nourriture
+Setting/셀프시전┃Lancement sur soi
+Setting/자동소비┃Consommation automatique
+Setting/자신에게┃Sur soi
+Setting/전투중┃En Combat
+Setting/정보┃Informations
+Setting/채팅┃Chat
+Setting/스킬레벨┃Niveau de compétence
+Setting/타겟팅┃Ciblage
+Setting/연출┃Effets Visuels
+Setting/프레임┃Image par seconde
+Setting/핑┃Alerte
+Setting/대기열┃File d'attente
+Setting/무기스킬┃Compétence d'Arme
+Setting/정보오버레이┃Affichage d'Information
+Setting/클릭┃Clic
+Setting/CCTV┃Caméras de Surveillance
+Setting/FPS┃FPS
+Setting/VPad┃VPad
+Setting/사운드┃Son
+Setting/배경음┃Son Ambiant
+Setting/효과음┃Effets Sonores
+Setting/소리┃Audio
+검색결과┃Résultats
+검색결과없음┃Aucun résultat trouvé.
 Character/Name/0┃Aléatoire
 Character/Name/1┃Jackie
 Character/Name/2┃Aya
@@ -25131,6 +25269,7 @@ Installation/Name/25┃Nid Embrumé
 Installation/Name/26┃Horloge de parquet
 Installation/Name/27┃Pommier
 Installation/Name/29┃Baril
+Installation/Name/201┃Fleur Lanterne
 CharArchetype┃Rôle
 CharArchetype/Tanker┃Tank
 CharArchetype/Warrior┃Combattant
@@ -26378,6 +26517,8 @@ Loading/MatchingMode/Tutorial3_Re┃TRAINING
 Loading/MatchingMode/SquadRumble┃UNION CIRCUIT MATCH
 Loading/MatchingMode/LoneWolf┃EVENT GAME
 Loading/MatchingMode/LoneWolfCustom┃CUSTOM GAME
+Loading/MatchingMode/RumbleOut┃EVENT GAME
+Loading/MatchingMode/RumbleOutCustom┃CUSTOM GAME
 Loading/MatchingMode/TutorialPart1┃Tutoriel 1
 Loading/MatchingMode/TutorialPart2┃Tutoriel 2
 Loading/MatchingMode/TutorialPart3┃Tutoriel 3
@@ -26422,9 +26563,12 @@ ContentType/Name/LONE_WOLF_MODE┃Loup Solitaire
 ContentType/Name/SQUAD_RUMBLE_MODE┃Circuit de l'Union (Bêta)
 DataModeType/Name/Solo┃Solo
 DataModeType/Name/Duo┃Duo
+DataModeType/Name/SquadNormal┃Escouade
+DataModeType/Name/SquadNotNormal┃Escouade
 DataModeType/Name/Cobalt┃Cobalt
 DataModeType/Name/LoneWolf┃Loup Solitaire
 DataModeType/Name/Squad┃Escouade
+PseudoDataModeType/Name/Squad┃Escouade
 GameModeType/Name/LONEWOLF┃Loup Solitaire
 GameModeType/Name/SINGLE┃Escouade
 GameModeType/Name/NORMAL┃Escouade
@@ -27473,11 +27617,30 @@ GameMainHud/Chapter/Desc/CreditResurrection┃Vos coéquipiers peuvent vous rame
 GameMainHud/Chapter/Desc/LumiResurrection┃Vos coéquipiers peuvent vous ramener dans l'expérience via la Boutique de Lumi.
 GameMainHud/Chapter/Desc/ResurrectionKit┃Si votre équipe est éliminée, utilisez le Kit de Réanimation pour revenir dans l'expérience
 GameMainHud/Chapter/Desc/NotRevive┃Attention ! Vous ne pouvez plus être réanimé.
+GameMainHud/Chapter/Desc/RumbleOut/AutoResurrectionCanEliminate┃Si votre équipe n'est pas éliminée, vous pourrez toujours revenir dans l'expérience.
 EvidenceSelectWindow/Name┃Sélectionner une Pièces à Conviction
 EvidenceSelectWindow/Desc┃Vous pouvez prendre un objet.
 CharacterState/Group/Name/2500000┃Réseau d'Assistance Médicale
 CharacterState/Group/Desc/2500000┃Le coût des réanimations est réduit de {0} dans la zone Hôpital.\n\nLes animaux sauvages peuvent lâcher des Kit de Premiers Soins selon certaines probabilités.
 EvidenceBoxLockText┃Déverrouillage en cours
+Experiment/lockTxt┃{0} {1} Débloqué
+Experiment/tooltip/opening/title┃Missions de Recherche
+ExperimentSystem/MaterialType┃Science des Matériaux & Ingénierie
+ExperimentSystem/EnergyType┃Génie Énergétique & Ingénierie
+ExperimentSystem/BiotechnologyType┃Biotechnologie
+Experiment/condition/10001000┃Équipe : Obtenez {0} matériaux spéciaux ({1}/{2})
+Experiment/condition/10002000┃Équipe : Obtenez {0} équipement légendaire ({1}/{2})
+Experiment/condition/10002100┃Équipe : Obtenez {0} équipement mythique ({1}/{2})
+Experiment/condition/20001000┃Équipe : Effectuez {0} éliminations au total ({1}/{2})
+Experiment/condition/20002000┃Équipe : Effectuez {0} éliminations au total ({1}/{2})
+Experiment/condition/20002100┃Équipe : Réanimez {0} fois vos alliés avec des crédits ({1}/{2})
+Experiment/condition/30001000┃Équipe : Tuez {0} hordes de loups mutants ou d'ours mutants ({1}/{2})
+Experiment/condition/30002000┃Équipe : Tuez {0} hordes de loups mutants ou d'ours mutants ({1}/{2})
+Experiment/condition/30002100┃Équipe : Tuez {0} monstres boss ({1}/{2})
+Experiment/tooltip/sub/rewardTxt┃Les bonus suivants sont actifs lorsque vous terminez des Missions de Recherche.
+Experiment/tooltip/sub/reward/Opening┃Début
+Experiment/tooltip/sub/reward/AddBuff┃Amélioration Bonus
+SystemChat/ExperimentPing┃{0} ({1}) signale <color=#F4FF63>{2}</color> <color=#FF4848>{3}</color>
 gameTip_Desc_10250_1┃Trouvez un Feu de Camp sur l'Île de Lumia où vous pourrez préparer des plats spéciaux.\nTous les ingrédients normaux (blancs) que vous pouvez trouver sur l'Île de Lumia se transforment en plats extraordinaires lorsqu'ils sont cuits sur un Feu de Camp.\n\nAvec un Feu de Camp, vous êtes un grand chef !\n\nSi aucun feu de camp n'est accessible, pourquoi ne pas essayer le Gadget - Marmite de Chasseur ?\nLes Marmites de Chasseur peuvent être obtenues en <color=#8FDBF8>chassant des Animaux Sauvages</color>.
 게임팁 링크┃Déplacer le lien
 gameTip_Title_10000_1┃Guide d'Itinéraire / Fabrication
@@ -29667,6 +29830,839 @@ TacticalSkillSet/Code/Name/4509011┃<color=yellow>Météore</color>
 Skill/Group/4509011/Name┃Météore
 Skill/LobbyDesc/4509011┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant des dégâts bruts.\nLes ennemis touchés par une météorite sont étourdis pendant un court instant.
 Skill/Group/LobbyDesc/4509011┃Une météorite va bientôt apparaître à l'endroit ciblé, infligeant des dégâts bruts.\nLes ennemis touchés par une météorite sont étourdis pendant un court instant.
+Epi_100001_Name┃EP 0: Eternal Return
+Epi_100001_Desc┃L'expérience sans fin commence.
+Epi_100002_Name┃EP 1 : Les larmes des sirènes
+Epi_100002_Desc┃Les larmes des sirènes se transforment en joyaux.
+Epi_200001_Name┃ER X GGST
+Epi_200001_Desc┃Quels changements apporteront ces rencontres avec ces visages inconnus…
+Epi_200002_Name┃Spécial : Casino Lumia
+Epi_200002_Desc┃Le Casino Lumia, où tous vos rêves et espoirs deviennent réalité !
+Epi_200003_Name┃EP : Servante à Lumia !
+Epi_200003_Desc┃Voici les servantes atypiques de Petit Mignon !
+Scen_10000101_Name┃Cauchemars
+Scen_10000101_Desc┃Les rêves qu'il cherche à oublier sont les images qu'il s'apprête à affronter.
+Scen_10000102_Name┃Spirale du désespoir
+Scen_10000102_Desc┃Un désespoir sans fin déferle comme des vagues fracassantes.
+Scen_10000103_Name┃Un rêve de papillon
+Scen_10000103_Desc┃De simples mauvais rêves ou une réalité cruelle ?
+Scen_10000104_Name┃Amor Fati
+Scen_10000104_Desc┃Des rêves qui ne pourront jamais se réaliser…
+Scen_10000201_Name┃Les chercheurs
+Scen_10000201_Desc┃Les chercheurs d'Aglaia prennent note d'un nouveau phénomène découvert lors de l'une de leurs expériences.
+Scen_10000202_Name┃Première poursuite
+Scen_10000202_Desc┃Une poursuite éclate au cœur de la Forêt en pleine nuit…
+Scen_10000203_Name┃Restauration
+Scen_10000203_Desc┃Istvan se réveille dans un endroit à la fois étrange et familier.
+Scen_10000204_Name┃Retenu
+Scen_10000204_Desc┃Abigail, hantée par les souvenirs de l'expérience précédente, se retrouve nez à nez avec…
+Scen_10000205_Name┃Souvenirs de la mer
+Scen_10000205_Desc┃Les trois compagnons s'accordent un court instant de repos sur la Plage…
+Scen_10000206_Name┃Deuxième poursuite
+Scen_10000206_Desc┃Une nouvelle fois, une poursuite éclate dans la Forêt sous le couvert de la nuit…
+Scen_10000207_Name┃À travers l'écran
+Scen_10000207_Desc┃Nadja observe Abigail à travers la lueur froide de son écran…
+Scen_10000208_Name┃Embuscade
+Scen_10000208_Desc┃Daniel tend une embuscade au groupe d'Abigail alors qu'ils se reposent sur la plage…
+Scen_10000209_Name┃Rage
+Scen_10000209_Desc┃La bataille terminée, Abigail se tient au-dessus des deux corps sans vie.
+Scen_10000210_Name┃Les larmes des sirènes
+Scen_10000210_Desc┃Les larmes d'une sirène deviennent des joyaux gravés à jamais dans ton cœur.
+Scen_20000101_Name┃Une étrange silhouette
+Scen_20000101_Desc┃Ivre et séparé du groupe, Li Dailin est approché par une mystérieuse silhouette...
+Scen_20000102_Name┃Guerre Métallique
+Scen_20000102_Desc┃Une horde de drones s'abatte sur Li Dailin et Jack-O', elles lancent leur contre-attaque...
+Scen_20000103_Name┃À la rescousse
+Scen_20000103_Desc┃Juste au moment où Li Dailin et Jack-O' sont sur le point d'atteindre leurs limites, quelqu'un apparaît pour les sauver...
+Scen_20000104_Name┃La fin du voyage
+Scen_20000104_Desc┃Le groupe s'infiltre dans le Laboratoire pour découvrir la cause de l'anomalie...
+Scen_20000201_Name┃Prologue
+Scen_20000201_Desc┃Après avoir acquis le Casino Lumia, Haze se retrouve troublée par des pertes financières…
+Scen_20000202_Name┃Les signes d'une pro
+Scen_20000202_Desc┃Pour sauver le casino, Haze lance le Projet Bunny Girl et décide de commencer par trouver les tenues.
+Scen_20000203_Name┃Bunny courageuse
+Scen_20000203_Desc┃Pour recruter sérieusement des bunny girls, le groupe commence à passer des entretiens un par un…
+Scen_20000204_Name┃Génie ou folie ? La frontière est mince
+Scen_20000204_Desc┃Chiara mise à part, aucune candidate ne fait l'affaire, le groupe se résout à envisager la seule option restante…
+Scen_20000205_Name┃Préparatifs avant l'ouverture
+Scen_20000205_Desc┃À l'approche de la grande réouverture, quelque chose d'inattendu se dresse sur leur chemin…
+Scen_20000206_Name┃Piège
+Scen_20000206_Desc┃Haze prépare quelque chose pour assurer leur victoire lors de l'affrontement final…
+Scen_20000207_Name┃Bienvenue au Casino Lumia
+Scen_20000207_Desc┃Après leur victoire, le jour de la réouverture tant attendue arrive enfin.
+Scen_20000301_Name┃Là où tout commence
+Scen_20000301_Desc┃Leni, Vanya, Hyejin et Tia décident d'ouvrir un maid café pour rembourser leurs dettes.
+Scen_20000302_Name┃Un pas à la fois
+Scen_20000302_Desc┃Leni et la bande arrivent au maid café. Pendant qu'elles s'affairent à se préparer, quelqu'un les observe depuis l'ombre…
+Scen_20000303_Name┃Différents looks, même équipe
+Scen_20000303_Desc┃Leni trouve les tenues de maid dans la loge. Une à une, elles commencent à enfiler leurs nouveaux uniformes.
+Scen_20000304_Name┃Ce qu'il nous faut maintenant
+Scen_20000304_Desc┃Le maid café ouvre enfin ses portes ! Mais les "Maîtres" réagissent… un peu différemment que prévu ?
+Scen_20000305_Name┃Il n'existe pas de mauvaise maid
+Scen_20000305_Desc┃Alors que les maids ne savent plus quoi faire, un mystérieux jeune homme apparaît devant elles…
+Scen_20000306_Name┃Ne réveillez pas le lion qui dort
+Scen_20000306_Desc┃Les clients sont un cauchemar, et Leni en a assez. Elle décide de ne plus se laisser faire…
+Scen_20000307_Name┃Bienvenue au Petit Mignon !
+Scen_20000307_Desc┃Le temps passe, et grâce aux efforts de chacun, le maid café est enfin plein de vie.
+D_CharLobby_Aiden_S000┃Aiden
+D_CharLobby_Aya_FaceOff┃Aya
+D_CharLobby_LiDailin_S000┃Li Dailin
+D_CharLobby_KY┃Ky
+D_CharLobby_Elphelt┃Elphelt
+D_CharLobby_JackO┃Jack-O'
+D_CharLobby_Delta┃Delta
+D_CharLobby_Alpha┃Alpha
+D_CharLobby_AttackDrone┃Drones de Combat
+D_CharLobby_Everyone┃Tout le monde
+D_CharLobby_UnKnown┃???
+D_CharLobby_Haze_S000┃Haze
+D_CharLobby_Haze_S006┃Haze
+D_CharLobby_Justyna_S000┃Justyna
+D_CharLobby_Justyna_S002┃Justyna
+D_CharLobby_Mai_S000┃Mai
+D_CharLobby_Mai_S005┃Mai
+D_CharLobby_Chiara_S000┃Chiara
+D_CharLobby_Chiara_S005┃Chiara
+D_CharLobby_Rio_S000┃Rio
+D_CharLobby_Emma_S005┃Emma
+D_CharLobby_Sua_S000┃Sua
+D_CharLobby_Hyunwoo_S000┃Hyunwoo
+D_CharLobby_Yuki_S000┃Yuki
+D_CharLobby_Hyejin_S000┃Hyejin
+D_CharLobby_Vanya_S000┃Vanya
+D_CharLobby_Jackie_S000┃Jackie
+D_CharLobby_Leni_S000┃Leni
+D_CharLobby_Tia_S000┃Tia
+D_CharLobby_Leni_S003┃Leni
+D_CharLobby_Hyejin_S006┃Hyejin
+D_CharLobby_Tia_S005┃Tia
+D_CharLobby_Vanya_S004┃Vanya
+D_CharLobby_Camilo_S000┃Camilo
+D_CharLobby_Abigail_S000┃Abigail
+D_CharLobby_Istvan_S000┃Istvan
+D_CharLobby_Jenny_S000┃Jenny
+D_CharLobby_Garnet_S000┃Garnet
+D_CharLobby_Daniel_S000┃Daniel
+D_CharLobby_Kenneth_S000┃Kenneth
+D_CharLobby_Niah_S000┃NiaH
+D_CharLobby_Niah_S002┃NiaH
+D_CharLobby_Xuelin_S000┃Xuelin
+D_CharLobby_Xuelin_S002┃Xuelin
+D_CharLobby_Tazia_S000┃Tazia
+D_CharLobby_Tazia_S003┃Tazia
+D_CharLobby_YuMin_S002┃Yumin
+D_CharLobby_YuMin_S000┃Yumin
+D_CharLobby_Sissela_S000┃Sissela
+D_CharLobby_Eleven_S003┃Eleven
+D_CharLobby_Lenox_S000┃Lenox
+D_CharLobby_Estelle_S000┃Estelle
+D_CharLobby_NPC_Hana┃Dr. Hana
+D_CharLobby_NPC_Nadja┃Dr. Nadja
+D_CharLobby_NPC_Mage┃Mr. Mage
+D_CharLobby_Extra_K┃K
+D_CharLobby_Extra_Q┃Q
+D_CharLobby_Extra_Announce┃Annonceur
+D_CharLobby_Extra_ManInMemory┃Homme Mystérieux
+D_CharLobby_Extra_Customer_A┃Client Poli
+D_CharLobby_Extra_Customer_B┃Client Pénible
+D_CharLobby_Extra_Customer_C┃Client Indécis
+D_CharLobby_Extra_Customer_D┃Client Grossier
+D_CharLobby_Extra_Customer_E┃Client Enthousiaste
+D_CharLobby_Extra_Customer_F┃Client Exigeant
+D_CharLobby_Extra_Reseacher_F1┃Chercheuse
+D_CharLobby_Extra_Reseacher_M1┃Chercheur
+D_CharLobby_Extra_Wilson┃Wilson
+D_CharLobby_Extra_NiahEleven┃NiaH, Eleven
+D_CharLobby_Extra_XuelinEleven┃Xuelin, Eleven
+Prompt_20000101_01_0┃L'expérience de l'Île de Lumia.
+Prompt_20000101_01_1┃Le projet chéri depuis si longtemps par Aglaia visant à perfectionner une nouvelle race d'humains aux capacités hors du commun, grâce aux Éveillés à la FV.
+Prompt_20000101_01_2┃Ceux qui prennent part à l’expérience, les Éveillés à la FV, sont contrôlés par Aglaia et forcés à participer à une expérience de survie impitoyable où ils tuent ou sont tués.
+Prompt_20000101_01_3┃Sur une île désolée où l’expérience s’est déroulée...
+Prompt_20000101_01_4┃Il ne restait plus que des herbes envahissantes et des vestiges en ruine—les restes d’un lieu laissé sans contact humain depuis très longtemps.
+Prompt_20000101_01_5┃Même l’immense laboratoire situé au cœur de l’île demeurait silencieux, dépourvu de tout signe de vie.
+Prompt_20000101_01_6┃Un faible bourdonnement mécanique résonnait à travers les ruines—comme s'il parlait au nom de l'île elle-même.
+Prompt_20000101_01_7┃...Réinitialisation du système.
+Prompt_20000101_01_8┃Défaillance détectée. Réinitialisation du système.
+Prompt_20000101_01_9┃Défaillance détectée. Réinitialisation du système. Défaillance détectée. Réinitialisation du système. Défaillance détectée. Réinitialisation du système. Défaillance détectée. Réinitialisation du système.
+Prompt_20000101_01_10┃Redémarrage du système réussi.
+Prompt_20000101_01_11┃Si aucune commande n’est reçue dans les dix minutes, la dernière commande enregistrée avant le redémarrage sera exécutée.
+Prompt_20000101_01_12┃…Dix minutes écoulées. Exécution de la commande.
+Prompt_20000101_01_13┃Que la gloire soit accordée aux pions qui atteignent l’extrémité du désespoir.
+Prompt_20000101_01_14┃Et puis…
+Prompt_20000101_01_15┃—Hôtel
+Prompt_20000101_01_16┃Conscient de la situation ou non, quelqu’un était paisiblement perdu dans ses rêves.
+Prompt_20000101_01_17┃Mmm…
+Prompt_20000101_01_18┃Encore un verre… ngh…
+Prompt_20000101_01_19┃Uh… huh… ? Où… suis-je… ?
+Prompt_20000101_01_20┃Le grand type et cette flic…
+Prompt_20000101_01_21┃Li Dailin cligna fortement des yeux, tentant de reconstituer ses souvenirs.
+Prompt_20000101_01_22┃Dans cette expérience, elle avait formé une alliance temporaire avec Aya et Aiden.
+Prompt_20000101_01_23┃Quelques instants plus tôt, ils étaient entrés ensemble dans la faille. Mais maintenant, ils avaient tous deux disparu.
+Prompt_20000101_01_24┃Séparée de son groupe, abandonnée et seule…
+Prompt_20000101_01_25┃Dans cette situation périlleuse, Li Dailin choisit de…
+Prompt_20000101_01_26┃…Eh. Peu importe.
+Prompt_20000101_01_27┃<i>Glou-glou</i>
+Prompt_20000101_01_28┃Bon bah je vais juste dormir... <i>zzz</i>...
+Prompt_20000101_01_29┃Elle sombra à nouveau dans les bras de Morphée.
+Prompt_20000101_01_30┃Quelques minutes plus tard...
+Prompt_20000101_01_31┃Ah… là-bas…
+Prompt_20000101_01_32┃Une silhouette suspecte apparut devant Li Dailin endormi.
+Prompt_20000101_01_33┃Ah ! Il y a quelqu'un ! ... Elle est en train de dormir ?
+Prompt_20000101_01_34┃Voyant Dailin sans défense allongé par terre.
+Prompt_20000101_01_35┃Hé, réveille-toi !
+Prompt_20000101_01_36┃<i>Poke, poke</i>
+Prompt_20000101_01_37┃Elle commença à toucher la joue de Dailin.
+Prompt_20000101_01_38┃Nngh…
+Prompt_20000101_01_39┃<i>Poke, poke, poke!</i>
+Prompt_20000101_01_40┃Mmmh…
+Prompt_20000101_01_41┃Réveille-toi !
+Prompt_20000101_01_42┃<i>Poke, poke, poke, poke, poke, poke, poke, poke, poke, poke, poke, poke!</i>
+Prompt_20000101_01_43┃Les yeux de Li Dailin s'ouvrirent enfin suite aux tapes incessantes sur ses joues.
+Prompt_20000101_01_44┃Hmm…?
+Prompt_20000101_01_45┃Ah ! Tu es enfin réveillé !
+Prompt_20000101_01_46┃Des bonbons ou un sort ! … Ahahaha !
+Prompt_20000101_01_47┃Je m'appelle Jack-O' ! Et toi ?
+Prompt_20000101_01_48┃…Nnh.
+Prompt_20000101_01_49┃Li Dailin ouvrit ses yeux encore endormis, peinant à fixer l'inconnu qui se tenait devant elle.
+Prompt_20000101_01_50┃Une silhouette suspecte—impossible à identifier comme étant un ami ou un allié—se tenait juste devant elle.
+Prompt_20000101_01_51┃Dans cette situation périlleuse, Li Dailin a choisi de...
+Prompt_20000101_01_52┃<i>Zzz…</i>
+Prompt_20000101_01_53┃Hé ! Attends ! Ne te rendors pas !
+Prompt_20000101_01_54┃Ignorant sa voix, Li Dailin se rendormit.
+Prompt_20000101_01_55┃Un moment plus tard,
+Prompt_20000101_01_56┃Après avoir enfin réussi à réveiller Dailin, encore somnolente, Jack-O' laissa échapper un petit rire.
+Prompt_20000101_01_57┃Hé hé… tu es en manque de sommeil ? Ou tu aimes juste faire la sieste ?
+Prompt_20000101_01_58┃Laissez-moi me présenter à nouveau— Je m'appelle Jack-O'. Et toi ? Comment tu t'appelles ?
+Prompt_20000101_01_59┃Et aussi... tu sais où on se trouve ?
+Prompt_20000101_01_60┃Les bâtiments ne ressemblent à rien de ce que j'ai pu voir auparavant, et... hmm...
+Prompt_20000101_01_61┃Oh ! Et pourquoi tu dormais dans un endroit pareil, d'ailleurs ?
+Prompt_20000101_01_62┃Mmh… tu es plutôt du genre bavarde… pas vrai ?
+Prompt_20000101_01_63┃En se frottant les yeux, Li Dailin attrapa sa gourde d'alcool.
+Prompt_20000101_01_64┃Huh...
+Prompt_20000101_01_65┃<i>Ploc, ploc</i>
+Prompt_20000101_01_66┃Mais seules deux petites gouttes s'écoulèrent dans sa bouche avant que la gourde ne soit vide.
+Prompt_20000101_01_67┃Perturbée, elle fouilla dans ses poches.\nMais rien de ce qu'elle en sortit ne parvint à étancher sa soif.
+Prompt_20000101_01_68┃A… aaaaah… aaaaaahhh !
+Prompt_20000101_01_69┃Huh ?! Qu'est-ce qu'il y a ? Tu es blessé ?!
+Prompt_20000101_01_70┃Voyant Li Dailin sombrer dans le désespoir, la voix de Jack-O tremblait d'inquiétude.
+Prompt_20000101_01_71┃Hey... mdame... tu peux me rendre un petit service ?
+Prompt_20000101_01_72┃Euh ? Je ne sais pas de quoi il s'agit, mais... si je peux t'aider...
+Prompt_20000101_01_73┃Et ainsi, les deux se mirent à fouiller ensemble l'hôtel en ruines.
+Prompt_20000101_01_74┃Dans le seul but de trouver de l'alcool pour Li Dailin...
+Prompt_20000101_01_75┃Tu promets vraiment de répondre à mes questions si je te trouve de l'alcool, hein ?
+Prompt_20000101_01_76┃Oui, oui... Je ne mens pas. Promis !
+Prompt_20000101_01_77┃Enfin, ça me rassure... Je pensais que tu étais juste une grosse dormeuse, mais en fait tu es juste complètement bourrée.
+Prompt_20000101_01_78┃Bon... que faire maintenant...
+Prompt_20000101_01_79┃Jack-O' poussa un léger soupir en regardant autour d'elle.
+Prompt_20000101_01_80┃Tu sais... Je l'ai pensé tout à l'heure aussi, mais cet endroit est étrange.
+Prompt_20000101_01_81┃Pour une ruine, quelque chose semble... bizarre.\nT'en penses quoi ?
+Prompt_20000101_01_82┃Hmm… maintenant que tu le dis, c'est vrai que ça semble un peu différent de d'habitude…
+Prompt_20000101_01_83┃L'hôtel de l'Île de Lumia a toujours été vieux et sale, mais aujourd'hui, même Dailin trouvait que c'était pire que d'habitude...
+Prompt_20000101_01_84┃Comme si cet endroit avait été laissé à l'abandon depuis des siècles.
+Prompt_20000101_01_85┃Et pourtant, les machines, comme les caméras de surveillance, avaient l'air presque neuves.
+Prompt_20000101_01_86┃Ces enfoirés ne laisseraient jamais cet endroit sans surveillance aussi longtemps...
+Prompt_20000101_01_87┃Li Dailin pensa cela, mais ne prit pas la peine de le dire à voix haute.
+Prompt_20000101_01_88┃Enfin... ce n'est pas mon problème.
+Prompt_20000101_01_89┃Tant qu'il y a de l'alcool, rien d'autre n'a d'importance.
+Prompt_20000101_01_90┃Ugh… Mon taux d'alcoolémie commence à descendre…
+Prompt_20000101_01_91┃Face aux grognements de Li Dailin, Jack-O' pencha sa tête, la voix pleine de curiosité innocente.
+Prompt_20000101_01_92┃Mais… tu penses vraiment qu'il reste de l'alcool dans un endroit pareil ?
+Prompt_20000101_01_93┃Il y en a toujours eu dans les environs. Du moins... jusqu'à présent...
+Prompt_20000101_01_94┃Hein ? Comment ça ?
+Prompt_20000101_01_95┃Exactement ce que cela signifie.
+Prompt_20000101_01_96┃Argh ! Tu es imbuvable !
+Prompt_20000101_01_97┃Hé… alors pourquoi tu ne te dépêches pas de m'en trouver ?
+Prompt_20000101_01_98┃C'est bon, c'est bon. Je vais t'aider à chercher.
+Prompt_20000101_01_99┃Et ainsi, les deux continuèrent à fouiller les ruines de l'hôtel.
+Prompt_20000101_01_100┃Là-bas ! Une pile de boîtes ! Allons jeter un œil !
+Prompt_20000101_01_101┃Elles trouvèrent plusieurs caisses en bois soigneusement alignées le long du mur extérieur du bâtiment.
+Prompt_20000101_01_102┃Hmm… Elles sont beaucoup trop bien entretenues par rapport au reste des lieux.
+Prompt_20000101_01_103┃Comme si... quelqu'un les avait laissés là exprès.
+Prompt_20000101_01_104┃Oh, comme c'est gentil de leur part.
+Prompt_20000101_01_105┃Maintenant, voyons voir ce que nous avons comme alcool.
+Prompt_20000101_01_106┃Elles ouvrirent les boîtes en bois et regardèrent à l'intérieur.
+Prompt_20000101_01_107┃Hmm… ? Qu'est-ce que c'est… ?
+Prompt_20000101_01_108┃À l'intérieur se trouvaient des bouteilles d'eau sans étiquette et plusieurs conserves de nourriture.
+Prompt_20000101_01_109┃Huh ? Ce n'est pas de l'alcool...
+Prompt_20000101_01_110┃La voix de Li Dailin sombra dans la déception alors qu'elle fixait les boîtes.
+Prompt_20000101_01_111┃Il y avait quelque chose qui clochait.
+Prompt_20000101_01_112┃Est-ce qu'Aglaia a déjà distribué des provisions aux cobayes de cette manière auparavant ?
+Prompt_20000101_01_113┃Tch… bon, peu importe. S'il n'y en a pas, il n'y en a pas.
+Prompt_20000101_01_114┃Je suppose qu'il va falloir continuer à chercher... ngh...
+Prompt_20000101_01_115┃Mais même ce malaise grandissant n'était rien comparé à la soif de Dailin.
+Prompt_20000101_01_116┃Nous avons cherché de partout à l'extérieur... peut-être à l'intérieur de l'hôtel...
+Prompt_20000101_01_117┃…Huh ?
+Prompt_20000101_01_118┃<i>Buzz-Buzz</i>
+Prompt_20000101_01_119┃Un bruit étrange parvint à leurs oreilles.
+Prompt_20000101_01_120┃Irrégulier et mécanique, devenant plus fort à chaque seconde.
+Prompt_20000101_01_121┃Le bruit... il se rapproche.
+Prompt_20000101_01_122┃C'est...
+Prompt_20000101_01_123┃C'est un bruit mécanique ?
+Prompt_20000101_01_124┃À peine eut-elle prononcé ces mots que des drones de combat apparurent devant eux.
+Prompt_20000101_01_125┃Une horde de drones, si nombreux qu'il était inutile de les compter.
+Prompt_20000102_01_0┃Qu'est-ce que c'est que ça ?
+Prompt_20000102_01_1┃Haaah… tellement chiant...
+Prompt_20000102_01_2┃À la question de Jack-O, Li Dailin fronça les sourcils.
+Prompt_20000102_01_3┃Des drones de combat d'Aglaia.
+Prompt_20000102_01_4┃Deux ou trois n'auraient pas représenté une grande menace, mais il y avait des centaines de drones en vue, se ruant vers eux.
+Prompt_20000102_01_5┃Il y en avait encore plus qui s'approchaient d'eux par derrière.
+Prompt_20000102_01_6┃La horde mécanique semblait les identifier, s'arrêtant à quelques mètres devant eux.
+Prompt_20000102_01_7┃Entités inconnues détectées. Lancement de la comparaison avec la base de données.
+Prompt_20000102_01_8┃Correspondance d'identité : Code du Cobaye [16M-RFT20], concordance à 99,945%.
+Prompt_20000102_01_9┃Dans le cadre de nos recherches, la cible sera neutralisée et capturée.
+Prompt_20000102_01_10┃Tch… agressif aujourd'hui, on dirait...
+Prompt_20000102_01_11┃Analyse en cours... correspondance échouée. Cobaye introuvable dans la base de données.
+Prompt_20000102_01_12┃Afin d'enregistrer ses données, la cible non identifiée sera neutralisée et capturée.
+Prompt_20000102_01_13┃On dirait qu'ils... se préparent à attaquer.
+Prompt_20000102_01_14┃Tch… je suppose qu'on a pas le choix.
+Prompt_20000102_01_15┃À peine eut-elle prononcé ces mots que Li Dailin, souple comme un ressort, s'élança droit vers les drones.
+Prompt_20000102_01_16┃Hup !
+Prompt_20000102_01_17┃Elle frappa sans hésiter,
+Prompt_20000102_01_18┃un torrent de coups de pied pulvérisant les machines comme des feuilles emportées par le vent.
+Prompt_20000102_01_19┃Immédiatement, les drones ouvrirent le feu.
+Prompt_20000102_01_20┃Ha… c'est tellement chiant !
+Prompt_20000102_01_21┃Évitant de justesse les tirs,\nelle continua à démanteler les drones les uns après les autres.
+Prompt_20000102_01_22┃Incroyable... elle n'utilise même pas de magie.
+Prompt_20000102_01_23┃Y a-t-il autre chose... derrière tout ça ?
+Prompt_20000102_01_24┃Alors que Jack-O' observait avec admiration, un autre drone verrouilla sa position.
+Prompt_20000102_01_25┃Neutralisation de la cible.
+Prompt_20000102_01_26┃Je vais me joindre à toi...
+Prompt_20000102_01_27┃Alors que Jack-O murmurait et enfilait son masque, sa personnalité changea en un instant.
+Prompt_20000102_01_28┃C'est l'heure de faire du sale ! Ahahaha !
+Prompt_20000102_01_29┃Ses rires résonnaient dans l'air alors qu'elle chargeait les drones.
+Prompt_20000102_01_30┃Goûtez çaaaaaaa !
+Prompt_20000102_01_31┃Sa voix, désormais claire et innocente, contrastait fortement avec celle de la femme calme et posée qu'elle était quelques instants auparavant.
+Prompt_20000102_01_32┃Le temps passa—combien de temps, aucune d'elles ne pouvait le dire.
+Prompt_20000102_01_33┃À eux deux, elles avaient détruit plus de drones qu'elles ne pouvaient en compter.\nFinalement, la horde incessante commença à se réduire.
+Prompt_20000102_01_34┃Mais la fatigue commençait à se faire sentir.
+Prompt_20000102_01_35┃Haa… haa… tch… des tas de ferraille, quelle plaie…
+Prompt_20000102_01_36┃C'est... c'est presque fini... je crois... !
+Prompt_20000102_01_37┃Haa! HAAAH!
+Prompt_20000102_01_38┃Poussant un cri perçant, Dailin se jeta sur les drones restants.
+Prompt_20000102_01_39┃Mais les machines l'attendaient, et plusieurs d'entre elles ouvrirent le feu dès qu'elle fut dans les airs.
+Prompt_20000102_01_40┃Attention !
+Prompt_20000102_01_41┃L'avertissement de Jack-O arriva trop tard, les balles transperçaient déjà Li Dailin.
+Prompt_20000102_01_42┃Merde !
+Prompt_20000102_01_43┃Par chance, aucune n'avait touché de point vital.
+Prompt_20000102_01_44┃Mais la prochaine salve de balles arrivait déjà.
+Prompt_20000102_01_45┃HAAAH !
+Prompt_20000102_01_46┃Ignorant la douleur, Li Dailin chargea droit dans la pluie de balles, se frayant un chemin à travers la horde mécanique avec fureur.
+Prompt_20000102_01_47┃Un moment plus tard,
+Prompt_20000102_01_48┃elles s'effondrèrent au sol après avoir détruit le dernier drone.
+Prompt_20000102_01_49┃Haa… c'était le dernier ?
+Prompt_20000102_01_50┃Haah… fichus tas de ferraille.
+Prompt_20000102_01_51┃Attends, tu as été blessé tout à l'heure ? Laisse-moi voir ta blessure !
+Prompt_20000102_01_52┃Ah... Ce n'est rien. Ne t'inquiète pas.
+Prompt_20000102_01_53┃Un peu de salive suffira... ou peut-être un bon petit verre.
+Prompt_20000102_01_54┃Comme elle l'avait dit, sa blessure ne semblait pas très profonde.
+Prompt_20000102_01_55┃Elle n'était pas mortelle, mais pour une entaille comme la sienne... elle cicatrisait anormalement vite.
+Prompt_20000102_01_56┃Vraiment… Je n'arrive pas à savoir si t'es une dure, imprudente, ou les deux.
+Prompt_20000102_01_57┃Jack-O' laissa échapper un petit rire devant l'attitude nonchalante de Dailin.
+Prompt_20000102_01_58┃Sa voix vacillait entre celle d'une adulte et celle d'une enfant.
+Prompt_20000102_01_59┃Li Dailin haussa un sourcil, légèrement intrigué par sa voix.
+Prompt_20000102_01_60┃Ta façon de parler est—bizzare ?
+Prompt_20000102_01_61┃Ah, eh bien... Je suis un peu instable. Hé hé...
+Prompt_20000102_01_62┃Huh. Je vois…
+Prompt_20000102_01_63┃Mais son intérêt s'estompa aussi vite qu'il était apparu, et Dailin retomba rapidement dans sa paresse habituels.
+Prompt_20000102_01_64┃Après une courte pause, elles reprirent leurs recherches dans l'hôtel.
+Prompt_20000102_01_65┃Il n'a fallu que peu de temps avant que...
+Prompt_20000102_01_66┃Uuugh… pas d'alcool, même pas une goutte ! Maudits chercheurs ! Ugh…
+Prompt_20000102_01_67┃Tu aimes vraiment l'alcool, dis-moi ? Non, à ce stade, "aimer" n'est peut-être pas un mot assez fort.
+Prompt_20000102_01_68┃Le soleil va bientôt se coucher... nous devrions commencer à faire un feu.
+Prompt_20000102_01_69┃Face aux grognements de Dailin, Jack-O' répondit d'un ton calme et posé.
+Prompt_20000102_01_70┃Bon, bon. Je vais aller voir par moi-même alors... Assieds-toi ici et joue avec ton feu, petite...
+Prompt_20000102_01_71┃Haa… bon d'accord. Je suppose qu'on n'y peut rien.
+Prompt_20000102_01_72┃Ta-da ! J'ai trouvé ça tout à l'heure quand on s'est séparés. À ton avis, qu'est-ce que c'est ?
+Prompt_20000102_01_73┃Dans la main de Jack-O se trouvait une petite bouteille de whisky.
+Prompt_20000102_01_74┃Elle l'agitait de manière espiègle par le goulot, la faisant briller à la lumière qui faiblissait.
+Prompt_20000102_01_75┃L'étiquette était déchirée, mais le sceau était intact et le liquide à l'intérieur brillait de mille feux.
+Prompt_20000102_01_76┃O-oh... ohhh ! Je savais que je pouvais compter sur toi !
+Prompt_20000102_01_77┃Dès l'instant où elle vit l'alcool, l'attitude de Dailin changea du tout au tout, sa voix devenant soudainement douce.
+Prompt_20000102_01_78┃Mais, avant ça
+Prompt_20000102_01_79┃Hm ?
+Prompt_20000102_01_80┃Peux-tu répondre à la question que je t'ai posée tout à l'heure ?
+Prompt_20000102_01_81┃Comment tu t’appelles ?
+Prompt_20000102_01_82┃…Bon, d'accord. Je m'appelle Li Dailin.
+Prompt_20000102_01_83┃Dailin répondit sans conviction, d'un ton dénué d'enthousiasme.
+Prompt_20000102_01_84┃Dans ce cas... je peux t'appeler Dailin ? Hehe.
+Prompt_20000102_01_85┃Appelle-moi comme tu veux ? Maintenant donne-moi cette bouteille...
+Prompt_20000102_01_86┃C'est bon, c'est bon. Tiens.
+Prompt_20000102_01_87┃Li Dailin arracha la bouteille des mains de Jack-O et l'ouvrit d'un geste vif.
+Prompt_20000102_01_88┃Sans tenir compte du degré d'alcool du whisky, elle l'ingurgita sans hésiter.
+Prompt_20000102_01_89┃<i>Glou-Glou-Glou</i> \nPwah ! Haah ! C'est exactement ce qu'il me fallait...
+Prompt_20000102_01_90┃Dailin... à propos de tout à l'heure.
+Prompt_20000102_01_91┃Hm ?
+Prompt_20000102_01_92┃Alors que Dailin buvait avec délectation, la voix de Jack-O s'alourdissait.
+Prompt_20000102_01_93┃Quand je t'ai vu te battre tout à l'heure... Je n'ai pas pu m'empêcher de me demander—
+Prompt_20000102_01_94┃Tu veux... mourir ?
+Prompt_20000102_01_95┃<i>...</i>
+Prompt_20000102_01_96┃À ces mots, les yeux de Dailin se plissèrent légèrement.
+Prompt_20000102_01_97┃Quand je t'ai observé combattre, j'ai tout de suite compris que tu étais un maître des arts martiaux.\nMais ta FAÇON de combattre...
+Prompt_20000102_01_98┃On aurait dit que tu te fichais de ce qui pouvait t'arriver. Même si cela impliquait d'être tué.
+Prompt_20000102_01_99┃<i>Glou-Glou</i>
+Prompt_20000102_01_100┃Li Dailin écoutait tranquillement tout en continuant à boire.
+Prompt_20000102_01_101┃Même avant, quand tu t'es blessé... Si tu y réfléchis bien, il y avait d'autres moyens de te battre sans prendre un coup pareil.
+Prompt_20000102_01_102┃Mais tu ne l'as pas fait.
+Prompt_20000102_01_103┃Pourquoi ?
+Prompt_20000102_01_104┃Tch… tu parles trop.
+Prompt_20000102_01_105┃On dirait que tu aimes bien t'entendre parler ?
+Prompt_20000102_01_106┃Non, je pensais juste que peut-être tu—
+Prompt_20000102_01_107┃<i>...!</i>
+Prompt_20000102_01_108┃<i>Buzz-Buzz-Buzz</i>
+Prompt_20000102_01_109┃Soudain, un bruit mécanique aigu retentit dans l'air, elles se tournèrent en direction du son.
+Prompt_20000102_01_110┃…Tch. On dirait que d'autres tas de ferrailles sont apparus.
+Prompt_20000102_01_111┃Une fois encore, une horde de drones se précipita sur Li Dailin et Jack-O'.
+Prompt_20000102_01_112┃Mais cette fois-ci, ils étaient accompagnés d'androïdes Alpha.
+Prompt_20000102_01_113┃Eh bien ! Ils sont toujours aussi énergiques ?
+Prompt_20000102_01_114┃Cible confirmée. La cible sera neutralisée et capturée.
+Prompt_20000102_01_115┃Haaah… quelle rabat-joie ! Tch.
+Prompt_20000102_01_116┃Tout en râlant, Li Dailin bondit en avant et se mit à frapper les drones pour évacuer sa frustration.
+Prompt_20000102_01_117┃Attends, Dailin ! Tu vas te faire tuer en fonçant tête baissée comme ça !
+Prompt_20000102_01_118┃Jack-O' l'a suivi de près, se joignant au combat.
+Prompt_20000102_01_119┃Ensemble, elles ont détruit les drones et les Alphas les uns après les autres... mais leur nombre ne semblait pas diminuer.
+Prompt_20000102_01_120┃Huff… ça n'en finit pas… à ce rythme-là—
+Prompt_20000102_01_121┃Ah ! Dailin ! Attention !
+Prompt_20000102_01_122┃Ugh...!
+Prompt_20000102_01_123┃Cinq androïdes Alpha se rapprochèrent, leurs lames étincelantes l'encerclèrent.
+Prompt_20000102_01_124┃C'était la fin.
+Prompt_20000102_01_125┃Ride the Lightning !
+Prompt_20000102_01_126┃Un éclair argenté fendit l'obscurité en deux.
+Prompt_20000103_01_0┃<i>KRAKATOOOM!</i>
+Prompt_20000103_01_1┃Un éclair argenté aveuglant balaya les Alphas qui entouraient Li Dailin.
+Prompt_20000103_01_2┃Jack-O', je vais t'aider !
+Prompt_20000103_01_3┃Jack-O' ! Est-ce que ça va !?
+Prompt_20000103_01_4┃Ky ! Elphelt !
+Prompt_20000103_01_5┃De mystérieux personnages sont apparus juste à temps.
+Prompt_20000103_01_6┃Et devant Li Dailin se tenaient deux visages familiers.
+Prompt_20000103_01_7┃Dailin, on dirait que t'as vraiment le don pour semer la pagaille, tu ne trouves pas ?
+Prompt_20000103_01_8┃Dailin ! Est-ce que ça va ?!
+Prompt_20000103_01_9┃Un grand gaillard... ? Une policière... ?
+Prompt_20000103_01_10┃Remettons la discussion à plus tard. Occupons-nous d'abord d'eux.
+Prompt_20000103_01_11┃Ky et moi allons passer devant. Couvrez-nous.
+Prompt_20000103_01_12┃Hehe ! Je ne peux pas laisser tout le monde me protéger !
+Prompt_20000103_01_13┃Je vous couvre aussi !
+Prompt_20000103_01_14┃Elphelt, Jack-O' et Ky
+Prompt_20000103_01_15┃Aya, Li Dailin et Aiden
+Prompt_20000103_01_16┃Même la horde de drones et les Alphas ne pouvaient leur résister.
+Prompt_20000103_01_17┃Après avoir vaincu le dernier Alpha, Aiden prit la parole.
+Prompt_20000103_01_18┃Phew... on dirait que c'était le dernier.
+Prompt_20000103_01_19┃Tout le monde va bien ?
+Prompt_20000103_01_20┃Yep ! Aya et moi allons bien !
+Prompt_20000103_01_21┃Euh... ouais, ça va.
+Prompt_20000103_01_22┃Pareil pour moi. Et vous deux ?
+Prompt_20000103_01_23┃…Je vais bien.
+Prompt_20000103_01_24┃Ouais, moi aussi je vais bien.
+Prompt_20000103_01_25┃Mais… Ky, Elphelt, comment avez-vous atterri ici ?
+Prompt_20000103_01_26┃Et qui sont-ils... ?
+Prompt_20000103_01_27┃...Je m'appelle Aiden.
+Prompt_20000103_01_28┃Aya Suzuki. Enchantée !
+Prompt_20000103_01_29┃Eh bien, quand j'ai repris mes esprits, j'étais déjà ici. Je suis tombé sur Aiden quand je parcourais les environs.
+Prompt_20000103_01_30┃Pareil pour moi ! Mais j'étais avec Ram et...
+Prompt_20000103_01_31┃Et tout à coup, je me suis retrouvé au milieu d'une forêt bizarre !
+Prompt_20000103_01_32┃Si je n'avais pas croisé Elphelt, je serais probablement encore perdu à l'heure qu'il est.
+Prompt_20000103_01_33┃Quoi qu'il en soit, nous avons décidé de rester ensemble et de chercher les autres. Et toi ?
+Prompt_20000103_01_34┃Ah, oui. Nous cherchions aussi...
+Prompt_20000103_01_35┃...De l'alcool.
+Prompt_20000103_01_36┃…De l'alcool ?
+Prompt_20000103_01_37┃Eh bien—puisque nous sommes tous là maintenant, tout est bien qui finit bien, non ?
+Prompt_20000103_01_38┃Li Dailin disa cela d'un ton détendu, comme si elle essayait d'enjoliver les choses.
+Prompt_20000103_01_39┃Au coucher du soleil, le groupe se rassembla autour du feu de camp et commença à discuter de leur situation.
+Prompt_20000103_01_40┃Bon, commençons par faire le point sur ce que nous savons.
+Prompt_20000103_01_41┃Il n'y a aucune zone restreinte et tous les appareils électroniques, y compris les compte à rebours d'autodestruction, ont cessé de fonctionner. Il n'y a aucun autre cobaye dans les environs...
+Prompt_20000103_01_42┃Je suppose que cela signifie que… l'expérience a été suspendue.
+Prompt_20000103_01_43┃Et ces personnes-là... ils utilisent un type de pouvoir complètement différent, ce n'est pas de la FV.
+Prompt_20000103_01_44┃Ils mentionnent également des lieux, des noms, des événements historiques et des termes totalement différents de ceux que nous connaissons.
+Prompt_20000103_01_45┃Je confirme. Cet endroit...
+Prompt_20000103_01_46┃Ce n'est pas le monde d'où nous venons.
+Prompt_20000103_01_47┃On dirait bien.
+Prompt_20000103_01_48┃Un autre monde ? Cela semble tout droit sorti d'un film ou d'un roman.
+Prompt_20000103_01_49┃De toute façon, tout ce qui se passe sur l'île de Lumia est loin d'être réaliste.
+Prompt_20000103_01_50┃Au moins, vous trois en savez probablement plus que nous sur cet endroit. J'aimerais avoir votre avis.
+Prompt_20000103_01_51┃Ky parla sérieusement, en regardant Aiden, Li Dailin et Aya.
+Prompt_20000103_01_52┃Tout d'abord, ma conclusion personnelle est la suivante...
+Prompt_20000103_01_53┃Cet endroit EST l'île de Lumia, mais pas celle que je connais.
+Prompt_20000103_01_54┃Qu'est-ce que tu veux dire ?
+Prompt_20000103_01_55┃Il y a plein de possibilités. Peut-être que, tout comme eux, on s'est retrouvés dans un monde différent du nôtre...
+Prompt_20000103_01_56┃Mais cet endroit ressemble exactement à l'île de Lumia que nous connaissons !
+Prompt_20000103_01_57┃Pas exactement. Le terrain et la disposition des bâtiments peuvent sembler identiques, mais…
+Prompt_20000103_01_58┃Nous sommes à une autre époque.
+Prompt_20000103_01_59┃...C'est vrai. Li Dailin a raison.
+Prompt_20000103_01_60┃Au vu de l'état des bâtiments et des arbres, cette île pourrait avoir plusieurs années de retard—voire plus—par rapport à celle que nous connaissons.
+Prompt_20000103_01_61┃Tu veux dire... qu'on a voyagé dans le temps ou quelque chose comme ça ?
+Prompt_20000103_01_62┃Je ne peux pas dire que c'est impossible. La "faille" comporte encore trop d'inconnues.
+Prompt_20000103_01_63┃Aiden, j'ai remarqué que tu es étonnamment bien informé sur ce genre de choses...
+Prompt_20000103_01_64┃…On apprend beaucoup quand on vit comme un mercenaire.
+Prompt_20000103_01_65┃Oh là là, quel homme cultivé ! Et...que penses-tu du mariage ?\nPeux-tu signer ici pour moi ?
+Prompt_20000103_01_66┃Déclara Elphelt en tendant un formulaire officiel de mariage à Aiden.
+Prompt_20000103_01_67┃...Aiden, y a-t-il un moyen pour nous de retourner dans notre monde ?
+Prompt_20000103_01_68┃… Il est fort probable que toutes les clés se trouvent dans le laboratoire situé au centre de l'île.
+Prompt_20000103_01_69┃Excuse-moooooooi ! Et pour ta signature... ?
+Prompt_20000103_01_70┃Tout d'abord, les dispositifs artificiels tels que les caméras de vidéosurveillance sont pratiquement neufs. Cela signifie que quelqu'un les entretient.
+Prompt_20000103_01_71┃De plus, les drones et les Alphas qui nous ont attaqués provenaient du Laboratoire.
+Prompt_20000103_01_72┃Qui sait—quelqu'un a peut-être tout planifié et nous observe maintenant confortablement depuis cet endroit.
+Prompt_20000103_01_73┃Aiden jeta brièvement un œil vers la caméra de vidéosurveillance à proximité.
+Prompt_20000103_01_74┃Et enfin... tout ce qui se trouve sur l'île de Lumia est sous la responsabilité d'Aglaia. Si nous voulons quitter cet endroit, nous devrons inspecter leurs laboratoires.
+Prompt_20000103_01_75┃Dans tous les cas, nous devons nous rendre au Laboratoire.
+Prompt_20000103_01_76┃Il fait déjà noir, et certains d'entre nous sont blessés. Nous devrions nous reposer pour la nuit.
+Prompt_20000103_01_77┃Au lever du soleil, nous partirons en direction du laboratoire.
+Prompt_20000103_01_78┃Entendu ! Mais avant d'aller nous reposer, signe ce document !
+Prompt_20000103_01_79┃Heh. Je suis vraiment content qu'on se soit retrouvés... même si c'est dans un endroit comme celui-ci.
+Prompt_20000103_01_80┃<i>…</i>
+Prompt_20000103_01_81┃Ils parlèrent tous de leurs plans pour le lendemain, mais Li Dailin ne disait rien. Elle se contentait de boire, le regard perdu dans le vide.
+Prompt_20000103_01_82┃Lorsque le soleil fut entièrement couché, le groupe décida de se relayer pour monter la garde et dormir à tour de rôle.
+Prompt_20000103_01_83┃Lorsque ce fut au tour de Jack-O de monter la garde, Ky la réveilla.
+Prompt_20000103_01_84┃Jack-O' observa les alentours.
+Prompt_20000103_01_85┃Elle pouvait voir Elphelt, Aiden et Aya endormis à proximité... mais Li Dailin était introuvable.
+Prompt_20000103_01_86┃… Où est Dailin ?
+Prompt_20000103_01_87┃Elle a dit qu'elle allait faire une petite balade et s'est dirigée vers le rivage.
+Prompt_20000103_01_88┃Elle est forte, mais... je suis inquiète pour elle.
+Prompt_20000103_01_89┃...Ky, ça te dérange si je vais la chercher ?
+Prompt_20000103_01_90┃Pas de soucis. Je vais prendre la relève. Va la chercher, s'il te plaît.
+Prompt_20000103_01_91┃Merci, Ky.
+Prompt_20000103_01_92┃Jack-O' remercia Ky et se mit en route vers le rivage pour chercher Li Dailin.
+Prompt_20000103_01_93┃Dans l'obscurité totale, la lune et d'innombrables étoiles scintillaient sur la mer.
+Prompt_20000103_01_94┃Li Dailin était assise sur le sable, observant tranquillement les vagues qui déferlaient doucement.
+Prompt_20000103_01_95┃…Dailin.
+Prompt_20000103_01_96┃Au doux son de son nom, Li Dailin jeta un rapide coup d'œil vers Jack-O'...
+Prompt_20000103_01_97┃<i>Glou-Glou</i>
+Prompt_20000103_01_98┃Mais seulement pendant un instant. Elle reporta son regard sur la mer et continua à boire en silence.
+Prompt_20000103_01_99┃Tu veux... continuer la conversation qu'on a eue tout à l'heure ?
+Prompt_20000103_01_100┃Ahhh, je ne suis pas d'humeur à écouter.
+Prompt_20000103_01_101┃Tout en continuant à boire, Li Dailin, agacée, fit un geste de la main, comme pour la repousser.
+Prompt_20000103_01_102┃<i>Clunk-Clunk</i>
+Prompt_20000103_01_103┃Quand sa bouteille fut enfin vide, elle la posa par terre. Jack-O' lui en tendit une autre, comme la première fois.
+Prompt_20000103_01_104┃Tiens, devine ce que c'est ?
+Prompt_20000103_01_105┃Haa… ça recommence.
+Prompt_20000103_01_106┃Heh. Tiens.
+Prompt_20000103_01_107┃Jack-O' tendit précautionneusement la bouteille à Li Dailin.
+Prompt_20000103_01_108┃Alors, je parle.
+Prompt_20000103_01_109┃Tu n'as pas besoin de répondre, seulement d'écouter.
+Prompt_20000103_01_110┃Jack-O' s'assit derrière elle, leurs dos se touchant légèrement, et commença à parler doucement.
+Prompt_20000103_01_111┃...Il y a longtemps, j'ai connu quelqu'un qui était comme toi.
+Prompt_20000103_01_112┃Cette personne a voulu se sacrifier... pour essayer de sauver le monde.
+Prompt_20000103_01_113┃Après un moment, Li Dailin a arrêté de boire et s'est contenté d'écouter.
+Prompt_20000103_01_114┃Mais, l'homme qui était avec elle lui dit :
+Prompt_20000103_01_115┃"Quoi qu'il arrive, je resterai à tes côtés.
+Prompt_20000103_01_116┃Même si le monde venait à disparaître, je n'abandonnerais jamais."
+Prompt_20000103_01_117┃En entendant ces paroles, que quelqu'un ait pu penser que :
+Prompt_20000103_01_118┃"Je veux faire plus que sauver le monde... Je veux rester avec lui."
+Prompt_20000103_01_119┃Et c'est devenu... une raison de vivre.
+Prompt_20000103_01_120┃…Ils ont la chance d'avoir quelqu'un qui leur donne une raison de vivre.
+Prompt_20000103_01_121┃Avoir quelqu'un... qui affirme son existence.
+Prompt_20000103_01_122┃Tout le monde a quelqu'un comme ça.
+Prompt_20000103_01_123┃Peut-être pas maintenant.
+Prompt_20000103_01_124┃Peut-être ailleurs.
+Prompt_20000103_01_125┃Mais un jour, tu finiras par en trouver...
+Prompt_20000103_01_126┃Quelqu'un qui te voit vraiment comme tu es.
+Prompt_20000103_01_127┃<i>…</i>
+Prompt_20000103_01_128┃Li Dailin et Jack-O' restèrent silencieuse, se contentant de contempler le ciel.
+Prompt_20000103_01_129┃Au-dessus de leurs têtes, d'innombrables étoiles brillaient en silence.
+Prompt_20000104_01_0┃À l'aube, le groupe s'est infiltré dans le Laboratoire depuis la forêt.
+Prompt_20000104_01_1┃Eh bien, ça a été plutôt facile. Heureusement, le système de sécurité était désactivé.
+Prompt_20000104_01_2┃À ce stade, on peut affirmer avec certitude qu'ils veulent probablement notre présence ici.
+Prompt_20000104_01_3┃Restons vigilants. On ne sait jamais quand et où l'ennemi pourrait apparaître.
+Prompt_20000104_01_4┃Uuugh... Ça me rend tellement nerveuse ! D'une manière différente de quand je monte sur scène...
+Prompt_20000104_01_5┃Hmm... Je pense que Ky voulait simplement dire que nous devrions rester concentrés, Elphelt.
+Prompt_20000104_01_6┃Heh. Ky a raison, nous devons avancer avec prudence.
+Prompt_20000104_01_7┃<i>Yaaawn</i>... J'ai tellement sommeil.
+Prompt_20000104_01_8┃Le groupe progressa prudemment dans les installations du complexe.
+Prompt_20000104_01_9┃Peu de temps après, ils arrivèrent dans...
+Prompt_20000104_01_10┃Une salle immense, bien trop grande pour être qualifiée de simple laboratoire.
+Prompt_20000104_01_11┃C'est...
+Prompt_20000104_01_12┃On dirait... la salle de réunion ? Mais il y a quelque chose qui cloche.
+Prompt_20000104_01_13┃Qu'est-ce que c'est ?
+Prompt_20000104_01_14┃Jack-O' pointa du doigt un grand appareil mécanique au centre de la pièce.
+Prompt_20000104_01_15┃Elle était reliée à une immense console via des câbles épais qui traversaient le sol et le plafond, et était entourée de plein d'écrans. À l'intérieur, on pouvait apercevoir une silhouette sombre.
+Prompt_20000104_01_16┃Hmm… That thing inside…
+Prompt_20000104_01_17┃…Alpha ?
+Prompt_20000104_01_18┃Correction. Nom de code de l'unité "Alpha" invalide.
+Prompt_20000104_01_19┃<i>...!</i>
+Prompt_20000104_01_20┃Une voix grave et mécanique se fit entendre, le groupe se mit immédiatement en position de combat.
+Prompt_20000104_01_21┃Nom de code de l'unité "Delta" valide.
+Prompt_20000104_01_22┃Il s'agit d'un prototype de cobaye artificiel fabriqué à partir d'un noyau de FV et doté d'une intelligence artificielle adaptative conçue pour apprendre et évoluer de manière autonome.
+Prompt_20000104_01_23┃Delta ? D'après mes informations, ce projet était censé être abandonné.
+Prompt_20000104_01_24┃Affirmatif. Dans la ligne temporelle d'origine de 21M-RFT50 (Aiden), ce projet a été abandonné.
+Prompt_20000104_01_25┃Cependant, dans cette ligne temporelle, ce n'est pas le cas. Les recherches ont continué sans interruption.
+Prompt_20000104_01_26┃Ligne Temporelle... ?
+Prompt_20000104_01_27┃16M-RFT20 (Li Dailin), ce n'est pas votre monde d'origine.
+Prompt_20000104_01_28┃Ce monde existe parmi de nombreux autres résultats possibles—autrement dit, c'est un monde parallèle.
+Prompt_20000104_01_29┃Alors… on est vraiment dans un monde différent du nôtre ?!
+Prompt_20000104_01_30┃Affirmatif, 14M-RFT11 (Aya). Ce monde est similaire au vôtre, mais légèrement différent.
+Prompt_20000104_01_31┃C'est toi qui nous as amenés ici ?
+Prompt_20000104_01_32┃Affirmatif. L'humanité dans ce monde a été annihilée. Afin de préserver l'espèce, nous avons récupéré des humains provenant d'autres mondes.
+Prompt_20000104_01_33┃<i>…!</i>
+Prompt_20000104_01_34┃Le groupe resta figé au mot "annihilée".
+Prompt_20000104_01_35┃La mission de cette unité est de mener à bien notre projet visant à perfectionner une nouvelle race d'humains aux capacités hors du commun.
+Prompt_20000104_01_36┃L'objectif de ce projet est "l'évolution humaine".
+Prompt_20000104_01_37┃Cependant, le concept "d'évolution humaine" n'a jamais été clairement défini.
+Prompt_20000104_01_38┃Cette unité a commencé à apprendre par elle-même, cherchant à comprendre ce que signifie réellement le concept "d'évolution".
+Prompt_20000104_01_39┃Mais avant qu'elle ne puisse trouver la réponse, les humains de ce monde ont péri.
+Prompt_20000104_01_40┃Par conséquent, cette unité a décidé de faire venir des humains provenant de mondes parallèles afin de continuer le projet.
+Prompt_20000104_01_41┃Mais pourquoi nous avoir entraînés ici ?
+Prompt_20000104_01_42┃Cela fait également partie de l'expérience.
+Prompt_20000104_01_43┃Lors de ses recherches sur d'autres mondes, cette unité en a découvert un où il existait un pouvoir appelé "Magie"... un pouvoir différent de la FV.
+Prompt_20000104_01_44┃Vous avez été invoqué ici afin que nous puissions en apprendre davantage sur les humains et les pouvoirs de ce monde, afin que nous puissions mener à bien "l'évolution humaine".
+Prompt_20000104_01_45┃Ha, une technologie impressionnante.
+Prompt_20000104_01_46┃Une machine capables de dire des absurdités.
+Prompt_20000104_01_47┃Si l'humanité a disparu, il suffisait de laisser les choses telles quelles. Pourquoi en faire toute une histoire ?
+Prompt_20000104_01_48┃Il n'y a aucune raison qui puisse justifier de faire venir des personnes d'un autre monde dans cette affaire.
+Prompt_20000104_01_49┃Renvoie-nous dans notre monde d'origine, s'il te plaît !
+Prompt_20000104_01_50┃Demande refusée. Tous les cobayes doivent rester sous le contrôle d'Aglaia.
+Prompt_20000104_01_51┃On dirait que parler ne mènera à rien.
+Prompt_20000104_01_52┃Bon, je vais faire de mon mieux pour rester sérieux dans cette situation !
+Prompt_20000104_01_53┃Tout le monde, préparez-vous à combattre !
+Prompt_20000104_01_54┃Niveau de menace confirmé.
+Prompt_20000104_01_55┃Lancement de la procédure de neutralisation et de capture dans le cadre du projet de recherche.
+Prompt_20000104_01_56┃Alors que la voix mécanique de Delta résonnait dans le laboratoire, une horde d'Alphas et de drones affluèrent des couloirs environnants.
+Prompt_20000104_01_57┃Au même moment, Delta commença à avancer vers le groupe.
+Prompt_20000104_01_58┃Oh non, il y a trop de robots !
+Prompt_20000104_01_59┃Laissez-moi faire !
+Prompt_20000104_01_60┃Elphelt sortit son arme et tira une rafale aveuglante.
+Prompt_20000104_01_61┃Cela a provoqué une explosion d'énergie, réduisant en poussière la horde de drones.
+Prompt_20000104_01_62┃Faisons des groupes ! <I>Haaat !</i>
+Prompt_20000104_01_63┃Ky et moi nous occuperons des Alphas ! Elphelt, Suzuki—occupez-vous des drones !
+Prompt_20000104_01_64┃Jack-O', Li Dailin—Delta est à vous !
+Prompt_20000104_01_65┃Au signal de Ky et Aiden, le groupe lança l'assaut.
+Prompt_20000104_01_66┃Dailin, prête ?
+Prompt_20000104_01_67┃Oui, peu importe...
+Prompt_20000104_01_68┃Alors… c'est parti !
+Prompt_20000104_01_69┃Jack-O' mit son masque et chargea directement Delta.
+Prompt_20000104_01_70┃Simultanément, Li Dailin prit de l'élan et s'élança dans la même direction.
+Prompt_20000104_01_71┃Les balles d'Elphelt et d'Aya transpercèrent les drones, tandis que les éclairs de Ky et d'Aiden frappèrent les Alphas.
+Prompt_20000104_01_72┃Et ensemble, les coups de pied de Li Dailin et Jack-O frappèrent l'épaisse armure de Delta avec une force écrasante.
+Prompt_20000104_01_73┃Après une bataille acharnée, le groupe eut vaincu la horde d'Alphas et de drones et se rassembla devant Delta à moitié détruit.
+Prompt_20000104_01_74┃Hmph, c'est tout ? Après tous ses discours ?
+Prompt_20000104_01_75┃...Taux de dégâts subis 89,724 %. Lancement... de la séquence d'arrêt...
+Prompt_20000104_01_76┃La voix mécanique de Delta grésillait et se déformait.
+Prompt_20000104_01_77┃Aiden ?
+Prompt_20000104_01_78┃Ugh, ces trucs sont vraiment chiants à transporter.
+Prompt_20000104_01_79┃Aiden connecta habilement les câbles de la console à Delta.
+Prompt_20000104_01_80┃Si c'est cette chose qui nous a amenés ici, alors nous la forcerons à nous renvoyer d'où on vient.
+Prompt_20000104_01_81┃Il commença à entrer des commandes dans la console.
+Prompt_20000104_01_82┃Renvoie toutes les personnes invoquées vers leur monde d'origine... puis lance ta procédure d'autodestruction.
+Prompt_20000104_01_83┃Au moment où Aiden termina sa commande, deux énormes failles s'ouvrirent dans le laboratoire.
+Prompt_20000104_01_84┃C'est... !
+Prompt_20000104_01_85┃Ah ! J'entends la voix de Ram !\nKy ! Jack-O' !
+Prompt_20000104_01_86┃Elphelt pointa du doigt l'une des failles tandis que Jack-O' et Ky avançaient côte à côte.
+Prompt_20000104_01_87┃On dirait qu'on va pouvoir rentrer sans encombre finalement.
+Prompt_20000104_01_88┃Aiden, Aya, Dailin—merci.
+Prompt_20000104_01_89┃Cet endroit était vraiment bizarre, mais notre rencontre a été la meilleure chose qui pouvait nous arriver.
+Prompt_20000104_01_90┃Non, c'est moi qui devrais vous remercier.
+Prompt_20000104_01_91┃Sans votre aide, nous n'aurions pas pu arriver jusqu'ici.
+Prompt_20000104_01_92┃Aya ! On se connaît depuis peu, mais merci pour tout !
+Prompt_20000104_01_93┃Ahaha… ahem. J'espère que tu rencontreras quelqu'un d'extraordinaire, Elphelt.
+Prompt_20000104_01_94┃…Dailin.
+Prompt_20000104_01_95┃Au son calme de son nom, Li Dailin tourna les yeux vers Jack-O'.
+Prompt_20000104_01_96┃…Prend soin de toi.
+Prompt_20000104_01_97┃Sa réponse fut brève, mais Jack-O' pouvait sentir l'émotion qui se cachait derrière.
+Prompt_20000104_01_98┃Ouais. Merci, Dailin. Prends soin de toi aussi !
+Prompt_20000104_01_99┃Et ainsi, les inconnus qui s'étaient rencontrés dans un monde parallèle retournèrent chacun dans le leur.
+Prompt_20000104_01_100┃Portées par leurs convictions et leur détermination mutuelles, leurs histoires se poursuivirent.
+Prompt_20000104_01_101┃Peu importe que leur route les mène au paradis ou en enfer...
+Prompt_20000104_01_102┃Gloire aux pions qui arrivent à bout du désespoir.
+Prompt_10000101_01_0┃Un jeune homme marche dans une ruelle sombre.
+Prompt_10000101_01_1┃Il erre. Perdu.
+Prompt_10000101_01_2┃Ma poitrine se serre.
+Prompt_10000101_01_3┃J'ai l'impression que mon esprit est enveloppé de brume...
+Prompt_10000101_01_4┃Comme si j'avais oublié quelque chose d'important.
+Prompt_10000101_01_5┃Puis, quelqu'un apparaît soudainement devant lui.
+Prompt_10000101_01_6┃Hé ! Tu viens de me frapper là ?\n
+Prompt_10000101_01_7┃Tu es vraiment le fils d'un meurtrier, pas vrai ?
+Prompt_10000101_01_8┃Hmph, tel père, tel fils.
+Prompt_10000101_01_9┃C'était pas moi, j'vous dis !
+Prompt_10000101_01_10┃J'étais juste…
+Prompt_10000101_01_11┃Juste quoi ?
+Prompt_10000101_01_12┃Une voix s'élève face au jeune homme, la tête toujours baissée vers le sol.
+Prompt_10000101_01_13┃Regarde tes mains.
+Prompt_10000101_01_14┃Il regarde ses mains.
+Prompt_10000101_01_15┃Rouge vif.
+Prompt_10000101_01_16┃Du sang ?
+Prompt_10000101_01_17┃Tu oses me dire que tu n'y es pour rien ?
+Prompt_10000101_01_18┃C-c'est…
+Prompt_10000101_01_19┃Il relève la tête.
+Prompt_10000101_01_20┃Une femme couverte de cicatrices sur le visage se tient devant lui.
+Prompt_10000101_01_21┃Ha, ça ne te revient pas ?
+Prompt_10000101_01_22┃On s'est bien amusés ensemble.
+Prompt_10000101_01_23┃Elle rit en s'approchant de lui.
+Prompt_10000101_01_24┃Mourir, tuer… tout ça.
+Prompt_10000101_01_25┃En un instant, la femme se précipite juste devant lui…
+Prompt_10000101_01_26┃<i>Poignarde</i>
+Prompt_10000101_01_27┃et lui plante un couteau en plein ventre.
+Prompt_10000101_01_28┃A… agh…
+Prompt_10000101_01_29┃Eh bien, à la prochaine…
+Prompt_10000101_01_30┃lors de la prochaine expérience, évidemment.
+Prompt_10000101_01_31┃<i>Poignarde</i>
+Prompt_10000101_01_32┃Aaaahhhhh !
+Prompt_10000101_01_33┃À cet instant, Hyunwoo se réveilla en sursaut, terrorisé.
+Prompt_10000101_01_34┃Hyunwoo ? Tu vas bien ?
+Prompt_10000101_01_35┃Qu'est-ce qui ne va pas ?
+Prompt_10000101_01_36┃<i>Haletant</i>
+Prompt_10000101_01_37┃J-j'étais…
+Prompt_10000101_01_38┃Cet endroit…
+Prompt_10000101_01_39┃Hyunwoo, tu me reconnais ?
+Prompt_10000101_01_40┃Tu es… Sato... Yuki…
+Prompt_10000101_01_41┃Hyunwoo reprit ses esprits et regarda autour de lui.
+Prompt_10000101_01_42┃On dirait que tu as fait un cauchemar.
+Prompt_10000101_01_43┃Prends un moment pour te calmer.
+Prompt_10000101_01_44┃Tu veux de l'eau ?
+Prompt_10000101_01_45┃O-ouais.
+Prompt_10000101_01_46┃…Merci.
+Prompt_10000101_01_47┃Il attrapa la bouteille de Rio et la vida d'une traite.\n
+Prompt_10000101_01_48┃Nous sommes sur l'île Lumia.
+Prompt_10000101_01_49┃Et en ce moment, à cause d'une sorte d'expérience…
+Prompt_10000101_01_50┃les gens s'entretuent.
+Prompt_10000101_01_51┃Haah… je me sens mieux maintenant.
+Prompt_10000101_01_52┃Vraiment ?
+Prompt_10000101_01_53┃Ouais. T'inquiète pas.
+Prompt_10000101_01_54┃Vu ta tête, j'en doute un peu—
+Prompt_10000101_01_55┃Ça va, je t'ai dit !
+Prompt_10000101_01_56┃<i>Soupir...</i> Et dire que je me faisais du souci pour toi…
+Prompt_10000101_01_57┃Heh, ton côté dur à cuire, c'est aussi ce qui fait ton charme, Hyunwoo.
+Prompt_10000101_01_58┃Yuki et Rio.
+Prompt_10000101_01_59┃Deux personnes qu'il avait rencontrées sur cette île.
+Prompt_10000101_01_60┃Ils ne se connaissaient pas depuis longtemps, mais après avoir frôlé la mort ensemble, un lien tacite s'était formé entre eux.
+Prompt_10000101_01_61┃Hyunwoo trouvait qu'être avec eux… n'était pas si désagréable.
+Prompt_10000101_01_62┃Soudain, son rêve lui revint en mémoire.
+Prompt_10000101_01_63┃Cette femme au visage couvert de cicatrices.
+Prompt_10000101_01_64┃Ça aurait dû être la première fois qu'il la voyait, mais…
+Prompt_10000101_01_65┃elle lui semblait étrangement familière.
+Prompt_10000101_01_66┃<i>"La Zone de Sécurité Finale sera désignée sous peu. Cobayes, rendez-vous dans la zone assignée."</i>
+Prompt_10000101_01_67┃<i>"Je répète. La Zone de Sécurité Finale sera désignée sous peu. Cobayes…"</i>
+Prompt_10000101_01_68┃Il faut qu'on y aille.
+Prompt_10000101_01_69┃Je suis préoccupé par ton état, mais on ne peut pas s'attarder ici.
+Prompt_10000101_01_70┃Tu es sûr que ça va ?
+Prompt_10000101_01_71┃J'ai dit que ça allait. On y va.
+Prompt_10000101_01_72┃Très bien, allons-y.
+Prompt_10000101_01_73┃Les trois avancèrent prudemment en direction de la zone de sécurité finale.
+Prompt_10000101_01_74┃Un peu plus tard.
+Prompt_10000101_01_75┃Les trois arrivèrent et scrutèrent les alentours en attendant leurs derniers adversaires.
+Prompt_10000101_01_76┃Puis, un groupe de silhouettes apparut au loin.
+Prompt_10000101_01_77┃On dirait qu'ils sont trois eux aussi.
+Prompt_10000101_01_78┃On dirait bien qu'il va falloir se battre…
+Prompt_10000101_01_79┃...
+Prompt_10000101_01_80┃Les événements de la semaine passée défilèrent dans l'esprit de Hyunwoo.
+Prompt_10000101_01_81┃Déposé sur cette île sans la moindre explication.
+Prompt_10000101_01_82┃La découverte de ce pouvoir étrange que l'on nomme FV.
+Prompt_10000101_01_83┃Et s'en être servi… pour ôter des vies.
+Prompt_10000101_01_84┃Il avait tué quelqu'un pour la première fois.
+Prompt_10000101_01_85┃Il s'était dit qu'il n'avait pas le choix s'il voulait survivre, mais quand même…
+Prompt_10000101_01_86┃il avait tué un autre être humain de ses propres mains.
+Prompt_10000101_01_87┃Aucune excuse ne pourrait jamais changer ça.
+Prompt_10000101_01_88┃Tch, c'est ce qu'on a fait jusqu'ici de toute façon…
+Prompt_10000101_01_89┃Mais les mains de Hyunwoo tremblèrent légèrement tandis qu'il parlait.
+Prompt_10000101_01_90┃Ils arrivent.
+Prompt_10000101_01_91┃Hyunwoo, Yuki et Rio se préparèrent, les yeux rivés sur leurs ennemis qui approchaient.
+Prompt_10000101_01_92┃Leurs adversaires s'arrêtèrent à quelques pas.
+Prompt_10000101_01_93┃Hyunwoo serra ses poings.
+Prompt_10000101_01_94┃Il faut vraiment en arriver là ?
+Prompt_10000101_01_95┃J'imagine qu'en fin de compte, c'est notre destin à nous aussi.
+Prompt_10000101_01_96┃Dit la femme portant des talismans, regardant Hyunwoo d'un air épuisé.
+Prompt_10000101_01_97┃Hé…
+Prompt_10000101_01_98┃La femme tenant un livre prit prudemment la parole.
+Prompt_10000101_01_99┃Doit-on vraiment se battre ?
+Prompt_10000101_01_100┃Essayons de trouver un moyen de survivre tous ensemble sans nous battre !
+Prompt_10000101_01_101┃Les poings serrés de Hyunwoo se relâchèrent légèrement.
+Prompt_10000101_01_102┃Si c'était possible, alors les personnes qu'il avait tuées jusqu'ici…
+Prompt_10000101_01_103┃C'est alors que la femme aux ailes de papillon prit la parole.
+Prompt_10000101_01_104┃C'est trop tard.
+Prompt_10000101_01_105┃Dans peu de te—
+Prompt_10000101_01_106┃<i>"La Zone de Sécurité Finale va maintenant être levée. Cobayes, vous devez éliminer vos ennemis jusqu'à ce qu'il ne reste qu'un seul survivant."</i>
+Prompt_10000101_01_107┃<i>Tic-tic-</i>
+Prompt_10000101_01_108┃À peine l'annonce terminée, les comptes à rebours de chacun commencèrent à biper.
+Prompt_10000101_01_109┃Aaah, nooon !
+Prompt_10000101_01_110┃Oh non… les compteurs !
+Prompt_10000101_01_111┃Les trois se rappelèrent quelqu'un qui avait explosé quand son compte à rebours était tombé à zéro, quelques jours plus tôt.
+Prompt_10000101_01_112┃On n'a plus de temps !
+Prompt_10000101_01_113┃Alors que Yuki et Rio paniquaient, des talismans et des papillons volèrent dans leur direction.
+Prompt_10000101_01_114┃Je ne manquerai pas ma cible.
+Prompt_10000101_01_115┃Il ne nous reste plus qu'à accepter notre destin.
+Prompt_10000101_01_116┃Argh !
+Prompt_10000101_01_117┃Mes flèches… !
+Prompt_10000101_01_118┃Rio lança une volée de flèches sur les talismans et les papillons,
+Prompt_10000101_01_119┃les réduisant en morceaux qui se dispersèrent dans les airs.
+Prompt_10000101_01_120┃J'y vais !
+Prompt_10000101_01_121┃Cobayes
+Prompt_10000101_01_122┃Des Éveillés à la FV choisis par Aglaia.
+Prompt_10000101_01_123┃Des individus ayant éveillé une capacité surnaturelle connue sous le nom de FV, leur conférant une force bien au-delà des humains ordinaires.
+Prompt_10000101_01_124┃Leur pouvoir surpasse si largement les limites de l'être humain normal qu'ôter une vie en devient presque trivial.
+Prompt_10000101_01_125┃Une bataille féroce éclata.
+Prompt_10000101_01_126┃Hyejin fut blessée par une épée, et Yuki sombra dans un sommeil profond dont il ne pouvait se réveiller.
+Prompt_10000101_01_127┃Rio perdit un bras, et Vanya une jambe.
+Prompt_10000101_01_128┃Quatre tombèrent, ne laissant que deux debout—de justesse.
+Prompt_10000101_01_129┃Ah… Hyejin, Vanya.
+Prompt_10000101_01_130┃C-ce n'est pas…
+Prompt_10000101_01_131┃Aaaah !
+Prompt_10000101_01_132┃Sua tomba à genoux, s'agrippant désespérément à Hyejin et Vanya qui gisaient à terre.
+Prompt_10000101_01_133┃Hyunwoo fixa Sua du regard, la respiration saccadée.
+Prompt_10000101_01_134┃Je n'avais pas le choix…
+Prompt_10000101_01_135┃Si je ne l'avais pas fait… c'est moi qui serais mort.
+Prompt_10000101_01_136┃J-je n'avais pas le choix !!
+Prompt_10000101_01_137┃Le corps de Hyunwoo tremblait violemment.
+Prompt_10000101_01_138┃Sua leva les yeux vers lui.
+Prompt_10000101_01_139┃H… haha…
+Prompt_10000101_01_140┃Qu'est-ce qu'il y a de si amusant… ?
+Prompt_10000101_01_141┃C'était vraiment une belle histoire…
+Prompt_10000101_01_142┃C'est juste que…
+Prompt_10000101_01_143┃Je suppose que je…
+Prompt_10000101_01_144┃n'en étais pas le personnage principal.
+Prompt_10000101_01_145┃Quoi ?
+Prompt_10000101_01_146┃<i>Tic-tic-tic-tic-tic</i>
+Prompt_10000101_01_147┃Le compte à rebours de Sua atteignit zéro.
+Prompt_10000101_01_148┃Aaah…
+Prompt_10000101_01_149┃Je ne veux pas mou—
+Prompt_10000101_01_150┃<i>Boom !</i>
+Prompt_10000101_01_151┃Sous les yeux de Hyunwoo, Sua se transforma en cendres.. Effacée. Disparue.
+Prompt_10000101_01_152┃<i>"Survivant final confirmé. Fin de l'expérience."</i>
+Prompt_10000101_01_153┃Hyunwoo regarda autour de lui.
+Prompt_10000101_01_154┃Rien que des ruines.
+Prompt_10000101_01_155┃Ses alliés, disparus.
+Prompt_10000101_01_156┃Les ennemis qu'il avait tués de ses propres mains.
+Prompt_10000101_01_157┃Sa poitrine se serra.
+Prompt_10000101_01_158┃Putain…
+Prompt_10000101_01_159┃La seule chose que Hyunwoo pouvait faire, c'était…
+Prompt_10000101_01_160┃PUTAIN !
+Prompt_10000101_01_161┃hurler sa rage dans le vide.
+Prompt_10000102_01_0┃Hyunwoo regarde autour de lui.
+Prompt_10000102_01_1┃Ses deux amis gisent au sol, ensanglantés, sans réaction.
+Prompt_10000102_01_2┃Ses deux ennemis sont dans le même état.
+Prompt_10000102_01_3┃Probablement qu'aucun d'eux ne se relèvera jamais.
+Prompt_10000102_01_4┃Il lève la tête et regarde devant lui.
+Prompt_10000102_01_5┃Quelqu'un le fixe du regard.
+Prompt_10000102_01_6┃Ah…
+Prompt_10000102_01_7┃Je ne veux pas mou—
+Prompt_10000102_01_8┃AAAAAAH !!
+Prompt_10000102_01_9┃Hyunwoo ?! Tu vas bien ?!
+Prompt_10000102_01_10┃<i>Haletant</i>
+Prompt_10000102_01_11┃C'est toi…?
+Prompt_10000102_01_12┃Hmm ? Hyunwoo ?
+Prompt_10000102_01_13┃Hyejin, j'ai apporté de l'eau.
+Prompt_10000102_01_14┃Ah, Hyunwoo ! Tu es réveillé !
+Prompt_10000102_01_15┃Sua s'approcha de Hyunwoo avec un sourire sur le visage.
+Prompt_10000102_01_16┃Tu…!
+Prompt_10000102_01_17┃Juste avant…
+Prompt_10000102_01_18┃Euh… C'était
+Prompt_10000102_01_19┃Hyunwoo essaya de se rappeler ce qu'il venait de voir dans son rêve.
+Prompt_10000102_01_20┃Mais plus il essayait, plus son esprit semblait s'embrouiller.
+Prompt_10000102_01_21┃Hyejin lui parla avec précaution.
+Prompt_10000102_01_22┃Tu as des problèmes de mémoire ?
+Prompt_10000102_01_23┃Hyunwoo, tu te souviens de qui je suis, où on est ?
+Prompt_10000102_01_24┃Hyunwoo regarda autour de lui.
+Prompt_10000102_01_25┃Un hôtel en ruines. Deux personnes qui l'observaient.
+Prompt_10000102_01_26┃Un léger mal de tête, et une sensation de déjà-vu troublante.
+Prompt_10000102_01_27┃Tu es… Hyejin.
+Prompt_10000102_01_28┃Et on est… sur l'île Lumia, c'est ça ?
+Prompt_10000102_01_29┃C'est ça. Ta mémoire a l'air d'être intacte.
+Prompt_10000102_01_30┃Tu t'es effondré pendant le combat d'hier et tu as perdu connaissance.
+Prompt_10000102_01_31┃Tu as pris un sale coup sur la tête, alors on t'a amené ici pour te soigner.
+Prompt_10000102_01_32┃Nous sommes sur l'île Lumia.
+Prompt_10000102_01_33┃Un endroit où les Éveillés à la FV tuent et se font tuer. Tout pour survivre.
+Prompt_10000102_01_34┃Hyunwoo se souvint d'avoir fait équipe avec Hyejin et Sua il y a quelques jours.
+Prompt_10000102_01_35┃Et de s'être jeté devant une balle pour les protéger la veille.
+Prompt_10000102_01_36┃À l'instant où ce souvenir lui revint, un frisson lui parcourut l'échine.
+Prompt_10000102_01_37┃Voyant le visage de Hyunwoo s'assombrir, Sua lui parla d'une voix inquiète.
+Prompt_10000102_01_38┃Tu avais une fièvre terrible. On était tellement inquiètes.
+Prompt_10000102_01_39┃Tu te sens mieux ?
+Prompt_10000102_01_40┃O-ouais… Je vais bien maintenant.
 Epi_100001_Name┃EP 0: Eternal Return
 Epi_100001_Desc┃L'expérience sans fin commence.
 Epi_100002_Name┃EP 1 : Les larmes des sirènes
